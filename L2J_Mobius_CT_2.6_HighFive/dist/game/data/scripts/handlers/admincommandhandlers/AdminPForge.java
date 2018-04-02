@@ -22,9 +22,9 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.mmocore.NioNetStringBuffer;
 import com.l2jmobius.gameserver.GameServer;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -603,7 +603,7 @@ public final class AdminPForge implements IAdminCommandHandler
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));
 						if (p.read())
 						{
-							ThreadPoolManager.execute(p);
+							ThreadPool.execute(p);
 						}
 					}
 				}

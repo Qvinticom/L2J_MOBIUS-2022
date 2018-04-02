@@ -23,8 +23,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -202,7 +202,7 @@ public final class CastleDungeon extends AbstractInstance
 	 */
 	private void spawnRaid(Instance instance)
 	{
-		final ScheduledFuture<?> spawnTask = ThreadPoolManager.schedule(() ->
+		final ScheduledFuture<?> spawnTask = ThreadPool.schedule(() ->
 		{
 			// Get template id of raid
 			final int npcId;

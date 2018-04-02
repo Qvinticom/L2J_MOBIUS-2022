@@ -21,8 +21,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FishingData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -220,10 +220,10 @@ public class Fishing
 			_player.rechargeShots(false, false, true);
 		}
 		
-		_reelInTask = ThreadPoolManager.schedule(() ->
+		_reelInTask = ThreadPool.schedule(() ->
 		{
 			_player.getFishing().reelInWithReward();
-			_startFishingTask = ThreadPoolManager.schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
+			_startFishingTask = ThreadPool.schedule(() -> _player.getFishing().castLine(), Rnd.get(baitData.getWaitMin(), baitData.getWaitMax()));
 		}, Rnd.get(baitData.getTimeMin(), baitData.getTimeMax()));
 		_player.stopMove(null);
 		_player.broadcastPacket(new ExFishingStart(_player, -1, baitData.getLevel(), _baitLocation));

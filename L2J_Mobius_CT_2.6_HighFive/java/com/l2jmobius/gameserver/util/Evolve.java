@@ -22,8 +22,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.model.L2PetData;
@@ -143,11 +143,11 @@ public final class Evolve
 		petSummon.startFeed();
 		item.setEnchantLevel(petSummon.getLevel());
 		
-		ThreadPoolManager.schedule(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPoolManager.schedule(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{
@@ -240,11 +240,11 @@ public final class Evolve
 		final L2World world = L2World.getInstance();
 		world.removeObject(removedItem);
 		
-		ThreadPoolManager.schedule(new EvolveFinalizer(player, petSummon), 900);
+		ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
 		
 		if (petSummon.getCurrentFed() <= 0)
 		{
-			ThreadPoolManager.schedule(new EvolveFeedWait(player, petSummon), 60000);
+			ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
 		}
 		else
 		{

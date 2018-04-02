@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
@@ -123,7 +123,7 @@ public class L2Request
 	{
 		_isRequestor = isRequestor;
 		_isAnswerer = !isRequestor;
-		ThreadPoolManager.schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
+		ThreadPool.schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
 	}
 	
 	/**

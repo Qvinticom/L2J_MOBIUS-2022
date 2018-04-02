@@ -18,7 +18,7 @@ package vehicles;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -120,7 +120,7 @@ public class BoatRunePrimeval implements Runnable
 				case 1:
 				{
 					BoatManager.getInstance().broadcastPackets(PRIMEVAL_DOCK, RUNE_DOCK[0], ARRIVED_AT_PRIMEVAL, ARRIVED_AT_PRIMEVAL_2, PRIMEVAL_SOUND);
-					ThreadPoolManager.schedule(this, 180000);
+					ThreadPool.schedule(this, 180000);
 					break;
 				}
 				case 2:
@@ -145,7 +145,7 @@ public class BoatRunePrimeval implements Runnable
 							_shoutCount = 0;
 						}
 						
-						ThreadPoolManager.schedule(this, 5000);
+						ThreadPool.schedule(this, 5000);
 						return;
 					}
 					_boat.executePath(RUNE_DOCK);
@@ -155,7 +155,7 @@ public class BoatRunePrimeval implements Runnable
 				{
 					BoatManager.getInstance().dockShip(BoatManager.RUNE_HARBOR, true);
 					BoatManager.getInstance().broadcastPackets(RUNE_DOCK[0], PRIMEVAL_DOCK, ARRIVED_AT_RUNE, ARRIVED_AT_RUNE_2, RUNE_SOUND);
-					ThreadPoolManager.schedule(this, 180000);
+					ThreadPool.schedule(this, 180000);
 					break;
 				}
 			}

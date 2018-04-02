@@ -16,8 +16,8 @@
  */
 package ai.areas.DenOfDevil;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -127,7 +127,7 @@ public final class DenOfEvil extends AbstractNpcAI
 		zone.addSkill(skillId, skillLevel + 1);
 		if (skillLevel == 3) // 3+1=4
 		{
-			ThreadPoolManager.schedule(new KashaDestruction(zone), 2 * 60 * 1000l);
+			ThreadPool.schedule(new KashaDestruction(zone), 2 * 60 * 1000l);
 			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.DEFEAT_KASHA_S_EYES_TO_LIFT_THE_GREAT_CURSE));
 		}
 		else if (skillLevel == 2)
@@ -140,7 +140,7 @@ public final class DenOfEvil extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		ThreadPoolManager.schedule(new RespawnNewEye(npc.getLocation()), 15000);
+		ThreadPool.schedule(new RespawnNewEye(npc.getLocation()), 15000);
 		final L2EffectZone zone = ZoneManager.getInstance().getZone(npc, L2EffectZone.class);
 		if (zone == null)
 		{
@@ -213,7 +213,7 @@ public final class DenOfEvil extends AbstractNpcAI
 						final L2Npc npc = (L2Npc) character;
 						if (CommonUtil.contains(EYE_IDS, npc.getId()))
 						{
-							ThreadPoolManager.schedule(new RespawnNewEye(npc.getLocation()), 15000);
+							ThreadPool.schedule(new RespawnNewEye(npc.getLocation()), 15000);
 						}
 					}
 				}

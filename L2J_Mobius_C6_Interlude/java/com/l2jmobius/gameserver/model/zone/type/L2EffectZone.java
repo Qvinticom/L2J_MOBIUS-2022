@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -138,7 +138,7 @@ public class L2EffectZone extends L2ZoneType
 				{
 					if (_task == null)
 					{
-						_task = ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
+						_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse);
 					}
 				}
 			}

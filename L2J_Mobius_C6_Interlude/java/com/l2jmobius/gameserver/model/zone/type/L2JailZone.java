@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
@@ -73,7 +73,7 @@ public class L2JailZone extends L2ZoneType
 			if (((L2PcInstance) character).isInJail())
 			{
 				// when a player wants to exit jail even if he is still jailed, teleport him back to jail
-				ThreadPoolManager.schedule(new BackToJail(character), 2000);
+				ThreadPool.schedule(new BackToJail(character), 2000);
 				((L2PcInstance) character).sendMessage("You can't cheat your way out of here. You must wait until your jail time is over.");
 			}
 		}

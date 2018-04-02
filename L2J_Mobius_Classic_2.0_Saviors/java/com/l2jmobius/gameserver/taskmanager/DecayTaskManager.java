@@ -23,7 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -65,7 +65,7 @@ public final class DecayTaskManager
 		
 		if (!_decayTasks.containsKey(character))
 		{
-			_decayTasks.put(character, ThreadPoolManager.schedule(new DecayTask(character), delay * 1000));
+			_decayTasks.put(character, ThreadPool.schedule(new DecayTask(character), delay * 1000));
 		}
 	}
 	

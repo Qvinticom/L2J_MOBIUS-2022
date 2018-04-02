@@ -29,8 +29,8 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
@@ -385,7 +385,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					if ((race != player.getRace()) || (((race == Race.HUMAN) || (race == Race.ORC)) && (isMage != player.isMageClass())))
 					{
 						TransformData.getInstance().transformPlayer(105, player);
-						ThreadPoolManager.schedule(new Untransform(player), 200);
+						ThreadPool.schedule(new Untransform(player), 200);
 					}
 				}
 				else
@@ -493,7 +493,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			player.broadcastUserInfo();
 			// Transform-untransorm player quickly to force the client to reload the character textures
 			TransformData.getInstance().transformPlayer(105, player);
-			ThreadPoolManager.schedule(new Untransform(player), 200);
+			ThreadPool.schedule(new Untransform(player), 200);
 			
 		}
 		else if (command.startsWith("admin_setcolor"))

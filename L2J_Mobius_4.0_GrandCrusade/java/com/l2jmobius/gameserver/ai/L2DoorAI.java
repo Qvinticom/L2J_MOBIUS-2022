@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.ai;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -89,7 +89,7 @@ public class L2DoorAI extends L2CharacterAI
 	@Override
 	protected void onEvtAttacked(L2Character attacker)
 	{
-		ThreadPoolManager.execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
+		ThreadPool.execute(new onEventAttackedDoorTask((L2DoorInstance) _actor, attacker));
 	}
 	
 	@Override

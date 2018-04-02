@@ -24,9 +24,9 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -80,12 +80,12 @@ public final class FakePlayerChatManager implements IGameXmlReader
 	
 	public void manageChat(L2PcInstance player, String fpcName, String message)
 	{
-		ThreadPoolManager.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
+		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(MIN_DELAY, MAX_DELAY));
 	}
 	
 	public void manageChat(L2PcInstance player, String fpcName, String message, int minDelay, int maxDelay)
 	{
-		ThreadPoolManager.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
+		ThreadPool.schedule(() -> manageResponce(player, fpcName, message), Rnd.get(minDelay, maxDelay));
 	}
 	
 	private void manageResponce(L2PcInstance player, String fpcName, String message)

@@ -21,7 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -61,7 +61,7 @@ public abstract class Chamber extends AbstractInstance
 		{
 			currentRoom = 0;
 			partyInside = party;
-			_banishTask = ThreadPoolManager.scheduleAtFixedRate(new BanishTask(), 60000, 60000);
+			_banishTask = ThreadPool.scheduleAtFixedRate(new BanishTask(), 60000, 60000);
 		}
 		
 		protected L2Party getPartyInside()
@@ -77,7 +77,7 @@ public abstract class Chamber extends AbstractInstance
 			// Schedule next room change only if remaining time is enough
 			if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
 			{
-				_roomChangeTask = ThreadPoolManager.schedule(new ChangeRoomTask(), nextInterval - 5000);
+				_roomChangeTask = ThreadPool.schedule(new ChangeRoomTask(), nextInterval - 5000);
 			}
 		}
 		

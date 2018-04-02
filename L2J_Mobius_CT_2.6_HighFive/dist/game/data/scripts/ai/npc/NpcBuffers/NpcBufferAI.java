@@ -16,7 +16,7 @@
  */
 package ai.npc.NpcBuffers;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -110,7 +110,7 @@ public class NpcBufferAI implements Runnable
 				break;
 			}
 		}
-		ThreadPoolManager.schedule(this, _skillData.getDelay());
+		ThreadPool.schedule(this, _skillData.getDelay());
 	}
 	
 	/**

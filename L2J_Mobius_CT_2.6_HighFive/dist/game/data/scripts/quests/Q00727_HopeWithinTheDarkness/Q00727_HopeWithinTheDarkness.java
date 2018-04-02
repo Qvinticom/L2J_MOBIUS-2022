@@ -21,7 +21,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
@@ -477,7 +477,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 						// Destroy instance after 5 minutes
 						inst.setDuration(5 * 60000);
 						inst.setEmptyDestroyTime(0);
-						ThreadPoolManager.schedule(new completeDungeon(world, player), 1500);
+						ThreadPool.schedule(new completeDungeon(world, player), 1500);
 					}
 				}
 			}
@@ -634,7 +634,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		world.setStatus(0);
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTER_INTERVAL);
 		InstanceManager.getInstance().addWorld(world);
-		ThreadPoolManager.schedule(new spawnNpcs((CAUWorld) world), INITIAL_SPAWN_DELAY);
+		ThreadPool.schedule(new spawnNpcs((CAUWorld) world), INITIAL_SPAWN_DELAY);
 		if (DEBUG)
 		{
 			_log.info("Castle HopeWithinTheDarkness started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
@@ -681,21 +681,21 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 					_instance.spawnGroup("victims");
 					_instance.spawnGroup("bosses_1");
 					
-					ThreadPoolManager.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
-					ThreadPoolManager.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
+					ThreadPool.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
+					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
 				else if (_world.getStatus() == 1)
 				{
 					_instance.spawnGroup("bosses_2");
 					
-					ThreadPoolManager.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
-					ThreadPoolManager.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
+					ThreadPool.schedule(new spawnNpcs(_world), WAVE_SPAWN_DELAY);
+					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
 				else if (_world.getStatus() == 2)
 				{
 					_instance.spawnGroup("bosses_3");
 					
-					ThreadPoolManager.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
+					ThreadPool.schedule(new spawnPrivates(_world), PRIVATE_SPAWN_DELAY);
 				}
 			}
 			catch (Exception e)

@@ -20,8 +20,8 @@ import java.text.SimpleDateFormat;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -131,7 +131,7 @@ public final class Parade extends AbstractNpcAI
 		
 		// Starts at 8:00 and repeats every 6 hours.
 		final long diff = timeLeftMilli(8, 0, 0), cycle = 3600000L;
-		ThreadPoolManager.scheduleAtFixedRate(new Start(), diff, cycle);
+		ThreadPool.scheduleAtFixedRate(new Start(), diff, cycle);
 		
 		// Test - Starts 3 minutes after server startup and repeats every 20 minutes.
 		// final long diff = timeLeftMilli(8, 0, 0), cycle = 600000L;
@@ -169,9 +169,9 @@ public final class Parade extends AbstractNpcAI
 		public void run()
 		{
 			load();
-			spawnTask = ThreadPoolManager.scheduleAtFixedRate(new Spawn(), 0, 5000);
-			deleteTask = ThreadPoolManager.scheduleAtFixedRate(new Delete(), 10000, 1000);
-			cleanTask = ThreadPoolManager.schedule(new Clean(), 420000);
+			spawnTask = ThreadPool.scheduleAtFixedRate(new Spawn(), 0, 5000);
+			deleteTask = ThreadPool.scheduleAtFixedRate(new Delete(), 10000, 1000);
+			cleanTask = ThreadPool.schedule(new Clean(), 420000);
 		}
 	}
 	

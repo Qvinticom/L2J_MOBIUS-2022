@@ -29,8 +29,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.tasks.MessageDeletionTask;
 import com.l2jmobius.gameserver.model.L2World;
@@ -72,11 +72,11 @@ public final class MailManager
 				
 				if (expiration < System.currentTimeMillis())
 				{
-					ThreadPoolManager.schedule(new MessageDeletionTask(msgId), 10000);
+					ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);
 				}
 				else
 				{
-					ThreadPoolManager.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
+					ThreadPool.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
 				}
 			}
 		}
@@ -181,7 +181,7 @@ public final class MailManager
 			receiver.sendPacket(ExNoticePostArrived.valueOf(true));
 		}
 		
-		ThreadPoolManager.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+		ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
 	}
 	
 	public final void markAsReadInDb(int msgId)

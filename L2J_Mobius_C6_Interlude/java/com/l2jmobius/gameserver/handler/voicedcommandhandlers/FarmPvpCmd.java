@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.voicedcommandhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
@@ -118,7 +118,7 @@ public class FarmPvpCmd implements IVoicedCommandHandler
 		activeChar.sendPacket(sg);
 		activeChar.setIsImobilised(true);
 		
-		ThreadPoolManager.schedule(new teleportTask(activeChar, placex, placey, placez, message), 15000);
+		ThreadPool.schedule(new teleportTask(activeChar, placex, placey, placez, message), 15000);
 		
 		return true;
 	}

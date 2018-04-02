@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.lang.ref.WeakReference;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.Fishing;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -47,7 +47,7 @@ public class L2FishingZone extends L2ZoneType
 			if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING))
 			{
 				final WeakReference<L2PcInstance> weakPlayer = new WeakReference<>(character.getActingPlayer());
-				ThreadPoolManager.execute(new Runnable()
+				ThreadPool.execute(new Runnable()
 				{
 					@Override
 					public void run()
@@ -69,7 +69,7 @@ public class L2FishingZone extends L2ZoneType
 										player.sendPacket(ExAutoFishAvailable.NO);
 									}
 								}
-								ThreadPoolManager.schedule(this, 1500);
+								ThreadPool.schedule(this, 1500);
 							}
 							else
 							{

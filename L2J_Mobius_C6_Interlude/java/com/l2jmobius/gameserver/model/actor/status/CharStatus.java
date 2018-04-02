@@ -22,7 +22,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -358,7 +358,7 @@ public class CharStatus
 			final int period = Formulas.getRegeneratePeriod(getActiveChar());
 			
 			// Create the HP/MP/CP Regeneration task
-			_regTask = ThreadPoolManager.scheduleAtFixedRate(new RegenTask(), period, period);
+			_regTask = ThreadPool.scheduleAtFixedRate(new RegenTask(), period, period);
 		}
 	}
 	

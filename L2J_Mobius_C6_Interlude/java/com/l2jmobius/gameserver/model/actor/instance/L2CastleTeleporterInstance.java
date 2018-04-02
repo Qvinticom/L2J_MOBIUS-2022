@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
@@ -70,7 +70,7 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 				}
 				
 				setTask(true);
-				ThreadPoolManager.schedule(new oustAllPlayers(), delay);
+				ThreadPool.schedule(new oustAllPlayers(), delay);
 			}
 			
 			final String filename = "data/html/castleteleporter/MassGK-1.htm";

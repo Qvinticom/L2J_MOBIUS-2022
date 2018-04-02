@@ -45,13 +45,13 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ItemsAutoDestroy;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.RecipeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2PlayerAI;
@@ -825,7 +825,7 @@ public final class L2PcInstance extends L2Playable
 		
 		if (_PvPRegTask == null)
 		{
-			_PvPRegTask = ThreadPoolManager.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+			_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
 		}
 	}
 	
@@ -2840,7 +2840,7 @@ public final class L2PcInstance extends L2Playable
 			getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
 			// Schedule a sit down task to wait for the animation to finish
-			ThreadPoolManager.schedule(new SitDownTask(this), 2500);
+			ThreadPool.schedule(new SitDownTask(this), 2500);
 			setBlockActions(true);
 		}
 	}
@@ -2863,7 +2863,7 @@ public final class L2PcInstance extends L2Playable
 			
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
 			// Schedule a stand up task to wait for the animation to finish
-			ThreadPoolManager.schedule(new StandUpTask(this), 2500);
+			ThreadPool.schedule(new StandUpTask(this), 2500);
 		}
 	}
 	
@@ -7768,7 +7768,7 @@ public final class L2PcInstance extends L2Playable
 							removeHenna(slot);
 							continue;
 						}
-						_hennaRemoveSchedules.put(slot, ThreadPoolManager.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+						_hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
 					}
 					
 					_henna[slot - 1] = henna;
@@ -7959,7 +7959,7 @@ public final class L2PcInstance extends L2Playable
 					final long currentTime = System.currentTimeMillis();
 					final long durationInMillis = henna.getDuration() * 60000;
 					getVariables().set("HennaDuration" + i, currentTime + durationInMillis);
-					_hennaRemoveSchedules.put(i, ThreadPoolManager.schedule(new HennaDurationTask(this, i), currentTime + durationInMillis));
+					_hennaRemoveSchedules.put(i, ThreadPool.schedule(new HennaDurationTask(this, i), currentTime + durationInMillis));
 				}
 				
 				// Reward henna skills
@@ -8071,7 +8071,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
 		{
-			_autoSaveTask = ThreadPoolManager.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
 		}
 	}
 	
@@ -8680,7 +8680,7 @@ public final class L2PcInstance extends L2Playable
 		_inventoryDisable = val;
 		if (val)
 		{
-			ThreadPoolManager.schedule(new InventoryEnableTask(this), 1500);
+			ThreadPool.schedule(new InventoryEnableTask(this), 1500);
 		}
 	}
 	
@@ -9504,7 +9504,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_skillListRefreshTask == null)
 		{
-			_skillListRefreshTask = ThreadPoolManager.schedule(() ->
+			_skillListRefreshTask = ThreadPool.schedule(() ->
 			{
 				sendSkillList(0);
 				_skillListRefreshTask = null;
@@ -9975,7 +9975,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskWarnUserTakeBreak == null)
 		{
-			_taskWarnUserTakeBreak = ThreadPoolManager.scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
+			_taskWarnUserTakeBreak = ThreadPool.scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
 		}
 	}
 	
@@ -10001,7 +10001,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskRentPet == null)
 		{
-			_taskRentPet = ThreadPoolManager.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000L, seconds * 1000L);
+			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000L, seconds * 1000L);
 		}
 	}
 	
@@ -10032,7 +10032,7 @@ public final class L2PcInstance extends L2Playable
 			final int timeinwater = (int) getStat().getValue(Stats.BREATH, 60000);
 			
 			sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
-			_taskWater = ThreadPoolManager.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
+			_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
 		}
 	}
 	
@@ -10413,7 +10413,7 @@ public final class L2PcInstance extends L2Playable
 				{
 					if (_teleportWatchdog == null)
 					{
-						_teleportWatchdog = ThreadPoolManager.schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
+						_teleportWatchdog = ThreadPool.schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
 					}
 				}
 			}
@@ -11307,7 +11307,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (_fameTask == null)
 		{
-			_fameTask = ThreadPoolManager.scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
+			_fameTask = ThreadPool.scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
 		}
 	}
 	
@@ -11427,7 +11427,7 @@ public final class L2PcInstance extends L2Playable
 			_soulTask.cancel(false);
 			_soulTask = null;
 		}
-		_soulTask = ThreadPoolManager.schedule(new ResetSoulsTask(this), 600000);
+		_soulTask = ThreadPool.schedule(new ResetSoulsTask(this), 600000);
 		
 	}
 	
@@ -11799,7 +11799,7 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(new SetupGauge(3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 			if (!isDead())
 			{
-				_mountFeedTask = ThreadPoolManager.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
+				_mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
 			}
 		}
 		else if (_canFeed)
@@ -11809,7 +11809,7 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(sg);
 			if (!isDead())
 			{
-				_mountFeedTask = ThreadPoolManager.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
+				_mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
 			}
 		}
 	}
@@ -11886,7 +11886,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public void enteredNoLanding(int delay)
 	{
-		_dismountTask = ThreadPoolManager.schedule(new DismountTask(this), delay * 1000);
+		_dismountTask = ThreadPool.schedule(new DismountTask(this), delay * 1000);
 	}
 	
 	public void exitedNoLanding()
@@ -12007,7 +12007,7 @@ public final class L2PcInstance extends L2Playable
 			_chargeTask.cancel(false);
 			_chargeTask = null;
 		}
-		_chargeTask = ThreadPoolManager.schedule(new ResetChargesTask(this), 600000);
+		_chargeTask = ThreadPool.schedule(new ResetChargesTask(this), 600000);
 	}
 	
 	/**
@@ -13046,7 +13046,7 @@ public final class L2PcInstance extends L2Playable
 	public void startRecoGiveTask()
 	{
 		// Create task to give new recommendations
-		_recoGiveTask = ThreadPoolManager.scheduleAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
+		_recoGiveTask = ThreadPool.scheduleAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
 		
 		// Store new data
 		storeRecommendations();
@@ -13988,7 +13988,7 @@ public final class L2PcInstance extends L2Playable
 			stopOnlineTimeUpdateTask();
 		}
 		
-		_onlineTimeUpdateTask = ThreadPoolManager.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000L, 60 * 1000L);
+		_onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000L, 60 * 1000L);
 	}
 	
 	private void updateOnlineTime()

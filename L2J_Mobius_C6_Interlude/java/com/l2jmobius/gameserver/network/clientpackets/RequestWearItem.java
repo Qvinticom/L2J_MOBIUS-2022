@@ -21,7 +21,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -272,7 +272,7 @@ public final class RequestWearItem extends L2GameClientPacket
 		// All weared items should be removed in ALLOW_WEAR_DELAY sec.
 		if (_removeWearItemsTask == null)
 		{
-			_removeWearItemsTask = ThreadPoolManager.schedule(new RemoveWearItemsTask(), Config.WEAR_DELAY * 1000);
+			_removeWearItemsTask = ThreadPool.schedule(new RemoveWearItemsTask(), Config.WEAR_DELAY * 1000);
 		}
 	}
 }

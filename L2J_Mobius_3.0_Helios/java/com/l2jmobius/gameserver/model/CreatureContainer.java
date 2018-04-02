@@ -22,7 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.function.Predicate;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
@@ -63,7 +63,7 @@ public class CreatureContainer
 	{
 		if ((_task == null) || _task.isDone())
 		{
-			_task = ThreadPoolManager.scheduleAtFixedRate(this::update, 1000L, 1000L);
+			_task = ThreadPool.scheduleAtFixedRate(this::update, 1000L, 1000L);
 		}
 	}
 	

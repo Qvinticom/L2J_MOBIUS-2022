@@ -28,7 +28,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.knownlist.BoatKnownList;
@@ -347,21 +347,21 @@ public class L2BoatInstance extends L2Character
 				{
 					_boat.say(5);
 					bc = new BoatCaptain(2, _boat);
-					ThreadPoolManager.schedule(bc, 240000);
+					ThreadPool.schedule(bc, 240000);
 					break;
 				}
 				case 2:
 				{
 					_boat.say(1);
 					bc = new BoatCaptain(3, _boat);
-					ThreadPoolManager.schedule(bc, 40000);
+					ThreadPool.schedule(bc, 40000);
 					break;
 				}
 				case 3:
 				{
 					_boat.say(0);
 					bc = new BoatCaptain(4, _boat);
-					ThreadPoolManager.schedule(bc, 20000);
+					ThreadPool.schedule(bc, 20000);
 					break;
 				}
 				case 4:
@@ -402,14 +402,14 @@ public class L2BoatInstance extends L2Character
 				{
 					_state++;
 					Boatrun bc = new Boatrun(_state, _boat);
-					ThreadPoolManager.schedule(bc, time);
+					ThreadPool.schedule(bc, time);
 				}
 				else if (time == 0)
 				{
 					_boat._cycle = 2;
 					_boat.say(10);
 					BoatCaptain bc = new BoatCaptain(1, _boat);
-					ThreadPoolManager.schedule(bc, 300000);
+					ThreadPool.schedule(bc, 300000);
 				}
 				else
 				{
@@ -425,14 +425,14 @@ public class L2BoatInstance extends L2Character
 				{
 					_state++;
 					Boatrun bc = new Boatrun(_state, _boat);
-					ThreadPoolManager.schedule(bc, time);
+					ThreadPool.schedule(bc, time);
 				}
 				else if (time == 0)
 				{
 					_boat._cycle = 1;
 					_boat.say(10);
 					BoatCaptain bc = new BoatCaptain(1, _boat);
-					ThreadPoolManager.schedule(bc, 300000);
+					ThreadPool.schedule(bc, 300000);
 				}
 				else
 				{
@@ -452,7 +452,7 @@ public class L2BoatInstance extends L2Character
 		{
 			// _runstate++;
 			Boatrun bc = new Boatrun(_runstate, this);
-			ThreadPoolManager.schedule(bc, 10);
+			ThreadPool.schedule(bc, 10);
 			_runstate = 0;
 		}
 	}
@@ -477,7 +477,7 @@ public class L2BoatInstance extends L2Character
 	{
 		say(10);
 		BoatCaptain bc = new BoatCaptain(1, this);
-		ThreadPoolManager.schedule(bc, 300000);
+		ThreadPool.schedule(bc, 300000);
 	}
 	
 	private int lastx = -1;
@@ -559,7 +559,7 @@ public class L2BoatInstance extends L2Character
 				}
 			}
 			Boatrun bc = new Boatrun(0, this);
-			ThreadPoolManager.schedule(bc, 0);
+			ThreadPool.schedule(bc, 0);
 		}
 		else if (_cycle == 2)
 		{
@@ -596,7 +596,7 @@ public class L2BoatInstance extends L2Character
 				}
 			}
 			Boatrun bc = new Boatrun(0, this);
-			ThreadPoolManager.schedule(bc, 0);
+			ThreadPool.schedule(bc, 0);
 		}
 	}
 	

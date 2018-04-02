@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.util.Collection;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
@@ -59,7 +59,7 @@ public class L2DamageZone extends L2ZoneType
 	{
 		if (_task == null)
 		{
-			_task = ThreadPoolManager.scheduleAtFixedRate(new ApplyDamage(this), 10, 1000);
+			_task = ThreadPool.scheduleAtFixedRate(new ApplyDamage(this), 10, 1000);
 		}
 	}
 	

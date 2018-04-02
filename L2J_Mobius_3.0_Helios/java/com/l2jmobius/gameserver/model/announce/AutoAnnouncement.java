@@ -25,8 +25,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -160,7 +160,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 			_task.cancel(false);
 		}
 		_currentState = _repeat;
-		_task = ThreadPoolManager.schedule(this, _initial);
+		_task = ThreadPool.schedule(this, _initial);
 	}
 	
 	@Override
@@ -178,7 +178,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 				_currentState--;
 			}
 			
-			_task = ThreadPoolManager.schedule(this, _delay);
+			_task = ThreadPool.schedule(this, _delay);
 		}
 	}
 }

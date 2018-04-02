@@ -23,10 +23,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.SevenSigns;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
@@ -472,7 +472,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		final EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getLocation(), partner.isIn7sDungeon());
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.schedule(ef, teleportTimer));
+		activeChar.setSkillCast(ThreadPool.schedule(ef, teleportTimer));
 		activeChar.forceIsCasting(GameTimeController.getInstance().getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		return true;

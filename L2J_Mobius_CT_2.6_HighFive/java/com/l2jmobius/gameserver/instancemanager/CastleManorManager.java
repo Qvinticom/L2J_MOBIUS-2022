@@ -35,8 +35,8 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.ManorMode;
 import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -101,7 +101,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			// Schedule autosave
 			if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 			{
-				ThreadPoolManager.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
+				ThreadPool.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
 			}
 		}
 		else
@@ -272,7 +272,7 @@ public final class CastleManorManager implements IXmlReader, IStorable
 			}
 		}
 		// Schedule mode change
-		ThreadPoolManager.schedule(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
+		ThreadPool.schedule(this::changeMode, _nextModeChange.getTimeInMillis() - System.currentTimeMillis());
 	}
 	
 	public final void changeMode()

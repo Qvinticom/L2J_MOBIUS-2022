@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -250,7 +250,7 @@ public final class RequestRestartPoint extends L2GameClientPacket
 			if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan()))
 			{
 				// Schedule respawn delay for attacker
-				ThreadPoolManager.schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
+				ThreadPool.schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
 				activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
 				return;
 			}

@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -75,7 +75,7 @@ public class Fort
 	
 	public void EndOfSiege(L2Clan clan)
 	{
-		ThreadPoolManager.schedule(new endFortressSiege(this, clan), 1000);
+		ThreadPool.schedule(new endFortressSiege(this, clan), 1000);
 	}
 	
 	public void Engrave(L2Clan clan, int objId)

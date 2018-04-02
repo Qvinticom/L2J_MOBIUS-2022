@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
@@ -101,7 +101,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_CHALLENGED_TO_A_DUEL);
 			sm.addString(name);
 			activeChar.sendPacket(sm);
-			ThreadPoolManager.schedule(() -> scheduleDeny(activeChar, name), 10000);
+			ThreadPool.schedule(() -> scheduleDeny(activeChar, name), 10000);
 			activeChar.blockRequest();
 			return;
 		}

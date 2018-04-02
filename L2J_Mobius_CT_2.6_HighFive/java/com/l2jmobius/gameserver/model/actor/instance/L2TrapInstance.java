@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -84,7 +84,7 @@ public final class L2TrapInstance extends L2Npc
 		_remainingTime = _lifeTime;
 		if (_skill != null)
 		{
-			_trapTask = ThreadPoolManager.scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
+			_trapTask = ThreadPool.scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
 		}
 	}
 	
@@ -409,7 +409,7 @@ public final class L2TrapInstance extends L2Npc
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
 		
-		ThreadPoolManager.schedule(new TrapTriggerTask(this), 500);
+		ThreadPool.schedule(new TrapTriggerTask(this), 500);
 	}
 	
 	public void unSummon()

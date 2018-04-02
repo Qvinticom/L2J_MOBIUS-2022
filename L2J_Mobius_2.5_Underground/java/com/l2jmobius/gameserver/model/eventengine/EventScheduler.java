@@ -26,8 +26,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.util.cron4j.PastPredictor;
 import com.l2jmobius.gameserver.util.cron4j.Predictor;
@@ -115,7 +115,7 @@ public class EventScheduler
 		if (timeSchedule <= (30 * 1000))
 		{
 			LOGGER.warning("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
-			ThreadPoolManager.schedule(this::startScheduler, timeSchedule + 1000);
+			ThreadPool.schedule(this::startScheduler, timeSchedule + 1000);
 			return;
 		}
 		
@@ -124,14 +124,14 @@ public class EventScheduler
 			_task.cancel(false);
 		}
 		
-		_task = ThreadPoolManager.schedule(() ->
+		_task = ThreadPool.schedule(() ->
 		{
 			run();
 			updateLastRun();
 			
 			if (isRepeating())
 			{
-				ThreadPoolManager.schedule(this::startScheduler, 1000);
+				ThreadPool.schedule(this::startScheduler, 1000);
 			}
 		}, timeSchedule);
 	}

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.fishing;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -106,7 +106,7 @@ public class L2Fishing implements Runnable
 		
 		if (_fishAiTask == null)
 		{
-			_fishAiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
+			_fishAiTask = ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	

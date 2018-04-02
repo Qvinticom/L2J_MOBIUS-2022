@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.csv.SummonItemsData;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -173,7 +173,7 @@ public class SummonItems implements IItemHandler
 				final L2Skill skill = SkillTable.getInstance().getInfo(2046, 1);
 				activeChar.useMagic(skill, true, true);
 				activeChar.sendPacket(SystemMessageId.SUMMON_A_PET);
-				ThreadPoolManager.schedule(new PetSummonFinalizer(activeChar, npcTemplate, item), 4800);
+				ThreadPool.schedule(new PetSummonFinalizer(activeChar, npcTemplate, item), 4800);
 				break;
 			}
 			case 2: // wyvern
@@ -289,7 +289,7 @@ public class SummonItems implements IItemHandler
 				
 				if (petSummon.getCurrentFed() <= 0)
 				{
-					ThreadPoolManager.schedule(new PetSummonFeedWait(_activeChar, petSummon), 60000);
+					ThreadPool.schedule(new PetSummonFeedWait(_activeChar, petSummon), 60000);
 				}
 				else
 				{

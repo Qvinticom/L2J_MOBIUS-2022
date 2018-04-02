@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -115,7 +115,7 @@ public class L2DamageZone extends L2ZoneType
 		{
 			if (getSettings().getTask() == null)
 			{
-				getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+				getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
 			}
 		}
 	}

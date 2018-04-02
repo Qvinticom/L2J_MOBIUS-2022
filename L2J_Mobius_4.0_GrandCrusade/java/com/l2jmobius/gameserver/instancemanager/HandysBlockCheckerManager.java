@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
@@ -86,7 +86,7 @@ public final class HandysBlockCheckerManager
 			{
 				holder.checkAndShuffle();
 			}
-			ThreadPoolManager.execute(holder.getEvent().new StartEvent());
+			ThreadPool.execute(holder.getEvent().new StartEvent());
 		}
 		else
 		{
@@ -364,7 +364,7 @@ public final class HandysBlockCheckerManager
 	
 	private void schedulePenaltyRemoval(int objId)
 	{
-		ThreadPoolManager.schedule(new PenaltyRemoveTask(objId), 10000);
+		ThreadPool.schedule(new PenaltyRemoveTask(objId), 10000);
 	}
 	
 	/**

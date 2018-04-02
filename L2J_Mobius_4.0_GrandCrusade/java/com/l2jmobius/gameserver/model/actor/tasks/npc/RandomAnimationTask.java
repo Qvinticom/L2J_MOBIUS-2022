@@ -22,8 +22,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
 /**
@@ -91,7 +91,7 @@ public class RandomAnimationTask implements Runnable
 		final int interval = Rnd.get(minWait, maxWait) * 1000;
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
-		ThreadPoolManager.schedule(this, interval);
+		ThreadPool.schedule(this, interval);
 	}
 	
 	/**

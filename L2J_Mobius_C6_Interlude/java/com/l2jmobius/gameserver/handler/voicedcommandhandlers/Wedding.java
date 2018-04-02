@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.handler.voicedcommandhandlers;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -409,7 +409,7 @@ public class Wedding implements IVoicedCommandHandler
 		
 		EscapeFinalizer ef = new EscapeFinalizer(activeChar, partner.getX(), partner.getY(), partner.getZ(), partner.isIn7sDungeon());
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.schedule(ef, teleportTimer));
+		activeChar.setSkillCast(ThreadPool.schedule(ef, teleportTimer));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (teleportTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		return true;

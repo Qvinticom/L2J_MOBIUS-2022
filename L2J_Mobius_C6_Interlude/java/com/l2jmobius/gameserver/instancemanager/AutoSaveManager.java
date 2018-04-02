@@ -23,7 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -72,9 +72,9 @@ public class AutoSaveManager
 	public void startAutoSaveManager()
 	{
 		stopAutoSaveManager();
-		_autoSaveInDB = ThreadPoolManager.scheduleAtFixedRate(new AutoSaveTask(), Config.AUTOSAVE_INITIAL_TIME, Config.AUTOSAVE_DELAY_TIME);
-		_autoCheckConnectionStatus = ThreadPoolManager.scheduleAtFixedRate(new ConnectionCheckTask(), Config.CHECK_CONNECTION_INITIAL_TIME, Config.CHECK_CONNECTION_DELAY_TIME);
-		_autoCleanDatabase = ThreadPoolManager.scheduleAtFixedRate(new AutoCleanDBTask(), Config.CLEANDB_INITIAL_TIME, Config.CLEANDB_DELAY_TIME);
+		_autoSaveInDB = ThreadPool.scheduleAtFixedRate(new AutoSaveTask(), Config.AUTOSAVE_INITIAL_TIME, Config.AUTOSAVE_DELAY_TIME);
+		_autoCheckConnectionStatus = ThreadPool.scheduleAtFixedRate(new ConnectionCheckTask(), Config.CHECK_CONNECTION_INITIAL_TIME, Config.CHECK_CONNECTION_DELAY_TIME);
+		_autoCleanDatabase = ThreadPool.scheduleAtFixedRate(new AutoCleanDBTask(), Config.CLEANDB_INITIAL_TIME, Config.CLEANDB_DELAY_TIME);
 	}
 	
 	protected class AutoSaveTask implements Runnable

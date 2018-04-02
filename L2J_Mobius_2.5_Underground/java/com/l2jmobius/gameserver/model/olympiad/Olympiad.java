@@ -38,8 +38,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
@@ -203,7 +203,7 @@ public class Olympiad extends ListenersContainer
 				if (_validationEnd > Calendar.getInstance().getTimeInMillis())
 				{
 					loadNoblesRank();
-					_scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+					_scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
 				}
 				else
 				{
@@ -393,7 +393,7 @@ public class Olympiad extends ListenersContainer
 			_scheduledOlympiadEnd.cancel(true);
 		}
 		
-		_scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
+		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
 		
 		updateCompStatus();
 	}
@@ -427,7 +427,7 @@ public class Olympiad extends ListenersContainer
 			_validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
 			
 			loadNoblesRank();
-			_scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+			_scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
 		}
 	}
 	
@@ -475,7 +475,7 @@ public class Olympiad extends ListenersContainer
 			LOGGER.info(getClass().getSimpleName() + ": Event starts/started: " + _compStart.getTime());
 		}
 		
-		_scheduledCompStart = ThreadPoolManager.schedule(() ->
+		_scheduledCompStart = ThreadPool.schedule(() ->
 		{
 			if (isOlympiadEnd())
 			{
@@ -488,19 +488,19 @@ public class Olympiad extends ListenersContainer
 			LOGGER.info(getClass().getSimpleName() + ": Olympiad Games have started.");
 			_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
-			_gameManager = ThreadPoolManager.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
+			_gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
 			if (Config.ALT_OLY_ANNOUNCE_GAMES)
 			{
-				_gameAnnouncer = ThreadPoolManager.scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
+				_gameAnnouncer = ThreadPool.scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
 			}
 			
 			final long regEnd = getMillisToCompEnd() - 600000;
 			if (regEnd > 0)
 			{
-				ThreadPoolManager.schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
+				ThreadPool.schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
 			}
 			
-			_scheduledCompEnd = ThreadPoolManager.schedule(() ->
+			_scheduledCompEnd = ThreadPool.schedule(() ->
 			{
 				if (isOlympiadEnd())
 				{
@@ -555,7 +555,7 @@ public class Olympiad extends ListenersContainer
 			_scheduledOlympiadEnd.cancel(true);
 		}
 		
-		_scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), 0);
+		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), 0);
 	}
 	
 	protected long getMillisToValidationEnd()
@@ -734,7 +734,7 @@ public class Olympiad extends ListenersContainer
 	
 	private void scheduleWeeklyChange()
 	{
-		_scheduledWeeklyTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			addWeeklyPoints();
 			LOGGER.info(getClass().getSimpleName() + ": Added weekly points to nobles");

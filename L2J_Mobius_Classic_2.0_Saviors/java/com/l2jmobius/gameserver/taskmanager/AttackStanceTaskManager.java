@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
@@ -45,7 +45,7 @@ public class AttackStanceTaskManager
 	 */
 	protected AttackStanceTaskManager()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
+		ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
 	}
 	
 	/**

@@ -25,7 +25,7 @@ import java.util.Vector;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -797,7 +797,7 @@ public class DM implements EventTask
 		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
 		
 		setUserData();
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			sit();
 			afterTeleportOperations();
@@ -1063,7 +1063,7 @@ public class DM implements EventTask
 		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
 		
 		removeUserData();
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			// final Vector<L2PcInstance> players = getPlayers();
 			synchronized (_players)

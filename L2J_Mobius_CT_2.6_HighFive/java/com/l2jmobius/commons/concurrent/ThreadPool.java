@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver;
+package com.l2jmobius.commons.concurrent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,9 +37,9 @@ import com.l2jmobius.Config;
  * <li>Instant pool handles short-life events.</li>
  * </ul>
  */
-public final class ThreadPoolManager
+public final class ThreadPool
 {
-	protected static final Logger LOG = Logger.getLogger(ThreadPoolManager.class.getName());
+	protected static final Logger LOG = Logger.getLogger(ThreadPool.class.getName());
 	
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
 	

@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -102,7 +102,7 @@ public class L2SummonInstance extends L2Summon
 			LOGGER.warning("L2SummonInstance: Task Delay " + (delay / 1000) + " seconds.");
 		}
 		
-		_summonLifeTask = ThreadPoolManager.scheduleAtFixedRate(new SummonLifetime(getOwner(), this), delay, delay);
+		_summonLifeTask = ThreadPool.scheduleAtFixedRate(new SummonLifetime(getOwner(), this), delay, delay);
 	}
 	
 	@Override

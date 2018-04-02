@@ -19,7 +19,7 @@ package handlers.telnethandlers;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.ITelnetHandler;
 
 /**
@@ -38,7 +38,7 @@ public class ThreadHandler implements ITelnetHandler
 	{
 		if (command.equals("performance"))
 		{
-			for (String line : ThreadPoolManager.getStats())
+			for (String line : ThreadPool.getStats())
 			{
 				_print.println(line);
 			}
@@ -46,10 +46,10 @@ public class ThreadHandler implements ITelnetHandler
 		}
 		else if (command.equals("purge"))
 		{
-			ThreadPoolManager.purge();
+			ThreadPool.purge();
 			_print.println("STATUS OF THREAD POOLS AFTER PURGE COMMAND:");
 			_print.println("");
-			for (String line : ThreadPoolManager.getStats())
+			for (String line : ThreadPool.getStats())
 			{
 				_print.println(line);
 			}

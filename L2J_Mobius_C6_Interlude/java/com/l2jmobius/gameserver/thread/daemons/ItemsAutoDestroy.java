@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
@@ -42,7 +42,7 @@ public class ItemsAutoDestroy
 		{
 			_sleep = 3600000;
 		}
-		ThreadPoolManager.scheduleAtFixedRate(new CheckItemsForDestroy(), 5000, 5000);
+		ThreadPool.scheduleAtFixedRate(new CheckItemsForDestroy(), 5000, 5000);
 	}
 	
 	public static ItemsAutoDestroy getInstance()

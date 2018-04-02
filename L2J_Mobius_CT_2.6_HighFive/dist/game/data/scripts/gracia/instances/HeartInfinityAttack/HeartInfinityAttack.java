@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -358,7 +358,7 @@ public class HeartInfinityAttack extends Quest
 		}
 		
 		conquestBegun = true;
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			for (int objId : world.getAllowed())
 			{
@@ -366,7 +366,7 @@ public class HeartInfinityAttack extends Quest
 				player.showQuestMovie(2); // ExStartScenePlayer.SCENE_ECHMUS_OPENING
 			}
 			
-			ThreadPoolManager.schedule(() -> conquestBegins(world), 62500);
+			ThreadPool.schedule(() -> conquestBegins(world), 62500);
 		}, 20000);
 	}
 	
@@ -420,7 +420,7 @@ public class HeartInfinityAttack extends Quest
 		world.hounds.add(addSpawn(HOUND, -179224, 209624, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.hounds.add(addSpawn(HOUND, -179880, 209464, -15504, 16384, false, 0, false, world.getInstanceId()));
 		world.startTime = System.currentTimeMillis();
-		world.timerTask = ThreadPoolManager.scheduleAtFixedRate(new TimerTask(world), 298 * 1000, 5 * 60 * 1000);
+		world.timerTask = ThreadPool.scheduleAtFixedRate(new TimerTask(world), 298 * 1000, 5 * 60 * 1000);
 	}
 	
 	@Override
@@ -607,8 +607,8 @@ public class HeartInfinityAttack extends Quest
 				npc.deleteMe();
 				world.deadTumor = addSpawn(DEADTUMOR, loc, world.getInstanceId());
 				world.deadTumors.add(world.deadTumor);
-				ThreadPoolManager.schedule(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
-				ThreadPoolManager.schedule(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
+				ThreadPool.schedule(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
+				ThreadPool.schedule(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
 				if (world.tumorCount < 1)
 				{
 					houndBlocked = true;
@@ -839,7 +839,7 @@ public class HeartInfinityAttack extends Quest
 			}
 		}
 		
-		ThreadPoolManager.schedule(() -> broadCastPacket(world, new ExShowScreenMessage(NpcStringId.EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY_NTHE_ADVANCING_PARTY_IS_FORCEFULLY_EXPELLED, 2, 8000)), 10000);
+		ThreadPool.schedule(() -> broadCastPacket(world, new ExShowScreenMessage(NpcStringId.EKIMUS_HAS_SENSED_ABNORMAL_ACTIVITY_NTHE_ADVANCING_PARTY_IS_FORCEFULLY_EXPELLED, 2, 8000)), 10000);
 	}
 	
 	protected void conquestConclusion(HIAWorld world)

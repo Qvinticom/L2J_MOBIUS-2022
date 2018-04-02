@@ -37,9 +37,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.enums.InstanceTeleportType;
@@ -284,7 +284,7 @@ public final class Instance implements IIdentifiable, INamable
 			}
 			else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime))
 			{
-				_emptyDestroyTask = ThreadPoolManager.schedule(this::destroy, emptyTime);
+				_emptyDestroyTask = ThreadPool.schedule(this::destroy, emptyTime);
 			}
 		}
 	}
@@ -678,11 +678,11 @@ public final class Instance implements IIdentifiable, INamable
 			sendWorldDestroyMessage(minutes);
 			if (minutes <= 5) // Message 1 minute before destroy
 			{
-				_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - 60000);
+				_cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - 60000);
 			}
 			else // Message 5 minutes before destroy
 			{
-				_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - (5 * 60000));
+				_cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - (5 * 60000));
 			}
 		}
 	}
@@ -896,7 +896,7 @@ public final class Instance implements IIdentifiable, INamable
 			player.sendPacket(sm);
 			
 			// Start eject task
-			_ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
+			_ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
 			{
 				if (player.isDead())
 				{
@@ -1125,12 +1125,12 @@ public final class Instance implements IIdentifiable, INamable
 		if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1))
 		{
 			sendWorldDestroyMessage(1);
-			_cleanUpTask = ThreadPoolManager.schedule(this::destroy, 60 * 1000); // 1 minute
+			_cleanUpTask = ThreadPool.schedule(this::destroy, 60 * 1000); // 1 minute
 		}
 		else
 		{
 			sendWorldDestroyMessage(5);
-			_cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
+			_cleanUpTask = ThreadPool.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
 		}
 	}
 	

@@ -25,8 +25,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2SpecialSiegeGuardAI;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -402,7 +402,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 							doUnSpawns(data);
 						}
 						
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							for (int doorId : INNER_DOORS_TO_OPEN)
 							{
@@ -457,7 +457,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 		
-		_siegeTask = ThreadPoolManager.schedule(new SiegeStarts(), 3600000);
+		_siegeTask = ThreadPool.schedule(new SiegeStarts(), 3600000);
 	}
 	
 	@Override
@@ -499,7 +499,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 		}
 		
 		// Schedule open doors closement and siege start in 2 minutes
-		ThreadPoolManager.schedule(new CloseOutterDoorsTask(this), 300000);
+		ThreadPool.schedule(new CloseOutterDoorsTask(this), 300000);
 	}
 	
 	/**

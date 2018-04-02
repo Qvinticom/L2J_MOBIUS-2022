@@ -29,8 +29,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -186,7 +186,7 @@ public class RaidBossSpawnManager
 				time.setTimeInMillis(respawnTime);
 				_log.info(getClass().getSimpleName() + ": Updated " + boss.getName() + " respawn time to " + time.getTime());
 				
-				_schedules.put(boss.getId(), ThreadPoolManager.schedule(new SpawnSchedule(boss.getId()), respawnDelay));
+				_schedules.put(boss.getId(), ThreadPool.schedule(new SpawnSchedule(boss.getId()), respawnDelay));
 				updateDb();
 			}
 		}
@@ -242,7 +242,7 @@ public class RaidBossSpawnManager
 		}
 		else
 		{
-			_schedules.put(bossId, ThreadPoolManager.schedule(new SpawnSchedule(bossId), respawnTime - Calendar.getInstance().getTimeInMillis()));
+			_schedules.put(bossId, ThreadPool.schedule(new SpawnSchedule(bossId), respawnTime - Calendar.getInstance().getTimeInMillis()));
 		}
 		
 		_spawns.put(bossId, spawnDat);

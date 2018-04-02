@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -77,7 +77,7 @@ public class SkillChannelizer implements Runnable
 		
 		// Start channeling.
 		_skill = skill;
-		_task = ThreadPoolManager.scheduleAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
+		_task = ThreadPool.scheduleAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
 	}
 	
 	public void stopChanneling()

@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.residences;
 import java.time.Instant;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ResidenceFunctionsData;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -65,7 +65,7 @@ public class ResidenceFunction
 		final ResidenceFunctionTemplate template = getTemplate();
 		if ((template != null) && (_expiration > System.currentTimeMillis()))
 		{
-			_task = ThreadPoolManager.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
+			_task = ThreadPool.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
 		}
 	}
 	

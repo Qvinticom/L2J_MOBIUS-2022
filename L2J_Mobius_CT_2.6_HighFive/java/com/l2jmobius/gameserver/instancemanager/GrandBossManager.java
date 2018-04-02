@@ -31,8 +31,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -109,7 +109,7 @@ public final class GrandBossManager implements IStorable
 		{
 			_log.log(Level.WARNING, "Error while initializing GrandBossManager: " + e.getMessage(), e);
 		}
-		ThreadPoolManager.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
+		ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
 	}
 	
 	/**

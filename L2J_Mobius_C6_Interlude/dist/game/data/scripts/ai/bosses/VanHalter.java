@@ -29,7 +29,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -239,14 +239,14 @@ public class VanHalter extends Quest
 		{
 			_timeUpTask.cancel(false);
 		}
-		_timeUpTask = ThreadPoolManager.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
+		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
 		
 		// Set bleeding to palyers.
 		if (_setBleedTask != null)
 		{
 			_setBleedTask.cancel(false);
 		}
-		_setBleedTask = ThreadPoolManager.schedule(new Bleeding(), 2000);
+		_setBleedTask = ThreadPool.schedule(new Bleeding(), 2000);
 		
 		final Integer status = GrandBossManager.getInstance().getBossStatus(29062);
 		if (status == INTERVAL)
@@ -896,7 +896,7 @@ public class VanHalter extends Quest
 	{
 		if ((_lockUpDoorOfAltarTask == null) && !_isLocked && _isCaptainSpawned)
 		{
-			_lockUpDoorOfAltarTask = ThreadPoolManager.schedule(new LockUpDoorOfAltar(), Config.HPH_TIMEOFLOCKUPDOOROFALTAR);
+			_lockUpDoorOfAltarTask = ThreadPool.schedule(new LockUpDoorOfAltar(), Config.HPH_TIMEOFLOCKUPDOOROFALTAR);
 		}
 	}
 	
@@ -934,7 +934,7 @@ public class VanHalter extends Quest
 				_closeDoorOfAltarTask.cancel(false);
 			}
 			_closeDoorOfAltarTask = null;
-			_closeDoorOfAltarTask = ThreadPoolManager.schedule(new CloseDoorOfAltar(), Config.HPH_INTERVALOFDOOROFALTER);
+			_closeDoorOfAltarTask = ThreadPool.schedule(new CloseDoorOfAltar(), Config.HPH_INTERVALOFDOOROFALTER);
 		}
 		else
 		{
@@ -969,7 +969,7 @@ public class VanHalter extends Quest
 				_openDoorOfAltarTask.cancel(false);
 			}
 			_openDoorOfAltarTask = null;
-			_openDoorOfAltarTask = ThreadPoolManager.schedule(new OpenDoorOfAltar(), Config.HPH_INTERVALOFDOOROFALTER);
+			_openDoorOfAltarTask = ThreadPool.schedule(new OpenDoorOfAltar(), Config.HPH_INTERVALOFDOOROFALTER);
 		}
 		else
 		{
@@ -1065,7 +1065,7 @@ public class VanHalter extends Quest
 		}
 		_timeUpTask = null;
 		
-		_movieTask = ThreadPoolManager.schedule(new Movie(1), Config.HPH_APPTIMEOFHALTER);
+		_movieTask = ThreadPool.schedule(new Movie(1), Config.HPH_APPTIMEOFHALTER);
 	}
 	
 	// Start fight against High Priestess van Halter.
@@ -1075,7 +1075,7 @@ public class VanHalter extends Quest
 		{
 			_timeUpTask.cancel(false);
 		}
-		_timeUpTask = ThreadPoolManager.schedule(new TimeUp(), Config.HPH_FIGHTTIMEOFHALTER);
+		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_FIGHTTIMEOFHALTER);
 		
 		final Map<Integer, L2PcInstance> _targets = new HashMap<>();
 		int i = 0;
@@ -1095,8 +1095,8 @@ public class VanHalter extends Quest
 		if (!_isHelperCalled)
 		{
 			_isHelperCalled = true;
-			_halterEscapeTask = ThreadPoolManager.schedule(new HalterEscape(), 500);
-			_callRoyalGuardHelperTask = ThreadPoolManager.schedule(new CallRoyalGuardHelper(), 1000);
+			_halterEscapeTask = ThreadPool.schedule(new HalterEscape(), 500);
+			_callRoyalGuardHelperTask = ThreadPool.schedule(new CallRoyalGuardHelper(), 1000);
 		}
 	}
 	
@@ -1113,7 +1113,7 @@ public class VanHalter extends Quest
 				{
 					_callRoyalGuardHelperTask.cancel(false);
 				}
-				_callRoyalGuardHelperTask = ThreadPoolManager.schedule(new CallRoyalGuardHelper(), Config.HPH_CALLROYALGUARDHELPERINTERVAL);
+				_callRoyalGuardHelperTask = ThreadPool.schedule(new CallRoyalGuardHelper(), Config.HPH_CALLROYALGUARDHELPERINTERVAL);
 			}
 			else
 			{
@@ -1171,7 +1171,7 @@ public class VanHalter extends Quest
 				{
 					_halterEscapeTask.cancel(false);
 				}
-				_halterEscapeTask = ThreadPoolManager.schedule(new HalterEscape(), 5000);
+				_halterEscapeTask = ThreadPool.schedule(new HalterEscape(), 5000);
 			}
 			else
 			{
@@ -1243,7 +1243,7 @@ public class VanHalter extends Quest
 			{
 				_setBleedTask.cancel(false);
 			}
-			_setBleedTask = ThreadPoolManager.schedule(new Bleeding(), 2000);
+			_setBleedTask = ThreadPool.schedule(new Bleeding(), 2000);
 		}
 	}
 	
@@ -1334,7 +1334,7 @@ public class VanHalter extends Quest
 		
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(29062);
 		final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
-		_intervalTask = ThreadPoolManager.schedule(new Interval(), temp);
+		_intervalTask = ThreadPool.schedule(new Interval(), temp);
 	}
 	
 	// Interval.
@@ -1433,7 +1433,7 @@ public class VanHalter extends Quest
 		{
 			_timeUpTask.cancel(false);
 		}
-		_timeUpTask = ThreadPoolManager.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
+		_timeUpTask = ThreadPool.schedule(new TimeUp(), Config.HPH_ACTIVITYTIMEOFHALTER);
 	}
 	
 	// Time up.
@@ -1482,7 +1482,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(2), 16);
+					_movieTask = ThreadPool.schedule(new Movie(2), 16);
 					break;
 				}
 				case 2:
@@ -1501,7 +1501,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(3), 1);
+					_movieTask = ThreadPool.schedule(new Movie(3), 1);
 					break;
 				}
 				case 3:
@@ -1520,7 +1520,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(4), 1500);
+					_movieTask = ThreadPool.schedule(new Movie(4), 1500);
 					break;
 				}
 				case 4:
@@ -1539,7 +1539,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(5), 1);
+					_movieTask = ThreadPool.schedule(new Movie(5), 1);
 					break;
 				}
 				case 5:
@@ -1558,7 +1558,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(6), 1500);
+					_movieTask = ThreadPool.schedule(new Movie(6), 1500);
 					break;
 				}
 				case 6:
@@ -1577,7 +1577,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(7), 1);
+					_movieTask = ThreadPool.schedule(new Movie(7), 1);
 					break;
 				}
 				case 7:
@@ -1596,7 +1596,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(8), 1500);
+					_movieTask = ThreadPool.schedule(new Movie(8), 1500);
 					break;
 				}
 				case 8:
@@ -1615,7 +1615,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(9), 1);
+					_movieTask = ThreadPool.schedule(new Movie(9), 1);
 					break;
 				}
 				case 9:
@@ -1634,7 +1634,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(10), 1500);
+					_movieTask = ThreadPool.schedule(new Movie(10), 1500);
 					break;
 				}
 				case 10:
@@ -1653,7 +1653,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(11), 1);
+					_movieTask = ThreadPool.schedule(new Movie(11), 1);
 					break;
 				}
 				case 11:
@@ -1672,7 +1672,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(12), 2000);
+					_movieTask = ThreadPool.schedule(new Movie(12), 2000);
 					break;
 				}
 				case 12:
@@ -1691,7 +1691,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(13), 1000);
+					_movieTask = ThreadPool.schedule(new Movie(13), 1000);
 					break;
 				}
 				case 13:
@@ -1709,7 +1709,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(14), 4700);
+					_movieTask = ThreadPool.schedule(new Movie(14), 4700);
 					break;
 				}
 				case 14:
@@ -1722,7 +1722,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(15), 4300);
+					_movieTask = ThreadPool.schedule(new Movie(15), 4300);
 					break;
 				}
 				case 15:
@@ -1743,7 +1743,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(16), 2000);
+					_movieTask = ThreadPool.schedule(new Movie(16), 2000);
 					break;
 				}
 				case 16:
@@ -1762,7 +1762,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(17), 6000);
+					_movieTask = ThreadPool.schedule(new Movie(17), 6000);
 					break;
 				}
 				case 17:
@@ -1776,7 +1776,7 @@ public class VanHalter extends Quest
 						_movieTask.cancel(false);
 					}
 					_movieTask = null;
-					_movieTask = ThreadPoolManager.schedule(new Movie(18), 1000);
+					_movieTask = ThreadPool.schedule(new Movie(18), 1000);
 					break;
 				}
 				case 18:

@@ -21,7 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -96,7 +96,7 @@ public class TvTManager
 			if (nextStartTime != null)
 			{
 				_task = new TvTStartTask(nextStartTime.getTimeInMillis());
-				ThreadPoolManager.execute(_task);
+				ThreadPool.execute(_task);
 			}
 		}
 		catch (Exception e)
@@ -123,7 +123,7 @@ public class TvTManager
 			
 			// schedule registration end
 			_task.setStartTime(System.currentTimeMillis() + (60000L * Config.TVT_EVENT_PARTICIPATION_TIME));
-			ThreadPoolManager.execute(_task);
+			ThreadPool.execute(_task);
 		}
 	}
 	
@@ -143,7 +143,7 @@ public class TvTManager
 		{
 			TvTEvent.sysMsgToAllParticipants("TvT Event: Teleporting participants to an arena in " + Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY + " second(s).");
 			_task.setStartTime(System.currentTimeMillis() + (60000L * Config.TVT_EVENT_RUNNING_TIME));
-			ThreadPoolManager.execute(_task);
+			ThreadPool.execute(_task);
 		}
 	}
 	
@@ -164,7 +164,7 @@ public class TvTManager
 		if (_task.nextRun.cancel(false))
 		{
 			_task.setStartTime(System.currentTimeMillis());
-			ThreadPoolManager.execute(_task);
+			ThreadPool.execute(_task);
 		}
 	}
 	
@@ -245,7 +245,7 @@ public class TvTManager
 			
 			if (delay > 0)
 			{
-				nextRun = ThreadPoolManager.schedule(this, nextMsg * 1000);
+				nextRun = ThreadPool.schedule(this, nextMsg * 1000);
 			}
 		}
 		

@@ -20,7 +20,7 @@ import java.util.Queue;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
@@ -115,7 +115,7 @@ public final class EventDispatcher
 		
 		if (hasListeners)
 		{
-			ThreadPoolManager.execute(() -> notifyEventToMultipleContainers(event, containers, null));
+			ThreadPool.execute(() -> notifyEventToMultipleContainers(event, containers, null));
 		}
 	}
 	
@@ -129,7 +129,7 @@ public final class EventDispatcher
 	{
 		if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType()))
 		{
-			ThreadPoolManager.schedule(() -> notifyEvent(event, container, null), delay);
+			ThreadPool.schedule(() -> notifyEvent(event, container, null), delay);
 		}
 	}
 	

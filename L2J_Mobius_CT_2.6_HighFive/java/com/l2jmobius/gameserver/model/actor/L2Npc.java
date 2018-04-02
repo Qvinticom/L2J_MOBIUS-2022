@@ -26,10 +26,10 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ItemsAutoDestroy;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.SevenSignsFestival;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -314,7 +314,7 @@ public class L2Npc extends L2Character
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
 		_rAniTask = new RandomAnimationTask(this);
-		ThreadPoolManager.schedule(_rAniTask, interval);
+		ThreadPool.schedule(_rAniTask, interval);
 	}
 	
 	/**
@@ -1533,7 +1533,7 @@ public class L2Npc extends L2Character
 	
 	public L2Npc scheduleDespawn(long delay)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (!isDecayed())
 			{

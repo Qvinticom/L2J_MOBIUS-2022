@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -252,11 +252,11 @@ public class ClanHall
 			
 			if (_endDate > currentTime)
 			{
-				ThreadPoolManager.schedule(new FunctionTask(), _endDate - currentTime);
+				ThreadPool.schedule(new FunctionTask(), _endDate - currentTime);
 			}
 			else
 			{
-				ThreadPoolManager.schedule(new FunctionTask(), 0);
+				ThreadPool.schedule(new FunctionTask(), 0);
 			}
 		}
 		
@@ -313,7 +313,7 @@ public class ClanHall
 							LOGGER.warning("deducted " + fee + " adena from " + getName() + " owner's cwh for function id : " + getType());
 						}
 						
-						ThreadPoolManager.schedule(new FunctionTask(), getRate());
+						ThreadPool.schedule(new FunctionTask(), getRate());
 					}
 					else
 					{
@@ -862,22 +862,22 @@ public class ClanHall
 		
 		if (_paidUntil > currentTime)
 		{
-			ThreadPoolManager.schedule(new FeeTask(), _paidUntil - currentTime);
+			ThreadPool.schedule(new FeeTask(), _paidUntil - currentTime);
 		}
 		else if (!_paid && !forced)
 		{
 			if ((System.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
 			{
-				ThreadPoolManager.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
+				ThreadPool.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
 			}
 			else
 			{
-				ThreadPoolManager.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
+				ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
 			}
 		}
 		else
 		{
-			ThreadPoolManager.schedule(new FeeTask(), 0);
+			ThreadPool.schedule(new FeeTask(), 0);
 		}
 	}
 	
@@ -919,7 +919,7 @@ public class ClanHall
 						LOGGER.warning("deducted " + getLease() + " adena from " + getName() + " owner's cwh for ClanHall _paidUntil" + _paidUntil);
 					}
 					
-					ThreadPoolManager.schedule(new FeeTask(), _paidUntil - System.currentTimeMillis());
+					ThreadPool.schedule(new FeeTask(), _paidUntil - System.currentTimeMillis());
 					_paid = true;
 					updateDb();
 				}
@@ -936,7 +936,7 @@ public class ClanHall
 						}
 						else
 						{
-							ThreadPoolManager.schedule(new FeeTask(), 3000);
+							ThreadPool.schedule(new FeeTask(), 3000);
 						}
 					}
 					else
@@ -948,11 +948,11 @@ public class ClanHall
 						
 						if ((System.currentTimeMillis() + (1000 * 60 * 60 * 24)) <= (_paidUntil + _chRate))
 						{
-							ThreadPoolManager.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
+							ThreadPool.schedule(new FeeTask(), System.currentTimeMillis() + (1000 * 60 * 60 * 24));
 						}
 						else
 						{
-							ThreadPoolManager.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
+							ThreadPool.schedule(new FeeTask(), (_paidUntil + _chRate) - System.currentTimeMillis());
 						}
 					}
 				}

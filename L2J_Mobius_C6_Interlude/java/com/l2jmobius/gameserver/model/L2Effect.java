@@ -22,7 +22,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -247,7 +247,7 @@ public abstract class L2Effect
 			final int duration = _period - _periodfirsttime;
 			// LOGGER.warning("Period: "+_period+"-"+_periodfirsttime+"="+duration);
 			_currentTask = new EffectTask(duration * 1000, -1);
-			_currentFuture = ThreadPoolManager.schedule(_currentTask, duration * 1000);
+			_currentFuture = ThreadPool.schedule(_currentTask, duration * 1000);
 		}
 	}
 	
@@ -338,7 +338,7 @@ public abstract class L2Effect
 	{
 		stopEffectTask();
 		_currentTask = new EffectTask(duration, -1);
-		_currentFuture = ThreadPoolManager.schedule(_currentTask, duration);
+		_currentFuture = ThreadPool.schedule(_currentTask, duration);
 		
 		if (_state == EffectState.ACTING)
 		{
@@ -358,7 +358,7 @@ public abstract class L2Effect
 	{
 		stopEffectTask();
 		_currentTask = new EffectTask(delay, rate);
-		_currentFuture = ThreadPoolManager.scheduleAtFixedRate(_currentTask, delay, rate);
+		_currentFuture = ThreadPool.scheduleAtFixedRate(_currentTask, delay, rate);
 		
 		if (_state == EffectState.ACTING)
 		{

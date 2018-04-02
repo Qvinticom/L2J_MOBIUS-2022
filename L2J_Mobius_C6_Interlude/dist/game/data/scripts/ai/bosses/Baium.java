@@ -26,7 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.geodata.GeoData;
@@ -175,7 +175,7 @@ public class Baium extends Quest
 			}
 			GrandBossManager.getInstance().addBoss(baium);
 			final L2NpcInstance _baium = baium;
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				try
 				{
@@ -244,7 +244,7 @@ public class Baium extends Quest
 				
 				startQuestTimer("skill_range", 500, npc, null, true);
 				final L2NpcInstance baium = npc;
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					try
 					{
@@ -338,7 +338,7 @@ public class Baium extends Quest
 				final L2GrandBossInstance baium = (L2GrandBossInstance) addSpawn(LIVE_BAIUM, npc);
 				GrandBossManager.getInstance().addBoss(baium);
 				final L2NpcInstance _baium = baium;
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					try
 					{

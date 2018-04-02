@@ -26,7 +26,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -1207,7 +1207,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			DoorData.getInstance().getDoor(19260052).openMe();
 			
 			countdownTime = 600000;
-			_countdown = ThreadPoolManager.scheduleAtFixedRate(() ->
+			_countdown = ThreadPool.scheduleAtFixedRate(() ->
 			{
 				countdownTime -= 10000;
 				L2Npc _npc = null;
@@ -1570,20 +1570,20 @@ public final class TullyWorkshop extends AbstractNpcAI
 	{
 		DoorData.getInstance().getDoor(20250005).openMe();
 		DoorData.getInstance().getDoor(20250004).openMe();
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250006,
 			20250007
 		}, STATE_OPEN), 2000);
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250778
 		}, STATE_CLOSE), 3000);
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250777
 		}, STATE_CLOSE), 6000);
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250009,
 			20250008
@@ -1594,12 +1594,12 @@ public final class TullyWorkshop extends AbstractNpcAI
 	{
 		DoorData.getInstance().getDoor(20250009).closeMe();
 		DoorData.getInstance().getDoor(20250008).closeMe();
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250777,
 			20250778
 		}, STATE_OPEN), 1000);
-		ThreadPoolManager.schedule(new DoorTask(new int[]
+		ThreadPool.schedule(new DoorTask(new int[]
 		{
 			20250005,
 			20250004,

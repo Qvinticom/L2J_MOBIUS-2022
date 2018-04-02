@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -111,7 +111,7 @@ public final class Elpies extends Event
 		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
 		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		
-		_eventTask = ThreadPoolManager.schedule(() ->
+		_eventTask = ThreadPool.schedule(() ->
 		{
 			Broadcast.toAllOnlinePlayers("Time is up!");
 			eventStop();

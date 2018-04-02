@@ -23,7 +23,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -294,7 +294,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		if (_avoidTask == null)
 		{
-			_avoidTask = ThreadPoolManager.scheduleAtFixedRate(this, 100, 100);
+			_avoidTask = ThreadPool.scheduleAtFixedRate(this, 100, 100);
 		}
 	}
 	

@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 
 /**
@@ -61,14 +61,14 @@ public final class FourSepulchersChangeAttackTimeTask implements Runnable
 				{
 					final Calendar inter = Calendar.getInstance();
 					inter.set(Calendar.MINUTE, (int) min);
-					ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
+					ThreadPool.schedule(new FourSepulchersManagerSayTask(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
 					break;
 				}
 			}
 		}
 		else
 		{
-			ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), 5 * 60400);
+			ThreadPool.schedule(new FourSepulchersManagerSayTask(), 5 * 60400);
 		}
 		// searching time when attack time will be ended:
 		// counting difference between time when attack time ends and
@@ -83,7 +83,7 @@ public final class FourSepulchersChangeAttackTimeTask implements Runnable
 			interval = Config.FS_TIME_ATTACK * 60000L;
 		}
 		
-		manager.setChangeCoolDownTimeTask(ThreadPoolManager.schedule(new FourSepulchersChangeCoolDownTimeTask(), interval));
+		manager.setChangeCoolDownTimeTask(ThreadPool.schedule(new FourSepulchersChangeCoolDownTimeTask(), interval));
 		final ScheduledFuture<?> changeAttackTimeTask = manager.getChangeAttackTimeTask();
 		
 		if (changeAttackTimeTask != null)

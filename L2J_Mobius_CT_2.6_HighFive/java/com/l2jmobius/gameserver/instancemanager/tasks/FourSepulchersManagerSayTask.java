@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.instancemanager.tasks;
 import java.util.Calendar;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 
 /**
@@ -43,7 +43,7 @@ public final class FourSepulchersManagerSayTask implements Runnable
 				// cannot be
 				// more than
 				// 59
-				ThreadPoolManager.schedule(new FourSepulchersManagerSayTask(), 5 * 60000);
+				ThreadPool.schedule(new FourSepulchersManagerSayTask(), 5 * 60000);
 			}
 			// attack time ending chat
 			else if ((tmp.get(Calendar.MINUTE) + 5) >= Config.FS_TIME_ATTACK)

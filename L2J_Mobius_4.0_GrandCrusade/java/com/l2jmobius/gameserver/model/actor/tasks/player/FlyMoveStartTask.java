@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.tasks.player;
 
 import java.util.Objects;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.SayuneRequest;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
@@ -51,7 +51,7 @@ public class FlyMoveStartTask implements Runnable
 		if (!_player.hasRequest(SayuneRequest.class))
 		{
 			_player.sendPacket(ExNotifyFlyMoveStart.STATIC_PACKET);
-			ThreadPoolManager.schedule(this, 1000L);
+			ThreadPool.schedule(this, 1000L);
 		}
 	}
 }

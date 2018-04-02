@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -56,7 +56,7 @@ public class ExAlterSkillRequest implements IClientOutgoingPacket
 		if (_alterTime > 0)
 		{
 			_player.setAlterSkillActive(true);
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				_player.sendPacket(new ExAlterSkillRequest(null, -1, -1, -1));
 				_player.setAlterSkillActive(false);

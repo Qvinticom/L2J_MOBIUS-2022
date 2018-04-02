@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.DeadLockDetector;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -179,7 +180,7 @@ public class GameServer
 		}
 		
 		printSection("ThreadPool");
-		ThreadPoolManager.init();
+		ThreadPool.init();
 		EventDispatcher.getInstance();
 		
 		// load script engines

@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.taskmanager;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
@@ -33,7 +33,7 @@ public class KnownListUpdateTaskManager
 	
 	public KnownListUpdateTaskManager()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(new KnownListUpdate(), 1000, 750);
+		ThreadPool.scheduleAtFixedRate(new KnownListUpdate(), 1000, 750);
 	}
 	
 	public static KnownListUpdateTaskManager getInstance()

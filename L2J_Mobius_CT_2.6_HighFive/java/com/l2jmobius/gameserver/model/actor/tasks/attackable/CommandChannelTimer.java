@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.actor.tasks.attackable;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 
 /**
@@ -48,7 +48,7 @@ public final class CommandChannelTimer implements Runnable
 		}
 		else
 		{
-			ThreadPoolManager.schedule(this, 10000); // 10sec
+			ThreadPool.schedule(this, 10000); // 10sec
 		}
 	}
 }

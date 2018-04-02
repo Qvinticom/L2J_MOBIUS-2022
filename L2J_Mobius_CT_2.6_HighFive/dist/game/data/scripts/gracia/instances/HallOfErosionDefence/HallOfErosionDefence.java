@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
@@ -358,7 +358,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				world.addAllowed(player.getObjectId());
 			}
 			
-			((HEDWorld) world).finishTask = ThreadPoolManager.schedule(new FinishTask((HEDWorld) world), 20 * 60000);
+			((HEDWorld) world).finishTask = ThreadPool.schedule(new FinishTask((HEDWorld) world), 20 * 60000);
 			runTumors((HEDWorld) world);
 		}
 	}
@@ -391,7 +391,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			{
 				final L2Npc npc = addSpawn(spawn[0], spawn[1], spawn[2], spawn[3], spawn[4], false, 0, false, world.getInstanceId());
 				world.deadTumors.add(npc);
-				ThreadPoolManager.schedule(new RegenerationCoffinSpawn(npc, world), 1000);
+				ThreadPool.schedule(new RegenerationCoffinSpawn(npc, world), 1000);
 			}
 		}
 		
@@ -403,7 +403,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			}
 		}
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (!conquestEnded)
 			{
@@ -544,7 +544,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				world.deadTumor = addSpawn(TUMOR_DEAD, npc.getLocation(), world.getInstanceId());
 				world.deadTumors.add(world.deadTumor);
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NTHE_NEARBY_UNDEAD_THAT_WERE_ATTACKING_SEED_OF_LIFE_START_LOSING_THEIR_ENERGY_AND_RUN_AWAY, 2, 8000));
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					world.deadTumor.deleteMe();
 					final L2Npc tumor = addSpawn(TUMOR_ALIVE, world.deadTumor.getLocation(), world.getInstanceId());

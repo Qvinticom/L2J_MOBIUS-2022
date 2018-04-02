@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
@@ -807,7 +807,7 @@ public class Potions implements IItemHandler
 			if (activeChar.isCastingNow() && (magicId > 2277) && (magicId < 2285))
 			{
 				_herbstask += 100;
-				ThreadPoolManager.schedule(new HerbTask(activeChar, magicId, level), _herbstask);
+				ThreadPool.schedule(new HerbTask(activeChar, magicId, level), _herbstask);
 			}
 			else
 			{

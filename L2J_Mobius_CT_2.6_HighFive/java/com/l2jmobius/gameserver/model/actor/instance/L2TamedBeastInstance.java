@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -152,7 +152,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			{
 				_durationCheckTask.cancel(true);
 			}
-			_durationCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
+			_durationCheckTask = ThreadPool.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 		}
 	}
 	
@@ -216,10 +216,10 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		int delay = 100;
 		for (Skill skill : _beastSkills)
 		{
-			ThreadPoolManager.schedule(new buffCast(skill), delay);
+			ThreadPool.schedule(new buffCast(skill), delay);
 			delay += (100 + skill.getHitTime());
 		}
-		ThreadPoolManager.schedule(new buffCast(null), delay);
+		ThreadPool.schedule(new buffCast(null), delay);
 	}
 	
 	private class buffCast implements Runnable
@@ -283,7 +283,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				{
 					_buffTask.cancel(true);
 				}
-				_buffTask = ThreadPoolManager.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
+				_buffTask = ThreadPool.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
 			}
 		}
 		else

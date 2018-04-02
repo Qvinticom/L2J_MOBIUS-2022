@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Memory;
 import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.gameserver.model.L2World;
@@ -39,7 +39,7 @@ public class ServerStatus
 	
 	protected ServerStatus()
 	{
-		_scheduledTask = ThreadPoolManager.scheduleAtFixedRate(new ServerStatusTask(), 1800000, 3600000);
+		_scheduledTask = ThreadPool.scheduleAtFixedRate(new ServerStatusTask(), 1800000, 3600000);
 	}
 	
 	protected class ServerStatusTask implements Runnable

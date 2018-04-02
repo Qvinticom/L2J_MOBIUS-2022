@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -206,7 +206,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 				{
 					_spawnMonsterTask.cancel(true);
 				}
-				_spawnMonsterTask = ThreadPoolManager.schedule(new SpawnMonster(getId()), 3500);
+				_spawnMonsterTask = ThreadPool.schedule(new SpawnMonster(getId()), 3500);
 				break;
 			}
 			case 31455:
@@ -361,12 +361,12 @@ public class L2SepulcherNpcInstance extends L2Npc
 		{
 			_closeTask.cancel(true);
 		}
-		_closeTask = ThreadPoolManager.schedule(new CloseNextDoor(doorId), 10000);
+		_closeTask = ThreadPool.schedule(new CloseNextDoor(doorId), 10000);
 		if (_spawnNextMysteriousBoxTask != null)
 		{
 			_spawnNextMysteriousBoxTask.cancel(true);
 		}
-		_spawnNextMysteriousBoxTask = ThreadPoolManager.schedule(new SpawnNextMysteriousBox(npcId), 0);
+		_spawnNextMysteriousBoxTask = ThreadPool.schedule(new SpawnNextMysteriousBox(npcId), 0);
 	}
 	
 	private static class CloseNextDoor implements Runnable

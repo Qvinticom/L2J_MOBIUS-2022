@@ -21,7 +21,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
@@ -147,7 +147,7 @@ public class NevitSystem implements IUniqueId
 			{
 				if ((_adventTask == null) && (getAdventTime() < Config.NEVIT_ADVENT_TIME))
 				{
-					_adventTask = ThreadPoolManager.schedule(new AdventTask(), 30000);
+					_adventTask = ThreadPool.schedule(new AdventTask(), 30000);
 					getPlayer().sendPacket(new ExNevitAdventTimeChange(getAdventTime(), false));
 				}
 			}
@@ -203,7 +203,7 @@ public class NevitSystem implements IUniqueId
 			getPlayer().sendPacket(new ExNevitAdventEffect(time));
 			getPlayer().sendPacket(SystemMessageId.THE_ANGEL_NEVIT_HAS_BLESSED_YOU_FROM_ABOVE_YOU_ARE_IMBUED_WITH_FULL_VITALITY_AS_WELL_AS_A_VITALITY_REPLENISHING_EFFECT_AND_SHOULD_YOU_DIE_YOU_WILL_NOT_LOSE_EXP);
 			getPlayer().startAbnormalVisualEffect(true, AbnormalVisualEffect.NAVIT_ADVENT);
-			_nevitEffectTask = ThreadPoolManager.schedule(new NevitEffectEnd(), time * 1000L);
+			_nevitEffectTask = ThreadPool.schedule(new NevitEffectEnd(), time * 1000L);
 		}
 	}
 	

@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -293,7 +293,7 @@ public class CastleManorManager
 		FirstDelay.set(Calendar.SECOND, 0);
 		FirstDelay.set(Calendar.MILLISECOND, 0);
 		FirstDelay.add(Calendar.MINUTE, 1);
-		ThreadPoolManager.scheduleAtFixedRate(new ManorTask(), FirstDelay.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 60000);
+		ThreadPool.scheduleAtFixedRate(new ManorTask(), FirstDelay.getTimeInMillis() - Calendar.getInstance().getTimeInMillis(), 60000);
 	}
 	
 	public void setNextPeriod()

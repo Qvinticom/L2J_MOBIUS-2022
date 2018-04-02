@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
@@ -64,7 +64,7 @@ public class MysteryPotion implements IItemHandler
 		activeChar.sendPacket(sm);
 		
 		MysteryPotionStop mp = new MysteryPotionStop(playable);
-		ThreadPoolManager.schedule(mp, EFFECT_DURATION);
+		ThreadPool.schedule(mp, EFFECT_DURATION);
 	}
 	
 	public class MysteryPotionStop implements Runnable

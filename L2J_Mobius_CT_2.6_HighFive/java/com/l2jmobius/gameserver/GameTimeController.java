@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
@@ -143,7 +144,7 @@ public final class GameTimeController extends Thread
 		
 		if (isNight)
 		{
-			ThreadPoolManager.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+			ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 		}
 		
 		while (true)
@@ -175,7 +176,7 @@ public final class GameTimeController extends Thread
 			{
 				isNight = !isNight;
 				
-				ThreadPoolManager.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
+				ThreadPool.execute(() -> DayNightSpawnManager.getInstance().notifyChangeMode());
 			}
 		}
 	}

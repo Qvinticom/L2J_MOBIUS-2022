@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -557,7 +557,7 @@ public class AutoChatHandler implements SpawnListener
 			if (isActive())
 			{
 				AutoChatRunner acr = new AutoChatRunner(_npcId, -1);
-				_chatTask = ThreadPoolManager.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
+				_chatTask = ThreadPool.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
 			}
 			else
 			{
@@ -669,11 +669,11 @@ public class AutoChatHandler implements SpawnListener
 					{
 						// Schedule it set to 5Ms, isn't error, if use 0 sometine
 						// chatDefinition return null in AutoChatRunner
-						_chatTask = ThreadPoolManager.schedule(acr, 5);
+						_chatTask = ThreadPool.schedule(acr, 5);
 					}
 					else
 					{
-						_chatTask = ThreadPoolManager.scheduleAtFixedRate(acr, getChatDelay(), getChatDelay());
+						_chatTask = ThreadPool.scheduleAtFixedRate(acr, getChatDelay(), getChatDelay());
 					}
 				}
 				else

@@ -23,7 +23,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
@@ -1121,7 +1121,7 @@ public class L2PetInstance extends L2Summon
 				_feedTime = 1;
 			}
 			
-			_feedTask = ThreadPoolManager.scheduleAtFixedRate(new FeedTask(), 60000 / _feedTime, 60000 / _feedTime);
+			_feedTask = ThreadPool.scheduleAtFixedRate(new FeedTask(), 60000 / _feedTime, 60000 / _feedTime);
 		}
 	}
 	

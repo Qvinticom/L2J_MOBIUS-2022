@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.BufferTable;
 import com.l2jmobius.gameserver.datatables.OfflineTradeTable;
@@ -461,7 +461,7 @@ public class Shutdown extends Thread
 		// stop all threadpolls
 		try
 		{
-			ThreadPoolManager.shutdown();
+			ThreadPool.shutdown();
 		}
 		catch (Throwable t)
 		{

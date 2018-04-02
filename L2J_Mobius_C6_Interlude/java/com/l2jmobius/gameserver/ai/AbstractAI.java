@@ -23,7 +23,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -859,7 +859,7 @@ abstract class AbstractAI implements Ctrl
 		
 		// Create and Launch an AI Follow Task to execute every 1s
 		_followTarget = target;
-		_followTask = ThreadPoolManager.scheduleAtFixedRate(new FollowTask(), 5, FOLLOW_INTERVAL);
+		_followTask = ThreadPool.scheduleAtFixedRate(new FollowTask(), 5, FOLLOW_INTERVAL);
 	}
 	
 	/**
@@ -877,7 +877,7 @@ abstract class AbstractAI implements Ctrl
 		}
 		
 		_followTarget = target;
-		_followTask = ThreadPoolManager.scheduleAtFixedRate(new FollowTask(range), 5, ATTACK_FOLLOW_INTERVAL);
+		_followTask = ThreadPool.scheduleAtFixedRate(new FollowTask(range), 5, ATTACK_FOLLOW_INTERVAL);
 	}
 	
 	/**

@@ -34,8 +34,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -274,7 +274,7 @@ public class AutoSpawnHandler
 		if (isActive)
 		{
 			final AutoSpawner rs = new AutoSpawner(objectId);
-			spawnTask = spawnInst._desDelay > 0 ? ThreadPoolManager.scheduleAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay) : ThreadPoolManager.schedule(rs, spawnInst._initDelay);
+			spawnTask = spawnInst._desDelay > 0 ? ThreadPool.scheduleAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay) : ThreadPool.schedule(rs, spawnInst._initDelay);
 			_runningSpawns.put(objectId, spawnTask);
 		}
 		else
@@ -285,7 +285,7 @@ public class AutoSpawnHandler
 			{
 				spawnTask.cancel(false);
 			}
-			ThreadPoolManager.schedule(rd, 0);
+			ThreadPool.schedule(rd, 0);
 		}
 		spawnInst.setSpawnActive(isActive);
 	}
@@ -489,7 +489,7 @@ public class AutoSpawnHandler
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
-					ThreadPoolManager.schedule(new AutoDespawner(_objectId), spawnInst.getDespawnDelay() - 1000);
+					ThreadPool.schedule(new AutoDespawner(_objectId), spawnInst.getDespawnDelay() - 1000);
 				}
 			}
 			catch (Exception e)

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -90,7 +90,7 @@ public class L2MonsterInstance extends L2Attackable
 	 */
 	public void returnHome()
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			L2Spawn mobSpawn = getSpawn();
 			if (!isInCombat() && !isAlikeDead() && !isDead() && (mobSpawn != null) && !isInsideRadius(mobSpawn.getX(), mobSpawn.getY(), Config.MAX_DRIFT_RANGE, false))
@@ -183,7 +183,7 @@ public class L2MonsterInstance extends L2Attackable
 	 */
 	protected void manageMinions()
 	{
-		_minionMaintainTask = ThreadPoolManager.schedule(() -> _minionList.spawnMinions(), getMaintenanceInterval());
+		_minionMaintainTask = ThreadPool.schedule(() -> _minionList.spawnMinions(), getMaintenanceInterval());
 	}
 	
 	/**

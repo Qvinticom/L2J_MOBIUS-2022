@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.zone.type;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -44,7 +44,7 @@ public class L2DynamicZone extends L2ZoneType
 		final AbstractZoneSettings settings = ZoneManager.getSettings(getName()) == null ? new TaskZoneSettings() : ZoneManager.getSettings(getName());
 		setSettings(settings);
 		
-		getSettings().setTask(ThreadPoolManager.schedule(() -> remove(), skill.getAbnormalTime() * 1000));
+		getSettings().setTask(ThreadPool.schedule(() -> remove(), skill.getAbnormalTime() * 1000));
 	}
 	
 	@Override

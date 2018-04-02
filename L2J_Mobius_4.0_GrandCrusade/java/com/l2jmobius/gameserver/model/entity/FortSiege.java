@@ -30,8 +30,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.FortTeleportWhoType;
@@ -111,7 +111,7 @@ public class FortSiege implements Siegable
 				final SystemMessage sm;
 				if (_time == 3600) // 1hr remains
 				{
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(600), 3000000); // Prepare task for 10 minutes left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(600), 3000000); // Prepare task for 10 minutes left.
 				}
 				else if (_time == 600) // 10min remains
 				{
@@ -119,49 +119,49 @@ public class FortSiege implements Siegable
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(10);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(300), 300000); // Prepare task for 5 minutes left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(300), 300000); // Prepare task for 5 minutes left.
 				}
 				else if (_time == 300) // 5min remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(5);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(60), 240000); // Prepare task for 1 minute left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(60), 240000); // Prepare task for 1 minute left.
 				}
 				else if (_time == 60) // 1min remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(1);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(30), 30000); // Prepare task for 30 seconds left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(30), 30000); // Prepare task for 30 seconds left.
 				}
 				else if (_time == 30) // 30seconds remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(30);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(10), 20000); // Prepare task for 10 seconds left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(10), 20000); // Prepare task for 10 seconds left.
 				}
 				else if (_time == 10) // 10seconds remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(10);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(5), 5000); // Prepare task for 5 seconds left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(5), 5000); // Prepare task for 5 seconds left.
 				}
 				else if (_time == 5) // 5seconds remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(5);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(1), 4000); // Prepare task for 1 seconds left.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(1), 4000); // Prepare task for 1 seconds left.
 				}
 				else if (_time == 1) // 1seconds remains
 				{
 					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(1);
 					announceToPlayer(sm);
-					ThreadPoolManager.schedule(new ScheduleStartSiegeTask(0), 1000); // Prepare task start siege.
+					ThreadPool.schedule(new ScheduleStartSiegeTask(0), 1000); // Prepare task start siege.
 				}
 				else if (_time == 0)// start siege
 				{
@@ -274,7 +274,7 @@ public class FortSiege implements Siegable
 			unspawnSiegeGuard(); // Remove all spawned siege guard from this fort
 			getFort().resetDoors(); // Respawn door to fort
 			
-			ThreadPoolManager.schedule(new ScheduleSuspiciousMerchantSpawn(), FortSiegeManager.getInstance().getSuspiciousMerchantRespawnDelay() * 60 * 1000L); // Prepare 3hr task for suspicious merchant respawn
+			ThreadPool.schedule(new ScheduleSuspiciousMerchantSpawn(), FortSiegeManager.getInstance().getSuspiciousMerchantRespawnDelay() * 60 * 1000L); // Prepare 3hr task for suspicious merchant respawn
 			setSiegeDateTime(true); // store suspicious merchant spawn in DB
 			
 			if (_siegeEnd != null)
@@ -336,7 +336,7 @@ public class FortSiege implements Siegable
 			getFort().getZone().updateZoneStatusForCharactersInside();
 			
 			// Schedule a task to prepare auto siege end
-			_siegeEnd = ThreadPoolManager.schedule(new ScheduleEndSiegeTask(), FortSiegeManager.getInstance().getSiegeLength() * 60 * 1000L); // Prepare auto end task
+			_siegeEnd = ThreadPool.schedule(new ScheduleEndSiegeTask(), FortSiegeManager.getInstance().getSiegeLength() * 60 * 1000L); // Prepare auto end task
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_S1_HAS_BEGUN);
 			sm.addCastleId(getFort().getResidenceId());
@@ -680,7 +680,7 @@ public class FortSiege implements Siegable
 				else if (_siegeRestore == null)
 				{
 					getFort().getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_HAVE_BEEN_SEIZED));
-					_siegeRestore = ThreadPoolManager.schedule(new ScheduleSiegeRestore(), FortSiegeManager.getInstance().getCountDownLength() * 60 * 1000L);
+					_siegeRestore = ThreadPool.schedule(new ScheduleSiegeRestore(), FortSiegeManager.getInstance().getCountDownLength() * 60 * 1000L);
 				}
 				else
 				{
@@ -838,7 +838,7 @@ public class FortSiege implements Siegable
 			saveFortSiege();
 			clearSiegeClan(); // remove all clans
 			// spawn suspicious merchant immediately
-			ThreadPoolManager.execute(new ScheduleSuspiciousMerchantSpawn());
+			ThreadPool.execute(new ScheduleSuspiciousMerchantSpawn());
 		}
 		else
 		{
@@ -846,33 +846,33 @@ public class FortSiege implements Siegable
 			if (getAttackerClans().isEmpty())
 			{
 				// no attackers - waiting for suspicious merchant spawn
-				ThreadPoolManager.schedule(new ScheduleSuspiciousMerchantSpawn(), delay);
+				ThreadPool.schedule(new ScheduleSuspiciousMerchantSpawn(), delay);
 			}
 			else
 			{
 				// preparing start siege task
 				if (delay > 3600000) // more than hour, how this can happens ? spawn suspicious merchant
 				{
-					ThreadPoolManager.execute(new ScheduleSuspiciousMerchantSpawn());
-					_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(3600), delay - 3600000);
+					ThreadPool.execute(new ScheduleSuspiciousMerchantSpawn());
+					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(3600), delay - 3600000);
 				}
 				if (delay > 600000) // more than 10 min, spawn suspicious merchant
 				{
-					ThreadPoolManager.execute(new ScheduleSuspiciousMerchantSpawn());
-					_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(600), delay - 600000);
+					ThreadPool.execute(new ScheduleSuspiciousMerchantSpawn());
+					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(600), delay - 600000);
 				}
 				else if (delay > 300000)
 				{
-					_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(300), delay - 300000);
+					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(300), delay - 300000);
 				}
 				else if (delay > 60000)
 				{
-					_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(60), delay - 60000);
+					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(60), delay - 60000);
 				}
 				else
 				{
 					// lower than 1 min, set to 1 min
-					_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(60), 0);
+					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(60), 0);
 				}
 				
 				_log.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort: " + getFort().getSiegeDate().getTime());
@@ -902,7 +902,7 @@ public class FortSiege implements Siegable
 		}
 		
 		// Execute siege auto start
-		_siegeStartTask = ThreadPoolManager.schedule(new FortSiege.ScheduleStartSiegeTask(3600), 0);
+		_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(3600), 0);
 	}
 	
 	/**

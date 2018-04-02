@@ -24,7 +24,7 @@ import java.util.Random;
 import java.util.Vector;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
@@ -335,7 +335,7 @@ public class VIP
 		Announcements.getInstance().gameAnnounceToAll("Vip event has started.Use .vipjoin to join or .vipleave to leave.");
 		spawnJoinNPC();
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			_joining = false;
 			_started = true;
@@ -348,7 +348,7 @@ public class VIP
 		Announcements.getInstance().gameAnnounceToAll("Registration for the VIP event involving " + _teamName + " has ended.");
 		Announcements.getInstance().gameAnnounceToAll("Players will be teleported to their locations in 20 seconds.");
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			teleportPlayers();
 			chooseVIP();
@@ -357,13 +357,13 @@ public class VIP
 			Announcements.getInstance().gameAnnounceToAll("VIP event will start in 20 seconds.");
 			spawnEndNPC();
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				Announcements.getInstance().gameAnnounceToAll("VIP event has started. " + _teamName + "'s VIP must get to the starter city and talk with " + getNPCName(_endNPC, null) + ". The opposing team must kill the VIP. All players except the VIP will respawn at their current locations.");
 				Announcements.getInstance().gameAnnounceToAll("VIP event will end if the " + _teamName + " team makes it to their town or when " + (_time / 1000 / 60) + " mins have elapsed.");
 				VIP.sit();
 				
-				ThreadPoolManager.schedule(() -> endEventTime(), _time);
+				ThreadPool.schedule(() -> endEventTime(), _time);
 			}, 20000);
 		}, 20000);
 	}
@@ -617,7 +617,7 @@ public class VIP
 	{
 		Announcements.getInstance().gameAnnounceToAll("Teleporting VIP players back to the Registration area in 20 seconds.");
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			for (L2PcInstance player1 : _playersVIP)
 			{

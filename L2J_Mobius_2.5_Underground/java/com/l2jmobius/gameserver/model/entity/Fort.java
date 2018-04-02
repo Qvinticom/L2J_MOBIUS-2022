@@ -33,10 +33,10 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.FortUpdater;
 import com.l2jmobius.gameserver.FortUpdater.UpdaterType;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
@@ -166,11 +166,11 @@ public final class Fort extends AbstractResidence
 			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
-				ThreadPoolManager.schedule(new FunctionTask(cwh), _endDate - currentTime);
+				ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
 			}
 			else
 			{
-				ThreadPoolManager.schedule(new FunctionTask(cwh), 0);
+				ThreadPool.schedule(new FunctionTask(cwh), 0);
 			}
 		}
 		
@@ -204,7 +204,7 @@ public final class Fort extends AbstractResidence
 						{
 							getOwnerClan().getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPoolManager.schedule(new FunctionTask(true), getRate());
+						ThreadPool.schedule(new FunctionTask(true), getRate());
 					}
 					else
 					{
@@ -273,7 +273,7 @@ public final class Fort extends AbstractResidence
 	
 	public void endOfSiege(L2Clan clan)
 	{
-		ThreadPoolManager.execute(new endFortressSiege(this, clan));
+		ThreadPool.execute(new endFortressSiege(this, clan));
 	}
 	
 	/**
@@ -594,15 +594,15 @@ public final class Fort extends AbstractResidence
 				initial = (Config.FS_UPDATE_FRQ * 60000L) - initial;
 				if ((Config.FS_MAX_OWN_TIME <= 0) || (getOwnedTime() < (Config.FS_MAX_OWN_TIME * 3600)))
 				{
-					_FortUpdater[0] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.PERIODIC_UPDATE), initial, Config.FS_UPDATE_FRQ * 60000L); // Schedule owner tasks to start running
+					_FortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.PERIODIC_UPDATE), initial, Config.FS_UPDATE_FRQ * 60000L); // Schedule owner tasks to start running
 					if (Config.FS_MAX_OWN_TIME > 0)
 					{
-						_FortUpdater[1] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
+						_FortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, runCount, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
 					}
 				}
 				else
 				{
-					_FortUpdater[1] = ThreadPoolManager.schedule(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 60000); // Schedule owner tasks to remove owner
+					_FortUpdater[1] = ThreadPool.schedule(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 60000); // Schedule owner tasks to remove owner
 				}
 			}
 			else
@@ -836,10 +836,10 @@ public final class Fort extends AbstractResidence
 				{
 					_FortUpdater[1].cancel(false);
 				}
-				_FortUpdater[0] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000L, Config.FS_UPDATE_FRQ * 60000L); // Schedule owner tasks to start running
+				_FortUpdater[0] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000L, Config.FS_UPDATE_FRQ * 60000L); // Schedule owner tasks to start running
 				if (Config.FS_MAX_OWN_TIME > 0)
 				{
-					_FortUpdater[1] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
+					_FortUpdater[1] = ThreadPool.scheduleAtFixedRate(new FortUpdater(this, clan, 0, UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owener
 				}
 			}
 			else

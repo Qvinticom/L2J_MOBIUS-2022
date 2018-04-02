@@ -25,7 +25,7 @@ import java.util.WeakHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import com.l2jmobius.gameserver.model.Inventory;
@@ -118,7 +118,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(manufacturer, maker);
-				ThreadPoolManager.schedule(maker, 100);
+				ThreadPool.schedule(maker, 100);
 			}
 			else
 			{
@@ -169,7 +169,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(player, maker);
-				ThreadPoolManager.schedule(maker, 100);
+				ThreadPool.schedule(maker, 100);
 			}
 			else
 			{
@@ -385,7 +385,7 @@ public class RecipeController
 					_player.broadcastPacket(msk);
 					
 					_player.sendPacket(new SetupGauge(0, _delay));
-					ThreadPoolManager.schedule(this, 100 + _delay);
+					ThreadPool.schedule(this, 100 + _delay);
 				}
 				else
 				{
@@ -539,7 +539,7 @@ public class RecipeController
 				if (Config.ALT_GAME_CREATION)
 				{
 					_player.sendPacket(new SetupGauge(0, _delay));
-					ThreadPoolManager.schedule(this, 100 + _delay);
+					ThreadPool.schedule(this, 100 + _delay);
 				}
 				// no rest - report no mana
 				else

@@ -29,9 +29,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -209,7 +209,7 @@ public class DBSpawnManager
 			{
 				LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + Util.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 				
-				_schedules.put(npc.getId(), ThreadPoolManager.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
+				_schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
 				updateDb();
 			}
 		}
@@ -270,7 +270,7 @@ public class DBSpawnManager
 		else
 		{
 			final long spawnTime = respawnTime - System.currentTimeMillis();
-			_schedules.put(npcId, ThreadPoolManager.schedule(() -> scheduleSpawn(npcId), spawnTime));
+			_schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
 		}
 		
 		_spawns.put(npcId, spawn);

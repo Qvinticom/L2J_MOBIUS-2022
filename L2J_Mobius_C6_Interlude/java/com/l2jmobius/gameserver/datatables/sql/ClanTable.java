@@ -27,7 +27,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
@@ -426,7 +426,7 @@ public class ClanTable
 	
 	public void scheduleRemoveClan(int clanId)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (getClan(clanId) == null)
 			{

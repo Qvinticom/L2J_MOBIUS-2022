@@ -26,7 +26,7 @@ import java.util.regex.Pattern;
 import java.util.regex.PatternSyntaxException;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.crypt.nProtect;
 import com.l2jmobius.commons.crypt.nProtect.RestrictionType;
 import com.l2jmobius.gameserver.GameTimeController;
@@ -538,7 +538,7 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			activeChar.setIsImobilised(true);
 			activeChar.disableAllSkills();
-			ThreadPoolManager.schedule(new Disconnection(activeChar), 20000);
+			ThreadPool.schedule(new Disconnection(activeChar), 20000);
 		}
 		
 		// Elrokian Trap like L2OFF

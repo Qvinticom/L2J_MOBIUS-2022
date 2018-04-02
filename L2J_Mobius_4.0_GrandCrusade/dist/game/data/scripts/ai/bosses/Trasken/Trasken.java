@@ -20,8 +20,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.Movie;
@@ -429,7 +429,7 @@ public class Trasken extends AbstractNpcAI
 					doom.setTarget(doom);
 					doom.isCastingNow();
 					doom.doCast(SKILL_1.getSkill());
-					ThreadPoolManager.schedule(() -> doom.deleteMe(), 15000);
+					ThreadPool.schedule(() -> doom.deleteMe(), 15000);
 				}
 				final double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100.0;
 				if ((percent <= 30) && (_statusZone == 4))
@@ -616,7 +616,7 @@ public class Trasken extends AbstractNpcAI
 				_zoneLair.getCharactersInside().stream().filter(L2Object::isMonster).forEach(cha -> ((L2MonsterInstance) cha).getSpawn().stopRespawn());
 				_zoneLair2.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
 				_zoneLair2.getCharactersInside().stream().filter(L2Object::isMonster).forEach(cha -> ((L2MonsterInstance) cha).getSpawn().stopRespawn());
-				ThreadPoolManager.schedule(() -> npc.decayMe(), 10000);
+				ThreadPool.schedule(() -> npc.decayMe(), 10000);
 				cancelQuestTimer("finish", npc, null);
 				
 				GrandBossManager.getInstance().setBossStatus(TRASKEN, DEAD);
@@ -642,7 +642,7 @@ public class Trasken extends AbstractNpcAI
 							final int[] spawn = Rnd_Spawn_Tail[Rnd.get(Rnd_Spawn_Tail.length)];
 							if (SpawnTable.getInstance().getSpawns(TAIL_TRASKEN) == null)
 							{
-								ThreadPoolManager.schedule(() ->
+								ThreadPool.schedule(() ->
 								{
 									tie_trasken = addSpawn(TAIL_TRASKEN, spawn[0], spawn[1], spawn[2], 0, false, 0, true);
 									tie_trasken.setCurrentHp(hp_tail);
@@ -663,7 +663,7 @@ public class Trasken extends AbstractNpcAI
 							final int[] spawn1 = Rnd_Spawn_Trasken[Rnd.get(Rnd_Spawn_Trasken.length)];
 							if (SpawnTable.getInstance().getSpawns(TRASKEN) == null)
 							{
-								ThreadPoolManager.schedule(() ->
+								ThreadPool.schedule(() ->
 								{
 									trasken = addSpawn(TRASKEN, spawn1[0], spawn1[1], spawn1[2], 0, false, 0, true);
 									trasken.doCast(SKILL_TRASKEN_UP.getSkill());
@@ -774,7 +774,7 @@ public class Trasken extends AbstractNpcAI
 			}
 			final int time = 540000;
 			zone.getPlayersInside().forEach(temp -> temp.sendPacket(new ExSendUIEvent(temp, false, false, 540, 0, NpcStringId.REMAINING_TIME)));
-			_collapseTask = ThreadPoolManager.schedule(() -> Fail(true), time);
+			_collapseTask = ThreadPool.schedule(() -> Fail(true), time);
 		}
 		return super.onEnterZone(character, zone);
 	}
@@ -784,7 +784,7 @@ public class Trasken extends AbstractNpcAI
 	{
 		if ((zone.getId() == ZONE_ID_HEART) && zone.getPlayersInside().isEmpty())
 		{
-			_collapseTask = ThreadPoolManager.schedule(() ->
+			_collapseTask = ThreadPool.schedule(() ->
 			{
 				Fail(true);
 				for (int info : eventTriggers)
@@ -890,7 +890,7 @@ public class Trasken extends AbstractNpcAI
 				character.getEffectList().stopSkillEffects(true, traskenBuff.getSkill());
 			}
 		}
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			character.broadcastPacket(new ExShowScreenMessage(NpcStringId.YOU_VE_EXCEEDED_THE_MAXIMUM_NUMBER_OF_PERSONNEL, 5, 24000, true));
 			character.doCast(SKILL_TRASKEN_SLEEP.getSkill());

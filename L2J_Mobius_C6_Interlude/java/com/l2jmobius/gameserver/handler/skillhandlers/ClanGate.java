@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.skillhandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
@@ -67,7 +67,7 @@ public class ClanGate implements ISkillHandler
 				if (player.isCastleLord(castle.getCastleId()))
 				{
 					// please note clan gate expires in two minutes WHATEVER happens to the clan leader.
-					ThreadPoolManager.schedule(new RemoveClanGate(castle.getCastleId(), player), skill.getTotalLifeTime());
+					ThreadPool.schedule(new RemoveClanGate(castle.getCastleId(), player), skill.getTotalLifeTime());
 					castle.createClanGate(player.getX(), player.getY(), player.getZ() + 20);
 					player.getClan().broadcastToOnlineMembers(new SystemMessage(SystemMessageId.COURT_MAGICIAN_CREATED_PORTAL));
 					player.setIsParalyzed(true);

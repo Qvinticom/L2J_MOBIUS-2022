@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.position.Location;
@@ -37,7 +37,7 @@ public class L2TownPetInstance extends L2NpcInstance
 	{
 		super(objectId, template);
 		
-		ThreadPoolManager.scheduleAtFixedRate(new RandomWalkTask(), 2000, 2000);
+		ThreadPool.scheduleAtFixedRate(new RandomWalkTask(), 2000, 2000);
 	}
 	
 	@Override

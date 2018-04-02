@@ -21,7 +21,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
@@ -561,8 +561,8 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				npc.deleteMe();
 				world.deadTumor = addSpawn(TUMOR_DEAD, loc, world.getInstanceId());
 				world.deadTumors.add(world.deadTumor);
-				ThreadPoolManager.schedule(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
-				ThreadPoolManager.schedule(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
+				ThreadPool.schedule(new TumorRevival(world.deadTumor, world), tumorRespawnTime);
+				ThreadPool.schedule(new RegenerationCoffinSpawn(world.deadTumor, world), 20000);
 				if (world.tumorCount >= 1)
 				{
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NIN_ORDER_TO_DRAW_OUT_THE_COWARDLY_COHEMENES_YOU_MUST_DESTROY_ALL_THE_TUMORS, 2, 8000));

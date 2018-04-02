@@ -32,8 +32,8 @@ import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
@@ -231,7 +231,7 @@ public class L2Attackable extends L2Npc
 						{
 							_commandChannelTimer = new CommandChannelTimer(this);
 							_commandChannelLastAttack = System.currentTimeMillis();
-							ThreadPoolManager.schedule(_commandChannelTimer, 10000); // check for last attack
+							ThreadPool.schedule(_commandChannelTimer, 10000); // check for last attack
 							_firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, ChatType.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
 						}
 					}

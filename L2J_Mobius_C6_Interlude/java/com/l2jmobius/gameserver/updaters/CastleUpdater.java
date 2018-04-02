@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.updaters;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.ItemContainer;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -61,7 +61,7 @@ public class CastleUpdater implements Runnable
 				
 				_runCount++;
 				final CastleUpdater cu = new CastleUpdater(_clan, _runCount);
-				ThreadPoolManager.schedule(cu, 3600000);
+				ThreadPool.schedule(cu, 3600000);
 			}
 		}
 		catch (Throwable e)

@@ -29,8 +29,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
 import com.l2jmobius.gameserver.enums.ItemLocation;
@@ -222,14 +222,14 @@ public class ItemTable
 				if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS)
 				{
 					item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-					itemLootShedule = ThreadPoolManager.schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
+					itemLootShedule = ThreadPool.schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
 					item.setItemLootShedule(itemLootShedule);
 				}
 			}
 			else if (!Config.AUTO_LOOT || ((reference instanceof L2EventMonsterInstance) && ((L2EventMonsterInstance) reference).eventDropOnGround()))
 			{
 				item.setOwnerId(actor.getObjectId());
-				itemLootShedule = ThreadPoolManager.schedule(new ResetOwner(item), 15000);
+				itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
 				item.setItemLootShedule(itemLootShedule);
 			}
 		}

@@ -17,7 +17,7 @@
 package handlers.telnethandlers.server;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.network.telnet.ITelnetCommand;
 
 import io.netty.channel.ChannelHandlerContext;
@@ -44,7 +44,7 @@ public class Performance implements ITelnetCommand
 	{
 		// ThreadPoolManager.purge();
 		final StringBuilder sb = new StringBuilder();
-		for (String line : ThreadPoolManager.getStats())
+		for (String line : ThreadPool.getStats())
 		{
 			sb.append(line + Config.EOL);
 		}

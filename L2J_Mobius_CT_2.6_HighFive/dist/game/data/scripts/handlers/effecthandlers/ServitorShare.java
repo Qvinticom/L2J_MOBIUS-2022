@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.conditions.Condition;
@@ -74,7 +74,7 @@ public final class ServitorShare extends AbstractEffect
 		final L2Character effected = info.getEffected().isPlayer() ? info.getEffected().getSummon() : info.getEffected().getActingPlayer();
 		if (effected != null)
 		{
-			ThreadPoolManager.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
+			ThreadPool.schedule(new ScheduledEffectExitTask(effected, info.getSkill().getId()), 100);
 		}
 	}
 }

@@ -27,8 +27,8 @@ import java.util.logging.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
@@ -91,7 +91,7 @@ public class LongTimeEvent extends Quest
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
 				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
-				ThreadPoolManager.schedule(new ScheduleStart(), delay);
+				ThreadPool.schedule(new ScheduleStart(), delay);
 				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getEndDate());
 			}
 			else
@@ -301,7 +301,7 @@ public class LongTimeEvent extends Quest
 		AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 		
 		// Schedule event end (now only for message sending)
-		ThreadPoolManager.schedule(new ScheduleEnd(), millisToEventEnd);
+		ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
 	}
 	
 	/**

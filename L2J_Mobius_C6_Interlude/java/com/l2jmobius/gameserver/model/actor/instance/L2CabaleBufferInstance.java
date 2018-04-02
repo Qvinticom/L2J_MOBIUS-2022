@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -187,7 +187,7 @@ public class L2CabaleBufferInstance extends L2NpcInstance
 			_aiTask.cancel(true);
 		}
 		
-		_aiTask = ThreadPoolManager.scheduleAtFixedRate(new CabalaAI(this), 3000, 3000);
+		_aiTask = ThreadPool.scheduleAtFixedRate(new CabalaAI(this), 3000, 3000);
 	}
 	
 	@Override

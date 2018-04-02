@@ -31,7 +31,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.crypt.nProtect;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.MMOClient;
@@ -125,7 +125,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		_packetQueue = new ArrayBlockingQueue<>(NetcoreConfig.getInstance().CLIENT_PACKET_QUEUE_SIZE);
 		
 		_guardCheckTask = nProtect.getInstance().startTask(this);
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (_closenow)
 			{
@@ -605,7 +605,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		// no long running tasks here, do it async
 		try
 		{
-			ThreadPoolManager.execute(new DisconnectTask());
+			ThreadPool.execute(new DisconnectTask());
 			
 		}
 		catch (RejectedExecutionException e)
@@ -636,7 +636,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			{
 				cancelCleanup();
 			}
-			_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), delay); // delayed
+			_cleanupTask = ThreadPool.schedule(new CleanupTask(), delay); // delayed
 		}
 		stopGuardTask();
 		nProtect.getInstance().closeSession(this);
@@ -993,11 +993,11 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 					return;
 				}
 				
-				ThreadPoolManager.execute(this);
+				ThreadPool.execute(this);
 			}
 			else
 			{
-				ThreadPoolManager.execute(this);
+				ThreadPool.execute(this);
 			}
 		}
 		catch (RejectedExecutionException e)

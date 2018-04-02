@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -163,7 +163,7 @@ public class L2SiegeFlagInstance extends L2Npc
 					// send warning to owners of headquarters that theirs base is under attack
 					_clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
 					setCanTalk(false);
-					ThreadPoolManager.schedule(new ScheduleTalkTask(), 20000);
+					ThreadPool.schedule(new ScheduleTalkTask(), 20000);
 				}
 			}
 		}

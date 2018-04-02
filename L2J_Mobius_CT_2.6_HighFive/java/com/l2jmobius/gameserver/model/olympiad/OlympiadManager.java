@@ -23,7 +23,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
@@ -405,7 +405,7 @@ public class OlympiadManager
 			if ((team != null) && team.contains(objId))
 			{
 				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.execute(new AnnounceUnregToTeam(team));
+				ThreadPool.execute(new AnnounceUnregToTeam(team));
 				return true;
 			}
 		}
@@ -437,7 +437,7 @@ public class OlympiadManager
 			if ((team != null) && team.contains(objId))
 			{
 				_teamsBasedRegisters.remove(team);
-				ThreadPoolManager.execute(new AnnounceUnregToTeam(team));
+				ThreadPool.execute(new AnnounceUnregToTeam(team));
 				return;
 			}
 		}

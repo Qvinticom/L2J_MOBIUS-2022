@@ -27,7 +27,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -567,7 +567,7 @@ public class Castle
 			if (getOwnerId() > 0)
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
-				ThreadPoolManager.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
+				ThreadPool.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 			}
 			
 			rs.close();
@@ -704,7 +704,7 @@ public class Castle
 				// give crowns
 				CrownManager.getInstance().checkCrowns(clan);
 				
-				ThreadPoolManager.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
+				ThreadPool.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 			}
 		}
 		catch (Exception e)

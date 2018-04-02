@@ -22,7 +22,7 @@ import java.util.WeakHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
@@ -90,7 +90,7 @@ public final class AwayManager
 		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.AWAY_TIMER * 1000);
 		activeChar.sendPacket(sg);
 		activeChar.setIsImobilised(true);
-		ThreadPoolManager.schedule(new setPlayerAwayTask(activeChar, text), Config.AWAY_TIMER * 1000);
+		ThreadPool.schedule(new setPlayerAwayTask(activeChar, text), Config.AWAY_TIMER * 1000);
 	}
 	
 	/**
@@ -101,7 +101,7 @@ public final class AwayManager
 		activeChar.sendMessage("You are back from Away Status in " + Config.BACK_TIMER + " Sec.");
 		SetupGauge sg = new SetupGauge(SetupGauge.BLUE, Config.BACK_TIMER * 1000);
 		activeChar.sendPacket(sg);
-		ThreadPoolManager.schedule(new setPlayerBackTask(activeChar), Config.BACK_TIMER * 1000);
+		ThreadPool.schedule(new setPlayerBackTask(activeChar), Config.BACK_TIMER * 1000);
 	}
 	
 	public void extraBack(L2PcInstance activeChar)

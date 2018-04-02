@@ -33,8 +33,8 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.communitybbs.BB.Forum;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
@@ -3177,7 +3177,7 @@ public class L2Clan implements IIdentifiable, INamable
 					_vars = new ClanVariables(getId());
 					if (Config.CLAN_VARIABLES_STORE_INTERVAL > 0)
 					{
-						ThreadPoolManager.scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
+						ThreadPool.scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
 					}
 				}
 			}

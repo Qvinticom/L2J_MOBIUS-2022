@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 
 /**
  * @author Shyla
@@ -41,7 +41,7 @@ public class EventsGlobalTask implements Runnable
 	
 	private EventsGlobalTask()
 	{
-		ThreadPoolManager.schedule(this, 5000);
+		ThreadPool.schedule(this, 5000);
 	}
 	
 	public static EventsGlobalTask getInstance()
@@ -238,7 +238,7 @@ public class EventsGlobalTask implements Runnable
 		{
 			for (EventTask actualEvent : registeredEventsAtCurrentTime)
 			{
-				ThreadPoolManager.schedule(actualEvent, 5000);
+				ThreadPool.schedule(actualEvent, 5000);
 			}
 		}
 	}

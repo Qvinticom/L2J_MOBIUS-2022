@@ -30,8 +30,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
 import com.l2jmobius.gameserver.enums.SiegeTeleportWhoType;
@@ -102,35 +102,35 @@ public class Siege implements Siegable
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HOUR_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt(2);
 					announceToPlayer(sm, true);
-					ThreadPoolManager.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 3600000); // Prepare task for 1 hr left.
+					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 3600000); // Prepare task for 1 hr left.
 				}
 				else if ((timeRemaining <= 3600000) && (timeRemaining > 600000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
-					ThreadPoolManager.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
+					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
-					ThreadPoolManager.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
+					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 10000))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
-					ThreadPoolManager.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
+					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
 				}
 				else if ((timeRemaining <= 10000) && (timeRemaining > 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S);
 					sm.addInt((int) timeRemaining / 1000);
 					announceToPlayer(sm, true);
-					ThreadPoolManager.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down
+					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down
 				}
 				else
 				{
@@ -169,7 +169,7 @@ public class Siege implements Siegable
 					final long regTimeRemaining = getTimeRegistrationOverDate().getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 					if (regTimeRemaining > 0)
 					{
-						_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
+						_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), regTimeRemaining);
 						return;
 					}
 					endTimeRegistration(true);
@@ -178,7 +178,7 @@ public class Siege implements Siegable
 				final long timeRemaining = getSiegeDate().getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 				if (timeRemaining > 86400000)
 				{
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 86400000); // Prepare task for 24 before siege start to end registration
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 86400000); // Prepare task for 24 before siege start to end registration
 				}
 				else if ((timeRemaining <= 86400000) && (timeRemaining > 13600000))
 				{
@@ -187,23 +187,23 @@ public class Siege implements Siegable
 					Broadcast.toAllOnlinePlayers(sm);
 					_isRegistrationOver = true;
 					clearSiegeWaitingClan();
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 13600000); // Prepare task for 1 hr left before siege start.
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 13600000); // Prepare task for 1 hr left before siege start.
 				}
 				else if ((timeRemaining <= 13600000) && (timeRemaining > 600000))
 				{
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 10000))
 				{
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
 				}
 				else if ((timeRemaining <= 10000) && (timeRemaining > 0))
 				{
-					_scheduledStartSiegeTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down
+					_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down
 				}
 				else
 				{
@@ -514,7 +514,7 @@ public class Siege implements Siegable
 			// Schedule a task to prepare auto siege end
 			_siegeEndDate = Calendar.getInstance();
 			_siegeEndDate.add(Calendar.MINUTE, SiegeManager.getInstance().getSiegeLength());
-			ThreadPoolManager.schedule(new ScheduleEndSiegeTask(getCastle()), 1000); // Prepare auto end task
+			ThreadPool.schedule(new ScheduleEndSiegeTask(getCastle()), 1000); // Prepare auto end task
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_STARTED);
 			sm.addCastleId(getCastle().getResidenceId());
@@ -1027,7 +1027,7 @@ public class Siege implements Siegable
 		{
 			_scheduledStartSiegeTask.cancel(false);
 		}
-		_scheduledStartSiegeTask = ThreadPoolManager.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
+		_scheduledStartSiegeTask = ThreadPool.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
 	}
 	
 	/**
@@ -1344,7 +1344,7 @@ public class Siege implements Siegable
 		if (_scheduledStartSiegeTask != null)
 		{
 			_scheduledStartSiegeTask.cancel(true);
-			_scheduledStartSiegeTask = ThreadPoolManager.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
+			_scheduledStartSiegeTask = ThreadPool.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();

@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.CategoryType;
@@ -340,7 +340,7 @@ public final class AwakeningMaster extends AbstractNpcAI
 			player.sendSkillList();
 		}
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			player.sendPacket(ExShowUsm.AWAKENING_END);
 		}, 10000);

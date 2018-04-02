@@ -19,7 +19,7 @@ package vehicles;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
@@ -291,11 +291,11 @@ public abstract class AirShipController extends AbstractNpcAI
 						playMovie(_dockedShip.getPassengers(), _movie);
 					}
 					
-					ThreadPoolManager.schedule(_decayTask, 1000);
+					ThreadPool.schedule(_decayTask, 1000);
 				}
 				else
 				{
-					_departSchedule = ThreadPoolManager.schedule(_departTask, DEPART_INTERVAL);
+					_departSchedule = ThreadPool.schedule(_departTask, DEPART_INTERVAL);
 				}
 			}
 		}

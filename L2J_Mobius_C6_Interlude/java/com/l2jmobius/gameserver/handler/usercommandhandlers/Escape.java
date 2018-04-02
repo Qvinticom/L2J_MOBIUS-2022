@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
@@ -156,7 +156,7 @@ public class Escape implements IUserCommandHandler
 		// End SoE Animation section
 		EscapeFinalizer ef = new EscapeFinalizer(activeChar);
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		activeChar.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 		
 		return true;

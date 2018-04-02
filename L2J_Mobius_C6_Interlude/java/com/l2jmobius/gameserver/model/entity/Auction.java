@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -355,7 +355,7 @@ public class Auction
 			taskDelay = _endDate - currentTime;
 		}
 		
-		ThreadPoolManager.schedule(new AutoEndTask(), taskDelay);
+		ThreadPool.schedule(new AutoEndTask(), taskDelay);
 	}
 	
 	/**
@@ -613,7 +613,7 @@ public class Auction
 		else
 		{
 			/** Task waiting ClanHallManager is loaded every 3s */
-			ThreadPoolManager.schedule(new AutoEndTask(), 3000);
+			ThreadPool.schedule(new AutoEndTask(), 3000);
 		}
 	}
 	

@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.model.L2TradeList;
@@ -58,7 +58,7 @@ public class TradeListTable
 		{
 			restoreCount(timer);
 			dataTimerSave(timer);
-			ThreadPoolManager.schedule(new RestoreCount(timer), (long) timer * 60 * 60 * 1000);
+			ThreadPool.schedule(new RestoreCount(timer), (long) timer * 60 * 60 * 1000);
 		}
 	}
 	
@@ -186,11 +186,11 @@ public class TradeListTable
 					savetimer = rset2.getLong("savetimer");
 					if ((savetimer - currentMillis) > 0)
 					{
-						ThreadPoolManager.schedule(new RestoreCount(time), savetimer - System.currentTimeMillis());
+						ThreadPool.schedule(new RestoreCount(time), savetimer - System.currentTimeMillis());
 					}
 					else
 					{
-						ThreadPoolManager.schedule(new RestoreCount(time), 0);
+						ThreadPool.schedule(new RestoreCount(time), 0);
 					}
 				}
 				

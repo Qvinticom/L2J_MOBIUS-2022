@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -303,7 +303,7 @@ public class Lindvior extends AbstractNpcAI
 		}
 		else if ((percent <= 75) && (_status == 1))
 		{
-			_bigVortexesTask = ThreadPoolManager.schedule(() -> spawnServitor(1, 300, _lindvior.getLocation(), NPC_ATTACKER_BIG_VORTEX), 1000);
+			_bigVortexesTask = ThreadPool.schedule(() -> spawnServitor(1, 300, _lindvior.getLocation(), NPC_ATTACKER_BIG_VORTEX), 1000);
 			for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
 			{
 				addSpawn(LINDVIOR_SERVITOR[1], loc, true);
@@ -324,7 +324,7 @@ public class Lindvior extends AbstractNpcAI
 			{
 				addSpawn(LINDVIOR_SERVITOR[2], loc, true);
 			}
-			_skillCastTask = ThreadPoolManager.scheduleAtFixedRate(() -> _lindvior.doCast(SKILL_REFLECT.getSkill()), 5000, 80000);
+			_skillCastTask = ThreadPool.scheduleAtFixedRate(() -> _lindvior.doCast(SKILL_REFLECT.getSkill()), 5000, 80000);
 			_status = 3;
 		}
 		else if ((percent <= 40) && (_status == 3))
@@ -348,7 +348,7 @@ public class Lindvior extends AbstractNpcAI
 		}
 		else if ((percent <= 35) && (_status == 4))
 		{
-			_smallVortexesTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+			_smallVortexesTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
 				for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
 				{
@@ -372,14 +372,14 @@ public class Lindvior extends AbstractNpcAI
 			_lindvior.deleteMe();
 			_lindvior = (L2GrandBossInstance) addSpawn(LINDVIOR_RAID, _lindvior.getLocation(), false, 0, false);
 			_lindvior.setCurrentHp(_lindvior.getMaxHp() * 0.2);
-			_bigVortexesTask = ThreadPoolManager.schedule(() -> spawnServitor(1, 300, _lindvior.getLocation(), NPC_ATTACKER_BIG_VORTEX), 1000);
+			_bigVortexesTask = ThreadPool.schedule(() -> spawnServitor(1, 300, _lindvior.getLocation(), NPC_ATTACKER_BIG_VORTEX), 1000);
 			for (Location loc : ATTACKER_SMALL_VORTEX_SPAWNS)
 			{
 				addSpawn(NPC_ATTACKER_SMALL_VORTEX, loc, true);
 				addSpawn(LINDVIOR_SERVITOR[4], loc, true);
 				addSpawn(LINDVIOR_SERVITOR[3], loc, true);
 			}
-			_collapseTask = ThreadPoolManager.schedule(Lindvior.this::Clean, 600000);
+			_collapseTask = ThreadPool.schedule(Lindvior.this::Clean, 600000);
 			_status = 6;
 		}
 		return super.onAttack(npc, attacker, damage, isSummon);
@@ -580,7 +580,7 @@ public class Lindvior extends AbstractNpcAI
 					_guardSpawn.add(npc);
 				}
 				
-				_mobsSpawnTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+				_mobsSpawnTask = ThreadPool.scheduleAtFixedRate(() ->
 				{
 					for (Location loc : ATTACKER_GENERATOR_SPAWNS)
 					{
@@ -596,7 +596,7 @@ public class Lindvior extends AbstractNpcAI
 				}, 30000, 80000);
 				
 				_dummyLindvior = addSpawn(LINDVIOR_CAMERA, 45259, -27115, -638, 41325, false, 0, false);
-				_announceTask = ThreadPoolManager.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_ACTIVATE_THE_4_GENERATORS, ExShowScreenMessage.TOP_CENTER, 7000, true))), 10000, 20000);
+				_announceTask = ThreadPool.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(player -> player.sendPacket(new ExShowScreenMessage(NpcStringId.YOU_MUST_ACTIVATE_THE_4_GENERATORS, ExShowScreenMessage.TOP_CENTER, 7000, true))), 10000, 20000);
 				break;
 			}
 			case 2: // After activation of 4 generators, we wait to be charged
@@ -621,7 +621,7 @@ public class Lindvior extends AbstractNpcAI
 					{
 						guard.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ALL_4_GENERATORS_MUST_BE_ACTIVATED);
 					});
-					_announceProtect = ThreadPoolManager.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(p -> player.sendPacket(new ExShowScreenMessage(NpcStringId.PROTECT_THE_GENERATOR, ExShowScreenMessage.TOP_CENTER, 7000, true))), 10000, 18000);
+					_announceProtect = ThreadPool.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(p -> player.sendPacket(new ExShowScreenMessage(NpcStringId.PROTECT_THE_GENERATOR, ExShowScreenMessage.TOP_CENTER, 7000, true))), 10000, 18000);
 					_zoneLair.broadcastPacket(new SpecialCamera(_dummyLindvior, 3300, 200, 20, 11000, 10500, 0, 8, 1, 0, 0));
 					_generatorSpawn.forEach(npc -> npc.sendInfo(player));
 					startQuestTimer("show_movie", 13000, null, null);
@@ -696,7 +696,7 @@ public class Lindvior extends AbstractNpcAI
 				_zoneLair.broadcastPacket(new SocialAction(_lindvior.getObjectId(), 1));
 				_zoneLair.getPlayersInside().forEach(_lindvior::sendInfo);
 				_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.LINDVIOR_HAS_FALLEN_FROM_THE_SKY, ExShowScreenMessage.TOP_CENTER, 7000));
-				_mobsSpawnTask = ThreadPoolManager.scheduleAtFixedRate(() -> spawnServitor(2, 1000, _lindvior.getLocation(), LINDVIOR_SERVITOR), 60000, 180000);
+				_mobsSpawnTask = ThreadPool.scheduleAtFixedRate(() -> spawnServitor(2, 1000, _lindvior.getLocation(), LINDVIOR_SERVITOR), 60000, 180000);
 				break;
 			}
 		}
@@ -749,12 +749,12 @@ public class Lindvior extends AbstractNpcAI
 				_dummyLindvior.deleteMe();
 				_lindvior2 = addSpawn(LINDVIOR_FAKE, CENTER_LOCATION, false, 0, false);
 				_lindvior2.setTargetable(false);
-				_announceTask = ThreadPoolManager.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(p -> p.sendPacket(new ExShowScreenMessage(NpcStringId.CHARGE_THE_CANNON_USING_THE_GENERATOR, ExShowScreenMessage.TOP_CENTER, 7000, true))), 40000, 20000);
+				_announceTask = ThreadPool.scheduleAtFixedRate(() -> _zoneLair.getPlayersInside().forEach(p -> p.sendPacket(new ExShowScreenMessage(NpcStringId.CHARGE_THE_CANNON_USING_THE_GENERATOR, ExShowScreenMessage.TOP_CENTER, 7000, true))), 40000, 20000);
 				break;
 			}
 			case "start_charge":
 			{
-				_skillCastTask = ThreadPoolManager.scheduleAtFixedRate(() -> _generatorSpawn.forEach(generators ->
+				_skillCastTask = ThreadPool.scheduleAtFixedRate(() -> _generatorSpawn.forEach(generators ->
 				{
 					int index = generators.getScriptValue();
 					if (!generators.isCastingNow() && (generators.getEffectList().getBuffInfoBySkillId(SKILL_RECHARGE_POSIBLE.getSkillId()) == null) && !hasFlag(_chargedMask, 1 << index))
@@ -780,7 +780,7 @@ public class Lindvior extends AbstractNpcAI
 						});
 					}
 				}), 10000, 20000);
-				_LynDracoTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+				_LynDracoTask = ThreadPool.scheduleAtFixedRate(() ->
 				{
 					for (Location loc : LYN_DRACO_SPAWNS)
 					{
@@ -830,7 +830,7 @@ public class Lindvior extends AbstractNpcAI
 				_mobsSpawnTask = null;
 			}
 			_zoneLair.getCharactersInside().stream().filter(L2Character::isNpc).forEach(mob -> mob.deleteMe());
-			ThreadPoolManager.schedule(() -> npc.decayMe(), 10000);
+			ThreadPool.schedule(() -> npc.decayMe(), 10000);
 			_zoneLair.broadcastPacket(new OnEventTrigger(SECOND_STAGE_EVENT_TRIGGER, false));
 			_zoneLair.broadcastPacket(new OnEventTrigger(FIRST_STAGE_EVENT_TRIGGER, true));
 			_lionel.deleteMe();
@@ -846,7 +846,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			_zoneLair.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_GENERATOR_HAS_BEEN_DESTROYED, ExShowScreenMessage.TOP_CENTER, 5000, true));
 			Clean();
-			_collapseTask = ThreadPoolManager.schedule(() -> Fail(false), 20000);
+			_collapseTask = ThreadPool.schedule(() -> Fail(false), 20000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -882,7 +882,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			if (zone.getPlayersInside().isEmpty())
 			{
-				_collapseTask = ThreadPoolManager.schedule(() -> Fail(true), 900000);
+				_collapseTask = ThreadPool.schedule(() -> Fail(true), 900000);
 			}
 		}
 		return super.onExitZone(character, zone);
@@ -940,7 +940,7 @@ public class Lindvior extends AbstractNpcAI
 		{
 			if (_socialTask == null)
 			{
-				_socialTask = ThreadPoolManager.schedule(() -> nextStage(1), 3000);
+				_socialTask = ThreadPool.schedule(() -> nextStage(1), 3000);
 			}
 		}
 	}

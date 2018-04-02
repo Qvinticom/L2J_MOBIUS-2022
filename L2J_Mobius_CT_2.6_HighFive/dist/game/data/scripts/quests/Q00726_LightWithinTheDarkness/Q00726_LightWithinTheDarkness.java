@@ -19,7 +19,7 @@ package quests.Q00726_LightWithinTheDarkness;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
@@ -281,7 +281,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		world.setStatus(0);
 		dungeon.setReEnterTime(System.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
-		ThreadPoolManager.schedule(new spawnNpcs((PAWORLD) world), 10000);
+		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
@@ -392,7 +392,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	
 	protected void FirstWave(PAWORLD world)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			addSpawn(SEDUCED_KNIGHT, 49384, -12232, -9384, 0, false, 0, false, world.getInstanceId());
 			addSpawn(SEDUCED_RANGER, 49192, -12232, -9384, 0, false, 0, false, world.getInstanceId());
@@ -404,7 +404,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			{
 				addSpawn(KANADIS_FOLLOWER1, 50536, -12232, -9384, 32768, false, 0, false, world.getInstanceId());
 			}
-			ThreadPoolManager.schedule(() -> SecondWave(world), 8 * 60 * 1000);
+			ThreadPool.schedule(() -> SecondWave(world), 8 * 60 * 1000);
 		}, 10000);
 	}
 	
@@ -416,7 +416,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		{
 			addSpawn(KANADIS_FOLLOWER2, 50536, -12232, -9384, 32768, false, 0, false, world.getInstanceId());
 		}
-		ThreadPoolManager.schedule(() -> ThirdWave(world), 8 * 60 * 1000);
+		ThreadPool.schedule(() -> ThirdWave(world), 8 * 60 * 1000);
 	}
 	
 	protected void ThirdWave(PAWORLD world)

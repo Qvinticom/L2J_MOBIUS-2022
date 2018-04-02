@@ -24,7 +24,7 @@ import java.util.Vector;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -848,7 +848,7 @@ public class CTF implements EventTask
 		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport to team spot in 20 seconds!");
 		
 		setUserData();
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			sit();
 			afterTeleportOperations();
@@ -1138,7 +1138,7 @@ public class CTF implements EventTask
 		sit();
 		Announcements.getInstance().gameAnnounceToAll(_eventName + ": Teleport back to participation NPC in 20 seconds!");
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			synchronized (_players)
 			{
@@ -1244,7 +1244,7 @@ public class CTF implements EventTask
 	 */
 	public static void autoEvent()
 	{
-		ThreadPoolManager.execute(new AutoEventTask());
+		ThreadPool.execute(new AutoEventTask());
 	}
 	
 	// start without restart
@@ -3343,7 +3343,7 @@ public class CTF implements EventTask
 								player.sendPacket(new RadarControl(0, 1, hasFlag.getX(), hasFlag.getY(), hasFlag.getZ()));
 								final L2Radar rdr = new L2Radar(player);
 								final L2Radar.RadarOnPlayer radar = rdr.new RadarOnPlayer(hasFlag, player);
-								ThreadPoolManager.schedule(radar, 10000 + Rnd.get(30000));
+								ThreadPool.schedule(radar, 10000 + Rnd.get(30000));
 							}
 						}
 					}

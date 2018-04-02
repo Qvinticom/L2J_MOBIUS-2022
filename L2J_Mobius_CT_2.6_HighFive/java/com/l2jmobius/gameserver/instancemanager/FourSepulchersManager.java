@@ -33,8 +33,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.instancemanager.tasks.FourSepulchersChangeAttackTimeTask;
@@ -204,25 +204,25 @@ public final class FourSepulchersManager
 		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd)) // entry time check
 		{
 			clean();
-			_changeEntryTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeEntryTimeTask(), 0);
+			_changeEntryTimeTask = ThreadPool.schedule(new FourSepulchersChangeEntryTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Entry time");
 		}
 		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd)) // warmup time check
 		{
 			clean();
-			_changeWarmUpTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeWarmUpTimeTask(), 0);
+			_changeWarmUpTimeTask = ThreadPool.schedule(new FourSepulchersChangeWarmUpTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in WarmUp time");
 		}
 		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd)) // attack time check
 		{
 			clean();
-			_changeAttackTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeAttackTimeTask(), 0);
+			_changeAttackTimeTask = ThreadPool.schedule(new FourSepulchersChangeAttackTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Attack time");
 		}
 		else
 		// else cooldown time and without cleanup because it's already implemented
 		{
-			_changeCoolDownTimeTask = ThreadPoolManager.schedule(new FourSepulchersChangeCoolDownTimeTask(), 0);
+			_changeCoolDownTimeTask = ThreadPool.schedule(new FourSepulchersChangeCoolDownTimeTask(), 0);
 			_log.info(getClass().getSimpleName() + ": Beginning in Cooldown time");
 		}
 	}

@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.MonsterRace;
@@ -119,7 +119,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
 			
-			ThreadPoolManager.schedule(new RunRace(codes, activeChar), 5000);
+			ThreadPool.schedule(new RunRace(codes, activeChar), 5000);
 		}
 	}
 	
@@ -147,7 +147,7 @@ public class AdminMonsterRace implements IAdminCommandHandler
 			MonRaceInfo spk = new MonRaceInfo(codes[2][0], codes[2][1], MonsterRace.getInstance().getMonsters(), MonsterRace.getInstance().getSpeeds());
 			activeChar.sendPacket(spk);
 			activeChar.broadcastPacket(spk);
-			ThreadPoolManager.schedule(new RunEnd(activeChar), 30000);
+			ThreadPool.schedule(new RunEnd(activeChar), 30000);
 		}
 	}
 	

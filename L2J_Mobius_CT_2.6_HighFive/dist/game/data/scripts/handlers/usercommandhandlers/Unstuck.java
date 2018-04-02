@@ -17,8 +17,8 @@
 package handlers.usercommandhandlers;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
@@ -111,7 +111,7 @@ public class Unstuck implements IUserCommandHandler
 		// End SoE Animation section
 		
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.schedule(new EscapeFinalizer(activeChar), unstuckTimer));
+		activeChar.setSkillCast(ThreadPool.schedule(new EscapeFinalizer(activeChar), unstuckTimer));
 		
 		return true;
 	}

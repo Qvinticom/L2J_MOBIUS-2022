@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
@@ -297,11 +297,11 @@ public class AutoSpawn
 				
 				if (spawnInst._desDelay > 0)
 				{
-					spawnTask = ThreadPoolManager.scheduleAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay);
+					spawnTask = ThreadPool.scheduleAtFixedRate(rs, spawnInst._initDelay, spawnInst._resDelay);
 				}
 				else
 				{
-					spawnTask = ThreadPoolManager.schedule(rs, spawnInst._initDelay);
+					spawnTask = ThreadPool.schedule(rs, spawnInst._initDelay);
 				}
 				
 				synchronized (_runningSpawns)
@@ -323,7 +323,7 @@ public class AutoSpawn
 					spawnTask.cancel(false);
 				}
 				
-				ThreadPoolManager.schedule(rd, 0);
+				ThreadPool.schedule(rd, 0);
 			}
 			
 			spawnInst.setSpawnActive(isActive);
@@ -604,7 +604,7 @@ public class AutoSpawn
 				if (spawnInst.getDespawnDelay() > 0)
 				{
 					AutoDespawner rd = new AutoDespawner(_objectId);
-					ThreadPoolManager.schedule(rd, spawnInst.getDespawnDelay() - 1000);
+					ThreadPool.schedule(rd, spawnInst.getDespawnDelay() - 1000);
 				}
 			}
 			catch (Exception e)

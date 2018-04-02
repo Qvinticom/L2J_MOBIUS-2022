@@ -33,7 +33,7 @@ import java.util.function.Function;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -1308,7 +1308,7 @@ public final class CharEffectList
 			return;
 		}
 		// Schedule the icon update packets 500miliseconds ahead, so it can gather-up most of the changes.
-		_effectIconsUpdate = ThreadPoolManager.schedule(() ->
+		_effectIconsUpdate = ThreadPool.schedule(() ->
 		{
 			AbnormalStatusUpdate asu = null;
 			PartySpelled ps = null;

@@ -37,9 +37,9 @@ import com.l2jmobius.Config;
  * <li>Instant pool handles short-life events.</li>
  * </ul>
  */
-public final class ThreadPoolManager
+public final class ThreadPool
 {
-	protected static final Logger LOGGER = Logger.getLogger(ThreadPoolManager.class.getName());
+	protected static final Logger LOG = Logger.getLogger(ThreadPool.class.getName());
 	
 	private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
 	
@@ -96,8 +96,8 @@ public final class ThreadPoolManager
 			purge();
 		}, 600000, 600000);
 		
-		LOGGER.info("ThreadPoolManager: Initialized " + getPoolSize(_instantPools) + "/" + getMaximumPoolSize(_instantPools) + " instant thread(s).");
-		LOGGER.info("ThreadPoolManager: Initialized " + getPoolSize(_scheduledPools) + "/" + getMaximumPoolSize(_scheduledPools) + " scheduled thread(s).");
+		LOG.info("ThreadPoolManager: Initialized " + getPoolSize(_instantPools) + "/" + getMaximumPoolSize(_instantPools) + " instant thread(s).");
+		LOG.info("ThreadPoolManager: Initialized " + getPoolSize(_scheduledPools) + "/" + getMaximumPoolSize(_scheduledPools) + " scheduled thread(s).");
 	}
 	
 	public static void purge()
@@ -205,7 +205,7 @@ public final class ThreadPoolManager
 	{
 		try
 		{
-			LOGGER.info("ThreadPoolManager: Shutting down.");
+			LOG.info("ThreadPoolManager: Shutting down.");
 			
 			for (ScheduledThreadPoolExecutor threadPool : _scheduledPools)
 			{
@@ -292,7 +292,7 @@ public final class ThreadPoolManager
 			}
 			catch (RuntimeException e)
 			{
-				LOGGER.warning("Exception in " + _runnable.getClass().getName() + " execution: " + e.getMessage());
+				LOG.warning("Exception in " + _runnable.getClass().getName() + " execution: " + e.getMessage());
 			}
 		}
 	}

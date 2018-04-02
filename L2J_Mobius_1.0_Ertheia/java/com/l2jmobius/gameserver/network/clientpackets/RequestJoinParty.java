@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
@@ -82,7 +82,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 			requestor.sendPacket(sm);
 			if (!requestor.isProcessingRequest())
 			{
-				ThreadPoolManager.schedule(() -> scheduleDeny(requestor), 10000);
+				ThreadPool.schedule(() -> scheduleDeny(requestor), 10000);
 				requestor.blockRequest();
 			}
 			else

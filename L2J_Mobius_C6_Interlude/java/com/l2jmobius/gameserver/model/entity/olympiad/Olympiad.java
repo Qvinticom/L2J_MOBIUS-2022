@@ -41,7 +41,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.OlympiadStadiaManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -241,7 +241,7 @@ public class Olympiad
 			{
 				if (_validationEnd > Calendar.getInstance().getTimeInMillis())
 				{
-					_scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+					_scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
 				}
 				else
 				{
@@ -402,7 +402,7 @@ public class Olympiad
 			_scheduledOlympiadEnd.cancel(true);
 		}
 		
-		_scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
+		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
 		
 		updateCompStatus();
 	}
@@ -436,7 +436,7 @@ public class Olympiad
 			final Calendar validationEnd = Calendar.getInstance();
 			_validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
 			
-			_scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+			_scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
 		}
 	}
 	
@@ -806,7 +806,7 @@ public class Olympiad
 			LOGGER.info("Olympiad System: Event starts/started : " + _compStart.getTime());
 		}
 		
-		_scheduledCompStart = ThreadPoolManager.schedule(() ->
+		_scheduledCompStart = ThreadPool.schedule(() ->
 		{
 			if (isOlympiadEnd())
 			{
@@ -825,10 +825,10 @@ public class Olympiad
 			final long regEnd = getMillisToCompEnd() - 600000;
 			if (regEnd > 0)
 			{
-				ThreadPoolManager.schedule(() -> Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.OLYMPIAD_REGISTRATION_PERIOD_ENDED)), regEnd);
+				ThreadPool.schedule(() -> Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.OLYMPIAD_REGISTRATION_PERIOD_ENDED)), regEnd);
 			}
 			
-			_scheduledCompEnd = ThreadPoolManager.schedule(() ->
+			_scheduledCompEnd = ThreadPool.schedule(() ->
 			{
 				if (isOlympiadEnd())
 				{
@@ -870,7 +870,7 @@ public class Olympiad
 			_scheduledOlympiadEnd.cancel(true);
 		}
 		
-		_scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), 0);
+		_scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), 0);
 	}
 	
 	protected long getMillisToValidationEnd()
@@ -1001,7 +1001,7 @@ public class Olympiad
 			return;
 		}
 		
-		_scheduledWeeklyTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			addWeeklyPoints();
 			LOGGER.info("Olympiad System: Added weekly points to nobles");
@@ -1771,7 +1771,7 @@ public class Olympiad
 				break;
 		}
 		
-		_scheduledWeeklyTask = ThreadPoolManager.scheduleAtFixedRate(new OlympiadPointsRestoreTask(final_change_period), getMillisToWeekChange(), final_change_period);
+		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(new OlympiadPointsRestoreTask(final_change_period), getMillisToWeekChange(), final_change_period);
 	}
 	
 	class OlympiadPointsRestoreTask implements Runnable

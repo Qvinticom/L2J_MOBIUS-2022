@@ -24,7 +24,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -173,7 +173,7 @@ public class DimensionalRift
 			final long jumpTime = calcTimeToNextJump();
 			teleporterTimer.schedule(teleporterTimerTask, jumpTime); // Teleporter task, 8-10 minutes
 			
-			earthQuakeTask = ThreadPoolManager.schedule(() ->
+			earthQuakeTask = ThreadPool.schedule(() ->
 			{
 				for (L2PcInstance p : _party.getMembers())
 				{

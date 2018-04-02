@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 
 /**
@@ -39,7 +39,7 @@ public final class FourSepulchersChangeWarmUpTimeTask implements Runnable
 		manager.setIsCoolDownTime(false);
 		
 		final long interval = manager.isFirstTimeRun() ? manager.getWarmUpTimeEnd() - Calendar.getInstance().getTimeInMillis() : Config.FS_TIME_WARMUP * 60000L;
-		manager.setChangeAttackTimeTask(ThreadPoolManager.schedule(new FourSepulchersChangeAttackTimeTask(), interval));
+		manager.setChangeAttackTimeTask(ThreadPool.schedule(new FourSepulchersChangeAttackTimeTask(), interval));
 		final ScheduledFuture<?> changeWarmUpTimeTask = manager.getChangeWarmUpTimeTask();
 		
 		if (changeWarmUpTimeTask != null)

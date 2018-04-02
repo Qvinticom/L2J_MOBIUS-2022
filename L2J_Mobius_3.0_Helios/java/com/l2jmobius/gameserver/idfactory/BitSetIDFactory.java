@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.idfactory;
 import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
@@ -53,7 +53,7 @@ public class BitSetIDFactory extends IdFactory
 		
 		synchronized (BitSetIDFactory.class)
 		{
-			ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+			ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 			initialize();
 		}
 		LOGGER.info(getClass().getSimpleName() + ": " + _freeIds.size() + " id's available.");

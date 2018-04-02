@@ -20,8 +20,8 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
@@ -247,7 +247,7 @@ public final class UseItem implements IClientIncomingPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					// Removed for preventing retail behavior.
 					// if (activeChar.isAttackingNow()) // If character is still engaged in strike we should not change weapon

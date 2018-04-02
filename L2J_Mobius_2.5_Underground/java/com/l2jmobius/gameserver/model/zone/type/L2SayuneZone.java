@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FlyMoveStartTask;
@@ -59,7 +59,7 @@ public class L2SayuneZone extends L2ZoneType
 		if (character.isPlayer() && (character.isInCategory(CategoryType.SIXTH_CLASS_GROUP) || Config.FREE_JUMPS_FOR_ALL) && !character.getActingPlayer().isMounted() && !character.isTransformed())
 		{
 			character.setInsideZone(ZoneId.SAYUNE, true);
-			ThreadPoolManager.execute(new FlyMoveStartTask(this, character.getActingPlayer()));
+			ThreadPool.execute(new FlyMoveStartTask(this, character.getActingPlayer()));
 		}
 	}
 	

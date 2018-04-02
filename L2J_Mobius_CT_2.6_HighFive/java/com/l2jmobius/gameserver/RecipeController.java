@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.StatType;
@@ -109,7 +110,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(manufacturer.getObjectId(), maker);
-				ThreadPoolManager.schedule(maker, 100);
+				ThreadPool.schedule(maker, 100);
 			}
 			else
 			{
@@ -158,7 +159,7 @@ public class RecipeController
 			if (Config.ALT_GAME_CREATION)
 			{
 				_activeMakers.put(player.getObjectId(), maker);
-				ThreadPoolManager.schedule(maker, 100);
+				ThreadPool.schedule(maker, 100);
 			}
 			else
 			{
@@ -353,7 +354,7 @@ public class RecipeController
 					_player.broadcastPacket(msk);
 					
 					_player.sendPacket(new SetupGauge(0, _delay));
-					ThreadPoolManager.schedule(this, 100 + _delay);
+					ThreadPool.schedule(this, 100 + _delay);
 				}
 				else
 				{
@@ -536,7 +537,7 @@ public class RecipeController
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
 							_player.sendPacket(new SetupGauge(0, _delay));
-							ThreadPoolManager.schedule(this, 100 + _delay);
+							ThreadPool.schedule(this, 100 + _delay);
 						}
 						else
 						{
@@ -558,7 +559,7 @@ public class RecipeController
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
 							_player.sendPacket(new SetupGauge(0, _delay));
-							ThreadPoolManager.schedule(this, 100 + _delay);
+							ThreadPool.schedule(this, 100 + _delay);
 						}
 						else
 						{

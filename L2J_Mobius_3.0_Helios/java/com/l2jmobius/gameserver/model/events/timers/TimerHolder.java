@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -58,7 +58,7 @@ public class TimerHolder<T> implements Runnable
 		_eventScript = eventScript;
 		_cancelScript = cancelScript;
 		_postExecutor = postExecutor;
-		_task = isRepeating ? ThreadPoolManager.scheduleAtFixedRate(this, _time, _time) : ThreadPoolManager.schedule(this, _time);
+		_task = isRepeating ? ThreadPool.scheduleAtFixedRate(this, _time, _time) : ThreadPool.schedule(this, _time);
 		TimersManager.getInstance().registerTimer(this);
 	}
 	

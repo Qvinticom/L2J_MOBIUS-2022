@@ -29,7 +29,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
@@ -1186,7 +1186,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					if (getCurrentMp() < mpConsume)
 					{
 						// If L2PcInstance doesn't have enough MP, stop the attack
-						ThreadPoolManager.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), 1000);
+						ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), 1000);
 						
 						sendPacket(new SystemMessage(SystemMessageId.NOT_ENOUGH_MP));
 						sendPacket(ActionFailed.STATIC_PACKET);
@@ -1201,7 +1201,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				else
 				{
 					// Cancel the action because the bow can't be re-use at this moment
-					ThreadPoolManager.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), 1000);
+					ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), 1000);
 					
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -1392,7 +1392,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// Notify AI with EVT_READY_TO_ACT
-		ThreadPoolManager.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), timeAtk + reuse);
+		ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_READY_TO_ACT), timeAtk + reuse);
 	}
 	
 	/**
@@ -1455,7 +1455,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPoolManager.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk);
+		ThreadPool.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk);
 		
 		// Calculate and set the disable delay of the bow in function of the Attack Speed
 		_disableBowAttackEndTime = ((sAtk + reuse) / GameTimeController.MILLIS_IN_TICK) + GameTimeController.getGameTicks();
@@ -1526,10 +1526,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// Create a new hit task with Medium priority for hit 1
-		ThreadPoolManager.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk / 2);
+		ThreadPool.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk / 2);
 		
 		// Create a new hit task with Medium priority for hit 2 with a higher delay
-		ThreadPoolManager.schedule(new HitTask(target, damage2, crit2, miss2, attack.soulshot, shld2), sAtk);
+		ThreadPool.schedule(new HitTask(target, damage2, crit2, miss2, attack.soulshot, shld2), sAtk);
 		
 		// Add those hits to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -1690,7 +1690,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// Create a new hit task with Medium priority
-		ThreadPoolManager.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk);
+		ThreadPool.schedule(new HitTask(target, damage1, crit1, miss1, attack.soulshot, shld1), sAtk);
 		
 		// Add this hit to the Server-Client packet Attack
 		attack.addHit(target, damage1, miss1, crit1, shld1);
@@ -2128,20 +2128,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			{
 				if (skill.isPotion())
 				{
-					_potionCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 2), hitTime);
+					_potionCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 2), hitTime);
 				}
 				else
 				{
-					_skillCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 2), hitTime);
+					_skillCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 2), hitTime);
 				}
 			}
 			else if (skill.isPotion())
 			{
-				_potionCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 1), hitTime - 200);
+				_potionCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 1), hitTime - 200);
 			}
 			else
 			{
-				_skillCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 1), hitTime - 200);
+				_skillCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 1), hitTime - 200);
 			}
 		}
 		else
@@ -6155,7 +6155,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		if (updateKnownObjects)
 		{
-			ThreadPoolManager.execute(new KnownListAsynchronousUpdateTask(this));
+			ThreadPool.execute(new KnownListAsynchronousUpdateTask(this));
 		}
 	}
 	
@@ -6592,7 +6592,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.schedule(new NotifyAITask(CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
@@ -6675,7 +6675,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.schedule(new NotifyAITask(CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPool.schedule(new NotifyAITask(CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
@@ -8504,11 +8504,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		else if (skill.isPotion())
 		{
-			_potionCast = ThreadPoolManager.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
+			_potionCast = ThreadPool.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
 		}
 		else
 		{
-			_skillCast = ThreadPoolManager.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
+			_skillCast = ThreadPool.schedule(new MagicUseTask(final_targets, skill, coolTime, 2), 200);
 		}
 	}
 	
@@ -8685,11 +8685,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		else if (skill.isPotion())
 		{
-			_potionCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 3), coolTime);
+			_potionCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 3), coolTime);
 		}
 		else
 		{
-			_skillCast = ThreadPoolManager.schedule(new MagicUseTask(targets, skill, coolTime, 3), coolTime);
+			_skillCast = ThreadPool.schedule(new MagicUseTask(targets, skill, coolTime, 3), coolTime);
 		}
 	}
 	
@@ -8798,7 +8798,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					
 					// DON'T USE : Recursive call to useMagic() method
 					// currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());
-					ThreadPoolManager.execute(new QueuedMagicUseTask(currPlayer, queuedSkill.getSkill(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed()));
+					ThreadPool.execute(new QueuedMagicUseTask(currPlayer, queuedSkill.getSkill(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed()));
 				}
 				
 				final L2Weapon activeWeapon = getActiveWeaponItem();
@@ -8924,7 +8924,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		if (delay > 10)
 		{
-			ThreadPoolManager.schedule(new EnableSkill(skill), delay);
+			ThreadPool.schedule(new EnableSkill(skill), delay);
 		}
 	}
 	
@@ -9318,7 +9318,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 										{
 											hitTime = (int) (0.70 * hitTime);
 										}
-										ThreadPoolManager.schedule(new notifyAiTaskDelayed(CtrlEvent.EVT_ATTACKED, this, target), hitTime);
+										ThreadPool.schedule(new notifyAiTaskDelayed(CtrlEvent.EVT_ATTACKED, this, target), hitTime);
 										break;
 									}
 								}
@@ -9730,7 +9730,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	{
 		updatePvPFlag(1);
 		
-		_PvPRegTask = ThreadPoolManager.scheduleAtFixedRate(new PvPFlag(), 1000, 1000);
+		_PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlag(), 1000, 1000);
 	}
 	
 	/**

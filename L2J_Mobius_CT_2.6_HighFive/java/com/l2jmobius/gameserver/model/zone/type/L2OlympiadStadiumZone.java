@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -180,7 +180,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 			// only participants, observers and GMs allowed
 			if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode())
 			{
-				ThreadPoolManager.execute(new KickPlayer(player));
+				ThreadPool.execute(new KickPlayer(player));
 			}
 			else
 			{

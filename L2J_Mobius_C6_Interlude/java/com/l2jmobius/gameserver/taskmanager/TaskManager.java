@@ -38,7 +38,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskCleanUp;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskOlympiadSave;
@@ -258,7 +258,7 @@ public final class TaskManager
 		else if (type == TYPE_SHEDULED)
 		{
 			final long delay = Long.valueOf(task.getParams()[0]);
-			task.scheduled = ThreadPoolManager.schedule(task, delay);
+			task.scheduled = ThreadPool.schedule(task, delay);
 			return true;
 		}
 		else if (type == TYPE_FIXED_SHEDULED)
@@ -266,7 +266,7 @@ public final class TaskManager
 			final long delay = Long.valueOf(task.getParams()[0]);
 			final long interval = Long.valueOf(task.getParams()[1]);
 			
-			task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
+			task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
 			return true;
 		}
 		else if (type == TYPE_TIME)
@@ -277,7 +277,7 @@ public final class TaskManager
 				final long diff = desired.getTime() - System.currentTimeMillis();
 				if (diff >= 0)
 				{
-					task.scheduled = ThreadPoolManager.schedule(task, diff);
+					task.scheduled = ThreadPool.schedule(task, diff);
 					return true;
 				}
 				LOGGER.info("Task " + task.getId() + " is obsoleted.");
@@ -329,7 +329,7 @@ public final class TaskManager
 				delay += interval;
 			}
 			
-			task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
+			task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
 			
 			return true;
 		}

@@ -33,9 +33,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.StringTokenizer;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.handler.ITelnetHandler;
@@ -200,7 +200,7 @@ public class DebugHandler implements ITelnetHandler
 					}
 					
 					sb.append("\n\n## Thread Pool Manager Statistics ##\n");
-					for (String line : ThreadPoolManager.getStats())
+					for (String line : ThreadPool.getStats())
 					{
 						sb.append(line);
 						sb.append('\n');

@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -67,8 +67,8 @@ public class GameTimeController
 		_timer = new TimerThread();
 		_timer.start();
 		
-		_timerWatcher = ThreadPoolManager.scheduleAtFixedRate(new TimerWatcher(), 0, 1000);
-		ThreadPoolManager.scheduleAtFixedRate(new BroadcastSunState(), 0, 600000);
+		_timerWatcher = ThreadPool.scheduleAtFixedRate(new TimerWatcher(), 0, 1000);
+		ThreadPool.scheduleAtFixedRate(new BroadcastSunState(), 0, 600000);
 	}
 	
 	public boolean isNowNight()
@@ -154,7 +154,7 @@ public class GameTimeController
 		// TODO: maybe a general TP is needed for that kinda stuff (all knownlist updates should be done in a TP anyway).
 		if (ended != null)
 		{
-			ThreadPoolManager.execute(new MovingObjectArrived(ended));
+			ThreadPool.execute(new MovingObjectArrived(ended));
 		}
 	}
 	

@@ -17,7 +17,7 @@
 package hellbound.AI;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -76,7 +76,7 @@ public final class Chimeras extends AbstractNpcAI
 			if (!npc.isInsideRadius(loc, 200, false, false))
 			{
 				npc.getSpawn().setLocation(loc);
-				ThreadPoolManager.schedule(new Teleport(npc, loc), 100);
+				ThreadPool.schedule(new Teleport(npc, loc), 100);
 			}
 		}
 		return super.onSpawn(npc);

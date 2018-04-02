@@ -30,7 +30,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -624,7 +624,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 						{
 							openDoor(doorId, world.getInstanceId());
 						}
-						ThreadPoolManager.schedule(new IntroTask(world, 0), 600000);
+						ThreadPool.schedule(new IntroTask(world, 0), 600000);
 						break;
 					}
 					case 3: // first morph
@@ -641,7 +641,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 						}
 						handleReenterTime(world);
 						world.activeScarlet.doCast(FIRST_MORPH_SKILL.getSkill());
-						ThreadPoolManager.schedule(new SongTask(world, 2), 1500);
+						ThreadPool.schedule(new SongTask(world, 2), 1500);
 						break;
 					}
 					case 4: // second morph
@@ -653,8 +653,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 							world.songEffectTask.cancel(false);
 						}
 						world.songEffectTask = null;
-						ThreadPoolManager.schedule(new IntroTask(world, 23), 2000);
-						ThreadPoolManager.schedule(new IntroTask(world, 24), 2100);
+						ThreadPool.schedule(new IntroTask(world, 23), 2000);
+						ThreadPool.schedule(new IntroTask(world, 24), 2100);
 						break;
 					}
 					case 5: // raid success
@@ -671,7 +671,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 						}
 						world.songTask = null;
 						world.songEffectTask = null;
-						ThreadPoolManager.schedule(new IntroTask(world, 33), 500);
+						ThreadPool.schedule(new IntroTask(world, 33), 500);
 						break;
 					}
 					case 6: // open doors
@@ -759,7 +759,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				updateKnownList(_world, demon);
 				_world.demons.add(demon);
 			}
-			ThreadPoolManager.schedule(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
+			ThreadPool.schedule(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
 		}
 	}
 	
@@ -803,7 +803,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				{
 					if (_world.isVideo)
 					{
-						_world.songTask = ThreadPoolManager.schedule(new SongTask(_world, 0), 1000);
+						_world.songTask = ThreadPool.schedule(new SongTask(_world, 0), 1000);
 					}
 					else if ((_world.frintezza != null) && !_world.frintezza.isDead())
 					{
@@ -817,15 +817,15 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 									_world.OnSong = element;
 									broadCastPacket(_world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, element.songName, null));
 									broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, element.skill.getSkillId(), element.skill.getSkillLvl(), element.skill.getSkill().getHitTime(), 0));
-									_world.songEffectTask = ThreadPoolManager.schedule(new SongTask(_world, 1), element.skill.getSkill().getHitTime() - 10000);
-									_world.songTask = ThreadPoolManager.schedule(new SongTask(_world, 0), element.skill.getSkill().getHitTime());
+									_world.songEffectTask = ThreadPool.schedule(new SongTask(_world, 1), element.skill.getSkill().getHitTime() - 10000);
+									_world.songTask = ThreadPool.schedule(new SongTask(_world, 0), element.skill.getSkill().getHitTime());
 									break;
 								}
 							}
 						}
 						else
 						{
-							ThreadPoolManager.schedule(new SoulBreakingArrow(_world.frintezza), 35000);
+							ThreadPool.schedule(new SoulBreakingArrow(_world.frintezza), 35000);
 						}
 					}
 					break;
@@ -898,8 +898,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 			{
 				case 0:
 				{
-					ThreadPoolManager.schedule(new IntroTask(_world, 1), 27000);
-					ThreadPoolManager.schedule(new IntroTask(_world, 2), 30000);
+					ThreadPool.schedule(new IntroTask(_world, 1), 27000);
+					ThreadPool.schedule(new IntroTask(_world, 2), 30000);
 					broadCastPacket(_world, new Earthquake(-87784, -155083, -9087, 45, 27));
 					break;
 				}
@@ -943,7 +943,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.scarletDummy.setIsInvul(true);
 					_world.scarletDummy.setIsImmobilized(true);
 					stopPc();
-					ThreadPoolManager.schedule(new IntroTask(_world, 3), 1000);
+					ThreadPool.schedule(new IntroTask(_world, 3), 1000);
 					break;
 				}
 				case 3:
@@ -964,46 +964,46 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 						updateKnownList(_world, demon);
 						_world.demons.add(demon);
 					}
-					ThreadPoolManager.schedule(new IntroTask(_world, 4), 6500);
+					ThreadPool.schedule(new IntroTask(_world, 4), 6500);
 					break;
 				}
 				case 4:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezzaDummy, 1800, 90, 8, 6500, 7000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 5), 900);
+					ThreadPool.schedule(new IntroTask(_world, 5), 900);
 					break;
 				}
 				case 5:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezzaDummy, 140, 90, 10, 2500, 4500, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 6), 4000);
+					ThreadPool.schedule(new IntroTask(_world, 6), 4000);
 					break;
 				}
 				case 6:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 40, 75, -10, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 40, 75, -10, 0, 12000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 7), 1350);
+					ThreadPool.schedule(new IntroTask(_world, 7), 1350);
 					break;
 				}
 				case 7:
 				{
 					broadCastPacket(_world, new SocialAction(_world.frintezza.getObjectId(), 2));
-					ThreadPoolManager.schedule(new IntroTask(_world, 8), 7000);
+					ThreadPool.schedule(new IntroTask(_world, 8), 7000);
 					break;
 				}
 				case 8:
 				{
 					_world.frintezzaDummy.deleteMe();
 					_world.frintezzaDummy = null;
-					ThreadPoolManager.schedule(new IntroTask(_world, 9), 1000);
+					ThreadPool.schedule(new IntroTask(_world, 9), 1000);
 					break;
 				}
 				case 9:
 				{
 					broadCastPacket(_world, new SocialAction(_world.demons.get(1).getObjectId(), 1));
 					broadCastPacket(_world, new SocialAction(_world.demons.get(2).getObjectId(), 1));
-					ThreadPoolManager.schedule(new IntroTask(_world, 10), 400);
+					ThreadPool.schedule(new IntroTask(_world, 10), 400);
 					break;
 				}
 				case 10:
@@ -1012,7 +1012,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					broadCastPacket(_world, new SocialAction(_world.demons.get(3).getObjectId(), 1));
 					sendPacketX(new SpecialCamera(_world.portraitDummy1, 1000, 118, 0, 0, 1000, 0, 0, 1, 0, 0), new SpecialCamera(_world.portraitDummy3, 1000, 62, 0, 0, 1000, 0, 0, 1, 0, 0), -87784);
 					sendPacketX(new SpecialCamera(_world.portraitDummy1, 1000, 118, 0, 0, 10000, 0, 0, 1, 0, 0), new SpecialCamera(_world.portraitDummy3, 1000, 62, 0, 0, 10000, 0, 0, 1, 0, 0), -87784);
-					ThreadPoolManager.schedule(new IntroTask(_world, 11), 2000);
+					ThreadPool.schedule(new IntroTask(_world, 11), 2000);
 					break;
 				}
 				case 11:
@@ -1024,19 +1024,19 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.portraitDummy3.deleteMe();
 					_world.portraitDummy1 = null;
 					_world.portraitDummy3 = null;
-					ThreadPoolManager.schedule(new IntroTask(_world, 12), 4500);
+					ThreadPool.schedule(new IntroTask(_world, 12), 4500);
 					break;
 				}
 				case 12:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 13), 700);
+					ThreadPool.schedule(new IntroTask(_world, 13), 700);
 					break;
 				}
 				case 13:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 195, 35, 0, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 14), 1300);
+					ThreadPool.schedule(new IntroTask(_world, 14), 1300);
 					break;
 				}
 				case 14:
@@ -1044,19 +1044,19 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.MOURNFUL_CHORALE_PRELUDE, 2, 5000));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 120, 180, 45, 1500, 10000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, 5006, 1, 34000, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 15), 1500);
+					ThreadPool.schedule(new IntroTask(_world, 15), 1500);
 					break;
 				}
 				case 15:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 520, 135, 45, 8000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 16), 7500);
+					ThreadPool.schedule(new IntroTask(_world, 16), 7500);
 					break;
 				}
 				case 16:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 1500, 110, 25, 10000, 13000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 17), 9500);
+					ThreadPool.schedule(new IntroTask(_world, 17), 9500);
 					break;
 				}
 				case 17:
@@ -1064,7 +1064,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 930, 160, -20, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.overheadDummy, 600, 180, -25, 0, 10000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new MagicSkillUse(_world.scarletDummy, _world.overheadDummy, 5004, 1, 5800, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 18), 5000);
+					ThreadPool.schedule(new IntroTask(_world, 18), 5000);
 					break;
 				}
 				case 18:
@@ -1077,20 +1077,20 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					updateKnownList(_world, _world.activeScarlet);
 					broadCastPacket(_world, new SocialAction(_world.activeScarlet.getObjectId(), 3));
 					broadCastPacket(_world, new SpecialCamera(_world.scarletDummy, 800, 180, 10, 1000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 19), 2100);
+					ThreadPool.schedule(new IntroTask(_world, 19), 2100);
 					break;
 				}
 				case 19:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 300, 60, 8, 0, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 20), 2000);
+					ThreadPool.schedule(new IntroTask(_world, 20), 2000);
 					break;
 				}
 				case 20:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 500, 90, 10, 3000, 5000, 0, 0, 1, 0, 0));
-					_world.songTask = ThreadPoolManager.schedule(new SongTask(_world, 0), 100);
-					ThreadPoolManager.schedule(new IntroTask(_world, 21), 3000);
+					_world.songTask = ThreadPool.schedule(new SongTask(_world, 0), 100);
+					ThreadPool.schedule(new IntroTask(_world, 21), 3000);
 					break;
 				}
 				case 21:
@@ -1105,7 +1105,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.scarletDummy.deleteMe();
 					_world.overheadDummy = null;
 					_world.scarletDummy = null;
-					ThreadPoolManager.schedule(new IntroTask(_world, 22), 2000);
+					ThreadPool.schedule(new IntroTask(_world, 22), 2000);
 					break;
 				}
 				case 22:
@@ -1124,7 +1124,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.frintezza.disableCoreAI(true);
 					_world.frintezza.setIsMortal(false);
 					startPc();
-					ThreadPoolManager.schedule(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
+					ThreadPool.schedule(new DemonSpawnTask(_world), TIME_BETWEEN_DEMON_SPAWNS);
 					break;
 				}
 				case 23:
@@ -1142,20 +1142,20 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.activeScarlet.setIsInvul(true);
 					_world.activeScarlet.setIsImmobilized(true);
 					_world.activeScarlet.disableAllSkills();
-					ThreadPoolManager.schedule(new IntroTask(_world, 25), 7000);
+					ThreadPool.schedule(new IntroTask(_world, 25), 7000);
 					break;
 				}
 				case 25:
 				{
 					broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, 5006, 1, 34000, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 500, 70, 15, 3000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 26), 3000);
+					ThreadPool.schedule(new IntroTask(_world, 26), 3000);
 					break;
 				}
 				case 26:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 2500, 90, 12, 6000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 27), 3000);
+					ThreadPool.schedule(new IntroTask(_world, 27), 3000);
 					break;
 				}
 				case 27:
@@ -1174,15 +1174,15 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					}
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 250, _world.scarlet_a, 12, 0, 1000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 250, _world.scarlet_a, 12, 0, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 28), 500);
+					ThreadPool.schedule(new IntroTask(_world, 28), 500);
 					break;
 				}
 				case 28:
 				{
 					_world.activeScarlet.doDie(_world.activeScarlet);
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 450, _world.scarlet_a, 14, 8000, 8000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 29), 6250);
-					ThreadPoolManager.schedule(new IntroTask(_world, 30), 7200);
+					ThreadPool.schedule(new IntroTask(_world, 29), 6250);
+					ThreadPool.schedule(new IntroTask(_world, 30), 7200);
 					break;
 				}
 				case 29:
@@ -1199,13 +1199,13 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 					_world.activeScarlet.disableAllSkills();
 					updateKnownList(_world, _world.activeScarlet);
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 450, _world.scarlet_a, 12, 500, 14000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 31), 8100);
+					ThreadPool.schedule(new IntroTask(_world, 31), 8100);
 					break;
 				}
 				case 31:
 				{
 					broadCastPacket(_world, new SocialAction(_world.activeScarlet.getObjectId(), 2));
-					ThreadPoolManager.schedule(new IntroTask(_world, 32), 9000);
+					ThreadPool.schedule(new IntroTask(_world, 32), 9000);
 					break;
 				}
 				case 32:
@@ -1221,8 +1221,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 300, _world.scarlet_a - 180, 5, 0, 7000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.activeScarlet, 200, _world.scarlet_a, 85, 4000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 34), 7400);
-					ThreadPoolManager.schedule(new IntroTask(_world, 35), 7500);
+					ThreadPool.schedule(new IntroTask(_world, 34), 7400);
+					ThreadPool.schedule(new IntroTask(_world, 35), 7500);
 					break;
 				}
 				case 34:
@@ -1234,13 +1234,13 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 120, 5, 0, 7000, 0, 0, 1, 0, 0));
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 100, 90, 5, 5000, 15000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 36), 7000);
+					ThreadPool.schedule(new IntroTask(_world, 36), 7000);
 					break;
 				}
 				case 36:
 				{
 					broadCastPacket(_world, new SpecialCamera(_world.frintezza, 900, 90, 25, 7000, 10000, 0, 0, 1, 0, 0));
-					ThreadPoolManager.schedule(new IntroTask(_world, 37), 9000);
+					ThreadPool.schedule(new IntroTask(_world, 37), 9000);
 					break;
 				}
 				case 37:
@@ -1326,7 +1326,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 			{
 				case 0:
 				{
-					ThreadPoolManager.schedule(new StatusTask(_world, 1), 2000);
+					ThreadPool.schedule(new StatusTask(_world, 1), 2000);
 					for (int doorId : FIRST_ROOM_DOORS)
 					{
 						openDoor(doorId, _world.getInstanceId());
@@ -1340,7 +1340,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				}
 				case 2:
 				{
-					ThreadPoolManager.schedule(new StatusTask(_world, 3), 100);
+					ThreadPool.schedule(new StatusTask(_world, 3), 100);
 					for (int doorId : SECOND_ROOM_DOORS)
 					{
 						openDoor(doorId, _world.getInstanceId());
@@ -1478,7 +1478,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 			final FETWorld world = (FETWorld) tmpworld;
 			if (npc.getId() == HALL_ALARM)
 			{
-				ThreadPoolManager.schedule(new StatusTask(world, 0), 2000);
+				ThreadPool.schedule(new StatusTask(world, 0), 2000);
 				if (debug)
 				{
 					_log.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
@@ -1489,7 +1489,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 				world.darkChoirPlayerCount--;
 				if (world.darkChoirPlayerCount < 1)
 				{
-					ThreadPoolManager.schedule(new StatusTask(world, 2), 2000);
+					ThreadPool.schedule(new StatusTask(world, 2), 2000);
 					if (debug)
 					{
 						_log.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");

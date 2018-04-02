@@ -23,7 +23,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.datatables.sql.TerritoryTable;
@@ -315,7 +315,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
+			_aiTask = ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	

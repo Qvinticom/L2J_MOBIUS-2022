@@ -22,7 +22,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -181,7 +181,7 @@ public final class L2CubicInstance implements IIdentifiable
 				break;
 			}
 		}
-		_disappearTask = ThreadPoolManager.schedule(new CubicDisappear(this), cubicDuration * 1000); // disappear
+		_disappearTask = ThreadPool.schedule(new CubicDisappear(this), cubicDuration * 1000); // disappear
 	}
 	
 	public synchronized void doAction()
@@ -208,12 +208,12 @@ public final class L2CubicInstance implements IIdentifiable
 			case SMART_CUBIC_EVATEMPLAR:
 			case SMART_CUBIC_SHILLIENTEMPLAR:
 			{
-				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
+				_actionTask = ThreadPool.scheduleAtFixedRate(new CubicAction(this, _cubicSkillChance), 0, _cubicDelay);
 				break;
 			}
 			case LIFE_CUBIC:
 			{
-				_actionTask = ThreadPoolManager.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
+				_actionTask = ThreadPool.scheduleAtFixedRate(new CubicHeal(this), 0, _cubicDelay);
 				break;
 			}
 		}

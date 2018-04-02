@@ -16,8 +16,8 @@
  */
 package quests.Q10292_SevenSignsGirlOfDoubt;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -160,7 +160,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 					creature1.setRandomWalking(true);
 					final L2Npc creature2 = addSpawn(CREATURE_OF_THE_DUSK2, 89524, -238131, -9632, 56, false, 0, false, player.getInstanceId());
 					creature2.setRandomWalking(true);
-					ThreadPoolManager.schedule(() ->
+					ThreadPool.schedule(() ->
 					{
 						creature1.deleteMe();
 						creature2.deleteMe();

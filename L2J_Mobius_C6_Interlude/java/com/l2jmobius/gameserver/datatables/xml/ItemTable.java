@@ -27,7 +27,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
@@ -216,7 +216,7 @@ public class ItemTable
 				item.setOwnerId(actor.getObjectId());
 				delay = 15000;
 			}
-			itemLootShedule = ThreadPoolManager.schedule(new resetOwner(item), delay);
+			itemLootShedule = ThreadPool.schedule(new resetOwner(item), delay);
 			item.setItemLootShedule(itemLootShedule);
 		}
 		

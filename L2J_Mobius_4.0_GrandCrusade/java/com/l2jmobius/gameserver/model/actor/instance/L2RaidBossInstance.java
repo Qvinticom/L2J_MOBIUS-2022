@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -72,7 +72,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	@Override
 	protected void startMaintenanceTask()
 	{
-		_maintenanceTask = ThreadPoolManager.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
+		_maintenanceTask = ThreadPool.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
 	}
 	
 	protected void checkAndReturnToSpawn()

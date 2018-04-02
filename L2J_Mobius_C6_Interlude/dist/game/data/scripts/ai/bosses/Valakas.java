@@ -21,7 +21,7 @@ import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -128,7 +128,7 @@ public class Valakas extends Quest
 			GrandBossManager.getInstance().addBoss(valakas);
 			final L2NpcInstance _valakas = valakas;
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				try
 				{
@@ -350,7 +350,7 @@ public class Valakas extends Quest
 			
 			lastAttackTime = System.currentTimeMillis();
 			final L2NpcInstance _valakas = valakas;
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				try
 				{

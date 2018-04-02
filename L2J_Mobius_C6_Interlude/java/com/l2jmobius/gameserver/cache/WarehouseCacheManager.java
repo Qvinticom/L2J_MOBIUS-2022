@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -46,7 +46,7 @@ public class WarehouseCacheManager
 	{
 		_cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000L; // 60*1000 = 60000
 		_cachedWh = new ConcurrentHashMap<>();
-		ThreadPoolManager.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
+		ThreadPool.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
 	}
 	
 	public void addCacheTask(L2PcInstance pc)

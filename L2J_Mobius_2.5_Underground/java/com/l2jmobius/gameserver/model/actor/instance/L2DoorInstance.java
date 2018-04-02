@@ -20,8 +20,8 @@ import java.util.Collection;
 import java.util.Set;
 import java.util.concurrent.Future;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2DoorAI;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
@@ -107,7 +107,7 @@ public final class L2DoorInstance extends L2Character
 		{
 			delay += Rnd.get(getTemplate().getRandomTime());
 		}
-		ThreadPoolManager.schedule(new TimerOpen(), delay * 1000);
+		ThreadPool.schedule(new TimerOpen(), delay * 1000);
 	}
 	
 	@Override
@@ -641,7 +641,7 @@ public final class L2DoorInstance extends L2Character
 			_autoCloseTask = null;
 			oldTask.cancel(false);
 		}
-		_autoCloseTask = ThreadPoolManager.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
+		_autoCloseTask = ThreadPool.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
 	}
 	
 	class AutoClose implements Runnable
@@ -676,7 +676,7 @@ public final class L2DoorInstance extends L2Character
 			{
 				delay += Rnd.get(getTemplate().getRandomTime());
 			}
-			ThreadPoolManager.schedule(this, delay * 1000);
+			ThreadPool.schedule(this, delay * 1000);
 		}
 	}
 	

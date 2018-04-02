@@ -22,7 +22,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -472,7 +472,7 @@ public class L2Attackable extends L2NpcInstance
 						{
 							_commandChannelTimer = new CommandChannelTimer(this);
 							_commandChannelLastAttack = System.currentTimeMillis();
-							ThreadPoolManager.schedule(_commandChannelTimer, 10000); // check for last attack
+							ThreadPool.schedule(_commandChannelTimer, 10000); // check for last attack
 							_firstCommandChannelAttacked.broadcastToChannelMembers(new CreatureSay(0, Say2.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
 						}
 					}
@@ -3401,7 +3401,7 @@ public class L2Attackable extends L2NpcInstance
 			}
 			else
 			{
-				ThreadPoolManager.schedule(this, 10000); // 10sec
+				ThreadPool.schedule(this, 10000); // 10sec
 			}
 		}
 	}

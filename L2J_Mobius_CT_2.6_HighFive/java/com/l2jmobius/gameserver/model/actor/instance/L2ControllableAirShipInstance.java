@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.actor.stat.ControllableAirShipStat;
@@ -257,8 +257,8 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 	public void onSpawn()
 	{
 		super.onSpawn();
-		_checkTask = ThreadPoolManager.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
-		_consumeFuelTask = ThreadPoolManager.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
+		_checkTask = ThreadPool.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
+		_consumeFuelTask = ThreadPool.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
 	}
 	
 	@Override
@@ -330,7 +330,7 @@ public class L2ControllableAirShipInstance extends L2AirShipInstance
 			if (isVisible() && isEmpty() && !isInDock())
 			{
 				// deleteMe() can't be called from CheckTask because task should not cancel itself
-				ThreadPoolManager.execute(new DecayTask());
+				ThreadPool.execute(new DecayTask());
 			}
 		}
 	}

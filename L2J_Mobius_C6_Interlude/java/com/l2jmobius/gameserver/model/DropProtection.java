@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 
@@ -105,6 +105,6 @@ public class DropProtection implements Runnable
 			throw new NullPointerException("Trying to protect dropped item to null owner");
 		}
 		
-		_task = ThreadPoolManager.schedule(this, PROTECTED_MILLIS_TIME);
+		_task = ThreadPool.schedule(this, PROTECTED_MILLIS_TIME);
 	}
 }

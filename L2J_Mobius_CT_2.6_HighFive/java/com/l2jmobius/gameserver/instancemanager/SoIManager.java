@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.instancemanager;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -116,7 +116,7 @@ public class SoIManager
 		spawnOpenedSeed();
 		DoorData.getInstance().getDoor(14240102).openMe();
 		
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			closeSeed();
 			setCurrentStage(4);

@@ -25,7 +25,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -263,11 +263,11 @@ public class Antharas extends Quest
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
 				// Start repeating timer to check for inactivity
-				_activityCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
+				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
 			else if (status == DEAD)
 			{
-				ThreadPoolManager.schedule(new UnlockAntharas(ANTHARASOLDID), respawnTime - System.currentTimeMillis());
+				ThreadPool.schedule(new UnlockAntharas(ANTHARASOLDID), respawnTime - System.currentTimeMillis());
 			}
 			else if (status == DORMANT)
 			{
@@ -316,7 +316,7 @@ public class Antharas extends Quest
 				_antharas.setCurrentHpMp(hp, mp);
 				_LastAction = System.currentTimeMillis();
 				// Start repeating timer to check for inactivity
-				_activityCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
+				_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 			}
 			else if ((antharasId != 0) && (status == DEAD))
 			{
@@ -331,7 +331,7 @@ public class Antharas extends Quest
 				}
 				else
 				{
-					ThreadPoolManager.schedule(new UnlockAntharas(antharasId), respawnTime - System.currentTimeMillis());
+					ThreadPool.schedule(new UnlockAntharas(antharasId), respawnTime - System.currentTimeMillis());
 				}
 			}
 		}
@@ -372,7 +372,7 @@ public class Antharas extends Quest
 				if (_monsterSpawnTask == null)
 				{
 					GrandBossManager.getInstance().setBossStatus(ANTHARASOLDID, WAITING);
-					_monsterSpawnTask = ThreadPoolManager.schedule(new AntharasSpawn(1), 60000 * Config.ANTHARAS_WAIT_TIME);
+					_monsterSpawnTask = ThreadPool.schedule(new AntharasSpawn(1), 60000 * Config.ANTHARAS_WAIT_TIME);
 				}
 			}
 		}
@@ -404,7 +404,7 @@ public class Antharas extends Quest
 		}
 		
 		// Spawn mobs.
-		_mobsSpawnTask = ThreadPoolManager.scheduleAtFixedRate(new MobsSpawn(), intervalOfMobs, intervalOfMobs);
+		_mobsSpawnTask = ThreadPool.scheduleAtFixedRate(new MobsSpawn(), intervalOfMobs, intervalOfMobs);
 	}
 	
 	// Do spawn Antharas.
@@ -462,7 +462,7 @@ public class Antharas extends Quest
 					GrandBossManager.getInstance().setBossStatus(npcId, FIGHTING);
 					_LastAction = System.currentTimeMillis();
 					// Start repeating timer to check for inactivity
-					_activityCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
+					_activityCheckTask = ThreadPool.scheduleAtFixedRate(new CheckActivity(), 60000, 60000);
 					// Setting 1st time of minions spawn task.
 					if (!FWA_OLDANTHARAS)
 					{
@@ -474,7 +474,7 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(2), 16);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(2), 16);
 					break;
 				}
 				case 2:
@@ -487,7 +487,7 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(3), 3000);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(3), 3000);
 					break;
 				}
 				case 3:
@@ -500,7 +500,7 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(4), 10000);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(4), 10000);
 					break;
 				}
 				case 4:
@@ -512,7 +512,7 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(5), 200);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(5), 200);
 					break;
 				}
 				case 5:
@@ -525,7 +525,7 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(6), 10800);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(6), 10800);
 					break;
 				}
 				case 6:
@@ -538,18 +538,18 @@ public class Antharas extends Quest
 						_socialTask.cancel(true);
 						_socialTask = null;
 					}
-					_socialTask = ThreadPoolManager.schedule(new AntharasSpawn(7), 1900);
+					_socialTask = ThreadPool.schedule(new AntharasSpawn(7), 1900);
 					break;
 				}
 				case 7:
 				{
 					_antharas.abortCast();
-					_mobiliseTask = ThreadPoolManager.schedule(new SetMobilised(_antharas), 16);
+					_mobiliseTask = ThreadPool.schedule(new SetMobilised(_antharas), 16);
 					// Move at random.
 					if (FWA_MOVEATRANDOM)
 					{
 						final Location pos = new Location(Rnd.get(175000, 178500), Rnd.get(112400, 116000), -7707, 0);
-						_moveAtRandomTask = ThreadPoolManager.schedule(new MoveAtRandom(_antharas, pos), 500);
+						_moveAtRandomTask = ThreadPool.schedule(new MoveAtRandom(_antharas, pos), 500);
 					}
 					if (_socialTask != null)
 					{
@@ -668,7 +668,7 @@ public class Antharas extends Quest
 			{
 				if ((_selfDestructionTask == null) && !npc.isDead())
 				{
-					_selfDestructionTask = ThreadPoolManager.schedule(new SelfDestructionOfBomber(npc), FWA_SELFDESTRUCTTIME);
+					_selfDestructionTask = ThreadPool.schedule(new SelfDestructionOfBomber(npc), FWA_SELFDESTRUCTTIME);
 				}
 				break;
 			}
@@ -842,7 +842,7 @@ public class Antharas extends Quest
 			if (_type == 0)
 			{
 				spawnCube();
-				_cubeSpawnTask = ThreadPoolManager.schedule(new CubeSpawn(1), 1800000);
+				_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(1), 1800000);
 			}
 			else
 			{
@@ -967,10 +967,10 @@ public class Antharas extends Quest
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{
-				_cubeSpawnTask = ThreadPoolManager.schedule(new CubeSpawn(0), 10000);
+				_cubeSpawnTask = ThreadPool.schedule(new CubeSpawn(0), 10000);
 				GrandBossManager.getInstance().setBossStatus(npc.getNpcId(), DEAD);
 				final long respawnTime = (Config.ANTHARAS_RESP_FIRST + Rnd.get(Config.ANTHARAS_RESP_SECOND)) * 3600000;
-				ThreadPoolManager.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
+				ThreadPool.schedule(new UnlockAntharas(npc.getNpcId()), respawnTime);
 				// also save the respawn time so that the info is maintained past reboots
 				final StatsSet info = GrandBossManager.getInstance().getStatsSet(npc.getNpcId());
 				info.set("respawn_time", (System.currentTimeMillis() + respawnTime));

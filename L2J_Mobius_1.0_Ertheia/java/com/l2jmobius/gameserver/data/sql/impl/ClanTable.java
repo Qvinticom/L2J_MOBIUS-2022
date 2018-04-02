@@ -29,8 +29,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.enums.UserInfoType;
@@ -331,7 +331,7 @@ public class ClanTable
 	
 	public void scheduleRemoveClan(int clanId)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (getClan(clanId) == null)
 			{

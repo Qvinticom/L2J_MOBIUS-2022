@@ -22,7 +22,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.TerritoryTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -422,7 +422,7 @@ public class L2Spawn
 			_scheduledCount++;
 			
 			// Create a new SpawnTask to launch after the respawn Delay
-			ThreadPoolManager.schedule(new SpawnTask(), _respawnDelay);
+			ThreadPool.schedule(new SpawnTask(), _respawnDelay);
 		}
 	}
 	

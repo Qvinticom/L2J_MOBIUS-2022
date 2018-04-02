@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
@@ -80,7 +80,7 @@ public final class RequestJoinPledge implements IClientIncomingPacket
 			{
 				if (!activeChar.isProcessingRequest())
 				{
-					ThreadPoolManager.schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
+					ThreadPool.schedule(() -> scheduleDeny(activeChar, activeChar.getTarget().getName()), 10000);
 					activeChar.blockRequest();
 				}
 				else

@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
@@ -312,7 +312,7 @@ public final class UseItem extends L2GameClientPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPoolManager.schedule(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
+				ThreadPool.schedule(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
 			}
 			else
 			{

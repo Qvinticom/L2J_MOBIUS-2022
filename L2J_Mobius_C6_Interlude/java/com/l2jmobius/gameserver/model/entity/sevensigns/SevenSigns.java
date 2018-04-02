@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.handler.AutoChatHandler;
@@ -306,7 +306,7 @@ public class SevenSigns
 			final long milliToChange = getMilliToPeriodChange();
 			
 			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
-			ThreadPoolManager.schedule(sspc, milliToChange);
+			ThreadPool.schedule(sspc, milliToChange);
 			
 			// Thanks to http://rainbow.arch.scriptmania.com/scripts/timezone_countdown.html for help with this.
 			final double numSecs = (milliToChange / 1000) % 60;
@@ -1849,7 +1849,7 @@ public class SevenSigns
 			setCalendarForNextPeriodChange();
 			
 			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
-			ThreadPoolManager.schedule(sspc, getMilliToPeriodChange());
+			ThreadPool.schedule(sspc, getMilliToPeriodChange());
 		}
 	}
 }

@@ -19,7 +19,7 @@ package vehicles;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -120,19 +120,19 @@ public class BoatInnadrilTour implements Runnable
 				case 0:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL5);
-					ThreadPoolManager.schedule(this, 240000);
+					ThreadPool.schedule(this, 240000);
 					break;
 				}
 				case 1:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL1);
-					ThreadPoolManager.schedule(this, 40000);
+					ThreadPool.schedule(this, 40000);
 					break;
 				}
 				case 2:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, LEAVE_INNADRIL0);
-					ThreadPoolManager.schedule(this, 20000);
+					ThreadPool.schedule(this, 20000);
 					break;
 				}
 				case 3:
@@ -140,31 +140,31 @@ public class BoatInnadrilTour implements Runnable
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, LEAVING_INNADRIL, INNADRIL_SOUND);
 					_boat.payForRide(0, 1, 107092, 219098, -3952);
 					_boat.executePath(TOUR);
-					ThreadPoolManager.schedule(this, 650000);
+					ThreadPool.schedule(this, 650000);
 					break;
 				}
 				case 4:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL20);
-					ThreadPoolManager.schedule(this, 300000);
+					ThreadPool.schedule(this, 300000);
 					break;
 				}
 				case 5:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL15);
-					ThreadPoolManager.schedule(this, 300000);
+					ThreadPool.schedule(this, 300000);
 					break;
 				}
 				case 6:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL10);
-					ThreadPoolManager.schedule(this, 300000);
+					ThreadPool.schedule(this, 300000);
 					break;
 				}
 				case 7:
 				{
 					BoatManager.getInstance().broadcastPacket(DOCK, DOCK, ARRIVAL5);
-					ThreadPoolManager.schedule(this, 240000);
+					ThreadPool.schedule(this, 240000);
 					break;
 				}
 				case 8:
@@ -175,7 +175,7 @@ public class BoatInnadrilTour implements Runnable
 				case 9:
 				{
 					BoatManager.getInstance().broadcastPackets(DOCK, DOCK, ARRIVED_AT_INNADRIL, INNADRIL_SOUND);
-					ThreadPoolManager.schedule(this, 300000);
+					ThreadPool.schedule(this, 300000);
 					break;
 				}
 			}

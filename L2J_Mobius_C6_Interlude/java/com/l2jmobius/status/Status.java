@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 
 public class Status extends Thread
@@ -60,7 +60,7 @@ public class Status extends Thread
 					final GameStatusThread gst = new GameStatusThread(connection, _uptime, _statusPw);
 					if (!connection.isClosed())
 					{
-						ThreadPoolManager.execute(gst);
+						ThreadPool.execute(gst);
 					}
 				}
 				else if (_mode == Server.MODE_LOGINSERVER)
@@ -68,7 +68,7 @@ public class Status extends Thread
 					final LoginStatusThread lst = new LoginStatusThread(connection, _uptime, _statusPw);
 					if (!connection.isClosed())
 					{
-						ThreadPoolManager.execute(lst);
+						ThreadPool.execute(lst);
 						_loginStatus.add(lst);
 					}
 				}

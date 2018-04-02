@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
@@ -40,7 +40,7 @@ public class AttackStanceTaskManager
 	
 	private AttackStanceTaskManager()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
+		ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
 	}
 	
 	public static AttackStanceTaskManager getInstance()

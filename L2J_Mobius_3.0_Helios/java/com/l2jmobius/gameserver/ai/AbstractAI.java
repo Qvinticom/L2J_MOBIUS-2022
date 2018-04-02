@@ -23,9 +23,9 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -728,7 +728,7 @@ public abstract class AbstractAI implements Ctrl
 		setTarget(target);
 		
 		final int followRange = range == -1 ? Rnd.get(50, 100) : range;
-		_followTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+		_followTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			try
 			{

@@ -30,7 +30,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -54,7 +54,7 @@ public final class Util
 	
 	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, IllegalActionPunishmentType punishment)
 	{
-		ThreadPoolManager.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
+		ThreadPool.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
 	}
 	
 	public static String getRelativePath(File base, File file)

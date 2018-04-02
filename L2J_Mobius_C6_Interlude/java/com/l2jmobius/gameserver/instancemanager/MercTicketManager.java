@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.handler.AutoChatHandler;
@@ -894,7 +894,7 @@ public class MercTicketManager
 			
 			if (despawnDelay > 0)
 			{
-				ThreadPoolManager.schedule(() -> npc.deleteMe(), despawnDelay);
+				ThreadPool.schedule(() -> npc.deleteMe(), despawnDelay);
 			}
 		}
 	}

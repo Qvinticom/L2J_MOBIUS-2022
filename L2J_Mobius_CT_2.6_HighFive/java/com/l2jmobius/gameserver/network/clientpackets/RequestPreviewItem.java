@@ -21,7 +21,7 @@ import java.util.Map;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -237,7 +237,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		{
 			activeChar.sendPacket(new ShopPreviewInfo(itemList));
 			// Schedule task
-			ThreadPoolManager.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+			ThreadPool.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
 		}
 	}
 }

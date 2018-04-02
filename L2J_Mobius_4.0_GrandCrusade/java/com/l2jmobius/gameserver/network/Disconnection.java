@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
@@ -183,7 +183,7 @@ public final class Disconnection
 	{
 		if (_activeChar != null)
 		{
-			ThreadPoolManager.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+			ThreadPool.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
 		}
 	}
 }

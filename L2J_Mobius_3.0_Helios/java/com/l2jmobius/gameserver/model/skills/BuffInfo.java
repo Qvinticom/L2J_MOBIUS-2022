@@ -23,8 +23,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -322,7 +322,7 @@ public final class BuffInfo
 		// Creates a task that will stop all the effects.
 		if (_abnormalTime > 0)
 		{
-			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
+			_scheduledFutureTimeTask = ThreadPool.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
 		
 		for (AbstractEffect effect : _effects)
@@ -340,7 +340,7 @@ public final class BuffInfo
 			{
 				// The task for the effect ticks.
 				final EffectTickTask effectTask = new EffectTickTask(this, effect);
-				final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
+				final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
 				// Adds the task for ticking.
 				addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
 			}
@@ -449,7 +449,7 @@ public final class BuffInfo
 			{
 				_scheduledFutureTimeTask.cancel(true);
 			}
-			_scheduledFutureTimeTask = ThreadPoolManager.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
+			_scheduledFutureTimeTask = ThreadPool.scheduleAtFixedRate(new BuffTimeTask(this), 0, 1000L);
 		}
 	}
 	

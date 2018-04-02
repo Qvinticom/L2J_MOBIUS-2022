@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -108,7 +108,7 @@ public abstract class VoteSystem implements Runnable
 		this.rewards = rewards;
 		this.checkMins = checkMins;
 		
-		ThreadPoolManager.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
+		ThreadPool.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
 	}
 	
 	protected void reward()

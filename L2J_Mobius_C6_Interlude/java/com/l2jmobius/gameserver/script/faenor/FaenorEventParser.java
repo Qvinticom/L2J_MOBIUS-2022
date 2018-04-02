@@ -25,7 +25,7 @@ import javax.script.ScriptContext;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.IntList;
 import com.l2jmobius.gameserver.script.Parser;
@@ -56,7 +56,7 @@ public class FaenorEventParser extends FaenorParser
 		if (_eventDates.getStartDate().after(currentDate))
 		{
 			_log.info("Event ID: (" + ID + ") is not active yet... Ignored.");
-			ThreadPoolManager.schedule(() -> parseEventDropAndMessage(eventNode), _eventDates.getStartDate().getTime() - currentDate.getTime());
+			ThreadPool.schedule(() -> parseEventDropAndMessage(eventNode), _eventDates.getStartDate().getTime() - currentDate.getTime());
 			return;
 		}
 		

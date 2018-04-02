@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -249,7 +249,7 @@ public class L2NpcInstance extends L2Character
 		
 		// Create a RandomAnimation Task that will be launched after the calculated delay
 		_rAniTask = new RandomAnimationTask();
-		ThreadPoolManager.schedule(_rAniTask, interval);
+		ThreadPool.schedule(_rAniTask, interval);
 	}
 	
 	/**

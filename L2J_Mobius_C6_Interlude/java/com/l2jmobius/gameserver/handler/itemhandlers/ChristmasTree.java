@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -87,7 +87,7 @@ public class ChristmasTree implements IItemHandler
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 			activeChar.sendPacket(sm);
 			
-			ThreadPoolManager.schedule(new DeSpawn(result), 3600000);
+			ThreadPool.schedule(new DeSpawn(result), 3600000);
 		}
 		catch (Exception e)
 		{

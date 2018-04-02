@@ -33,13 +33,13 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.MMOClient;
 import com.l2jmobius.commons.mmocore.MMOConnection;
 import com.l2jmobius.commons.mmocore.ReceivablePacket;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
@@ -131,7 +131,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		
 		if (Config.CHAR_STORE_INTERVAL > 0)
 		{
-			_autoSaveInDB = ThreadPoolManager.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_STORE_INTERVAL * 60000L);
+			_autoSaveInDB = ThreadPool.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_STORE_INTERVAL * 60000L);
 		}
 		else
 		{
@@ -702,7 +702,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		// no long running tasks here, do it async
 		try
 		{
-			ThreadPoolManager.execute(new DisconnectTask());
+			ThreadPool.execute(new DisconnectTask());
 		}
 		catch (RejectedExecutionException e)
 		{
@@ -723,7 +723,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			{
 				cancelCleanup();
 			}
-			_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), 0); // instant
+			_cleanupTask = ThreadPool.schedule(new CleanupTask(), 0); // instant
 		}
 	}
 	
@@ -875,7 +875,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			{
 				if (_cleanupTask == null)
 				{
-					_cleanupTask = ThreadPoolManager.schedule(new CleanupTask(), fast ? 5 : 15000L);
+					_cleanupTask = ThreadPool.schedule(new CleanupTask(), fast ? 5 : 15000L);
 				}
 			}
 		}
@@ -1092,11 +1092,11 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 					closeNow();
 					return;
 				}
-				ThreadPoolManager.execute(this);
+				ThreadPool.execute(this);
 			}
 			else
 			{
-				ThreadPoolManager.execute(this);
+				ThreadPool.execute(this);
 			}
 		}
 		catch (RejectedExecutionException e)

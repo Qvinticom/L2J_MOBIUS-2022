@@ -21,7 +21,7 @@ import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
 
@@ -37,7 +37,7 @@ public class DecayTaskManager
 	
 	public DecayTaskManager()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(new DecayScheduler(), 10000, 5000);
+		ThreadPool.scheduleAtFixedRate(new DecayScheduler(), 10000, 5000);
 	}
 	
 	public static DecayTaskManager getInstance()

@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -365,15 +365,15 @@ public class HeartInfinityDefence extends Quest
 				}
 			}
 			((HIDWorld) world).startTime = System.currentTimeMillis();
-			((HIDWorld) world).finishTask = ThreadPoolManager.schedule(new FinishTask((HIDWorld) world), 30 * 60000);
-			((HIDWorld) world).timerTask = ThreadPoolManager.scheduleAtFixedRate(new TimerTask((HIDWorld) world), 298 * 1000, 5 * 60 * 1000);
+			((HIDWorld) world).finishTask = ThreadPool.schedule(new FinishTask((HIDWorld) world), 30 * 60000);
+			((HIDWorld) world).timerTask = ThreadPool.scheduleAtFixedRate(new TimerTask((HIDWorld) world), 298 * 1000, 5 * 60 * 1000);
 			conquestBegins((HIDWorld) world);
 		}
 	}
 	
 	private void conquestBegins(HIDWorld world)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			broadCastPacket(world, new ExShowScreenMessage(NpcStringId.YOU_CAN_HEAR_THE_UNDEAD_OF_EKIMUS_RUSHING_TOWARD_YOU_S1_S2_IT_HAS_NOW_BEGUN, 2, 8000));
 			for (int[] spawn1 : ROOMS_MOBS)
@@ -406,7 +406,7 @@ public class HeartInfinityDefence extends Quest
 			InstanceManager.getInstance().getInstance(world.getInstanceId()).getDoor(14240102).openMe();
 			preawakenedEchmus = addSpawn(29161, -179534, 208510, -15496, 16342, false, 0, false, world.getInstanceId());
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				if (!conquestEnded)
 				{
@@ -423,7 +423,7 @@ public class HeartInfinityDefence extends Quest
 				}
 			}, 60000);
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				if (!conquestEnded)
 				{
@@ -452,7 +452,7 @@ public class HeartInfinityDefence extends Quest
 				}
 			}, tumorRespawnTime);
 			
-			world.wagonSpawnTask = ThreadPoolManager.scheduleAtFixedRate(() -> addSpawn(SOULWAGON, -179544, 207400, -15496, 0, false, 0, false, world.getInstanceId()), 1000, wagonRespawnTime);
+			world.wagonSpawnTask = ThreadPool.scheduleAtFixedRate(() -> addSpawn(SOULWAGON, -179544, 207400, -15496, 0, false, 0, false, world.getInstanceId()), 1000, wagonRespawnTime);
 		}, 20000);
 	}
 	
@@ -593,7 +593,7 @@ public class HeartInfinityDefence extends Quest
 				wagonRespawnTime += 10000;
 				broadCastPacket(world, new ExShowScreenMessage(NpcStringId.THE_TUMOR_INSIDE_S1_HAS_BEEN_DESTROYED_NTHE_SPEED_THAT_EKIMUS_CALLS_OUT_HIS_PREY_HAS_SLOWED_DOWN, 2, 8000));
 				
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					world.deadTumor.deleteMe();
 					final L2Npc alivetumor = addSpawn(ALIVETUMOR, loc, world.getInstanceId());

@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.tasks.UpdateSoDStateTask;
 import com.l2jmobius.gameserver.model.quest.Quest;
 
@@ -113,7 +113,7 @@ public final class SoDManager
 				}
 				else
 				{
-					ThreadPoolManager.schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
+					ThreadPool.schedule(new UpdateSoDStateTask(), Config.SOD_STAGE_2_LENGTH - timePast);
 				}
 				break;
 			}

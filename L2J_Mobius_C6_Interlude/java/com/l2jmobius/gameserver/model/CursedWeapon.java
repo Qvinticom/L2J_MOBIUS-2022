@@ -23,7 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.Rnd;
@@ -341,7 +341,7 @@ public class CursedWeapon
 		}
 		else
 		{
-			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 		}
 	}
 	
@@ -356,7 +356,7 @@ public class CursedWeapon
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000L);
 			
-			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 			
 			return true;
 		}

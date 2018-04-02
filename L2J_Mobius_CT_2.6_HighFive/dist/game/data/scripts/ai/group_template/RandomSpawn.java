@@ -19,7 +19,7 @@ package ai.group_template;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 
@@ -91,7 +91,7 @@ public final class RandomSpawn extends AbstractNpcAI
 		if (!npc.isInsideRadius(loc, 200, false, false))
 		{
 			npc.getSpawn().setLocation(loc);
-			ThreadPoolManager.schedule(new Teleport(npc, loc), 100);
+			ThreadPool.schedule(new Teleport(npc, loc), 100);
 		}
 		return super.onSpawn(npc);
 	}

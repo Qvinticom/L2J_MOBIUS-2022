@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -307,11 +307,11 @@ public abstract class AirShipController extends Quest
 						}
 					}
 					
-					ThreadPoolManager.schedule(_decayTask, 1000);
+					ThreadPool.schedule(_decayTask, 1000);
 				}
 				else
 				{
-					_departSchedule = ThreadPoolManager.schedule(_departTask, DEPART_INTERVAL);
+					_departSchedule = ThreadPool.schedule(_departTask, DEPART_INTERVAL);
 				}
 			}
 		}

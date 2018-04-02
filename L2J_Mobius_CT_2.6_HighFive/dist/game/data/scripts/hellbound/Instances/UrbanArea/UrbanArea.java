@@ -18,7 +18,7 @@ package hellbound.Instances.UrbanArea;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -167,7 +167,7 @@ public final class UrbanArea extends AbstractInstance
 						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						inst.setDuration(5 * 60000);
 						inst.setEmptyDestroyTime(0);
-						ThreadPoolManager.schedule(new ExitInstance(party, world), 285000);
+						ThreadPool.schedule(new ExitInstance(party, world), 285000);
 						htmltext = "32343-02d.htm";
 					}
 				}
@@ -221,7 +221,7 @@ public final class UrbanArea extends AbstractInstance
 								world.activeAmaskariCall.cancel(true);
 							}
 							
-							world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
+							world.activeAmaskariCall = ThreadPool.schedule(new CallAmaskari(npc), 25000);
 						}
 					}
 				}
@@ -267,7 +267,7 @@ public final class UrbanArea extends AbstractInstance
 					{
 						world.activeAmaskariCall.cancel(true);
 					}
-					world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
+					world.activeAmaskariCall = ThreadPool.schedule(new CallAmaskari(npc), 25000);
 				}
 			}
 		}
@@ -319,7 +319,7 @@ public final class UrbanArea extends AbstractInstance
 					{
 						world.activeAmaskariCall.cancel(true);
 					}
-					world.activeAmaskariCall = ThreadPoolManager.schedule(new CallAmaskari(npc), 25000);
+					world.activeAmaskariCall = ThreadPool.schedule(new CallAmaskari(npc), 25000);
 				}
 			}
 		}

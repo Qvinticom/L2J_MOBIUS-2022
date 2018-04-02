@@ -24,8 +24,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -396,7 +396,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			_scheduledCount++;
 			
 			// Create a new SpawnTask to launch after the respawn Delay
-			ThreadPoolManager.schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
+			ThreadPool.schedule(new SpawnTask(), hasRespawnRandom() ? Rnd.get(_respawnMinDelay, _respawnMaxDelay) : _respawnMinDelay);
 		}
 	}
 	

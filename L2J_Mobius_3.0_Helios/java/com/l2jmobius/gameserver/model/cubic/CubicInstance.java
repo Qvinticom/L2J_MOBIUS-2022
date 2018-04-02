@@ -21,8 +21,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
@@ -54,8 +54,8 @@ public class CubicInstance
 	
 	private void activate()
 	{
-		_skillUseTask = ThreadPoolManager.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
-		_expireTask = ThreadPoolManager.schedule(this::deactivate, _template.getDuration() * 1000);
+		_skillUseTask = ThreadPool.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
+		_expireTask = ThreadPool.schedule(this::deactivate, _template.getDuration() * 1000);
 	}
 	
 	public void deactivate()

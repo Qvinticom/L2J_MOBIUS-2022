@@ -17,9 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
@@ -656,7 +656,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
 		{
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				// Check if player can receive reward today.
 				final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
@@ -676,7 +676,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.HARDWARE_INFO_ENABLED)
 		{
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				if (client.getHardwareInfo() == null)
 				{

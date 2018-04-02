@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.scripts;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -49,7 +49,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel40 ef = new RaidbossLevel40(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -196,7 +196,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel45 ef = new RaidbossLevel45(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -296,7 +296,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel50 ef = new RaidbossLevel50(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -416,7 +416,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel55 ef = new RaidbossLevel55(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -529,7 +529,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel60 ef = new RaidbossLevel60(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -622,7 +622,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel65 ef = new RaidbossLevel65(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	
@@ -738,7 +738,7 @@ public class L2RBManager
 		player.sendPacket(sg);
 		
 		final RaidbossLevel70 ef = new RaidbossLevel70(player);
-		player.setSkillCast(ThreadPoolManager.schedule(ef, unstuckTimer));
+		player.setSkillCast(ThreadPool.schedule(ef, unstuckTimer));
 		player.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (unstuckTimer / GameTimeController.MILLIS_IN_TICK));
 	}
 	

@@ -44,7 +44,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.object.L2ObjectMap;
 import com.l2jmobius.gameserver.GameTimeController;
@@ -315,7 +315,7 @@ public class GameStatusThread extends Thread
 				}
 				else if (_usrCommand.equals("performance"))
 				{
-					for (String line : ThreadPoolManager.getStats())
+					for (String line : ThreadPool.getStats())
 					{
 						_print.println(line);
 					}
@@ -323,10 +323,10 @@ public class GameStatusThread extends Thread
 				}
 				else if (_usrCommand.equals("purge"))
 				{
-					ThreadPoolManager.purge();
+					ThreadPool.purge();
 					_print.println("STATUS OF THREAD POOLS AFTER PURGE COMMAND:");
 					_print.println("");
-					for (String line : ThreadPoolManager.getStats())
+					for (String line : ThreadPool.getStats())
 					{
 						_print.println(line);
 					}
@@ -1223,7 +1223,7 @@ public class GameStatusThread extends Thread
 		checkForDeadlocks(sb);
 		
 		sb.append("\n\n## Thread Pool Manager Statistics ##\n");
-		for (String line : ThreadPoolManager.getStats())
+		for (String line : ThreadPool.getStats())
 		{
 			sb.append(line);
 			sb.append('\n');

@@ -29,8 +29,8 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -116,7 +116,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				}
 				if (_acceptedClans.size() >= 2)
 				{
-					_nextSiege = ThreadPoolManager.schedule(new SiegeStart(), 3600000);
+					_nextSiege = ThreadPool.schedule(new SiegeStart(), 3600000);
 					_rainbow.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 				}
 				else
@@ -140,7 +140,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			// XXX _rainbow.siegeStarts();
 			
 			spawnGourds();
-			_siegeEnd = ThreadPoolManager.schedule(new SiegeEnd(null), _rainbow.getSiegeLenght() - 120000);
+			_siegeEnd = ThreadPool.schedule(new SiegeEnd(null), _rainbow.getSiegeLenght() - 120000);
 		}
 	}
 	
@@ -178,10 +178,10 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			
 			// XXX _rainbow.siegeEnds();
 			
-			ThreadPoolManager.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
+			ThreadPool.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
 			setRegistrationEndString((_rainbow.getNextSiegeTime() + System.currentTimeMillis()) - 3600000);
 			// Teleport out of the arenas is made 2 mins after game ends
-			ThreadPoolManager.schedule(new TeleportBack(), 120000);
+			ThreadPool.schedule(new TeleportBack(), 120000);
 		}
 	}
 	
@@ -287,7 +287,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 			if (delay > -1)
 			{
 				setRegistrationEndString(delay - 3600000);
-				_nextSiege = ThreadPoolManager.schedule(new SetFinalAttackers(), delay);
+				_nextSiege = ThreadPool.schedule(new SetFinalAttackers(), delay);
 			}
 			else
 			{
@@ -625,7 +625,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				{
 					_siegeEnd.cancel(false);
 				}
-				ThreadPoolManager.execute(new SiegeEnd(clan));
+				ThreadPool.execute(new SiegeEnd(clan));
 			}
 		}
 		
@@ -905,7 +905,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	public static void launchSiege()
 	{
 		_nextSiege.cancel(false);
-		ThreadPoolManager.execute(new SiegeStart());
+		ThreadPool.execute(new SiegeStart());
 	}
 	
 	@Override
@@ -915,7 +915,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		{
 			_siegeEnd.cancel(false);
 		}
-		ThreadPoolManager.execute(new SiegeEnd(null));
+		ThreadPool.execute(new SiegeEnd(null));
 	}
 	
 	public static void updateAdminDate(long date)
@@ -932,7 +932,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		date -= 3600000;
 		setRegistrationEndString(date);
-		_nextSiege = ThreadPoolManager.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
+		_nextSiege = ThreadPool.schedule(new SetFinalAttackers(), _rainbow.getNextSiegeTime());
 	}
 	
 	public static void main(String[] args)

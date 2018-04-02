@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.knownlist;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -101,7 +101,7 @@ public class NpcKnownList extends CharKnownList
 	{
 		if ((_trackingTask == null) && (getActiveChar().getAggroRange() > 0))
 		{
-			_trackingTask = ThreadPoolManager.scheduleAtFixedRate(new TrackingTask(), 2000, 2000);
+			_trackingTask = ThreadPool.scheduleAtFixedRate(new TrackingTask(), 2000, 2000);
 		}
 	}
 	

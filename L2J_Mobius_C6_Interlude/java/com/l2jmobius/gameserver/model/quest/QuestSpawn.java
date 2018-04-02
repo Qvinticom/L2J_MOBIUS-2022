@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.quest;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -140,7 +140,7 @@ public final class QuestSpawn
 				
 				if (despawnDelay > 0)
 				{
-					ThreadPoolManager.schedule(new DeSpawnScheduleTimerTask(result), despawnDelay);
+					ThreadPool.schedule(new DeSpawnScheduleTimerTask(result), despawnDelay);
 				}
 				
 				return result;

@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.PrimeFinder;
 
 /**
@@ -57,7 +57,7 @@ public class BitSetIDFactory extends IdFactory
 	protected BitSetIDFactory()
 	{
 		super();
-		ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+		ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
 		initialize();
 		LOGGER.info("IDFactory: " + _freeIds.size() + " id's available.");
 	}

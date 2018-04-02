@@ -24,7 +24,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -330,7 +330,7 @@ public final class L2WorldRegion
 			}
 			
 			// then, set a timer to activate the neighbors
-			_neighborsTask = ThreadPoolManager.schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
+			_neighborsTask = ThreadPool.schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
 		}
 	}
 	
@@ -350,7 +350,7 @@ public final class L2WorldRegion
 			
 			// start a timer to "suggest" a deactivate to self and neighbors.
 			// suggest means: first check if a neighbor has L2PcInstances in it. If not, deactivate.
-			_neighborsTask = ThreadPoolManager.schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
+			_neighborsTask = ThreadPool.schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
 		}
 	}
 	

@@ -24,7 +24,7 @@ import java.util.Calendar;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
@@ -163,12 +163,12 @@ public class Lottery
 						if (_enddate > System.currentTimeMillis())
 						{
 							_isStarted = true;
-							ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+							ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 							
 							if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 							{
 								_isSellingTickets = true;
-								ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+								ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 							}
 							rset.close();
 							statement.close();
@@ -212,8 +212,8 @@ public class Lottery
 				_enddate = finishtime.getTimeInMillis();
 			}
 			
-			ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
-			ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+			ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+			ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection())
 			{
@@ -460,7 +460,7 @@ public class Lottery
 				LOGGER.warning("Lottery: Could not store finished lottery data: " + e);
 			}
 			
-			ThreadPoolManager.schedule(new startLottery(), MINUTE);
+			ThreadPool.schedule(new startLottery(), MINUTE);
 			_number++;
 			
 			_isStarted = false;

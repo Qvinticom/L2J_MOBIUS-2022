@@ -22,8 +22,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
@@ -92,7 +92,7 @@ public abstract class L2Vehicle extends L2Character
 	{
 		if (_engine != null)
 		{
-			ThreadPoolManager.schedule(_engine, delay);
+			ThreadPool.schedule(_engine, delay);
 		}
 	}
 	

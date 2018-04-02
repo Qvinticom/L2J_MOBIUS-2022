@@ -27,8 +27,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -256,7 +256,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 							if ((doorInfo[0] == sepulcherId) && (doorInfo[1] == currentWave))
 							{
 								openDoor(doorInfo[2], 0);
-								ThreadPoolManager.schedule(() ->
+								ThreadPool.schedule(() ->
 								{
 									closeDoor(doorInfo[2], 0);
 								}, 15000);
@@ -578,7 +578,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 		showHtmlFile(player, npcId + "-OK.html", npc, null);
 		
 		// Kick all players when/if time is over
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			ZoneManager.getInstance().getZoneById(MANAGER_ZONES.get(npcId)).oustAllPlayers();
 		}, TIME_ATTACK * 60 * 1000);

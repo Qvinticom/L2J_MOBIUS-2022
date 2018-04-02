@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -56,7 +56,7 @@ public class ClassChange extends AbstractEffect
 		{
 			final L2PcInstance player = effected.getActingPlayer();
 			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				final int activeClass = player.getClassId().getId();
 				

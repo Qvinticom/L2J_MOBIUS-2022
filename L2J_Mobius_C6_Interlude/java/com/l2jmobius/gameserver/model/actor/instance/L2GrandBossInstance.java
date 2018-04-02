@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
@@ -104,7 +104,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	protected void manageMinions()
 	{
 		_minionList.spawnMinions();
-		_minionMaintainTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+		_minionMaintainTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			// Teleport raid boss home if it's too far from home location
 			final L2Spawn bossSpawn = getSpawn();

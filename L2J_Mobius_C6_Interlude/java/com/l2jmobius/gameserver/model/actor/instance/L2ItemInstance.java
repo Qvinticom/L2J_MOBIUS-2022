@@ -26,7 +26,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
@@ -1033,7 +1033,7 @@ public final class L2ItemInstance extends L2Object
 	private void scheduleConsumeManaTask()
 	{
 		_consumingMana = true;
-		ThreadPoolManager.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+		ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
 	}
 	
 	/**

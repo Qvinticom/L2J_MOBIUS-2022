@@ -26,8 +26,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
@@ -109,7 +109,7 @@ public class PremiumManager
 	 */
 	private void startExpireTask(L2PcInstance player, long delay)
 	{
-		ScheduledFuture<?> task = ThreadPoolManager.schedule(new PremiumExpireTask(player), delay);
+		ScheduledFuture<?> task = ThreadPool.schedule(new PremiumExpireTask(player), delay);
 		expiretasks.put(player.getAccountName(), task);
 	}
 	

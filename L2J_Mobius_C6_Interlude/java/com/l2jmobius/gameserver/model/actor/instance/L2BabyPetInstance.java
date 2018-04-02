@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -83,7 +83,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 			}
 			
 			// start the healing task
-			_healingTask = ThreadPoolManager.scheduleAtFixedRate(new Heal(this), 0, 1000);
+			_healingTask = ThreadPool.scheduleAtFixedRate(new Heal(this), 0, 1000);
 		}
 	}
 	
@@ -121,7 +121,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 		super.doRevive();
 		if (_healingTask == null)
 		{
-			_healingTask = ThreadPoolManager.scheduleAtFixedRate(new Heal(this), 0, 1000);
+			_healingTask = ThreadPool.scheduleAtFixedRate(new Heal(this), 0, 1000);
 		}
 	}
 	

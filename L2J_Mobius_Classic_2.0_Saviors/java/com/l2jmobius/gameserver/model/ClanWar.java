@@ -21,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -56,7 +56,7 @@ public final class ClanWar
 		_startTime = System.currentTimeMillis();
 		_state = ClanWarState.BLOOD_DECLARATION;
 		
-		_cancelTask = ThreadPoolManager.schedule(() ->
+		_cancelTask = ThreadPool.schedule(() ->
 		{
 			clanWarTimeout();
 		}, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
@@ -88,7 +88,7 @@ public final class ClanWar
 		
 		if ((_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) > System.currentTimeMillis())
 		{
-			_cancelTask = ThreadPoolManager.schedule(() ->
+			_cancelTask = ThreadPool.schedule(() ->
 			{
 				clanWarTimeout();
 			}, (_startTime + TIME_TO_CANCEL_NON_MUTUAL_CLAN_WAR) - System.currentTimeMillis());
@@ -104,7 +104,7 @@ public final class ClanWar
 			}
 			else
 			{
-				ThreadPoolManager.schedule(() ->
+				ThreadPool.schedule(() ->
 				{
 					ClanTable.getInstance().deleteclanswars(_attackerClanId, _attackedClanId);
 				}, endTimePeriod);
@@ -200,7 +200,7 @@ public final class ClanWar
 			_winnerClanId = winnerClan.getId();
 			_endTime = System.currentTimeMillis();
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				ClanTable.getInstance().deleteclanswars(cancelor.getId(), winnerClan.getId());
 			}, (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
@@ -225,7 +225,7 @@ public final class ClanWar
 			_state = ClanWarState.TIE;
 			_endTime = System.currentTimeMillis();
 			
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				ClanTable.getInstance().deleteclanswars(attackerClan.getId(), attackedClan.getId());
 			}, (_endTime + TIME_TO_DELETION_AFTER_CANCELLATION) - System.currentTimeMillis());

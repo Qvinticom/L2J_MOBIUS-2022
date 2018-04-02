@@ -34,10 +34,10 @@ import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.LoginServerThread;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -199,7 +199,7 @@ public class Debug implements ITelnetCommand
 				}
 				
 				sb.append("\r\n## Thread Pool Manager Statistics ##\r\n");
-				for (String line : ThreadPoolManager.getStats())
+				for (String line : ThreadPool.getStats())
 				{
 					sb.append(line);
 					sb.append("\r\n");

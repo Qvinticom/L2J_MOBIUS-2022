@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -258,7 +258,7 @@ public final class QueenAnt extends AbstractNpcAI
 				{
 					((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
 				}
-				_task = ThreadPoolManager.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
+				_task = ThreadPool.scheduleAtFixedRate(new QueenAntTask(), 5 * 1000, 5 * 1000);
 				break;
 			}
 		}

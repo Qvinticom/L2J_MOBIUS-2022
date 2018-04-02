@@ -16,7 +16,7 @@
  */
 package quests.Q10742_AFurryFriend;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -228,6 +228,6 @@ public final class Q10742_AFurryFriend extends Quest
 	public void onRouteFinished(L2Npc npc)
 	{
 		WalkingManager.getInstance().cancelMoving(npc);
-		ThreadPoolManager.schedule(() -> npc.deleteMe(), 1000);
+		ThreadPool.schedule(() -> npc.deleteMe(), 1000);
 	}
 }

@@ -24,8 +24,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -304,7 +304,7 @@ public final class BlockCheckerEngine
 				
 				_abnormalEnd = true;
 				
-				ThreadPoolManager.execute(new EndEvent());
+				ThreadPool.execute(new EndEvent());
 			}
 		}
 		catch (Exception e)
@@ -422,7 +422,7 @@ public final class BlockCheckerEngine
 			}
 			_isStarted = true;
 			// Spawn the blocks
-			ThreadPoolManager.execute(new SpawnRound(16, 1));
+			ThreadPool.execute(new SpawnRound(16, 1));
 			// Start up player parameters
 			setUpPlayers();
 			// Set the started time
@@ -457,19 +457,19 @@ public final class BlockCheckerEngine
 				case 1:
 				{
 					// Schedule second spawn round
-					_task = ThreadPoolManager.schedule(new SpawnRound(20, 2), 60000);
+					_task = ThreadPool.schedule(new SpawnRound(20, 2), 60000);
 					break;
 				}
 				case 2:
 				{
 					// Schedule third spawn round
-					_task = ThreadPoolManager.schedule(new SpawnRound(14, 3), 60000);
+					_task = ThreadPool.schedule(new SpawnRound(14, 3), 60000);
 					break;
 				}
 				case 3:
 				{
 					// Schedule Event End Count Down
-					_task = ThreadPoolManager.schedule(new EndEvent(), 180000);
+					_task = ThreadPool.schedule(new EndEvent(), 180000);
 					break;
 				}
 			}
@@ -529,7 +529,7 @@ public final class BlockCheckerEngine
 					SpawnTable.getInstance().addNewSpawn(girlSpawn, false);
 					girlSpawn.init();
 					// Schedule his deletion after 9 secs of spawn
-					ThreadPoolManager.schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
+					ThreadPool.schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
 				}
 				catch (Exception e)
 				{

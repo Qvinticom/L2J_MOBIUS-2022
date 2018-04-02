@@ -41,7 +41,7 @@ import javax.script.ScriptException;
 import javax.script.SimpleScriptContext;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jserver.script.jython.JythonScriptEngine;
 
 /**
@@ -79,7 +79,7 @@ public final class L2ScriptEngineManager
 		{
 			_cache = null;
 		}
-		ThreadPoolManager.scheduleAtFixedRate(new CleaneCache(), 43200000, 43200000);
+		ThreadPool.scheduleAtFixedRate(new CleaneCache(), 43200000, 43200000);
 		LOGGER.info("Initializing Script Engine Manager");
 		
 		for (ScriptEngineFactory factory : factories)

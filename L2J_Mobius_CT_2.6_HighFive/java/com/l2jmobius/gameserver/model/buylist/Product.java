@@ -24,8 +24,8 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.items.L2Item;
 
 /**
@@ -113,7 +113,7 @@ public final class Product
 		}
 		if ((_restockTask == null) || _restockTask.isDone())
 		{
-			_restockTask = ThreadPoolManager.schedule(new RestockTask(), getRestockDelay());
+			_restockTask = ThreadPool.schedule(new RestockTask(), getRestockDelay());
 		}
 		final boolean result = _count.addAndGet(-val) >= 0;
 		save();
@@ -130,7 +130,7 @@ public final class Product
 		final long remainTime = nextRestockTime - System.currentTimeMillis();
 		if (remainTime > 0)
 		{
-			_restockTask = ThreadPoolManager.schedule(new RestockTask(), remainTime);
+			_restockTask = ThreadPool.schedule(new RestockTask(), remainTime);
 		}
 		else
 		{

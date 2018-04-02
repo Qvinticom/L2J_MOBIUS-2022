@@ -25,8 +25,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -131,11 +131,11 @@ public abstract class ClanHall
 			final long currentTime = System.currentTimeMillis();
 			if (_endDate > currentTime)
 			{
-				ThreadPoolManager.schedule(new FunctionTask(cwh), _endDate - currentTime);
+				ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
 			}
 			else
 			{
-				ThreadPoolManager.schedule(new FunctionTask(cwh), 0);
+				ThreadPool.schedule(new FunctionTask(cwh), 0);
 			}
 		}
 		
@@ -164,7 +164,7 @@ public abstract class ClanHall
 						{
 							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPoolManager.schedule(new FunctionTask(true), getRate());
+						ThreadPool.schedule(new FunctionTask(true), getRate());
 					}
 					else
 					{

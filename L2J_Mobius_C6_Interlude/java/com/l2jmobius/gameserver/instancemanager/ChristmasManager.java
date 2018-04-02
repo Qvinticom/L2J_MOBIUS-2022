@@ -22,7 +22,7 @@ import java.util.Random;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
@@ -321,7 +321,7 @@ public class ChristmasManager
 		
 		// Tasks:
 		
-		ThreadPoolManager.execute(new DeleteSpawns());
+		ThreadPool.execute(new DeleteSpawns());
 		
 		endFestiveMessagesAtFixedRate();
 		isManagerInit--;
@@ -340,7 +340,7 @@ public class ChristmasManager
 	public void spawnTrees()
 	{
 		GetTreePos gtp = new GetTreePos(first);
-		ThreadPoolManager.execute(gtp);
+		ThreadPool.execute(gtp);
 	}
 	
 	/**
@@ -416,7 +416,7 @@ public class ChristmasManager
 				
 				SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(first);
 				
-				_task = ThreadPoolManager.schedule(ssNPCs, 300);
+				_task = ThreadPool.schedule(ssNPCs, 300);
 				ssNPCs.setTask(_task);
 				
 				return;
@@ -425,7 +425,7 @@ public class ChristmasManager
 			_iterator++;
 			GetTreePos gtp = new GetTreePos(_iterator);
 			
-			_task = ThreadPoolManager.schedule(gtp, 300);
+			_task = ThreadPool.schedule(gtp, 300);
 			gtp.setTask(_task);
 		}
 	}
@@ -523,7 +523,7 @@ public class ChristmasManager
 	private void startFestiveMessagesAtFixedRate()
 	{
 		SendXMasMessage XMasMessage = new SendXMasMessage();
-		_XMasMessageTask = ThreadPoolManager.scheduleAtFixedRate(XMasMessage, 60000, _IntervalOfChristmas);
+		_XMasMessageTask = ThreadPool.scheduleAtFixedRate(XMasMessage, 60000, _IntervalOfChristmas);
 	}
 	
 	/**
@@ -598,7 +598,7 @@ public class ChristmasManager
 	private void givePresentsAtFixedRate()
 	{
 		final XMasPresentGivingTask XMasPresents = new XMasPresentGivingTask();
-		_XMasPresentsTask = ThreadPoolManager.scheduleAtFixedRate(XMasPresents, _IntervalOfChristmas, _IntervalOfChristmas * 3);
+		_XMasPresentsTask = ThreadPool.scheduleAtFixedRate(XMasPresents, _IntervalOfChristmas, _IntervalOfChristmas * 3);
 	}
 	
 	class XMasPresentGivingTask implements Runnable
@@ -722,7 +722,7 @@ public class ChristmasManager
 			_iterator++;
 			SpawnSantaNPCs ssNPCs = new SpawnSantaNPCs(_iterator);
 			
-			_task = ThreadPoolManager.schedule(ssNPCs, 300);
+			_task = ThreadPool.schedule(ssNPCs, 300);
 			ssNPCs.setTask(_task);
 		}
 	}
@@ -741,7 +741,7 @@ public class ChristmasManager
 			LOGGER.info("ChristmasManager:Init ChristmasManager was started successfully, have a festive holiday.");
 			
 			final EndEvent ee = new EndEvent();
-			Future<?> task = ThreadPoolManager.schedule(ee, 86400000);
+			Future<?> task = ThreadPool.schedule(ee, 86400000);
 			ee.setTask(task);
 			
 			isManagerInit = 5;

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -187,7 +187,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 	{
 		if ((_majorHeal != null) || (_buffs != null) || ((_recharge != null) && (_castTask == null) && !isDead()))
 		{
-			_castTask = ThreadPoolManager.scheduleAtFixedRate(new CastTask(this), 3000, 2000);
+			_castTask = ThreadPool.scheduleAtFixedRate(new CastTask(this), 3000, 2000);
 		}
 	}
 	

@@ -30,9 +30,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
@@ -380,7 +380,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		if (_positionBroadcastTask == null)
 		{
-			_positionBroadcastTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+			_positionBroadcastTask = ThreadPool.scheduleAtFixedRate(() ->
 			{
 				if (_positionPacket == null)
 				{
@@ -1089,7 +1089,7 @@ public class L2Party extends AbstractPlayerGroup
 		}
 		_changeRequestDistributionType = partyDistributionType;
 		_changeDistributionTypeAnswers = new HashSet<>();
-		_changeDistributionTypeRequestTask = ThreadPoolManager.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+		_changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 		
 		broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 		

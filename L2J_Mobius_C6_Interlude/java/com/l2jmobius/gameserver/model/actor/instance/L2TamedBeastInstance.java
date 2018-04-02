@@ -20,7 +20,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -199,7 +199,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				_durationCheckTask.cancel(true);
 			}
 			
-			_durationCheckTask = ThreadPoolManager.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
+			_durationCheckTask = ThreadPool.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
 		}
 	}
 	
@@ -292,7 +292,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			{
 				_buffTask.cancel(true);
 			}
-			_buffTask = ThreadPoolManager.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
+			_buffTask = ThreadPool.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
 		}
 		else
 		{

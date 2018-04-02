@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
@@ -129,7 +129,7 @@ public final class TradeRequest implements IClientIncomingPacket
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_TRADE_WITH_C1);
 				sm.addString(name);
 				player.sendPacket(sm);
-				ThreadPoolManager.schedule(() -> scheduleDeny(player, name), 10000);
+				ThreadPool.schedule(() -> scheduleDeny(player, name), 10000);
 				player.blockRequest();
 			}
 			else

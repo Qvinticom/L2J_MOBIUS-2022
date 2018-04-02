@@ -20,6 +20,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -31,7 +32,7 @@ public final class ItemsAutoDestroy
 	
 	protected ItemsAutoDestroy()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(this::removeItems, 5000, 5000);
+		ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
 	}
 	
 	public static ItemsAutoDestroy getInstance()

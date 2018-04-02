@@ -17,7 +17,7 @@
 package ai.areas.GainakUnderground;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -140,7 +140,7 @@ public final class GainakSiege extends AbstractNpcAI
 		final L2SiegeZone zone = ZoneManager.getInstance().getZone(npc, L2SiegeZone.class);
 		if ((zone != null) && (zone.getId() == 60019) && zone.isActive())
 		{
-			ThreadPoolManager.schedule(new RespawnNewAssassin(npc.getLocation()), 60000);
+			ThreadPool.schedule(new RespawnNewAssassin(npc.getLocation()), 60000);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

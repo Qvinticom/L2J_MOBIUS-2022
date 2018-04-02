@@ -16,7 +16,7 @@
  */
 package ai.others.NpcBuffers;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -53,7 +53,7 @@ public final class NpcBuffers extends AbstractNpcAI
 		final NpcBufferData data = _npcBuffers.getNpcBuffer(npc.getId());
 		for (NpcBufferSkillData skill : data.getSkills())
 		{
-			ThreadPoolManager.schedule(new NpcBufferAI(npc, skill), skill.getInitialDelay());
+			ThreadPool.schedule(new NpcBufferAI(npc, skill), skill.getInitialDelay());
 		}
 		return super.onSpawn(npc);
 	}

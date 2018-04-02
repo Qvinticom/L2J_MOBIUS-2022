@@ -28,8 +28,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.ActionData;
@@ -218,7 +218,7 @@ public class SkillCaster implements Runnable
 		// Reschedule next task if we have such.
 		if (hasNextPhase)
 		{
-			_task = ThreadPoolManager.schedule(this, nextTaskDelay);
+			_task = ThreadPool.schedule(this, nextTaskDelay);
 		}
 		else
 		{
@@ -755,7 +755,7 @@ public class SkillCaster implements Runnable
 			
 			if (queuedSkill != null)
 			{
-				ThreadPoolManager.execute(() ->
+				ThreadPool.execute(() ->
 				{
 					currPlayer.setQueuedSkill(null, null, false, false);
 					currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());

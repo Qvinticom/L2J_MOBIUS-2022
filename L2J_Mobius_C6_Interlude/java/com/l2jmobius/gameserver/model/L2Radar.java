@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.Vector;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
@@ -127,7 +127,7 @@ public final class L2Radar
 					return;
 				}
 				_me.sendPacket(new RadarControl(0, 1, _myTarget.getX(), _myTarget.getY(), _myTarget.getZ()));
-				ThreadPoolManager.schedule(new RadarOnPlayer(_myTarget, _me), 15000);
+				ThreadPool.schedule(new RadarOnPlayer(_myTarget, _me), 15000);
 			}
 			catch (Throwable t)
 			{

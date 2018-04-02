@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -131,7 +131,7 @@ public class SoulCrystals implements IItemHandler
 		
 		// Continue execution later
 		CrystalFinalizer cf = new CrystalFinalizer(activeChar, target, crystalId);
-		ThreadPoolManager.schedule(cf, skill.getHitTime());
+		ThreadPool.schedule(cf, skill.getHitTime());
 	}
 	
 	static class CrystalFinalizer implements Runnable

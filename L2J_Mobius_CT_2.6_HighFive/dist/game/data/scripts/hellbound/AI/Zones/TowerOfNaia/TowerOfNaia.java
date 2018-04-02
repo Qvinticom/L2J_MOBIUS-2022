@@ -26,7 +26,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -557,7 +557,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			{
 				removeForeigners(npcId, party);
 				startRoom(npcId);
-				ThreadPoolManager.schedule(new StopRoomTask(npcId), 300000);
+				ThreadPool.schedule(new StopRoomTask(npcId), 300000);
 			}
 			else
 			{
@@ -853,7 +853,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		}
 		else
 		{
-			ThreadPoolManager.schedule(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
+			ThreadPool.schedule(() -> addSpawn(MUTATED_ELPY, -45474, 247450, -13994, 49152, false, 0, false), respawnTime - System.currentTimeMillis());
 		}
 	}
 	

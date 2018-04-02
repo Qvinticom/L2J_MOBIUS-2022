@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -116,8 +116,8 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			spawnFlags();
 			gateControl(1);
 			anonce("Take place at the siege of his headquarters.", 1);
-			ThreadPoolManager.schedule(new startFirstStep(), 5 * 60000);
-			_midTimer = ThreadPoolManager.schedule(new midSiegeStep(), 25 * 60000);
+			ThreadPool.schedule(new startFirstStep(), 5 * 60000);
+			_midTimer = ThreadPool.schedule(new midSiegeStep(), 25 * 60000);
 			
 			_siegeEndDate = Calendar.getInstance();
 			_siegeEndDate.add(Calendar.MINUTE, 60);
@@ -139,7 +139,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		gateControl(1);
 		_finalStage = true;
 		anonce("Take place at the siege of his headquarters.", 1);
-		ThreadPoolManager.schedule(new startFirstStep(), 5 * 60000);
+		ThreadPool.schedule(new startFirstStep(), 5 * 60000);
 	}
 	
 	public void endSiege(boolean par)
@@ -682,7 +682,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 				else
 				{
 					_midTimer.cancel(false);
-					ThreadPoolManager.schedule(new midSiegeStep(), 5000);
+					ThreadPool.schedule(new midSiegeStep(), 5000);
 				}
 			}
 			else

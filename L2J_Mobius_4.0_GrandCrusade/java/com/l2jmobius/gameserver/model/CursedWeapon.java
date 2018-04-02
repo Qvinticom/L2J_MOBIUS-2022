@@ -24,9 +24,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Party.MessageType;
@@ -350,7 +350,7 @@ public class CursedWeapon implements INamable
 		{
 			_player.stopTransformation(true);
 			
-			ThreadPoolManager.schedule(() -> _player.transform(transformationId, true), 500);
+			ThreadPool.schedule(() -> _player.transform(transformationId, true), 500);
 		}
 		else
 		{
@@ -374,7 +374,7 @@ public class CursedWeapon implements INamable
 		}
 		else
 		{
-			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 		}
 		
 	}
@@ -388,7 +388,7 @@ public class CursedWeapon implements INamable
 			
 			// Start the Life Task
 			_endTime = System.currentTimeMillis() + (_duration * 60000L);
-			_removeTask = ThreadPoolManager.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
 			
 			return true;
 		}

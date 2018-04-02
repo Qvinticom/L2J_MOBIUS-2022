@@ -20,7 +20,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
 /**
@@ -189,7 +189,7 @@ public class L2Potion extends L2Object
 	
 	private void startPotionMpRegeneration(L2Character activeChar)
 	{
-		_potionmpRegTask = ThreadPoolManager.scheduleAtFixedRate(new PotionMpHealing(activeChar), 1000, _milliseconds);
+		_potionmpRegTask = ThreadPool.scheduleAtFixedRate(new PotionMpHealing(activeChar), 1000, _milliseconds);
 		
 		if (Config.DEBUG)
 		{

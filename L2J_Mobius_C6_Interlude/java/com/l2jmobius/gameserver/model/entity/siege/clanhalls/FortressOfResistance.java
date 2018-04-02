@@ -27,7 +27,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -127,7 +127,7 @@ public class FortressOfResistance
 			final long milliToCapture = getMilliToCapture();
 			
 			RunMessengerSpawn rms = new RunMessengerSpawn();
-			ThreadPoolManager.schedule(rms, milliToCapture);
+			ThreadPool.schedule(rms, milliToCapture);
 			
 			final long total_millis = System.currentTimeMillis() + milliToCapture;
 			
@@ -219,9 +219,9 @@ public class FortressOfResistance
 			e.printStackTrace();
 		}
 		final RunBossSpawn rbs = new RunBossSpawn();
-		ThreadPoolManager.schedule(rbs, 3600000); // 60 * 60 * 1000
+		ThreadPool.schedule(rbs, 3600000); // 60 * 60 * 1000
 		LOGGER.info("Fortress of Resistanse: Messenger spawned!");
-		ThreadPoolManager.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
+		ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
 	}
 	
 	protected class RunBossSpawn implements Runnable
@@ -261,8 +261,8 @@ public class FortressOfResistance
 		Announce("Capture of Partisan Hideout has begun!");
 		Announce("You have one hour to kill Nurka!");
 		
-		_nurka = ThreadPoolManager.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
-		_announce = ThreadPoolManager.schedule(new AnnounceInfo("No one can`t kill Nurka! Partisan Hideout set free until next week!"), 3600000);
+		_nurka = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
+		_announce = ThreadPool.schedule(new AnnounceInfo("No one can`t kill Nurka! Partisan Hideout set free until next week!"), 3600000);
 	}
 	
 	protected class DeSpawnTimer implements Runnable

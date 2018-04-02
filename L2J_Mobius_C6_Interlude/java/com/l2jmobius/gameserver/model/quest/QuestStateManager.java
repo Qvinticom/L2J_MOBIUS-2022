@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.quest;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class QuestStateManager
@@ -34,7 +34,7 @@ public class QuestStateManager
 			try
 			{
 				cleanUp();
-				ThreadPoolManager.schedule(new ScheduleTimerTask(), 60000);
+				ThreadPool.schedule(new ScheduleTimerTask(), 60000);
 			}
 			catch (Throwable t)
 			{
@@ -51,7 +51,7 @@ public class QuestStateManager
 	// Constructor
 	public QuestStateManager()
 	{
-		ThreadPoolManager.schedule(new ScheduleTimerTask(), 60000);
+		ThreadPool.schedule(new ScheduleTimerTask(), 60000);
 	}
 	
 	// =========================================================

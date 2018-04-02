@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -69,7 +69,7 @@ public class ItemsOnGroundManager
 		
 		if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0)
 		{
-			ThreadPoolManager.scheduleAtFixedRate(new StoreInDb(), Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+			ThreadPool.scheduleAtFixedRate(new StoreInDb(), Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
 		}
 	}
 	
@@ -208,7 +208,7 @@ public class ItemsOnGroundManager
 			return;
 		}
 		
-		ThreadPoolManager.execute(new StoreInDb());
+		ThreadPool.execute(new StoreInDb());
 	}
 	
 	public void cleanUp()

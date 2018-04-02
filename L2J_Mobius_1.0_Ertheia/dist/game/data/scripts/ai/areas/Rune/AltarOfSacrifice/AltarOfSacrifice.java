@@ -16,7 +16,7 @@
  */
 package ai.areas.Rune.AltarOfSacrifice;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -109,7 +109,7 @@ public class AltarOfSacrifice extends AbstractNpcAI
 	
 	private void sendMessage(L2Npc npc, NpcStringId npcString, int delay)
 	{
-		ThreadPoolManager.schedule(() ->
+		ThreadPool.schedule(() ->
 		{
 			if (npc != null)
 			{

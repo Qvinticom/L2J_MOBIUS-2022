@@ -36,8 +36,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
@@ -1451,7 +1451,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		_consumingMana = true;
-		ThreadPoolManager.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+		ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
 	}
 	
 	/**
@@ -1584,7 +1584,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public final void dropMe(L2Character dropper, int x, int y, int z)
 	{
-		ThreadPoolManager.execute(new ItemDropTask(this, dropper, x, y, z));
+		ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
 		if ((dropper != null) && dropper.isPlayer())
 		{
 			// Notify to scripts
@@ -1873,7 +1873,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				_lifeTimeTask.cancel(true);
 			}
-			_lifeTimeTask = ThreadPoolManager.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
+			_lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
 		}
 	}
 	
@@ -2406,11 +2406,11 @@ public final class L2ItemInstance extends L2Object
 			final long time = getVisualLifeTime() - System.currentTimeMillis();
 			if (time > 0)
 			{
-				_appearanceLifeTimeTask = ThreadPoolManager.schedule(this::onVisualLifeTimeEnd, time);
+				_appearanceLifeTimeTask = ThreadPool.schedule(this::onVisualLifeTimeEnd, time);
 			}
 			else
 			{
-				ThreadPoolManager.execute(this::onVisualLifeTimeEnd);
+				ThreadPool.execute(this::onVisualLifeTimeEnd);
 			}
 		}
 	}

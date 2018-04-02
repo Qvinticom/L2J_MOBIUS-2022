@@ -16,7 +16,7 @@
  */
 package vehicles.AirShipGludioGracia;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -251,7 +251,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				{
 					// _ship.teleToLocation(-167874, 256731, -509, 41035, false);
 					_ship.setOustLoc(OUST_GRACIA);
-					ThreadPoolManager.schedule(this, 5000);
+					ThreadPool.schedule(this, 5000);
 					break;
 				}
 				case 2:
@@ -264,7 +264,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 					broadcastInGracia(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_ADEN_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GRACIA_DOCK_ID);
 					_ship.oustPlayers();
-					ThreadPoolManager.schedule(this, 60000);
+					ThreadPool.schedule(this, 60000);
 					break;
 				}
 				case 4:
@@ -278,7 +278,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 				{
 					// _ship.teleToLocation(-157261, 255664, 221, 64781, false);
 					_ship.setOustLoc(OUST_GLUDIO);
-					ThreadPoolManager.schedule(this, 5000);
+					ThreadPool.schedule(this, 5000);
 					break;
 				}
 				case 6:
@@ -291,7 +291,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 					broadcastInGludio(NpcStringId.THE_REGULARLY_SCHEDULED_AIRSHIP_HAS_ARRIVED_IT_WILL_DEPART_FOR_THE_GRACIA_CONTINENT_IN_1_MINUTE);
 					_ship.setInDock(GLUDIO_DOCK_ID);
 					_ship.oustPlayers();
-					ThreadPoolManager.schedule(this, 60000);
+					ThreadPool.schedule(this, 60000);
 					break;
 				}
 			}

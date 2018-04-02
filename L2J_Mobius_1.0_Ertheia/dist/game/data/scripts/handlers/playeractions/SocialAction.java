@@ -16,7 +16,7 @@
  */
 package handlers.playeractions;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
@@ -129,7 +129,7 @@ public final class SocialAction implements IPlayerActionHandler
 			player.sendPacket(sm);
 			if (!player.isProcessingRequest())
 			{
-				ThreadPoolManager.schedule(() -> scheduleDeny(player), 10000);
+				ThreadPool.schedule(() -> scheduleDeny(player), 10000);
 				player.blockRequest();
 			}
 			return;

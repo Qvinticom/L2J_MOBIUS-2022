@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -977,7 +977,7 @@ public class EnergySeeds extends AbstractNpcAI
 		
 		public void scheduleRespawn(long waitTime)
 		{
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				// if the AI is inactive, do not spawn the NPC
 				if (isSeedActive(_seedId))

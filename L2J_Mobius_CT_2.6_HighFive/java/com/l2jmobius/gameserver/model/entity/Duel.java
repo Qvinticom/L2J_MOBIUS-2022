@@ -24,7 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.DuelResult;
 import com.l2jmobius.gameserver.enums.Team;
@@ -98,7 +98,7 @@ public class Duel
 			broadcastToTeam2(sm);
 		}
 		// Schedule duel start
-		ThreadPoolManager.schedule(new ScheduleStartDuelTask(this), 3000);
+		ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
 	}
 	
 	public static class PlayerCondition
@@ -206,14 +206,14 @@ public class Duel
 					}
 					case CONTINUE:
 					{
-						ThreadPoolManager.schedule(this, 1000);
+						ThreadPool.schedule(this, 1000);
 						break;
 					}
 					default:
 					{
 						setFinished(true);
 						playKneelAnimation();
-						ThreadPoolManager.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
+						ThreadPool.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
 						InstanceManager.getInstance().destroyInstance(_duel.getDueldInstanceId());
 						break;
 					}
@@ -251,11 +251,11 @@ public class Duel
 					_duel.teleportPlayers();
 					
 					// give players 20 seconds to complete teleport and get ready (its ought to be 30 on official..)
-					ThreadPoolManager.schedule(this, _duel.isPartyDuel() ? 20000 : 1);
+					ThreadPool.schedule(this, _duel.isPartyDuel() ? 20000 : 1);
 				}
 				else if (count > 0) // duel not started yet - continue countdown
 				{
-					ThreadPoolManager.schedule(this, 1000);
+					ThreadPool.schedule(this, 1000);
 				}
 				else
 				{
@@ -461,7 +461,7 @@ public class Duel
 		broadcastToTeam2(B04_S01);
 		
 		// start duelling task
-		ThreadPoolManager.schedule(new ScheduleDuelTask(this), 1000);
+		ThreadPool.schedule(new ScheduleDuelTask(this), 1000);
 	}
 	
 	/**

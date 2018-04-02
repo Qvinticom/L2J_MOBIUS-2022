@@ -26,7 +26,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_REST;
 import java.util.EmptyStackException;
 import java.util.Stack;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -371,7 +371,7 @@ public class L2PlayerAI extends L2CharacterAI
 	@Override
 	protected void onEvtArrivedRevalidate()
 	{
-		ThreadPoolManager.execute(new KnownListAsynchronousUpdateTask(_actor));
+		ThreadPool.execute(new KnownListAsynchronousUpdateTask(_actor));
 		super.onEvtArrivedRevalidate();
 	}
 	

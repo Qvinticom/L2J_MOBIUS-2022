@@ -20,7 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Collection;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
@@ -52,7 +52,7 @@ public final class Util
 	
 	public static void handleIllegalPlayerAction(L2PcInstance actor, String message, int punishment)
 	{
-		ThreadPoolManager.schedule(new IllegalPlayerAction(actor, message, punishment), 5000);
+		ThreadPool.schedule(new IllegalPlayerAction(actor, message, punishment), 5000);
 	}
 	
 	public static String getRelativePath(File base, File file)

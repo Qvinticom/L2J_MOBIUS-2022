@@ -20,8 +20,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -159,7 +159,7 @@ public final class FortressOfTheDead extends ClanHallSiegeEngine
 		{
 			cancelSiegeTask();
 			final long scheduleTime = (24 - hoursLeft) * 10 * 60000;
-			_siegeTask = ThreadPoolManager.schedule(new SiegeStarts(), scheduleTime);
+			_siegeTask = ThreadPool.schedule(new SiegeStarts(), scheduleTime);
 		}
 		else
 		{

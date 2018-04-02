@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -106,7 +106,7 @@ public class L2PoisonZone extends L2ZoneType
 	{
 		if ((((character instanceof L2Playable) && _target.equalsIgnoreCase("pc")) || ((character instanceof L2PcInstance) && _target.equalsIgnoreCase("pc_only")) || ((character instanceof L2MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (_task == null))
 		{
-			_task = ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(/* this */), _initialDelay, _reuse);
+			_task = ThreadPool.scheduleAtFixedRate(new ApplySkill(/* this */), _initialDelay, _reuse);
 		}
 	}
 	

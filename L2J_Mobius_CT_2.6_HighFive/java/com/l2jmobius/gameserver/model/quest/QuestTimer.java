@@ -20,7 +20,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -68,7 +68,7 @@ public class QuestTimer
 		_player = player;
 		_npc = npc;
 		_isRepeating = repeating;
-		_schedular = repeating ? ThreadPoolManager.scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.schedule(new ScheduleTimerTask(), time);
+		_schedular = repeating ? ThreadPool.scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPool.schedule(new ScheduleTimerTask(), time);
 	}
 	
 	public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player)

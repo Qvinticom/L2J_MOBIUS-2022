@@ -26,7 +26,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.geodata.GeoData;
@@ -257,7 +257,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		// If not idle - create an AI task (schedule onEvtThink repeatedly)
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPoolManager.scheduleAtFixedRate(this, 1000, 1000);
+			_aiTask = ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
 		}
 	}
 	

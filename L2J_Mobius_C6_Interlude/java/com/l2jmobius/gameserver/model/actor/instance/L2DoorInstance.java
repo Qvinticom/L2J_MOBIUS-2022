@@ -23,7 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2DoorAI;
@@ -411,7 +411,7 @@ public class L2DoorInstance extends L2Character
 		if (actionDelay > -1)
 		{
 			AutoOpenClose ao = new AutoOpenClose();
-			ThreadPoolManager.scheduleAtFixedRate(ao, actionDelay, actionDelay);
+			ThreadPool.scheduleAtFixedRate(ao, actionDelay, actionDelay);
 		}
 		else if (_autoActionTask != null)
 		{
@@ -870,7 +870,7 @@ public class L2DoorInstance extends L2Character
 	 */
 	public void onOpen()
 	{
-		ThreadPoolManager.schedule(new CloseTask(), 60000);
+		ThreadPool.schedule(new CloseTask(), 60000);
 	}
 	
 	/**

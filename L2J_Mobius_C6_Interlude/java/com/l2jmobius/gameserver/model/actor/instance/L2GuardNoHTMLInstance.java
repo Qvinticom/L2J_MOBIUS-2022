@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
@@ -91,7 +91,7 @@ public final class L2GuardNoHTMLInstance extends L2Attackable
 	{
 		super(objectId, template);
 		getKnownList(); // init knownlist
-		ThreadPoolManager.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.nextInt(60000));
+		ThreadPool.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.nextInt(60000));
 	}
 	
 	/*

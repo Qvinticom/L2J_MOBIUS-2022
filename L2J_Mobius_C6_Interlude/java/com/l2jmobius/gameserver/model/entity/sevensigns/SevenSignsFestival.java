@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -3248,7 +3248,7 @@ public class SevenSignsFestival implements SpawnListener
 		_festivalData = new HashMap<>();
 		
 		restoreFestivalData();
-		ThreadPoolManager.scheduleAtFixedRate(new RestoreStatus(), 7200000, 10800000);
+		ThreadPool.scheduleAtFixedRate(new RestoreStatus(), 7200000, 10800000);
 		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
@@ -3400,7 +3400,7 @@ public class SevenSignsFestival implements SpawnListener
 		// at the specified time, then invoke it automatically after every cycle.
 		FestivalManager fm = new FestivalManager();
 		setNextFestivalStart(Config.ALT_FESTIVAL_MANAGER_START + FESTIVAL_SIGNUP_TIME);
-		_managerScheduledTask = ThreadPoolManager.scheduleAtFixedRate(fm, Config.ALT_FESTIVAL_MANAGER_START, Config.ALT_FESTIVAL_CYCLE_LENGTH);
+		_managerScheduledTask = ThreadPool.scheduleAtFixedRate(fm, Config.ALT_FESTIVAL_MANAGER_START, Config.ALT_FESTIVAL_CYCLE_LENGTH);
 		
 		LOGGER.info("SevenSignsFestival: The first Festival of Darkness cycle begins in " + (Config.ALT_FESTIVAL_MANAGER_START / 60000) + " minute(s).");
 	}

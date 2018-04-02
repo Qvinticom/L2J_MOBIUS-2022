@@ -27,7 +27,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
@@ -67,7 +67,7 @@ public class FishingChampionshipManager
 		}
 		else
 		{
-			ThreadPoolManager.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
+			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	
@@ -316,7 +316,7 @@ public class FishingChampionshipManager
 			pl.sendPacket(html);
 			
 			refreshResult();
-			ThreadPoolManager.schedule(new needRefresh(), 60000);
+			ThreadPool.schedule(new needRefresh(), 60000);
 			return;
 		}
 		
@@ -482,7 +482,7 @@ public class FishingChampionshipManager
 			shutdown();
 			
 			LOGGER.info("FishingChampionshipManager : new event period start.");
-			ThreadPoolManager.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
+			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}
 	

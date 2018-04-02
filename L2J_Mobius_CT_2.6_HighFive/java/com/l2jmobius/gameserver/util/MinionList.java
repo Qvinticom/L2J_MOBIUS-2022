@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -141,7 +141,7 @@ public class MinionList
 		final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
 		if ((time > 0) && !_master.isAlikeDead())
 		{
-			ThreadPoolManager.schedule(new MinionRespawnTask(minion), time);
+			ThreadPool.schedule(new MinionRespawnTask(minion), time);
 		}
 	}
 	

@@ -26,8 +26,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -152,12 +152,12 @@ public class Lottery
 						if (_enddate > System.currentTimeMillis())
 						{
 							_isStarted = true;
-							ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+							ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 							
 							if (_enddate > (System.currentTimeMillis() + (12 * MINUTE)))
 							{
 								_isSellingTickets = true;
-								ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+								ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 							}
 							return;
 						}
@@ -191,8 +191,8 @@ public class Lottery
 				_enddate = finishtime.getTimeInMillis();
 			}
 			
-			ThreadPoolManager.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
-			ThreadPoolManager.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
+			ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
+			ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_LOTTERY))
@@ -400,7 +400,7 @@ public class Lottery
 				_log.log(Level.WARNING, "Lottery: Could not store finished lottery data: " + e.getMessage(), e);
 			}
 			
-			ThreadPoolManager.schedule(new startLottery(), MINUTE);
+			ThreadPool.schedule(new startLottery(), MINUTE);
 			_number++;
 			
 			_isStarted = false;

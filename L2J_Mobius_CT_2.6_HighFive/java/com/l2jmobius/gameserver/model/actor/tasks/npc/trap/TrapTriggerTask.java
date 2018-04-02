@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.npc.trap;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 
 /**
@@ -38,7 +38,7 @@ public class TrapTriggerTask implements Runnable
 		try
 		{
 			_trap.doCast(_trap.getSkill());
-			ThreadPoolManager.schedule(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
+			ThreadPool.schedule(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
 		}
 		catch (Exception e)
 		{

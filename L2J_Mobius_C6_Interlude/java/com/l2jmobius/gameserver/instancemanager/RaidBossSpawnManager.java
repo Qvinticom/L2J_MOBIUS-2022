@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.GmListTable;
@@ -201,7 +201,7 @@ public class RaidBossSpawnManager
 			info.set("respawnTime", respawnTime);
 			
 			ScheduledFuture<?> futureSpawn;
-			futureSpawn = ThreadPoolManager.schedule(new SpawnSchedule(boss.getNpcId()), respawn_delay);
+			futureSpawn = ThreadPool.schedule(new SpawnSchedule(boss.getNpcId()), respawn_delay);
 			
 			_schedules.put(boss.getNpcId(), futureSpawn);
 			
@@ -274,7 +274,7 @@ public class RaidBossSpawnManager
 			ScheduledFuture<?> futureSpawn;
 			final long spawnTime = respawnTime - Calendar.getInstance().getTimeInMillis();
 			
-			futureSpawn = ThreadPoolManager.schedule(new SpawnSchedule(bossId), spawnTime);
+			futureSpawn = ThreadPool.schedule(new SpawnSchedule(bossId), spawnTime);
 			
 			_schedules.put(bossId, futureSpawn);
 		}

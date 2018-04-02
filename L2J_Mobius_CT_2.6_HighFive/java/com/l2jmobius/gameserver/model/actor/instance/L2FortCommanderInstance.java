@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -158,7 +158,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 						
 						broadcastPacket(ns);
 						setCanTalk(false);
-						ThreadPoolManager.schedule(new ScheduleTalkTask(), 10000);
+						ThreadPool.schedule(new ScheduleTalkTask(), 10000);
 					}
 				}
 			}

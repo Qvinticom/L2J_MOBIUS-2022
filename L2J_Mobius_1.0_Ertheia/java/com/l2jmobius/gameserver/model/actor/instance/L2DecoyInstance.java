@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -53,8 +53,8 @@ public class L2DecoyInstance extends L2Character
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int skilllevel = getTemplate().getDisplayId() - 13070;
-		_DecoyLifeTask = ThreadPoolManager.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
-		_HateSpam = ThreadPoolManager.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
+		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
+		_HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
 	}
 	
 	@Override

@@ -25,8 +25,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.handler.IPunishmentHandler;
 import com.l2jmobius.gameserver.handler.PunishmentHandler;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
@@ -147,7 +147,7 @@ public class PunishmentTask implements Runnable
 		onStart();
 		if (_expirationTime > 0) // Has expiration?
 		{
-			_task = ThreadPoolManager.schedule(this, (_expirationTime - System.currentTimeMillis()));
+			_task = ThreadPool.schedule(this, (_expirationTime - System.currentTimeMillis()));
 		}
 	}
 	

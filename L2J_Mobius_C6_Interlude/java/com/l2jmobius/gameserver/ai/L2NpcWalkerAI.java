@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.ai;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.csv.NpcWalkerRoutesTable;
 import com.l2jmobius.gameserver.model.L2NpcWalkerNode;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -59,7 +59,7 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 		super(accessor);
 		// Do we really need 2 minutes delay before start?
 		// no we dont... :)
-		ThreadPoolManager.scheduleAtFixedRate(this, 0, 1000);
+		ThreadPool.scheduleAtFixedRate(this, 0, 1000);
 	}
 	
 	@Override

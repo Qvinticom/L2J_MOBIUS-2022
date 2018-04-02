@@ -25,7 +25,7 @@ import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
@@ -427,7 +427,7 @@ public class AutoAnnouncementHandler
 			if (isActive())
 			{
 				AutoAnnouncementRunner acr = new AutoAnnouncementRunner(_defaultId);
-				_chatTask = ThreadPoolManager.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
+				_chatTask = ThreadPool.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);
 			}
 			else
 			{

@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.AutoPotionTask;
@@ -70,7 +70,7 @@ public class AutoPotion implements IVoicedCommandHandler
 				AUTO_POTION_TASKS.get(playerOID).cancel(true);
 				AUTO_POTION_TASKS.remove(playerOID);
 			}
-			AUTO_POTION_TASKS.put(activeChar.getObjectId(), ThreadPoolManager.scheduleAtFixedRate(new AutoPotionTask(activeChar), POTION_TASK_DELAY, POTION_TASK_DELAY));
+			AUTO_POTION_TASKS.put(activeChar.getObjectId(), ThreadPool.scheduleAtFixedRate(new AutoPotionTask(activeChar), POTION_TASK_DELAY, POTION_TASK_DELAY));
 			activeChar.sendMessage("Auto potions is enabled.");
 			return true;
 		}

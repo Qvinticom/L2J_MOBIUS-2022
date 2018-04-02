@@ -40,10 +40,10 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.EmptyQueue;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
@@ -1010,7 +1010,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					{
 						if (isPlayer())
 						{
-							ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
 							sendPacket(ActionFailed.STATIC_PACKET);
 						}
 						return;
@@ -1049,7 +1049,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						if (getCurrentMp() < mpConsume)
 						{
 							// If L2PcInstance doesn't have enough MP, stop the attack
-							ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
 							sendPacket(SystemMessageId.NOT_ENOUGH_MP);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							return;
@@ -1119,14 +1119,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					
 					// Calculate and set the disable delay of the bow in function of the Attack Speed
 					_disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
-					_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+					_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 					break;
 				}
 				case FIST:
 				{
 					if (!isPlayer())
 					{
-						_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+						_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 						break;
 					}
 				}
@@ -1136,12 +1136,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				case DUALDAGGER:
 				{
 					final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
-					_hitTask = ThreadPoolManager.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
+					_hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
 					break;
 				}
 				default:
 				{
-					_hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+					_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 					break;
 				}
 			}
@@ -2986,7 +2986,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPoolManager.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
 			return true;
 		}
 		
@@ -3404,7 +3404,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
 	}
@@ -3482,7 +3482,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Create a task to notify the AI that L2Character arrives at a check point of the movement
 		if ((ticksToMove * GameTimeController.MILLIS_IN_TICK) > 3000)
 		{
-			ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+			ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
 		}
 		
 		// the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
@@ -3635,7 +3635,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		_hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
+		_hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
 	}
 	
 	public void onFirstHitTimeForDual(L2Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack)
@@ -3646,7 +3646,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
-		_hitTask = ThreadPoolManager.schedule(() -> onSecondHitTimeForDual(weapon, attack, hitTime, delayForSecondAttack, attackTime), delayForSecondAttack);
+		_hitTask = ThreadPool.schedule(() -> onSecondHitTimeForDual(weapon, attack, hitTime, delayForSecondAttack, attackTime), delayForSecondAttack);
 		
 		// First dual attack is the first hit only.
 		final Hit hit = attack.getHits().get(0);
@@ -3696,7 +3696,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		_hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+		_hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
 	}
 	
 	public void onHitTarget(L2Character target, L2Weapon weapon, Hit hit)

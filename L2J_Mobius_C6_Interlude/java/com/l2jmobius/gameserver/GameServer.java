@@ -28,7 +28,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.crypt.nProtect;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.NetcoreConfig;
@@ -182,10 +182,10 @@ public class GameServer
 		LOGGER.info("L2DatabaseFactory: loaded.");
 		
 		Util.printSection("Threads");
-		ThreadPoolManager.init();
+		ThreadPool.init();
 		if (Config.DEADLOCKCHECK_INTIAL_TIME > 0)
 		{
-			ThreadPoolManager.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);
+			ThreadPool.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);
 		}
 		new File(Config.DATAPACK_ROOT, "data/clans").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/crests").mkdirs();
@@ -521,7 +521,7 @@ public class GameServer
 			
 			if (Config.PCB_ENABLE)
 			{
-				ThreadPoolManager.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
+				ThreadPool.scheduleAtFixedRate(PcPoint.getInstance(), Config.PCB_INTERVAL * 1000, Config.PCB_INTERVAL * 1000);
 			}
 		}
 		else

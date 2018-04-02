@@ -19,7 +19,7 @@ package ai.bosses;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -130,7 +130,7 @@ public class Zaken extends Quest
 		super(questId, name, descr);
 		
 		// Zaken doors handling
-		ThreadPoolManager.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(() ->
 		{
 			try
 			{
@@ -138,7 +138,7 @@ public class Zaken extends Quest
 				{
 					LOGGER.info("Zaken door id 21240006 opened, game time 00.00.");
 					DoorTable.getInstance().getDoor(21240006).openMe();
-					ThreadPoolManager.schedule(() ->
+					ThreadPool.schedule(() ->
 					{
 						try
 						{

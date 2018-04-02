@@ -28,7 +28,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -137,7 +137,7 @@ public class DevastatedCastle
 			final long milliToSiege = getMilliToSiege();
 			
 			RunMessengerSpawn rms = new RunMessengerSpawn();
-			ThreadPoolManager.schedule(rms, milliToSiege);
+			ThreadPool.schedule(rms, milliToSiege);
 			
 			final long total_millis = System.currentTimeMillis() + milliToSiege;
 			
@@ -230,11 +230,11 @@ public class DevastatedCastle
 		}
 		
 		RunSiege rs = new RunSiege();
-		ThreadPoolManager.schedule(rs, 14400000); // 4 * 60 * 60 * 1000
+		ThreadPool.schedule(rs, 14400000); // 4 * 60 * 60 * 1000
 		
-		ThreadPoolManager.schedule(new DeSpawnTimer(result), 7200000); // 2 * 60 * 60 * 1000
-		ThreadPoolManager.schedule(new AnnounceInfo("Siege registration of Devastated castle is over!"), 7200000);
-		ThreadPoolManager.schedule(new AnnounceInfo("2 hours until siege begin."), 7200000);
+		ThreadPool.schedule(new DeSpawnTimer(result), 7200000); // 2 * 60 * 60 * 1000
+		ThreadPool.schedule(new AnnounceInfo("Siege registration of Devastated castle is over!"), 7200000);
+		ThreadPool.schedule(new AnnounceInfo("2 hours until siege begin."), 7200000);
 	}
 	
 	protected class AnnounceInfo implements Runnable
@@ -290,7 +290,7 @@ public class DevastatedCastle
 			spawn.setZ(-2194);
 			spawn.stopRespawn();
 			result = spawn.spawnOne();
-			_gustav = ThreadPoolManager.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
+			_gustav = ThreadPool.schedule(new DeSpawnTimer(result), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS1_ID);
 			spawn = new L2Spawn(template);
@@ -299,7 +299,7 @@ public class DevastatedCastle
 			spawn.setZ(-2195);
 			spawn.stopRespawn();
 			_minion1 = spawn.spawnOne();
-			_dietrich = ThreadPoolManager.schedule(new DeSpawnTimer(_minion1), 3600000); // 60 * 60 * 1000
+			_dietrich = ThreadPool.schedule(new DeSpawnTimer(_minion1), 3600000); // 60 * 60 * 1000
 			
 			template = NpcTable.getInstance().getTemplate(BOSS2_ID);
 			spawn = new L2Spawn(template);
@@ -308,7 +308,7 @@ public class DevastatedCastle
 			spawn.setZ(-2194);
 			spawn.stopRespawn();
 			_minion2 = spawn.spawnOne();
-			_mikhail = ThreadPoolManager.schedule(new DeSpawnTimer(_minion2), 3600000); // 60 * 60 * 1000
+			_mikhail = ThreadPool.schedule(new DeSpawnTimer(_minion2), 3600000); // 60 * 60 * 1000
 			
 			spawnMonsters();
 		}
@@ -737,7 +737,7 @@ public class DevastatedCastle
 				e.printStackTrace();
 			}
 		}
-		_monsterdespawn = ThreadPoolManager.schedule(new DeSpawnMonsters(), 3600000); // 60 * 60 * 1000
+		_monsterdespawn = ThreadPool.schedule(new DeSpawnMonsters(), 3600000); // 60 * 60 * 1000
 	}
 	
 	protected class DeSpawnMonsters implements Runnable

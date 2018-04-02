@@ -20,7 +20,7 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -55,7 +55,7 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		if (command.equals("admin_stats"))
 		{
-			for (String line : ThreadPoolManager.getStats())
+			for (String line : ThreadPool.getStats())
 			{
 				activeChar.sendMessage(line);
 			}

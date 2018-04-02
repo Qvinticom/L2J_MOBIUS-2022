@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.taskmanager;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 
 /**
  * @author NB4L1
@@ -59,19 +59,19 @@ public abstract class ExclusiveTask
 	{
 		cancel();
 		
-		_future = ThreadPoolManager.schedule(_runnable, delay);
+		_future = ThreadPool.schedule(_runnable, delay);
 	}
 	
 	public final synchronized void execute()
 	{
-		ThreadPoolManager.execute(_runnable);
+		ThreadPool.execute(_runnable);
 	}
 	
 	public final synchronized void scheduleAtFixedRate(long delay, long period)
 	{
 		cancel();
 		
-		_future = ThreadPoolManager.scheduleAtFixedRate(_runnable, delay, period);
+		_future = ThreadPool.scheduleAtFixedRate(_runnable, delay, period);
 	}
 	
 	private final Runnable _runnable = () ->

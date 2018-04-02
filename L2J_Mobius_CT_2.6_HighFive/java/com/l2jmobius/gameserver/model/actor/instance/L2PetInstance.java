@@ -26,8 +26,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
@@ -1100,7 +1100,7 @@ public class L2PetInstance extends L2Summon
 		stopFeed();
 		if (!isDead() && (getOwner().getSummon() == this))
 		{
-			_feedTask = ThreadPoolManager.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
+			_feedTask = ThreadPool.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
 		}
 	}
 	

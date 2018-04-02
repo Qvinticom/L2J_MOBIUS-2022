@@ -18,8 +18,8 @@ package ai.npc.NpcBuffers.impl;
 
 import java.util.Collection;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.SevenSigns;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -76,8 +76,8 @@ public final class CabaleBuffer extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		ThreadPoolManager.schedule(new CabaleAI(npc), 3000);
-		ThreadPoolManager.schedule(new Talk(npc), 60000);
+		ThreadPool.schedule(new CabaleAI(npc), 3000);
+		ThreadPool.schedule(new Talk(npc), 60000);
 		return super.onSpawn(npc);
 	}
 	
@@ -101,7 +101,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 					messages = PREACHER_MSG;
 				}
 				broadcastSay(_npc, messages[getRandom(messages.length)], null, -1);
-				ThreadPoolManager.schedule(this, 60000);
+				ThreadPool.schedule(this, 60000);
 			}
 		}
 	}
@@ -224,7 +224,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 					break;
 				}
 			}
-			ThreadPoolManager.schedule(this, 3000);
+			ThreadPool.schedule(this, 3000);
 		}
 		
 		/**

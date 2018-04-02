@@ -36,8 +36,8 @@ import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -425,11 +425,11 @@ public final class BotReportTable
 				c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) + 1);
 			}
 			
-			ThreadPoolManager.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
+			ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
 		}
 		catch (Exception e)
 		{
-			ThreadPoolManager.schedule(new ResetPointTask(), 24 * 3600 * 1000);
+			ThreadPool.schedule(new ResetPointTask(), 24 * 3600 * 1000);
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
 		}
 	}

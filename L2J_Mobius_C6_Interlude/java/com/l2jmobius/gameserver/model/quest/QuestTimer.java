@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.quest;
 
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -71,11 +71,11 @@ public class QuestTimer
 		_isRepeating = repeating;
 		if (repeating)
 		{
-			_schedular = ThreadPoolManager.scheduleAtFixedRate(new ScheduleTimerTask(), time, time); // Prepare auto end task
+			_schedular = ThreadPool.scheduleAtFixedRate(new ScheduleTimerTask(), time, time); // Prepare auto end task
 		}
 		else
 		{
-			_schedular = ThreadPoolManager.schedule(new ScheduleTimerTask(), time); // Prepare auto end task
+			_schedular = ThreadPool.schedule(new ScheduleTimerTask(), time); // Prepare auto end task
 		}
 	}
 	

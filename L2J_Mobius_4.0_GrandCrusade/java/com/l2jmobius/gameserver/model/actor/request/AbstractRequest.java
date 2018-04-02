@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.request;
 import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -55,7 +55,7 @@ public abstract class AbstractRequest
 	
 	public void scheduleTimeout(long delay)
 	{
-		_timeOutTask = ThreadPoolManager.schedule(this::onTimeout, delay);
+		_timeOutTask = ThreadPool.schedule(this::onTimeout, delay);
 	}
 	
 	public boolean isTimeout()

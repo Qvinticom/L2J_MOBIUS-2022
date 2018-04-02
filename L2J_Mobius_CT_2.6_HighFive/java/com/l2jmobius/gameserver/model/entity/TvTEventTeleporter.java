@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.entity;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -45,7 +45,7 @@ public class TvTEventTeleporter implements Runnable
 		_coordinates = coordinates;
 		_adminRemove = adminRemove;
 		
-		ThreadPoolManager.schedule(this, fastSchedule ? 0 : (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000);
+		ThreadPool.schedule(this, fastSchedule ? 0 : (TvTEvent.isStarted() ? Config.TVT_EVENT_RESPAWN_TELEPORT_DELAY : Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY) * 1000);
 	}
 	
 	/**

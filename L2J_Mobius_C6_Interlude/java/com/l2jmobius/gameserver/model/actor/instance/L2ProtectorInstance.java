@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -128,7 +128,7 @@ public class L2ProtectorInstance extends L2NpcInstance
 			_aiTask.cancel(true);
 		}
 		
-		_aiTask = ThreadPoolManager.scheduleAtFixedRate(new ProtectorAI(this), 3000, 3000);
+		_aiTask = ThreadPool.scheduleAtFixedRate(new ProtectorAI(this), 3000, 3000);
 	}
 	
 	@Override

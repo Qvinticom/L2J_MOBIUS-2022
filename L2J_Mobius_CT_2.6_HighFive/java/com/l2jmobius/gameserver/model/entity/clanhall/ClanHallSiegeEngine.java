@@ -30,8 +30,8 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
@@ -86,7 +86,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		_hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
 		_hall.setSiege(this);
 		
-		_siegeTask = ThreadPoolManager.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
+		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
 		_log.config(_hall.getName() + " siege scheduled for " + getSiegeDate().getTime() + ".");
 		loadAttackers();
 	}
@@ -294,7 +294,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		Broadcast.toAllOnlinePlayers(msg);
 		_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 		
-		_siegeTask = ThreadPoolManager.schedule(new SiegeStarts(), 3600000);
+		_siegeTask = ThreadPool.schedule(new SiegeStarts(), 3600000);
 	}
 	
 	@Override
@@ -305,7 +305,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			onSiegeEnds();
 			_attackers.clear();
 			_hall.updateNextSiege();
-			_siegeTask = ThreadPoolManager.schedule(new PrepareOwner(), _hall.getSiegeDate().getTimeInMillis());
+			_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getSiegeDate().getTimeInMillis());
 			_hall.updateSiegeStatus(SiegeStatus.WAITING_BATTLE);
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_SIEGE_OF_S1_HAS_BEEN_CANCELED_DUE_TO_LACK_OF_INTEREST);
 			sm.addString(_hall.getName());
@@ -337,7 +337,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		_hall.updateSiegeStatus(SiegeStatus.RUNNING);
 		onSiegeStarts();
-		_siegeTask = ThreadPoolManager.schedule(new SiegeEnds(), _hall.getSiegeLenght());
+		_siegeTask = ThreadPool.schedule(new SiegeEnds(), _hall.getSiegeLenght());
 	}
 	
 	@Override
@@ -399,7 +399,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 		
 		onSiegeEnds();
 		
-		_siegeTask = ThreadPoolManager.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
+		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - System.currentTimeMillis() - 3600000);
 		_log.config("Siege of " + _hall.getName() + " scheduled for " + _hall.getSiegeDate().getTime() + ".");
 		
 		_hall.updateSiegeStatus(SiegeStatus.REGISTERING);
@@ -410,7 +410,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	public void updateSiege()
 	{
 		cancelSiegeTask();
-		_siegeTask = ThreadPoolManager.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - 3600000);
+		_siegeTask = ThreadPool.schedule(new PrepareOwner(), _hall.getNextSiegeTime() - 3600000);
 		_log.config(_hall.getName() + " siege scheduled for " + _hall.getSiegeDate().getTime() + ".");
 	}
 	

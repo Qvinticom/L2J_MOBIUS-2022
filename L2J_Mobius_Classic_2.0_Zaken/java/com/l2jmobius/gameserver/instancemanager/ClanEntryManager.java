@@ -33,9 +33,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeWaitingInfo;
@@ -390,7 +390,7 @@ public class ClanEntryManager
 	
 	private static void lockPlayer(int playerId)
 	{
-		_playerLocked.put(playerId, ThreadPoolManager.schedule(() ->
+		_playerLocked.put(playerId, ThreadPool.schedule(() ->
 		{
 			_playerLocked.remove(playerId);
 		}, LOCK_TIME));
@@ -398,7 +398,7 @@ public class ClanEntryManager
 	
 	private static void lockClan(int clanId)
 	{
-		_clanLocked.put(clanId, ThreadPoolManager.schedule(() ->
+		_clanLocked.put(clanId, ThreadPool.schedule(() ->
 		{
 			_clanLocked.remove(clanId);
 		}, LOCK_TIME));

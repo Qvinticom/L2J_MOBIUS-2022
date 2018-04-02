@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 
 import java.util.concurrent.Future;
 
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -49,7 +49,7 @@ public class L2DynamicZone extends L2ZoneType
 		_skill = skill;
 		
 		Runnable r = () -> remove();
-		setTask(ThreadPoolManager.schedule(r, skill.getBuffDuration()));
+		setTask(ThreadPool.schedule(r, skill.getBuffDuration()));
 	}
 	
 	@Override

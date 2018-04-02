@@ -21,7 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -137,7 +137,7 @@ public final class Race extends Event
 		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.schedule(() -> StartRace(), _time_register * 60 * 1000);
+		_eventTask = ThreadPool.schedule(() -> StartRace(), _time_register * 60 * 1000);
 		
 		return true;
 		
@@ -180,7 +180,7 @@ public final class Race extends Event
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPoolManager.schedule(() -> timeUp(), _time_race * 60 * 1000);
+		_eventTask = ThreadPool.schedule(() -> timeUp(), _time_race * 60 * 1000);
 	}
 	
 	@Override

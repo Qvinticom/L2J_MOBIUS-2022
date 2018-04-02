@@ -39,7 +39,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.crypt.nProtect;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Point3D;
@@ -4231,7 +4231,7 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			
-			ThreadPoolManager.execute(launchedMovingTask);
+			ThreadPool.execute(launchedMovingTask);
 		}
 	}
 	
@@ -4322,7 +4322,7 @@ public final class L2PcInstance extends L2Playable
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
 			sittingTaskLaunched = true;
 			// Schedule a sit down task to wait for the animation to finish
-			ThreadPoolManager.schedule(new SitDownTask(this), 2500);
+			ThreadPool.schedule(new SitDownTask(this), 2500);
 			setIsParalyzed(true);
 		}
 	}
@@ -4406,7 +4406,7 @@ public final class L2PcInstance extends L2Playable
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
 			// Schedule a stand up task to wait for the animation to finish
 			setIsImobilised(true);
-			ThreadPoolManager.schedule(new StandUpTask(this), 2000);
+			ThreadPool.schedule(new StandUpTask(this), 2000);
 			stopFakeDeath(null);
 		}
 		
@@ -4442,7 +4442,7 @@ public final class L2PcInstance extends L2Playable
 			broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
 			// Schedule a stand up task to wait for the animation to finish
 			setIsImobilised(true);
-			ThreadPoolManager.schedule(new StandUpTask(this), 2500);
+			ThreadPool.schedule(new StandUpTask(this), 2500);
 			
 		}
 	}
@@ -4890,7 +4890,7 @@ public final class L2PcInstance extends L2Playable
 				else
 				{
 					_herbstask += 100;
-					ThreadPoolManager.schedule(new HerbTask(process, itemId, count, reference, sendMessage), _herbstask);
+					ThreadPool.schedule(new HerbTask(process, itemId, count, reference, sendMessage), _herbstask);
 				}
 			}
 			else
@@ -5612,7 +5612,7 @@ public final class L2PcInstance extends L2Playable
 		
 		if (protect)
 		{
-			ThreadPoolManager.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_SPAWN_PROTECTION - 1) * 1000);
+			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_SPAWN_PROTECTION - 1) * 1000);
 		}
 	}
 	
@@ -5631,7 +5631,7 @@ public final class L2PcInstance extends L2Playable
 		
 		if (protect)
 		{
-			ThreadPoolManager.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_TELEPORT_PROTECTION - 1) * 1000);
+			ThreadPool.schedule(new TeleportProtectionFinalizer(this), (Config.PLAYER_TELEPORT_PROTECTION - 1) * 1000);
 		}
 	}
 	
@@ -7392,7 +7392,7 @@ public final class L2PcInstance extends L2Playable
 							pk.sendMessage("You are a teamkiller !!! Teamkills not counting.");
 						}
 						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							teleToLocation((TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, (TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)) + Rnd.get(201)) - 100, TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)), false);
 							doRevive();
@@ -7404,7 +7404,7 @@ public final class L2PcInstance extends L2Playable
 					if (TvT.is_teleport() || TvT.is_started())
 					{
 						sendMessage("You will be revived and teleported to team spot in " + (Config.TVT_REVIVE_DELAY / 1000) + " seconds!");
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							teleToLocation(TvT._teamsX.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsY.get(TvT._teams.indexOf(_teamNameTvT)), TvT._teamsZ.get(TvT._teams.indexOf(_teamNameTvT)), false);
 							doRevive();
@@ -7421,7 +7421,7 @@ public final class L2PcInstance extends L2Playable
 						{
 							removeCTFFlagOnDie();
 						}
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							teleToLocation(CTF._teamsX.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsY.get(CTF._teams.indexOf(_teamNameCTF)), CTF._teamsZ.get(CTF._teams.indexOf(_teamNameCTF)), false);
 							doRevive();
@@ -7448,7 +7448,7 @@ public final class L2PcInstance extends L2Playable
 						}
 						
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							final Location p_loc = DM.get_playersSpawnLocation();
 							teleToLocation(p_loc._x, p_loc._y, p_loc._z, false);
@@ -7461,7 +7461,7 @@ public final class L2PcInstance extends L2Playable
 					if (DM.is_teleport() || DM.is_started())
 					{
 						sendMessage("You will be revived and teleported to spot in 20 seconds!");
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							final Location players_loc = DM.get_playersSpawnLocation();
 							teleToLocation(players_loc._x, players_loc._y, players_loc._z, false);
@@ -7485,7 +7485,7 @@ public final class L2PcInstance extends L2Playable
 					else
 					{
 						sendMessage("You will be revived and teleported to team spot in 20 seconds!");
-						ThreadPoolManager.schedule(() ->
+						ThreadPool.schedule(() ->
 						{
 							doRevive();
 							if (_isVIP)
@@ -12759,7 +12759,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		_inventoryDisable = true;
 		
-		ThreadPoolManager.schedule(new InventoryEnable(), 1500);
+		ThreadPool.schedule(new InventoryEnable(), 1500);
 	}
 	
 	/**
@@ -13093,7 +13093,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void rechargeAutoSoulShot(boolean physical, boolean magic, boolean summon, int atkTime)
 	{
-		ThreadPoolManager.schedule(() -> rechargeAutoSoulShot(physical, magic, summon), atkTime);
+		ThreadPool.schedule(() -> rechargeAutoSoulShot(physical, magic, summon), atkTime);
 	}
 	
 	/**
@@ -14868,7 +14868,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskWarnUserTakeBreak == null)
 		{
-			_taskWarnUserTakeBreak = ThreadPoolManager.scheduleAtFixedRate(new WarnUserTakeBreak(), 7200000, 7200000);
+			_taskWarnUserTakeBreak = ThreadPool.scheduleAtFixedRate(new WarnUserTakeBreak(), 7200000, 7200000);
 		}
 	}
 	
@@ -14904,7 +14904,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskRentPet == null)
 		{
-			_taskRentPet = ThreadPoolManager.scheduleAtFixedRate(new RentPetTask(), seconds * 1000L, seconds * 1000L);
+			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(), seconds * 1000L, seconds * 1000L);
 		}
 	}
 	
@@ -14948,7 +14948,7 @@ public final class L2PcInstance extends L2Playable
 			final int timeinwater = 86000;
 			
 			sendPacket(new SetupGauge(2, timeinwater));
-			_taskWater = ThreadPoolManager.scheduleAtFixedRate(new WaterTask(), timeinwater, 1000);
+			_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(), timeinwater, 1000);
 		}
 	}
 	
@@ -16415,7 +16415,7 @@ public final class L2PcInstance extends L2Playable
 			_shortBuffTask.cancel(false);
 			_shortBuffTask = null;
 		}
-		_shortBuffTask = ThreadPoolManager.schedule(new ShortBuffTask(this), 15000);
+		_shortBuffTask = ThreadPool.schedule(new ShortBuffTask(this), 15000);
 		
 		sendPacket(new ShortBuffStatusUpdate(magicId, level, time));
 	}
@@ -16617,7 +16617,7 @@ public final class L2PcInstance extends L2Playable
 					checkDelay = Math.round((float) (_fish.getGutsCheckTime() * 0.66));
 				}
 			}
-			_taskforfish = ThreadPoolManager.scheduleAtFixedRate(new LookingForFishTask(_fish.getWaitTime(), _fish.getFishGuts(), _fish.getType(), isNoob, isUpperGrade), 10000, checkDelay);
+			_taskforfish = ThreadPool.scheduleAtFixedRate(new LookingForFishTask(_fish.getWaitTime(), _fish.getFishGuts(), _fish.getType(), isNoob, isUpperGrade), 10000, checkDelay);
 		}
 	}
 	
@@ -18781,7 +18781,7 @@ public final class L2PcInstance extends L2Playable
 					
 					// start the countdown
 					final int minutes = (int) (delayInMilliseconds / 60000);
-					_punishTask = ThreadPoolManager.schedule(new PunishTask(this), _punishTimer);
+					_punishTask = ThreadPool.schedule(new PunishTask(this), _punishTimer);
 					sendMessage("You are chat banned for " + minutes + " minutes.");
 				}
 				else
@@ -18803,7 +18803,7 @@ public final class L2PcInstance extends L2Playable
 					_punishTimer = delayInMilliseconds; // Delay in milliseconds
 					
 					// start the countdown
-					_punishTask = ThreadPoolManager.schedule(new PunishTask(this), _punishTimer);
+					_punishTask = ThreadPool.schedule(new PunishTask(this), _punishTimer);
 					sendMessage("You are in jail for " + (delayInMilliseconds / 60000) + " minutes.");
 				}
 				
@@ -18897,7 +18897,7 @@ public final class L2PcInstance extends L2Playable
 			// If punish timer exists, restart punishtask.
 			if (_punishTimer > 0)
 			{
-				_punishTask = ThreadPoolManager.schedule(new PunishTask(this), _punishTimer);
+				_punishTask = ThreadPool.schedule(new PunishTask(this), _punishTimer);
 				sendMessage("You are still " + getPunishLevel().string() + " for " + (_punishTimer / 60000) + " minutes.");
 			}
 			if (getPunishLevel() == PunishLevel.JAIL)

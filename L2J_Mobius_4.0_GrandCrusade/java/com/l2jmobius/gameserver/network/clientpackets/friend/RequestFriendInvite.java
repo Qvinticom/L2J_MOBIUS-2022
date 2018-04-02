@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.friend;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2World;
@@ -65,7 +65,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_REQUESTED_C1_TO_BE_ON_YOUR_FRIENDS_LIST);
 				sm.addString(_name);
 				activeChar.sendPacket(sm);
-				ThreadPoolManager.schedule(() -> scheduleDeny(activeChar), 10000);
+				ThreadPool.schedule(() -> scheduleDeny(activeChar), 10000);
 				activeChar.blockRequest();
 			}
 			else

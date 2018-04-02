@@ -27,8 +27,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.ThreadPoolManager;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -299,13 +299,13 @@ public final class WalkingManager implements IGameXmlReader
 						npc.setWalking();
 					}
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
-					walk.setWalkCheckTask(ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
+					walk.setWalkCheckTask(ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 					
 					_activeRoutes.put(npc.getObjectId(), walk); // register route
 				}
 				else
 				{
-					ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000);
+					ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000);
 				}
 			}
 			else
@@ -446,7 +446,7 @@ public final class WalkingManager implements IGameXmlReader
 						npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
 					}
 					
-					ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
+					ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
 				}
 			}
 		}

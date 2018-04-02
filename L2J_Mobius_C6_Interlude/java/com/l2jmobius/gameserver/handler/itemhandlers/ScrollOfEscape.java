@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPoolManager;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -223,7 +223,7 @@ public class ScrollOfEscape implements IItemHandler
 		
 		EscapeFinalizer ef = new EscapeFinalizer(activeChar, itemId);
 		// continue execution later
-		activeChar.setSkillCast(ThreadPoolManager.schedule(ef, skill.getHitTime()));
+		activeChar.setSkillCast(ThreadPool.schedule(ef, skill.getHitTime()));
 		activeChar.setSkillCastEndTime(10 + GameTimeController.getGameTicks() + (skill.getHitTime() / GameTimeController.MILLIS_IN_TICK));
 	}
 	
