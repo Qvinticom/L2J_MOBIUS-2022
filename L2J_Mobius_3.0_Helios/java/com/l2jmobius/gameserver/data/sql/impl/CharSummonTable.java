@@ -197,18 +197,21 @@ public class CharSummonTable
 					final int time = rs.getInt("time");
 					
 					skill = SkillData.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
-					if ((skill == null) || !activeChar.hasServitor(summonObjId))
+					if (skill == null)
 					{
-						removeServitor(activeChar, summonObjId);
 						return;
 					}
+					removeServitor(activeChar, summonObjId);
 					
 					skill.applyEffects(activeChar, activeChar);
 					
 					final L2ServitorInstance summon = (L2ServitorInstance) activeChar.getServitor(summonObjId);
-					summon.setCurrentHp(curHp);
-					summon.setCurrentMp(curMp);
-					summon.setLifeTimeRemaining(time);
+					if (summon != null)
+					{
+						summon.setCurrentHp(curHp);
+						summon.setCurrentMp(curMp);
+						summon.setLifeTimeRemaining(time);
+					}
 				}
 			}
 		}
