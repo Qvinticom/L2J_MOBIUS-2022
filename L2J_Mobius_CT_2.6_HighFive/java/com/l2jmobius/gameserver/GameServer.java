@@ -161,20 +161,21 @@ public final class GameServer
 	{
 		final long serverLoadStart = System.currentTimeMillis();
 		
+		printSection("ThreadPool");
+		ThreadPool.initThreadPools(new GameThreadPools());
+		
+		printSection("IdFactory");
 		if (!IdFactory.getInstance().isInitialized())
 		{
 			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
 		}
 		
-		printSection("ThreadPool");
-		ThreadPool.init();
-		EventDispatcher.getInstance();
-		
 		new File("log/game").mkdirs();
 		
 		// load script engines
 		printSection("Scripting Engines");
+		EventDispatcher.getInstance();
 		ScriptEngineManager.getInstance();
 		
 		printSection("World");

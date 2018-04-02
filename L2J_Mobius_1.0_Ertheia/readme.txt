@@ -109,7 +109,6 @@ Others:
 -Reworked drop system
 -Skill system from L2jUnity
 -GeoEngine from aCis
--Threadpool manager from aCis
 
 TODO:
 -Modify all skill levels/sublevels based on client

@@ -179,14 +179,22 @@ public class GameServer
 		
 		Util.printSection("Database");
 		DatabaseFactory.getInstance();
-		LOGGER.info("L2DatabaseFactory: loaded.");
+		LOGGER.info("Database: Initialized.");
 		
-		Util.printSection("Threads");
-		ThreadPool.init();
+		Util.printSection("ThreadPool");
+		ThreadPool.initThreadPools(new GameThreadPools());
 		if (Config.DEADLOCKCHECK_INTIAL_TIME > 0)
 		{
 			ThreadPool.scheduleAtFixedRate(DeadlockDetector.getInstance(), Config.DEADLOCKCHECK_INTIAL_TIME, Config.DEADLOCKCHECK_DELAY_TIME);
 		}
+		
+		Util.printSection("IdFactory");
+		if (!IdFactory.getInstance().isInitialized())
+		{
+			LOGGER.info("Could not read object IDs from DB. Please Check Your Data.");
+			throw new Exception("Could not initialize the ID factory");
+		}
+		
 		new File(Config.DATAPACK_ROOT, "data/clans").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/crests").mkdirs();
 		new File(Config.DATAPACK_ROOT, "data/pathnode").mkdirs();
@@ -207,11 +215,6 @@ public class GameServer
 		MapRegionTable.getInstance();
 		Announcements.getInstance();
 		AutoAnnouncementHandler.getInstance();
-		if (!IdFactory.getInstance().isInitialized())
-		{
-			LOGGER.info("Could not read object IDs from DB. Please Check Your Data.");
-			throw new Exception("Could not initialize the ID factory");
-		}
 		GlobalVariablesManager.getInstance();
 		StaticObjects.getInstance();
 		TeleportLocationTable.getInstance();

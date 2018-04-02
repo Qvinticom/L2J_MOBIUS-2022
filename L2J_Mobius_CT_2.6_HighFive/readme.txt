@@ -25,4 +25,3 @@ What is done
 -User command expon/expoff
 -Reworked drop system
 -GeoEngine from aCis
--Threadpool manager from aCis
