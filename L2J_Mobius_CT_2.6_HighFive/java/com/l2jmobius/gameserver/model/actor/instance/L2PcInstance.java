@@ -10606,8 +10606,11 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (isSpawnProtected())
 		{
-			sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
-			
+			setProtection(false);
+			if (!isInsideZone(ZoneId.PEACE))
+			{
+				sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
+			}
 			if (Config.RESTORE_SERVITOR_ON_RECONNECT && !hasSummon() && CharSummonTable.getInstance().getServitors().containsKey(getObjectId()))
 			{
 				CharSummonTable.getInstance().restoreServitor(this);
@@ -10619,10 +10622,12 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (isTeleportProtected())
 		{
-			sendMessage("Teleport spawn protection ended.");
+			setTeleportProtection(false);
+			if (!isInsideZone(ZoneId.PEACE))
+			{
+				sendMessage("Teleport spawn protection ended.");
+			}
 		}
-		setProtection(false);
-		setTeleportProtection(false);
 	}
 	
 	/**

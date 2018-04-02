@@ -15293,27 +15293,21 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void onActionRequest()
 	{
-		/*
-		 * Important: dont send here a broadcast like removeAbnornalstatus cause they will create mass lag on pvp
-		 */
-		
 		if (isSpawnProtected())
 		{
-			sendMessage("The effect of Spawn Protection has been removed.");
-		}
-		else if (isTeleportProtected())
-		{
-			sendMessage("The effect of Teleport Spawn Protection has been removed.");
-		}
-		
-		if (Config.PLAYER_SPAWN_PROTECTION > 0)
-		{
 			setProtection(false);
+			if (!isInsideZone(ZoneId.PEACE))
+			{
+				sendMessage("You are no longer protected from aggressive monsters.");
+			}
 		}
-		
-		if (Config.PLAYER_TELEPORT_PROTECTION > 0)
+		if (isTeleportProtected())
 		{
 			setTeleportProtection(false);
+			if (!isInsideZone(ZoneId.PEACE))
+			{
+				sendMessage("Teleport spawn protection ended.");
+			}
 		}
 	}
 	
