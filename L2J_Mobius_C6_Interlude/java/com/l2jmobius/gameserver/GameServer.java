@@ -179,7 +179,6 @@ public class GameServer
 		
 		Util.printSection("Database");
 		DatabaseFactory.getInstance();
-		LOGGER.info("Database: Initialized.");
 		
 		Util.printSection("ThreadPool");
 		ThreadPool.initThreadPools(new GameThreadPools());

@@ -30,7 +30,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
  */
 public class DatabaseFactory
 {
-	private static final Logger _log = Logger.getLogger(DatabaseFactory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DatabaseFactory.class.getName());
 	
 	private final ComboPooledDataSource _dataSource;
 	
@@ -39,7 +39,7 @@ public class DatabaseFactory
 		if (Config.DATABASE_MAX_CONNECTIONS < 2)
 		{
 			Config.DATABASE_MAX_CONNECTIONS = 2;
-			_log.warning("A minimum of 2 connections are required.");
+			LOGGER.warning("A minimum of 2 connections are required.");
 		}
 		
 		_dataSource = new ComboPooledDataSource();
@@ -92,6 +92,8 @@ public class DatabaseFactory
 		{
 			e.printStackTrace();
 		}
+		
+		LOGGER.info("Database: Initialized.");
 	}
 	
 	public Connection getConnection()
@@ -105,7 +107,7 @@ public class DatabaseFactory
 			}
 			catch (SQLException e)
 			{
-				_log.warning(getClass().getSimpleName() + ": Unable to get a connection: " + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + ": Unable to get a connection: " + e.getMessage());
 			}
 		}
 		return con;
@@ -119,7 +121,7 @@ public class DatabaseFactory
 		}
 		catch (Exception e)
 		{
-			_log.info(e.getMessage());
+			LOGGER.info(e.getMessage());
 		}
 	}
 	
