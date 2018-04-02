@@ -24,6 +24,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -106,7 +107,7 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final Set<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
+		final Set<Integer> classed = _classBasedRegisters.get(getClassGroup(noble));
 		if ((classed != null) && classed.contains(objId))
 		{
 			if (showMessage)
@@ -199,7 +200,7 @@ public class OlympiadManager
 			{
 				if (player.isOnEvent())
 				{
-					player.sendMessage("You can't join olympiad while participating on TvT Event.");
+					player.sendMessage("You can't join olympiad while participating on an Event.");
 					return false;
 				}
 				
@@ -218,7 +219,7 @@ public class OlympiadManager
 					return false;
 				}
 				
-				_classBasedRegisters.computeIfAbsent(player.getBaseClass(), k -> ConcurrentHashMap.newKeySet()).add(charId);
+				_classBasedRegisters.computeIfAbsent(getClassGroup(player), k -> ConcurrentHashMap.newKeySet()).add(charId);
 				player.sendPacket(SystemMessageId.YOU_HAVE_BEEN_REGISTERED_FOR_THE_OLYMPIAD_WAITING_LIST_FOR_A_CLASS_BATTLE);
 				break;
 			}
@@ -292,7 +293,7 @@ public class OlympiadManager
 			return true;
 		}
 		
-		final Set<Integer> classed = _classBasedRegisters.get(noble.getBaseClass());
+		final Set<Integer> classed = _classBasedRegisters.get(getClassGroup(noble));
 		if ((classed != null) && classed.remove(objId))
 		{
 			if (Config.DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP > 0)
@@ -321,7 +322,7 @@ public class OlympiadManager
 			return;
 		}
 		
-		_classBasedRegisters.getOrDefault(player.getBaseClass(), Collections.emptySet()).remove(objId);
+		_classBasedRegisters.getOrDefault(getClassGroup(player), Collections.emptySet()).remove(objId);
 	}
 	
 	public int getCountOpponents()
@@ -332,5 +333,49 @@ public class OlympiadManager
 	private static class SingletonHolder
 	{
 		protected static final OlympiadManager _instance = new OlympiadManager();
+	}
+	
+	private int getClassGroup(L2PcInstance player)
+	{
+		if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP))
+		{
+			return 1001;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP))
+		{
+			return 1002;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP))
+		{
+			return 1003;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP))
+		{
+			return 1004;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP))
+		{
+			return 1005;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP))
+		{
+			return 1006;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP))
+		{
+			return 1007;
+		}
+		else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP))
+		{
+			return 1008;
+		}
+		else if (player.isInCategory(CategoryType.ERTHEIA_FOURTH_CLASS_GROUP))
+		{
+			return 1009;
+		}
+		else
+		{
+			return player.getBaseClass();
+		}
 	}
 }
