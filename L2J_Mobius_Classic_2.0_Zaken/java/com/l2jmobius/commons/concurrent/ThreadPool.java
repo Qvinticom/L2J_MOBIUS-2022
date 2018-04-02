@@ -50,8 +50,8 @@ public final class ThreadPool
 		}
 		
 		SCHEDULED_THREAD_POOL_EXECUTOR = new ScheduledThreadPoolExecutor(Config.SCHEDULED_THREAD_POOL_COUNT != -1 ? Config.SCHEDULED_THREAD_POOL_COUNT : Runtime.getRuntime().availableProcessors() * Config.THREADS_PER_SCHEDULED_THREAD_POOL, new PoolThreadFactory("L2JM-S-", Thread.NORM_PRIORITY));
-		final int poolCount = Config.INSTANT_THREAD_POOL_COUNT != -1 ? Config.INSTANT_THREAD_POOL_COUNT : Runtime.getRuntime().availableProcessors() * Config.THREADS_PER_INSTANT_THREAD_POOL;
-		THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(poolCount, poolCount, 1, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PoolThreadFactory("L2JM-I-", Thread.NORM_PRIORITY));
+		final int instantPoolCount = Config.INSTANT_THREAD_POOL_COUNT != -1 ? Config.INSTANT_THREAD_POOL_COUNT : Runtime.getRuntime().availableProcessors() * Config.THREADS_PER_INSTANT_THREAD_POOL;
+		THREAD_POOL_EXECUTOR = new ThreadPoolExecutor(instantPoolCount, instantPoolCount, 1, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PoolThreadFactory("L2JM-I-", Thread.NORM_PRIORITY));
 		
 		getThreadPools().forEach(tp ->
 		{
@@ -59,7 +59,7 @@ public final class ThreadPool
 			tp.prestartAllCoreThreads();
 		});
 		
-		scheduleAtFixedRate(ThreadPool::purge, 60000, 60000); // Repeats every one minute.
+		scheduleAtFixedRate(ThreadPool::purge, 60000, 60000); // Repeats every minute.
 		
 		LOGGER.info("ThreadPool: Initialized with");
 		LOGGER.info("..." + SCHEDULED_THREAD_POOL_EXECUTOR.getPoolSize() + "/" + SCHEDULED_THREAD_POOL_EXECUTOR.getPoolSize() + " scheduled thread(s)."); // ScheduledThreadPoolExecutor has a fixed number of threads and maximumPoolSize has no effect
