@@ -82,7 +82,7 @@ public class Q00926_30DaySearchOperation extends Quest
 			{
 				if (player.getLevel() >= MIN_LEVEL)
 				{
-					if (getQuestItemsCount(player, REMNANT_OF_THE_RIFT) < 99)
+					if (getQuestItemsCount(player, REMNANT_OF_THE_RIFT) < 29)
 					{
 						giveItems(player, REMNANT_OF_THE_RIFT, 1);
 						giveItems(player, BELOAS_SUPPLY_ITEMS, 1);
