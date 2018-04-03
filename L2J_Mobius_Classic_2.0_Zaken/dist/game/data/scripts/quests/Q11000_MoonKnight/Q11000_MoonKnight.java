@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPress
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
 
@@ -82,6 +83,7 @@ public class Q11000_MoonKnight extends Quest
 		addKillId(OL_MAHUM_THIEF, TUREK_ORC_COMMANDER, TUREK_ORC_INVADER);
 		addCondLevel(MIN_LVL, MAX_LVL, "no_level.html");
 		registerQuestItems(MOLD, AMORA_RECEIPT, ARMOR_TRADE_CONTRACT, TUREK_ORC_ORDER, TUREK_ORC_INVADER_HEAD);
+		setQuestNameNpcStringId(NpcStringId.MOON_KNIGHT);
 	}
 	
 	@Override

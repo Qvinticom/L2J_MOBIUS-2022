@@ -66,6 +66,7 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
 		addCondRace(Race.HUMAN, "no-race.html"); // Custom
 		registerQuestItems(INVENTORY_BOOK, WOODEN_POLE, WOODEN_DOOR_PANEL, STONE_POWDER);
+		setQuestNameNpcStringId(NpcStringId.LV_11_20_HELP_WITH_TEMPLE_RESTORATION);
 	}
 	
 	@Override

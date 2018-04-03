@@ -67,6 +67,7 @@ public class Q11001_TombsOfAncestors extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
 		addCondRace(Race.HUMAN, "no-race.html");
 		registerQuestItems(HUNTERS_MEMO, WOLF_PELT, ORC_AMULET, WEREWOLFS_FANG, BROKEN_SWORD);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_TOMBS_OF_ANCESTORS);
 	}
 	
 	@Override

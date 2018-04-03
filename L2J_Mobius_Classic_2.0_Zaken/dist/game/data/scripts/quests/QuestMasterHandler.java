@@ -153,6 +153,7 @@ import quests.Q11001_TombsOfAncestors.Q11001_TombsOfAncestors;
 import quests.Q11002_HelpWithTempleRestoration.Q11002_HelpWithTempleRestoration;
 import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
 import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
+import quests.Q11014_SurpriseGift.Q11014_SurpriseGift;
 import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
 
 /**
@@ -298,6 +299,7 @@ public class QuestMasterHandler
 		Q11002_HelpWithTempleRestoration.class,
 		Q11007_NoiseInWoods.class,
 		Q11013_ShilensHunt.class,
+		Q11014_SurpriseGift.class,
 		Q11019_TribalBenefit.class,
 	};
 	

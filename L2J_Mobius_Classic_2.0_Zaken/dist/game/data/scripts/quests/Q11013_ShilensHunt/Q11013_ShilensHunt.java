@@ -69,6 +69,7 @@ public class Q11013_ShilensHunt extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "");
 		addCondRace(Race.DARK_ELF, "");
 		registerQuestItems(HUNTING_PLAN, WOLF_TAIL, GOBLIN_POISONOUS_DART, IMP_WING, FUNGUS_JUICE, BALOR_ORC_FANG);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_SHILEN_S_HUNT);
 	}
 	
 	@Override

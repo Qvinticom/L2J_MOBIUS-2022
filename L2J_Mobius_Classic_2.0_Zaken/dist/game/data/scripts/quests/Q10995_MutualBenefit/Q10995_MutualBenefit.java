@@ -69,6 +69,7 @@ public class Q10995_MutualBenefit extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
 		addCondRace(Race.DWARF, "no-race.html");
 		registerQuestItems(BOUNTY_POSTER, BALCK_WOLF_TOOTH, GOBLINS_NAVIGATION_DEVICE, UTUKU_ORC_AMULET, GOBLIN_BRIGANDS_OLD_SWORD, GARUM_WEREWOLF_TAIL, GOBLIN_BRIGAND_LIEUTENANT_NECKLACE);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_MUTUAL_BENEFIT);
 	}
 	
 	@Override

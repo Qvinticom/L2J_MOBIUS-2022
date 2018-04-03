@@ -68,6 +68,7 @@ public class Q11019_TribalBenefit extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
 		addCondRace(Race.ORC, "no-race.html");
 		registerQuestItems(TRIBAL_CHRONICLE, KASHA_WOLF_FUR, ASHES_OF_ANCESTORS, IMP_NECKLACE, MOUNTAIN_FUNGUS_SPORES, MARAKU_WEREWOLF_CLAW, EYE_OF_SEER_TEARS);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_TRIBAL_BENEFIT);
 	}
 	
 	@Override

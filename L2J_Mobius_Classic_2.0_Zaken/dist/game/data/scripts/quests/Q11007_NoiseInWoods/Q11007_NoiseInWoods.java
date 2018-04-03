@@ -67,6 +67,7 @@ public class Q11007_NoiseInWoods extends Quest
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html");
 		addCondRace(Race.ELF, "no-race.html");
 		registerQuestItems(MARK_OF_SECURITY, TAIL_OF_A_GRAY_WOLF, GOBLINS_PACK_OF_KNICKKNACKS, KABBO_ORC_STURDY_AMULET, MUSHROOM_SPORE_POWDER);
+		setQuestNameNpcStringId(NpcStringId.LV_2_20_NOISE_IN_WOODS);
 	}
 	
 	@Override
