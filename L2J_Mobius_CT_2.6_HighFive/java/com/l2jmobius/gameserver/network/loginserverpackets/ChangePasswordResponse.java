@@ -16,9 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets;
 
+import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 public class ChangePasswordResponse extends BaseRecievePacket
 {

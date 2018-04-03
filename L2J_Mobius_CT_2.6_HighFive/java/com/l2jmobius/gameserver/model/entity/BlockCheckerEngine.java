@@ -26,6 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.Team;
@@ -48,7 +49,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameExtendedChangePoints;
 import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author BiggBoss

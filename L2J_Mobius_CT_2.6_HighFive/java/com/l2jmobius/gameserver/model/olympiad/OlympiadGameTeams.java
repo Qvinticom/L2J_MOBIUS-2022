@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -32,7 +33,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Pere, DS

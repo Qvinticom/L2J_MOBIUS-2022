@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
@@ -41,7 +42,6 @@ import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
-import com.l2jmobius.util.Util;
 
 /**
  * This class manages inventory
@@ -1443,7 +1443,7 @@ public abstract class Inventory extends ItemContainer
 			default:
 			{
 				_log.info("Unhandled slot type: " + slot);
-				_log.info(Util.getTraceString(Thread.currentThread().getStackTrace()));
+				_log.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
 			}
 		}
 		if (pdollSlot >= 0)

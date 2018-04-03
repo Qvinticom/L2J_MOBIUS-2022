@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Task dedicated for looking for fishes.

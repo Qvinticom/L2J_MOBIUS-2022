@@ -23,12 +23,12 @@ import java.util.Map;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.file.filter.XMLFilter;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.engines.items.DocumentItem;
 import com.l2jmobius.gameserver.engines.skills.DocumentSkill;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.file.filter.XMLFilter;
 
 /**
  * @author mkizub

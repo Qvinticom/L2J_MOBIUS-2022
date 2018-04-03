@@ -26,7 +26,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 
 /**
  * Database Factory implementation.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public class DatabaseFactory
 {

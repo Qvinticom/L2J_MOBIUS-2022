@@ -18,13 +18,13 @@ package ai.group_template;
 
 import java.util.logging.Level;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
-import com.l2jmobius.util.Rnd;
 
 import ai.AbstractNpcAI;
 

@@ -25,12 +25,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.L2RecipeInstance;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * The Class RecipeData.

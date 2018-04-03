@@ -23,11 +23,11 @@ import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.itemcontainer.Mail;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Migi, DS

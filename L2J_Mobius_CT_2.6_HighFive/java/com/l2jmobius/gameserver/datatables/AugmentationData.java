@@ -31,6 +31,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.OptionData;
 import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -38,7 +39,6 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.options.Options;
 import com.l2jmobius.gameserver.network.clientpackets.AbstractRefinePacket;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Loads augmentation bonuses and skills.

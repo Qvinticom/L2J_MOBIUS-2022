@@ -22,9 +22,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
-import com.l2jmobius.util.Util;
 
 /**
  * Quests and scripts manager.
@@ -197,7 +197,7 @@ public final class QuestManager
 		if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS)
 		{
 			final String questName = quest.getName().contains("_") ? quest.getName().substring(quest.getName().indexOf('_') + 1) : quest.getName();
-			_log.info("Loaded quest " + Util.splitWords(questName) + ".");
+			_log.info("Loaded quest " + CommonUtil.splitWords(questName) + ".");
 		}
 	}
 	
@@ -256,7 +256,7 @@ public final class QuestManager
 		
 		if (Config.ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS)
 		{
-			_log.info("Loaded script " + Util.splitWords(script.getClass().getSimpleName()) + ".");
+			_log.info("Loaded script " + CommonUtil.splitWords(script.getClass().getSimpleName()) + ".");
 		}
 	}
 	

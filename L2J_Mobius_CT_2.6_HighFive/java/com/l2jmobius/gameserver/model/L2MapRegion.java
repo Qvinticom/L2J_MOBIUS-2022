@@ -22,8 +22,8 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.Race;
-import com.l2jmobius.util.Rnd;
 
 /**
  * @author Nyaran

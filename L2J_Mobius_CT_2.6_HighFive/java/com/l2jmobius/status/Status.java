@@ -29,7 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 public class Status extends Thread
 {

@@ -27,6 +27,9 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.mmocore.MMOClient;
 import com.l2jmobius.commons.mmocore.MMOConnection;
 import com.l2jmobius.commons.mmocore.SendablePacket;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.commons.util.crypt.LoginCrypt;
+import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.SessionKey;
 import com.l2jmobius.loginserver.network.serverpackets.L2LoginServerPacket;
@@ -34,9 +37,6 @@ import com.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.crypt.LoginCrypt;
-import com.l2jmobius.util.crypt.ScrambledKeyPair;
 
 /**
  * Represents a client connected into the LoginServer

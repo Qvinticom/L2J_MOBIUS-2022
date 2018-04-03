@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.fishing;
 import java.util.concurrent.Future;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -29,7 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExFishingHpRegen;
 import com.l2jmobius.gameserver.network.serverpackets.ExFishingStartCombat;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 public class L2Fishing implements Runnable
 {

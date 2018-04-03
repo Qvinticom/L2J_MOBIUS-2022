@@ -18,6 +18,7 @@ package custom.listeners;
 
 import java.util.logging.Level;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -37,7 +38,6 @@ import com.l2jmobius.gameserver.model.events.impl.sieges.castle.OnCastleSiegeSta
 import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
-import com.l2jmobius.util.Rnd;
 
 import ai.AbstractNpcAI;
 

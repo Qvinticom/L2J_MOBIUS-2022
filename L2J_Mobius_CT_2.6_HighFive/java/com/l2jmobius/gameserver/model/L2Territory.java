@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Logger;
 
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 /**
  * @version 0.1, 2005-03-12

@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.datatables;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.util.Rnd;
 
 /**
  * This class holds parameter, specific to certain NPCs.<br>

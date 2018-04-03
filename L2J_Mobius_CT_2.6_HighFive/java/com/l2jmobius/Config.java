@@ -52,6 +52,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.PropertiesParser;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -59,8 +61,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.PropertiesParser;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class loads all the game server related configurations from files.<br>

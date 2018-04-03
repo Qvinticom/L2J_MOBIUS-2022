@@ -26,6 +26,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.tasks.StartMovingTask;
@@ -40,7 +41,6 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class manages walking monsters.

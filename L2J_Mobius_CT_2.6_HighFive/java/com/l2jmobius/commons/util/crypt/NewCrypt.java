@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util.crypt;
+package com.l2jmobius.commons.util.crypt;
 
 /**
  * Class to use a blowfish cipher with ECB processing.<br>

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util;
+package com.l2jmobius.commons.util;
 
 import java.security.SecureRandom;
 import java.util.Random;
@@ -78,7 +78,7 @@ public final class Rnd
 		/**
 		 * Get a random double number from 0 to 1
 		 * @return A random double number from 0 to 1
-		 * @see com.l2jmobius.util.Rnd#nextDouble()
+		 * @see com.l2jmobius.commons.util.Rnd#nextDouble()
 		 */
 		public final double get()
 		{
@@ -206,17 +206,17 @@ public final class Rnd
 		UNSECURE_ATOMIC,
 		
 		/**
-		 * Like {@link com.l2jmobius.util.Rnd.RandomType#UNSECURE_ATOMIC}.<br>
+		 * Like {@link com.l2jmobius.commons.util.Rnd.RandomType#UNSECURE_ATOMIC}.<br>
 		 * Each thread has it`s own random instance.<br>
 		 * Provides best parallel access speed.
-		 * @see com.l2jmobius.util.Rnd.ThreadLocalRandom
+		 * @see com.l2jmobius.commons.util.Rnd.ThreadLocalRandom
 		 */
 		UNSECURE_THREAD_LOCAL,
 		
 		/**
-		 * Like {@link com.l2jmobius.util.Rnd.RandomType#UNSECURE_ATOMIC}.<br>
+		 * Like {@link com.l2jmobius.commons.util.Rnd.RandomType#UNSECURE_ATOMIC}.<br>
 		 * Provides much faster parallel access speed.
-		 * @see com.l2jmobius.util.Rnd.NonAtomicRandom
+		 * @see com.l2jmobius.commons.util.Rnd.NonAtomicRandom
 		 */
 		UNSECURE_VOLATILE
 	}
@@ -311,7 +311,7 @@ public final class Rnd
 	/**
 	 * Get a random double number from 0 to 1
 	 * @return A random double number from 0 to 1
-	 * @see com.l2jmobius.util.Rnd#nextDouble()
+	 * @see com.l2jmobius.commons.util.Rnd#nextDouble()
 	 */
 	public static double get()
 	{
@@ -437,8 +437,8 @@ public final class Rnd
 	
 	/**
 	 * @param n
-	 * @return
-	 * @see com.l2jmobius.util.Rnd#get(int n)
+	 * @return int
+	 * @see com.l2jmobius.commons.util.Rnd#get(int n)
 	 */
 	public static int nextInt(int n)
 	{

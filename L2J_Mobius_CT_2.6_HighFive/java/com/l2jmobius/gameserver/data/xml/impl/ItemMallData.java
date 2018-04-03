@@ -26,9 +26,9 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author Mobius

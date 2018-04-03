@@ -24,8 +24,8 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Holds all skill learn data for all NPCs.

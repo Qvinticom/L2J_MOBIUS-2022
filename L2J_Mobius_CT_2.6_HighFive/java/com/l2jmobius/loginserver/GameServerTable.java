@@ -34,10 +34,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IPSubnet;
+import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
-import com.l2jmobius.util.IPSubnet;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * The Class GameServerTable loads the game server names and initialize the game server tables.

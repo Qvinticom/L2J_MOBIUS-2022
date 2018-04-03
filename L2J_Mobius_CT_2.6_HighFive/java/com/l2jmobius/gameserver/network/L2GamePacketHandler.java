@@ -25,9 +25,9 @@ import com.l2jmobius.commons.mmocore.IMMOExecutor;
 import com.l2jmobius.commons.mmocore.IPacketHandler;
 import com.l2jmobius.commons.mmocore.MMOConnection;
 import com.l2jmobius.commons.mmocore.ReceivablePacket;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.clientpackets.*;
-import com.l2jmobius.util.Util;
 
 /**
  * Stateful Packet Handler<BR>
@@ -1848,7 +1848,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 		_log.warning("Unknown Packet: 0x" + Integer.toHexString(opcode) + " on State: " + state.name() + " Client: " + client);
 		final byte[] array = new byte[size];
 		buf.get(array);
-		_log.warning(Util.printData(array, size));
+		_log.warning(CommonUtil.printData(array, size));
 	}
 	
 	private void printDebugDoubleOpcode(int opcode, int id2, ByteBuffer buf, GameClientState state, L2GameClient client)
@@ -1863,7 +1863,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 		_log.warning("Unknown Packet: 0x" + Integer.toHexString(opcode) + ":0x" + Integer.toHexString(id2) + " on State: " + state.name() + " Client: " + client);
 		final byte[] array = new byte[size];
 		buf.get(array);
-		_log.warning(Util.printData(array, size));
+		_log.warning(CommonUtil.printData(array, size));
 	}
 	
 	// impl

@@ -22,6 +22,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.MobGroup;
 import com.l2jmobius.gameserver.model.MobGroupTable;
@@ -35,7 +36,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * AI for controllable mobs

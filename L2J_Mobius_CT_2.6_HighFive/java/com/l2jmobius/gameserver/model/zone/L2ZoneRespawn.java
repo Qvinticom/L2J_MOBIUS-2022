@@ -20,8 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Abstract zone with spawn locations

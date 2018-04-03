@@ -24,6 +24,7 @@ import java.util.concurrent.Future;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2DoorAI;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
@@ -56,7 +57,6 @@ import com.l2jmobius.gameserver.network.serverpackets.DoorStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
 import com.l2jmobius.gameserver.network.serverpackets.StaticObject;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 public class L2DoorInstance extends L2Character
 {

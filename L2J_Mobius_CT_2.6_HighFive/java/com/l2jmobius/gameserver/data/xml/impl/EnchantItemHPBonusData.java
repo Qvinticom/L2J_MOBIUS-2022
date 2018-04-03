@@ -25,6 +25,7 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.StatFunction;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -32,7 +33,6 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class holds the Enchant HP Bonus Data.

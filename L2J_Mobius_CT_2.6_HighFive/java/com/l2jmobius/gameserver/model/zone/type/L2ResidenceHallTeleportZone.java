@@ -19,9 +19,9 @@ package com.l2jmobius.gameserver.model.zone.type;
 import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Teleport residence zone for clan hall sieges

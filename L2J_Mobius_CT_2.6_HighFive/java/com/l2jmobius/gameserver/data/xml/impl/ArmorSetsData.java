@@ -23,9 +23,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.L2ArmorSet;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Loads armor set bonuses.

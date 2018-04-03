@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.Arrays;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2SummonAI;
@@ -54,7 +55,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopManageList;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
-import com.l2jmobius.util.Rnd;
 
 /**
  * This class manages the action use request packet.

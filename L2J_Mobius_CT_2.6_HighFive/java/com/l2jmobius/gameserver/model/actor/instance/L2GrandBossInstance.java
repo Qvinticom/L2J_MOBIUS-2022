@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -24,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
 
 /**
  * This class manages all Grand Bosses.

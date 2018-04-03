@@ -23,6 +23,7 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -32,7 +33,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 import ai.AbstractNpcAI;
 

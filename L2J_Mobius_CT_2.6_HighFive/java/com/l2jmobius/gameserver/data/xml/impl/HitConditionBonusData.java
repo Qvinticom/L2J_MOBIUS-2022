@@ -20,9 +20,9 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * This class load, holds and calculates the hit condition bonuses.

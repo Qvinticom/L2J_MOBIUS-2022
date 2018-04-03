@@ -32,8 +32,8 @@ import java.util.ResourceBundle;
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.loginserver.GameServerTable;
-import com.l2jmobius.util.Util;
 
 /**
  * The Class BaseGameServerRegister.
@@ -128,7 +128,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void registerGameServer(int id, String outDir) throws IOException
 	{
-		final byte[] hexId = Util.generateHex(16);
+		final byte[] hexId = CommonUtil.generateHex(16);
 		GameServerTable.getInstance().registerServerOnDB(hexId, id, "");
 		
 		final Properties hexSetting = new Properties();

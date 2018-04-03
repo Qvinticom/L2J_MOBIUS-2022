@@ -48,8 +48,8 @@ public class GMAudit
 	{
 		final SimpleDateFormat _formatter = new SimpleDateFormat("dd/MM/yyyy H:mm:ss");
 		final String date = _formatter.format(new Date());
-		String name = com.l2jmobius.util.Util.replaceIllegalCharacters(gmName);
-		if (!com.l2jmobius.util.Util.isValidFileName(name))
+		String name = com.l2jmobius.commons.util.CommonUtil.replaceIllegalCharacters(gmName);
+		if (!com.l2jmobius.commons.util.CommonUtil.isValidFileName(name))
 		{
 			name = "INVALID_GM_NAME_" + date;
 		}

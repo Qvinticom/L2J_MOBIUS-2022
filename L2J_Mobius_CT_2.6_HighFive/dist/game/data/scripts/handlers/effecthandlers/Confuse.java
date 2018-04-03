@@ -19,6 +19,7 @@ package handlers.effecthandlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -29,7 +30,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Confuse effect implementation.

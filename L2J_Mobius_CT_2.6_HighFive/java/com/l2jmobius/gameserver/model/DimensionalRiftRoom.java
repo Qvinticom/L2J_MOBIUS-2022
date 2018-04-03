@@ -21,7 +21,7 @@ import java.awt.Shape;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 /**
  * Dimensional Rift Room.

@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util;
+package com.l2jmobius.commons.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,12 +34,9 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 
-/**
- * Useful utilities common to L2J Server.
- */
-public final class Util
+public final class CommonUtil
 {
-	private static final Logger _log = Logger.getLogger(Util.class.getName());
+	private static final Logger _log = Logger.getLogger(CommonUtil.class.getName());
 	
 	private static final char[] ILLEGAL_CHARACTERS =
 	{
@@ -94,7 +91,7 @@ public final class Util
 	
 	/**
 	 * This call is equivalent to Util.printData(data, data.length)
-	 * @see Util#printData(byte[],int)
+	 * @see CommonUtil#printData(byte[],int)
 	 * @param data data to represent in hexadecimal
 	 * @return byte array represented in hexadecimal format
 	 */
@@ -112,7 +109,7 @@ public final class Util
 	{
 		final byte[] data = new byte[buf.remaining()];
 		buf.get(data);
-		final String hex = Util.printData(data, data.length);
+		final String hex = CommonUtil.printData(data, data.length);
 		buf.position(buf.position() - data.length);
 		return hex;
 	}

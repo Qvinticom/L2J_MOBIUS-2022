@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.gameserverpackets;
 
 import java.util.List;
 
-import com.l2jmobius.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
 public class AuthRequest extends BaseSendablePacket
 {

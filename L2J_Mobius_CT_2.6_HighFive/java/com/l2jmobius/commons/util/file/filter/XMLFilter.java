@@ -14,21 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util.file.filter;
+package com.l2jmobius.commons.util.file.filter;
 
 import java.io.File;
 import java.io.FileFilter;
 
 /**
  * Specialized {@link FileFilter} class.<br>
- * Accepts <b>files</b> ending with ".sql" only.
- * @author Zoey76
+ * Accepts files ending with ".xml" only.
+ * @author mrTJO
  */
-public class SQLFilter implements FileFilter
+public class XMLFilter implements FileFilter
 {
 	@Override
 	public boolean accept(File f)
 	{
-		return (f != null) && f.isFile() && f.getName().toLowerCase().endsWith(".sql");
+		return (f != null) && f.isFile() && f.getName().toLowerCase().endsWith(".xml");
 	}
 }

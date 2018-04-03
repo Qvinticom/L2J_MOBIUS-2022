@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util.data.xml;
+package com.l2jmobius.commons.util;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -30,7 +30,7 @@ import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.util.file.filter.XMLFilter;
+import com.l2jmobius.commons.util.file.filter.XMLFilter;
 
 /**
  * Interface for XML parsers.

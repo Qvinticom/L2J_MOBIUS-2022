@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.olympiad;
 import java.util.List;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 /**
  * @author DS

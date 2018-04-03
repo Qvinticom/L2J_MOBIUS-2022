@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.loginserver.network.gameserverpackets;
 
+import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.SessionKey;
 import com.l2jmobius.loginserver.network.loginserverpackets.PlayerAuthResponse;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * @author -Wooden-

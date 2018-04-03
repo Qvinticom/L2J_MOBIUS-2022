@@ -20,13 +20,13 @@ import java.util.Arrays;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
 import com.l2jmobius.loginserver.network.loginserverpackets.AuthResponse;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * <pre>

@@ -14,21 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util.file.filter;
+package com.l2jmobius.commons.util.file.filter;
 
 import java.io.File;
 import java.io.FileFilter;
 
 /**
- * Specialized {@link FileFilter} class.<br>
- * Accepts <b>files</b> matching "numbers".xml only.
- * @author UnAfraid
+ * @author lasarus
  */
-public class NumericNameFilter extends XMLFilter
+public class ExtFilter implements FileFilter
 {
+	private final String _ext;
+	
+	public ExtFilter(String ext)
+	{
+		_ext = ext;
+	}
+	
 	@Override
 	public boolean accept(File f)
 	{
-		return super.accept(f) && f.getName().matches("\\d+\\.xml");
+		return f.getName().toLowerCase().endsWith(_ext);
 	}
 }

@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.L2ExtractableProductItem;
 import com.l2jmobius.gameserver.model.L2ExtractableSkill;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -29,7 +30,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Restoration Random effect implementation.<br>

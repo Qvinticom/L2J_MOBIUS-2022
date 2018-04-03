@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.model.entity;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.util.Rnd;
 
 public class TvTEventTeleporter implements Runnable
 {

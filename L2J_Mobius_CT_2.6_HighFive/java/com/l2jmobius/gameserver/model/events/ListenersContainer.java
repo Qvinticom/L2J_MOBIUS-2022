@@ -22,8 +22,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.function.Predicate;
 
+import com.l2jmobius.commons.util.EmptyQueue;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
-import com.l2jmobius.util.EmptyQueue;
 
 /**
  * @author UnAfraid

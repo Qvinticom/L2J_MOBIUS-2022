@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -31,7 +32,6 @@ import com.l2jmobius.gameserver.model.items.enchant.EnchantItemGroup;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantRateItem;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScrollGroup;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author UnAfraid

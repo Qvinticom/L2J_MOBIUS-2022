@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.loginserver.network.loginserverpackets;
 
+import com.l2jmobius.commons.network.BaseSendablePacket;
 import com.l2jmobius.loginserver.GameServerTable;
-import com.l2jmobius.util.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-

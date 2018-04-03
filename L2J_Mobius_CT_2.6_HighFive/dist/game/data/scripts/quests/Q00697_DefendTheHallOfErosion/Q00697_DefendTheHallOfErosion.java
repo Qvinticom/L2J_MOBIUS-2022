@@ -16,13 +16,13 @@
  */
 package quests.Q00697_DefendTheHallOfErosion;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.util.Rnd;
 
 public class Q00697_DefendTheHallOfErosion extends Quest
 {

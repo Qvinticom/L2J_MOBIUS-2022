@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -39,7 +40,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
 import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * Fishing effect implementation.

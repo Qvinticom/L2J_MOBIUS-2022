@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network;
 
-import com.l2jmobius.util.Rnd;
+import com.l2jmobius.commons.util.Rnd;
 
 /**
  * Blowfish keygen for GameServer client connections.

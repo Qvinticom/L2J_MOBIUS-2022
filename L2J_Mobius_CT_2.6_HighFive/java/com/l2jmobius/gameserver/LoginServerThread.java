@@ -44,6 +44,10 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.BaseSendablePacket;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.commons.util.crypt.NewCrypt;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -71,10 +75,6 @@ import com.l2jmobius.gameserver.network.loginserverpackets.RequestCharacters;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.LoginFail;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.Util;
-import com.l2jmobius.util.crypt.NewCrypt;
-import com.l2jmobius.util.network.BaseSendablePacket;
 
 public class LoginServerThread extends Thread
 {
@@ -124,7 +124,7 @@ public class LoginServerThread extends Thread
 		if (_hexID == null)
 		{
 			_requestID = Config.REQUEST_ID;
-			_hexID = Util.generateHex(16);
+			_hexID = CommonUtil.generateHex(16);
 		}
 		else
 		{
@@ -156,7 +156,7 @@ public class LoginServerThread extends Thread
 				_out = new BufferedOutputStream(_loginSocket.getOutputStream());
 				
 				// init Blowfish
-				final byte[] blowfishKey = Util.generateHex(40);
+				final byte[] blowfishKey = CommonUtil.generateHex(40);
 				// Protect the new blowfish key what cannot begin with zero
 				if (blowfishKey[0] == 0)
 				{

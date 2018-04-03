@@ -24,12 +24,12 @@ import java.util.concurrent.Future;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.util.Rnd;
 
 public class L2SummonAI extends L2PlayableAI implements Runnable
 {

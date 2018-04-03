@@ -34,6 +34,8 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.CategoryType;
@@ -64,8 +66,6 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
-import com.l2jmobius.util.Rnd;
-import com.l2jmobius.util.Util;
 
 /**
  * Quest main class.
@@ -1397,7 +1397,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
-		return (player != null) && player.getAccessLevel().isGm() && showResult(player, "<html><body><title>Script error</title>" + Util.getStackTrace(t) + "</body></html>");
+		return (player != null) && player.getAccessLevel().isGm() && showResult(player, "<html><body><title>Script error</title>" + CommonUtil.getStackTrace(t) + "</body></html>");
 	}
 	
 	/**

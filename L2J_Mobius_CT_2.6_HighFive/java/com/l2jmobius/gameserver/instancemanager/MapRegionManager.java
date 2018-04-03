@@ -24,6 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.model.L2MapRegion;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -40,7 +41,6 @@ import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * Map Region Manager.

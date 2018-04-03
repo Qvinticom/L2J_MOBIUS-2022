@@ -18,6 +18,7 @@ package com.l2jmobius.loginserver.network;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerThread;
 import com.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
 import com.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
@@ -31,7 +32,6 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ReplyCharacters;
 import com.l2jmobius.loginserver.network.gameserverpackets.RequestTempBan;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
-import com.l2jmobius.util.network.BaseRecievePacket;
 
 /**
  * @author mrTJO

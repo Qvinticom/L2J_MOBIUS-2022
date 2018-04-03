@@ -18,10 +18,10 @@ package com.l2jmobius.gameserver.model.zone.form;
 
 import java.awt.Rectangle;
 
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
-import com.l2jmobius.util.Rnd;
 
 /**
  * A primitive rectangular zone

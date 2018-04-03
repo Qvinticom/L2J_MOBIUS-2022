@@ -28,10 +28,10 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import com.l2jmobius.util.data.xml.IXmlReader;
 
 /**
  * @author evill33t, GodKratos

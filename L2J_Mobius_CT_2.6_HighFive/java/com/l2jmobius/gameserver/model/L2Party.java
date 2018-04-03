@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -59,7 +60,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDelete;
 import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowDeleteAll;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.Rnd;
 
 /**
  * This class serves as a container for player parties.

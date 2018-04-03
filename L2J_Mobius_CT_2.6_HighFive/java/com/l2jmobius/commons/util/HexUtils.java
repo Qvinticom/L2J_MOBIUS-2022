@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.util;
+package com.l2jmobius.commons.util;
 
 import java.util.Arrays;
 
@@ -167,7 +167,14 @@ public class HexUtils
 		
 		for (int dataIdx = offset, charsIdx = dstOffset; dataIdx < (len + offset); ++dataIdx, ++charsIdx)
 		{
-			dstAsciiChars[charsIdx] = (data[dataIdx] > 0x1f) && (data[dataIdx] < 0x80) ? (char) data[dataIdx] : '.';
+			if ((data[dataIdx] > 0x1f) && (data[dataIdx] < 0x80))
+			{
+				dstAsciiChars[charsIdx] = (char) data[dataIdx];
+			}
+			else
+			{
+				dstAsciiChars[charsIdx] = '.';
+			}
 		}
 		
 		return dstAsciiChars;
@@ -207,7 +214,7 @@ public class HexUtils
 		else
 		{
 			numLines = (len / _HEX_ED_BPL) + 1;
-			textData = new char[(lineLength * numLines) - (_HEX_ED_BPL - lenBplMod) - _NEW_LINE_CHARS.length];
+			textData = new char[(lineLength * numLines) - (_HEX_ED_BPL - (lenBplMod)) - _NEW_LINE_CHARS.length];
 		}
 		
 		// performance penalty, only doing space filling in the loop is faster
@@ -238,7 +245,9 @@ public class HexUtils
 			}
 			else if (dataLen < _HEX_ED_BPL)
 			{
-				Arrays.fill(textData, lineHexDataStart + (dataLen * _HEX_ED_CPB), lineHexDataStart + (dataLen * _HEX_ED_CPB) + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' ');
+				// last line which shows less than _HEX_ED_BPL bytes
+				final int lineHexDataEnd = lineHexDataStart + (dataLen * _HEX_ED_CPB);
+				Arrays.fill(textData, lineHexDataEnd, lineHexDataEnd + ((_HEX_ED_BPL - dataLen) * _HEX_ED_CPB) + 1, ' '); // spaces, for the last line if there are not _HEX_ED_BPL bytes
 			}
 			else
 			{

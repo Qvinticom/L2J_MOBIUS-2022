@@ -26,6 +26,7 @@ import java.nio.channels.FileChannel;
 import java.util.Scanner;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.PropertiesParser;
 import com.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockFlat;
@@ -33,7 +34,6 @@ import com.l2jmobius.gameserver.geoengine.geodata.BlockMultilayer;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.util.PropertiesParser;
 
 /**
  * @author Hasha

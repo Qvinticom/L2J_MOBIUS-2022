@@ -9,7 +9,7 @@
  * suitability of this software for any purpose. It is provided "as is"
  * without expressed or implied warranty.
  */
-package com.l2jmobius.util;
+package com.l2jmobius.commons.util;
 
 import java.util.Arrays;
 

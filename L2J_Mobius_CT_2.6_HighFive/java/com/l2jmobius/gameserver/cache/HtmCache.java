@@ -26,8 +26,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.file.filter.HTMLFilter;
 import com.l2jmobius.gameserver.util.Util;
-import com.l2jmobius.util.file.filter.HTMLFilter;
 
 /**
  * @author Layane
