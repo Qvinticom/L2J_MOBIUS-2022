@@ -27,7 +27,7 @@ public final class ScriptingClassLoader extends ClassLoader
 	
 	private Iterable<ScriptingOutputFileObject> _compiledClasses;
 	
-	ScriptingClassLoader(final ClassLoader parent, final Iterable<ScriptingOutputFileObject> compiledClasses)
+	ScriptingClassLoader(ClassLoader parent, Iterable<ScriptingOutputFileObject> compiledClasses)
 	{
 		super(parent);
 		_compiledClasses = compiledClasses;
@@ -39,9 +39,9 @@ public final class ScriptingClassLoader extends ClassLoader
 	}
 	
 	@Override
-	protected Class<?> findClass(final String name) throws ClassNotFoundException
+	protected Class<?> findClass(String name) throws ClassNotFoundException
 	{
-		for (final ScriptingOutputFileObject compiledClass : _compiledClasses)
+		for (ScriptingOutputFileObject compiledClass : _compiledClasses)
 		{
 			if (compiledClass.getJavaName().equals(name))
 			{

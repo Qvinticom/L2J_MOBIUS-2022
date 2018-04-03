@@ -34,9 +34,11 @@ public abstract class ManagedScript
 	
 	public ManagedScript()
 	{
-		_scriptFile = ScriptEngineManager.getInstance().getCurrentLoadingScript();
+		_scriptFile = getScriptPath();
 		setLastLoadTime(System.currentTimeMillis());
 	}
+	
+	public abstract Path getScriptPath();
 	
 	/**
 	 * Attempts to reload this script and to refresh the necessary bindings with it ScriptControler.<BR>

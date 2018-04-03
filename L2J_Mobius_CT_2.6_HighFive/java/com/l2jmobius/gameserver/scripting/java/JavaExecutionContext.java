@@ -18,6 +18,8 @@ package com.l2jmobius.gameserver.scripting.java;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Path;
 import java.util.Arrays;
@@ -33,6 +35,7 @@ import javax.tools.DiagnosticCollector;
 import javax.tools.JavaFileObject;
 
 import com.l2jmobius.gameserver.scripting.AbstractExecutionContext;
+import com.l2jmobius.gameserver.scripting.annotations.Disabled;
 
 /**
  * @author HorridoJoho
@@ -41,7 +44,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 {
 	private static final Logger LOGGER = Logger.getLogger(JavaExecutionContext.class.getName());
 	
-	JavaExecutionContext(final JavaScriptingEngine engine)
+	JavaExecutionContext(JavaScriptingEngine engine)
 	{
 		super(engine);
 	}
@@ -68,7 +71,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 	
 	private ClassLoader determineScriptParentClassloader()
 	{
-		String classloader = getProperty("classloader");
+		final String classloader = getProperty("classloader");
 		if (classloader == null)
 		{
 			return ClassLoader.getSystemClassLoader();
@@ -104,7 +107,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		final DiagnosticCollector<JavaFileObject> fileManagerDiagnostics = new DiagnosticCollector<>();
 		final DiagnosticCollector<JavaFileObject> compilationDiagnostics = new DiagnosticCollector<>();
 		
-		try (final ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
+		try (ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
 		{
 			final List<String> options = new LinkedList<>();
 			addOptionIfNotNull(options, getProperty("source"), "-source");
@@ -124,7 +127,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			}
 			else
 			{
-				String[] versionSplit = targetVersion.split("\\.");
+				final String[] versionSplit = targetVersion.split("\\.");
 				if (versionSplit.length > 1)
 				{
 					options.add("-target");
@@ -183,11 +186,11 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 				
 				for (ScriptingOutputFileObject compiledClass : compiledClasses)
 				{
-					Path compiledSourcePath = compiledClass.getSourcePath();
+					final Path compiledSourcePath = compiledClass.getSourcePath();
 					// sourePath can be relative, so we have to use endsWith
 					if ((compiledSourcePath != null) && (compiledSourcePath.equals(sourcePath) || compiledSourcePath.endsWith(sourcePath)))
 					{
-						String javaName = compiledClass.getJavaName();
+						final String javaName = compiledClass.getJavaName();
 						if (javaName.indexOf('$') != -1)
 						{
 							continue;
@@ -197,12 +200,24 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 						setCurrentExecutingScript(compiledSourcePath);
 						try
 						{
-							ScriptingClassLoader loader = new ScriptingClassLoader(parentClassLoader, compiledClasses);
-							Class<?> javaCls = loader.loadClass(javaName);
-							javaCls.getMethod("main", String[].class).invoke(null, (Object) new String[]
+							final ScriptingClassLoader loader = new ScriptingClassLoader(parentClassLoader, compiledClasses);
+							final Class<?> javaClass = loader.loadClass(javaName);
+							Method mainMethod = null;
+							for (Method m : javaClass.getMethods())
 							{
-								compiledSourcePath.toString()
-							});
+								if (m.getName().equals("main") && Modifier.isStatic(m.getModifiers()) && (m.getParameterCount() == 1) && (m.getParameterTypes()[0] == String[].class))
+								{
+									mainMethod = m;
+									break;
+								}
+							}
+							if ((mainMethod != null) && !javaClass.isAnnotationPresent(Disabled.class))
+							{
+								mainMethod.invoke(null, (Object) new String[]
+								{
+									compiledSourcePath.toString()
+								});
+							}
 						}
 						catch (Exception e)
 						{

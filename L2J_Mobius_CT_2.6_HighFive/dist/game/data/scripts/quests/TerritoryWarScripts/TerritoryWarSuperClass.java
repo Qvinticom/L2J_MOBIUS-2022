@@ -17,8 +17,6 @@
 package quests.TerritoryWarScripts;
 
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
 
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
@@ -48,10 +46,6 @@ import quests.Q00176_StepsForHonor.Q00176_StepsForHonor;
  */
 public class TerritoryWarSuperClass extends Quest
 {
-	private static Map<Integer, TerritoryWarSuperClass> _forTheSakeScripts = new HashMap<>();
-	private static Map<Integer, TerritoryWarSuperClass> _protectTheScripts = new HashMap<>();
-	private static Map<Integer, TerritoryWarSuperClass> _killTheScripts = new HashMap<>();
-	
 	// "For the Sake of the Territory ..." quests variables
 	public int CATAPULT_ID;
 	public int TERRITORY_ID;
@@ -253,7 +247,7 @@ public class TerritoryWarSuperClass extends Quest
 		if (territoryId > 0)
 		{
 			// register Territory Quest
-			final TerritoryWarSuperClass territoryQuest = _forTheSakeScripts.get(territoryId);
+			final TerritoryWarSuperClass territoryQuest = TerritoryWarSuperClassLoader.getForTheSakeScripts().get(territoryId);
 			QuestState st = player.getQuestState(territoryQuest.getName());
 			if (st == null)
 			{
@@ -265,7 +259,7 @@ public class TerritoryWarSuperClass extends Quest
 			// register player on Death
 			if (player.getLevel() >= 61)
 			{
-				final TerritoryWarSuperClass killthe = _killTheScripts.get(player.getClassId().getId());
+				final TerritoryWarSuperClass killthe = TerritoryWarSuperClassLoader.getKillTheScripts().get(player.getClassId().getId());
 				if (killthe != null)
 				{
 					st = player.getQuestState(killthe.getName());
@@ -379,7 +373,7 @@ public class TerritoryWarSuperClass extends Quest
 		{
 			if (player.getSiegeSide() > 0)
 			{
-				final TerritoryWarSuperClass territoryQuest = _forTheSakeScripts.get(player.getSiegeSide());
+				final TerritoryWarSuperClass territoryQuest = TerritoryWarSuperClassLoader.getForTheSakeScripts().get(player.getSiegeSide());
 				if (territoryQuest == null)
 				{
 					continue;
@@ -393,7 +387,7 @@ public class TerritoryWarSuperClass extends Quest
 					// register player on Death
 					if (player.getLevel() >= 61)
 					{
-						final TerritoryWarSuperClass killthe = _killTheScripts.get(player.getClassId().getId());
+						final TerritoryWarSuperClass killthe = TerritoryWarSuperClassLoader.getKillTheScripts().get(player.getClassId().getId());
 						if (killthe != null)
 						{
 							st = player.getQuestState(killthe.getName());
@@ -412,7 +406,7 @@ public class TerritoryWarSuperClass extends Quest
 				else
 				{
 					st.exitQuest(false);
-					for (Quest q : _protectTheScripts.values())
+					for (Quest q : TerritoryWarSuperClassLoader.getProtectTheScripts().values())
 					{
 						st = player.getQuestState(q.getName());
 						if (st != null)
@@ -421,7 +415,7 @@ public class TerritoryWarSuperClass extends Quest
 						}
 					}
 					// unregister player on Death
-					final TerritoryWarSuperClass killthe = _killTheScripts.get(player.getClassIndex());
+					final TerritoryWarSuperClass killthe = TerritoryWarSuperClassLoader.getKillTheScripts().get(player.getClassIndex());
 					if (killthe != null)
 					{
 						st = player.getQuestState(killthe.getName());
@@ -504,70 +498,6 @@ public class TerritoryWarSuperClass extends Quest
 					_sfh.unset("kills");
 				}
 			}
-		}
-	}
-	
-	public static void main(String[] args)
-	{
-		// initialize superclass
-		new TerritoryWarSuperClass(-1, TerritoryWarSuperClass.class.getSimpleName(), "Territory War Superclass");
-		
-		// initialize subclasses
-		// "For The Sake" quests
-		final TerritoryWarSuperClass gludio = new Q00717_ForTheSakeOfTheTerritoryGludio();
-		_forTheSakeScripts.put(gludio.TERRITORY_ID, gludio);
-		final TerritoryWarSuperClass dion = new Q00718_ForTheSakeOfTheTerritoryDion();
-		_forTheSakeScripts.put(dion.TERRITORY_ID, dion);
-		final TerritoryWarSuperClass giran = new Q00719_ForTheSakeOfTheTerritoryGiran();
-		_forTheSakeScripts.put(giran.TERRITORY_ID, giran);
-		final TerritoryWarSuperClass oren = new Q00720_ForTheSakeOfTheTerritoryOren();
-		_forTheSakeScripts.put(oren.TERRITORY_ID, oren);
-		final TerritoryWarSuperClass aden = new Q00721_ForTheSakeOfTheTerritoryAden();
-		_forTheSakeScripts.put(aden.TERRITORY_ID, aden);
-		final TerritoryWarSuperClass innadril = new Q00722_ForTheSakeOfTheTerritoryInnadril();
-		_forTheSakeScripts.put(innadril.TERRITORY_ID, innadril);
-		final TerritoryWarSuperClass goddard = new Q00723_ForTheSakeOfTheTerritoryGoddard();
-		_forTheSakeScripts.put(goddard.TERRITORY_ID, goddard);
-		final TerritoryWarSuperClass rune = new Q00724_ForTheSakeOfTheTerritoryRune();
-		_forTheSakeScripts.put(rune.TERRITORY_ID, rune);
-		final TerritoryWarSuperClass schuttgart = new Q00725_ForTheSakeOfTheTerritorySchuttgart();
-		_forTheSakeScripts.put(schuttgart.TERRITORY_ID, schuttgart);
-		// "Protect the" quests
-		final TerritoryWarSuperClass catapult = new Q00729_ProtectTheTerritoryCatapult();
-		_protectTheScripts.put(catapult.getId(), catapult);
-		final TerritoryWarSuperClass supplies = new Q00730_ProtectTheSuppliesSafe();
-		_protectTheScripts.put(supplies.getId(), supplies);
-		final TerritoryWarSuperClass military = new Q00731_ProtectTheMilitaryAssociationLeader();
-		_protectTheScripts.put(military.getId(), military);
-		final TerritoryWarSuperClass religious = new Q00732_ProtectTheReligiousAssociationLeader();
-		_protectTheScripts.put(religious.getId(), religious);
-		final TerritoryWarSuperClass economic = new Q00733_ProtectTheEconomicAssociationLeader();
-		_protectTheScripts.put(economic.getId(), economic);
-		// "Kill" quests
-		final TerritoryWarSuperClass knights = new Q00734_PierceThroughAShield();
-		for (int i : knights.CLASS_IDS)
-		{
-			_killTheScripts.put(i, knights);
-		}
-		final TerritoryWarSuperClass warriors = new Q00735_MakeSpearsDull();
-		for (int i : warriors.CLASS_IDS)
-		{
-			_killTheScripts.put(i, warriors);
-		}
-		final TerritoryWarSuperClass wizards = new Q00736_WeakenTheMagic();
-		for (int i : wizards.CLASS_IDS)
-		{
-			_killTheScripts.put(i, wizards);
-		}
-		final TerritoryWarSuperClass priests = new Q00737_DenyBlessings();
-		for (int i : priests.CLASS_IDS)
-		{
-			_killTheScripts.put(i, priests);
-		}
-		final TerritoryWarSuperClass keys = new Q00738_DestroyKeyTargets();
-		for (int i : keys.CLASS_IDS)
-		{
-			_killTheScripts.put(i, keys);
 		}
 	}
 }

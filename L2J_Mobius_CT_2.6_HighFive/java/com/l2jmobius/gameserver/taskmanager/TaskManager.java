@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.taskmanager.tasks.TaskOlympiadSave;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskRaidPointsReset;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskRecom;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskRestart;
-import com.l2jmobius.gameserver.taskmanager.tasks.TaskScript;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskSevenSignsUpdate;
 import com.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
 
@@ -184,7 +183,6 @@ public final class TaskManager
 		registerTask(new TaskRaidPointsReset());
 		registerTask(new TaskRecom());
 		registerTask(new TaskRestart());
-		registerTask(new TaskScript());
 		registerTask(new TaskSevenSignsUpdate());
 		registerTask(new TaskShutdown());
 	}

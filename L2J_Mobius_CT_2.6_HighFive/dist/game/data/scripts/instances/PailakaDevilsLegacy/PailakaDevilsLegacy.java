@@ -340,9 +340,4 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 		}
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
 	}
-	
-	public static void main(String[] args)
-	{
-		new PailakaDevilsLegacy();
-	}
 }

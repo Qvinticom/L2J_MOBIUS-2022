@@ -30,7 +30,7 @@ public abstract class AbstractExecutionContext<T extends IScriptingEngine> imple
 	private final Map<String, String> _properties;
 	private volatile Path _currentExecutingScipt;
 	
-	protected AbstractExecutionContext(final T engine)
+	protected AbstractExecutionContext(T engine)
 	{
 		if (engine == null)
 		{
@@ -40,19 +40,19 @@ public abstract class AbstractExecutionContext<T extends IScriptingEngine> imple
 		_properties = new HashMap<>();
 	}
 	
-	protected final void setCurrentExecutingScript(final Path currentExecutingScript)
+	protected final void setCurrentExecutingScript(Path currentExecutingScript)
 	{
 		_currentExecutingScipt = currentExecutingScript;
 	}
 	
 	@Override
-	public final String setProperty(final String key, final String value)
+	public final String setProperty(String key, String value)
 	{
 		return _properties.put(key, value);
 	}
 	
 	@Override
-	public final String getProperty(final String key)
+	public final String getProperty(String key)
 	{
 		if (!_properties.containsKey(key))
 		{

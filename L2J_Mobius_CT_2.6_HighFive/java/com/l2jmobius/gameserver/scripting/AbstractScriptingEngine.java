@@ -30,7 +30,7 @@ public abstract class AbstractScriptingEngine implements IScriptingEngine
 	private final String[] _commonFileExtensions;
 	private final Map<String, String> _properties;
 	
-	protected AbstractScriptingEngine(final String engineName, final String engineVersion, final String... commonFileExtensions)
+	protected AbstractScriptingEngine(String engineName, String engineVersion, String... commonFileExtensions)
 	{
 		if ((engineName == null) || engineName.isEmpty() || (engineVersion == null) || engineVersion.isEmpty() || (commonFileExtensions == null) || (commonFileExtensions.length == 0))
 		{
@@ -43,13 +43,13 @@ public abstract class AbstractScriptingEngine implements IScriptingEngine
 	}
 	
 	@Override
-	public final String setProperty(final String key, final String value)
+	public final String setProperty(String key, String value)
 	{
 		return _properties.put(key, value);
 	}
 	
 	@Override
-	public final String getProperty(final String key)
+	public final String getProperty(String key)
 	{
 		return _properties.get(key);
 	}

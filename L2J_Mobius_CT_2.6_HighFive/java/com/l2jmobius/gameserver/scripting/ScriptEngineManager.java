@@ -16,12 +16,12 @@
  */
 package com.l2jmobius.gameserver.scripting;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,7 +30,6 @@ import java.util.Map.Entry;
 import java.util.Objects;
 import java.util.Properties;
 import java.util.ServiceLoader;
-import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -43,11 +42,13 @@ import com.l2jmobius.gameserver.scripting.java.JavaScriptingEngine;
  */
 public final class ScriptEngineManager
 {
-	private static final Logger _log = Logger.getLogger(ScriptEngineManager.class.getName());
-	public static final Path SCRIPT_LIST_FILE = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts.cfg");
+	private static final Logger LOGGER = Logger.getLogger(ScriptEngineManager.class.getName());
 	public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
 	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
 	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
+	public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(ScriptEngineManager.SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");
+	public static final Path CONDITION_HANDLER_FILE = Paths.get(ScriptEngineManager.SCRIPT_FOLDER.toString(), "handlers", "ConditionMasterHandler.java");
+	public static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "DailyMissionMasterHandler.java");
 	
 	private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
 	private IExecutionContext _currentExecutionContext = null;
@@ -74,7 +75,7 @@ public final class ScriptEngineManager
 		catch (Exception e)
 		{
 			props = null;
-			_log.warning("Couldn't load ScriptEngines.ini: " + e.getMessage());
+			LOGGER.warning("Couldn't load ScriptEngines.properties: " + e.getMessage());
 		}
 		return props;
 	}
@@ -88,7 +89,7 @@ public final class ScriptEngineManager
 			_extEngines.put(commonExtension, context);
 		}
 		
-		_log.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
+		LOGGER.info("ScriptEngine: " + engine.getEngineName() + " " + engine.getEngineVersion() + " (" + engine.getLanguageName() + " " + engine.getLanguageVersion() + ")");
 	}
 	
 	private void maybeSetProperties(String propPrefix, Properties props, IScriptingEngine engine)
@@ -98,7 +99,7 @@ public final class ScriptEngineManager
 			return;
 		}
 		
-		for (final Entry<Object, Object> prop : props.entrySet())
+		for (Entry<Object, Object> prop : props.entrySet())
 		{
 			String key = (String) prop.getKey();
 			String value = (String) prop.getValue();
@@ -161,6 +162,21 @@ public final class ScriptEngineManager
 		executeScript(EFFECT_MASTER_HANDLER_FILE);
 	}
 	
+	public void executeSkillConditionMasterHandler() throws Exception
+	{
+		executeScript(SKILL_CONDITION_HANDLER_FILE);
+	}
+	
+	public void executeConditionMasterHandler() throws Exception
+	{
+		executeScript(CONDITION_HANDLER_FILE);
+	}
+	
+	public void executeDailyMissionMasterHandler() throws Exception
+	{
+		executeScript(ONE_DAY_REWARD_MASTER_HANDLER);
+	}
+	
 	public void executeScriptList() throws Exception
 	{
 		if (Config.ALT_DEV_NO_QUESTS)
@@ -168,61 +184,18 @@ public final class ScriptEngineManager
 			return;
 		}
 		
-		// throws exception if not exists or not file
-		checkExistingFile("ScriptList", SCRIPT_LIST_FILE);
-		
 		final Map<IExecutionContext, List<Path>> files = new LinkedHashMap<>();
-		final Set<String> extWithoutEngine = new HashSet<>();
-		
-		Files.lines(SCRIPT_LIST_FILE).forEach(line ->
-		{
-			line = line.trim();
-			if (line.isEmpty() || (line.charAt(0) == '#'))
-			{
-				return;
-			}
-			
-			Path sourceFile = SCRIPT_FOLDER.resolve(line);
-			try
-			{
-				checkExistingFile("ScriptFile", sourceFile);
-			}
-			catch (Exception e)
-			{
-				_log.warning(e.getMessage());
-				return;
-			}
-			
-			sourceFile = sourceFile.toAbsolutePath();
-			final String ext = getFileExtension(sourceFile);
-			if (ext == null)
-			{
-				_log.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
-				return;
-			}
-			
-			final IExecutionContext engine = getEngineByExtension(ext);
-			if (engine == null)
-			{
-				if (extWithoutEngine.add(ext))
-				{
-					_log.warning("ScriptEngine: No engine registered for extension " + ext + "!");
-				}
-				return;
-			}
-			
-			files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
-		});
+		processDirectory(SCRIPT_FOLDER.toFile(), files);
 		
 		for (Entry<IExecutionContext, List<Path>> entry : files.entrySet())
 		{
 			_currentExecutionContext = entry.getKey();
 			try
 			{
-				Map<Path, Throwable> invokationErrors = entry.getKey().executeScripts(entry.getValue());
+				final Map<Path, Throwable> invokationErrors = entry.getKey().executeScripts(entry.getValue());
 				for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet())
 				{
-					_log.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
+					LOGGER.log(Level.WARNING, "ScriptEngine: " + entry2.getKey() + " failed execution!", entry2.getValue());
 				}
 			}
 			finally
@@ -230,6 +203,64 @@ public final class ScriptEngineManager
 				_currentExecutionContext = null;
 			}
 		}
+	}
+	
+	private void processDirectory(File dir, Map<IExecutionContext, List<Path>> files)
+	{
+		for (File file : dir.listFiles())
+		{
+			if (file.isDirectory())
+			{
+				processDirectory(file, files);
+			}
+			else
+			{
+				processFile(file, files);
+			}
+		}
+	}
+	
+	private void processFile(File file, Map<IExecutionContext, List<Path>> files)
+	{
+		switch (file.getName())
+		{
+			case "package-info.java":
+			case "MasterHandler.java":
+			case "EffectMasterHandler.java":
+			case "SkillConditionMasterHandler.java":
+			case "ConditionMasterHandler.java":
+			case "DailyMissionMasterHandler.java":
+			{
+				return;
+			}
+		}
+		
+		Path sourceFile = file.toPath();
+		try
+		{
+			checkExistingFile("ScriptFile", sourceFile);
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning(e.getMessage());
+			return;
+		}
+		
+		sourceFile = sourceFile.toAbsolutePath();
+		final String ext = getFileExtension(sourceFile);
+		if (ext == null)
+		{
+			LOGGER.warning("ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+			return;
+		}
+		
+		final IExecutionContext engine = getEngineByExtension(ext);
+		if (engine == null)
+		{
+			return;
+		}
+		
+		files.computeIfAbsent(engine, k -> new LinkedList<>()).add(sourceFile);
 	}
 	
 	public void executeScript(Path sourceFile) throws Exception
@@ -245,16 +276,16 @@ public final class ScriptEngineManager
 		checkExistingFile("ScriptFile", sourceFile);
 		
 		sourceFile = sourceFile.toAbsolutePath();
-		String ext = getFileExtension(sourceFile);
+		final String ext = getFileExtension(sourceFile);
 		Objects.requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 		
-		IExecutionContext engine = getEngineByExtension(ext);
+		final IExecutionContext engine = getEngineByExtension(ext);
 		Objects.requireNonNull(engine, "ScriptEngine: No engine registered for extension " + ext + "!");
 		
 		_currentExecutionContext = engine;
 		try
 		{
-			Entry<Path, Throwable> error = engine.executeScript(sourceFile);
+			final Entry<Path, Throwable> error = engine.executeScript(sourceFile);
 			if (error != null)
 			{
 				throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
@@ -266,9 +297,9 @@ public final class ScriptEngineManager
 		}
 	}
 	
-	protected Path getCurrentLoadingScript()
+	public Path getCurrentLoadingScript()
 	{
-		return _currentExecutionContext.getCurrentExecutingScript();
+		return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
 	}
 	
 	public static ScriptEngineManager getInstance()

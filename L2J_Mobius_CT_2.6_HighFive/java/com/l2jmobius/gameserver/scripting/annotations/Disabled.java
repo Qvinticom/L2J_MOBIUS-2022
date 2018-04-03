@@ -14,15 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.scripting.java;
+package com.l2jmobius.gameserver.scripting.annotations;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * @author HorridoJoho
+ * @author UnAfraid
  */
-public final class JavaCompilerException extends RuntimeException
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+public @interface Disabled
 {
-	public JavaCompilerException(String diagnostics)
-	{
-		super(diagnostics);
-	}
+	
 }
