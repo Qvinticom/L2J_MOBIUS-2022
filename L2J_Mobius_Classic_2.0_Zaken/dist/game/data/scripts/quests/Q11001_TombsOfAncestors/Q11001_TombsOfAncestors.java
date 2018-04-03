@@ -134,7 +134,10 @@ public class Q11001_TombsOfAncestors extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30598-01.html";
+				if (npc.getId() == NEWBIE_GUIDE)
+				{
+					htmltext = "30598-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -171,6 +174,11 @@ public class Q11001_TombsOfAncestors extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}

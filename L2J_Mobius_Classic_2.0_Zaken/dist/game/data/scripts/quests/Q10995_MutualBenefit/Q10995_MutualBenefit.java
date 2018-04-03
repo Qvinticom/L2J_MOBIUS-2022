@@ -219,7 +219,10 @@ public class Q10995_MutualBenefit extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30601-01.html";
+				if (npc.getId() == NEWBIE_GUIDE)
+				{
+					htmltext = "30601-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -260,6 +263,11 @@ public class Q10995_MutualBenefit extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}

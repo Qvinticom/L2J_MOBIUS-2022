@@ -140,7 +140,10 @@ public class Q11013_ShilensHunt extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30600-01.html";
+				if (npc.getId() == NEWBIE_GUIDE)
+				{
+					htmltext = "30600-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -177,6 +180,11 @@ public class Q11013_ShilensHunt extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}

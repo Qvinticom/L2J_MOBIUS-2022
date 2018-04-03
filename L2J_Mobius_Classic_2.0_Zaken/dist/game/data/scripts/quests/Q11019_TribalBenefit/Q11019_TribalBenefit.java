@@ -218,7 +218,10 @@ public class Q11019_TribalBenefit extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30602-01.html";
+				if (npc.getId() == NEWBIE_GUIDE)
+				{
+					htmltext = "30602-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -259,6 +262,11 @@ public class Q11019_TribalBenefit extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}

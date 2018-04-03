@@ -133,7 +133,10 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30283-01.html";
+				if (npc.getId() == ALTRAN)
+				{
+					htmltext = "30283-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -170,6 +173,11 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}

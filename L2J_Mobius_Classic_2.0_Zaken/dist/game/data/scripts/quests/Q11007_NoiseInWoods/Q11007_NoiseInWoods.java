@@ -207,7 +207,10 @@ public class Q11007_NoiseInWoods extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30599-01.html";
+				if (npc.getId() == NEWBIE_GUIDE)
+				{
+					htmltext = "30599-01.html";
+				}
 				break;
 			}
 			case State.STARTED:
@@ -248,6 +251,11 @@ public class Q11007_NoiseInWoods extends Quest
 						}
 					}
 				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				htmltext = getAlreadyCompletedMsg(talker);
 				break;
 			}
 		}
