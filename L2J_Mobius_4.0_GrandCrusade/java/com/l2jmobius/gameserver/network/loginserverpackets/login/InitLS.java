@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.network.BaseRecievePacket;
 
 public class InitLS extends BaseRecievePacket
 {

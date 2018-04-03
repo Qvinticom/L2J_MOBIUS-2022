@@ -27,9 +27,9 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.network.BaseSendablePacket;
 import com.l2jmobius.commons.util.crypt.NewCrypt;
 import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;

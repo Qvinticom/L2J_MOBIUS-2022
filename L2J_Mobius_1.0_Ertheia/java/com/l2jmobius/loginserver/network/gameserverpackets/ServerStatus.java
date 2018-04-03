@@ -18,7 +18,7 @@ package com.l2jmobius.loginserver.network.gameserverpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.util.network.BaseRecievePacket;
+import com.l2jmobius.commons.network.BaseRecievePacket;
 import com.l2jmobius.loginserver.GameServerTable;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.GameServerThread;

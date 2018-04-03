@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import java.util.List;
 
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
 /**
  * @author mrTJO Thanks to mochitto

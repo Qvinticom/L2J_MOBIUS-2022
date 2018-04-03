@@ -22,7 +22,7 @@ import java.util.logging.Logger;
 
 import javax.crypto.Cipher;
 
-import com.l2jmobius.commons.util.network.BaseSendablePacket;
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
 /**
  * @author -Wooden-
