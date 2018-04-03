@@ -71,6 +71,7 @@ import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
+import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -96,6 +97,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private final int _questId;
 	private final byte _initialState = State.CREATED;
 	private boolean _isCustom = false;
+	private NpcStringId _questNameNpcStringId;
 	
 	private int[] _questItemIds = null;
 	
@@ -182,7 +184,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public int getNpcStringId()
 	{
-		return _questId > 10000 ? _questId - 5000 : _questId;
+		return _questNameNpcStringId != null ? _questNameNpcStringId.getId() / 100 : (_questId > 10000 ? _questId - 5000 : _questId);
+	}
+	
+	public NpcStringId getQuestNameNpcStringId()
+	{
+		return _questNameNpcStringId;
+	}
+	
+	public void setQuestNameNpcStringId(NpcStringId npcStringId)
+	{
+		_questNameNpcStringId = npcStringId;
 	}
 	
 	/**
