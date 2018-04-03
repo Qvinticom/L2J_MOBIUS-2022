@@ -228,13 +228,9 @@ public class Q11019_TribalBenefit extends Quest
 			{
 				if (npc.getId() == NEWBIE_GUIDE)
 				{
-					switch (qs.getCond())
+					if (qs.isCond(1))
 					{
-						case 1:
-						{
-							htmltext = "30602-02a.html";
-							break;
-						}
+						htmltext = "30602-02a.html";
 					}
 					break;
 				}
