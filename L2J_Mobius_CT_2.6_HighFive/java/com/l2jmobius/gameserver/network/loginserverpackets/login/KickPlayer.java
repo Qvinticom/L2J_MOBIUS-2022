@@ -14,24 +14,28 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
-import com.l2jmobius.commons.network.BaseSendablePacket;
+import com.l2jmobius.commons.network.BaseRecievePacket;
 
-/**
- * @author -Wooden-
- */
-public class PlayerLogout extends BaseSendablePacket
+public class KickPlayer extends BaseRecievePacket
 {
-	public PlayerLogout(String player)
+	private final String _account;
+	
+	/**
+	 * @param decrypt
+	 */
+	public KickPlayer(byte[] decrypt)
 	{
-		writeC(0x03);
-		writeS(player);
+		super(decrypt);
+		_account = readS();
 	}
 	
-	@Override
-	public byte[] getContent()
+	/**
+	 * @return Returns the account.
+	 */
+	public String getAccount()
 	{
-		return getBytes();
+		return _account;
 	}
 }

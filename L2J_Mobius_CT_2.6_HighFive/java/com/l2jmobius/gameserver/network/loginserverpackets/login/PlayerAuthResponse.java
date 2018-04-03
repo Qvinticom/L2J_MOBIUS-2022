@@ -14,21 +14,27 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
 import com.l2jmobius.commons.network.BaseRecievePacket;
 
-public class KickPlayer extends BaseRecievePacket
+/**
+ * @author -Wooden-
+ */
+public class PlayerAuthResponse extends BaseRecievePacket
 {
 	private final String _account;
+	private final boolean _authed;
 	
 	/**
 	 * @param decrypt
 	 */
-	public KickPlayer(byte[] decrypt)
+	public PlayerAuthResponse(byte[] decrypt)
 	{
 		super(decrypt);
+		
 		_account = readS();
+		_authed = readC() != 0;
 	}
 	
 	/**
@@ -37,5 +43,13 @@ public class KickPlayer extends BaseRecievePacket
 	public String getAccount()
 	{
 		return _account;
+	}
+	
+	/**
+	 * @return Returns the authed state.
+	 */
+	public boolean isAuthed()
+	{
+		return _authed;
 	}
 }

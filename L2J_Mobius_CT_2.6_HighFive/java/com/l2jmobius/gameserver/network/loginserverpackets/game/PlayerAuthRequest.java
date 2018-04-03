@@ -14,20 +14,24 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import com.l2jmobius.commons.network.BaseSendablePacket;
+import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 
 /**
  * @author -Wooden-
  */
-public class ChangeAccessLevel extends BaseSendablePacket
+public class PlayerAuthRequest extends BaseSendablePacket
 {
-	public ChangeAccessLevel(String player, int access)
+	public PlayerAuthRequest(String account, SessionKey key)
 	{
-		writeC(0x04);
-		writeD(access);
-		writeS(player);
+		writeC(0x05);
+		writeS(account);
+		writeD(key.playOkID1);
+		writeD(key.playOkID2);
+		writeD(key.loginOkID1);
+		writeD(key.loginOkID2);
 	}
 	
 	@Override

@@ -14,26 +14,40 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.network.BaseRecievePacket;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
-public class ChangePasswordResponse extends BaseRecievePacket
+/**
+ * @author mrTJO
+ */
+public class TempBan extends BaseSendablePacket
 {
-	public ChangePasswordResponse(byte[] decrypt)
+	public TempBan(String accountName, String ip, long time, String reason)
 	{
-		super(decrypt);
-		// boolean isSuccessful = readC() > 0;
-		final String character = readS();
-		final String msgToSend = readS();
-		
-		final L2PcInstance player = L2World.getInstance().getPlayer(character);
-		
-		if (player != null)
+		writeC(0x0A);
+		writeS(accountName);
+		writeS(ip);
+		writeQ(System.currentTimeMillis() + (time * 60000));
+		if (reason != null)
 		{
-			player.sendMessage(msgToSend);
+			writeC(0x01);
+			writeS(reason);
 		}
+		else
+		{
+			writeC(0x00);
+		}
+	}
+	
+	public TempBan(String accountName, String ip, long time)
+	{
+		this(accountName, ip, time, null);
+	}
+	
+	@Override
+	public byte[] getContent()
+	{
+		return getBytes();
 	}
 }

@@ -14,30 +14,26 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
-import com.l2jmobius.commons.network.BaseSendablePacket;
+import com.l2jmobius.commons.network.BaseRecievePacket;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * @author mrTJO
- */
-public class SendMail extends BaseSendablePacket
+public class ChangePasswordResponse extends BaseRecievePacket
 {
-	public SendMail(String accountName, String mailId, String... args)
+	public ChangePasswordResponse(byte[] decrypt)
 	{
-		writeC(0x09);
-		writeS(accountName);
-		writeS(mailId);
-		writeC(args.length);
-		for (String arg : args)
+		super(decrypt);
+		// boolean isSuccessful = readC() > 0;
+		final String character = readS();
+		final String msgToSend = readS();
+		
+		final L2PcInstance player = L2World.getInstance().getPlayer(character);
+		
+		if (player != null)
 		{
-			writeS(arg);
+			player.sendMessage(msgToSend);
 		}
-	}
-	
-	@Override
-	public byte[] getContent()
-	{
-		return getBytes();
 	}
 }

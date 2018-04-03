@@ -14,24 +14,20 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
 import com.l2jmobius.commons.network.BaseSendablePacket;
 
 /**
- * @author mrTJO
+ * @author -Wooden-
  */
-public class PlayerTracert extends BaseSendablePacket
+public class ChangeAccessLevel extends BaseSendablePacket
 {
-	public PlayerTracert(String account, String pcIp, String hop1, String hop2, String hop3, String hop4)
+	public ChangeAccessLevel(String player, int access)
 	{
-		writeC(0x07);
-		writeS(account);
-		writeS(pcIp);
-		writeS(hop1);
-		writeS(hop2);
-		writeS(hop3);
-		writeS(hop4);
+		writeC(0x04);
+		writeD(access);
+		writeS(player);
 	}
 	
 	@Override

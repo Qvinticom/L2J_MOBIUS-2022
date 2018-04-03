@@ -14,29 +14,41 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.gameserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.login;
 
-import com.l2jmobius.commons.network.BaseSendablePacket;
-import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
+import com.l2jmobius.commons.network.BaseRecievePacket;
 
 /**
  * @author -Wooden-
  */
-public class PlayerAuthRequest extends BaseSendablePacket
+public class AuthResponse extends BaseRecievePacket
 {
-	public PlayerAuthRequest(String account, SessionKey key)
+	private final int _serverId;
+	private final String _serverName;
+	
+	/**
+	 * @param decrypt
+	 */
+	public AuthResponse(byte[] decrypt)
 	{
-		writeC(0x05);
-		writeS(account);
-		writeD(key.playOkID1);
-		writeD(key.playOkID2);
-		writeD(key.loginOkID1);
-		writeD(key.loginOkID2);
+		super(decrypt);
+		_serverId = readC();
+		_serverName = readS();
 	}
 	
-	@Override
-	public byte[] getContent()
+	/**
+	 * @return Returns the serverId.
+	 */
+	public int getServerId()
 	{
-		return getBytes();
+		return _serverId;
+	}
+	
+	/**
+	 * @return Returns the serverName.
+	 */
+	public String getServerName()
+	{
+		return _serverName;
 	}
 }

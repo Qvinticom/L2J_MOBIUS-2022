@@ -14,41 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.network.BaseRecievePacket;
+import java.util.List;
+
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
 /**
- * @author -Wooden-
+ * @author mrTJO Thanks to mochitto
  */
-public class AuthResponse extends BaseRecievePacket
+public class ReplyCharacters extends BaseSendablePacket
 {
-	private final int _serverId;
-	private final String _serverName;
-	
-	/**
-	 * @param decrypt
-	 */
-	public AuthResponse(byte[] decrypt)
+	public ReplyCharacters(String account, int chars, List<Long> timeToDel)
 	{
-		super(decrypt);
-		_serverId = readC();
-		_serverName = readS();
+		writeC(0x08);
+		writeS(account);
+		writeC(chars);
+		writeC(timeToDel.size());
+		for (long time : timeToDel)
+		{
+			writeQ(time);
+		}
 	}
 	
-	/**
-	 * @return Returns the serverId.
-	 */
-	public int getServerId()
+	@Override
+	public byte[] getContent()
 	{
-		return _serverId;
-	}
-	
-	/**
-	 * @return Returns the serverName.
-	 */
-	public String getServerName()
-	{
-		return _serverName;
+		return getBytes();
 	}
 }

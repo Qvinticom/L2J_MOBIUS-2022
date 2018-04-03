@@ -14,33 +14,30 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.loginserverpackets;
+package com.l2jmobius.gameserver.network.loginserverpackets.game;
 
-import com.l2jmobius.commons.network.BaseRecievePacket;
+import com.l2jmobius.commons.network.BaseSendablePacket;
 
-public class InitLS extends BaseRecievePacket
+/**
+ * @author mrTJO
+ */
+public class SendMail extends BaseSendablePacket
 {
-	private final int _rev;
-	private final byte[] _key;
-	
-	public int getRevision()
+	public SendMail(String accountName, String mailId, String... args)
 	{
-		return _rev;
+		writeC(0x09);
+		writeS(accountName);
+		writeS(mailId);
+		writeC(args.length);
+		for (String arg : args)
+		{
+			writeS(arg);
+		}
 	}
 	
-	public byte[] getRSAKey()
+	@Override
+	public byte[] getContent()
 	{
-		return _key;
-	}
-	
-	/**
-	 * @param decrypt
-	 */
-	public InitLS(byte[] decrypt)
-	{
-		super(decrypt);
-		_rev = readD();
-		final int size = readD();
-		_key = readB(size);
+		return getBytes();
 	}
 }
