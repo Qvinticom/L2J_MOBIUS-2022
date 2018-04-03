@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,13 +24,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
  * This class holds the Experience points for each level for players and pets.
  * @author mrTJO
  */
-public final class ExperienceData implements IXmlReader
+public final class ExperienceData implements IGameXmlReader
 {
 	private final Map<Integer, Long> _expTable = new HashMap<>();
 	
@@ -55,7 +56,7 @@ public final class ExperienceData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		final Node table = doc.getFirstChild();
 		final NamedNodeMap tableAttr = table.getAttributes();

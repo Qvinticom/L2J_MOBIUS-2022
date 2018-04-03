@@ -29,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
  * This class manages the zones
  * @author durgus
  */
-public final class ZoneManager implements IXmlReader
+public final class ZoneManager implements IGameXmlReader
 {
 	private static final Map<String, AbstractZoneSettings> _settings = new HashMap<>();
 	

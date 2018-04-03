@@ -24,13 +24,13 @@ import java.util.logging.Level;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
  * Secondary Auth data.
  * @author NosBit
  */
-public class SecondaryAuthData implements IXmlReader
+public class SecondaryAuthData implements IGameXmlReader
 {
 	private final Set<String> _forbiddenPasswords = new HashSet<>();
 	private boolean _enabled = false;
@@ -52,7 +52,7 @@ public class SecondaryAuthData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		try
 		{

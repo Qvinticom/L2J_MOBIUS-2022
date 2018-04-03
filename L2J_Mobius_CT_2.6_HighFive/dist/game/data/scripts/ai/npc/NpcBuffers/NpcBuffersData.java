@@ -16,6 +16,7 @@
  */
 package ai.npc.NpcBuffers;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,13 +27,13 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * @author UnAfraid
  */
-public class NpcBuffersData implements IXmlReader
+public class NpcBuffersData implements IGameXmlReader
 {
 	private final Map<Integer, NpcBufferData> _npcBuffers = new HashMap<>();
 	
@@ -49,7 +50,7 @@ public class NpcBuffersData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		StatsSet set;
 		Node attr;

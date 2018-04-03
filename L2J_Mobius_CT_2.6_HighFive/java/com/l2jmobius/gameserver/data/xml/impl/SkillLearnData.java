@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,14 +25,14 @@ import java.util.Map;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.base.ClassId;
 
 /**
  * Holds all skill learn data for all NPCs.
  * @author xban1x
  */
-public final class SkillLearnData implements IXmlReader
+public final class SkillLearnData implements IGameXmlReader
 {
 	private final Map<Integer, List<ClassId>> _skillLearn = new HashMap<>();
 	
@@ -49,7 +50,7 @@ public final class SkillLearnData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 		{

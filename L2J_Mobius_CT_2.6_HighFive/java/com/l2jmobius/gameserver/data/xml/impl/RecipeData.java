@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.L2RecipeInstance;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.L2RecipeStatInstance;
@@ -36,7 +37,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  * The Class RecipeData.
  * @author Zoey76
  */
-public class RecipeData implements IXmlReader
+public class RecipeData implements IGameXmlReader
 {
 	private final Map<Integer, L2RecipeList> _recipes = new HashMap<>();
 	
@@ -57,7 +58,7 @@ public class RecipeData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		// TODO: Cleanup checks enforced by XSD.
 		final List<L2RecipeInstance> recipePartList = new ArrayList<>();

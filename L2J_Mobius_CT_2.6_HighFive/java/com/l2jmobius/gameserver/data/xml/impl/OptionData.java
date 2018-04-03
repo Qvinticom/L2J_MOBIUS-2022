@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
@@ -24,7 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.options.Options;
 import com.l2jmobius.gameserver.model.options.OptionsSkillHolder;
@@ -36,7 +37,7 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  * Item Option data.
  * @author UnAfraid
  */
-public class OptionData implements IXmlReader
+public class OptionData implements IGameXmlReader
 {
 	private final Map<Integer, Options> _optionData = new HashMap<>();
 	
@@ -54,7 +55,7 @@ public class OptionData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

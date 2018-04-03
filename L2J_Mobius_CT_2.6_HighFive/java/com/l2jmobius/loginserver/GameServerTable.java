@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.loginserver;
 
+import java.io.File;
 import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -29,13 +30,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.IPSubnet;
-import com.l2jmobius.commons.util.IXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 
@@ -43,8 +45,10 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  * The Class GameServerTable loads the game server names and initialize the game server tables.
  * @author KenM, Zoey76
  */
-public final class GameServerTable implements IXmlReader
+public final class GameServerTable implements IGameXmlReader
 {
+	private static final Logger LOGGER = Logger.getLogger(GameServerTable.class.getName());
+	
 	// Server Names
 	private static final Map<Integer, String> SERVER_NAMES = new HashMap<>();
 	// Game Server Table
@@ -76,7 +80,7 @@ public final class GameServerTable implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		final NodeList servers = doc.getElementsByTagName("server");
 		for (int s = 0; s < servers.getLength(); s++)
@@ -277,7 +281,11 @@ public final class GameServerTable implements IXmlReader
 	 */
 	private String hexToString(byte[] hex)
 	{
-		return hex == null ? "null" : new BigInteger(hex).toString(16);
+		if (hex == null)
+		{
+			return "null";
+		}
+		return new BigInteger(hex).toString(16);
 	}
 	
 	/**
@@ -454,7 +462,11 @@ public final class GameServerTable implements IXmlReader
 		 */
 		public int getCurrentPlayerCount()
 		{
-			return _gst == null ? 0 : _gst.getPlayerCount();
+			if (_gst == null)
+			{
+				return 0;
+			}
+			return _gst.getPlayerCount();
 		}
 		
 		/**

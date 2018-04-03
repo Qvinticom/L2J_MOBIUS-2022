@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,14 +27,14 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
 
 /**
  * @author Mobius
  */
-public class ItemMallData implements IXmlReader
+public class ItemMallData implements IGameXmlReader
 {
 	private static final Logger _log = Logger.getLogger(ItemMallData.class.getName());
 	private final Map<Integer, ItemMallProduct> _mallList = new HashMap<>();
@@ -57,7 +58,7 @@ public class ItemMallData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		Node att;

@@ -52,9 +52,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.PropertiesParser;
-import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.Location;
@@ -3299,7 +3298,7 @@ public final class Config
 		return result;
 	}
 	
-	private static class IPConfigData implements IXmlReader
+	private static class IPConfigData implements IGameXmlReader
 	{
 		private static final List<String> _subnets = new ArrayList<>(5);
 		private static final List<String> _hosts = new ArrayList<>(5);
@@ -3312,22 +3311,22 @@ public final class Config
 		@Override
 		public void load()
 		{
-			GameServer.printSection("Network Configuration");
-			if ((new File(IPCONFIG_FILE)).exists())
+			final File f = new File(IPCONFIG_FILE);
+			if (f.exists())
 			{
-				LOGGER.log(Level.INFO, "Using existing ipconfig.xml.");
+				LOGGER.info("Network Config: ipconfig.xml exists using manual configuration...");
 				parseFile(new File(IPCONFIG_FILE));
 			}
 			else
 			// Auto configuration...
 			{
-				LOGGER.log(Level.INFO, "Using automatic network configuration.");
+				LOGGER.info("Network Config: ipconfig.xml doesn't exists using automatic configuration...");
 				autoIpConfig();
 			}
 		}
 		
 		@Override
-		public void parseDocument(Document doc)
+		public void parseDocument(Document doc, File f)
 		{
 			NamedNodeMap attrs;
 			for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
@@ -3344,7 +3343,7 @@ public final class Config
 							
 							if (_hosts.size() != _subnets.size())
 							{
-								LOGGER.log(Level.WARNING, "Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
+								LOGGER.warning("Failed to Load " + IPCONFIG_FILE + " File - subnets does not match server addresses.");
 							}
 						}
 					}
@@ -3352,7 +3351,7 @@ public final class Config
 					final Node att = n.getAttributes().getNamedItem("address");
 					if (att == null)
 					{
-						LOGGER.log(Level.WARNING, "Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
+						LOGGER.warning("Failed to load " + IPCONFIG_FILE + " file - default server address is missing.");
 						_hosts.add("127.0.0.1");
 					}
 					else
@@ -3417,7 +3416,7 @@ public final class Config
 						{
 							_subnets.add(subnet);
 							_hosts.add(hostAddress);
-							LOGGER.log(Level.INFO, "Adding new subnet: " + subnet + " address: " + hostAddress);
+							LOGGER.info("Network Config: Adding new subnet: " + subnet + " address: " + hostAddress);
 						}
 					}
 				}
@@ -3425,23 +3424,31 @@ public final class Config
 				// External host and subnet
 				_hosts.add(externalIp);
 				_subnets.add("0.0.0.0/0");
-				LOGGER.log(Level.INFO, "Adding new subnet: 0.0.0.0/0 address: " + externalIp);
+				LOGGER.info("Network Config: Adding new subnet: 0.0.0.0/0 address: " + externalIp);
 			}
 			catch (SocketException e)
 			{
-				LOGGER.log(Level.INFO, "Configuration failed please manually configure ipconfig.xml", e);
+				LOGGER.log(Level.INFO, "Network Config: Configuration failed please configure manually using ipconfig.xml", e);
 				System.exit(0);
 			}
 		}
 		
 		protected List<String> getSubnets()
 		{
-			return _subnets.isEmpty() ? Arrays.asList("0.0.0.0/0") : _subnets;
+			if (_subnets.isEmpty())
+			{
+				return Arrays.asList("0.0.0.0/0");
+			}
+			return _subnets;
 		}
 		
 		protected List<String> getHosts()
 		{
-			return _hosts.isEmpty() ? Arrays.asList("127.0.0.1") : _hosts;
+			if (_hosts.isEmpty())
+			{
+				return Arrays.asList("127.0.0.1");
+			}
+			return _hosts;
 		}
 	}
 }

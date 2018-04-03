@@ -27,7 +27,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 /**
  * @author Mobius
  */
-public class PetSkillData implements IXmlReader
+public class PetSkillData implements IGameXmlReader
 {
 	private static Logger LOGGER = Logger.getLogger(PetSkillData.class.getName());
 	private final Map<Integer, Map<Long, SkillHolder>> _skillTrees = new HashMap<>();

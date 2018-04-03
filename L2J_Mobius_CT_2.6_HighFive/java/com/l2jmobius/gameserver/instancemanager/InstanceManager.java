@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -28,7 +29,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -36,7 +37,7 @@ import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 /**
  * @author evill33t, GodKratos
  */
-public final class InstanceManager implements IXmlReader
+public final class InstanceManager implements IGameXmlReader
 {
 	private static final Map<Integer, Instance> INSTANCES = new ConcurrentHashMap<>();
 	private final Map<Integer, InstanceWorld> _instanceWorlds = new ConcurrentHashMap<>();
@@ -198,7 +199,7 @@ public final class InstanceManager implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

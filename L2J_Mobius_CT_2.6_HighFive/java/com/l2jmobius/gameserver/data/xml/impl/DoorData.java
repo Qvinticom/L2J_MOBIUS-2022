@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -28,7 +29,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -40,7 +41,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
  * Loads doors.
  * @author JIV, GodKratos, UnAfraid
  */
-public class DoorData implements IXmlReader
+public class DoorData implements IGameXmlReader
 {
 	private static final Map<String, Set<Integer>> _groups = new HashMap<>();
 	private final Map<Integer, L2DoorInstance> _doors = new HashMap<>();
@@ -62,7 +63,7 @@ public class DoorData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node a = doc.getFirstChild(); a != null; a = a.getNextSibling())
 		{

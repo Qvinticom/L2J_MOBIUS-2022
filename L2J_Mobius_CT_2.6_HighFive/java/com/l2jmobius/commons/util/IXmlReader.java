@@ -18,6 +18,11 @@ package com.l2jmobius.commons.util;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -26,10 +31,10 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXParseException;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.XMLFilter;
 
 /**
@@ -39,6 +44,7 @@ import com.l2jmobius.commons.util.file.filter.XMLFilter;
 public interface IXmlReader
 {
 	Logger LOGGER = Logger.getLogger(IXmlReader.class.getName());
+	
 	String JAXP_SCHEMA_LANGUAGE = "http://java.sun.com/xml/jaxp/properties/schemaLanguage";
 	String W3C_XML_SCHEMA = "http://www.w3.org/2001/XMLSchema";
 	/** The default file filter, ".xml" files only. */
@@ -51,15 +57,6 @@ public interface IXmlReader
 	void load();
 	
 	/**
-	 * Wrapper for {@link #parseFile(File)} method.
-	 * @param path the relative path to the datapack root of the XML file to parse.
-	 */
-	default void parseDatapackFile(String path)
-	{
-		parseFile(new File(Config.DATAPACK_ROOT, path));
-	}
-	
-	/**
 	 * Parses a single XML file.<br>
 	 * If the file was successfully parsed, call {@link #parseDocument(Document, File)} for the parsed document.<br>
 	 * <b>Validation is enforced.</b>
@@ -69,14 +66,14 @@ public interface IXmlReader
 	{
 		if (!getCurrentFileFilter().accept(f))
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Could not parse " + f.getName() + " is not a file or it doesn't exist!");
+			LOGGER.warning("Could not parse " + f.getName() + " is not a file or it doesn't exist!");
 			return;
 		}
 		
 		final DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 		dbf.setNamespaceAware(true);
-		dbf.setValidating(true);
-		dbf.setIgnoringComments(true);
+		dbf.setValidating(isValidating());
+		dbf.setIgnoringComments(isIgnoringComments());
 		try
 		{
 			dbf.setAttribute(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
@@ -86,14 +83,32 @@ public interface IXmlReader
 		}
 		catch (SAXParseException e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Could not parse file " + f.getName() + " at line " + e.getLineNumber() + ", column " + e.getColumnNumber() + ": " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName() + " at line: " + e.getLineNumber() + ", column: " + e.getColumnNumber() + " :", e);
 			return;
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Could not parse file " + f.getName() + ": " + e.getMessage());
+			LOGGER.log(Level.WARNING, "Could not parse file: " + f.getName(), e);
 			return;
 		}
+	}
+	
+	/**
+	 * Checks if XML validation is enabled.
+	 * @return {@code true} if its enabled, {@code false} otherwise
+	 */
+	default boolean isValidating()
+	{
+		return true;
+	}
+	
+	/**
+	 * Checks if XML comments are ignored.
+	 * @return {@code true} if its comments are ignored, {@code false} otherwise
+	 */
+	default boolean isIgnoringComments()
+	{
+		return true;
 	}
 	
 	/**
@@ -107,27 +122,6 @@ public interface IXmlReader
 	}
 	
 	/**
-	 * Wrapper for {@link #parseDirectory(File, boolean)}.
-	 * @param path the path to the directory where the XML files are.
-	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
-	 */
-	default boolean parseDirectory(String path)
-	{
-		return parseDirectory(new File(path), false);
-	}
-	
-	/**
-	 * Wrapper for {@link #parseDirectory(File, boolean)}.
-	 * @param path the path to the directory where the XML files are.
-	 * @param recursive parses all sub folders if there is.
-	 * @return {@code false} if it fails to find the directory, {@code true} otherwise.
-	 */
-	default boolean parseDirectory(String path, boolean recursive)
-	{
-		return parseDirectory(new File(path), recursive);
-	}
-	
-	/**
 	 * Loads all XML files from {@code path} and calls {@link #parseFile(File)} for each one of them.
 	 * @param dir the directory object to scan.
 	 * @param recursive parses all sub folders if there is.
@@ -137,37 +131,23 @@ public interface IXmlReader
 	{
 		if (!dir.exists())
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": Folder " + dir.getAbsolutePath() + " doesn't exist!");
+			LOGGER.warning("Folder " + dir.getAbsolutePath() + " doesn't exist!");
 			return false;
 		}
 		
-		final File[] files = dir.listFiles();
-		if (files != null)
+		final File[] listOfFiles = dir.listFiles();
+		for (File f : listOfFiles)
 		{
-			for (File f : files)
+			if (recursive && f.isDirectory())
 			{
-				if (recursive && f.isDirectory())
-				{
-					parseDirectory(f, recursive);
-				}
-				else if (getCurrentFileFilter().accept(f))
-				{
-					parseFile(f);
-				}
+				parseDirectory(f, recursive);
+			}
+			else if (getCurrentFileFilter().accept(f))
+			{
+				parseFile(f);
 			}
 		}
 		return true;
-	}
-	
-	/**
-	 * Wrapper for {@link #parseDirectory(File, boolean)}.
-	 * @param path the path to the directory where the XML files are
-	 * @param recursive parses all sub folders if there is
-	 * @return {@code false} if it fails to find the directory, {@code true} otherwise
-	 */
-	default boolean parseDatapackDirectory(String path, boolean recursive)
-	{
-		return parseDirectory(new File(Config.DATAPACK_ROOT, path), recursive);
 	}
 	
 	/**
@@ -176,20 +156,7 @@ public interface IXmlReader
 	 * @param doc the current document to parse
 	 * @param f the current file
 	 */
-	default void parseDocument(Document doc, File f)
-	{
-		parseDocument(doc);
-	}
-	
-	/**
-	 * Abstract method that when implemented will parse the current document.<br>
-	 * Is expected to be call from {@link #parseFile(File)}.
-	 * @param doc the current document to parse
-	 */
-	default void parseDocument(Document doc)
-	{
-		LOGGER.severe("Parser not implemented!");
-	}
+	void parseDocument(Document doc, File f);
 	
 	/**
 	 * Parses a boolean value.
@@ -243,7 +210,7 @@ public interface IXmlReader
 	 */
 	default Byte parseByte(Node node, Byte defaultValue)
 	{
-		return node != null ? Byte.valueOf(node.getNodeValue()) : defaultValue;
+		return node != null ? Byte.decode(node.getNodeValue()) : defaultValue;
 	}
 	
 	/**
@@ -287,7 +254,7 @@ public interface IXmlReader
 	 */
 	default Short parseShort(Node node, Short defaultValue)
 	{
-		return node != null ? Short.valueOf(node.getNodeValue()) : defaultValue;
+		return node != null ? Short.decode(node.getNodeValue()) : defaultValue;
 	}
 	
 	/**
@@ -331,7 +298,7 @@ public interface IXmlReader
 	 */
 	default int parseInt(Node node, Integer defaultValue)
 	{
-		return node != null ? Integer.parseInt(node.getNodeValue()) : defaultValue;
+		return node != null ? Integer.decode(node.getNodeValue()) : defaultValue;
 	}
 	
 	/**
@@ -352,7 +319,7 @@ public interface IXmlReader
 	 */
 	default Integer parseInteger(Node node, Integer defaultValue)
 	{
-		return node != null ? Integer.valueOf(node.getNodeValue()) : defaultValue;
+		return node != null ? Integer.decode(node.getNodeValue()) : defaultValue;
 	}
 	
 	/**
@@ -396,7 +363,7 @@ public interface IXmlReader
 	 */
 	default Long parseLong(Node node, Long defaultValue)
 	{
-		return node != null ? Long.valueOf(node.getNodeValue()) : defaultValue;
+		return node != null ? Long.decode(node.getNodeValue()) : defaultValue;
 	}
 	
 	/**
@@ -630,6 +597,80 @@ public interface IXmlReader
 	}
 	
 	/**
+	 * @param node
+	 * @return parses all attributes to a Map
+	 */
+	default Map<String, Object> parseAttributes(Node node)
+	{
+		final NamedNodeMap attrs = node.getAttributes();
+		final Map<String, Object> map = new LinkedHashMap<>();
+		for (int i = 0; i < attrs.getLength(); i++)
+		{
+			final Node att = attrs.item(i);
+			map.put(att.getNodeName(), att.getNodeValue());
+		}
+		return map;
+	}
+	
+	/**
+	 * Executes action for each child of node
+	 * @param node
+	 * @param action
+	 */
+	default void forEach(Node node, Consumer<Node> action)
+	{
+		forEach(node, a -> true, action);
+	}
+	
+	/**
+	 * Executes action for each child that matches nodeName
+	 * @param node
+	 * @param nodeName
+	 * @param action
+	 */
+	default void forEach(Node node, String nodeName, Consumer<Node> action)
+	{
+		forEach(node, innerNode -> nodeName.equalsIgnoreCase(innerNode.getNodeName()), action);
+	}
+	
+	/**
+	 * Executes action for each child of node if matches the filter specified
+	 * @param node
+	 * @param filter
+	 * @param action
+	 */
+	default void forEach(Node node, Predicate<Node> filter, Consumer<Node> action)
+	{
+		final NodeList list = node.getChildNodes();
+		for (int i = 0; i < list.getLength(); i++)
+		{
+			final Node targetNode = list.item(i);
+			if (filter.test(targetNode))
+			{
+				action.accept(targetNode);
+			}
+		}
+	}
+	
+	/**
+	 * @param node
+	 * @return {@code true} if the node is an element type, {@code false} otherwise
+	 */
+	static boolean isNode(Node node)
+	{
+		return node.getNodeType() == Node.ELEMENT_NODE;
+	}
+	
+	/**
+	 * @param node
+	 * @return {@code true} if the node is an element type, {@code false} otherwise
+	 */
+	static boolean isText(Node node)
+	{
+		return node.getNodeType() == Node.TEXT_NODE;
+	}
+	
+	/**
 	 * Gets the current file filter.
 	 * @return the current file filter
 	 */
@@ -642,7 +683,7 @@ public interface IXmlReader
 	 * Simple XML error handler.
 	 * @author Zoey76
 	 */
-	static class XMLErrorHandler implements ErrorHandler
+	class XMLErrorHandler implements ErrorHandler
 	{
 		@Override
 		public void warning(SAXParseException e) throws SAXParseException

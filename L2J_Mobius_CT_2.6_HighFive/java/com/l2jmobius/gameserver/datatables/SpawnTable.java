@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
+import java.io.File;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,7 +36,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -47,7 +48,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  * Spawn data retriever.
  * @author Zoey76
  */
-public final class SpawnTable implements IXmlReader
+public final class SpawnTable implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
 	// SQL
@@ -105,7 +106,7 @@ public final class SpawnTable implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		for (Node list = doc.getFirstChild(); list != null; list = list.getNextSibling())

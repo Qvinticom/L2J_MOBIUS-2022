@@ -16,6 +16,7 @@
  */
 package instances.FinalEmperialTomb;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +32,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -74,7 +75,7 @@ import instances.AbstractInstance;
  * Use proper zone spawn system.
  * @author Gigiikun
  */
-public final class FinalEmperialTomb extends AbstractInstance implements IXmlReader
+public final class FinalEmperialTomb extends AbstractInstance implements IGameXmlReader
 {
 	protected class FETWorld extends InstanceWorld
 	{
@@ -258,7 +259,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IXmlRea
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		final Node first = doc.getFirstChild();
 		if ((first != null) && "list".equalsIgnoreCase(first.getNodeName()))

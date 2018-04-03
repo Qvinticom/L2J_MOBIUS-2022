@@ -16,6 +16,7 @@
  */
 package ai.npc.ForgeOfTheGods;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
@@ -26,7 +27,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Spawn;
@@ -38,7 +39,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
  * Tar Beetle zone spawn
  * @author malyelfik
  */
-public class TarBeetleSpawn implements IXmlReader
+public class TarBeetleSpawn implements IGameXmlReader
 {
 	private final List<SpawnZone> zones = new ArrayList<>();
 	private ScheduledFuture<?> spawnTask;
@@ -61,7 +62,7 @@ public class TarBeetleSpawn implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		int i = 0;
 		for (Node d = doc.getFirstChild(); d != null; d = d.getNextSibling())
@@ -97,11 +98,11 @@ public class TarBeetleSpawn implements IXmlReader
 										final Zone bannedZone = new Zone();
 										final int bMinZ = parseInteger(attrs, "minZ");
 										final int bMaxZ = parseInteger(attrs, "maxZ");
-										for (Node f = c.getFirstChild(); f != null; f = f.getNextSibling())
+										for (Node h = c.getFirstChild(); h != null; h = h.getNextSibling())
 										{
-											if (f.getNodeName().equals("point"))
+											if (h.getNodeName().equals("point"))
 											{
-												attrs = f.getAttributes();
+												attrs = h.getAttributes();
 												final int x = parseInteger(attrs, "x");
 												final int y = parseInteger(attrs, "y");
 												bannedZone.add(x, y, bMinZ, bMaxZ, 0);

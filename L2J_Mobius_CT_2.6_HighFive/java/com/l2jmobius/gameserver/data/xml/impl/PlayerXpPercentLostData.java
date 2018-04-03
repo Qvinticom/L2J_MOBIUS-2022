@@ -16,19 +16,20 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.Arrays;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 
 /**
  * This class holds the Player Xp Percent Lost Data for each level for players.
  * @author Zealar
  */
-public final class PlayerXpPercentLostData implements IXmlReader
+public final class PlayerXpPercentLostData implements IGameXmlReader
 {
 	private final int _maxlevel = ExperienceData.getInstance().getMaxLevel();
 	private final double[] _playerXpPercentLost = new double[_maxlevel + 1];
@@ -46,7 +47,7 @@ public final class PlayerXpPercentLostData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

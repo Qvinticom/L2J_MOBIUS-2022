@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -24,7 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -33,7 +34,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
  * This class loads and holds all static object data.
  * @author UnAfraid
  */
-public final class StaticObjectData implements IXmlReader
+public final class StaticObjectData implements IGameXmlReader
 {
 	private final Map<Integer, L2StaticObjectInstance> _staticObjects = new HashMap<>();
 	
@@ -54,7 +55,7 @@ public final class StaticObjectData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

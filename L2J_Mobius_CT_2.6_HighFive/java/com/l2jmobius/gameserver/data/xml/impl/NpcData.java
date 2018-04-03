@@ -34,7 +34,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
@@ -53,7 +53,7 @@ import com.l2jmobius.gameserver.util.Util;
  * NPC data parser.
  * @author NosBit
  */
-public class NpcData implements IXmlReader
+public class NpcData implements IGameXmlReader
 {
 	private final Map<Integer, L2NpcTemplate> _npcs = new ConcurrentHashMap<>();
 	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
@@ -790,7 +790,7 @@ public class NpcData implements IXmlReader
 	 * Once Spawn System gets reworked delete this class<br>
 	 * @author Zealar
 	 */
-	private final class MinionData implements IXmlReader
+	private final class MinionData implements IGameXmlReader
 	{
 		public final Map<Integer, List<MinionHolder>> _tempMinions = new HashMap<>();
 		
@@ -808,7 +808,7 @@ public class NpcData implements IXmlReader
 		}
 		
 		@Override
-		public void parseDocument(Document doc)
+		public void parseDocument(Document doc, File f)
 		{
 			for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 			{

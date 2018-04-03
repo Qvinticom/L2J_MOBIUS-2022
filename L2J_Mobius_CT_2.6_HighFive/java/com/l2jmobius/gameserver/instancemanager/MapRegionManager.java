@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.instancemanager;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.model.L2MapRegion;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -46,7 +47,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
  * Map Region Manager.
  * @author Nyaran
  */
-public final class MapRegionManager implements IXmlReader
+public final class MapRegionManager implements IGameXmlReader
 {
 	private static final Map<String, L2MapRegion> _regions = new HashMap<>();
 	private static final String defaultRespawn = "talking_island_town";
@@ -65,7 +66,7 @@ public final class MapRegionManager implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		NamedNodeMap attrs;
 		String name;

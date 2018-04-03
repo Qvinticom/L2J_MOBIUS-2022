@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,7 +24,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.fishing.L2FishingRod;
 
@@ -31,7 +32,7 @@ import com.l2jmobius.gameserver.model.fishing.L2FishingRod;
  * This class holds the Fishing Rods information.
  * @author nonom
  */
-public final class FishingRodsData implements IXmlReader
+public final class FishingRodsData implements IGameXmlReader
 {
 	private final Map<Integer, L2FishingRod> _fishingRods = new HashMap<>();
 	
@@ -52,7 +53,7 @@ public final class FishingRodsData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{

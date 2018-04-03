@@ -16,6 +16,7 @@
  */
 package hellbound;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
@@ -34,7 +35,7 @@ import com.l2jmobius.gameserver.model.Location;
  * Hellbound Spawns parser.
  * @author Zoey76
  */
-public final class HellboundSpawns implements IXmlReader
+public final class HellboundSpawns implements IGameXmlReader
 {
 	private final List<L2Spawn> _spawns = new ArrayList<>();
 	private final Map<Integer, int[]> _spawnLevels = new HashMap<>();
@@ -54,7 +55,7 @@ public final class HellboundSpawns implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
 		{

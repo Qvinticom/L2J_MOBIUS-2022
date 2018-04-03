@@ -32,7 +32,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.commons.util.file.filter.NumericNameFilter;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.model.items.L2Item;
  * Loads buy lists for NPCs.
  * @author NosBit
  */
-public final class BuyListData implements IXmlReader
+public final class BuyListData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(BuyListData.class.getName());
 	

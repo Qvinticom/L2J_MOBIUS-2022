@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.data.xml.impl;
 
+import java.io.File;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
-import com.l2jmobius.commons.util.IXmlReader;
+import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
@@ -28,7 +30,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
  * This class load, holds and calculates the hit condition bonuses.
  * @author Nik
  */
-public final class HitConditionBonusData implements IXmlReader
+public final class HitConditionBonusData implements IGameXmlReader
 {
 	private int frontBonus = 0;
 	private int sideBonus = 0;
@@ -55,7 +57,7 @@ public final class HitConditionBonusData implements IXmlReader
 	}
 	
 	@Override
-	public void parseDocument(Document doc)
+	public void parseDocument(Document doc, File f)
 	{
 		for (Node d = doc.getFirstChild().getFirstChild(); d != null; d = d.getNextSibling())
 		{
