@@ -16,6 +16,8 @@
  */
 package instances.AshenShadowRevolutionaries;
 
+import java.util.List;
+
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -258,12 +260,16 @@ public class AshenShadowRevolutionaries extends AbstractInstance
 			}
 			else
 			{
-				for (L2Npc captive : world.getParameters().getList("CAPTIVES", L2Npc.class))
+				final List<L2Npc> captives = world.getParameters().getList("CAPTIVES", L2Npc.class);
+				if (captives != null)
 				{
-					captive.setTargetable(true);
-					captive.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
-					captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.MAGIC_SQUARE);
-					captive.broadcastInfo();
+					for (L2Npc captive : captives)
+					{
+						captive.setTargetable(true);
+						captive.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.FLESH_STONE);
+						captive.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.MAGIC_SQUARE);
+						captive.broadcastInfo();
+					}
 				}
 				world.spawnGroup("wave_3");
 				world.finishInstance();
