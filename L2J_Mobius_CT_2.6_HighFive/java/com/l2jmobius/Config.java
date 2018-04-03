@@ -64,10 +64,11 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * This class loads all the game server related configurations from files.<br>
  * The files are usually located in config folder in server root folder.<br>
+ * Each configuration has a default value (that should reflect retail behavior).
  */
 public final class Config
 {
-	private static final Logger _log = Logger.getLogger(Config.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
 	
 	// --------------------------------------------------
 	// Constants
@@ -79,7 +80,6 @@ public final class Config
 	// --------------------------------------------------
 	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
 	public static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
-	public static final String CUSTOM_CONFIG_FILE = "./config/Custom.ini";
 	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
 	public static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
@@ -101,6 +101,33 @@ public final class Config
 	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
 	public static final String HEXID_FILE = "./config/hexid.txt";
 	public static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+	
+	// --------------------------------------------------
+	// Custom Config File Definitions
+	// --------------------------------------------------
+	public static final String CUSTOM_ANTIFEED_CONFIG_FILE = "./Config/Custom/AntiFeed.ini";
+	public static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./Config/Custom/AutoPotions.ini";
+	public static final String CUSTOM_BANKING_CONFIG_FILE = "./Config/Custom/Banking.ini";
+	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./Config/Custom/ChampionMonsters.ini";
+	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./Config/Custom/ChatModeration.ini";
+	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./Config/Custom/CommunityBoard.ini";
+	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./Config/Custom/DualboxCheck.ini";
+	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./Config/Custom/FindPvP.ini";
+	public static final String CUSTOM_HELLBOUND_STATUS_CONFIG_FILE = "./Config/Custom/HellboundStatus.ini";
+	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./Config/Custom/OfflineTrade.ini";
+	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./Config/Custom/PasswordChange.ini";
+	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./Config/Custom/PremiumSystem.ini";
+	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./Config/Custom/PrivateStoreRange.ini";
+	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./Config/Custom/PvpAnnounce.ini";
+	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./Config/Custom/RandomSpawns.ini";
+	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./Config/Custom/ScreenWelcomeMessage.ini";
+	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./Config/Custom/ServerTime.ini";
+	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./Config/Custom/StartingLocation.ini";
+	public static final String CUSTOM_TVT_CONFIG_FILE = "./Config/Custom/TeamVersusTeam.ini";
+	public static final String CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE = "./Config/Custom/WarehouseSorting.ini";
+	public static final String CUSTOM_WEDDING_CONFIG_FILE = "./Config/Custom/Wedding.ini";
+	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./Config/Custom/MultilingualSupport.ini";
+	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./Config/Custom/WalkerBotProtection.ini";
 	
 	// --------------------------------------------------
 	// Variable Definitions
@@ -1232,7 +1259,7 @@ public final class Config
 			}
 			catch (IOException e)
 			{
-				_log.log(Level.WARNING, "Error setting datapack root!", e);
+				LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
 			}
 			
@@ -1253,7 +1280,7 @@ public final class Config
 				}
 				catch (NumberFormatException e)
 				{
-					_log.log(Level.WARNING, "Wrong config protocol version: " + protocol + ". Skipped.");
+					LOGGER.log(Level.WARNING, "Wrong config protocol version: " + protocol + ". Skipped.");
 				}
 			}
 			
@@ -1477,7 +1504,7 @@ public final class Config
 					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
-						_log.warning("[SkillDurationList]: invalid config property -> SkillDurationList \"" + skill + "\"");
+						LOGGER.warning("[SkillDurationList]: invalid config property -> SkillDurationList \"" + skill + "\"");
 					}
 					else
 					{
@@ -1489,7 +1516,7 @@ public final class Config
 						{
 							if (!skill.isEmpty())
 							{
-								_log.warning("[SkillDurationList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
+								LOGGER.warning("[SkillDurationList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
 							}
 						}
 					}
@@ -1506,7 +1533,7 @@ public final class Config
 					final String[] skillSplit = skill.split(",");
 					if (skillSplit.length != 2)
 					{
-						_log.warning("[SkillReuseList]: invalid config property -> SkillReuseList \"" + skill + "\"");
+						LOGGER.warning("[SkillReuseList]: invalid config property -> SkillReuseList \"" + skill + "\"");
 					}
 					else
 					{
@@ -1518,7 +1545,7 @@ public final class Config
 						{
 							if (!skill.isEmpty())
 							{
-								_log.warning("[SkillReuseList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
+								LOGGER.warning("[SkillReuseList]: invalid config property -> SkillList \"" + skillSplit[0] + "\"" + skillSplit[1]);
 							}
 						}
 					}
@@ -1680,7 +1707,7 @@ public final class Config
 			ALT_CLAN_LEADER_DATE_CHANGE = character.getInt("AltClanLeaderDateChange", 3);
 			if ((ALT_CLAN_LEADER_DATE_CHANGE < 1) || (ALT_CLAN_LEADER_DATE_CHANGE > 7))
 			{
-				_log.log(Level.WARNING, "Wrong value specified for AltClanLeaderDateChange: " + ALT_CLAN_LEADER_DATE_CHANGE);
+				LOGGER.log(Level.WARNING, "Wrong value specified for AltClanLeaderDateChange: " + ALT_CLAN_LEADER_DATE_CHANGE);
 				ALT_CLAN_LEADER_DATE_CHANGE = 3;
 			}
 			ALT_CLAN_LEADER_HOUR_CHANGE = character.getString("AltClanLeaderHourChange", "00:00:00");
@@ -1725,8 +1752,8 @@ public final class Config
 				}
 				catch (NumberFormatException nfe)
 				{
-					_log.warning("Auto loot item ids: Wrong ItemId passed: " + item);
-					_log.warning(nfe.getMessage());
+					LOGGER.warning("Auto loot item ids: Wrong ItemId passed: " + item);
+					LOGGER.warning(nfe.getMessage());
 				}
 			}
 			UNSTUCK_INTERVAL = character.getInt("UnstuckInterval", 300);
@@ -1745,8 +1772,8 @@ public final class Config
 				}
 				catch (NumberFormatException nfe)
 				{
-					_log.warning("Player Spawn Protection: Wrong ItemId passed: " + item);
-					_log.warning(nfe.getMessage());
+					LOGGER.warning("Player Spawn Protection: Wrong ItemId passed: " + item);
+					LOGGER.warning(nfe.getMessage());
 				}
 			}
 			
@@ -1956,7 +1983,7 @@ public final class Config
 			}
 			catch (NumberFormatException nfe)
 			{
-				_log.log(Level.WARNING, nfe.getMessage(), nfe);
+				LOGGER.log(Level.WARNING, nfe.getMessage(), nfe);
 			}
 			ALT_MANOR_REFRESH_TIME = General.getInt("AltManorRefreshTime", 20);
 			ALT_MANOR_REFRESH_MIN = General.getInt("AltManorRefreshMin", 0);
@@ -2112,7 +2139,7 @@ public final class Config
 				final String[] propSplit = prop.split(",");
 				if (propSplit.length != 2)
 				{
-					_log.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + prop + "\"");
+					LOGGER.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + prop + "\"");
 				}
 				
 				try
@@ -2123,7 +2150,7 @@ public final class Config
 				{
 					if (!prop.isEmpty())
 					{
-						_log.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + propSplit[0] + "\"" + propSplit[1]);
+						LOGGER.warning("[CustomMinionsRespawnTime]: invalid config property -> CustomMinionsRespawnTime \"" + propSplit[0] + "\"" + propSplit[1]);
 					}
 				}
 			}
@@ -2205,7 +2232,7 @@ public final class Config
 					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
+						LOGGER.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 					}
 					else
 					{
@@ -2217,7 +2244,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
+								LOGGER.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 							}
 						}
 					}
@@ -2233,7 +2260,7 @@ public final class Config
 					final String[] itemSplit = item.split(",");
 					if (itemSplit.length != 2)
 					{
-						_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
+						LOGGER.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 					}
 					else
 					{
@@ -2245,7 +2272,7 @@ public final class Config
 						{
 							if (!item.isEmpty())
 							{
-								_log.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
+								LOGGER.warning("Config.load(): invalid config property -> RateDropItemsById \"" + item + "\"");
 							}
 						}
 					}
@@ -2262,65 +2289,314 @@ public final class Config
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 			
-			// Load Custom L2Properties file (if exists)
-			final PropertiesParser CustomSettings = new PropertiesParser(CUSTOM_CONFIG_FILE);
+			// Load Antifeed Properties file (if exists)
+			final PropertiesParser Antifeed = new PropertiesParser(CUSTOM_ANTIFEED_CONFIG_FILE);
 			
-			L2JMOD_CHAMPION_ENABLE = CustomSettings.getBoolean("ChampionEnable", false);
-			L2JMOD_CHAMPION_PASSIVE = CustomSettings.getBoolean("ChampionPassive", false);
-			L2JMOD_CHAMPION_FREQUENCY = CustomSettings.getInt("ChampionFrequency", 0);
-			L2JMOD_CHAMP_TITLE = CustomSettings.getString("ChampionTitle", "Champion");
-			L2JMOD_SHOW_CHAMPION_AURA = CustomSettings.getBoolean("ChampionAura", true);
-			L2JMOD_CHAMP_MIN_LVL = CustomSettings.getInt("ChampionMinLevel", 20);
-			L2JMOD_CHAMP_MAX_LVL = CustomSettings.getInt("ChampionMaxLevel", 60);
-			L2JMOD_CHAMPION_HP = CustomSettings.getInt("ChampionHp", 7);
-			L2JMOD_CHAMPION_HP_REGEN = CustomSettings.getFloat("ChampionHpRegen", 1);
-			L2JMOD_CHAMPION_REWARDS_EXP_SP = CustomSettings.getFloat("ChampionRewardsExpSp", 8);
-			L2JMOD_CHAMPION_REWARDS_CHANCE = CustomSettings.getFloat("ChampionRewardsChance", 8);
-			L2JMOD_CHAMPION_REWARDS_AMOUNT = CustomSettings.getFloat("ChampionRewardsAmount", 1);
-			L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE = CustomSettings.getFloat("ChampionAdenasRewardsChance", 1);
-			L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT = CustomSettings.getFloat("ChampionAdenasRewardsAmount", 1);
-			L2JMOD_CHAMPION_ATK = CustomSettings.getFloat("ChampionAtk", 1);
-			L2JMOD_CHAMPION_SPD_ATK = CustomSettings.getFloat("ChampionSpdAtk", 1);
-			L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE = CustomSettings.getInt("ChampionRewardLowerLvlItemChance", 0);
-			L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE = CustomSettings.getInt("ChampionRewardHigherLvlItemChance", 0);
-			L2JMOD_CHAMPION_REWARD_ID = CustomSettings.getInt("ChampionRewardItemID", 6393);
-			L2JMOD_CHAMPION_REWARD_QTY = CustomSettings.getInt("ChampionRewardItemQty", 1);
-			L2JMOD_CHAMPION_ENABLE_VITALITY = CustomSettings.getBoolean("ChampionEnableVitality", false);
-			L2JMOD_CHAMPION_ENABLE_IN_INSTANCES = CustomSettings.getBoolean("ChampionEnableInInstances", false);
+			L2JMOD_ANTIFEED_ENABLE = Antifeed.getBoolean("AntiFeedEnable", false);
+			L2JMOD_ANTIFEED_DUALBOX = Antifeed.getBoolean("AntiFeedDualbox", true);
+			L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = Antifeed.getBoolean("AntiFeedDisconnectedAsDualbox", true);
+			L2JMOD_ANTIFEED_INTERVAL = Antifeed.getInt("AntiFeedInterval", 120) * 1000;
 			
-			TVT_EVENT_ENABLED = CustomSettings.getBoolean("TvTEventEnabled", false);
-			TVT_EVENT_IN_INSTANCE = CustomSettings.getBoolean("TvTEventInInstance", false);
-			TVT_EVENT_INSTANCE_FILE = CustomSettings.getString("TvTEventInstanceFile", "coliseum.xml");
-			TVT_EVENT_INTERVAL = CustomSettings.getString("TvTEventInterval", "20:00").split(",");
-			TVT_EVENT_PARTICIPATION_TIME = CustomSettings.getInt("TvTEventParticipationTime", 3600);
-			TVT_EVENT_RUNNING_TIME = CustomSettings.getInt("TvTEventRunningTime", 1800);
-			TVT_EVENT_PARTICIPATION_NPC_ID = CustomSettings.getInt("TvTEventParticipationNpcId", 0);
+			// Load AutoPotions Properties file (if exists)
+			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
 			
-			L2JMOD_ALLOW_WEDDING = CustomSettings.getBoolean("AllowWedding", false);
-			L2JMOD_WEDDING_PRICE = CustomSettings.getInt("WeddingPrice", 250000000);
-			L2JMOD_WEDDING_PUNISH_INFIDELITY = CustomSettings.getBoolean("WeddingPunishInfidelity", true);
-			L2JMOD_WEDDING_TELEPORT = CustomSettings.getBoolean("WeddingTeleport", true);
-			L2JMOD_WEDDING_TELEPORT_PRICE = CustomSettings.getInt("WeddingTeleportPrice", 50000);
-			L2JMOD_WEDDING_TELEPORT_DURATION = CustomSettings.getInt("WeddingTeleportDuration", 60);
-			L2JMOD_WEDDING_SAMESEX = CustomSettings.getBoolean("WeddingAllowSameSex", false);
-			L2JMOD_WEDDING_FORMALWEAR = CustomSettings.getBoolean("WeddingFormalWear", true);
-			L2JMOD_WEDDING_DIVORCE_COSTS = CustomSettings.getInt("WeddingDivorceCosts", 20);
+			AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
+			AUTO_POTIONS_IN_OLYMPIAD = AutoPotions.getBoolean("AutoPotionsInOlympiad", false);
+			AUTO_POTION_MIN_LVL = AutoPotions.getInt("AutoPotionMinimumLevel", 1);
+			AUTO_CP_ENABLED = AutoPotions.getBoolean("AutoCpEnabled", true);
+			AUTO_HP_ENABLED = AutoPotions.getBoolean("AutoHpEnabled", true);
+			AUTO_MP_ENABLED = AutoPotions.getBoolean("AutoMpEnabled", true);
+			AUTO_CP_PERCENTAGE = AutoPotions.getInt("AutoCpPercentage", 70);
+			AUTO_HP_PERCENTAGE = AutoPotions.getInt("AutoHpPercentage", 70);
+			AUTO_MP_PERCENTAGE = AutoPotions.getInt("AutoMpPercentage", 70);
+			AUTO_CP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoCpItemIds", "0").split(","))
+			{
+				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_HP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoHpItemIds", "0").split(","))
+			{
+				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
+			}
+			AUTO_MP_ITEM_IDS = new ArrayList<>();
+			for (String s : AutoPotions.getString("AutoMpItemIds", "0").split(","))
+			{
+				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
+			}
 			
-			L2JMOD_ENABLE_WAREHOUSESORTING_CLAN = CustomSettings.getBoolean("EnableWarehouseSortingClan", false);
-			L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE = CustomSettings.getBoolean("EnableWarehouseSortingPrivate", false);
+			// Load Banking Properties file (if exists)
+			final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
+			
+			BANKING_SYSTEM_ENABLED = Banking.getBoolean("BankingEnabled", false);
+			BANKING_SYSTEM_GOLDBARS = Banking.getInt("BankingGoldbarCount", 1);
+			BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
+			
+			// Load ChampionMonster Properties file (if exists)
+			final PropertiesParser ChampionMonster = new PropertiesParser(CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE);
+			
+			L2JMOD_CHAMPION_ENABLE = ChampionMonster.getBoolean("ChampionEnable", false);
+			L2JMOD_CHAMPION_PASSIVE = ChampionMonster.getBoolean("ChampionPassive", false);
+			L2JMOD_CHAMPION_FREQUENCY = ChampionMonster.getInt("ChampionFrequency", 0);
+			L2JMOD_CHAMP_TITLE = ChampionMonster.getString("ChampionTitle", "Champion");
+			L2JMOD_SHOW_CHAMPION_AURA = ChampionMonster.getBoolean("ChampionAura", true);
+			L2JMOD_CHAMP_MIN_LVL = ChampionMonster.getInt("ChampionMinLevel", 20);
+			L2JMOD_CHAMP_MAX_LVL = ChampionMonster.getInt("ChampionMaxLevel", 60);
+			L2JMOD_CHAMPION_HP = ChampionMonster.getInt("ChampionHp", 7);
+			L2JMOD_CHAMPION_HP_REGEN = ChampionMonster.getFloat("ChampionHpRegen", 1);
+			L2JMOD_CHAMPION_REWARDS_EXP_SP = ChampionMonster.getFloat("ChampionRewardsExpSp", 8);
+			L2JMOD_CHAMPION_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionRewardsChance", 8);
+			L2JMOD_CHAMPION_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionRewardsAmount", 1);
+			L2JMOD_CHAMPION_ADENAS_REWARDS_CHANCE = ChampionMonster.getFloat("ChampionAdenasRewardsChance", 1);
+			L2JMOD_CHAMPION_ADENAS_REWARDS_AMOUNT = ChampionMonster.getFloat("ChampionAdenasRewardsAmount", 1);
+			L2JMOD_CHAMPION_ATK = ChampionMonster.getFloat("ChampionAtk", 1);
+			L2JMOD_CHAMPION_SPD_ATK = ChampionMonster.getFloat("ChampionSpdAtk", 1);
+			L2JMOD_CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardLowerLvlItemChance", 0);
+			L2JMOD_CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE = ChampionMonster.getInt("ChampionRewardHigherLvlItemChance", 0);
+			L2JMOD_CHAMPION_REWARD_ID = ChampionMonster.getInt("ChampionRewardItemID", 6393);
+			L2JMOD_CHAMPION_REWARD_QTY = ChampionMonster.getInt("ChampionRewardItemQty", 1);
+			L2JMOD_CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
+			L2JMOD_CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
+			
+			// Load ChatModeration Properties file (if exists)
+			final PropertiesParser ChatModeration = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
+			
+			L2JMOD_CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", false);
+			
+			// Load CommunityBoard Properties file (if exists)
+			final PropertiesParser CommunityBoard = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);
+			
+			CUSTOM_CB_ENABLED = CommunityBoard.getBoolean("CustomCommunityBoard", false);
+			COMMUNITYBOARD_CURRENCY = CommunityBoard.getInt("CommunityCurrencyId", 57);
+			COMMUNITYBOARD_ENABLE_MULTISELLS = CommunityBoard.getBoolean("CommunityEnableMultisells", true);
+			COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", true);
+			COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", true);
+			COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", true);
+			COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
+			COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
+			COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);
+			COMMUNITYBOARD_COMBAT_DISABLED = CommunityBoard.getBoolean("CommunityCombatDisabled", true);
+			COMMUNITYBOARD_KARMA_DISABLED = CommunityBoard.getBoolean("CommunityKarmaDisabled", true);
+			COMMUNITYBOARD_CAST_ANIMATIONS = CommunityBoard.getBoolean("CommunityCastAnimations", false);
+			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);
+			COMMUNITY_PREMIUM_COIN_ID = CommunityBoard.getInt("CommunityPremiumBuyCoinId", 57);
+			COMMUNITY_PREMIUM_PRICE_PER_DAY = CommunityBoard.getInt("CommunityPremiumPricePerDay", 1000000);
+			final String[] allowedBuffs = CommunityBoard.getString("CommunityAvailableBuffs", "").split(",");
+			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
+			for (String s : allowedBuffs)
+			{
+				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
+			}
+			final String[] availableTeleports = CommunityBoard.getString("CommunityTeleportList", "").split(";");
+			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
+			for (String s : availableTeleports)
+			{
+				final String splitInfo[] = s.split(",");
+				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
+			}
+			
+			// Load DualboxCheck Properties file (if exists)
+			final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
+			
+			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxPlayersPerIP", 0);
+			L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
+			L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
+			final String[] dualboxCheckWhiteList = DualboxCheck.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
+			L2JMOD_DUALBOX_CHECK_WHITELIST = new HashMap<>(dualboxCheckWhiteList.length);
+			for (String entry : dualboxCheckWhiteList)
+			{
+				final String[] entrySplit = entry.split(",");
+				if (entrySplit.length != 2)
+				{
+					LOGGER.warning("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"" + entry + "\"");
+				}
+				else
+				{
+					try
+					{
+						int num = Integer.parseInt(entrySplit[1]);
+						num = num == 0 ? -1 : num;
+						L2JMOD_DUALBOX_CHECK_WHITELIST.put(InetAddress.getByName(entrySplit[0]).hashCode(), num);
+					}
+					catch (UnknownHostException e)
+					{
+						LOGGER.warning("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"" + entrySplit[0] + "\"");
+					}
+					catch (NumberFormatException e)
+					{
+						LOGGER.warning("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"" + entrySplit[1] + "\"");
+					}
+				}
+			}
+			
+			// Load FindPvP Properties file (if exists)
+			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
+			
+			ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
+			
+			// Load HellboundStatus Properties file (if exists)
+			final PropertiesParser HellboundStatus = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
+			
+			L2JMOD_HELLBOUND_STATUS = HellboundStatus.getBoolean("HellboundStatus", false);
+			
+			// Load OfflineTrade Properties file (if exists)
+			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
+			
+			OFFLINE_TRADE_ENABLE = OfflineTrade.getBoolean("OfflineTradeEnable", false);
+			OFFLINE_CRAFT_ENABLE = OfflineTrade.getBoolean("OfflineCraftEnable", false);
+			OFFLINE_MODE_IN_PEACE_ZONE = OfflineTrade.getBoolean("OfflineModeInPeaceZone", false);
+			OFFLINE_MODE_NO_DAMAGE = OfflineTrade.getBoolean("OfflineModeNoDamage", false);
+			OFFLINE_SET_NAME_COLOR = OfflineTrade.getBoolean("OfflineSetNameColor", false);
+			OFFLINE_NAME_COLOR = Integer.decode("0x" + OfflineTrade.getString("OfflineNameColor", "808080"));
+			OFFLINE_FAME = OfflineTrade.getBoolean("OfflineFame", true);
+			RESTORE_OFFLINERS = OfflineTrade.getBoolean("RestoreOffliners", false);
+			OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
+			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
+			OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
+			
+			// Load PasswordChange Properties file (if exists)
+			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
+			
+			L2JMOD_ALLOW_CHANGE_PASSWORD = PasswordChange.getBoolean("AllowChangePassword", false);
+			
+			// Load PremiumSystem Properties file (if exists)
+			final PropertiesParser PremiumSystem = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);
+			
+			PREMIUM_SYSTEM_ENABLED = PremiumSystem.getBoolean("EnablePremiumSystem", false);
+			PREMIUM_RATE_XP = PremiumSystem.getFloat("PremiumRateXp", 2);
+			PREMIUM_RATE_SP = PremiumSystem.getFloat("PremiumRateSp", 2);
+			PREMIUM_RATE_DROP_CHANCE = PremiumSystem.getFloat("PremiumRateDropChance", 2);
+			PREMIUM_RATE_DROP_AMOUNT = PremiumSystem.getFloat("PremiumRateDropAmount", 1);
+			PREMIUM_RATE_SPOIL_CHANCE = PremiumSystem.getFloat("PremiumRateSpoilChance", 2);
+			PREMIUM_RATE_SPOIL_AMOUNT = PremiumSystem.getFloat("PremiumRateSpoilAmount", 1);
+			final String[] premiumDropChanceMultiplier = PremiumSystem.getString("PremiumRateDropChanceByItemId", "").split(";");
+			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
+			if (!premiumDropChanceMultiplier[0].isEmpty())
+			{
+				for (String item : premiumDropChanceMultiplier)
+				{
+					final String[] itemSplit = item.split(",");
+					if (itemSplit.length != 2)
+					{
+						LOGGER.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
+					}
+					else
+					{
+						try
+						{
+							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+						}
+						catch (NumberFormatException nfe)
+						{
+							if (!item.isEmpty())
+							{
+								LOGGER.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
+							}
+						}
+					}
+				}
+			}
+			final String[] premiumDropAmountMultiplier = PremiumSystem.getString("PremiumRateDropAmountByItemId", "").split(";");
+			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
+			if (!premiumDropAmountMultiplier[0].isEmpty())
+			{
+				for (String item : premiumDropAmountMultiplier)
+				{
+					final String[] itemSplit = item.split(",");
+					if (itemSplit.length != 2)
+					{
+						LOGGER.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
+					}
+					else
+					{
+						try
+						{
+							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
+						}
+						catch (NumberFormatException nfe)
+						{
+							if (!item.isEmpty())
+							{
+								LOGGER.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
+							}
+						}
+					}
+				}
+			}
+			
+			// Load CustomSettings Properties file (if exists)
+			final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
+			
+			SHOP_MIN_RANGE_FROM_PLAYER = PrivateStoreRange.getInt("ShopMinRangeFromPlayer", 50);
+			SHOP_MIN_RANGE_FROM_NPC = PrivateStoreRange.getInt("ShopMinRangeFromNpc", 100);
+			
+			// Load PvpAnnounce Properties file (if exists)
+			final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);
+			
+			ANNOUNCE_PK_PVP = PvpAnnounce.getBoolean("AnnouncePkPvP", false);
+			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = PvpAnnounce.getBoolean("AnnouncePkPvPNormalMessage", true);
+			ANNOUNCE_PK_MSG = PvpAnnounce.getString("AnnouncePkMsg", "$killer has slaughtered $target");
+			ANNOUNCE_PVP_MSG = PvpAnnounce.getString("AnnouncePvpMsg", "$killer has defeated $target");
+			
+			// Load RandomSpawns Properties file (if exists)
+			final PropertiesParser RandomSpawns = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
+			
+			ENABLE_RANDOM_MONSTER_SPAWNS = RandomSpawns.getBoolean("EnableRandomMonsterSpawns", false);
+			MOB_MAX_SPAWN_RANGE = RandomSpawns.getInt("MaxSpawnMobRange", 150);
+			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
+			if (ENABLE_RANDOM_MONSTER_SPAWNS)
+			{
+				final String[] mobsIds = RandomSpawns.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
+				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
+				for (String id : mobsIds)
+				{
+					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
+				}
+			}
+			
+			// Load ScreenWelcomeMessage Properties file (if exists)
+			final PropertiesParser ScreenWelcomeMessage = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
+			
+			WELCOME_MESSAGE_ENABLED = ScreenWelcomeMessage.getBoolean("ScreenWelcomeMessageEnable", false);
+			WELCOME_MESSAGE_TEXT = ScreenWelcomeMessage.getString("ScreenWelcomeMessageText", "Welcome to L2J server!");
+			WELCOME_MESSAGE_TIME = ScreenWelcomeMessage.getInt("ScreenWelcomeMessageTime", 10) * 1000;
+			
+			// Load ServerTime Properties file (if exists)
+			final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
+			
+			L2JMOD_DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
+			
+			// Load StartingLocation Properties file (if exists)
+			final PropertiesParser StartingLocation = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
+			
+			CUSTOM_STARTING_LOC = StartingLocation.getBoolean("CustomStartingLocation", false);
+			CUSTOM_STARTING_LOC_X = StartingLocation.getInt("CustomStartingLocX", 83020);
+			CUSTOM_STARTING_LOC_Y = StartingLocation.getInt("CustomStartingLocY", 147880);
+			CUSTOM_STARTING_LOC_Z = StartingLocation.getInt("CustomStartingLocZ", -3469);
+			
+			// Load TeamVersusTeam Properties file (if exists)
+			final PropertiesParser TeamVersusTeam = new PropertiesParser(CUSTOM_TVT_CONFIG_FILE);
+			
+			TVT_EVENT_ENABLED = TeamVersusTeam.getBoolean("TvTEventEnabled", false);
+			TVT_EVENT_IN_INSTANCE = TeamVersusTeam.getBoolean("TvTEventInInstance", false);
+			TVT_EVENT_INSTANCE_FILE = TeamVersusTeam.getString("TvTEventInstanceFile", "coliseum.xml");
+			TVT_EVENT_INTERVAL = TeamVersusTeam.getString("TvTEventInterval", "20:00").split(",");
+			TVT_EVENT_PARTICIPATION_TIME = TeamVersusTeam.getInt("TvTEventParticipationTime", 3600);
+			TVT_EVENT_RUNNING_TIME = TeamVersusTeam.getInt("TvTEventRunningTime", 1800);
+			TVT_EVENT_PARTICIPATION_NPC_ID = TeamVersusTeam.getInt("TvTEventParticipationNpcId", 0);
 			
 			if (TVT_EVENT_PARTICIPATION_NPC_ID == 0)
 			{
 				TVT_EVENT_ENABLED = false;
-				_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcId");
+				LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcId");
 			}
 			else
 			{
-				String[] tvtNpcCoords = CustomSettings.getString("TvTEventParticipationNpcCoordinates", "0,0,0").split(",");
+				String[] tvtNpcCoords = TeamVersusTeam.getString("TvTEventParticipationNpcCoordinates", "0,0,0").split(",");
 				if (tvtNpcCoords.length < 3)
 				{
 					TVT_EVENT_ENABLED = false;
-					_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcCoordinates");
+					LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationNpcCoordinates");
 				}
 				else
 				{
@@ -2337,40 +2613,40 @@ public final class Config
 					{
 						TVT_EVENT_PARTICIPATION_NPC_COORDINATES[3] = Integer.parseInt(tvtNpcCoords[3]);
 					}
-					TVT_EVENT_MIN_PLAYERS_IN_TEAMS = CustomSettings.getInt("TvTEventMinPlayersInTeams", 1);
-					TVT_EVENT_MAX_PLAYERS_IN_TEAMS = CustomSettings.getInt("TvTEventMaxPlayersInTeams", 20);
-					TVT_EVENT_MIN_LVL = CustomSettings.getByte("TvTEventMinPlayerLevel", (byte) 1);
-					TVT_EVENT_MAX_LVL = CustomSettings.getByte("TvTEventMaxPlayerLevel", (byte) 80);
-					TVT_EVENT_RESPAWN_TELEPORT_DELAY = CustomSettings.getInt("TvTEventRespawnTeleportDelay", 20);
-					TVT_EVENT_START_LEAVE_TELEPORT_DELAY = CustomSettings.getInt("TvTEventStartLeaveTeleportDelay", 20);
-					TVT_EVENT_EFFECTS_REMOVAL = CustomSettings.getInt("TvTEventEffectsRemoval", 0);
-					TVT_EVENT_MAX_PARTICIPANTS_PER_IP = CustomSettings.getInt("TvTEventMaxParticipantsPerIP", 0);
-					TVT_ALLOW_VOICED_COMMAND = CustomSettings.getBoolean("TvTAllowVoicedInfoCommand", false);
-					TVT_EVENT_TEAM_1_NAME = CustomSettings.getString("TvTEventTeam1Name", "Team1");
-					tvtNpcCoords = CustomSettings.getString("TvTEventTeam1Coordinates", "0,0,0").split(",");
+					TVT_EVENT_MIN_PLAYERS_IN_TEAMS = TeamVersusTeam.getInt("TvTEventMinPlayersInTeams", 1);
+					TVT_EVENT_MAX_PLAYERS_IN_TEAMS = TeamVersusTeam.getInt("TvTEventMaxPlayersInTeams", 20);
+					TVT_EVENT_MIN_LVL = TeamVersusTeam.getByte("TvTEventMinPlayerLevel", (byte) 1);
+					TVT_EVENT_MAX_LVL = TeamVersusTeam.getByte("TvTEventMaxPlayerLevel", (byte) 80);
+					TVT_EVENT_RESPAWN_TELEPORT_DELAY = TeamVersusTeam.getInt("TvTEventRespawnTeleportDelay", 20);
+					TVT_EVENT_START_LEAVE_TELEPORT_DELAY = TeamVersusTeam.getInt("TvTEventStartLeaveTeleportDelay", 20);
+					TVT_EVENT_EFFECTS_REMOVAL = TeamVersusTeam.getInt("TvTEventEffectsRemoval", 0);
+					TVT_EVENT_MAX_PARTICIPANTS_PER_IP = TeamVersusTeam.getInt("TvTEventMaxParticipantsPerIP", 0);
+					TVT_ALLOW_VOICED_COMMAND = TeamVersusTeam.getBoolean("TvTAllowVoicedInfoCommand", false);
+					TVT_EVENT_TEAM_1_NAME = TeamVersusTeam.getString("TvTEventTeam1Name", "Team1");
+					tvtNpcCoords = TeamVersusTeam.getString("TvTEventTeam1Coordinates", "0,0,0").split(",");
 					if (tvtNpcCoords.length < 3)
 					{
 						TVT_EVENT_ENABLED = false;
-						_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam1Coordinates");
+						LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam1Coordinates");
 					}
 					else
 					{
 						TVT_EVENT_TEAM_1_COORDINATES[0] = Integer.parseInt(tvtNpcCoords[0]);
 						TVT_EVENT_TEAM_1_COORDINATES[1] = Integer.parseInt(tvtNpcCoords[1]);
 						TVT_EVENT_TEAM_1_COORDINATES[2] = Integer.parseInt(tvtNpcCoords[2]);
-						TVT_EVENT_TEAM_2_NAME = CustomSettings.getString("TvTEventTeam2Name", "Team2");
-						tvtNpcCoords = CustomSettings.getString("TvTEventTeam2Coordinates", "0,0,0").split(",");
+						TVT_EVENT_TEAM_2_NAME = TeamVersusTeam.getString("TvTEventTeam2Name", "Team2");
+						tvtNpcCoords = TeamVersusTeam.getString("TvTEventTeam2Coordinates", "0,0,0").split(",");
 						if (tvtNpcCoords.length < 3)
 						{
 							TVT_EVENT_ENABLED = false;
-							_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam2Coordinates");
+							LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventTeam2Coordinates");
 						}
 						else
 						{
 							TVT_EVENT_TEAM_2_COORDINATES[0] = Integer.parseInt(tvtNpcCoords[0]);
 							TVT_EVENT_TEAM_2_COORDINATES[1] = Integer.parseInt(tvtNpcCoords[1]);
 							TVT_EVENT_TEAM_2_COORDINATES[2] = Integer.parseInt(tvtNpcCoords[2]);
-							tvtNpcCoords = CustomSettings.getString("TvTEventParticipationFee", "0,0").split(",");
+							tvtNpcCoords = TeamVersusTeam.getString("TvTEventParticipationFee", "0,0").split(",");
 							try
 							{
 								TVT_EVENT_PARTICIPATION_FEE[0] = Integer.parseInt(tvtNpcCoords[0]);
@@ -2380,16 +2656,16 @@ public final class Config
 							{
 								if (tvtNpcCoords.length > 0)
 								{
-									_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationFee");
+									LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventParticipationFee");
 								}
 							}
-							tvtNpcCoords = CustomSettings.getString("TvTEventReward", "57,100000").split(";");
+							tvtNpcCoords = TeamVersusTeam.getString("TvTEventReward", "57,100000").split(";");
 							for (String reward : tvtNpcCoords)
 							{
 								final String[] rewardSplit = reward.split(",");
 								if (rewardSplit.length != 2)
 								{
-									_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
+									LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
 								}
 								else
 								{
@@ -2405,18 +2681,18 @@ public final class Config
 									{
 										if (!reward.isEmpty())
 										{
-											_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
+											LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventReward \"" + reward + "\"");
 										}
 									}
 								}
 							}
 							
-							TVT_EVENT_TARGET_TEAM_MEMBERS_ALLOWED = CustomSettings.getBoolean("TvTEventTargetTeamMembersAllowed", true);
-							TVT_EVENT_SCROLL_ALLOWED = CustomSettings.getBoolean("TvTEventScrollsAllowed", false);
-							TVT_EVENT_POTIONS_ALLOWED = CustomSettings.getBoolean("TvTEventPotionsAllowed", false);
-							TVT_EVENT_SUMMON_BY_ITEM_ALLOWED = CustomSettings.getBoolean("TvTEventSummonByItemAllowed", false);
-							TVT_REWARD_TEAM_TIE = CustomSettings.getBoolean("TvTRewardTeamTie", false);
-							tvtNpcCoords = CustomSettings.getString("TvTDoorsToOpen", "").split(";");
+							TVT_EVENT_TARGET_TEAM_MEMBERS_ALLOWED = TeamVersusTeam.getBoolean("TvTEventTargetTeamMembersAllowed", true);
+							TVT_EVENT_SCROLL_ALLOWED = TeamVersusTeam.getBoolean("TvTEventScrollsAllowed", false);
+							TVT_EVENT_POTIONS_ALLOWED = TeamVersusTeam.getBoolean("TvTEventPotionsAllowed", false);
+							TVT_EVENT_SUMMON_BY_ITEM_ALLOWED = TeamVersusTeam.getBoolean("TvTEventSummonByItemAllowed", false);
+							TVT_REWARD_TEAM_TIE = TeamVersusTeam.getBoolean("TvTRewardTeamTie", false);
+							tvtNpcCoords = TeamVersusTeam.getString("TvTDoorsToOpen", "").split(";");
 							for (String door : tvtNpcCoords)
 							{
 								try
@@ -2427,12 +2703,12 @@ public final class Config
 								{
 									if (!door.isEmpty())
 									{
-										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToOpen \"" + door + "\"");
+										LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToOpen \"" + door + "\"");
 									}
 								}
 							}
 							
-							tvtNpcCoords = CustomSettings.getString("TvTDoorsToClose", "").split(";");
+							tvtNpcCoords = TeamVersusTeam.getString("TvTDoorsToClose", "").split(";");
 							for (String door : tvtNpcCoords)
 							{
 								try
@@ -2443,12 +2719,12 @@ public final class Config
 								{
 									if (!door.isEmpty())
 									{
-										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToClose \"" + door + "\"");
+										LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTDoorsToClose \"" + door + "\"");
 									}
 								}
 							}
 							
-							tvtNpcCoords = CustomSettings.getString("TvTEventFighterBuffs", "").split(";");
+							tvtNpcCoords = TeamVersusTeam.getString("TvTEventFighterBuffs", "").split(";");
 							if (!tvtNpcCoords[0].isEmpty())
 							{
 								TVT_EVENT_FIGHTER_BUFFS = new HashMap<>(tvtNpcCoords.length);
@@ -2457,7 +2733,7 @@ public final class Config
 									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
-										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
+										LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
 									}
 									else
 									{
@@ -2469,14 +2745,14 @@ public final class Config
 										{
 											if (!skill.isEmpty())
 											{
-												_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
+												LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventFighterBuffs \"" + skill + "\"");
 											}
 										}
 									}
 								}
 							}
 							
-							tvtNpcCoords = CustomSettings.getString("TvTEventMageBuffs", "").split(";");
+							tvtNpcCoords = TeamVersusTeam.getString("TvTEventMageBuffs", "").split(";");
 							if (!tvtNpcCoords[0].isEmpty())
 							{
 								TVT_EVENT_MAGE_BUFFS = new HashMap<>(tvtNpcCoords.length);
@@ -2485,7 +2761,7 @@ public final class Config
 									final String[] skillSplit = skill.split(",");
 									if (skillSplit.length != 2)
 									{
-										_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
+										LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
 									}
 									else
 									{
@@ -2497,7 +2773,7 @@ public final class Config
 										{
 											if (!skill.isEmpty())
 											{
-												_log.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
+												LOGGER.warning("TvTEventEngine[Config.load()]: invalid config property -> TvTEventMageBuffs \"" + skill + "\"");
 											}
 										}
 									}
@@ -2508,42 +2784,31 @@ public final class Config
 				}
 			}
 			
-			BANKING_SYSTEM_ENABLED = CustomSettings.getBoolean("BankingEnabled", false);
-			BANKING_SYSTEM_GOLDBARS = CustomSettings.getInt("BankingGoldbarCount", 1);
-			BANKING_SYSTEM_ADENA = CustomSettings.getInt("BankingAdenaCount", 500000000);
+			// Load WarehouseSorting Properties file (if exists)
+			final PropertiesParser WarehouseSorting = new PropertiesParser(CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE);
 			
-			OFFLINE_TRADE_ENABLE = CustomSettings.getBoolean("OfflineTradeEnable", false);
-			OFFLINE_CRAFT_ENABLE = CustomSettings.getBoolean("OfflineCraftEnable", false);
-			OFFLINE_MODE_IN_PEACE_ZONE = CustomSettings.getBoolean("OfflineModeInPeaceZone", false);
-			OFFLINE_MODE_NO_DAMAGE = CustomSettings.getBoolean("OfflineModeNoDamage", false);
-			OFFLINE_SET_NAME_COLOR = CustomSettings.getBoolean("OfflineSetNameColor", false);
-			OFFLINE_NAME_COLOR = Integer.decode("0x" + CustomSettings.getString("OfflineNameColor", "808080"));
-			OFFLINE_FAME = CustomSettings.getBoolean("OfflineFame", true);
-			RESTORE_OFFLINERS = CustomSettings.getBoolean("RestoreOffliners", false);
-			OFFLINE_MAX_DAYS = CustomSettings.getInt("OfflineMaxDays", 10);
-			STORE_OFFLINE_TRADE_IN_REALTIME = CustomSettings.getBoolean("StoreOfflineTradeInRealtime", true);
-			OFFLINE_DISCONNECT_FINISHED = CustomSettings.getBoolean("OfflineDisconnectFinished", true);
+			L2JMOD_ENABLE_WAREHOUSESORTING_CLAN = WarehouseSorting.getBoolean("EnableWarehouseSortingClan", false);
+			L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE = WarehouseSorting.getBoolean("EnableWarehouseSortingPrivate", false);
 			
-			L2JMOD_DISPLAY_SERVER_TIME = CustomSettings.getBoolean("DisplayServerTime", false);
+			// Load Wedding Properties file (if exists)
+			final PropertiesParser Wedding = new PropertiesParser(CUSTOM_WEDDING_CONFIG_FILE);
 			
-			WELCOME_MESSAGE_ENABLED = CustomSettings.getBoolean("ScreenWelcomeMessageEnable", false);
-			WELCOME_MESSAGE_TEXT = CustomSettings.getString("ScreenWelcomeMessageText", "Welcome to L2J server!");
-			WELCOME_MESSAGE_TIME = CustomSettings.getInt("ScreenWelcomeMessageTime", 10) * 1000;
+			L2JMOD_ALLOW_WEDDING = Wedding.getBoolean("AllowWedding", false);
+			L2JMOD_WEDDING_PRICE = Wedding.getInt("WeddingPrice", 250000000);
+			L2JMOD_WEDDING_PUNISH_INFIDELITY = Wedding.getBoolean("WeddingPunishInfidelity", true);
+			L2JMOD_WEDDING_TELEPORT = Wedding.getBoolean("WeddingTeleport", true);
+			L2JMOD_WEDDING_TELEPORT_PRICE = Wedding.getInt("WeddingTeleportPrice", 50000);
+			L2JMOD_WEDDING_TELEPORT_DURATION = Wedding.getInt("WeddingTeleportDuration", 60);
+			L2JMOD_WEDDING_SAMESEX = Wedding.getBoolean("WeddingAllowSameSex", false);
+			L2JMOD_WEDDING_FORMALWEAR = Wedding.getBoolean("WeddingFormalWear", true);
+			L2JMOD_WEDDING_DIVORCE_COSTS = Wedding.getInt("WeddingDivorceCosts", 20);
 			
-			L2JMOD_ANTIFEED_ENABLE = CustomSettings.getBoolean("AntiFeedEnable", false);
-			L2JMOD_ANTIFEED_DUALBOX = CustomSettings.getBoolean("AntiFeedDualbox", true);
-			L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = CustomSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-			L2JMOD_ANTIFEED_INTERVAL = CustomSettings.getInt("AntiFeedInterval", 120) * 1000;
-			ANNOUNCE_PK_PVP = CustomSettings.getBoolean("AnnouncePkPvP", false);
-			ANNOUNCE_PK_PVP_NORMAL_MESSAGE = CustomSettings.getBoolean("AnnouncePkPvPNormalMessage", true);
-			ANNOUNCE_PK_MSG = CustomSettings.getString("AnnouncePkMsg", "$killer has slaughtered $target");
-			ANNOUNCE_PVP_MSG = CustomSettings.getString("AnnouncePvpMsg", "$killer has defeated $target");
+			// Load MultilingualSupport Properties file (if exists)
+			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
 			
-			L2JMOD_CHAT_ADMIN = CustomSettings.getBoolean("ChatAdmin", false);
-			
-			L2JMOD_MULTILANG_DEFAULT = CustomSettings.getString("MultiLangDefault", "en");
-			L2JMOD_MULTILANG_ENABLE = CustomSettings.getBoolean("MultiLangEnable", false);
-			String[] allowed = CustomSettings.getString("MultiLangAllowed", L2JMOD_MULTILANG_DEFAULT).split(";");
+			L2JMOD_MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
+			L2JMOD_MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
+			String[] allowed = MultilingualSupport.getString("MultiLangAllowed", L2JMOD_MULTILANG_DEFAULT).split(";");
 			L2JMOD_MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
@@ -2552,13 +2817,12 @@ public final class Config
 			
 			if (!L2JMOD_MULTILANG_ALLOWED.contains(L2JMOD_MULTILANG_DEFAULT))
 			{
-				_log.warning("MultiLang[Config.load()]: default language: " + L2JMOD_MULTILANG_DEFAULT + " is not in allowed list !");
+				LOGGER.warning("MultiLang[Config.load()]: default language: " + L2JMOD_MULTILANG_DEFAULT + " is not in allowed list !");
 			}
 			
-			L2JMOD_HELLBOUND_STATUS = CustomSettings.getBoolean("HellboundStatus", false);
-			L2JMOD_MULTILANG_VOICED_ALLOW = CustomSettings.getBoolean("MultiLangVoiceCommand", true);
-			L2JMOD_MULTILANG_SM_ENABLE = CustomSettings.getBoolean("MultiLangSystemMessageEnable", false);
-			allowed = CustomSettings.getString("MultiLangSystemMessageAllowed", "").split(";");
+			L2JMOD_MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
+			L2JMOD_MULTILANG_SM_ENABLE = MultilingualSupport.getBoolean("MultiLangSystemMessageEnable", false);
+			allowed = MultilingualSupport.getString("MultiLangSystemMessageAllowed", "").split(";");
 			L2JMOD_MULTILANG_SM_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
@@ -2567,8 +2831,8 @@ public final class Config
 					L2JMOD_MULTILANG_SM_ALLOWED.add(lang);
 				}
 			}
-			L2JMOD_MULTILANG_NS_ENABLE = CustomSettings.getBoolean("MultiLangNpcStringEnable", false);
-			allowed = CustomSettings.getString("MultiLangNpcStringAllowed", "").split(";");
+			L2JMOD_MULTILANG_NS_ENABLE = MultilingualSupport.getBoolean("MultiLangNpcStringEnable", false);
+			allowed = MultilingualSupport.getString("MultiLangNpcStringAllowed", "").split(";");
 			L2JMOD_MULTILANG_NS_ALLOWED = new ArrayList<>(allowed.length);
 			for (String lang : allowed)
 			{
@@ -2578,178 +2842,10 @@ public final class Config
 				}
 			}
 			
-			L2WALKER_PROTECTION = CustomSettings.getBoolean("L2WalkerProtection", false);
+			// Load WalkerBotProtection Properties file (if exists)
+			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
 			
-			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = CustomSettings.getInt("DualboxCheckMaxPlayersPerIP", 0);
-			L2JMOD_DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = CustomSettings.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
-			L2JMOD_DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = CustomSettings.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
-			final String[] dualboxCheckWhiteList = CustomSettings.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
-			L2JMOD_DUALBOX_CHECK_WHITELIST = new HashMap<>(dualboxCheckWhiteList.length);
-			for (String entry : dualboxCheckWhiteList)
-			{
-				final String[] entrySplit = entry.split(",");
-				if (entrySplit.length != 2)
-				{
-					_log.warning("DualboxCheck[Config.load()]: invalid config property -> DualboxCheckWhitelist \"" + entry + "\"");
-				}
-				else
-				{
-					try
-					{
-						int num = Integer.parseInt(entrySplit[1]);
-						num = num == 0 ? -1 : num;
-						L2JMOD_DUALBOX_CHECK_WHITELIST.put(InetAddress.getByName(entrySplit[0]).hashCode(), num);
-					}
-					catch (UnknownHostException e)
-					{
-						_log.warning("DualboxCheck[Config.load()]: invalid address -> DualboxCheckWhitelist \"" + entrySplit[0] + "\"");
-					}
-					catch (NumberFormatException e)
-					{
-						_log.warning("DualboxCheck[Config.load()]: invalid number -> DualboxCheckWhitelist \"" + entrySplit[1] + "\"");
-					}
-				}
-			}
-			L2JMOD_ALLOW_CHANGE_PASSWORD = CustomSettings.getBoolean("AllowChangePassword", false);
-			
-			CUSTOM_STARTING_LOC = CustomSettings.getBoolean("CustomStartingLocation", false);
-			CUSTOM_STARTING_LOC_X = CustomSettings.getInt("CustomStartingLocX", 83020);
-			CUSTOM_STARTING_LOC_Y = CustomSettings.getInt("CustomStartingLocY", 147880);
-			CUSTOM_STARTING_LOC_Z = CustomSettings.getInt("CustomStartingLocZ", -3469);
-			
-			SHOP_MIN_RANGE_FROM_PLAYER = CustomSettings.getInt("ShopMinRangeFromPlayer", 50);
-			SHOP_MIN_RANGE_FROM_NPC = CustomSettings.getInt("ShopMinRangeFromNpc", 100);
-			
-			ENABLE_RANDOM_MONSTER_SPAWNS = CustomSettings.getBoolean("EnableRandomMonsterSpawns", false);
-			MOB_MAX_SPAWN_RANGE = CustomSettings.getInt("MaxSpawnMobRange", 150);
-			MOB_MIN_SPAWN_RANGE = MOB_MAX_SPAWN_RANGE * -1;
-			if (ENABLE_RANDOM_MONSTER_SPAWNS)
-			{
-				final String[] mobsIds = CustomSettings.getString("MobsSpawnNotRandom", "18812,18813,18814,22138").split(",");
-				MOBS_LIST_NOT_RANDOM = new ArrayList<>(mobsIds.length);
-				for (String id : mobsIds)
-				{
-					MOBS_LIST_NOT_RANDOM.add(Integer.valueOf(id));
-				}
-			}
-			
-			CUSTOM_CB_ENABLED = CustomSettings.getBoolean("CustomCommunityBoard", false);
-			COMMUNITYBOARD_CURRENCY = CustomSettings.getInt("CommunityCurrencyId", 57);
-			COMMUNITYBOARD_ENABLE_MULTISELLS = CustomSettings.getBoolean("CommunityEnableMultisells", true);
-			COMMUNITYBOARD_ENABLE_TELEPORTS = CustomSettings.getBoolean("CommunityEnableTeleports", true);
-			COMMUNITYBOARD_ENABLE_BUFFS = CustomSettings.getBoolean("CommunityEnableBuffs", true);
-			COMMUNITYBOARD_ENABLE_HEAL = CustomSettings.getBoolean("CommunityEnableHeal", true);
-			COMMUNITYBOARD_TELEPORT_PRICE = CustomSettings.getInt("CommunityTeleportPrice", 0);
-			COMMUNITYBOARD_BUFF_PRICE = CustomSettings.getInt("CommunityBuffPrice", 0);
-			COMMUNITYBOARD_HEAL_PRICE = CustomSettings.getInt("CommunityHealPrice", 0);
-			COMMUNITYBOARD_COMBAT_DISABLED = CustomSettings.getBoolean("CommunityCombatDisabled", true);
-			COMMUNITYBOARD_KARMA_DISABLED = CustomSettings.getBoolean("CommunityKarmaDisabled", true);
-			COMMUNITYBOARD_CAST_ANIMATIONS = CustomSettings.getBoolean("CommunityCastAnimations", false);
-			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("CommunityPremiumSystem", false);
-			COMMUNITY_PREMIUM_COIN_ID = CustomSettings.getInt("CommunityPremiumBuyCoinId", 57);
-			COMMUNITY_PREMIUM_PRICE_PER_DAY = CustomSettings.getInt("CommunityPremiumPricePerDay", 1000000);
-			final String[] allowedBuffs = CustomSettings.getString("CommunityAvailableBuffs", "").split(",");
-			COMMUNITY_AVAILABLE_BUFFS = new ArrayList<>(allowedBuffs.length);
-			for (String s : allowedBuffs)
-			{
-				COMMUNITY_AVAILABLE_BUFFS.add(Integer.parseInt(s));
-			}
-			final String[] availableTeleports = CustomSettings.getString("CommunityTeleportList", "").split(";");
-			COMMUNITY_AVAILABLE_TELEPORTS = new HashMap<>(availableTeleports.length);
-			for (String s : availableTeleports)
-			{
-				final String splitInfo[] = s.split(",");
-				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
-			}
-			
-			PREMIUM_SYSTEM_ENABLED = CustomSettings.getBoolean("EnablePremiumSystem", false);
-			PREMIUM_RATE_XP = CustomSettings.getFloat("PremiumRateXp", 2);
-			PREMIUM_RATE_SP = CustomSettings.getFloat("PremiumRateSp", 2);
-			PREMIUM_RATE_DROP_CHANCE = CustomSettings.getFloat("PremiumRateDropChance", 2);
-			PREMIUM_RATE_DROP_AMOUNT = CustomSettings.getFloat("PremiumRateDropAmount", 1);
-			PREMIUM_RATE_SPOIL_CHANCE = CustomSettings.getFloat("PremiumRateSpoilChance", 2);
-			PREMIUM_RATE_SPOIL_AMOUNT = CustomSettings.getFloat("PremiumRateSpoilAmount", 1);
-			final String[] premiumDropChanceMultiplier = CustomSettings.getString("PremiumRateDropChanceByItemId", "").split(";");
-			PREMIUM_RATE_DROP_CHANCE_BY_ID = new HashMap<>(premiumDropChanceMultiplier.length);
-			if (!premiumDropChanceMultiplier[0].isEmpty())
-			{
-				for (String item : premiumDropChanceMultiplier)
-				{
-					final String[] itemSplit = item.split(",");
-					if (itemSplit.length != 2)
-					{
-						_log.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
-					}
-					else
-					{
-						try
-						{
-							PREMIUM_RATE_DROP_CHANCE_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-						}
-						catch (NumberFormatException nfe)
-						{
-							if (!item.isEmpty())
-							{
-								_log.warning("Config.load(): invalid config property -> PremiumRateDropChanceByItemId \"" + item + "\"");
-							}
-						}
-					}
-				}
-			}
-			final String[] premiumDropAmountMultiplier = CustomSettings.getString("PremiumRateDropAmountByItemId", "").split(";");
-			PREMIUM_RATE_DROP_AMOUNT_BY_ID = new HashMap<>(premiumDropAmountMultiplier.length);
-			if (!premiumDropAmountMultiplier[0].isEmpty())
-			{
-				for (String item : premiumDropAmountMultiplier)
-				{
-					final String[] itemSplit = item.split(",");
-					if (itemSplit.length != 2)
-					{
-						_log.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
-					}
-					else
-					{
-						try
-						{
-							PREMIUM_RATE_DROP_AMOUNT_BY_ID.put(Integer.valueOf(itemSplit[0]), Float.valueOf(itemSplit[1]));
-						}
-						catch (NumberFormatException nfe)
-						{
-							if (!item.isEmpty())
-							{
-								_log.warning("Config.load(): invalid config property -> PremiumRateDropAmountByItemId \"" + item + "\"");
-							}
-						}
-					}
-				}
-			}
-			
-			ENABLE_FIND_PVP = CustomSettings.getBoolean("EnableFindPvP", false);
-			
-			AUTO_POTIONS_ENABLED = CustomSettings.getBoolean("AutoPotionsEnabled", false);
-			AUTO_POTIONS_IN_OLYMPIAD = CustomSettings.getBoolean("AutoPotionsInOlympiad", false);
-			AUTO_POTION_MIN_LVL = CustomSettings.getInt("AutoPotionMinimumLevel", 1);
-			AUTO_CP_ENABLED = CustomSettings.getBoolean("AutoCpEnabled", true);
-			AUTO_HP_ENABLED = CustomSettings.getBoolean("AutoHpEnabled", true);
-			AUTO_MP_ENABLED = CustomSettings.getBoolean("AutoMpEnabled", true);
-			AUTO_CP_PERCENTAGE = CustomSettings.getInt("AutoCpPercentage", 70);
-			AUTO_HP_PERCENTAGE = CustomSettings.getInt("AutoHpPercentage", 70);
-			AUTO_MP_PERCENTAGE = CustomSettings.getInt("AutoMpPercentage", 70);
-			AUTO_CP_ITEM_IDS = new ArrayList<>();
-			for (String s : CustomSettings.getString("AutoCpItemIds", "0").split(","))
-			{
-				AUTO_CP_ITEM_IDS.add(Integer.parseInt(s));
-			}
-			AUTO_HP_ITEM_IDS = new ArrayList<>();
-			for (String s : CustomSettings.getString("AutoHpItemIds", "0").split(","))
-			{
-				AUTO_HP_ITEM_IDS.add(Integer.parseInt(s));
-			}
-			AUTO_MP_ITEM_IDS = new ArrayList<>();
-			for (String s : CustomSettings.getString("AutoMpItemIds", "0").split(","))
-			{
-				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
-			}
+			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
 			
 			// Load PvP L2Properties file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
@@ -2852,17 +2948,17 @@ public final class Config
 					}
 					catch (Exception e)
 					{
-						_log.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+						LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
 					}
 				}
 				else
 				{
-					_log.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+					LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
 				}
 			}
 			else
 			{
-				_log.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+				LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
 			}
 			
 			// Grand bosses
@@ -2921,11 +3017,11 @@ public final class Config
 					.filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
 					.collect(Collectors.toList());
 				//@formatter:on
-				_log.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
+				LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
 			}
 			catch (IOException ioe)
 			{
-				_log.log(Level.WARNING, "Error while loading chat filter words!", ioe);
+				LOGGER.log(Level.WARNING, "Error while loading chat filter words!", ioe);
 			}
 			
 			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_CONFIG_FILE);
@@ -2969,7 +3065,7 @@ public final class Config
 			}
 			catch (IOException e)
 			{
-				_log.log(Level.WARNING, "Error setting datapack root!", e);
+				LOGGER.log(Level.WARNING, "Error setting datapack root!", e);
 				DATAPACK_ROOT = new File(".");
 			}
 			
@@ -3014,7 +3110,7 @@ public final class Config
 		}
 		else
 		{
-			_log.severe("Could not Load Config: server mode was not set!");
+			LOGGER.severe("Could not Load Config: server mode was not set!");
 		}
 	}
 	
@@ -3049,14 +3145,14 @@ public final class Config
 					hexSetting.setProperty("ServerID", String.valueOf(serverId));
 					hexSetting.setProperty("HexID", hexId);
 					hexSetting.store(out, "The HexId to Auth into LoginServer");
-					_log.log(Level.INFO, "Gameserver: Generated new HexID file for server id " + serverId + ".");
+					LOGGER.log(Level.INFO, "Gameserver: Generated new HexID file for server id " + serverId + ".");
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.warning("Failed to save hex id to " + fileName + " File.");
-			_log.warning("Config: " + e.getMessage());
+			LOGGER.warning("Failed to save hex id to " + fileName + " File.");
+			LOGGER.warning("Config: " + e.getMessage());
 		}
 	}
 	
@@ -3270,7 +3366,7 @@ public final class Config
 			valueSplit = value.split(",");
 			if (valueSplit.length != 2)
 			{
-				_log.warning("parseItemsList[Config.load()]: invalid entry -> \"" + valueSplit[0] + "\", should be itemId,itemNumber. Skipping to the next entry in the list.");
+				LOGGER.warning("parseItemsList[Config.load()]: invalid entry -> \"" + valueSplit[0] + "\", should be itemId,itemNumber. Skipping to the next entry in the list.");
 				continue;
 			}
 			
@@ -3281,7 +3377,7 @@ public final class Config
 			}
 			catch (NumberFormatException e)
 			{
-				_log.warning("parseItemsList[Config.load()]: invalid itemId -> \"" + valueSplit[0] + "\", value must be an integer. Skipping to the next entry in the list.");
+				LOGGER.warning("parseItemsList[Config.load()]: invalid itemId -> \"" + valueSplit[0] + "\", value must be an integer. Skipping to the next entry in the list.");
 				continue;
 			}
 			try
@@ -3290,7 +3386,7 @@ public final class Config
 			}
 			catch (NumberFormatException e)
 			{
-				_log.warning("parseItemsList[Config.load()]: invalid item number -> \"" + valueSplit[1] + "\", value must be an integer. Skipping to the next entry in the list.");
+				LOGGER.warning("parseItemsList[Config.load()]: invalid item number -> \"" + valueSplit[1] + "\", value must be an integer. Skipping to the next entry in the list.");
 				continue;
 			}
 			result[i++] = tmp;
