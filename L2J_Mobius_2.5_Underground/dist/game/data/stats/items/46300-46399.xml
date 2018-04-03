@@ -1397,6 +1397,7 @@
 	<item id="46371" name="Ashen Certificate" type="EtcItem">
 		<!-- Certificate of the Revolutionaries that Refugee Neti has requested. -->
 		<set name="icon" val="icon.etc_scroll_gray_i00" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1411,6 +1412,7 @@
 	<item id="46372" name="Revolutionaries' Strategic Map Piece" type="EtcItem">
 		<!-- Part of the map that shows the strategy of the Ashen Shadow Revolutionaries. If you've collected them all, take them to Sir Klaus Vasper. -->
 		<set name="icon" val="icon.etc_piece_of_paper_gray_i00" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1425,6 +1427,7 @@
 	<item id="46373" name="Transport Goods" type="EtcItem">
 		<!-- Goods that Blacksmith Kluto has requested from you. If you've collected them all, take them to Blacksmith Kluto. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1439,6 +1442,7 @@
 	<item id="46374" name="Destroyed Mark Fragment" type="EtcItem">
 		<!-- Proof that you've completed that Yuyuria has requested from you. If you've collected them all, take them to Wanderer Yuyuria. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
+		<set name="is_questitem" val="true" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1462,7 +1466,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18496" level="1" /> <!-- Gludin Hero's Reward Box -->
+		</skills>
 	</item>
 	<item id="46376" name="Shadow Weapon Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Shadow Weapon. -->

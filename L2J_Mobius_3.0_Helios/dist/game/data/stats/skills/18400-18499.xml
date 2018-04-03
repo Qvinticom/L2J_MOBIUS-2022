@@ -1218,9 +1218,136 @@
 		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="18496" toLevel="1" name="Gludin Hero's Reward Box">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>46375</itemConsumeId> <!-- Gludin Hero's Reward Box -->
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2.941176470588235">
+						<item id="35342" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35342" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35339" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35349" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35340" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35341" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35352" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35338" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35345" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35348" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35347" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35344" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35346" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35343" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35353" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35354" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35351" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35350" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35311" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35308" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35318" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35309" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35310" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35321" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35307" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35314" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35317" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35316" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35313" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35315" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35312" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35322" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35323" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35320" count="1" />
+					</item>
+					<item chance="2.941176470588235">
+						<item id="35319" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18497" toLevel="1" name="Fish Gift Box">
 		<!-- AUTO GENERATED SKILL -->

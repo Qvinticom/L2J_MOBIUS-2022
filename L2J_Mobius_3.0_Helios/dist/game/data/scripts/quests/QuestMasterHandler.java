@@ -185,6 +185,12 @@ import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
 import quests.Q00817_BlackAteliaResearch.Q00817_BlackAteliaResearch;
 import quests.Q00823_DisappearedRaceNewFairy.Q00823_DisappearedRaceNewFairy;
+import quests.Q00826_InSearchOfTheSecretWeapon.Q00826_InSearchOfTheSecretWeapon;
+import quests.Q00827_EinhasadsOrder.Q00827_EinhasadsOrder;
+import quests.Q00828_EvasBlessing.Q00828_EvasBlessing;
+import quests.Q00829_MaphrsSalvation.Q00829_MaphrsSalvation;
+import quests.Q00830_TheWayOfTheGiantsPawn.Q00830_TheWayOfTheGiantsPawn;
+import quests.Q00831_SayhasScheme.Q00831_SayhasScheme;
 import quests.Q00901_HowLavasaurusesAreMade.Q00901_HowLavasaurusesAreMade;
 import quests.Q00902_ReclaimOurEra.Q00902_ReclaimOurEra;
 import quests.Q00903_TheCallOfAntharas.Q00903_TheCallOfAntharas;
@@ -615,6 +621,12 @@ public class QuestMasterHandler
 		Q00790_ObtainingFerinsTrust.class,
 		Q00817_BlackAteliaResearch.class,
 		Q00823_DisappearedRaceNewFairy.class,
+		Q00826_InSearchOfTheSecretWeapon.class,
+		Q00827_EinhasadsOrder.class,
+		Q00828_EvasBlessing.class,
+		Q00829_MaphrsSalvation.class,
+		Q00830_TheWayOfTheGiantsPawn.class,
+		Q00831_SayhasScheme.class,
 		Q00901_HowLavasaurusesAreMade.class,
 		Q00902_ReclaimOurEra.class,
 		Q00903_TheCallOfAntharas.class,

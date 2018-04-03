@@ -39,9 +39,7 @@
 		</drop_lists>
 	</npc>
 	<npc id="19601" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
 			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
@@ -49,27 +47,25 @@
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false"/>
 		<collision>
 			<radius normal="0.1" />
 			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19602" level="85" type="L2Npc" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="58233" hpRegen="7.5" mp="24308" mpRegen="2.7" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="false" talkable="false" targetable="false"/>
 		<collision>
-			<radius normal="19" />
-			<height normal="13" />
+			<radius normal="0.1" />
+			<height normal="0.1" />
 		</collision>
 	</npc>
 	<npc id="19603" level="85" type="L2Npc" name="Training Dummy">

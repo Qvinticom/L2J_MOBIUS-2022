@@ -38,7 +38,6 @@
 		</collision>
 	</npc>
 	<npc id="34102" level="85" type="L2Npc" name="Transport Goods">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
@@ -55,17 +54,14 @@
 		</collision>
 	</npc>
 	<npc id="34103" level="85" type="L2Monster" name="Revolutionaries' Altar">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="70" int="28" dex="40" wit="65" con="74" men="20">
+		<race>ETC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="10" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 		</stats>
-		<status attackable="false" />
 		<collision>
 			<radius normal="46" />
 			<height normal="72.5" />

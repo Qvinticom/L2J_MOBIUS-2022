@@ -1093,4 +1093,8 @@
 	<zone name="Harnak Underground Ruins Room 24" id="60165" type="ScriptZone" shape="Cylinder" minZ="-7736" maxZ="-7576" rad="1000">
 		<node X="-114700" Y="143834" />
 	</zone>
+	<zone name="Shadow Revolutionaries Instance" id="60200" type="ScriptZone" shape="Cylinder" minZ="-3300" maxZ="-2900" rad="7000">
+		<stat name="instanceId" val="260" />
+		<node X="-81666" Y="152746" />
+	</zone>
 </list>
