@@ -62,6 +62,7 @@ Infinite Odyssey:
 -Atelia Fortress
 -Kelbim
 -Enchanted Valley
+-Ashen Shadow Revolutionaries
 
 Underground:
 -Underground Gainak
