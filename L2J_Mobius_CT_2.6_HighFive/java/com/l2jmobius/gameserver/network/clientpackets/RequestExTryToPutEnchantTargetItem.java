@@ -18,30 +18,33 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantTargetItemResult;
 
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantTargetItem extends L2GameClientPacket
+public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((_objectId == 0) || (activeChar == null))
 		{
 			return;

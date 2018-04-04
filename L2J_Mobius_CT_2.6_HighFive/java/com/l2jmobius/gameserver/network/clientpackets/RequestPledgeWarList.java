@@ -16,32 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveWarList;
 
 /**
  * Format: (ch) dd
  * @author -Wooden-
  */
-public final class RequestPledgeWarList extends L2GameClientPacket
+public final class RequestPledgeWarList implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk1;
 	private int _tab;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_unk1 = readD();
-		_tab = readD();
+		_unk1 = packet.readD();
+		_tab = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// _log.info("C5: RequestPledgeWarList d:"+_unk1);
 		// _log.info("C5: RequestPledgeWarList d:"+_tab);
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

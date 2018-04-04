@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class RequestBlock extends L2GameClientPacket
+public final class RequestBlock implements IClientIncomingPacket
 {
 	private static final int BLOCK = 0;
 	private static final int UNBLOCK = 1;
@@ -33,20 +35,21 @@ public final class RequestBlock extends L2GameClientPacket
 	private Integer _type;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_type = readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
+		_type = packet.readD(); // 0x00 - block, 0x01 - unblock, 0x03 - allblock, 0x04 - allunblock
 		
 		if ((_type == BLOCK) || (_type == UNBLOCK))
 		{
-			_name = readS();
+			_name = packet.readS();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		final int targetId = CharNameTable.getInstance().getIdByName(_name);
 		final int targetAL = CharNameTable.getInstance().getAccessLevelById(targetId);
 		

@@ -17,10 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
@@ -28,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * This class ...
  * @version $Revision: 1.13.4.7 $ $Date: 2005/03/27 15:29:30 $
  */
-public class ValidatePosition extends L2GameClientPacket
+public class ValidatePosition implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -37,19 +39,20 @@ public class ValidatePosition extends L2GameClientPacket
 	private int _data; // vehicle id
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
-		_data = readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		_data = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || activeChar.isTeleporting() || activeChar.inObserverMode())
 		{
 			return;
@@ -86,7 +89,7 @@ public class ValidatePosition extends L2GameClientPacket
 				diffSq = ((dx * dx) + (dy * dy));
 				if (diffSq > 250000)
 				{
-					sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInVehiclePosition()));
+					client.sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInVehiclePosition()));
 				}
 			}
 			return;

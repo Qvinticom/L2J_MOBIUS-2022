@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Mobius
  */
-public class ExBrProductInfo extends L2GameServerPacket
+public class ExBrProductInfo implements IClientOutgoingPacket
 {
 	private final ItemMallProduct _product;
 	
@@ -32,22 +34,22 @@ public class ExBrProductInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if (_product == null)
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0xFE);
-		writeH(0xD7);
+		OutgoingPackets.EX_BR_PRODUCT_INFO.writeId(packet);
 		
-		writeD(_product.getProductId()); // product id
-		writeD(_product.getPrice()); // points
-		writeD(1); // components size
-		writeD(_product.getItemId()); // item id
-		writeD(_product.getItemCount()); // quality
-		writeD(_product.getItemWeight()); // weight
-		writeD(_product.isTradable() ? 1 : 0); // 0 - dont drop/trade
+		packet.writeD(_product.getProductId()); // product id
+		packet.writeD(_product.getPrice()); // points
+		packet.writeD(1); // components size
+		packet.writeD(_product.getItemId()); // item id
+		packet.writeD(_product.getItemCount()); // quality
+		packet.writeD(_product.getItemWeight()); // weight
+		packet.writeD(_product.isTradable() ? 1 : 0); // 0 - dont drop/trade
+		return true;
 	}
 }

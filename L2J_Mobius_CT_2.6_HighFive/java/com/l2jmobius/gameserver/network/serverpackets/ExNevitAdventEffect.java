@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author mochitto
  */
-public class ExNevitAdventEffect extends L2GameServerPacket
+public class ExNevitAdventEffect implements IClientOutgoingPacket
 {
 	private final int _timeLeft;
 	
@@ -29,10 +32,10 @@ public class ExNevitAdventEffect extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xE0);
-		writeD(_timeLeft);
+		OutgoingPackets.EX_NAVIT_ADVENT_EFFECT.writeId(packet);
+		packet.writeD(_timeLeft);
+		return true;
 	}
 }

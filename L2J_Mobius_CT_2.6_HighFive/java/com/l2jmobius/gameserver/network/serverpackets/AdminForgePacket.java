@@ -20,11 +20,13 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+
 /**
  * This class is made to create packets with any format
  * @author Maktakien
  */
-public class AdminForgePacket extends L2GameServerPacket
+public class AdminForgePacket implements IClientOutgoingPacket
 {
 	private final List<Part> _parts = new ArrayList<>();
 	
@@ -46,55 +48,50 @@ public class AdminForgePacket extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		for (Part p : _parts)
 		{
-			generate(p.b, p.str);
+			generate(packet, p.b, p.str);
 		}
-		
+		return true;
 	}
 	
-	/**
-	 * @param b
-	 * @param string
-	 * @return
-	 */
-	public boolean generate(byte b, String string)
+	public boolean generate(PacketWriter packet, byte b, String string)
 	{
 		if ((b == 'C') || (b == 'c'))
 		{
-			writeC(Integer.decode(string));
+			packet.writeC(Integer.decode(string));
 			return true;
 		}
 		else if ((b == 'D') || (b == 'd'))
 		{
-			writeD(Integer.decode(string));
+			packet.writeD(Integer.decode(string));
 			return true;
 		}
 		else if ((b == 'H') || (b == 'h'))
 		{
-			writeH(Integer.decode(string));
+			packet.writeH(Integer.decode(string));
 			return true;
 		}
 		else if ((b == 'F') || (b == 'f'))
 		{
-			writeF(Double.parseDouble(string));
+			packet.writeF(Double.parseDouble(string));
 			return true;
 		}
 		else if ((b == 'S') || (b == 's'))
 		{
-			writeS(string);
+			packet.writeS(string);
 			return true;
 		}
 		else if ((b == 'B') || (b == 'b') || (b == 'X') || (b == 'x'))
 		{
-			writeB(new BigInteger(string).toByteArray());
+			packet.writeB(new BigInteger(string).toByteArray());
 			return true;
 		}
 		else if ((b == 'Q') || (b == 'q'))
 		{
-			writeQ(Long.decode(string));
+			packet.writeQ(Long.decode(string));
 			return true;
 		}
 		return false;
@@ -104,5 +101,4 @@ public class AdminForgePacket extends L2GameServerPacket
 	{
 		_parts.add(new Part(b, string));
 	}
-	
 }

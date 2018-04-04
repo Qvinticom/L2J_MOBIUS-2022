@@ -21,7 +21,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.security.KeyPair;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.util.Set;
@@ -30,6 +29,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.network.BaseSendablePacket;
 import com.l2jmobius.commons.util.crypt.NewCrypt;
+import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler;
 import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerState;
@@ -131,7 +131,6 @@ public class GameServerThread extends Thread
 			final String serverName = getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")";
 			final String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
 			_log.info(msg);
-			broadcastToTelnet(msg);
 		}
 		finally
 		{
@@ -212,9 +211,9 @@ public class GameServerThread extends Thread
 		{
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
-		final KeyPair pair = GameServerTable.getInstance().getKeyPair();
-		_privateKey = (RSAPrivateKey) pair.getPrivate();
-		_publicKey = (RSAPublicKey) pair.getPublic();
+		final ScrambledKeyPair pair = LoginController.getInstance().getScrambledRSAKeyPair();
+		_privateKey = (RSAPrivateKey) pair.getPrivateKey();
+		_publicKey = (RSAPublicKey) pair.getPublicKey();
 		_blowfish = new NewCrypt("_;v.]05-31!|+-%xT!^[$\00");
 		setName(getClass().getSimpleName() + "-" + getId() + "@" + _connectionIp);
 		start();
@@ -243,14 +242,6 @@ public class GameServerThread extends Thread
 		catch (IOException e)
 		{
 			_log.severe("IOException while sending packet " + sl.getClass().getSimpleName());
-		}
-	}
-	
-	public void broadcastToTelnet(String msg)
-	{
-		if (L2LoginServer.getInstance().getStatusServer() != null)
-		{
-			L2LoginServer.getInstance().getStatusServer().sendMessageToTelnets(msg);
 		}
 	}
 	
@@ -300,7 +291,11 @@ public class GameServerThread extends Thread
 	 */
 	public boolean isAuthed()
 	{
-		return (getGameServerInfo() != null) && getGameServerInfo().isAuthed();
+		if (getGameServerInfo() == null)
+		{
+			return false;
+		}
+		return getGameServerInfo().isAuthed();
 	}
 	
 	public void setGameServerInfo(GameServerInfo gsi)
@@ -323,7 +318,11 @@ public class GameServerThread extends Thread
 	
 	public int getServerId()
 	{
-		return getGameServerInfo() != null ? getGameServerInfo().getId() : -1;
+		if (getGameServerInfo() != null)
+		{
+			return getGameServerInfo().getId();
+		}
+		return -1;
 	}
 	
 	public RSAPrivateKey getPrivateKey()

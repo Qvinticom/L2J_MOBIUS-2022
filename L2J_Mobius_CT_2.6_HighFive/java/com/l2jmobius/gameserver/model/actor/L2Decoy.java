@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
 public abstract class L2Decoy extends L2Character
@@ -49,7 +49,7 @@ public abstract class L2Decoy extends L2Character
 	public void onSpawn()
 	{
 		super.onSpawn();
-		sendPacket(new CharInfo(this));
+		sendPacket(new CharInfo(this, false));
 	}
 	
 	@Override
@@ -59,7 +59,7 @@ public abstract class L2Decoy extends L2Character
 		{
 			if (player != null)
 			{
-				player.sendPacket(new CharInfo(this));
+				player.sendPacket(new CharInfo(this, false));
 			}
 		}
 	}
@@ -159,15 +159,15 @@ public abstract class L2Decoy extends L2Character
 	@Override
 	public void sendInfo(L2PcInstance activeChar)
 	{
-		activeChar.sendPacket(new CharInfo(this));
+		activeChar.sendPacket(new CharInfo(this, false));
 	}
 	
 	@Override
-	public void sendPacket(L2GameServerPacket mov)
+	public void sendPacket(IClientOutgoingPacket... packets)
 	{
 		if (getOwner() != null)
 		{
-			getOwner().sendPacket(mov);
+			getOwner().sendPacket(packets);
 		}
 	}
 	

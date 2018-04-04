@@ -16,29 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExManagePartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.JoinParty;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestAnswerJoinParty extends L2GameClientPacket
+public final class RequestAnswerJoinParty implements IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

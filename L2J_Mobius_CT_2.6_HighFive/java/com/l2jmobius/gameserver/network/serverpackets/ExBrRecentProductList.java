@@ -24,14 +24,16 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Mobius
  */
-public class ExBrRecentProductList extends L2GameServerPacket
+public class ExBrRecentProductList implements IClientOutgoingPacket
 {
 	private final List<ItemMallProduct> _itemList = new ArrayList<>();
 	
@@ -62,33 +64,33 @@ public class ExBrRecentProductList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if ((_itemList == null) || _itemList.isEmpty())
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0xFE);
-		writeH(0xDC);
-		writeD(_itemList.size());
+		OutgoingPackets.EX_BR_RECENT_PRODUCT_LIST.writeId(packet);
+		packet.writeD(_itemList.size());
 		
 		for (ItemMallProduct product : _itemList)
 		{
-			writeD(product.getProductId());
-			writeH(product.getCategory());
-			writeD(product.getPrice());
-			writeD(0x00); // category
+			packet.writeD(product.getProductId());
+			packet.writeH(product.getCategory());
+			packet.writeD(product.getPrice());
+			packet.writeD(0x00); // category
 			
-			writeD(0x00); // start sale
-			writeD(0x00); // end sale
-			writeC(0x00); // day week
-			writeC(0x00); // start hour
-			writeC(0x00); // start min
-			writeC(0x00); // end hour
-			writeC(0x00); // end min
-			writeD(0x00); // current stock
-			writeD(0x00); // max stock
+			packet.writeD(0x00); // start sale
+			packet.writeD(0x00); // end sale
+			packet.writeC(0x00); // day week
+			packet.writeC(0x00); // start hour
+			packet.writeC(0x00); // start min
+			packet.writeC(0x00); // end hour
+			packet.writeC(0x00); // end min
+			packet.writeD(0x00); // current stock
+			packet.writeD(0x00); // max stock
 		}
+		return true;
 	}
 }

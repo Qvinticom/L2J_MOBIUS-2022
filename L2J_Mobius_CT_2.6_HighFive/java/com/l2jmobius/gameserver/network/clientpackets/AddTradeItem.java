@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
@@ -28,24 +30,25 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeOwnAdd;
  * This class ...
  * @version $Revision: 1.5.2.2.2.5 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class AddTradeItem extends L2GameClientPacket
+public final class AddTradeItem implements IClientIncomingPacket
 {
 	private int _tradeId;
 	private int _objectId;
 	private long _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_tradeId = readD();
-		_objectId = readD();
-		_count = readQ();
+		_tradeId = packet.readD();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

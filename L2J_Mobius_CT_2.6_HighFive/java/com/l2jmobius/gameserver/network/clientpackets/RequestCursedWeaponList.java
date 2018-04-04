@@ -19,26 +19,28 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExCursedWeaponList;
 
 /**
  * Format: (ch)
  * @author -Wooden-
  */
-public class RequestCursedWeaponList extends L2GameClientPacket
+public class RequestCursedWeaponList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// nothing to read it's just a trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2Character activeChar = getClient().getActiveChar();
+		final L2Character activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -52,11 +54,5 @@ public class RequestCursedWeaponList extends L2GameClientPacket
 		}
 		
 		activeChar.sendPacket(new ExCursedWeaponList(list));
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

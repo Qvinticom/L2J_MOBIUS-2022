@@ -16,15 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * This class ...
  * @version $Revision: 1.5.2.3.2.5 $ $Date: 2005/03/29 23:15:10 $
  */
-public class PetStatusUpdate extends L2GameServerPacket
+public class PetStatusUpdate implements IClientOutgoingPacket
 {
 	private final L2Summon _summon;
 	private int _maxFed, _curFed;
@@ -47,24 +49,25 @@ public class PetStatusUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xB6);
-		writeD(_summon.getSummonType());
-		writeD(_summon.getObjectId());
-		writeD(_summon.getX());
-		writeD(_summon.getY());
-		writeD(_summon.getZ());
-		writeS(_summon.getTitle());
-		writeD(_curFed);
-		writeD(_maxFed);
-		writeD((int) _summon.getCurrentHp());
-		writeD(_summon.getMaxHp());
-		writeD((int) _summon.getCurrentMp());
-		writeD(_summon.getMaxMp());
-		writeD(_summon.getLevel());
-		writeQ(_summon.getStat().getExp());
-		writeQ(_summon.getExpForThisLevel()); // 0% absolute value
-		writeQ(_summon.getExpForNextLevel()); // 100% absolute value
+		OutgoingPackets.PET_STATUS_UPDATE.writeId(packet);
+		packet.writeD(_summon.getSummonType());
+		packet.writeD(_summon.getObjectId());
+		packet.writeD(_summon.getX());
+		packet.writeD(_summon.getY());
+		packet.writeD(_summon.getZ());
+		packet.writeS(_summon.getTitle());
+		packet.writeD(_curFed);
+		packet.writeD(_maxFed);
+		packet.writeD((int) _summon.getCurrentHp());
+		packet.writeD(_summon.getMaxHp());
+		packet.writeD((int) _summon.getCurrentMp());
+		packet.writeD(_summon.getMaxMp());
+		packet.writeD(_summon.getLevel());
+		packet.writeQ(_summon.getStat().getExp());
+		packet.writeQ(_summon.getExpForThisLevel()); // 0% absolute value
+		packet.writeQ(_summon.getExpForNextLevel()); // 100% absolute value
+		return true;
 	}
 }

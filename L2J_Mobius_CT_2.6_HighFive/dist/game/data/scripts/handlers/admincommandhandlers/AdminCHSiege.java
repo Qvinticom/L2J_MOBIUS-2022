@@ -296,7 +296,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 		}
 		else if (split[0].equals(COMMANDS[7]))
 		{
-			activeChar.sendPacket(new SiegeInfo(hall));
+			activeChar.sendPacket(new SiegeInfo(hall, activeChar));
 		}
 		else if (split[0].equals(COMMANDS[8]))
 		{

@@ -16,16 +16,18 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format: (ch) dSdS
  * @author -Wooden-
  */
-public final class RequestPledgeReorganizeMember extends L2GameClientPacket
+public final class RequestPledgeReorganizeMember implements IClientIncomingPacket
 {
 	private int _isMemberSelected;
 	private String _memberName;
@@ -33,23 +35,24 @@ public final class RequestPledgeReorganizeMember extends L2GameClientPacket
 	private String _selectedMember;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_isMemberSelected = readD();
-		_memberName = readS();
-		_newPledgeType = readD();
-		_selectedMember = readS();
+		_isMemberSelected = packet.readD();
+		_memberName = packet.readS();
+		_newPledgeType = packet.readD();
+		_selectedMember = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_isMemberSelected == 0)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

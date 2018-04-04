@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 
@@ -23,18 +24,17 @@ import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
  * (ch)
  * @author KenM
  */
-public class RequestGotoLobby extends L2GameClientPacket
+public class RequestGotoLobby implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		client.sendPacket(new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1));
 	}
 }

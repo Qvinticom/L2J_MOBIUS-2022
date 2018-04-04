@@ -19,11 +19,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author -Wooden-
  * @author UnAfraid, mrTJO
  */
-public class PackageToList extends L2GameServerPacket
+public class PackageToList implements IClientOutgoingPacket
 {
 	private final Map<Integer, String> _players;
 	
@@ -33,14 +36,15 @@ public class PackageToList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xC8);
-		writeD(_players.size());
+		OutgoingPackets.PACKAGE_TO_LIST.writeId(packet);
+		packet.writeD(_players.size());
 		for (Entry<Integer, String> entry : _players.entrySet())
 		{
-			writeD(entry.getKey());
-			writeS(entry.getValue());
+			packet.writeD(entry.getKey());
+			packet.writeS(entry.getValue());
 		}
+		return true;
 	}
 }

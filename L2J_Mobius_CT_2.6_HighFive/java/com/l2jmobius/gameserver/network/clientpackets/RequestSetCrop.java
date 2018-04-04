@@ -20,16 +20,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.L2Seed;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * @author l3x
  */
-public final class RequestSetCrop extends L2GameClientPacket
+public final class RequestSetCrop implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 21; // length of the one item
 	
@@ -37,26 +39,26 @@ public final class RequestSetCrop extends L2GameClientPacket
 	private List<CropProcure> _items;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_manorId = readD();
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		_manorId = packet.readD();
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = readD();
-			final long sales = readQ();
-			final long price = readQ();
-			final int type = readC();
+			final int itemId = packet.readD();
+			final long sales = packet.readQ();
+			final long price = packet.readQ();
+			final int type = packet.readC();
 			if ((itemId < 1) || (sales < 0) || (price < 0))
 			{
 				_items.clear();
-				return;
+				return false;
 			}
 			
 			if (sales > 0)
@@ -64,10 +66,11 @@ public final class RequestSetCrop extends L2GameClientPacket
 				_items.add(new CropProcure(itemId, sales, type, sales, price));
 			}
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_items.isEmpty())
 		{
@@ -77,15 +80,15 @@ public final class RequestSetCrop extends L2GameClientPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (!manor.isModifiablePeriod())
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		
 		// Check player privileges
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((player == null) || (player.getClan() == null) || (player.getClan().getCastleId() != _manorId) || !player.hasClanPrivilege(ClanPrivilege.CS_MANOR_ADMIN) || !player.getLastFolkNPC().canInteract(player))
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		

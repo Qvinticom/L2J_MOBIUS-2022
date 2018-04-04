@@ -18,11 +18,13 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Iterator;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class RecipeShopManageList extends L2GameServerPacket
+public class RecipeShopManageList implements IClientOutgoingPacket
 {
 	private final L2PcInstance _seller;
 	private final boolean _isDwarven;
@@ -58,42 +60,43 @@ public class RecipeShopManageList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xDE);
-		writeD(_seller.getObjectId());
-		writeD((int) _seller.getAdena());
-		writeD(_isDwarven ? 0x00 : 0x01);
+		OutgoingPackets.RECIPE_SHOP_MANAGE_LIST.writeId(packet);
+		packet.writeD(_seller.getObjectId());
+		packet.writeD((int) _seller.getAdena());
+		packet.writeD(_isDwarven ? 0x00 : 0x01);
 		
 		if (_recipes == null)
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
 		else
 		{
-			writeD(_recipes.length);// number of items in recipe book
+			packet.writeD(_recipes.length);// number of items in recipe book
 			
 			for (int i = 0; i < _recipes.length; i++)
 			{
 				final L2RecipeList temp = _recipes[i];
-				writeD(temp.getId());
-				writeD(i + 1);
+				packet.writeD(temp.getId());
+				packet.writeD(i + 1);
 			}
 		}
 		
 		if (!_seller.hasManufactureShop())
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
 		else
 		{
-			writeD(_seller.getManufactureItems().size());
+			packet.writeD(_seller.getManufactureItems().size());
 			for (L2ManufactureItem item : _seller.getManufactureItems().values())
 			{
-				writeD(item.getRecipeId());
-				writeD(0x00);
-				writeQ(item.getCost());
+				packet.writeD(item.getRecipeId());
+				packet.writeD(0x00);
+				packet.writeQ(item.getCost());
 			}
 		}
+		return true;
 	}
 }

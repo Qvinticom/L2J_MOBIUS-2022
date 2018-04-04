@@ -16,35 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * @author Zoey76
  */
-public final class RequestHennaRemove extends L2GameClientPacket
+public final class RequestHennaRemove implements IClientIncomingPacket
 {
 	private int _symbolId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_symbolId = readD();
+		_symbolId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("HennaRemove"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("HennaRemove"))
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		
@@ -62,7 +65,7 @@ public final class RequestHennaRemove extends L2GameClientPacket
 				else
 				{
 					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-					sendActionFailed();
+					client.sendActionFailed();
 				}
 				found = true;
 				break;
@@ -72,7 +75,7 @@ public final class RequestHennaRemove extends L2GameClientPacket
 		if (!found)
 		{
 			_log.warning(getClass().getSimpleName() + ": Player " + activeChar + " requested Henna Draw remove without any henna.");
-			sendActionFailed();
+			client.sendActionFailed();
 		}
 	}
 }

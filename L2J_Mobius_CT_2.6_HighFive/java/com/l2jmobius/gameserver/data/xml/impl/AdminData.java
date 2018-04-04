@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.L2AdminCommandAccessRight;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -317,7 +317,7 @@ public final class AdminData implements IGameXmlReader
 	 * Broadcast to GMs.
 	 * @param packet the packet
 	 */
-	public void broadcastToGMs(L2GameServerPacket packet)
+	public void broadcastToGMs(IClientOutgoingPacket packet)
 	{
 		for (L2PcInstance gm : getAllGms(true))
 		{

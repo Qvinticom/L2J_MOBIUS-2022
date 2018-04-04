@@ -22,6 +22,7 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -35,6 +36,7 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ShopPreviewInfo;
@@ -44,7 +46,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  ** @author Gnacik
  */
-public final class RequestPreviewItem extends L2GameClientPacket
+public final class RequestPreviewItem implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private int _unk;
@@ -77,11 +79,11 @@ public final class RequestPreviewItem extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_unk = readD();
-		_listId = readD();
-		_count = readD();
+		_unk = packet.readD();
+		_listId = packet.readD();
+		_count = packet.readD();
 		
 		if (_count < 0)
 		{
@@ -89,7 +91,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		if (_count > 100)
 		{
-			return; // prevent too long lists
+			return false; // prevent too long lists
 		}
 		
 		// Create _items table that will contain all ItemID to Wear
@@ -98,12 +100,13 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		// Fill _items table with all ItemID to Wear
 		for (int i = 0; i < _count; i++)
 		{
-			_items[i] = readD();
+			_items[i] = packet.readD();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_items == null)
 		{
@@ -111,13 +114,13 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		}
 		
 		// Get the current player and return if null
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("buy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
 		{
 			activeChar.sendMessage("You are buying too fast.");
 			return;
@@ -141,7 +144,7 @@ public final class RequestPreviewItem extends L2GameClientPacket
 		
 		if ((_count < 1) || (_listId >= 4000000))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

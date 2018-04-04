@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author godson
  */
-public class ExOlympiadUserInfo extends L2GameServerPacket
+public class ExOlympiadUserInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _player;
 	private Participant _par = null;
@@ -71,28 +73,28 @@ public class ExOlympiadUserInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x7A);
+		OutgoingPackets.EX_OLYMPIAD_USER_INFO.writeId(packet);
 		if (_player != null)
 		{
-			writeC(_player.getOlympiadSide());
-			writeD(_player.getObjectId());
-			writeS(_player.getName());
-			writeD(_player.getClassId().getId());
+			packet.writeC(_player.getOlympiadSide());
+			packet.writeD(_player.getObjectId());
+			packet.writeS(_player.getName());
+			packet.writeD(_player.getClassId().getId());
 		}
 		else
 		{
-			writeC(_par.getSide());
-			writeD(_par.getObjectId());
-			writeS(_par.getName());
-			writeD(_par.getBaseClass());
+			packet.writeC(_par.getSide());
+			packet.writeD(_par.getObjectId());
+			packet.writeS(_par.getName());
+			packet.writeD(_par.getBaseClass());
 		}
 		
-		writeD(_curHp);
-		writeD(_maxHp);
-		writeD(_curCp);
-		writeD(_maxCp);
+		packet.writeD(_curHp);
+		packet.writeD(_maxHp);
+		packet.writeD(_curCp);
+		packet.writeD(_maxCp);
+		return true;
 	}
 }

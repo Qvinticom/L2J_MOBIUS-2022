@@ -20,8 +20,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
@@ -30,14 +28,11 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.StringJoiner;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 
 public final class CommonUtil
 {
-	private static final Logger _log = Logger.getLogger(CommonUtil.class.getName());
-	
 	private static final char[] ILLEGAL_CHARACTERS =
 	{
 		'/',
@@ -56,26 +51,6 @@ public final class CommonUtil
 		'\"',
 		':'
 	};
-	
-	/**
-	 * Checks if a host name is internal
-	 * @param host the host name to check
-	 * @return true: host name is internal<br>
-	 *         false: host name is external
-	 */
-	public static boolean isInternalHostname(String host)
-	{
-		try
-		{
-			final InetAddress addr = InetAddress.getByName(host);
-			return addr.isSiteLocalAddress() || addr.isLoopbackAddress();
-		}
-		catch (UnknownHostException e)
-		{
-			_log.warning("Util: " + e.getMessage());
-		}
-		return false;
-	}
 	
 	/**
 	 * Method to generate the hexadecimal representation of a byte array.<br>
@@ -123,19 +98,16 @@ public final class CommonUtil
 	{
 		final byte[] array = new byte[size];
 		Rnd.nextBytes(array);
+		
+		// Don't allow 0s inside the array!
+		for (int i = 0; i < array.length; i++)
+		{
+			while (array[i] == 0)
+			{
+				array[i] = (byte) Rnd.get(Byte.MAX_VALUE);
+			}
+		}
 		return array;
-	}
-	
-	/**
-	 * Method to get the stack trace of a Throwable into a String
-	 * @param t Throwable to get the stacktrace from
-	 * @return stack trace from Throwable as String
-	 */
-	public static String getStackTrace(Throwable t)
-	{
-		final StringWriter sw = new StringWriter();
-		t.printStackTrace(new PrintWriter(sw));
-		return sw.toString();
 	}
 	
 	/**
@@ -222,10 +194,22 @@ public final class CommonUtil
 		// @formatter:on
 	}
 	
+	/**
+	 * Method to get the stack trace of a Throwable into a String
+	 * @param t Throwable to get the stacktrace from
+	 * @return stack trace from Throwable as String
+	 */
+	public static String getStackTrace(Throwable t)
+	{
+		final StringWriter sw = new StringWriter();
+		t.printStackTrace(new PrintWriter(sw));
+		return sw.toString();
+	}
+	
 	public static String getTraceString(StackTraceElement[] stackTraceElements)
 	{
 		final StringJoiner sj = new StringJoiner(Config.EOL);
-		for (final StackTraceElement stackTraceElement : stackTraceElements)
+		for (StackTraceElement stackTraceElement : stackTraceElements)
 		{
 			sj.add(stackTraceElement.toString());
 		}

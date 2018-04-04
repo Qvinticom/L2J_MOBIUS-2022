@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author mrTJO
  */
-public class ExCubeGameRemovePlayer extends L2GameServerPacket
+public class ExCubeGameRemovePlayer implements IClientOutgoingPacket
 {
 	L2PcInstance _player;
 	boolean _isRedTeam;
@@ -38,15 +40,15 @@ public class ExCubeGameRemovePlayer extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x97);
-		writeD(0x02);
+		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+		packet.writeD(0x02);
 		
-		writeD(0xffffffff);
+		packet.writeD(0xffffffff);
 		
-		writeD(_isRedTeam ? 0x01 : 0x00);
-		writeD(_player.getObjectId());
+		packet.writeD(_isRedTeam ? 0x01 : 0x00);
+		packet.writeD(_player.getObjectId());
+		return true;
 	}
 }

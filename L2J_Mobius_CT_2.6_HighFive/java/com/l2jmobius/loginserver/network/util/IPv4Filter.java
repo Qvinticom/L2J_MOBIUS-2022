@@ -24,15 +24,14 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.mmocore.IAcceptFilter;
-
 /**
  * IPv4 filter.
- * @author Forsaiken, Zoey76
+ * @author Forsaiken
  */
-public class IPv4Filter implements IAcceptFilter, Runnable
+public class IPv4Filter implements Runnable
 {
-	private static final Logger LOG = Logger.getLogger(IPv4Filter.class.getName());
+	protected final Logger _log = Logger.getLogger(getClass().getName());
+	
 	private final HashMap<Integer, Flood> _ipFloodMap;
 	private static final long SLEEP_TIME = 5000;
 	
@@ -65,17 +64,17 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 		}
 	}
 	
-	@Override
 	public boolean accept(SocketChannel sc)
 	{
 		final InetAddress addr = sc.socket().getInetAddress();
 		if (!(addr instanceof Inet4Address))
 		{
-			LOG.info(IPv4Filter.class.getSimpleName() + ": Someone tried to connect from something other than IPv4: " + addr.getHostAddress());
+			_log.info("Someone tried to connect from something other than IPv4: " + addr.getHostAddress());
 			return false;
 		}
 		
 		final int h = hash(addr.getAddress());
+		
 		final long current = System.currentTimeMillis();
 		Flood f;
 		synchronized (_ipFloodMap)
@@ -90,15 +89,21 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 				return false;
 			}
 			
-			f.lastAccess = current;
 			if ((f.lastAccess + 1000) > current)
 			{
+				f.lastAccess = current;
+				
 				if (f.trys >= 3)
 				{
 					f.trys = -1;
 					return false;
 				}
+				
 				f.trys++;
+			}
+			else
+			{
+				f.lastAccess = current;
 			}
 		}
 		else
@@ -123,7 +128,8 @@ public class IPv4Filter implements IAcceptFilter, Runnable
 				final Iterator<Entry<Integer, Flood>> it = _ipFloodMap.entrySet().iterator();
 				while (it.hasNext())
 				{
-					if (it.next().getValue().lastAccess < reference)
+					final Flood f = it.next().getValue();
+					if (f.lastAccess < reference)
 					{
 						it.remove();
 					}

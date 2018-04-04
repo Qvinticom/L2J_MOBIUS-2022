@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author mrTJO
  */
-public class Ex2ndPasswordVerify extends L2GameServerPacket
+public class Ex2ndPasswordVerify implements IClientOutgoingPacket
 {
 	public static final int PASSWORD_OK = 0x00;
 	public static final int PASSWORD_WRONG = 0x01;
@@ -34,12 +37,11 @@ public class Ex2ndPasswordVerify extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		// writeH(0x109); GOD
-		writeH(0xe6);
-		writeD(_mode);
-		writeD(_wrongTentatives);
+		OutgoingPackets.EX_2ND_PASSWORD_VERIFY.writeId(packet);
+		packet.writeD(_mode);
+		packet.writeD(_wrongTentatives);
+		return true;
 	}
 }

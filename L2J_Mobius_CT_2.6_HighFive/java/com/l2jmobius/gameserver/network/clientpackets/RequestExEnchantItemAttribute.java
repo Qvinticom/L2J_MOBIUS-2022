@@ -17,11 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAttributeEnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
@@ -30,20 +32,21 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Util;
 
-public class RequestExEnchantItemAttribute extends L2GameClientPacket
+public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

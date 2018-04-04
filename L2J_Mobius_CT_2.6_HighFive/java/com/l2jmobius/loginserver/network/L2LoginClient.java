@@ -16,139 +16,107 @@
  */
 package com.l2jmobius.loginserver.network;
 
-import java.io.IOException;
 import java.net.InetAddress;
-import java.nio.ByteBuffer;
-import java.security.interfaces.RSAPrivateKey;
+import java.net.InetSocketAddress;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.mmocore.MMOClient;
-import com.l2jmobius.commons.mmocore.MMOConnection;
-import com.l2jmobius.commons.mmocore.SendablePacket;
+import javax.crypto.SecretKey;
+
+import com.l2jmobius.commons.network.ChannelInboundHandler;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.IOutgoingPacket;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.commons.util.crypt.LoginCrypt;
 import com.l2jmobius.commons.util.crypt.ScrambledKeyPair;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.SessionKey;
-import com.l2jmobius.loginserver.network.serverpackets.L2LoginServerPacket;
+import com.l2jmobius.loginserver.network.serverpackets.Init;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
+
 /**
  * Represents a client connected into the LoginServer
  * @author KenM
  */
-public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
+public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 {
 	private static final Logger _log = Logger.getLogger(L2LoginClient.class.getName());
 	
-	public static enum LoginClientState
-	{
-		CONNECTED,
-		AUTHED_GG,
-		AUTHED_LOGIN
-	}
-	
-	private LoginClientState _state;
-	
 	// Crypt
-	private final LoginCrypt _loginCrypt;
 	private final ScrambledKeyPair _scrambledPair;
-	private final byte[] _blowfishKey;
+	private final SecretKey _blowfishKey;
+	private InetAddress _addr;
+	private Channel _channel;
 	
 	private String _account;
 	private int _accessLevel;
 	private int _lastServer;
 	private SessionKey _sessionKey;
-	private final int _sessionId;
+	private int _sessionId;
 	private boolean _joinedGS;
 	private Map<Integer, Integer> _charsOnServers;
 	private Map<Integer, long[]> _charsToDelete;
 	
-	private final long _connectionStartTime;
+	private long _connectionStartTime;
 	
-	/**
-	 * @param con
-	 */
-	public L2LoginClient(MMOConnection<L2LoginClient> con)
+	public L2LoginClient(SecretKey blowfishKey)
 	{
-		super(con);
-		_state = LoginClientState.CONNECTED;
+		super();
+		_blowfishKey = blowfishKey;
 		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
-		_blowfishKey = LoginController.getInstance().getBlowfishKey();
+	}
+	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx)
+	{
+		super.channelActive(ctx);
+		
+		setConnectionState(ConnectionState.CONNECTED);
+		final InetSocketAddress address = (InetSocketAddress) ctx.channel().remoteAddress();
+		_addr = address.getAddress();
+		_channel = ctx.channel();
 		_sessionId = Rnd.nextInt();
 		_connectionStartTime = System.currentTimeMillis();
-		_loginCrypt = new LoginCrypt();
-		_loginCrypt.setKey(_blowfishKey);
+		
+		sendPacket(new Init(_scrambledPair.getScrambledModulus(), _blowfishKey.getEncoded(), _sessionId));
 	}
 	
 	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
+	public void channelInactive(ChannelHandlerContext ctx)
 	{
-		boolean isChecksumValid = false;
-		try
+		if (!hasJoinedGS() || ((getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
 		{
-			isChecksumValid = _loginCrypt.decrypt(buf.array(), buf.position(), size);
-			if (!isChecksumValid)
-			{
-				_log.warning("Wrong checksum from client: " + toString());
-				super.getConnection().close((SendablePacket<L2LoginClient>) null);
-				return false;
-			}
-			return true;
-		}
-		catch (IOException e)
-		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
-			super.getConnection().close((SendablePacket<L2LoginClient>) null);
-			return false;
+			LoginController.getInstance().removeAuthedLoginClient(getAccount());
 		}
 	}
 	
 	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
+	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<L2LoginClient> packet)
 	{
-		final int offset = buf.position();
 		try
 		{
-			size = _loginCrypt.encrypt(buf.array(), offset, size);
+			packet.run(this);
 		}
-		catch (IOException e)
+		catch (Exception e)
 		{
 			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
-			return false;
 		}
-		buf.position(offset + size);
-		return true;
 	}
 	
-	public LoginClientState getState()
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 	{
-		return _state;
 	}
 	
-	public void setState(LoginClientState state)
+	public InetAddress getConnectionAddress()
 	{
-		_state = state;
-	}
-	
-	public byte[] getBlowfishKey()
-	{
-		return _blowfishKey;
-	}
-	
-	public byte[] getScrambledModulus()
-	{
-		return _scrambledPair._scrambledModulus;
-	}
-	
-	public RSAPrivateKey getRSAPrivateKey()
-	{
-		return (RSAPrivateKey) _scrambledPair._pair.getPrivate();
+		return _addr;
 	}
 	
 	public String getAccount()
@@ -186,6 +154,11 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		return _sessionId;
 	}
 	
+	public ScrambledKeyPair getScrambledKeyPair()
+	{
+		return _scrambledPair;
+	}
+	
 	public boolean hasJoinedGS()
 	{
 		return _joinedGS;
@@ -211,24 +184,39 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		return _connectionStartTime;
 	}
 	
-	public void sendPacket(L2LoginServerPacket lsp)
+	public void sendPacket(IOutgoingPacket packet)
 	{
-		getConnection().sendPacket(lsp);
+		if ((packet == null))
+		{
+			return;
+		}
+		
+		// Write into the channel.
+		_channel.writeAndFlush(packet);
 	}
 	
 	public void close(LoginFailReason reason)
 	{
-		getConnection().close(new LoginFail(reason));
+		close(new LoginFail(reason));
 	}
 	
 	public void close(PlayFailReason reason)
 	{
-		getConnection().close(new PlayFail(reason));
+		close(new PlayFail(reason));
 	}
 	
-	public void close(L2LoginServerPacket lsp)
+	public void close(IOutgoingPacket packet)
 	{
-		getConnection().close(lsp);
+		sendPacket(packet);
+		closeNow();
+	}
+	
+	public void closeNow()
+	{
+		if (_channel != null)
+		{
+			_channel.close();
+		}
 	}
 	
 	public void setCharsOnServ(int servId, int chars)
@@ -257,31 +245,5 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	public Map<Integer, long[]> getCharsWaitingDelOnServ()
 	{
 		return _charsToDelete;
-	}
-	
-	@Override
-	public void onDisconnection()
-	{
-		if (!hasJoinedGS() || ((getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
-		{
-			LoginController.getInstance().removeAuthedLoginClient(getAccount());
-		}
-	}
-	
-	@Override
-	public String toString()
-	{
-		final InetAddress address = getConnection().getInetAddress();
-		if (getState() == LoginClientState.AUTHED_LOGIN)
-		{
-			return "[" + getAccount() + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
-		}
-		return "[" + (address == null ? "disconnected" : address.getHostAddress()) + "]";
-	}
-	
-	@Override
-	protected void onForcedDisconnection()
-	{
-		// Empty
 	}
 }

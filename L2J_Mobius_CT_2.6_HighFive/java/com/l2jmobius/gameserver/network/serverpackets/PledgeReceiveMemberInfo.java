@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2ClanMember;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public class PledgeReceiveMemberInfo extends L2GameServerPacket
+public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 {
 	private final L2ClanMember _member;
 	
@@ -34,26 +36,26 @@ public class PledgeReceiveMemberInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x3e);
+		OutgoingPackets.PLEDGE_RECEIVE_MEMBER_INFO.writeId(packet);
 		
-		writeD(_member.getPledgeType());
-		writeS(_member.getName());
-		writeS(_member.getTitle()); // title
-		writeD(_member.getPowerGrade()); // power
+		packet.writeD(_member.getPledgeType());
+		packet.writeS(_member.getName());
+		packet.writeS(_member.getTitle()); // title
+		packet.writeD(_member.getPowerGrade()); // power
 		
 		// clan or subpledge name
 		if (_member.getPledgeType() != 0)
 		{
-			writeS((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
+			packet.writeS((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
 		}
 		else
 		{
-			writeS(_member.getClan().getName());
+			packet.writeS(_member.getClan().getName());
 		}
 		
-		writeS(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
+		packet.writeS(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
+		return true;
 	}
 }

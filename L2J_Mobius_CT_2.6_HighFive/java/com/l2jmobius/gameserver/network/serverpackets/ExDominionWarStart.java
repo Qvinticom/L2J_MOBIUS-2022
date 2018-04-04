@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author JIV
  */
-public class ExDominionWarStart extends L2GameServerPacket
+public class ExDominionWarStart implements IClientOutgoingPacket
 {
 	private final int _objId;
 	private final int _terId;
@@ -36,14 +38,14 @@ public class ExDominionWarStart extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xA3);
-		writeD(_objId);
-		writeD(0x01); // ??
-		writeD(_terId);
-		writeD(_isDisguised ? 1 : 0);
-		writeD(_isDisguised ? _terId : 0);
+		OutgoingPackets.EX_DOMINION_WAR_START.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeD(0x01); // ??
+		packet.writeD(_terId);
+		packet.writeD(_isDisguised ? 1 : 0);
+		packet.writeD(_isDisguised ? _terId : 0);
+		return true;
 	}
 }

@@ -16,23 +16,25 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.model.base.ClassId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.NewCharacterSuccess;
 
 /**
  * @author Zoey76
  */
-public final class NewCharacter extends L2GameClientPacket
+public final class NewCharacter implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final NewCharacterSuccess ct = new NewCharacterSuccess();
 		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.fighter)); // Human Figther
@@ -46,6 +48,6 @@ public final class NewCharacter extends L2GameClientPacket
 		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.dwarvenFighter)); // Dwarf Fighter
 		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.maleSoldier)); // Male Kamael Soldier
 		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.femaleSoldier)); // Female Kamael Soldier
-		sendPacket(ct);
+		client.sendPacket(ct);
 	}
 }

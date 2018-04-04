@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Shortcut;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ShortCutInit extends L2GameServerPacket
+public final class ShortCutInit implements IClientOutgoingPacket
 {
 	private Shortcut[] _shortCuts;
 	
@@ -34,34 +36,34 @@ public final class ShortCutInit extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x45);
-		writeD(_shortCuts.length);
+		OutgoingPackets.SHORT_CUT_INIT.writeId(packet);
+		packet.writeD(_shortCuts.length);
 		for (Shortcut sc : _shortCuts)
 		{
-			writeD(sc.getType().ordinal());
-			writeD(sc.getSlot() + (sc.getPage() * 12));
+			packet.writeD(sc.getType().ordinal());
+			packet.writeD(sc.getSlot() + (sc.getPage() * 12));
 			
 			switch (sc.getType())
 			{
 				case ITEM:
 				{
-					writeD(sc.getId());
-					writeD(0x01);
-					writeD(sc.getSharedReuseGroup());
-					writeD(0x00);
-					writeD(0x00);
-					writeH(0x00);
-					writeH(0x00);
+					packet.writeD(sc.getId());
+					packet.writeD(0x01);
+					packet.writeD(sc.getSharedReuseGroup());
+					packet.writeD(0x00);
+					packet.writeD(0x00);
+					packet.writeH(0x00);
+					packet.writeH(0x00);
 					break;
 				}
 				case SKILL:
 				{
-					writeD(sc.getId());
-					writeD(sc.getLevel());
-					writeC(0x00); // C5
-					writeD(0x01); // C6
+					packet.writeD(sc.getId());
+					packet.writeD(sc.getLevel());
+					packet.writeC(0x00); // C5
+					packet.writeD(0x01); // C6
 					break;
 				}
 				case ACTION:
@@ -69,10 +71,11 @@ public final class ShortCutInit extends L2GameServerPacket
 				case RECIPE:
 				case BOOKMARK:
 				{
-					writeD(sc.getId());
-					writeD(0x01); // C6
+					packet.writeD(sc.getId());
+					packet.writeD(0x01); // C6
 				}
 			}
 		}
+		return true;
 	}
 }

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -59,6 +60,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -96,37 +98,38 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
  * packet format rev87 bddddbdcccccccccccccccccccc
  * <p>
  */
-public class EnterWorld extends L2GameClientPacket
+public class EnterWorld implements IClientIncomingPacket
 {
 	private final int[][] tracert = new int[5][4];
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		readB(new byte[32]); // Unknown Byte Array
-		readD(); // Unknown Value
-		readD(); // Unknown Value
-		readD(); // Unknown Value
-		readD(); // Unknown Value
-		readB(new byte[32]); // Unknown Byte Array
-		readD(); // Unknown Value
+		packet.readB(32); // Unknown Byte Array
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readD(); // Unknown Value
+		packet.readB(32); // Unknown Byte Array
+		packet.readD(); // Unknown Value
 		for (int i = 0; i < 5; i++)
 		{
 			for (int o = 0; o < 4; o++)
 			{
-				tracert[i][o] = readC();
+				tracert[i][o] = packet.readC();
 			}
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			_log.warning("EnterWorld failed! activeChar returned 'null'.");
-			getClient().closeNow();
+			client.closeNow();
 			return;
 		}
 		
@@ -138,7 +141,7 @@ public class EnterWorld extends L2GameClientPacket
 		
 		LoginServerThread.getInstance().sendClientTracert(activeChar.getAccountName(), adress);
 		
-		getClient().setClientTracert(tracert);
+		client.setClientTracert(tracert);
 		
 		// Restore to instanced area if enabled
 		if (Config.RESTORE_PLAYER_INSTANCE)
@@ -285,8 +288,8 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 			
-			sendPacket(new PledgeShowMemberListAll(activeChar.getClan(), activeChar));
-			sendPacket(new PledgeStatusChanged(activeChar.getClan()));
+			client.sendPacket(new PledgeShowMemberListAll(activeChar.getClan(), activeChar));
+			client.sendPacket(new PledgeStatusChanged(activeChar.getClan()));
 			
 			// Residential skills support
 			if (activeChar.getClan().getCastleId() > 0)
@@ -350,16 +353,16 @@ public class EnterWorld extends L2GameClientPacket
 		activeChar.getMacros().sendUpdate();
 		
 		// Send Item List
-		sendPacket(new ItemList(activeChar, false));
+		client.sendPacket(new ItemList(activeChar, false));
 		
 		// Send GG check
 		activeChar.queryGameGuard();
 		
 		// Send Teleport Bookmark List
-		sendPacket(new ExGetBookMarkInfoPacket(activeChar));
+		client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
 		
 		// Send Shortcuts
-		sendPacket(new ShortCutInit(activeChar));
+		client.sendPacket(new ShortCutInit(activeChar));
 		
 		// Send Action list
 		activeChar.sendPacket(ExBasicActionList.STATIC_PACKET);
@@ -377,7 +380,7 @@ public class EnterWorld extends L2GameClientPacket
 			loadTutorial(activeChar);
 		}
 		
-		activeChar.sendPacket(new QuestList());
+		activeChar.sendPacket(new QuestList(activeChar));
 		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
@@ -413,7 +416,7 @@ public class EnterWorld extends L2GameClientPacket
 		// Expand Skill
 		activeChar.sendPacket(new ExStorageMaxCount(activeChar));
 		
-		sendPacket(new FriendList(activeChar));
+		client.sendPacket(new FriendList(activeChar));
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_FRIEND_S1_JUST_LOGGED_IN);
 		sm.addString(activeChar.getName());
@@ -443,14 +446,14 @@ public class EnterWorld extends L2GameClientPacket
 			notice.replace("%clan_name%", activeChar.getClan().getName());
 			notice.replace("%notice_text%", activeChar.getClan().getNotice());
 			notice.disableValidation();
-			sendPacket(notice);
+			client.sendPacket(notice);
 		}
 		else if (Config.SERVER_NEWS)
 		{
 			final String serverNews = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/servnews.htm");
 			if (serverNews != null)
 			{
-				sendPacket(new NpcHtmlMessage(serverNews));
+				client.sendPacket(new NpcHtmlMessage(serverNews));
 			}
 		}
 		
@@ -462,14 +465,14 @@ public class EnterWorld extends L2GameClientPacket
 		if (activeChar.isAlikeDead()) // dead or fake dead
 		{
 			// no broadcast needed since the player will already spawn dead to others
-			sendPacket(new Die(activeChar));
+			client.sendPacket(new Die(activeChar));
 		}
 		
 		activeChar.onPlayerEnter();
 		
-		sendPacket(new SkillCoolTime(activeChar));
-		sendPacket(new ExVoteSystemInfo(activeChar));
-		sendPacket(new ExShowContactList(activeChar));
+		client.sendPacket(new SkillCoolTime(activeChar));
+		client.sendPacket(new ExVoteSystemInfo(activeChar));
+		client.sendPacket(new ExShowContactList(activeChar));
 		
 		for (L2ItemInstance i : activeChar.getInventory().getItems())
 		{
@@ -539,7 +542,7 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			if (MailManager.getInstance().hasUnreadPost(activeChar))
 			{
-				sendPacket(ExNoticePostArrived.valueOf(false));
+				client.sendPacket(ExNoticePostArrived.valueOf(false));
 			}
 		}
 		
@@ -677,11 +680,5 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			qs.getQuest().notifyEvent("UC", null, player);
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

@@ -19,8 +19,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class WareHouseDepositList extends AbstractItemPacket
 {
@@ -56,17 +58,18 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x41);
-		writeH(_whType);
-		writeQ(_playerAdena);
-		writeH(_items.size());
+		OutgoingPackets.WAREHOUSE_DEPOSIT_LIST.writeId(packet);
+		packet.writeH(_whType);
+		packet.writeQ(_playerAdena);
+		packet.writeH(_items.size());
 		
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

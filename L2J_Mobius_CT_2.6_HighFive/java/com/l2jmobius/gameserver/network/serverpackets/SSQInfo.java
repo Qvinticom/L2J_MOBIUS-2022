@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.SevenSigns;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Changes the sky color depending on the outcome of the Seven Signs competition.
  * @author Tempy
  */
-public class SSQInfo extends L2GameServerPacket
+public class SSQInfo implements IClientOutgoingPacket
 {
 	private int _state = 0;
 	
@@ -49,9 +51,10 @@ public class SSQInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x73);
-		writeH(256 + _state);
+		OutgoingPackets.SSQ_INFO.writeId(packet);
+		packet.writeH(256 + _state);
+		return true;
 	}
 }

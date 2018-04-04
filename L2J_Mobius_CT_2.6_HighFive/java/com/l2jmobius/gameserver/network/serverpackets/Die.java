@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -30,8 +31,9 @@ import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class Die extends L2GameServerPacket
+public class Die implements IClientOutgoingPacket
 {
 	private final int _charObjId;
 	private final boolean _canTeleport;
@@ -58,11 +60,11 @@ public class Die extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x00);
-		writeD(_charObjId);
-		writeD(_canTeleport ? 0x01 : 0x00);
+		OutgoingPackets.DIE.writeId(packet);
+		packet.writeD(_charObjId);
+		packet.writeD(_canTeleport ? 0x01 : 0x00);
 		
 		if (_activeChar.isPlayer())
 		{
@@ -106,25 +108,26 @@ public class Die extends L2GameServerPacket
 				}
 			}
 			
-			writeD(_clan.getHideoutId() > 0 ? 0x01 : 0x00); // 6d 01 00 00 00 - to hide away
-			writeD((_clan.getCastleId() > 0) || isInCastleDefense ? 0x01 : 0x00); // 6d 02 00 00 00 - to castle
-			writeD((TerritoryWarManager.getInstance().getHQForClan(_clan) != null) || ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty()) || ((hall != null) && hall.getSiege().checkIsAttacker(_clan)) ? 0x01 : 0x00); // 6d 03 00 00 00 - to siege HQ
-			writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
-			writeD(_staticRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
-			writeD((_clan.getFortId() > 0) || isInFortDefense ? 0x01 : 0x00); // 6d 05 00 00 00 - to fortress
+			packet.writeD(_clan.getHideoutId() > 0 ? 0x01 : 0x00); // 6d 01 00 00 00 - to hide away
+			packet.writeD((_clan.getCastleId() > 0) || isInCastleDefense ? 0x01 : 0x00); // 6d 02 00 00 00 - to castle
+			packet.writeD((TerritoryWarManager.getInstance().getHQForClan(_clan) != null) || ((siegeClan != null) && !isInCastleDefense && !isInFortDefense && !siegeClan.getFlag().isEmpty()) || ((hall != null) && hall.getSiege().checkIsAttacker(_clan)) ? 0x01 : 0x00); // 6d 03 00 00 00 - to siege HQ
+			packet.writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
+			packet.writeD(_staticRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
+			packet.writeD((_clan.getFortId() > 0) || isInFortDefense ? 0x01 : 0x00); // 6d 05 00 00 00 - to fortress
 		}
 		else
 		{
-			writeD(0x00); // 6d 01 00 00 00 - to hide away
-			writeD(0x00); // 6d 02 00 00 00 - to castle
-			writeD(0x00); // 6d 03 00 00 00 - to siege HQ
-			writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
-			writeD(_staticRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
-			writeD(0x00); // 6d 05 00 00 00 - to fortress
+			packet.writeD(0x00); // 6d 01 00 00 00 - to hide away
+			packet.writeD(0x00); // 6d 02 00 00 00 - to castle
+			packet.writeD(0x00); // 6d 03 00 00 00 - to siege HQ
+			packet.writeD(_sweepable ? 0x01 : 0x00); // sweepable (blue glow)
+			packet.writeD(_staticRes ? 0x01 : 0x00); // 6d 04 00 00 00 - to FIXED
+			packet.writeD(0x00); // 6d 05 00 00 00 - to fortress
 		}
 		// TODO: protocol 152
-		// writeC(0); // show die animation
-		// writeD(0); // agathion ress button
-		// writeD(0); // additional free space
+		// packet.writeC(0); // show die animation
+		// packet.writeD(0); // agathion ress button
+		// packet.writeD(0); // additional free space
+		return true;
 	}
 }

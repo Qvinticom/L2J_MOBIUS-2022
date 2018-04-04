@@ -16,28 +16,30 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * format ch c: (id) 0xD0 h: (subid) 0x13
  * @author -Wooden-
  */
-public final class RequestOlympiadMatchList extends L2GameClientPacket
+public final class RequestOlympiadMatchList implements IClientIncomingPacket
 {
 	private static final String COMMAND = "arenalist";
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !activeChar.inObserverMode())
 		{
 			return;

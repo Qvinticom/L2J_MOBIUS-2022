@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.L2Augmentation;
@@ -32,6 +33,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.multisell.Entry;
 import com.l2jmobius.gameserver.model.multisell.Ingredient;
 import com.l2jmobius.gameserver.model.multisell.PreparedListContainer;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -40,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * The Class MultiSellChoose.
  */
-public class MultiSellChoose extends L2GameClientPacket
+public class MultiSellChoose implements IClientIncomingPacket
 {
 	private int _listId;
 	private int _entryId;
@@ -69,34 +71,35 @@ public class MultiSellChoose extends L2GameClientPacket
 	private int _unk11;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_listId = readD();
-		_entryId = readD();
-		_amount = readQ();
-		_unk1 = readH();
-		_unk2 = readD();
-		_unk3 = readD();
-		_unk4 = readH(); // elemental attributes
-		_unk5 = readH(); // elemental attributes
-		_unk6 = readH(); // elemental attributes
-		_unk7 = readH(); // elemental attributes
-		_unk8 = readH(); // elemental attributes
-		_unk9 = readH(); // elemental attributes
-		_unk10 = readH(); // elemental attributes
-		_unk11 = readH(); // elemental attributes
+		_listId = packet.readD();
+		_entryId = packet.readD();
+		_amount = packet.readQ();
+		_unk1 = packet.readH();
+		_unk2 = packet.readD();
+		_unk3 = packet.readD();
+		_unk4 = packet.readH(); // elemental attributes
+		_unk5 = packet.readH(); // elemental attributes
+		_unk6 = packet.readH(); // elemental attributes
+		_unk7 = packet.readH(); // elemental attributes
+		_unk8 = packet.readH(); // elemental attributes
+		_unk9 = packet.readH(); // elemental attributes
+		_unk10 = packet.readH(); // elemental attributes
+		_unk11 = packet.readH(); // elemental attributes
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getMultiSell().tryPerformAction("multisell choose"))
+		if (!client.getFloodProtectors().getMultiSell().tryPerformAction("multisell choose"))
 		{
 			player.setMultiSell(null);
 			return;

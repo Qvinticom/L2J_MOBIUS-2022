@@ -17,13 +17,15 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-, KenM
  */
-public class ExStorageMaxCount extends L2GameServerPacket
+public class ExStorageMaxCount implements IClientOutgoingPacket
 {
 	private final int _inventory;
 	private final int _warehouse;
@@ -49,19 +51,19 @@ public class ExStorageMaxCount extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x2F);
+		OutgoingPackets.EX_STORAGE_MAX_COUNT.writeId(packet);
 		
-		writeD(_inventory);
-		writeD(_warehouse);
-		writeD(_clan);
-		writeD(_privateSell);
-		writeD(_privateBuy);
-		writeD(_receipeD);
-		writeD(_recipe);
-		writeD(_inventoryExtraSlots); // Belt inventory slots increase count
-		writeD(_inventoryQuestItems);
+		packet.writeD(_inventory);
+		packet.writeD(_warehouse);
+		packet.writeD(_clan);
+		packet.writeD(_privateSell);
+		packet.writeD(_privateBuy);
+		packet.writeD(_receipeD);
+		packet.writeD(_recipe);
+		packet.writeD(_inventoryExtraSlots); // Belt inventory slots increase count
+		packet.writeD(_inventoryQuestItems);
+		return true;
 	}
 }

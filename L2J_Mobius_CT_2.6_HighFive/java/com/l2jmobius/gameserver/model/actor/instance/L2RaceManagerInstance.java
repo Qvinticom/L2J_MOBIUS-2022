@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MonRaceInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
@@ -222,7 +222,7 @@ public class L2RaceManagerInstance extends L2Npc
 		}
 	}
 	
-	protected void broadcast(L2GameServerPacket pkt)
+	protected void broadcast(IClientOutgoingPacket pkt)
 	{
 		for (L2RaceManagerInstance manager : _managers)
 		{

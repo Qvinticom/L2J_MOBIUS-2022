@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author devScarlet, mrTJO
  */
-public class ExPlayScene extends L2GameServerPacket
+public class ExPlayScene implements IClientOutgoingPacket
 {
 	public static final ExPlayScene STATIC_PACKET = new ExPlayScene();
 	
@@ -28,9 +31,9 @@ public class ExPlayScene extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x5C);
+		OutgoingPackets.EX_PLAY_SCENE.writeId(packet);
+		return true;
 	}
 }

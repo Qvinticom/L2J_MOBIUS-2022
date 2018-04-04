@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -27,24 +29,25 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * Format: (ch) dSS
  * @author -Wooden-
  */
-public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
+public final class RequestPledgeSetAcademyMaster implements IClientIncomingPacket
 {
 	private String _currPlayerName;
 	private int _set; // 1 set, 0 delete
 	private String _targetPlayerName;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_set = readD();
-		_currPlayerName = readS();
-		_targetPlayerName = readS();
+		_set = packet.readD();
+		_currPlayerName = packet.readS();
+		_targetPlayerName = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		final L2Clan clan = activeChar.getClan();
 		if (clan == null)
 		{

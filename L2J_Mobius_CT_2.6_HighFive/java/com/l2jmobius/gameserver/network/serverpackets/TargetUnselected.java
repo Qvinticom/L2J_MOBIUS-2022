@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class TargetUnselected extends L2GameServerPacket
+public class TargetUnselected implements IClientOutgoingPacket
 {
 	private final int _targetObjId;
 	private final int _x;
@@ -37,13 +39,14 @@ public class TargetUnselected extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x24);
-		writeD(_targetObjId);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
-		writeD(0x00); // ??
+		OutgoingPackets.TARGET_UNSELECTED.writeId(packet);
+		packet.writeD(_targetObjId);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(0x00); // ??
+		return true;
 	}
 }

@@ -17,30 +17,32 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowContactList;
 
 /**
  * Format: (ch)
  * @author mrTJO & UnAfraid
  */
-public final class RequestExShowContactList extends L2GameClientPacket
+public final class RequestExShowContactList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger packet
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

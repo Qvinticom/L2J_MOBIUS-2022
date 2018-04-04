@@ -16,31 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopItemInfo;
 
 /**
  * This class ... cdd
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopMakeInfo extends L2GameClientPacket
+public final class RequestRecipeShopMakeInfo implements IClientIncomingPacket
 {
 	private int _playerObjectId;
 	private int _recipeId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_playerObjectId = readD();
-		_recipeId = readD();
+		_playerObjectId = packet.readD();
+		_recipeId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

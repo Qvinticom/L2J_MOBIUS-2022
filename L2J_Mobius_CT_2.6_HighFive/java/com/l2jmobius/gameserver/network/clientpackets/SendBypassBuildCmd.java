@@ -17,17 +17,19 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * This class handles all GM commands triggered by //command
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:29 $
  */
-public final class SendBypassBuildCmd extends L2GameClientPacket
+public final class SendBypassBuildCmd implements IClientIncomingPacket
 {
 	public static final int GM_MESSAGE = 9;
 	public static final int ANNOUNCEMENT = 10;
@@ -35,19 +37,20 @@ public final class SendBypassBuildCmd extends L2GameClientPacket
 	private String _command;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_command = readS();
+		_command = packet.readS();
 		if (_command != null)
 		{
 			_command = _command.trim();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

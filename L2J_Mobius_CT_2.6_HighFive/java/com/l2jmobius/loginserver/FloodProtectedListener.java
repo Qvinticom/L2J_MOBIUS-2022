@@ -34,11 +34,18 @@ public abstract class FloodProtectedListener extends Thread
 {
 	private final Logger _log = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new ConcurrentHashMap<>();
-	private final ServerSocket _serverSocket;
+	private ServerSocket _serverSocket;
 	
 	public FloodProtectedListener(String listenIp, int port) throws IOException
 	{
-		_serverSocket = listenIp.equals("*") ? new ServerSocket(port) : new ServerSocket(port, 50, InetAddress.getByName(listenIp));
+		if (listenIp.equals("*"))
+		{
+			_serverSocket = new ServerSocket(port);
+		}
+		else
+		{
+			_serverSocket = new ServerSocket(port, 50, InetAddress.getByName(listenIp));
+		}
 	}
 	
 	@Override

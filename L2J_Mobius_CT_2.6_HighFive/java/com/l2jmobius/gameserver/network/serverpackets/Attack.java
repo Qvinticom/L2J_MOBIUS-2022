@@ -20,11 +20,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Hit;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class Attack extends L2GameServerPacket
+public class Attack implements IClientOutgoingPacket
 {
 	private final int _attackerObjId;
 	private final boolean _soulshot;
@@ -79,31 +81,38 @@ public class Attack extends L2GameServerPacket
 	
 	/**
 	 * Writes current hit
+	 * @param packet
 	 * @param hit
 	 */
-	private void writeHit(Hit hit)
+	private void writeHit(PacketWriter packet, Hit hit)
 	{
-		writeD(hit.getTargetId());
-		writeD(hit.getDamage());
-		writeC(hit.getFlags());
+		packet.writeD(hit.getTargetId());
+		packet.writeD(hit.getDamage());
+		packet.writeC(hit.getFlags());
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		final Iterator<Hit> it = _hits.iterator();
-		writeC(0x33);
+		OutgoingPackets.ATTACK.writeId(packet);
 		
-		writeD(_attackerObjId);
-		writeHit(it.next());
-		writeLoc(_attackerLoc);
+		packet.writeD(_attackerObjId);
+		writeHit(packet, it.next());
+		packet.writeD(_attackerLoc.getX());
+		packet.writeD(_attackerLoc.getY());
+		packet.writeD(_attackerLoc.getZ());
 		
-		writeH(_hits.size() - 1);
+		packet.writeH(_hits.size() - 1);
 		while (it.hasNext())
 		{
-			writeHit(it.next());
+			writeHit(packet, it.next());
 		}
 		
-		writeLoc(_targetLoc);
+		packet.writeD(_targetLoc.getX());
+		packet.writeD(_targetLoc.getY());
+		packet.writeD(_targetLoc.getZ());
+		
+		return true;
 	}
 }

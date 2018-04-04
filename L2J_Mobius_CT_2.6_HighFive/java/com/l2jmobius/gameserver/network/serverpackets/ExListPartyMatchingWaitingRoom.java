@@ -19,13 +19,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
+public class ExListPartyMatchingWaitingRoom implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	// private final int _page;
@@ -45,15 +47,14 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x36);
+		OutgoingPackets.EX_LIST_PARTY_MATCHING_WAITING_ROOM.writeId(packet);
 		if (_mode == 0)
 		{
-			writeD(0);
-			writeD(0);
-			return;
+			packet.writeD(0);
+			packet.writeD(0);
+			return true;
 		}
 		
 		for (L2PcInstance cha : PartyMatchWaitingList.getInstance().getPlayers())
@@ -77,13 +78,14 @@ public class ExListPartyMatchingWaitingRoom extends L2GameServerPacket
 			_members.add(cha);
 		}
 		
-		writeD(0x01); // Page?
-		writeD(_members.size());
+		packet.writeD(0x01); // Page?
+		packet.writeD(_members.size());
 		for (L2PcInstance member : _members)
 		{
-			writeS(member.getName());
-			writeD(member.getActiveClass());
-			writeD(member.getLevel());
+			packet.writeS(member.getName());
+			packet.writeD(member.getActiveClass());
+			packet.writeD(member.getLevel());
 		}
+		return true;
 	}
 }

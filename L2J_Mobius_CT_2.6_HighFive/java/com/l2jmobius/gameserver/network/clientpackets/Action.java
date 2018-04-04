@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -24,10 +25,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class Action extends L2GameClientPacket
+public final class Action implements IClientIncomingPacket
 {
 	private int _objectId;
 	@SuppressWarnings("unused")
@@ -39,20 +41,21 @@ public final class Action extends L2GameClientPacket
 	private int _actionId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD(); // Target object Identifier
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		_actionId = readC(); // Action identifier : 0-Simple click, 1-Shift click
+		_objectId = packet.readD(); // Target object Identifier
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_actionId = packet.readC(); // Action identifier : 0-Simple click, 1-Shift click
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -61,7 +64,7 @@ public final class Action extends L2GameClientPacket
 		if (activeChar.inObserverMode())
 		{
 			activeChar.sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -97,27 +100,27 @@ public final class Action extends L2GameClientPacket
 		if (obj == null)
 		{
 			// pressing e.g. pickup many times quickly would get you here
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!obj.isTargetable() && !activeChar.canOverrideCond(PcCondOverride.TARGET_ALL))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Players can't interact with objects in the other instances, except from multiverse
 		if ((obj.getInstanceId() != activeChar.getInstanceId()) && (activeChar.getInstanceId() != -1))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Only GMs can directly interact with invisible characters
 		if (!obj.isVisibleFor(activeChar))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -125,7 +128,7 @@ public final class Action extends L2GameClientPacket
 		if (activeChar.getActiveRequester() != null)
 		{
 			// Actions prohibited when in trade
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -151,16 +154,10 @@ public final class Action extends L2GameClientPacket
 			default:
 			{
 				// Invalid action detected (probably client cheating), log this
-				_log.warning(getType() + ": Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
-				sendPacket(ActionFailed.STATIC_PACKET);
+				_log.warning("[C] Action: Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

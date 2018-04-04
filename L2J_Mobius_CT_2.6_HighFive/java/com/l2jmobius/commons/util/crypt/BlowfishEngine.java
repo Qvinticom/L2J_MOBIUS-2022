@@ -1118,7 +1118,7 @@ public final class BlowfishEngine
 	
 	private int func(int x)
 	{
-		return ((S0[(x >>> 24)] + S1[(x >>> 16) & 0xff]) ^ S2[(x >>> 8) & 0xff]) + S3[x & 0xff];
+		return (((S0[(x >>> 24)] + S1[(x >>> 16) & 0xff]) ^ S2[(x >>> 8) & 0xff]) + S3[x & 0xff]);
 	}
 	
 	/**
@@ -1129,7 +1129,8 @@ public final class BlowfishEngine
 	 */
 	private void processTable(int xl, int xr, int[] table)
 	{
-		for (int s = 0; s < table.length; s += 2)
+		final int size = table.length;
+		for (int s = 0; s < size; s += 2)
 		{
 			xl ^= P[0];
 			xr ^= func(xl) ^ P[1];
@@ -1436,7 +1437,7 @@ public final class BlowfishEngine
 	 */
 	private int bytesTo32bits(byte[] src, int srcIndex)
 	{
-		return ((src[srcIndex + 3] & 0xff) << 24) | ((src[srcIndex + 2] & 0xff) << 16) | ((src[srcIndex + 1] & 0xff) << 8) | (src[srcIndex] & 0xff);
+		return ((src[srcIndex + 3] & 0xff) << 24) | ((src[srcIndex + 2] & 0xff) << 16) | ((src[srcIndex + 1] & 0xff) << 8) | ((src[srcIndex] & 0xff));
 	}
 	
 	/**

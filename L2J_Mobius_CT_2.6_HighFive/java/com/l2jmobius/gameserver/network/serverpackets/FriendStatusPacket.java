@@ -16,15 +16,17 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
  * Inform player about friend online status change
  * @author JIV
  */
-public class FriendStatusPacket extends L2GameServerPacket
+public class FriendStatusPacket implements IClientOutgoingPacket
 {
 	private final boolean _online;
 	private final int _objid;
@@ -38,11 +40,12 @@ public class FriendStatusPacket extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x77);
-		writeD(_online ? 1 : 0);
-		writeS(_name);
-		writeD(_objid);
+		OutgoingPackets.L2_FRIEND_STATUS.writeId(packet);
+		packet.writeD(_online ? 1 : 0);
+		packet.writeS(_name);
+		packet.writeD(_objid);
+		return true;
 	}
 }

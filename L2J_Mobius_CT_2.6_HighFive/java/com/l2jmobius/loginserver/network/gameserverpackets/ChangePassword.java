@@ -22,7 +22,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Base64;
 import java.util.Collection;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -104,7 +103,7 @@ public class ChangePassword extends BaseRecievePacket
 						passUpdated = ps.executeUpdate();
 					}
 					
-					_log.log(Level.INFO, "The password for account " + accountName + " has been changed from " + curpassEnc + " to " + Base64.getEncoder().encodeToString(password));
+					_log.info("The password for account " + accountName + " has been changed from " + curpassEnc + " to " + Base64.getEncoder().encodeToString(password));
 					if (passUpdated > 0)
 					{
 						gst.ChangePasswordResponse((byte) 1, characterName, "You have successfully changed your password!");

@@ -20,6 +20,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.InstanceType;
@@ -39,6 +40,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
@@ -50,7 +52,7 @@ import com.l2jmobius.gameserver.util.Util;
  * RequestBypassToServer client packet implementation.
  * @author HorridoJoho
  */
-public final class RequestBypassToServer extends L2GameClientPacket
+public final class RequestBypassToServer implements IClientIncomingPacket
 {
 	// FIXME: This is for compatibility, will be changed when bypass functionality got an overhaul by NosBit
 	private static final String[] _possibleNonHtmlCommands =
@@ -69,15 +71,16 @@ public final class RequestBypassToServer extends L2GameClientPacket
 	private String _command;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_command = readS();
+		_command = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -117,7 +120,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 			}
 		}
 		
-		if (!getClient().getFloodProtectors().getServerBypass().tryPerformAction(_command))
+		if (!client.getFloodProtectors().getServerBypass().tryPerformAction(_command))
 		{
 			return;
 		}
@@ -293,7 +296,7 @@ public final class RequestBypassToServer extends L2GameClientPacket
 				}
 				else
 				{
-					_log.warning(getClient() + " sent not handled RequestBypassToServer: [" + _command + "]");
+					_log.warning(client + " sent not handled RequestBypassToServer: [" + _command + "]");
 				}
 			}
 		}

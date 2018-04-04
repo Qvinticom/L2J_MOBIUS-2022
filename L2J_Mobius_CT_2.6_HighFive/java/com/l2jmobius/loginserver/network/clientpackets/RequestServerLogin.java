@@ -17,8 +17,11 @@
 package com.l2jmobius.loginserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.loginserver.LoginController;
 import com.l2jmobius.loginserver.SessionKey;
+import com.l2jmobius.loginserver.network.L2LoginClient;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayOk;
@@ -31,70 +34,46 @@ import com.l2jmobius.loginserver.network.serverpackets.PlayOk;
  * c: server ID
  * </pre>
  */
-public class RequestServerLogin extends L2LoginClientPacket
+public class RequestServerLogin implements IIncomingPacket<L2LoginClient>
 {
 	private int _skey1;
 	private int _skey2;
 	private int _serverId;
 	
-	/**
-	 * @return
-	 */
-	public int getSessionKey1()
-	{
-		return _skey1;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getSessionKey2()
-	{
-		return _skey2;
-	}
-	
-	/**
-	 * @return
-	 */
-	public int getServerID()
-	{
-		return _serverId;
-	}
-	
 	@Override
-	public boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() < 9)
+		if (packet.getReadableBytes() >= 9)
 		{
-			return false;
+			_skey1 = packet.readD();
+			_skey2 = packet.readD();
+			_serverId = packet.readC();
+			return true;
 		}
-		_skey1 = readD();
-		_skey2 = readD();
-		_serverId = readC();
-		return true;
+		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		final SessionKey sk = getClient().getSessionKey();
+		final SessionKey sk = client.getSessionKey();
 		
 		// if we didnt showed the license we cant check these values
 		if (!Config.SHOW_LICENCE || sk.checkLoginPair(_skey1, _skey2))
 		{
-			if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
+			if (LoginController.getInstance().isLoginPossible(client, _serverId))
 			{
-				getClient().setJoinedGS(true);
-				getClient().sendPacket(new PlayOk(sk));
+				client.setJoinedGS(true);
+				client.sendPacket(new PlayOk(sk));
 			}
 			else
 			{
-				getClient().close(PlayFailReason.REASON_SERVER_OVERLOADED);
+				client.close(PlayFailReason.REASON_SERVER_OVERLOADED);
 			}
 		}
 		else
 		{
-			getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			client.close(LoginFailReason.REASON_ACCESS_FAILED);
 		}
 	}
 }

@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class LoginFail extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class LoginFail implements IClientOutgoingPacket
 {
 	public static final int NO_TEXT = 0;
 	public static final int SYSTEM_ERROR_LOGIN_LATER = 1;
@@ -41,9 +44,10 @@ public class LoginFail extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0A);
-		writeD(_reason);
+		OutgoingPackets.LOGIN_FAIL.writeId(packet);
+		packet.writeD(_reason);
+		return true;
 	}
 }

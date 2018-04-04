@@ -19,10 +19,13 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author UnAfraid
  */
-public class ExQuestNpcLogList extends L2GameServerPacket
+public class ExQuestNpcLogList implements IClientOutgoingPacket
 {
 	private final int _questId;
 	private final List<NpcHolder> _npcs = new ArrayList<>();
@@ -43,18 +46,18 @@ public class ExQuestNpcLogList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xC5);
-		writeD(_questId);
-		writeC(_npcs.size());
+		OutgoingPackets.EX_QUEST_NPC_LOG_LIST.writeId(packet);
+		packet.writeD(_questId);
+		packet.writeC(_npcs.size());
 		for (NpcHolder holder : _npcs)
 		{
-			writeD((holder.getNpcId() + 1000000));
-			writeC(holder.getUnknown());
-			writeD(holder.getCount());
+			packet.writeD((holder.getNpcId() + 1000000));
+			packet.writeC(holder.getUnknown());
+			packet.writeD(holder.getCount());
 		}
+		return true;
 	}
 	
 	private class NpcHolder

@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.model.L2Crest;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public class ExPledgeCrestLarge extends L2GameServerPacket
+public class ExPledgeCrestLarge implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
@@ -41,20 +43,20 @@ public class ExPledgeCrestLarge extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x1B);
-		writeD(0x00);
-		writeD(_crestId);
+		OutgoingPackets.EX_PLEDGE_EMBLEM.writeId(packet);
+		packet.writeD(0x00);
+		packet.writeD(_crestId);
 		if (_data != null)
 		{
-			writeD(_data.length);
-			writeB(_data);
+			packet.writeD(_data.length);
+			packet.writeB(_data);
 		}
 		else
 		{
-			writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 }

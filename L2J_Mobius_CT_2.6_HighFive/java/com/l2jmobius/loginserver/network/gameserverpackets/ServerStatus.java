@@ -30,16 +30,6 @@ public class ServerStatus extends BaseRecievePacket
 {
 	protected static Logger _log = Logger.getLogger(ServerStatus.class.getName());
 	
-	public static final String[] STATUS_STRING =
-	{
-		"Auto",
-		"Good",
-		"Normal",
-		"Full",
-		"Down",
-		"Gm Only"
-	};
-	
 	public static final int SERVER_LIST_STATUS = 0x01;
 	public static final int SERVER_TYPE = 0x02;
 	public static final int SERVER_LIST_SQUARE_BRACKET = 0x03;
@@ -81,42 +71,40 @@ public class ServerStatus extends BaseRecievePacket
 		super(decrypt);
 		
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(server.getServerId());
-		if (gsi == null)
+		if (gsi != null)
 		{
-			return;
-		}
-		
-		final int size = readD();
-		for (int i = 0; i < size; i++)
-		{
-			final int type = readD();
-			final int value = readD();
-			switch (type)
+			final int size = readD();
+			for (int i = 0; i < size; i++)
 			{
-				case SERVER_LIST_STATUS:
+				final int type = readD();
+				final int value = readD();
+				switch (type)
 				{
-					gsi.setStatus(value);
-					break;
-				}
-				case SERVER_LIST_SQUARE_BRACKET:
-				{
-					gsi.setShowingBrackets(value == ON);
-					break;
-				}
-				case MAX_PLAYERS:
-				{
-					gsi.setMaxPlayers(value);
-					break;
-				}
-				case SERVER_TYPE:
-				{
-					gsi.setServerType(value);
-					break;
-				}
-				case SERVER_AGE:
-				{
-					gsi.setAgeLimit(value);
-					break;
+					case SERVER_LIST_STATUS:
+					{
+						gsi.setStatus(value);
+						break;
+					}
+					case SERVER_LIST_SQUARE_BRACKET:
+					{
+						gsi.setShowingBrackets(value == ON);
+						break;
+					}
+					case MAX_PLAYERS:
+					{
+						gsi.setMaxPlayers(value);
+						break;
+					}
+					case SERVER_TYPE:
+					{
+						gsi.setServerType(value);
+						break;
+					}
+					case SERVER_AGE:
+					{
+						gsi.setAgeLimit(value);
+						break;
+					}
 				}
 			}
 		}

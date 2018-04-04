@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public final class LeaveWorld extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public final class LeaveWorld implements IClientOutgoingPacket
 {
 	public static final LeaveWorld STATIC_PACKET = new LeaveWorld();
 	
@@ -25,8 +28,9 @@ public final class LeaveWorld extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x84);
+		OutgoingPackets.LOG_OUT_OK.writeId(packet);
+		return true;
 	}
 }

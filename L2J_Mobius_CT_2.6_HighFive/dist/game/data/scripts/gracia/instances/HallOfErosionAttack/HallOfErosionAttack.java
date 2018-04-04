@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
@@ -691,7 +691,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		}
 	}
 	
-	protected void broadCastPacket(HEAWorld world, L2GameServerPacket packet)
+	protected void broadCastPacket(HEAWorld world, IClientOutgoingPacket packet)
 	{
 		for (int objId : world.getAllowed())
 		{

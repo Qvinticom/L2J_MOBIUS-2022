@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -31,6 +32,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -39,7 +41,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * RequestSellItem client packet class.
  */
-public final class RequestSellItem extends L2GameClientPacket
+public final class RequestSellItem implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 16;
 	private static final int CUSTOM_CB_SELL_LIST = 423;
@@ -48,46 +50,41 @@ public final class RequestSellItem extends L2GameClientPacket
 	private List<UniqueItemHolder> _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_listId = readD();
-		final int size = readD();
-		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != _buf.remaining()))
+		_listId = packet.readD();
+		final int size = packet.readD();
+		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			final int objectId = readD();
-			final int itemId = readD();
-			final long count = readQ();
+			final int objectId = packet.readD();
+			final int itemId = packet.readD();
+			final long count = packet.readQ();
 			if ((objectId < 1) || (itemId < 1) || (count < 1))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items.add(new UniqueItemHolder(itemId, objectId, count));
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		processSell();
-	}
-	
-	protected void processSell()
-	{
-		final L2PcInstance player = getClient().getActiveChar();
-		
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("buy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("buy"))
 		{
 			player.sendMessage("You are buying too fast.");
 			return;
@@ -95,14 +92,14 @@ public final class RequestSellItem extends L2GameClientPacket
 		
 		if (_items == null)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		// Alt game - Karma punishment
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_SHOP && (player.getKarma() > 0))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -112,7 +109,7 @@ public final class RequestSellItem extends L2GameClientPacket
 		{
 			if ((target == null) || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) || (player.getInstanceId() != target.getInstanceId()))
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			if (target instanceof L2MerchantInstance)
@@ -121,14 +118,14 @@ public final class RequestSellItem extends L2GameClientPacket
 			}
 			else
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
 		
 		if ((merchant == null) && !player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -143,7 +140,7 @@ public final class RequestSellItem extends L2GameClientPacket
 		{
 			if (!buyList.isNpcAllowed(merchant.getId()))
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}

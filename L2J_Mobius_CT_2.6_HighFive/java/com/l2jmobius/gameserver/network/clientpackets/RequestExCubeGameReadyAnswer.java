@@ -16,31 +16,34 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format: chddd d: Arena d: Answer
  * @author mrTJO
  */
-public final class RequestExCubeGameReadyAnswer extends L2GameClientPacket
+public final class RequestExCubeGameReadyAnswer implements IClientIncomingPacket
 {
 	private int _arena;
 	private int _answer;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		// client sends -1,0,1,2 for arena parameter
-		_arena = readD() + 1;
+		_arena = packet.readD() + 1;
 		// client sends 1 if clicked confirm on not clicked, 0 if clicked cancel
-		_answer = readD();
+		_answer = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		
 		if (player == null)
 		{

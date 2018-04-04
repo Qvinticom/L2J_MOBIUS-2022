@@ -16,32 +16,35 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExClosePartyRoom;
 
 /**
  * @author Gnacik
  */
-public final class RequestWithdrawPartyRoom extends L2GameClientPacket
+public final class RequestWithdrawPartyRoom implements IClientIncomingPacket
 {
 	private int _roomid;
 	@SuppressWarnings("unused")
 	private int _unk1;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_unk1 = readD();
+		_roomid = packet.readD();
+		_unk1 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = client.getActiveChar();
 		
 		if (_activeChar == null)
 		{

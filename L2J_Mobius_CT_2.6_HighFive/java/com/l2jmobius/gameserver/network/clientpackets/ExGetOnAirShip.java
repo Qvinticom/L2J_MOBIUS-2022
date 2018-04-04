@@ -16,11 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
+
 /**
  * Format: (c) dddd d: dx d: dy d: dz d: AirShip id ??
  * @author -Wooden-
  */
-public class ExGetOnAirShip extends L2GameClientPacket
+public class ExGetOnAirShip implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -28,16 +31,17 @@ public class ExGetOnAirShip extends L2GameClientPacket
 	private int _shipId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_shipId = readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_shipId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		_log.info("[T1:ExGetOnAirShip] x: " + _x);
 		_log.info("[T1:ExGetOnAirShip] y: " + _y);

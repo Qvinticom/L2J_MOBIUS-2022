@@ -19,10 +19,12 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class ExSendUIEvent extends L2GameServerPacket
+public class ExSendUIEvent implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final boolean _type;
@@ -80,27 +82,27 @@ public class ExSendUIEvent extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x8E);
-		writeD(_objectId);
-		writeD(_type ? 1 : 0); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
-		writeD(0);// unknown
-		writeD(0);// unknown
-		writeS(_countUp ? "1" : "0"); // 0 = count down, 1 = count up
+		OutgoingPackets.EX_SEND_UI_EVENT.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_type ? 1 : 0); // 0 = show, 1 = hide (there is 2 = pause and 3 = resume also but they don't work well you can only pause count down and you cannot resume it because resume hides the counter).
+		packet.writeD(0); // unknown
+		packet.writeD(0); // unknown
+		packet.writeS(_countUp ? "1" : "0"); // 0 = count down, 1 = count up
 		// timer always disappears 10 seconds before end
-		writeS(String.valueOf(_startTime / 60));
-		writeS(String.valueOf(_startTime % 60));
-		writeS(String.valueOf(_endTime / 60));
-		writeS(String.valueOf(_endTime % 60));
-		writeD(_npcstringId);
+		packet.writeS(String.valueOf(_startTime / 60));
+		packet.writeS(String.valueOf(_startTime % 60));
+		packet.writeS(String.valueOf(_endTime / 60));
+		packet.writeS(String.valueOf(_endTime % 60));
+		packet.writeD(_npcstringId);
 		if (_params != null)
 		{
 			for (String param : _params)
 			{
-				writeS(param);
+				packet.writeS(param);
 			}
 		}
+		return true;
 	}
 }

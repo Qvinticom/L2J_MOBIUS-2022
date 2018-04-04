@@ -17,7 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -25,22 +27,23 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.2.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class SetPrivateStoreMsgBuy extends L2GameClientPacket
+public final class SetPrivateStoreMsgBuy implements IClientIncomingPacket
 {
 	private static final int MAX_MSG_LENGTH = 29;
 	
 	private String _storeMsg;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_storeMsg = readS();
+		_storeMsg = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((player == null) || (player.getBuyList() == null))
 		{
 			return;
@@ -53,6 +56,6 @@ public final class SetPrivateStoreMsgBuy extends L2GameClientPacket
 		}
 		
 		player.getBuyList().setTitle(_storeMsg);
-		player.sendPacket(new PrivateStoreMsgBuy(player));
+		client.sendPacket(new PrivateStoreMsgBuy(player));
 	}
 }

@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Populates the Siege Defender List in the SiegeInfo Window<BR>
@@ -44,7 +46,7 @@ import com.l2jmobius.gameserver.model.entity.Castle;
  * d = AllyCrestID<BR>
  * @author KenM
  */
-public final class SiegeDefenderList extends L2GameServerPacket
+public final class SiegeDefenderList implements IClientOutgoingPacket
 {
 	private final Castle _castle;
 	
@@ -54,20 +56,20 @@ public final class SiegeDefenderList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xcb);
-		writeD(_castle.getResidenceId());
-		writeD(0x00); // 0
-		writeD(0x01); // 1
-		writeD(0x00); // 0
+		OutgoingPackets.CASTLE_SIEGE_DEFENDER_LIST.writeId(packet);
+		packet.writeD(_castle.getResidenceId());
+		packet.writeD(0x00); // 0
+		packet.writeD(0x01); // 1
+		packet.writeD(0x00); // 0
 		final int size = _castle.getSiege().getDefenderClans().size() + _castle.getSiege().getDefenderWaitingClans().size();
 		if (size > 0)
 		{
 			L2Clan clan;
 			
-			writeD(size);
-			writeD(size);
+			packet.writeD(size);
+			packet.writeD(size);
 			// Listing the Lord and the approved clans
 			for (L2SiegeClan siegeclan : _castle.getSiege().getDefenderClans())
 			{
@@ -77,58 +79,59 @@ public final class SiegeDefenderList extends L2GameServerPacket
 					continue;
 				}
 				
-				writeD(clan.getId());
-				writeS(clan.getName());
-				writeS(clan.getLeaderName());
-				writeD(clan.getCrestId());
-				writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(clan.getId());
+				packet.writeS(clan.getName());
+				packet.writeS(clan.getLeaderName());
+				packet.writeD(clan.getCrestId());
+				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
 				switch (siegeclan.getType())
 				{
 					case OWNER:
 					{
-						writeD(0x01); // owner
+						packet.writeD(0x01); // owner
 						break;
 					}
 					case DEFENDER_PENDING:
 					{
-						writeD(0x02); // approved
+						packet.writeD(0x02); // approved
 						break;
 					}
 					case DEFENDER:
 					{
-						writeD(0x03); // waiting approved
+						packet.writeD(0x03); // waiting approved
 						break;
 					}
 					default:
 					{
-						writeD(0x00);
+						packet.writeD(0x00);
 						break;
 					}
 				}
-				writeD(clan.getAllyId());
-				writeS(clan.getAllyName());
-				writeS(""); // AllyLeaderName
-				writeD(clan.getAllyCrestId());
+				packet.writeD(clan.getAllyId());
+				packet.writeS(clan.getAllyName());
+				packet.writeS(""); // AllyLeaderName
+				packet.writeD(clan.getAllyCrestId());
 			}
 			for (L2SiegeClan siegeclan : _castle.getSiege().getDefenderWaitingClans())
 			{
 				clan = ClanTable.getInstance().getClan(siegeclan.getClanId());
-				writeD(clan.getId());
-				writeS(clan.getName());
-				writeS(clan.getLeaderName());
-				writeD(clan.getCrestId());
-				writeD(0x00); // signed time (seconds) (not storated by L2J)
-				writeD(0x02); // waiting approval
-				writeD(clan.getAllyId());
-				writeS(clan.getAllyName());
-				writeS(""); // AllyLeaderName
-				writeD(clan.getAllyCrestId());
+				packet.writeD(clan.getId());
+				packet.writeS(clan.getName());
+				packet.writeS(clan.getLeaderName());
+				packet.writeD(clan.getCrestId());
+				packet.writeD(0x00); // signed time (seconds) (not storated by L2J)
+				packet.writeD(0x02); // waiting approval
+				packet.writeD(clan.getAllyId());
+				packet.writeS(clan.getAllyName());
+				packet.writeS(""); // AllyLeaderName
+				packet.writeD(clan.getAllyCrestId());
 			}
 		}
 		else
 		{
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

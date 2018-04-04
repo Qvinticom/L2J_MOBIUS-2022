@@ -19,7 +19,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class SkillList extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public final class SkillList implements IClientOutgoingPacket
 {
 	private final List<Skill> _skills = new ArrayList<>();
 	
@@ -47,18 +50,19 @@ public final class SkillList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x5F);
-		writeD(_skills.size());
+		OutgoingPackets.SKILL_LIST.writeId(packet);
+		packet.writeD(_skills.size());
 		
 		for (Skill temp : _skills)
 		{
-			writeD(temp.passive ? 1 : 0);
-			writeD(temp.level);
-			writeD(temp.id);
-			writeC(temp.disabled ? 1 : 0);
-			writeC(temp.enchanted ? 1 : 0);
+			packet.writeD(temp.passive ? 1 : 0);
+			packet.writeD(temp.level);
+			packet.writeD(temp.id);
+			packet.writeC(temp.disabled ? 1 : 0);
+			packet.writeC(temp.enchanted ? 1 : 0);
 		}
+		return true;
 	}
 }

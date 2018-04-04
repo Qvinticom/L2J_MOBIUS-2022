@@ -38,7 +38,5 @@ public class PlayerLogout extends BaseRecievePacket
 		final String account = readS();
 		
 		server.removeAccountOnGameServer(account);
-		
-		server.broadcastToTelnet("Player " + account + " disconnected from GameServer " + server.getServerId());
 	}
 }

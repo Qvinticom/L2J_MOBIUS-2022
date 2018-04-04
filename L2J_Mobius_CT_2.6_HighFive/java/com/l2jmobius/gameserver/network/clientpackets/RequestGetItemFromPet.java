@@ -17,16 +17,18 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class RequestGetItemFromPet extends L2GameClientPacket
+public final class RequestGetItemFromPet implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _amount;
@@ -34,23 +36,24 @@ public final class RequestGetItemFromPet extends L2GameClientPacket
 	private int _unknown;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_amount = readQ();
-		_unknown = readD();// = 0 for most trades
+		_objectId = packet.readD();
+		_amount = packet.readQ();
+		_unknown = packet.readD();// = 0 for most trades
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((_amount <= 0) || (player == null) || !player.hasPet())
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("getfrompet"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("getfrompet"))
 		{
 			player.sendMessage("You get items from pet too fast.");
 			return;

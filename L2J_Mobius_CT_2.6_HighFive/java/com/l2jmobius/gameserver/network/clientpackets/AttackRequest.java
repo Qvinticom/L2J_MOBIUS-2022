@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -24,10 +25,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class AttackRequest extends L2GameClientPacket
+public final class AttackRequest implements IClientIncomingPacket
 {
 	// cddddc
 	private int _objectId;
@@ -41,19 +43,20 @@ public final class AttackRequest extends L2GameClientPacket
 	private int _attackId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
-		_attackId = readC(); // 0 for simple click 1 for shift-click
+		_objectId = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
+		_attackId = packet.readC(); // 0 for simple click 1 for shift-click
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.StopMoveInVehicle;
 
 /**
  * @author Maktakien
  */
-public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
+public final class CannotMoveAnymoreInVehicle implements IClientIncomingPacket
 {
 	private int _x;
 	private int _y;
@@ -32,19 +34,20 @@ public final class CannotMoveAnymoreInVehicle extends L2GameClientPacket
 	private int _boatId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_boatId = readD();
-		_x = readD();
-		_y = readD();
-		_z = readD();
-		_heading = readD();
+		_boatId = packet.readD();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		_heading = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

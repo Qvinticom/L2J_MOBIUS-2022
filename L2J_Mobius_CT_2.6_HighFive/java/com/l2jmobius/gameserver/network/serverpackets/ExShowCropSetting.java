@@ -20,14 +20,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.L2Seed;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author l3x
  */
-public class ExShowCropSetting extends L2GameServerPacket
+public class ExShowCropSetting implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private final Set<L2Seed> _seeds;
@@ -57,57 +59,57 @@ public class ExShowCropSetting extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE); // Id
-		writeH(0x2b); // SubId
+		OutgoingPackets.EX_SHOW_CROP_SETTING.writeId(packet);
 		
-		writeD(_manorId); // manor id
-		writeD(_seeds.size()); // size
+		packet.writeD(_manorId); // manor id
+		packet.writeD(_seeds.size()); // size
 		
 		CropProcure cp;
 		for (L2Seed s : _seeds)
 		{
-			writeD(s.getCropId()); // crop id
-			writeD(s.getLevel()); // seed level
-			writeC(1);
-			writeD(s.getReward(1)); // reward 1 id
-			writeC(1);
-			writeD(s.getReward(2)); // reward 2 id
-			writeD(s.getCropLimit()); // next sale limit
-			writeD(0); // ???
-			writeD(s.getCropMinPrice()); // min crop price
-			writeD(s.getCropMaxPrice()); // max crop price
+			packet.writeD(s.getCropId()); // crop id
+			packet.writeD(s.getLevel()); // seed level
+			packet.writeC(1);
+			packet.writeD(s.getReward(1)); // reward 1 id
+			packet.writeC(1);
+			packet.writeD(s.getReward(2)); // reward 2 id
+			packet.writeD(s.getCropLimit()); // next sale limit
+			packet.writeD(0); // ???
+			packet.writeD(s.getCropMinPrice()); // min crop price
+			packet.writeD(s.getCropMaxPrice()); // max crop price
 			// Current period
 			if (_current.containsKey(s.getCropId()))
 			{
 				cp = _current.get(s.getCropId());
-				writeQ(cp.getStartAmount()); // buy
-				writeQ(cp.getPrice()); // price
-				writeC(cp.getReward()); // reward
+				packet.writeQ(cp.getStartAmount()); // buy
+				packet.writeQ(cp.getPrice()); // price
+				packet.writeC(cp.getReward()); // reward
 			}
 			else
 			{
-				writeQ(0);
-				writeQ(0);
-				writeC(0);
+				packet.writeQ(0);
+				packet.writeQ(0);
+				packet.writeC(0);
 			}
 			// Next period
 			if (_next.containsKey(s.getCropId()))
 			{
 				cp = _next.get(s.getCropId());
-				writeQ(cp.getStartAmount()); // buy
-				writeQ(cp.getPrice()); // price
-				writeC(cp.getReward()); // reward
+				packet.writeQ(cp.getStartAmount()); // buy
+				packet.writeQ(cp.getPrice()); // price
+				packet.writeC(cp.getReward()); // reward
 			}
 			else
 			{
-				writeQ(0);
-				writeQ(0);
-				writeC(0);
+				packet.writeQ(0);
+				packet.writeQ(0);
+				packet.writeC(0);
 			}
 		}
 		_next.clear();
 		_current.clear();
+		return true;
 	}
 }

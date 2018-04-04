@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * This packet shows the mouse click particle for 30 seconds on every location.
  * @author NosBit
  */
-public final class ExShowTrace extends L2GameServerPacket
+public final class ExShowTrace implements IClientOutgoingPacket
 {
 	private final List<Location> _locations = new ArrayList<>();
 	
@@ -41,19 +43,19 @@ public final class ExShowTrace extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x67);
+		OutgoingPackets.EX_SHOW_TRACE.writeId(packet);
 		
-		writeH(0); // type broken in H5
-		writeD(0); // time broken in H5
-		writeH(_locations.size());
+		packet.writeH(0); // type broken in H5
+		packet.writeD(0); // time broken in H5
+		packet.writeH(_locations.size());
 		for (Location loc : _locations)
 		{
-			writeD(loc.getX());
-			writeD(loc.getY());
-			writeD(loc.getZ());
+			packet.writeD(loc.getX());
+			packet.writeD(loc.getY());
+			packet.writeD(loc.getZ());
 		}
+		return true;
 	}
 }

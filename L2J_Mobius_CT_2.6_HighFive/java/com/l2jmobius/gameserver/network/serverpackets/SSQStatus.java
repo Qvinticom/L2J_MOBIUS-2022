@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -26,7 +28,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  * @author Tempy
  * @editor shansoft
  */
-public class SSQStatus extends L2GameServerPacket
+public class SSQStatus implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final int _page;
@@ -38,16 +40,16 @@ public class SSQStatus extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		final int winningCabal = SevenSigns.getInstance().getCabalHighestScore();
 		final int totalDawnMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DAWN);
 		final int totalDuskMembers = SevenSigns.getInstance().getTotalMembers(SevenSigns.CABAL_DUSK);
 		
-		writeC(0xfb);
+		OutgoingPackets.SSQ_STATUS.writeId(packet);
 		
-		writeC(_page);
-		writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
+		packet.writeC(_page);
+		packet.writeC(SevenSigns.getInstance().getCurrentPeriod()); // current period?
 		
 		int dawnPercent = 0;
 		int duskPercent = 0;
@@ -58,7 +60,7 @@ public class SSQStatus extends L2GameServerPacket
 			{
 				// [ddd cc dd ddd c ddd c]
 				
-				writeD(SevenSigns.getInstance().getCurrentCycle());
+				packet.writeD(SevenSigns.getInstance().getCurrentCycle());
 				
 				final int currentPeriod = SevenSigns.getInstance().getCurrentPeriod();
 				
@@ -66,22 +68,22 @@ public class SSQStatus extends L2GameServerPacket
 				{
 					case SevenSigns.PERIOD_COMP_RECRUITING:
 					{
-						writeD(SystemMessageId.THIS_IS_THE_INITIAL_PERIOD.getId());
+						packet.writeD(SystemMessageId.THIS_IS_THE_INITIAL_PERIOD.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMPETITION:
 					{
-						writeD(SystemMessageId.THE_SSQ_COMPETITION_PERIOD_IS_UNDERWAY.getId());
+						packet.writeD(SystemMessageId.THE_SSQ_COMPETITION_PERIOD_IS_UNDERWAY.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMP_RESULTS:
 					{
-						writeD(SystemMessageId.THIS_IS_A_PERIOD_WHEN_SERVER_STATISTICS_ARE_CALCULATED.getId());
+						packet.writeD(SystemMessageId.THIS_IS_A_PERIOD_WHEN_SERVER_STATISTICS_ARE_CALCULATED.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
 					{
-						writeD(SystemMessageId.THIS_IS_THE_SEAL_VALIDATION_PERIOD.getId());
+						packet.writeD(SystemMessageId.THIS_IS_THE_SEAL_VALIDATION_PERIOD.getId());
 						break;
 					}
 				}
@@ -91,22 +93,22 @@ public class SSQStatus extends L2GameServerPacket
 					case SevenSigns.PERIOD_COMP_RECRUITING:
 					case SevenSigns.PERIOD_COMP_RESULTS:
 					{
-						writeD(SystemMessageId.UNTIL_TODAY_AT_6_00_P_M.getId());
+						packet.writeD(SystemMessageId.UNTIL_TODAY_AT_6_00_P_M.getId());
 						break;
 					}
 					case SevenSigns.PERIOD_COMPETITION:
 					case SevenSigns.PERIOD_SEAL_VALIDATION:
 					{
-						writeD(SystemMessageId.UNTIL_NEXT_MONDAY_AT_6_00_P_M.getId());
+						packet.writeD(SystemMessageId.UNTIL_NEXT_MONDAY_AT_6_00_P_M.getId());
 						break;
 					}
 				}
 				
-				writeC(SevenSigns.getInstance().getPlayerCabal(_objectId));
-				writeC(SevenSigns.getInstance().getPlayerSeal(_objectId));
+				packet.writeC(SevenSigns.getInstance().getPlayerCabal(_objectId));
+				packet.writeC(SevenSigns.getInstance().getPlayerSeal(_objectId));
 				
-				writeQ(SevenSigns.getInstance().getPlayerStoneContrib(_objectId)); // Seal Stones Turned-In
-				writeQ(SevenSigns.getInstance().getPlayerAdenaCollect(_objectId)); // Ancient Adena to Collect
+				packet.writeQ(SevenSigns.getInstance().getPlayerStoneContrib(_objectId)); // Seal Stones Turned-In
+				packet.writeQ(SevenSigns.getInstance().getPlayerAdenaCollect(_objectId)); // Ancient Adena to Collect
 				
 				final double dawnStoneScore = SevenSigns.getInstance().getCurrentStoneScore(SevenSigns.CABAL_DAWN);
 				final int dawnFestivalScore = SevenSigns.getInstance().getCurrentFestivalScore(SevenSigns.CABAL_DAWN);
@@ -140,73 +142,73 @@ public class SSQStatus extends L2GameServerPacket
 				}
 				
 				/* DUSK */
-				writeQ(duskStoneScoreProp); // Seal Stone Score
-				writeQ(duskFestivalScore); // Festival Score
-				writeQ(duskTotalScore); // Total Score
+				packet.writeQ(duskStoneScoreProp); // Seal Stone Score
+				packet.writeQ(duskFestivalScore); // Festival Score
+				packet.writeQ(duskTotalScore); // Total Score
 				
-				writeC(duskPercent); // Dusk %
+				packet.writeC(duskPercent); // Dusk %
 				
 				/* DAWN */
-				writeQ(dawnStoneScoreProp); // Seal Stone Score
-				writeQ(dawnFestivalScore); // Festival Score
-				writeQ(dawnTotalScore); // Total Score
+				packet.writeQ(dawnStoneScoreProp); // Seal Stone Score
+				packet.writeQ(dawnFestivalScore); // Festival Score
+				packet.writeQ(dawnTotalScore); // Total Score
 				
-				writeC(dawnPercent); // Dawn %
+				packet.writeC(dawnPercent); // Dawn %
 				break;
 			}
 			case 2:
 			{
 				// c cc hc [cd (dc (S))]
-				writeH(1);
+				packet.writeH(1);
 				
-				writeC(5); // Total number of festivals
+				packet.writeC(5); // Total number of festivals
 				
 				for (int i = 0; i < 5; i++)
 				{
-					writeC(i + 1); // Current client-side festival ID
-					writeD(SevenSignsFestival.FESTIVAL_LEVEL_SCORES[i]);
+					packet.writeC(i + 1); // Current client-side festival ID
+					packet.writeD(SevenSignsFestival.FESTIVAL_LEVEL_SCORES[i]);
 					
 					final int duskScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DUSK, i);
 					final int dawnScore = SevenSignsFestival.getInstance().getHighestScore(SevenSigns.CABAL_DAWN, i);
 					
 					// Dusk Score \\
-					writeQ(duskScore);
+					packet.writeQ(duskScore);
 					
 					StatsSet highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DUSK, i);
 					String[] partyMembers = highScoreData.getString("members").split(",");
 					
 					if (partyMembers != null)
 					{
-						writeC(partyMembers.length);
+						packet.writeC(partyMembers.length);
 						
 						for (String partyMember : partyMembers)
 						{
-							writeS(partyMember);
+							packet.writeS(partyMember);
 						}
 					}
 					else
 					{
-						writeC(0);
+						packet.writeC(0);
 					}
 					
 					// Dawn Score \\
-					writeQ(dawnScore);
+					packet.writeQ(dawnScore);
 					
 					highScoreData = SevenSignsFestival.getInstance().getHighestScoreData(SevenSigns.CABAL_DAWN, i);
 					partyMembers = highScoreData.getString("members").split(",");
 					
 					if (partyMembers != null)
 					{
-						writeC(partyMembers.length);
+						packet.writeC(partyMembers.length);
 						
 						for (String partyMember : partyMembers)
 						{
-							writeS(partyMember);
+							packet.writeS(partyMember);
 						}
 					}
 					else
 					{
-						writeC(0);
+						packet.writeC(0);
 					}
 				}
 				break;
@@ -214,42 +216,42 @@ public class SSQStatus extends L2GameServerPacket
 			case 3:
 			{
 				// c cc [ccc (cccc)]
-				writeC(10); // Minimum limit for winning cabal to retain their seal
-				writeC(35); // Minimum limit for winning cabal to claim a seal
-				writeC(3); // Total number of seals
+				packet.writeC(10); // Minimum limit for winning cabal to retain their seal
+				packet.writeC(35); // Minimum limit for winning cabal to claim a seal
+				packet.writeC(3); // Total number of seals
 				
 				for (int i = 1; i < 4; i++)
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
 					
-					writeC(i);
-					writeC(SevenSigns.getInstance().getSealOwner(i));
+					packet.writeC(i);
+					packet.writeC(SevenSigns.getInstance().getSealOwner(i));
 					
 					if (totalDuskMembers == 0)
 					{
 						if (totalDawnMembers == 0)
 						{
-							writeC(0);
-							writeC(0);
+							packet.writeC(0);
+							packet.writeC(0);
 						}
 						else
 						{
-							writeC(0);
-							writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
+							packet.writeC(0);
+							packet.writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
 						}
 					}
 					else
 					{
 						if (totalDawnMembers == 0)
 						{
-							writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
-							writeC(0);
+							packet.writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
+							packet.writeC(0);
 						}
 						else
 						{
-							writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
-							writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
+							packet.writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
+							packet.writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
 						}
 					}
 				}
@@ -258,8 +260,8 @@ public class SSQStatus extends L2GameServerPacket
 			case 4:
 			{
 				// c cc [cc (ccD)] CT 2.3 update
-				writeC(winningCabal); // Overall predicted winner
-				writeC(3); // Total number of seals
+				packet.writeC(winningCabal); // Overall predicted winner
+				packet.writeC(3); // Total number of seals
 				
 				for (int i = 1; i < 4; i++)
 				{
@@ -269,7 +271,7 @@ public class SSQStatus extends L2GameServerPacket
 					duskPercent = Math.round((duskProportion / (totalDuskMembers == 0 ? 1 : (float) totalDuskMembers)) * 100);
 					final int sealOwner = SevenSigns.getInstance().getSealOwner(i);
 					
-					writeC(i);
+					packet.writeC(i);
 					
 					switch (sealOwner)
 					{
@@ -279,21 +281,21 @@ public class SSQStatus extends L2GameServerPacket
 							{
 								case SevenSigns.CABAL_NULL:
 								{
-									writeC(SevenSigns.CABAL_NULL);
-									writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+									packet.writeC(SevenSigns.CABAL_NULL);
+									packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									break;
 								}
 								case SevenSigns.CABAL_DAWN:
 								{
 									if (dawnPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -301,13 +303,13 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (duskPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_NOT_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_SINCE_LESS_THAN_35_PERCENT_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -322,13 +324,13 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (dawnPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
 								}
@@ -336,13 +338,13 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (dawnPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(sealOwner);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -350,18 +352,18 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (duskPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else if (dawnPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -376,13 +378,13 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (duskPercent >= 10)
 									{
-										writeC(SevenSigns.CABAL_DUSK);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DUSK);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.THE_COMPETITION_HAS_ENDED_IN_A_TIE_THEREFORE_NOBODY_HAS_BEEN_AWARDED_THE_SEAL.getId());
 									}
 									break;
 								}
@@ -390,18 +392,18 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (dawnPercent >= 35)
 									{
-										writeC(SevenSigns.CABAL_DAWN);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(SevenSigns.CABAL_DAWN);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_NOT_OWNED_35_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else if (duskPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(sealOwner);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -409,13 +411,13 @@ public class SSQStatus extends L2GameServerPacket
 								{
 									if (duskPercent >= 10)
 									{
-										writeC(sealOwner);
-										writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
+										packet.writeC(sealOwner);
+										packet.writeD(SystemMessageId.SINCE_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_AND_10_OR_MORE_PEOPLE_HAVE_PARTICIPATED.getId());
 									}
 									else
 									{
-										writeC(SevenSigns.CABAL_NULL);
-										writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
+										packet.writeC(SevenSigns.CABAL_NULL);
+										packet.writeD(SystemMessageId.ALTHOUGH_THE_SEAL_WAS_OWNED_DURING_THE_PREVIOUS_PERIOD_LESS_THAN_10_OF_PEOPLE_HAVE_VOTED.getId());
 									}
 									break;
 								}
@@ -427,5 +429,6 @@ public class SSQStatus extends L2GameServerPacket
 				break;
 			}
 		}
+		return true;
 	}
 }

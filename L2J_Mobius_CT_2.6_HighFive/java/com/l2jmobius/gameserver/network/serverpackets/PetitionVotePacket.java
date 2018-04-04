@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Plim
  */
-public class PetitionVotePacket extends L2GameServerPacket
+public class PetitionVotePacket implements IClientOutgoingPacket
 {
 	public static final PetitionVotePacket STATIC_PACKET = new PetitionVotePacket();
 	
@@ -28,8 +31,9 @@ public class PetitionVotePacket extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFC);
+		OutgoingPackets.PETITION_VOTE.writeId(packet);
+		return true;
 	}
 }

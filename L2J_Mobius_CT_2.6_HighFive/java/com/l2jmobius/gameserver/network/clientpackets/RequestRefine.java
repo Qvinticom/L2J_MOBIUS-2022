@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.AugmentationData;
 import com.l2jmobius.gameserver.model.L2Augmentation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExVariationResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -37,18 +39,19 @@ public final class RequestRefine extends AbstractRefinePacket
 	private long _gemStoneCount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetItemObjId = readD();
-		_refinerItemObjId = readD();
-		_gemStoneItemObjId = readD();
-		_gemStoneCount = readQ();
+		_targetItemObjId = packet.readD();
+		_refinerItemObjId = packet.readD();
+		_gemStoneItemObjId = packet.readD();
+		_gemStoneCount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

@@ -59,7 +59,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PetDelete;
 import com.l2jmobius.gameserver.network.serverpackets.PetInfo;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
@@ -852,26 +852,6 @@ public abstract class L2Summon extends L2Playable
 		return getOwner();
 	}
 	
-	@Override
-	public final void broadcastPacket(L2GameServerPacket mov)
-	{
-		if (getOwner() != null)
-		{
-			mov.setInvisible(getOwner().isInvisible());
-		}
-		super.broadcastPacket(mov);
-	}
-	
-	@Override
-	public final void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist)
-	{
-		if (getOwner() != null)
-		{
-			mov.setInvisible(getOwner().isInvisible());
-		}
-		super.broadcastPacket(mov, radiusInKnownlist);
-	}
-	
 	public void updateAndBroadcastStatus(int val)
 	{
 		if (getOwner() == null)
@@ -1095,11 +1075,11 @@ public abstract class L2Summon extends L2Playable
 	}
 	
 	@Override
-	public void sendPacket(L2GameServerPacket mov)
+	public void sendPacket(IClientOutgoingPacket... packets)
 	{
 		if (getOwner() != null)
 		{
-			getOwner().sendPacket(mov);
+			getOwner().sendPacket(packets);
 		}
 	}
 	

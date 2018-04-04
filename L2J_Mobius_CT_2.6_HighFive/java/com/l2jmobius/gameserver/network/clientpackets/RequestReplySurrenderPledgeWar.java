@@ -16,25 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
-public final class RequestReplySurrenderPledgeWar extends L2GameClientPacket
+public final class RequestReplySurrenderPledgeWar implements IClientIncomingPacket
 {
 	private String _reqName;
 	private int _answer;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_reqName = readS();
-		_answer = readD();
+		_reqName = packet.readS();
+		_answer = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

@@ -23,16 +23,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Support for "Chat with Friends" dialog. <br />
  * This packet is sent only at login.
  * @author mrTJO, UnAfraid
  */
-public class FriendListExtended extends L2GameServerPacket
+public class FriendListExtended implements IClientOutgoingPacket
 {
 	private final List<FriendInfo> _info;
 	
@@ -100,18 +102,19 @@ public class FriendListExtended extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x58);
-		writeD(_info.size());
+		OutgoingPackets.FRIEND_LIST.writeId(packet);
+		packet.writeD(_info.size());
 		for (FriendInfo info : _info)
 		{
-			writeD(info._objId); // character id
-			writeS(info._name);
-			writeD(info._online ? 0x01 : 0x00); // online
-			writeD(info._online ? info._objId : 0x00); // object id if online
-			writeD(info._classid);
-			writeD(info._level);
+			packet.writeD(info._objId); // character id
+			packet.writeS(info._name);
+			packet.writeD(info._online ? 0x01 : 0x00); // online
+			packet.writeD(info._online ? info._objId : 0x00); // object id if online
+			packet.writeD(info._classid);
+			packet.writeD(info._level);
 		}
+		return true;
 	}
 }

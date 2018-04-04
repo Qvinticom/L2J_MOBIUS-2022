@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExListPartyMatchingWaitingRoom;
 
 /**
  * @author Gnacik
  */
-public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
+public class RequestListPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	private int _page;
 	private int _minlvl;
@@ -30,18 +32,19 @@ public class RequestListPartyMatchingWaitingRoom extends L2GameClientPacket
 	private int _mode; // 1 - waitlist 0 - room waitlist
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_page = readD();
-		_minlvl = readD();
-		_maxlvl = readD();
-		_mode = readD();
+		_page = packet.readD();
+		_minlvl = packet.readD();
+		_maxlvl = packet.readD();
+		_mode = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = client.getActiveChar();
 		
 		if (_activeChar == null)
 		{

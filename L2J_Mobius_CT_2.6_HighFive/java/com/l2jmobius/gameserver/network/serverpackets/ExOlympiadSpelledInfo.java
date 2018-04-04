@@ -19,13 +19,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author godson
  */
-public class ExOlympiadSpelledInfo extends L2GameServerPacket
+public class ExOlympiadSpelledInfo implements IClientOutgoingPacket
 {
 	private final int _playerId;
 	private final List<BuffInfo> _effects = new ArrayList<>();
@@ -41,20 +43,20 @@ public class ExOlympiadSpelledInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x7B);
-		writeD(_playerId);
-		writeD(_effects.size());
+		OutgoingPackets.EX_OLYMPIAD_SPELLED_INFO.writeId(packet);
+		packet.writeD(_playerId);
+		packet.writeD(_effects.size());
 		for (BuffInfo info : _effects)
 		{
 			if ((info != null) && info.isInUse())
 			{
-				writeD(info.getSkill().getDisplayId());
-				writeH(info.getSkill().getDisplayLevel());
-				writeD(info.getTime());
+				packet.writeD(info.getSkill().getDisplayId());
+				packet.writeH(info.getSkill().getDisplayLevel());
+				packet.writeD(info.getTime());
 			}
 		}
+		return true;
 	}
 }

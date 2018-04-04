@@ -21,6 +21,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.handler.ChatHandler;
 import com.l2jmobius.gameserver.handler.IChatHandler;
@@ -32,6 +33,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChat;
 import com.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.util.Util;
@@ -40,7 +42,7 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.16.2.12.2.7 $ $Date: 2005/04/11 10:06:11 $
  */
-public final class Say2 extends L2GameClientPacket
+public final class Say2 implements IClientIncomingPacket
 {
 	private static Logger _logChat = Logger.getLogger("chat");
 	
@@ -88,17 +90,18 @@ public final class Say2 extends L2GameClientPacket
 	private String _target;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_text = readS();
-		_type = readD();
-		_target = (_type == ChatType.WHISPER.getClientId()) ? readS() : null;
+		_text = packet.readS();
+		_type = packet.readD();
+		_target = (_type == ChatType.WHISPER.getClientId()) ? packet.readS() : null;
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -215,7 +218,7 @@ public final class Say2 extends L2GameClientPacket
 		}
 		else
 		{
-			_log.info("No handler registered for ChatType: " + _type + " Player: " + getClient());
+			_log.info("No handler registered for ChatType: " + _type + " Player: " + client);
 		}
 	}
 	
@@ -263,29 +266,23 @@ public final class Say2 extends L2GameClientPacket
 			{
 				if (owner.getInventory().getItemByObjectId(id) == null)
 				{
-					_log.info(getClient() + " trying publish item which doesnt own! ID:" + id);
+					_log.info(owner.getClient() + " trying publish item which doesnt own! ID:" + id);
 					return false;
 				}
 				((L2ItemInstance) item).publish();
 			}
 			else
 			{
-				_log.info(getClient() + " trying publish object which is not item! Object:" + item);
+				_log.info(owner.getClient() + " trying publish object which is not item! Object:" + item);
 				return false;
 			}
 			pos1 = _text.indexOf(8, pos) + 1;
 			if (pos1 == 0) // missing ending tag
 			{
-				_log.info(getClient() + " sent invalid publish item msg! ID:" + id);
+				_log.info(owner.getClient() + " sent invalid publish item msg! ID:" + id);
 				return false;
 			}
 		}
 		return true;
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

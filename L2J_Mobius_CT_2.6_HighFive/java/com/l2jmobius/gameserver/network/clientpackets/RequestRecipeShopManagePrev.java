@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
 
@@ -24,25 +26,25 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
  * This class ...
  * @version $Revision: 1.1.2.1.2.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRecipeShopManagePrev extends L2GameClientPacket
+public final class RequestRecipeShopManagePrev implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if ((player == null))
 		{
 			return;
 		}
 		else if (player.isAlikeDead() || (player.getTarget() == null) || !player.getTarget().isPlayer())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

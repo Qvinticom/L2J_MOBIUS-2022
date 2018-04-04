@@ -20,6 +20,7 @@ import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 public class AccountingFormatter extends AbstractFormatter
@@ -50,7 +51,7 @@ public class AccountingFormatter extends AbstractFormatter
 					{
 						if (!client.isDetached())
 						{
-							address = client.getConnection().getInetAddress().getHostAddress();
+							address = client.getConnectionAddress().getHostAddress();
 						}
 					}
 					catch (Exception e)
@@ -58,7 +59,7 @@ public class AccountingFormatter extends AbstractFormatter
 						
 					}
 					
-					switch (client.getState())
+					switch ((ConnectionState) client.getConnectionState())
 					{
 						case IN_GAME:
 							if (client.getActiveChar() != null)
@@ -68,7 +69,7 @@ public class AccountingFormatter extends AbstractFormatter
 								output.append(client.getActiveChar().getObjectId());
 								output.append(") ");
 							}
-						case AUTHED:
+						case AUTHENTICATED:
 							if (client.getAccountName() != null)
 							{
 								output.append(client.getAccountName());

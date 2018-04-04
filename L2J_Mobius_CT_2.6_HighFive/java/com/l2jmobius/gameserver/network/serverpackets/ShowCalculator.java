@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class ShowCalculator extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ShowCalculator implements IClientOutgoingPacket
 {
 	private final int _calculatorId;
 	
@@ -29,9 +32,10 @@ public class ShowCalculator extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xe2);
-		writeD(_calculatorId);
+		OutgoingPackets.SHOW_CALC.writeId(packet);
+		packet.writeD(_calculatorId);
+		return true;
 	}
 }

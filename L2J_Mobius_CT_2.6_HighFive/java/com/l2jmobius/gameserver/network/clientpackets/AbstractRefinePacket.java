@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public abstract class AbstractRefinePacket extends L2GameClientPacket
+public abstract class AbstractRefinePacket implements IClientIncomingPacket
 {
 	public static final int GRADE_NONE = 0;
 	public static final int GRADE_MID = 1;

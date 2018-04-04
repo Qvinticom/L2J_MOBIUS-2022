@@ -17,10 +17,12 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
 import com.l2jmobius.gameserver.network.serverpackets.ExReplyReceivedPost;
@@ -29,20 +31,21 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestReceivedPost extends L2GameClientPacket
+public final class RequestReceivedPost implements IClientIncomingPacket
 {
 	private int _msgId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_msgId = readD();
+		_msgId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !Config.ALLOW_MAIL)
 		{
 			return;
@@ -74,11 +77,5 @@ public final class RequestReceivedPost extends L2GameClientPacket
 		activeChar.sendPacket(new ExReplyReceivedPost(msg));
 		activeChar.sendPacket(new ExChangePostState(true, _msgId, Message.READED));
 		msg.markAsRead();
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

@@ -19,10 +19,8 @@ package com.l2jmobius.gameserver;
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.InetAddress;
-import java.net.UnknownHostException;
+import java.lang.management.ManagementFactory;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
@@ -32,8 +30,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.mmocore.SelectorConfig;
-import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.commons.util.DeadLockDetector;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
@@ -135,26 +131,23 @@ import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.entity.TvTManager;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
-import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GamePacketHandler;
+import com.l2jmobius.gameserver.network.ClientNetworkManager;
+import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
+import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
-import com.l2jmobius.loginserver.network.util.IPv4Filter;
-import com.l2jmobius.status.Status;
 
 public final class GameServer
 {
-	private static final Logger _log = Logger.getLogger(GameServer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
 	// Local Constants
 	private static final String LOG_FOLDER = "log"; // Name of folder for log file
 	private static final String LOG_NAME = "./log.cfg"; // Name of log file
 	
-	private final SelectorThread<L2GameClient> _selectorThread;
-	private final L2GamePacketHandler _gamePacketHandler;
 	private final DeadLockDetector _deadDetectThread;
-	public static GameServer gameServer;
+	private static GameServer INSTANCE;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
 	public GameServer() throws Exception
@@ -167,7 +160,7 @@ public final class GameServer
 		printSection("IdFactory");
 		if (!IdFactory.getInstance().isInitialized())
 		{
-			_log.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
+			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
 		}
 		
@@ -177,6 +170,9 @@ public final class GameServer
 		printSection("Scripting Engines");
 		EventDispatcher.getInstance();
 		ScriptEngineManager.getInstance();
+		
+		printSection("Telnet");
+		TelnetServer.getInstance();
 		
 		printSection("World");
 		// start game time control early
@@ -233,7 +229,7 @@ public final class GameServer
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{
-			_log.info("PremiumManager: Premium system is enabled.");
+			LOGGER.info("PremiumManager: Premium system is enabled.");
 			PremiumManager.getInstance();
 		}
 		
@@ -295,12 +291,13 @@ public final class GameServer
 		
 		try
 		{
-			_log.info("Loading server scripts...");
+			LOGGER.info("Loading server scripts...");
+			ScriptEngineManager.getInstance().executeMasterHandler();
 			ScriptEngineManager.getInstance().executeScriptList();
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed to execute script list!", e);
+			LOGGER.log(Level.WARNING, "Failed to execute script list!", e);
 		}
 		
 		SpawnTable.getInstance().load();
@@ -340,7 +337,7 @@ public final class GameServer
 		SevenSignsFestival.getInstance();
 		AutoSpawnHandler.getInstance();
 		
-		_log.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
+		LOGGER.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
 		
 		if (Config.L2JMOD_ALLOW_WEDDING)
 		{
@@ -365,7 +362,7 @@ public final class GameServer
 		
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		
-		_log.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
+		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 		
 		TvTManager.getInstance();
 		KnownListUpdateTaskManager.getInstance();
@@ -373,6 +370,11 @@ public final class GameServer
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{
 			OfflineTradersTable.getInstance().restoreOfflineTraders();
+		}
+		
+		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
+		{
+			ServerRestartManager.getInstance();
 		}
 		
 		if (Config.DEADLOCK_DETECTOR)
@@ -387,53 +389,41 @@ public final class GameServer
 		}
 		System.gc();
 		final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
-		_log.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
-		_log.info(getClass().getSimpleName() + ": Geodata use " + geodataMemory + " MB of memory.");
-		_log.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
-		_log.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
+		LOGGER.info(getClass().getSimpleName() + ": Started, using " + getUsedMemoryMB() + " of " + totalMem + " MB total memory.");
+		LOGGER.info(getClass().getSimpleName() + ": Geodata use " + geodataMemory + " MB of memory.");
+		LOGGER.info(getClass().getSimpleName() + ": Maximum number of connected players is " + Config.MAXIMUM_ONLINE_USERS + ".");
+		LOGGER.info(getClass().getSimpleName() + ": Server loaded in " + ((System.currentTimeMillis() - serverLoadStart) / 1000) + " seconds.");
 		
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = Config.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = Config.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = Config.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = Config.MMO_HELPER_BUFFER_COUNT;
-		sc.TCP_NODELAY = Config.MMO_TCP_NODELAY;
+		ClientNetworkManager.getInstance().start();
 		
-		_gamePacketHandler = new L2GamePacketHandler();
-		_selectorThread = new SelectorThread<>(sc, _gamePacketHandler, _gamePacketHandler, _gamePacketHandler, new IPv4Filter());
-		
-		InetAddress bindAddress = null;
-		if (!Config.GAMESERVER_HOSTNAME.equals("*"))
+		if (Boolean.getBoolean("newLoginServer"))
 		{
-			try
-			{
-				bindAddress = InetAddress.getByName(Config.GAMESERVER_HOSTNAME);
-			}
-			catch (UnknownHostException e1)
-			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": WARNING: The GameServer bind address is invalid, using all avaliable IPs! Reason: " + e1.getMessage(), e1);
-			}
+			LoginServerNetworkManager.getInstance().connect();
+		}
+		else
+		{
+			LoginServerThread.getInstance().start();
 		}
 		
-		try
-		{
-			_selectorThread.openServerSocket(bindAddress, Config.PORT_GAME);
-			_selectorThread.start();
-			_log.log(Level.INFO, getClass().getSimpleName() + ": is now listening on: " + Config.GAMESERVER_HOSTNAME + ":" + Config.PORT_GAME);
-		}
-		catch (IOException e)
-		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
-		
-		if (Config.SERVER_RESTART_SCHEDULE_ENABLED)
-		{
-			ServerRestartManager.getInstance();
-		}
-		
-		LoginServerThread.getInstance().start();
 		Toolkit.getDefaultToolkit().beep();
+	}
+	
+	public long getStartedTime()
+	{
+		return ManagementFactory.getRuntimeMXBean().getStartTime();
+	}
+	
+	public String getUptime()
+	{
+		final long uptime = ManagementFactory.getRuntimeMXBean().getUptime() / 1000;
+		final long hours = uptime / 3600;
+		final long mins = (uptime - (hours * 3600)) / 60;
+		final long secs = ((uptime - (hours * 3600)) - (mins * 60));
+		if (hours > 0)
+		{
+			return hours + "hrs " + mins + "mins " + secs + "secs";
+		}
+		return mins + "mins " + secs + "secs";
 	}
 	
 	public static void main(String[] args) throws Exception
@@ -455,27 +445,13 @@ public final class GameServer
 		Config.load();
 		printSection("Database");
 		DatabaseFactory.getInstance();
-		gameServer = new GameServer();
 		
-		if (Config.IS_TELNET_ENABLED)
-		{
-			new Status(Server.serverMode).start();
-		}
+		INSTANCE = new GameServer();
 	}
 	
 	public long getUsedMemoryMB()
 	{
 		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
-	}
-	
-	public SelectorThread<L2GameClient> getSelectorThread()
-	{
-		return _selectorThread;
-	}
-	
-	public L2GamePacketHandler getL2GamePacketHandler()
-	{
-		return _gamePacketHandler;
 	}
 	
 	public DeadLockDetector getDeadLockDetectorThread()
@@ -490,6 +466,11 @@ public final class GameServer
 		{
 			s = "-" + s;
 		}
-		_log.info(s);
+		LOGGER.info(s);
+	}
+	
+	public static GameServer getInstance()
+	{
+		return INSTANCE;
 	}
 }

@@ -25,10 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * This class handles following admin commands: - enchant_armor
@@ -214,9 +211,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(itemInstance);
 			player.sendPacket(iu);
-			player.broadcastPacket(new CharInfo(player));
-			player.sendPacket(new UserInfo(player));
-			player.broadcastPacket(new ExBrExtraUserInfo(player));
+			player.broadcastUserInfo();
 			
 			// informations
 			activeChar.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");

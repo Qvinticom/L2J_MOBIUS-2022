@@ -16,27 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendManorList;
 
 /**
  * @author l3x
  */
-public class RequestManorList extends L2GameClientPacket
+public class RequestManorList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		sendPacket(new ExSendManorList());
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ExSendManorList());
 	}
 }

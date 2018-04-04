@@ -16,23 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
+
 /**
  * Format: (c) S S: pledge name?
  * @author -Wooden-
  */
-public class RequestPledgeExtendedInfo extends L2GameClientPacket
+public class RequestPledgeExtendedInfo implements IClientIncomingPacket
 {
 	@SuppressWarnings("unused")
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// TODO: Implement
 	}

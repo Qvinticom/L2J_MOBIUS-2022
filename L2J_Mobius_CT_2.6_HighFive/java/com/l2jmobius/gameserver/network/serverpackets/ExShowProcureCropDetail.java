@@ -19,15 +19,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author l3x
  */
-public class ExShowProcureCropDetail extends L2GameServerPacket
+public class ExShowProcureCropDetail implements IClientOutgoingPacket
 {
 	private final int _cropId;
 	private final Map<Integer, CropProcure> _castleCrops = new HashMap<>();
@@ -47,21 +49,21 @@ public class ExShowProcureCropDetail extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x78);
+		OutgoingPackets.EX_SHOW_PROCURE_CROP_DETAIL.writeId(packet);
 		
-		writeD(_cropId); // crop id
-		writeD(_castleCrops.size()); // size
+		packet.writeD(_cropId); // crop id
+		packet.writeD(_castleCrops.size()); // size
 		
 		for (Map.Entry<Integer, CropProcure> entry : _castleCrops.entrySet())
 		{
 			final CropProcure crop = entry.getValue();
-			writeD(entry.getKey()); // manor name
-			writeQ(crop.getAmount()); // buy residual
-			writeQ(crop.getPrice()); // buy price
-			writeC(crop.getReward()); // reward type
+			packet.writeD(entry.getKey()); // manor name
+			packet.writeQ(crop.getAmount()); // buy residual
+			packet.writeQ(crop.getPrice()); // buy price
+			packet.writeC(crop.getReward()); // reward type
 		}
+		return true;
 	}
 }

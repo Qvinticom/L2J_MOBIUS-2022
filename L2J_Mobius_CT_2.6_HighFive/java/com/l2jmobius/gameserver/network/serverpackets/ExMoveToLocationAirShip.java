@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class ExMoveToLocationAirShip extends L2GameServerPacket
+public class ExMoveToLocationAirShip implements IClientOutgoingPacket
 {
 	private final int _objId, _tx, _ty, _tz, _x, _y, _z;
 	
@@ -34,17 +36,16 @@ public class ExMoveToLocationAirShip extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x65);
-		
-		writeD(_objId);
-		writeD(_tx);
-		writeD(_ty);
-		writeD(_tz);
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		OutgoingPackets.EX_MOVE_TO_LOCATION_AIRSHIP.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeD(_tx);
+		packet.writeD(_ty);
+		packet.writeD(_tz);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		return true;
 	}
 }

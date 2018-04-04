@@ -40,8 +40,8 @@ import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -269,7 +269,7 @@ public abstract class L2Vehicle extends L2Character
 		return _passengers;
 	}
 	
-	public void broadcastToPassengers(L2GameServerPacket sm)
+	public void broadcastToPassengers(IClientOutgoingPacket sm)
 	{
 		for (L2PcInstance player : _passengers)
 		{

@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
@@ -44,11 +45,11 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.SystemMessageId.SMLocalisation;
 
 /**
- * @author UnAfraid
  * @param <T>
+ * @author UnAfraid
  */
 @SuppressWarnings("unchecked")
-public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>extends L2GameServerPacket
+public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> implements IClientOutgoingPacket
 {
 	private static final SMParam[] EMPTY_PARAM_ARRAY = new SMParam[0];
 	
@@ -356,28 +357,28 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 		return (T) this;
 	}
 	
-	protected final void writeMe()
+	protected final void writeMe(PacketWriter packet)
 	{
-		writeD(getId());
-		writeD(_params.length);
+		packet.writeD(getId());
+		packet.writeD(_params.length);
 		SMParam param;
 		for (int i = 0; i < _paramIndex; i++)
 		{
 			param = _params[i];
 			
-			writeD(param.getType());
+			packet.writeD(param.getType());
 			switch (param.getType())
 			{
 				case TYPE_TEXT:
 				case TYPE_PLAYER_NAME:
 				{
-					writeS(param.getStringValue());
+					packet.writeS(param.getStringValue());
 					break;
 				}
 				
 				case TYPE_LONG_NUMBER:
 				{
-					writeQ(param.getLongValue());
+					packet.writeQ(param.getLongValue());
 					break;
 				}
 				
@@ -390,24 +391,24 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 				case TYPE_INSTANCE_NAME:
 				case TYPE_DOOR_NAME:
 				{
-					writeD(param.getIntValue());
+					packet.writeD(param.getIntValue());
 					break;
 				}
 				
 				case TYPE_SKILL_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					writeD(array[0]); // SkillId
-					writeD(array[1]); // SkillLevel
+					packet.writeD(array[0]); // SkillId
+					packet.writeD(array[1]); // SkillLevel
 					break;
 				}
 				
 				case TYPE_ZONE_NAME:
 				{
 					final int[] array = param.getIntArrayValue();
-					writeD(array[0]); // x
-					writeD(array[1]); // y
-					writeD(array[2]); // z
+					packet.writeD(array[0]); // x
+					packet.writeD(array[1]); // y
+					packet.writeD(array[2]); // z
 					break;
 				}
 			}
@@ -540,7 +541,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>>e
 				
 				case TYPE_SYSTEM_STRING:
 				{
-					params[i] = "SYS-S-" + param.getIntValue(); // writeD(param.getIntValue());
+					params[i] = "SYS-S-" + param.getIntValue(); // packet.writeD(param.getIntValue());
 					break;
 				}
 				

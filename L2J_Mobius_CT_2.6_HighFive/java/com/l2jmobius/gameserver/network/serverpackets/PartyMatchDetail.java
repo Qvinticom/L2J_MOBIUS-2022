@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class PartyMatchDetail extends L2GameServerPacket
+public class PartyMatchDetail implements IClientOutgoingPacket
 {
 	private final PartyMatchRoom _room;
 	
@@ -36,16 +38,17 @@ public class PartyMatchDetail extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x9d);
-		writeD(_room.getId());
-		writeD(_room.getMaxMembers());
-		writeD(_room.getMinLvl());
-		writeD(_room.getMaxLvl());
-		writeD(_room.getLootType());
-		writeD(_room.getLocation());
-		writeS(_room.getTitle());
-		writeH(59064);
+		OutgoingPackets.PARTY_ROOM_INFO.writeId(packet);
+		packet.writeD(_room.getId());
+		packet.writeD(_room.getMaxMembers());
+		packet.writeD(_room.getMinLvl());
+		packet.writeD(_room.getMaxLvl());
+		packet.writeD(_room.getLootType());
+		packet.writeD(_room.getLocation());
+		packet.writeS(_room.getTitle());
+		packet.writeH(59064);
+		return true;
 	}
 }

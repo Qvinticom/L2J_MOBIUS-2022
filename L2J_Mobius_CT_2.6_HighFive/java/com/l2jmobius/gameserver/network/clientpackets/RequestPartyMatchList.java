@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
@@ -27,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
 /**
  * @author Gnacik
  */
-public class RequestPartyMatchList extends L2GameClientPacket
+public class RequestPartyMatchList implements IClientIncomingPacket
 {
 	private int _roomid;
 	private int _membersmax;
@@ -37,20 +39,21 @@ public class RequestPartyMatchList extends L2GameClientPacket
 	private String _roomtitle;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_roomid = readD();
-		_membersmax = readD();
-		_lvlmin = readD();
-		_lvlmax = readD();
-		_loot = readD();
-		_roomtitle = readS();
+		_roomid = packet.readD();
+		_membersmax = packet.readD();
+		_lvlmin = packet.readD();
+		_lvlmax = packet.readD();
+		_loot = packet.readD();
+		_roomtitle = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = client.getActiveChar();
 		
 		if (_activeChar == null)
 		{

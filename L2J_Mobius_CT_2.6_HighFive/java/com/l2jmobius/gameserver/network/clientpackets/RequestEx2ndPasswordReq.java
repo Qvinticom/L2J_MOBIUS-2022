@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 
@@ -24,31 +26,32 @@ import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
  * (ch)cS{S} c: change pass? S: current password S: new password
  * @author mrTJO
  */
-public class RequestEx2ndPasswordReq extends L2GameClientPacket
+public class RequestEx2ndPasswordReq implements IClientIncomingPacket
 {
 	private int _changePass;
 	private String _password, _newPassword;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_changePass = readC();
-		_password = readS();
+		_changePass = packet.readC();
+		_password = packet.readS();
 		if (_changePass == 2)
 		{
-			_newPassword = readS();
+			_newPassword = packet.readS();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!SecondaryAuthData.getInstance().isEnabled())
 		{
 			return;
 		}
 		
-		final SecondaryPasswordAuth spa = getClient().getSecondaryAuth();
+		final SecondaryPasswordAuth spa = client.getSecondaryAuth();
 		boolean exVal = false;
 		
 		if ((_changePass == 0) && !spa.passwordExist())
@@ -62,7 +65,7 @@ public class RequestEx2ndPasswordReq extends L2GameClientPacket
 		
 		if (exVal)
 		{
-			getClient().sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.SUCCESS));
+			client.sendPacket(new Ex2ndPasswordAck(Ex2ndPasswordAck.SUCCESS));
 		}
 	}
 }

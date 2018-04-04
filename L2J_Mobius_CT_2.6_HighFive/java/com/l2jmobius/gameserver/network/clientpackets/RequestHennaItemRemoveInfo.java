@@ -16,28 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.HennaItemRemoveInfo;
 
 /**
  * @author Zoey76
  */
-public final class RequestHennaItemRemoveInfo extends L2GameClientPacket
+public final class RequestHennaItemRemoveInfo implements IClientIncomingPacket
 {
 	private int _symbolId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_symbolId = readD();
+		_symbolId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (_symbolId == 0))
 		{
 			return;
@@ -47,7 +50,7 @@ public final class RequestHennaItemRemoveInfo extends L2GameClientPacket
 		if (henna == null)
 		{
 			_log.warning(getClass().getName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		activeChar.sendPacket(new HennaItemRemoveInfo(henna, activeChar));

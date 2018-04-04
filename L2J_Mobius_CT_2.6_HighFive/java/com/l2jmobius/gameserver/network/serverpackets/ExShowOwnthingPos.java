@@ -18,13 +18,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.TerritoryWard;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Gigiikun-
  */
-public class ExShowOwnthingPos extends L2GameServerPacket
+public class ExShowOwnthingPos implements IClientOutgoingPacket
 {
 	public static final ExShowOwnthingPos STATIC_PACKET = new ExShowOwnthingPos();
 	
@@ -33,42 +35,42 @@ public class ExShowOwnthingPos extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x93);
+		OutgoingPackets.EX_SHOW_OWNTHING_POS.writeId(packet);
 		
 		if (TerritoryWarManager.getInstance().isTWInProgress())
 		{
 			final List<TerritoryWard> territoryWardList = TerritoryWarManager.getInstance().getAllTerritoryWards();
-			writeD(territoryWardList.size());
+			packet.writeD(territoryWardList.size());
 			for (TerritoryWard ward : territoryWardList)
 			{
-				writeD(ward.getTerritoryId());
+				packet.writeD(ward.getTerritoryId());
 				
 				if (ward.getNpc() != null)
 				{
-					writeD(ward.getNpc().getX());
-					writeD(ward.getNpc().getY());
-					writeD(ward.getNpc().getZ());
+					packet.writeD(ward.getNpc().getX());
+					packet.writeD(ward.getNpc().getY());
+					packet.writeD(ward.getNpc().getZ());
 				}
 				else if (ward.getPlayer() != null)
 				{
-					writeD(ward.getPlayer().getX());
-					writeD(ward.getPlayer().getY());
-					writeD(ward.getPlayer().getZ());
+					packet.writeD(ward.getPlayer().getX());
+					packet.writeD(ward.getPlayer().getY());
+					packet.writeD(ward.getPlayer().getZ());
 				}
 				else
 				{
-					writeD(0x00);
-					writeD(0x00);
-					writeD(0x00);
+					packet.writeD(0x00);
+					packet.writeD(0x00);
+					packet.writeD(0x00);
 				}
 			}
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

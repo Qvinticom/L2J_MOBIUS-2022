@@ -16,31 +16,28 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCrestLarge;
 
 /**
  * Fomat : chd c: (id) 0xD0 h: (subid) 0x10 d: the crest id This is a trigger
  * @author -Wooden-
  */
-public final class RequestExPledgeCrestLarge extends L2GameClientPacket
+public final class RequestExPledgeCrestLarge implements IClientIncomingPacket
 {
 	private int _crestId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_crestId = readD();
+		_crestId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		sendPacket(new ExPledgeCrestLarge(_crestId));
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new ExPledgeCrestLarge(_crestId));
 	}
 }

@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class BotReportTable
 {
-	// Zoey76: TODO: Split XML parsing from SQL operations, use IXmlReader instead of SAXParser.
+	// Zoey76: TODO: Split XML parsing from SQL operations, use IGameXmlReader instead of SAXParser.
 	private static final Logger LOGGER = Logger.getLogger(BotReportTable.class.getName());
 	
 	private static final int COLUMN_BOT_ID = 1;
@@ -443,7 +443,7 @@ public final class BotReportTable
 	 */
 	private static int hashIp(L2PcInstance player)
 	{
-		final String con = player.getClient().getConnection().getInetAddress().getHostAddress();
+		final String con = player.getClient().getConnectionAddress().getHostAddress();
 		final String[] rawByte = con.split("\\.");
 		final int[] rawIp = new int[4];
 		for (int i = 0; i < 4; i++)

@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author devScarlet
  */
-public class NicknameChanged extends L2GameServerPacket
+public class NicknameChanged implements IClientOutgoingPacket
 {
 	private final String _title;
 	private final int _objectId;
@@ -33,10 +35,11 @@ public class NicknameChanged extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xcc);
-		writeD(_objectId);
-		writeS(_title);
+		OutgoingPackets.NICK_NAME_CHANGED.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeS(_title);
+		return true;
 	}
 }

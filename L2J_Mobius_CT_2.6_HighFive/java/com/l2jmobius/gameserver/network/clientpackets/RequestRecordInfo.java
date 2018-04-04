@@ -18,25 +18,27 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SpawnItem;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-public class RequestRecordInfo extends L2GameClientPacket
+public class RequestRecordInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

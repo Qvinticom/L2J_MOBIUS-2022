@@ -41,11 +41,8 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 /**
  * @author Nik
@@ -281,11 +278,7 @@ public class L2Event
 				player.getPoly().setPolyInfo(null, "1");
 				player.decayMe();
 				player.spawnMe(player.getX(), player.getY(), player.getZ());
-				final CharInfo info1 = new CharInfo(player);
-				player.broadcastPacket(info1);
-				final UserInfo info2 = new UserInfo(player);
-				player.sendPacket(info2);
-				player.broadcastPacket(new ExBrExtraUserInfo(player));
+				player.broadcastUserInfo();
 				
 				player.stopTransformation(true);
 			}

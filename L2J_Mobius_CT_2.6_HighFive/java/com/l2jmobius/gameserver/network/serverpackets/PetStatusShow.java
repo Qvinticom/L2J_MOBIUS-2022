@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Yme
  */
-public class PetStatusShow extends L2GameServerPacket
+public class PetStatusShow implements IClientOutgoingPacket
 {
 	private final int _summonType;
 	
@@ -31,9 +33,10 @@ public class PetStatusShow extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xb1);
-		writeD(_summonType);
+		OutgoingPackets.PET_STATUS_SHOW.writeId(packet);
+		packet.writeD(_summonType);
+		return true;
 	}
 }

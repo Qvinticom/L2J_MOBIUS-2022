@@ -18,8 +18,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Advi, UnAfraid
@@ -41,9 +43,10 @@ public class InventoryUpdate extends AbstractInventoryUpdate
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x21);
-		writeItems();
+		OutgoingPackets.INVENTORY_UPDATE.writeId(packet);
+		writeItems(packet);
+		return true;
 	}
 }

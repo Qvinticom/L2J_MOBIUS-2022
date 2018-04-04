@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAskJoinMPCC;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -28,20 +30,21 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * D0 0D 00 5A 00 77 00 65 00 72 00 67 00 00 00
  * @author chris_00
  */
-public final class RequestExAskJoinMPCC extends L2GameClientPacket
+public final class RequestExAskJoinMPCC implements IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

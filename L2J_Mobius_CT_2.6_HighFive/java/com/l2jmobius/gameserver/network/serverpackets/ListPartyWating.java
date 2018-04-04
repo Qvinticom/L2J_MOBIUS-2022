@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class ListPartyWating extends L2GameServerPacket
+public class ListPartyWating implements IClientOutgoingPacket
 {
 	private final L2PcInstance _cha;
 	private final int _loc;
@@ -42,7 +44,7 @@ public class ListPartyWating extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		for (PartyMatchRoom room : PartyMatchRoomList.getInstance().getRooms())
 		{
@@ -63,40 +65,41 @@ public class ListPartyWating extends L2GameServerPacket
 		}
 		final int size = _rooms.size();
 		
-		writeC(0x9c);
+		OutgoingPackets.LIST_PARTY_WAITING.writeId(packet);
 		if (size > 0)
 		{
-			writeD(0x01);
+			packet.writeD(0x01);
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
 		
-		writeD(_rooms.size());
+		packet.writeD(_rooms.size());
 		for (PartyMatchRoom room : _rooms)
 		{
-			writeD(room.getId());
-			writeS(room.getTitle());
-			writeD(room.getLocation());
-			writeD(room.getMinLvl());
-			writeD(room.getMaxLvl());
-			writeD(room.getMaxMembers());
-			writeS(room.getOwner().getName());
-			writeD(room.getMembers());
+			packet.writeD(room.getId());
+			packet.writeS(room.getTitle());
+			packet.writeD(room.getLocation());
+			packet.writeD(room.getMinLvl());
+			packet.writeD(room.getMaxLvl());
+			packet.writeD(room.getMaxMembers());
+			packet.writeS(room.getOwner().getName());
+			packet.writeD(room.getMembers());
 			for (L2PcInstance member : room.getPartyMembers())
 			{
 				if (member != null)
 				{
-					writeD(member.getClassId().getId());
-					writeS(member.getName());
+					packet.writeD(member.getClassId().getId());
+					packet.writeS(member.getName());
 				}
 				else
 				{
-					writeD(0x00);
-					writeS("Not Found");
+					packet.writeD(0x00);
+					packet.writeS("Not Found");
 				}
 			}
 		}
+		return true;
 	}
 }

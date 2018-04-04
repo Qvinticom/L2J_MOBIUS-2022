@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.L2World;
@@ -25,6 +26,7 @@ import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -35,22 +37,23 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.2.2.3.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestCrystallizeItem extends L2GameClientPacket
+public final class RequestCrystallizeItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readQ();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{
@@ -58,7 +61,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("crystallize"))
 		{
 			activeChar.sendMessage("You are crystallizing too fast.");
 			return;
@@ -83,7 +86,7 @@ public final class RequestCrystallizeItem extends L2GameClientPacket
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().ordinal() != 117) && (activeChar.getClassId().ordinal() != 55))
 			{
-				_log.info("Player " + activeChar.getClient() + " used crystalize with classid: " + activeChar.getClassId().ordinal());
+				_log.info("Player " + client + " used crystalize with classid: " + activeChar.getClassId().ordinal());
 			}
 			return;
 		}

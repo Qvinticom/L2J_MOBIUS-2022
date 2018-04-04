@@ -18,10 +18,13 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Map;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author KenM
  */
-public class ExGetBossRecord extends L2GameServerPacket
+public class ExGetBossRecord implements IClientOutgoingPacket
 {
 	private final Map<Integer, Integer> _bossRecordInfo;
 	private final int _ranking;
@@ -35,28 +38,28 @@ public class ExGetBossRecord extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x34);
-		writeD(_ranking);
-		writeD(_totalPoints);
+		OutgoingPackets.EX_GET_BOSS_RECORD.writeId(packet);
+		packet.writeD(_ranking);
+		packet.writeD(_totalPoints);
 		if (_bossRecordInfo == null)
 		{
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		else
 		{
-			writeD(_bossRecordInfo.size()); // list size
+			packet.writeD(_bossRecordInfo.size()); // list size
 			for (int bossId : _bossRecordInfo.keySet())
 			{
-				writeD(bossId);
-				writeD(_bossRecordInfo.get(bossId));
-				writeD(0x00); // ??
+				packet.writeD(bossId);
+				packet.writeD(_bossRecordInfo.get(bossId));
+				packet.writeD(0x00); // ??
 			}
 		}
+		return true;
 	}
 }

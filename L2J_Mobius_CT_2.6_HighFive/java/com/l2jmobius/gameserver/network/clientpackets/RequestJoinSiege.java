@@ -17,6 +17,7 @@
 
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
@@ -24,30 +25,32 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeInfo;
 
 /**
  * @author KenM
  */
-public final class RequestJoinSiege extends L2GameClientPacket
+public final class RequestJoinSiege implements IClientIncomingPacket
 {
 	private int _castleId;
 	private int _isAttacker;
 	private int _isJoining;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_castleId = readD();
-		_isAttacker = readD();
-		_isJoining = readD();
+		_castleId = packet.readD();
+		_isAttacker = packet.readD();
+		_isJoining = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -107,7 +110,7 @@ public final class RequestJoinSiege extends L2GameClientPacket
 			{
 				CHSiegeManager.getInstance().unRegisterClan(clan, hall);
 			}
-			activeChar.sendPacket(new SiegeInfo(hall));
+			activeChar.sendPacket(new SiegeInfo(hall, activeChar));
 		}
 	}
 }

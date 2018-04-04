@@ -19,11 +19,13 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class ExEnchantSkillInfo extends L2GameServerPacket
+public final class ExEnchantSkillInfo implements IClientOutgoingPacket
 {
 	private final List<Integer> _routes = new ArrayList<>(); // skill lvls for each route
 	
@@ -81,19 +83,19 @@ public final class ExEnchantSkillInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x2a);
-		writeD(_id);
-		writeD(_lvl);
-		writeD(_maxEnchanted ? 0 : 1);
-		writeD(_lvl > 100 ? 1 : 0); // enchanted?
-		writeD(_routes.size());
+		OutgoingPackets.EX_ENCHANT_SKILL_INFO.writeId(packet);
+		packet.writeD(_id);
+		packet.writeD(_lvl);
+		packet.writeD(_maxEnchanted ? 0 : 1);
+		packet.writeD(_lvl > 100 ? 1 : 0); // enchanted?
+		packet.writeD(_routes.size());
 		
 		for (int level : _routes)
 		{
-			writeD(level);
+			packet.writeD(level);
 		}
+		return true;
 	}
 }

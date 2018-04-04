@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author mrTJO & UnAfraid
  */
-public class ExConfirmAddingContact extends L2GameServerPacket
+public class ExConfirmAddingContact implements IClientOutgoingPacket
 {
 	private final String _charName;
 	private final boolean _added;
@@ -31,11 +34,11 @@ public class ExConfirmAddingContact extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD2);
-		writeS(_charName);
-		writeD(_added ? 0x01 : 0x00);
+		OutgoingPackets.EX_CONFIRM_ADDING_POST_FRIEND.writeId(packet);
+		packet.writeS(_charName);
+		packet.writeD(_added ? 0x01 : 0x00);
+		return true;
 	}
 }

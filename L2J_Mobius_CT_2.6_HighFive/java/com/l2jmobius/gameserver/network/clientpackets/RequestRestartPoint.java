@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
@@ -32,20 +33,22 @@ import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * This class ...
  * @version $Revision: 1.7.2.3.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestartPoint extends L2GameClientPacket
+public final class RequestRestartPoint implements IClientIncomingPacket
 {
 	protected int _requestedPointType;
 	protected boolean _continuation;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_requestedPointType = readD();
+		_requestedPointType = packet.readD();
+		return true;
 	}
 	
 	class DeathTask implements Runnable
@@ -65,9 +68,9 @@ public final class RequestRestartPoint extends L2GameClientPacket
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{

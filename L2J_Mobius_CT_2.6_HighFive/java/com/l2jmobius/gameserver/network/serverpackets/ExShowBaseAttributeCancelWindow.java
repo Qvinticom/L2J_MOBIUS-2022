@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
+public class ExShowBaseAttributeCancelWindow implements IClientOutgoingPacket
 {
 	private final L2ItemInstance[] _items;
 	private long _price;
@@ -31,16 +33,16 @@ public class ExShowBaseAttributeCancelWindow extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x74);
-		writeD(_items.length);
+		OutgoingPackets.EX_SHOW_BASE_ATTRIBUTE_CANCEL_WINDOW.writeId(packet);
+		packet.writeD(_items.length);
 		for (L2ItemInstance item : _items)
 		{
-			writeD(item.getObjectId());
-			writeQ(getPrice(item));
+			packet.writeD(item.getObjectId());
+			packet.writeQ(getPrice(item));
 		}
+		return true;
 	}
 	
 	/**

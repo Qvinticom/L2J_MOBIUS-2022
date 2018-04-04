@@ -21,33 +21,36 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 
 /**
  * This class ...
  * @version $Revision: 1.5.2.8.2.8 $ $Date: 2005/04/02 10:43:04 $
  */
-public final class ProtocolVersion extends L2GameClientPacket
+public final class ProtocolVersion implements IClientIncomingPacket
 {
 	private static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	private int _version;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_version = readD();
+		_version = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// this packet is never encrypted
 		if (_version == -2)
 		{
 			// this is just a ping attempt from the new C2 client
-			getClient().close((L2GameServerPacket) null);
+			client.close((IClientOutgoingPacket) null);
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
@@ -55,18 +58,18 @@ public final class ProtocolVersion extends L2GameClientPacket
 			record.setParameters(new Object[]
 			{
 				_version,
-				getClient()
+				client
 			});
 			_logAccounting.log(record);
-			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 0);
-			getClient().setProtocolOk(false);
-			getClient().close(pk);
+			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 0);
+			client.setProtocolOk(false);
+			client.close(pk);
 		}
 		else
 		{
-			final KeyPacket pk = new KeyPacket(getClient().enableCrypt(), 1);
-			getClient().sendPacket(pk);
-			getClient().setProtocolOk(true);
+			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 1);
+			client.sendPacket(pk);
+			client.setProtocolOk(true);
 		}
 	}
 }

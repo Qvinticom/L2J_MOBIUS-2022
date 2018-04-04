@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PartySmallWindowDelete extends L2GameServerPacket
+public final class PartySmallWindowDelete implements IClientOutgoingPacket
 {
 	private final L2PcInstance _member;
 	
@@ -28,10 +30,11 @@ public final class PartySmallWindowDelete extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x51);
-		writeD(_member.getObjectId());
-		writeS(_member.getName());
+		OutgoingPackets.PARTY_SMALL_WINDOW_DELETE.writeId(packet);
+		packet.writeD(_member.getObjectId());
+		packet.writeS(_member.getName());
+		return true;
 	}
 }

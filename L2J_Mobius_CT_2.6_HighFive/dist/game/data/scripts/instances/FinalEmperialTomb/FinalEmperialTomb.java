@@ -58,8 +58,8 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -648,7 +648,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					case 4: // second morph
 					{
 						world.isVideo = true;
-						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
+						broadCastPacket(world, new MagicSkillCanceled(world.frintezza.getObjectId()));
 						if (world.songEffectTask != null)
 						{
 							world.songEffectTask.cancel(false);
@@ -661,7 +661,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					case 5: // raid success
 					{
 						world.isVideo = true;
-						broadCastPacket(world, new MagicSkillCanceld(world.frintezza.getObjectId()));
+						broadCastPacket(world, new MagicSkillCanceled(world.frintezza.getObjectId()));
 						if (world.songTask != null)
 						{
 							world.songTask.cancel(true);
@@ -1285,7 +1285,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			}
 		}
 		
-		private void sendPacketX(L2GameServerPacket packet1, L2GameServerPacket packet2, int x)
+		private void sendPacketX(IClientOutgoingPacket packet1, IClientOutgoingPacket packet2, int x)
 		{
 			for (int objId : _world.getAllowed())
 			{
@@ -1392,7 +1392,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		}
 	}
 	
-	protected void broadCastPacket(FETWorld world, L2GameServerPacket packet)
+	protected void broadCastPacket(FETWorld world, IClientOutgoingPacket packet)
 	{
 		for (int objId : world.getAllowed())
 		{

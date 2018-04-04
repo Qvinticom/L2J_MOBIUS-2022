@@ -21,6 +21,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -31,6 +32,7 @@ import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.EnchantResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -40,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
-public final class RequestEnchantItem extends L2GameClientPacket
+public final class RequestEnchantItem implements IClientIncomingPacket
 {
 	protected static final Logger _logEnchant = Logger.getLogger("enchant");
 	
@@ -48,22 +50,23 @@ public final class RequestEnchantItem extends L2GameClientPacket
 	private int _supportId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_supportId = readD();
+		_objectId = packet.readD();
+		_supportId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || (_objectId == 0))
 		{
 			return;
 		}
 		
-		if (!activeChar.isOnline() || getClient().isDetached())
+		if (!activeChar.isOnline() || client.isDetached())
 		{
 			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
 			return;

@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Kerberos
  */
-public final class NpcSay extends L2GameServerPacket
+public final class NpcSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final ChatType _textType;
@@ -114,23 +116,24 @@ public final class NpcSay extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x30);
-		writeD(_objectId);
-		writeD(_textType.getClientId());
-		writeD(_npcId);
-		writeD(_npcString);
+		OutgoingPackets.NPC_SAY.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_textType.getClientId());
+		packet.writeD(_npcId);
+		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{
-			writeS(_text);
+			packet.writeS(_text);
 		}
 		else if (_parameters != null)
 		{
 			for (String s : _parameters)
 			{
-				writeS(s);
+				packet.writeS(s);
 			}
 		}
+		return true;
 	}
 }

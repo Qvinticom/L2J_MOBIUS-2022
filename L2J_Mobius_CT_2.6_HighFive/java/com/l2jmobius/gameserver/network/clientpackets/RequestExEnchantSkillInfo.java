@@ -16,37 +16,40 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
 
 /**
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x06 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillInfo extends L2GameClientPacket
+public final class RequestExEnchantSkillInfo implements IClientIncomingPacket
 {
 	private int _skillId;
 	private int _skillLvl;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_skillId = readD();
-		_skillLvl = readD();
+		_skillId = packet.readD();
+		_skillLvl = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{

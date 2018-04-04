@@ -18,15 +18,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.model.FortSiegeSpawn;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public class ExShowFortressMapInfo extends L2GameServerPacket
+public class ExShowFortressMapInfo implements IClientOutgoingPacket
 {
 	private final Fort _fortress;
 	
@@ -36,14 +38,13 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x7D);
+		OutgoingPackets.EX_SHOW_FORTRESS_MAP_INFO.writeId(packet);
 		
-		writeD(_fortress.getResidenceId());
-		writeD(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
-		writeD(_fortress.getFortSize()); // barracks count
+		packet.writeD(_fortress.getResidenceId());
+		packet.writeD(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
+		packet.writeD(_fortress.getFortSize()); // barracks count
 		
 		final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
 		if ((commanders != null) && (commanders.size() != 0) && _fortress.getSiege().isInProgress())
@@ -56,11 +57,11 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 					{
 						if (isSpawned(spawn.getId()))
 						{
-							writeD(0);
+							packet.writeD(0);
 						}
 						else
 						{
-							writeD(1);
+							packet.writeD(1);
 						}
 					}
 					break;
@@ -73,15 +74,15 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 						count++;
 						if (count == 4)
 						{
-							writeD(1); // TODO: control room emulated
+							packet.writeD(1); // TODO: control room emulated
 						}
 						if (isSpawned(spawn.getId()))
 						{
-							writeD(0);
+							packet.writeD(0);
 						}
 						else
 						{
-							writeD(1);
+							packet.writeD(1);
 						}
 					}
 					break;
@@ -92,9 +93,10 @@ public class ExShowFortressMapInfo extends L2GameServerPacket
 		{
 			for (int i = 0; i < _fortress.getFortSize(); i++)
 			{
-				writeD(0);
+				packet.writeD(0);
 			}
 		}
+		return true;
 	}
 	
 	/**

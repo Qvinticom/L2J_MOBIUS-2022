@@ -17,8 +17,10 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2PremiumItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExGetPremiumItemList;
 import com.l2jmobius.gameserver.util.Util;
@@ -26,24 +28,25 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author Gnacik
  */
-public final class RequestWithDrawPremiumItem extends L2GameClientPacket
+public final class RequestWithDrawPremiumItem implements IClientIncomingPacket
 {
 	private int _itemNum;
 	private int _charId;
 	private long _itemCount;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_itemNum = readD();
-		_charId = readD();
-		_itemCount = readQ();
+		_itemNum = packet.readD();
+		_charId = packet.readD();
+		_itemCount = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		
 		if (activeChar == null)
 		{

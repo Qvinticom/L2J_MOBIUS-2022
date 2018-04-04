@@ -22,7 +22,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.GeneralSecurityException;
 import java.security.KeyPairGenerator;
 import java.security.MessageDigest;
-import java.security.interfaces.RSAPrivateKey;
 import java.security.spec.RSAKeyGenParameterSpec;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -37,7 +36,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -64,10 +64,8 @@ public class LoginController
 	private final Map<InetAddress, Integer> _failedLoginAttemps = new HashMap<>();
 	private final Map<InetAddress, Long> _bannedIps = new ConcurrentHashMap<>();
 	
-	protected ScrambledKeyPair[] _keyPairs;
-	
-	protected byte[][] _blowfishKeys;
-	private static final int BLOWFISH_KEYS = 20;
+	private final ScrambledKeyPair[] _keyPairs;
+	private final KeyGenerator _blowfishKeyGenerator;
 	
 	// SQL Queries
 	private static final String USER_INFO_SELECT = "SELECT login, password, IF(? > value OR value IS NULL, accessLevel, -1) AS accessLevel, lastServer FROM accounts LEFT JOIN (account_data) ON (account_data.account_name=accounts.login AND account_data.var=\"ban_temp\") WHERE login=?";
@@ -83,60 +81,26 @@ public class LoginController
 		_log.info("Loading LoginController...");
 		
 		_keyPairs = new ScrambledKeyPair[10];
-		
-		final KeyPairGenerator keygen = KeyPairGenerator.getInstance("RSA");
-		
+		_blowfishKeyGenerator = KeyGenerator.getInstance("Blowfish");
+		final KeyPairGenerator rsaKeyPairGenerator = KeyPairGenerator.getInstance("RSA");
 		final RSAKeyGenParameterSpec spec = new RSAKeyGenParameterSpec(1024, RSAKeyGenParameterSpec.F4);
-		keygen.initialize(spec);
+		rsaKeyPairGenerator.initialize(spec);
 		
-		// generate the initial set of keys
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < _keyPairs.length; i++)
 		{
-			_keyPairs[i] = new ScrambledKeyPair(keygen.generateKeyPair());
+			_keyPairs[i] = new ScrambledKeyPair(rsaKeyPairGenerator.generateKeyPair());
 		}
-		_log.info("Cached 10 KeyPairs for RSA communication");
 		
-		testCipher((RSAPrivateKey) _keyPairs[0]._pair.getPrivate());
-		
-		// Store keys for blowfish communication
-		generateBlowFishKeys();
+		_log.info("Cached 10 KeyPairs for RSA communication.");
 		
 		final Thread purge = new PurgeThread();
 		purge.setDaemon(true);
 		purge.start();
 	}
 	
-	/**
-	 * This is mostly to force the initialization of the Crypto Implementation, avoiding it being done on runtime when its first needed.<BR>
-	 * In short it avoids the worst-case execution time on runtime by doing it on loading.
-	 * @param key Any private RSA Key just for testing purposes.
-	 * @throws GeneralSecurityException if a underlying exception was thrown by the Cipher
-	 */
-	private void testCipher(RSAPrivateKey key) throws GeneralSecurityException
+	public SecretKey generateBlowfishKey()
 	{
-		Cipher.getInstance("RSA/ECB/nopadding").init(Cipher.DECRYPT_MODE, key);
-	}
-	
-	private void generateBlowFishKeys()
-	{
-		_blowfishKeys = new byte[BLOWFISH_KEYS][16];
-		
-		for (int i = 0; i < BLOWFISH_KEYS; i++)
-		{
-			for (int j = 0; j < _blowfishKeys[i].length; j++)
-			{
-				_blowfishKeys[i][j] = (byte) (Rnd.nextInt(255) + 1);
-			}
-		}
-		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
-	}
-	
-	/**
-	 * @return Returns a random key
-	 */
-	public byte[] getBlowfishKey()
-	{
-		return _blowfishKeys[(int) (Math.random() * BLOWFISH_KEYS)];
+		return _blowfishKeyGenerator.generateKey();
 	}
 	
 	public SessionKey assignSessionKeyToClient(String account, L2LoginClient client)
@@ -175,13 +139,13 @@ public class LoginController
 		synchronized (_failedLoginAttemps)
 		{
 			failedLoginAttemps = _failedLoginAttemps.get(addr);
-			if (failedLoginAttemps != null)
+			if (failedLoginAttemps == null)
 			{
-				++failedLoginAttemps;
+				failedLoginAttemps = 1;
 			}
 			else
 			{
-				failedLoginAttemps = 1;
+				++failedLoginAttemps;
 			}
 			
 			_failedLoginAttemps.put(addr, failedLoginAttemps);
@@ -380,7 +344,11 @@ public class LoginController
 	public SessionKey getKeyForAccount(String account)
 	{
 		final L2LoginClient client = _loginServerClients.get(account);
-		return client != null ? client.getSessionKey() : null;
+		if (client != null)
+		{
+			return client.getSessionKey();
+		}
+		return null;
 	}
 	
 	public boolean isAccountInAnyGameServer(String account)
@@ -431,28 +399,27 @@ public class LoginController
 	{
 		final GameServerInfo gsi = GameServerTable.getInstance().getRegisteredGameServerById(serverId);
 		final int access = client.getAccessLevel();
-		if ((gsi == null) || !gsi.isAuthed())
+		if ((gsi != null) && gsi.isAuthed())
 		{
-			return false;
-		}
-		
-		final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
-		
-		if (loginOk && (client.getLastServer() != serverId))
-		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
+			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access > 0);
+			
+			if (loginOk && (client.getLastServer() != serverId))
 			{
-				ps.setInt(1, serverId);
-				ps.setString(2, client.getAccount());
-				ps.executeUpdate();
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
+					PreparedStatement ps = con.prepareStatement(ACCOUNT_LAST_SERVER_UPDATE))
+				{
+					ps.setInt(1, serverId);
+					ps.setString(2, client.getAccount());
+					ps.executeUpdate();
+				}
+				catch (Exception e)
+				{
+					_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
+				}
 			}
-			catch (Exception e)
-			{
-				_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
-			}
+			return loginOk;
 		}
-		return loginOk;
+		return false;
 	}
 	
 	public void setAccountAccessLevel(String account, int banLevel)
@@ -671,7 +638,7 @@ public class LoginController
 		}
 	}
 	
-	public static enum AuthLoginResult
+	public enum AuthLoginResult
 	{
 		INVALID_PASSWORD,
 		ACCOUNT_BANNED,

@@ -21,6 +21,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
@@ -29,6 +30,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantSkillInfo;
@@ -41,7 +43,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * Format (ch) dd c: (id) 0xD0 h: (subid) 0x33 d: skill id d: skill lvl
  * @author -Wooden-
  */
-public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
+public final class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 {
 	private static final Logger _logEnchant = Logger.getLogger("enchant");
 	
@@ -49,21 +51,22 @@ public final class RequestExEnchantSkillUntrain extends L2GameClientPacket
 	private int _skillLvl;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_skillId = readD();
-		_skillLvl = readD();
+		_skillId = packet.readD();
+		_skillLvl = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if ((_skillId <= 0) || (_skillLvl <= 0))
 		{
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

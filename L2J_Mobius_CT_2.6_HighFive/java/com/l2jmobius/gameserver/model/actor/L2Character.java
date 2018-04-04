@@ -132,8 +132,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceld;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
+import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.MoveToLocation;
@@ -533,9 +533,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * In order to inform other players of state modification on the L2Character, server just need to go through _knownPlayers to send Server->Client Packet
 	 * @param mov
 	 */
-	public void broadcastPacket(L2GameServerPacket mov)
+	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		mov.setInvisible(isInvisible());
 		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
@@ -554,9 +553,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param mov
 	 * @param radiusInKnownlist
 	 */
-	public void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist)
+	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
 	{
-		mov.setInvisible(isInvisible());
 		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
 		for (L2PcInstance player : plrs)
 		{
@@ -3915,7 +3913,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING); // setting back previous intention
 			}
-			broadcastPacket(new MagicSkillCanceld(getObjectId())); // broadcast packet to stop animations client-side
+			broadcastPacket(new MagicSkillCanceled(getObjectId())); // broadcast packet to stop animations client-side
 			sendPacket(ActionFailed.STATIC_PACKET); // send an "action failed" packet to the caster
 		}
 	}

@@ -16,19 +16,22 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
+
 /**
  * @author ShanSoft Packets Structure: chddd
  */
-public final class RequestChangeBookMarkSlot extends L2GameClientPacket
+public final class RequestChangeBookMarkSlot implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// There is nothing to read.
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		
 	}

@@ -21,13 +21,14 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.logging.Level;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format: c dddd
  * @author KenM
  */
-public class GameGuardReply extends L2GameClientPacket
+public class GameGuardReply implements IClientIncomingPacket
 {
 	private static final byte[] VALID =
 	{
@@ -56,17 +57,17 @@ public class GameGuardReply extends L2GameClientPacket
 	private final byte[] _reply = new byte[8];
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		readB(_reply, 0, 4);
-		readD();
-		readB(_reply, 4, 4);
+		packet.readB(_reply, 0, 4);
+		packet.readD();
+		packet.readB(_reply, 4, 4);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		try
 		{
 			final MessageDigest md = MessageDigest.getInstance("SHA");
@@ -80,11 +81,5 @@ public class GameGuardReply extends L2GameClientPacket
 		{
 			_log.log(Level.WARNING, "", e);
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

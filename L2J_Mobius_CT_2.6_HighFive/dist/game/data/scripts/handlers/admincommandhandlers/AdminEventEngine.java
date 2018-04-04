@@ -35,11 +35,8 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.model.entity.L2Event.EventState;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -324,11 +321,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				{
 					player.getPoly().setPolyInfo("npc", polyIds[Rnd.get(polyIds.length)]);
 					player.teleToLocation(player.getLocation(), true);
-					final CharInfo info1 = new CharInfo(player);
-					player.broadcastPacket(info1);
-					final UserInfo info2 = new UserInfo(player);
-					player.sendPacket(info2);
-					player.broadcastPacket(new ExBrExtraUserInfo(player));
+					player.broadcastUserInfo();
 				}
 				showEventControl(activeChar);
 			}
@@ -341,11 +334,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 						player.getPoly().setPolyInfo(null, "1");
 						player.decayMe();
 						player.spawnMe(player.getX(), player.getY(), player.getZ());
-						final CharInfo info1 = new CharInfo(player);
-						player.broadcastPacket(info1);
-						final UserInfo info2 = new UserInfo(player);
-						player.sendPacket(info2);
-						player.broadcastPacket(new ExBrExtraUserInfo(player));
+						player.broadcastUserInfo();
 					}
 				}
 				showEventControl(activeChar);

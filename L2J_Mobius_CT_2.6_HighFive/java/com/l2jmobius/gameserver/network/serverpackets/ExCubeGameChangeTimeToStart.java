@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author mrTJO
  */
-public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
+public class ExCubeGameChangeTimeToStart implements IClientOutgoingPacket
 {
 	int _seconds;
 	
@@ -33,12 +36,12 @@ public class ExCubeGameChangeTimeToStart extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x97);
-		writeD(0x03);
+		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+		packet.writeD(0x03);
 		
-		writeD(_seconds);
+		packet.writeD(_seconds);
+		return true;
 	}
 }

@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class AskJoinParty extends L2GameServerPacket
+public class AskJoinParty implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	private final PartyDistributionType _partyDistributionType;
@@ -34,10 +36,11 @@ public class AskJoinParty extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x39);
-		writeS(_requestorName);
-		writeD(_partyDistributionType.getId());
+		OutgoingPackets.ASK_JOIN_PARTY.writeId(packet);
+		packet.writeS(_requestorName);
+		packet.writeD(_partyDistributionType.getId());
+		return true;
 	}
 }

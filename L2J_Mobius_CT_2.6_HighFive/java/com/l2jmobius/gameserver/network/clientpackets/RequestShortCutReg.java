@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ShortcutType;
 import com.l2jmobius.gameserver.model.Shortcut;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
-public final class RequestShortCutReg extends L2GameClientPacket
+public final class RequestShortCutReg implements IClientIncomingPacket
 {
 	private ShortcutType _type;
 	private int _id;
@@ -30,34 +32,29 @@ public final class RequestShortCutReg extends L2GameClientPacket
 	private int _characterType; // 1 - player, 2 - pet
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int typeId = readD();
+		final int typeId = packet.readD();
 		_type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
-		final int slot = readD();
+		final int slot = packet.readD();
 		_slot = slot % 12;
 		_page = slot / 12;
-		_id = readD();
-		_lvl = readD();
-		_characterType = readD();
+		_id = packet.readD();
+		_lvl = packet.readD();
+		_characterType = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if ((getActiveChar() == null) || (_page > 10) || (_page < 0))
+		if ((client.getActiveChar() == null) || (_page > 10) || (_page < 0))
 		{
 			return;
 		}
 		
 		final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _characterType);
-		getActiveChar().registerShortCut(sc);
-		sendPacket(new ShortCutRegister(sc));
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.getActiveChar().registerShortCut(sc);
+		client.sendPacket(new ShortCutRegister(sc));
 	}
 }

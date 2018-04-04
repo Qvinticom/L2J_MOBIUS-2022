@@ -18,64 +18,66 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Collection;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Mobius
  */
-public class ExBrProductList extends L2GameServerPacket
+public class ExBrProductList implements IClientOutgoingPacket
 {
 	private final Collection<ItemMallProduct> _itemList = ItemMallData.getInstance().getAllItems();
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD6);
-		writeD(_itemList.size());
+		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
+		packet.writeD(_itemList.size());
 		
 		for (ItemMallProduct product : _itemList)
 		{
 			final int category = product.getCategory();
 			
-			writeD(product.getProductId()); // product id
-			writeH(category); // category id
-			writeD(product.getPrice()); // points
+			packet.writeD(product.getProductId()); // product id
+			packet.writeH(category); // category id
+			packet.writeD(product.getPrice()); // points
 			
 			switch (category)
 			{
 				case 6:
 				{
-					writeD(0x01); // event
+					packet.writeD(0x01); // event
 					break;
 				}
 				case 7:
 				{
-					writeD(0x02); // best
+					packet.writeD(0x02); // best
 					break;
 				}
 				case 8:
 				{
-					writeD(0x03); // event & best
+					packet.writeD(0x03); // event & best
 					break;
 				}
 				default:
 				{
-					writeD(0x00); // normal
+					packet.writeD(0x00); // normal
 					break;
 				}
 			}
 			
-			writeD(0x00); // start sale
-			writeD(0x00); // end sale
-			writeC(0x00); // day week
-			writeC(0x00); // start hour
-			writeC(0x00); // start min
-			writeC(0x00); // end hour
-			writeC(0x00); // end min
-			writeD(0x00); // current stock
-			writeD(0x00); // max stock
+			packet.writeD(0x00); // start sale
+			packet.writeD(0x00); // end sale
+			packet.writeC(0x00); // day week
+			packet.writeC(0x00); // start hour
+			packet.writeC(0x00); // start min
+			packet.writeC(0x00); // end hour
+			packet.writeC(0x00); // end min
+			packet.writeD(0x00); // current stock
+			packet.writeD(0x00); // max stock
 		}
+		return true;
 	}
 }

@@ -31,18 +31,15 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
-import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExRedSky;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SSQInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SunRise;
 import com.l2jmobius.gameserver.network.serverpackets.SunSet;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -382,11 +379,7 @@ public class AdminEffects implements IAdminCommandHandler
 				final String id = st.nextToken();
 				activeChar.getPoly().setPolyInfo("npc", id);
 				activeChar.teleToLocation(activeChar.getLocation());
-				final CharInfo info1 = new CharInfo(activeChar);
-				activeChar.broadcastPacket(info1);
-				final UserInfo info2 = new UserInfo(activeChar);
-				activeChar.sendPacket(info2);
-				activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
+				activeChar.broadcastUserInfo();
 			}
 			catch (Exception e)
 			{
@@ -398,11 +391,7 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.getPoly().setPolyInfo(null, "1");
 			activeChar.decayMe();
 			activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());
-			final CharInfo info1 = new CharInfo(activeChar);
-			activeChar.broadcastPacket(info1);
-			final UserInfo info2 = new UserInfo(activeChar);
-			activeChar.sendPacket(info2);
-			activeChar.broadcastPacket(new ExBrExtraUserInfo(activeChar));
+			activeChar.broadcastUserInfo();
 		}
 		else if (command.equals("admin_clearteams"))
 		{
@@ -718,7 +707,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private void adminAtmosphere(String type, String state, int duration, L2PcInstance activeChar)
 	{
-		L2GameServerPacket packet = null;
+		IClientOutgoingPacket packet = null;
 		
 		if (type.equals("signsky"))
 		{

@@ -16,33 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.RecipeController;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * @author Administrator
  */
-public final class RequestRecipeItemMakeSelf extends L2GameClientPacket
+public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 {
 	private int _id;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
+		_id = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
+		if (!client.getFloodProtectors().getManufacture().tryPerformAction("RecipeMakeSelf"))
 		{
 			return;
 		}

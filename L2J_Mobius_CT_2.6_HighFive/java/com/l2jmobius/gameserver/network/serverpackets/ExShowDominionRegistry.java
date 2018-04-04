@@ -19,15 +19,17 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Calendar;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager.Territory;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author GodKratos
  */
-public class ExShowDominionRegistry extends L2GameServerPacket
+public class ExShowDominionRegistry implements IClientOutgoingPacket
 {
 	private static final int MINID = 80;
 	private final int _castleId;
@@ -58,17 +60,16 @@ public class ExShowDominionRegistry extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x90);
-		writeD(MINID + _castleId); // Current Territory Id
+		OutgoingPackets.EX_SHOW_DOMINION_REGISTRY.writeId(packet);
+		packet.writeD(MINID + _castleId); // Current Territory Id
 		if (TerritoryWarManager.getInstance().getTerritory(_castleId) == null)
 		{
 			// something is wrong
-			writeS("No Owner"); // Owners Clan
-			writeS("No Owner"); // Owner Clan Leader
-			writeS("No Ally"); // Owner Alliance
+			packet.writeS("No Owner"); // Owners Clan
+			packet.writeS("No Owner"); // Owner Clan Leader
+			packet.writeS("No Ally"); // Owner Alliance
 		}
 		else
 		{
@@ -76,34 +77,35 @@ public class ExShowDominionRegistry extends L2GameServerPacket
 			if (clan == null)
 			{
 				// something is wrong
-				writeS("No Owner"); // Owners Clan
-				writeS("No Owner"); // Owner Clan Leader
-				writeS("No Ally"); // Owner Alliance
+				packet.writeS("No Owner"); // Owners Clan
+				packet.writeS("No Owner"); // Owner Clan Leader
+				packet.writeS("No Ally"); // Owner Alliance
 			}
 			else
 			{
-				writeS(clan.getName()); // Owners Clan
-				writeS(clan.getLeaderName()); // Owner Clan Leader
-				writeS(clan.getAllyName()); // Owner Alliance
+				packet.writeS(clan.getName()); // Owners Clan
+				packet.writeS(clan.getLeaderName()); // Owner Clan Leader
+				packet.writeS(clan.getAllyName()); // Owner Alliance
 			}
 		}
-		writeD(_clanReq); // Clan Request
-		writeD(_mercReq); // Merc Request
-		writeD(_warTime); // War Time
-		writeD(_currentTime); // Current Time
-		writeD(_isClanRegistered); // is Cancel clan registration
-		writeD(_isMercRegistered); // is Cancel mercenaries registration
-		writeD(0x01); // unknown
+		packet.writeD(_clanReq); // Clan Request
+		packet.writeD(_mercReq); // Merc Request
+		packet.writeD(_warTime); // War Time
+		packet.writeD(_currentTime); // Current Time
+		packet.writeD(_isClanRegistered); // is Cancel clan registration
+		packet.writeD(_isMercRegistered); // is Cancel mercenaries registration
+		packet.writeD(0x01); // unknown
 		final List<Territory> territoryList = TerritoryWarManager.getInstance().getAllTerritories();
-		writeD(territoryList.size()); // Territory Count
+		packet.writeD(territoryList.size()); // Territory Count
 		for (Territory t : territoryList)
 		{
-			writeD(t.getTerritoryId()); // Territory Id
-			writeD(t.getOwnedWardIds().size()); // Emblem Count
+			packet.writeD(t.getTerritoryId()); // Territory Id
+			packet.writeD(t.getOwnedWardIds().size()); // Emblem Count
 			for (int i : t.getOwnedWardIds())
 			{
-				writeD(i); // Emblem ID - should be in for loop for emblem count
+				packet.writeD(i); // Emblem ID - should be in for loop for emblem count
 			}
 		}
+		return true;
 	}
 }

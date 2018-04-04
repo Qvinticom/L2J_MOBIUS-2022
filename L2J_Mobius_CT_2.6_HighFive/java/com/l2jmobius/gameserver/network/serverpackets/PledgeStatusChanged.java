@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class PledgeStatusChanged extends L2GameServerPacket
+public final class PledgeStatusChanged implements IClientOutgoingPacket
 {
 	private final L2Clan _clan;
 	
@@ -28,15 +30,16 @@ public final class PledgeStatusChanged extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xCD);
-		writeD(_clan.getLeaderId());
-		writeD(_clan.getId());
-		writeD(_clan.getCrestId());
-		writeD(_clan.getAllyId());
-		writeD(_clan.getAllyCrestId());
-		writeD(0x00);
-		writeD(0x00);
+		OutgoingPackets.PLEDGE_STATUS_CHANGED.writeId(packet);
+		packet.writeD(_clan.getLeaderId());
+		packet.writeD(_clan.getId());
+		packet.writeD(_clan.getCrestId());
+		packet.writeD(_clan.getAllyId());
+		packet.writeD(_clan.getAllyCrestId());
+		packet.writeD(0x00);
+		packet.writeD(0x00);
+		return true;
 	}
 }

@@ -16,24 +16,26 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.QuestList;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestQuestList extends L2GameClientPacket
+public final class RequestQuestList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final QuestList ql = new QuestList();
-		sendPacket(ql);
+		final QuestList ql = new QuestList(client.getActiveChar());
+		client.sendPacket(ql);
 	}
 }

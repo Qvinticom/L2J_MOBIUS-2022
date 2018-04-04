@@ -16,20 +16,22 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Gnat
  **/
-
-public class ExBirthdayPopup extends L2GameServerPacket
+public class ExBirthdayPopup implements IClientOutgoingPacket
 {
 	public ExBirthdayPopup()
 	{
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x8f);
+		OutgoingPackets.EX_NOTIFY_BIRTHDAY.writeId(packet);
+		return true;
 	}
 }

@@ -18,13 +18,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * Format: (ch) d[ddddd]
  * @author -Wooden-
  */
-public class ExCursedWeaponLocation extends L2GameServerPacket
+public class ExCursedWeaponLocation implements IClientOutgoingPacket
 {
 	private final List<CursedWeaponInfo> _cursedWeaponInfo;
 	
@@ -34,29 +36,29 @@ public class ExCursedWeaponLocation extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x47);
+		OutgoingPackets.EX_CURSED_WEAPON_LOCATION.writeId(packet);
 		
 		if (!_cursedWeaponInfo.isEmpty())
 		{
-			writeD(_cursedWeaponInfo.size());
+			packet.writeD(_cursedWeaponInfo.size());
 			for (CursedWeaponInfo w : _cursedWeaponInfo)
 			{
-				writeD(w.id);
-				writeD(w.activated);
+				packet.writeD(w.id);
+				packet.writeD(w.activated);
 				
-				writeD(w.pos.getX());
-				writeD(w.pos.getY());
-				writeD(w.pos.getZ());
+				packet.writeD(w.pos.getX());
+				packet.writeD(w.pos.getY());
+				packet.writeD(w.pos.getZ());
 			}
 		}
 		else
 		{
-			writeD(0);
-			writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
+		return true;
 	}
 	
 	public static class CursedWeaponInfo

@@ -22,9 +22,6 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.mmocore.NioNetStringBuffer;
-import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -32,7 +29,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.clientpackets.L2GameClientPacket;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
@@ -88,7 +84,7 @@ public final class AdminPForge implements IAdminCommandHandler
 			long opCodeLong;
 			try
 			{
-				opCodeLong = Long.parseLong(opCode);
+				opCodeLong = Long.decode(opCode);
 			}
 			catch (Exception e)
 			{
@@ -596,16 +592,20 @@ public final class AdminPForge implements IAdminCommandHandler
 				}
 				else if (bb != null)
 				{
-					bb.flip();
-					final L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
+					// TODO: Implement me!
+					// @formatter:off
+					/*bb.flip();
+					L2GameClientPacket p = (L2GameClientPacket) GameServer.gameServer.getL2GamePacketHandler().handlePacket(bb, activeChar.getClient());
 					if (p != null)
 					{
 						p.setBuffers(bb, activeChar.getClient(), new NioNetStringBuffer(2000));
 						if (p.read())
 						{
-							ThreadPool.execute(p);
+							ThreadPoolManager.getInstance().executePacket(p);
 						}
-					}
+					}*/
+					// @formatter:on
+					throw new UnsupportedOperationException("Not implemented yet!");
 				}
 				
 				showValuesPage(activeChar, opCodes, format);

@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class AutoAttackStop extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class AutoAttackStop implements IClientOutgoingPacket
 {
 	private final int _targetObjId;
 	
@@ -29,9 +32,10 @@ public class AutoAttackStop extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x26);
-		writeD(_targetObjId);
+		OutgoingPackets.AUTO_ATTACK_STOP.writeId(packet);
+		packet.writeD(_targetObjId);
+		return true;
 	}
 }

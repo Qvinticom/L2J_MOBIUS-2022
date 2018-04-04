@@ -19,19 +19,21 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import static com.l2jmobius.gameserver.model.actor.L2Npc.INTERACTION_DISTANCE;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.ItemRequest;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
  * This class ...
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPrivateStoreSell extends L2GameClientPacket
+public final class RequestPrivateStoreSell implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 28; // length of the one item
 	
@@ -39,38 +41,39 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 	private ItemRequest[] _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_storePlayerId = readD();
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		_storePlayerId = packet.readD();
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		_items = new ItemRequest[count];
 		
 		for (int i = 0; i < count; i++)
 		{
-			final int objectId = readD();
-			final int itemId = readD();
-			readH(); // TODO analyse this
-			readH(); // TODO analyse this
-			final long cnt = readQ();
-			final long price = readQ();
+			final int objectId = packet.readD();
+			final int itemId = packet.readD();
+			packet.readH(); // TODO analyse this
+			packet.readH(); // TODO analyse this
+			final long cnt = packet.readQ();
+			final long price = packet.readQ();
 			
 			if ((objectId < 1) || (itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items[i] = new ItemRequest(objectId, itemId, cnt, price);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -78,11 +81,11 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 		
 		if (_items == null)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("privatestoresell"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("privatestoresell"))
 		{
 			player.sendMessage("You are selling items too fast.");
 			return;
@@ -124,13 +127,13 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your Access Level.");
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!storeList.privateStoreSell(player, _items))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			_log.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			return;
 		}
@@ -146,11 +149,5 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			storePlayer.setPrivateStoreType(PrivateStoreType.NONE);
 			storePlayer.broadcastUserInfo();
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

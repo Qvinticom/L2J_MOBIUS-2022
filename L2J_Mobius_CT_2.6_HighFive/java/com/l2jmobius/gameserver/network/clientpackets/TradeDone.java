@@ -16,34 +16,37 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * This packet manages the trade response.
  */
-public final class TradeDone extends L2GameClientPacket
+public final class TradeDone implements IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("trade"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("trade"))
 		{
 			player.sendMessage("You are trading too fast.");
 			return;

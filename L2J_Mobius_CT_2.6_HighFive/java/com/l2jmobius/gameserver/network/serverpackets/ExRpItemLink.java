@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author KenM
  */
-public final class ExRpItemLink extends L2GameServerPacket
+public final class ExRpItemLink implements IClientOutgoingPacket
 {
 	private final L2ItemInstance _item;
 	
@@ -31,40 +33,40 @@ public final class ExRpItemLink extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x6C);
-		writeD(_item.getObjectId());
-		writeD(_item.getDisplayId());
-		writeD(_item.getLocationSlot());
-		writeQ(_item.getCount());
-		writeH(_item.getItem().getType2());
-		writeH(_item.getCustomType1());
-		writeH(_item.isEquipped() ? 0x01 : 0x00);
-		writeD(_item.getItem().getBodyPart());
-		writeH(_item.getEnchantLevel());
-		writeH(_item.getCustomType2());
+		OutgoingPackets.EX_RP_ITEM_LINK.writeId(packet);
+		packet.writeD(_item.getObjectId());
+		packet.writeD(_item.getDisplayId());
+		packet.writeD(_item.getLocationSlot());
+		packet.writeQ(_item.getCount());
+		packet.writeH(_item.getItem().getType2());
+		packet.writeH(_item.getCustomType1());
+		packet.writeH(_item.isEquipped() ? 0x01 : 0x00);
+		packet.writeD(_item.getItem().getBodyPart());
+		packet.writeH(_item.getEnchantLevel());
+		packet.writeH(_item.getCustomType2());
 		if (_item.isAugmented())
 		{
-			writeD(_item.getAugmentation().getAugmentationId());
+			packet.writeD(_item.getAugmentation().getAugmentationId());
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
-		writeD(_item.getMana());
-		writeD(_item.isTimeLimitedItem() ? (int) (_item.getRemainingTime() / 1000) : -9999);
-		writeH(_item.getAttackElementType());
-		writeH(_item.getAttackElementPower());
+		packet.writeD(_item.getMana());
+		packet.writeD(_item.isTimeLimitedItem() ? (int) (_item.getRemainingTime() / 1000) : -9999);
+		packet.writeH(_item.getAttackElementType());
+		packet.writeH(_item.getAttackElementPower());
 		for (byte i = 0; i < 6; i++)
 		{
-			writeH(_item.getElementDefAttr(i));
+			packet.writeH(_item.getElementDefAttr(i));
 		}
 		// Enchant Effects
 		for (int op : _item.getEnchantOptions())
 		{
-			writeH(op);
+			packet.writeH(op);
 		}
+		return true;
 	}
 }

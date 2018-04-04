@@ -21,6 +21,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -30,8 +31,9 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.MaterialType;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class SortedWareHouseWithdrawalList extends L2GameServerPacket
+public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 {
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
@@ -794,50 +796,51 @@ public class SortedWareHouseWithdrawalList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x42);
+		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
 		/*
 		 * 0x01-Private Warehouse 0x02-Clan Warehouse 0x03-Castle Warehouse 0x04-Warehouse
 		 */
-		writeH(_whType);
-		writeQ(_playerAdena);
-		writeH(_objects.size());
+		packet.writeH(_whType);
+		packet.writeQ(_playerAdena);
+		packet.writeH(_objects.size());
 		
 		for (L2WarehouseItem item : _objects)
 		{
-			writeD(item.getObjectId());
-			writeD(item.getItem().getDisplayId());
-			writeD(item.getLocationSlot());
-			writeQ(item.getCount());
-			writeH(item.getItem().getType2());
-			writeH(item.getCustomType1());
-			writeH(0x00); // Can't be equipped in WH
-			writeD(item.getItem().getBodyPart());
-			writeH(item.getEnchantLevel());
-			writeH(item.getCustomType2());
+			packet.writeD(item.getObjectId());
+			packet.writeD(item.getItem().getDisplayId());
+			packet.writeD(item.getLocationSlot());
+			packet.writeQ(item.getCount());
+			packet.writeH(item.getItem().getType2());
+			packet.writeH(item.getCustomType1());
+			packet.writeH(0x00); // Can't be equipped in WH
+			packet.writeD(item.getItem().getBodyPart());
+			packet.writeH(item.getEnchantLevel());
+			packet.writeH(item.getCustomType2());
 			if (item.isAugmented())
 			{
-				writeD(item.getAugmentationId());
+				packet.writeD(item.getAugmentationId());
 			}
 			else
 			{
-				writeD(0x00);
+				packet.writeD(0x00);
 			}
-			writeD(item.getMana());
-			writeD(item.getTime());
-			writeH(item.getAttackElementType());
-			writeH(item.getAttackElementPower());
+			packet.writeD(item.getMana());
+			packet.writeD(item.getTime());
+			packet.writeH(item.getAttackElementType());
+			packet.writeH(item.getAttackElementPower());
 			for (byte i = 0; i < 6; i++)
 			{
-				writeH(item.getElementDefAttr(i));
+				packet.writeH(item.getElementDefAttr(i));
 			}
 			// Enchant Effects
 			for (int op : item.getEnchantOptions())
 			{
-				writeH(op);
+				packet.writeH(op);
 			}
-			writeD(item.getObjectId());
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

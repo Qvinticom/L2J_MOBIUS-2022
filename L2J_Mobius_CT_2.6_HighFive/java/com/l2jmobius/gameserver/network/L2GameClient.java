@@ -17,13 +17,11 @@
 package com.l2jmobius.gameserver.network;
 
 import java.net.InetAddress;
-import java.net.UnknownHostException;
-import java.nio.ByteBuffer;
+import java.net.InetSocketAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.List;
-import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Future;
 import java.util.concurrent.RejectedExecutionException;
 import java.util.concurrent.ScheduledFuture;
@@ -35,57 +33,50 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.mmocore.MMOClient;
-import com.l2jmobius.commons.mmocore.MMOConnection;
-import com.l2jmobius.commons.mmocore.ReceivablePacket;
+import com.l2jmobius.commons.network.ChannelInboundHandler;
+import com.l2jmobius.commons.network.ICrypt;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.IOutgoingPacket;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 import com.l2jmobius.gameserver.util.FloodProtectors;
 import com.l2jmobius.gameserver.util.Util;
+
+import io.netty.channel.Channel;
+import io.netty.channel.ChannelHandlerContext;
 
 /**
  * Represents a client connected on Game Server.
  * @author KenM
  */
-public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> implements Runnable
+public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 {
-	protected static final Logger _log = Logger.getLogger(L2GameClient.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2GameClient.class.getName());
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
-	/**
-	 * @author KenM
-	 */
-	public static enum GameClientState
-	{
-		/** Client has just connected . */
-		CONNECTED,
-		/** Client has authed but doesn't has character attached to it yet. */
-		AUTHED,
-		/** Client has selected a char and is in game. */
-		IN_GAME
-	}
-	
-	private GameClientState _state;
+	private final int _objectId;
 	
 	// Info
-	private final InetAddress _addr;
+	private InetAddress _addr;
+	private Channel _channel;
 	private String _accountName;
 	private SessionKey _sessionId;
 	private L2PcInstance _activeChar;
@@ -93,7 +84,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	private SecondaryPasswordAuth _secondaryAuth;
 	
 	private boolean _isAuthedGG;
-	private final long _connectionStartTime;
+	private final long _connectionStartTime = System.currentTimeMillis();
 	private List<CharSelectInfoPackage> _charSlotMapping = null;
 	
 	// flood protectors
@@ -103,49 +94,83 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	protected final ScheduledFuture<?> _autoSaveInDB;
 	protected ScheduledFuture<?> _cleanupTask = null;
 	
-	private L2GameServerPacket _aditionalClosePacket;
-	
 	// Crypt
-	private final GameCrypt _crypt;
-	
-	private final ClientStats _stats;
+	private final Crypt _crypt;
 	
 	private boolean _isDetached = false;
 	
 	private boolean _protocol;
 	
-	private final ArrayBlockingQueue<ReceivablePacket<L2GameClient>> _packetQueue;
-	private final ReentrantLock _queueLock = new ReentrantLock();
-	
 	private int[][] trace;
 	
-	public L2GameClient(MMOConnection<L2GameClient> con)
+	public L2GameClient()
 	{
-		super(con);
-		_state = GameClientState.CONNECTED;
-		_connectionStartTime = System.currentTimeMillis();
-		_crypt = new GameCrypt();
-		_stats = new ClientStats();
-		
-		_packetQueue = new ArrayBlockingQueue<>(Config.CLIENT_PACKET_QUEUE_SIZE);
-		
-		if (Config.CHAR_STORE_INTERVAL > 0)
+		_objectId = IdFactory.getInstance().getNextId();
+		_crypt = new Crypt(this);
+		if (Config.CHAR_DATA_STORE_INTERVAL > 0)
 		{
-			_autoSaveInDB = ThreadPool.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_STORE_INTERVAL * 60000L);
+			_autoSaveInDB = ThreadPool.scheduleAtFixedRate(new AutoSaveTask(), 300000L, Config.CHAR_DATA_STORE_INTERVAL);
 		}
 		else
 		{
 			_autoSaveInDB = null;
 		}
+	}
+	
+	public int getObjectId()
+	{
+		return _objectId;
+	}
+	
+	@Override
+	public void channelActive(ChannelHandlerContext ctx)
+	{
+		super.channelActive(ctx);
 		
+		setConnectionState(ConnectionState.CONNECTED);
+		final InetSocketAddress address = (InetSocketAddress) ctx.channel().remoteAddress();
+		_addr = address.getAddress();
+		_channel = ctx.channel();
+		LOGGER.finer("Client Connected: " + ctx.channel());
+	}
+	
+	@Override
+	public void channelInactive(ChannelHandlerContext ctx)
+	{
+		LOGGER.finer("Client Disconnected: " + ctx.channel());
+		
+		// no long running tasks here, do it async
 		try
 		{
-			_addr = con != null ? con.getInetAddress() : InetAddress.getLocalHost();
+			ThreadPool.execute(new DisconnectTask());
 		}
-		catch (UnknownHostException e)
+		catch (RejectedExecutionException e)
 		{
-			throw new Error("Unable to determine localhost address.");
+			// server is closing
 		}
+	}
+	
+	@Override
+	protected void channelRead0(ChannelHandlerContext ctx, IIncomingPacket<L2GameClient> packet)
+	{
+		try
+		{
+			packet.run(this);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception for: " + toString() + " on packet.run: " + packet.getClass().getSimpleName(), e);
+		}
+	}
+	
+	@Override
+	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
+	{
+	}
+	
+	public Channel getChannel()
+	{
+		return _channel;
 	}
 	
 	public byte[] enableCrypt()
@@ -153,25 +178,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		final byte[] key = BlowFishKeygen.getRandomKey();
 		_crypt.setKey(key);
 		return key;
-	}
-	
-	public GameClientState getState()
-	{
-		return _state;
-	}
-	
-	public void setState(GameClientState pState)
-	{
-		if (_state != pState)
-		{
-			_state = pState;
-			_packetQueue.clear();
-		}
-	}
-	
-	public ClientStats getStats()
-	{
-		return _stats;
 	}
 	
 	/**
@@ -188,21 +194,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		return _connectionStartTime;
 	}
 	
-	@Override
-	public boolean decrypt(ByteBuffer buf, int size)
-	{
-		_crypt.decrypt(buf.array(), buf.position(), size);
-		return true;
-	}
-	
-	@Override
-	public boolean encrypt(ByteBuffer buf, int size)
-	{
-		_crypt.encrypt(buf.array(), buf.position(), size);
-		buf.position(buf.position() + size);
-		return true;
-	}
-	
 	public L2PcInstance getActiveChar()
 	{
 		return _activeChar;
@@ -211,10 +202,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	public void setActiveChar(L2PcInstance pActiveChar)
 	{
 		_activeChar = pActiveChar;
-		// JIV remove - done on spawn
-		/*
-		 * if (_activeChar != null) { L2World.getInstance().storeObject(getActiveChar()); }
-		 */
 	}
 	
 	public ReentrantLock getActiveCharLock()
@@ -262,15 +249,26 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		return _sessionId;
 	}
 	
-	public void sendPacket(L2GameServerPacket gsp)
+	public void sendPacket(IClientOutgoingPacket packet)
 	{
-		if (_isDetached || (gsp == null) || (gsp.isInvisible() && (getActiveChar() != null) && !getActiveChar().canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)))
+		if (_isDetached || (packet == null))
 		{
 			return;
 		}
 		
-		getConnection().sendPacket(gsp);
-		gsp.runImpl();
+		// Write into the channel.
+		_channel.writeAndFlush(packet);
+		
+		// Run packet implementation.
+		packet.runImpl(getActiveChar());
+	}
+	
+	/**
+	 * @param smId
+	 */
+	public void sendPacket(SystemMessageId smId)
+	{
+		sendPacket(SystemMessage.getSystemMessage(smId));
 	}
 	
 	public boolean isDetached()
@@ -357,7 +355,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error updating delete time of character.", e);
+			LOGGER.log(Level.SEVERE, "Error updating delete time of character.", e);
 			return -1;
 		}
 	}
@@ -382,7 +380,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error saving character..", e);
+			LOGGER.log(Level.SEVERE, "Error saving character..", e);
 		}
 	}
 	
@@ -402,7 +400,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error restoring character.", e);
+			LOGGER.log(Level.SEVERE, "Error restoring character.", e);
 		}
 		
 		final LogRecord record = new LogRecord(Level.WARNING, "Restore");
@@ -571,7 +569,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error deleting character.", e);
+			LOGGER.log(Level.SEVERE, "Error deleting character.", e);
 		}
 	}
 	
@@ -587,7 +585,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		if (character != null)
 		{
 			// exploit prevention, should not happens in normal way
-			_log.severe("Attempt of double login: " + character.getName() + "(" + objId + ") " + getAccountName());
+			LOGGER.severe("Attempt of double login: " + character.getName() + "(" + objId + ") " + getAccountName());
 			if (character.getClient() != null)
 			{
 				character.getClient().closeNow();
@@ -612,7 +610,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		else
 		{
-			_log.severe("could not restore in slot: " + charslot);
+			LOGGER.severe("could not restore in slot: " + charslot);
 		}
 		
 		// setCharacter(character);
@@ -620,11 +618,11 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	}
 	
 	/**
-	 * @param list
+	 * @param chars
 	 */
-	public void setCharSelection(List<CharSelectInfoPackage> list)
+	public void setCharSelection(List<CharSelectInfoPackage> chars)
 	{
-		_charSlotMapping = list;
+		_charSlotMapping = chars;
 	}
 	
 	public CharSelectInfoPackage getCharSelection(int charslot)
@@ -641,33 +639,13 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		return _secondaryAuth;
 	}
 	
-	public void close(L2GameServerPacket gsp)
+	public void close(IOutgoingPacket packet)
 	{
-		if (getConnection() == null)
+		if (packet != null)
 		{
-			return; // ofline shop
+			_channel.writeAndFlush(packet);
 		}
-		if (_aditionalClosePacket != null)
-		{
-			getConnection().close(new L2GameServerPacket[]
-			{
-				_aditionalClosePacket,
-				gsp
-			});
-		}
-		else
-		{
-			getConnection().close(gsp);
-		}
-	}
-	
-	public void close(L2GameServerPacket[] gspArray)
-	{
-		if (getConnection() == null)
-		{
-			return; // ofline shop
-		}
-		getConnection().close(gspArray);
+		_channel.close();
 	}
 	
 	/**
@@ -679,35 +657,10 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		final CharSelectInfoPackage info = getCharSelection(charslot);
 		if (info == null)
 		{
-			_log.warning(toString() + " tried to delete Character in slot " + charslot + " but no characters exits at that slot.");
+			LOGGER.warning(toString() + " tried to delete Character in slot " + charslot + " but no characters exits at that slot.");
 			return -1;
 		}
 		return info.getObjectId();
-	}
-	
-	@Override
-	protected void onForcedDisconnection()
-	{
-		final LogRecord record = new LogRecord(Level.WARNING, "Disconnected abnormally");
-		record.setParameters(new Object[]
-		{
-			this
-		});
-		_logAccounting.log(record);
-	}
-	
-	@Override
-	protected void onDisconnection()
-	{
-		// no long running tasks here, do it async
-		try
-		{
-			ThreadPool.execute(new DisconnectTask());
-		}
-		catch (RejectedExecutionException e)
-		{
-			// server is closing
-		}
 	}
 	
 	/**
@@ -735,14 +688,15 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	{
 		try
 		{
-			final InetAddress address = getConnection().getInetAddress();
-			switch (getState())
+			final InetAddress address = _addr;
+			final ConnectionState state = (ConnectionState) getConnectionState();
+			switch (state)
 			{
 				case CONNECTED:
 				{
 					return "[IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
-				case AUTHED:
+				case AUTHENTICATED:
 				{
 					return "[Account: " + getAccountName() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
@@ -822,8 +776,10 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			}
 			catch (Exception e1)
 			{
-				_log.log(Level.WARNING, "Error while disconnecting client.", e1);
+				LOGGER.log(Level.WARNING, "Error while disconnecting client.", e1);
 			}
+			
+			IdFactory.getInstance().releaseId(getObjectId());
 		}
 	}
 	
@@ -881,7 +837,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 		catch (Exception e1)
 		{
-			_log.log(Level.WARNING, "Error during cleanup.", e1);
+			LOGGER.log(Level.WARNING, "Error during cleanup.", e1);
 		}
 	}
 	
@@ -896,14 +852,14 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				if (_autoSaveInDB != null)
 				{
 					_autoSaveInDB.cancel(true);
-					// ThreadPoolManager.getInstance().removeGeneral((Runnable) _autoSaveInDB);
+					// ThreadPool.getInstance().removeGeneral((Runnable) _autoSaveInDB);
 				}
 				
 				if (getActiveChar() != null) // this should only happen on connection loss
 				{
 					if (getActiveChar().isLocked())
 					{
-						_log.log(Level.WARNING, "Player " + getActiveChar().getName() + " still performing subclass actions during disconnect.");
+						LOGGER.warning("Player " + getActiveChar().getName() + " still performing subclass actions during disconnect.");
 					}
 					
 					// we store all data from players who are disconnected while in an event in order to restore it in the next login
@@ -912,20 +868,20 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 						L2Event.savePlayerEventStatus(getActiveChar());
 					}
 					
-					// prevent closing again
-					getActiveChar().setClient(null);
-					
 					if (getActiveChar().isOnline())
 					{
 						getActiveChar().deleteMe();
 						AntiFeedManager.getInstance().onDisconnect(L2GameClient.this);
 					}
+					
+					// prevent closing again
+					getActiveChar().setClient(null);
 				}
 				setActiveChar(null);
 			}
 			catch (Exception e1)
 			{
-				_log.log(Level.WARNING, "Error while cleanup client.", e1);
+				LOGGER.log(Level.WARNING, "Error while cleanup client.", e1);
 			}
 			finally
 			{
@@ -953,7 +909,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "Error on AutoSaveTask.", e);
+				LOGGER.log(Level.SEVERE, "Error on AutoSaveTask.", e);
 			}
 		}
 	}
@@ -976,182 +932,10 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return true;
 		}
 		
-		final Logger _logAudit = Logger.getLogger("audit");
-		_logAudit.log(Level.INFO, "AUDIT: Client " + toString() + " kicked for reason: " + punishment);
+		final Logger logAudit = Logger.getLogger("audit");
+		logAudit.info("AUDIT: Client " + toString() + " kicked for reason: " + punishment);
 		closeNow();
 		return false;
-	}
-	
-	/**
-	 * True if detached, or flood detected, or queue overflow detected and queue still not empty.
-	 * @return false if client can receive packets.
-	 */
-	public boolean dropPacket()
-	{
-		if (_isDetached)
-		{
-			return true;
-		}
-		
-		// flood protection
-		if (getStats().countPacket(_packetQueue.size()))
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return true;
-		}
-		
-		return getStats().dropPacket();
-	}
-	
-	/**
-	 * Counts buffer underflow exceptions.
-	 */
-	public void onBufferUnderflow()
-	{
-		if (getStats().countUnderflowException())
-		{
-			_log.severe("Client " + toString() + " - Disconnected: Too many buffer underflow exceptions.");
-			closeNow();
-			return;
-		}
-		if (_state != GameClientState.CONNECTED)
-		{
-			return;
-		}
-		if (Config.PACKET_HANDLER_DEBUG)
-		{
-			_log.severe("Client " + toString() + " - Disconnected, too many buffer underflows in non-authed state.");
-		}
-		closeNow();
-	}
-	
-	/**
-	 * Counts unknown packets
-	 */
-	public void onUnknownPacket()
-	{
-		if (getStats().countUnknownPacket())
-		{
-			_log.severe("Client " + toString() + " - Disconnected: Too many unknown packets.");
-			closeNow();
-			return;
-		}
-		if (_state != GameClientState.CONNECTED)
-		{
-			return;
-		}
-		if (Config.PACKET_HANDLER_DEBUG)
-		{
-			_log.severe("Client " + toString() + " - Disconnected, too many unknown packets in non-authed state.");
-		}
-		closeNow();
-	}
-	
-	/**
-	 * Add packet to the queue and start worker thread if needed
-	 * @param packet
-	 */
-	public void execute(ReceivablePacket<L2GameClient> packet)
-	{
-		if (getStats().countFloods())
-		{
-			_log.severe("Client " + toString() + " - Disconnected, too many floods:" + getStats().longFloods + " long and " + getStats().shortFloods + " short.");
-			closeNow();
-			return;
-		}
-		
-		if (!_packetQueue.offer(packet))
-		{
-			if (getStats().countQueueOverflow())
-			{
-				_log.severe("Client " + toString() + " - Disconnected, too many queue overflows.");
-				closeNow();
-			}
-			else
-			{
-				sendPacket(ActionFailed.STATIC_PACKET);
-			}
-			return;
-		}
-		
-		if (_queueLock.isLocked())
-		{
-			return;
-		}
-		
-		try
-		{
-			if (_state == GameClientState.CONNECTED)
-			{
-				if (getStats().processedPackets > 3)
-				{
-					if (Config.PACKET_HANDLER_DEBUG)
-					{
-						_log.severe("Client " + toString() + " - Disconnected, too many packets in non-authed state.");
-					}
-					closeNow();
-					return;
-				}
-				ThreadPool.execute(this);
-			}
-			else
-			{
-				ThreadPool.execute(this);
-			}
-		}
-		catch (RejectedExecutionException e)
-		{
-			// if the server is shutdown we ignore
-			// _log.severe("Failed executing: " + packet.getClass().getSimpleName() + " for Client: " + toString());
-		}
-	}
-	
-	@Override
-	public void run()
-	{
-		if (!_queueLock.tryLock())
-		{
-			return;
-		}
-		
-		try
-		{
-			int count = 0;
-			ReceivablePacket<L2GameClient> packet;
-			while (true)
-			{
-				packet = _packetQueue.poll();
-				if (packet == null)
-				{
-					return;
-				}
-				
-				if (_isDetached) // clear queue immediately after detach
-				{
-					_packetQueue.clear();
-					return;
-				}
-				
-				try
-				{
-					packet.run();
-				}
-				catch (Exception e)
-				{
-					_log.severe("Exception during execution " + packet.getClass().getSimpleName() + ", client: " + toString() + "," + e.getMessage());
-				}
-				
-				count++;
-				if (getStats().countBurst(count))
-				{
-					return;
-				}
-			}
-		}
-		finally
-		{
-			_queueLock.unlock();
-		}
 	}
 	
 	public void setClientTracert(int[][] tracert)
@@ -1175,8 +959,13 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		return false;
 	}
 	
-	public void setAditionalClosePacket(L2GameServerPacket aditionalClosePacket)
+	public void sendActionFailed()
 	{
-		_aditionalClosePacket = aditionalClosePacket;
+		sendPacket(ActionFailed.STATIC_PACKET);
+	}
+	
+	public ICrypt getCrypt()
+	{
+		return _crypt;
 	}
 }

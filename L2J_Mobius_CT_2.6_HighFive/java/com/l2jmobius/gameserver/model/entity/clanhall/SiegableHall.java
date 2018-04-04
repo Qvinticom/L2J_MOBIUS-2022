@@ -256,7 +256,7 @@ public final class SiegableHall extends ClanHall
 	
 	public final void showSiegeInfo(L2PcInstance player)
 	{
-		player.sendPacket(new SiegeInfo(this));
+		player.sendPacket(new SiegeInfo(this, player));
 	}
 	
 	@Override

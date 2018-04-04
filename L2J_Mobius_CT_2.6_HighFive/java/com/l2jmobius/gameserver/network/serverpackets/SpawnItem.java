@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class SpawnItem extends L2GameServerPacket
+public final class SpawnItem implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private int _itemId;
@@ -50,19 +52,20 @@ public final class SpawnItem extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x05);
-		writeD(_objectId);
-		writeD(_itemId);
+		OutgoingPackets.SPAWN_ITEM.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_itemId);
 		
-		writeD(_x);
-		writeD(_y);
-		writeD(_z);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
 		// only show item count if it is a stackable item
-		writeD(_stackable);
-		writeQ(_count);
-		writeD(0x00); // c2
-		writeD(0x00); // freya unk
+		packet.writeD(_stackable);
+		packet.writeQ(_count);
+		packet.writeD(0x00); // c2
+		packet.writeD(0x00); // freya unk
+		return true;
 	}
 }

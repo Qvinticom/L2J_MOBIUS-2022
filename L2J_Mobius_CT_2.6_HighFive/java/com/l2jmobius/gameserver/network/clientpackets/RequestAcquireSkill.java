@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -41,6 +42,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillDone;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillList;
@@ -54,7 +56,7 @@ import com.l2jmobius.gameserver.util.Util;
  * Request Acquire Skill client packet implementation.
  * @author Zoey76
  */
-public final class RequestAcquireSkill extends L2GameClientPacket
+public final class RequestAcquireSkill implements IClientIncomingPacket
 {
 	private static final String[] QUEST_VAR_NAMES =
 	{
@@ -70,21 +72,22 @@ public final class RequestAcquireSkill extends L2GameClientPacket
 	private int _subType;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
-		_level = readD();
-		_skillType = AcquireSkillType.getAcquireSkillType(readD());
+		_id = packet.readD();
+		_level = packet.readD();
+		_skillType = AcquireSkillType.getAcquireSkillType(packet.readD());
 		if (_skillType == AcquireSkillType.SUBPLEDGE)
 		{
-			_subType = readD();
+			_subType = packet.readD();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

@@ -24,7 +24,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -97,7 +97,7 @@ public abstract class AbstractPlayerGroup
 	 * Broadcast a packet to every member of this group.
 	 * @param packet the packet to broadcast
 	 */
-	public void broadcastPacket(L2GameServerPacket packet)
+	public void broadcastPacket(IClientOutgoingPacket packet)
 	{
 		forEachMember(m ->
 		{

@@ -37,8 +37,8 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMode;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -457,7 +457,7 @@ public abstract class AbstractOlympiadGame
 	
 	public abstract void broadcastOlympiadInfo(L2OlympiadStadiumZone stadium);
 	
-	protected abstract void broadcastPacket(L2GameServerPacket packet);
+	protected abstract void broadcastPacket(IClientOutgoingPacket packet);
 	
 	protected abstract boolean needBuffers();
 	

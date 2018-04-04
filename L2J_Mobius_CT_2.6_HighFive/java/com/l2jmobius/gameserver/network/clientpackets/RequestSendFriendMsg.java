@@ -21,8 +21,10 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
 
@@ -30,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
  * Recieve Private (Friend) Message - 0xCC Format: c SS S: Message S: Receiving Player
  * @author Tempy
  */
-public final class RequestSendFriendMsg extends L2GameClientPacket
+public final class RequestSendFriendMsg implements IClientIncomingPacket
 {
 	private static Logger _logChat = Logger.getLogger("chat");
 	
@@ -38,16 +40,17 @@ public final class RequestSendFriendMsg extends L2GameClientPacket
 	private String _reciever;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_message = readS();
-		_reciever = readS();
+		_message = packet.readS();
+		_reciever = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

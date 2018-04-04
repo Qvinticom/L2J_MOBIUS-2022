@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.nio.BufferUnderflowException;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.model.Location;
@@ -26,12 +27,13 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.util.Util;
 
-public class MoveBackwardToLocation extends L2GameClientPacket
+public class MoveBackwardToLocation implements IClientIncomingPacket
 {
 	private int _targetX;
 	private int _targetY;
@@ -42,32 +44,33 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 	private int _movementMode;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_targetX = readD();
-		_targetY = readD();
-		_targetZ = readD();
-		_originX = readD();
-		_originY = readD();
-		_originZ = readD();
+		_targetX = packet.readD();
+		_targetY = packet.readD();
+		_targetZ = packet.readD();
+		_originX = packet.readD();
+		_originY = packet.readD();
+		_originZ = packet.readD();
 		try
 		{
-			_movementMode = readD(); // is 0 if cursor keys are used 1 if mouse is used
+			_movementMode = packet.readD(); // is 0 if cursor keys are used 1 if mouse is used
 		}
 		catch (BufferUnderflowException e)
 		{
 			if (Config.L2WALKER_PROTECTION)
 			{
-				final L2PcInstance activeChar = getClient().getActiveChar();
+				final L2PcInstance activeChar = client.getActiveChar();
 				Util.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " is trying to use L2Walker and got kicked.", Config.DEFAULT_PUNISH);
 			}
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -136,5 +139,11 @@ public class MoveBackwardToLocation extends L2GameClientPacket
 			return;
 		}
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_targetX, _targetY, _targetZ));
+		
+		// Mobius: Check spawn protections.
+		if (activeChar.isSpawnProtected() || activeChar.isTeleportProtected())
+		{
+			activeChar.onActionRequest();
+		}
 	}
 }

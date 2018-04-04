@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
@@ -25,28 +26,30 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.AcquireSkillInfo;
 
 /**
  * Request Acquire Skill Info client packet implementation.
  * @author Zoey76
  */
-public final class RequestAcquireSkillInfo extends L2GameClientPacket
+public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 {
 	private int _id;
 	private int _level;
 	private AcquireSkillType _skillType;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_id = readD();
-		_level = readD();
-		_skillType = AcquireSkillType.getAcquireSkillType(readD());
+		_id = packet.readD();
+		_level = packet.readD();
+		_skillType = AcquireSkillType.getAcquireSkillType(packet.readD());
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if ((_id <= 0) || (_level <= 0))
 		{
@@ -54,7 +57,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -106,7 +109,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 			case COLLECT:
 			case TRANSFER:
 			{
-				sendPacket(new AcquireSkillInfo(_skillType, s));
+				client.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case CLASS:
@@ -114,7 +117,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 				if (trainer.getTemplate().canTeach(activeChar.getLearningClass()))
 				{
 					final int customSp = s.getCalculatedLevelUpSp(activeChar.getClassId(), activeChar.getLearningClass());
-					sendPacket(new AcquireSkillInfo(_skillType, s, customSp));
+					client.sendPacket(new AcquireSkillInfo(_skillType, s, customSp));
 				}
 				break;
 			}
@@ -124,7 +127,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 				{
 					return;
 				}
-				sendPacket(new AcquireSkillInfo(_skillType, s));
+				client.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 			case SUBPLEDGE:
@@ -133,7 +136,7 @@ public final class RequestAcquireSkillInfo extends L2GameClientPacket
 				{
 					return;
 				}
-				sendPacket(new AcquireSkillInfo(_skillType, s));
+				client.sendPacket(new AcquireSkillInfo(_skillType, s));
 				break;
 			}
 		}

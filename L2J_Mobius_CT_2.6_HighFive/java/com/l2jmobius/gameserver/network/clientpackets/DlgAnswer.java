@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
@@ -27,30 +28,32 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAn
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * @author Dezmond_snz
  */
-public final class DlgAnswer extends L2GameClientPacket
+public final class DlgAnswer implements IClientIncomingPacket
 {
 	private int _messageId;
 	private int _answer;
 	private int _requesterId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_messageId = readD();
-		_answer = readD();
-		_requesterId = readD();
+		_messageId = packet.readD();
+		_answer = packet.readD();
+		_requesterId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

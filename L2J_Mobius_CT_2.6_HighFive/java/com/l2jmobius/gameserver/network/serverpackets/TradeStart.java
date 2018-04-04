@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class TradeStart extends AbstractItemPacket
 {
@@ -33,19 +35,20 @@ public final class TradeStart extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		if ((_activeChar.getActiveTradeList() == null) || (_activeChar.getActiveTradeList().getPartner() == null))
 		{
-			return;
+			return false;
 		}
 		
-		writeC(0x14);
-		writeD(_activeChar.getActiveTradeList().getPartner().getObjectId());
-		writeH(_itemList.length);
+		OutgoingPackets.TRADE_START.writeId(packet);
+		packet.writeD(_activeChar.getActiveTradeList().getPartner().getObjectId());
+		packet.writeH(_itemList.length);
 		for (L2ItemInstance item : _itemList)
 		{
-			writeItem(item);
+			writeItem(packet, item);
 		}
+		return true;
 	}
 }

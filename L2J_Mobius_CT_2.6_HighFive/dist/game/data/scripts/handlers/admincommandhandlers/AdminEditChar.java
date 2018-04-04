@@ -991,7 +991,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		}
 		else
 		{
-			ip = client.getConnection().getInetAddress().getHostAddress();
+			ip = client.getConnectionAddress().getHostAddress();
 			// if (client.getHWID() != null)
 			// {
 			// hwid = client.getHWID();
@@ -1209,7 +1209,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					continue;
 				}
 				
-				ip = client.getConnection().getInetAddress().getHostAddress();
+				ip = client.getConnectionAddress().getHostAddress();
 				if (!ip.equals(IpAdress))
 				{
 					continue;
@@ -1304,7 +1304,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				continue;
 			}
 			
-			ip = client.getConnection().getInetAddress().getHostAddress();
+			ip = client.getConnectionAddress().getHostAddress();
 			if (ipMap.get(ip) == null)
 			{
 				ipMap.put(ip, new ArrayList<L2PcInstance>());
@@ -1356,7 +1356,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				continue;
 			}
 			
-			final IpPack pack = new IpPack(client.getConnection().getInetAddress().getHostAddress(), client.getTrace());
+			final IpPack pack = new IpPack(client.getConnectionAddress().getHostAddress(), client.getTrace());
 			if (ipMap.get(pack) == null)
 			{
 				ipMap.put(pack, new ArrayList<L2PcInstance>());

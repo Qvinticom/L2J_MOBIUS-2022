@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * MagicSkillLaunched server packet implementation.
  * @author UnAfraid
  */
-public class MagicSkillLaunched extends L2GameServerPacket
+public class MagicSkillLaunched implements IClientOutgoingPacket
 {
 	private final int _charObjId;
 	private final int _skillId;
@@ -54,16 +56,17 @@ public class MagicSkillLaunched extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x54);
-		writeD(_charObjId);
-		writeD(_skillId);
-		writeD(_skillLevel);
-		writeD(_targets.size());
+		OutgoingPackets.MAGIC_SKILL_LAUNCHED.writeId(packet);
+		packet.writeD(_charObjId);
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		packet.writeD(_targets.size());
 		for (L2Object target : _targets)
 		{
-			writeD(target.getObjectId());
+			packet.writeD(target.getObjectId());
 		}
+		return true;
 	}
 }

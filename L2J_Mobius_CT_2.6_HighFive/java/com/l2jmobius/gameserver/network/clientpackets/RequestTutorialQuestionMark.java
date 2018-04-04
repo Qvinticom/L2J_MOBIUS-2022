@@ -16,24 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2ClassMasterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
-public class RequestTutorialQuestionMark extends L2GameClientPacket
+public class RequestTutorialQuestionMark implements IClientIncomingPacket
 {
 	private int _number = 0;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_number = readD();
+		_number = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		
 		if (player == null)
 		{

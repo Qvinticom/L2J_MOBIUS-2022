@@ -36,7 +36,6 @@ public class PlayerInGame extends BaseRecievePacket
 		{
 			final String account = readS();
 			server.addAccountOnGameServer(account);
-			server.broadcastToTelnet("Account " + account + " logged in GameServer " + server.getServerId());
 		}
 	}
 }

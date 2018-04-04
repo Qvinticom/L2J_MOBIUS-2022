@@ -16,24 +16,24 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowAgitInfo;
 
 /**
  * @author KenM
  */
-public class RequestAllAgitInfo extends L2GameClientPacket
+public class RequestAllAgitInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		if (client != null)
 		{
 			client.sendPacket(new ExShowAgitInfo());

@@ -16,14 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author -Wooden-
  */
-public final class PledgeShowMemberListUpdate extends L2GameServerPacket
+public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 {
 	private final int _pledgeType;
 	private int _hasSponsor;
@@ -76,25 +78,26 @@ public final class PledgeShowMemberListUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x5b);
-		writeS(_name);
-		writeD(_level);
-		writeD(_classId);
-		writeD(_sex);
-		writeD(_race);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_UPDATE.writeId(packet);
+		packet.writeS(_name);
+		packet.writeD(_level);
+		packet.writeD(_classId);
+		packet.writeD(_sex);
+		packet.writeD(_race);
 		if (_isOnline)
 		{
-			writeD(_objectId);
-			writeD(_pledgeType);
+			packet.writeD(_objectId);
+			packet.writeD(_pledgeType);
 		}
 		else
 		{
 			// when going offline send as 0
-			writeD(0);
-			writeD(0);
+			packet.writeD(0);
+			packet.writeD(0);
 		}
-		writeD(_hasSponsor);
+		packet.writeD(_hasSponsor);
+		return true;
 	}
 }

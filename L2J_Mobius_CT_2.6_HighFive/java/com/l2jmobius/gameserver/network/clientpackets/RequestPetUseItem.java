@@ -16,38 +16,41 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-public final class RequestPetUseItem extends L2GameClientPacket
+public final class RequestPetUseItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
 		// TODO: implement me properly
 		// readQ();
 		// readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || !activeChar.hasPet())
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
+		if (!client.getFloodProtectors().getUseItem().tryPerformAction("pet use item"))
 		{
 			return;
 		}

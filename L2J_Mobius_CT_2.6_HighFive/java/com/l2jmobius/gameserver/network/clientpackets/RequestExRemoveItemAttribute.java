@@ -16,17 +16,19 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExBaseAttributeCancelResult;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-public class RequestExRemoveItemAttribute extends L2GameClientPacket
+public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _price;
@@ -37,16 +39,17 @@ public class RequestExRemoveItemAttribute extends L2GameClientPacket
 	}
 	
 	@Override
-	public void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_element = (byte) readD();
+		_objectId = packet.readD();
+		_element = (byte) packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

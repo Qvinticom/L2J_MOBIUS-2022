@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Henna;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * This server packet sends the player's henna information using the Game Master's UI.
  * @author KenM, Zoey76
  */
-public final class GMHennaInfo extends L2GameServerPacket
+public final class GMHennaInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final List<L2Henna> _hennas = new ArrayList<>();
@@ -44,21 +46,22 @@ public final class GMHennaInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xF0);
-		writeC(_activeChar.getHennaStatINT()); // equip INT
-		writeC(_activeChar.getHennaStatSTR()); // equip STR
-		writeC(_activeChar.getHennaStatCON()); // equip CON
-		writeC(_activeChar.getHennaStatMEN()); // equip MEN
-		writeC(_activeChar.getHennaStatDEX()); // equip DEX
-		writeC(_activeChar.getHennaStatWIT()); // equip WIT
-		writeD(3); // Slots
-		writeD(_hennas.size()); // Size
+		OutgoingPackets.GM_HENNA_INFO.writeId(packet);
+		packet.writeC(_activeChar.getHennaStatINT()); // equip INT
+		packet.writeC(_activeChar.getHennaStatSTR()); // equip STR
+		packet.writeC(_activeChar.getHennaStatCON()); // equip CON
+		packet.writeC(_activeChar.getHennaStatMEN()); // equip MEN
+		packet.writeC(_activeChar.getHennaStatDEX()); // equip DEX
+		packet.writeC(_activeChar.getHennaStatWIT()); // equip WIT
+		packet.writeD(3); // Slots
+		packet.writeD(_hennas.size()); // Size
 		for (L2Henna henna : _hennas)
 		{
-			writeD(henna.getDyeId());
-			writeD(0x01);
+			packet.writeD(henna.getDyeId());
+			packet.writeD(0x01);
 		}
+		return true;
 	}
 }

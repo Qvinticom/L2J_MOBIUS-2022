@@ -16,12 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class CharCreateOk extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class CharCreateOk implements IClientOutgoingPacket
 {
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x0f);
-		writeD(0x01);
+		OutgoingPackets.CHARACTER_CREATE_SUCCESS.writeId(packet);
+		packet.writeD(0x01);
+		return true;
 	}
 }

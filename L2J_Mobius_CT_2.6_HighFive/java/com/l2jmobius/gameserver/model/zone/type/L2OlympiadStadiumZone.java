@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExOlympiadUserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -146,7 +146,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 		}
 	}
 	
-	public final void broadcastPacketToObservers(L2GameServerPacket packet)
+	public final void broadcastPacketToObservers(IClientOutgoingPacket packet)
 	{
 		for (L2Character character : getCharactersInside())
 		{

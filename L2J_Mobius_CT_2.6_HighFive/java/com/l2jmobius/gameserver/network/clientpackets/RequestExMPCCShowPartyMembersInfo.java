@@ -16,28 +16,31 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExMPCCShowPartyMemberInfo;
 
 /**
  * Format:(ch) d
  * @author chris_00
  */
-public final class RequestExMPCCShowPartyMembersInfo extends L2GameClientPacket
+public final class RequestExMPCCShowPartyMembersInfo implements IClientIncomingPacket
 {
 	private int _partyLeaderId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_partyLeaderId = readD();
+		_partyLeaderId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

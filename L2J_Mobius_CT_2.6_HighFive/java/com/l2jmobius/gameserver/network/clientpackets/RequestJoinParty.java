@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PartyDistributionType;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.AskJoinParty;
@@ -30,22 +32,23 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * sample 29 42 00 00 10 01 00 00 00 format cdd
  * @version $Revision: 1.7.4.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestJoinParty extends L2GameClientPacket
+public final class RequestJoinParty implements IClientIncomingPacket
 {
 	private String _name;
 	private int _partyDistributionTypeId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
-		_partyDistributionTypeId = readD();
+		_name = packet.readS();
+		_partyDistributionTypeId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance requestor = getClient().getActiveChar();
+		final L2PcInstance requestor = client.getActiveChar();
 		final L2PcInstance target = L2World.getInstance().getPlayer(_name);
 		
 		if (requestor == null)

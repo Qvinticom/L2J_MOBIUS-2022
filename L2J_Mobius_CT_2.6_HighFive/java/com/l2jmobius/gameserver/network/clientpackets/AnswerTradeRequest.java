@@ -16,8 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -27,20 +29,21 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeDone;
  * This class ...
  * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class AnswerTradeRequest extends L2GameClientPacket
+public final class AnswerTradeRequest implements IClientIncomingPacket
 {
 	private int _response;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_response = readD();
+		_response = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -49,7 +52,7 @@ public final class AnswerTradeRequest extends L2GameClientPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

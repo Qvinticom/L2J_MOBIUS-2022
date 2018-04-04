@@ -16,7 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
@@ -29,18 +31,18 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  * <p>
  * @version $Revision: 1.3.4.4 $ $Date: 2005/03/29 23:15:33 $
  */
-public final class Appearing extends L2GameClientPacket
+public final class Appearing implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -50,13 +52,7 @@ public final class Appearing extends L2GameClientPacket
 			activeChar.onTeleported();
 		}
 		
-		sendPacket(new UserInfo(activeChar));
-		sendPacket(new ExBrExtraUserInfo(activeChar));
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(new UserInfo(activeChar));
+		client.sendPacket(new ExBrExtraUserInfo(activeChar));
 	}
 }

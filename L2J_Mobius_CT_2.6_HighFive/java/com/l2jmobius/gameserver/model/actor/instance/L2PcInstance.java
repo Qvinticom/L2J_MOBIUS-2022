@@ -262,7 +262,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.ExDominionWarStart;
 import com.l2jmobius.gameserver.network.serverpackets.ExDuelUpdateUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExFishingEnd;
 import com.l2jmobius.gameserver.network.serverpackets.ExFishingStart;
@@ -280,9 +279,9 @@ import com.l2jmobius.gameserver.network.serverpackets.FriendStatusPacket;
 import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
@@ -2052,10 +2051,8 @@ public final class L2PcInstance extends L2Playable
 					removeSkill(getKnownSkill(4270), false, true);
 					setIsOverloaded(false);
 				}
-				sendPacket(new UserInfo(this));
+				broadcastUserInfo();
 				sendPacket(new EtcStatusUpdate(this));
-				broadcastPacket(new CharInfo(this));
-				broadcastPacket(new ExBrExtraUserInfo(this));
 			}
 		}
 	}
@@ -3942,7 +3939,12 @@ public final class L2PcInstance extends L2Playable
 	
 	public String getIPAddress()
 	{
-		return (_client != null) && (_client.getConnectionAddress() != null) ? _client.getConnectionAddress().getHostAddress() : "N/A";
+		String ip = "N/A";
+		if ((_client != null) && (_client.getConnectionAddress() != null))
+		{
+			ip = _client.getConnectionAddress().getHostAddress();
+		}
+		return ip;
 	}
 	
 	/**
@@ -3951,15 +3953,23 @@ public final class L2PcInstance extends L2Playable
 	 */
 	private void closeNetConnection(boolean closeClient)
 	{
-		if (_client != null)
+		final L2GameClient client = _client;
+		if (client != null)
 		{
-			if (_client.isDetached())
+			if (client.isDetached())
 			{
-				_client.cleanMe(true);
+				client.cleanMe(true);
 			}
-			else if (!_client.getConnection().isClosed())
+			else if (client.getChannel().isActive())
 			{
-				_client.close(closeClient ? LeaveWorld.STATIC_PACKET : ServerClose.STATIC_PACKET);
+				if (closeClient)
+				{
+					client.close(LeaveWorld.STATIC_PACKET);
+				}
+				else
+				{
+					client.close(ServerClose.STATIC_PACKET);
+				}
 			}
 		}
 	}
@@ -4132,15 +4142,30 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public final void broadcastUserInfo()
 	{
-		// Send a Server->Client packet UserInfo to this L2PcInstance
+		// Send user info to the current player
 		sendPacket(new UserInfo(this));
-		
-		// Send a Server->Client packet CharInfo to all L2PcInstance in _KnownPlayers of the L2PcInstance
-		broadcastPacket(new CharInfo(this));
 		broadcastPacket(new ExBrExtraUserInfo(this));
-		if (TerritoryWarManager.getInstance().isTWInProgress() && (TerritoryWarManager.getInstance().checkIsRegistered(-1, getObjectId()) || TerritoryWarManager.getInstance().checkIsRegistered(-1, getClan())))
+		
+		// Broadcast char info to known players
+		broadcastCharInfo();
+	}
+	
+	public final void broadcastCharInfo()
+	{
+		final CharInfo charInfo = new CharInfo(this, false);
+		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
-			broadcastPacket(new ExDominionWarStart(this));
+			if (isVisibleFor(player))
+			{
+				if (isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS))
+				{
+					player.sendPacket(new CharInfo(this, true));
+				}
+				else
+				{
+					player.sendPacket(charInfo);
+				}
+			}
 		}
 	}
 	
@@ -4156,14 +4181,12 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public final void broadcastPacket(L2GameServerPacket mov)
+	public final void broadcastPacket(IClientOutgoingPacket mov)
 	{
 		if (!(mov instanceof CharInfo))
 		{
 			sendPacket(mov);
 		}
-		
-		mov.setInvisible(isInvisible());
 		
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
@@ -4189,14 +4212,12 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public void broadcastPacket(L2GameServerPacket mov, int radiusInKnownlist)
+	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
 	{
 		if (!(mov instanceof CharInfo))
 		{
 			sendPacket(mov);
 		}
-		
-		mov.setInvisible(isInvisible());
 		
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
@@ -4255,11 +4276,14 @@ public final class L2PcInstance extends L2Playable
 	 * Send a Server->Client packet StatusUpdate to the L2PcInstance.
 	 */
 	@Override
-	public void sendPacket(L2GameServerPacket packet)
+	public void sendPacket(IClientOutgoingPacket... packets)
 	{
 		if (_client != null)
 		{
-			_client.sendPacket(packet);
+			for (IClientOutgoingPacket packet : packets)
+			{
+				_client.sendPacket(packet);
+			}
 		}
 	}
 	
@@ -12955,7 +12979,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			setXYZ(getBoat().getLocation());
 			
-			activeChar.sendPacket(new CharInfo(this));
+			activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
@@ -12982,7 +13006,7 @@ public final class L2PcInstance extends L2Playable
 		else if (isInAirShip())
 		{
 			setXYZ(getAirShip().getLocation());
-			activeChar.sendPacket(new CharInfo(this));
+			activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
@@ -13008,7 +13032,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			activeChar.sendPacket(new CharInfo(this));
+			activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
@@ -13058,7 +13082,7 @@ public final class L2PcInstance extends L2Playable
 		if (isTransformed())
 		{
 			// Required double send for fix Mounted H5+
-			sendPacket(new CharInfo(activeChar));
+			sendPacket(new CharInfo(activeChar, false));
 		}
 	}
 	
@@ -14256,7 +14280,6 @@ public final class L2PcInstance extends L2Playable
 	public void setCharmOfCourage(boolean val)
 	{
 		_hasCharmOfCourage = val;
-		
 	}
 	
 	/**

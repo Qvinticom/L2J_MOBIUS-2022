@@ -16,11 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author KenM
  * @author UnAfraid
  */
-public class ExPCCafePointInfo extends L2GameServerPacket
+public class ExPCCafePointInfo implements IClientOutgoingPacket
 {
 	private final int _points;
 	private final int _mAddPoint;
@@ -51,15 +54,15 @@ public class ExPCCafePointInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x32);
-		writeD(_points); // num points
-		writeD(_mAddPoint); // points inc display
-		writeC(_mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
-		writeD(_remainTime); // period hours left
-		writeC(_pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
-		writeD(_time * 3); // value is in seconds * 3
+		OutgoingPackets.EX_PC_CAFE_POINT_INFO.writeId(packet);
+		packet.writeD(_points); // num points
+		packet.writeD(_mAddPoint); // points inc display
+		packet.writeC(_mPeriodType); // period(0=don't show window,1=acquisition,2=use points)
+		packet.writeD(_remainTime); // period hours left
+		packet.writeC(_pointType); // points inc display color(0=yellow, 1=cyan-blue, 2=red, all other black)
+		packet.writeD(_time * 3); // value is in seconds * 3
+		return true;
 	}
 }

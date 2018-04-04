@@ -52,7 +52,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExOpenMPCC;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
 import com.l2jmobius.gameserver.network.serverpackets.ExSetPartyLooting;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PartyMemberPosition;
 import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAdd;
 import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowAll;
@@ -265,7 +265,7 @@ public class L2Party extends AbstractPlayerGroup
 	 * @param player
 	 * @param msg
 	 */
-	public void broadcastToPartyMembers(L2PcInstance player, L2GameServerPacket msg)
+	public void broadcastToPartyMembers(L2PcInstance player, IClientOutgoingPacket msg)
 	{
 		for (L2PcInstance member : getMembers())
 		{

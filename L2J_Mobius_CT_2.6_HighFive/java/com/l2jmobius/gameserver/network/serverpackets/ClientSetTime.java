@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.GameTimeController;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class ClientSetTime extends L2GameServerPacket
+public class ClientSetTime implements IClientOutgoingPacket
 {
 	public static final ClientSetTime STATIC_PACKET = new ClientSetTime();
 	
@@ -27,10 +29,11 @@ public class ClientSetTime extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xf2);
-		writeD(GameTimeController.getInstance().getGameTime()); // time in client minutes
-		writeD(6); // constant to match the server time( this determines the speed of the client clock)
+		OutgoingPackets.CLIENT_SET_TIME.writeId(packet);
+		packet.writeD(GameTimeController.getInstance().getGameTime()); // time in client minutes
+		packet.writeD(0x06); // constant to match the server time( this determines the speed of the client clock)
+		return true;
 	}
 }

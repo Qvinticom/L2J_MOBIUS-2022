@@ -17,34 +17,37 @@
 
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.SiegeAttackerList;
 
 /**
  * This class ...
  * @version $Revision: 1.3.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestSiegeAttackerList extends L2GameClientPacket
+public final class RequestSiegeAttackerList implements IClientIncomingPacket
 {
 	private int _castleId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_castleId = readD();
+		_castleId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if (castle != null)
 		{
 			final SiegeAttackerList sal = new SiegeAttackerList(castle);
-			sendPacket(sal);
+			client.sendPacket(sal);
 		}
 		else
 		{
@@ -52,7 +55,7 @@ public final class RequestSiegeAttackerList extends L2GameClientPacket
 			if (hall != null)
 			{
 				final SiegeAttackerList sal = new SiegeAttackerList(hall);
-				sendPacket(sal);
+				client.sendPacket(sal);
 			}
 		}
 	}

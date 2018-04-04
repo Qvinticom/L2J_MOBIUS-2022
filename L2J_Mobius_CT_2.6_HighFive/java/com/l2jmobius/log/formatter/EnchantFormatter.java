@@ -55,7 +55,7 @@ public class EnchantFormatter extends AbstractFormatter
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
 						output.append(" IP:");
-						output.append(player.getClient().getConnection().getInetAddress().getHostAddress());
+						output.append(player.getClient().getConnectionAddress().getHostAddress());
 					}
 				}
 				else if (p instanceof L2ItemInstance)

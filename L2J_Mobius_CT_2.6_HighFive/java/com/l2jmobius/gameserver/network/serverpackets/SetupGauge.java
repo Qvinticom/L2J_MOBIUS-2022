@@ -16,7 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public final class SetupGauge extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public final class SetupGauge implements IClientOutgoingPacket
 {
 	public static final int BLUE = 0;
 	public static final int RED = 1;
@@ -42,18 +46,19 @@ public final class SetupGauge extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x6b);
-		writeD(_charObjId);
-		writeD(_dat1);
-		writeD(_time);
-		writeD(_time2);
+		OutgoingPackets.SETUP_GAUGE.writeId(packet);
+		packet.writeD(_charObjId);
+		packet.writeD(_dat1);
+		packet.writeD(_time);
+		packet.writeD(_time2);
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void runImpl(L2PcInstance player)
 	{
-		_charObjId = getClient().getActiveChar().getObjectId();
+		_charObjId = player.getObjectId();
 	}
 }

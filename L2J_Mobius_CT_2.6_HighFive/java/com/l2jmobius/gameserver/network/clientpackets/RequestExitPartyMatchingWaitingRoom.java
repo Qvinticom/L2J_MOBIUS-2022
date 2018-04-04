@@ -16,23 +16,26 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * @author Gnacik
  */
-public final class RequestExitPartyMatchingWaitingRoom extends L2GameClientPacket
+public final class RequestExitPartyMatchingWaitingRoom implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = client.getActiveChar();
 		
 		if (_activeChar == null)
 		{

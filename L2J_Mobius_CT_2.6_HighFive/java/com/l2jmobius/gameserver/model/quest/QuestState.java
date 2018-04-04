@@ -175,7 +175,7 @@ public final class QuestState
 			}
 		}
 		
-		_player.sendPacket(new QuestList());
+		_player.sendPacket(new QuestList(_player));
 		return true;
 	}
 	
@@ -355,7 +355,7 @@ public final class QuestState
 		}
 		
 		// send a packet to the client to inform it of the quest progress (step change)
-		_player.sendPacket(new QuestList());
+		_player.sendPacket(new QuestList(_player));
 		
 		final Quest q = getQuest();
 		if (!q.isCustomQuest() && (cond > 0))
@@ -684,7 +684,7 @@ public final class QuestState
 		if (repeatable)
 		{
 			_player.delQuestState(getQuestName());
-			_player.sendPacket(new QuestList());
+			_player.sendPacket(new QuestList(_player));
 		}
 		else
 		{

@@ -16,12 +16,16 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * Fromat: d d: the failure reason
  */
-public final class LoginFail extends L2LoginServerPacket
+public final class LoginFail implements IOutgoingPacket
 {
-	public static enum LoginFailReason
+	public enum LoginFailReason
 	{
 		REASON_NO_MESSAGE(0x00),
 		REASON_SYSTEM_ERROR_LOGIN_LATER(0x01),
@@ -84,9 +88,10 @@ public final class LoginFail extends L2LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x01);
-		writeC(_reason.getCode());
+		OutgoingPackets.LOGIN_FAIL.writeId(packet);
+		packet.writeC(_reason.getCode());
+		return true;
 	}
 }

@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author VISTALL
  */
-public class ExSubPledgeSkillAdd extends L2GameServerPacket
+public class ExSubPledgeSkillAdd implements IClientOutgoingPacket
 {
 	private final int _type;
 	private final int _skillId;
@@ -33,12 +36,12 @@ public class ExSubPledgeSkillAdd extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x76);
-		writeD(_type);
-		writeD(_skillId);
-		writeD(_skillLevel);
+		OutgoingPackets.EX_SUB_PLEDGE_SKILL_ADD.writeId(packet);
+		packet.writeD(_type);
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		return true;
 	}
 }

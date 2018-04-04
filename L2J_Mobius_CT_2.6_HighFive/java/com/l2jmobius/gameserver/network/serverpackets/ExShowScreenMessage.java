@@ -19,14 +19,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * ExShowScreenMessage server packet implementation.
  * @author Kerberos
  */
-public class ExShowScreenMessage extends L2GameServerPacket
+public class ExShowScreenMessage implements IClientOutgoingPacket
 {
 	private final int _type;
 	private final int _sysMessageId;
@@ -200,24 +202,23 @@ public class ExShowScreenMessage extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x39);
-		writeD(_type);
-		writeD(_sysMessageId);
-		writeD(_position);
-		writeD(_unk1);
-		writeD(_size);
-		writeD(_unk2);
-		writeD(_unk3);
-		writeD(_effect ? 0x01 : 0x00);
-		writeD(_time);
-		writeD(_fade ? 0x01 : 0x00);
-		writeD(_npcString);
+		OutgoingPackets.EX_SHOW_SCREEN_MESSAGE.writeId(packet);
+		packet.writeD(_type);
+		packet.writeD(_sysMessageId);
+		packet.writeD(_position);
+		packet.writeD(_unk1);
+		packet.writeD(_size);
+		packet.writeD(_unk2);
+		packet.writeD(_unk3);
+		packet.writeD(_effect ? 0x01 : 0x00);
+		packet.writeD(_time);
+		packet.writeD(_fade ? 0x01 : 0x00);
+		packet.writeD(_npcString);
 		if (_npcString == -1)
 		{
-			writeS(_text);
+			packet.writeS(_text);
 		}
 		else
 		{
@@ -225,9 +226,10 @@ public class ExShowScreenMessage extends L2GameServerPacket
 			{
 				for (String s : _parameters)
 				{
-					writeS(s);
+					packet.writeS(s);
 				}
 			}
 		}
+		return true;
 	}
 }

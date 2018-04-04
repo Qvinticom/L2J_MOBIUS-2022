@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Gnacik
  */
-public class ExPartyRoomMember extends L2GameServerPacket
+public class ExPartyRoomMember implements IClientOutgoingPacket
 {
 	private final PartyMatchRoom _room;
 	private final int _mode;
@@ -34,35 +36,35 @@ public class ExPartyRoomMember extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x08);
-		writeD(_mode);
-		writeD(_room.getMembers());
+		OutgoingPackets.EX_PARTY_ROOM_MEMBER.writeId(packet);
+		packet.writeD(_mode);
+		packet.writeD(_room.getMembers());
 		for (L2PcInstance member : _room.getPartyMembers())
 		{
-			writeD(member.getObjectId());
-			writeS(member.getName());
-			writeD(member.getActiveClass());
-			writeD(member.getLevel());
-			writeD(_room.getLocation());
+			packet.writeD(member.getObjectId());
+			packet.writeS(member.getName());
+			packet.writeD(member.getActiveClass());
+			packet.writeD(member.getLevel());
+			packet.writeD(_room.getLocation());
 			if (_room.getOwner().equals(member))
 			{
-				writeD(0x01);
+				packet.writeD(0x01);
 			}
 			else
 			{
 				if ((_room.getOwner().isInParty() && member.isInParty()) && (_room.getOwner().getParty().getLeaderObjectId() == member.getParty().getLeaderObjectId()))
 				{
-					writeD(0x02);
+					packet.writeD(0x02);
 				}
 				else
 				{
-					writeD(0x00);
+					packet.writeD(0x00);
 				}
 			}
-			writeD(0x00); // TODO: Instance datas there is more if that is not 0!
+			packet.writeD(0x00); // TODO: Instance datas there is more if that is not 0!
 		}
+		return true;
 	}
 }

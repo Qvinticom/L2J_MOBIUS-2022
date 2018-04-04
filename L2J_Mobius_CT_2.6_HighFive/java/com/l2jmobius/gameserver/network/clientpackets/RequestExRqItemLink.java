@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -25,20 +26,20 @@ import com.l2jmobius.gameserver.network.serverpackets.ExRpItemLink;
 /**
  * @author KenM
  */
-public class RequestExRqItemLink extends L2GameClientPacket
+public class RequestExRqItemLink implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		if (client != null)
 		{
 			final L2Object object = L2World.getInstance().findObject(_objectId);

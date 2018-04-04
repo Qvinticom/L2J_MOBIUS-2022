@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -23,9 +24,10 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
 import com.l2jmobius.gameserver.model.actor.instance.L2AirShipInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public class MoveToLocationAirShip extends L2GameClientPacket
+public class MoveToLocationAirShip implements IClientIncomingPacket
 {
 	public static final int MIN_Z = -895;
 	public static final int MAX_Z = 6105;
@@ -36,20 +38,21 @@ public class MoveToLocationAirShip extends L2GameClientPacket
 	private int _param2 = 0;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_command = readD();
-		_param1 = readD();
-		if (_buf.remaining() > 0)
+		_command = packet.readD();
+		_param1 = packet.readD();
+		if (packet.getReadableBytes() > 0)
 		{
-			_param2 = readD();
+			_param2 = packet.readD();
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

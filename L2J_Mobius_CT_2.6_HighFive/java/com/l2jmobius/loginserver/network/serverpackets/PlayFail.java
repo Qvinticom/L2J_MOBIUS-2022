@@ -16,13 +16,17 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.IOutgoingPacket;
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.loginserver.network.OutgoingPackets;
+
 /**
  * This class ...
  * @version $Revision: 1.2.4.1 $ $Date: 2005/03/27 15:30:11 $
  */
-public final class PlayFail extends L2LoginServerPacket
+public final class PlayFail implements IOutgoingPacket
 {
-	public static enum PlayFailReason
+	public enum PlayFailReason
 	{
 		REASON_NO_MESSAGE(0x00),
 		REASON_SYSTEM_ERROR_LOGIN_LATER(0x01),
@@ -85,9 +89,10 @@ public final class PlayFail extends L2LoginServerPacket
 	}
 	
 	@Override
-	protected void write()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x06);
-		writeC(_reason.getCode());
+		OutgoingPackets.PLAY_FAIL.writeId(packet);
+		packet.writeC(_reason.getCode());
+		return true;
 	}
 }

@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
@@ -430,7 +430,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		}
 	}
 	
-	protected void broadCastPacket(PAWORLD world, L2GameServerPacket packet)
+	protected void broadCastPacket(PAWORLD world, IClientOutgoingPacket packet)
 	{
 		for (int objId : world.getAllowed())
 		{

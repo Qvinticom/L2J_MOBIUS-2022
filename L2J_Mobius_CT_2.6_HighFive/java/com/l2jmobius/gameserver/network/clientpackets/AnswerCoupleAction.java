@@ -16,8 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -27,24 +29,25 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author JIV
  */
-public class AnswerCoupleAction extends L2GameClientPacket
+public class AnswerCoupleAction implements IClientIncomingPacket
 {
 	private int _charObjId;
 	private int _actionId;
 	private int _answer;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_actionId = readD();
-		_answer = readD();
-		_charObjId = readD();
+		_actionId = packet.readD();
+		_answer = packet.readD();
+		_charObjId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		final L2PcInstance target = L2World.getInstance().getPlayer(_charObjId);
 		if ((activeChar == null) || (target == null))
 		{
@@ -63,7 +66,7 @@ public class AnswerCoupleAction extends L2GameClientPacket
 			final int distance = (int) activeChar.calculateDistance(target, false, false);
 			if ((distance > 125) || (distance < 15) || (activeChar.getObjectId() == target.getObjectId()))
 			{
-				sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
+				client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				target.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 				return;
 			}

@@ -19,10 +19,12 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class PartySpelled extends L2GameServerPacket
+public class PartySpelled implements IClientOutgoingPacket
 {
 	private final List<BuffInfo> _effects = new ArrayList<>();
 	private final L2Character _activeChar;
@@ -38,20 +40,21 @@ public class PartySpelled extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xF4);
-		writeD(_activeChar.isServitor() ? 2 : _activeChar.isPet() ? 1 : 0);
-		writeD(_activeChar.getObjectId());
-		writeD(_effects.size());
+		OutgoingPackets.PARTY_SPELLED.writeId(packet);
+		packet.writeD(_activeChar.isServitor() ? 2 : _activeChar.isPet() ? 1 : 0);
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_effects.size());
 		for (BuffInfo info : _effects)
 		{
 			if ((info != null) && info.isInUse())
 			{
-				writeD(info.getSkill().getDisplayId());
-				writeH(info.getSkill().getDisplayLevel());
-				writeD(info.getTime());
+				packet.writeD(info.getSkill().getDisplayId());
+				packet.writeH(info.getSkill().getDisplayLevel());
+				packet.writeD(info.getTime());
 			}
 		}
+		return true;
 	}
 }

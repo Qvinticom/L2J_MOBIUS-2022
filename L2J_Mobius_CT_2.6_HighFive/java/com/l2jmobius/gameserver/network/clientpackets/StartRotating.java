@@ -16,29 +16,32 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.StartRotation;
 
 /**
  * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class StartRotating extends L2GameClientPacket
+public final class StartRotating implements IClientIncomingPacket
 {
 	private int _degree;
 	private int _side;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_degree = readD();
-		_side = readD();
+		_degree = packet.readD();
+		_side = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

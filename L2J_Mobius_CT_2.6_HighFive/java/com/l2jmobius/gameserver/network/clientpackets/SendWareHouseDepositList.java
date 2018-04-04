@@ -22,12 +22,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.itemcontainer.PcWarehouse;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -37,50 +39,51 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * SendWareHouseDepositList client packet class.
  */
-public final class SendWareHouseDepositList extends L2GameClientPacket
+public final class SendWareHouseDepositList implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 12;
 	
 	private List<ItemHolder> _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int size = readD();
-		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != _buf.remaining()))
+		final int size = packet.readD();
+		if ((size <= 0) || (size > Config.MAX_ITEM_IN_PACKET) || ((size * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new ArrayList<>(size);
 		for (int i = 0; i < size; i++)
 		{
-			final int objId = readD();
-			final long count = readQ();
+			final int objId = packet.readD();
+			final long count = packet.readQ();
 			if ((objId < 1) || (count < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items.add(new ItemHolder(objId, count));
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_items == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("deposit"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("deposit"))
 		{
 			player.sendMessage("You are depositing items too fast.");
 			return;

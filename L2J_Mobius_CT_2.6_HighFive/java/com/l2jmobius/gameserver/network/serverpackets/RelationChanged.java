@@ -19,12 +19,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Luca Baldi
  */
-public final class RelationChanged extends L2GameServerPacket
+public final class RelationChanged implements IClientOutgoingPacket
 {
 	public static final int RELATION_PARTY1 = 0x00001; // party member
 	public static final int RELATION_PARTY2 = 0x00002; // party member
@@ -60,7 +62,6 @@ public final class RelationChanged extends L2GameServerPacket
 		_singled._autoAttackable = autoattackable ? 1 : 0;
 		_singled._karma = activeChar.getKarma();
 		_singled._pvpFlag = activeChar.getPvpFlag();
-		setInvisible(activeChar.isInvisible());
 	}
 	
 	public RelationChanged()
@@ -84,30 +85,31 @@ public final class RelationChanged extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xce);
+		OutgoingPackets.RELATION_CHANGED.writeId(packet);
 		if (_multi == null)
 		{
-			writeD(1);
-			writeRelation(_singled);
+			packet.writeD(1);
+			writeRelation(packet, _singled);
 		}
 		else
 		{
-			writeD(_multi.size());
+			packet.writeD(_multi.size());
 			for (Relation r : _multi)
 			{
-				writeRelation(r);
+				writeRelation(packet, r);
 			}
 		}
+		return true;
 	}
 	
-	private void writeRelation(Relation relation)
+	private void writeRelation(PacketWriter packet, Relation relation)
 	{
-		writeD(relation._objId);
-		writeD(relation._relation);
-		writeD(relation._autoAttackable);
-		writeD(relation._karma);
-		writeD(relation._pvpFlag);
+		packet.writeD(relation._objId);
+		packet.writeD(relation._relation);
+		packet.writeD(relation._autoAttackable);
+		packet.writeD(relation._karma);
+		packet.writeD(relation._pvpFlag);
 	}
 }

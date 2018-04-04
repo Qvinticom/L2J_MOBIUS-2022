@@ -17,9 +17,11 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -33,22 +35,23 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * </p>
  * @author -Wooden-, TempyIncursion
  */
-public final class RequestPetition extends L2GameClientPacket
+public final class RequestPetition implements IClientIncomingPacket
 {
 	private String _content;
 	private int _type; // 1 = on : 0 = off;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_content = readS();
-		_type = readD();
+		_content = packet.readS();
+		_type = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

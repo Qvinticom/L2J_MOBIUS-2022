@@ -17,11 +17,13 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangePostState;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -30,31 +32,32 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * @author Migi, DS
  */
-public final class RequestRejectPostAttachment extends L2GameClientPacket
+public final class RequestRejectPostAttachment implements IClientIncomingPacket
 {
 	private int _msgId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_msgId = readD();
+		_msgId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	public void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL || !Config.ALLOW_ATTACHMENTS)
 		{
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("rejectattach"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("rejectattach"))
 		{
 			return;
 		}

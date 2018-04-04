@@ -16,8 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author ShanSoft
@@ -39,42 +41,42 @@ public class ExBuySellList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xB7);
-		writeD(0x01);
+		OutgoingPackets.EX_BUY_SELL_LIST.writeId(packet);
+		packet.writeD(0x01);
 		
 		if ((_sellList != null))
 		{
-			writeH(_sellList.length);
+			packet.writeH(_sellList.length);
 			for (L2ItemInstance item : _sellList)
 			{
-				writeItem(item);
-				writeQ(item.getItem().getReferencePrice() / 2);
+				writeItem(packet, item);
+				packet.writeQ(item.getItem().getReferencePrice() / 2);
 			}
 		}
 		else
 		{
-			writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
 		if ((_refundList != null) && (_refundList.length > 0))
 		{
-			writeH(_refundList.length);
+			packet.writeH(_refundList.length);
 			int i = 0;
 			for (L2ItemInstance item : _refundList)
 			{
-				writeItem(item);
-				writeD(i++);
-				writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
+				writeItem(packet, item);
+				packet.writeD(i++);
+				packet.writeQ((item.getItem().getReferencePrice() / 2) * item.getCount());
 			}
 		}
 		else
 		{
-			writeH(0x00);
+			packet.writeH(0x00);
 		}
 		
-		writeC(_done ? 0x01 : 0x00);
+		packet.writeC(_done ? 0x01 : 0x00);
+		return true;
 	}
 }

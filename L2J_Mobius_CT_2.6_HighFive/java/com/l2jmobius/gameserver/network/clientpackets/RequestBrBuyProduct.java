@@ -22,11 +22,13 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrGamePoint;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
@@ -34,22 +36,23 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 /**
  * @author Mobius
  */
-public class RequestBrBuyProduct extends L2GameClientPacket
+public class RequestBrBuyProduct implements IClientIncomingPacket
 {
 	private int _productId;
 	private int _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_productId = readD();
-		_count = readD();
+		_productId = packet.readD();
+		_count = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

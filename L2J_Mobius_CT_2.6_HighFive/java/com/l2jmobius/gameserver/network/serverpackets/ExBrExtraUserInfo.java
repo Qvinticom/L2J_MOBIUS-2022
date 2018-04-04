@@ -16,13 +16,15 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * ExBrExtraUserInfo server packet implementation.
  * @author Kerberos, Zoey76
  */
-public class ExBrExtraUserInfo extends L2GameServerPacket
+public class ExBrExtraUserInfo implements IClientOutgoingPacket
 {
 	/** Player object ID. */
 	private final int _charObjId;
@@ -36,16 +38,15 @@ public class ExBrExtraUserInfo extends L2GameServerPacket
 		_charObjId = player.getObjectId();
 		_abnormalVisualEffectsEvent = player.getAbnormalVisualEffectEvent();
 		_lectureMark = 1; // TODO: Implement.
-		setInvisible(player.isInvisible());
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xDA);
-		writeD(_charObjId);
-		writeD(_abnormalVisualEffectsEvent);
-		writeC(_lectureMark);
+		OutgoingPackets.EX_BR_EXTRA_USER_INFO.writeId(packet);
+		packet.writeD(_charObjId);
+		packet.writeD(_abnormalVisualEffectsEvent);
+		packet.writeC(_lectureMark);
+		return true;
 	}
 }

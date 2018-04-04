@@ -16,8 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class WareHouseWithdrawalList extends AbstractItemPacket
 {
@@ -51,17 +53,18 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x42);
-		writeH(_whType);
-		writeQ(_playerAdena);
-		writeH(_items.length);
+		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
+		packet.writeH(_whType);
+		packet.writeQ(_playerAdena);
+		packet.writeH(_items.length);
 		
 		for (L2ItemInstance item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
 		}
+		return true;
 	}
 }

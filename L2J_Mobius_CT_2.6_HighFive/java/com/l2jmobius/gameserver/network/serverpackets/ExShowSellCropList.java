@@ -19,16 +19,18 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
 import com.l2jmobius.gameserver.model.L2Seed;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author l3x
  */
-public final class ExShowSellCropList extends L2GameServerPacket
+public final class ExShowSellCropList implements IClientOutgoingPacket
 {
 	private final int _manorId;
 	private final Map<Integer, L2ItemInstance> _cropsItems = new HashMap<>();
@@ -56,39 +58,39 @@ public final class ExShowSellCropList extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x2C);
+		OutgoingPackets.EX_SHOW_SELL_CROP_LIST.writeId(packet);
 		
-		writeD(_manorId); // manor id
-		writeD(_cropsItems.size()); // size
+		packet.writeD(_manorId); // manor id
+		packet.writeD(_cropsItems.size()); // size
 		for (L2ItemInstance item : _cropsItems.values())
 		{
 			final L2Seed seed = CastleManorManager.getInstance().getSeedByCrop(item.getId());
-			writeD(item.getObjectId()); // Object id
-			writeD(item.getId()); // crop id
-			writeD(seed.getLevel()); // seed level
-			writeC(0x01);
-			writeD(seed.getReward(1)); // reward 1 id
-			writeC(0x01);
-			writeD(seed.getReward(2)); // reward 2 id
+			packet.writeD(item.getObjectId()); // Object id
+			packet.writeD(item.getId()); // crop id
+			packet.writeD(seed.getLevel()); // seed level
+			packet.writeC(0x01);
+			packet.writeD(seed.getReward(1)); // reward 1 id
+			packet.writeC(0x01);
+			packet.writeD(seed.getReward(2)); // reward 2 id
 			if (_castleCrops.containsKey(item.getId()))
 			{
 				final CropProcure crop = _castleCrops.get(item.getId());
-				writeD(_manorId); // manor
-				writeQ(crop.getAmount()); // buy residual
-				writeQ(crop.getPrice()); // buy price
-				writeC(crop.getReward()); // reward
+				packet.writeD(_manorId); // manor
+				packet.writeQ(crop.getAmount()); // buy residual
+				packet.writeQ(crop.getPrice()); // buy price
+				packet.writeC(crop.getReward()); // reward
 			}
 			else
 			{
-				writeD(0xFFFFFFFF); // manor
-				writeQ(0x00); // buy residual
-				writeQ(0x00); // buy price
-				writeC(0x00); // reward
+				packet.writeD(0xFFFFFFFF); // manor
+				packet.writeQ(0x00); // buy residual
+				packet.writeQ(0x00); // buy price
+				packet.writeC(0x00); // reward
 			}
-			writeQ(item.getCount()); // my crops
+			packet.writeQ(item.getCount()); // my crops
 		}
+		return true;
 	}
 }

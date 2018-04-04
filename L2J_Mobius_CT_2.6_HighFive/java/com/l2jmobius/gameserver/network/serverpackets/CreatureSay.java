@@ -19,12 +19,14 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-public final class CreatureSay extends L2GameServerPacket
+public final class CreatureSay implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	private final ChatType _textType;
@@ -86,40 +88,40 @@ public final class CreatureSay extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x4A);
-		writeD(_objectId);
-		writeD(_textType.getClientId());
+		OutgoingPackets.SAY2.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_textType.getClientId());
 		if (_charName != null)
 		{
-			writeS(_charName);
+			packet.writeS(_charName);
 		}
 		else
 		{
-			writeD(_charId);
+			packet.writeD(_charId);
 		}
-		writeD(_npcString); // High Five NPCString ID
+		packet.writeD(_npcString); // High Five NPCString ID
 		if (_text != null)
 		{
-			writeS(_text);
+			packet.writeS(_text);
 		}
 		else if (_parameters != null)
 		{
 			for (String s : _parameters)
 			{
-				writeS(s);
+				packet.writeS(s);
 			}
 		}
+		return true;
 	}
 	
 	@Override
-	public final void runImpl()
+	public final void runImpl(L2PcInstance player)
 	{
-		final L2PcInstance _pci = getClient().getActiveChar();
-		if (_pci != null)
+		if (player != null)
 		{
-			_pci.broadcastSnoop(_textType, _charName, _text);
+			player.broadcastSnoop(_textType, _charName, _text);
 		}
 	}
 }

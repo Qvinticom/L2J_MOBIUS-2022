@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PartyMatchRoom;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
 import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyRoomMember;
@@ -30,22 +32,23 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
  * This class ...
  * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestPartyMatchConfig extends L2GameClientPacket
+public final class RequestPartyMatchConfig implements IClientIncomingPacket
 {
 	private int _auto, _loc, _lvl;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_auto = readD(); //
-		_loc = readD(); // Location
-		_lvl = readD(); // my level
+		_auto = packet.readD(); //
+		_loc = packet.readD(); // Location
+		_lvl = packet.readD(); // my level
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance _activeChar = getClient().getActiveChar();
+		final L2PcInstance _activeChar = client.getActiveChar();
 		
 		if (_activeChar == null)
 		{

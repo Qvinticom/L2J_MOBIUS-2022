@@ -18,11 +18,13 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -30,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author Zoey76
  */
-public class RequestUnEquipItem extends L2GameClientPacket
+public class RequestUnEquipItem implements IClientIncomingPacket
 {
 	private int _slot;
 	
@@ -38,15 +40,16 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	 * Packet type id 0x16 format: cd
 	 */
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_slot = readD();
+		_slot = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

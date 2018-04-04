@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.VehiclePathPoint;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public class BoatManager
 {
@@ -151,7 +151,7 @@ public class BoatManager
 	 * @param point2
 	 * @param packet
 	 */
-	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket packet)
+	public void broadcastPacket(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket packet)
 	{
 		broadcastPacketsToPlayers(point1, point2, packet);
 	}
@@ -162,25 +162,25 @@ public class BoatManager
 	 * @param point2
 	 * @param packets
 	 */
-	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets)
+	public void broadcastPackets(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
 		broadcastPacketsToPlayers(point1, point2, packets);
 	}
 	
-	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, L2GameServerPacket... packets)
+	private void broadcastPacketsToPlayers(VehiclePathPoint point1, VehiclePathPoint point2, IClientOutgoingPacket... packets)
 	{
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			if (Math.hypot(player.getX() - point1.getX(), player.getY() - point1.getY()) < Config.BOAT_BROADCAST_RADIUS)
 			{
-				for (L2GameServerPacket p : packets)
+				for (IClientOutgoingPacket p : packets)
 				{
 					player.sendPacket(p);
 				}
 			}
 			else if (Math.hypot(player.getX() - point2.getX(), player.getY() - point2.getY()) < Config.BOAT_BROADCAST_RADIUS)
 			{
-				for (L2GameServerPacket p : packets)
+				for (IClientOutgoingPacket p : packets)
 				{
 					player.sendPacket(p);
 				}

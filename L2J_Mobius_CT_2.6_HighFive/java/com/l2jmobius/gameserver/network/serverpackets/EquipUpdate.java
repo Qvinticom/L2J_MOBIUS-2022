@@ -16,10 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class EquipUpdate extends L2GameServerPacket
+public final class EquipUpdate implements IClientOutgoingPacket
 {
 	private final L2ItemInstance _item;
 	private final int _change;
@@ -31,12 +33,12 @@ public final class EquipUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		int bodypart = 0;
-		writeC(0x4b);
-		writeD(_change);
-		writeD(_item.getObjectId());
+		OutgoingPackets.EQUIP_UPDATE.writeId(packet);
+		packet.writeD(_change);
+		packet.writeD(_item.getObjectId());
 		switch (_item.getItem().getBodyPart())
 		{
 			case L2Item.SLOT_L_EAR:
@@ -120,6 +122,7 @@ public final class EquipUpdate extends L2GameServerPacket
 				break;
 			}
 		}
-		writeD(bodypart);
+		packet.writeD(bodypart);
+		return true;
 	}
 }

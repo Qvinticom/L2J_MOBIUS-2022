@@ -24,11 +24,14 @@ import java.util.logging.Logger;
 import javax.crypto.Cipher;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.IIncomingPacket;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.LoginController;
+import com.l2jmobius.loginserver.LoginController.AuthLoginResult;
 import com.l2jmobius.loginserver.model.data.AccountInfo;
+import com.l2jmobius.loginserver.network.ConnectionState;
 import com.l2jmobius.loginserver.network.L2LoginClient;
-import com.l2jmobius.loginserver.network.L2LoginClient.LoginClientState;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked;
 import com.l2jmobius.loginserver.network.serverpackets.AccountKicked.AccountKickedReason;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
@@ -41,58 +44,48 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  * 
  * <pre>
  */
-public class RequestAuthLogin extends L2LoginClientPacket
+public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 {
 	private static Logger _log = Logger.getLogger(RequestAuthLogin.class.getName());
 	
-	private final byte[] _raw = new byte[128];
+	private final byte[] _raw1 = new byte[128];
+	private final byte[] _raw2 = new byte[128];
+	private boolean _newAuthMethod = false;
 	
 	private String _user;
 	private String _password;
-	private int _ncotp;
-	
-	/**
-	 * @return
-	 */
-	public String getPassword()
-	{
-		return _password;
-	}
-	
-	/**
-	 * @return
-	 */
-	public String getUser()
-	{
-		return _user;
-	}
-	
-	public int getOneTimePassword()
-	{
-		return _ncotp;
-	}
 	
 	@Override
-	public boolean readImpl()
+	public boolean read(L2LoginClient client, PacketReader packet)
 	{
-		if (super._buf.remaining() >= 128)
+		if (packet.getReadableBytes() >= 256)
 		{
-			readB(_raw);
+			_newAuthMethod = true;
+			packet.readB(_raw1, 0, _raw1.length);
+			packet.readB(_raw2, 0, _raw2.length);
+			return true;
+		}
+		else if (packet.getReadableBytes() >= 128)
+		{
+			packet.readB(_raw1, 0, _raw1.length);
 			return true;
 		}
 		return false;
 	}
 	
 	@Override
-	public void run()
+	public void run(L2LoginClient client)
 	{
-		byte[] decrypted = null;
-		final L2LoginClient client = getClient();
+		byte[] decrypted = new byte[_newAuthMethod ? 256 : 128];
 		try
 		{
 			final Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
-			rsaCipher.init(Cipher.DECRYPT_MODE, client.getRSAPrivateKey());
-			decrypted = rsaCipher.doFinal(_raw, 0x00, 0x80);
+			rsaCipher.init(Cipher.DECRYPT_MODE, client.getScrambledKeyPair().getPrivateKey());
+			rsaCipher.doFinal(_raw1, 0, 128, decrypted, 0);
+			if (_newAuthMethod)
+			{
+				rsaCipher.doFinal(_raw2, 0, 128, decrypted, 128);
+			}
 		}
 		catch (GeneralSecurityException e)
 		{
@@ -102,12 +95,16 @@ public class RequestAuthLogin extends L2LoginClientPacket
 		
 		try
 		{
-			_user = new String(decrypted, 0x5E, 14).trim().toLowerCase();
-			_password = new String(decrypted, 0x6C, 16).trim();
-			_ncotp = decrypted[0x7c];
-			_ncotp |= decrypted[0x7d] << 8;
-			_ncotp |= decrypted[0x7e] << 16;
-			_ncotp |= decrypted[0x7f] << 24;
+			if (_newAuthMethod)
+			{
+				_user = new String(decrypted, 0x4E, 50).trim() + new String(decrypted, 0xCE, 14).trim();
+				_password = new String(decrypted, 0xDC, 16).trim();
+			}
+			else
+			{
+				_user = new String(decrypted, 0x5E, 14).trim();
+				_password = new String(decrypted, 0x6C, 16).trim();
+			}
 		}
 		catch (Exception e)
 		{
@@ -115,8 +112,7 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		final InetAddress clientAddr = getClient().getConnection().getInetAddress();
-		
+		final InetAddress clientAddr = client.getConnectionAddress();
 		final LoginController lc = LoginController.getInstance();
 		final AccountInfo info = lc.retriveAccountInfo(clientAddr, _user, _password);
 		if (info == null)
@@ -126,21 +122,22 @@ public class RequestAuthLogin extends L2LoginClientPacket
 			return;
 		}
 		
-		switch (lc.tryCheckinAccount(client, clientAddr, info))
+		final AuthLoginResult result = lc.tryCheckinAccount(client, clientAddr, info);
+		switch (result)
 		{
 			case AUTH_SUCCESS:
 			{
 				client.setAccount(info.getLogin());
-				client.setState(LoginClientState.AUTHED_LOGIN);
+				client.setConnectionState(ConnectionState.AUTHED_LOGIN);
 				client.setSessionKey(lc.assignSessionKeyToClient(info.getLogin(), client));
 				lc.getCharactersOnAccount(info.getLogin());
 				if (Config.SHOW_LICENCE)
 				{
-					client.sendPacket(new LoginOk(getClient().getSessionKey()));
+					client.sendPacket(new LoginOk(client.getSessionKey()));
 				}
 				else
 				{
-					getClient().sendPacket(new ServerList(getClient()));
+					client.sendPacket(new ServerList(client));
 				}
 				break;
 			}
@@ -173,7 +170,6 @@ public class RequestAuthLogin extends L2LoginClientPacket
 				if (gsi != null)
 				{
 					client.close(LoginFailReason.REASON_ACCOUNT_IN_USE);
-					
 					// kick from there
 					if (gsi.isAuthed())
 					{

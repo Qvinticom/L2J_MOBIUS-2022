@@ -16,33 +16,36 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantScroll;
 import com.l2jmobius.gameserver.model.items.enchant.EnchantSupportItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPutEnchantSupportItemResult;
 
 /**
  * @author KenM
  */
-public class RequestExTryToPutEnchantSupportItem extends L2GameClientPacket
+public class RequestExTryToPutEnchantSupportItem implements IClientIncomingPacket
 {
 	private int _supportObjectId;
 	private int _enchantObjectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_supportObjectId = readD();
-		_enchantObjectId = readD();
+		_supportObjectId = packet.readD();
+		_enchantObjectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

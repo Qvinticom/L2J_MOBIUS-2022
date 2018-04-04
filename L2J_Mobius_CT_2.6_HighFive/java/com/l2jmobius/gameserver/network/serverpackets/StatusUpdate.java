@@ -18,9 +18,11 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class StatusUpdate extends L2GameServerPacket
+public final class StatusUpdate implements IClientOutgoingPacket
 {
 	public static final int LEVEL = 0x01;
 	public static final int EXP = 0x02;
@@ -102,16 +104,17 @@ public final class StatusUpdate extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x18);
-		writeD(_objectId);
-		writeD(_attributes.size());
+		OutgoingPackets.STATUS_UPDATE.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(_attributes.size());
 		
 		for (Attribute temp : _attributes)
 		{
-			writeD(temp.id);
-			writeD(temp.value);
+			packet.writeD(temp.id);
+			packet.writeD(temp.value);
 		}
+		return true;
 	}
 }

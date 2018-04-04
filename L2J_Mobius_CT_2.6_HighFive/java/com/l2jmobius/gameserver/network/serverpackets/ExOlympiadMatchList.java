@@ -19,17 +19,19 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.olympiad.AbstractOlympiadGame;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameClassed;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameNonClassed;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTeams;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author mrTJO
  */
-public class ExOlympiadMatchList extends L2GameServerPacket
+public class ExOlympiadMatchList implements IClientOutgoingPacket
 {
 	private final List<OlympiadGameTask> _games = new ArrayList<>();
 	
@@ -51,43 +53,43 @@ public class ExOlympiadMatchList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD4);
-		writeD(0x00); // Type 0 = Match List, 1 = Match Result
+		OutgoingPackets.EX_RECEIVE_OLYMPIAD.writeId(packet);
+		packet.writeD(0x00); // Type 0 = Match List, 1 = Match Result
 		
-		writeD(_games.size());
-		writeD(0x00);
+		packet.writeD(_games.size());
+		packet.writeD(0x00);
 		
 		for (OlympiadGameTask curGame : _games)
 		{
 			final AbstractOlympiadGame game = curGame.getGame();
 			if (game != null)
 			{
-				writeD(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
+				packet.writeD(game.getStadiumId()); // Stadium Id (Arena 1 = 0)
 				
 				if (game instanceof OlympiadGameNonClassed)
 				{
-					writeD(1);
+					packet.writeD(1);
 				}
 				else if (game instanceof OlympiadGameClassed)
 				{
-					writeD(2);
+					packet.writeD(2);
 				}
 				else if (game instanceof OlympiadGameTeams)
 				{
-					writeD(-1);
+					packet.writeD(-1);
 				}
 				else
 				{
-					writeD(0);
+					packet.writeD(0);
 				}
 				
-				writeD(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
-				writeS(game.getPlayerNames()[0]); // Player 1 Name
-				writeS(game.getPlayerNames()[1]); // Player 2 Name
+				packet.writeD(curGame.isRunning() ? 0x02 : 0x01); // (1 = Standby, 2 = Playing)
+				packet.writeS(game.getPlayerNames()[0]); // Player 1 Name
+				packet.writeS(game.getPlayerNames()[1]); // Player 2 Name
 			}
 		}
+		return true;
 	}
 }

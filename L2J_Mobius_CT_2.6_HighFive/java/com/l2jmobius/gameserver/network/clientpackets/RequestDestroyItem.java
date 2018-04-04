@@ -22,11 +22,13 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -38,22 +40,23 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.7.2.4.2.6 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestDestroyItem extends L2GameClientPacket
+public final class RequestDestroyItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readQ();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -68,7 +71,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (!getClient().getFloodProtectors().getTransaction().tryPerformAction("destroy"))
+		if (!client.getFloodProtectors().getTransaction().tryPerformAction("destroy"))
 		{
 			activeChar.sendMessage("You are destroying items too fast.");
 			return;
@@ -213,7 +216,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		}
 		else
 		{
-			sendPacket(new ItemList(activeChar, true));
+			client.sendPacket(new ItemList(activeChar, true));
 		}
 		
 		final StatusUpdate su = new StatusUpdate(activeChar);

@@ -21,64 +21,67 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.UIData;
 import com.l2jmobius.gameserver.model.ActionKey;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
+import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Request Save Key Mapping client packet.
  * @author mrTJO, Zoey76
  */
-public class RequestSaveKeyMapping extends L2GameClientPacket
+public class RequestSaveKeyMapping implements IClientIncomingPacket
 {
 	private final Map<Integer, List<ActionKey>> _keyMap = new HashMap<>();
 	private final Map<Integer, List<Integer>> _catMap = new HashMap<>();
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		int category = 0;
 		
-		readD(); // Unknown
-		readD(); // Unknown
-		final int _tabNum = readD();
+		packet.readD(); // Unknown
+		packet.readD(); // Unknown
+		final int _tabNum = packet.readD();
 		for (int i = 0; i < _tabNum; i++)
 		{
-			final int cmd1Size = readC();
+			final int cmd1Size = packet.readC();
 			for (int j = 0; j < cmd1Size; j++)
 			{
-				UIData.addCategory(_catMap, category, readC());
+				UIData.addCategory(_catMap, category, packet.readC());
 			}
 			category++;
 			
-			final int cmd2Size = readC();
+			final int cmd2Size = packet.readC();
 			for (int j = 0; j < cmd2Size; j++)
 			{
-				UIData.addCategory(_catMap, category, readC());
+				UIData.addCategory(_catMap, category, packet.readC());
 			}
 			category++;
 			
-			final int cmdSize = readD();
+			final int cmdSize = packet.readD();
 			for (int j = 0; j < cmdSize; j++)
 			{
-				final int cmd = readD();
-				final int key = readD();
-				final int tgKey1 = readD();
-				final int tgKey2 = readD();
-				final int show = readD();
+				final int cmd = packet.readD();
+				final int key = packet.readD();
+				final int tgKey1 = packet.readD();
+				final int tgKey2 = packet.readD();
+				final int show = packet.readD();
 				UIData.addKey(_keyMap, i, new ActionKey(i, cmd, key, tgKey1, tgKey2, show));
 			}
 		}
-		readD();
-		readD();
+		packet.readD();
+		packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
-		if (!Config.STORE_UI_SETTINGS || (player == null) || (getClient().getState() != GameClientState.IN_GAME))
+		final L2PcInstance player = client.getActiveChar();
+		if (!Config.STORE_UI_SETTINGS || (player == null) || (client.getConnectionState() != ConnectionState.IN_GAME))
 		{
 			return;
 		}

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.BlockList;
@@ -26,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SendTradeRequest;
@@ -34,20 +36,21 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * This packet manages the trade request.
  */
-public final class TradeRequest extends L2GameClientPacket
+public final class TradeRequest implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -56,7 +59,7 @@ public final class TradeRequest extends L2GameClientPacket
 		if (!player.getAccessLevel().allowTransaction())
 		{
 			player.sendMessage("Transactions are disabled for your current Access Level.");
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

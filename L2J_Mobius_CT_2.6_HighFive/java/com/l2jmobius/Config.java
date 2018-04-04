@@ -89,7 +89,6 @@ public final class Config
 	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
 	public static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
 	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
-	public static final String MMO_CONFIG_FILE = "./config/MMO.ini";
 	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
 	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
@@ -494,15 +493,7 @@ public final class Config
 	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
 	public static int INSTANT_THREAD_POOL_COUNT;
 	public static int THREADS_PER_INSTANT_THREAD_POOL;
-	public static int CLIENT_PACKET_QUEUE_SIZE;
-	public static int CLIENT_PACKET_QUEUE_MAX_BURST_SIZE;
-	public static int CLIENT_PACKET_QUEUE_MAX_PACKETS_PER_SECOND;
-	public static int CLIENT_PACKET_QUEUE_MEASURE_INTERVAL;
-	public static int CLIENT_PACKET_QUEUE_MAX_AVERAGE_PACKETS_PER_SECOND;
-	public static int CLIENT_PACKET_QUEUE_MAX_FLOODS_PER_MIN;
-	public static int CLIENT_PACKET_QUEUE_MAX_OVERFLOWS_PER_MIN;
-	public static int CLIENT_PACKET_QUEUE_MAX_UNDERFLOWS_PER_MIN;
-	public static int CLIENT_PACKET_QUEUE_MAX_UNKNOWN_PER_MIN;
+	public static int IO_PACKET_THREAD_CORE_SIZE;
 	public static boolean DEADLOCK_DETECTOR;
 	public static int DEADLOCK_CHECK_INTERVAL;
 	public static boolean RESTART_ON_DEADLOCK;
@@ -511,7 +502,7 @@ public final class Config
 	public static int HERB_AUTO_DESTROY_TIME;
 	public static List<Integer> LIST_PROTECTED_ITEMS;
 	public static boolean DATABASE_CLEAN_UP;
-	public static int CHAR_STORE_INTERVAL;
+	public static int CHAR_DATA_STORE_INTERVAL;
 	public static boolean LAZY_ITEMS_UPDATE;
 	public static boolean UPDATE_ITEMS_ON_CHAR_STORE;
 	public static boolean DESTROY_DROPPED_PLAYER_ITEM;
@@ -1113,7 +1104,11 @@ public final class Config
 	public static double HP_REGEN_MULTIPLIER;
 	public static double MP_REGEN_MULTIPLIER;
 	public static double CP_REGEN_MULTIPLIER;
-	public static boolean IS_TELNET_ENABLED;
+	public static boolean TELNET_ENABLED;
+	public static String TELNET_PASSWORD;
+	public static String TELNET_HOSTNAME;
+	public static List<String> TELNET_HOSTS;
+	public static int TELNET_PORT;
 	public static boolean SHOW_LICENCE;
 	public static boolean ACCEPT_NEW_GAMESERVER;
 	public static int SERVER_ID;
@@ -1237,7 +1232,7 @@ public final class Config
 			
 			final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
 			
-			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "*");
+			GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "0.0.0.0");
 			PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
 			
 			GAME_SERVER_LOGIN_PORT = serverSettings.getInt("LoginPort", 9014);
@@ -1250,7 +1245,7 @@ public final class Config
 			DATABASE_URL = serverSettings.getString("URL", "jdbc:mysql://localhost/l2jmobiush5?useUnicode=true&characterEncoding=utf-8");
 			DATABASE_LOGIN = serverSettings.getString("Login", "root");
 			DATABASE_PASSWORD = serverSettings.getString("Password", "");
-			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 500);
+			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
 			
 			try
@@ -1284,6 +1279,12 @@ public final class Config
 				}
 			}
 			
+			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
+			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
+			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
+			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
+			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
+			
 			SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
 			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
 			SERVER_RESTART_SCHEDULE_COUNTDOWN = serverSettings.getInt("ServerRestartScheduleCountdown", 600);
@@ -1294,7 +1295,7 @@ public final class Config
 			GAME_SERVER_SUBNETS = ipcd.getSubnets();
 			GAME_SERVER_HOSTS = ipcd.getHosts();
 			
-			// Load Feature L2Properties file (if exists)
+			// Load Feature config file (if exists)
 			final PropertiesParser Feature = new PropertiesParser(FEATURE_CONFIG_FILE);
 			
 			CH_TELE_FEE_RATIO = Feature.getLong("ClanHallTeleportFunctionFeeRatio", 604800000);
@@ -1478,7 +1479,7 @@ public final class Config
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
 			ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
 			
-			// Load Character L2Properties file (if exists)
+			// Load Character config file (if exists)
 			final PropertiesParser character = new PropertiesParser(CHARACTER_CONFIG_FILE);
 			
 			PLAYER_DELEVEL = character.getBoolean("Delevel", true);
@@ -1822,27 +1823,22 @@ public final class Config
 			NEVIT_ADVENT_TIME = character.getInt("NevitAdventTime", 14400);
 			NEVIT_IGNORE_ADVENT_TIME = character.getBoolean("NevitIgnoreAdventTime", false);
 			
-			// Load Telnet L2Properties file (if exists)
+			// Load Telnet config file (if exists)
 			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
 			
-			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
+			TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
+			TELNET_PORT = telnetSettings.getInt("Port", 12345);
+			TELNET_HOSTNAME = telnetSettings.getString("BindAddress", "127.0.0.1");
+			TELNET_PASSWORD = telnetSettings.getString("Password", "");
+			TELNET_HOSTS = Arrays.asList(telnetSettings.getString("ListOfHosts", "127.0.0.1,::1").split(","));
 			
-			// MMO
-			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-			
-			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
-			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
-			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
-			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
-			
-			// Load IdFactory L2Properties file (if exists)
+			// Load IdFactory config file (if exists)
 			final PropertiesParser IdFactory = new PropertiesParser(IDFACTORY_CONFIG_FILE);
 			
 			IDFACTORY_TYPE = IdFactory.getEnum("IDFactory", IdFactoryType.class, IdFactoryType.BitSet);
 			BAD_ID_CHECKING = IdFactory.getBoolean("BadIdChecking", true);
 			
-			// Load General L2Properties file (if exists)
+			// Load General config file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 			EVERYBODY_HAS_ADMIN_RIGHTS = General.getBoolean("EverybodyHasAdminRights", false);
 			SERVER_LIST_BRACKET = General.getBoolean("ServerListBrackets", false);
@@ -1883,27 +1879,6 @@ public final class Config
 			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
 			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
 			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-			SCHEDULED_THREAD_POOL_COUNT = General.getInt("ScheduledThreadPoolCount", -1);
-			THREADS_PER_SCHEDULED_THREAD_POOL = General.getInt("ThreadsPerScheduledThreadPool", 4);
-			INSTANT_THREAD_POOL_COUNT = General.getInt("InstantThreadPoolCount", -1);
-			THREADS_PER_INSTANT_THREAD_POOL = General.getInt("ThreadsPerInstantThreadPool", 2);
-			CLIENT_PACKET_QUEUE_SIZE = General.getInt("ClientPacketQueueSize", 0);
-			if (CLIENT_PACKET_QUEUE_SIZE == 0)
-			{
-				CLIENT_PACKET_QUEUE_SIZE = MMO_MAX_READ_PER_PASS + 2;
-			}
-			CLIENT_PACKET_QUEUE_MAX_BURST_SIZE = General.getInt("ClientPacketQueueMaxBurstSize", 0);
-			if (CLIENT_PACKET_QUEUE_MAX_BURST_SIZE == 0)
-			{
-				CLIENT_PACKET_QUEUE_MAX_BURST_SIZE = MMO_MAX_READ_PER_PASS + 1;
-			}
-			CLIENT_PACKET_QUEUE_MAX_PACKETS_PER_SECOND = General.getInt("ClientPacketQueueMaxPacketsPerSecond", 80);
-			CLIENT_PACKET_QUEUE_MEASURE_INTERVAL = General.getInt("ClientPacketQueueMeasureInterval", 5);
-			CLIENT_PACKET_QUEUE_MAX_AVERAGE_PACKETS_PER_SECOND = General.getInt("ClientPacketQueueMaxAveragePacketsPerSecond", 40);
-			CLIENT_PACKET_QUEUE_MAX_FLOODS_PER_MIN = General.getInt("ClientPacketQueueMaxFloodsPerMin", 2);
-			CLIENT_PACKET_QUEUE_MAX_OVERFLOWS_PER_MIN = General.getInt("ClientPacketQueueMaxOverflowsPerMin", 1);
-			CLIENT_PACKET_QUEUE_MAX_UNDERFLOWS_PER_MIN = General.getInt("ClientPacketQueueMaxUnderflowsPerMin", 1);
-			CLIENT_PACKET_QUEUE_MAX_UNKNOWN_PER_MIN = General.getInt("ClientPacketQueueMaxUnknownPerMin", 5);
 			DEADLOCK_DETECTOR = General.getBoolean("DeadLockDetector", true);
 			DEADLOCK_CHECK_INTERVAL = General.getInt("DeadLockCheckInterval", 20);
 			RESTART_ON_DEADLOCK = General.getBoolean("RestartOnDeadlock", false);
@@ -1917,7 +1892,7 @@ public final class Config
 				LIST_PROTECTED_ITEMS.add(Integer.parseInt(id));
 			}
 			DATABASE_CLEAN_UP = General.getBoolean("DatabaseCleanUp", true);
-			CHAR_STORE_INTERVAL = General.getInt("CharacterDataStoreInterval", 15);
+			CHAR_DATA_STORE_INTERVAL = General.getInt("CharacterDataStoreInterval", 15) * 60 * 1000;
 			LAZY_ITEMS_UPDATE = General.getBoolean("LazyItemsUpdate", false);
 			UPDATE_ITEMS_ON_CHAR_STORE = General.getBoolean("UpdateItemsOnCharStore", false);
 			DESTROY_DROPPED_PLAYER_ITEM = General.getBoolean("DestroyPlayerDroppedItem", false);
@@ -2087,12 +2062,12 @@ public final class Config
 			GAME_POINT_ITEM_ID = General.getInt("GamePointItemId", -1);
 			ENABLE_FALLING_DAMAGE = General.getBoolean("EnableFallingDamage", true);
 			
-			// Load FloodProtector L2Properties file
+			// Load FloodProtector config file
 			final PropertiesParser FloodProtectors = new PropertiesParser(FLOOD_PROTECTOR_CONFIG_FILE);
 			
 			loadFloodProtectorConfigs(FloodProtectors);
 			
-			// Load NPC L2Properties file (if exists)
+			// Load NPC config file (if exists)
 			final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
 			
 			ANNOUNCE_MAMMON_SPAWN = NPC.getBoolean("AnnounceMammonSpawn", false);
@@ -2163,7 +2138,7 @@ public final class Config
 			PET_HP_REGEN_MULTIPLIER = NPC.getDouble("PetHpRegenMultiplier", 100) / 100;
 			PET_MP_REGEN_MULTIPLIER = NPC.getDouble("PetMpRegenMultiplier", 100) / 100;
 			
-			// Load Rates L2Properties file (if exists)
+			// Load Rates config file (if exists)
 			final PropertiesParser RatesSettings = new PropertiesParser(RATES_CONFIG_FILE);
 			
 			RATE_XP = RatesSettings.getFloat("RateXp", 1);
@@ -2847,7 +2822,7 @@ public final class Config
 			
 			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
 			
-			// Load PvP L2Properties file (if exists)
+			// Load PvP config file (if exists)
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
 			
 			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
@@ -2879,7 +2854,7 @@ public final class Config
 			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
 			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
 			
-			// Load Olympiad L2Properties file (if exists)
+			// Load Olympiad config file (if exists)
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
 			
 			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
@@ -3056,7 +3031,7 @@ public final class Config
 			GAME_SERVER_LOGIN_HOST = ServerSettings.getString("LoginHostname", "127.0.0.1");
 			GAME_SERVER_LOGIN_PORT = ServerSettings.getInt("LoginPort", 9013);
 			
-			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "*");
+			LOGIN_BIND_ADDRESS = ServerSettings.getString("LoginserverHostname", "0.0.0.0");
 			PORT_LOGIN = ServerSettings.getInt("LoginserverPort", 2106);
 			
 			try
@@ -3093,20 +3068,6 @@ public final class Config
 			NORMAL_CONNECTION_TIME = ServerSettings.getInt("NormalConnectionTime", 700);
 			FAST_CONNECTION_TIME = ServerSettings.getInt("FastConnectionTime", 350);
 			MAX_CONNECTION_PER_IP = ServerSettings.getInt("MaxConnectionPerIP", 50);
-			
-			// MMO
-			final PropertiesParser mmoSettings = new PropertiesParser(MMO_CONFIG_FILE);
-			
-			MMO_SELECTOR_SLEEP_TIME = mmoSettings.getInt("SleepTime", 20);
-			MMO_MAX_SEND_PER_PASS = mmoSettings.getInt("MaxSendPerPass", 12);
-			MMO_MAX_READ_PER_PASS = mmoSettings.getInt("MaxReadPerPass", 12);
-			MMO_HELPER_BUFFER_COUNT = mmoSettings.getInt("HelperBufferCount", 20);
-			MMO_TCP_NODELAY = mmoSettings.getBoolean("TcpNoDelay", false);
-			
-			// Load Telnet L2Properties file (if exists)
-			final PropertiesParser telnetSettings = new PropertiesParser(TELNET_CONFIG_FILE);
-			
-			IS_TELNET_ENABLED = telnetSettings.getBoolean("EnableTelnet", false);
 		}
 		else
 		{
@@ -3115,7 +3076,7 @@ public final class Config
 	}
 	
 	/**
-	 * Save hexadecimal ID of the server in the L2Properties file.<br>
+	 * Save hexadecimal ID of the server in the config file.<br>
 	 * Check {@link #HEXID_FILE}.
 	 * @param serverId the ID of the server whose hexId to save
 	 * @param hexId the hexadecimal ID to store
@@ -3126,10 +3087,10 @@ public final class Config
 	}
 	
 	/**
-	 * Save hexadecimal ID of the server in the L2Properties file.
+	 * Save hexadecimal ID of the server in the config file.
 	 * @param serverId the ID of the server whose hexId to save
 	 * @param hexId the hexadecimal ID to store
-	 * @param fileName name of the L2Properties file
+	 * @param fileName name of the config file
 	 */
 	public static void saveHexid(int serverId, String hexId, String fileName)
 	{

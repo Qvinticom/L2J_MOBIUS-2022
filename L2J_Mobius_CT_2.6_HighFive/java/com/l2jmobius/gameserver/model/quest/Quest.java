@@ -66,7 +66,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
-import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.ExNpcQuestHtmlMessage;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
@@ -2450,7 +2450,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			
 			if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999))
 			{
-				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
+				final ExNpcQuestHtmlMessage npcReply = new ExNpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
 				npcReply.setHtml(content);
 				npcReply.replace("%playername%", player.getName());
 				player.sendPacket(npcReply);

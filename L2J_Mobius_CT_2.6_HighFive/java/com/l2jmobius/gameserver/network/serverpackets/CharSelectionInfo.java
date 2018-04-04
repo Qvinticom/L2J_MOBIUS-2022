@@ -26,14 +26,16 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class CharSelectionInfo extends L2GameServerPacket
+public class CharSelectionInfo implements IClientOutgoingPacket
 {
 	private static Logger _log = Logger.getLogger(CharSelectionInfo.class.getName());
 	private final String _loginName;
@@ -68,15 +70,15 @@ public class CharSelectionInfo extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x09);
+		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
 		final int size = (_characterPackages.size());
-		writeD(size);
+		packet.writeD(size);
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
-		writeC(0x00);
+		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
+		packet.writeC(0x00);
 		
 		long lastAccess = 0L;
 		
@@ -97,78 +99,80 @@ public class CharSelectionInfo extends L2GameServerPacket
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
 			
-			writeS(charInfoPackage.getName());
-			writeD(charInfoPackage.getObjectId());
-			writeS(_loginName);
-			writeD(_sessionId);
-			writeD(charInfoPackage.getClanId());
-			writeD(0x00); // Builder Level
+			packet.writeS(charInfoPackage.getName());
+			packet.writeD(charInfoPackage.getObjectId());
+			packet.writeS(_loginName);
+			packet.writeD(_sessionId);
+			packet.writeD(charInfoPackage.getClanId());
+			packet.writeD(0x00); // Builder Level
 			
-			writeD(charInfoPackage.getSex());
-			writeD(charInfoPackage.getRace());
-			writeD(charInfoPackage.getBaseClassId());
+			packet.writeD(charInfoPackage.getSex());
+			packet.writeD(charInfoPackage.getRace());
+			packet.writeD(charInfoPackage.getBaseClassId());
 			
-			writeD(0x01); // active ??
+			packet.writeD(0x01); // active ??
 			
-			writeD(charInfoPackage.getX());
-			writeD(charInfoPackage.getY());
-			writeD(charInfoPackage.getZ());
+			packet.writeD(charInfoPackage.getX());
+			packet.writeD(charInfoPackage.getY());
+			packet.writeD(charInfoPackage.getZ());
 			
-			writeF(charInfoPackage.getCurrentHp());
-			writeF(charInfoPackage.getCurrentMp());
+			packet.writeF(charInfoPackage.getCurrentHp());
+			packet.writeF(charInfoPackage.getCurrentMp());
 			
-			writeD(charInfoPackage.getSp());
-			writeQ(charInfoPackage.getExp());
-			writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High Five
-																																																																							// exp %
-			writeD(charInfoPackage.getLevel());
+			packet.writeD(charInfoPackage.getSp());
+			packet.writeQ(charInfoPackage.getExp());
+			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
+																																																																									// Five
+			// exp %
+			packet.writeD(charInfoPackage.getLevel());
 			
-			writeD(charInfoPackage.getKarma());
-			writeD(charInfoPackage.getPkKills());
-			writeD(charInfoPackage.getPvPKills());
+			packet.writeD(charInfoPackage.getKarma());
+			packet.writeD(charInfoPackage.getPkKills());
+			packet.writeD(charInfoPackage.getPvPKills());
 			
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
-			writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 			
 			for (int slot : getPaperdollOrder())
 			{
-				writeD(charInfoPackage.getPaperdollItemId(slot));
+				packet.writeD(charInfoPackage.getPaperdollItemId(slot));
 			}
 			
-			writeD(charInfoPackage.getHairStyle());
-			writeD(charInfoPackage.getHairColor());
-			writeD(charInfoPackage.getFace());
+			packet.writeD(charInfoPackage.getHairStyle());
+			packet.writeD(charInfoPackage.getHairColor());
+			packet.writeD(charInfoPackage.getFace());
 			
-			writeF(charInfoPackage.getMaxHp()); // hp max
-			writeF(charInfoPackage.getMaxMp()); // mp max
+			packet.writeF(charInfoPackage.getMaxHp()); // hp max
+			packet.writeF(charInfoPackage.getMaxMp()); // mp max
 			
-			writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0); // days left before
+			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0); // days left before
 			// delete .. if != 0
 			// then char is inactive
-			writeD(charInfoPackage.getClassId());
-			writeD(i == _activeId ? 0x01 : 0x00); // c3 auto-select char
+			packet.writeD(charInfoPackage.getClassId());
+			packet.writeD(i == _activeId ? 0x01 : 0x00); // c3 auto-select char
 			
-			writeC(Math.min(charInfoPackage.getEnchantEffect(), 127));
-			writeD(charInfoPackage.getAugmentationId());
+			packet.writeC(Math.min(charInfoPackage.getEnchantEffect(), 127));
+			packet.writeD(charInfoPackage.getAugmentationId());
 			
-			writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
+			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
 			
 			// Implementing it will be waster of resources.
-			writeD(0x00); // Pet ID
-			writeD(0x00); // Pet Level
-			writeD(0x00); // Pet Max Food
-			writeD(0x00); // Pet Current Food
-			writeF(0x00); // Pet Max HP
-			writeF(0x00); // Pet Max MP
+			packet.writeD(0x00); // Pet ID
+			packet.writeD(0x00); // Pet Level
+			packet.writeD(0x00); // Pet Max Food
+			packet.writeD(0x00); // Pet Current Food
+			packet.writeF(0x00); // Pet Max HP
+			packet.writeF(0x00); // Pet Max MP
 			
 			// High Five by Vistall:
-			writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
+			packet.writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
 		}
+		return true;
 	}
 	
 	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)

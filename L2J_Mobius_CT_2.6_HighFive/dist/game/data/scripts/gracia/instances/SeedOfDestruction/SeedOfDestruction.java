@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CameraMode;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.NormalCamera;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
@@ -1732,7 +1732,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		return super.onEnterZone(character, zone);
 	}
 	
-	private void broadcastPacket(L2GameServerPacket mov, SODWorld world)
+	private void broadcastPacket(IClientOutgoingPacket mov, SODWorld world)
 	{
 		for (L2PcInstance player : world.PlayersInInstance)
 		{

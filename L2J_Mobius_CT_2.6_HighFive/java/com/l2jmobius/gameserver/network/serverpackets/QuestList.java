@@ -18,14 +18,23 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class QuestList extends L2GameServerPacket
+public class QuestList implements IClientOutgoingPacket
 {
+	final L2PcInstance _player;
+	
+	public QuestList(L2PcInstance player)
+	{
+		_player = player;
+	}
+	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		/**
 		 * <pre>
@@ -60,36 +69,31 @@ public class QuestList extends L2GameServerPacket
 		 * </pre>
 		 */
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
-		if (activeChar == null)
-		{
-			return;
-		}
+		final List<Quest> quests = _player.getAllActiveQuests();
 		
-		final List<Quest> quests = activeChar.getAllActiveQuests();
-		
-		writeC(0x86);
-		writeH(quests.size());
+		OutgoingPackets.QUEST_LIST.writeId(packet);
+		packet.writeH(quests.size());
 		for (Quest q : quests)
 		{
-			writeD(q.getId());
-			QuestState qs = activeChar.getQuestState(q.getName());
+			packet.writeD(q.getId());
+			QuestState qs = _player.getQuestState(q.getName());
 			if (qs == null)
 			{
-				writeD(0);
+				packet.writeD(0);
 				continue;
 			}
 			
 			int states = qs.getInt("__compltdStateFlags");
 			if (states > 0)
 			{
-				writeD(states);
+				packet.writeD(states);
 			}
 			else
 			{
-				writeD(qs.getInt("cond"));
+				packet.writeD(qs.getInt("cond"));
 			}
 		}
-		writeB(new byte[128]);
+		packet.writeB(new byte[128]);
+		return true;
 	}
 }

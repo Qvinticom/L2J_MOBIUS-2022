@@ -16,12 +16,14 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public class PledgeShowMemberListAll extends L2GameServerPacket
+public class PledgeShowMemberListAll implements IClientOutgoingPacket
 {
 	private final L2Clan _clan;
 	private final L2PcInstance _activeChar;
@@ -36,11 +38,11 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
 		_pledgeType = 0;
 		// FIXME: That's wrong on retail sends this whole packet few times (depending how much sub pledges it has)
-		writePledge(0);
+		writePledge(packet, 0);
 		
 		for (SubPledge subPledge : _clan.getAllSubPledges())
 		{
@@ -59,34 +61,34 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 		// unless this is sent sometimes, the client doesn't recognise the player as the leader
 		_activeChar.sendPacket(new UserInfo(_activeChar));
 		_activeChar.sendPacket(new ExBrExtraUserInfo(_activeChar));
-		
+		return true;
 	}
 	
-	private void writePledge(int mainOrSubpledge)
+	private void writePledge(PacketWriter packet, int mainOrSubpledge)
 	{
-		writeC(0x5a);
+		OutgoingPackets.PLEDGE_SHOW_MEMBER_LIST_ALL.writeId(packet);
 		
-		writeD(mainOrSubpledge);
-		writeD(_clan.getId());
-		writeD(_pledgeType);
-		writeS(_clan.getName());
-		writeS(_clan.getLeaderName());
+		packet.writeD(mainOrSubpledge);
+		packet.writeD(_clan.getId());
+		packet.writeD(_pledgeType);
+		packet.writeS(_clan.getName());
+		packet.writeS(_clan.getLeaderName());
 		
-		writeD(_clan.getCrestId()); // crest id .. is used again
-		writeD(_clan.getLevel());
-		writeD(_clan.getCastleId());
-		writeD(_clan.getHideoutId());
-		writeD(_clan.getFortId());
-		writeD(_clan.getRank());
-		writeD(_clan.getReputationScore());
-		writeD(0x00); // 0
-		writeD(0x00); // 0
-		writeD(_clan.getAllyId());
-		writeS(_clan.getAllyName());
-		writeD(_clan.getAllyCrestId());
-		writeD(_clan.isAtWar() ? 1 : 0);// new c3
-		writeD(0x00); // Territory castle ID
-		writeD(_clan.getSubPledgeMembersCount(_pledgeType));
+		packet.writeD(_clan.getCrestId()); // crest id .. is used again
+		packet.writeD(_clan.getLevel());
+		packet.writeD(_clan.getCastleId());
+		packet.writeD(_clan.getHideoutId());
+		packet.writeD(_clan.getFortId());
+		packet.writeD(_clan.getRank());
+		packet.writeD(_clan.getReputationScore());
+		packet.writeD(0x00); // 0
+		packet.writeD(0x00); // 0
+		packet.writeD(_clan.getAllyId());
+		packet.writeS(_clan.getAllyName());
+		packet.writeD(_clan.getAllyCrestId());
+		packet.writeD(_clan.isAtWar() ? 1 : 0);// new c3
+		packet.writeD(0x00); // Territory castle ID
+		packet.writeD(_clan.getSubPledgeMembersCount(_pledgeType));
 		
 		for (L2ClanMember m : _members)
 		{
@@ -94,22 +96,22 @@ public class PledgeShowMemberListAll extends L2GameServerPacket
 			{
 				continue;
 			}
-			writeS(m.getName());
-			writeD(m.getLevel());
-			writeD(m.getClassId());
+			packet.writeS(m.getName());
+			packet.writeD(m.getLevel());
+			packet.writeD(m.getClassId());
 			final L2PcInstance player = m.getPlayerInstance();
 			if (player != null)
 			{
-				writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect
-				writeD(player.getRace().ordinal());// writeD(1);
+				packet.writeD(player.getAppearance().getSex() ? 1 : 0); // no visible effect
+				packet.writeD(player.getRace().ordinal());// packet.writeD(1);
 			}
 			else
 			{
-				writeD(0x01); // no visible effect
-				writeD(0x01); // writeD(1);
+				packet.writeD(0x01); // no visible effect
+				packet.writeD(0x01); // packet.writeD(1);
 			}
-			writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
-			writeD(m.getSponsor() != 0 ? 1 : 0);
+			packet.writeD(m.isOnline() ? m.getObjectId() : 0); // objectId = online 0 = offline
+			packet.writeD(m.getSponsor() != 0 ? 1 : 0);
 		}
 	}
 }

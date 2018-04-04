@@ -16,35 +16,38 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ManagePledgePower;
 
-public final class RequestPledgePower extends L2GameClientPacket
+public final class RequestPledgePower implements IClientIncomingPacket
 {
 	private int _rank;
 	private int _action;
 	private int _privs;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_rank = readD();
-		_action = readD();
+		_rank = packet.readD();
+		_action = packet.readD();
 		if (_action == 2)
 		{
-			_privs = readD();
+			_privs = packet.readD();
 		}
 		else
 		{
 			_privs = 0;
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -70,7 +73,7 @@ public final class RequestPledgePower extends L2GameClientPacket
 		}
 		else
 		{
-			player.sendPacket(new ManagePledgePower(getClient().getActiveChar().getClan(), _action, _rank));
+			player.sendPacket(new ManagePledgePower(client.getActiveChar().getClan(), _action, _rank));
 		}
 	}
 }

@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author -Wooden-
  */
-public class ShowPCCafeCouponShowUI extends L2GameServerPacket
+public class ShowPCCafeCouponShowUI implements IClientOutgoingPacket
 {
 	public static final ShowPCCafeCouponShowUI STATIC_PACKET = new ShowPCCafeCouponShowUI();
 	
@@ -28,9 +31,9 @@ public class ShowPCCafeCouponShowUI extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x44);
+		OutgoingPackets.SHOW_PC_CAFE_COUPON_SHOW_UI.writeId(packet);
+		return true;
 	}
 }

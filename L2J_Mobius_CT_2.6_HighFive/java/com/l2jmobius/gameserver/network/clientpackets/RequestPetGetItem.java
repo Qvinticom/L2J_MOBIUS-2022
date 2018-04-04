@@ -16,59 +16,62 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.MercTicketManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestPetGetItem extends L2GameClientPacket
+public final class RequestPetGetItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
+		_objectId = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		final L2World world = L2World.getInstance();
 		final L2ItemInstance item = (L2ItemInstance) world.findObject(_objectId);
-		if ((item == null) || (getActiveChar() == null) || !getActiveChar().hasPet())
+		if ((item == null) || (client.getActiveChar() == null) || !client.getActiveChar().hasPet())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		final int castleId = MercTicketManager.getInstance().getTicketCastleId(item.getId());
 		if (castleId > 0)
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (FortSiegeManager.getInstance().isCombat(item.getId()))
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
-		final L2PetInstance pet = (L2PetInstance) getClient().getActiveChar().getSummon();
+		final L2PetInstance pet = (L2PetInstance) client.getActiveChar().getSummon();
 		if (pet.isDead() || pet.isOutOfControl())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (pet.isUncontrollable())
 		{
-			sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_ENTER_THE_PARTY_ROOM);
+			client.sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_ENTER_THE_PARTY_ROOM);
 			return;
 		}
 		

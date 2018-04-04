@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 
 public class OfflineTradersTable
 {
@@ -187,14 +186,13 @@ public class OfflineTradersTable
 				
 				try
 				{
-					final L2GameClient client = new L2GameClient(null);
+					final L2GameClient client = new L2GameClient();
 					client.setDetached(true);
 					player = L2PcInstance.load(rs.getInt("charId"));
 					client.setActiveChar(player);
 					player.setOnlineStatus(true, false);
 					client.setAccountName(player.getAccountNamePlayer());
 					L2World.getInstance().addPlayerToWorld(player);
-					client.setState(GameClientState.IN_GAME);
 					player.setClient(client);
 					player.setOfflineStartTime(time);
 					player.spawnMe(player.getX(), player.getY(), player.getZ());

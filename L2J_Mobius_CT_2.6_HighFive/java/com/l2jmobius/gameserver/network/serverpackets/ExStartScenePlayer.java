@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author JIV
  */
-public class ExStartScenePlayer extends L2GameServerPacket
+public class ExStartScenePlayer implements IClientOutgoingPacket
 {
 	private final int _movieId;
 	
@@ -29,10 +32,10 @@ public class ExStartScenePlayer extends L2GameServerPacket
 	}
 	
 	@Override
-	public void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x99);
-		writeD(_movieId);
+		OutgoingPackets.EX_START_SCENE_PLAYER.writeId(packet);
+		packet.writeD(_movieId);
+		return true;
 	}
 }

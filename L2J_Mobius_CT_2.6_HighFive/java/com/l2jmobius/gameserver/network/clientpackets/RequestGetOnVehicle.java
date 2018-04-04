@@ -16,11 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.instancemanager.BoatManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
@@ -28,26 +30,27 @@ import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
  * This class ...
  * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestGetOnVehicle extends L2GameClientPacket
+public final class RequestGetOnVehicle implements IClientIncomingPacket
 {
 	private int _boatId;
 	private Location _pos;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		int x, y, z;
-		_boatId = readD();
-		x = readD();
-		y = readD();
-		z = readD();
+		_boatId = packet.readD();
+		x = packet.readD();
+		y = packet.readD();
+		z = packet.readD();
 		_pos = new Location(x, y, z);
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -59,7 +62,7 @@ public final class RequestGetOnVehicle extends L2GameClientPacket
 			boat = activeChar.getBoat();
 			if (boat.getObjectId() != _boatId)
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}
@@ -68,7 +71,7 @@ public final class RequestGetOnVehicle extends L2GameClientPacket
 			boat = BoatManager.getInstance().getBoat(_boatId);
 			if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius(boat, 1000, true, false))
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 		}

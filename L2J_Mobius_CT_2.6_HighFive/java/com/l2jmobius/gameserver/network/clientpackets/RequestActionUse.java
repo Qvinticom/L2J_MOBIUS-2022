@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.Arrays;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -44,6 +45,7 @@ import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -60,7 +62,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * This class manages the action use request packet.
  * @author Zoey76
  */
-public final class RequestActionUse extends L2GameClientPacket
+public final class RequestActionUse implements IClientIncomingPacket
 {
 	private static final int SIN_EATER_ID = 12564;
 	private static final int SWITCH_STANCE_ID = 6054;
@@ -76,18 +78,22 @@ public final class RequestActionUse extends L2GameClientPacket
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;
 	
+	private L2GameClient _client;
+	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_actionId = readD();
-		_ctrlPressed = (readD() == 1);
-		_shiftPressed = (readC() == 1);
+		_actionId = packet.readD();
+		_ctrlPressed = (packet.readD() == 1);
+		_shiftPressed = (packet.readC() == 1);
+		_client = client;
+		return (_actionId != 10) && (_actionId != 28);
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -96,7 +102,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		// Don't do anything if player is dead or confused
 		if ((activeChar.isFakeDeath() && (_actionId != 0)) || activeChar.isDead() || activeChar.isOutOfControl())
 		{
-			sendPacket(ActionFailed.STATIC_PACKET);
+			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -120,7 +126,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			final int[] allowedActions = activeChar.isTransformed() ? ExBasicActionList.ACTIONS_ON_TRANSFORM : ExBasicActionList.DEFAULT_ACTION_LIST;
 			if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
 			{
-				sendPacket(ActionFailed.STATIC_PACKET);
+				client.sendPacket(ActionFailed.STATIC_PACKET);
 				_log.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation());
 				return;
 			}
@@ -198,23 +204,23 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				if (summon.isDead())
 				{
-					sendPacket(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM);
+					client.sendPacket(SystemMessageId.DEAD_PETS_CANNOT_BE_RETURNED_TO_THEIR_SUMMONING_ITEM);
 					break;
 				}
 				if (summon.isAttackingNow() || summon.isInCombat() || summon.isMovementDisabled())
 				{
-					sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
+					client.sendPacket(SystemMessageId.A_PET_CANNOT_BE_UNSUMMONED_DURING_BATTLE);
 					break;
 				}
 				if (summon.isHungry())
 				{
 					if (summon.isPet() && !((L2PetInstance) summon).getPetData().getFood().isEmpty())
 					{
-						sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
+						client.sendPacket(SystemMessageId.YOU_MAY_NOT_RESTORE_A_HUNGRY_PET);
 					}
 					else
 					{
-						sendPacket(SystemMessageId.THE_HUNTING_HELPER_PET_CANNOT_BE_RETURNED_BECAUSE_THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_IT_LEAVES);
+						client.sendPacket(SystemMessageId.THE_HUNTING_HELPER_PET_CANNOT_BE_RETURNED_BECAUSE_THERE_IS_NOT_MUCH_TIME_REMAINING_UNTIL_IT_LEAVES);
 					}
 					break;
 				}
@@ -267,7 +273,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			{
 				if (activeChar.isAlikeDead())
 				{
-					sendPacket(ActionFailed.STATIC_PACKET);
+					client.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -279,7 +285,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				{
 					activeChar.standUp();
 				}
-				sendPacket(new RecipeShopManageList(activeChar, true));
+				client.sendPacket(new RecipeShopManageList(activeChar, true));
 				break;
 			}
 			case 38: // Mount/Dismount
@@ -302,7 +308,7 @@ public final class RequestActionUse extends L2GameClientPacket
 					}
 					else
 					{
-						sendPacket(SystemMessageId.INVALID_TARGET);
+						client.sendPacket(SystemMessageId.INVALID_TARGET);
 					}
 				}
 				break;
@@ -347,7 +353,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 				if (activeChar.isAlikeDead())
 				{
-					sendPacket(ActionFailed.STATIC_PACKET);
+					client.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE)
@@ -359,7 +365,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				{
 					activeChar.standUp();
 				}
-				sendPacket(new RecipeShopManageList(activeChar, false));
+				client.sendPacket(new RecipeShopManageList(activeChar, false));
 				break;
 			}
 			case 52: // Unsummon Servitor
@@ -368,7 +374,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				{
 					if (summon.isAttackingNow() || summon.isInCombat())
 					{
-						sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
+						client.sendPacket(SystemMessageId.A_SERVITOR_WHOM_IS_ENGAGED_IN_BATTLE_CANNOT_BE_DE_ACTIVATED);
 						break;
 					}
 					summon.unSummon(activeChar);
@@ -1067,7 +1073,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		if (!activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && activeChar.isInsideRadius(target, L2StaticObjectInstance.INTERACTION_DISTANCE, false, false))
 		{
 			final ChairSit cs = new ChairSit(activeChar, target.getId());
-			sendPacket(cs);
+			_client.sendPacket(cs);
 			activeChar.sitDown();
 			activeChar.broadcastPacket(cs);
 			return true;
@@ -1097,7 +1103,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	 */
 	private void useSkill(int skillId, L2Object target, boolean pet)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = _client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -1138,7 +1144,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	
 	private void useSkill(String skillName, L2Object target, boolean pet)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = _client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -1159,7 +1165,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			if (!((L2BabyPetInstance) summon).isInSupportMode())
 			{
-				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+				_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
 				return;
 			}
 		}
@@ -1183,16 +1189,16 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			if (!((L2BabyPetInstance) summon).isInSupportMode())
 			{
-				sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
+				_client.sendPacket(SystemMessageId.A_PET_ON_AUXILIARY_MODE_CANNOT_USE_SKILLS);
 				return false;
 			}
 		}
 		
 		if (summon.isPet())
 		{
-			if ((summon.getLevel() - getActiveChar().getLevel()) > 20)
+			if ((summon.getLevel() - _client.getActiveChar().getLevel()) > 20)
 			{
-				sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
+				_client.sendPacket(SystemMessageId.YOUR_PET_IS_TOO_HIGH_LEVEL_TO_CONTROL);
 				return false;
 			}
 		}
@@ -1207,7 +1213,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	 */
 	private void useSkill(int skillId, boolean pet)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = _client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -1224,7 +1230,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	 */
 	private void useSkill(String skillName, boolean pet)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = _client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -1245,12 +1251,12 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			if (summon.isPet() && ((L2PetInstance) summon).isUncontrollable())
 			{
-				sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR);
+				_client.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_THAT_IS_A_NOBLESSE_CAN_VIEW_THE_SIEGE_WAR_STATUS_WINDOW_DURING_A_SIEGE_WAR);
 				return false;
 			}
 			if (summon.isBetrayed())
 			{
-				sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
+				_client.sendPacket(SystemMessageId.YOUR_PET_SERVITOR_IS_UNRESPONSIVE_AND_WILL_NOT_OBEY_ANY_ORDERS);
 				return false;
 			}
 			return true;
@@ -1258,11 +1264,11 @@ public final class RequestActionUse extends L2GameClientPacket
 		
 		if (checkPet)
 		{
-			sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
+			_client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 		}
 		else
 		{
-			sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
+			_client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_SERVITOR);
 		}
 		return false;
 	}
@@ -1273,14 +1279,14 @@ public final class RequestActionUse extends L2GameClientPacket
 	 */
 	private void tryBroadcastSocial(int id)
 	{
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = _client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
 		}
 		if (activeChar.isFishing())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+			_client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
 		
@@ -1296,7 +1302,7 @@ public final class RequestActionUse extends L2GameClientPacket
 	 */
 	private void useCoupleSocial(int id)
 	{
-		final L2PcInstance requester = getActiveChar();
+		final L2PcInstance requester = _client.getActiveChar();
 		if (requester == null)
 		{
 			return;
@@ -1305,14 +1311,14 @@ public final class RequestActionUse extends L2GameClientPacket
 		final L2Object target = requester.getTarget();
 		if ((target == null) || !target.isPlayer())
 		{
-			sendPacket(SystemMessageId.INVALID_TARGET);
+			_client.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
 		}
 		
 		final int distance = (int) requester.calculateDistance(target, false, false);
 		if ((distance > 125) || (distance < 15) || (requester.getObjectId() == target.getObjectId()))
 		{
-			sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
+			_client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);
 			return;
 		}
 		
@@ -1321,7 +1327,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_SHOP_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1329,13 +1335,13 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
 		if (requester.isFishing())
 		{
-			sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+			_client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
 			return;
 		}
 		
@@ -1343,7 +1349,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1351,7 +1357,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1359,7 +1365,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1367,14 +1373,14 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_HIDEOUT_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 		}
 		
 		if (requester.isMounted() || requester.isFlyingMounted() || requester.isInBoat() || requester.isInAirShip())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1382,7 +1388,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1390,7 +1396,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(requester);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1400,7 +1406,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_SHOP_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1408,7 +1414,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1416,7 +1422,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_PARTICIPATING_IN_A_COUPLE_ACTION_AND_CANNOT_BE_REQUESTED_FOR_ANOTHER_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1424,7 +1430,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_FISHING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1432,7 +1438,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CHAOTIC_STATE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1440,7 +1446,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_THE_OLYMPIAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1448,7 +1454,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_PARTICIPATING_IN_A_HIDEOUT_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1456,7 +1462,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_CASTLE_SIEGE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1464,7 +1470,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_RIDING_A_SHIP_STEED_OR_STRIDER_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1472,7 +1478,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TELEPORTING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1480,7 +1486,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_TRANSFORMING_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
@@ -1488,20 +1494,20 @@ public final class RequestActionUse extends L2GameClientPacket
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_CURRENTLY_DEAD_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);
-			sendPacket(sm);
+			_client.sendPacket(sm);
 			return;
 		}
 		
 		if (requester.isAllSkillsDisabled() || partner.isAllSkillsDisabled())
 		{
-			sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_CANCELLED);
+			_client.sendPacket(SystemMessageId.THE_COUPLE_ACTION_WAS_CANCELLED);
 			return;
 		}
 		
 		requester.setMultiSocialAction(id, partner.getObjectId());
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_REQUESTED_A_COUPLE_ACTION_WITH_C1);
 		sm.addPcName(partner);
-		sendPacket(sm);
+		_client.sendPacket(sm);
 		
 		if ((requester.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE) || (partner.getAI().getIntention() != CtrlIntention.AI_INTENTION_IDLE))
 		{
@@ -1518,11 +1524,5 @@ public final class RequestActionUse extends L2GameClientPacket
 		}
 		
 		partner.sendPacket(new ExAskCoupleAction(requester.getObjectId(), id));
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return (_actionId != 10) && (_actionId != 28);
 	}
 }

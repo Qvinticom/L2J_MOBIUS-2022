@@ -16,33 +16,27 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowCastleInfo;
 
 /**
  * @author KenM
  */
-public class RequestAllCastleInfo extends L2GameClientPacket
+public class RequestAllCastleInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		if (client != null)
 		{
 			client.sendPacket(new ExShowCastleInfo());
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -26,6 +27,7 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
@@ -36,7 +38,7 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.11.2.1.2.7 $ $Date: 2005/04/02 21:25:21 $
  */
-public final class RequestDropItem extends L2GameClientPacket
+public final class RequestDropItem implements IClientIncomingPacket
 {
 	private int _objectId;
 	private long _count;
@@ -45,25 +47,26 @@ public final class RequestDropItem extends L2GameClientPacket
 	private int _z;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_objectId = readD();
-		_count = readQ();
-		_x = readD();
-		_y = readD();
-		_z = readD();
+		_objectId = packet.readD();
+		_count = packet.readQ();
+		_x = packet.readD();
+		_y = packet.readD();
+		_z = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if ((activeChar == null) || activeChar.isDead())
 		{
 			return;
 		}
 		// Flood protect drop to avoid packet lag
-		if (!getClient().getFloodProtectors().getDropItem().tryPerformAction("drop item"))
+		if (!client.getFloodProtectors().getDropItem().tryPerformAction("drop item"))
 		{
 			return;
 		}
@@ -203,11 +206,5 @@ public final class RequestDropItem extends L2GameClientPacket
 			_log.warning(msg);
 			AdminData.getInstance().broadcastMessageToGMs(msg);
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

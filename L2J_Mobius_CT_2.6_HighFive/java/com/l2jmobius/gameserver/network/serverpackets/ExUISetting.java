@@ -18,14 +18,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.ActionKey;
 import com.l2jmobius.gameserver.model.UIKeysSettings;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author mrTJO
  */
-public class ExUISetting extends L2GameServerPacket
+public class ExUISetting implements IClientOutgoingPacket
 {
 	private final UIKeysSettings _uiSettings;
 	private int buffsize, categories;
@@ -69,69 +71,69 @@ public class ExUISetting extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x70);
+		OutgoingPackets.EX_UI_SETTING.writeId(packet);
 		
-		writeD(buffsize);
-		writeD(categories);
+		packet.writeD(buffsize);
+		packet.writeD(categories);
 		
 		int category = 0;
 		
 		final int numKeyCt = _uiSettings.getKeys().size();
-		writeD(numKeyCt);
+		packet.writeD(numKeyCt);
 		for (int i = 0; i < numKeyCt; i++)
 		{
 			if (_uiSettings.getCategories().containsKey(category))
 			{
 				final List<Integer> catElList1 = _uiSettings.getCategories().get(category);
-				writeC(catElList1.size());
+				packet.writeC(catElList1.size());
 				for (int cmd : catElList1)
 				{
-					writeC(cmd);
+					packet.writeC(cmd);
 				}
 			}
 			else
 			{
-				writeC(0x00);
+				packet.writeC(0x00);
 			}
 			category++;
 			
 			if (_uiSettings.getCategories().containsKey(category))
 			{
 				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
-				writeC(catElList2.size());
+				packet.writeC(catElList2.size());
 				for (int cmd : catElList2)
 				{
-					writeC(cmd);
+					packet.writeC(cmd);
 				}
 			}
 			else
 			{
-				writeC(0x00);
+				packet.writeC(0x00);
 			}
 			category++;
 			
 			if (_uiSettings.getKeys().containsKey(i))
 			{
 				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
-				writeD(keyElList.size());
+				packet.writeD(keyElList.size());
 				for (ActionKey akey : keyElList)
 				{
-					writeD(akey.getCommandId());
-					writeD(akey.getKeyId());
-					writeD(akey.getToogleKey1());
-					writeD(akey.getToogleKey2());
-					writeD(akey.getShowStatus());
+					packet.writeD(akey.getCommandId());
+					packet.writeD(akey.getKeyId());
+					packet.writeD(akey.getToogleKey1());
+					packet.writeD(akey.getToogleKey2());
+					packet.writeD(akey.getShowStatus());
 				}
 			}
 			else
 			{
-				writeD(0x00);
+				packet.writeD(0x00);
 			}
 		}
-		writeD(0x11);
-		writeD(0x10);
+		packet.writeD(0x11);
+		packet.writeD(0x10);
+		return true;
 	}
 }

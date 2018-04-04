@@ -16,27 +16,29 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * This class handles RequestGmLista packet triggered by /gmlist command
  * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestGmList extends L2GameClientPacket
+public final class RequestGmList implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		if (getClient().getActiveChar() == null)
+		if (client.getActiveChar() == null)
 		{
 			return;
 		}
-		AdminData.getInstance().sendListToPlayer(getClient().getActiveChar());
+		AdminData.getInstance().sendListToPlayer(client.getActiveChar());
 	}
 }

@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExAutoSoulShot;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -27,23 +29,24 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  * This class ...
  * @version $Revision: 1.0.0.0 $ $Date: 2005/07/11 15:29:30 $
  */
-public final class RequestAutoSoulShot extends L2GameClientPacket
+public final class RequestAutoSoulShot implements IClientIncomingPacket
 {
 	// format cd
 	private int _itemId;
 	private int _type; // 1 = on : 0 = off;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_itemId = readD();
-		_type = readD();
+		_itemId = packet.readD();
+		_type = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;
@@ -148,11 +151,5 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 				activeChar.sendPacket(sm);
 			}
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

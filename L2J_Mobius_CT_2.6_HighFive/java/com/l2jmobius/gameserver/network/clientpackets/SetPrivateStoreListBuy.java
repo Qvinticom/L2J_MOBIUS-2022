@@ -19,10 +19,12 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreManageListBuy;
@@ -34,49 +36,50 @@ import com.l2jmobius.gameserver.util.Util;
  * This class ...
  * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $ CPU Disasm Packets: ddhhQQ cddb
  */
-public final class SetPrivateStoreListBuy extends L2GameClientPacket
+public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 40; // length of the one item
 	
 	private Item[] _items = null;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int count = readD();
-		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		final int count = packet.readD();
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new Item[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = readD();
+			final int itemId = packet.readD();
 			
-			readD(); // TODO analyse this
+			packet.readD(); // TODO analyse this
 			
-			final long cnt = readQ();
-			final long price = readQ();
+			final long cnt = packet.readQ();
+			final long price = packet.readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
-			readD(); // Unk
-			readD(); // Unk
-			readD(); // Unk
-			readD(); // Unk
+			packet.readD(); // Unk
+			packet.readD(); // Unk
+			packet.readD(); // Unk
+			packet.readD(); // Unk
 			
 			_items[i] = new Item(itemId, cnt, price);
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;

@@ -19,16 +19,18 @@ package com.l2jmobius.gameserver.network.clientpackets;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
  * Format:(ch) d[dd]
  * @author -Wooden-
  */
-public final class RequestSaveInventoryOrder extends L2GameClientPacket
+public final class RequestSaveInventoryOrder implements IClientIncomingPacket
 {
 	private List<InventoryOrder> _order;
 	
@@ -36,23 +38,24 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 	private static final int LIMIT = 125;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		int sz = readD();
+		int sz = packet.readD();
 		sz = Math.min(sz, LIMIT);
 		_order = new ArrayList<>(sz);
 		for (int i = 0; i < sz; i++)
 		{
-			final int objectId = readD();
-			final int order = readD();
+			final int objectId = packet.readD();
+			final int order = packet.readD();
 			_order.add(new InventoryOrder(objectId, order));
 		}
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player != null)
 		{
 			final Inventory inventory = player.getInventory();
@@ -78,11 +81,5 @@ public final class RequestSaveInventoryOrder extends L2GameClientPacket
 			objectID = id;
 			order = ord;
 		}
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
 	}
 }

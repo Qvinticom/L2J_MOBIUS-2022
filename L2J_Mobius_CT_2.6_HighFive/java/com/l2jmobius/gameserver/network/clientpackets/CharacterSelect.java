@@ -21,6 +21,7 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
@@ -34,8 +35,8 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSelec
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SSQInfo;
@@ -45,7 +46,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
  * This class ...
  * @version $Revision: 1.5.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
  */
-public class CharacterSelect extends L2GameClientPacket
+public class CharacterSelect implements IClientIncomingPacket
 {
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
@@ -62,19 +63,19 @@ public class CharacterSelect extends L2GameClientPacket
 	private int _unk4; // new in C4
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_charSlot = readD();
-		_unk1 = readH();
-		_unk2 = readD();
-		_unk3 = readD();
-		_unk4 = readD();
+		_charSlot = packet.readD();
+		_unk1 = packet.readH();
+		_unk2 = packet.readD();
+		_unk3 = packet.readD();
+		_unk4 = packet.readD();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2GameClient client = getClient();
 		if (!client.getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterSelect"))
 		{
 			return;
@@ -138,18 +139,18 @@ public class CharacterSelect extends L2GameClientPacket
 					client.setActiveChar(cha);
 					cha.setOnlineStatus(true, true);
 					
-					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), getClient()), Containers.Players(), TerminateReturn.class);
+					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
 					if ((terminate != null) && terminate.terminate())
 					{
 						cha.deleteMe();
 						return;
 					}
 					
-					sendPacket(new SSQInfo());
+					client.sendPacket(new SSQInfo());
 					
-					client.setState(GameClientState.IN_GAME);
+					client.setConnectionState(ConnectionState.IN_GAME);
 					final CharSelected cs = new CharSelected(cha, client.getSessionId().playOkID1);
-					sendPacket(cs);
+					client.sendPacket(cs);
 				}
 			}
 			finally

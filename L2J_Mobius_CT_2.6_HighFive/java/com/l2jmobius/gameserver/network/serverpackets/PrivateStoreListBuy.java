@@ -18,8 +18,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreListBuy extends AbstractItemPacket
 {
@@ -36,21 +38,22 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xbe);
-		writeD(_objId);
-		writeQ(_playerAdena);
+		OutgoingPackets.PRIVATE_STORE_BUY_LIST.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeQ(_playerAdena);
 		
-		writeD(_items.size());
+		packet.writeD(_items.size());
 		
 		for (TradeItem item : _items)
 		{
-			writeItem(item);
-			writeD(item.getObjectId());
-			writeQ(item.getPrice());
-			writeQ(item.getItem().getReferencePrice() * 2);
-			writeQ(item.getStoreCount());
+			writeItem(packet, item);
+			packet.writeD(item.getObjectId());
+			packet.writeQ(item.getPrice());
+			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeQ(item.getStoreCount());
 		}
+		return true;
 	}
 }

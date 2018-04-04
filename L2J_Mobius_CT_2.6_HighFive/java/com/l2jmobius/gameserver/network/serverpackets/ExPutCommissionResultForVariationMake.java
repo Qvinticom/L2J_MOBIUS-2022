@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class ExPutCommissionResultForVariationMake implements IClientOutgoingPacket
 {
 	private final int _gemstoneObjId;
 	private final int _itemId;
@@ -33,19 +36,18 @@ public class ExPutCommissionResultForVariationMake extends L2GameServerPacket
 		_unk1 = 0;
 		_unk2 = 0;
 		_unk3 = 1;
-		
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x55);
-		writeD(_gemstoneObjId);
-		writeD(_itemId);
-		writeQ(_gemstoneCount);
-		writeD(_unk1);
-		writeD(_unk2);
-		writeD(_unk3);
+		OutgoingPackets.EX_PUT_COMMISSION_RESULT_FOR_VARIATION_MAKE.writeId(packet);
+		packet.writeD(_gemstoneObjId);
+		packet.writeD(_itemId);
+		packet.writeQ(_gemstoneCount);
+		packet.writeD(_unk1);
+		packet.writeD(_unk2);
+		packet.writeD(_unk3);
+		return true;
 	}
 }

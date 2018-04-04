@@ -21,9 +21,11 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -33,20 +35,20 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * This class ...
  * @version $Revision: 1.9.4.3 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class Logout extends L2GameClientPacket
+public final class Logout implements IClientIncomingPacket
 {
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -109,7 +111,7 @@ public final class Logout extends L2GameClientPacket
 		final LogRecord record = new LogRecord(Level.INFO, "Disconnected");
 		record.setParameters(new Object[]
 		{
-			getClient()
+			client
 		});
 		_logAccounting.log(record);
 		

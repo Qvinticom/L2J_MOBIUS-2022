@@ -16,13 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * TutorialCloseHtml server packet implementation.
  * @author HorridoJoho
  */
-public class TutorialCloseHtml extends L2GameServerPacket
+public class TutorialCloseHtml implements IClientOutgoingPacket
 {
 	public static final TutorialCloseHtml STATIC_PACKET = new TutorialCloseHtml();
 	
@@ -31,14 +34,15 @@ public class TutorialCloseHtml extends L2GameServerPacket
 	}
 	
 	@Override
-	public void runImpl()
+	public void runImpl(L2PcInstance player)
 	{
-		getClient().getActiveChar().clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
+		player.clearHtmlActions(HtmlActionScope.TUTORIAL_HTML);
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xa9);
+		OutgoingPackets.TUTORIAL_CLOSE_HTML.writeId(packet);
+		return true;
 	}
 }

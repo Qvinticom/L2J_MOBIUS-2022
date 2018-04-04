@@ -63,8 +63,8 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrExtraUserInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
@@ -1534,7 +1534,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void broadcastToOnlineAllyMembers(L2GameServerPacket packet)
+	public void broadcastToOnlineAllyMembers(IClientOutgoingPacket packet)
 	{
 		for (L2Clan clan : ClanTable.getInstance().getClanAllies(getAllyId()))
 		{
@@ -1542,7 +1542,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void broadcastToOnlineMembers(L2GameServerPacket packet)
+	public void broadcastToOnlineMembers(IClientOutgoingPacket packet)
 	{
 		for (L2ClanMember member : _members.values())
 		{
@@ -1564,7 +1564,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 	}
 	
-	public void broadcastToOtherOnlineMembers(L2GameServerPacket packet, L2PcInstance player)
+	public void broadcastToOtherOnlineMembers(IClientOutgoingPacket packet, L2PcInstance player)
 	{
 		for (L2ClanMember member : _members.values())
 		{

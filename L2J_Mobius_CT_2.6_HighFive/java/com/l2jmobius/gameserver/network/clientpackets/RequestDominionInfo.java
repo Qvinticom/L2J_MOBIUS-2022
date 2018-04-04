@@ -16,30 +16,26 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExReplyDominionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowOwnthingPos;
 
 /**
  * @author JIV
  */
-public class RequestDominionInfo extends L2GameClientPacket
+public class RequestDominionInfo implements IClientIncomingPacket
 {
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// nothing
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		sendPacket(ExReplyDominionInfo.STATIC_PACKET);
-		sendPacket(ExShowOwnthingPos.STATIC_PACKET);
-	}
-	
-	@Override
-	protected boolean triggersOnActionRequest()
-	{
-		return false;
+		client.sendPacket(ExReplyDominionInfo.STATIC_PACKET);
+		client.sendPacket(ExShowOwnthingPos.STATIC_PACKET);
 	}
 }

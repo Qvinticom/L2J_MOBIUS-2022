@@ -21,13 +21,14 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.RestartResponse;
@@ -37,20 +38,20 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  * This class ...
  * @version $Revision: 1.11.2.1.2.4 $ $Date: 2005/03/27 15:29:30 $
  */
-public final class RequestRestart extends L2GameClientPacket
+public final class RequestRestart implements IClientIncomingPacket
 {
 	protected static final Logger _logAccounting = Logger.getLogger("accounting");
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		// trigger
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		
 		if (player == null)
 		{
@@ -59,28 +60,28 @@ public final class RequestRestart extends L2GameClientPacket
 		
 		if ((player.getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
 		{
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		if (player.isLocked())
 		{
 			_log.warning("Player " + player.getName() + " tried to restart during class change.");
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
 			player.sendMessage("Cannot restart while trading");
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) && !(player.isGM() && Config.GM_RESTART_FIGHTING))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
@@ -92,7 +93,7 @@ public final class RequestRestart extends L2GameClientPacket
 			if (SevenSignsFestival.getInstance().isFestivalInitialized())
 			{
 				player.sendMessage("You cannot restart while you are a participant in a festival.");
-				sendPacket(RestartResponse.valueOf(false));
+				client.sendPacket(RestartResponse.valueOf(false));
 				return;
 			}
 			
@@ -106,14 +107,12 @@ public final class RequestRestart extends L2GameClientPacket
 		
 		if (player.isBlockedFromExit())
 		{
-			sendPacket(RestartResponse.valueOf(false));
+			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
 		
 		// Remove player from Boss Zone
 		player.removeFromBossZone();
-		
-		final L2GameClient client = getClient();
 		
 		final LogRecord record = new LogRecord(Level.INFO, "Logged out");
 		record.setParameters(new Object[]
@@ -131,13 +130,13 @@ public final class RequestRestart extends L2GameClientPacket
 		AntiFeedManager.getInstance().onDisconnect(client);
 		
 		// return the client to the authed status
-		client.setState(GameClientState.AUTHED);
+		client.setConnectionState(ConnectionState.AUTHENTICATED);
 		
-		sendPacket(RestartResponse.valueOf(true));
+		client.sendPacket(RestartResponse.valueOf(true));
 		
 		// send char list
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
-		sendPacket(cl);
+		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
 	}
 }

@@ -20,15 +20,17 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * MagicSkillUse server packet implementation.
  * @author UnAfraid, NosBit
  */
-public final class MagicSkillUse extends L2GameServerPacket
+public final class MagicSkillUse implements IClientOutgoingPacket
 {
 	private final int _skillId;
 	private final int _skillLevel;
@@ -56,26 +58,33 @@ public final class MagicSkillUse extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x48);
-		writeD(_activeChar.getObjectId());
-		writeD(_target.getObjectId());
-		writeD(_skillId);
-		writeD(_skillLevel);
-		writeD(_hitTime);
-		writeD(_reuseDelay);
-		writeLoc(_activeChar);
-		writeH(_unknown.size()); // TODO: Implement me!
+		OutgoingPackets.MAGIC_SKILL_USE.writeId(packet);
+		packet.writeD(_activeChar.getObjectId());
+		packet.writeD(_target.getObjectId());
+		packet.writeD(_skillId);
+		packet.writeD(_skillLevel);
+		packet.writeD(_hitTime);
+		packet.writeD(_reuseDelay);
+		packet.writeD(_activeChar.getX());
+		packet.writeD(_activeChar.getY());
+		packet.writeD(_activeChar.getZ());
+		packet.writeH(_unknown.size()); // TODO: Implement me!
 		for (int unknown : _unknown)
 		{
-			writeH(unknown);
+			packet.writeH(unknown);
 		}
-		writeH(_groundLocations.size());
+		packet.writeH(_groundLocations.size());
 		for (IPositionable target : _groundLocations)
 		{
-			writeLoc(target);
+			packet.writeD(target.getX());
+			packet.writeD(target.getY());
+			packet.writeD(target.getZ());
 		}
-		writeLoc(_target);
+		packet.writeD(_target.getX());
+		packet.writeD(_target.getY());
+		packet.writeD(_target.getZ());
+		return true;
 	}
 }

@@ -18,13 +18,15 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.List;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.instancemanager.MailManager;
 import com.l2jmobius.gameserver.model.entity.Message;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
  * @author Migi, DS
  */
-public class ExShowReceivedPostList extends L2GameServerPacket
+public class ExShowReceivedPostList implements IClientOutgoingPacket
 {
 	private final List<Message> _inbox;
 	
@@ -34,32 +36,32 @@ public class ExShowReceivedPostList extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xAA);
-		writeD((int) (System.currentTimeMillis() / 1000));
+		OutgoingPackets.EX_SHOW_RECEIVED_POST_LIST.writeId(packet);
+		packet.writeD((int) (System.currentTimeMillis() / 1000));
 		if ((_inbox != null) && (_inbox.size() > 0))
 		{
-			writeD(_inbox.size());
+			packet.writeD(_inbox.size());
 			for (Message msg : _inbox)
 			{
-				writeD(msg.getId());
-				writeS(msg.getSubject());
-				writeS(msg.getSenderName());
-				writeD(msg.isLocked() ? 0x01 : 0x00);
-				writeD(msg.getExpirationSeconds());
-				writeD(msg.isUnread() ? 0x01 : 0x00);
-				writeD(0x01);
-				writeD(msg.hasAttachments() ? 0x01 : 0x00);
-				writeD(msg.isReturned() ? 0x01 : 0x00);
-				writeD(msg.getSendBySystem());
-				writeD(0x00);
+				packet.writeD(msg.getId());
+				packet.writeS(msg.getSubject());
+				packet.writeS(msg.getSenderName());
+				packet.writeD(msg.isLocked() ? 0x01 : 0x00);
+				packet.writeD(msg.getExpirationSeconds());
+				packet.writeD(msg.isUnread() ? 0x01 : 0x00);
+				packet.writeD(0x01);
+				packet.writeD(msg.hasAttachments() ? 0x01 : 0x00);
+				packet.writeD(msg.isReturned() ? 0x01 : 0x00);
+				packet.writeD(msg.getSendBySystem());
+				packet.writeD(0x00);
 			}
 		}
 		else
 		{
-			writeD(0x00);
+			packet.writeD(0x00);
 		}
+		return true;
 	}
 }

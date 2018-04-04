@@ -16,9 +16,11 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
 
-public final class DeleteObject extends L2GameServerPacket
+public final class DeleteObject implements IClientOutgoingPacket
 {
 	private final int _objectId;
 	
@@ -33,10 +35,11 @@ public final class DeleteObject extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x08);
-		writeD(_objectId);
-		writeD(0x00); // c2
+		OutgoingPackets.DELETE_OBJECT.writeId(packet);
+		packet.writeD(_objectId);
+		packet.writeD(0x00); // c2
+		return true;
 	}
 }

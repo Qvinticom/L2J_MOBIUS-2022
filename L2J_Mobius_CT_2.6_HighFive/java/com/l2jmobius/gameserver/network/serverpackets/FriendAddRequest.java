@@ -16,7 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-public class FriendAddRequest extends L2GameServerPacket
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
+public class FriendAddRequest implements IClientOutgoingPacket
 {
 	private final String _requestorName;
 	
@@ -29,10 +32,11 @@ public class FriendAddRequest extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0x83);
-		writeS(_requestorName);
-		writeD(0x00);
+		OutgoingPackets.FRIEND_ADD_REQUEST.writeId(packet);
+		packet.writeS(_requestorName);
+		packet.writeD(0x00);
+		return true;
 	}
 }

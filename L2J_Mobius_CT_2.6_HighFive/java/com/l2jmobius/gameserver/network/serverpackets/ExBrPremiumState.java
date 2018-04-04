@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author GodKratos
  */
-public class ExBrPremiumState extends L2GameServerPacket
+public class ExBrPremiumState implements IClientOutgoingPacket
 {
 	private final int _objId;
 	private final int _state;
@@ -31,11 +34,11 @@ public class ExBrPremiumState extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0xD9);
-		writeD(_objId);
-		writeC(_state);
+		OutgoingPackets.EX_BR_PREMIUM_STATE.writeId(packet);
+		packet.writeD(_objId);
+		packet.writeC(_state);
+		return true;
 	}
 }

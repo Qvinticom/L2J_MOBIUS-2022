@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author Gnacik
  */
-public class ExRequestChangeNicknameColor extends L2GameServerPacket
+public class ExRequestChangeNicknameColor implements IClientOutgoingPacket
 {
 	private final int _itemObjectId;
 	
@@ -29,10 +32,10 @@ public class ExRequestChangeNicknameColor extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x83);
-		writeD(_itemObjectId);
+		OutgoingPackets.EX_REQUEST_CHANGE_NICKNAME_COLOR.writeId(packet);
+		packet.writeD(_itemObjectId);
+		return true;
 	}
 }

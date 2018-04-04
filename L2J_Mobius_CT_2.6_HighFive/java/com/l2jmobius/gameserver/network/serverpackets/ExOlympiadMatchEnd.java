@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author GodKratos
  */
-public class ExOlympiadMatchEnd extends L2GameServerPacket
+public class ExOlympiadMatchEnd implements IClientOutgoingPacket
 {
 	public static final ExOlympiadMatchEnd STATIC_PACKET = new ExOlympiadMatchEnd();
 	
@@ -28,9 +31,9 @@ public class ExOlympiadMatchEnd extends L2GameServerPacket
 	}
 	
 	@Override
-	protected final void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xFE);
-		writeH(0x2D);
+		OutgoingPackets.EX_OLYMPIAD_MATCH_END.writeId(packet);
+		return true;
 	}
 }

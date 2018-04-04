@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.network.OutgoingPackets;
+
 /**
  * @author mrTJO
  */
-public class ExCubeGameCloseUI extends L2GameServerPacket
+public class ExCubeGameCloseUI implements IClientOutgoingPacket
 {
 	/**
 	 * Close Minigame Waiting List
@@ -30,10 +33,10 @@ public class ExCubeGameCloseUI extends L2GameServerPacket
 	}
 	
 	@Override
-	protected void writeImpl()
+	public boolean write(PacketWriter packet)
 	{
-		writeC(0xfe);
-		writeH(0x97);
-		writeD(0xffffffff);
+		OutgoingPackets.EX_BLOCK_UP_SET_LIST.writeId(packet);
+		packet.writeD(0xffffffff);
+		return true;
 	}
 }

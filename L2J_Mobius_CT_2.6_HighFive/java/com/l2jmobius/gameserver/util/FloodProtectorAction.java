@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -197,14 +198,15 @@ public final class FloodProtectorAction
 		{
 			if (!_client.isDetached())
 			{
-				address = _client.getConnection().getInetAddress().getHostAddress();
+				address = _client.getConnectionAddress().getHostAddress();
 			}
 		}
 		catch (Exception e)
 		{
 		}
 		
-		switch (_client.getState())
+		final ConnectionState state = (ConnectionState) _client.getConnectionState();
+		switch (state)
 		{
 			case IN_GAME:
 			{
@@ -217,7 +219,7 @@ public final class FloodProtectorAction
 				}
 				break;
 			}
-			case AUTHED:
+			case AUTHENTICATED:
 			{
 				if (_client.getAccountName() != null)
 				{
@@ -239,6 +241,7 @@ public final class FloodProtectorAction
 				throw new IllegalStateException("Missing state on switch");
 			}
 		}
+		
 		Arrays.stream(lines).forEach(output::append);
 		
 		_log.warning(output.toString());

@@ -17,25 +17,28 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExConfirmAddingContact;
 
 /**
  * Format: (ch)S S: Character Name
  * @author UnAfraid & mrTJO
  */
-public class RequestExAddContactToContactList extends L2GameClientPacket
+public class RequestExAddContactToContactList implements IClientIncomingPacket
 {
 	private String _name;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_name = readS();
+		_name = packet.readS();
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (!Config.ALLOW_MAIL)
 		{
@@ -47,7 +50,7 @@ public class RequestExAddContactToContactList extends L2GameClientPacket
 			return;
 		}
 		
-		final L2PcInstance activeChar = getClient().getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

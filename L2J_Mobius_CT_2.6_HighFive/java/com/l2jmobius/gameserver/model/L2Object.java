@@ -47,7 +47,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 import com.l2jmobius.gameserver.network.serverpackets.ExSendUIEvent;
-import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
+import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -328,7 +328,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public abstract void sendInfo(L2PcInstance activeChar);
 	
-	public void sendPacket(L2GameServerPacket mov)
+	public void sendPacket(IClientOutgoingPacket... packets)
 	{
 	}
 	

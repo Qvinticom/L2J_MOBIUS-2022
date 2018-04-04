@@ -17,33 +17,36 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
-public final class RequestMagicSkillUse extends L2GameClientPacket
+public final class RequestMagicSkillUse implements IClientIncomingPacket
 {
 	private int _magicId;
 	private boolean _ctrlPressed;
 	private boolean _shiftPressed;
 	
 	@Override
-	protected void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		_magicId = readD(); // Identifier of the used skill
-		_ctrlPressed = readD() != 0; // True if it's a ForceAttack : Ctrl pressed
-		_shiftPressed = readC() != 0; // True if Shift pressed
+		_magicId = packet.readD(); // Identifier of the used skill
+		_ctrlPressed = packet.readD() != 0; // True if it's a ForceAttack : Ctrl pressed
+		_shiftPressed = packet.readC() != 0; // True if Shift pressed
+		return true;
 	}
 	
 	@Override
-	protected void runImpl()
+	public void run(L2GameClient client)
 	{
 		// Get the current L2PcInstance of the player
-		final L2PcInstance activeChar = getActiveChar();
+		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
 			return;

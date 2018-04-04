@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.model.CropProcure;
@@ -29,52 +30,54 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.UniqueItemHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author l3x
  */
-public class RequestProcureCropList extends L2GameClientPacket
+public class RequestProcureCropList implements IClientIncomingPacket
 {
 	private static final int BATCH_LENGTH = 20; // length of the one item
 	
 	private List<CropHolder> _items = null;
 	
 	@Override
-	protected final void readImpl()
+	public boolean read(L2GameClient client, PacketReader packet)
 	{
-		final int count = readD();
-		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != _buf.remaining()))
+		final int count = packet.readD();
+		if ((count <= 0) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
 		{
-			return;
+			return false;
 		}
 		
 		_items = new ArrayList<>(count);
 		for (int i = 0; i < count; i++)
 		{
-			final int objId = readD();
-			final int itemId = readD();
-			final int manorId = readD();
-			final long cnt = readQ();
+			final int objId = packet.readD();
+			final int itemId = packet.readD();
+			final int manorId = packet.readD();
+			final long cnt = packet.readQ();
 			if ((objId < 1) || (itemId < 1) || (manorId < 0) || (cnt < 0))
 			{
 				_items = null;
-				return;
+				return false;
 			}
 			_items.add(new CropHolder(objId, itemId, cnt, manorId));
 		}
+		return true;
 	}
 	
 	@Override
-	protected final void runImpl()
+	public void run(L2GameClient client)
 	{
 		if (_items == null)
 		{
 			return;
 		}
 		
-		final L2PcInstance player = getActiveChar();
+		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
 			return;
@@ -83,21 +86,21 @@ public class RequestProcureCropList extends L2GameClientPacket
 		final CastleManorManager manor = CastleManorManager.getInstance();
 		if (manor.isUnderMaintenance())
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
 		if (!(manager instanceof L2MerchantInstance) || !manager.canInteract(player))
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		
 		final int castleId = manager.getCastle().getResidenceId();
 		if (manager.getTemplate().getParameters().getInt("manor_id", -1) != castleId)
 		{
-			sendActionFailed();
+			client.sendActionFailed();
 			return;
 		}
 		
@@ -107,14 +110,14 @@ public class RequestProcureCropList extends L2GameClientPacket
 			final L2ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());
 			if ((item == null) || (item.getCount() < i.getCount()) || (item.getId() != i.getId()))
 			{
-				sendActionFailed();
+				client.sendActionFailed();
 				return;
 			}
 			
 			final CropProcure cp = i.getCropProcure();
 			if ((cp == null) || (cp.getAmount() < i.getCount()))
 			{
-				sendActionFailed();
+				client.sendActionFailed();
 				return;
 			}
 			
