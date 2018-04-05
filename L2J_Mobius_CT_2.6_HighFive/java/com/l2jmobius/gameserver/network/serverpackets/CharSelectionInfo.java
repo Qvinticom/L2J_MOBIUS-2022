@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,7 +41,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
-	private final List<CharSelectInfoPackage> _characterPackages;
+	private final CharSelectInfoPackage[] _characterPackages;
 	
 	/**
 	 * Constructor for CharSelectionInfo.
@@ -64,7 +64,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		_activeId = activeId;
 	}
 	
-	public List<CharSelectInfoPackage> getCharInfo()
+	public CharSelectInfoPackage[] getCharInfo()
 	{
 		return _characterPackages;
 	}
@@ -73,23 +73,22 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
-		final int size = (_characterPackages.size());
-		packet.writeD(size);
+		
+		final int size = _characterPackages.length;
+		packet.writeD(size); // How many char there is on this account
 		
 		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
 		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
 		packet.writeC(0x00);
 		
 		long lastAccess = 0L;
-		
 		if (_activeId == -1)
 		{
 			for (int i = 0; i < size; i++)
 			{
-				final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
-				if (lastAccess < charInfoPackage.getLastAccess())
+				if (lastAccess < _characterPackages[i].getLastAccess())
 				{
-					lastAccess = charInfoPackage.getLastAccess();
+					lastAccess = _characterPackages[i].getLastAccess();
 					_activeId = i;
 				}
 			}
@@ -97,7 +96,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		for (int i = 0; i < size; i++)
 		{
-			final CharSelectInfoPackage charInfoPackage = _characterPackages.get(i);
+			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 			
 			packet.writeS(charInfoPackage.getName());
 			packet.writeD(charInfoPackage.getObjectId());
@@ -110,12 +109,11 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getRace());
 			packet.writeD(charInfoPackage.getBaseClassId());
 			
-			packet.writeD(0x01); // active ??
+			packet.writeD(0x01); // server id ??
 			
 			packet.writeD(charInfoPackage.getX());
 			packet.writeD(charInfoPackage.getY());
 			packet.writeD(charInfoPackage.getZ());
-			
 			packet.writeF(charInfoPackage.getCurrentHp());
 			packet.writeF(charInfoPackage.getCurrentMp());
 			
@@ -123,7 +121,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeQ(charInfoPackage.getExp());
 			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
 																																																																									// Five
-			// exp %
 			packet.writeD(charInfoPackage.getLevel());
 			
 			packet.writeD(charInfoPackage.getKarma());
@@ -150,9 +147,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeF(charInfoPackage.getMaxHp()); // hp max
 			packet.writeF(charInfoPackage.getMaxMp()); // mp max
 			
-			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0); // days left before
-			// delete .. if != 0
-			// then char is inactive
+			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
 			packet.writeD(charInfoPackage.getClassId());
 			packet.writeD(i == _activeId ? 0x01 : 0x00); // c3 auto-select char
 			
@@ -169,15 +164,16 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeF(0x00); // Pet Max HP
 			packet.writeF(0x00); // Pet Max MP
 			
-			// High Five by Vistall:
 			packet.writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
 		}
 		return true;
 	}
 	
-	private static List<CharSelectInfoPackage> loadCharacterSelectInfo(String loginName)
+	private static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName)
 	{
-		final List<CharSelectInfoPackage> characterList = new ArrayList<>();
+		CharSelectInfoPackage charInfopackage;
+		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
@@ -186,19 +182,20 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			{
 				while (charList.next())// fills the package
 				{
-					final CharSelectInfoPackage charInfopackage = restoreChar(charList);
+					charInfopackage = restoreChar(charList);
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
 					}
 				}
 			}
+			return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
 		}
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
 		}
-		return characterList;
+		return new CharSelectInfoPackage[0];
 	}
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
@@ -224,7 +221,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		}
 	}
 	
-	public static CharSelectInfoPackage restoreChar(ResultSet chardata) throws Exception
+	private static CharSelectInfoPackage restoreChar(ResultSet chardata) throws Exception
 	{
 		final int objectId = chardata.getInt("charId");
 		final String name = chardata.getString("char_name");

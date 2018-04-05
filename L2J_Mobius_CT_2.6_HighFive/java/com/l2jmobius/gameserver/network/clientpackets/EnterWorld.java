@@ -509,7 +509,6 @@ public class EnterWorld implements IClientIncomingPacket
 		if (activeChar.getInventory().getItemByItemId(9819) != null)
 		{
 			final Fort fort = FortManager.getInstance().getFort(activeChar);
-			
 			if (fort != null)
 			{
 				FortSiegeManager.getInstance().dropCombatFlag(activeChar, fort.getResidenceId());
@@ -529,7 +528,7 @@ public class EnterWorld implements IClientIncomingPacket
 			activeChar.teleToLocation(TeleportWhereType.TOWN);
 		}
 		
-		// Remove demonic weapon if character is not cursed weapon equipped
+		// Remove demonic weapon if character is not cursed weapon equipped.
 		if ((activeChar.getInventory().getItemByItemId(8190) != null) && !activeChar.isCursedWeaponEquipped())
 		{
 			activeChar.destroyItem("Zariche", activeChar.getInventory().getItemByItemId(8190), null, true);

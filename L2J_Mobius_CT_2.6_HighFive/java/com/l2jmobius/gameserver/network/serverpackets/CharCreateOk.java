@@ -21,6 +21,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharCreateOk implements IClientOutgoingPacket
 {
+	public static final CharCreateOk STATIC_PACKET = new CharCreateOk();
+	
+	private CharCreateOk()
+	{
+	}
+	
 	@Override
 	public boolean write(PacketWriter packet)
 	{

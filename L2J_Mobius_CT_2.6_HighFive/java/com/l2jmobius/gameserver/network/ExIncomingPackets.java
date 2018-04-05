@@ -88,7 +88,6 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_EX_ENCHANT_SKILL_UNTRAIN(0x33, RequestExEnchantSkillUntrain::new, ConnectionState.IN_GAME),
 	REQUEST_EX_ENCHANT_SKILL_ROUTE_CHANGE(0x34, RequestExEnchantSkillRouteChange::new, ConnectionState.IN_GAME),
 	REQUEST_EX_ENCHANT_ITEM_ATTRIBUTE(0x35, RequestExEnchantItemAttribute::new, ConnectionState.IN_GAME),
-	EX_GET_ON_AIR_SHIP(0x36, null, ConnectionState.IN_GAME),
 	MOVE_TO_LOCATION_AIR_SHIP(0x38, MoveToLocationAirShip::new, ConnectionState.IN_GAME),
 	REQUEST_BID_ITEM_AUCTION(0x39, RequestBidItemAuction::new, ConnectionState.IN_GAME),
 	REQUEST_INFO_ITEM_AUCTION(0x3A, RequestInfoItemAuction::new, ConnectionState.IN_GAME),

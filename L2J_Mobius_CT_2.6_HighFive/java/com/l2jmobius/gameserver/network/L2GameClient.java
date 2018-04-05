@@ -21,7 +21,6 @@ import java.net.InetSocketAddress;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -74,7 +73,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	private SecondaryPasswordAuth _secondaryAuth;
 	
 	private boolean _isAuthedGG;
-	private List<CharSelectInfoPackage> _charSlotMapping = null;
+	private CharSelectInfoPackage[] _charSlotMapping = null;
 	
 	// flood protectors
 	private final FloodProtectors _floodProtectors = new FloodProtectors(this);
@@ -576,18 +575,18 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 	/**
 	 * @param chars
 	 */
-	public void setCharSelection(List<CharSelectInfoPackage> chars)
+	public void setCharSelection(CharSelectInfoPackage[] chars)
 	{
 		_charSlotMapping = chars;
 	}
 	
 	public CharSelectInfoPackage getCharSelection(int charslot)
 	{
-		if ((_charSlotMapping == null) || (charslot < 0) || (charslot >= _charSlotMapping.size()))
+		if ((_charSlotMapping == null) || (charslot < 0) || (charslot >= _charSlotMapping.length))
 		{
 			return null;
 		}
-		return _charSlotMapping.get(charslot);
+		return _charSlotMapping[charslot];
 	}
 	
 	public SecondaryPasswordAuth getSecondaryAuth()

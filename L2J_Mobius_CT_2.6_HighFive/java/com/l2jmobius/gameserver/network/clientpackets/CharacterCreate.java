@@ -56,22 +56,14 @@ import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.util.Util;
 
-@SuppressWarnings("unused")
 public final class CharacterCreate implements IClientIncomingPacket
 {
 	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
 	private String _name;
-	private int _race;
 	private byte _sex;
 	private int _classId;
-	private int _int;
-	private int _str;
-	private int _con;
-	private int _men;
-	private int _dex;
-	private int _wit;
 	private byte _hairStyle;
 	private byte _hairColor;
 	private byte _face;
@@ -80,15 +72,15 @@ public final class CharacterCreate implements IClientIncomingPacket
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_name = packet.readS();
-		_race = packet.readD();
+		packet.readD(); // race
 		_sex = (byte) packet.readD();
 		_classId = packet.readD();
-		_int = packet.readD();
-		_str = packet.readD();
-		_con = packet.readD();
-		_men = packet.readD();
-		_dex = packet.readD();
-		_wit = packet.readD();
+		packet.readD(); // _int
+		packet.readD(); // _str
+		packet.readD(); // _con
+		packet.readD(); // _men
+		packet.readD(); // _dex
+		packet.readD(); // _wit
 		_hairStyle = (byte) packet.readD();
 		_hairColor = (byte) packet.readD();
 		_face = (byte) packet.readD();
@@ -173,8 +165,8 @@ public final class CharacterCreate implements IClientIncomingPacket
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
 			}
-			final PcAppearance app = new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0);
-			newChar = L2PcInstance.create(template, client.getAccountName(), _name, app);
+			
+			newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
 		// HP and MP are at maximum and CP is zero by default.
@@ -182,11 +174,11 @@ public final class CharacterCreate implements IClientIncomingPacket
 		newChar.setCurrentMp(newChar.getMaxMp());
 		// newChar.setMaxLoad(template.getBaseLoad());
 		
-		client.sendPacket(new CharCreateOk());
-		
 		initNewChar(client, newChar);
 		
-		final LogRecord record = new LogRecord(Level.INFO, "Created new character");
+		client.sendPacket(CharCreateOk.STATIC_PACKET);
+		
+		final LogRecord record = new LogRecord(Level.INFO, "Created new character.");
 		record.setParameters(new Object[]
 		{
 			newChar,
