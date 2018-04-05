@@ -89,25 +89,6 @@ public class MinionList
 	}
 	
 	/**
-	 * Delete all spawned minions and try to reuse them.
-	 */
-	public void deleteSpawnedMinions()
-	{
-		if (!_spawnedMinions.isEmpty())
-		{
-			for (L2MonsterInstance minion : _spawnedMinions)
-			{
-				if (minion != null)
-				{
-					minion.setLeader(null);
-					minion.deleteMe();
-				}
-			}
-			_spawnedMinions.clear();
-		}
-	}
-	
-	/**
 	 * Called on the minion spawn and added them in the list of the spawned minions.
 	 * @param minion
 	 */
@@ -118,13 +99,24 @@ public class MinionList
 	
 	/**
 	 * Called on the master death/delete.
-	 * @param force if true - force delete of the spawned minions By default minions deleted only for raidbosses
+	 * @param force - When true, force delete of the spawned minions. By default minions are deleted only for raidbosses.
 	 */
 	public void onMasterDie(boolean force)
 	{
-		if (_master.isRaid() || force)
+		if (_master.isRaid() || force || Config.FORCE_DELETE_MINIONS)
 		{
-			deleteSpawnedMinions();
+			if (!_spawnedMinions.isEmpty())
+			{
+				for (L2MonsterInstance minion : _spawnedMinions)
+				{
+					if (minion != null)
+					{
+						minion.setLeader(null);
+						minion.deleteMe();
+					}
+				}
+				_spawnedMinions.clear();
+			}
 		}
 	}
 	

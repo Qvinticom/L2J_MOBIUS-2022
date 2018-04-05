@@ -644,6 +644,7 @@ public final class Config
 	public static float RAID_MIN_RESPAWN_MULTIPLIER;
 	public static float RAID_MAX_RESPAWN_MULTIPLIER;
 	public static boolean RAID_DISABLE_CURSE;
+	public static boolean FORCE_DELETE_MINIONS;
 	public static int RAID_CHAOS_TIME;
 	public static int GRAND_CHAOS_TIME;
 	public static int MINION_CHAOS_TIME;
@@ -2039,6 +2040,7 @@ public final class Config
 					}
 				}
 			}
+			FORCE_DELETE_MINIONS = NPC.getBoolean("ForceDeleteMinions", false);
 			
 			RAID_DISABLE_CURSE = NPC.getBoolean("DisableRaidCurse", false);
 			RAID_CHAOS_TIME = NPC.getInt("RaidChaosTime", 10);
