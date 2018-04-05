@@ -489,14 +489,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 								addedItem.addSpecialAbility(_soulCrystalSpecialOptions[i], i + 1, 2, false);
 							}
 						}
-						addedItem.updateDatabase();
+						addedItem.updateDatabase(true);
 						// Mark that we have already upgraded the item.
 						itemEnchantmentProcessed = false;
 					}
 					if (product.getEnchantmentLevel() > 0)
 					{
 						addedItem.setEnchantLevel(product.getEnchantmentLevel());
-						addedItem.updateDatabase();
+						addedItem.updateDatabase(true);
 					}
 					
 					if (addedItem.getCount() > 1)

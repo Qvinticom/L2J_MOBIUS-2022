@@ -447,14 +447,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 						addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
 						addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
 						addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
-						addedItem.updateDatabase();
+						addedItem.updateDatabase(true);
 						// Mark that we have already upgraded the item.
 						itemEnchantmentProcessed = false;
 					}
 					if (product.getEnchantmentLevel() > 0)
 					{
 						addedItem.setEnchantLevel(product.getEnchantmentLevel());
-						addedItem.updateDatabase();
+						addedItem.updateDatabase(true);
 					}
 					
 					if (addedItem.getCount() > 1)
