@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.util.Util;
 @SuppressWarnings("unused")
 public final class CharacterCreate implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
 	private String _name;
@@ -252,7 +252,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		initNewChar(client, newChar);
 		
-		_logAccounting.info("Created new character, " + newChar + ", " + client);
+		LOG_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
 	}
 	
 	private static boolean isValidName(String text)

@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
  */
 public class CharacterSelect implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cd
 	private int _charSlot;
@@ -175,7 +175,7 @@ public class CharacterSelect implements IClientIncomingPacket
 				client.getActiveCharLock().unlock();
 			}
 			
-			_logAccounting.info("Logged in, " + client);
+			LOG_ACCOUNTING.info("Logged in, " + client);
 		}
 	}
 }

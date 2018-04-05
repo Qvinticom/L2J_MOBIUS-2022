@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
  */
 public final class ProtocolVersion implements IClientIncomingPacket
 {
-	private static final Logger _logAccounting = Logger.getLogger("accounting");
+	private static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private int _version;
 	
@@ -51,7 +51,7 @@ public final class ProtocolVersion implements IClientIncomingPacket
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
-			_logAccounting.warning("Wrong protocol version " + _version + ", " + client);
+			LOG_ACCOUNTING.warning("Wrong protocol version " + _version + ", " + client);
 			client.setProtocolOk(false);
 			client.close(new KeyPacket(client.enableCrypt(), 0));
 		}

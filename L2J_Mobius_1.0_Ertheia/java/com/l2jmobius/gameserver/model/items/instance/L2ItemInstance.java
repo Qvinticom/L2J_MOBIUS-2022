@@ -95,7 +95,7 @@ import com.l2jmobius.gameserver.util.GMAudit;
 public final class L2ItemInstance extends L2Object
 {
 	private static final Logger LOGGER = Logger.getLogger(L2ItemInstance.class.getName());
-	private static final Logger _logItems = Logger.getLogger("item");
+	private static final Logger LOG_ITEMS = Logger.getLogger("item");
 	
 	/** ID of the owner */
 	private int _ownerId;
@@ -326,7 +326,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				if (getEnchantLevel() > 0)
 				{
-					_logItems.info("SETOWNER:" + String.valueOf(process) // in case of null
+					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
 						+ ":+" + getEnchantLevel() //
 						+ " " + getItem().getName() //
@@ -336,7 +336,7 @@ public final class L2ItemInstance extends L2Object
 				}
 				else
 				{
-					_logItems.info("SETOWNER:" + String.valueOf(process) // in case of null
+					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
 						+ ":" + getItem().getName() //
 						+ "(" + _count + "), " //
@@ -500,7 +500,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				if (getEnchantLevel() > 0)
 				{
-					_logItems.info("CHANGE:" + String.valueOf(process) // in case of null
+					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
 						+ ":+" + getEnchantLevel() //
 						+ " " + getItem().getName() //
@@ -511,7 +511,7 @@ public final class L2ItemInstance extends L2Object
 				}
 				else
 				{
-					_logItems.info("CHANGE:" + String.valueOf(process) // in case of null
+					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
 						+ ":" + getItem().getName() //
 						+ "(" + _count + "), PrevCount(" //

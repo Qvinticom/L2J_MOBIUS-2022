@@ -88,7 +88,7 @@ import com.l2jmobius.gameserver.util.GMAudit;
 public final class L2ItemInstance extends L2Object
 {
 	private static final Logger _log = Logger.getLogger(L2ItemInstance.class.getName());
-	private static final Logger _logItems = Logger.getLogger("item");
+	private static final Logger LOG_ITEMS = Logger.getLogger("item");
 	
 	/** ID of the owner */
 	private int _ownerId;
@@ -323,7 +323,7 @@ public final class L2ItemInstance extends L2Object
 				creator,
 				reference
 			});
-			_logItems.log(record);
+			LOG_ITEMS.log(record);
 		}
 		
 		if ((creator != null) && creator.isGM())
@@ -485,7 +485,7 @@ public final class L2ItemInstance extends L2Object
 				creator,
 				reference
 			});
-			_logItems.log(record);
+			LOG_ITEMS.log(record);
 		}
 		
 		if ((creator != null) && creator.isGM())
