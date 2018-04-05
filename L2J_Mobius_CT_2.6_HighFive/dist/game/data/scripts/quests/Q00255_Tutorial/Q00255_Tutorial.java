@@ -237,7 +237,7 @@ public class Q00255_Tutorial extends Quest
 						html = element[2];
 					}
 				}
-				if (getQuestItemsCount(player, 5588) == 0)
+				if (!hasQuestItems(player, 5588))
 				{
 					giveItems(player, 5588, 1);
 				}
