@@ -29,6 +29,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordAck;
 import com.l2jmobius.gameserver.network.serverpackets.Ex2ndPasswordCheck;
@@ -104,7 +105,7 @@ public class SecondaryPasswordAuth
 		if (passwordExist())
 		{
 			_log.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced savePassword");
-			_activeClient.closeNow();
+			Disconnection.of(_activeClient).defaultSequence(false);
 			return false;
 		}
 		
@@ -157,7 +158,7 @@ public class SecondaryPasswordAuth
 		if (!passwordExist())
 		{
 			_log.warning("[SecondaryPasswordAuth]" + _activeClient.getAccountName() + " forced changePassword");
-			_activeClient.closeNow();
+			Disconnection.of(_activeClient).defaultSequence(false);
 			return false;
 		}
 		
@@ -231,7 +232,14 @@ public class SecondaryPasswordAuth
 	
 	public void openDialog()
 	{
-		_activeClient.sendPacket(passwordExist() ? new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT) : new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
+		if (passwordExist())
+		{
+			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT));
+		}
+		else
+		{
+			_activeClient.sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
+		}
 	}
 	
 	public boolean isAuthed()
@@ -243,7 +251,10 @@ public class SecondaryPasswordAuth
 	{
 		try
 		{
-			return Base64.getEncoder().encodeToString(MessageDigest.getInstance("SHA").digest(password.getBytes("UTF-8")));
+			final MessageDigest md = MessageDigest.getInstance("SHA");
+			final byte[] raw = password.getBytes("UTF-8");
+			final byte[] hash = md.digest(raw);
+			return Base64.getEncoder().encodeToString(hash);
 		}
 		catch (NoSuchAlgorithmException e)
 		{
@@ -258,6 +269,16 @@ public class SecondaryPasswordAuth
 	
 	private boolean validatePassword(String password)
 	{
-		return Util.isDigit(password) && (password.length() >= 6) && (password.length() <= 8) && !SecondaryAuthData.getInstance().isForbiddenPassword(password);
+		if (!Util.isDigit(password))
+		{
+			return false;
+		}
+		
+		if ((password.length() < 6) || (password.length() > 8))
+		{
+			return false;
+		}
+		
+		return !SecondaryAuthData.getInstance().isForbiddenPassword(password);
 	}
 }

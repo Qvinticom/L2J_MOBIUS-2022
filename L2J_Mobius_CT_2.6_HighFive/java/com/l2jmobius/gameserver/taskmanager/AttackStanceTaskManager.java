@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.taskmanager;
 
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -36,6 +37,8 @@ public class AttackStanceTaskManager
 	protected static final Logger _log = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
 	protected static final Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
+	
+	public static final long COMBAT_TIME = 15_000;
 	
 	/**
 	 * Instantiates a new attack stance task manager.
@@ -74,15 +77,14 @@ public class AttackStanceTaskManager
 	 */
 	public void removeAttackStanceTask(L2Character actor)
 	{
-		if (actor == null)
+		if (actor != null)
 		{
-			return;
+			if (actor.isSummon())
+			{
+				actor = actor.getActingPlayer();
+			}
+			_attackStanceTasks.remove(actor);
 		}
-		if (actor.isSummon())
-		{
-			actor = actor.getActingPlayer();
-		}
-		_attackStanceTasks.remove(actor);
 	}
 	
 	/**
@@ -92,15 +94,15 @@ public class AttackStanceTaskManager
 	 */
 	public boolean hasAttackStanceTask(L2Character actor)
 	{
-		if (actor == null)
+		if (actor != null)
 		{
-			return false;
+			if (actor.isSummon())
+			{
+				actor = actor.getActingPlayer();
+			}
+			return _attackStanceTasks.containsKey(actor);
 		}
-		if (actor.isSummon())
-		{
-			actor = actor.getActingPlayer();
-		}
-		return _attackStanceTasks.containsKey(actor);
+		return false;
 	}
 	
 	protected class FightModeScheduler implements Runnable
@@ -111,10 +113,13 @@ public class AttackStanceTaskManager
 			final long current = System.currentTimeMillis();
 			try
 			{
+				final Iterator<Entry<L2Character, Long>> iter = _attackStanceTasks.entrySet().iterator();
+				Entry<L2Character, Long> e;
 				L2Character actor;
-				for (Entry<L2Character, Long> e : _attackStanceTasks.entrySet())
+				while (iter.hasNext())
 				{
-					if ((current - e.getValue()) > 15000)
+					e = iter.next();
+					if ((current - e.getValue()) > COMBAT_TIME)
 					{
 						actor = e.getKey();
 						if (actor != null)
@@ -126,7 +131,7 @@ public class AttackStanceTaskManager
 								actor.getSummon().broadcastPacket(new AutoAttackStop(actor.getSummon().getObjectId()));
 							}
 						}
-						_attackStanceTasks.remove(e.getKey());
+						iter.remove();
 					}
 				}
 			}

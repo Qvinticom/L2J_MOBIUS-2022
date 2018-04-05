@@ -190,7 +190,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			setWorldRegion(L2World.getInstance().getRegion(getLocation()));
 			
 			// Add the L2Object spawn in the _allobjects of L2World
-			L2World.getInstance().storeObject(this);
+			L2World.getInstance().addObject(this);
 			
 			// Add the L2Object spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
 			getWorldRegion().addVisibleObject(this);
@@ -237,7 +237,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			// Add the L2Object spawn in the _allobjects of L2World
 		}
 		
-		L2World.getInstance().storeObject(this);
+		L2World.getInstance().addObject(this);
 		
 		// these can synchronize on others instances, so they're out of
 		// synchronized, to avoid deadlocks

@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
 
 /**
@@ -32,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
  */
 public final class ProtocolVersion implements IClientIncomingPacket
 {
-	private static final Logger _logAccounting = Logger.getLogger("accounting");
+	private static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private int _version;
 	
@@ -50,7 +49,7 @@ public final class ProtocolVersion implements IClientIncomingPacket
 		if (_version == -2)
 		{
 			// this is just a ping attempt from the new C2 client
-			client.close((IClientOutgoingPacket) null);
+			client.closeNow();
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
@@ -60,7 +59,7 @@ public final class ProtocolVersion implements IClientIncomingPacket
 				_version,
 				client
 			});
-			_logAccounting.log(record);
+			LOG_ACCOUNTING.log(record);
 			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 0);
 			client.setProtocolOk(false);
 			client.close(pk);

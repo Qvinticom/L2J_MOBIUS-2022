@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -139,14 +140,7 @@ public final class FloodProtectorAction
 	 */
 	private void kickPlayer()
 	{
-		if (_client.getActiveChar() != null)
-		{
-			_client.getActiveChar().logout(false);
-		}
-		else
-		{
-			_client.closeNow();
-		}
+		Disconnection.of(_client).defaultSequence(false);
 		
 		if (_log.isLoggable(Level.WARNING))
 		{

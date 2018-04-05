@@ -49,6 +49,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharCreateOk;
@@ -58,7 +59,7 @@ import com.l2jmobius.gameserver.util.Util;
 @SuppressWarnings("unused")
 public final class CharacterCreate implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
 	private String _name;
@@ -104,7 +105,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 			return;
 		}
 		
-		if (Config.FORBIDDEN_NAMES.length > 1)
+		if (Config.FORBIDDEN_NAMES.length > 0)
 		{
 			for (String st : Config.FORBIDDEN_NAMES)
 			{
@@ -191,7 +192,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 			newChar,
 			client
 		});
-		_logAccounting.log(record);
+		LOG_ACCOUNTING.log(record);
 	}
 	
 	private boolean isValidName(String text)
@@ -219,7 +220,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 	
 	private void initNewChar(L2GameClient client, L2PcInstance newChar)
 	{
-		L2World.getInstance().storeObject(newChar);
+		L2World.getInstance().addObject(newChar);
 		
 		if (Config.STARTING_ADENA > 0)
 		{
@@ -238,7 +239,6 @@ public final class CharacterCreate implements IClientIncomingPacket
 			final Location createLoc = template.getCreationPoint();
 			newChar.setXYZInvisible(createLoc.getX(), createLoc.getY(), createLoc.getZ());
 		}
-		
 		newChar.setTitle("");
 		
 		if (Config.ENABLE_VITALITY)
@@ -289,7 +289,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		EventDispatcher.getInstance().notifyEvent(new OnPlayerCreate(newChar, newChar.getObjectId(), newChar.getName(), client), Containers.Players());
 		
 		newChar.setOnlineStatus(true, false);
-		newChar.deleteMe();
+		Disconnection.of(client, newChar).storeMe().deleteMe();
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.setCharSelection(cl.getCharInfo());

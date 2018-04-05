@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerBypass;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -89,7 +90,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 		if (_command.isEmpty())
 		{
 			_log.warning("Player " + activeChar.getName() + " sent empty bypass!");
-			activeChar.logout();
+			Disconnection.of(client, activeChar).defaultSequence(false);
 			return;
 		}
 		

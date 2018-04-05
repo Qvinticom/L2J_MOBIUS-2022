@@ -47,7 +47,7 @@ public final class CharacterRestore implements IClientIncomingPacket
 			return;
 		}
 		
-		client.markRestoredChar(_charSlot);
+		client.restore(_charSlot);
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);
 		client.sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());

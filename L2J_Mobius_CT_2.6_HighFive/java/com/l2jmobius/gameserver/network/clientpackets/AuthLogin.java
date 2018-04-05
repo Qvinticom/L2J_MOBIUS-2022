@@ -20,7 +20,6 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.LoginServerThread.SessionKey;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
  * This class ...
@@ -54,9 +53,10 @@ public final class AuthLogin implements IClientIncomingPacket
 	{
 		if (_loginName.isEmpty() || !client.isProtocolOk())
 		{
-			client.close((IClientOutgoingPacket) null);
+			client.closeNow();
 			return;
 		}
+		
 		final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
 		
 		// avoid potential exploits
@@ -70,7 +70,7 @@ public final class AuthLogin implements IClientIncomingPacket
 			}
 			else
 			{
-				client.close((IClientOutgoingPacket) null);
+				client.close(null);
 			}
 		}
 	}

@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 
 /**
  * This class handles following admin commands: - character_disconnect = disconnects target player
@@ -68,7 +69,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 		{
 			activeChar.sendMessage("Character " + player.getName() + " disconnected from server.");
 			
-			player.logout();
+			Disconnection.of(player).defaultSequence(false);
 		}
 	}
 }

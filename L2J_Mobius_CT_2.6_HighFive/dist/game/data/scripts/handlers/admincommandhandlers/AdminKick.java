@@ -18,10 +18,10 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 
 public class AdminKick implements IAdminCommandHandler
 {
@@ -44,11 +44,7 @@ public class AdminKick implements IAdminCommandHandler
 				final L2PcInstance plyr = L2World.getInstance().getPlayer(player);
 				if (plyr != null)
 				{
-					if (plyr.getOfflineStartTime() > 0)
-					{
-						OfflineTradersTable.removeTrader(plyr.getObjectId());
-					}
-					plyr.logout();
+					Disconnection.of(plyr).defaultSequence(false);
 					activeChar.sendMessage("You kicked " + plyr.getName() + " from the game.");
 				}
 			}
@@ -61,7 +57,7 @@ public class AdminKick implements IAdminCommandHandler
 				if (!player.isGM())
 				{
 					counter++;
-					player.logout();
+					Disconnection.of(player).defaultSequence(false);
 				}
 			}
 			activeChar.sendMessage("Kicked " + counter + " players.");

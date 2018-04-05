@@ -87,7 +87,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 		_ctrlPressed = (packet.readD() == 1);
 		_shiftPressed = (packet.readC() == 1);
 		_client = client;
-		return (_actionId != 10) && (_actionId != 28);
+		return true;
 	}
 	
 	@Override

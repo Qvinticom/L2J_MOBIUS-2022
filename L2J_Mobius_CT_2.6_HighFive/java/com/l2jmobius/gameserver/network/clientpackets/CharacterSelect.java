@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -36,6 +35,7 @@ import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
  */
 public class CharacterSelect implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cd
 	private int _charSlot;
@@ -127,12 +127,12 @@ public class CharacterSelect implements IClientIncomingPacket
 					}
 					
 					// load up character from disk
-					final L2PcInstance cha = client.loadCharFromDisk(_charSlot);
+					final L2PcInstance cha = client.load(_charSlot);
 					if (cha == null)
 					{
 						return; // handled in L2GameClient
 					}
-					L2World.getInstance().addPlayerToWorld(cha);
+					
 					CharNameTable.getInstance().addName(cha);
 					
 					cha.setClient(client);
@@ -142,15 +142,14 @@ public class CharacterSelect implements IClientIncomingPacket
 					final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
 					if ((terminate != null) && terminate.terminate())
 					{
-						cha.deleteMe();
+						Disconnection.of(cha).defaultSequence(false);
 						return;
 					}
 					
 					client.sendPacket(new SSQInfo());
 					
 					client.setConnectionState(ConnectionState.IN_GAME);
-					final CharSelected cs = new CharSelected(cha, client.getSessionId().playOkID1);
-					client.sendPacket(cs);
+					client.sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 				}
 			}
 			finally
@@ -163,7 +162,7 @@ public class CharacterSelect implements IClientIncomingPacket
 			{
 				client
 			});
-			_logAccounting.log(record);
+			LOG_ACCOUNTING.log(record);
 		}
 	}
 }

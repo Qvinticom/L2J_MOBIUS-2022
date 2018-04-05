@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerChat;
 import com.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -112,7 +113,7 @@ public final class Say2 implements IClientIncomingPacket
 		{
 			_log.warning("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + _text);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			activeChar.logout();
+			Disconnection.of(activeChar).defaultSequence(false);
 			return;
 		}
 		
@@ -120,7 +121,7 @@ public final class Say2 implements IClientIncomingPacket
 		{
 			_log.warning(activeChar.getName() + ": sending empty text. Possible packet hack!");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-			activeChar.logout();
+			Disconnection.of(activeChar).defaultSequence(false);
 			return;
 		}
 		

@@ -252,6 +252,7 @@ import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.L2BossZone;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractHtmlPacket;
@@ -282,7 +283,6 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
-import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 import com.l2jmobius.gameserver.network.serverpackets.NicknameChanged;
@@ -303,7 +303,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RecipeShopMsg;
 import com.l2jmobius.gameserver.network.serverpackets.RecipeShopSellList;
 import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 import com.l2jmobius.gameserver.network.serverpackets.Ride;
-import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.network.serverpackets.ShortCutInit;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
@@ -826,6 +825,8 @@ public final class L2PcInstance extends L2Playable
 	
 	private volatile int _actionMask;
 	
+	private Future<?> _autoSaveTask = null;
+	
 	/**
 	 * Creates a player.
 	 * @param objectId the object ID
@@ -1265,38 +1266,6 @@ public final class L2PcInstance extends L2Playable
 	public void isInCraftMode(boolean b)
 	{
 		_inCraftMode = b;
-	}
-	
-	/**
-	 * Manage Logout Task:
-	 * <ul>
-	 * <li>Remove player from world</li>
-	 * <li>Save player data into DB</li>
-	 * </ul>
-	 */
-	public void logout()
-	{
-		logout(true);
-	}
-	
-	/**
-	 * Manage Logout Task:
-	 * <ul>
-	 * <li>Remove player from world</li>
-	 * <li>Save player data into DB</li>
-	 * </ul>
-	 * @param closeClient
-	 */
-	public void logout(boolean closeClient)
-	{
-		try
-		{
-			closeNetConnection(closeClient);
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.WARNING, "Exception on logout(): " + e.getMessage(), e);
-		}
 	}
 	
 	/**
@@ -3945,33 +3914,6 @@ public final class L2PcInstance extends L2Playable
 			ip = _client.getConnectionAddress().getHostAddress();
 		}
 		return ip;
-	}
-	
-	/**
-	 * Close the active connection with the client.
-	 * @param closeClient
-	 */
-	private void closeNetConnection(boolean closeClient)
-	{
-		final L2GameClient client = _client;
-		if (client != null)
-		{
-			if (client.isDetached())
-			{
-				client.cleanMe(true);
-			}
-			else if (client.getChannel().isActive())
-			{
-				if (closeClient)
-				{
-					client.close(LeaveWorld.STATIC_PACKET);
-				}
-				else
-				{
-					client.close(ServerClose.STATIC_PACKET);
-				}
-			}
-		}
 	}
 	
 	public Location getCurrentSkillWorldPosition()
@@ -6967,6 +6909,10 @@ public final class L2PcInstance extends L2Playable
 			{
 				player.setOverrideCond(player.getVariables().getLong(COND_OVERRIDE_KEY, PcCondOverride.getAllExceptionsMask()));
 			}
+			
+			player.setOnlineStatus(true, false);
+			
+			player.startAutoSaveTask();
 		}
 		catch (Exception e)
 		{
@@ -8163,6 +8109,56 @@ public final class L2PcInstance extends L2Playable
 	public int getHennaStatDEX()
 	{
 		return _hennaDEX;
+	}
+	
+	private void startAutoSaveTask()
+	{
+		if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null))
+		{
+			_autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+		}
+	}
+	
+	private void stopAutoSaveTask()
+	{
+		if (_autoSaveTask != null)
+		{
+			_autoSaveTask.cancel(false);
+			_autoSaveTask = null;
+		}
+	}
+	
+	protected void autoSave()
+	{
+		storeMe();
+		storeRecommendations(false);
+		
+		if (Config.UPDATE_ITEMS_ON_CHAR_STORE)
+		{
+			getInventory().updateDatabase();
+			getWarehouse().updateDatabase();
+		}
+	}
+	
+	public boolean canLogout()
+	{
+		if (isLocked())
+		{
+			_log.warning("Player " + getName() + " tried to restart/logout during class change.");
+			return false;
+		}
+		
+		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(this) && !(isGM() && Config.GM_RESTART_FIGHTING))
+		{
+			return false;
+		}
+		
+		if (isBlockedFromExit())
+		{
+			return false;
+		}
+		
+		return true;
 	}
 	
 	/**
@@ -11039,23 +11035,19 @@ public final class L2PcInstance extends L2Playable
 	 * <li>If the L2PcInstance is in observer mode, set its position to its position before entering in observer mode</li>
 	 * <li>Set the online Flag to True or False and update the characters table of the database with online status and lastAccess</li>
 	 * <li>Stop the HP/MP/CP Regeneration task</li>
-	 * <li>Cancel Crafting, Attak or Cast</li>
+	 * <li>Cancel Crafting, Attack or Cast</li>
 	 * <li>Remove the L2PcInstance from the world</li>
 	 * <li>Stop Party and Unsummon Pet</li>
 	 * <li>Update database with items in its inventory and remove them from the world</li>
 	 * <li>Remove all L2Object from _knownObjects and _knownPlayer of the L2Character then cancel Attak or Cast and notify AI</li>
 	 * <li>Close the connection with the client</li>
 	 * </ul>
+	 * <br>
+	 * Remember this method is not to be used to half-ass disconnect players! This method is dedicated only to erase the player from the world.<br>
+	 * If you intend to disconnect a player please use {@link Disconnection}
 	 */
 	@Override
 	public boolean deleteMe()
-	{
-		cleanup();
-		storeMe();
-		return super.deleteMe();
-	}
-	
-	private synchronized void cleanup()
 	{
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(this), this);
 		
@@ -11452,9 +11444,17 @@ public final class L2PcInstance extends L2Playable
 			player.removeSnooped(this);
 		}
 		
+		// we store all data from players who are disconnected while in an event in order to restore it in the next login
+		if (L2Event.isParticipant(this))
+		{
+			L2Event.savePlayerEventStatus(this);
+		}
+		
+		// Anti Feed
+		AntiFeedManager.getInstance().onDisconnect(getClient());
+		
 		// Remove L2Object object from _allObjects of L2World
 		L2World.getInstance().removeObject(this);
-		L2World.getInstance().removeFromAllPlayers(this);
 		
 		try
 		{
@@ -11465,6 +11465,10 @@ public final class L2PcInstance extends L2Playable
 		{
 			_log.log(Level.WARNING, "Exception on deleteMe() notifyFriends: " + e.getMessage(), e);
 		}
+		
+		stopAutoSaveTask();
+		
+		return super.deleteMe();
 	}
 	
 	private L2Fish _fish;

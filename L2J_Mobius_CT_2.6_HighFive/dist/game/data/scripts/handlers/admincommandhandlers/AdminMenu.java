@@ -21,7 +21,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -31,6 +30,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -172,11 +172,7 @@ public class AdminMenu implements IAdminCommandHandler
 				String text;
 				if (plyr != null)
 				{
-					if (plyr.getOfflineStartTime() > 0)
-					{
-						OfflineTradersTable.removeTrader(plyr.getObjectId());
-					}
-					plyr.logout();
+					Disconnection.of(plyr).defaultSequence(false);
 					text = "You kicked " + plyr.getName() + " from the game.";
 				}
 				else

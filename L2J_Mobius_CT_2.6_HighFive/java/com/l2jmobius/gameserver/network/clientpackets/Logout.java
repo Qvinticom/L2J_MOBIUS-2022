@@ -25,11 +25,13 @@ import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.L2Event;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import com.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
  * This class ...
@@ -37,7 +39,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public final class Logout implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -51,6 +53,7 @@ public final class Logout implements IClientIncomingPacket
 		final L2PcInstance player = client.getActiveChar();
 		if (player == null)
 		{
+			client.closeNow();
 			return;
 		}
 		
@@ -113,8 +116,11 @@ public final class Logout implements IClientIncomingPacket
 		{
 			client
 		});
-		_logAccounting.log(record);
+		LOG_ACCOUNTING.log(record);
 		
-		player.logout();
+		if (!OfflineTradeUtil.enteredOfflineMode(player))
+		{
+			Disconnection.of(client, player).defaultSequence(false);
+		}
 	}
 }

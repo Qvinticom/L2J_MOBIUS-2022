@@ -24,15 +24,17 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.SevenSignsFestival;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
-import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.ConnectionState;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.CharSelectionInfo;
 import com.l2jmobius.gameserver.network.serverpackets.RestartResponse;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
+import com.l2jmobius.gameserver.util.OfflineTradeUtil;
 
 /**
  * This class ...
@@ -40,7 +42,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public final class RequestRestart implements IClientIncomingPacket
 {
-	protected static final Logger _logAccounting = Logger.getLogger("accounting");
+	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -61,6 +63,7 @@ public final class RequestRestart implements IClientIncomingPacket
 		if ((player.getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (player.getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
 		{
 			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -68,12 +71,13 @@ public final class RequestRestart implements IClientIncomingPacket
 		{
 			_log.warning("Player " + player.getName() + " tried to restart during class change.");
 			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.getPrivateStoreType() != PrivateStoreType.NONE)
 		{
-			player.sendMessage("Cannot restart while trading");
+			player.sendMessage("Cannot restart while trading.");
 			client.sendPacket(RestartResponse.valueOf(false));
 			return;
 		}
@@ -82,6 +86,7 @@ public final class RequestRestart implements IClientIncomingPacket
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_RESTART_WHILE_IN_COMBAT);
 			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -94,6 +99,7 @@ public final class RequestRestart implements IClientIncomingPacket
 			{
 				player.sendMessage("You cannot restart while you are a participant in a festival.");
 				client.sendPacket(RestartResponse.valueOf(false));
+				player.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
@@ -108,6 +114,14 @@ public final class RequestRestart implements IClientIncomingPacket
 		if (player.isBlockedFromExit())
 		{
 			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		if (!player.canLogout())
+		{
+			client.sendPacket(RestartResponse.valueOf(false));
+			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -119,15 +133,12 @@ public final class RequestRestart implements IClientIncomingPacket
 		{
 			client
 		});
-		_logAccounting.log(record);
+		LOG_ACCOUNTING.log(record);
 		
-		// detach the client from the char so that the connection isnt closed in the deleteMe
-		player.setClient(null);
-		
-		player.deleteMe();
-		
-		client.setActiveChar(null);
-		AntiFeedManager.getInstance().onDisconnect(client);
+		if (!OfflineTradeUtil.enteredOfflineMode(player))
+		{
+			Disconnection.of(client, player).storeMe().deleteMe();
+		}
 		
 		// return the client to the authed status
 		client.setConnectionState(ConnectionState.AUTHENTICATED);

@@ -24,18 +24,19 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.network.Disconnection;
 
 public final class L2World
 {
-	private static final Logger _log = Logger.getLogger(L2World.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2World.class.getName());
 	/** Gracia border Flying objects not allowed to the east of it. */
 	public static final int GRACIA_MAX_X = -166168;
 	public static final int GRACIA_MAX_Z = 6105;
@@ -91,16 +92,29 @@ public final class L2World
 	 * </ul>
 	 * @param object
 	 */
-	public void storeObject(L2Object object)
+	public void addObject(L2Object object)
 	{
-		if (_allObjects.containsKey(object.getObjectId()))
+		if (_allObjects.putIfAbsent(object.getObjectId(), object) != null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Current object: " + object + " already exist in OID map!");
-			_log.log(Level.WARNING, "---------------------- End ---------------------");
-			return;
+			LOGGER.warning(getClass().getSimpleName() + ": Object " + object + " already exists in the world. Stack Trace: " + CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
 		}
 		
-		_allObjects.put(object.getObjectId(), object);
+		if (object.isPlayer())
+		{
+			final L2PcInstance newPlayer = (L2PcInstance) object;
+			if (newPlayer.isTeleporting()) // TODO: drop when we stop removing player from the world while teleporting.
+			{
+				return;
+			}
+			
+			final L2PcInstance existingPlayer = _allPlayers.putIfAbsent(object.getObjectId(), newPlayer);
+			if (existingPlayer != null)
+			{
+				Disconnection.of(existingPlayer).defaultSequence(false);
+				Disconnection.of(newPlayer).defaultSequence(false);
+				LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
+			}
+		}
 	}
 	
 	/**
@@ -116,6 +130,15 @@ public final class L2World
 	public void removeObject(L2Object object)
 	{
 		_allObjects.remove(object.getObjectId());
+		if (object.isPlayer())
+		{
+			final L2PcInstance player = (L2PcInstance) object;
+			if (player.isTeleporting()) // TODO: drop when we stop removing player from the world while teleportingq.
+			{
+				return;
+			}
+			_allPlayers.remove(object.getObjectId());
+		}
 	}
 	
 	/**
@@ -279,24 +302,6 @@ public final class L2World
 			// If visible L2Object is a L2PcInstance, add visible L2Object in L2ObjectHashSet(L2PcInstance) _knownPlayer of the object
 			object.getKnownList().addKnownObject(visible);
 		}
-	}
-	
-	/**
-	 * Adds the player to the world.
-	 * @param player the player to add
-	 */
-	public void addPlayerToWorld(L2PcInstance player)
-	{
-		_allPlayers.put(player.getObjectId(), player);
-	}
-	
-	/**
-	 * Remove the player from the world.
-	 * @param player the player to remove
-	 */
-	public void removeFromAllPlayers(L2PcInstance player)
-	{
-		_allPlayers.remove(player.getObjectId());
 	}
 	
 	/**
@@ -558,7 +563,7 @@ public final class L2World
 			}
 		}
 		
-		_log.info("L2World: (" + REGIONS_X + " by " + REGIONS_Y + ") World Region Grid set up.");
+		LOGGER.info("L2World: (" + REGIONS_X + " by " + REGIONS_Y + ") World Region Grid set up.");
 	}
 	
 	/**
@@ -566,7 +571,7 @@ public final class L2World
 	 */
 	public void deleteVisibleNpcSpawns()
 	{
-		_log.info("Deleting all visible NPCs.");
+		LOGGER.info("Deleting all visible NPCs.");
 		for (int i = 0; i <= REGIONS_X; i++)
 		{
 			for (int j = 0; j <= REGIONS_Y; j++)
@@ -574,7 +579,7 @@ public final class L2World
 				_worldRegions[i][j].deleteVisibleNpcSpawns();
 			}
 		}
-		_log.info("All visible NPCs deleted.");
+		LOGGER.info("All visible NPCs deleted.");
 	}
 	
 	/**
