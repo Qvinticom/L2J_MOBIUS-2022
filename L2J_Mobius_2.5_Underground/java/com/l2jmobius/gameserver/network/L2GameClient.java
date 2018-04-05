@@ -528,7 +528,10 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		if (player != null)
 		{
 			// exploit prevention, should not happens in normal way
-			LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + getAccountName());
+			if (player.isOnlineInt() == 1)
+			{
+				LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + getAccountName());
+			}
 			Disconnection.of(player).defaultSequence(false);
 			return null;
 		}

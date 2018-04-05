@@ -560,12 +560,23 @@ public class LoginServerThread extends Thread
 	 * Kick player for the given account.
 	 * @param account the account
 	 */
-	public void doKickPlayer(String account)
+	private void doKickPlayer(String account)
 	{
 		final L2GameClient client = _accountsInGameServer.get(account);
 		if (client != null)
 		{
-			ACCOUNTING_LOGGER.info("Kicked by login, " + client);
+			if (client.isDetached())
+			{
+				if (client.getActiveChar() != null)
+				{
+					client.getActiveChar().deleteMe();
+				}
+				sendLogout(account);
+			}
+			else
+			{
+				ACCOUNTING_LOGGER.info("Kicked by login, " + client);
+			}
 			client.close(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_LOGGED_IN_TO_TWO_PLACES_IF_YOU_SUSPECT_ACCOUNT_THEFT_WE_RECOMMEND_CHANGING_YOUR_PASSWORD_SCANNING_YOUR_COMPUTER_FOR_VIRUSES_AND_USING_AN_ANTI_VIRUS_SOFTWARE));
 		}
 	}
