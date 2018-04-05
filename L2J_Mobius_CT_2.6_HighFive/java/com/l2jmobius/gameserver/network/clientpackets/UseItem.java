@@ -80,7 +80,7 @@ public final class UseItem implements IClientIncomingPacket
 	{
 		_objectId = packet.readD();
 		_ctrlPressed = packet.readD() != 0;
-		return !Config.SPAWN_PROTECTION_ALLOWED_ITEMS.contains(_itemId);
+		return true;
 	}
 	
 	@Override
