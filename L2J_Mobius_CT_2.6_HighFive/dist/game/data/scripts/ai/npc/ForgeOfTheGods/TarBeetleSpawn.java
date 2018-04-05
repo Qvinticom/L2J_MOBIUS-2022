@@ -53,7 +53,7 @@ public class TarBeetleSpawn implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		parseDatapackFile("data/spawnZones/tar_beetle.xml");
+		parseDatapackFile("data/scripts/ai/npc/ForgeOfTheGods/tar_beetle.xml");
 		if (!zones.isEmpty())
 		{
 			spawnTask = ThreadPool.scheduleAtFixedRate(() -> zones.forEach(SpawnZone::refreshSpawn), 1000, 60000);

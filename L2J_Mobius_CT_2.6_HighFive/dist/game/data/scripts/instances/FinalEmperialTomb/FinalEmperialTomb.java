@@ -253,7 +253,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		_spawnCount = 0;
 		_spawnList.clear();
 		_spawnZoneList.clear();
-		parseDatapackFile("data/spawnZones/final_emperial_tomb.xml");
+		parseDatapackFile("data/scripts/instances/FinalEmperialTomb/final_emperial_tomb.xml");
 		_log.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 		_log.info("[Final Emperial Tomb] Loaded " + _spawnCount + " spawns data.");
 	}

@@ -77,7 +77,7 @@ public final class SpawnTable implements IGameXmlReader
 			}
 			
 			// Load XML list
-			parseDatapackDirectory("data/spawnlist", false);
+			parseDatapackDirectory("data/spawns", false);
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _xmlSpawnCount + " npc spawns from XML.");
 		}
 	}

@@ -378,7 +378,7 @@ public final class ZoneManager implements IGameXmlReader
 		_classZones.clear();
 		_spawnTerritories.clear();
 		parseDatapackDirectory("data/zones", false);
-		parseDatapackDirectory("data/zones/npcSpawnTerritories", false);
+		parseDatapackDirectory("data/zones/spawnZones", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _classZones.size() + " zone classes and " + getSize() + " zones.");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _spawnTerritories.size() + " NPC spawn territoriers.");
 	}
