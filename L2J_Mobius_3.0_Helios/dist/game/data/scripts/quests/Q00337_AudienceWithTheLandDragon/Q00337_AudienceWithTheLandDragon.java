@@ -158,7 +158,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 					takeItems(player, THIRD_FRAGMENT_OF_ABYSS_JEWEL, 1);
 					takeItems(player, HERALD_OF_SLAYER, 1);
 					giveItems(player, PORTAL_STONE, 1);
-					qs.exitQuest(false, true);
+					qs.exitQuest(true, true);
 					htmltext = event;
 					break;
 				}
@@ -219,7 +219,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					if (qs.getInt("drop2") == 1)
+					if (hasQuestItems(player, TOTEM_OF_LAND_DRAGON))
 					{
 						takeItems(player, TOTEM_OF_LAND_DRAGON, 1);
 						giveItems(player, MARK_OF_WATCHMAN, 1);
@@ -618,8 +618,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					for (int i = 0; i < 3; i++)
 					{
-						final L2Npc mob1 = addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
-						addAttackDesire(mob1, qs.getPlayer());
+						addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000L, false);
 					}
 				}
 				break;
