@@ -25,3 +25,8 @@ What is done
 -User command expon/expoff
 -Reworked drop system
 -GeoEngine from aCis
+-Retail system messages and NPC strings
+-New script loader
+-New ThreadPool
+-New XML reader
+-Replaced MMOCore with Netty
