@@ -273,7 +273,6 @@ public final class Config
 	public static int UNSTUCK_INTERVAL;
 	public static int TELEPORT_WATCHDOG_TIMEOUT;
 	public static int PLAYER_SPAWN_PROTECTION;
-	public static List<Integer> SPAWN_PROTECTION_ALLOWED_ITEMS;
 	public static int PLAYER_TELEPORT_PROTECTION;
 	public static boolean RANDOM_RESPAWN_IN_TOWN_ENABLED;
 	public static boolean OFFSET_ON_TELEPORT_ENABLED;
@@ -1743,25 +1742,6 @@ public final class Config
 			UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
 			TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);
 			PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);
-			final String[] items = Character.getString("PlayerSpawnProtectionAllowedItems", "0").split(",");
-			SPAWN_PROTECTION_ALLOWED_ITEMS = new ArrayList<>(items.length);
-			for (String item : items)
-			{
-				Integer itm = 0;
-				try
-				{
-					itm = Integer.parseInt(item);
-				}
-				catch (NumberFormatException nfe)
-				{
-					LOGGER.warning("Player Spawn Protection: Wrong ItemId passed: " + item);
-					LOGGER.warning(nfe.getMessage());
-				}
-				if (itm != 0)
-				{
-					SPAWN_PROTECTION_ALLOWED_ITEMS.add(itm);
-				}
-			}
 			PLAYER_TELEPORT_PROTECTION = Character.getInt("PlayerTeleportProtection", 0);
 			RANDOM_RESPAWN_IN_TOWN_ENABLED = Character.getBoolean("RandomRespawnInTownEnabled", true);
 			OFFSET_ON_TELEPORT_ENABLED = Character.getBoolean("OffsetOnTeleportEnabled", true);
