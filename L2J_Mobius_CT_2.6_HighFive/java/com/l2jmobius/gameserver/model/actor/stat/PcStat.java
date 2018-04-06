@@ -123,6 +123,13 @@ public class PcStat extends PlayableStat
 			return false;
 		}
 		
+		// Premium rates
+		if (activeChar.hasPremiumStatus())
+		{
+			addToExp *= Config.PREMIUM_RATE_XP;
+			addToSp *= Config.PREMIUM_RATE_SP;
+		}
+		
 		final long baseExp = addToExp;
 		final int baseSp = addToSp;
 		
