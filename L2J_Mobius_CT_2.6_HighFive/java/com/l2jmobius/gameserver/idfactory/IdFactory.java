@@ -36,48 +36,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
  */
 public abstract class IdFactory
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
-	
-	@Deprecated
-	protected static final String[] ID_UPDATES =
-	{
-		"UPDATE items                 SET owner_id = ?    WHERE owner_id = ?",
-		"UPDATE items                 SET object_id = ?   WHERE object_id = ?",
-		"UPDATE character_quests      SET charId = ?     WHERE charId = ?",
-		"UPDATE character_contacts     SET charId = ?     WHERE charId = ?",
-		"UPDATE character_contacts     SET friendId = ?   WHERE contactId = ?",
-		"UPDATE character_friends     SET charId = ?     WHERE charId = ?",
-		"UPDATE character_friends     SET friendId = ?   WHERE friendId = ?",
-		"UPDATE character_hennas      SET charId = ? WHERE charId = ?",
-		"UPDATE character_recipebook  SET charId = ? WHERE charId = ?",
-		"UPDATE character_recipeshoplist  SET charId = ? WHERE charId = ?",
-		"UPDATE character_shortcuts   SET charId = ? WHERE charId = ?",
-		"UPDATE character_shortcuts   SET shortcut_id = ? WHERE shortcut_id = ? AND type = 1", // items
-		"UPDATE character_macroses    SET charId = ? WHERE charId = ?",
-		"UPDATE character_skills      SET charId = ? WHERE charId = ?",
-		"UPDATE character_skills_save SET charId = ? WHERE charId = ?",
-		"UPDATE character_subclasses  SET charId = ? WHERE charId = ?",
-		"UPDATE character_ui_actions  SET charId = ? WHERE charId = ?",
-		"UPDATE character_ui_categories  SET charId = ? WHERE charId = ?",
-		"UPDATE characters            SET charId = ? WHERE charId = ?",
-		"UPDATE characters            SET clanid = ?      WHERE clanid = ?",
-		"UPDATE clan_data             SET clan_id = ?     WHERE clan_id = ?",
-		"UPDATE siege_clans           SET clan_id = ?     WHERE clan_id = ?",
-		"UPDATE clan_data             SET ally_id = ?     WHERE ally_id = ?",
-		"UPDATE clan_data             SET leader_id = ?   WHERE leader_id = ?",
-		"UPDATE pets                  SET item_obj_id = ? WHERE item_obj_id = ?",
-		"UPDATE character_hennas     SET charId = ? WHERE charId = ?",
-		"UPDATE itemsonground         SET object_id = ?   WHERE object_id = ?",
-		"UPDATE auction_bid          SET bidderId = ?      WHERE bidderId = ?",
-		"UPDATE auction_watch        SET charObjId = ?     WHERE charObjId = ?",
-		"UPDATE olympiad_fights        SET charOneId = ?     WHERE charOneId = ?",
-		"UPDATE olympiad_fights        SET charTwoId = ?     WHERE charTwoId = ?",
-		"UPDATE heroes_diary        SET charId = ?     WHERE charId = ?",
-		"UPDATE olympiad_nobles        SET charId = ?     WHERE charId = ?",
-		"UPDATE character_offline_trade SET charId = ?     WHERE charId = ?",
-		"UPDATE character_offline_trade_items SET charId = ? WHERE charId = ?",
-		"UPDATE clanhall             SET ownerId = ?       WHERE ownerId = ?"
-	};
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	protected static final String[] ID_CHECKS =
 	{
@@ -151,12 +110,6 @@ public abstract class IdFactory
 	{
 		switch (Config.IDFACTORY_TYPE)
 		{
-			case Compaction:
-			{
-				throw new UnsupportedOperationException("Compaction IdFactory is disabled.");
-				// _instance = new CompactionIDFactory();
-				// break;
-			}
 			case BitSet:
 			{
 				_instance = new BitSetIDFactory();
@@ -184,11 +137,11 @@ public abstract class IdFactory
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("UPDATE characters SET online = 0");
-			_log.info("Updated characters online status.");
+			LOGGER.info("Updated characters online status.");
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not update characters online status: " + e.getMessage(), e);
 		}
 	}
 	
@@ -226,6 +179,7 @@ public abstract class IdFactory
 			// stmt.executeUpdate("DELETE FROM characters WHERE characters.account_name NOT IN (SELECT login FROM accounts);");
 			
 			// If the character does not exist...
+			// Characters
 			cleanCount += stmt.executeUpdate("DELETE FROM account_gsdata WHERE account_gsdata.account_name NOT IN (SELECT account_name FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_contacts WHERE character_contacts.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_contacts WHERE character_contacts.contactId NOT IN (SELECT charId FROM characters);");
@@ -244,11 +198,15 @@ public abstract class IdFactory
 			cleanCount += stmt.executeUpdate("DELETE FROM character_instance_time WHERE character_instance_time.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_ui_actions WHERE character_ui_actions.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM character_ui_categories WHERE character_ui_categories.charId NOT IN (SELECT charId FROM characters);");
+			
+			// Items
 			cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id NOT IN (SELECT charId FROM characters) AND items.owner_id NOT IN (SELECT clan_id FROM clan_data) AND items.owner_id != -1;");
 			cleanCount += stmt.executeUpdate("DELETE FROM items WHERE items.owner_id = -1 AND loc LIKE 'MAIL' AND loc_data NOT IN (SELECT messageId FROM messages WHERE senderId = -1);");
 			cleanCount += stmt.executeUpdate("DELETE FROM item_auction_bid WHERE item_auction_bid.playerObjId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM item_attributes WHERE item_attributes.itemId NOT IN (SELECT object_id FROM items);");
 			cleanCount += stmt.executeUpdate("DELETE FROM item_elementals WHERE item_elementals.itemId NOT IN (SELECT object_id FROM items);");
+			
+			// Misc
 			cleanCount += stmt.executeUpdate("DELETE FROM cursed_weapons WHERE cursed_weapons.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM heroes WHERE heroes.charId NOT IN (SELECT charId FROM characters);");
 			cleanCount += stmt.executeUpdate("DELETE FROM olympiad_nobles WHERE olympiad_nobles.charId NOT IN (SELECT charId FROM characters);");
@@ -277,13 +235,6 @@ public abstract class IdFactory
 			cleanCount += stmt.executeUpdate("DELETE FROM siege_clans WHERE siege_clans.clan_id NOT IN (SELECT clan_id FROM clan_data);");
 			cleanCount += stmt.executeUpdate("DELETE FROM clan_notices WHERE clan_notices.clan_id NOT IN (SELECT clan_id FROM clan_data);");
 			cleanCount += stmt.executeUpdate("DELETE FROM auction_bid WHERE auction_bid.bidderId NOT IN (SELECT clan_id FROM clan_data);");
-			// Untested, leaving commented out until confirmation that it's safe/works properly. Was
-			// initially removed because of a bug. Search for idfactory.java changes in the trac for
-			// further info.
-			// cleanCount +=
-			// stmt.executeUpdate("DELETE FROM auction WHERE auction.id IN (SELECT id FROM clanhall WHERE ownerId <> 0) AND auction.sellerId=0;");
-			// cleanCount +=
-			// stmt.executeUpdate("DELETE FROM auction_bid WHERE auctionId NOT IN (SELECT id FROM auction)");
 			
 			// Forum Related
 			cleanCount += stmt.executeUpdate("DELETE FROM forums WHERE forums.forum_owner_id NOT IN (SELECT clan_id FROM clan_data) AND forums.forum_parent=2;");
@@ -300,11 +251,11 @@ public abstract class IdFactory
 			stmt.executeUpdate("UPDATE clanhall SET ownerId=0, paidUntil=0, paid=0 WHERE clanhall.ownerId NOT IN (SELECT clan_id FROM clan_data);");
 			stmt.executeUpdate("UPDATE fort SET owner=0 WHERE owner NOT IN (SELECT clan_id FROM clan_data);");
 			
-			_log.info("Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " s");
+			LOGGER.info("Cleaned " + cleanCount + " elements from database in " + ((System.currentTimeMillis() - cleanupStart) / 1000) + " s");
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Could not clean up database: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not clean up database: " + e.getMessage(), e);
 		}
 	}
 	
@@ -315,11 +266,11 @@ public abstract class IdFactory
 		{
 			s.executeUpdate("DELETE FROM mods_wedding WHERE player1Id NOT IN (SELECT charId FROM characters)");
 			s.executeUpdate("DELETE FROM mods_wedding WHERE player2Id NOT IN (SELECT charId FROM characters)");
-			_log.info("Cleaned up invalid Weddings.");
+			LOGGER.info("Cleaned up invalid Weddings.");
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Could not clean up invalid Weddings: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not clean up invalid Weddings: " + e.getMessage(), e);
 		}
 	}
 	
@@ -336,7 +287,7 @@ public abstract class IdFactory
 					cleanCount += stmt.executeUpdate();
 				}
 			}
-			_log.info("Cleaned " + cleanCount + " expired timestamps from database.");
+			LOGGER.info("Cleaned " + cleanCount + " expired timestamps from database.");
 		}
 		catch (SQLException e)
 		{

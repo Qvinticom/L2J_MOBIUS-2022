@@ -910,9 +910,8 @@ public final class Config
 	public static int PVP_NORMAL_TIME;
 	public static int PVP_PVP_TIME;
 	
-	public static enum IdFactoryType
+	public enum IdFactoryType
 	{
-		Compaction,
 		BitSet,
 		Stack
 	}
