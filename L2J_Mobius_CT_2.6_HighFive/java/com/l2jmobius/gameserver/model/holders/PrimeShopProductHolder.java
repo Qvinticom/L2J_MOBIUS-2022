@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model;
+package com.l2jmobius.gameserver.model.holders;
 
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 /**
  * @author Mobius
  */
-public class ItemMallProduct
+public class PrimeShopProductHolder
 {
 	private final int _productId;
 	private final int _category;
@@ -33,7 +33,7 @@ public class ItemMallProduct
 	private final int _weight;
 	private final boolean _tradable;
 	
-	public ItemMallProduct(int productId, int category, int points, int item, int count)
+	public PrimeShopProductHolder(int productId, int category, int points, int item, int count)
 	{
 		_productId = productId;
 		_category = category;

@@ -33,13 +33,13 @@ public class ExBrGamePoint implements IClientOutgoingPacket
 	{
 		_playerObj = player.getObjectId();
 		
-		if (Config.GAME_POINT_ITEM_ID == -1)
+		if (Config.PRIME_SHOP_ITEM_ID == -1)
 		{
 			_points = player.getGamePoints();
 		}
 		else
 		{
-			_points = player.getInventory().getInventoryItemCount(Config.GAME_POINT_ITEM_ID, -1);
+			_points = player.getInventory().getInventoryItemCount(Config.PRIME_SHOP_ITEM_ID, -1);
 		}
 	}
 	

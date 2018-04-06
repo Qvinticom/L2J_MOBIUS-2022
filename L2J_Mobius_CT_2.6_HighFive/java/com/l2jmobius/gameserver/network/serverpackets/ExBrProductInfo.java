@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
-import com.l2jmobius.gameserver.model.ItemMallProduct;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBrProductInfo implements IClientOutgoingPacket
 {
-	private final ItemMallProduct _product;
+	private final PrimeShopProductHolder _product;
 	
 	public ExBrProductInfo(int id)
 	{
-		_product = ItemMallData.getInstance().getProduct(id);
+		_product = PrimeShopData.getInstance().getProduct(id);
 	}
 	
 	@Override

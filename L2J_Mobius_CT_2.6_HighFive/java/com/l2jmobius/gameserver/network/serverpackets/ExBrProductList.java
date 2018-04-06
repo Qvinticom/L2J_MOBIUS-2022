@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
-import com.l2jmobius.gameserver.model.ItemMallProduct;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
+import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBrProductList implements IClientOutgoingPacket
 {
-	private final Collection<ItemMallProduct> _itemList = ItemMallData.getInstance().getAllItems();
+	private final Collection<PrimeShopProductHolder> _itemList = PrimeShopData.getInstance().getAllItems();
 	
 	@Override
 	public boolean write(PacketWriter packet)
@@ -36,7 +36,7 @@ public class ExBrProductList implements IClientOutgoingPacket
 		OutgoingPackets.EX_BR_PRODUCT_LIST.writeId(packet);
 		packet.writeD(_itemList.size());
 		
-		for (ItemMallProduct product : _itemList)
+		for (PrimeShopProductHolder product : _itemList)
 		{
 			final int category = product.getCategory();
 			

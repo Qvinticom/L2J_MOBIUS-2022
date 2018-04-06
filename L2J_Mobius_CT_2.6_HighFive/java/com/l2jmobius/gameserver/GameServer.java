@@ -59,7 +59,7 @@ import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.data.xml.impl.HitConditionBonusData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
-import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.KarmaData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -210,7 +210,7 @@ public final class GameServer
 		FishingMonstersData.getInstance();
 		FishingRodsData.getInstance();
 		HennaData.getInstance();
-		ItemMallData.getInstance();
+		PrimeShopData.getInstance();
 		
 		printSection("Characters");
 		ClassListData.getInstance();

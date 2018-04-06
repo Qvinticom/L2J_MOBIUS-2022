@@ -23,10 +23,10 @@ import java.util.logging.Level;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.ExBrBuyProduct;
@@ -63,7 +63,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 			return;
 		}
 		
-		final ItemMallProduct product = ItemMallData.getInstance().getProduct(_productId);
+		final PrimeShopProductHolder product = PrimeShopData.getInstance().getProduct(_productId);
 		if (product == null)
 		{
 			player.sendPacket(new ExBrBuyProduct(ExBrBuyProduct.RESULT_WRONG_PRODUCT));
@@ -77,7 +77,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 			return;
 		}
 		
-		final long gamePointSize = Config.GAME_POINT_ITEM_ID == -1 ? player.getGamePoints() : player.getInventory().getInventoryItemCount(Config.GAME_POINT_ITEM_ID, -1);
+		final long gamePointSize = Config.PRIME_SHOP_ITEM_ID == -1 ? player.getGamePoints() : player.getInventory().getInventoryItemCount(Config.PRIME_SHOP_ITEM_ID, -1);
 		if (totalPoints > gamePointSize)
 		{
 			player.sendPacket(new ExBrBuyProduct(ExBrBuyProduct.RESULT_NOT_ENOUGH_POINTS));
@@ -101,13 +101,13 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		}
 		
 		// Pay for Item
-		if (Config.GAME_POINT_ITEM_ID == -1)
+		if (Config.PRIME_SHOP_ITEM_ID == -1)
 		{
 			player.setGamePoints(player.getGamePoints() - totalPoints);
 		}
 		else
 		{
-			player.getInventory().destroyItemByItemId("Buy Product" + _productId, Config.GAME_POINT_ITEM_ID, totalPoints, player, null);
+			player.getInventory().destroyItemByItemId("Buy Product" + _productId, Config.PRIME_SHOP_ITEM_ID, totalPoints, player, null);
 		}
 		
 		// Buy Item

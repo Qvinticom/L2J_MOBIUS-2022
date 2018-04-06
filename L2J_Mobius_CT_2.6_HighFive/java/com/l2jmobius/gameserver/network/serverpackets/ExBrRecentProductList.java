@@ -25,9 +25,9 @@ import java.util.logging.Level;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.ItemMallData;
-import com.l2jmobius.gameserver.model.ItemMallProduct;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExBrRecentProductList implements IClientOutgoingPacket
 {
-	private final List<ItemMallProduct> _itemList = new ArrayList<>();
+	private final List<PrimeShopProductHolder> _itemList = new ArrayList<>();
 	
 	public ExBrRecentProductList(L2PcInstance player)
 	{
@@ -49,7 +49,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 			{
 				while (rset.next())
 				{
-					final ItemMallProduct product = ItemMallData.getInstance().getProduct(rset.getInt("productId"));
+					final PrimeShopProductHolder product = PrimeShopData.getInstance().getProduct(rset.getInt("productId"));
 					if ((product != null) && !_itemList.contains(product))
 					{
 						_itemList.add(product);
@@ -74,7 +74,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 		OutgoingPackets.EX_BR_RECENT_PRODUCT_LIST.writeId(packet);
 		packet.writeD(_itemList.size());
 		
-		for (ItemMallProduct product : _itemList)
+		for (PrimeShopProductHolder product : _itemList)
 		{
 			packet.writeD(product.getProductId());
 			packet.writeH(product.getCategory());

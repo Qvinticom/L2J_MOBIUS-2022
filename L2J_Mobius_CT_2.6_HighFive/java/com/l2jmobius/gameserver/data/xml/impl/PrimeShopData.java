@@ -28,18 +28,18 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.ItemMallProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.holders.PrimeShopProductHolder;
 
 /**
  * @author Mobius
  */
-public class ItemMallData implements IGameXmlReader
+public class PrimeShopData implements IGameXmlReader
 {
-	private static final Logger _log = Logger.getLogger(ItemMallData.class.getName());
-	private final Map<Integer, ItemMallProduct> _mallList = new HashMap<>();
+	private static final Logger LOGGER = Logger.getLogger(PrimeShopData.class.getName());
+	private final Map<Integer, PrimeShopProductHolder> _products = new HashMap<>();
 	
-	protected ItemMallData()
+	protected PrimeShopData()
 	{
 		load();
 	}
@@ -47,14 +47,14 @@ public class ItemMallData implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		_mallList.clear();
+		_products.clear();
 		
-		if (!Config.ENABLE_ITEM_MALL)
+		if (!Config.ENABLE_PRIME_SHOP)
 		{
 			return;
 		}
 		
-		parseDatapackFile("data/ItemMall.xml");
+		parseDatapackFile("data/PrimeShop.xml");
 	}
 	
 	@Override
@@ -78,33 +78,33 @@ public class ItemMallData implements IGameXmlReader
 							att = attrs.item(i);
 							set.set(att.getNodeName(), att.getNodeValue());
 						}
-						final ItemMallProduct product = new ItemMallProduct(set.getInt("id"), set.getInt("category"), set.getInt("points"), set.getInt("item"), set.getInt("count"));
-						_mallList.put(set.getInt("id"), product);
+						final PrimeShopProductHolder product = new PrimeShopProductHolder(set.getInt("id"), set.getInt("category"), set.getInt("points"), set.getInt("item"), set.getInt("count"));
+						_products.put(set.getInt("id"), product);
 					}
 				}
 			}
 		}
 		
-		_log.info(getClass().getSimpleName() + ": Loaded " + _mallList.size() + " products.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _products.size() + " products.");
 	}
 	
-	public Collection<ItemMallProduct> getAllItems()
+	public Collection<PrimeShopProductHolder> getAllItems()
 	{
-		return _mallList.values();
+		return _products.values();
 	}
 	
-	public ItemMallProduct getProduct(int id)
+	public PrimeShopProductHolder getProduct(int id)
 	{
-		return _mallList.get(id);
+		return _products.get(id);
 	}
 	
-	public static ItemMallData getInstance()
+	public static PrimeShopData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ItemMallData _instance = new ItemMallData();
+		protected static final PrimeShopData _instance = new PrimeShopData();
 	}
 }
