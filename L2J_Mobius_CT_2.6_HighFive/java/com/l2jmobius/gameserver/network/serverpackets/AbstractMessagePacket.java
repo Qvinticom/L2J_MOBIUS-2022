@@ -474,7 +474,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	
 	public final T getLocalizedMessage(String lang)
 	{
-		if (!Config.L2JMOD_MULTILANG_SM_ENABLE || (getSystemMessageId() == SystemMessageId.S1))
+		if (!Config.MULTILANG_SM_ENABLE || (getSystemMessageId() == SystemMessageId.S1))
 		{
 			return (T) this;
 		}

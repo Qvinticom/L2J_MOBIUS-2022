@@ -634,12 +634,12 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			((L2Attackable) npc).setChampion(false);
 		}
 		
-		if (Config.L2JMOD_CHAMPION_ENABLE)
+		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
-			if (npc.isMonster() && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (npc.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (npc.isMonster() && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
-				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
+				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 				{
 					((L2Attackable) npc).setChampion(true);
 				}

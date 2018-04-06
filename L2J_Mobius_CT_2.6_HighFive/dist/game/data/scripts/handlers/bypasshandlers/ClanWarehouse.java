@@ -73,7 +73,7 @@ public class ClanWarehouse implements IBypassHandler
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawC
 			{
-				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_CLAN)
+				if (Config.ENABLE_WAREHOUSESORTING_CLAN)
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 					msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/WhSortedC.htm");

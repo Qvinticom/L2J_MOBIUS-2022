@@ -56,7 +56,7 @@ public final class AntiFeedManager
 	 */
 	public final boolean check(L2Character attacker, L2Character target)
 	{
-		if (!Config.L2JMOD_ANTIFEED_ENABLE)
+		if (!Config.ANTIFEED_ENABLE)
 		{
 			return true;
 		}
@@ -78,15 +78,15 @@ public final class AntiFeedManager
 			return false;
 		}
 		
-		if ((Config.L2JMOD_ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()))
+		if ((Config.ANTIFEED_INTERVAL > 0) && _lastDeathTimes.containsKey(targetPlayer.getObjectId()))
 		{
-			if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.L2JMOD_ANTIFEED_INTERVAL)
+			if ((System.currentTimeMillis() - _lastDeathTimes.get(targetPlayer.getObjectId())) < Config.ANTIFEED_INTERVAL)
 			{
 				return false;
 			}
 		}
 		
-		if (Config.L2JMOD_ANTIFEED_DUALBOX && (attacker != null))
+		if (Config.ANTIFEED_DUALBOX && (attacker != null))
 		{
 			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
 			if (attackerPlayer == null)
@@ -99,7 +99,7 @@ public final class AntiFeedManager
 			if ((targetClient == null) || (attackerClient == null) || targetClient.isDetached() || attackerClient.isDetached())
 			{
 				// unable to check ip address
-				return !Config.L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX;
+				return !Config.ANTIFEED_DISCONNECTED_AS_DUALBOX;
 			}
 			
 			return !targetClient.getConnectionAddress().equals(attackerClient.getConnectionAddress());
@@ -161,7 +161,7 @@ public final class AntiFeedManager
 		
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
 		
-		if ((connectionCount.get() + 1) <= (max + Config.L2JMOD_DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
+		if ((connectionCount.get() + 1) <= (max + Config.DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
 		{
 			connectionCount.incrementAndGet();
 			return true;
@@ -265,9 +265,9 @@ public final class AntiFeedManager
 		
 		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
 		int limit = max;
-		if (Config.L2JMOD_DUALBOX_CHECK_WHITELIST.containsKey(addrHash))
+		if (Config.DUALBOX_CHECK_WHITELIST.containsKey(addrHash))
 		{
-			limit += Config.L2JMOD_DUALBOX_CHECK_WHITELIST.get(addrHash);
+			limit += Config.DUALBOX_CHECK_WHITELIST.get(addrHash);
 		}
 		return limit;
 	}

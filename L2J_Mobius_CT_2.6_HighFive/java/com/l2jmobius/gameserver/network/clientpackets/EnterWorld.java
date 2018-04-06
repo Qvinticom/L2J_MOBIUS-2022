@@ -399,7 +399,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		
 		// Wedding Checks
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.ALLOW_WEDDING)
 		{
 			engage(activeChar);
 			notifyPartner(activeChar, activeChar.getPartnerId());

@@ -166,6 +166,65 @@ public final class CharacterCreate implements IClientIncomingPacket
 				return;
 			}
 			
+			// Custom Feature: Disallow a race to be created.
+			// Example: Humans can not be created if AllowHuman = False in Custom.properties
+			switch (template.getRace())
+			{
+				case HUMAN:
+				{
+					if (!Config.ALLOW_HUMAN)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+				case ELF:
+				{
+					if (!Config.ALLOW_ELF)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+				case DARK_ELF:
+				{
+					if (!Config.ALLOW_DARKELF)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+				case ORC:
+				{
+					if (!Config.ALLOW_ORC)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+				case DWARF:
+				{
+					if (!Config.ALLOW_DWARF)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+				case KAMAEL:
+				{
+					if (!Config.ALLOW_KAMAEL)
+					{
+						client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+						return;
+					}
+					break;
+				}
+			}
 			newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
@@ -174,9 +233,9 @@ public final class CharacterCreate implements IClientIncomingPacket
 		newChar.setCurrentMp(newChar.getMaxMp());
 		// newChar.setMaxLoad(template.getBaseLoad());
 		
-		initNewChar(client, newChar);
-		
 		client.sendPacket(CharCreateOk.STATIC_PACKET);
+		
+		initNewChar(client, newChar);
 		
 		final LogRecord record = new LogRecord(Level.INFO, "Created new character.");
 		record.setParameters(new Object[]

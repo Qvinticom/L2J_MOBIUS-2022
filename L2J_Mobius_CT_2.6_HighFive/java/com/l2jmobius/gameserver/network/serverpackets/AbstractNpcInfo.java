@@ -100,9 +100,9 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			{
 				_title = "Invisible";
 			}
-			else if (Config.L2JMOD_CHAMPION_ENABLE && cha.isChampion())
+			else if (Config.CHAMPION_ENABLE && cha.isChampion())
 			{
-				_title = (Config.L2JMOD_CHAMP_TITLE); // On every subclass
+				_title = (Config.CHAMP_TITLE); // On every subclass
 			}
 			else if (cha.getTemplate().isUsingServerSideTitle())
 			{

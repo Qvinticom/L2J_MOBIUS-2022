@@ -57,7 +57,7 @@ public class PrivateWarehouse implements IBypassHandler
 		{
 			if (command.toLowerCase().startsWith(COMMANDS[0])) // WithdrawP
 			{
-				if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE)
+				if (Config.ENABLE_WAREHOUSESORTING_PRIVATE)
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
 					msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/WhSortedP.htm");

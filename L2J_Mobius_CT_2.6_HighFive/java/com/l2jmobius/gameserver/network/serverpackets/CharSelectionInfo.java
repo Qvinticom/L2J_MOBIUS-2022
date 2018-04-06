@@ -272,12 +272,12 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		charInfopackage.setY(chardata.getInt("y"));
 		charInfopackage.setZ(chardata.getInt("z"));
 		
-		if (Config.L2JMOD_MULTILANG_ENABLE)
+		if (Config.MULTILANG_ENABLE)
 		{
 			String lang = chardata.getString("language");
-			if (!Config.L2JMOD_MULTILANG_ALLOWED.contains(lang))
+			if (!Config.MULTILANG_ALLOWED.contains(lang))
 			{
-				lang = Config.L2JMOD_MULTILANG_DEFAULT;
+				lang = Config.MULTILANG_DEFAULT;
 			}
 			charInfopackage.setHtmlPrefix("data/lang/" + lang + "/");
 		}

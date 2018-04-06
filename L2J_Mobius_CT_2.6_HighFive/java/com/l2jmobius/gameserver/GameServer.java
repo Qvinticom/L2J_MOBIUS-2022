@@ -339,7 +339,7 @@ public final class GameServer
 		
 		LOGGER.info("AutoSpawnHandler: Loaded " + AutoSpawnHandler.getInstance().size() + " handlers in total.");
 		
-		if (Config.L2JMOD_ALLOW_WEDDING)
+		if (Config.ALLOW_WEDDING)
 		{
 			CoupleManager.getInstance();
 		}

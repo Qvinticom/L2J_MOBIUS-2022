@@ -138,7 +138,7 @@ public abstract class IdFactory
 		setAllCharacterOffline();
 		if (Config.DATABASE_CLEAN_UP)
 		{
-			if (Config.L2JMOD_ALLOW_WEDDING)
+			if (Config.ALLOW_WEDDING)
 			{
 				cleanInvalidWeddings();
 			}

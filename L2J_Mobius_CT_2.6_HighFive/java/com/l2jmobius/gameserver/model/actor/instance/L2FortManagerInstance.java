@@ -242,7 +242,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 					}
 					else if (val.equalsIgnoreCase("withdraw"))
 					{
-						if (Config.L2JMOD_ENABLE_WAREHOUSESORTING_CLAN)
+						if (Config.ENABLE_WAREHOUSESORTING_CLAN)
 						{
 							final String htmFile = "data/html/mods/WhSortedC.htm";
 							final String htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmFile);

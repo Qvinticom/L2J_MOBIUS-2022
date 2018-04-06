@@ -132,7 +132,7 @@ public final class HellboundLoader
 				{
 					AdminCommandHandler.getInstance().registerHandler((IAdminCommandHandler) instance);
 				}
-				else if (Config.L2JMOD_HELLBOUND_STATUS && (instance instanceof IVoicedCommandHandler))
+				else if (Config.HELLBOUND_STATUS && (instance instanceof IVoicedCommandHandler))
 				{
 					VoicedCommandHandler.getInstance().registerHandler((IVoicedCommandHandler) instance);
 				}

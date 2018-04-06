@@ -69,7 +69,7 @@ public final class DlgAnswer implements IClientIncomingPacket
 		{
 			if (activeChar.removeAction(PlayerAction.USER_ENGAGE))
 			{
-				if (Config.L2JMOD_ALLOW_WEDDING)
+				if (Config.ALLOW_WEDDING)
 				{
 					activeChar.engageAnswer(_answer);
 				}

@@ -277,9 +277,9 @@ public class CharStat
 	public double getMAtk(L2Character target, Skill skill)
 	{
 		float bonusAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
+		if (Config.CHAMPION_ENABLE && _activeChar.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
+			bonusAtk = Config.CHAMPION_ATK;
 		}
 		if (_activeChar.isRaid())
 		{
@@ -296,9 +296,9 @@ public class CharStat
 	public int getMAtkSpd()
 	{
 		float bonusSpdAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
+		if (Config.CHAMPION_ENABLE && _activeChar.isChampion())
 		{
-			bonusSpdAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
+			bonusSpdAtk = Config.CHAMPION_SPD_ATK;
 		}
 		
 		double val = calcStat(Stats.MAGIC_ATTACK_SPEED, _activeChar.getTemplate().getBaseMAtkSpd() * bonusSpdAtk);
@@ -504,9 +504,9 @@ public class CharStat
 	public double getPAtk(L2Character target)
 	{
 		float bonusAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
+		if (Config.CHAMPION_ENABLE && _activeChar.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_ATK;
+			bonusAtk = Config.CHAMPION_ATK;
 		}
 		if (_activeChar.isRaid())
 		{
@@ -521,9 +521,9 @@ public class CharStat
 	public double getPAtkSpd()
 	{
 		float bonusAtk = 1;
-		if (Config.L2JMOD_CHAMPION_ENABLE && _activeChar.isChampion())
+		if (Config.CHAMPION_ENABLE && _activeChar.isChampion())
 		{
-			bonusAtk = Config.L2JMOD_CHAMPION_SPD_ATK;
+			bonusAtk = Config.CHAMPION_SPD_ATK;
 		}
 		return Math.round(calcStat(Stats.POWER_ATTACK_SPEED, _activeChar.getTemplate().getBasePAtkSpd() * bonusAtk, null, null));
 	}

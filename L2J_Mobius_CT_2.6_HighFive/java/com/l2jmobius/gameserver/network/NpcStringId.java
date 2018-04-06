@@ -17876,13 +17876,13 @@ public final class NpcStringId
 			}
 		}
 		
-		if (!Config.L2JMOD_MULTILANG_NS_ENABLE)
+		if (!Config.MULTILANG_NS_ENABLE)
 		{
 			_log.log(Level.INFO, "NpcStringId: MultiLanguage disabled.");
 			return;
 		}
 		
-		final List<String> languages = Config.L2JMOD_MULTILANG_NS_ALLOWED;
+		final List<String> languages = Config.MULTILANG_NS_ALLOWED;
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);

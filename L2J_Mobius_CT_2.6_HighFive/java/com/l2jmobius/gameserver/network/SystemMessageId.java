@@ -9834,13 +9834,13 @@ public final class SystemMessageId
 			}
 		}
 		
-		if (!Config.L2JMOD_MULTILANG_SM_ENABLE)
+		if (!Config.MULTILANG_SM_ENABLE)
 		{
 			_log.log(Level.INFO, "SystemMessageId: MultiLanguage disabled.");
 			return;
 		}
 		
-		final List<String> languages = Config.L2JMOD_MULTILANG_SM_ALLOWED;
+		final List<String> languages = Config.MULTILANG_SM_ALLOWED;
 		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
