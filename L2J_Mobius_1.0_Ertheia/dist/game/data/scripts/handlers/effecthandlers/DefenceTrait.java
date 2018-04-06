@@ -78,7 +78,7 @@ public final class DefenceTrait extends AbstractEffect
 				{
 					if (charStat.getDefenceTraitsCount()[trait.getKey().ordinal()] == 0)
 					{
-						return;
+						continue;
 					}
 					
 					charStat.getDefenceTraits()[trait.getKey().ordinal()] /= trait.getValue();
@@ -88,7 +88,7 @@ public final class DefenceTrait extends AbstractEffect
 				{
 					if (charStat.getTraitsInvul()[trait.getKey().ordinal()] == 0)
 					{
-						return;
+						continue;
 					}
 					
 					charStat.getTraitsInvul()[trait.getKey().ordinal()]--;

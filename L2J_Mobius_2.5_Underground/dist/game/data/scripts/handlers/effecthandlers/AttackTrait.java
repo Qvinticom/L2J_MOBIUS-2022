@@ -59,7 +59,7 @@ public final class AttackTrait extends AbstractEffect
 			{
 				if (charStat.getAttackTraitsCount()[trait.getKey().ordinal()] == 0)
 				{
-					return;
+					continue;
 				}
 				
 				charStat.getAttackTraits()[trait.getKey().ordinal()] /= trait.getValue();
