@@ -23,7 +23,6 @@ import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
@@ -545,10 +544,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				spawn = new L2Spawn(target.getTemplate().getId());
-				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
-				{
-					spawn.setCustom(true);
-				}
 				spawn.setX(activeChar.getX());
 				spawn.setY(activeChar.getY());
 				spawn.setZ(activeChar.getZ());
@@ -590,10 +585,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final L2Spawn spawnDat = new L2Spawn(target.getId());
-				if (Config.SAVE_GMSPAWN_ON_CUSTOM)
-				{
-					spawn.setCustom(true);
-				}
 				spawnDat.setX(activeChar.getX());
 				spawnDat.setY(activeChar.getY());
 				spawnDat.setZ(activeChar.getZ());

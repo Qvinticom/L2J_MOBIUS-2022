@@ -30,3 +30,4 @@ What is done
 -New ThreadPool
 -New XML reader
 -Replaced MMOCore with Netty
+-Dropped SQL spawnlist

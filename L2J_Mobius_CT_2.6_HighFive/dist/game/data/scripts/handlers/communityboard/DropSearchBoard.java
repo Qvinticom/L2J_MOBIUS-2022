@@ -286,7 +286,7 @@ public class DropSearchBoard implements IParseBoardHandler
 			case "_bbs_npc_trace":
 			{
 				int npcId = Integer.parseInt(params[1]);
-				L2Spawn spawn = SpawnTable.getInstance().findAny(npcId);
+				L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn == null)
 				{
 					player.sendMessage("Cannot find any spawn. Maybe dropped by a boss or instance monster.");

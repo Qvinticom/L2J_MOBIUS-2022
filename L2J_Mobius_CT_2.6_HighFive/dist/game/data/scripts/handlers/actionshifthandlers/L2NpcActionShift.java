@@ -19,6 +19,7 @@ package handlers.actionshifthandlers;
 import java.util.Set;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.IActionShiftHandler;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
@@ -134,15 +135,19 @@ public class L2NpcActionShift implements IActionShiftHandler
 				}
 				else if (((L2Npc) target).getSpawn().hasRespawnRandom())
 				{
-					html.replace("%resp%", ((L2Npc) target).getSpawn().getRespawnMinDelay() / 1000 + "-" + (((L2Npc) target).getSpawn().getRespawnMaxDelay() / 1000) + " sec");
+					html.replace("%resp%", (((L2Npc) target).getSpawn().getRespawnMinDelay() / 1000) + "-" + (((L2Npc) target).getSpawn().getRespawnMaxDelay() / 1000) + " sec");
 				}
 				else
 				{
-					html.replace("%resp%", ((L2Npc) target).getSpawn().getRespawnMinDelay() / 1000 + " sec");
+					html.replace("%resp%", (((L2Npc) target).getSpawn().getRespawnMinDelay() / 1000) + " sec");
 				}
+				
+				final String spawnFile = SpawnTable.getInstance().getSpawnFile(((L2Npc) target).getSpawn().getNpcSpawnTemplateId());
+				html.replace("%spawnfile%", spawnFile.substring(spawnFile.lastIndexOf("\\") + 1));
 			}
 			else
 			{
+				html.replace("%spawnfile%", "<font color=FF0000>--</font>");
 				html.replace("%territory%", "<font color=FF0000>--</font>");
 				html.replace("%spawntype%", "<font color=FF0000>--</font>");
 				html.replace("%spawn%", "<font color=FF0000>null</font>");

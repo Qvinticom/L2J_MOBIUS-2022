@@ -267,6 +267,6 @@ public final class Q00604_DaimonTheWhiteEyedPart2 extends Quest
 	
 	private static boolean isDaimonSpawned()
 	{
-		return SpawnTable.getInstance().findAny(DAIMON_THE_WHITE_EYED) != null;
+		return SpawnTable.getInstance().getAnySpawn(DAIMON_THE_WHITE_EYED) != null;
 	}
 }

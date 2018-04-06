@@ -78,12 +78,11 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private Constructor<? extends L2Npc> _constructor;
 	/** If True a L2NpcInstance is respawned each time that another is killed */
 	private boolean _doRespawn;
-	/** If true then spawn is custom */
-	private boolean _customSpawn;
 	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private Map<Integer, Location> _lastSpawnPoints;
 	private boolean _isNoRndWalk = false; // Is no random walk
+	private int _spawnTemplateId = 0;
 	
 	/** The task launching the function doSpawn() */
 	class SpawnTask implements Runnable
@@ -390,23 +389,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * Set the spawn as custom.<BR>
-	 * @param custom
-	 */
-	public void setCustom(boolean custom)
-	{
-		_customSpawn = custom;
-	}
-	
-	/**
-	 * @return type of spawn.
-	 */
-	public boolean isCustom()
-	{
-		return _customSpawn;
-	}
-	
-	/**
 	 * Decrease the current number of L2NpcInstance of this L2Spawn and if necessary create a SpawnTask to launch after the respawn Delay. <B><U> Actions</U> :</B>
 	 * <li>Decrease the current number of L2NpcInstance of this L2Spawn</li>
 	 * <li>Check if respawn is possible to prevent multiple respawning caused by lag</li>
@@ -556,10 +538,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * @param mob
+	 * @param npc
 	 * @return
 	 */
-	private L2Npc initializeNpcInstance(L2Npc mob)
+	private L2Npc initializeNpcInstance(L2Npc npc)
 	{
 		int newlocx = 0;
 		int newlocy = 0;
@@ -579,7 +561,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			if (getLocationId() == 0)
 			{
-				return mob;
+				return npc;
 			}
 			
 			// Calculate the random position in the location area
@@ -607,8 +589,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 			
-			final boolean isQuestMonster = (mob.getTitle() != null) && mob.getTitle().contains("Quest");
-			if (mob.isMonster() && !isQuestMonster && !mob.isWalker() && !mob.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(mob.getId()))
+			final boolean isQuestMonster = (npc.getTitle() != null) && npc.getTitle().contains("Quest");
+			if (npc.isMonster() && !isQuestMonster && !npc.isWalker() && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, getInstanceId()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId()))
 			{
 				newlocx = randX;
 				newlocy = randY;
@@ -622,69 +604,69 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		// newlocz = GeoEngine.getInstance().getHeight(newlocx, newlocy, newlocz);
 		// }
 		
-		mob.stopAllEffects();
+		npc.stopAllEffects();
 		
-		mob.setIsDead(false);
+		npc.setIsDead(false);
 		// Reset decay info
-		mob.setDecayed(false);
+		npc.setDecayed(false);
 		// Set the HP and MP of the L2NpcInstance to the max
-		mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
+		npc.setCurrentHpMp(npc.getMaxHp(), npc.getMaxMp());
 		// Clear script variables
-		if (mob.hasVariables())
+		if (npc.hasVariables())
 		{
-			mob.getVariables().getSet().clear();
+			npc.getVariables().getSet().clear();
 		}
 		// Set is not random walk default value
-		mob.setIsNoRndWalk(isNoRndWalk());
+		npc.setIsNoRndWalk(isNoRndWalk());
 		
 		// Set the heading of the L2NpcInstance (random heading if not defined)
 		if (getHeading() == -1)
 		{
-			mob.setHeading(Rnd.nextInt(61794));
+			npc.setHeading(Rnd.nextInt(61794));
 		}
 		else
 		{
-			mob.setHeading(getHeading());
+			npc.setHeading(getHeading());
 		}
 		
-		if (mob instanceof L2Attackable)
+		if (npc instanceof L2Attackable)
 		{
-			((L2Attackable) mob).setChampion(false);
+			((L2Attackable) npc).setChampion(false);
 		}
 		
 		if (Config.L2JMOD_CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
-			if (mob.isMonster() && !getTemplate().isUndying() && !mob.isRaid() && !mob.isRaidMinion() && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (mob.getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (mob.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
+			if (npc.isMonster() && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.L2JMOD_CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.L2JMOD_CHAMP_MIN_LVL) && (npc.getLevel() <= Config.L2JMOD_CHAMP_MAX_LVL) && (Config.L2JMOD_CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
 				if (Rnd.get(100) < Config.L2JMOD_CHAMPION_FREQUENCY)
 				{
-					((L2Attackable) mob).setChampion(true);
+					((L2Attackable) npc).setChampion(true);
 				}
 			}
 		}
 		
 		// Reset summoner
-		mob.setSummoner(null);
+		npc.setSummoner(null);
 		// Reset summoned list
-		mob.resetSummonedNpcs();
+		npc.resetSummonedNpcs();
 		// Link the L2NpcInstance to this L2Spawn
-		mob.setSpawn(this);
+		npc.setSpawn(this);
 		
 		// Spawn NPC
-		mob.spawnMe(newlocx, newlocy, newlocz);
+		npc.spawnMe(newlocx, newlocy, newlocz);
 		
-		notifyNpcSpawned(mob);
+		notifyNpcSpawned(npc);
 		
-		_spawnedNpcs.add(mob);
+		_spawnedNpcs.add(npc);
 		if (_lastSpawnPoints != null)
 		{
-			_lastSpawnPoints.put(mob.getObjectId(), new Location(newlocx, newlocy, newlocz));
+			_lastSpawnPoints.put(npc.getObjectId(), new Location(newlocx, newlocy, newlocz));
 		}
 		
 		// Increase the current number of L2NpcInstance managed by this L2Spawn
 		_currentCount++;
-		return mob;
+		return npc;
 	}
 	
 	public static void addSpawnListener(SpawnListener listener)
@@ -799,6 +781,16 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public final void setIsNoRndWalk(boolean value)
 	{
 		_isNoRndWalk = value;
+	}
+	
+	public void setSpawnTemplateId(int npcSpawnTemplateId)
+	{
+		_spawnTemplateId = npcSpawnTemplateId;
+	}
+	
+	public int getNpcSpawnTemplateId()
+	{
+		return _spawnTemplateId;
 	}
 	
 	@Override

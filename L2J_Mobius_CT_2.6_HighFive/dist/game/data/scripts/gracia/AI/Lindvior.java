@@ -93,9 +93,9 @@ public class Lindvior extends AbstractNpcAI
 			}
 			case "start":
 			{
-				_lindviorCamera = SpawnTable.getInstance().findAny(LINDVIOR_CAMERA).getLastSpawn();
-				_tomaris = SpawnTable.getInstance().findAny(TOMARIS).getLastSpawn();
-				_artius = SpawnTable.getInstance().findAny(ARTIUS).getLastSpawn();
+				_lindviorCamera = SpawnTable.getInstance().getAnySpawn(LINDVIOR_CAMERA).getLastSpawn();
+				_tomaris = SpawnTable.getInstance().getAnySpawn(TOMARIS).getLastSpawn();
+				_artius = SpawnTable.getInstance().getAnySpawn(ARTIUS).getLastSpawn();
 				startQuestTimer("tomaris_shout1", 1000, _tomaris, null);
 				startQuestTimer("artius_shout", 60000, _artius, null);
 				startQuestTimer("tomaris_shout2", 90000, _tomaris, null);

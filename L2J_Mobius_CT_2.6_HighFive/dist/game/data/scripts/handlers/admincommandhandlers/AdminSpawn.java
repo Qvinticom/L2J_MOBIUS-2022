@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -417,10 +416,6 @@ public class AdminSpawn implements IAdminCommandHandler
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(template);
-			if (Config.SAVE_GMSPAWN_ON_CUSTOM)
-			{
-				spawn.setCustom(true);
-			}
 			spawn.setX(target.getX());
 			spawn.setY(target.getY());
 			spawn.setZ(target.getZ());

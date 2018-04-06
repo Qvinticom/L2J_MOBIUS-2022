@@ -16,14 +16,15 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
@@ -35,50 +36,36 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 /**
  * Spawn data retriever.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class SpawnTable implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(SpawnTable.class.getName());
-	// SQL
-	private static final String SELECT_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM spawnlist";
-	private static final String SELECT_CUSTOM_SPAWNS = "SELECT count, npc_templateid, locx, locy, locz, heading, respawn_delay, respawn_random, loc_id, periodOfDay FROM custom_spawnlist";
-	
+	private static final String OTHER_XML_FOLDER = "data/spawns/Others";
 	private static final Map<Integer, Set<L2Spawn>> _spawnTable = new ConcurrentHashMap<>();
+	private static final Map<Integer, String> _spawnTemplates = new HashMap<>();
+	private int _spanwCount = 0;
 	
-	private int _xmlSpawnCount = 0;
-	
-	/**
-	 * Wrapper to load all spawns.
-	 */
 	@Override
 	public void load()
 	{
+		_spawnTemplates.put(0, "None");
 		if (!Config.ALT_DEV_NO_SPAWNS)
 		{
-			fillSpawnTable(false);
-			final int spawnCount = _spawnTable.size();
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + spawnCount + " npc spawns.");
-			if (Config.CUSTOM_SPAWNLIST_TABLE)
-			{
-				fillSpawnTable(true);
-				LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_spawnTable.size() - spawnCount) + " custom npc spawns.");
-			}
-			
-			// Load XML list
-			parseDatapackDirectory("data/spawns", false);
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _xmlSpawnCount + " npc spawns from XML.");
+			LOGGER.info(getClass().getSimpleName() + ": Initializing spawns...");
+			parseDatapackDirectory("data/spawns", true);
+			LOGGER.info(getClass().getSimpleName() + ": " + _spanwCount + " spawns have been initialized!");
 		}
 	}
 	
@@ -179,6 +166,13 @@ public final class SpawnTable implements IGameXmlReader
 							{
 								// mandatory
 								final int templateId = parseInteger(attrs, "id");
+								
+								// avoid spawning unwanted spawns
+								if (!checkTemplate(templateId))
+								{
+									continue;
+								}
+								
 								// coordinates are optional, if territory is specified; mandatory otherwise
 								int x = 0;
 								int y = 0;
@@ -239,58 +233,15 @@ public final class SpawnTable implements IGameXmlReader
 									}
 								}
 								
-								_xmlSpawnCount += addSpawn(spawnInfo, map);
+								spawnInfo.set("fileName", f.getPath());
+								
+								_spanwCount += addSpawn(spawnInfo, map);
 							}
 						}
 					}
 				}
 			}
 		}
-	}
-	
-	/**
-	 * Retrieves spawn data from database.
-	 * @param isCustom if {@code true} the spawns are loaded as custom from custom spawn table
-	 * @return the spawn count
-	 */
-	private int fillSpawnTable(boolean isCustom)
-	{
-		int npcSpawnCount = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			Statement s = con.createStatement();
-			ResultSet rs = s.executeQuery(isCustom ? SELECT_CUSTOM_SPAWNS : SELECT_SPAWNS))
-		{
-			while (rs.next())
-			{
-				final StatsSet spawnInfo = new StatsSet();
-				final int npcId = rs.getInt("npc_templateid");
-				
-				// Check basic requirements first
-				if (!checkTemplate(npcId))
-				{
-					// Don't spawn
-					continue;
-				}
-				
-				spawnInfo.set("npcTemplateid", npcId);
-				spawnInfo.set("count", rs.getInt("count"));
-				spawnInfo.set("x", rs.getInt("locx"));
-				spawnInfo.set("y", rs.getInt("locy"));
-				spawnInfo.set("z", rs.getInt("locz"));
-				spawnInfo.set("heading", rs.getInt("heading"));
-				spawnInfo.set("respawnDelay", rs.getInt("respawn_delay"));
-				spawnInfo.set("respawnRandom", rs.getInt("respawn_random"));
-				spawnInfo.set("locId", rs.getInt("loc_id"));
-				spawnInfo.set("periodOfDay", rs.getInt("periodOfDay"));
-				spawnInfo.set("isCustomSpawn", isCustom);
-				npcSpawnCount += addSpawn(spawnInfo);
-			}
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Spawn could not be initialized: " + e.getMessage(), e);
-		}
-		return npcSpawnCount;
 	}
 	
 	/**
@@ -315,7 +266,6 @@ public final class SpawnTable implements IGameXmlReader
 			spawnDat.setLocationId(spawnInfo.getInt("locId", 0));
 			final String territoryName = spawnInfo.getString("territoryName", "");
 			final String spawnName = spawnInfo.getString("spawnName", "");
-			spawnDat.setCustom(spawnInfo.getBoolean("isCustomSpawn", false));
 			if (!spawnName.isEmpty())
 			{
 				spawnDat.setName(spawnName);
@@ -347,6 +297,25 @@ public final class SpawnTable implements IGameXmlReader
 				}
 			}
 			
+			final String fileName = spawnInfo.getString("fileName", "None");
+			if (_spawnTemplates.values().contains(fileName))
+			{
+				for (Entry<Integer, String> entry : _spawnTemplates.entrySet())
+				{
+					if (entry.getValue().equals(fileName))
+					{
+						spawnDat.setSpawnTemplateId(entry.getKey());
+						break;
+					}
+				}
+			}
+			else
+			{
+				final int newId = _spawnTemplates.size();
+				_spawnTemplates.put(newId, fileName);
+				spawnDat.setSpawnTemplateId(newId);
+			}
+			
 			addSpawn(spawnDat);
 		}
 		catch (Exception e)
@@ -356,16 +325,6 @@ public final class SpawnTable implements IGameXmlReader
 		}
 		
 		return ret;
-	}
-	
-	/**
-	 * Wrapper for {@link #addSpawn(StatsSet, Map)}.
-	 * @param spawnInfo StatsSet of spawn parameters
-	 * @return count NPC instances, spawned by this spawn
-	 */
-	private int addSpawn(StatsSet spawnInfo)
-	{
-		return addSpawn(spawnInfo, null);
 	}
 	
 	/**
@@ -398,11 +357,11 @@ public final class SpawnTable implements IGameXmlReader
 	}
 	
 	/**
-	 * Finds a spawn for the given NPC ID.
+	 * Gets a spawn for the given NPC ID.
 	 * @param npcId the NPC Id
 	 * @return a spawn for the given NPC ID or {@code null}
 	 */
-	public L2Spawn findAny(int npcId)
+	public L2Spawn getAnySpawn(int npcId)
 	{
 		return getSpawns(npcId).stream().findFirst().orElse(null);
 	}
@@ -410,32 +369,93 @@ public final class SpawnTable implements IGameXmlReader
 	/**
 	 * Adds a new spawn to the spawn table.
 	 * @param spawn the spawn to add
-	 * @param storeInDb if {@code true} it'll be saved in the database
+	 * @param store if {@code true} it'll be saved in the spawn XML files
 	 */
-	public void addNewSpawn(L2Spawn spawn, boolean storeInDb)
+	public void addNewSpawn(L2Spawn spawn, boolean store)
 	{
 		addSpawn(spawn);
 		
-		if (storeInDb)
+		if (store)
 		{
-			final String spawnTable = spawn.isCustom() && Config.CUSTOM_SPAWNLIST_TABLE ? "custom_spawnlist" : "spawnlist";
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement insert = con.prepareStatement("INSERT INTO " + spawnTable + "(count,npc_templateid,locx,locy,locz,heading,respawn_delay,respawn_random,loc_id) values(?,?,?,?,?,?,?,?,?)"))
+			// Create output directory if it doesn't exist
+			final File outputDirectory = new File(OTHER_XML_FOLDER);
+			if (!outputDirectory.exists())
 			{
-				insert.setInt(1, spawn.getAmount());
-				insert.setInt(2, spawn.getId());
-				insert.setInt(3, spawn.getX());
-				insert.setInt(4, spawn.getY());
-				insert.setInt(5, spawn.getZ());
-				insert.setInt(6, spawn.getHeading());
-				insert.setInt(7, spawn.getRespawnDelay() / 1000);
-				insert.setInt(8, spawn.getRespawnMaxDelay() - spawn.getRespawnMinDelay());
-				insert.setInt(9, spawn.getLocationId());
-				insert.execute();
+				boolean result = false;
+				try
+				{
+					outputDirectory.mkdir();
+					result = true;
+				}
+				catch (SecurityException se)
+				{
+					// empty
+				}
+				if (result)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Created directory: " + OTHER_XML_FOLDER);
+				}
 			}
-			catch (Exception e)
+			
+			// XML file for spawn
+			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final File spawnFile = new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+			
+			// Write info to XML
+			final String spawnId = String.valueOf(spawn.getId());
+			final String spawnCount = String.valueOf(spawn.getAmount());
+			final String spawnX = String.valueOf(spawn.getX());
+			final String spawnY = String.valueOf(spawn.getY());
+			final String spawnZ = String.valueOf(spawn.getZ());
+			final String spawnHeading = String.valueOf(spawn.getHeading());
+			final String spawnDelay = String.valueOf(spawn.getRespawnDelay() / 1000);
+			if (spawnFile.exists()) // update
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not store spawn in the DB:" + e.getMessage(), e);
+				final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+				try
+				{
+					final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+					final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+					String currentLine;
+					while ((currentLine = reader.readLine()) != null)
+					{
+						if (currentLine.contains("</spawn>"))
+						{
+							writer.write("		<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnDelay=\"" + spawnDelay + "\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
+							writer.write(currentLine + Config.EOL);
+							continue;
+						}
+						writer.write(currentLine + Config.EOL);
+					}
+					writer.close();
+					reader.close();
+					spawnFile.delete();
+					tempFile.renameTo(spawnFile);
+				}
+				catch (Exception e)
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Could not store spawn in the spawn XML files: " + e);
+				}
+			}
+			else // new file
+			{
+				try
+				{
+					final BufferedWriter writer = new BufferedWriter(new FileWriter(spawnFile));
+					writer.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>" + Config.EOL);
+					writer.write("<list enabled=\"true\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:noNamespaceSchemaLocation=\"../../xsd/spawns.xsd\">" + Config.EOL);
+					writer.write("	<spawn name=\"" + x + "_" + y + "\">" + Config.EOL);
+					writer.write("		<npc id=\"" + spawnId + (spawn.getAmount() > 1 ? "\" count=\"" + spawnCount : "") + "\" x=\"" + spawnX + "\" y=\"" + spawnY + "\" z=\"" + spawnZ + (spawn.getHeading() > 0 ? "\" heading=\"" + spawnHeading : "") + "\" respawnDelay=\"" + spawnDelay + "\" /> <!-- " + NpcData.getInstance().getTemplate(spawn.getId()).getName() + " -->" + Config.EOL);
+					writer.write("	</spawn>" + Config.EOL);
+					writer.write("</list>" + Config.EOL);
+					writer.close();
+					LOGGER.info(getClass().getSimpleName() + ": Created file: " + OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+				}
+				catch (Exception e)
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be added to the spawn XML files: " + e);
+				}
 			}
 		}
 	}
@@ -443,30 +463,84 @@ public final class SpawnTable implements IGameXmlReader
 	/**
 	 * Delete an spawn from the spawn table.
 	 * @param spawn the spawn to delete
-	 * @param updateDb if {@code true} database will be updated
+	 * @param update if {@code true} the spawn XML files will be updated
 	 */
-	public void deleteSpawn(L2Spawn spawn, boolean updateDb)
+	public void deleteSpawn(L2Spawn spawn, boolean update)
 	{
 		if (!removeSpawn(spawn))
 		{
 			return;
 		}
 		
-		if (updateDb)
+		if (update)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
-				PreparedStatement delete = con.prepareStatement("DELETE FROM " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + " WHERE locx=? AND locy=? AND locz=? AND npc_templateid=? AND heading=?"))
+			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
+			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
+			final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
+			final File spawnFile = npcSpawnTemplateId != -1 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
+			try
 			{
-				delete.setInt(1, spawn.getX());
-				delete.setInt(2, spawn.getY());
-				delete.setInt(3, spawn.getZ());
-				delete.setInt(4, spawn.getId());
-				delete.setInt(5, spawn.getHeading());
-				delete.execute();
+				final BufferedReader reader = new BufferedReader(new FileReader(spawnFile));
+				final BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+				final String spawnId = String.valueOf(spawn.getId());
+				final String spawnX = String.valueOf(spawn.getX());
+				final String spawnY = String.valueOf(spawn.getY());
+				final String spawnZ = String.valueOf(spawn.getZ());
+				boolean found = false; // in XML you can have more than one spawn with same coords
+				boolean isMultiLine = false; // in case spawn has more stats
+				boolean lastLineFound = false; // used to check for empty file
+				int lineCount = 0;
+				String currentLine;
+				while ((currentLine = reader.readLine()) != null)
+				{
+					if (!found)
+					{
+						if (isMultiLine)
+						{
+							if (currentLine.contains("</npc>"))
+							{
+								found = true;
+							}
+							continue;
+						}
+						if (currentLine.contains(spawnId) && currentLine.contains(spawnX) && currentLine.contains(spawnY) && currentLine.contains(spawnZ))
+						{
+							if (!currentLine.contains("/>") && !currentLine.contains("</npc>"))
+							{
+								isMultiLine = true;
+							}
+							else
+							{
+								found = true;
+							}
+							continue;
+						}
+					}
+					writer.write(currentLine + Config.EOL);
+					if (currentLine.contains("</list>"))
+					{
+						lastLineFound = true;
+					}
+					if (!lastLineFound)
+					{
+						lineCount++;
+					}
+				}
+				writer.close();
+				reader.close();
+				spawnFile.delete();
+				tempFile.renameTo(spawnFile);
+				// Delete empty file
+				if (lineCount < 7)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/'));
+					spawnFile.delete();
+				}
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Spawn " + spawn + " could not be removed from DB: " + e.getMessage(), e);
+				LOGGER.warning(getClass().getSimpleName() + ": Spawn " + spawn + " could not be removed from the spawn XML files: " + e);
 			}
 		}
 	}
@@ -519,6 +593,11 @@ public final class SpawnTable implements IGameXmlReader
 			}
 		}
 		return true;
+	}
+	
+	public String getSpawnFile(int templateId)
+	{
+		return _spawnTemplates.get(templateId);
 	}
 	
 	public static SpawnTable getInstance()
