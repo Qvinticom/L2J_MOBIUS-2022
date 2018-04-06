@@ -24,8 +24,11 @@ import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.transform.Transform;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionCancel;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -51,10 +54,8 @@ public final class SkillTransfer extends AbstractNpcAI
 	private SkillTransfer()
 	{
 		setPlayerProfessionChangeId(this::onProfessionChange);
-		if (Config.SKILL_CHECK_ENABLE)
-		{
-			setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
-		}
+		setPlayerProfessionCancelId(this::onProfessionCancel);
+		setOnEnterWorld(Config.SKILL_CHECK_ENABLE);
 	}
 	
 	public void onProfessionChange(OnPlayerProfessionChange event)
@@ -72,6 +73,29 @@ public final class SkillTransfer extends AbstractNpcAI
 			player.getVariables().set(name, true);
 			giveItems(player, PORMANDERS[index]);
 		}
+	}
+	
+	public void onProfessionCancel(OnPlayerProfessionCancel event)
+	{
+		final L2PcInstance player = event.getActiveChar();
+		final int index = getTransferClassIndex(player);
+		
+		// is a transfer class
+		if (index < 0)
+		{
+			return;
+		}
+		
+		int pomanderId = PORMANDERS[index].getId();
+		// remove unsused HolyPomander
+		PcInventory inv = player.getInventory();
+		for (L2ItemInstance itemI : inv.getAllItemsByItemId(pomanderId))
+		{
+			inv.destroyItem("[HolyPomander - remove]", itemI, player, null);
+		}
+		// remove holy pomander variable
+		final String name = HOLY_POMANDER + event.getClassId();
+		player.getVariables().remove(name);
 	}
 	
 	@Override
@@ -109,6 +133,11 @@ public final class SkillTransfer extends AbstractNpcAI
 						}
 					}
 				}
+			}
+			// SkillTransfer or HolyPomander missing
+			if (count > 0)
+			{
+				player.getInventory().addItem("[HolyPomander - missing]", PORMANDERS[index].getId(), count, player, null);
 			}
 		}
 		return super.onEnterWorld(player);

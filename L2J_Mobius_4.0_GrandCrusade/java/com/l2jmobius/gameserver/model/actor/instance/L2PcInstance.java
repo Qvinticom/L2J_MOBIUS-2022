@@ -204,6 +204,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogou
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMenteeStatus;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMentorStatus;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPKChanged;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionCancel;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
@@ -9695,6 +9696,10 @@ public final class L2PcInstance extends L2Playable
 				_log.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
 				return false;
 			}
+			
+			// Notify to scripts
+			int classId = getSubClasses().get(classIndex).getClassId();
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
 		}
 		finally
 		{

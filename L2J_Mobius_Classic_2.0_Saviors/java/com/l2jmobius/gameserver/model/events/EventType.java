@@ -95,6 +95,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMento
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPKChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPressTutorialMark;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionCancel;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
@@ -256,6 +257,7 @@ public enum EventType
 	ON_PLAYER_PRESS_TUTORIAL_MARK(OnPlayerPressTutorialMark.class, void.class),
 	ON_PLAYER_MOVE_REQUEST(OnPlayerMoveRequest.class, void.class, TerminateReturn.class),
 	ON_PLAYER_PROFESSION_CHANGE(OnPlayerProfessionChange.class, void.class),
+	ON_PLAYER_PROFESSION_CANCEL(OnPlayerProfessionCancel.class, void.class),
 	ON_PLAYER_CHANGE_TO_AWAKENED_CLASS(OnPlayerChangeToAwakenedClass.class, void.class),
 	ON_PLAYER_PVP_CHANGED(OnPlayerPvPChanged.class, void.class),
 	ON_PLAYER_PVP_KILL(OnPlayerPvPKill.class, void.class),
