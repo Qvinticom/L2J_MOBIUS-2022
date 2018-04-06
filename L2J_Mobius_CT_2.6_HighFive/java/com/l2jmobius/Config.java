@@ -451,9 +451,6 @@ public final class Config
 	// General Settings
 	// --------------------------------------------------
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
-	public static boolean SERVER_LIST_BRACKET;
-	public static int SERVER_LIST_TYPE;
-	public static int SERVER_LIST_AGE;
 	public static boolean SERVER_GMONLY;
 	public static boolean GM_HERO_AURA;
 	public static boolean GM_STARTUP_INVULNERABLE;
@@ -548,7 +545,7 @@ public final class Config
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
 	public static boolean ALLOW_RENTPET;
-	public static boolean ALLOWFISHING;
+	public static boolean ALLOW_FISHING;
 	public static boolean ALLOW_BOAT;
 	public static int BOAT_BROADCAST_RADIUS;
 	public static boolean ALLOW_CURSED_WEAPONS;
@@ -746,6 +743,11 @@ public final class Config
 	public static String KARMA_NONDROPPABLE_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_PET_ITEMS;
 	public static int[] KARMA_LIST_NONDROPPABLE_ITEMS;
+	public static boolean ANTIFEED_ENABLE;
+	public static boolean ANTIFEED_DUALBOX;
+	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
+	public static int ANTIFEED_INTERVAL;
+	public static boolean ANNOUNCE_GAINAK_SIEGE;
 	
 	// --------------------------------------------------
 	// Rate Settings
@@ -860,6 +862,9 @@ public final class Config
 	public static int REQUEST_ID;
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
 	public static List<Integer> PROTOCOL_LIST;
+	public static int SERVER_LIST_TYPE;
+	public static int SERVER_LIST_AGE;
+	public static boolean SERVER_LIST_BRACKET;
 	public static boolean LOGIN_SERVER_SCHEDULE_RESTART;
 	public static long LOGIN_SERVER_SCHEDULE_RESTART_TIME;
 	public static boolean SERVER_RESTART_SCHEDULE_ENABLED;
@@ -1129,10 +1134,6 @@ public final class Config
 	public static boolean WELCOME_MESSAGE_ENABLED;
 	public static String WELCOME_MESSAGE_TEXT;
 	public static int WELCOME_MESSAGE_TIME;
-	public static boolean ANTIFEED_ENABLE;
-	public static boolean ANTIFEED_DUALBOX;
-	public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
-	public static int ANTIFEED_INTERVAL;
 	public static boolean ANNOUNCE_PK_PVP;
 	public static boolean ANNOUNCE_PK_PVP_NORMAL_MESSAGE;
 	public static String ANNOUNCE_PK_MSG;
@@ -1288,6 +1289,10 @@ public final class Config
 			INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
 			THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
 			IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
+			
+			DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
+			DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);
+			RESTART_ON_DEADLOCK = serverSettings.getBoolean("RestartOnDeadlock", false);
 			
 			SERVER_RESTART_SCHEDULE_ENABLED = serverSettings.getBoolean("ServerRestartScheduleEnabled", false);
 			SERVER_RESTART_SCHEDULE_MESSAGE = serverSettings.getBoolean("ServerRestartScheduleMessage", false);
@@ -1827,9 +1832,6 @@ public final class Config
 			// Load General config file (if exists)
 			final PropertiesParser General = new PropertiesParser(GENERAL_CONFIG_FILE);
 			EVERYBODY_HAS_ADMIN_RIGHTS = General.getBoolean("EverybodyHasAdminRights", false);
-			SERVER_LIST_BRACKET = General.getBoolean("ServerListBrackets", false);
-			SERVER_LIST_TYPE = getServerTypeId(General.getString("ServerListType", "Normal").split(","));
-			SERVER_LIST_AGE = General.getInt("ServerListAge", 0);
 			SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
 			GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
 			GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
@@ -1865,9 +1867,6 @@ public final class Config
 			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
 			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
 			ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowScriptsLoadInLogs", false);
-			DEADLOCK_DETECTOR = General.getBoolean("DeadLockDetector", true);
-			DEADLOCK_CHECK_INTERVAL = General.getInt("DeadLockCheckInterval", 20);
-			RESTART_ON_DEADLOCK = General.getBoolean("RestartOnDeadlock", false);
 			ALLOW_DISCARDITEM = General.getBoolean("AllowDiscardItem", true);
 			AUTODESTROY_ITEM_AFTER = General.getInt("AutoDestroyDroppedItemAfter", 600);
 			HERB_AUTO_DESTROY_TIME = General.getInt("AutoDestroyHerbTime", 60) * 1000;
@@ -1923,7 +1922,7 @@ public final class Config
 			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
 			ALLOW_RENTPET = General.getBoolean("AllowRentPet", false);
-			ALLOWFISHING = General.getBoolean("AllowFishing", true);
+			ALLOW_FISHING = General.getBoolean("AllowFishing", true);
 			ALLOW_MANOR = General.getBoolean("AllowManor", true);
 			ALLOW_BOAT = General.getBoolean("AllowBoat", true);
 			BOAT_BROADCAST_RADIUS = General.getInt("BoatBroadcastRadius", 20000);
@@ -2249,14 +2248,212 @@ public final class Config
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 			
-			// Load Antifeed config file (if exists)
-			final PropertiesParser Antifeed = new PropertiesParser(CUSTOM_ANTIFEED_CONFIG_FILE);
+			// Load PvP config file (if exists)
+			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
 			
-			ANTIFEED_ENABLE = Antifeed.getBoolean("AntiFeedEnable", false);
-			ANTIFEED_DUALBOX = Antifeed.getBoolean("AntiFeedDualbox", true);
-			ANTIFEED_DISCONNECTED_AS_DUALBOX = Antifeed.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-			ANTIFEED_INTERVAL = Antifeed.getInt("AntiFeedInterval", 120) * 1000;
+			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
+			KARMA_AWARD_PK_KILL = PVPSettings.getBoolean("AwardPKKillPVPPoint", false);
+			KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 5);
+			KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
+			KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
 			
+			String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
+			KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
+			
+			for (int i = 0; i < karma.length; i++)
+			{
+				KARMA_LIST_NONDROPPABLE_PET_ITEMS[i] = Integer.parseInt(karma[i]);
+			}
+			
+			karma = KARMA_NONDROPPABLE_ITEMS.split(",");
+			KARMA_LIST_NONDROPPABLE_ITEMS = new int[karma.length];
+			
+			for (int i = 0; i < karma.length; i++)
+			{
+				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
+			}
+			
+			// sorting so binarySearch can be used later
+			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
+			Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
+			
+			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
+			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
+			
+			ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
+			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
+			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
+			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
+			
+			// Load Olympiad config file (if exists)
+			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
+			
+			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
+			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
+			ALT_OLY_MAX_BUFFS = Olympiad.getInt("AltOlyMaxBuffs", 5);
+			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
+			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
+			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
+			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
+			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
+			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
+			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 11);
+			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 11);
+			ALT_OLY_TEAMS = Olympiad.getInt("AltOlyTeamsParticipants", 6);
+			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
+			ALT_OLY_CLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyClassedReward", "13722,50"));
+			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
+			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
+			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
+			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
+			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
+			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 200);
+			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 100);
+			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 75);
+			ALT_OLY_RANK3_POINTS = Olympiad.getInt("AltOlyRank3Points", 55);
+			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
+			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
+			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
+			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
+			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
+			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
+			ALT_OLY_MAX_WEEKLY_MATCHES_NON_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesNonClassed", 60);
+			ALT_OLY_MAX_WEEKLY_MATCHES_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesClassed", 30);
+			ALT_OLY_MAX_WEEKLY_MATCHES_TEAM = Olympiad.getInt("AltOlyMaxWeeklyMatchesTeam", 10);
+			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
+			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
+			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
+			final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
+			LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
+			for (String id : olyRestrictedItems)
+			{
+				LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
+			}
+			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
+			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 120);
+			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
+			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
+			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
+			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
+			for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
+			{
+				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
+			}
+			
+			final File hexIdFile = new File(HEXID_FILE);
+			if (hexIdFile.exists())
+			{
+				final PropertiesParser hexId = new PropertiesParser(hexIdFile);
+				
+				if (hexId.containskey("ServerID") && hexId.containskey("HexID"))
+				{
+					SERVER_ID = hexId.getInt("ServerID", 1);
+					try
+					{
+						HEX_ID = new BigInteger(hexId.getString("HexID", null), 16).toByteArray();
+					}
+					catch (Exception e)
+					{
+						LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+					}
+				}
+				else
+				{
+					LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+				}
+			}
+			else
+			{
+				LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
+			}
+			
+			// Grand bosses
+			final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
+			
+			ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
+			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
+			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
+			
+			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
+			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
+			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
+			
+			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
+			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
+			
+			CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
+			CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
+			
+			ORFEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfOrfenSpawn", 48);
+			ORFEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfOrfenSpawn", 20);
+			
+			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
+			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
+			
+			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
+			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
+			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 36);
+			
+			// Gracia Seeds
+			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
+			
+			// Seed of Destruction
+			SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
+			SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
+			
+			MIN_TIAT_PLAYERS = GraciaSeedsSettings.getInt("MinPlayers", 36);
+			MAX_TIAT_PLAYERS = GraciaSeedsSettings.getInt("MaxPlayers", 45);
+			MIN_TIAT_LEVEL = GraciaSeedsSettings.getInt("MinLevel", 75);
+			
+			SOI_EKIMUS_KILL_COUNT = GraciaSeedsSettings.getInt("EkimusKillCount", 5);
+			EROSION_ATTACK_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinEroAttPlayers", 18);
+			EROSION_ATTACK_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxEroAttPlayers", 27);
+			EROSION_DEFENCE_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinEroDefPlayers", 18);
+			EROSION_DEFENCE_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxEroDefPlayers", 27);
+			HEART_ATTACK_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinHeaAttPlayers", 18);
+			HEART_ATTACK_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxHeaAttPlayers", 27);
+			HEART_DEFENCE_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinHeaDefPlayers", 18);
+			HEART_DEFENCE_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxHeaDefPlayers", 27);
+			
+			try
+			{
+				//@formatter:off
+				FILTER_LIST = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)
+					.map(String::trim)
+					.filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
+					.collect(Collectors.toList());
+				//@formatter:on
+				LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
+			}
+			catch (IOException e)
+			{
+				LOGGER.log(Level.WARNING, "Error while loading chat filter words!", e);
+			}
+			
+			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_CONFIG_FILE);
+			
+			CHS_MAX_ATTACKERS = ClanHallSiege.getInt("MaxAttackers", 500);
+			CHS_CLAN_MINLEVEL = ClanHallSiege.getInt("MinClanLevel", 4);
+			CHS_MAX_FLAGS_PER_CLAN = ClanHallSiege.getInt("MaxFlagsPerClan", 1);
+			CHS_ENABLE_FAME = ClanHallSiege.getBoolean("EnableFame", false);
+			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
+			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
+			
+			final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
+			
+			GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
+			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
+			
+			PART_OF_CHARACTER_HEIGHT = geoData.getInt("PartOfCharacterHeight", 75);
+			MAX_OBSTACLE_HEIGHT = geoData.getInt("MaxObstacleHeight", 32);
+			
+			PATHFINDING = geoData.getBoolean("PathFinding", true);
+			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			BASE_WEIGHT = geoData.getInt("BaseWeight", 10);
+			DIAGONAL_WEIGHT = geoData.getInt("DiagonalWeight", 14);
+			OBSTACLE_MULTIPLIER = geoData.getInt("ObstacleMultiplier", 10);
+			HEURISTIC_WEIGHT = geoData.getInt("HeuristicWeight", 20);
+			MAX_ITERATIONS = geoData.getInt("MaxIterations", 3500);
 			// Load AllowedPlayerRaces config file (if exists)
 			final PropertiesParser AllowedPlayerRaces = new PropertiesParser(CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE);
 			
@@ -2816,208 +3013,6 @@ public final class Config
 			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
 			
 			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
-			
-			// Load PvP config file (if exists)
-			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
-			
-			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
-			KARMA_AWARD_PK_KILL = PVPSettings.getBoolean("AwardPKKillPVPPoint", false);
-			KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 5);
-			KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
-			KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
-			
-			String[] karma = KARMA_NONDROPPABLE_PET_ITEMS.split(",");
-			KARMA_LIST_NONDROPPABLE_PET_ITEMS = new int[karma.length];
-			
-			for (int i = 0; i < karma.length; i++)
-			{
-				KARMA_LIST_NONDROPPABLE_PET_ITEMS[i] = Integer.parseInt(karma[i]);
-			}
-			
-			karma = KARMA_NONDROPPABLE_ITEMS.split(",");
-			KARMA_LIST_NONDROPPABLE_ITEMS = new int[karma.length];
-			
-			for (int i = 0; i < karma.length; i++)
-			{
-				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
-			}
-			
-			// sorting so binarySearch can be used later
-			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
-			Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
-			
-			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
-			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
-			
-			// Load Olympiad config file (if exists)
-			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
-			
-			ALT_OLY_START_TIME = Olympiad.getInt("AltOlyStartTime", 18);
-			ALT_OLY_MIN = Olympiad.getInt("AltOlyMin", 0);
-			ALT_OLY_MAX_BUFFS = Olympiad.getInt("AltOlyMaxBuffs", 5);
-			ALT_OLY_CPERIOD = Olympiad.getLong("AltOlyCPeriod", 21600000);
-			ALT_OLY_BATTLE = Olympiad.getLong("AltOlyBattle", 300000);
-			ALT_OLY_WPERIOD = Olympiad.getLong("AltOlyWPeriod", 604800000);
-			ALT_OLY_VPERIOD = Olympiad.getLong("AltOlyVPeriod", 86400000);
-			ALT_OLY_START_POINTS = Olympiad.getInt("AltOlyStartPoints", 10);
-			ALT_OLY_WEEKLY_POINTS = Olympiad.getInt("AltOlyWeeklyPoints", 10);
-			ALT_OLY_CLASSED = Olympiad.getInt("AltOlyClassedParticipants", 11);
-			ALT_OLY_NONCLASSED = Olympiad.getInt("AltOlyNonClassedParticipants", 11);
-			ALT_OLY_TEAMS = Olympiad.getInt("AltOlyTeamsParticipants", 6);
-			ALT_OLY_REG_DISPLAY = Olympiad.getInt("AltOlyRegistrationDisplayNumber", 100);
-			ALT_OLY_CLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyClassedReward", "13722,50"));
-			ALT_OLY_NONCLASSED_REWARD = parseItemsList(Olympiad.getString("AltOlyNonClassedReward", "13722,40"));
-			ALT_OLY_TEAM_REWARD = parseItemsList(Olympiad.getString("AltOlyTeamReward", "13722,85"));
-			ALT_OLY_COMP_RITEM = Olympiad.getInt("AltOlyCompRewItem", 13722);
-			ALT_OLY_MIN_MATCHES = Olympiad.getInt("AltOlyMinMatchesForPoints", 15);
-			ALT_OLY_GP_PER_POINT = Olympiad.getInt("AltOlyGPPerPoint", 1000);
-			ALT_OLY_HERO_POINTS = Olympiad.getInt("AltOlyHeroPoints", 200);
-			ALT_OLY_RANK1_POINTS = Olympiad.getInt("AltOlyRank1Points", 100);
-			ALT_OLY_RANK2_POINTS = Olympiad.getInt("AltOlyRank2Points", 75);
-			ALT_OLY_RANK3_POINTS = Olympiad.getInt("AltOlyRank3Points", 55);
-			ALT_OLY_RANK4_POINTS = Olympiad.getInt("AltOlyRank4Points", 40);
-			ALT_OLY_RANK5_POINTS = Olympiad.getInt("AltOlyRank5Points", 30);
-			ALT_OLY_MAX_POINTS = Olympiad.getInt("AltOlyMaxPoints", 10);
-			ALT_OLY_DIVIDER_CLASSED = Olympiad.getInt("AltOlyDividerClassed", 5);
-			ALT_OLY_DIVIDER_NON_CLASSED = Olympiad.getInt("AltOlyDividerNonClassed", 5);
-			ALT_OLY_MAX_WEEKLY_MATCHES = Olympiad.getInt("AltOlyMaxWeeklyMatches", 70);
-			ALT_OLY_MAX_WEEKLY_MATCHES_NON_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesNonClassed", 60);
-			ALT_OLY_MAX_WEEKLY_MATCHES_CLASSED = Olympiad.getInt("AltOlyMaxWeeklyMatchesClassed", 30);
-			ALT_OLY_MAX_WEEKLY_MATCHES_TEAM = Olympiad.getInt("AltOlyMaxWeeklyMatchesTeam", 10);
-			ALT_OLY_LOG_FIGHTS = Olympiad.getBoolean("AltOlyLogFights", false);
-			ALT_OLY_SHOW_MONTHLY_WINNERS = Olympiad.getBoolean("AltOlyShowMonthlyWinners", true);
-			ALT_OLY_ANNOUNCE_GAMES = Olympiad.getBoolean("AltOlyAnnounceGames", true);
-			final String[] olyRestrictedItems = Olympiad.getString("AltOlyRestrictedItems", "6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,9388,9389,9390,17049,17050,17051,17052,17053,17054,17055,17056,17057,17058,17059,17060,17061,20759,20775,20776,20777,20778,14774").split(",");
-			LIST_OLY_RESTRICTED_ITEMS = new ArrayList<>(olyRestrictedItems.length);
-			for (String id : olyRestrictedItems)
-			{
-				LIST_OLY_RESTRICTED_ITEMS.add(Integer.parseInt(id));
-			}
-			ALT_OLY_ENCHANT_LIMIT = Olympiad.getInt("AltOlyEnchantLimit", -1);
-			ALT_OLY_WAIT_TIME = Olympiad.getInt("AltOlyWaitTime", 120);
-			ALT_OLY_USE_CUSTOM_PERIOD_SETTINGS = Olympiad.getBoolean("AltOlyUseCustomPeriodSettings", false);
-			ALT_OLY_PERIOD = Olympiad.getString("AltOlyPeriod", "MONTH");
-			ALT_OLY_PERIOD_MULTIPLIER = Olympiad.getInt("AltOlyPeriodMultiplier", 1);
-			ALT_OLY_COMPETITION_DAYS = new ArrayList<>();
-			for (String s : Olympiad.getString("AltOlyCompetitionDays", "1,2,3,4,5,6,7").split(","))
-			{
-				ALT_OLY_COMPETITION_DAYS.add(Integer.parseInt(s));
-			}
-			
-			final File hexIdFile = new File(HEXID_FILE);
-			if (hexIdFile.exists())
-			{
-				final PropertiesParser hexId = new PropertiesParser(hexIdFile);
-				
-				if (hexId.containskey("ServerID") && hexId.containskey("HexID"))
-				{
-					SERVER_ID = hexId.getInt("ServerID", 1);
-					try
-					{
-						HEX_ID = new BigInteger(hexId.getString("HexID", null), 16).toByteArray();
-					}
-					catch (Exception e)
-					{
-						LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
-					}
-				}
-				else
-				{
-					LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
-				}
-			}
-			else
-			{
-				LOGGER.warning("Could not load HexID file (" + HEXID_FILE + "). Hopefully login will give us one.");
-			}
-			
-			// Grand bosses
-			final PropertiesParser GrandBossSettings = new PropertiesParser(GRANDBOSS_CONFIG_FILE);
-			
-			ANTHARAS_WAIT_TIME = GrandBossSettings.getInt("AntharasWaitTime", 30);
-			ANTHARAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAntharasSpawn", 264);
-			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
-			
-			VALAKAS_WAIT_TIME = GrandBossSettings.getInt("ValakasWaitTime", 30);
-			VALAKAS_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfValakasSpawn", 264);
-			VALAKAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfValakasSpawn", 72);
-			
-			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
-			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
-			
-			CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
-			CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
-			
-			ORFEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfOrfenSpawn", 48);
-			ORFEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfOrfenSpawn", 20);
-			
-			QUEEN_ANT_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfQueenAntSpawn", 36);
-			QUEEN_ANT_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfQueenAntSpawn", 17);
-			
-			BELETH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBelethSpawn", 192);
-			BELETH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBelethSpawn", 148);
-			BELETH_MIN_PLAYERS = GrandBossSettings.getInt("BelethMinPlayers", 36);
-			
-			// Gracia Seeds
-			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
-			
-			// Seed of Destruction
-			SOD_TIAT_KILL_COUNT = GraciaSeedsSettings.getInt("TiatKillCountForNextState", 10);
-			SOD_STAGE_2_LENGTH = GraciaSeedsSettings.getLong("Stage2Length", 720) * 60000;
-			
-			MIN_TIAT_PLAYERS = GraciaSeedsSettings.getInt("MinPlayers", 36);
-			MAX_TIAT_PLAYERS = GraciaSeedsSettings.getInt("MaxPlayers", 45);
-			MIN_TIAT_LEVEL = GraciaSeedsSettings.getInt("MinLevel", 75);
-			
-			SOI_EKIMUS_KILL_COUNT = GraciaSeedsSettings.getInt("EkimusKillCount", 5);
-			EROSION_ATTACK_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinEroAttPlayers", 18);
-			EROSION_ATTACK_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxEroAttPlayers", 27);
-			EROSION_DEFENCE_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinEroDefPlayers", 18);
-			EROSION_DEFENCE_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxEroDefPlayers", 27);
-			HEART_ATTACK_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinHeaAttPlayers", 18);
-			HEART_ATTACK_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxHeaAttPlayers", 27);
-			HEART_DEFENCE_MIN_PLAYERS = GraciaSeedsSettings.getInt("MinHeaDefPlayers", 18);
-			HEART_DEFENCE_MAX_PLAYERS = GraciaSeedsSettings.getInt("MaxHeaDefPlayers", 27);
-			
-			try
-			{
-				//@formatter:off
-				FILTER_LIST = Files.lines(Paths.get(CHAT_FILTER_FILE), StandardCharsets.UTF_8)
-					.map(String::trim)
-					.filter(line -> (!line.isEmpty() && (line.charAt(0) != '#')))
-					.collect(Collectors.toList());
-				//@formatter:on
-				LOGGER.info("Loaded " + FILTER_LIST.size() + " Filter Words.");
-			}
-			catch (IOException ioe)
-			{
-				LOGGER.log(Level.WARNING, "Error while loading chat filter words!", ioe);
-			}
-			
-			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_CONFIG_FILE);
-			
-			CHS_MAX_ATTACKERS = ClanHallSiege.getInt("MaxAttackers", 500);
-			CHS_CLAN_MINLEVEL = ClanHallSiege.getInt("MinClanLevel", 4);
-			CHS_MAX_FLAGS_PER_CLAN = ClanHallSiege.getInt("MaxFlagsPerClan", 1);
-			CHS_ENABLE_FAME = ClanHallSiege.getBoolean("EnableFame", false);
-			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
-			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
-			
-			final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-			
-			GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
-			COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
-			
-			PART_OF_CHARACTER_HEIGHT = geoData.getInt("PartOfCharacterHeight", 75);
-			MAX_OBSTACLE_HEIGHT = geoData.getInt("MaxObstacleHeight", 32);
-			
-			PATHFINDING = geoData.getBoolean("PathFinding", true);
-			PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			BASE_WEIGHT = geoData.getInt("BaseWeight", 10);
-			DIAGONAL_WEIGHT = geoData.getInt("DiagonalWeight", 14);
-			OBSTACLE_MULTIPLIER = geoData.getInt("ObstacleMultiplier", 10);
-			HEURISTIC_WEIGHT = geoData.getInt("HeuristicWeight", 20);
-			MAX_ITERATIONS = geoData.getInt("MaxIterations", 3500);
 		}
 		else if (Server.serverMode == Server.MODE_LOGINSERVER)
 		{

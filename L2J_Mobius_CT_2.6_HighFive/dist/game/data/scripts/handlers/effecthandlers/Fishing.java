@@ -78,7 +78,7 @@ public final class Fishing extends AbstractEffect
 		
 		final L2PcInstance player = activeChar.getActingPlayer();
 		
-		if (!Config.ALLOWFISHING && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		if (!Config.ALLOW_FISHING && !player.canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
 		{
 			player.sendMessage("Fishing is disabled!");
 			return;
