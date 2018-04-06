@@ -513,7 +513,7 @@ public class Lottery
 						default:
 						{
 							res[0] = 4;
-							res[1] = 200;
+							res[1] = Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE;
 						}
 					}
 				}
