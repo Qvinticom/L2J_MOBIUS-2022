@@ -45,6 +45,7 @@ import com.l2jmobius.gameserver.network.EventLoopGroupManager;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
@@ -227,6 +228,16 @@ public class Shutdown extends Thread
 			{
 				LoginServerThread.getInstance().interrupt();
 				LOGGER.info("Login Server Thread: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+			}
+			catch (Throwable t)
+			{
+				// ignore
+			}
+			
+			try
+			{
+				TelnetServer.getInstance().shutdown();
+				LOGGER.info("Telnet Server Thread: Thread interruped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)
 			{
