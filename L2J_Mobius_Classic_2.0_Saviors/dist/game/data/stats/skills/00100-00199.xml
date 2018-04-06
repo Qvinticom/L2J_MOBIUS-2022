@@ -2691,6 +2691,13 @@
 					<item>HEAVY</item>
 				</armorType>
 			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+				<armorType>
+					<item>MAGIC</item>
+				</armorType>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="164" toLevel="3" name="Quick Recovery">
