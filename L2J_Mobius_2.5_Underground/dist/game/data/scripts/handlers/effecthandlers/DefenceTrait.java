@@ -76,11 +76,21 @@ public final class DefenceTrait extends AbstractEffect
 			{
 				if (trait.getValue() < 2.0f)
 				{
+					if (charStat.getDefenceTraitsCount()[trait.getKey().ordinal()] == 0)
+					{
+						return;
+					}
+					
 					charStat.getDefenceTraits()[trait.getKey().ordinal()] /= trait.getValue();
 					charStat.getDefenceTraitsCount()[trait.getKey().ordinal()]--;
 				}
 				else
 				{
+					if (charStat.getTraitsInvul()[trait.getKey().ordinal()] == 0)
+					{
+						return;
+					}
+					
 					charStat.getTraitsInvul()[trait.getKey().ordinal()]--;
 				}
 			}

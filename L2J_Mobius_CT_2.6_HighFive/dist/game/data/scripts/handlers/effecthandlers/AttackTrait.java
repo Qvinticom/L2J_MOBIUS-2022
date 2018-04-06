@@ -59,6 +59,11 @@ public final class AttackTrait extends AbstractEffect
 		{
 			for (Entry<TraitType, Float> trait : _attackTraits.entrySet())
 			{
+				if (charStat.getAttackTraitsCount()[trait.getKey().ordinal()] == 0)
+				{
+					return;
+				}
+				
 				charStat.getAttackTraits()[trait.getKey().ordinal()] /= trait.getValue();
 				charStat.getAttackTraitsCount()[trait.getKey().ordinal()]--;
 			}
