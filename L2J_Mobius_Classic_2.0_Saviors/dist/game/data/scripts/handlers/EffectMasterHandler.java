@@ -261,7 +261,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("RebalanceHP", RebalanceHP::new);
 		EffectHandler.getInstance().registerHandler("RebalanceHPSummon", RebalanceHPSummon::new);
 		EffectHandler.getInstance().registerHandler("RecoverVitalityInPeaceZone", RecoverVitalityInPeaceZone::new);
-		EffectHandler.getInstance().registerHandler("Recovery", Recovery::new);
 		EffectHandler.getInstance().registerHandler("ReduceDamage", ReduceDamage::new);
 		EffectHandler.getInstance().registerHandler("ReduceCancel", ReduceCancel::new);
 		EffectHandler.getInstance().registerHandler("ReduceDropPenalty", ReduceDropPenalty::new);

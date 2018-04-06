@@ -5011,9 +5011,6 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		// calculate Shilen's Breath debuff level
-		calculateShilensBreathDebuffLevel(killer);
-		
 		if (isMounted())
 		{
 			stopFeed();
@@ -11369,89 +11366,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			_soulTask.cancel(false);
 			_soulTask = null;
-		}
-	}
-	
-	public int getShilensBreathDebuffLevel()
-	{
-		final BuffInfo buff = getEffectList().getBuffInfoBySkillId(CommonSkill.SHILENS_BREATH.getId());
-		return buff == null ? 0 : buff.getSkill().getLevel();
-	}
-	
-	public void calculateShilensBreathDebuffLevel(L2Character killer)
-	{
-		if (killer == null)
-		{
-			_log.warning(this + " called calculateShilensBreathDebuffLevel with killer null!");
-			return;
-		}
-		
-		if (isResurrectSpecialAffected() || isLucky() || isBlockedFromDeathPenalty() || isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE) || canOverrideCond(PcCondOverride.DEATH_PENALTY))
-		{
-			return;
-		}
-		double percent = 1.0;
-		
-		if (killer.isRaid())
-		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_RAID, 1);
-		}
-		else if (killer.isMonster())
-		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_MOB, 1);
-		}
-		else if (killer.isPlayable())
-		{
-			percent *= getStat().getValue(Stats.REDUCE_DEATH_PENALTY_BY_PVP, 1);
-		}
-		
-		if ((killer.isNpc() && ((L2Npc) killer).getTemplate().isDeathPenalty()) || (Rnd.get(1, 100) <= ((Config.DEATH_PENALTY_CHANCE) * percent)))
-		{
-			if (!killer.isPlayable() || (getReputation() < 0))
-			{
-				increaseShilensBreathDebuff();
-			}
-		}
-	}
-	
-	public void increaseShilensBreathDebuff()
-	{
-		int nextLv = getShilensBreathDebuffLevel() + 1;
-		if (nextLv > 5)
-		{
-			nextLv = 5;
-		}
-		
-		final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), nextLv);
-		if (skill != null)
-		{
-			skill.applyEffects(this, this);
-			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(nextLv));
-		}
-	}
-	
-	public void decreaseShilensBreathDebuff()
-	{
-		final int nextLv = getShilensBreathDebuffLevel() - 1;
-		if (nextLv > 0)
-		{
-			final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), nextLv);
-			skill.applyEffects(this, this);
-			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(nextLv));
-		}
-		else
-		{
-			sendPacket(SystemMessageId.SHILEN_S_BREATH_HAS_BEEN_PURIFIED);
-		}
-	}
-	
-	public void setShilensBreathDebuffLevel(int level)
-	{
-		if (level > 0)
-		{
-			final Skill skill = SkillData.getInstance().getSkill(CommonSkill.SHILENS_BREATH.getId(), level);
-			skill.applyEffects(this, this);
-			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_VE_BEEN_AFFLICTED_BY_SHILEN_S_BREATH_LEVEL_S1).addInt(level));
 		}
 	}
 	

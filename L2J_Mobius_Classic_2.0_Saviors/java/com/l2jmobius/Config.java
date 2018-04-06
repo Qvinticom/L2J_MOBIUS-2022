@@ -150,7 +150,6 @@ public final class Config
 	public static boolean DECREASE_SKILL_LEVEL;
 	public static double ALT_WEIGHT_LIMIT;
 	public static int RUN_SPD_BOOST;
-	public static int DEATH_PENALTY_CHANCE;
 	public static double RESPAWN_RESTORE_CP;
 	public static double RESPAWN_RESTORE_HP;
 	public static double RESPAWN_RESTORE_MP;
@@ -1398,7 +1397,6 @@ public final class Config
 			DECREASE_SKILL_LEVEL = Character.getBoolean("DecreaseSkillOnDelevel", true);
 			ALT_WEIGHT_LIMIT = Character.getDouble("AltWeightLimit", 1);
 			RUN_SPD_BOOST = Character.getInt("RunSpeedBoost", 0);
-			DEATH_PENALTY_CHANCE = Character.getInt("DeathPenaltyChance", 20);
 			RESPAWN_RESTORE_CP = Character.getDouble("RespawnRestoreCP", 0) / 100;
 			RESPAWN_RESTORE_HP = Character.getDouble("RespawnRestoreHP", 65) / 100;
 			RESPAWN_RESTORE_MP = Character.getDouble("RespawnRestoreMP", 0) / 100;
