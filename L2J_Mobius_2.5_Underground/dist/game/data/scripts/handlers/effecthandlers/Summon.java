@@ -121,7 +121,7 @@ public final class Summon extends AbstractEffect
 		player.addServitor(summon);
 		
 		summon.setShowSummonAnimation(true);
-		summon.setRunning();
 		summon.spawnMe();
+		summon.setRunning();
 	}
 }

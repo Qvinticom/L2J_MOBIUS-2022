@@ -99,7 +99,7 @@ public final class Summon extends AbstractEffect
 		
 		player.setPet(summon);
 		
-		summon.setRunning();
 		summon.spawnMe();
+		summon.setRunning();
 	}
 }
