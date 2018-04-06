@@ -86,7 +86,7 @@ public final class DwarfWarehouseChange2 extends AbstractNpcAI
 		{
 			htmltext = "30511-08.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == BOUNTY_HUNTER) && (player.getClassId() == ClassId.scavenger))
+		else if ((classId == BOUNTY_HUNTER) && (player.getClassId() == ClassId.SCAVENGER))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -128,7 +128,7 @@ public final class DwarfWarehouseChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.BOUNTY_HUNTER_GROUP))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.scavenger) || (classId == ClassId.bountyHunter))
+			if ((classId == ClassId.SCAVENGER) || (classId == ClassId.BOUNTY_HUNTER))
 			{
 				htmltext = "30511-02.htm"; // fnClassList1
 			}

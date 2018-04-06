@@ -22,8 +22,8 @@ package com.l2jmobius.gameserver.model.base;
  */
 public enum ClassLevel
 {
-	First,
-	Second,
-	Third,
-	Fourth
+	FIRST,
+	SECOND,
+	THIRD,
+	FOURTH
 }

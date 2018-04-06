@@ -107,7 +107,7 @@ public final class OrcChange2 extends AbstractNpcAI
 		{
 			htmltext = "30513-19.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == DESTROYER) && (player.getClassId() == ClassId.orcRaider))
+		else if ((classId == DESTROYER) && (player.getClassId() == ClassId.ORC_RAIDER))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -135,7 +135,7 @@ public final class OrcChange2 extends AbstractNpcAI
 				htmltext = "30513-23.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == TYRANT) && (player.getClassId() == ClassId.orcMonk))
+		else if ((classId == TYRANT) && (player.getClassId() == ClassId.ORC_MONK))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -163,7 +163,7 @@ public final class OrcChange2 extends AbstractNpcAI
 				htmltext = "30513-27.htm"; // fnNoProof21
 			}
 		}
-		else if ((classId == OVERLORD) && (player.getClassId() == ClassId.orcShaman))
+		else if ((classId == OVERLORD) && (player.getClassId() == ClassId.ORC_SHAMAN))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -191,7 +191,7 @@ public final class OrcChange2 extends AbstractNpcAI
 				htmltext = "30513-31.htm"; // fnNoProof31
 			}
 		}
-		else if ((classId == WARCRYER) && (player.getClassId() == ClassId.orcShaman))
+		else if ((classId == WARCRYER) && (player.getClassId() == ClassId.ORC_SHAMAN))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -233,15 +233,15 @@ public final class OrcChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.ORC_MALL_CLASS) || player.isInCategory(CategoryType.ORC_FALL_CLASS))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.orcRaider) || (classId == ClassId.destroyer))
+			if ((classId == ClassId.ORC_RAIDER) || (classId == ClassId.DESTROYER))
 			{
 				htmltext = "30513-02.htm"; // fnClassList1
 			}
-			else if ((classId == ClassId.orcMonk) || (classId == ClassId.tyrant))
+			else if ((classId == ClassId.ORC_MONK) || (classId == ClassId.TYRANT))
 			{
 				htmltext = "30513-06.htm"; // fnClassList2
 			}
-			else if ((classId == ClassId.orcShaman) || (classId == ClassId.overlord) || (classId == ClassId.warcryer))
+			else if ((classId == ClassId.ORC_SHAMAN) || (classId == ClassId.OVERLORD) || (classId == ClassId.WARCRYER))
 			{
 				htmltext = "30513-10.htm"; // fnClassList3
 			}

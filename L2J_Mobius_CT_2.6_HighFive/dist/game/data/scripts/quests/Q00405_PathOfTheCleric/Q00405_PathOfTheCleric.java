@@ -80,7 +80,7 @@ public final class Q00405_PathOfTheCleric extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.mage)
+				if (player.getClassId() == ClassId.MAGE)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -100,7 +100,7 @@ public final class Q00405_PathOfTheCleric extends Quest
 						htmltext = "30022-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.cleric)
+				else if (player.getClassId() == ClassId.CLERIC)
 				{
 					htmltext = "30022-02a.htm";
 				}

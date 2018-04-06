@@ -111,7 +111,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 		{
 			htmltext = "30115-21.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == SORCERER) && (player.getClassId() == ClassId.wizard))
+		else if ((classId == SORCERER) && (player.getClassId() == ClassId.WIZARD))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -139,7 +139,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 				htmltext = "30115-25.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == NECROMANCER) && (player.getClassId() == ClassId.wizard))
+		else if ((classId == NECROMANCER) && (player.getClassId() == ClassId.WIZARD))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -167,7 +167,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 				htmltext = "30115-29.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == WARLOCK) && (player.getClassId() == ClassId.wizard))
+		else if ((classId == WARLOCK) && (player.getClassId() == ClassId.WIZARD))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -195,7 +195,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 				htmltext = "30115-33.htm"; // fnNoProof13
 			}
 		}
-		else if ((classId == SPELLSINGER) && (player.getClassId() == ClassId.elvenWizard))
+		else if ((classId == SPELLSINGER) && (player.getClassId() == ClassId.ELVEN_WIZARD))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -223,7 +223,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 				htmltext = "30115-37.htm"; // fnNoProof21
 			}
 		}
-		else if ((classId == ELEMENTAL_SUMMONER) && (player.getClassId() == ClassId.elvenWizard))
+		else if ((classId == ELEMENTAL_SUMMONER) && (player.getClassId() == ClassId.ELVEN_WIZARD))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -265,11 +265,11 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.WIZARD_GROUP) && (player.isInCategory(CategoryType.HUMAN_MALL_CLASS) || player.isInCategory(CategoryType.ELF_MALL_CLASS)))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.wizard) || (classId == ClassId.sorceror) || (classId == ClassId.necromancer) || (classId == ClassId.warlock))
+			if ((classId == ClassId.WIZARD) || (classId == ClassId.SORCERER) || (classId == ClassId.NECROMANCER) || (classId == ClassId.WARLOCK))
 			{
 				htmltext = "30115-02.htm"; // fnClassList1
 			}
-			else if ((classId == ClassId.elvenWizard) || (classId == ClassId.spellsinger) || (classId == ClassId.elementalSummoner))
+			else if ((classId == ClassId.ELVEN_WIZARD) || (classId == ClassId.SPELLSINGER) || (classId == ClassId.ELEMENTAL_SUMMONER))
 			{
 				htmltext = "30115-12.htm"; // fnClassList2
 			}

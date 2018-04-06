@@ -16,6 +16,9 @@
  */
 package com.l2jmobius.gameserver.model.base;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 
@@ -32,169 +35,160 @@ import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
  */
 public enum ClassId implements IIdentifiable
 {
-	fighter(0x00, false, Race.HUMAN, null),
+	FIGHTER(0, false, Race.HUMAN, null),
 	
-	warrior(0x01, false, Race.HUMAN, fighter),
-	gladiator(0x02, false, Race.HUMAN, warrior),
-	warlord(0x03, false, Race.HUMAN, warrior),
-	knight(0x04, false, Race.HUMAN, fighter),
-	paladin(0x05, false, Race.HUMAN, knight),
-	darkAvenger(0x06, false, Race.HUMAN, knight),
-	rogue(0x07, false, Race.HUMAN, fighter),
-	treasureHunter(0x08, false, Race.HUMAN, rogue),
-	hawkeye(0x09, false, Race.HUMAN, rogue),
+	WARRIOR(1, false, Race.HUMAN, FIGHTER),
+	GLADIATOR(2, false, Race.HUMAN, WARRIOR),
+	WARLORD(3, false, Race.HUMAN, WARRIOR),
+	KNIGHT(4, false, Race.HUMAN, FIGHTER),
+	PALADIN(5, false, Race.HUMAN, KNIGHT),
+	DARK_AVENGER(6, false, Race.HUMAN, KNIGHT),
+	ROGUE(7, false, Race.HUMAN, FIGHTER),
+	TREASURE_HUNTER(8, false, Race.HUMAN, ROGUE),
+	HAWKEYE(9, false, Race.HUMAN, ROGUE),
 	
-	mage(0x0a, true, Race.HUMAN, null),
-	wizard(0x0b, true, Race.HUMAN, mage),
-	sorceror(0x0c, true, Race.HUMAN, wizard),
-	necromancer(0x0d, true, Race.HUMAN, wizard),
-	warlock(0x0e, true, true, Race.HUMAN, wizard),
-	cleric(0x0f, true, Race.HUMAN, mage),
-	bishop(0x10, true, Race.HUMAN, cleric),
-	prophet(0x11, true, Race.HUMAN, cleric),
+	MAGE(10, true, Race.HUMAN, null),
+	WIZARD(11, true, Race.HUMAN, MAGE),
+	SORCERER(12, true, Race.HUMAN, WIZARD),
+	NECROMANCER(13, true, Race.HUMAN, WIZARD),
+	WARLOCK(14, true, true, Race.HUMAN, WIZARD),
+	CLERIC(15, true, Race.HUMAN, MAGE),
+	BISHOP(16, true, Race.HUMAN, CLERIC),
+	PROPHET(17, true, Race.HUMAN, CLERIC),
 	
-	elvenFighter(0x12, false, Race.ELF, null),
-	elvenKnight(0x13, false, Race.ELF, elvenFighter),
-	templeKnight(0x14, false, Race.ELF, elvenKnight),
-	swordSinger(0x15, false, Race.ELF, elvenKnight),
-	elvenScout(0x16, false, Race.ELF, elvenFighter),
-	plainsWalker(0x17, false, Race.ELF, elvenScout),
-	silverRanger(0x18, false, Race.ELF, elvenScout),
+	ELVEN_FIGHTER(18, false, Race.ELF, null),
+	ELVEN_KNIGHT(19, false, Race.ELF, ELVEN_FIGHTER),
+	TEMPLE_KNIGHT(20, false, Race.ELF, ELVEN_KNIGHT),
+	SWORDSINGER(21, false, Race.ELF, ELVEN_KNIGHT),
+	ELVEN_SCOUT(22, false, Race.ELF, ELVEN_FIGHTER),
+	PLAINS_WALKER(23, false, Race.ELF, ELVEN_SCOUT),
+	SILVER_RANGER(24, false, Race.ELF, ELVEN_SCOUT),
 	
-	elvenMage(0x19, true, Race.ELF, null),
-	elvenWizard(0x1a, true, Race.ELF, elvenMage),
-	spellsinger(0x1b, true, Race.ELF, elvenWizard),
-	elementalSummoner(0x1c, true, true, Race.ELF, elvenWizard),
-	oracle(0x1d, true, Race.ELF, elvenMage),
-	elder(0x1e, true, Race.ELF, oracle),
+	ELVEN_MAGE(25, true, Race.ELF, null),
+	ELVEN_WIZARD(26, true, Race.ELF, ELVEN_MAGE),
+	SPELLSINGER(27, true, Race.ELF, ELVEN_WIZARD),
+	ELEMENTAL_SUMMONER(28, true, true, Race.ELF, ELVEN_WIZARD),
+	ORACLE(29, true, Race.ELF, ELVEN_MAGE),
+	ELDER(30, true, Race.ELF, ORACLE),
 	
-	darkFighter(0x1f, false, Race.DARK_ELF, null),
-	palusKnight(0x20, false, Race.DARK_ELF, darkFighter),
-	shillienKnight(0x21, false, Race.DARK_ELF, palusKnight),
-	bladedancer(0x22, false, Race.DARK_ELF, palusKnight),
-	assassin(0x23, false, Race.DARK_ELF, darkFighter),
-	abyssWalker(0x24, false, Race.DARK_ELF, assassin),
-	phantomRanger(0x25, false, Race.DARK_ELF, assassin),
+	DARK_FIGHTER(31, false, Race.DARK_ELF, null),
+	PALUS_KNIGHT(32, false, Race.DARK_ELF, DARK_FIGHTER),
+	SHILLIEN_KNIGHT(33, false, Race.DARK_ELF, PALUS_KNIGHT),
+	BLADEDANCER(34, false, Race.DARK_ELF, PALUS_KNIGHT),
+	ASSASSIN(35, false, Race.DARK_ELF, DARK_FIGHTER),
+	ABYSS_WALKER(36, false, Race.DARK_ELF, ASSASSIN),
+	PHANTOM_RANGER(37, false, Race.DARK_ELF, ASSASSIN),
 	
-	darkMage(0x26, true, Race.DARK_ELF, null),
-	darkWizard(0x27, true, Race.DARK_ELF, darkMage),
-	spellhowler(0x28, true, Race.DARK_ELF, darkWizard),
-	phantomSummoner(0x29, true, true, Race.DARK_ELF, darkWizard),
-	shillienOracle(0x2a, true, Race.DARK_ELF, darkMage),
-	shillenElder(0x2b, true, Race.DARK_ELF, shillienOracle),
+	DARK_MAGE(38, true, Race.DARK_ELF, null),
+	DARK_WIZARD(39, true, Race.DARK_ELF, DARK_MAGE),
+	SPELLHOWLER(40, true, Race.DARK_ELF, DARK_WIZARD),
+	PHANTOM_SUMMONER(41, true, true, Race.DARK_ELF, DARK_WIZARD),
+	SHILLIEN_ORACLE(42, true, Race.DARK_ELF, DARK_MAGE),
+	SHILLIEN_ELDER(43, true, Race.DARK_ELF, SHILLIEN_ORACLE),
 	
-	orcFighter(0x2c, false, Race.ORC, null),
-	orcRaider(0x2d, false, Race.ORC, orcFighter),
-	destroyer(0x2e, false, Race.ORC, orcRaider),
-	orcMonk(0x2f, false, Race.ORC, orcFighter),
-	tyrant(0x30, false, Race.ORC, orcMonk),
+	ORC_FIGHTER(44, false, Race.ORC, null),
+	ORC_RAIDER(45, false, Race.ORC, ORC_FIGHTER),
+	DESTROYER(46, false, Race.ORC, ORC_RAIDER),
+	ORC_MONK(47, false, Race.ORC, ORC_FIGHTER),
+	TYRANT(48, false, Race.ORC, ORC_MONK),
 	
-	orcMage(0x31, false, Race.ORC, null),
-	orcShaman(0x32, true, Race.ORC, orcMage),
-	overlord(0x33, true, Race.ORC, orcShaman),
-	warcryer(0x34, true, Race.ORC, orcShaman),
+	ORC_MAGE(49, true, Race.ORC, null),
+	ORC_SHAMAN(50, true, Race.ORC, ORC_MAGE),
+	OVERLORD(51, true, Race.ORC, ORC_SHAMAN),
+	WARCRYER(52, true, Race.ORC, ORC_SHAMAN),
 	
-	dwarvenFighter(0x35, false, Race.DWARF, null),
-	scavenger(0x36, false, Race.DWARF, dwarvenFighter),
-	bountyHunter(0x37, false, Race.DWARF, scavenger),
-	artisan(0x38, false, Race.DWARF, dwarvenFighter),
-	warsmith(0x39, false, Race.DWARF, artisan),
+	DWARVEN_FIGHTER(53, false, Race.DWARF, null),
+	SCAVENGER(54, false, Race.DWARF, DWARVEN_FIGHTER),
+	BOUNTY_HUNTER(55, false, Race.DWARF, SCAVENGER),
+	ARTISAN(56, false, Race.DWARF, DWARVEN_FIGHTER),
+	WARSMITH(57, false, Race.DWARF, ARTISAN),
 	
-	/*
-	 * Dummy Entries (id's already in decimal format) btw FU NCSoft for the amount of work you put me through to do this!! <START>
-	 */
-	dummyEntry1(58, false, null, null),
-	dummyEntry2(59, false, null, null),
-	dummyEntry3(60, false, null, null),
-	dummyEntry4(61, false, null, null),
-	dummyEntry5(62, false, null, null),
-	dummyEntry6(63, false, null, null),
-	dummyEntry7(64, false, null, null),
-	dummyEntry8(65, false, null, null),
-	dummyEntry9(66, false, null, null),
-	dummyEntry10(67, false, null, null),
-	dummyEntry11(68, false, null, null),
-	dummyEntry12(69, false, null, null),
-	dummyEntry13(70, false, null, null),
-	dummyEntry14(71, false, null, null),
-	dummyEntry15(72, false, null, null),
-	dummyEntry16(73, false, null, null),
-	dummyEntry17(74, false, null, null),
-	dummyEntry18(75, false, null, null),
-	dummyEntry19(76, false, null, null),
-	dummyEntry20(77, false, null, null),
-	dummyEntry21(78, false, null, null),
-	dummyEntry22(79, false, null, null),
-	dummyEntry23(80, false, null, null),
-	dummyEntry24(81, false, null, null),
-	dummyEntry25(82, false, null, null),
-	dummyEntry26(83, false, null, null),
-	dummyEntry27(84, false, null, null),
-	dummyEntry28(85, false, null, null),
-	dummyEntry29(86, false, null, null),
-	dummyEntry30(87, false, null, null),
-	/*
-	 * <END> Of Dummy entries
-	 */
+	DUMMY_ENTRY_1(58, false, null, null),
+	DUMMY_ENTRY_2(59, false, null, null),
+	DUMMY_ENTRY_3(60, false, null, null),
+	DUMMY_ENTRY_4(61, false, null, null),
+	DUMMY_ENTRY_5(62, false, null, null),
+	DUMMY_ENTRY_6(63, false, null, null),
+	DUMMY_ENTRY_7(64, false, null, null),
+	DUMMY_ENTRY_8(65, false, null, null),
+	DUMMY_ENTRY_9(66, false, null, null),
+	DUMMY_ENTRY_10(67, false, null, null),
+	DUMMY_ENTRY_11(68, false, null, null),
+	DUMMY_ENTRY_12(69, false, null, null),
+	DUMMY_ENTRY_13(70, false, null, null),
+	DUMMY_ENTRY_14(71, false, null, null),
+	DUMMY_ENTRY_15(72, false, null, null),
+	DUMMY_ENTRY_16(73, false, null, null),
+	DUMMY_ENTRY_17(74, false, null, null),
+	DUMMY_ENTRY_18(75, false, null, null),
+	DUMMY_ENTRY_19(76, false, null, null),
+	DUMMY_ENTRY_20(77, false, null, null),
+	DUMMY_ENTRY_21(78, false, null, null),
+	DUMMY_ENTRY_22(79, false, null, null),
+	DUMMY_ENTRY_23(80, false, null, null),
+	DUMMY_ENTRY_24(81, false, null, null),
+	DUMMY_ENTRY_25(82, false, null, null),
+	DUMMY_ENTRY_26(83, false, null, null),
+	DUMMY_ENTRY_27(84, false, null, null),
+	DUMMY_ENTRY_28(85, false, null, null),
+	DUMMY_ENTRY_29(86, false, null, null),
+	DUMMY_ENTRY_30(87, false, null, null),
 	
-	/*
-	 * Now the bad boys! new class ids :)) (3rd classes)
-	 */
-	duelist(0x58, false, Race.HUMAN, gladiator),
-	dreadnought(0x59, false, Race.HUMAN, warlord),
-	phoenixKnight(0x5a, false, Race.HUMAN, paladin),
-	hellKnight(0x5b, false, Race.HUMAN, darkAvenger),
-	sagittarius(0x5c, false, Race.HUMAN, hawkeye),
-	adventurer(0x5d, false, Race.HUMAN, treasureHunter),
-	archmage(0x5e, true, Race.HUMAN, sorceror),
-	soultaker(0x5f, true, Race.HUMAN, necromancer),
-	arcanaLord(0x60, true, true, Race.HUMAN, warlock),
-	cardinal(0x61, true, Race.HUMAN, bishop),
-	hierophant(0x62, true, Race.HUMAN, prophet),
+	DUELIST(88, false, Race.HUMAN, GLADIATOR),
+	DREADNOUGHT(89, false, Race.HUMAN, WARLORD),
+	PHOENIX_KNIGHT(90, false, Race.HUMAN, PALADIN),
+	HELL_KNIGHT(91, false, Race.HUMAN, DARK_AVENGER),
+	SAGITTARIUS(92, false, Race.HUMAN, HAWKEYE),
+	ADVENTURER(93, false, Race.HUMAN, TREASURE_HUNTER),
+	ARCHMAGE(94, true, Race.HUMAN, SORCERER),
+	SOULTAKER(95, true, Race.HUMAN, NECROMANCER),
+	ARCANA_LORD(96, true, true, Race.HUMAN, WARLOCK),
+	CARDINAL(97, true, Race.HUMAN, BISHOP),
+	HIEROPHANT(98, true, Race.HUMAN, PROPHET),
 	
-	evaTemplar(0x63, false, Race.ELF, templeKnight),
-	swordMuse(0x64, false, Race.ELF, swordSinger),
-	windRider(0x65, false, Race.ELF, plainsWalker),
-	moonlightSentinel(0x66, false, Race.ELF, silverRanger),
-	mysticMuse(0x67, true, Race.ELF, spellsinger),
-	elementalMaster(0x68, true, true, Race.ELF, elementalSummoner),
-	evaSaint(0x69, true, Race.ELF, elder),
+	EVA_TEMPLAR(99, false, Race.ELF, TEMPLE_KNIGHT),
+	SWORD_MUSE(100, false, Race.ELF, SWORDSINGER),
+	WIND_RIDER(101, false, Race.ELF, PLAINS_WALKER),
+	MOONLIGHT_SENTINEL(102, false, Race.ELF, SILVER_RANGER),
+	MYSTIC_MUSE(103, true, Race.ELF, SPELLSINGER),
+	ELEMENTAL_MASTER(104, true, true, Race.ELF, ELEMENTAL_SUMMONER),
+	EVA_SAINT(105, true, Race.ELF, ELDER),
 	
-	shillienTemplar(0x6a, false, Race.DARK_ELF, shillienKnight),
-	spectralDancer(0x6b, false, Race.DARK_ELF, bladedancer),
-	ghostHunter(0x6c, false, Race.DARK_ELF, abyssWalker),
-	ghostSentinel(0x6d, false, Race.DARK_ELF, phantomRanger),
-	stormScreamer(0x6e, true, Race.DARK_ELF, spellhowler),
-	spectralMaster(0x6f, true, true, Race.DARK_ELF, phantomSummoner),
-	shillienSaint(0x70, true, Race.DARK_ELF, shillenElder),
+	SHILLIEN_TEMPLAR(106, false, Race.DARK_ELF, SHILLIEN_KNIGHT),
+	SPECTRAL_DANCER(107, false, Race.DARK_ELF, BLADEDANCER),
+	GHOST_HUNTER(108, false, Race.DARK_ELF, ABYSS_WALKER),
+	GHOST_SENTINEL(109, false, Race.DARK_ELF, PHANTOM_RANGER),
+	STORM_SCREAMER(110, true, Race.DARK_ELF, SPELLHOWLER),
+	SPECTRAL_MASTER(111, true, true, Race.DARK_ELF, PHANTOM_SUMMONER),
+	SHILLIEN_SAINT(112, true, Race.DARK_ELF, SHILLIEN_ELDER),
 	
-	titan(0x71, false, Race.ORC, destroyer),
-	grandKhavatari(0x72, false, Race.ORC, tyrant),
-	dominator(0x73, true, Race.ORC, overlord),
-	doomcryer(0x74, true, Race.ORC, warcryer),
+	TITAN(113, false, Race.ORC, DESTROYER),
+	GRAND_KHAVATARI(114, false, Race.ORC, TYRANT),
+	DOMINATOR(115, true, Race.ORC, OVERLORD),
+	DOOMCRYER(116, true, Race.ORC, WARCRYER),
 	
-	fortuneSeeker(0x75, false, Race.DWARF, bountyHunter),
-	maestro(0x76, false, Race.DWARF, warsmith),
+	FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
+	MAESTRO(118, false, Race.DWARF, WARSMITH),
 	
-	dummyEntry31(0x77, false, null, null),
-	dummyEntry32(0x78, false, null, null),
-	dummyEntry33(0x79, false, null, null),
-	dummyEntry34(0x7a, false, null, null),
+	DUMMY_ENTRY_31(119, false, null, null),
+	DUMMY_ENTRY_32(120, false, null, null),
+	DUMMY_ENTRY_33(121, false, null, null),
+	DUMMY_ENTRY_34(122, false, null, null),
 	
-	maleSoldier(0x7b, false, Race.KAMAEL, null),
-	femaleSoldier(0x7C, false, Race.KAMAEL, null),
-	trooper(0x7D, false, Race.KAMAEL, maleSoldier),
-	warder(0x7E, false, Race.KAMAEL, femaleSoldier),
-	berserker(0x7F, false, Race.KAMAEL, trooper),
-	maleSoulbreaker(0x80, false, Race.KAMAEL, trooper),
-	femaleSoulbreaker(0x81, false, Race.KAMAEL, warder),
-	arbalester(0x82, false, Race.KAMAEL, warder),
-	doombringer(0x83, false, Race.KAMAEL, berserker),
-	maleSoulhound(0x84, false, Race.KAMAEL, maleSoulbreaker),
-	femaleSoulhound(0x85, false, Race.KAMAEL, femaleSoulbreaker),
-	trickster(0x86, false, Race.KAMAEL, arbalester),
-	inspector(0x87, false, Race.KAMAEL, warder), // DS: yes, both male/female inspectors use skills from warder
-	judicator(0x88, false, Race.KAMAEL, inspector);
+	MALE_SOLDIER(123, false, Race.KAMAEL, null),
+	FEMALE_SOLDIER(124, false, Race.KAMAEL, null),
+	TROOPER(125, false, Race.KAMAEL, MALE_SOLDIER),
+	WARDER(126, false, Race.KAMAEL, FEMALE_SOLDIER),
+	BERSERKER(127, false, Race.KAMAEL, TROOPER),
+	MALE_SOULBREAKER(128, false, Race.KAMAEL, TROOPER),
+	FEMALE_SOULBREAKER(129, false, Race.KAMAEL, WARDER),
+	ARBALESTER(130, false, Race.KAMAEL, WARDER),
+	DOOMBRINGER(131, false, Race.KAMAEL, BERSERKER),
+	MALE_SOUL_HOUND(132, false, Race.KAMAEL, MALE_SOULBREAKER),
+	FEMALE_SOUL_HOUND(133, false, Race.KAMAEL, FEMALE_SOULBREAKER),
+	TRICKSTER(134, false, Race.KAMAEL, ARBALESTER),
+	INSPECTOR(135, false, Race.KAMAEL, WARDER),
+	JUDICATOR(136, false, Race.KAMAEL, INSPECTOR);
 	
 	/** The Identifier of the Class */
 	private final int _id;
@@ -211,6 +205,9 @@ public enum ClassId implements IIdentifiable
 	/** The parent ClassId or null if this class is a root */
 	private final ClassId _parent;
 	
+	/** List of available Class for next transfer **/
+	private final Set<ClassId> _nextClassIds = new HashSet<>(1);
+	
 	/**
 	 * Class constructor.
 	 * @param pId the class Id.
@@ -225,6 +222,11 @@ public enum ClassId implements IIdentifiable
 		_isSummoner = false;
 		_race = race;
 		_parent = pParent;
+		
+		if (_parent != null)
+		{
+			_parent.addNextClassId(this);
+		}
 	}
 	
 	/**
@@ -242,6 +244,11 @@ public enum ClassId implements IIdentifiable
 		_isSummoner = pIsSummoner;
 		_race = race;
 		_parent = pParent;
+		
+		if (_parent != null)
+		{
+			_parent.addNextClassId(this);
+		}
 	}
 	
 	/**
@@ -327,6 +334,23 @@ public enum ClassId implements IIdentifiable
 		return _parent;
 	}
 	
+	public final ClassId getRootClassId()
+	{
+		if (_parent != null)
+		{
+			return _parent.getRootClassId();
+		}
+		return this;
+	}
+	
+	/**
+	 * @return list of possible class transfer for this class
+	 */
+	public Set<ClassId> getNextClassIds()
+	{
+		return _nextClassIds;
+	}
+	
 	public static ClassId getClassId(int cId)
 	{
 		try
@@ -337,5 +361,10 @@ public enum ClassId implements IIdentifiable
 		{
 			return null;
 		}
+	}
+	
+	private final void addNextClassId(ClassId cId)
+	{
+		_nextClassIds.add(cId);
 	}
 }

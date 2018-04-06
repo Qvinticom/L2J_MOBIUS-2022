@@ -423,7 +423,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 		{
 			if (npc.getId() == PRIESTESS_PUPINA)
 			{
-				if ((player.getClassId() == ClassId.cleric) || (player.getClassId() == ClassId.shillienOracle))
+				if ((player.getClassId() == ClassId.CLERIC) || (player.getClassId() == ClassId.SHILLIEN_ORACLE))
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{

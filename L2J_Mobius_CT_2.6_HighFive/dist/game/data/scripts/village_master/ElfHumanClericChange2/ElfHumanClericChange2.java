@@ -98,7 +98,7 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 		{
 			htmltext = "30120-15.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == BISHOP) && (player.getClassId() == ClassId.cleric))
+		else if ((classId == BISHOP) && (player.getClassId() == ClassId.CLERIC))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -126,7 +126,7 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 				htmltext = "30120-19.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == PROPHET) && (player.getClassId() == ClassId.cleric))
+		else if ((classId == PROPHET) && (player.getClassId() == ClassId.CLERIC))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -154,7 +154,7 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 				htmltext = "30120-23.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == ELDER) && (player.getClassId() == ClassId.oracle))
+		else if ((classId == ELDER) && (player.getClassId() == ClassId.ORACLE))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -196,11 +196,11 @@ public final class ElfHumanClericChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.CLERIC_GROUP) && (player.isInCategory(CategoryType.HUMAN_CALL_CLASS) || player.isInCategory(CategoryType.ELF_CALL_CLASS)))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.cleric) || (classId == ClassId.bishop) || (classId == ClassId.prophet))
+			if ((classId == ClassId.CLERIC) || (classId == ClassId.BISHOP) || (classId == ClassId.PROPHET))
 			{
 				htmltext = "30120-02.htm"; // fnClassList1
 			}
-			else if ((classId == ClassId.oracle) || (classId == ClassId.elder))
+			else if ((classId == ClassId.ORACLE) || (classId == ClassId.ELDER))
 			{
 				htmltext = "30120-09.htm"; // fnClassList2
 			}

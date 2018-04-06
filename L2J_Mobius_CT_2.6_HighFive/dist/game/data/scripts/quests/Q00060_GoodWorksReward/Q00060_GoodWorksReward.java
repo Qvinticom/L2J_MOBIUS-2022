@@ -335,75 +335,75 @@ public final class Q00060_GoodWorksReward extends Quest
 			{
 				if (qs.isMemoState(10))
 				{
-					if ((player.getClassId() == ClassId.warrior))
+					if ((player.getClassId() == ClassId.WARRIOR))
 					{
 						htmltext = "31092-05.html";
 					}
-					else if ((player.getClassId() == ClassId.knight))
+					else if ((player.getClassId() == ClassId.KNIGHT))
 					{
 						htmltext = "31092-06.html";
 					}
-					else if ((player.getClassId() == ClassId.rogue))
+					else if ((player.getClassId() == ClassId.ROGUE))
 					{
 						htmltext = "31092-07.html";
 					}
-					else if ((player.getClassId() == ClassId.wizard))
+					else if ((player.getClassId() == ClassId.WIZARD))
 					{
 						htmltext = "31092-08.html";
 					}
-					else if ((player.getClassId() == ClassId.cleric))
+					else if ((player.getClassId() == ClassId.CLERIC))
 					{
 						htmltext = "31092-09.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenKnight))
+					else if ((player.getClassId() == ClassId.ELVEN_KNIGHT))
 					{
 						htmltext = "31092-10.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenScout))
+					else if ((player.getClassId() == ClassId.ELVEN_SCOUT))
 					{
 						htmltext = "31092-11.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenWizard))
+					else if ((player.getClassId() == ClassId.ELVEN_WIZARD))
 					{
 						htmltext = "31092-12.html";
 					}
-					else if ((player.getClassId() == ClassId.oracle))
+					else if ((player.getClassId() == ClassId.ORACLE))
 					{
 						htmltext = "31092-13.html";
 					}
-					else if ((player.getClassId() == ClassId.palusKnight))
+					else if ((player.getClassId() == ClassId.PALUS_KNIGHT))
 					{
 						htmltext = "31092-14.html";
 					}
-					else if ((player.getClassId() == ClassId.assassin))
+					else if ((player.getClassId() == ClassId.ASSASSIN))
 					{
 						htmltext = "31092-15.html";
 					}
-					else if ((player.getClassId() == ClassId.darkWizard))
+					else if ((player.getClassId() == ClassId.DARK_WIZARD))
 					{
 						htmltext = "31092-16.html";
 					}
-					else if ((player.getClassId() == ClassId.shillienOracle))
+					else if ((player.getClassId() == ClassId.SHILLIEN_ORACLE))
 					{
 						htmltext = "31092-17.html";
 					}
-					else if ((player.getClassId() == ClassId.orcRaider))
+					else if ((player.getClassId() == ClassId.ORC_RAIDER))
 					{
 						htmltext = "31092-18.html";
 					}
-					else if ((player.getClassId() == ClassId.orcMonk))
+					else if ((player.getClassId() == ClassId.ORC_MONK))
 					{
 						htmltext = "31092-19.html";
 					}
-					else if ((player.getClassId() == ClassId.orcShaman))
+					else if ((player.getClassId() == ClassId.ORC_SHAMAN))
 					{
 						htmltext = "31092-20.html";
 					}
-					else if ((player.getClassId() == ClassId.scavenger))
+					else if ((player.getClassId() == ClassId.SCAVENGER))
 					{
 						htmltext = "31092-21.html";
 					}
-					else if ((player.getClassId() == ClassId.artisan))
+					else if ((player.getClassId() == ClassId.ARTISAN))
 					{
 						htmltext = "31092-22.html";
 					}
@@ -414,75 +414,75 @@ public final class Q00060_GoodWorksReward extends Quest
 			{
 				if (player.isInCategory(CategoryType.SECOND_CLASS_GROUP))
 				{
-					if ((player.getClassId() == ClassId.warrior))
+					if ((player.getClassId() == ClassId.WARRIOR))
 					{
 						htmltext = "31092-05a.html";
 					}
-					else if ((player.getClassId() == ClassId.knight))
+					else if ((player.getClassId() == ClassId.KNIGHT))
 					{
 						htmltext = "31092-06a.html";
 					}
-					else if ((player.getClassId() == ClassId.rogue))
+					else if ((player.getClassId() == ClassId.ROGUE))
 					{
 						htmltext = "31092-07a.html";
 					}
-					else if ((player.getClassId() == ClassId.wizard))
+					else if ((player.getClassId() == ClassId.WIZARD))
 					{
 						htmltext = "31092-08a.html";
 					}
-					else if ((player.getClassId() == ClassId.cleric))
+					else if ((player.getClassId() == ClassId.CLERIC))
 					{
 						htmltext = "31092-09a.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenKnight))
+					else if ((player.getClassId() == ClassId.ELVEN_KNIGHT))
 					{
 						htmltext = "31092-10a.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenScout))
+					else if ((player.getClassId() == ClassId.ELVEN_SCOUT))
 					{
 						htmltext = "31092-11a.html";
 					}
-					else if ((player.getClassId() == ClassId.elvenWizard))
+					else if ((player.getClassId() == ClassId.ELVEN_WIZARD))
 					{
 						htmltext = "31092-12a.html";
 					}
-					else if ((player.getClassId() == ClassId.oracle))
+					else if ((player.getClassId() == ClassId.ORACLE))
 					{
 						htmltext = "31092-13a.html";
 					}
-					else if ((player.getClassId() == ClassId.palusKnight))
+					else if ((player.getClassId() == ClassId.PALUS_KNIGHT))
 					{
 						htmltext = "31092-14a.html";
 					}
-					else if ((player.getClassId() == ClassId.assassin))
+					else if ((player.getClassId() == ClassId.ASSASSIN))
 					{
 						htmltext = "31092-15a.html";
 					}
-					else if ((player.getClassId() == ClassId.darkWizard))
+					else if ((player.getClassId() == ClassId.DARK_WIZARD))
 					{
 						htmltext = "31092-16a.html";
 					}
-					else if ((player.getClassId() == ClassId.shillienOracle))
+					else if ((player.getClassId() == ClassId.SHILLIEN_ORACLE))
 					{
 						htmltext = "31092-17a.html";
 					}
-					else if ((player.getClassId() == ClassId.orcRaider))
+					else if ((player.getClassId() == ClassId.ORC_RAIDER))
 					{
 						htmltext = "31092-18a.html";
 					}
-					else if ((player.getClassId() == ClassId.orcMonk))
+					else if ((player.getClassId() == ClassId.ORC_MONK))
 					{
 						htmltext = "31092-19a.html";
 					}
-					else if ((player.getClassId() == ClassId.orcShaman))
+					else if ((player.getClassId() == ClassId.ORC_SHAMAN))
 					{
 						htmltext = "31092-20a.html";
 					}
-					else if ((player.getClassId() == ClassId.scavenger))
+					else if ((player.getClassId() == ClassId.SCAVENGER))
 					{
 						htmltext = "31092-21a.html";
 					}
-					else if ((player.getClassId() == ClassId.artisan))
+					else if ((player.getClassId() == ClassId.ARTISAN))
 					{
 						htmltext = "31092-22a.html";
 					}
@@ -490,7 +490,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_6":
 			{
-				if ((player.getClassId() == ClassId.warrior))
+				if ((player.getClassId() == ClassId.WARRIOR))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -510,7 +510,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_7":
 			{
-				if ((player.getClassId() == ClassId.warrior))
+				if ((player.getClassId() == ClassId.WARRIOR))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -530,7 +530,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_8":
 			{
-				if ((player.getClassId() == ClassId.knight))
+				if ((player.getClassId() == ClassId.KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_DUTY))
 					{
@@ -550,7 +550,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_9":
 			{
-				if ((player.getClassId() == ClassId.knight))
+				if ((player.getClassId() == ClassId.KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_DUTY))
 					{
@@ -570,7 +570,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_10":
 			{
-				if ((player.getClassId() == ClassId.rogue))
+				if ((player.getClassId() == ClassId.ROGUE))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -590,7 +590,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_11":
 			{
-				if ((player.getClassId() == ClassId.rogue))
+				if ((player.getClassId() == ClassId.ROGUE))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -610,7 +610,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_12":
 			{
-				if ((player.getClassId() == ClassId.wizard))
+				if ((player.getClassId() == ClassId.WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -630,7 +630,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_13":
 			{
-				if ((player.getClassId() == ClassId.wizard))
+				if ((player.getClassId() == ClassId.WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -650,7 +650,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_14":
 			{
-				if ((player.getClassId() == ClassId.wizard))
+				if ((player.getClassId() == ClassId.WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -670,7 +670,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_15":
 			{
-				if ((player.getClassId() == ClassId.cleric))
+				if ((player.getClassId() == ClassId.CLERIC))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -690,7 +690,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_16":
 			{
-				if ((player.getClassId() == ClassId.cleric))
+				if ((player.getClassId() == ClassId.CLERIC))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -710,7 +710,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_17":
 			{
-				if ((player.getClassId() == ClassId.elvenKnight))
+				if ((player.getClassId() == ClassId.ELVEN_KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_DUTY))
 					{
@@ -730,7 +730,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_18":
 			{
-				if ((player.getClassId() == ClassId.elvenKnight))
+				if ((player.getClassId() == ClassId.ELVEN_KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -750,7 +750,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_19":
 			{
-				if ((player.getClassId() == ClassId.elvenScout))
+				if ((player.getClassId() == ClassId.ELVEN_SCOUT))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -770,7 +770,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_20":
 			{
-				if ((player.getClassId() == ClassId.elvenScout))
+				if ((player.getClassId() == ClassId.ELVEN_SCOUT))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -790,7 +790,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_21":
 			{
-				if ((player.getClassId() == ClassId.elvenWizard))
+				if ((player.getClassId() == ClassId.ELVEN_WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -810,7 +810,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_22":
 			{
-				if ((player.getClassId() == ClassId.elvenWizard))
+				if ((player.getClassId() == ClassId.ELVEN_WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -830,7 +830,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_23":
 			{
-				if ((player.getClassId() == ClassId.oracle))
+				if ((player.getClassId() == ClassId.ORACLE))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -850,7 +850,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_24":
 			{
-				if ((player.getClassId() == ClassId.palusKnight))
+				if ((player.getClassId() == ClassId.PALUS_KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_DUTY))
 					{
@@ -870,7 +870,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_25":
 			{
-				if ((player.getClassId() == ClassId.palusKnight))
+				if ((player.getClassId() == ClassId.PALUS_KNIGHT))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -890,7 +890,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_26":
 			{
-				if ((player.getClassId() == ClassId.assassin))
+				if ((player.getClassId() == ClassId.ASSASSIN))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -910,7 +910,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_27":
 			{
-				if ((player.getClassId() == ClassId.assassin))
+				if ((player.getClassId() == ClassId.ASSASSIN))
 				{
 					if (!hasQuestItems(player, MARK_OF_SEEKER))
 					{
@@ -930,7 +930,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_28":
 			{
-				if ((player.getClassId() == ClassId.darkWizard))
+				if ((player.getClassId() == ClassId.DARK_WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -950,7 +950,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_29":
 			{
-				if ((player.getClassId() == ClassId.darkWizard))
+				if ((player.getClassId() == ClassId.DARK_WIZARD))
 				{
 					if (!hasQuestItems(player, MARK_OF_SCHOLAR))
 					{
@@ -970,7 +970,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_30":
 			{
-				if ((player.getClassId() == ClassId.shillienOracle))
+				if ((player.getClassId() == ClassId.SHILLIEN_ORACLE))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -990,7 +990,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_31":
 			{
-				if ((player.getClassId() == ClassId.orcRaider))
+				if ((player.getClassId() == ClassId.ORC_RAIDER))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -1010,7 +1010,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_32":
 			{
-				if ((player.getClassId() == ClassId.orcMonk))
+				if ((player.getClassId() == ClassId.ORC_MONK))
 				{
 					if (!hasQuestItems(player, MARK_OF_CHALLENGER))
 					{
@@ -1030,7 +1030,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_33":
 			{
-				if ((player.getClassId() == ClassId.orcShaman))
+				if ((player.getClassId() == ClassId.ORC_SHAMAN))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -1050,7 +1050,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_34":
 			{
-				if ((player.getClassId() == ClassId.orcShaman))
+				if ((player.getClassId() == ClassId.ORC_SHAMAN))
 				{
 					if (!hasQuestItems(player, MARK_OF_PILGRIM))
 					{
@@ -1070,7 +1070,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_35":
 			{
-				if ((player.getClassId() == ClassId.scavenger))
+				if ((player.getClassId() == ClassId.SCAVENGER))
 				{
 					if (!hasQuestItems(player, MARK_OF_GUILDSMAN))
 					{
@@ -1090,7 +1090,7 @@ public final class Q00060_GoodWorksReward extends Quest
 			}
 			case "REPLY_36":
 			{
-				if ((player.getClassId() == ClassId.artisan))
+				if ((player.getClassId() == ClassId.ARTISAN))
 				{
 					if (!hasQuestItems(player, MARK_OF_GUILDSMAN))
 					{

@@ -30,9 +30,9 @@ public final class ClassInfo
 	
 	/**
 	 * Constructor for ClassInfo.
-	 * @param classId the class ID
-	 * @param className the in game class name
-	 * @param parentClassId the parent class for the given {@code classId}
+	 * @param classId the class Id.
+	 * @param className the in game class name.
+	 * @param parentClassId the parent class for the given {@code classId}.
 	 */
 	public ClassInfo(ClassId classId, String className, ClassId parentClassId)
 	{
@@ -42,7 +42,7 @@ public final class ClassInfo
 	}
 	
 	/**
-	 * @return the class ID
+	 * @return the class Id.
 	 */
 	public ClassId getClassId()
 	{
@@ -50,7 +50,7 @@ public final class ClassInfo
 	}
 	
 	/**
-	 * @return the hardcoded in-game class name
+	 * @return the hardcoded in-game class name.
 	 */
 	public String getClassName()
 	{
@@ -58,7 +58,7 @@ public final class ClassInfo
 	}
 	
 	/**
-	 * @return the class client ID
+	 * @return the class client Id.
 	 */
 	private int getClassClientId()
 	{
@@ -75,11 +75,12 @@ public final class ClassInfo
 		{
 			classClientId += 1438;
 		}
+		
 		return classClientId;
 	}
 	
 	/**
-	 * @return the class client ID formatted to be displayed on a HTML.
+	 * @return the class client Id formatted to be displayed on a HTML.
 	 */
 	public String getClientCode()
 	{
@@ -87,7 +88,7 @@ public final class ClassInfo
 	}
 	
 	/**
-	 * @return the escaped class client ID formatted to be displayed on a HTML
+	 * @return the escaped class client Id formatted to be displayed on a HTML.
 	 */
 	public String getEscapedClientCode()
 	{
@@ -95,7 +96,7 @@ public final class ClassInfo
 	}
 	
 	/**
-	 * @return the parent class ID
+	 * @return the parent class Id.
 	 */
 	public ClassId getParentClassId()
 	{

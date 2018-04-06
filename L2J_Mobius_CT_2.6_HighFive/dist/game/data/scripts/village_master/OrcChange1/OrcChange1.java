@@ -120,7 +120,7 @@ public final class OrcChange1 extends AbstractNpcAI
 		{
 			htmltext = "30500-24.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == 45) && (player.getClassId() == ClassId.orcFighter))
+		else if ((classId == 45) && (player.getClassId() == ClassId.ORC_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -148,7 +148,7 @@ public final class OrcChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-13.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == 47) && (player.getClassId() == ClassId.orcFighter))
+		else if ((classId == 47) && (player.getClassId() == ClassId.ORC_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -176,7 +176,7 @@ public final class OrcChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-17.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == 50) && (player.getClassId() == ClassId.orcMage))
+		else if ((classId == 50) && (player.getClassId() == ClassId.ORC_MAGE))
 		{
 			if (player.getLevel() < 20)
 			{

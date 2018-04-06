@@ -80,7 +80,7 @@ public final class Q00178_IconicTrinity extends Quest
 			}
 			case "32138-14.htm":
 			{
-				if ((qs.isMemoState(10) && (player.getLevel() <= TWENTY_LEVEL) && (player.getClassId() == ClassId.maleSoldier)) || (player.getClassId() == ClassId.femaleSoldier))
+				if ((qs.isMemoState(10) && (player.getLevel() <= TWENTY_LEVEL) && (player.getClassId() == ClassId.MALE_SOLDIER)) || (player.getClassId() == ClassId.FEMALE_SOLDIER))
 				{
 					giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
 					addExpAndSp(player, 20123, 976);
@@ -91,7 +91,7 @@ public final class Q00178_IconicTrinity extends Quest
 			}
 			case "32138-17.html":
 			{
-				if ((qs.isMemoState(10) && (player.getLevel() > TWENTY_LEVEL) && (player.getClassId() != ClassId.maleSoldier)) || (player.getClassId() != ClassId.femaleSoldier))
+				if ((qs.isMemoState(10) && (player.getLevel() > TWENTY_LEVEL) && (player.getClassId() != ClassId.MALE_SOLDIER)) || (player.getClassId() != ClassId.FEMALE_SOLDIER))
 				{
 					giveItems(player, SCROLL_ENCHANT_ARMOR_D_GRADE, 1);
 					qs.exitQuest(false, true);
@@ -436,7 +436,7 @@ public final class Q00178_IconicTrinity extends Quest
 						}
 						case 10:
 						{
-							if (((player.getLevel() <= TWENTY_LEVEL) && (player.getClassId() == ClassId.maleSoldier)) || (player.getClassId() == ClassId.femaleSoldier))
+							if (((player.getLevel() <= TWENTY_LEVEL) && (player.getClassId() == ClassId.MALE_SOLDIER)) || (player.getClassId() == ClassId.FEMALE_SOLDIER))
 							{
 								htmltext = "32138-12.html";
 							}

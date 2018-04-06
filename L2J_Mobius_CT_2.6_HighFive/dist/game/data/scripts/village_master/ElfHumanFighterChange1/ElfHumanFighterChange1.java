@@ -166,7 +166,7 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 		{
 			htmltext = "30066-41.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == WARRIOR) && (player.getClassId() == ClassId.fighter))
+		else if ((classId == WARRIOR) && (player.getClassId() == ClassId.FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -194,7 +194,7 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-24.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == KNIGHT) && (player.getClassId() == ClassId.fighter))
+		else if ((classId == KNIGHT) && (player.getClassId() == ClassId.FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -222,7 +222,7 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-28.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == ROGUE) && (player.getClassId() == ClassId.fighter))
+		else if ((classId == ROGUE) && (player.getClassId() == ClassId.FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -250,7 +250,7 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-32.htm"; // fnNoProof13
 			}
 		}
-		else if ((classId == ELVEN_KNIGHT) && (player.getClassId() == ClassId.elvenFighter))
+		else if ((classId == ELVEN_KNIGHT) && (player.getClassId() == ClassId.ELVEN_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -278,7 +278,7 @@ public final class ElfHumanFighterChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-36.htm"; // fnNoProof21
 			}
 		}
-		else if ((classId == ELVEN_SCOUT) && (player.getClassId() == ClassId.elvenFighter))
+		else if ((classId == ELVEN_SCOUT) && (player.getClassId() == ClassId.ELVEN_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{

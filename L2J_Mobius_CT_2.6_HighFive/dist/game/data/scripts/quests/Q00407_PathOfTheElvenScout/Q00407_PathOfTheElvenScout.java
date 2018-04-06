@@ -79,7 +79,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.elvenFighter)
+				if (player.getClassId() == ClassId.ELVEN_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -100,7 +100,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 						htmltext = "30328-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.elvenScout)
+				else if (player.getClassId() == ClassId.ELVEN_SCOUT)
 				{
 					htmltext = "30328-02a.htm";
 				}

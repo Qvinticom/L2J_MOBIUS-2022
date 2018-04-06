@@ -86,7 +86,7 @@ public final class DwarfBlacksmithChange2 extends AbstractNpcAI
 		{
 			htmltext = "30512-08.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == WARSMITH) && (player.getClassId() == ClassId.artisan))
+		else if ((classId == WARSMITH) && (player.getClassId() == ClassId.ARTISAN))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -128,7 +128,7 @@ public final class DwarfBlacksmithChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.WARSMITH_GROUP))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.artisan) || (classId == ClassId.warsmith))
+			if ((classId == ClassId.ARTISAN) || (classId == ClassId.WARSMITH))
 			{
 				htmltext = "30512-02.htm"; // fnClassList1
 			}

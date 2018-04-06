@@ -145,7 +145,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 		{
 			htmltext = "30109-39.htm"; // fnYouAreThirdClass
 		}
-		else if ((classId == GLADIATOR) && (player.getClassId() == ClassId.warrior))
+		else if ((classId == GLADIATOR) && (player.getClassId() == ClassId.WARRIOR))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -173,7 +173,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-43.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == WARLORD) && (player.getClassId() == ClassId.warrior))
+		else if ((classId == WARLORD) && (player.getClassId() == ClassId.WARRIOR))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -201,7 +201,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-47.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == PALADIN) && (player.getClassId() == ClassId.knight))
+		else if ((classId == PALADIN) && (player.getClassId() == ClassId.KNIGHT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -229,7 +229,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-51.htm"; // fnNoProof21
 			}
 		}
-		else if ((classId == DARK_AVENGER) && (player.getClassId() == ClassId.knight))
+		else if ((classId == DARK_AVENGER) && (player.getClassId() == ClassId.KNIGHT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -257,7 +257,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-55.htm"; // fnNoProof22
 			}
 		}
-		else if ((classId == TREASURE_HUNTER) && (player.getClassId() == ClassId.rogue))
+		else if ((classId == TREASURE_HUNTER) && (player.getClassId() == ClassId.ROGUE))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -285,7 +285,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-59.htm"; // fnNoProof31
 			}
 		}
-		else if ((classId == HAWKEYE) && (player.getClassId() == ClassId.rogue))
+		else if ((classId == HAWKEYE) && (player.getClassId() == ClassId.ROGUE))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -313,7 +313,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-63.htm"; // fnNoProof32
 			}
 		}
-		else if ((classId == TEMPLE_KNIGHT) && (player.getClassId() == ClassId.elvenKnight))
+		else if ((classId == TEMPLE_KNIGHT) && (player.getClassId() == ClassId.ELVEN_KNIGHT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -341,7 +341,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-67.htm"; // fnNoProof41
 			}
 		}
-		else if ((classId == SWORDSINGER) && (player.getClassId() == ClassId.elvenKnight))
+		else if ((classId == SWORDSINGER) && (player.getClassId() == ClassId.ELVEN_KNIGHT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -369,7 +369,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-71.htm"; // fnNoProof42
 			}
 		}
-		else if ((classId == PLAINS_WALKER) && (player.getClassId() == ClassId.elvenScout))
+		else if ((classId == PLAINS_WALKER) && (player.getClassId() == ClassId.ELVEN_SCOUT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -397,7 +397,7 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 				htmltext = "30109-75.htm"; // fnNoProof51
 			}
 		}
-		else if ((classId == SILVER_RANGER) && (player.getClassId() == ClassId.elvenScout))
+		else if ((classId == SILVER_RANGER) && (player.getClassId() == ClassId.ELVEN_SCOUT))
 		{
 			if (player.getLevel() < 40)
 			{
@@ -439,23 +439,23 @@ public final class ElfHumanFighterChange2 extends AbstractNpcAI
 		else if (player.isInCategory(CategoryType.FIGHTER_GROUP) && (player.isInCategory(CategoryType.HUMAN_FALL_CLASS) || player.isInCategory(CategoryType.ELF_FALL_CLASS)))
 		{
 			final ClassId classId = player.getClassId();
-			if ((classId == ClassId.warrior) || (classId == ClassId.gladiator) || (classId == ClassId.warlord))
+			if ((classId == ClassId.WARRIOR) || (classId == ClassId.GLADIATOR) || (classId == ClassId.WARLORD))
 			{
 				htmltext = "30109-02.htm"; // fnClassList1
 			}
-			else if ((classId == ClassId.knight) || (classId == ClassId.paladin) || (classId == ClassId.darkAvenger))
+			else if ((classId == ClassId.KNIGHT) || (classId == ClassId.PALADIN) || (classId == ClassId.DARK_AVENGER))
 			{
 				htmltext = "30109-09.htm"; // fnClassList2
 			}
-			else if ((classId == ClassId.rogue) || (classId == ClassId.treasureHunter) || (classId == ClassId.hawkeye))
+			else if ((classId == ClassId.ROGUE) || (classId == ClassId.TREASURE_HUNTER) || (classId == ClassId.HAWKEYE))
 			{
 				htmltext = "30109-16.htm"; // fnClassList3
 			}
-			else if ((classId == ClassId.elvenKnight) || (classId == ClassId.templeKnight) || (classId == ClassId.swordSinger))
+			else if ((classId == ClassId.ELVEN_KNIGHT) || (classId == ClassId.TEMPLE_KNIGHT) || (classId == ClassId.SWORDSINGER))
 			{
 				htmltext = "30109-23.htm"; // fnClassList4
 			}
-			else if ((classId == ClassId.elvenScout) || (classId == ClassId.plainsWalker) || (classId == ClassId.silverRanger))
+			else if ((classId == ClassId.ELVEN_SCOUT) || (classId == ClassId.PLAINS_WALKER) || (classId == ClassId.SILVER_RANGER))
 			{
 				htmltext = "30109-30.htm"; // fnClassList5
 			}

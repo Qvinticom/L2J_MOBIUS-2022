@@ -101,7 +101,7 @@ public final class DwarfWarehouseChange1 extends AbstractNpcAI
 		{
 			htmltext = "30498-12.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == SCAVENGER) && (player.getClassId() == ClassId.dwarvenFighter))
+		else if ((classId == SCAVENGER) && (player.getClassId() == ClassId.DWARVEN_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{

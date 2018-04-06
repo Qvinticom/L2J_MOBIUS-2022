@@ -78,7 +78,7 @@ public final class Q00401_PathOfTheWarrior extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.fighter)
+				if (player.getClassId() == ClassId.FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -96,7 +96,7 @@ public final class Q00401_PathOfTheWarrior extends Quest
 						htmltext = "30010-02.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.warrior)
+				else if (player.getClassId() == ClassId.WARRIOR)
 				{
 					htmltext = "30010-02a.htm";
 				}

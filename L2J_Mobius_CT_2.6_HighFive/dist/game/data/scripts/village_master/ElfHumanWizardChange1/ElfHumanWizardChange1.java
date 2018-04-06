@@ -166,7 +166,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 		{
 			htmltext = "30037-34.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == WIZARD) && (player.getClassId() == ClassId.mage))
+		else if ((classId == WIZARD) && (player.getClassId() == ClassId.MAGE))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -194,7 +194,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-21.htm"; // fnNoProof11
 			}
 		}
-		else if ((classId == CLERIC) && (player.getClassId() == ClassId.mage))
+		else if ((classId == CLERIC) && (player.getClassId() == ClassId.MAGE))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -222,7 +222,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-25.htm"; // fnNoProof12
 			}
 		}
-		else if ((classId == ELVEN_WIZARD) && (player.getClassId() == ClassId.elvenMage))
+		else if ((classId == ELVEN_WIZARD) && (player.getClassId() == ClassId.ELVEN_MAGE))
 		{
 			if (player.getLevel() < 20)
 			{
@@ -250,7 +250,7 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 				htmltext = npc.getId() + "-29.htm"; // fnNoProof21
 			}
 		}
-		else if ((classId == ORACLE) && (player.getClassId() == ClassId.elvenMage))
+		else if ((classId == ORACLE) && (player.getClassId() == ClassId.ELVEN_MAGE))
 		{
 			if (player.getLevel() < 20)
 			{

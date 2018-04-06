@@ -2247,7 +2247,7 @@ public final class L2PcInstance extends L2Playable
 		
 		try
 		{
-			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.Third))
+			if ((getLvlJoinedAcademy() != 0) && (_clan != null) && (PlayerClass.values()[Id].getLevel() == ClassLevel.THIRD))
 			{
 				if (getLvlJoinedAcademy() <= 16)
 				{

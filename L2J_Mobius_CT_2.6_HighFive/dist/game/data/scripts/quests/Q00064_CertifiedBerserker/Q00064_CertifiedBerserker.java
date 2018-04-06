@@ -303,7 +303,7 @@ public final class Q00064_CertifiedBerserker extends Quest
 			{
 				if (player.getRace() == Race.KAMAEL)
 				{
-					if (player.getClassId() == ClassId.trooper)
+					if (player.getClassId() == ClassId.TROOPER)
 					{
 						if (player.getLevel() >= MIN_LEVEL)
 						{

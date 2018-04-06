@@ -101,7 +101,7 @@ public final class DwarfBlacksmithChange1 extends AbstractNpcAI
 		{
 			htmltext = "30499-12.htm"; // fnYouAreFourthClass
 		}
-		else if ((classId == ARTISAN) && (player.getClassId() == ClassId.dwarvenFighter))
+		else if ((classId == ARTISAN) && (player.getClassId() == ClassId.DWARVEN_FIGHTER))
 		{
 			if (player.getLevel() < 20)
 			{

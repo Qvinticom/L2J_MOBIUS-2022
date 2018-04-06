@@ -570,7 +570,7 @@ public final class Q00212_TrialOfDuty extends Quest
 		
 		if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
 		{
-			if (player.getClassId() == ClassId.knight)
+			if (player.getClassId() == ClassId.KNIGHT)
 			{
 				rewardItems(player, DIMENSIONAL_DIAMOND, 45);
 			}

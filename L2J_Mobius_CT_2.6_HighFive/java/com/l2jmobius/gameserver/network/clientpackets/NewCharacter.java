@@ -37,17 +37,17 @@ public final class NewCharacter implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final NewCharacterSuccess ct = new NewCharacterSuccess();
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.fighter)); // Human Figther
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.mage)); // Human Mystic
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.elvenFighter)); // Elven Fighter
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.elvenMage)); // Elven Mystic
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.darkFighter)); // Dark Fighter
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.darkMage)); // Dark Mystic
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.orcFighter)); // Orc Fighter
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.orcMage)); // Orc Mystic
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.dwarvenFighter)); // Dwarf Fighter
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.maleSoldier)); // Male Kamael Soldier
-		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.femaleSoldier)); // Female Kamael Soldier
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.FIGHTER)); // Human Figther
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.MAGE)); // Human Mystic
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.ELVEN_FIGHTER)); // Elven Fighter
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.ELVEN_MAGE)); // Elven Mystic
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.DARK_FIGHTER)); // Dark Fighter
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.DARK_MAGE)); // Dark Mystic
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.ORC_FIGHTER)); // Orc Fighter
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.ORC_MAGE)); // Orc Mystic
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.DWARVEN_FIGHTER)); // Dwarf Fighter
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.MALE_SOLDIER)); // Male Kamael Soldier
+		ct.addChar(PlayerTemplateData.getInstance().getTemplate(ClassId.FEMALE_SOLDIER)); // Female Kamael Soldier
 		client.sendPacket(ct);
 	}
 }

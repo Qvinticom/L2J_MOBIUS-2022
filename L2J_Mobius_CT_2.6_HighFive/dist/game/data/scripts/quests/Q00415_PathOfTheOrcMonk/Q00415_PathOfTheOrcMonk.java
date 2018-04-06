@@ -105,7 +105,7 @@ public final class Q00415_PathOfTheOrcMonk extends Quest
 		{
 			case "ACCEPT":
 			{
-				if (player.getClassId() == ClassId.orcFighter)
+				if (player.getClassId() == ClassId.ORC_FIGHTER)
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
@@ -123,7 +123,7 @@ public final class Q00415_PathOfTheOrcMonk extends Quest
 						htmltext = "30587-03.htm";
 					}
 				}
-				else if (player.getClassId() == ClassId.orcMonk)
+				else if (player.getClassId() == ClassId.ORC_MONK)
 				{
 					htmltext = "30587-02a.htm";
 				}
