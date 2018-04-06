@@ -1463,7 +1463,6 @@
 		<effects>
 			<effect name="Summon">
 				<npcId>14737</npcId>
-				<lifeTime>1200</lifeTime>
 				<consumeItemId>2131</consumeItemId>
 				<consumeItemCount>40</consumeItemCount>
 			</effect>
@@ -1715,6 +1714,7 @@
 	</skill>
 	<skill id="16" toLevel="24" name="Mortal Blow">
 		<castRange>40</castRange>
+		<affectRange>40</affectRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
 			<value level="1">-52</value>
@@ -2729,7 +2729,6 @@
 					<value level="9">14671</value>
 					<value level="10">14672</value>
 				</npcId>
-				<lifeTime>1200</lifeTime>
 				<item>consumeItemId</item>
 				<consumeItemCount>
 					<value level="1">4</value>

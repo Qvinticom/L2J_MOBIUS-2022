@@ -265,52 +265,55 @@ public class Q00348_AnArrogantSearch extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		switch (npc.getId())
+		if (qs != null)
 		{
-			case CRIMSON_DRAKE:
-			case KADIOS:
+			switch (npc.getId())
 			{
-				if (qs.isCond(2) && getRandomBoolean())
+				case CRIMSON_DRAKE:
+				case KADIOS:
 				{
-					giveItems(killer, SHELL_OF_MONSTERS, 1, true);
-					qs.setCond(3);
-				}
-				break;
-			}
-			case PLATINUM_TRIBE_SHAMAN:
-			case PLATINUM_TRIBE_PREFECT:
-			{
-				if (qs.isCond(8))
-				{
-					if (giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 0.5, true))
+					if (qs.isCond(2) && getRandomBoolean())
 					{
-						qs.setCond(10);
+						giveItems(killer, SHELL_OF_MONSTERS, 1, true);
+						qs.setCond(3);
 					}
+					break;
 				}
-				break;
-			}
-			case GUARDIAN_ANGEL:
-			case SEAL_ANGEL:
-			{
-				if (qs.isCond(9))
+				case PLATINUM_TRIBE_SHAMAN:
+				case PLATINUM_TRIBE_PREFECT:
 				{
-					if (giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 0.5, true))
+					if (qs.isCond(8))
 					{
-						qs.setCond(11);
+						if (giveItemRandomly(killer, npc, WHITE_CLOTH_PLATINUM, 1, 100, 0.5, true))
+						{
+							qs.setCond(10);
+						}
 					}
+					break;
 				}
-				break;
-			}
-			case STONE_WATCHMAN_EZEKIEL:
-			{
-				if (qs.isCond(5))
+				case GUARDIAN_ANGEL:
+				case SEAL_ANGEL:
 				{
-					giveItems(killer, BOOK_OF_SAINT, 1);
-					qs.setCond(6);
+					if (qs.isCond(9))
+					{
+						if (giveItemRandomly(killer, npc, WHITE_CLOTH_ANGLE, 1, 1000, 0.5, true))
+						{
+							qs.setCond(11);
+						}
+					}
+					break;
 				}
-				break;
+				case STONE_WATCHMAN_EZEKIEL:
+				{
+					if (qs.isCond(5))
+					{
+						giveItems(killer, BOOK_OF_SAINT, 1);
+						qs.setCond(6);
+					}
+					break;
+				}
 			}
 		}
-		return null;
+		return super.onKill(npc, killer, isSummon);
 	}
 }

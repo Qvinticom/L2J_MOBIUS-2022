@@ -788,13 +788,13 @@
 	</skill>
 	<skill id="2050" toLevel="1" name="Scroll: Guidance">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3926</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3926</itemConsumeId> <!-- L2Day - Guidance Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -804,20 +804,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Accuracy">
-				<amount>4</amount>
+				<amount>2</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2051" toLevel="1" name="Scroll: Death Whisper">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3927</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3927</itemConsumeId> <!-- L2Day - Death Whisper Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -827,20 +827,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CriticalDamage">
-				<amount>35</amount>
+				<amount>25</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2052" toLevel="1" name="Scroll: Focus">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3928</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3928</itemConsumeId> <!-- L2Day - Focus Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -850,20 +850,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="CriticalRate">
-				<amount>30</amount>
+				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2053" toLevel="1" name="Scroll: Acumen">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3929</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3929</itemConsumeId> <!-- L2Day - Greater Acumen Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -873,20 +873,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MagicalAttackSpeed">
-				<amount>30</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2054" toLevel="1" name="Scroll: Haste">
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3930</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3930</itemConsumeId> <!-- L2Day - Haste Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -896,20 +896,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
-				<amount>33</amount>
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2055" toLevel="1" name="Scroll: Agility">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3931</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3931</itemConsumeId> <!-- L2Day - Agility Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -919,20 +919,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="PhysicalEvasion">
-				<amount>4</amount>
+				<amount>2</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2056" toLevel="1" name="Scroll: Empower">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3932</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3932</itemConsumeId> <!-- L2Day - Mystic Empower Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -942,20 +942,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="MAtk">
-				<amount>75</amount>
+				<amount>55</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2057" toLevel="1" name="Scroll: Might">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3933</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3933</itemConsumeId> <!-- L2Day - Might Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -972,13 +972,13 @@
 	</skill>
 	<skill id="2058" toLevel="1" name="Scroll: Wind Walk">
 		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3934</itemConsumeId>
 		<abnormalType>SPEED_UP</abnormalType>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3934</itemConsumeId> <!-- L2Day - Windwalk Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -988,20 +988,20 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="Speed">
-				<amount>33</amount>
+				<amount>20</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="2059" toLevel="1" name="Scroll: Shield">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>3935</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>3935</itemConsumeId> <!-- L2Day - Shield Scroll -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1086,13 +1086,13 @@
 	</skill>
 	<skill id="2064" toLevel="1" name="Scroll: Mana Regeneration">
 		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>3600</abnormalTime>
+		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>29688</itemConsumeId>
 		<hitTime>4000</hitTime>
 		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
-		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>4218</itemConsumeId> <!-- L2 Day - Scroll of Mana Regeneration -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

@@ -106,7 +106,7 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 		</selfEffects>
-		</skill>
+	</skill>
 	<skill id="55004" toLevel="2" name="2nd Class Buff Scroll">
 		<icon>icon.skill55004</icon>
 		<operateType>A2</operateType>
@@ -147,7 +147,7 @@
 				<skillLevel>2</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Regeneration -->
-				<skillId>4698</skillId>
+				<skillId>1044</skillId>
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="CallSkill"> <!-- Guidance -->
@@ -364,128 +364,132 @@
 	<skill id="55035" toLevel="1" name="1st Class Buff Scroll">
 		<icon>icon.skill55035</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29552</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>12</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Concentration -->
+				<skillId>1078</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>55</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>12</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-25</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55036" toLevel="2" name="2nd Class Buff Scroll">
 		<icon>icon.skill55036</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29553</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>33</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>3</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>65</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Regeneration -->
+				<skillId>1044</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Guidance -->
+				<skillId>1240</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-36</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Death Whisper -->
+				<skillId>1242</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="HpRegen">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Magic Barrier -->
+				<skillId>1036</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="Accuracy">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Blessed Body -->
+				<skillId>1045</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Blessed Soul -->
+				<skillId>1048</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Haste -->
+				<skillId>1086</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MaxHp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MaxMp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55037" toLevel="1" name="Quick Healing Potion">
 		<icon>icon.skill55037</icon>
@@ -716,7 +720,7 @@
 						<item id="49081" count="1" />	<!-- Rice Cake of Flaming Fighting Spirit -->
 					</item>
 					<item chance="2.083333333333333">
-						<item id="49518" count="1" />	<!-- Special Pirate Fruit -->
+						<item id="49518" count="1" />	<!-- SpecialSpecial Pirate Fruit -->
 					</item>
 					<item chance="2.083333333333333">
 						<item id="49110" count="1" />	<!-- High-Quality Dye Chest -->
@@ -1182,128 +1186,132 @@
 	<skill id="55055" toLevel="1" name="1st Class Buff Scroll">
 		<icon>icon.skill55055</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29654</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>12</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Concentration -->
+				<skillId>1078</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>55</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>12</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-25</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55056" toLevel="2" name="2nd Class Buff Scroll">
 		<icon>icon.skill55056</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29655</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>33</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>3</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>65</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Regeneration -->
+				<skillId>1044</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Guidance -->
+				<skillId>1240</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-36</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Death Whisper -->
+				<skillId>1242</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="HpRegen">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Magic Barrier -->
+				<skillId>1036</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="Accuracy">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Blessed Body -->
+				<skillId>1045</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Blessed Soul -->
+				<skillId>1048</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Haste -->
+				<skillId>1086</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MaxHp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MaxMp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55057" toLevel="1" name="Wind Walk">
 		<icon>icon.skill55057</icon>
@@ -2184,130 +2192,134 @@
 		</effects>
 	</skill>
 	<skill id="55085" toLevel="1" name="1st Class Buff Scroll">
-		<icon>icon.skill55085</icon>
+		<icon>icon.skill55055</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>29697</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>12</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>20</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Concentration -->
+				<skillId>1078</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>20</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>55</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>12</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-25</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55086" toLevel="2" name="2nd Class Buff Scroll">
-		<icon>icon.skill55086</icon>
+		<icon>icon.skill55056</icon>
 		<operateType>A2</operateType>
-		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>29698</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<staticReuse>true</staticReuse>
-		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="PAtk">
-				<amount>15</amount>
-				<mode>PER</mode>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<stayAfterDeath>true</stayAfterDeath>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<abnormalLvl>1</abnormalLvl>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>1</magicLvl>
+		<selfEffects>
+			<effect name="CallSkill"> <!-- Shield -->
+				<skillId>1040</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="Speed">
-				<amount>33</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Might -->
+				<skillId>1068</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalEvasion">
-				<amount>3</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill">	<!-- Acumen -->
+				<skillId>1085</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Wind Walk -->
+				<skillId>1204</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MAtk">
-				<amount>65</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Focus -->
+				<skillId>4359</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Regeneration -->
+				<skillId>1044</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>15</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Guidance -->
+				<skillId>1240</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="ReduceCancel">
-				<amount>-36</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Death Whisper -->
+				<skillId>1242</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="HpRegen">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Magic Barrier -->
+				<skillId>1036</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="Accuracy">
-				<amount>2</amount>
-				<mode>DIFF</mode>
+			<effect name="CallSkill"> <!-- Blessed Body -->
+				<skillId>1045</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>25</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Blessed Soul -->
+				<skillId>1048</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>23</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Haste -->
+				<skillId>1086</skillId>
+				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="MaxHp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Agility -->
+				<skillId>1087</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="MaxMp">
-				<amount>10</amount>
-				<mode>PER</mode>
+			<effect name="CallSkill"> <!-- Empower -->
+				<skillId>1059</skillId>
+				<skillLevel>2</skillLevel>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>15</amount>
-				<mode>PER</mode>
-			</effect>
-		</effects>
+		</selfEffects>
 	</skill>
 	<skill id="55087" toLevel="1" name="Minor Blessed Scroll of Escape">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

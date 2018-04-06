@@ -221,6 +221,6 @@ public class Q00933_ExploringTheWestWingOfTheDungeonOfAbyss extends Quest
 			}
 		}
 		
-		return null;
+		return super.onKill(npc, killer, isSummon);
 	}
 }

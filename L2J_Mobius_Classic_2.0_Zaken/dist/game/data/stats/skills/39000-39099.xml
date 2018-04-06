@@ -153,6 +153,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="PhysicalAttackSpeed">
 				<amount>5</amount>
@@ -179,6 +182,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>5</amount>
@@ -198,13 +204,16 @@
 		<magicLvl>46</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A2</operateType>
-		<reuseDelay>3000</reuseDelay>
+		<reuseDelay>600000</reuseDelay>
 		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
+		<conditions>
+			<condition name="OpNeedAgathion" />
+		</conditions>
 		<effects>
 			<effect name="Speed">
 				<amount>20</amount>
@@ -811,9 +820,28 @@
 		</effects>
 	</skill>
 	<skill id="39057" toLevel="1" name="Warrior Experience Amulet">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill19226</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<stayAfterDeath>true</stayAfterDeath>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>1</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39058" toLevel="1" name="Rare Accessory Box">
 		<icon>icon.skil39058</icon>

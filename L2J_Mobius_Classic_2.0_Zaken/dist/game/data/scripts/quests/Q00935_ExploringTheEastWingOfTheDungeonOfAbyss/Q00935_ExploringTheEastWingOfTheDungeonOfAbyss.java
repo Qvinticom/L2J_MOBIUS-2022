@@ -221,6 +221,6 @@ public class Q00935_ExploringTheEastWingOfTheDungeonOfAbyss extends Quest
 			}
 		}
 		
-		return null;
+		return super.onKill(npc, killer, isSummon);
 	}
 }

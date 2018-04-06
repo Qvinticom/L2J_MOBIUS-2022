@@ -10,10 +10,10 @@
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2179535" sp="65386" raidPoints="300" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="869366" hpRegen="701.75" mp="300" mpRegen="740.74" />
-			<attack physical="19047" magical="3361" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="1481" magical="860" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="687245.8498023715" hpRegen="208" mp="196.2066710268149" mpRegen="2.1" />
+			<attack physical="105" magical="8" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1252" magical="229" />
 			<speed>
 				<walk ground="80" />
 				<run ground="230" />
@@ -330,10 +330,10 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="2041407" sp="61242" raidPoints="300" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1176984" hpRegen="877.19" mp="1708" mpRegen="925.92" />
-			<attack physical="23809.52" magical="4201.68" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="1851.85" magical="1075.26" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="930422.1343873518" hpRegen="441.65" mp="1117.069980379333" mpRegen="20.0" />
+			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1602" magical="293" />
 			<speed>
 				<walk ground="50" />
 				<run ground="110" />
@@ -920,10 +920,10 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<acquire exp="8872500" sp="266175" raidPoints="300" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1176984" hpRegen="877.19" mp="1708" mpRegen="925.92" />
-			<attack physical="23809" magical="4201" random="30" critical="7" accuracy="40" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="1851" magical="1075" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="930422.1343873518" hpRegen="441.65" mp="1117.069980379333" mpRegen="20.0" />
+			<attack physical="722.31" magical="1398.68" random="30" critical="7" accuracy="40" attackSpeed="172" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="1602" magical="293" />
 			<speed>
 				<walk ground="60" />
 				<run ground="230" />
@@ -1302,11 +1302,10 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="1024738848" sp="30742165" raidPoints="450" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<!-- Need check stats-->
-			<vitals hp="53342293" hpRegen="281" mp="18000" mpRegen="3" />
-			<attack physical="1646" magical="278" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1264" magical="1264" />
+		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+			<vitals hp="237154151.7786561" hpRegen="750" mp="11772.40026160889" mpRegen="99" />
+			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3300" magical="2200" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />

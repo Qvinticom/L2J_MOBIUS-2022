@@ -624,7 +624,7 @@
 			<skill id="3622" level="1" minimumEnchant="6" /> <!-- Enchant Robe (A-grade) -->
 		</skills>
 		<stats>
-			<stat type="INT" val="-2" />
+			<stat type="MEN" val="-2" />
 			<stat type="WIT" val="2" />
 		</stats>
 	</set>
@@ -703,10 +703,32 @@
 	</set>
 	<set id="48" minimumPieces="2">
 		<requiredItems>
-			<item id="70184" /> <!-- Deviâ€™s Earring -->
+			<item id="70184" /> <!-- Devil's Earring -->
 		</requiredItems>
 		<skills>
 			<skill id="55292" level="1" minimumPieces="2" /> <!-- Deviâ€™s Earring -->
+		</skills>
+	</set>
+	<set id="49" minimumPieces="3">
+		<requiredItems>
+			<item id="70099" /> <!-- Tunic of Devotion -->
+			<item id="70100" /> <!-- Stockings of Devotion -->
+			<item id="70098" /> <!-- Leather Helmet -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3501" level="1" minimumPieces="3" /> <!-- Devotion Set -->
+		</skills>
+	</set>
+	<set id="50" minimumPieces="3">
+		<requiredItems>
+			<item id="70096" /> <!-- Wooden Breastplate -->
+			<item id="70097" /> <!-- Wooden Gaiters -->
+			<item id="70095" /> <!-- Wooden Helmet -->
+		</requiredItems>
+		<skills>
+			<skill id="3006" level="1" minimumPieces="3" /> <!-- Equip Set Items -->
+			<skill id="3500" level="1" minimumPieces="3" /> <!-- Wooden Set -->
 		</skills>
 	</set>
 </list>

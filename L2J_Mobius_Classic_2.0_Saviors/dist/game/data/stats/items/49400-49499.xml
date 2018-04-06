@@ -931,6 +931,10 @@
 		<skills>
 			<skill id="17619" level="1" /> <!-- Release Agathion - Pisces -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39053" level="1" /> <!-- Agathion Teleport: Gludio -->
+			<skill id="39054" level="1" /> <!-- Agathion Teleport: Dion -->
+			<skill id="39055" level="1" /> <!-- Agathion Teleport: Giran -->
+			<skill id="39056" level="1" /> <!-- Agathion Teleport: Oren -->
 		</skills>
 	</item>
 	<item id="49459" name="Agathion - Cancer" additionalName="15-day" type="Armor">
@@ -949,6 +953,10 @@
 		<skills>
 			<skill id="17621" level="1" /> <!-- Release Agathion - Cancer -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="39053" level="1" /> <!-- Agathion Teleport: Gludio -->
+			<skill id="39054" level="1" /> <!-- Agathion Teleport: Dion -->
+			<skill id="39055" level="1" /> <!-- Agathion Teleport: Giran -->
+			<skill id="39056" level="1" /> <!-- Agathion Teleport: Oren -->
 		</skills>
 	</item>
 	<item id="49460" name="Fish Stew: Might" type="EtcItem">
@@ -1066,24 +1074,31 @@
 	<item id="49466" name="Warrior Experience Rune" additionalName="30-day" type="EtcItem">
 		<!-- 30-day item. Increases XP and SP gain by 20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.skill19226" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39057" level="1" /> <!-- Hero Experience Rune -->
+		</skills>
 	</item>
 	<item id="49467" name="Fire Dragon Pendant" type="Armor">
 		<!-- Pendant holding the sealed power of Fire Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1092,13 +1107,14 @@
 		<!-- Pendant holding the sealed power of Land Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_pendant_pvp" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="chest" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="10" />
 		<stats>
 			<stat type="pDef">28</stat>
 		</stats>
@@ -1127,6 +1143,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49467" min="1" max="1" chance="100" />
+			<item id="49469" min="10" max="10" chance="100" />
+		</capsuled_items>
 	</item>
 	<item id="49472" name="Land Dragon Pendant Chest" type="EtcItem">
 		<!-- Double-click the chest to get 1 Land Dragon Pendant and 10 Pendant Polishes. -->
@@ -1197,7 +1218,7 @@
 		<set name="enchant_enabled" val="7" />
 		<set name="time" val="21600" />
 		<skills>
-			<skill id="3562" level="1" /> <!-- Refined Romantic Chapeau lvl 1 - Teleport lv1 -->
+			<skill id="3562" level="1" />
 		</skills>
 		<stats>
 			<stat type="mDef">32</stat>

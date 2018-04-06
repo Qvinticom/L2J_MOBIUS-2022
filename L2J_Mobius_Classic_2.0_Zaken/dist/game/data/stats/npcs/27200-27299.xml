@@ -44,7 +44,6 @@
 		</collision>
 	</npc>
 	<npc id="27201" level="23" type="L2Monster" name="Ol Mahum Thief">
-	<!-- Guessed -->
 	<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -57,7 +56,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2" /> <!-- Long Sword -->
+		<equipment rhand="2" lhand="19"/> <!-- Long Sword -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="685" hpRegen="2" mp="273" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -96,7 +95,7 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<equipment rhand="291" /> <!-- Trident -->
+		<equipment rhand="127" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="849" hpRegen="2" mp="329" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
@@ -138,7 +137,7 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<equipment rhand="291" /> <!-- Trident -->
+		<equipment rhand="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="685" hpRegen="2" mp="273" mpRegen="0.9" />
 			<attack physical="19.33758" magical="13.20506" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
