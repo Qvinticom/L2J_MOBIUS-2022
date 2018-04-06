@@ -1064,12 +1064,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 			}
 			
-			// Reduce the current CP if TIREDNESS configuration is activated
-			if (Config.ALT_GAME_TIREDNESS)
-			{
-				setCurrentCp(getCurrentCp() - 10);
-			}
-			
 			final WeaponType attackType = getAttackType();
 			final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == L2Item.SLOT_LR_HAND);
 			final int timeAtk = Formulas.calculateTimeBetweenAttacks(getPAtkSpd());
