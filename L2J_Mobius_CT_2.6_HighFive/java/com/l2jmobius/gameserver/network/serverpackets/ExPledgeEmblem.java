@@ -24,19 +24,19 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 /**
  * @author -Wooden-
  */
-public class ExPledgeCrestLarge implements IClientOutgoingPacket
+public class ExPledgeEmblem implements IClientOutgoingPacket
 {
 	private final int _crestId;
 	private final byte[] _data;
 	
-	public ExPledgeCrestLarge(int crestId)
+	public ExPledgeEmblem(int crestId)
 	{
 		_crestId = crestId;
 		final L2Crest crest = CrestTable.getInstance().getCrest(crestId);
 		_data = crest != null ? crest.getData() : null;
 	}
 	
-	public ExPledgeCrestLarge(int crestId, byte[] data)
+	public ExPledgeEmblem(int crestId, byte[] data)
 	{
 		_crestId = crestId;
 		_data = data;

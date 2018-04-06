@@ -1205,7 +1205,7 @@ public final class Config
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
-	 * If the key doesn't appear in properties file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (properties file) for configuring your server.
+	 * If the key doesn't appear in config file, a default value is set by this class. {@link #SERVER_CONFIG_FILE} (config file) for configuring your server.
 	 */
 	public static void load()
 	{
@@ -2243,7 +2243,7 @@ public final class Config
 			DROP_ITEM_MAX_LEVEL_DIFFERENCE = RatesSettings.getInt("DropItemMaxLevelDifference", 10);
 			DROP_ITEM_MIN_LEVEL_GAP_CHANCE = RatesSettings.getDouble("DropItemMinLevelGapChance", 10);
 			
-			// Load Antifeed Properties file (if exists)
+			// Load Antifeed config file (if exists)
 			final PropertiesParser Antifeed = new PropertiesParser(CUSTOM_ANTIFEED_CONFIG_FILE);
 			
 			L2JMOD_ANTIFEED_ENABLE = Antifeed.getBoolean("AntiFeedEnable", false);
@@ -2251,7 +2251,7 @@ public final class Config
 			L2JMOD_ANTIFEED_DISCONNECTED_AS_DUALBOX = Antifeed.getBoolean("AntiFeedDisconnectedAsDualbox", true);
 			L2JMOD_ANTIFEED_INTERVAL = Antifeed.getInt("AntiFeedInterval", 120) * 1000;
 			
-			// Load AutoPotions Properties file (if exists)
+			// Load AutoPotions config file (if exists)
 			final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);
 			
 			AUTO_POTIONS_ENABLED = AutoPotions.getBoolean("AutoPotionsEnabled", false);
@@ -2279,14 +2279,14 @@ public final class Config
 				AUTO_MP_ITEM_IDS.add(Integer.parseInt(s));
 			}
 			
-			// Load Banking Properties file (if exists)
+			// Load Banking config file (if exists)
 			final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
 			
 			BANKING_SYSTEM_ENABLED = Banking.getBoolean("BankingEnabled", false);
 			BANKING_SYSTEM_GOLDBARS = Banking.getInt("BankingGoldbarCount", 1);
 			BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
 			
-			// Load ChampionMonster Properties file (if exists)
+			// Load ChampionMonster config file (if exists)
 			final PropertiesParser ChampionMonster = new PropertiesParser(CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE);
 			
 			L2JMOD_CHAMPION_ENABLE = ChampionMonster.getBoolean("ChampionEnable", false);
@@ -2312,12 +2312,12 @@ public final class Config
 			L2JMOD_CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
 			L2JMOD_CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
 			
-			// Load ChatModeration Properties file (if exists)
+			// Load ChatModeration config file (if exists)
 			final PropertiesParser ChatModeration = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
 			
 			L2JMOD_CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", false);
 			
-			// Load CommunityBoard Properties file (if exists)
+			// Load CommunityBoard config file (if exists)
 			final PropertiesParser CommunityBoard = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);
 			
 			CUSTOM_CB_ENABLED = CommunityBoard.getBoolean("CustomCommunityBoard", false);
@@ -2349,7 +2349,7 @@ public final class Config
 				COMMUNITY_AVAILABLE_TELEPORTS.put(splitInfo[0], new Location(Integer.parseInt(splitInfo[1]), Integer.parseInt(splitInfo[2]), Integer.parseInt(splitInfo[3])));
 			}
 			
-			// Load DualboxCheck Properties file (if exists)
+			// Load DualboxCheck config file (if exists)
 			final PropertiesParser DualboxCheck = new PropertiesParser(CUSTOM_DUALBOX_CHECK_CONFIG_FILE);
 			
 			L2JMOD_DUALBOX_CHECK_MAX_PLAYERS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxPlayersPerIP", 0);
@@ -2383,17 +2383,17 @@ public final class Config
 				}
 			}
 			
-			// Load FindPvP Properties file (if exists)
+			// Load FindPvP config file (if exists)
 			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
 			
 			ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
 			
-			// Load HellboundStatus Properties file (if exists)
+			// Load HellboundStatus config file (if exists)
 			final PropertiesParser HellboundStatus = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
 			
 			L2JMOD_HELLBOUND_STATUS = HellboundStatus.getBoolean("HellboundStatus", false);
 			
-			// Load OfflineTrade Properties file (if exists)
+			// Load OfflineTrade config file (if exists)
 			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
 			
 			OFFLINE_TRADE_ENABLE = OfflineTrade.getBoolean("OfflineTradeEnable", false);
@@ -2408,12 +2408,12 @@ public final class Config
 			STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
 			OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
 			
-			// Load PasswordChange Properties file (if exists)
+			// Load PasswordChange config file (if exists)
 			final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
 			
 			L2JMOD_ALLOW_CHANGE_PASSWORD = PasswordChange.getBoolean("AllowChangePassword", false);
 			
-			// Load PremiumSystem Properties file (if exists)
+			// Load PremiumSystem config file (if exists)
 			final PropertiesParser PremiumSystem = new PropertiesParser(CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE);
 			
 			PREMIUM_SYSTEM_ENABLED = PremiumSystem.getBoolean("EnablePremiumSystem", false);
@@ -2478,13 +2478,13 @@ public final class Config
 				}
 			}
 			
-			// Load CustomSettings Properties file (if exists)
+			// Load CustomSettings config file (if exists)
 			final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
 			
 			SHOP_MIN_RANGE_FROM_PLAYER = PrivateStoreRange.getInt("ShopMinRangeFromPlayer", 50);
 			SHOP_MIN_RANGE_FROM_NPC = PrivateStoreRange.getInt("ShopMinRangeFromNpc", 100);
 			
-			// Load PvpAnnounce Properties file (if exists)
+			// Load PvpAnnounce config file (if exists)
 			final PropertiesParser PvpAnnounce = new PropertiesParser(CUSTOM_PVP_ANNOUNCE_CONFIG_FILE);
 			
 			ANNOUNCE_PK_PVP = PvpAnnounce.getBoolean("AnnouncePkPvP", false);
@@ -2492,7 +2492,7 @@ public final class Config
 			ANNOUNCE_PK_MSG = PvpAnnounce.getString("AnnouncePkMsg", "$killer has slaughtered $target");
 			ANNOUNCE_PVP_MSG = PvpAnnounce.getString("AnnouncePvpMsg", "$killer has defeated $target");
 			
-			// Load RandomSpawns Properties file (if exists)
+			// Load RandomSpawns config file (if exists)
 			final PropertiesParser RandomSpawns = new PropertiesParser(CUSTOM_RANDOM_SPAWNS_CONFIG_FILE);
 			
 			ENABLE_RANDOM_MONSTER_SPAWNS = RandomSpawns.getBoolean("EnableRandomMonsterSpawns", false);
@@ -2508,19 +2508,19 @@ public final class Config
 				}
 			}
 			
-			// Load ScreenWelcomeMessage Properties file (if exists)
+			// Load ScreenWelcomeMessage config file (if exists)
 			final PropertiesParser ScreenWelcomeMessage = new PropertiesParser(CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE);
 			
 			WELCOME_MESSAGE_ENABLED = ScreenWelcomeMessage.getBoolean("ScreenWelcomeMessageEnable", false);
 			WELCOME_MESSAGE_TEXT = ScreenWelcomeMessage.getString("ScreenWelcomeMessageText", "Welcome to L2J server!");
 			WELCOME_MESSAGE_TIME = ScreenWelcomeMessage.getInt("ScreenWelcomeMessageTime", 10) * 1000;
 			
-			// Load ServerTime Properties file (if exists)
+			// Load ServerTime config file (if exists)
 			final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
 			
 			L2JMOD_DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
 			
-			// Load StartingLocation Properties file (if exists)
+			// Load StartingLocation config file (if exists)
 			final PropertiesParser StartingLocation = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
 			
 			CUSTOM_STARTING_LOC = StartingLocation.getBoolean("CustomStartingLocation", false);
@@ -2528,7 +2528,7 @@ public final class Config
 			CUSTOM_STARTING_LOC_Y = StartingLocation.getInt("CustomStartingLocY", 147880);
 			CUSTOM_STARTING_LOC_Z = StartingLocation.getInt("CustomStartingLocZ", -3469);
 			
-			// Load TeamVersusTeam Properties file (if exists)
+			// Load TeamVersusTeam config file (if exists)
 			final PropertiesParser TeamVersusTeam = new PropertiesParser(CUSTOM_TVT_CONFIG_FILE);
 			
 			TVT_EVENT_ENABLED = TeamVersusTeam.getBoolean("TvTEventEnabled", false);
@@ -2738,13 +2738,13 @@ public final class Config
 				}
 			}
 			
-			// Load WarehouseSorting Properties file (if exists)
+			// Load WarehouseSorting config file (if exists)
 			final PropertiesParser WarehouseSorting = new PropertiesParser(CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE);
 			
 			L2JMOD_ENABLE_WAREHOUSESORTING_CLAN = WarehouseSorting.getBoolean("EnableWarehouseSortingClan", false);
 			L2JMOD_ENABLE_WAREHOUSESORTING_PRIVATE = WarehouseSorting.getBoolean("EnableWarehouseSortingPrivate", false);
 			
-			// Load Wedding Properties file (if exists)
+			// Load Wedding config file (if exists)
 			final PropertiesParser Wedding = new PropertiesParser(CUSTOM_WEDDING_CONFIG_FILE);
 			
 			L2JMOD_ALLOW_WEDDING = Wedding.getBoolean("AllowWedding", false);
@@ -2757,7 +2757,7 @@ public final class Config
 			L2JMOD_WEDDING_FORMALWEAR = Wedding.getBoolean("WeddingFormalWear", true);
 			L2JMOD_WEDDING_DIVORCE_COSTS = Wedding.getInt("WeddingDivorceCosts", 20);
 			
-			// Load MultilingualSupport Properties file (if exists)
+			// Load MultilingualSupport config file (if exists)
 			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
 			
 			L2JMOD_MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
@@ -2796,7 +2796,7 @@ public final class Config
 				}
 			}
 			
-			// Load WalkerBotProtection Properties file (if exists)
+			// Load WalkerBotProtection config file (if exists)
 			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);
 			
 			L2WALKER_PROTECTION = WalkerBotProtection.getBoolean("L2WalkerProtection", false);
@@ -3122,7 +3122,7 @@ public final class Config
 	
 	/**
 	 * Loads single flood protector configuration.
-	 * @param properties properties file reader
+	 * @param properties config file reader
 	 * @param config flood protector configuration instance
 	 * @param configString flood protector configuration string that determines for which flood protector configuration should be read
 	 * @param defaultInterval default flood protector interval

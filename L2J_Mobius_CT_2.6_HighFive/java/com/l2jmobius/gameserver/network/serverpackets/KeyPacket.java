@@ -16,31 +16,33 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class KeyPacket implements IClientOutgoingPacket
 {
 	private final byte[] _key;
-	private final int _id;
+	private final int _result;
 	
-	public KeyPacket(byte[] key, int id)
+	public KeyPacket(byte[] key, int result)
 	{
 		_key = key;
-		_id = id;
+		_result = result;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.VERSION_CHECK.writeId(packet);
-		packet.writeC(_id); // 0 - wrong protocol, 1 - protocol ok
+		
+		packet.writeC(_result); // 0 - wrong protocol, 1 - protocol ok
 		for (int i = 0; i < 8; i++)
 		{
 			packet.writeC(_key[i]); // key
 		}
 		packet.writeD(0x01);
-		packet.writeD(0x01); // server id
+		packet.writeD(Config.SERVER_ID); // server id
 		packet.writeC(0x01);
 		packet.writeD(0x00); // obfuscation key
 		return true;

@@ -20,7 +20,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.network.serverpackets.AllyCrest;
-import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCrestLarge;
+import com.l2jmobius.gameserver.network.serverpackets.ExPledgeEmblem;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeCrest;
 
 /**
@@ -104,7 +104,7 @@ public final class L2Crest implements IIdentifiable
 			}
 			case PLEDGE_LARGE:
 			{
-				activeChar.sendPacket(new ExPledgeCrestLarge(getId(), getData()));
+				activeChar.sendPacket(new ExPledgeEmblem(getId(), getData()));
 				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId() + "_l";
 				break;
 			}
