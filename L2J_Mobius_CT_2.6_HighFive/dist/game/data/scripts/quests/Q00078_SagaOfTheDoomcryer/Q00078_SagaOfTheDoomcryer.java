@@ -28,7 +28,7 @@ public class Q00078_SagaOfTheDoomcryer extends AbstractSagaQuest
 {
 	public Q00078_SagaOfTheDoomcryer()
 	{
-		super(78, Q00078_SagaOfTheDoomcryer.class.getSimpleName(), "Saga of the Doomcryer");
+		super(78);
 		_npc = new int[]
 		{
 			31336,

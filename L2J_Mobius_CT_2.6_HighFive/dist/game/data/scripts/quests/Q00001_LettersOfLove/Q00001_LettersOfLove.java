@@ -44,7 +44,7 @@ public class Q00001_LettersOfLove extends Quest
 	
 	public Q00001_LettersOfLove()
 	{
-		super(1, Q00001_LettersOfLove.class.getSimpleName(), "Letters of Love");
+		super(1);
 		addStartNpc(DARIN);
 		addTalkId(DARIN, ROXXY, BAULRO);
 		registerQuestItems(DARINS_LETTER, ROXXYS_KERCHIEF, DARINS_RECEIPT, BAULROS_POTION);

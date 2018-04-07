@@ -158,7 +158,7 @@ public class Q00255_Tutorial extends Quest
 	
 	public Q00255_Tutorial()
 	{
-		super(-1, Q00255_Tutorial.class.getSimpleName(), "Tutorial");
+		super(-1);
 	}
 	
 	@Override

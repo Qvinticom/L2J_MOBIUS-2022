@@ -61,7 +61,7 @@ public class Q00328_SenseForBusiness extends Quest
 	
 	public Q00328_SenseForBusiness()
 	{
-		super(328, Q00328_SenseForBusiness.class.getSimpleName(), "Sense for Business");
+		super(328);
 		addStartNpc(SARIEN);
 		addTalkId(SARIEN);
 		addKillId(MONSTER_EYES.keySet());

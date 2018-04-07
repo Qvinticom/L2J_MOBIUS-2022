@@ -57,7 +57,7 @@ public final class Q00504_CompetitionForTheBanditStronghold extends Quest
 	
 	public Q00504_CompetitionForTheBanditStronghold()
 	{
-		super(504, Q00504_CompetitionForTheBanditStronghold.class.getSimpleName(), "Competition for the Bandit Stronghold");
+		super(504);
 		addStartNpc(MESSENGER);
 		addTalkId(MESSENGER);
 		addKillId(MONSTERS.keySet());

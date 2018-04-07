@@ -57,7 +57,7 @@ public final class Q00407_PathOfTheElvenScout extends Quest
 	
 	public Q00407_PathOfTheElvenScout()
 	{
-		super(407, Q00407_PathOfTheElvenScout.class.getSimpleName(), "Path of the Elven Scout");
+		super(407);
 		addStartNpc(MASTER_REORIA);
 		addTalkId(MASTER_REORIA, GUARD_BABENCO, GUARD_MORETTI, PRIAS);
 		addKillId(OL_MAHUM_PATROL, OL_MAHUM_SENTRY);

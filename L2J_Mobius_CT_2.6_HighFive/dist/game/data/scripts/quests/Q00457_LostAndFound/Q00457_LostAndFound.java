@@ -56,7 +56,7 @@ public final class Q00457_LostAndFound extends Quest
 	
 	public Q00457_LostAndFound()
 	{
-		super(457, Q00457_LostAndFound.class.getSimpleName(), "Lost and Found");
+		super(457);
 		addStartNpc(GUMIEL);
 		addSpawnId(ESCORT_CHECKER);
 		addFirstTalkId(GUMIEL);

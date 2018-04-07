@@ -97,7 +97,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 	
 	public Q00501_ProofOfClanAlliance()
 	{
-		super(501, Q00501_ProofOfClanAlliance.class.getSimpleName(), "Proof of Clan Alliance");
+		super(501);
 		addStartNpc(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING);
 		addTalkId(SIR_KRISTOF_RODEMAI, STATUE_OF_OFFERING, ATHREA, KALIS);
 		addKillId(OEL_MAHUM_WITCH_DOCTOR, HARIT_LIZARDMAN_SHAMAN, VANOR_SILENOS_SHAMAN, BOX_OF_ATHREA_1, BOX_OF_ATHREA_2, BOX_OF_ATHREA_3, BOX_OF_ATHREA_4, BOX_OF_ATHREA_5);

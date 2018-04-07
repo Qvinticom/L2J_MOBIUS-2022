@@ -37,7 +37,7 @@ public class Q10268_ToTheSeedOfInfinity extends Quest
 	
 	public Q10268_ToTheSeedOfInfinity()
 	{
-		super(10268, Q10268_ToTheSeedOfInfinity.class.getSimpleName(), "To the Seed of Infinity");
+		super(10268);
 		addStartNpc(KEUCEREUS);
 		addTalkId(KEUCEREUS, TEPIOS);
 		registerQuestItems(INTRODUCTION);

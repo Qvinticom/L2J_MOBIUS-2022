@@ -28,7 +28,7 @@ public class Q00095_SagaOfTheHellKnight extends AbstractSagaQuest
 {
 	public Q00095_SagaOfTheHellKnight()
 	{
-		super(95, Q00095_SagaOfTheHellKnight.class.getSimpleName(), "Saga of the Hell Knight");
+		super(95);
 		_npc = new int[]
 		{
 			31582,

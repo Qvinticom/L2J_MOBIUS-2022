@@ -28,7 +28,7 @@ public class Q00093_SagaOfTheSpectralMaster extends AbstractSagaQuest
 {
 	public Q00093_SagaOfTheSpectralMaster()
 	{
-		super(93, Q00093_SagaOfTheSpectralMaster.class.getSimpleName(), "Saga of the Spectral Master");
+		super(93);
 		_npc = new int[]
 		{
 			30175,

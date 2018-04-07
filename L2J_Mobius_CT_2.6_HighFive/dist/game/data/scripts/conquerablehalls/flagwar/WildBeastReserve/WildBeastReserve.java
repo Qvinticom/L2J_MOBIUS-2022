@@ -87,7 +87,7 @@ public final class WildBeastReserve extends FlagWar
 	
 	private WildBeastReserve()
 	{
-		super(WildBeastReserve.class.getSimpleName(), BEAST_FARM);
+		super(BEAST_FARM);
 	}
 	
 	@Override

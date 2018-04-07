@@ -28,7 +28,7 @@ public class Q00100_SagaOfTheMaestro extends AbstractSagaQuest
 {
 	public Q00100_SagaOfTheMaestro()
 	{
-		super(100, Q00100_SagaOfTheMaestro.class.getSimpleName(), "Saga of the Maestro");
+		super(100);
 		_npc = new int[]
 		{
 			31592,

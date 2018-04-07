@@ -157,7 +157,7 @@ public class Q00611_AllianceWithVarkaSilenos extends Quest
 	
 	public Q00611_AllianceWithVarkaSilenos()
 	{
-		super(611, Q00611_AllianceWithVarkaSilenos.class.getSimpleName(), "Alliance with Varka Silenos");
+		super(611);
 		addStartNpc(NARAN_ASHANUK);
 		addTalkId(NARAN_ASHANUK);
 		addKillId(MOBS.keySet());

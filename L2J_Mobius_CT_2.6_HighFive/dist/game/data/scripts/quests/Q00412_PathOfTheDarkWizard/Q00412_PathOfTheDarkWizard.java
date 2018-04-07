@@ -60,7 +60,7 @@ public final class Q00412_PathOfTheDarkWizard extends Quest
 	
 	public Q00412_PathOfTheDarkWizard()
 	{
-		super(412, Q00412_PathOfTheDarkWizard.class.getSimpleName(), "Path Of The Dark Wizard");
+		super(412);
 		addStartNpc(VARIKA);
 		addTalkId(VARIKA, CHARKEREN, ANNIKA, ARKENIA);
 		addKillId(MARSH_ZOMBIE, MISERY_SKELETON, SKELETON_SCOUT, SKELETON_HUNTER, SKELETON_HUNTER_ARCHER);

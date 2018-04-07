@@ -28,7 +28,7 @@ public class Q00097_SagaOfTheShillienTemplar extends AbstractSagaQuest
 {
 	public Q00097_SagaOfTheShillienTemplar()
 	{
-		super(97, Q00097_SagaOfTheShillienTemplar.class.getSimpleName(), "Saga of the Shillien Templar");
+		super(97);
 		_npc = new int[]
 		{
 			31580,

@@ -52,7 +52,7 @@ public final class Q00293_TheHiddenVeins extends Quest
 	
 	public Q00293_TheHiddenVeins()
 	{
-		super(293, Q00293_TheHiddenVeins.class.getSimpleName(), "The Hidden Veins");
+		super(293);
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR, CHICHIRIN);
 		addKillId(MONSTERS);

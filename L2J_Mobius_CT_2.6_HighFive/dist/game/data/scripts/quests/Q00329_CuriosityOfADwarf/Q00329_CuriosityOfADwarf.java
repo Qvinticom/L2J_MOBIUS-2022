@@ -52,7 +52,7 @@ public final class Q00329_CuriosityOfADwarf extends Quest
 	
 	public Q00329_CuriosityOfADwarf()
 	{
-		super(329, Q00329_CuriosityOfADwarf.class.getSimpleName(), "Curiosity Of A Dwarf");
+		super(329);
 		addStartNpc(TRADER_ROLENTO);
 		addTalkId(TRADER_ROLENTO);
 		addKillId(MONSTER_DROPS.keySet());

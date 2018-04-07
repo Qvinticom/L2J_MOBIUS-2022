@@ -28,7 +28,7 @@ public class Q00077_SagaOfTheDominator extends AbstractSagaQuest
 {
 	public Q00077_SagaOfTheDominator()
 	{
-		super(77, Q00077_SagaOfTheDominator.class.getSimpleName(), "Saga of the Dominator");
+		super(77);
 		_npc = new int[]
 		{
 			31336,

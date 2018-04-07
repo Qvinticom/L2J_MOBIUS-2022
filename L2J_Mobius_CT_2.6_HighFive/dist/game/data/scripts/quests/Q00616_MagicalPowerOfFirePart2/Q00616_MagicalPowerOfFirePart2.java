@@ -47,7 +47,7 @@ public class Q00616_MagicalPowerOfFirePart2 extends Quest
 	
 	public Q00616_MagicalPowerOfFirePart2()
 	{
-		super(616, Q00616_MagicalPowerOfFirePart2.class.getSimpleName(), "Magical Power of Fire - Part 2");
+		super(616);
 		addStartNpc(UDAN);
 		addTalkId(UDAN, KETRA_TOTEM);
 		addKillId(NASTRON);

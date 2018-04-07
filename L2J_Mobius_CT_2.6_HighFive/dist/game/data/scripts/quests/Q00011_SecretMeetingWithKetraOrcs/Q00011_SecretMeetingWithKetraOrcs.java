@@ -38,7 +38,7 @@ public class Q00011_SecretMeetingWithKetraOrcs extends Quest
 	
 	public Q00011_SecretMeetingWithKetraOrcs()
 	{
-		super(11, Q00011_SecretMeetingWithKetraOrcs.class.getSimpleName(), "Secret Meeting With Ketra Orcs");
+		super(11);
 		addStartNpc(CADMON);
 		addTalkId(CADMON, LEON, WAHKAN);
 		registerQuestItems(BOX);

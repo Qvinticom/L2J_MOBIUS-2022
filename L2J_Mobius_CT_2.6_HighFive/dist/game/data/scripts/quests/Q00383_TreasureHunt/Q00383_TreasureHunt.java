@@ -67,7 +67,7 @@ public final class Q00383_TreasureHunt extends Quest
 	
 	public Q00383_TreasureHunt()
 	{
-		super(383, Q00383_TreasureHunt.class.getSimpleName(), "Treasure Hunt");
+		super(383);
 		addStartNpc(ESPEN);
 		addTalkId(ESPEN, PIRATES_CHEST);
 	}

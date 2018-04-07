@@ -54,7 +54,7 @@ public final class Q00454_CompletelyLost extends Quest
 	
 	public Q00454_CompletelyLost()
 	{
-		super(454, Q00454_CompletelyLost.class.getSimpleName(), "Completely Lost");
+		super(454);
 		addStartNpc(INJURED_SOLDIER);
 		addTalkId(INJURED_SOLDIER, ERMIAN);
 		addSpawnId(ERMIAN);

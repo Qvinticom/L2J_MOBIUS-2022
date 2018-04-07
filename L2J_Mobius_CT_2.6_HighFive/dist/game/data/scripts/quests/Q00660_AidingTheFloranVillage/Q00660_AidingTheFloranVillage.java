@@ -67,7 +67,7 @@ public final class Q00660_AidingTheFloranVillage extends Quest
 	
 	public Q00660_AidingTheFloranVillage()
 	{
-		super(660, Q00660_AidingTheFloranVillage.class.getSimpleName(), "Aiding the Floran Village");
+		super(660);
 		addStartNpc(MARIA, ALEX);
 		addTalkId(MARIA, ALEX);
 		addKillId(MONSTERS.keySet());

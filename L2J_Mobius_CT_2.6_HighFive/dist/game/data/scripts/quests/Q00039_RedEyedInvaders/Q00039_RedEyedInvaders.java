@@ -50,7 +50,7 @@ public final class Q00039_RedEyedInvaders extends Quest
 	
 	public Q00039_RedEyedInvaders()
 	{
-		super(39, Q00039_RedEyedInvaders.class.getSimpleName(), "Red-eyed Invaders");
+		super(39);
 		addStartNpc(GUARD_BABENCO);
 		addTalkId(GUARD_BABENCO, CAPTAIN_BATHIA);
 		addKillId(MALE_LIZARDMAN_GUARD, MALE_LIZARDMAN_SCOUT, MALE_LIZARDMAN, GIANT_ARANE);

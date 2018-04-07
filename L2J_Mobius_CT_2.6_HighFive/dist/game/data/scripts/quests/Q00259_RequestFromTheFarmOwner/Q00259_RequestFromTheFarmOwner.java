@@ -61,7 +61,7 @@ public final class Q00259_RequestFromTheFarmOwner extends Quest
 	
 	public Q00259_RequestFromTheFarmOwner()
 	{
-		super(259, Q00259_RequestFromTheFarmOwner.class.getSimpleName(), "Request from the Farm Owner");
+		super(259);
 		addStartNpc(EDMOND);
 		addTalkId(EDMOND, MARIUS);
 		addKillId(MONSTERS);

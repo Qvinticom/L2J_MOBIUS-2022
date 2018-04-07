@@ -47,7 +47,7 @@ public class Q00610_MagicalPowerOfWaterPart2 extends Quest
 	
 	public Q00610_MagicalPowerOfWaterPart2()
 	{
-		super(610, Q00610_MagicalPowerOfWaterPart2.class.getSimpleName(), "Magical Power of Water - Part 2");
+		super(610);
 		addStartNpc(ASEFA);
 		addTalkId(ASEFA, VARKA_TOTEM);
 		addKillId(ASHUTAR);

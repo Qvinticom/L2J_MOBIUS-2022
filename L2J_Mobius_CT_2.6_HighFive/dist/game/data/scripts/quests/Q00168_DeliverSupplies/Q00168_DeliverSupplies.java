@@ -54,7 +54,7 @@ public class Q00168_DeliverSupplies extends Quest
 	
 	public Q00168_DeliverSupplies()
 	{
-		super(168, Q00168_DeliverSupplies.class.getSimpleName(), "Deliver Supplies");
+		super(168);
 		addStartNpc(JENNA);
 		addTalkId(JENNA, ROSELYN, KRISTIN, HARANT);
 		registerQuestItems(JENNAS_LETTER, SENTRY_BLADE1, SENTRY_BLADE2, SENTRY_BLADE3, OLD_BRONZE_SWORD);

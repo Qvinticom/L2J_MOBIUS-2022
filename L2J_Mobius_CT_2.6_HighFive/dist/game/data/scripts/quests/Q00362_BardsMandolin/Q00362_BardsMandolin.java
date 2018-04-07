@@ -42,7 +42,7 @@ public final class Q00362_BardsMandolin extends Quest
 	
 	public Q00362_BardsMandolin()
 	{
-		super(362, Q00362_BardsMandolin.class.getSimpleName(), "Bard's Mandolin");
+		super(362);
 		addStartNpc(SWAN);
 		addTalkId(SWAN, GALION, WOODROW, NANARIN);
 		registerQuestItems(SWANS_FLUTE, SWANS_LETTER);

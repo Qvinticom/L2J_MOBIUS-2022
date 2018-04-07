@@ -74,7 +74,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 	
 	public Q00128_PailakaSongOfIceAndFire()
 	{
-		super(128, Q00128_PailakaSongOfIceAndFire.class.getSimpleName(), "Pailaka - Song of Ice and Fire");
+		super(128);
 		addStartNpc(ADLER1);
 		addTalkId(ADLER1, ADLER2, SINAI, INSPECTOR);
 		addKillId(HILLAS, PAPION, KINSUS, GARGOS, ADIANTUM);

@@ -39,7 +39,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	
 	public Q00694_BreakThroughTheHallOfSuffering()
 	{
-		super(694, Q00694_BreakThroughTheHallOfSuffering.class.getSimpleName(), "Break Through The Hall Of Suffering");
+		super(694);
 		addStartNpc(TEPIOS);
 		addTalkId(TEPIOS);
 		addTalkId(TEPIOS2);

@@ -43,7 +43,7 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 	
 	public Q00192_SevenSignsSeriesOfDoubt()
 	{
-		super(192, Q00192_SevenSignsSeriesOfDoubt.class.getSimpleName(), "Seven Signs, Series of Doubt");
+		super(192);
 		addStartNpc(CROOP, UNIDENTIFIED_BODY);
 		addTalkId(CROOP, STAN, UNIDENTIFIED_BODY, HECTOR, HOLLINT);
 		registerQuestItems(CROOPS_INTRODUCTION, JACOBS_NECKLACE, CROOPS_LETTER);

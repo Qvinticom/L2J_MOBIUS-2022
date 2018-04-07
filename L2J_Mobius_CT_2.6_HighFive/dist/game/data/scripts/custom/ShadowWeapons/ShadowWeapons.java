@@ -18,14 +18,15 @@ package custom.ShadowWeapons;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
+
+import ai.AbstractNpcAI;
 
 /**
  * Shadow Weapons AI.<br>
  * Original Jython script by DrLecter.
  * @author Nyaran, jurchiks
  */
-public final class ShadowWeapons extends Quest
+public final class ShadowWeapons extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =
@@ -44,7 +45,6 @@ public final class ShadowWeapons extends Quest
 	// @formatter:on
 	private ShadowWeapons()
 	{
-		super(-1, ShadowWeapons.class.getSimpleName(), "custom");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

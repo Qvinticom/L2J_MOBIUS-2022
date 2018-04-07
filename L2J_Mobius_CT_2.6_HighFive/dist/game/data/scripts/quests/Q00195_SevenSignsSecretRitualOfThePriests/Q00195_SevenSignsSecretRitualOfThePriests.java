@@ -52,7 +52,7 @@ public final class Q00195_SevenSignsSecretRitualOfThePriests extends Quest
 	
 	public Q00195_SevenSignsSecretRitualOfThePriests()
 	{
-		super(195, Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName(), "Seven Signs, Secret Ritual of the Priests");
+		super(195);
 		addFirstTalkId(IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
 		addStartNpc(CLAUDIA_ATHEBALDT);
 		addTalkId(CLAUDIA_ATHEBALDT, JOHN, RAYMOND, IASON_HEINE, LIGHT_OF_DAWN, DARKNESS_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, SHELF);

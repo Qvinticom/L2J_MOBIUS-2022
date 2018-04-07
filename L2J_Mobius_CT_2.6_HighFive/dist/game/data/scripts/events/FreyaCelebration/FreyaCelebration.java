@@ -20,8 +20,8 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -65,7 +65,6 @@ public final class FreyaCelebration extends LongTimeEvent
 	
 	private FreyaCelebration()
 	{
-		super(FreyaCelebration.class.getSimpleName(), "events");
 		addStartNpc(FREYA);
 		addFirstTalkId(FREYA);
 		addTalkId(FREYA);

@@ -51,7 +51,6 @@ public final class KamaelChange1 extends AbstractNpcAI
 	
 	private KamaelChange1()
 	{
-		super(KamaelChange1.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

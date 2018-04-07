@@ -104,7 +104,7 @@ public final class Q00227_TestOfTheReformer extends Quest
 	
 	public Q00227_TestOfTheReformer()
 	{
-		super(227, Q00227_TestOfTheReformer.class.getSimpleName(), "Test Of The Reformer");
+		super(227);
 		addStartNpc(PRIESTESS_PUPINA);
 		addTalkId(PRIESTESS_PUPINA, PREACHER_SLA, RAMUS, KATARI, KAKAN, NYAKURI, OL_MAHUM_PILGRIM);
 		addAttackId(NAMELESS_REVENANT, CRIMSON_WEREWOLF);

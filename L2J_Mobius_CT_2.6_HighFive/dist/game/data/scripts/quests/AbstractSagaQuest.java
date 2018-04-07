@@ -63,9 +63,9 @@ public abstract class AbstractSagaQuest extends Quest
 	};
 	// @formatter:on
 	
-	public AbstractSagaQuest(int questId, String name, String descr)
+	public AbstractSagaQuest(int questId)
 	{
-		super(questId, name, descr);
+		super(questId);
 	}
 	
 	private QuestState findQuest(L2PcInstance player)

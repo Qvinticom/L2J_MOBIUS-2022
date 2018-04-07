@@ -26,17 +26,18 @@ import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Sub-class skills validator.<br>
  * TODO: Rewrite.
  * @author DS
  */
-public final class SubClassSkills extends Quest
+public final class SubClassSkills extends AbstractNpcAI
 {
 	// arrays must be sorted
 	// @formatter:off
@@ -88,7 +89,6 @@ public final class SubClassSkills extends Quest
 	
 	private SubClassSkills()
 	{
-		super(-1, SubClassSkills.class.getSimpleName(), "custom");
 		setOnEnterWorld(true);
 	}
 	

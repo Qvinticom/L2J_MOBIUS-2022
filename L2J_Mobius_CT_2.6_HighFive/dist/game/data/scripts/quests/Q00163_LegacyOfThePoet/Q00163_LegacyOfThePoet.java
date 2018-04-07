@@ -48,7 +48,7 @@ public class Q00163_LegacyOfThePoet extends Quest
 	
 	public Q00163_LegacyOfThePoet()
 	{
-		super(163, Q00163_LegacyOfThePoet.class.getSimpleName(), "Legacy of the Poet");
+		super(163);
 		addStartNpc(STARDEN);
 		addTalkId(STARDEN);
 		addKillId(MONSTERS);

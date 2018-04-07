@@ -37,7 +37,7 @@ public class Q00013_ParcelDelivery extends Quest
 	
 	public Q00013_ParcelDelivery()
 	{
-		super(13, Q00013_ParcelDelivery.class.getSimpleName(), "Parcel Delivery");
+		super(13);
 		addStartNpc(FUNDIN);
 		addTalkId(FUNDIN, VULCAN);
 		registerQuestItems(PACKAGE);

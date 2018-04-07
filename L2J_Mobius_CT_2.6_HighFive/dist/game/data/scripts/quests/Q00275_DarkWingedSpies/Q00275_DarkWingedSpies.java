@@ -48,7 +48,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	
 	public Q00275_DarkWingedSpies()
 	{
-		super(275, Q00275_DarkWingedSpies.class.getSimpleName(), "Dark Winged Spies");
+		super(275);
 		addStartNpc(NERUGA_CHIEF_TANTUS);
 		addTalkId(NERUGA_CHIEF_TANTUS);
 		addKillId(DARKWING_BAT, VARANGKAS_TRACKER);

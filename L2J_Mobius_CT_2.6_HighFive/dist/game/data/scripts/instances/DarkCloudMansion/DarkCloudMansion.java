@@ -206,7 +206,6 @@ public final class DarkCloudMansion extends AbstractInstance
 	
 	public DarkCloudMansion()
 	{
-		super(DarkCloudMansion.class.getSimpleName());
 		addFirstTalkId(BSM, SOTruth);
 		addStartNpc(YIYEN);
 		addTalkId(YIYEN, SOTruth);

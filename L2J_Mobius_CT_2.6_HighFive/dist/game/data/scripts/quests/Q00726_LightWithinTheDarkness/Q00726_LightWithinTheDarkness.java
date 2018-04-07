@@ -89,7 +89,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	
 	public Q00726_LightWithinTheDarkness()
 	{
-		super(726, Q00726_LightWithinTheDarkness.class.getSimpleName(), "Light within the Darkness");
+		super(726);
 		_fortDungeons.put(35666, new FortDungeon(80));
 		_fortDungeons.put(35698, new FortDungeon(81));
 		_fortDungeons.put(35735, new FortDungeon(82));

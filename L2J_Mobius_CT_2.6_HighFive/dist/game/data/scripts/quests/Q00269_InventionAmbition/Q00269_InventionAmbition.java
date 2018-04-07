@@ -52,7 +52,7 @@ public final class Q00269_InventionAmbition extends Quest
 	
 	public Q00269_InventionAmbition()
 	{
-		super(269, Q00269_InventionAmbition.class.getSimpleName(), "Invention Ambition");
+		super(269);
 		addStartNpc(INVENTOR_MARU);
 		addTalkId(INVENTOR_MARU);
 		addKillId(MONSTERS.keySet());

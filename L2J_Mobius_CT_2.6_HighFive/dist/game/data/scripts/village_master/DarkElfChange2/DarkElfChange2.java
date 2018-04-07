@@ -21,14 +21,15 @@ import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Dark Elven Change Part 2.
  * @author nonom
  */
-public final class DarkElfChange2 extends Quest
+public final class DarkElfChange2 extends AbstractNpcAI
 {
 	// NPCs
 	private static int[] NPCS =
@@ -72,7 +73,6 @@ public final class DarkElfChange2 extends Quest
 	// @formatter:on
 	private DarkElfChange2()
 	{
-		super(-1, DarkElfChange2.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

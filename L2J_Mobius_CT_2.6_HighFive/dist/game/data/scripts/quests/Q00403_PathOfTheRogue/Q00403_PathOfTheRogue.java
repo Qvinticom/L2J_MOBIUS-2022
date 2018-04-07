@@ -81,7 +81,7 @@ public final class Q00403_PathOfTheRogue extends Quest
 	
 	public Q00403_PathOfTheRogue()
 	{
-		super(403, Q00403_PathOfTheRogue.class.getSimpleName(), "Path Of The Rogue");
+		super(403);
 		addStartNpc(CAPTAIN_BEZIQUE);
 		addTalkId(CAPTAIN_BEZIQUE, NETI);
 		addAttackId(MONSTER_DROPS.keySet());

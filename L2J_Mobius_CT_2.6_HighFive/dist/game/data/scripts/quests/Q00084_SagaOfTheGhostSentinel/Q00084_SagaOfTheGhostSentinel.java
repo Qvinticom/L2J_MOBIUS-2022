@@ -28,7 +28,7 @@ public class Q00084_SagaOfTheGhostSentinel extends AbstractSagaQuest
 {
 	public Q00084_SagaOfTheGhostSentinel()
 	{
-		super(84, Q00084_SagaOfTheGhostSentinel.class.getSimpleName(), "Saga of the Ghost Sentinel");
+		super(84);
 		_npc = new int[]
 		{
 			30702,

@@ -70,7 +70,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 	
 	public Q00022_TragedyInVonHellmannForest()
 	{
-		super(22, Q00022_TragedyInVonHellmannForest.class.getSimpleName(), "Tragedy in Von Hellmann Forest");
+		super(22);
 		addKillId(MOBS);
 		addKillId(SOUL_OF_WELL);
 		addAttackId(SOUL_OF_WELL);

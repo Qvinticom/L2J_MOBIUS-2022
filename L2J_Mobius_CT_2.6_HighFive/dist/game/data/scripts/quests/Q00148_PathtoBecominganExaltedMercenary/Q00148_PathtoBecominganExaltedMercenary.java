@@ -50,7 +50,7 @@ public class Q00148_PathtoBecominganExaltedMercenary extends Quest
 	
 	public Q00148_PathtoBecominganExaltedMercenary()
 	{
-		super(148, Q00148_PathtoBecominganExaltedMercenary.class.getSimpleName(), "Path to Becoming an Exalted Mercenary");
+		super(148);
 		addStartNpc(MERC);
 		addTalkId(MERC);
 	}

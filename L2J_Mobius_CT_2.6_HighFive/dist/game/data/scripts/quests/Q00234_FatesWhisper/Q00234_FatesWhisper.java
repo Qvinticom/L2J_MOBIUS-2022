@@ -142,7 +142,7 @@ public final class Q00234_FatesWhisper extends Quest
 	
 	public Q00234_FatesWhisper()
 	{
-		super(234, Q00234_FatesWhisper.class.getSimpleName(), "Fate's Whisper");
+		super(234);
 		addStartNpc(MAESTRO_LEORIN);
 		addTalkId(ZENKIN, CLIFF, MASTER_KASPAR, HEAD_BLACKSMITH_FERRIS, MAESTRO_LEORIN);
 		addTalkId(COFFER_OF_THE_DEAD, CHEST_OF_KERNON, CHEST_OF_HALLATE, CHEST_OF_GOLKONDA);

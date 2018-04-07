@@ -35,7 +35,6 @@ public final class KrateisCube extends AbstractNpcAI
 	
 	public KrateisCube()
 	{
-		super(KrateisCube.class.getSimpleName(), "Krateis Cube");
 		addStartNpc(MANAGER);
 		addFirstTalkId(MANAGER);
 		addTalkId(MANAGER);

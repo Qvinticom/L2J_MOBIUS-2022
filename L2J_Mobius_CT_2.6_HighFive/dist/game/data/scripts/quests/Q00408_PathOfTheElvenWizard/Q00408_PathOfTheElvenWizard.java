@@ -61,7 +61,7 @@ public final class Q00408_PathOfTheElvenWizard extends Quest
 	
 	public Q00408_PathOfTheElvenWizard()
 	{
-		super(408, Q00408_PathOfTheElvenWizard.class.getSimpleName(), "Path Of The Elven Wizard");
+		super(408);
 		addStartNpc(ROSSELA);
 		addTalkId(ROSSELA, GREENIS, THALIA, NORTHWIND);
 		addKillId(DRYAD_ELDER, SUKAR_WERERAT_LEADER, PINCER_SPIDER);

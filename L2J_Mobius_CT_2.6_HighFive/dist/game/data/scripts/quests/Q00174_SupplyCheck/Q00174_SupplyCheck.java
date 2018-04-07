@@ -51,7 +51,7 @@ public class Q00174_SupplyCheck extends Quest
 	
 	public Q00174_SupplyCheck()
 	{
-		super(174, Q00174_SupplyCheck.class.getSimpleName(), "Supply Check");
+		super(174);
 		addStartNpc(MARCELA);
 		addTalkId(MARCELA, BENIS, NIKA);
 		

@@ -42,7 +42,7 @@ public class Q00006_StepIntoTheFuture extends Quest
 	
 	public Q00006_StepIntoTheFuture()
 	{
-		super(6, Q00006_StepIntoTheFuture.class.getSimpleName(), "Step Into the Future");
+		super(6);
 		addStartNpc(ROXXY);
 		addTalkId(ROXXY, BAULRO, SIR_COLLIN);
 		registerQuestItems(BAULRO_LETTER);

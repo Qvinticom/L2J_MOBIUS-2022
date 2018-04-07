@@ -76,7 +76,6 @@ public final class Rabbits extends Event
 	
 	private Rabbits()
 	{
-		super(Rabbits.class.getSimpleName(), "custom/events");
 		addFirstTalkId(NPC_MANAGER, CHEST);
 		addTalkId(NPC_MANAGER);
 		addStartNpc(NPC_MANAGER);

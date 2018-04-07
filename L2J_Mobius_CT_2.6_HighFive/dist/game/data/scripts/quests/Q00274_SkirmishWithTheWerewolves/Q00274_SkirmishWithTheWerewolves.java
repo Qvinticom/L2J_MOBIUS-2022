@@ -48,7 +48,7 @@ public final class Q00274_SkirmishWithTheWerewolves extends Quest
 	
 	public Q00274_SkirmishWithTheWerewolves()
 	{
-		super(274, Q00274_SkirmishWithTheWerewolves.class.getSimpleName(), "Skirmish with the Werewolves");
+		super(274);
 		addStartNpc(BRUKURSE);
 		addTalkId(BRUKURSE);
 		addKillId(MONSTERS);

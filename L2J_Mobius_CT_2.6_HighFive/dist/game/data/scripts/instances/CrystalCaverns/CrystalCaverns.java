@@ -493,7 +493,6 @@ public final class CrystalCaverns extends AbstractInstance
 	
 	public CrystalCaverns()
 	{
-		super(CrystalCaverns.class.getSimpleName());
 		addStartNpc(ORACLE_GUIDE_1, ORACLE_GUIDE_4);
 		addTalkId(ORACLE_GUIDE_1, ORACLE_GUIDE_3, ORACLE_GUIDE_4, 32275, 32276, 32277);
 		addFirstTalkId(ORACLE_GUIDE_1, ORACLE_GUIDE_2, ORACLE_GUIDE_4, CRYSTAL_GOLEM, 32274, 32275, 32276, 32277);

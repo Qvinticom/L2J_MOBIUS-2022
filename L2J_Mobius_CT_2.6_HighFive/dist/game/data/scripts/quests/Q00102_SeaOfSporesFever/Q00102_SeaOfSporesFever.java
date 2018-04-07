@@ -77,7 +77,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 	
 	public Q00102_SeaOfSporesFever()
 	{
-		super(102, Q00102_SeaOfSporesFever.class.getSimpleName(), "Sea of Spores Fever");
+		super(102);
 		addStartNpc(ALBERIUS);
 		addTalkId(ALBERIUS, COBENDELL, GARTRANDELL, BERROS, VELTRESS, RAYEN);
 		addKillId(DRYAD, DRYAD_ELDER);

@@ -36,7 +36,7 @@ public class Q00015_SweetWhispers extends Quest
 	
 	public Q00015_SweetWhispers()
 	{
-		super(15, Q00015_SweetWhispers.class.getSimpleName(), "Sweet Whispers");
+		super(15);
 		addStartNpc(VLADIMIR);
 		addTalkId(VLADIMIR, HIERARCH, M_NECROMANCER);
 	}

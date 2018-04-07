@@ -45,7 +45,7 @@ public class Q00152_ShardsOfGolem extends Quest
 	
 	public Q00152_ShardsOfGolem()
 	{
-		super(152, Q00152_ShardsOfGolem.class.getSimpleName(), "Shards of Golem");
+		super(152);
 		addStartNpc(HARRYS);
 		addTalkId(HARRYS, ALTRAN);
 		addKillId(STONE_GOLEM);

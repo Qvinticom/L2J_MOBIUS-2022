@@ -45,7 +45,7 @@ public final class Q00272_WrathOfAncestors extends Quest
 	
 	public Q00272_WrathOfAncestors()
 	{
-		super(272, Q00272_WrathOfAncestors.class.getSimpleName(), "Wrath of Ancestors");
+		super(272);
 		addStartNpc(LIVINA);
 		addTalkId(LIVINA);
 		addKillId(MONSTERS);

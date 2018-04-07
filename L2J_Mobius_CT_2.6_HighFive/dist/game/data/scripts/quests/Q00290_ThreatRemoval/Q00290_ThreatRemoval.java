@@ -63,7 +63,7 @@ public class Q00290_ThreatRemoval extends Quest
 	
 	public Q00290_ThreatRemoval()
 	{
-		super(290, Q00290_ThreatRemoval.class.getSimpleName(), "Threat Removal");
+		super(290);
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS_TAG.keySet());

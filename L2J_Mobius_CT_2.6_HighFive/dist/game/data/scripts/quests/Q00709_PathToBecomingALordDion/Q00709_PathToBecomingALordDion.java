@@ -58,12 +58,12 @@ public class Q00709_PathToBecomingALordDion extends Quest
 	
 	public Q00709_PathToBecomingALordDion()
 	{
-		super(709, Q00709_PathToBecomingALordDion.class.getSimpleName(), "Path to Becoming a Lord - Dion");
+		super(709);
 		addStartNpc(Crosby);
 		addTalkId(Crosby);
 		addTalkId(Sophia);
 		addTalkId(Rouke);
-		questItemIds = new int[]
+		_questItemIds = new int[]
 		{
 			Epaulette,
 			MandragoraRoot

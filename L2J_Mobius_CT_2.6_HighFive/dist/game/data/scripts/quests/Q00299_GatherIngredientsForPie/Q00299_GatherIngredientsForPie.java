@@ -61,7 +61,7 @@ public final class Q00299_GatherIngredientsForPie extends Quest
 	
 	public Q00299_GatherIngredientsForPie()
 	{
-		super(299, Q00299_GatherIngredientsForPie.class.getSimpleName(), "Gather Ingredients for Pie");
+		super(299);
 		addStartNpc(EMILLY);
 		addTalkId(LARS, BRIGHT, EMILLY);
 		addKillId(MONSTERS_CHANCES.keySet());

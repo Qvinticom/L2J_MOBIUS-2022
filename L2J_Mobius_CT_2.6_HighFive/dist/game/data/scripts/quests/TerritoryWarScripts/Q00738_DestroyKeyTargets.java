@@ -26,7 +26,7 @@ public final class Q00738_DestroyKeyTargets extends TerritoryWarSuperClass
 {
 	public Q00738_DestroyKeyTargets()
 	{
-		super(738, Q00738_DestroyKeyTargets.class.getSimpleName(), "Destroy Key Targets");
+		super(738);
 		CLASS_IDS = new int[]
 		{
 			51,

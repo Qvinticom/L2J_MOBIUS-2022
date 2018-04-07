@@ -26,7 +26,7 @@ public final class Q00717_ForTheSakeOfTheTerritoryGludio extends TerritoryWarSup
 {
 	public Q00717_ForTheSakeOfTheTerritoryGludio()
 	{
-		super(717, Q00717_ForTheSakeOfTheTerritoryGludio.class.getSimpleName(), "For the Sake of the Territory - Gludio");
+		super(717);
 		CATAPULT_ID = 36499;
 		TERRITORY_ID = 81;
 		LEADER_IDS = new int[]

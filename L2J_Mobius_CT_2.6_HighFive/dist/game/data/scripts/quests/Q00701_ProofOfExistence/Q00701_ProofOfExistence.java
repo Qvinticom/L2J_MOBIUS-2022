@@ -56,7 +56,7 @@ public class Q00701_ProofOfExistence extends Quest
 	
 	public Q00701_ProofOfExistence()
 	{
-		super(701, Q00701_ProofOfExistence.class.getSimpleName(), "Proof of Existence");
+		super(701);
 		addStartNpc(ARTIUS);
 		addTalkId(ARTIUS);
 		addKillId(MOBS.keySet());

@@ -61,7 +61,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 	
 	public Q00118_ToLeadAndBeLed()
 	{
-		super(118, Q00118_ToLeadAndBeLed.class.getSimpleName(), "To Lead And Be Led");
+		super(118);
 		addStartNpc(BLACKSMITH_PINTER);
 		addTalkId(BLACKSMITH_PINTER);
 		addKillId(MAILLE_LIZARDMAN, MAILLE_LIZARDMAN_SCOUT, MAILLE_LIZARDMAN_GUARD, KING_OF_THE_ARANEID);

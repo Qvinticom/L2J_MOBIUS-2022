@@ -49,7 +49,7 @@ public final class Q00654_JourneyToASettlement extends Quest
 	
 	public Q00654_JourneyToASettlement()
 	{
-		super(654, Q00654_JourneyToASettlement.class.getSimpleName(), "Journey to a Settlement");
+		super(654);
 		addStartNpc(NAMELESS_SPIRIT);
 		addTalkId(NAMELESS_SPIRIT);
 		addKillId(MOBS_SKIN.keySet());

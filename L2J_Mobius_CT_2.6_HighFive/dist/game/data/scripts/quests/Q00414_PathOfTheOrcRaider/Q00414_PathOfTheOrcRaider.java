@@ -56,7 +56,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 	
 	public Q00414_PathOfTheOrcRaider()
 	{
-		super(414, Q00414_PathOfTheOrcRaider.class.getSimpleName(), "Path Of The Orc Raider");
+		super(414);
 		addStartNpc(PREFECT_KARUKIA);
 		addTalkId(PREFECT_KARUKIA, PREFRCT_KASMAN, PREFRCT_TAZEER);
 		addKillId(KURUKA_RATMAN_LEADER, UMBAR_ORC, TIMORA_ORC, GOBLIN_TOMB_RAIDER_LEADER);

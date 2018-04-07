@@ -58,7 +58,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 	
 	public Q00691_MatrasSuspiciousRequest()
 	{
-		super(691, Q00691_MatrasSuspiciousRequest.class.getSimpleName(), "Matras' Suspicious Request");
+		super(691);
 		addStartNpc(MATRAS);
 		addTalkId(MATRAS);
 		addKillId(REWARD_CHANCES.keySet());

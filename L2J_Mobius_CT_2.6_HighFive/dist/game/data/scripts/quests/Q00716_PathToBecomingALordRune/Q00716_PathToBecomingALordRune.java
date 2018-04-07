@@ -58,7 +58,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 	
 	public Q00716_PathToBecomingALordRune()
 	{
-		super(716, Q00716_PathToBecomingALordRune.class.getSimpleName(), "Path to Becoming a Lord - Rune");
+		super(716);
 		addStartNpc(Frederick);
 		addTalkId(Frederick);
 		addTalkId(new int[]

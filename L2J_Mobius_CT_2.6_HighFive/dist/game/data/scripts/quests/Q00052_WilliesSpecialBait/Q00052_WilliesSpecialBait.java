@@ -40,7 +40,7 @@ public class Q00052_WilliesSpecialBait extends Quest
 	
 	public Q00052_WilliesSpecialBait()
 	{
-		super(52, Q00052_WilliesSpecialBait.class.getSimpleName(), "Willie's Special Bait");
+		super(52);
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE);
 		addKillId(TARLK_BASILISK);

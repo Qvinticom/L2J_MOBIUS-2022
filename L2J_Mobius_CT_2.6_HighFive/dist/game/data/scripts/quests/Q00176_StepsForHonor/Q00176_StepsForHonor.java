@@ -38,7 +38,7 @@ public class Q00176_StepsForHonor extends Quest
 	
 	public Q00176_StepsForHonor()
 	{
-		super(176, Q00176_StepsForHonor.class.getSimpleName(), "Steps for Honor");
+		super(176);
 		addStartNpc(RAPIDUS);
 		addTalkId(RAPIDUS);
 	}

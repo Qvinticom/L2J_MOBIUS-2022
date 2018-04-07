@@ -44,7 +44,7 @@ public class Q00043_HelpTheSister extends Quest
 	
 	public Q00043_HelpTheSister()
 	{
-		super(43, Q00043_HelpTheSister.class.getSimpleName(), "Help The Sister!");
+		super(43);
 		addStartNpc(COOPER);
 		addTalkId(COOPER, GALLADUCCI);
 		addKillId(SORROW_MAIDEN, SPECTER);

@@ -67,7 +67,6 @@ public final class Elpies extends Event
 	
 	private Elpies()
 	{
-		super(Elpies.class.getSimpleName(), "custom/events");
 		addSpawnId(ELPY);
 		addKillId(ELPY);
 	}

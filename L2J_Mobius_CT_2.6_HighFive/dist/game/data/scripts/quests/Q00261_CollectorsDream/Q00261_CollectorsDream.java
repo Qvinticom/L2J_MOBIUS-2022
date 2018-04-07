@@ -51,7 +51,7 @@ public final class Q00261_CollectorsDream extends Quest
 	
 	public Q00261_CollectorsDream()
 	{
-		super(261, Q00261_CollectorsDream.class.getSimpleName(), "Collector's Dream");
+		super(261);
 		addStartNpc(ALSHUPES);
 		addTalkId(ALSHUPES);
 		addKillId(MONSTERS);

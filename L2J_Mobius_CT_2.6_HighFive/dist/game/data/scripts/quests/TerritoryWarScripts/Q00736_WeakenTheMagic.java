@@ -26,7 +26,7 @@ public final class Q00736_WeakenTheMagic extends TerritoryWarSuperClass
 {
 	public Q00736_WeakenTheMagic()
 	{
-		super(736, Q00736_WeakenTheMagic.class.getSimpleName(), "Weaken the magic");
+		super(736);
 		CLASS_IDS = new int[]
 		{
 			40,

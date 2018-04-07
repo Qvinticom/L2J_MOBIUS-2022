@@ -62,7 +62,7 @@ public final class Q00235_MimirsElixir extends Quest
 	
 	public Q00235_MimirsElixir()
 	{
-		super(235, Q00235_MimirsElixir.class.getSimpleName(), "Mimir's Elixir");
+		super(235);
 		addStartNpc(LADD);
 		addTalkId(LADD, JOAN, ALCHEMISTS_MIXING_URN);
 		addKillId(MOBS.keySet());

@@ -19,7 +19,7 @@ package events.TheValentineEvent;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * The Valentine Event event AI.
@@ -36,7 +36,6 @@ public final class TheValentineEvent extends LongTimeEvent
 	
 	private TheValentineEvent()
 	{
-		super(TheValentineEvent.class.getSimpleName(), "events");
 		addStartNpc(NPC);
 		addFirstTalkId(NPC);
 		addTalkId(NPC);

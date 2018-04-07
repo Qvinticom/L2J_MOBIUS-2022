@@ -43,7 +43,7 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 	
 	public Q00714_PathToBecomingALordSchuttgart()
 	{
-		super(714, Q00714_PathToBecomingALordSchuttgart.class.getSimpleName(), "Path to Becoming a Lord - Schuttgart");
+		super(714);
 		addStartNpc(August);
 		addTalkId(August);
 		addTalkId(Newyear);
@@ -52,7 +52,7 @@ public class Q00714_PathToBecomingALordSchuttgart extends Quest
 		{
 			addKillId(i);
 		}
-		questItemIds = new int[]
+		_questItemIds = new int[]
 		{
 			GolemShard
 		};

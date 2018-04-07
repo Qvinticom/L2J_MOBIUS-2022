@@ -58,7 +58,7 @@ public final class Q00258_BringWolfPelts extends Quest
 	
 	public Q00258_BringWolfPelts()
 	{
-		super(258, Q00258_BringWolfPelts.class.getSimpleName(), "Bring Wolf Pelts");
+		super(258);
 		addStartNpc(LECTOR);
 		addTalkId(LECTOR);
 		addKillId(MONSTERS);

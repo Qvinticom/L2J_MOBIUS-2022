@@ -64,7 +64,7 @@ public class Q00690_JudesRequest extends Quest
 	
 	public Q00690_JudesRequest()
 	{
-		super(690, Q00690_JudesRequest.class.getSimpleName(), "Jude's Request");
+		super(690);
 		addStartNpc(JUDE);
 		addTalkId(JUDE);
 		addKillId(LESSER_EVIL, GREATER_EVIL);

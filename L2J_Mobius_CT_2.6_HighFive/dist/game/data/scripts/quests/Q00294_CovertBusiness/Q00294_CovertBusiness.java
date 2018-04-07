@@ -52,7 +52,7 @@ public final class Q00294_CovertBusiness extends Quest
 	
 	public Q00294_CovertBusiness()
 	{
-		super(294, Q00294_CovertBusiness.class.getSimpleName(), "Covert Business");
+		super(294);
 		addStartNpc(KEEF);
 		addTalkId(KEEF);
 		addKillId(MONSTER_DROP_CHANCE.keySet());

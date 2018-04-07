@@ -37,7 +37,7 @@ public final class Q00061_LawEnforcement extends Quest
 	
 	public Q00061_LawEnforcement()
 	{
-		super(61, Q00061_LawEnforcement.class.getSimpleName(), "Law Enforcement");
+		super(61);
 		addStartNpc(LIANE);
 		addTalkId(LIANE, KEKROPUS, EINDBURGH);
 	}

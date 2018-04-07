@@ -43,7 +43,7 @@ public class Q00173_ToTheIsleOfSouls extends Quest
 	
 	public Q00173_ToTheIsleOfSouls()
 	{
-		super(173, Q00173_ToTheIsleOfSouls.class.getSimpleName(), "To the Isle of Souls");
+		super(173);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI, GENTLER);
 		

@@ -55,7 +55,7 @@ public final class Q00032_AnObviousLie extends Quest
 	
 	public Q00032_AnObviousLie()
 	{
-		super(32, Q00032_AnObviousLie.class.getSimpleName(), "An Obvious Lie");
+		super(32);
 		addStartNpc(MAXIMILIAN);
 		addTalkId(MAXIMILIAN, GENTLER, MIKI_THE_CAT);
 		addKillId(ALLIGATOR);

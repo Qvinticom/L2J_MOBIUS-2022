@@ -63,7 +63,7 @@ public final class Q00107_MercilessPunishment extends Quest
 	
 	public Q00107_MercilessPunishment()
 	{
-		super(107, Q00107_MercilessPunishment.class.getSimpleName(), "Merciless Punishment");
+		super(107);
 		addStartNpc(URUTU_CHIEF_HATOS);
 		addTalkId(URUTU_CHIEF_HATOS, CENTURION_PARUGON);
 		addKillId(BARANKA_MESSENGER);

@@ -173,8 +173,6 @@ public abstract class Chamber extends AbstractInstance
 	
 	protected Chamber(String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
-		super(name, descr);
-		
 		INSTANCEID = instanceId;
 		INSTANCE_TEMPLATE = instanceTemplateName;
 		ENTRANCE_GATEKEEPER = entranceGKId;

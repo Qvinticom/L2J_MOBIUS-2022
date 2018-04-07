@@ -59,7 +59,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	
 	public Q10292_SevenSignsGirlOfDoubt()
 	{
-		super(10292, Q10292_SevenSignsGirlOfDoubt.class.getSimpleName(), "Seven Signs, Girl of Doubt");
+		super(10292);
 		addStartNpc(WOOD);
 		addSpawnId(ELCADIA);
 		addTalkId(WOOD, FRANZ, ELCADIA, HARDIN);

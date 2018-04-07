@@ -44,7 +44,7 @@ public class Q10291_FireDragonDestroyer extends Quest
 	
 	public Q10291_FireDragonDestroyer()
 	{
-		super(10291, Q10291_FireDragonDestroyer.class.getSimpleName(), "Fire Dragon Destroyer");
+		super(10291);
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);

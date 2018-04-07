@@ -53,7 +53,7 @@ public final class Q00410_PathOfThePalusKnight extends Quest
 	
 	public Q00410_PathOfThePalusKnight()
 	{
-		super(410, Q00410_PathOfThePalusKnight.class.getSimpleName(), "Path Of The Palus Knight");
+		super(410);
 		addStartNpc(MASTER_VIRGIL);
 		addTalkId(MASTER_VIRGIL, KALINTA);
 		addKillId(VENOMOUS_SPIDER, ARACHNID_TRACKER, LYCANTHROPE);

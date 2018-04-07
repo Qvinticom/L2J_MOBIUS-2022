@@ -54,7 +54,7 @@ public class Q00702_ATrapForRevenge extends Quest
 	
 	public Q00702_ATrapForRevenge()
 	{
-		super(702, Q00702_ATrapForRevenge.class.getSimpleName(), "A Trap for Revenge");
+		super(702);
 		addStartNpc(PLENOS);
 		addTalkId(PLENOS, LEKON, TENIUS);
 		addKillId(MONSTERS);

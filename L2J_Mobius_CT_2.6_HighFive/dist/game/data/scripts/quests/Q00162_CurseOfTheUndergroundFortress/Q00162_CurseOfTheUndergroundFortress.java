@@ -57,7 +57,7 @@ public class Q00162_CurseOfTheUndergroundFortress extends Quest
 	
 	public Q00162_CurseOfTheUndergroundFortress()
 	{
-		super(162, Q00162_CurseOfTheUndergroundFortress.class.getSimpleName(), "Curse of the Underground Fortress");
+		super(162);
 		addStartNpc(UNOREN);
 		addTalkId(UNOREN);
 		addKillId(MONSTERS_SKULLS.keySet());

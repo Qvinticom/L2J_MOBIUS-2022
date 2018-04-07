@@ -28,7 +28,7 @@ public class Q00080_SagaOfTheWindRider extends AbstractSagaQuest
 {
 	public Q00080_SagaOfTheWindRider()
 	{
-		super(80, Q00080_SagaOfTheWindRider.class.getSimpleName(), "Saga of the Wind Rider");
+		super(80);
 		_npc = new int[]
 		{
 			31603,

@@ -28,7 +28,7 @@ public class Q00076_SagaOfTheGrandKhavatari extends AbstractSagaQuest
 {
 	public Q00076_SagaOfTheGrandKhavatari()
 	{
-		super(76, Q00076_SagaOfTheGrandKhavatari.class.getSimpleName(), "Saga of the Grand Khavatari");
+		super(76);
 		_npc = new int[]
 		{
 			31339,

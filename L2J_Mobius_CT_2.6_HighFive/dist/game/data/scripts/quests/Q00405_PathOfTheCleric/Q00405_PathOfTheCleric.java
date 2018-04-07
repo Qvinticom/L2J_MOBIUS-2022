@@ -59,7 +59,7 @@ public final class Q00405_PathOfTheCleric extends Quest
 	
 	public Q00405_PathOfTheCleric()
 	{
-		super(405, Q00405_PathOfTheCleric.class.getSimpleName(), "Path Of The Cleric");
+		super(405);
 		addStartNpc(ZIGAUNT);
 		addTalkId(ZIGAUNT, GALLINT, VIVYAN, TRADER_SIMPLON, GUARD_PRAGA, LIONEL);
 		addKillId(RUIN_ZOMBIE, RUIN_ZOMBIE_LEADER);

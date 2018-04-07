@@ -134,7 +134,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 	
 	public Q00456_DontKnowDontCare()
 	{
-		super(456, Q00456_DontKnowDontCare.class.getSimpleName(), "Don't Know, Don't Care");
+		super(456);
 		addStartNpc(SEPARATED_SOUL);
 		addTalkId(SEPARATED_SOUL);
 		addFirstTalkId(DRAKE_LORD_CORPSE, BEHEMOTH_LEADER_CORPSE, DRAGON_BEAST_CORPSE);

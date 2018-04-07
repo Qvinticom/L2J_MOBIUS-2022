@@ -28,7 +28,7 @@ public class Q00085_SagaOfTheCardinal extends AbstractSagaQuest
 {
 	public Q00085_SagaOfTheCardinal()
 	{
-		super(85, Q00085_SagaOfTheCardinal.class.getSimpleName(), "Saga of the Cardinal");
+		super(85);
 		_npc = new int[]
 		{
 			30191,

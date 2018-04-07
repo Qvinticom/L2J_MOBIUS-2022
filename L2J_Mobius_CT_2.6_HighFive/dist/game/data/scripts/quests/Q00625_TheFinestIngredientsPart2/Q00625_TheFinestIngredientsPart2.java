@@ -58,7 +58,7 @@ public final class Q00625_TheFinestIngredientsPart2 extends Quest
 	
 	public Q00625_TheFinestIngredientsPart2()
 	{
-		super(625, Q00625_TheFinestIngredientsPart2.class.getSimpleName(), "The Finest Ingredients - Part 2");
+		super(625);
 		addStartNpc(JEREMY);
 		addTalkId(JEREMY, YETIS_TABLE);
 		addSpawnId(ICICLE_EMPEROR_BUMBALUMP);

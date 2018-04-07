@@ -24,7 +24,7 @@ public final class Q00731_ProtectTheMilitaryAssociationLeader extends TerritoryW
 {
 	public Q00731_ProtectTheMilitaryAssociationLeader()
 	{
-		super(731, Q00731_ProtectTheMilitaryAssociationLeader.class.getSimpleName(), "Protect the Military Association Leader");
+		super(731);
 		NPC_IDS = new int[]
 		{
 			36508,

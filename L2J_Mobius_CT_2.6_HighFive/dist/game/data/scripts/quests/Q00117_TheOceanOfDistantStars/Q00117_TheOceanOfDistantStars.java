@@ -54,7 +54,7 @@ public final class Q00117_TheOceanOfDistantStars extends Quest
 	
 	public Q00117_TheOceanOfDistantStars()
 	{
-		super(117, Q00117_TheOceanOfDistantStars.class.getSimpleName(), "The Ocean of Distant Stars");
+		super(117);
 		addStartNpc(ABEY);
 		addTalkId(ABEY, GHOST_OF_A_RAILROAD_ENGINEER, GHOST_OF_AN_ANCIENT_RAILROAD_ENGINEER, BOX, OBI);
 		addKillId(BANDIT_WARRIOR, BANDIT_INSPECTOR);

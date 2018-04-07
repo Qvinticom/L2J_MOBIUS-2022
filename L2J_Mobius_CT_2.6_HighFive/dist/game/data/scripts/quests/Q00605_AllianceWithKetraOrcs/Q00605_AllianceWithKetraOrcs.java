@@ -157,7 +157,7 @@ public class Q00605_AllianceWithKetraOrcs extends Quest
 	
 	public Q00605_AllianceWithKetraOrcs()
 	{
-		super(605, Q00605_AllianceWithKetraOrcs.class.getSimpleName(), "Alliance with Ketra Orcs");
+		super(605);
 		addStartNpc(WAHKAN);
 		addTalkId(WAHKAN);
 		addKillId(MOBS.keySet());

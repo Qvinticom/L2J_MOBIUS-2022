@@ -93,7 +93,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 	
 	public Q00308_ReedFieldMaintenance()
 	{
-		super(308, Q00308_ReedFieldMaintenance.class.getSimpleName(), "Reed Field Maintenance");
+		super(308);
 		addStartNpc(KATENSA);
 		addTalkId(KATENSA);
 		addKillId(MUCROKIAN.keySet());

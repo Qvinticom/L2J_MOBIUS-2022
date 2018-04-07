@@ -26,7 +26,7 @@ public final class Q00719_ForTheSakeOfTheTerritoryGiran extends TerritoryWarSupe
 {
 	public Q00719_ForTheSakeOfTheTerritoryGiran()
 	{
-		super(719, Q00719_ForTheSakeOfTheTerritoryGiran.class.getSimpleName(), "For the Sake of the Territory - Giran");
+		super(719);
 		CATAPULT_ID = 36501;
 		TERRITORY_ID = 83;
 		LEADER_IDS = new int[]

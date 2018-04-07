@@ -52,7 +52,7 @@ public class Q00341_HuntingForWildBeasts extends Quest
 	
 	public Q00341_HuntingForWildBeasts()
 	{
-		super(341, Q00341_HuntingForWildBeasts.class.getSimpleName(), "Hunting for Wild Beasts");
+		super(341);
 		addStartNpc(PANO);
 		addTalkId(PANO);
 		addKillId(MONSTERS.keySet());

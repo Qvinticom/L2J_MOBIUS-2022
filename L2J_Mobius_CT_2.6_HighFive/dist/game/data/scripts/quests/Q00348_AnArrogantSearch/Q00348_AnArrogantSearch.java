@@ -107,7 +107,7 @@ public class Q00348_AnArrogantSearch extends Quest
 	
 	public Q00348_AnArrogantSearch()
 	{
-		super(348, Q00348_AnArrogantSearch.class.getSimpleName(), "An Arrogant Search");
+		super(348);
 		addAttackId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOWFANG, ANGEL_KILLER, PLATINUM_TRIBE_SHAMAN, PLATINUM_TRIBE_OVERLORD);
 		addSpawnId(ARK_GUARDIAN_ELBEROTH, ARK_GUARDIAN_SHADOWFANG, ANGEL_KILLER);
 		addStartNpc(HANELLIN);

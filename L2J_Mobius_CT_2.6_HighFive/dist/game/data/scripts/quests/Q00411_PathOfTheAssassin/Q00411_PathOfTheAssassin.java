@@ -53,7 +53,7 @@ public final class Q00411_PathOfTheAssassin extends Quest
 	
 	public Q00411_PathOfTheAssassin()
 	{
-		super(411, Q00411_PathOfTheAssassin.class.getSimpleName(), "Path Of The Assassin");
+		super(411);
 		addStartNpc(TRISKEL);
 		addTalkId(TRISKEL, GUARD_LEIKAN, ARKENIA);
 		addKillId(MOONSTONE_BEAST, CALPICO);

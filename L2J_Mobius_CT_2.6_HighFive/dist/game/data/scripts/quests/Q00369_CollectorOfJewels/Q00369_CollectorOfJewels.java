@@ -52,7 +52,7 @@ public final class Q00369_CollectorOfJewels extends Quest
 	
 	public Q00369_CollectorOfJewels()
 	{
-		super(369, Q00369_CollectorOfJewels.class.getSimpleName(), "Collector of Jewels");
+		super(369);
 		addStartNpc(NELL);
 		addTalkId(NELL);
 		addKillId(MOBS_DROP_CHANCES.keySet());

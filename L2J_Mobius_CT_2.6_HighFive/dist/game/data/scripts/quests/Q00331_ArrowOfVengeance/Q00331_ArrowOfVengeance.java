@@ -56,7 +56,7 @@ public class Q00331_ArrowOfVengeance extends Quest
 	
 	public Q00331_ArrowOfVengeance()
 	{
-		super(331, Q00331_ArrowOfVengeance.class.getSimpleName(), "Arrow for Vengeance");
+		super(331);
 		addStartNpc(BELTON);
 		addTalkId(BELTON);
 		addKillId(MONSTERS.keySet());

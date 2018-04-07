@@ -56,7 +56,7 @@ public final class Q00120_PavelsLastResearch extends Quest
 	
 	public Q00120_PavelsLastResearch()
 	{
-		super(120, Q00120_PavelsLastResearch.class.getSimpleName(), "Pavel's Last Research");
+		super(120);
 		addStartNpc(SUSPICIOUS_LOOKING_PILE_OF_STONES);
 		addTalkId(SUSPICIOUS_LOOKING_PILE_OF_STONES, WENDY, YUMI, WEATHERMASTER_1, WEATHERMASTER_2, WEATHERMASTER_3, DOCTOR_CHAOS_SECRET_BOOKSHELF);
 		addSkillSeeId(WEATHERMASTER_1, WEATHERMASTER_2, WEATHERMASTER_3);

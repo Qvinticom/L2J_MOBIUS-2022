@@ -50,7 +50,7 @@ public final class Q00284_MuertosFeather extends Quest
 	
 	public Q00284_MuertosFeather()
 	{
-		super(284, Q00284_MuertosFeather.class.getSimpleName(), "Muertos Feather");
+		super(284);
 		addStartNpc(TREVOR);
 		addTalkId(TREVOR);
 		addKillId(MOB_DROP_CHANCE.keySet());

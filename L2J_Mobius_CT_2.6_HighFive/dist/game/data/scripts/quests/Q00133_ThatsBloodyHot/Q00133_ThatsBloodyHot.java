@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
-import hellbound.HellboundEngine;
+import ai.areas.Hellbound.HellboundEngine;
 import quests.Q00131_BirdInACage.Q00131_BirdInACage;
 
 /**
@@ -41,7 +41,7 @@ public class Q00133_ThatsBloodyHot extends Quest
 	
 	public Q00133_ThatsBloodyHot()
 	{
-		super(133, Q00133_ThatsBloodyHot.class.getSimpleName(), "That's Bloody Hot!");
+		super(133);
 		addStartNpc(KANIS);
 		addTalkId(KANIS, GALATE);
 		registerQuestItems(REFINED_CRYSTAL_SAMPLE);

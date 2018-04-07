@@ -28,7 +28,7 @@ public class Q00068_SagaOfTheSoulHound extends AbstractSagaQuest
 {
 	public Q00068_SagaOfTheSoulHound()
 	{
-		super(68, Q00068_SagaOfTheSoulHound.class.getSimpleName(), "Saga of the Soul Hound");
+		super(68);
 		_npc = new int[]
 		{
 			32138,

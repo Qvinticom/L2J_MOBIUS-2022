@@ -28,7 +28,7 @@ public class Q00087_SagaOfEvasSaint extends AbstractSagaQuest
 {
 	public Q00087_SagaOfEvasSaint()
 	{
-		super(87, Q00087_SagaOfEvasSaint.class.getSimpleName(), "Saga of Eva's Saint");
+		super(87);
 		_npc = new int[]
 		{
 			30191,

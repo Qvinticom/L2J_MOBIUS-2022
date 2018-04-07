@@ -28,7 +28,7 @@ public class Q00072_SagaOfTheSwordMuse extends AbstractSagaQuest
 {
 	public Q00072_SagaOfTheSwordMuse()
 	{
-		super(72, Q00072_SagaOfTheSwordMuse.class.getSimpleName(), "Saga of the Sword Muse");
+		super(72);
 		_npc = new int[]
 		{
 			30853,

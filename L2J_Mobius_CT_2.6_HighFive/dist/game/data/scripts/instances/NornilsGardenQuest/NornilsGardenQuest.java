@@ -47,8 +47,6 @@ public final class NornilsGardenQuest extends AbstractInstance
 	
 	public NornilsGardenQuest()
 	{
-		super(NornilsGardenQuest.class.getSimpleName());
-		
 		addStartNpc(RODENPICULA, MOTHER_NORNIL);
 		addTalkId(RODENPICULA, MOTHER_NORNIL);
 		addFirstTalkId(RODENPICULA, MOTHER_NORNIL);

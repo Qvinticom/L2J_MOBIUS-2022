@@ -135,7 +135,7 @@ public class Q00350_EnhanceYourWeapon extends Quest
 	
 	public Q00350_EnhanceYourWeapon()
 	{
-		super(350, Q00350_EnhanceYourWeapon.class.getSimpleName(), "Enhance Your Weapon");
+		super(350);
 		addStartNpc(STARTING_NPCS);
 		addTalkId(STARTING_NPCS);
 		load();

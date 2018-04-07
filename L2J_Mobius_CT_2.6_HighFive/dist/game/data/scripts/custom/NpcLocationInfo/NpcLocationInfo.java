@@ -20,14 +20,15 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Npc Location Info AI.
  * @author Nyaran
  */
-public final class NpcLocationInfo extends Quest
+public final class NpcLocationInfo extends AbstractNpcAI
 {
 	private static final int[] NPC =
 	{
@@ -261,7 +262,6 @@ public final class NpcLocationInfo extends Quest
 	
 	private NpcLocationInfo()
 	{
-		super(-1, NpcLocationInfo.class.getSimpleName(), "custom");
 		addStartNpc(NPC);
 		addTalkId(NPC);
 	}

@@ -24,7 +24,7 @@ public final class Q00729_ProtectTheTerritoryCatapult extends TerritoryWarSuperC
 {
 	public Q00729_ProtectTheTerritoryCatapult()
 	{
-		super(729, Q00729_ProtectTheTerritoryCatapult.class.getSimpleName(), "Protect the Territory Catapult");
+		super(729);
 		NPC_IDS = new int[]
 		{
 			36499,

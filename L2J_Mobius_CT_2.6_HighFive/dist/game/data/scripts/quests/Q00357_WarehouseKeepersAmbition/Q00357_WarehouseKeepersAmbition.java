@@ -47,7 +47,7 @@ public final class Q00357_WarehouseKeepersAmbition extends Quest
 	
 	public Q00357_WarehouseKeepersAmbition()
 	{
-		super(357, Q00357_WarehouseKeepersAmbition.class.getSimpleName(), "Warehouse Keeper's Ambition");
+		super(357);
 		addStartNpc(SILVA);
 		addTalkId(SILVA);
 		addKillId(DROP_DATA.keySet());

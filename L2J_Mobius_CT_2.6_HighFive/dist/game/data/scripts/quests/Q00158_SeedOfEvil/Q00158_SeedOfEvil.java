@@ -43,7 +43,7 @@ public class Q00158_SeedOfEvil extends Quest
 	
 	public Q00158_SeedOfEvil()
 	{
-		super(158, Q00158_SeedOfEvil.class.getSimpleName(), "Seed of Evil");
+		super(158);
 		addStartNpc(BIOTIN);
 		addTalkId(BIOTIN);
 		addAttackId(NERKAS);

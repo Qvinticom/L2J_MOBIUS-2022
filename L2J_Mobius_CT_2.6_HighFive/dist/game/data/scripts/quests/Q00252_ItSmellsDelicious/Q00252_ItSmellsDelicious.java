@@ -49,7 +49,7 @@ public class Q00252_ItSmellsDelicious extends Quest
 	
 	public Q00252_ItSmellsDelicious()
 	{
-		super(252, Q00252_ItSmellsDelicious.class.getSimpleName(), "It Smells Delicious!");
+		super(252);
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(CHEF);

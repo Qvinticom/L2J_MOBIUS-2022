@@ -46,7 +46,7 @@ public class Q00170_DangerousSeduction extends Quest
 	
 	public Q00170_DangerousSeduction()
 	{
-		super(170, Q00170_DangerousSeduction.class.getSimpleName(), "Dangerous Seduction");
+		super(170);
 		addStartNpc(VELLIOR);
 		addTalkId(VELLIOR);
 		addKillId(MERKENIS);

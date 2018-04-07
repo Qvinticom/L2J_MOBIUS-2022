@@ -199,11 +199,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	
 	public Q00144_PailakaInjuredDragon()
 	{
-		super(144, Q00144_PailakaInjuredDragon.class.getSimpleName(), "Pailaka - Injured Dragon");
+		super(144);
 		addStartNpc(KETRA_ORC_SHAMAN);
 		addKillId(LATANA);
 		
-		questItemIds = ITEMS;
+		_questItemIds = ITEMS;
 		
 		for (int npcId : NPCS)
 		{

@@ -55,7 +55,7 @@ public final class Q00370_AnElderSowsSeeds extends Quest
 	
 	public Q00370_AnElderSowsSeeds()
 	{
-		super(370, Q00370_AnElderSowsSeeds.class.getSimpleName(), "An Elder Sows Seeds");
+		super(370);
 		addStartNpc(CASIAN);
 		addTalkId(CASIAN);
 		addKillId(MOBS1.keySet());

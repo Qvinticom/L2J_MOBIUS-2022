@@ -68,7 +68,7 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	
 	public Q00211_TrialOfTheChallenger()
 	{
-		super(211, Q00211_TrialOfTheChallenger.class.getSimpleName(), "Trial of the Challenger");
+		super(211);
 		addStartNpc(KASH);
 		addTalkId(FILAUR, KASH, MARTIAN, RALDO, CHEST_OF_SHYSLASSYS);
 		addKillId(SHYSLASSYS, GORR, BARAHAM, QUEEN_OF_SUCCUBUS);

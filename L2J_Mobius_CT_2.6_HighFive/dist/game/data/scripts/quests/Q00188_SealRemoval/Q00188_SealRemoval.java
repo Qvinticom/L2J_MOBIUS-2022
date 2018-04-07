@@ -45,7 +45,7 @@ public final class Q00188_SealRemoval extends Quest
 	
 	public Q00188_SealRemoval()
 	{
-		super(188, Q00188_SealRemoval.class.getSimpleName(), "Seal Removal");
+		super(188);
 		addStartNpc(RESEARCHER_LORAIN);
 		addTalkId(RESEARCHER_LORAIN, MAESTRO_NIKOLA, DOROTHY_LOCKSMITH);
 		registerQuestItems(BROKEN_METAL_PIECES);

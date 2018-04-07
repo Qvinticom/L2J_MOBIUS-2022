@@ -40,7 +40,7 @@ public class Q00156_MillenniumLove extends Quest
 	
 	public Q00156_MillenniumLove()
 	{
-		super(156, Q00156_MillenniumLove.class.getSimpleName(), "Millennium Love");
+		super(156);
 		addStartNpc(LILITH);
 		addTalkId(LILITH, BAENEDES);
 		registerQuestItems(LILITHS_LETTER, THEONS_DIARY);

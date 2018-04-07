@@ -21,12 +21,13 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
+
+import ai.AbstractNpcAI;
 
 /**
  * @author UnAfraid
  */
-public final class Clan extends Quest
+public final class Clan extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =
@@ -63,7 +64,6 @@ public final class Clan extends Quest
 	
 	private Clan()
 	{
-		super(-1, Clan.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

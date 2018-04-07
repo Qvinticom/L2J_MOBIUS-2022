@@ -26,7 +26,7 @@ public final class Q00735_MakeSpearsDull extends TerritoryWarSuperClass
 {
 	public Q00735_MakeSpearsDull()
 	{
-		super(735, Q00735_MakeSpearsDull.class.getSimpleName(), "Make Spears Dull");
+		super(735);
 		CLASS_IDS = new int[]
 		{
 			23,

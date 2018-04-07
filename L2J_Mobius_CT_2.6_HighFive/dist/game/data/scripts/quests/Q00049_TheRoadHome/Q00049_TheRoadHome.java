@@ -62,7 +62,7 @@ public final class Q00049_TheRoadHome extends Quest
 	
 	public Q00049_TheRoadHome()
 	{
-		super(49, Q00049_TheRoadHome.class.getSimpleName(), "The Road Home");
+		super(49);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());

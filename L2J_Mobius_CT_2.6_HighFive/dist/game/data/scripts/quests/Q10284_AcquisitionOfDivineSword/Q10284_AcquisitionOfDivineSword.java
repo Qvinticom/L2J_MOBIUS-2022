@@ -47,7 +47,7 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 	
 	public Q10284_AcquisitionOfDivineSword()
 	{
-		super(10284, Q10284_AcquisitionOfDivineSword.class.getSimpleName(), "Acquisition of Divine Sword");
+		super(10284);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, JINIA, TARUN, KRUN);
 		registerQuestItems(COLD_RESISTANCE_POTION);

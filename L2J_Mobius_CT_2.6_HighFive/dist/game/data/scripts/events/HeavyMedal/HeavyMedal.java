@@ -19,7 +19,7 @@ package events.HeavyMedal;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * Heavy Medals event AI.
@@ -50,7 +50,6 @@ public final class HeavyMedal extends LongTimeEvent
 	
 	private HeavyMedal()
 	{
-		super(HeavyMedal.class.getSimpleName(), "events");
 		addStartNpc(CAT_ROY);
 		addStartNpc(CAT_WINNIE);
 		addTalkId(CAT_ROY);

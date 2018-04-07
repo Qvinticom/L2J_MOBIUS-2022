@@ -50,7 +50,7 @@ public final class Q00661_MakingTheHarvestGroundsSafe extends Quest
 	
 	public Q00661_MakingTheHarvestGroundsSafe()
 	{
-		super(661, Q00661_MakingTheHarvestGroundsSafe.class.getSimpleName(), "Making the Harvest Grounds Safe");
+		super(661);
 		addStartNpc(NORMAN);
 		addTalkId(NORMAN);
 		addKillId(MONSTER_CHANCES.keySet());

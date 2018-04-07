@@ -24,7 +24,7 @@ public final class Q00733_ProtectTheEconomicAssociationLeader extends TerritoryW
 {
 	public Q00733_ProtectTheEconomicAssociationLeader()
 	{
-		super(733, Q00733_ProtectTheEconomicAssociationLeader.class.getSimpleName(), "Protect the Economic Association Leader");
+		super(733);
 		NPC_IDS = new int[]
 		{
 			36513,

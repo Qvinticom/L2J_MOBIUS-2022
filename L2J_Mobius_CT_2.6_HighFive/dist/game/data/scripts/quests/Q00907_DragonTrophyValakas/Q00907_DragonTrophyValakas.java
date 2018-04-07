@@ -43,7 +43,7 @@ public class Q00907_DragonTrophyValakas extends Quest
 	
 	public Q00907_DragonTrophyValakas()
 	{
-		super(907, Q00907_DragonTrophyValakas.class.getSimpleName(), "Dragon Trophy - Valakas");
+		super(907);
 		addStartNpc(KLEIN);
 		addTalkId(KLEIN);
 		addKillId(VALAKAS);

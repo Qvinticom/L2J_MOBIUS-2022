@@ -26,15 +26,16 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Raidboss Info AI.<br>
  * Original Jython script Kerberos.
  * @author Nyaran
  */
-public final class RaidbossInfo extends Quest
+public final class RaidbossInfo extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPC =
@@ -57,7 +58,6 @@ public final class RaidbossInfo extends Quest
 	
 	private RaidbossInfo()
 	{
-		super(-1, RaidbossInfo.class.getSimpleName(), "custom");
 		addStartNpc(NPC);
 		addTalkId(NPC);
 		

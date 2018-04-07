@@ -36,7 +36,7 @@ public class Q00182_NewRecruits extends Quest
 	
 	public Q00182_NewRecruits()
 	{
-		super(182, Q00182_NewRecruits.class.getSimpleName(), "New Recruits");
+		super(182);
 		addStartNpc(KEKROPUS);
 		addTalkId(KEKROPUS, MENACING_MACHINE);
 	}

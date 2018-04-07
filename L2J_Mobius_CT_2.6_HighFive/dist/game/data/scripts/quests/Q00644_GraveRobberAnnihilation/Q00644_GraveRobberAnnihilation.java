@@ -62,7 +62,7 @@ public final class Q00644_GraveRobberAnnihilation extends Quest
 	
 	public Q00644_GraveRobberAnnihilation()
 	{
-		super(644, Q00644_GraveRobberAnnihilation.class.getSimpleName(), "Grave Robber Annihilation");
+		super(644);
 		addStartNpc(KARUDA);
 		addTalkId(KARUDA);
 		addKillId(MONSTER_DROP_CHANCES.keySet());

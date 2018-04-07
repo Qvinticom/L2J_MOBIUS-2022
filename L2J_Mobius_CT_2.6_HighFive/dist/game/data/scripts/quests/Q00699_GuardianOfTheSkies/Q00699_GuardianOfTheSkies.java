@@ -55,7 +55,7 @@ public class Q00699_GuardianOfTheSkies extends Quest
 	
 	public Q00699_GuardianOfTheSkies()
 	{
-		super(699, Q00699_GuardianOfTheSkies.class.getSimpleName(), "Guardian of the Skies");
+		super(699);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(VALDSTONE);

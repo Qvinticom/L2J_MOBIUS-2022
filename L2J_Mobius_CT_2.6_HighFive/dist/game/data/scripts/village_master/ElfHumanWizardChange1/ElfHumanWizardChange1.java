@@ -54,7 +54,6 @@ public final class ElfHumanWizardChange1 extends AbstractNpcAI
 	
 	private ElfHumanWizardChange1()
 	{
-		super(ElfHumanWizardChange1.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

@@ -42,7 +42,7 @@ public class Q00017_LightAndDarkness extends Quest
 	
 	public Q00017_LightAndDarkness()
 	{
-		super(17, Q00017_LightAndDarkness.class.getSimpleName(), "Light and Darkness");
+		super(17);
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH, SAINT_ALTAR_1, SAINT_ALTAR_2, SAINT_ALTAR_3, SAINT_ALTAR_4);
 		registerQuestItems(BLOOD_OF_SAINT);

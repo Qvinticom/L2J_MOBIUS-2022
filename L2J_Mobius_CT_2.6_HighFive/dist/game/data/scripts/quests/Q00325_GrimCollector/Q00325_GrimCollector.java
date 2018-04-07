@@ -70,7 +70,7 @@ public final class Q00325_GrimCollector extends Quest
 	
 	public Q00325_GrimCollector()
 	{
-		super(325, Q00325_GrimCollector.class.getSimpleName(), "Grim Collector");
+		super(325);
 		addStartNpc(GUARD_CURTIZ);
 		addTalkId(GUARD_CURTIZ, VARSAK, SAMED);
 		addKillId(MONSTER_DROPS.keySet());

@@ -41,7 +41,7 @@ public class Q00029_ChestCaughtWithABaitOfEarth extends Quest
 	
 	public Q00029_ChestCaughtWithABaitOfEarth()
 	{
-		super(29, Q00029_ChestCaughtWithABaitOfEarth.class.getSimpleName(), "Chest Caught With A Bait Of Earth");
+		super(29);
 		addStartNpc(WILLIE);
 		addTalkId(WILLIE, ANABEL);
 		registerQuestItems(SMALL_GLASS_BOX);

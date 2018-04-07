@@ -39,7 +39,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 	
 	public Q00695_DefendTheHallOfSuffering()
 	{
-		super(695, Q00695_DefendTheHallOfSuffering.class.getSimpleName(), "Defend The Hall of Suffering");
+		super(695);
 		addStartNpc(TEPIOS);
 		addTalkId(TEPIOS);
 		addTalkId(TEPIOS2);

@@ -31,7 +31,7 @@ public class Q00698_BlockTheLordsEscape extends Quest
 	
 	public Q00698_BlockTheLordsEscape()
 	{
-		super(698, Q00698_BlockTheLordsEscape.class.getSimpleName(), "Block the Lords Escape");
+		super(698);
 		addStartNpc(TEPIOS);
 		addTalkId(TEPIOS);
 	}

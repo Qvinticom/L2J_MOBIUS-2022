@@ -49,7 +49,7 @@ public class Q00151_CureForFever extends Quest
 	
 	public Q00151_CureForFever()
 	{
-		super(151, Q00151_CureForFever.class.getSimpleName(), "Cure for Fever");
+		super(151);
 		addStartNpc(ELLIAS);
 		addTalkId(ELLIAS, YOHANES);
 		addKillId(MOBS);

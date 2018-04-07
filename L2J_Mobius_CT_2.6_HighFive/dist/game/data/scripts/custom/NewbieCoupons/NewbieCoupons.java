@@ -19,14 +19,15 @@ package custom.NewbieCoupons;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
+
+import ai.AbstractNpcAI;
 
 /**
  * Newbie Weapon/Accesories Coupons for the Hellbound opening event.<br>
  * Original Jython script by Vice.
  * @author Nyaran
  */
-public final class NewbieCoupons extends Quest
+public final class NewbieCoupons extends AbstractNpcAI
 {
 	private static final int COUPON_ONE = 7832;
 	private static final int COUPON_TWO = 7833;
@@ -58,8 +59,6 @@ public final class NewbieCoupons extends Quest
 	
 	private NewbieCoupons()
 	{
-		super(-1, NewbieCoupons.class.getSimpleName(), "custom");
-		
 		for (int i : NPCs)
 		{
 			addStartNpc(i);

@@ -73,7 +73,7 @@ public class Q00458_PerfectForm extends Quest
 	
 	public Q00458_PerfectForm()
 	{
-		super(458, Q00458_PerfectForm.class.getSimpleName(), "Perfect Form");
+		super(458);
 		addStartNpc(KELLEYIA);
 		addTalkId(KELLEYIA);
 		addKillId(KOOKABURRAS);

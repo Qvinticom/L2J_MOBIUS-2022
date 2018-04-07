@@ -63,7 +63,7 @@ public final class Q00404_PathOfTheHumanWizard extends Quest
 	
 	public Q00404_PathOfTheHumanWizard()
 	{
-		super(404, Q00404_PathOfTheHumanWizard.class.getSimpleName(), "Path Of The Human Wizard");
+		super(404);
 		addStartNpc(PARINA);
 		addTalkId(PARINA, EARTH_SNAKE, WASTELAND_LIZARDMAN, FLAME_SALAMANDER, WIND_SYLPH, WATER_UNDINE);
 		addKillId(RED_BEAR, RATMAN_WARRIOR, WATER_SEER);

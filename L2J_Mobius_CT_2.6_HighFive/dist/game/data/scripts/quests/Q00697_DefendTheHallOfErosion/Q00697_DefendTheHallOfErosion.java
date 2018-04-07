@@ -31,7 +31,7 @@ public class Q00697_DefendTheHallOfErosion extends Quest
 	
 	public Q00697_DefendTheHallOfErosion()
 	{
-		super(697, Q00697_DefendTheHallOfErosion.class.getSimpleName(), "Defend the Hall of Erosion");
+		super(697);
 		addStartNpc(TEPIOS);
 		addTalkId(TEPIOS);
 	}

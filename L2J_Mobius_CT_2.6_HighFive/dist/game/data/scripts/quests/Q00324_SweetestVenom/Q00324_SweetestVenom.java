@@ -51,7 +51,7 @@ public class Q00324_SweetestVenom extends Quest
 	
 	public Q00324_SweetestVenom()
 	{
-		super(324, Q00324_SweetestVenom.class.getSimpleName(), "Sweetest Venom");
+		super(324);
 		addStartNpc(ASTARON);
 		addTalkId(ASTARON);
 		addKillId(MONSTERS.keySet());

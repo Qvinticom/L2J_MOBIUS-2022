@@ -85,7 +85,6 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 	
 	public SanctumOftheLordsOfDawn()
 	{
-		super(SanctumOftheLordsOfDawn.class.getSimpleName());
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
 		addAggroRangeEnterId(GUARDS_OF_THE_DAWN, GUARDS_OF_THE_DAWN_2, GUARDS_OF_THE_DAWN_3);

@@ -128,7 +128,7 @@ public class QuestLink implements IBypassHandler
 			
 			if (quest.isCustomQuest())
 			{
-				sb.append(quest.getDescr() + state);
+				sb.append(quest.getPath() + state);
 			}
 			else
 			{

@@ -48,7 +48,7 @@ public final class Q00367_ElectrifyingRecharge extends Quest
 	
 	public Q00367_ElectrifyingRecharge()
 	{
-		super(367, Q00367_ElectrifyingRecharge.class.getSimpleName(), "Electrifying Recharge!");
+		super(367);
 		addStartNpc(LORAIN);
 		addTalkId(LORAIN);
 		addAttackId(CATHEROK);

@@ -24,9 +24,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public abstract class Event extends Quest
 {
-	public Event(String name, String descr)
+	public Event()
 	{
-		super(-1, name, descr);
+		super(-1);
 	}
 	
 	public abstract boolean eventStart(L2PcInstance eventMaker);

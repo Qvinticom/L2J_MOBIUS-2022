@@ -51,7 +51,7 @@ public final class Q10285_MeetingSirra extends Quest
 	
 	public Q10285_MeetingSirra()
 	{
-		super(10285, Q10285_MeetingSirra.class.getSimpleName(), "Meeting Sirra");
+		super(10285);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, JINIA, KEGOR, SIRRA, JINIA2, FREYAS_STEWARD);
 	}

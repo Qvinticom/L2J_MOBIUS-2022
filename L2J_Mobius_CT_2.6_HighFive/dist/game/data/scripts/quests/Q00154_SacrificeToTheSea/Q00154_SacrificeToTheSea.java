@@ -46,7 +46,7 @@ public final class Q00154_SacrificeToTheSea extends Quest
 	
 	public Q00154_SacrificeToTheSea()
 	{
-		super(154, Q00154_SacrificeToTheSea.class.getSimpleName(), "Sacrifice to the Sea");
+		super(154);
 		addStartNpc(ROCKSWELL);
 		addTalkId(ROCKSWELL, CRISTEL, ROLLFNAN);
 		addKillId(ELDER_KELTIR, YOUNG_KELTIR, KELTIR);

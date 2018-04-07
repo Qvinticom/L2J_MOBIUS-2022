@@ -51,7 +51,7 @@ public final class Q00062_PathOfTheTrooper extends Quest
 	
 	public Q00062_PathOfTheTrooper()
 	{
-		super(62, Q00062_PathOfTheTrooper.class.getSimpleName(), "Path Of The Trooper");
+		super(62);
 		addStartNpc(MASTER_GWAIN);
 		addTalkId(MASTER_GWAIN, MASTER_SHUBAIN);
 		addKillId(FELIM_LIZARDMAN_WARRIOR, VENOMOUS_SPIDER, TUMRAN_BUGBEAR);

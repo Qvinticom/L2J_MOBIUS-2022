@@ -42,7 +42,7 @@ public class Q00613_ProveYourCourageVarka extends Quest
 	
 	public Q00613_ProveYourCourageVarka()
 	{
-		super(613, Q00613_ProveYourCourageVarka.class.getSimpleName(), "Prove Your Courage! (Varka)");
+		super(613);
 		addStartNpc(ASHAS);
 		addTalkId(ASHAS);
 		addKillId(HEKATON);

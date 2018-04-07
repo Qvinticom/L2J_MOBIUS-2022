@@ -83,7 +83,7 @@ public class Q00999_T1Tutorial extends Quest
 	
 	public Q00999_T1Tutorial()
 	{
-		super(-1, Q00999_T1Tutorial.class.getSimpleName(), "Kamael Tutorial");
+		super(-1);
 		// @formatter:off
 		Event.put("32133_02", new Object[]{"32133-03.htm", -119692, 44504, 380, DIPLOMA, 0x7b, SOULSHOT_NOVICE, 200, 0x7c, SOULSHOT_NOVICE, 200});
 		Event.put("30008_02", new Object[]{"30008-03.htm", 0, 0, 0, RECOMMENDATION_01, 0x00, SOULSHOT_NOVICE, 200, 0x00, 0, 0});
@@ -306,9 +306,9 @@ public class Q00999_T1Tutorial extends Quest
 							st.setState(State.STARTED);
 						}
 					}
-					else if ((step == 1) && (getQuestItemsCount(player, talk.item) == 0) && (Ex <= 2))
+					else if ((step == 1) && !hasQuestItems(player, talk.item) && (Ex <= 2))
 					{
-						if (getQuestItemsCount(player, BLUE_GEM) != 0)
+						if (hasQuestItems(player, BLUE_GEM))
 						{
 							takeItems(player, BLUE_GEM, -1);
 							giveItems(player, talk.item, 1);
@@ -417,7 +417,7 @@ public class Q00999_T1Tutorial extends Quest
 			qs.set("Ex", "2");
 		}
 		
-		if ((Ex == 2) && (getQuestItemsCount(player, BLUE_GEM) < 1))
+		if ((Ex == 2) && !hasQuestItems(player, BLUE_GEM))
 		{
 			((L2MonsterInstance) npc).dropItem(player, BLUE_GEM, 1);
 			playSound(player, "ItemSound.quest_tutorial");

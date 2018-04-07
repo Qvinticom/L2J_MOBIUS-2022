@@ -53,7 +53,7 @@ public final class Q00354_ConquestOfAlligatorIsland extends Quest
 	
 	public Q00354_ConquestOfAlligatorIsland()
 	{
-		super(354, Q00354_ConquestOfAlligatorIsland.class.getSimpleName(), "Conquest of Alligator Island");
+		super(354);
 		addStartNpc(KLUCK);
 		addTalkId(KLUCK);
 		addKillId(MOB1.keySet());

@@ -50,7 +50,7 @@ public final class Q00106_ForgottenTruth extends Quest
 	
 	public Q00106_ForgottenTruth()
 	{
-		super(106, Q00106_ForgottenTruth.class.getSimpleName(), "Forgotten Truth");
+		super(106);
 		addStartNpc(THIFIELL);
 		addTalkId(THIFIELL, KARTA);
 		addKillId(TUMRAN_ORC_BRIGAND);

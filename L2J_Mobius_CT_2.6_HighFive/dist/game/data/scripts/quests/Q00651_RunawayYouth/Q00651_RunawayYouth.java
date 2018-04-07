@@ -38,7 +38,7 @@ public class Q00651_RunawayYouth extends Quest
 	
 	public Q00651_RunawayYouth()
 	{
-		super(651, Q00651_RunawayYouth.class.getSimpleName(), "Runaway Youth");
+		super(651);
 		addStartNpc(IVAN);
 		addTalkId(BATIDAE, IVAN);
 	}

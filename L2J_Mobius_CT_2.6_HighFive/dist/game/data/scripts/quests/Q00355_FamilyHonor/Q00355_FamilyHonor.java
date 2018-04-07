@@ -77,7 +77,7 @@ public final class Q00355_FamilyHonor extends Quest
 	
 	public Q00355_FamilyHonor()
 	{
-		super(355, Q00355_FamilyHonor.class.getSimpleName(), "Family Honor");
+		super(355);
 		addStartNpc(GALIBREDO);
 		addTalkId(GALIBREDO, PATRIN);
 		addKillId(MOBS.keySet());

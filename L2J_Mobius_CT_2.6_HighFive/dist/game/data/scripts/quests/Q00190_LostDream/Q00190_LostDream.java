@@ -40,7 +40,7 @@ public final class Q00190_LostDream extends Quest
 	
 	public Q00190_LostDream()
 	{
-		super(190, Q00190_LostDream.class.getSimpleName(), "Lost Dream");
+		super(190);
 		addStartNpc(HEAD_BLACKSMITH_KUSTO);
 		addTalkId(HEAD_BLACKSMITH_KUSTO, RESEARCHER_LORAIN, MAESTRO_NIKOLA, JURIS);
 	}

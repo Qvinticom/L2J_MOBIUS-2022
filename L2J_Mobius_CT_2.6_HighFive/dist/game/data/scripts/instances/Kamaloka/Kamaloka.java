@@ -384,7 +384,6 @@ public final class Kamaloka extends AbstractInstance
 	
 	public Kamaloka()
 	{
-		super(Kamaloka.class.getSimpleName());
 		addFirstTalkId(TELEPORTER);
 		addTalkId(TELEPORTER);
 		for (int cap : CAPTAINS)

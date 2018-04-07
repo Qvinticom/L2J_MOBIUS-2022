@@ -87,7 +87,7 @@ public final class Q00108_JumbleTumbleDiamondFuss extends Quest
 	
 	public Q00108_JumbleTumbleDiamondFuss()
 	{
-		super(108, Q00108_JumbleTumbleDiamondFuss.class.getSimpleName(), "Jumble, Tumble, Diamond Fuss");
+		super(108);
 		addStartNpc(COLLECTOR_GOUPH);
 		addTalkId(COLLECTOR_GOUPH, TRADER_REEP, CARRIER_TOROCCO, MINER_MARON, BLACKSMITH_BRUNON, WAREHOUSE_KEEPER_MURDOC, WAREHOUSE_KEEPER_AIRY);
 		addKillId(GOBLIN_BRIGAND_LEADER, GOBLIN_BRIGAND_LIEUTENANT, BLADE_BAT);

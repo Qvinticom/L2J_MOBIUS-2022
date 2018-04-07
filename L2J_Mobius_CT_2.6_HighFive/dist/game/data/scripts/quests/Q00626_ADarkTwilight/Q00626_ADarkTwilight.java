@@ -68,7 +68,7 @@ public class Q00626_ADarkTwilight extends Quest
 	
 	public Q00626_ADarkTwilight()
 	{
-		super(626, Q00626_ADarkTwilight.class.getSimpleName(), "A Dark Twilight");
+		super(626);
 		addStartNpc(HIERARCH);
 		addTalkId(HIERARCH);
 		addKillId(MONSTERS.keySet());

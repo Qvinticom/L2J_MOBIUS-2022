@@ -151,7 +151,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	
 	public Q00511_AwlUnderFoot()
 	{
-		super(511, Q00511_AwlUnderFoot.class.getSimpleName(), "instances");
+		super(511);
 		_fortDungeons.put(35666, new FortDungeon(22));
 		_fortDungeons.put(35698, new FortDungeon(23));
 		_fortDungeons.put(35735, new FortDungeon(24));

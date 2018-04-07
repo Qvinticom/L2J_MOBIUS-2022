@@ -158,7 +158,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 	
 	public Q00289_NoMoreSoupForYou()
 	{
-		super(289, Q00289_NoMoreSoupForYou.class.getSimpleName(), "No More Soup For You");
+		super(289);
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MOBS);

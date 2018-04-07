@@ -57,7 +57,7 @@ public class Q00240_ImTheOnlyOneYouCanTrust extends Quest
 	
 	public Q00240_ImTheOnlyOneYouCanTrust()
 	{
-		super(240, Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName(), "I'm the Only One You Can Trust");
+		super(240);
 		addStartNpc(KINTAIJIN);
 		addTalkId(KINTAIJIN);
 		addKillId(MOBS);

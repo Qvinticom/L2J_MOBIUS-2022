@@ -47,7 +47,7 @@ public class Q10273_GoodDayToFly extends Quest
 	
 	public Q10273_GoodDayToFly()
 	{
-		super(10273, Q10273_GoodDayToFly.class.getSimpleName(), "Good Day to Fly");
+		super(10273);
 		addStartNpc(LEKON);
 		addTalkId(LEKON);
 		addKillId(MOBS);

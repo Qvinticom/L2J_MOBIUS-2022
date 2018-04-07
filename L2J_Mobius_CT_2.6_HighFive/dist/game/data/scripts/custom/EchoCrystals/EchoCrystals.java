@@ -21,15 +21,16 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Echo Crystals AI.
  * @author Plim
  */
-public final class EchoCrystals extends Quest
+public final class EchoCrystals extends AbstractNpcAI
 {
 	private static final int[] NPCs =
 	{
@@ -81,7 +82,6 @@ public final class EchoCrystals extends Quest
 	
 	private EchoCrystals()
 	{
-		super(-1, EchoCrystals.class.getSimpleName(), "custom");
 		// Initialize Map
 		SCORES.put(4410, new ScoreData(4411, "01", "02", "03"));
 		SCORES.put(4409, new ScoreData(4412, "04", "05", "06"));

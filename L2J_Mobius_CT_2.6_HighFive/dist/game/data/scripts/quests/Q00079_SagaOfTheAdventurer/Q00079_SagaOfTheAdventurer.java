@@ -28,7 +28,7 @@ public class Q00079_SagaOfTheAdventurer extends AbstractSagaQuest
 {
 	public Q00079_SagaOfTheAdventurer()
 	{
-		super(79, Q00079_SagaOfTheAdventurer.class.getSimpleName(), "Saga of the Adventurer");
+		super(79);
 		_npc = new int[]
 		{
 			31603,

@@ -57,13 +57,13 @@ public class Q00710_PathToBecomingALordGiran extends Quest
 	
 	public Q00710_PathToBecomingALordGiran()
 	{
-		super(710, Q00710_PathToBecomingALordGiran.class.getSimpleName(), "Path to Becoming a Lord - Giran");
+		super(710);
 		addStartNpc(Saul);
 		addTalkId(Saul);
 		addTalkId(Gesto);
 		addTalkId(Felton);
 		addTalkId(CargoBox);
-		questItemIds = new int[]
+		_questItemIds = new int[]
 		{
 			FreightChest,
 			GestoBox

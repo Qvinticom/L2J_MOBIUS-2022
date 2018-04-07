@@ -82,7 +82,7 @@ public final class Q00416_PathOfTheOrcShaman extends Quest
 	
 	public Q00416_PathOfTheOrcShaman()
 	{
-		super(416, Q00416_PathOfTheOrcShaman.class.getSimpleName(), "Path of the Orc Shaman");
+		super(416);
 		addStartNpc(TATARU_ZU_HESTUI);
 		addTalkId(TATARU_ZU_HESTUI, UMOS, MOIRA, DEAD_LEOPARDS_CARCASS, DUDA_MARA_TOTEM_SPIRIT, HESTUI_TOTEM_SPIRIT, TOTEM_SPIRIT_OF_GANDI);
 		addKillId(MOBS.keySet());

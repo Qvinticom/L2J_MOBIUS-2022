@@ -44,7 +44,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 	
 	public Q10504_JewelOfAntharas()
 	{
-		super(10504, Q10504_JewelOfAntharas.class.getSimpleName(), "Jewel of Antharas");
+		super(10504);
 		addStartNpc(THEODRIC);
 		addTalkId(THEODRIC);
 		addKillId(ANTHARAS);

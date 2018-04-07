@@ -51,7 +51,7 @@ public final class Q00196_SevenSignsSealOfTheEmperor extends Quest
 	
 	public Q00196_SevenSignsSealOfTheEmperor()
 	{
-		super(196, Q00196_SevenSignsSealOfTheEmperor.class.getSimpleName(), "Seven Signs, Seal of the Emperor");
+		super(196);
 		addFirstTalkId(MERCHANT_OF_MAMMON);
 		addStartNpc(IASON_HEINE);
 		addTalkId(IASON_HEINE, MERCHANT_OF_MAMMON, SHUNAIMAN, WOOD, COURT_MAGICIAN);

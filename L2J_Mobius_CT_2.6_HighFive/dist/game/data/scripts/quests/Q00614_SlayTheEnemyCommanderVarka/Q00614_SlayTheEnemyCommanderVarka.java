@@ -42,7 +42,7 @@ public class Q00614_SlayTheEnemyCommanderVarka extends Quest
 	
 	public Q00614_SlayTheEnemyCommanderVarka()
 	{
-		super(614, Q00614_SlayTheEnemyCommanderVarka.class.getSimpleName(), "Slay the Enemy Commander! (Varka)");
+		super(614);
 		addStartNpc(ASHAS);
 		addTalkId(ASHAS);
 		addKillId(TAYR);

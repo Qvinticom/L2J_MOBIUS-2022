@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
-import ai.individual.Antharas.Antharas;
-import ai.individual.Baium.Baium;
+import ai.bosses.Antharas.Antharas;
+import ai.bosses.Baium.Baium;
 
 /**
  * @author St3eT

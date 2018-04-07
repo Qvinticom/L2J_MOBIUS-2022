@@ -57,7 +57,7 @@ public final class Q00279_TargetOfOpportunity extends Quest
 	
 	public Q00279_TargetOfOpportunity()
 	{
-		super(279, Q00279_TargetOfOpportunity.class.getSimpleName(), "Target of Opportunity");
+		super(279);
 		addStartNpc(JERIAN);
 		addTalkId(JERIAN);
 		addKillId(MONSTERS);

@@ -70,7 +70,7 @@ public class Q00025_HidingBehindTheTruth extends Quest
 	
 	public Q00025_HidingBehindTheTruth()
 	{
-		super(25, Q00025_HidingBehindTheTruth.class.getSimpleName(), "Hiding Behind the Truth");
+		super(25);
 		addStartNpc(PRIEST_BENEDICT);
 		addTalkId(HIGH_PRIEST_AGRIPEL, PRIEST_BENEDICT, MYSTERIOUS_WIZARD, TOMBSTONE, MAID_OF_LIDIA, BROKEN_BOOKSHELF2, BROKEN_BOOKSHELF3, BROKEN_BOOKSHELF4, COFFIN);
 		registerQuestItems(GEMSTONE_KEY, CONTRACT, TOTEM_DOLL3, TOTEM_DOLL2, LIDAS_DRESS);

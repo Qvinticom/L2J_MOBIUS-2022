@@ -57,7 +57,7 @@ public final class Q00629_CleanUpTheSwampOfScreams extends Quest
 	
 	public Q00629_CleanUpTheSwampOfScreams()
 	{
-		super(629, Q00629_CleanUpTheSwampOfScreams.class.getSimpleName(), "Clean Up The Swamp Of Screams");
+		super(629);
 		addStartNpc(PIERCE);
 		addTalkId(PIERCE);
 		addKillId(MOBS_DROP_CHANCES.keySet());

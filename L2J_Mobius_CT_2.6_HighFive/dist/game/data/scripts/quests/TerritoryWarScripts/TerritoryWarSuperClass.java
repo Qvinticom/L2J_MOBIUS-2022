@@ -59,9 +59,9 @@ public class TerritoryWarSuperClass extends Quest
 	public int RANDOM_MIN;
 	public int RANDOM_MAX;
 	
-	public TerritoryWarSuperClass(int questId, String name, String descr)
+	public TerritoryWarSuperClass(int questId)
 	{
-		super(questId, name, descr);
+		super(questId);
 		
 		if (questId < 0)
 		{

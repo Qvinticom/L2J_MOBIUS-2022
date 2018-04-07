@@ -65,7 +65,7 @@ public final class Q00365_DevilsLegacy extends Quest
 	
 	public Q00365_DevilsLegacy()
 	{
-		super(365, Q00365_DevilsLegacy.class.getSimpleName(), "Devil's Legacy");
+		super(365);
 		addStartNpc(RANDOLF);
 		addTalkId(RANDOLF, COLLOB);
 		addKillId(MOBS.keySet());

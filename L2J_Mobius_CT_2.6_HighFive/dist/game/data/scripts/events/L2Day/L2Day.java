@@ -21,8 +21,8 @@ import java.util.Map;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 
 /**
  * L2 Day event AI.
@@ -142,7 +142,6 @@ public final class L2Day extends LongTimeEvent
 	
 	private L2Day()
 	{
-		super(L2Day.class.getSimpleName(), "events");
 		addStartNpc(MANAGERS.keySet());
 		addFirstTalkId(MANAGERS.keySet());
 		addTalkId(MANAGERS.keySet());

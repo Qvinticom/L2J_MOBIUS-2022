@@ -54,7 +54,7 @@ public final class Q00316_DestroyPlagueCarriers extends Quest
 	
 	public Q00316_DestroyPlagueCarriers()
 	{
-		super(316, Q00316_DestroyPlagueCarriers.class.getSimpleName(), "Destroy Plague Carriers");
+		super(316);
 		addStartNpc(ELLENIA);
 		addTalkId(ELLENIA);
 		addAttackId(VAROOL_FOULCLAW);

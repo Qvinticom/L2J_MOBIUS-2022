@@ -26,7 +26,7 @@ public final class Q00720_ForTheSakeOfTheTerritoryOren extends TerritoryWarSuper
 {
 	public Q00720_ForTheSakeOfTheTerritoryOren()
 	{
-		super(720, Q00720_ForTheSakeOfTheTerritoryOren.class.getSimpleName(), "For the Sake of the Territory - Oren");
+		super(720);
 		CATAPULT_ID = 36502;
 		TERRITORY_ID = 84;
 		LEADER_IDS = new int[]

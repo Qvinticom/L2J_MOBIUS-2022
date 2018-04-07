@@ -93,7 +93,7 @@ public class Q00309_ForAGoodCause extends Quest
 	
 	public Q00309_ForAGoodCause()
 	{
-		super(309, Q00309_ForAGoodCause.class.getSimpleName(), "For A Good Cause");
+		super(309);
 		addStartNpc(ATRA);
 		addTalkId(ATRA);
 		addKillId(MUCROKIANS.keySet());

@@ -62,7 +62,7 @@ public final class Q00047_IntoTheDarkElvenForest extends Quest
 	
 	public Q00047_IntoTheDarkElvenForest()
 	{
-		super(47, Q00047_IntoTheDarkElvenForest.class.getSimpleName(), "Into the Dark Elven Forest");
+		super(47);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());

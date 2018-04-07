@@ -50,7 +50,7 @@ public final class Q00286_FabulousFeathers extends Quest
 	
 	public Q00286_FabulousFeathers()
 	{
-		super(286, Q00286_FabulousFeathers.class.getSimpleName(), "Fabulous Feathers");
+		super(286);
 		addStartNpc(ERINU);
 		addTalkId(ERINU);
 		addKillId(MOB_DROP_CHANCES.keySet());

@@ -33,7 +33,7 @@ public final class Q00639_GuardiansOfTheHolyGrail extends Quest
 	
 	public Q00639_GuardiansOfTheHolyGrail()
 	{
-		super(639, Q00639_GuardiansOfTheHolyGrail.class.getSimpleName(), "Guardians of the Holy Grail");
+		super(639);
 		addStartNpc(DOMINIC);
 		addTalkId(DOMINIC);
 	}

@@ -47,7 +47,7 @@ public final class Q00637_ThroughOnceMore extends Quest
 	
 	public Q00637_ThroughOnceMore()
 	{
-		super(637, Q00637_ThroughOnceMore.class.getSimpleName(), "Through the Gate Once More");
+		super(637);
 		addStartNpc(FLAURON);
 		addTalkId(FLAURON);
 		addKillId(MOBS);

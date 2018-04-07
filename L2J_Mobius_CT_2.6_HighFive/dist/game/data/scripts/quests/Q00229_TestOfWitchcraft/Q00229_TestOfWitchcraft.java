@@ -104,7 +104,7 @@ public final class Q00229_TestOfWitchcraft extends Quest
 	
 	public Q00229_TestOfWitchcraft()
 	{
-		super(229, Q00229_TestOfWitchcraft.class.getSimpleName(), "Test Of Witchcraft");
+		super(229);
 		{
 			addStartNpc(SHADOW_ORIM);
 			addTalkId(SHADOW_ORIM, GROCER_LARA, TRADER_ALEXANDRIA, MAGISTER_IKER, PRIEST_VADIN, TRADER_NESTLE, SIR_KLAUS_VASPER, LEOPOLD, MAGISTER_KAIRA, WARDEN_RODERIK, WARDEN_ENDRIGO, FISHER_EVERT);

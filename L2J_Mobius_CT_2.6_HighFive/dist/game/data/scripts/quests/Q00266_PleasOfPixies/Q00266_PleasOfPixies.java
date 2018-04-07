@@ -63,7 +63,7 @@ public final class Q00266_PleasOfPixies extends Quest
 	
 	public Q00266_PleasOfPixies()
 	{
-		super(266, Q00266_PleasOfPixies.class.getSimpleName(), "Pleas of Pixies");
+		super(266);
 		addStartNpc(PIXY_MURIKA);
 		addTalkId(PIXY_MURIKA);
 		addKillId(MONSTERS.keySet());

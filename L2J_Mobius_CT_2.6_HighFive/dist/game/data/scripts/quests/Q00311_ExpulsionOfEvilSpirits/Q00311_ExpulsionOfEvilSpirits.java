@@ -61,7 +61,7 @@ public final class Q00311_ExpulsionOfEvilSpirits extends Quest
 	
 	public Q00311_ExpulsionOfEvilSpirits()
 	{
-		super(311, Q00311_ExpulsionOfEvilSpirits.class.getSimpleName(), "Expulsion of Evil Spirits");
+		super(311);
 		addStartNpc(CHAIREN);
 		addTalkId(CHAIREN);
 		addKillId(MONSTERS.keySet());

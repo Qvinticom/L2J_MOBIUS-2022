@@ -56,7 +56,7 @@ public class Q00242_PossessorOfAPreciousSoul2 extends Quest
 	
 	public Q00242_PossessorOfAPreciousSoul2()
 	{
-		super(242, Q00242_PossessorOfAPreciousSoul2.class.getSimpleName(), "Possessor Of A Precious Soul 2");
+		super(242);
 		addStartNpc(VIRGIL);
 		addTalkId(VIRGIL, KASSANDRA, OGMAR, MYSTERIOUS_KNIGHT, ANGEL_CORPSE, KALIS, MATILD, FALLEN_UNICORN, CORNERSTONE, PURE_UNICORN);
 		addKillId(RESTRAINER_OF_GLORY);

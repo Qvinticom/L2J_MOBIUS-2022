@@ -28,7 +28,7 @@ public class Q00081_SagaOfTheGhostHunter extends AbstractSagaQuest
 {
 	public Q00081_SagaOfTheGhostHunter()
 	{
-		super(81, Q00081_SagaOfTheGhostHunter.class.getSimpleName(), "Saga of the Ghost Hunter");
+		super(81);
 		_npc = new int[]
 		{
 			31603,

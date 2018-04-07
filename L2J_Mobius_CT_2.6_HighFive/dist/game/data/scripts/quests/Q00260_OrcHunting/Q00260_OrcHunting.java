@@ -56,7 +56,7 @@ public final class Q00260_OrcHunting extends Quest
 	
 	public Q00260_OrcHunting()
 	{
-		super(260, Q00260_OrcHunting.class.getSimpleName(), "Orc Hunting");
+		super(260);
 		addStartNpc(RAYEN);
 		addTalkId(RAYEN);
 		addKillId(MONSTERS.keySet());

@@ -26,7 +26,7 @@ public final class Q00734_PierceThroughAShield extends TerritoryWarSuperClass
 {
 	public Q00734_PierceThroughAShield()
 	{
-		super(734, Q00734_PierceThroughAShield.class.getSimpleName(), "Pierce through a Shield");
+		super(734);
 		CLASS_IDS = new int[]
 		{
 			6,

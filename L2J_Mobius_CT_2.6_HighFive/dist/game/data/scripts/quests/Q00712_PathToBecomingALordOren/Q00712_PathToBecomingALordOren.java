@@ -48,7 +48,7 @@ public class Q00712_PathToBecomingALordOren extends Quest
 	
 	public Q00712_PathToBecomingALordOren()
 	{
-		super(712, Q00712_PathToBecomingALordOren.class.getSimpleName(), "Path to Becoming a Lord - Oren");
+		super(712);
 		addStartNpc(new int[]
 		{
 			Brasseur,
@@ -58,7 +58,7 @@ public class Q00712_PathToBecomingALordOren extends Quest
 		addTalkId(Croop);
 		addTalkId(Marty);
 		addTalkId(Valleria);
-		questItemIds = new int[]
+		_questItemIds = new int[]
 		{
 			NebuliteOrb
 		};

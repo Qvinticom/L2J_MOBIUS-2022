@@ -53,7 +53,7 @@ public final class Q00340_SubjugationOfLizardmen extends Quest
 	
 	public Q00340_SubjugationOfLizardmen()
 	{
-		super(340, Q00340_SubjugationOfLizardmen.class.getSimpleName(), "Subjugation Of Lizardmen");
+		super(340);
 		addStartNpc(GUARD_WEISZ);
 		addTalkId(GUARD_WEISZ, HIGH_PRIESTESS_LEVIAN, PRIEST_ADONIUS, CHEST_OF_BIFRONS);
 		addKillId(FELIM_LIZARDMAN, FELIM_LIZARDMAN_SCOUT, FELIM_LIZARDMAN_WARRIOR, LANGK_LIZARDMAN_WARRIOR, LANGK_LIZARDMAN_SCOUT, LANGK_LIZARDMAN, SERPENT_DEMON_BIFRONS);

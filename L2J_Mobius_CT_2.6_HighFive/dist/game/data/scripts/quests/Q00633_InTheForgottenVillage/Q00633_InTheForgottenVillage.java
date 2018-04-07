@@ -74,7 +74,7 @@ public final class Q00633_InTheForgottenVillage extends Quest
 	
 	public Q00633_InTheForgottenVillage()
 	{
-		super(633, Q00633_InTheForgottenVillage.class.getSimpleName(), "In The Forgotten Village");
+		super(633);
 		addStartNpc(MINA);
 		addTalkId(MINA);
 		addKillId(MOBS_DROP_CHANCES.keySet());

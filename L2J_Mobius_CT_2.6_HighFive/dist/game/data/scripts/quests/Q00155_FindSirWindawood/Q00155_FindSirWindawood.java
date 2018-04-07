@@ -39,7 +39,7 @@ public class Q00155_FindSirWindawood extends Quest
 	
 	public Q00155_FindSirWindawood()
 	{
-		super(155, Q00155_FindSirWindawood.class.getSimpleName(), "Find Sir Windawood");
+		super(155);
 		addStartNpc(ABELLOS);
 		addTalkId(ABELLOS, SIR_COLLIN_WINDAWOOD);
 		registerQuestItems(OFFICIAL_LETTER);

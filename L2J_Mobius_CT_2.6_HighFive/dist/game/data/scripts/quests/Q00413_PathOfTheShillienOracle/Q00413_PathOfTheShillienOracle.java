@@ -57,7 +57,7 @@ public final class Q00413_PathOfTheShillienOracle extends Quest
 	
 	public Q00413_PathOfTheShillienOracle()
 	{
-		super(413, Q00413_PathOfTheShillienOracle.class.getSimpleName(), "Path of the Shillien Oracle");
+		super(413);
 		addStartNpc(MAGISTER_SIDRA);
 		addTalkId(MAGISTER_SIDRA, PRIEST_ADONIUS, MAGISTER_TALBOT);
 		addKillId(ZOMBIE_SOLDIER, ZOMBIE_WARRIOR, SHIELD_SKELETON, SKELETON_INFANTRYMAN, DARK_SUCCUBUS);

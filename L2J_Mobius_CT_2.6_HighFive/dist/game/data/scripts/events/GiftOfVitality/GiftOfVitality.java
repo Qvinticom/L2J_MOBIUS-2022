@@ -18,8 +18,8 @@ package events.GiftOfVitality;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.event.LongTimeEvent;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -79,7 +79,6 @@ public final class GiftOfVitality extends LongTimeEvent
 	
 	private GiftOfVitality()
 	{
-		super(GiftOfVitality.class.getSimpleName(), "events");
 		addStartNpc(STEVE_SHYAGEL);
 		addFirstTalkId(STEVE_SHYAGEL);
 		addTalkId(STEVE_SHYAGEL);

@@ -71,7 +71,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	
 	public Q00104_SpiritOfMirrors()
 	{
-		super(104, Q00104_SpiritOfMirrors.class.getSimpleName(), "Spirit of Mirrors");
+		super(104);
 		addStartNpc(GALLINT);
 		addTalkId(ARNOLD, GALLINT, JOHNSTONE, KENYOS);
 		addKillId(MONSTERS.keySet());

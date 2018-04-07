@@ -59,7 +59,7 @@ public class Q00377_ExplorationOfTheGiantsCavePart2 extends Quest
 	
 	public Q00377_ExplorationOfTheGiantsCavePart2()
 	{
-		super(377, Q00377_ExplorationOfTheGiantsCavePart2.class.getSimpleName(), "Exploration of the Giants' Cave - Part 2");
+		super(377);
 		addStartNpc(SOBLING);
 		addTalkId(SOBLING);
 		addKillId(MOBS1.keySet());

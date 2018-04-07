@@ -55,7 +55,7 @@ public class Q00166_MassOfDarkness extends Quest
 	
 	public Q00166_MassOfDarkness()
 	{
-		super(166, Q00166_MassOfDarkness.class.getSimpleName(), "Mass of Darkness");
+		super(166);
 		addStartNpc(UNDRIAS);
 		addTalkId(UNDRIAS, IRIA, DORANKUS, TRUDY);
 		registerQuestItems(UNDRIAS_LETTER, CEREMONIAL_DAGGER, DREVIANT_WINE, GARMIELS_SCRIPTURE);

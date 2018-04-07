@@ -51,7 +51,6 @@ public final class ElcadiasTent extends AbstractInstance
 	
 	public ElcadiasTent()
 	{
-		super(ElcadiasTent.class.getSimpleName());
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
 		addTalkId(GRUFF_LOOKING_MAN, ELCADIA);

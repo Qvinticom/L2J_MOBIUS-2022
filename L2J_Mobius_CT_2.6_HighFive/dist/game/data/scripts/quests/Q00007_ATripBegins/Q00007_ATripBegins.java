@@ -42,7 +42,7 @@ public class Q00007_ATripBegins extends Quest
 	
 	public Q00007_ATripBegins()
 	{
-		super(7, Q00007_ATripBegins.class.getSimpleName(), "A Trip Begins");
+		super(7);
 		addStartNpc(MIRABEL);
 		addTalkId(MIRABEL, ARIEL, ASTERIOS);
 		registerQuestItems(ARIELS_RECOMMENDATION);

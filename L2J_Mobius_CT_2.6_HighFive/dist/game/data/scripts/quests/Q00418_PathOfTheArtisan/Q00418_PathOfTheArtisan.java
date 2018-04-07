@@ -60,7 +60,7 @@ public final class Q00418_PathOfTheArtisan extends Quest
 	
 	public Q00418_PathOfTheArtisan()
 	{
-		super(418, Q00418_PathOfTheArtisan.class.getSimpleName(), "Path Of The Artisan");
+		super(418);
 		addStartNpc(BLACKSMITH_SILVERA);
 		addTalkId(BLACKSMITH_SILVERA, BLACKSMITH_PINTER, BLACKSMITH_KLUTO, IRON_GATES_LOCKIRIN, WAREHOUSE_KEEPER_RYDEL, MINERAL_TRADER_HITCHI, RAILROAD_WORKER_OBI);
 		addKillId(VUKU_ORC_FIGHTER, BOOGLE_RATMAN, BOOGLE_RATMAN_LEADER);

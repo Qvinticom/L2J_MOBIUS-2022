@@ -42,7 +42,7 @@ public class Q10281_MutatedKaneusRune extends Quest
 	
 	public Q10281_MutatedKaneusRune()
 	{
-		super(10281, Q10281_MutatedKaneusRune.class.getSimpleName(), "Mutated Kaneus - Rune");
+		super(10281);
 		addStartNpc(MATHIAS);
 		addTalkId(MATHIAS, KAYAN);
 		addKillId(WHITE_ALLOSCE);

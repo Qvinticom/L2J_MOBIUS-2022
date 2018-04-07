@@ -41,7 +41,7 @@ public final class Q00313_CollectSpores extends Quest
 	
 	public Q00313_CollectSpores()
 	{
-		super(313, Q00313_CollectSpores.class.getSimpleName(), "Collect Spores");
+		super(313);
 		addStartNpc(HERBIEL);
 		addTalkId(HERBIEL);
 		addKillId(SPORE_FUNGUS);

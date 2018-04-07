@@ -200,7 +200,6 @@ public final class NornilsGarden extends AbstractInstance
 	
 	public NornilsGarden()
 	{
-		super(NornilsGarden.class.getSimpleName());
 		addStartNpc(_garden_guard);
 		addFirstTalkId(_garden_guard);
 		addTalkId(_garden_guard);

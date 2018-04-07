@@ -55,7 +55,7 @@ public final class Q00401_PathOfTheWarrior extends Quest
 	
 	public Q00401_PathOfTheWarrior()
 	{
-		super(401, Q00401_PathOfTheWarrior.class.getSimpleName(), "Path Of The Warrior");
+		super(401);
 		addStartNpc(MASTER_AURON);
 		addTalkId(MASTER_AURON, TRADER_SIMPLON);
 		addAttackId(VENOMOUS_SPIDERS, ARACHNID_TRACKER);

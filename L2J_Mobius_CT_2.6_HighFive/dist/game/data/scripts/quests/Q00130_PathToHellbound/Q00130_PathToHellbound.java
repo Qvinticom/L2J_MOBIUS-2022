@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
-import hellbound.HellboundEngine;
+import ai.areas.Hellbound.HellboundEngine;
 
 /**
  * Path To Hellbound (130)
@@ -40,7 +40,7 @@ public class Q00130_PathToHellbound extends Quest
 	
 	public Q00130_PathToHellbound()
 	{
-		super(130, Q00130_PathToHellbound.class.getSimpleName(), "Path To Hellbound");
+		super(130);
 		addStartNpc(CASIAN);
 		addTalkId(CASIAN, GALATE);
 		registerQuestItems(CASIANS_BLUE_CRYSTAL);

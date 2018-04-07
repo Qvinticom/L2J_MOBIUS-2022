@@ -56,7 +56,7 @@ public class Q00141_ShadowFoxPart3 extends Quest
 	
 	public Q00141_ShadowFoxPart3()
 	{
-		super(141, Q00141_ShadowFoxPart3.class.getSimpleName(), "Shadow Fox - 3");
+		super(141);
 		addStartNpc(NATOOLS);
 		addTalkId(NATOOLS);
 		addKillId(MOBS.keySet());

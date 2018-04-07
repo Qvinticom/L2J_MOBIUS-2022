@@ -40,7 +40,7 @@ public class Q10288_SecretMission extends Quest
 	
 	public Q10288_SecretMission()
 	{
-		super(10288, Q10288_SecretMission.class.getSimpleName(), "Secret Mission");
+		super(10288);
 		addStartNpc(AQUILANI, DOMINIC);
 		addFirstTalkId(AQUILANI);
 		addTalkId(DOMINIC, GREYMORE, AQUILANI);

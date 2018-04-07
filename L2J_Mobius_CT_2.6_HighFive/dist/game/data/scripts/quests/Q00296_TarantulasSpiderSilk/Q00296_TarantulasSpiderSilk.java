@@ -48,7 +48,7 @@ public final class Q00296_TarantulasSpiderSilk extends Quest
 	
 	public Q00296_TarantulasSpiderSilk()
 	{
-		super(296, Q00296_TarantulasSpiderSilk.class.getSimpleName(), "Tarantula's Spider Silk");
+		super(296);
 		addStartNpc(TRADER_MION);
 		addTalkId(TRADER_MION, DEFENDER_NATHAN);
 		addKillId(MONSTERS);

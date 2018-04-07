@@ -92,7 +92,7 @@ public class Q00254_LegendaryTales extends Quest
 	
 	public Q00254_LegendaryTales()
 	{
-		super(254, Q00254_LegendaryTales.class.getSimpleName(), "Legendary Tales");
+		super(254);
 		addStartNpc(GILMORE);
 		addTalkId(GILMORE);
 		addKillId(MONSTERS);

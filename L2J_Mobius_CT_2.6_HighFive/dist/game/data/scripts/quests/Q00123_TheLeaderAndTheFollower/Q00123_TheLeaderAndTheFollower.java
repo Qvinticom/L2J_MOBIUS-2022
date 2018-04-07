@@ -59,7 +59,7 @@ public final class Q00123_TheLeaderAndTheFollower extends Quest
 	
 	public Q00123_TheLeaderAndTheFollower()
 	{
-		super(123, Q00123_TheLeaderAndTheFollower.class.getSimpleName(), "The Leader And The Follower");
+		super(123);
 		addStartNpc(HEAD_BLACKSMITH_NEWYEAR);
 		addTalkId(HEAD_BLACKSMITH_NEWYEAR);
 		addKillId(BRUIN_LIZARDMAN, PICOT_ARANEID);

@@ -41,7 +41,7 @@ public final class Q00295_DreamingOfTheSkies extends Quest
 	
 	public Q00295_DreamingOfTheSkies()
 	{
-		super(295, Q00295_DreamingOfTheSkies.class.getSimpleName(), "Dreaming of the Skies");
+		super(295);
 		addStartNpc(ARIN);
 		addTalkId(ARIN);
 		addKillId(MAGICAL_WEAVER);

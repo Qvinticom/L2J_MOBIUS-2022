@@ -103,7 +103,6 @@ public final class CastleDungeon extends AbstractInstance
 	
 	public CastleDungeon()
 	{
-		super(CastleDungeon.class.getSimpleName());
 		addFirstTalkId(CASTLE_DUNGEON.keySet());
 		addStartNpc(CASTLE_DUNGEON.keySet());
 		addTalkId(CASTLE_DUNGEON.keySet());

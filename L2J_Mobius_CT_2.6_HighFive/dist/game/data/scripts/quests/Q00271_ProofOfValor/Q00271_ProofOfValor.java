@@ -45,7 +45,7 @@ public final class Q00271_ProofOfValor extends Quest
 	
 	public Q00271_ProofOfValor()
 	{
-		super(271, Q00271_ProofOfValor.class.getSimpleName(), "Proof of Valor");
+		super(271);
 		addStartNpc(RUKAIN);
 		addTalkId(RUKAIN);
 		addKillId(KASHA_WOLF);

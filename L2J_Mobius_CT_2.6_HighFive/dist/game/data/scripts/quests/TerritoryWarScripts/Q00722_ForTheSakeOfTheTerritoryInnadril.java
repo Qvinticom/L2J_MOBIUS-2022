@@ -26,7 +26,7 @@ public final class Q00722_ForTheSakeOfTheTerritoryInnadril extends TerritoryWarS
 {
 	public Q00722_ForTheSakeOfTheTerritoryInnadril()
 	{
-		super(722, Q00722_ForTheSakeOfTheTerritoryInnadril.class.getSimpleName(), "For the Sake of the Territory - Innadril");
+		super(722);
 		CATAPULT_ID = 36504;
 		TERRITORY_ID = 86;
 		LEADER_IDS = new int[]

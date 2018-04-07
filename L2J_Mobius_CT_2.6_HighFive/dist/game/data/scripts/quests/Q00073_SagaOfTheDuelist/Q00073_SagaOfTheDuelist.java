@@ -37,7 +37,7 @@ public class Q00073_SagaOfTheDuelist extends AbstractSagaQuest
 	
 	public Q00073_SagaOfTheDuelist()
 	{
-		super(73, Q00073_SagaOfTheDuelist.class.getSimpleName(), "Saga of the Duelist");
+		super(73);
 		_npc = new int[]
 		{
 			30849,

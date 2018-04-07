@@ -65,7 +65,7 @@ public class Q00142_FallenAngelRequestOfDawn extends Quest
 	
 	public Q00142_FallenAngelRequestOfDawn()
 	{
-		super(142, Q00142_FallenAngelRequestOfDawn.class.getSimpleName(), "Fallen Angel - Request of Dawn");
+		super(142);
 		addTalkId(NATOOLS, RAYMOND, CASIAN, ROCK);
 		addKillId(MOBS.keySet());
 		addKillId(FALLEN_ANGEL);

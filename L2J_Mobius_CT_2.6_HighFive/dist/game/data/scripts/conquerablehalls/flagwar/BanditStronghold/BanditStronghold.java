@@ -87,7 +87,7 @@ public final class BanditStronghold extends FlagWar
 	
 	private BanditStronghold()
 	{
-		super(BanditStronghold.class.getSimpleName(), BANDIT_STRONGHOLD);
+		super(BANDIT_STRONGHOLD);
 	}
 	
 	@Override

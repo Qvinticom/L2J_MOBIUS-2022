@@ -101,7 +101,6 @@ public final class Race extends Event
 	
 	private Race()
 	{
-		super(Race.class.getSimpleName(), "custom/events");
 		addStartNpc(_start_npc);
 		addFirstTalkId(_start_npc);
 		addTalkId(_start_npc);

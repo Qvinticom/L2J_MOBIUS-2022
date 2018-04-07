@@ -65,8 +65,8 @@ import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ExNpcQuestHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
@@ -84,13 +84,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private volatile Map<Predicate<L2PcInstance>, String> _startCondition = null;
 	
 	private final int _questId;
-	private final String _name;
-	private final String _descr;
 	private final byte _initialState = State.CREATED;
 	protected boolean _onEnterWorld = false;
 	private boolean _isCustom = false;
 	
-	public int[] questItemIds = null;
+	public int[] _questItemIds = null;
 	
 	private static final String DEFAULT_NO_QUEST_MSG = "<html><body>You are either not on a quest that involves this NPC, or you don't meet this NPC's minimum quest requirements.</body></html>";
 	private static final String DEFAULT_ALREADY_COMPLETED_MSG = "<html><body>This quest has already been completed.</body></html>";
@@ -102,17 +100,29 @@ public class Quest extends AbstractScript implements IIdentifiable
 	private static final int RESET_MINUTES = 30;
 	
 	/**
+	 * @return the reset hour for a daily quest, could be overridden on a script.
+	 */
+	public int getResetHour()
+	{
+		return RESET_HOUR;
+	}
+	
+	/**
+	 * @return the reset minutes for a daily quest, could be overridden on a script.
+	 */
+	public int getResetMinutes()
+	{
+		return RESET_MINUTES;
+	}
+	
+	/**
 	 * The Quest object constructor.<br>
 	 * Constructing a quest also calls the {@code init_LoadGlobalData} convenience method.
 	 * @param questId ID of the quest
-	 * @param name String corresponding to the name of the quest
-	 * @param descr String for the description of the quest
 	 */
-	public Quest(int questId, String name, String descr)
+	public Quest(int questId)
 	{
 		_questId = questId;
-		_name = name;
-		_descr = descr;
 		if (questId > 0)
 		{
 			QuestManager.getInstance().addQuest(this);
@@ -123,24 +133,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		onLoad();
-	}
-	
-	/**
-	 * Gets the reset hour for a daily quest.
-	 * @return the reset hour
-	 */
-	public int getResetHour()
-	{
-		return RESET_HOUR;
-	}
-	
-	/**
-	 * Gets the reset minutes for a daily quest.
-	 * @return the reset minutes
-	 */
-	public int getResetMinutes()
-	{
-		return RESET_MINUTES;
 	}
 	
 	/**
@@ -201,8 +193,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public QuestState getQuestState(L2PcInstance player, boolean initIfNone)
 	{
-		final QuestState qs = player.getQuestState(_name);
-		return (qs != null) || !initIfNone ? qs : newQuestState(player);
+		final QuestState qs = player.getQuestState(getName());
+		if ((qs != null) || !initIfNone)
+		{
+			return qs;
+		}
+		return newQuestState(player);
 	}
 	
 	/**
@@ -213,17 +209,21 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return _initialState;
 	}
 	
+	/**
+	 * @return the name of the quest
+	 */
 	public String getName()
 	{
-		return _name;
+		return getClass().getSimpleName();
 	}
 	
 	/**
-	 * @return the description of the quest
+	 * @return the path of the quest script
 	 */
-	public String getDescr()
+	public String getPath()
 	{
-		return _descr;
+		final String path = getClass().getName().replace('.', '/');
+		return path.substring(0, path.lastIndexOf('/' + getClass().getSimpleName()));
 	}
 	
 	/**
@@ -249,7 +249,10 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			synchronized (this)
 			{
-				_questTimers = new ConcurrentHashMap<>(1);
+				if (_questTimers == null)
+				{
+					_questTimers = new ConcurrentHashMap<>(1);
+				}
 			}
 		}
 		return _questTimers;
@@ -269,18 +272,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 		final List<QuestTimer> timers = getQuestTimers().computeIfAbsent(name, k -> new ArrayList<>(1));
 		// if there exists a timer with this name, allow the timer only if the [npc, player] set is unique
 		// nulls act as wildcards
-		if (getQuestTimer(name, npc, player) != null)
+		if (getQuestTimer(name, npc, player) == null)
 		{
-			return;
-		}
-		_writeLock.lock();
-		try
-		{
-			timers.add(new QuestTimer(this, name, time, npc, player, repeating));
-		}
-		finally
-		{
-			_writeLock.unlock();
+			_writeLock.lock();
+			try
+			{
+				timers.add(new QuestTimer(this, name, time, npc, player, repeating));
+			}
+			finally
+			{
+				_writeLock.unlock();
+			}
 		}
 	}
 	
@@ -332,26 +334,24 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		final List<QuestTimer> timers = getQuestTimers().get(name);
-		if (timers == null)
+		if (timers != null)
 		{
-			return;
-		}
-		
-		_writeLock.lock();
-		try
-		{
-			for (QuestTimer timer : timers)
+			_writeLock.lock();
+			try
 			{
-				if (timer != null)
+				for (QuestTimer timer : timers)
 				{
-					timer.cancel();
+					if (timer != null)
+					{
+						timer.cancel();
+					}
 				}
+				timers.clear();
 			}
-			timers.clear();
-		}
-		finally
-		{
-			_writeLock.unlock();
+			finally
+			{
+				_writeLock.unlock();
+			}
 		}
 	}
 	
@@ -377,23 +377,21 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void removeQuestTimer(QuestTimer timer)
 	{
-		if ((timer == null) || (_questTimers == null))
+		if ((timer != null) && (_questTimers != null))
 		{
-			return;
-		}
-		final List<QuestTimer> timers = getQuestTimers().get(timer.getName());
-		if (timers == null)
-		{
-			return;
-		}
-		_writeLock.lock();
-		try
-		{
-			timers.remove(timer);
-		}
-		finally
-		{
-			_writeLock.unlock();
+			final List<QuestTimer> timers = getQuestTimers().get(timer.getName());
+			if (timers != null)
+			{
+				_writeLock.lock();
+				try
+				{
+					timers.remove(timer);
+				}
+				finally
+				{
+					_writeLock.unlock();
+				}
+			}
 		}
 	}
 	
@@ -606,7 +604,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			final String startConditionHtml = getStartConditionHtml(player);
-			if (!player.hasQuestState(_name) && (startConditionHtml != null))
+			if (!player.hasQuestState(getName()) && (startConditionHtml != null))
 			{
 				res = startConditionHtml;
 			}
@@ -707,9 +705,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 		try
 		{
 			res = onItemEvent(item, player, event);
-			if ((res != null) && (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false")))
+			if (res != null)
 			{
-				return;
+				if (res.equalsIgnoreCase("true") || res.equalsIgnoreCase("false"))
+				{
+					return;
+				}
 			}
 		}
 		catch (Exception e)
@@ -790,7 +791,11 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public final void notifySeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		final L2PcInstance player = isSummon || creature.isPlayer() ? creature.getActingPlayer() : null;
+		L2PcInstance player = null;
+		if (isSummon || creature.isPlayer())
+		{
+			player = creature.getActingPlayer();
+		}
 		String res = null;
 		try
 		{
@@ -1399,7 +1404,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
-		return (player != null) && player.getAccessLevel().isGm() && showResult(player, "<html><body><title>Script error</title>" + CommonUtil.getStackTrace(t) + "</body></html>");
+		if ((player != null) && player.getAccessLevel().isGm())
+		{
+			final String res = "<html><body><title>Script error</title>" + CommonUtil.getStackTrace(t) + "</body></html>";
+			return showResult(player, res);
+		}
+		return false;
 	}
 	
 	/**
@@ -1547,14 +1557,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static void createQuestVarInDb(QuestState qs, String var, String value)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
+			PreparedStatement statement = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
 		{
-			ps.setInt(1, qs.getPlayer().getObjectId());
-			ps.setString(2, qs.getQuestName());
-			ps.setString(3, var);
-			ps.setString(4, value);
-			ps.setString(5, value);
-			ps.executeUpdate();
+			statement.setInt(1, qs.getPlayer().getObjectId());
+			statement.setString(2, qs.getQuestName());
+			statement.setString(3, var);
+			statement.setString(4, value);
+			statement.setString(5, value);
+			statement.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1571,13 +1581,13 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
+			PreparedStatement statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
 		{
-			ps.setString(1, value);
-			ps.setInt(2, qs.getPlayer().getObjectId());
-			ps.setString(3, qs.getQuestName());
-			ps.setString(4, var);
-			ps.executeUpdate();
+			statement.setString(1, value);
+			statement.setInt(2, qs.getPlayer().getObjectId());
+			statement.setString(3, qs.getQuestName());
+			statement.setString(4, var);
+			statement.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -1593,12 +1603,12 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
+			PreparedStatement statement = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
 		{
-			ps.setInt(1, qs.getPlayer().getObjectId());
-			ps.setString(2, qs.getQuestName());
-			ps.setString(3, var);
-			ps.executeUpdate();
+			statement.setInt(1, qs.getPlayer().getObjectId());
+			statement.setString(2, qs.getQuestName());
+			statement.setString(3, var);
+			statement.executeUpdate();
 		}
 		catch (Exception e)
 		{
@@ -2475,10 +2485,10 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String getHtm(String prefix, String fileName)
 	{
 		final HtmCache hc = HtmCache.getInstance();
-		String content = hc.getHtm(prefix, fileName.startsWith("data/") ? fileName : "data/scripts/" + getDescr().toLowerCase() + "/" + getName() + "/" + fileName);
+		String content = hc.getHtm(prefix, fileName.startsWith("data/") ? fileName : "data/scripts/" + getPath().toLowerCase() + "/" + fileName);
 		if (content == null)
 		{
-			content = hc.getHtm(prefix, "data/scripts/" + getDescr() + "/" + getName() + "/" + fileName);
+			content = hc.getHtm(prefix, "data/scripts/" + getPath() + "/" + fileName);
 			if (content == null)
 			{
 				content = hc.getHtmForce(prefix, "data/scripts/quests/" + getName() + "/" + fileName);
@@ -2492,7 +2502,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public int[] getRegisteredItemIds()
 	{
-		return questItemIds;
+		return _questItemIds;
 	}
 	
 	/**
@@ -2508,7 +2518,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				_log.severe(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
 			}
 		}
-		questItemIds = items;
+		_questItemIds = items;
 	}
 	
 	/**
@@ -2517,7 +2527,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void removeRegisteredQuestItems(L2PcInstance player)
 	{
-		takeItems(player, -1, questItemIds);
+		takeItems(player, -1, _questItemIds);
 	}
 	
 	@Override

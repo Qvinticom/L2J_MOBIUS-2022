@@ -47,7 +47,6 @@ public final class OrcChange1 extends AbstractNpcAI
 	
 	private OrcChange1()
 	{
-		super(OrcChange1.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

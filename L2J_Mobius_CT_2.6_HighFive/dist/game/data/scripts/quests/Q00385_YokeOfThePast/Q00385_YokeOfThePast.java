@@ -97,7 +97,7 @@ public final class Q00385_YokeOfThePast extends Quest
 	
 	public Q00385_YokeOfThePast()
 	{
-		super(385, Q00385_YokeOfThePast.class.getSimpleName(), "Yoke of the Past");
+		super(385);
 		addStartNpc(ZIGGURATS);
 		addTalkId(ZIGGURATS);
 		addKillId(MONSTER_CHANCES.keySet());

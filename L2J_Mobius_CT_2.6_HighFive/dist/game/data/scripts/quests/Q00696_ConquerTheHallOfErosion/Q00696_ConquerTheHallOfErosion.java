@@ -30,7 +30,7 @@ public final class Q00696_ConquerTheHallOfErosion extends Quest
 	
 	public Q00696_ConquerTheHallOfErosion()
 	{
-		super(696, Q00696_ConquerTheHallOfErosion.class.getSimpleName(), "Conquer the Hall of Erosion");
+		super(696);
 		addStartNpc(TEPIOS);
 		addTalkId(TEPIOS);
 	}

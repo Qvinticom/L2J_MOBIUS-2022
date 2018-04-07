@@ -44,7 +44,7 @@ public class Q10276_MutatedKaneusGludio extends Quest
 	
 	public Q10276_MutatedKaneusGludio()
 	{
-		super(10276, Q10276_MutatedKaneusGludio.class.getSimpleName(), "Mutated Kaneus - Gludio");
+		super(10276);
 		addStartNpc(BATHIS);
 		addTalkId(BATHIS, ROHMER);
 		addKillId(TOMLAN_KAMOS, OL_ARIOSH);

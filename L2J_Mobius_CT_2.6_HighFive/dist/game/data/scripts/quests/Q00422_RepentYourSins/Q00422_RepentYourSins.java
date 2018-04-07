@@ -62,7 +62,7 @@ public final class Q00422_RepentYourSins extends Quest
 	
 	public Q00422_RepentYourSins()
 	{
-		super(422, Q00422_RepentYourSins.class.getSimpleName(), "Repent Your Sins");
+		super(422);
 		addStartNpc(BLACK_JUDGE);
 		addTalkId(BLACK_JUDGE, BLACKSMITH_PUSHKIN, PIOTUR, ELDER_CASIAN, KATARI, MAGISTER_JOAN);
 		addKillId(SCAVENGER_WERERAT, TYRANT_KINGPIN, TUREK_WAR_HOUND, TRISALIM_TARANTULA);

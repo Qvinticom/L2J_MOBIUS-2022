@@ -40,7 +40,7 @@ public class Q00053_LinnaeusSpecialBait extends Quest
 	
 	public Q00053_LinnaeusSpecialBait()
 	{
-		super(53, Q00053_LinnaeusSpecialBait.class.getSimpleName(), "Linnaeus Special Bait");
+		super(53);
 		addStartNpc(LINNAEUS);
 		addTalkId(LINNAEUS);
 		addKillId(CRIMSON_DRAKE);

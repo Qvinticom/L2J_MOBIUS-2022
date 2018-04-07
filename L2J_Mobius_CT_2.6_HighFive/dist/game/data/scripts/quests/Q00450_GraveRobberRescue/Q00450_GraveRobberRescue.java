@@ -48,7 +48,7 @@ public class Q00450_GraveRobberRescue extends Quest
 	
 	public Q00450_GraveRobberRescue()
 	{
-		super(450, Q00450_GraveRobberRescue.class.getSimpleName(), "Grave Robber Rescue");
+		super(450);
 		addStartNpc(KANEMIKA);
 		addTalkId(KANEMIKA, WARRIOR);
 		registerQuestItems(EVIDENCE_OF_MIGRATION);

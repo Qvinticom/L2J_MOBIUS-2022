@@ -26,7 +26,7 @@ public final class Q00725_ForTheSakeOfTheTerritorySchuttgart extends TerritoryWa
 {
 	public Q00725_ForTheSakeOfTheTerritorySchuttgart()
 	{
-		super(725, Q00725_ForTheSakeOfTheTerritorySchuttgart.class.getSimpleName(), "For the Sake of the Territory - Schuttgart");
+		super(725);
 		CATAPULT_ID = 36507;
 		TERRITORY_ID = 89;
 		LEADER_IDS = new int[]

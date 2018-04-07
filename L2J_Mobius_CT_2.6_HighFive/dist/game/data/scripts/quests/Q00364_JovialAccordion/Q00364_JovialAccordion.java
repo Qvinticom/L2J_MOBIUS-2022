@@ -47,7 +47,7 @@ public final class Q00364_JovialAccordion extends Quest
 	
 	public Q00364_JovialAccordion()
 	{
-		super(364, Q00364_JovialAccordion.class.getSimpleName(), "Jovial Accordion");
+		super(364);
 		addStartNpc(BARBADO);
 		addTalkId(BARBADO, BEER_CHEST, CLOTH_CHEST, SABRIN, XABER, SWAN);
 		registerQuestItems(STOLEN_BLACK_BEER, STOLEN_EVENT_CLOTHES, CLOTHES_CHEST_KEY, BEER_CHEST_KEY);

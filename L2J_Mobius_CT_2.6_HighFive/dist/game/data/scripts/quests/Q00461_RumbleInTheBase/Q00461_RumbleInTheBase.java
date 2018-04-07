@@ -56,7 +56,7 @@ public class Q00461_RumbleInTheBase extends Quest
 	
 	public Q00461_RumbleInTheBase()
 	{
-		super(461, Q00461_RumbleInTheBase.class.getSimpleName(), "Rumble in the Base");
+		super(461);
 		addStartNpc(STAN);
 		addTalkId(STAN);
 		addKillId(MONSTERS.keySet());

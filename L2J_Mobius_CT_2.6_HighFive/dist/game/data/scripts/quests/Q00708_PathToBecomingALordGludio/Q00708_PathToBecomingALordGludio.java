@@ -52,13 +52,13 @@ public class Q00708_PathToBecomingALordGludio extends Quest
 	
 	public Q00708_PathToBecomingALordGludio()
 	{
-		super(708, Q00708_PathToBecomingALordGludio.class.getSimpleName(), "Path to Becoming a Lord - Gludio");
+		super(708);
 		addStartNpc(Sayres);
 		addTalkId(Sayres);
 		addTalkId(Pinter);
 		addTalkId(Bathis);
 		addKillId(Mobs);
-		questItemIds = new int[]
+		_questItemIds = new int[]
 		{
 			HeadlessKnightsArmor
 		};

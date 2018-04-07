@@ -56,7 +56,7 @@ public final class Q00409_PathOfTheElvenOracle extends Quest
 	
 	public Q00409_PathOfTheElvenOracle()
 	{
-		super(409, Q00409_PathOfTheElvenOracle.class.getSimpleName(), "Path of the Elven Oracle");
+		super(409);
 		addStartNpc(PRIEST_MANUEL);
 		addTalkId(PRIEST_MANUEL, ALLANA, PERRIN);
 		addKillId(TAMIL, lIZARDMAN_WARRIOR, LIZARDMAN_SCOUT, LIZARDMAN_SOLDIER);

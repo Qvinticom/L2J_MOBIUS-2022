@@ -174,7 +174,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	
 	public Q00727_HopeWithinTheDarkness()
 	{
-		super(727, Q00727_HopeWithinTheDarkness.class.getSimpleName(), "Hope Within The Darkness");
+		super(727);
 		
 		for (int i : CASTLE_DUNGEONS.keySet())
 		{

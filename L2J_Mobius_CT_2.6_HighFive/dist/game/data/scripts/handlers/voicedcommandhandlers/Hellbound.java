@@ -19,7 +19,7 @@ package handlers.voicedcommandhandlers;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-import hellbound.HellboundEngine;
+import ai.areas.Hellbound.HellboundEngine;
 
 /**
  * Hellbound voiced command.

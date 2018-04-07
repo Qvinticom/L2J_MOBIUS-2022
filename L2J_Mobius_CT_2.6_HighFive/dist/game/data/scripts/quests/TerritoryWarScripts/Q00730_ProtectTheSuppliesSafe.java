@@ -24,7 +24,7 @@ public final class Q00730_ProtectTheSuppliesSafe extends TerritoryWarSuperClass
 {
 	public Q00730_ProtectTheSuppliesSafe()
 	{
-		super(730, Q00730_ProtectTheSuppliesSafe.class.getSimpleName(), "Protect the Supplies Safe");
+		super(730);
 		NPC_IDS = new int[]
 		{
 			36591,

@@ -44,7 +44,7 @@ public class Q10278_MutatedKaneusHeine extends Quest
 	
 	public Q10278_MutatedKaneusHeine()
 	{
-		super(10278, Q10278_MutatedKaneusHeine.class.getSimpleName(), "Mutated Kaneus - Heine");
+		super(10278);
 		addStartNpc(GOSTA);
 		addTalkId(GOSTA, MINEVIA);
 		addKillId(BLADE_OTIS, WEIRD_BUNEI);

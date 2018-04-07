@@ -233,7 +233,6 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 	
 	public FinalEmperialTomb()
 	{
-		super(FinalEmperialTomb.class.getSimpleName());
 		load();
 		addAttackId(SCARLET1, FRINTEZZA);
 		addAttackId(PORTRAITS);

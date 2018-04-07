@@ -213,7 +213,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 	
 	public Q00619_RelicsOfTheOldEmpire()
 	{
-		super(619, Q00619_RelicsOfTheOldEmpire.class.getSimpleName(), "Relics of the Old Empire");
+		super(619);
 		addStartNpc(GHOST_OF_ADVENTURER);
 		addTalkId(GHOST_OF_ADVENTURER);
 		addKillId(MOBS.keySet());

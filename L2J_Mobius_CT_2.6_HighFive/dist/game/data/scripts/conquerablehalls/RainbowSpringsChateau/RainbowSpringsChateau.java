@@ -269,7 +269,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	public RainbowSpringsChateau()
 	{
-		super(RainbowSpringsChateau.class.getSimpleName(), "conquerablehalls", RAINBOW_SPRINGS);
+		super(RAINBOW_SPRINGS);
 		
 		addFirstTalkId(MESSENGER);
 		addTalkId(MESSENGER);

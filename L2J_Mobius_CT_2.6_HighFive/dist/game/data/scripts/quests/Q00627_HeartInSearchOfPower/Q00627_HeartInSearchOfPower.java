@@ -70,7 +70,7 @@ public class Q00627_HeartInSearchOfPower extends Quest
 	
 	public Q00627_HeartInSearchOfPower()
 	{
-		super(627, Q00627_HeartInSearchOfPower.class.getSimpleName(), "Heart in Search of Power");
+		super(627);
 		addStartNpc(MYSTERIOUS_NECROMANCER);
 		addTalkId(MYSTERIOUS_NECROMANCER, ENFEUX);
 		addKillId(MONSTERS.keySet());

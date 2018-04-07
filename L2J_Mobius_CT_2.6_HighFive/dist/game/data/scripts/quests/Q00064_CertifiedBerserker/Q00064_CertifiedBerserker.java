@@ -67,7 +67,7 @@ public final class Q00064_CertifiedBerserker extends Quest
 	
 	public Q00064_CertifiedBerserker()
 	{
-		super(64, Q00064_CertifiedBerserker.class.getSimpleName(), "Certified Berserker");
+		super(64);
 		addStartNpc(MASTER_ORKURUS);
 		addTalkId(MASTER_ORKURUS, MASTER_ENTIENS, MASTER_TENAIN, CARAVANER_GORT, HARKILGAMED);
 		addKillId(DEAD_SEEKER, MARSH_STAKATO_DRONE, BREKA_ORC, BREKA_ORC_ARCHER, BREKA_ORC_SHAMAN, BREKA_ORC_OVERLORD, BREKA_ORC_WARRIOR, ROAD_SCAVENGER, DIVINE_EMISSARY);

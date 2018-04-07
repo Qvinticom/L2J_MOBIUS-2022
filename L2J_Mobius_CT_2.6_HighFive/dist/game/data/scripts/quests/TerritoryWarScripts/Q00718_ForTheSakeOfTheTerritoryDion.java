@@ -26,7 +26,7 @@ public final class Q00718_ForTheSakeOfTheTerritoryDion extends TerritoryWarSuper
 {
 	public Q00718_ForTheSakeOfTheTerritoryDion()
 	{
-		super(718, Q00718_ForTheSakeOfTheTerritoryDion.class.getSimpleName(), "For the Sake of the Territory - Dion");
+		super(718);
 		CATAPULT_ID = 36500;
 		TERRITORY_ID = 82;
 		LEADER_IDS = new int[]

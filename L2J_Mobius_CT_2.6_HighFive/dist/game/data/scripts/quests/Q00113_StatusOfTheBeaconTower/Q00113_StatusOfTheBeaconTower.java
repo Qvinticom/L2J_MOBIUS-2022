@@ -38,7 +38,7 @@ public class Q00113_StatusOfTheBeaconTower extends Quest
 	
 	public Q00113_StatusOfTheBeaconTower()
 	{
-		super(113, Q00113_StatusOfTheBeaconTower.class.getSimpleName(), "Status of the Beacon Tower");
+		super(113);
 		addStartNpc(MOIRA);
 		addTalkId(MOIRA, TORRANT);
 		registerQuestItems(FIRE_BOX, FLAME_BOX);

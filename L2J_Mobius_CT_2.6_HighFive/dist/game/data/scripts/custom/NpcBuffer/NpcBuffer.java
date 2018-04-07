@@ -43,7 +43,6 @@ import com.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -53,7 +52,9 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SetSummonRemainTime;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 
-public class NpcBuffer extends Quest
+import ai.AbstractNpcAI;
+
+public class NpcBuffer extends AbstractNpcAI
 {
 	private static final boolean DEBUG = false;
 	
@@ -512,7 +513,6 @@ public class NpcBuffer extends Quest
 	
 	private NpcBuffer()
 	{
-		super(-1, NpcBuffer.class.getSimpleName(), "custom");
 		addStartNpc(NPC_ID);
 		addFirstTalkId(NPC_ID);
 		addTalkId(NPC_ID);

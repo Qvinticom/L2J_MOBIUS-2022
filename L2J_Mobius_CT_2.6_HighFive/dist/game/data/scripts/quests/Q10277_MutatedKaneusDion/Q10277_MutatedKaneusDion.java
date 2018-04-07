@@ -44,7 +44,7 @@ public class Q10277_MutatedKaneusDion extends Quest
 	
 	public Q10277_MutatedKaneusDion()
 	{
-		super(10277, Q10277_MutatedKaneusDion.class.getSimpleName(), "Mutated Kaneus - Dion");
+		super(10277);
 		addStartNpc(LUKAS);
 		addTalkId(LUKAS, MIRIEN);
 		addKillId(CRIMSON_HATU, SEER_FLOUROS);

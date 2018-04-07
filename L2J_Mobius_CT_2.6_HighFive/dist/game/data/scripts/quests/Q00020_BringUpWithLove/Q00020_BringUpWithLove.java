@@ -38,7 +38,7 @@ public class Q00020_BringUpWithLove extends Quest
 	
 	public Q00020_BringUpWithLove()
 	{
-		super(20, Q00020_BringUpWithLove.class.getSimpleName(), "Bring Up With Love");
+		super(20);
 		addStartNpc(TUNATUN);
 		addTalkId(TUNATUN);
 	}

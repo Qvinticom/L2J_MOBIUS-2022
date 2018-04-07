@@ -53,7 +53,7 @@ public final class Q00345_MethodToRaiseTheDead extends Quest
 	
 	public Q00345_MethodToRaiseTheDead()
 	{
-		super(345, Q00345_MethodToRaiseTheDead.class.getSimpleName(), "Method to Raise the Dead");
+		super(345);
 		addStartNpc(DOROTHY);
 		addTalkId(DOROTHY, ORPHEUS, MEDIUM_JAR, XENOVIA);
 		addKillId(CROKIAN, CROKIAN_WARRIOR);

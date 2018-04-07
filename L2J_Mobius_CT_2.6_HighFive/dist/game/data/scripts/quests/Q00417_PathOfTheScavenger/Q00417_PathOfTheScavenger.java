@@ -76,7 +76,7 @@ public final class Q00417_PathOfTheScavenger extends Quest
 	
 	public Q00417_PathOfTheScavenger()
 	{
-		super(417, Q00417_PathOfTheScavenger.class.getSimpleName(), "Path Of The Scavenger");
+		super(417);
 		addStartNpc(COLLECTOR_PIPI);
 		addTalkId(COLLECTOR_PIPI, WAREHOUSE_KEEPER_RAUT, TRADER_MION, TRADER_SHARI, HEAD_BLACKSMITH_BRONK, PRIEST_OF_THE_EARTH_ZIMENF, MASTER_TOMA, TORAI, WAREHOUSE_CHIEF_YASENI);
 		addAttackId(HUNTER_TARANTULA, PLUNDER_TARANTULA, HUNTER_BEAR, HONEY_BEAR);

@@ -18,12 +18,13 @@ package village_master.Alliance;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
+
+import ai.AbstractNpcAI;
 
 /**
  * @author UnAfraid
  */
-public final class Alliance extends Quest
+public final class Alliance extends AbstractNpcAI
 {
 	// @formatter:off
 	private static final int[] NPCS =
@@ -45,7 +46,6 @@ public final class Alliance extends Quest
 	
 	private Alliance()
 	{
-		super(-1, Alliance.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

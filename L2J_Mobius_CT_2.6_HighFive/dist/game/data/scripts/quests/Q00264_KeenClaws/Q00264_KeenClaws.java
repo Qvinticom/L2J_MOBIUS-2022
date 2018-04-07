@@ -62,7 +62,7 @@ public final class Q00264_KeenClaws extends Quest
 	
 	public Q00264_KeenClaws()
 	{
-		super(264, Q00264_KeenClaws.class.getSimpleName(), "Keen Claws");
+		super(264);
 		addStartNpc(PAINT);
 		addTalkId(PAINT);
 		addKillId(MONSTER_CHANCES.keySet());

@@ -65,7 +65,7 @@ public class Q00101_SwordOfSolidarity extends Quest
 	
 	public Q00101_SwordOfSolidarity()
 	{
-		super(101, Q00101_SwordOfSolidarity.class.getSimpleName(), "Sword of Solidarity");
+		super(101);
 		addStartNpc(ROIEN);
 		addKillId(MONSTERS);
 		addTalkId(ROIEN, ALTRAN);

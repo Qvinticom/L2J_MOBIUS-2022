@@ -75,7 +75,7 @@ public final class Q00344_1000YearsTheEndOfLamentation extends Quest
 	
 	public Q00344_1000YearsTheEndOfLamentation()
 	{
-		super(344, Q00344_1000YearsTheEndOfLamentation.class.getSimpleName(), "1000 years, the End of Lamentation");
+		super(344);
 		addStartNpc(GILMORE);
 		addTalkId(KAIEN, GARVARENTZ, GILMORE, RODEMAI, ORVEN);
 		addKillId(MONSTER_CHANCES.keySet());

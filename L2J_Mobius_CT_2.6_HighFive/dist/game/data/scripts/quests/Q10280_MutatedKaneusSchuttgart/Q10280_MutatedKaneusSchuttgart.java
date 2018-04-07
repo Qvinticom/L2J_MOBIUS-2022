@@ -44,7 +44,7 @@ public class Q10280_MutatedKaneusSchuttgart extends Quest
 	
 	public Q10280_MutatedKaneusSchuttgart()
 	{
-		super(10280, Q10280_MutatedKaneusSchuttgart.class.getSimpleName(), "Mutated Kaneus - Schuttgart");
+		super(10280);
 		addStartNpc(VISHOTSKY);
 		addTalkId(VISHOTSKY, ATRAXIA);
 		addKillId(VENOMOUS_STORACE, KEL_BILETTE);

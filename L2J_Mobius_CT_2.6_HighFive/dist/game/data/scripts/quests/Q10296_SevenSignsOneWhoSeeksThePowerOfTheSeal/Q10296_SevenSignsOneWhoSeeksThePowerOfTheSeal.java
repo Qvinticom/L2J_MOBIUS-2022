@@ -45,7 +45,7 @@ public final class Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal extends Quest
 	
 	public Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal()
 	{
-		super(10296, Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName(), "Seven Signs, One Who Seeks the Power of the Seal");
+		super(10296);
 		addStartNpc(ERISS_EVIL_THOUGHTS, ODD_GLOBE);
 		addTalkId(ERISS_EVIL_THOUGHTS, ODD_GLOBE, HARDIN, WOOD, FRANZ, ELCADIA, ELCADIA_2);
 	}

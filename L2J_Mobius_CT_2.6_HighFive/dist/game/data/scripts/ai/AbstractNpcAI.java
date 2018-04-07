@@ -28,9 +28,9 @@ import com.l2jmobius.gameserver.model.quest.Quest;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	public AbstractNpcAI(String name, String descr)
+	public AbstractNpcAI()
 	{
-		super(-1, name, descr);
+		super(-1);
 	}
 	
 	/**

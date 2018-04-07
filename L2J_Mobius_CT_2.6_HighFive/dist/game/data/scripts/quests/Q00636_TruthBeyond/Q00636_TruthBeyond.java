@@ -40,7 +40,7 @@ public final class Q00636_TruthBeyond extends Quest
 	
 	public Q00636_TruthBeyond()
 	{
-		super(636, Q00636_TruthBeyond.class.getSimpleName(), "The Truth Beyond the Gate");
+		super(636);
 		addStartNpc(ELIYAH);
 		addTalkId(ELIYAH, FLAURON);
 		addEnterZoneId(ZONE);

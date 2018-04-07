@@ -102,7 +102,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 	
 	public Q00692_HowtoOpposeEvil()
 	{
-		super(692, Q00692_HowtoOpposeEvil.class.getSimpleName(), "How to Oppose Evil");
+		super(692);
 		addStartNpc(DILIOS);
 		addTalkId(DILIOS, KIRKLAN);
 		addKillId(QUEST_MOBS.keySet());

@@ -60,7 +60,7 @@ public final class Q00343_UnderTheShadowOfTheIvoryTower extends Quest
 	
 	public Q00343_UnderTheShadowOfTheIvoryTower()
 	{
-		super(343, Q00343_UnderTheShadowOfTheIvoryTower.class.getSimpleName(), "Under The Shadow Of The Ivory Tower");
+		super(343);
 		addStartNpc(MAGIC_TRADER_CEMA);
 		addTalkId(MAGIC_TRADER_CEMA, LICH_KING_ICARUS, COLLECTOR_MARSHA, COLLECTOR_TRUMPIN);
 		addKillId(MANASHEN_GARGOYLE, ENCHANTED_MONSTEREYE, ENCHANTED_STONE_GOLEM, ENCHANTED_IRON_GOLEM);

@@ -46,7 +46,7 @@ public final class Q00291_RevengeOfTheRedbonnet extends Quest
 	
 	public Q00291_RevengeOfTheRedbonnet()
 	{
-		super(291, Q00291_RevengeOfTheRedbonnet.class.getSimpleName(), "Revenge of the Redbonnet");
+		super(291);
 		addStartNpc(MARYSE_REDBONNET);
 		addTalkId(MARYSE_REDBONNET);
 		addKillId(BLACK_WOLF);

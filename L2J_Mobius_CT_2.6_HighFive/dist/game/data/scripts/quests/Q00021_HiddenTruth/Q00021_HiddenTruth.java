@@ -64,7 +64,7 @@ public class Q00021_HiddenTruth extends Quest
 	
 	public Q00021_HiddenTruth()
 	{
-		super(21, Q00021_HiddenTruth.class.getSimpleName(), "Hidden Truth");
+		super(21);
 		addStartNpc(MYSTERIOUS_WIZARD);
 		addTalkId(MYSTERIOUS_WIZARD, TOMBSTONE, GHOST_OF_VON_HELLMAN, GHOST_OF_VON_HELLMANS_PAGE, BROKEN_BOOKSHELF, AGRIPEL, BENEDICT, DOMINIC, INNOCENTIN);
 		addSeeCreatureId(GHOST_OF_VON_HELLMANS_PAGE);

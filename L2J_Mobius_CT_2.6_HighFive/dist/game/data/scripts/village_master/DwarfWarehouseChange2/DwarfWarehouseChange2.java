@@ -52,7 +52,6 @@ public final class DwarfWarehouseChange2 extends AbstractNpcAI
 	
 	private DwarfWarehouseChange2()
 	{
-		super(DwarfWarehouseChange2.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

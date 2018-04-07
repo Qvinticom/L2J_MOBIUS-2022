@@ -45,7 +45,7 @@ public final class Q00268_TracesOfEvil extends Quest
 	
 	public Q00268_TracesOfEvil()
 	{
-		super(268, Q00268_TracesOfEvil.class.getSimpleName(), "Traces of Evil");
+		super(268);
 		addStartNpc(KUNAI);
 		addTalkId(KUNAI);
 		addKillId(MONSTERS);

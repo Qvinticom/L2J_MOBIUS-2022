@@ -43,7 +43,7 @@ public class Q00164_BloodFiend extends Quest
 	
 	public Q00164_BloodFiend()
 	{
-		super(164, Q00164_BloodFiend.class.getSimpleName(), "Blood Fiend");
+		super(164);
 		addStartNpc(CREAMEES);
 		addTalkId(CREAMEES);
 		addKillId(KIRUNAK);

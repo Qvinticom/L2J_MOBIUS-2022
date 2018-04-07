@@ -18,15 +18,16 @@ package events.CharacterBirthday;
 
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.util.Util;
+
+import ai.AbstractNpcAI;
 
 /**
  * Character Birthday event AI.<br>
  * Updated to H5 by Nyaran.
  * @author Gnacik
  */
-public final class CharacterBirthday extends Quest
+public final class CharacterBirthday extends AbstractNpcAI
 {
 	private static final int ALEGRIA = 32600;
 	private static int SPAWNS = 0;
@@ -56,7 +57,6 @@ public final class CharacterBirthday extends Quest
 	
 	private CharacterBirthday()
 	{
-		super(-1, CharacterBirthday.class.getSimpleName(), "events");
 		addStartNpc(ALEGRIA);
 		addStartNpc(GK);
 		addTalkId(ALEGRIA);

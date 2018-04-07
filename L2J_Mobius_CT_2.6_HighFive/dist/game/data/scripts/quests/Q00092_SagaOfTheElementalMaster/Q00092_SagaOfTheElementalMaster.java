@@ -28,7 +28,7 @@ public class Q00092_SagaOfTheElementalMaster extends AbstractSagaQuest
 {
 	public Q00092_SagaOfTheElementalMaster()
 	{
-		super(92, Q00092_SagaOfTheElementalMaster.class.getSimpleName(), "Saga of the Elemental Master");
+		super(92);
 		_npc = new int[]
 		{
 			30174,

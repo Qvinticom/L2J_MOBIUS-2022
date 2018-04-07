@@ -44,7 +44,7 @@ public final class Q10287_StoryOfThoseLeft extends Quest
 	
 	public Q10287_StoryOfThoseLeft()
 	{
-		super(10287, Q10287_StoryOfThoseLeft.class.getSimpleName(), "Story of Those Left");
+		super(10287);
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY, JINIA, KEGOR);
 	}

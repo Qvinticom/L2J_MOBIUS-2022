@@ -180,7 +180,6 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 	
 	public IceQueensCastleNormalBattle()
 	{
-		super(IceQueensCastleNormalBattle.class.getSimpleName());
 		addStartNpc(SIRRA, SUPP_KEGOR, SUPP_JINIA);
 		addFirstTalkId(SUPP_KEGOR, SUPP_JINIA);
 		addTalkId(SIRRA, JINIA, SUPP_KEGOR);

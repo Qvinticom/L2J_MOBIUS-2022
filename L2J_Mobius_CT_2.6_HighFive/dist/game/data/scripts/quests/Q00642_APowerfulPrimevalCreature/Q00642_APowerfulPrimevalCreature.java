@@ -56,7 +56,7 @@ public class Q00642_APowerfulPrimevalCreature extends Quest
 	
 	public Q00642_APowerfulPrimevalCreature()
 	{
-		super(642, Q00642_APowerfulPrimevalCreature.class.getSimpleName(), "A Powerful Primeval Creature");
+		super(642);
 		addStartNpc(DINN);
 		addTalkId(DINN);
 		addKillId(ANCIENT_EGG);

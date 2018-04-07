@@ -44,14 +44,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 {
 	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
 	
-	public AbstractInstance(String name, String desc)
+	public AbstractInstance()
 	{
-		super(name, desc);
-	}
-	
-	public AbstractInstance(String name)
-	{
-		super(name, "instances");
 	}
 	
 	protected void enterInstance(L2PcInstance player, String template, int templateId)

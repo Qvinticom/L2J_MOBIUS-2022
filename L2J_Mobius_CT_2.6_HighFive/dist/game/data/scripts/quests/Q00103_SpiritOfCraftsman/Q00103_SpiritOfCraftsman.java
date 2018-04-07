@@ -67,7 +67,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 	
 	public Q00103_SpiritOfCraftsman()
 	{
-		super(103, Q00103_SpiritOfCraftsman.class.getSimpleName(), "Spirit of Craftsman");
+		super(103);
 		addStartNpc(BLACKSMITH_KAROYD);
 		addTalkId(BLACKSMITH_KAROYD, CECON, HARNE);
 		addKillId(MARSH_ZOMBIE, DOOM_SOLDIER, SKELETON_HUNTER, SKELETON_HUNTER_ARCHER);

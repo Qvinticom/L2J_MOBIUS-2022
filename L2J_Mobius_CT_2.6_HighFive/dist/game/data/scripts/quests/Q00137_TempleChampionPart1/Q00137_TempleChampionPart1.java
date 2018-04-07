@@ -46,7 +46,7 @@ public class Q00137_TempleChampionPart1 extends Quest
 	
 	public Q00137_TempleChampionPart1()
 	{
-		super(137, Q00137_TempleChampionPart1.class.getSimpleName(), "Temple Champion - 1");
+		super(137);
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN);
 		addKillId(MOBS);

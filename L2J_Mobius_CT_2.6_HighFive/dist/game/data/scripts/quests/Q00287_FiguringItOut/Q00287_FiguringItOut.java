@@ -87,7 +87,7 @@ public class Q00287_FiguringItOut extends Quest
 	
 	public Q00287_FiguringItOut()
 	{
-		super(287, Q00287_FiguringItOut.class.getSimpleName(), "Figuring It Out!");
+		super(287);
 		addStartNpc(LAKI);
 		addTalkId(LAKI);
 		addKillId(MONSTERS.keySet());

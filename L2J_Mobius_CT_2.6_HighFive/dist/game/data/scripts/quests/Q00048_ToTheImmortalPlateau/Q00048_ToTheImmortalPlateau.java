@@ -62,7 +62,7 @@ public final class Q00048_ToTheImmortalPlateau extends Quest
 	
 	public Q00048_ToTheImmortalPlateau()
 	{
-		super(48, Q00048_ToTheImmortalPlateau.class.getSimpleName(), "To The Immortal Plateau");
+		super(48);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());

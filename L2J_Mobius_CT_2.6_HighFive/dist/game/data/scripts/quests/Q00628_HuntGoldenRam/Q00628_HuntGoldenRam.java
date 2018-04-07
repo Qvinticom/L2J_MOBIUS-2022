@@ -61,7 +61,7 @@ public final class Q00628_HuntGoldenRam extends Quest
 	
 	public Q00628_HuntGoldenRam()
 	{
-		super(628, Q00628_HuntGoldenRam.class.getSimpleName(), "Hunt of the Golden Ram Mercenary Force");
+		super(628);
 		addStartNpc(KAHMAN);
 		addTalkId(KAHMAN);
 		addKillId(MOBS_DROP_CHANCES.keySet());

@@ -55,7 +55,7 @@ public class Q00288_HandleWithCare extends Quest
 	
 	public Q00288_HandleWithCare()
 	{
-		super(288, Q00288_HandleWithCare.class.getSimpleName(), "Handle With Care");
+		super(288);
 		addStartNpc(ANKUMI);
 		addTalkId(ANKUMI);
 		addKillId(SEER_UGOROS);

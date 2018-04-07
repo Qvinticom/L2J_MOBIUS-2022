@@ -62,7 +62,7 @@ public class Q00241_PossessorOfAPreciousSoul1 extends Quest
 	
 	public Q00241_PossessorOfAPreciousSoul1()
 	{
-		super(241, Q00241_PossessorOfAPreciousSoul1.class.getSimpleName(), "Possessor Of A Precious Soul 1");
+		super(241);
 		addStartNpc(TALIEN);
 		addTalkId(TALIEN, STEDMIEL, GABRIELLE, GILMORE, KANTABILON, RAHORAKTI, CARADINE, KASSANDRA, VIRGIL, OGMAR);
 		addKillId(BARAHAM, MALRUK_SUCCUBUS_1, MALRUK_SUCCUBUS_TUREN_1, MALRUK_SUCCUBUS_2, MALRUK_SUCCUBUS_TUREN_2, TAIK_ORC_SUPPLY_LEADER);

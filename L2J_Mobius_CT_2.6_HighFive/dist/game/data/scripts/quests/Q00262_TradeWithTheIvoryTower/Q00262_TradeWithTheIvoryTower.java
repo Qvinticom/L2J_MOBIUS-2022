@@ -51,7 +51,7 @@ public final class Q00262_TradeWithTheIvoryTower extends Quest
 	
 	public Q00262_TradeWithTheIvoryTower()
 	{
-		super(262, Q00262_TradeWithTheIvoryTower.class.getSimpleName(), "Trade With The Ivory Tower");
+		super(262);
 		addStartNpc(VOLLODOS);
 		addTalkId(VOLLODOS);
 		addKillId(MOBS_SAC.keySet());

@@ -51,7 +51,7 @@ public final class Q00378_GrandFeast extends Quest
 	
 	public Q00378_GrandFeast()
 	{
-		super(378, Q00378_GrandFeast.class.getSimpleName(), "Grand Feast");
+		super(378);
 		addStartNpc(RANSPO);
 		addTalkId(RANSPO);
 	}

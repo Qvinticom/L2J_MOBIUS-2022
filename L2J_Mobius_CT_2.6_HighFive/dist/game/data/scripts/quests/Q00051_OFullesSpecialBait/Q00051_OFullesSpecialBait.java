@@ -40,7 +40,7 @@ public class Q00051_OFullesSpecialBait extends Quest
 	
 	public Q00051_OFullesSpecialBait()
 	{
-		super(51, Q00051_OFullesSpecialBait.class.getSimpleName(), "O'Fulle's Special Bait");
+		super(51);
 		addStartNpc(OFULLE);
 		addTalkId(OFULLE);
 		addKillId(FETTERED_SOUL);

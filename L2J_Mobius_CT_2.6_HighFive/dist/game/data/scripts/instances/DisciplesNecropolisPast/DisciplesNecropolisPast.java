@@ -121,7 +121,6 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 	
 	public DisciplesNecropolisPast()
 	{
-		super(DisciplesNecropolisPast.class.getSimpleName());
 		addAttackId(SEAL_DEVICE);
 		addFirstTalkId(SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
 		addKillId(LILIM_BUTCHER, LILIM_MAGUS, LILIM_KNIGHT_ERRANT, LILIM_KNIGHT, SHILENS_EVIL_THOUGHTS1, SHILENS_EVIL_THOUGHTS2, LILIM_SLAYER, LILIM_GREAT_MAGUS, LILIM_GUARD_KNIGHT);

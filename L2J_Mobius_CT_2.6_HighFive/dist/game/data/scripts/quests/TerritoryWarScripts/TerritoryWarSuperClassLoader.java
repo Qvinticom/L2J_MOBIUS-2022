@@ -46,7 +46,7 @@ public class TerritoryWarSuperClassLoader
 	public static void main(String[] args)
 	{
 		// initialize superclass
-		new TerritoryWarSuperClass(-1, TerritoryWarSuperClass.class.getSimpleName(), "Territory War Superclass");
+		new TerritoryWarSuperClass(-1);
 		
 		// initialize subclasses
 		// "For The Sake" quests

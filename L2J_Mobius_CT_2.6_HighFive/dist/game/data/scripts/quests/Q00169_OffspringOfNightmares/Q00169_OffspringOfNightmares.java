@@ -45,7 +45,7 @@ public class Q00169_OffspringOfNightmares extends Quest
 	
 	public Q00169_OffspringOfNightmares()
 	{
-		super(169, Q00169_OffspringOfNightmares.class.getSimpleName(), "Offspring of Nightmares");
+		super(169);
 		addStartNpc(VLASTY);
 		addTalkId(VLASTY);
 		addKillId(LESSER_DARK_HORROR, DARK_HORROR);

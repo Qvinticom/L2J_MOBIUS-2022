@@ -46,7 +46,6 @@ public final class DwarfBlacksmithChange1 extends AbstractNpcAI
 	
 	private DwarfBlacksmithChange1()
 	{
-		super(DwarfBlacksmithChange1.class.getSimpleName(), "village_master");
 		addStartNpc(NPCS);
 		addTalkId(NPCS);
 	}

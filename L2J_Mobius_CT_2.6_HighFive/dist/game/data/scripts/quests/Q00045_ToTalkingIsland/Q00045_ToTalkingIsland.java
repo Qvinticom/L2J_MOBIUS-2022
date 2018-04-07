@@ -62,7 +62,7 @@ public final class Q00045_ToTalkingIsland extends Quest
 	
 	public Q00045_ToTalkingIsland()
 	{
-		super(45, Q00045_ToTalkingIsland.class.getSimpleName(), "To Talking Island");
+		super(45);
 		addStartNpc(GALLADUCCI);
 		addTalkId(GALLADUCCI);
 		addTalkId(NPC_ITEMS.keySet());

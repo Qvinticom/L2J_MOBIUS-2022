@@ -38,7 +38,7 @@ public class Q00012_SecretMeetingWithVarkaSilenos extends Quest
 	
 	public Q00012_SecretMeetingWithVarkaSilenos()
 	{
-		super(12, Q00012_SecretMeetingWithVarkaSilenos.class.getSimpleName(), "Secret Meeting With Varka Silenos");
+		super(12);
 		addStartNpc(CADMON);
 		addTalkId(CADMON, HELMUT, NARAN);
 		registerQuestItems(BOX);

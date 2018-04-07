@@ -53,7 +53,7 @@ public class Q00034_InSearchOfCloth extends Quest
 	
 	public Q00034_InSearchOfCloth()
 	{
-		super(34, Q00034_InSearchOfCloth.class.getSimpleName(), "In Search of Cloth");
+		super(34);
 		addStartNpc(RADIA);
 		addTalkId(RADIA, RALFORD, VARAN);
 		addKillId(MOBS);

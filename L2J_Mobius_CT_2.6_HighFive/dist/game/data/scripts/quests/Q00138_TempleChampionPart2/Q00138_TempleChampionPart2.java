@@ -50,7 +50,7 @@ public class Q00138_TempleChampionPart2 extends Quest
 	
 	public Q00138_TempleChampionPart2()
 	{
-		super(138, Q00138_TempleChampionPart2.class.getSimpleName(), "Temple Champion - 2");
+		super(138);
 		addStartNpc(SYLVAIN);
 		addTalkId(SYLVAIN, PUPINA, ANGUS, SLA);
 		addKillId(MOBS);

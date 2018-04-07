@@ -106,7 +106,7 @@ public final class Q00634_InSearchOfFragmentsOfDimension extends Quest
 	
 	public Q00634_InSearchOfFragmentsOfDimension()
 	{
-		super(634, Q00634_InSearchOfFragmentsOfDimension.class.getSimpleName(), "In Search of Fragments of Dimension");
+		super(634);
 		addStartNpc(DIMENSIONAL_GATE_KEEPER);
 		addTalkId(DIMENSIONAL_GATE_KEEPER);
 		addKillId(MOBS);

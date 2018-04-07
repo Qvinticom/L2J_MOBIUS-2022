@@ -45,7 +45,7 @@ public final class Q00379_FantasyWine extends Quest
 	
 	public Q00379_FantasyWine()
 	{
-		super(379, Q00379_FantasyWine.class.getSimpleName(), "Fantasy Wine");
+		super(379);
 		addStartNpc(HARLAN);
 		addTalkId(HARLAN);
 		addKillId(ENKU_ORC_CHAMPION, ENKU_ORC_SHAMAN);

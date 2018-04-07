@@ -28,7 +28,7 @@ public class Q00091_SagaOfTheArcanaLord extends AbstractSagaQuest
 {
 	public Q00091_SagaOfTheArcanaLord()
 	{
-		super(91, Q00091_SagaOfTheArcanaLord.class.getSimpleName(), "Saga of the Arcana Lord");
+		super(91);
 		_npc = new int[]
 		{
 			31605,

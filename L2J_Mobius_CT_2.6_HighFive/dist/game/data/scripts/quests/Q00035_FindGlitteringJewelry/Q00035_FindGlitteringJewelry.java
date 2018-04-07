@@ -49,7 +49,7 @@ public class Q00035_FindGlitteringJewelry extends Quest
 	
 	public Q00035_FindGlitteringJewelry()
 	{
-		super(35, Q00035_FindGlitteringJewelry.class.getSimpleName(), "Find Glittering Jewelry");
+		super(35);
 		addStartNpc(ELLIE);
 		addTalkId(ELLIE, FELTON);
 		addKillId(ALLIGATOR);

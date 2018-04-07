@@ -59,7 +59,7 @@ public class Q00312_TakeAdvantageOfTheCrisis extends Quest
 	
 	public Q00312_TakeAdvantageOfTheCrisis()
 	{
-		super(312, Q00312_TakeAdvantageOfTheCrisis.class.getSimpleName(), "Take Advantage of the Crisis!");
+		super(312);
 		addStartNpc(FILAUR);
 		addTalkId(FILAUR);
 		addKillId(MOBS.keySet());

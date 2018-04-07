@@ -63,7 +63,7 @@ public class Q00700_CursedLife extends Quest
 	
 	public Q00700_CursedLife()
 	{
-		super(700, Q00700_CursedLife.class.getSimpleName(), "Cursed Life");
+		super(700);
 		addStartNpc(ORBYU);
 		addTalkId(ORBYU);
 		addKillId(ROK);

@@ -82,7 +82,7 @@ public final class Q00225_TestOfTheSearcher extends Quest
 	
 	public Q00225_TestOfTheSearcher()
 	{
-		super(225, Q00225_TestOfTheSearcher.class.getSimpleName(), "Test Of The Searcher");
+		super(225);
 		addStartNpc(MASTER_LUTHER);
 		addTalkId(MASTER_LUTHER, CAPTAIN_ALEX, TYRA, TREE, STRONG_WOODEN_CHEST, MILITIAMAN_LEIRYNN, DRUNKARD_BORYS, BODYGUARD_JAX);
 		addKillId(HANGMAN_TREE, ROAD_SCAVENGER, GIANT_FUNGUS, DELU_lIZARDMAN_SHAMAN, NEER_BODYGUARD, DELU_CHIEF_KALKIS);

@@ -28,7 +28,7 @@ public class Q00089_SagaOfTheMysticMuse extends AbstractSagaQuest
 {
 	public Q00089_SagaOfTheMysticMuse()
 	{
-		super(89, Q00089_SagaOfTheMysticMuse.class.getSimpleName(), "Saga of the Mystic Muse");
+		super(89);
 		_npc = new int[]
 		{
 			30174,

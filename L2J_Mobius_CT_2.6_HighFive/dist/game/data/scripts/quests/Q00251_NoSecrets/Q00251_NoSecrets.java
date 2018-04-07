@@ -52,7 +52,7 @@ public class Q00251_NoSecrets extends Quest
 	
 	public Q00251_NoSecrets()
 	{
-		super(251, Q00251_NoSecrets.class.getSimpleName(), "No Secrets");
+		super(251);
 		addStartNpc(PINAPS);
 		addTalkId(PINAPS);
 		addKillId(MOBS);

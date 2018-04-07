@@ -47,7 +47,7 @@ public class Q00002_WhatWomenWant extends Quest
 	
 	public Q00002_WhatWomenWant()
 	{
-		super(2, Q00002_WhatWomenWant.class.getSimpleName(), "What Women Want");
+		super(2);
 		addStartNpc(ARUJIEN);
 		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
 		registerQuestItems(ARUJIENS_LETTER1, ARUJIENS_LETTER2, ARUJIENS_LETTER3, POETRY_BOOK, GREENIS_LETTER);

@@ -76,7 +76,7 @@ public final class Q00371_ShrieksOfGhosts extends Quest
 	
 	public Q00371_ShrieksOfGhosts()
 	{
-		super(371, Q00371_ShrieksOfGhosts.class.getSimpleName(), "Shrieks of Ghosts");
+		super(371);
 		addStartNpc(REVA);
 		addTalkId(REVA, PATRIN);
 		addKillId(MOBS.keySet());

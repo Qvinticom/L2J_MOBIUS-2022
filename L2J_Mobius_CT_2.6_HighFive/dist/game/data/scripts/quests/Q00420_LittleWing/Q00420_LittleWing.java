@@ -119,7 +119,7 @@ public final class Q00420_LittleWing extends Quest
 	
 	public Q00420_LittleWing()
 	{
-		super(420, Q00420_LittleWing.class.getSimpleName(), "Little Wing");
+		super(420);
 		addStartNpc(COOPER);
 		addTalkId(MARIA, CRONOS, BYRON, MIMYU, EXARION, ZWOV, KALIBRAN, SUZET, SHAMHAI, COOPER);
 		addAttackId(DELUXE_STONE_BREAKERS);

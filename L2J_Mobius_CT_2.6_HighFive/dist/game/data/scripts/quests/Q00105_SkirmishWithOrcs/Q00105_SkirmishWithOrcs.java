@@ -77,7 +77,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	
 	public Q00105_SkirmishWithOrcs()
 	{
-		super(105, Q00105_SkirmishWithOrcs.class.getSimpleName(), "Skirmish with Orcs");
+		super(105);
 		addStartNpc(KENDNELL);
 		addTalkId(KENDNELL);
 		addKillId(MONSTER_DROP.keySet());

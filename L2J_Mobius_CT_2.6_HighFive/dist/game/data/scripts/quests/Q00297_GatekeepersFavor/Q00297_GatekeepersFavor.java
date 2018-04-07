@@ -42,7 +42,7 @@ public class Q00297_GatekeepersFavor extends Quest
 	
 	public Q00297_GatekeepersFavor()
 	{
-		super(297, Q00297_GatekeepersFavor.class.getSimpleName(), "Gatekeeper's Favor");
+		super(297);
 		addStartNpc(WIRPHY);
 		addTalkId(WIRPHY);
 		addKillId(WHINSTONE_GOLEM);
