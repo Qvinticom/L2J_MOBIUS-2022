@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.MathUtil;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
@@ -46,6 +45,7 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * @author Hasha

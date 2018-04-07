@@ -34,7 +34,6 @@ import java.util.function.BiPredicate;
 import java.util.stream.Stream;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.MathUtil;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.model.CharEffectList;
@@ -50,6 +49,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.StatsHolder;
 import com.l2jmobius.gameserver.model.stats.TraitType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.util.MathUtil;
 
 public class CharStat
 {

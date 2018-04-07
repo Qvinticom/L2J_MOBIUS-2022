@@ -16,13 +16,13 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.commons.util.MathUtil;
 import com.l2jmobius.gameserver.enums.Position;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.stats.Stats;
+import com.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * @author Sdw

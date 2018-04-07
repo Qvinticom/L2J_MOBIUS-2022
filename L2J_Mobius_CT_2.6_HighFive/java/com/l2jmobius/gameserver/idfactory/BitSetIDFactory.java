@@ -20,7 +20,7 @@ import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.PrimeFinder;
+import com.l2jmobius.gameserver.util.PrimeFinder;
 
 /**
  * This class ..

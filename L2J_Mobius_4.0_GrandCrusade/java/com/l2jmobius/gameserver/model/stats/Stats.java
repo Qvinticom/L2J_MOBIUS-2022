@@ -21,7 +21,6 @@ import java.util.Optional;
 import java.util.function.BiFunction;
 import java.util.logging.Logger;
 
-import com.l2jmobius.commons.util.MathUtil;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.stats.finalizers.AttributeFinalizer;
@@ -51,6 +50,7 @@ import com.l2jmobius.gameserver.model.stats.finalizers.ShieldDefenceRateFinalize
 import com.l2jmobius.gameserver.model.stats.finalizers.ShotsBonusFinalizer;
 import com.l2jmobius.gameserver.model.stats.finalizers.SpeedFinalizer;
 import com.l2jmobius.gameserver.model.stats.finalizers.VampiricChanceFinalizer;
+import com.l2jmobius.gameserver.util.MathUtil;
 
 /**
  * Enum of basic stats.

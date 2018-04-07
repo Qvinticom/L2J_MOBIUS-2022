@@ -9,7 +9,7 @@
  * suitability of this software for any purpose. It is provided "as is"
  * without expressed or implied warranty.
  */
-package com.l2jmobius.commons.util;
+package com.l2jmobius.gameserver.util;
 
 import java.util.Arrays;
 
