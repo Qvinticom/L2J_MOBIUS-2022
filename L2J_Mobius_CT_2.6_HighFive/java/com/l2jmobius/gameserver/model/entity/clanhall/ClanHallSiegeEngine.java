@@ -46,18 +46,17 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Siegable;
+import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-import ai.AbstractNpcAI;
-
 /**
  * @author BiggBoss
  */
-public abstract class ClanHallSiegeEngine extends AbstractNpcAI implements Siegable
+public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 {
 	private static final String SQL_LOAD_ATTACKERS = "SELECT attacker_id FROM clanhall_siege_attackers WHERE clanhall_id = ?";
 	private static final String SQL_SAVE_ATTACKERS = "INSERT INTO clanhall_siege_attackers VALUES (?,?)";
@@ -81,6 +80,7 @@ public abstract class ClanHallSiegeEngine extends AbstractNpcAI implements Siega
 	
 	public ClanHallSiegeEngine(int hallId)
 	{
+		super(-1);
 		_log = Logger.getLogger(getClass().getName());
 		
 		_hall = CHSiegeManager.getInstance().getSiegableHall(hallId);
