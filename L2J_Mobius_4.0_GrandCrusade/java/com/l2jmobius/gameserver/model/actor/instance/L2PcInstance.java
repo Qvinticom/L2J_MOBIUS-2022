@@ -9637,6 +9637,13 @@ public final class L2PcInstance extends L2Playable
 		
 		try
 		{
+			// Notify to scripts before class is removed.
+			if (!getSubClasses().isEmpty()) // also null check
+			{
+				final int classId = getSubClasses().get(classIndex).getClassId();
+				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
+			}
+			
 			final SubClass subClass = getSubClasses().remove(classIndex);
 			if (subClass == null)
 			{
@@ -9696,10 +9703,6 @@ public final class L2PcInstance extends L2Playable
 				_log.log(Level.WARNING, "Could not modify sub class for " + getName() + " to class index " + classIndex + ": " + e.getMessage(), e);
 				return false;
 			}
-			
-			// Notify to scripts
-			int classId = getSubClasses().get(classIndex).getClassId();
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
 		}
 		finally
 		{
