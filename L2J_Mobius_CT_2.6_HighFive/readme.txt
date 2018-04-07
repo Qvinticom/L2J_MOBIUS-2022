@@ -31,3 +31,4 @@ What is done
 -New XML reader
 -Replaced MMOCore with Netty
 -Dropped SQL spawnlist
+-Sell buffs command

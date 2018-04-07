@@ -91,6 +91,11 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 			return;
 		}
 		
+		if (player.isSellingBuffs())
+		{
+			return;
+		}
+		
 		final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl);
 		if (skill == null)
 		{

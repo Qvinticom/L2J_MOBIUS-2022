@@ -121,6 +121,7 @@ public final class Config
 	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./Config/Custom/PvpAnnounce.ini";
 	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./Config/Custom/RandomSpawns.ini";
 	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./Config/Custom/ScreenWelcomeMessage.ini";
+	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
 	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./Config/Custom/ServerTime.ini";
 	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./Config/Custom/StartingLocation.ini";
 	public static final String CUSTOM_TVT_CONFIG_FILE = "./Config/Custom/TeamVersusTeam.ini";
@@ -1197,6 +1198,7 @@ public final class Config
 	public static int COMMUNITY_PREMIUM_PRICE_PER_DAY;
 	public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
+	public static boolean ENABLE_FIND_PVP;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
 	public static float PREMIUM_RATE_SP;
@@ -1207,7 +1209,12 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
-	public static boolean ENABLE_FIND_PVP;
+	public static boolean SELLBUFF_ENABLED;
+	public static int SELLBUFF_MP_MULTIPLER;
+	public static int SELLBUFF_PAYMENT_ID;
+	public static long SELLBUFF_MIN_PRICE;
+	public static long SELLBUFF_MAX_PRICE;
+	public static int SELLBUFF_MAX_BUFFS;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -2726,6 +2733,16 @@ public final class Config
 			WELCOME_MESSAGE_ENABLED = ScreenWelcomeMessage.getBoolean("ScreenWelcomeMessageEnable", false);
 			WELCOME_MESSAGE_TEXT = ScreenWelcomeMessage.getString("ScreenWelcomeMessageText", "Welcome to our server!");
 			WELCOME_MESSAGE_TIME = ScreenWelcomeMessage.getInt("ScreenWelcomeMessageTime", 10) * 1000;
+			
+			// Load SellBuffs config file (if exists)
+			final PropertiesParser SellBuffs = new PropertiesParser(CUSTOM_SELL_BUFFS_CONFIG_FILE);
+			
+			SELLBUFF_ENABLED = SellBuffs.getBoolean("SellBuffEnable", false);
+			SELLBUFF_MP_MULTIPLER = SellBuffs.getInt("MpCostMultipler", 1);
+			SELLBUFF_PAYMENT_ID = SellBuffs.getInt("PaymentID", 57);
+			SELLBUFF_MIN_PRICE = SellBuffs.getLong("MinimalPrice", 100000);
+			SELLBUFF_MAX_PRICE = SellBuffs.getLong("MaximalPrice", 100000000);
+			SELLBUFF_MAX_BUFFS = SellBuffs.getInt("MaxBuffs", 15);
 			
 			// Load ServerTime config file (if exists)
 			final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);

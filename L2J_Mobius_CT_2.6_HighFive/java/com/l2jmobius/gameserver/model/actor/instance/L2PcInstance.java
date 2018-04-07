@@ -211,6 +211,7 @@ import com.l2jmobius.gameserver.model.fishing.L2Fishing;
 import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
+import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import com.l2jmobius.gameserver.model.interfaces.IEventListener;
@@ -929,6 +930,29 @@ public final class L2PcInstance extends L2Playable
 	private String _lastPetitionGmName = null;
 	
 	private boolean _hasCharmOfCourage = false;
+	
+	// Selling buffs system
+	private boolean _isSellingBuffs = false;
+	private List<SellBuffHolder> _sellingBuffs = null;
+	
+	public boolean isSellingBuffs()
+	{
+		return _isSellingBuffs;
+	}
+	
+	public void setIsSellingBuffs(boolean val)
+	{
+		_isSellingBuffs = val;
+	}
+	
+	public List<SellBuffHolder> getSellingBuffs()
+	{
+		if (_sellingBuffs == null)
+		{
+			_sellingBuffs = new ArrayList<>();
+		}
+		return _sellingBuffs;
+	}
 	
 	/**
 	 * Create a new L2PcInstance and add it in the characters table of the database.<br>

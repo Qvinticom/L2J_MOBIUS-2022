@@ -59,7 +59,6 @@ import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.data.xml.impl.HitConditionBonusData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
-import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.KarmaData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -68,6 +67,7 @@ import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.PetSkillData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
+import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
@@ -116,6 +116,7 @@ import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossPointsManager;
 import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager;
+import com.l2jmobius.gameserver.instancemanager.SellBuffsManager;
 import com.l2jmobius.gameserver.instancemanager.ServerRestartManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SoDManager;
@@ -281,6 +282,10 @@ public final class GameServer
 		CursedWeaponsManager.getInstance();
 		TransformData.getInstance();
 		BotReportTable.getInstance();
+		if (Config.SELLBUFF_ENABLED)
+		{
+			SellBuffsManager.getInstance();
+		}
 		
 		printSection("Scripts");
 		QuestManager.getInstance();

@@ -32,6 +32,7 @@ import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
@@ -73,7 +74,7 @@ public class OfflineTradersTable
 					{
 						stm3.setInt(1, pc.getObjectId()); // Char Id
 						stm3.setLong(2, pc.getOfflineStartTime());
-						stm3.setInt(3, pc.getPrivateStoreType().getId()); // store type
+						stm3.setInt(3, pc.isSellingBuffs() ? PrivateStoreType.SELL_BUFFS.getId() : pc.getPrivateStoreType().getId()); // store type
 						String title = null;
 						
 						switch (pc.getPrivateStoreType())
@@ -104,14 +105,29 @@ public class OfflineTradersTable
 									continue;
 								}
 								title = pc.getSellList().getTitle();
-								for (TradeItem i : pc.getSellList().getItems())
+								if (pc.isSellingBuffs())
 								{
-									stm_items.setInt(1, pc.getObjectId());
-									stm_items.setInt(2, i.getObjectId());
-									stm_items.setLong(3, i.getCount());
-									stm_items.setLong(4, i.getPrice());
-									stm_items.executeUpdate();
-									stm_items.clearParameters();
+									for (SellBuffHolder holder : pc.getSellingBuffs())
+									{
+										stm_items.setInt(1, pc.getObjectId());
+										stm_items.setInt(2, holder.getSkillId());
+										stm_items.setLong(3, 0);
+										stm_items.setLong(4, holder.getPrice());
+										stm_items.executeUpdate();
+										stm_items.clearParameters();
+									}
+								}
+								else
+								{
+									for (TradeItem i : pc.getSellList().getItems())
+									{
+										stm_items.setInt(1, pc.getObjectId());
+										stm_items.setInt(2, i.getObjectId());
+										stm_items.setLong(3, i.getCount());
+										stm_items.setLong(4, i.getPrice());
+										stm_items.executeUpdate();
+										stm_items.clearParameters();
+									}
 								}
 								break;
 							}
@@ -175,7 +191,16 @@ public class OfflineTradersTable
 					}
 				}
 				
-				final PrivateStoreType type = PrivateStoreType.findById(rs.getInt("type"));
+				final int typeId = rs.getInt("type");
+				boolean isSellBuff = false;
+				
+				if (typeId == PrivateStoreType.SELL_BUFFS.getId())
+				{
+					isSellBuff = true;
+				}
+				
+				final PrivateStoreType type = isSellBuff ? PrivateStoreType.PACKAGE_SELL : PrivateStoreType.findById(typeId);
+				
 				if (type == null)
 				{
 					LOGGER.warning(getClass().getSimpleName() + ": PrivateStoreType with id " + rs.getInt("type") + " could not be found.");
@@ -199,6 +224,12 @@ public class OfflineTradersTable
 					client.setAccountName(player.getAccountNamePlayer());
 					player.setClient(client);
 					player.setOfflineStartTime(time);
+					
+					if (isSellBuff)
+					{
+						player.setIsSellingBuffs(true);
+					}
+					
 					player.spawnMe(player.getX(), player.getY(), player.getZ());
 					LoginServerThread.getInstance().addGameServerLogin(player.getAccountName(), client);
 					try (PreparedStatement stm_items = con.prepareStatement(LOAD_OFFLINE_ITEMS))
@@ -224,12 +255,22 @@ public class OfflineTradersTable
 								case SELL:
 								case PACKAGE_SELL:
 								{
-									while (items.next())
+									if (player.isSellingBuffs())
 									{
-										if (player.getSellList().addItem(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
+										while (items.next())
 										{
-											continue;
-											// throw new NullPointerException();
+											player.getSellingBuffs().add(new SellBuffHolder(items.getInt("item"), items.getLong("price")));
+										}
+									}
+									else
+									{
+										while (items.next())
+										{
+											if (player.getSellList().addItem(items.getInt(2), items.getLong(3), items.getLong(4)) == null)
+											{
+												continue;
+												// throw new NullPointerException();
+											}
 										}
 									}
 									player.getSellList().setTitle(rs.getString("title"));
@@ -339,14 +380,29 @@ public class OfflineTradersTable
 								{
 									title = trader.getSellList().getTitle();
 								}
-								for (TradeItem i : trader.getSellList().getItems())
+								if (trader.isSellingBuffs())
 								{
-									stm3.setInt(1, trader.getObjectId());
-									stm3.setInt(2, i.getObjectId());
-									stm3.setLong(3, i.getCount());
-									stm3.setLong(4, i.getPrice());
-									stm3.executeUpdate();
-									stm3.clearParameters();
+									for (SellBuffHolder holder : trader.getSellingBuffs())
+									{
+										stm3.setInt(1, trader.getObjectId());
+										stm3.setInt(2, holder.getSkillId());
+										stm3.setLong(3, 0);
+										stm3.setLong(4, holder.getPrice());
+										stm3.executeUpdate();
+										stm3.clearParameters();
+									}
+								}
+								else
+								{
+									for (TradeItem i : trader.getSellList().getItems())
+									{
+										stm3.setInt(1, trader.getObjectId());
+										stm3.setInt(2, i.getObjectId());
+										stm3.setLong(3, i.getCount());
+										stm3.setLong(4, i.getPrice());
+										stm3.executeUpdate();
+										stm3.clearParameters();
+									}
 								}
 								break;
 							}
@@ -373,7 +429,7 @@ public class OfflineTradersTable
 						{
 							stm4.setInt(1, trader.getObjectId()); // Char Id
 							stm4.setLong(2, trader.getOfflineStartTime());
-							stm4.setInt(3, trader.getPrivateStoreType().getId()); // store type
+							stm4.setInt(3, trader.isSellingBuffs() ? PrivateStoreType.SELL_BUFFS.getId() : trader.getPrivateStoreType().getId()); // store type
 							stm4.setString(4, title);
 							stm4.executeUpdate();
 							stm4.clearParameters();

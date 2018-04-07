@@ -28,7 +28,7 @@ public class PrivateStoreMsgSell implements IClientOutgoingPacket
 	public PrivateStoreMsgSell(L2PcInstance player)
 	{
 		_objId = player.getObjectId();
-		if (player.getSellList() != null)
+		if ((player.getSellList() != null) || player.isSellingBuffs())
 		{
 			_storeMsg = player.getSellList().getTitle();
 		}

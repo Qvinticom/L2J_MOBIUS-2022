@@ -271,7 +271,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 			}
 			case 37: // Dwarven Manufacture
 			{
-				if (activeChar.isAlikeDead())
+				if (activeChar.isAlikeDead() || activeChar.isSellingBuffs())
 				{
 					client.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
