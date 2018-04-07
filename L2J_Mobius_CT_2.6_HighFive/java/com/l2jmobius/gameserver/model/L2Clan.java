@@ -35,7 +35,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.commons.util.EnumIntBitmask;
 import com.l2jmobius.gameserver.communitybbs.BB.Forum;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
@@ -76,6 +75,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.EnumIntBitmask;
 import com.l2jmobius.gameserver.util.Util;
 
 public class L2Clan implements IIdentifiable, INamable
