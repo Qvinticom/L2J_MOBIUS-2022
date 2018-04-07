@@ -394,7 +394,10 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 132: // Soul Hound (Male)
 							case 157: // Tyrr Doombringer
 							{
-								player.getAppearance().setSex(false);
+								if (player.getAppearance().getSex())
+								{
+									player.getAppearance().setSex(false);
+								}
 								break;
 							}
 							case 124: // Soldier (Female)
@@ -405,7 +408,10 @@ public class AdminEditChar implements IAdminCommandHandler
 							case 134: // Trickster
 							case 165: // Yul Trickster
 							{
-								player.getAppearance().setSex(true);
+								if (!player.getAppearance().getSex())
+								{
+									player.getAppearance().setSex(true);
+								}
 								break;
 							}
 						}

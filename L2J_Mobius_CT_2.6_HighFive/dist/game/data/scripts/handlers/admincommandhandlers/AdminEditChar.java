@@ -376,13 +376,52 @@ public class AdminEditChar implements IAdminCommandHandler
 					{
 						player.setBaseClass(classidval);
 					}
+					
+					// Sex checks.
+					boolean sexChange = false;
+					if (player.getRace().equals(Race.KAMAEL))
+					{
+						switch (classidval)
+						{
+							case 123: // Soldier (Male)
+							case 125: // Trooper
+							case 127: // Berserker
+							case 128: // Soul Breaker (Male)
+							case 131: // Doombringer
+							case 132: // Soul Hound (Male)
+							{
+								if (player.getAppearance().getSex())
+								{
+									sexChange = true;
+									player.getAppearance().setSex(false);
+								}
+								break;
+							}
+							case 124: // Soldier (Female)
+							case 126: // Warder
+							case 129: // Soul Breaker (Female)
+							case 130: // Arbalester
+							case 133: // Soul Hound (Female)
+							case 134: // Trickster
+							{
+								if (!player.getAppearance().getSex())
+								{
+									sexChange = true;
+									player.getAppearance().setSex(true);
+								}
+								break;
+							}
+						}
+					}
+					
 					final String newclass = ClassListData.getInstance().getClass(player.getClassId()).getClassName();
 					player.storeMe();
 					player.sendMessage("A GM changed your class to " + newclass + ".");
 					player.broadcastUserInfo();
 					activeChar.sendMessage(player.getName() + " is a " + newclass + ".");
+					
 					// If necessary transform-untransform player quickly to force the client to reload the character textures
-					if ((race != player.getRace()) || (((race == Race.HUMAN) || (race == Race.ORC)) && (isMage != player.isMageClass())))
+					if (sexChange || (race != player.getRace()) || (((race == Race.HUMAN) || (race == Race.ORC)) && (isMage != player.isMageClass())))
 					{
 						TransformData.getInstance().transformPlayer(105, player);
 						ThreadPool.schedule(new Untransform(player), 200);

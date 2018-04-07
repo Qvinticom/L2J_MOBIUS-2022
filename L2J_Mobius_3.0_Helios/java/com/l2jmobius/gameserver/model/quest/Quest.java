@@ -1732,7 +1732,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not delete char quest:", e);
+			_log.log(Level.WARNING, "Unable to delete char quest!", e);
 		}
 	}
 	
