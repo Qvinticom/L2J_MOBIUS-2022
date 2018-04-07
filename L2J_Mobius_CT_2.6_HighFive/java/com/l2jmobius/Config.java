@@ -400,6 +400,7 @@ public final class Config
 	public static int FS_MAX_SUPPLY_LEVEL;
 	public static int FS_FEE_FOR_CASTLE;
 	public static int FS_MAX_OWN_TIME;
+	
 	// --------------------------------------------------
 	// Feature Settings
 	// --------------------------------------------------
@@ -925,6 +926,7 @@ public final class Config
 	public static double ENCHANT_CHANCE_ELEMENT_JEWEL;
 	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
 	public static int[] ENCHANT_BLACKLIST;
+	public static boolean DISABLE_OVER_ENCHANTING;
 	public static int AUGMENTATION_NG_SKILL_CHANCE;
 	public static int AUGMENTATION_NG_GLOW_CHANCE;
 	public static int AUGMENTATION_MID_SKILL_CHANCE;
@@ -1649,7 +1651,7 @@ public final class Config
 				ENCHANT_BLACKLIST[i] = Integer.parseInt(notenchantable[i]);
 			}
 			Arrays.sort(ENCHANT_BLACKLIST);
-			
+			DISABLE_OVER_ENCHANTING = Character.getBoolean("DisableOverEnchanting", true);
 			AUGMENTATION_NG_SKILL_CHANCE = Character.getInt("AugmentationNGSkillChance", 15);
 			AUGMENTATION_NG_GLOW_CHANCE = Character.getInt("AugmentationNGGlowChance", 0);
 			AUGMENTATION_MID_SKILL_CHANCE = Character.getInt("AugmentationMidSkillChance", 30);

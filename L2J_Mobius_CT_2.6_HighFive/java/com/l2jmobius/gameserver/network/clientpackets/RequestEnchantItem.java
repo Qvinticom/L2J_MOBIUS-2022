@@ -110,8 +110,8 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 			supportTemplate = EnchantItemData.getInstance().getSupportItem(support);
 		}
 		
-		// first validation check
-		if (!scrollTemplate.isValid(item, supportTemplate) || (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel()))
+		// first validation check - also over enchant check
+		if (!scrollTemplate.isValid(item, supportTemplate) || (Config.DISABLE_OVER_ENCHANTING && (item.getEnchantLevel() == scrollTemplate.getMaxEnchantLevel())))
 		{
 			activeChar.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
 			activeChar.setActiveEnchantItemId(L2PcInstance.ID_NONE);
