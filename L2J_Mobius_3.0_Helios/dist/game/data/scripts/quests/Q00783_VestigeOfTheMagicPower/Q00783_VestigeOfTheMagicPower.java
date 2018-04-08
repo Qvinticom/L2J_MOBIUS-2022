@@ -16,9 +16,11 @@
  */
 package quests.Q00783_VestigeOfTheMagicPower;
 
+import java.util.List;
+
 import com.l2jmobius.gameserver.enums.Faction;
-import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -30,7 +32,7 @@ import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 /**
  * Vestige of the Magic Power (783)
  * @URL https://l2wiki.com/Vestige_of_the_Magic_Power
- * @author Gigi
+ * @author Gigi, Iris
  */
 public class Q00783_VestigeOfTheMagicPower extends Quest
 {
@@ -81,6 +83,9 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 		{
 			case "31595-02.htm":
 			case "31595-03.htm":
+			case "31595-05.htm":
+			case "31595-06.htm":
+			case "31595-07.htm":
 			{
 				htmltext = event;
 				break;
@@ -91,35 +96,62 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 				htmltext = event;
 				break;
 			}
-			case "31595-07.html":
+			case "31595-05a.htm":
 			{
-				if (qs.isCond(2))
-				{
-					if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
-						giveItems(player, BASIC_SUPPLY_BOX, 1);
-						addExpAndSp(player, 4845395970L, 11628900);
-					}
-					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) <= 1)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
-						giveItems(player, INTERMEDIATE_SUPPLY_BOX, 1);
-						addExpAndSp(player, 9690791940L, 23257800);
-					}
-					else if (player.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2)
-					{
-						addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
-						giveItems(player, ADVANCED_SUPPLY_BOX, 1);
-						addExpAndSp(player, 14536187910L, 34886700);
-					}
-					qs.exitQuest(QuestType.DAILY, true);
-					htmltext = event;
-					break;
-				}
+				qs.setCond(2, true);
+				htmltext = event;
+				break;
 			}
+			case "31595-06a.htm":
+			{
+				qs.setCond(3, true);
+				htmltext = event;
+				break;
+			}
+			case "31595-07a.htm":
+			{
+				qs.setCond(3, true);
+				htmltext = event;
+				break;
+			}
+			case "31595-05b.htm":
+			{
+				qs.exitQuest(QuestType.DAILY, true);
+				addFactionPoints(player, Faction.BLACKBIRD_CLAN, 100);
+				giveItemRandomly(player, BASIC_SUPPLY_BOX, 1, 1, 0.9, false);
+				giveItemRandomly(player, INTERMEDIATE_SUPPLY_BOX, 1, 1, 0.4, false);
+				giveItemRandomly(player, ADVANCED_SUPPLY_BOX, 1, 1, 0.2, false);
+				addExpAndSp(player, 12113489880L, 12113460);
+				htmltext = event;
+				break;
+			}
+			case "31595-06b.htm":
+			{
+				qs.exitQuest(QuestType.DAILY, true);
+				addFactionPoints(player, Faction.BLACKBIRD_CLAN, 200);
+				giveItemRandomly(player, BASIC_SUPPLY_BOX, 1, 1, 0.4, false);
+				giveItemRandomly(player, INTERMEDIATE_SUPPLY_BOX, 1, 1, 0.9, false);
+				giveItemRandomly(player, ADVANCED_SUPPLY_BOX, 1, 1, 0.2, false);
+				addExpAndSp(player, 24226979760L, 24226920);
+				htmltext = event;
+				break;
+			}
+			case "31595-07b.htm":
+			{
+				qs.exitQuest(QuestType.DAILY, true);
+				addFactionPoints(player, Faction.BLACKBIRD_CLAN, 300);
+				giveItemRandomly(player, BASIC_SUPPLY_BOX, 1, 1, 0.2, false);
+				giveItemRandomly(player, INTERMEDIATE_SUPPLY_BOX, 1, 1, 0.5, false);
+				giveItemRandomly(player, ADVANCED_SUPPLY_BOX, 1, 1, 0.9, false);
+				giveItems(player, ADVANCED_SUPPLY_BOX, 1);
+				addExpAndSp(player, 36340469640L, 36340380);
+				htmltext = event;
+				break;
+			}
+			
 		}
 		return htmltext;
+		
 	}
 	
 	@Override
@@ -141,12 +173,37 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 				{
 					if (qs.isCond(1))
 					{
-						htmltext = "31595-05.html";
+						htmltext = "31595-04.htm";
 					}
-					else if (qs.isCond(2))
+					else if (qs.isCond(5))
 					{
-						htmltext = "31595-06.html";
+						htmltext = "31595-05b.htm";
+						onAdvEvent(htmltext, npc, player);
 					}
+					else if (qs.isCond(6))
+					{
+						htmltext = "31595-06b.htm";
+						onAdvEvent(htmltext, npc, player);
+					}
+					else if (qs.isCond(7))
+					{
+						htmltext = "31595-07b.htm";
+						onAdvEvent(htmltext, npc, player);
+					}
+					else if (qs.isCond(2) || qs.isCond(3) || qs.isCond(4))
+					{
+						htmltext = "31595-08.htm";
+					}
+					break;
+				}
+				case State.COMPLETED:
+				{
+					if (!qs.isNowAvailable())
+					{
+						htmltext = "31595-00a.htm";
+						break;
+					}
+					htmltext = "31595-01.htm";
 					break;
 				}
 			}
@@ -157,37 +214,72 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if (qs != null)
+		if (killer.isInParty())
 		{
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) == 0) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 300))
+			final L2Party party = killer.getParty();
+			final List<L2PcInstance> partyMember = party.getMembers();
+			
+			for (L2PcInstance singleMember : partyMember)
 			{
-				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 300)
+				QuestState qsPartyMember = getQuestState(singleMember, false);
+				double distance = npc.calculateDistance(singleMember, true, false);
+				if ((qsPartyMember != null) && (distance <= 1000))
 				{
-					qs.setCond(2, true);
+					if (qsPartyMember.isCond(2))
+					{
+						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+						{
+							qsPartyMember.setCond(5, true);
+						}
+						
+					}
+					if (qsPartyMember.isCond(3))
+					{
+						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+						{
+							qsPartyMember.setCond(6, true);
+						}
+						
+					}
+					if (qsPartyMember.isCond(4))
+					{
+						if (giveItemRandomly(singleMember, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+						{
+							qsPartyMember.setCond(7, true);
+						}
+					}
 				}
-				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 1) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 600))
-			{
-				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 600)
-				{
-					qs.setCond(2, true);
-				}
-				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			if ((killer.getFactionLevel(Faction.BLACKBIRD_CLAN) >= 2) && (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) < 900))
-			{
-				if (getQuestItemsCount(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS) == 900)
-				{
-					qs.setCond(2, true);
-				}
-				giveItems(killer, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}
+		else
+		{
+			final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
+			if (qs != null)
+			{
+				if (qs.isCond(2))
+				{
+					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+					{
+						qs.setCond(5, true);
+					}
+				}
+				if (qs.isCond(3))
+				{
+					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+					{
+						qs.setCond(6, true);
+					}
+				}
+				if (qs.isCond(4))
+				{
+					if (giveItemRandomly(killer, npc, HIGH_GRADE_FRAGMENT_OF_CHAOS, 1, 300, 1, true))
+					{
+						qs.setCond(7, true);
+					}
+				}
+			}
+		}
+		
 		return super.onKill(npc, killer, isSummon);
 	}
 }
