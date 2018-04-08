@@ -348,6 +348,7 @@ import quests.Q10541_TrainLikeTheRealThing.Q10541_TrainLikeTheRealThing;
 import quests.Q10542_SearchingForNewPower.Q10542_SearchingForNewPower;
 import quests.Q10543_SheddingWeight.Q10543_SheddingWeight;
 import quests.Q10544_SeekerSupplies.Q10544_SeekerSupplies;
+import quests.Q10658_MakkumInTheDimension.Q10658_MakkumInTheDimension;
 import quests.Q10701_TheRoadToDestruction.Q10701_TheRoadToDestruction;
 import quests.Q10702_TheRoadToInfinity.Q10702_TheRoadToInfinity;
 import quests.Q10703_BottleOfIstinasSoul.Q10703_BottleOfIstinasSoul;
@@ -781,6 +782,7 @@ public class QuestMasterHandler
 		Q10542_SearchingForNewPower.class,
 		Q10543_SheddingWeight.class,
 		Q10544_SeekerSupplies.class,
+		Q10658_MakkumInTheDimension.class,
 		Q10701_TheRoadToDestruction.class,
 		Q10702_TheRoadToInfinity.class,
 		Q10703_BottleOfIstinasSoul.class,

@@ -5498,14 +5498,26 @@
 		</drop_lists>
 	</npc>
 	<npc id="26195" level="101" type="L2RaidBoss" name="Dimensional Makkum">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16780" level="2" />
+			<skill name="Skill02_ID" id="16779" level="1" />
+			<skill name="Skill03_ID" id="16866" level="1" />
+		</parameters>
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="941348280" sp="1882696" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4100000" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="2200000.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="37220.231122922" magical="6304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1680.3191489362" magical="1133.5047930793" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
 			<speed>
-				<walk ground="60" />
-				<run ground="240" />
+				<walk ground="60.0" />
+				<run ground="210.0" />
 			</speed>
 		</stats>
 		<status attackable="false" />
@@ -5521,7 +5533,10 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->		
+			<skill id="16780" level="2" /> <!-- Bloody Circle -->
+			<skill id="16779" level="1" /> <!-- Black Hearts Rage -->
+			<skill id="16866" level="1" /> <!-- Sentence of Death -->
 		</skill_list>
 		<drop_lists>
 			<drop>

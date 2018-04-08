@@ -2941,4 +2941,82 @@
 			<height normal="100" />
 		</collision>
 	</npc>
+	<npc id="26195" level="101" type="L2RaidBoss" name="Dimensional Makkum">
+		<parameters>
+			<param name="IsAggressive" value="1" />
+			<skill name="Skill01_ID" id="16780" level="2" />
+			<skill name="Skill02_ID" id="16779" level="1" />
+			<skill name="Skill03_ID" id="16866" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="941348280" sp="1882696" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2200000.0" hpRegen="7.5" mp="24308.0" mpRegen="2.7" />
+			<attack physical="37220.231122922" magical="6304.9036091231" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1680.3191489362" magical="1133.5047930793" />
+			<attribute>
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+				<attack type="DARK" value="430" />
+			</attribute>
+			<speed>
+				<walk ground="60.0" />
+				<run ground="210.0" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="68" />
+		</collision>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->		
+			<skill id="16780" level="2" /> <!-- Bloody Circle -->
+			<skill id="16779" level="1" /> <!-- Black Hearts Rage -->
+			<skill id="16866" level="1" /> <!-- Sentence of Death -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="17428" min="1" max="1" chance="2.206" /> <!-- Helios Dual Dagger -->
+				<item id="17416" min="1" max="1" chance="2.192" /> <!-- Helios Shaper -->
+				<item id="17423" min="1" max="1" chance="2.186" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="2.181" /> <!-- Helios Buster -->
+				<item id="17420" min="1" max="1" chance="2.167" /> <!-- Helios Fighter -->
+				<item id="17426" min="1" max="1" chance="2.1605" /> <!-- Helios Retributer -->
+				<item id="17417" min="1" max="1" chance="2.1425" /> <!-- Helios Cutter -->
+				<item id="17419" min="1" max="1" chance="2.139" /> <!-- Helios Avenger -->
+				<item id="17425" min="1" max="1" chance="2.135" /> <!-- Helios Caster -->
+				<item id="17421" min="1" max="1" chance="2.133" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="1" chance="2.132" /> <!-- Helios Thrower -->
+				<item id="17427" min="1" max="1" chance="2.1265" /> <!-- Helios Dualsword -->
+				<item id="17418" min="1" max="1" chance="2.11" /> <!-- Helios Slasher -->
+				<item id="17429" min="1" max="1" chance="2.083" /> <!-- Helios Dual Blunt Weapon -->
+				<item id="17526" min="1" max="1" chance="33.91" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="33.39" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="10.013" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36164" min="1" max="1" chance="10.006" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="46493" min="1" max="1" chance="7.549" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46448" min="1" max="1" chance="7.523" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="7.477" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="7.467" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="7.461" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="19447" min="1" max="1" chance="5.033" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="36163" min="1" max="1" chance="4.969" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="46509" min="1" max="1" chance="2.563" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="2.546" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="2.531" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="2.492" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="35569" min="1" max="1" chance="2.466" /> <!-- Bloody Eternal Enhancement Stone -->
+				<item id="46464" min="1" max="1" chance="2.451" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="35568" min="1" max="1" chance="0.75" /> <!-- Bloody Helios Enhancement Stone -->
+			</drop>
+		</drop_lists>
+	</npc>
 </list>
