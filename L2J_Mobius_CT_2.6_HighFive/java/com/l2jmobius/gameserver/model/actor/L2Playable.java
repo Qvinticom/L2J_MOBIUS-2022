@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.model.actor;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.PlayableStat;
@@ -155,10 +156,7 @@ public abstract class L2Playable extends L2Character
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		broadcastStatusUpdate();
 		
-		if (getWorldRegion() != null)
-		{
-			getWorldRegion().onDeath(this);
-		}
+		ZoneManager.getInstance().getRegion(this).onDeath(this);
 		
 		// Notify Quest of L2Playable's death
 		final L2PcInstance actingPlayer = getActingPlayer();

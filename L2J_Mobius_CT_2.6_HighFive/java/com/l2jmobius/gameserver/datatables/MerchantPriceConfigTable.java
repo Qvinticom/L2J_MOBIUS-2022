@@ -33,6 +33,7 @@ import org.xml.sax.SAXException;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.InstanceListManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 
@@ -58,7 +59,7 @@ public class MerchantPriceConfigTable implements InstanceListManager
 	{
 		for (MerchantPriceConfig mpc : _mpcs.values())
 		{
-			if ((npc.getWorldRegion() != null) && npc.getWorldRegion().containsZone(mpc.getZoneId()))
+			if (ZoneManager.getInstance().getRegion(npc).getZones().containsKey(mpc.getZoneId()))
 			{
 				return mpc;
 			}

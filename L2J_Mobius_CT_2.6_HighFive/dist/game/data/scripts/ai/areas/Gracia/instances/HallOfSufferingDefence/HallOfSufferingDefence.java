@@ -395,10 +395,10 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		// Notify L2Character AI
 		boss.getAI().notifyEvent(CtrlEvent.EVT_DEAD);
 		
-		if (boss.getWorldRegion() != null)
-		{
-			boss.getWorldRegion().onDeath(boss);
-		}
+		// if (boss.getWorldRegion() != null)
+		// {
+		// boss.getWorldRegion().onDeath(boss);
+		// }
 	}
 	
 	@Override

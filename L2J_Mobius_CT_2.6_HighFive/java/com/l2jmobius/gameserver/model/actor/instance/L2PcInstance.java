@@ -131,7 +131,6 @@ import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.L2Request;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.Macro;
 import com.l2jmobius.gameserver.model.MacroList;
@@ -1699,16 +1698,24 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// This function is called too often from movement code
-		if (!force)
+		if (force)
+		{
+			_zoneValidateCounter = 4;
+		}
+		else
 		{
 			_zoneValidateCounter--;
-			if (_zoneValidateCounter >= 0)
+			if (_zoneValidateCounter < 0)
+			{
+				_zoneValidateCounter = 4;
+			}
+			else
 			{
 				return;
 			}
 		}
-		_zoneValidateCounter = 4;
-		getWorldRegion().revalidateZones(this);
+		
+		ZoneManager.getInstance().getRegion(this).revalidateZones(this);
 		
 		if (Config.ALLOW_WATER)
 		{
@@ -11224,11 +11231,7 @@ public final class L2PcInstance extends L2Playable
 		getEffectList().stopAllToggles();
 		
 		// Remove from world regions zones
-		final L2WorldRegion oldRegion = getWorldRegion();
-		if (oldRegion != null)
-		{
-			oldRegion.removeFromZones(this);
-		}
+		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
 		// Remove the L2PcInstance from the world
 		try

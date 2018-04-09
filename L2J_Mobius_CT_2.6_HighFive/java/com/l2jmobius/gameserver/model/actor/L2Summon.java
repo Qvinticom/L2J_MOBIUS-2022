@@ -31,11 +31,11 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
@@ -53,6 +53,7 @@ import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo.SummonInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -417,12 +418,9 @@ public abstract class L2Summon extends L2Playable
 			}
 			
 			stopAllEffects();
-			final L2WorldRegion oldRegion = getWorldRegion();
+			final ZoneRegion oldRegion = ZoneManager.getInstance().getRegion(this);
 			decayMe();
-			if (oldRegion != null)
-			{
-				oldRegion.removeFromZones(this);
-			}
+			oldRegion.removeFromZones(this);
 			
 			setTarget(null);
 			if (owner != null)

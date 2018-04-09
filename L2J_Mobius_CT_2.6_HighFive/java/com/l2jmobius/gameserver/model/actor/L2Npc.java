@@ -50,10 +50,10 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2ClanHallManagerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoormenInstance;
@@ -1345,14 +1345,10 @@ public class L2Npc extends L2Character
 			getSkillChannelized().abortChannelization();
 		}
 		
-		final L2WorldRegion oldRegion = getWorldRegion();
-		if (oldRegion != null)
-		{
-			oldRegion.removeFromZones(this);
-		}
+		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
 		// Remove L2Object object from _allObjects of L2World
-		L2World.getInstance().removeObject(this);
+		// L2World.getInstance().removeObject(this);
 		
 		return super.deleteMe();
 	}

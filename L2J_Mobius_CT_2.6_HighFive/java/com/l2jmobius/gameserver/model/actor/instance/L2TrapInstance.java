@@ -23,6 +23,7 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.TrapAction;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -416,11 +417,7 @@ public final class L2TrapInstance extends L2Npc
 		
 		if (isSpawned() && !isDead())
 		{
-			if (getWorldRegion() != null)
-			{
-				getWorldRegion().removeFromZones(this);
-			}
-			
+			ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 			deleteMe();
 		}
 	}

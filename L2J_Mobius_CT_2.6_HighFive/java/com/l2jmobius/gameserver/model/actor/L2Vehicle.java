@@ -25,8 +25,8 @@ import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -391,7 +392,7 @@ public abstract class L2Vehicle extends L2Character
 			_log.log(Level.SEVERE, "Failed oustPlayers().", e);
 		}
 		
-		final L2WorldRegion oldZoneRegion = getWorldRegion();
+		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
 		
 		try
 		{
@@ -402,13 +403,10 @@ public abstract class L2Vehicle extends L2Character
 			_log.log(Level.SEVERE, "Failed decayMe().", e);
 		}
 		
-		if (oldZoneRegion != null)
-		{
-			oldZoneRegion.removeFromZones(this);
-		}
+		oldZoneRegion.removeFromZones(this);
 		
 		// Remove L2Object object from _allObjects of L2World
-		L2World.getInstance().removeObject(this);
+		// L2World.getInstance().removeObject(this);
 		
 		return super.deleteMe();
 	}

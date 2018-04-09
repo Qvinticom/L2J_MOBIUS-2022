@@ -16,9 +16,7 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
@@ -29,12 +27,8 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Vehicle;
-import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.zone.L2ZoneType;
-import com.l2jmobius.gameserver.model.zone.type.L2PeaceZone;
 
 public final class L2WorldRegion
 {
@@ -47,7 +41,6 @@ public final class L2WorldRegion
 	private final int _regionZ;
 	private boolean _active = false;
 	private ScheduledFuture<?> _neighborsTask = null;
-	private final List<L2ZoneType> _zones;
 	
 	public L2WorldRegion(int regionX, int regionY, int regionZ)
 	{
@@ -57,104 +50,6 @@ public final class L2WorldRegion
 		
 		// default a newly initialized region to inactive, unless always on is specified
 		_active = Config.GRIDS_ALWAYS_ON;
-		_zones = new ArrayList<>();
-	}
-	
-	public List<L2ZoneType> getZones()
-	{
-		return _zones;
-	}
-	
-	public void addZone(L2ZoneType zone)
-	{
-		_zones.add(zone);
-	}
-	
-	public void removeZone(L2ZoneType zone)
-	{
-		_zones.remove(zone);
-	}
-	
-	public void revalidateZones(L2Character character)
-	{
-		// do NOT update the world region while the character is still in the process of teleporting
-		// Once the teleport is COMPLETED, revalidation occurs safely, at that time.
-		
-		if (character.isTeleporting())
-		{
-			return;
-		}
-		
-		for (L2ZoneType z : getZones())
-		{
-			if (z != null)
-			{
-				z.revalidateInZone(character);
-			}
-		}
-	}
-	
-	public void removeFromZones(L2Character character)
-	{
-		for (L2ZoneType z : getZones())
-		{
-			if (z != null)
-			{
-				z.removeCharacter(character);
-			}
-		}
-	}
-	
-	public boolean containsZone(int zoneId)
-	{
-		for (L2ZoneType z : getZones())
-		{
-			if (z.getId() == zoneId)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean checkEffectRangeInsidePeaceZone(Skill skill, int x, int y, int z)
-	{
-		final int range = skill.getEffectRange();
-		final int up = y + range;
-		final int down = y - range;
-		final int left = x + range;
-		final int right = x - range;
-		
-		for (L2ZoneType e : getZones())
-		{
-			if ((e instanceof L2PeaceZone) && (e.isInsideZone(x, up, z) || e.isInsideZone(x, down, z) || e.isInsideZone(left, y, z) || e.isInsideZone(right, y, z) || e.isInsideZone(x, y, z)))
-			{
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public void onDeath(L2Character character)
-	{
-		for (L2ZoneType z : getZones())
-		{
-			if (z != null)
-			{
-				z.onDieInside(character);
-			}
-		}
-	}
-	
-	public void onRevive(L2Character character)
-	{
-		for (L2ZoneType z : getZones())
-		{
-			if (z != null)
-			{
-				z.onReviveInside(character);
-			}
-		}
 	}
 	
 	/** Task of AI notification */

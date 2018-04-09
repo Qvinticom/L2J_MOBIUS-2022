@@ -150,6 +150,16 @@ public final class GameServer
 	private static GameServer INSTANCE;
 	public static final Calendar dateTimeServerStarted = Calendar.getInstance();
 	
+	public long getUsedMemoryMB()
+	{
+		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
+	}
+	
+	public DeadLockDetector getDeadLockDetectorThread()
+	{
+		return _deadDetectThread;
+	}
+	
 	public GameServer() throws Exception
 	{
 		final long serverLoadStart = System.currentTimeMillis();
@@ -450,16 +460,6 @@ public final class GameServer
 		DatabaseFactory.getInstance();
 		
 		INSTANCE = new GameServer();
-	}
-	
-	public long getUsedMemoryMB()
-	{
-		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
-	}
-	
-	public DeadLockDetector getDeadLockDetectorThread()
-	{
-		return _deadDetectThread;
 	}
 	
 	public static void printSection(String s)

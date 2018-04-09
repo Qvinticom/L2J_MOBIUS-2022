@@ -55,6 +55,7 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -123,6 +124,7 @@ import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
@@ -481,13 +483,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void onDecay()
 	{
-		final L2WorldRegion reg = getWorldRegion();
-		if (reg != null)
-		{
-			reg.removeFromZones(this);
-		}
-		
-		decayMe(); // Sets world region to null
+		decayMe();
+		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 	}
 	
 	@Override
@@ -1989,21 +1986,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// prevent casting signets to peace zone
 		if (skill.isChanneling() && (skill.getChannelingSkillId() > 0))
 		{
-			final L2WorldRegion region = getWorldRegion();
-			if (region == null)
-			{
-				return false;
-			}
+			final ZoneRegion zoneRegion = ZoneManager.getInstance().getRegion(this);
 			boolean canCast = true;
 			if ((skill.getTargetType() == L2TargetType.GROUND) && isPlayer())
 			{
-				final Location wp = getActingPlayer().getCurrentSkillWorldPosition();
-				if (!region.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
+				Location wp = getActingPlayer().getCurrentSkillWorldPosition();
+				if (!zoneRegion.checkEffectRangeInsidePeaceZone(skill, wp.getX(), wp.getY(), wp.getZ()))
 				{
 					canCast = false;
 				}
 			}
-			else if (!region.checkEffectRangeInsidePeaceZone(skill, getX(), getY(), getZ()))
+			else if (!zoneRegion.checkEffectRangeInsidePeaceZone(skill, getX(), getY(), getZ()))
 			{
 				canCast = false;
 			}
@@ -2413,10 +2406,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			getAI().notifyEvent(CtrlEvent.EVT_DEAD);
 		}
 		
-		if (getWorldRegion() != null)
-		{
-			getWorldRegion().onDeath(this);
-		}
+		ZoneManager.getInstance().getRegion(this).onDeath(this);
 		
 		getAttackByList().clear();
 		
@@ -2424,16 +2414,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getSkillChannelized().abortChannelization();
 		}
-		
-		// karma reduction tempfix
-		// if (isMonster() && (killer != null) && killer.isPlayer() && (killer.getActingPlayer().getKarma() > 0))
-		// {
-		// if (killer.getLevel() >= (getLevel() - 5))
-		// {
-		// killer.getActingPlayer().setKarma(killer.getActingPlayer().getKarma() < 50 ? 0 : (int) (killer.getActingPlayer().getKarma() - (killer.getActingPlayer().getKarma() / 8)));
-		// }
-		// }
-		
 		return true;
 	}
 	
@@ -2487,10 +2467,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Start broadcast status
 			broadcastPacket(new Revive(this));
-			if (getWorldRegion() != null)
-			{
-				getWorldRegion().onRevive(this);
-			}
+			
+			ZoneManager.getInstance().getRegion(this).onRevive(this);
 		}
 		else
 		{
@@ -2519,8 +2497,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (_ai == null)
 				{
-					// Return the new AI within the synchronized block
-					// to avoid being nulled by other threads
 					return _ai = initAI();
 				}
 			}
@@ -4023,7 +3999,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		getWorldRegion().revalidateZones(this);
+		ZoneManager.getInstance().getRegion(this).revalidateZones(this);
 	}
 	
 	/**

@@ -460,22 +460,6 @@ public final class ZoneManager implements IGameXmlReader
 	}
 	
 	/**
-	 * Returns all zones registered with the ZoneManager. To minimize iteration processing retrieve zones from L2WorldRegion for a specific location instead.
-	 * @return zones
-	 * @see #getAllZones(Class)
-	 */
-	// @Deprecated
-	// public Collection<L2ZoneType> getAllZones()
-	// {
-	// final List<L2ZoneType> zones = new ArrayList<>();
-	// for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
-	// {
-	// zones.addAll(map.values());
-	// }
-	// return zones;
-	// }
-	
-	/**
 	 * Return all zones by class type.
 	 * @param <T> the generic type
 	 * @param zoneType Zone class

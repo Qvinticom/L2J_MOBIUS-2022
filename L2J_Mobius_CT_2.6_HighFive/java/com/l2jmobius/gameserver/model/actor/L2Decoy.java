@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.actor;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -130,10 +131,7 @@ public abstract class L2Decoy extends L2Character
 		{
 			return;
 		}
-		if (getWorldRegion() != null)
-		{
-			getWorldRegion().removeFromZones(this);
-		}
+		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		owner.setDecoy(null);
 		decayMe();
 	}
