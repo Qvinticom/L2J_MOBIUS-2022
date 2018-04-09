@@ -429,7 +429,7 @@ public class Duel
 			// Open arena doors
 			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(getDueldInstanceId()).getDoors())
 			{
-				if ((door != null) && !door.getOpen())
+				if ((door != null) && !door.isOpen())
 				{
 					door.openMe();
 				}
@@ -609,7 +609,7 @@ public class Duel
 		// Remove Olympiad buffers
 		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getDueldInstanceId()).getNpcs())
 		{
-			if ((buffer instanceof L2OlympiadManagerInstance) && buffer.isVisible())
+			if ((buffer instanceof L2OlympiadManagerInstance) && buffer.isSpawned())
 			{
 				buffer.decayMe();
 			}

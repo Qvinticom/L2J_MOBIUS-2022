@@ -409,7 +409,6 @@ public final class Instance
 					region.removeVisibleObject(door);
 				}
 				
-				door.getKnownList().removeAllKnownObjects();
 				L2World.getInstance().removeObject(door);
 			}
 		}

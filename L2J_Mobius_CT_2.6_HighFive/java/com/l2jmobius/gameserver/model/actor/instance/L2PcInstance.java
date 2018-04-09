@@ -155,7 +155,6 @@ import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.L2Vehicle;
 import com.l2jmobius.gameserver.model.actor.appearance.PcAppearance;
-import com.l2jmobius.gameserver.model.actor.knownlist.PcKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.actor.status.PcStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
@@ -1159,18 +1158,6 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public final PcKnownList getKnownList()
-	{
-		return (PcKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new PcKnownList(this));
-	}
-	
-	@Override
 	public final PcStat getStat()
 	{
 		return (PcStat) super.getStat();
@@ -1692,16 +1679,14 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(new RelationChanged(getSummon(), getRelation(this), false));
 		}
 		
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		
-		for (L2PcInstance target : plrs)
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, target ->
 		{
 			target.sendPacket(new RelationChanged(this, getRelation(target), isAutoAttackable(target)));
 			if (hasSummon())
 			{
 				target.sendPacket(new RelationChanged(getSummon(), getRelation(target), isAutoAttackable(target)));
 			}
-		}
+		});
 	}
 	
 	@Override
@@ -1951,20 +1936,13 @@ public final class L2PcInstance extends L2Playable
 		}
 		if ((_karma == 0) && (karma > 0))
 		{
-			final Collection<L2Object> objs = getKnownList().getKnownObjects().values();
-			
-			for (L2Object object : objs)
+			L2World.getInstance().forEachVisibleObject(this, L2GuardInstance.class, object ->
 			{
-				if (!(object instanceof L2GuardInstance))
+				if (object.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{
-					continue;
+					object.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 				}
-				
-				if (((L2GuardInstance) object).getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
-				{
-					((L2GuardInstance) object).getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
-				}
-			}
+			});
 		}
 		else if ((_karma > 0) && (karma == 0))
 		{
@@ -4120,7 +4098,7 @@ public final class L2PcInstance extends L2Playable
 	public final void broadcastCharInfo()
 	{
 		final CharInfo charInfo = new CharInfo(this, false);
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
 			if (isVisibleFor(player))
 			{
@@ -4133,7 +4111,7 @@ public final class L2PcInstance extends L2Playable
 					player.sendPacket(charInfo);
 				}
 			}
-		}
+		});
 	}
 	
 	public final void broadcastTitleInfo()
@@ -4155,27 +4133,28 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(mov);
 		}
 		
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if ((player == null) || !isVisibleFor(player))
+			if (!isVisibleFor(player))
 			{
-				continue;
+				return;
 			}
 			player.sendPacket(mov);
 			if (mov instanceof CharInfo)
 			{
 				final int relation = getRelation(player);
-				final Integer oldrelation = getKnownList().getKnownRelations().get(player.getObjectId());
+				Integer oldrelation = getKnownRelations().get(player.getObjectId());
 				if ((oldrelation != null) && (oldrelation != relation))
 				{
 					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable(player)));
 					if (hasSummon())
 					{
 						player.sendPacket(new RelationChanged(getSummon(), relation, isAutoAttackable(player)));
+						// getKnownRelations().put(player.getObjectId(), relation);
 					}
 				}
 			}
-		}
+		});
 	}
 	
 	@Override
@@ -4186,30 +4165,29 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(mov);
 		}
 		
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if (player == null)
+			if (!isVisibleFor(player) || (calculateDistance(player, true, false) >= radiusInKnownlist))
 			{
-				continue;
+				return;
 			}
-			if (isInsideRadius(player, radiusInKnownlist, false, false))
+			
+			player.sendPacket(mov);
+			if (mov instanceof CharInfo)
 			{
-				player.sendPacket(mov);
-				if (mov instanceof CharInfo)
+				final int relation = getRelation(player);
+				final Integer oldrelation = getKnownRelations().get(player.getObjectId());
+				if ((oldrelation != null) && (oldrelation != relation))
 				{
-					final int relation = getRelation(player);
-					final Integer oldrelation = getKnownList().getKnownRelations().get(player.getObjectId());
-					if ((oldrelation != null) && (oldrelation != relation))
+					player.sendPacket(new RelationChanged(this, relation, isAutoAttackable(player)));
+					if (hasSummon())
 					{
-						player.sendPacket(new RelationChanged(this, relation, isAutoAttackable(player)));
-						if (hasSummon())
-						{
-							player.sendPacket(new RelationChanged(getSummon(), relation, isAutoAttackable(player)));
-						}
+						player.sendPacket(new RelationChanged(getSummon(), relation, isAutoAttackable(player)));
 					}
+					getKnownRelations().put(player.getObjectId(), relation);
 				}
 			}
-		}
+		});
 	}
 	
 	/**
@@ -4374,7 +4352,7 @@ public final class L2PcInstance extends L2Playable
 		synchronized (target)
 		{
 			// Check if the target to pick up is visible
-			if (!target.isVisible())
+			if (!target.isSpawned())
 			{
 				// Send a Server->Client packet ActionFailed to this L2PcInstance
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -4546,7 +4524,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0))
 		{
-			for (L2Character cha : getKnownList().getKnownCharacters())
+			for (L2Character cha : L2World.getInstance().getVisibleObjects(this, L2Character.class))
 			{
 				if (Util.checkIfInRange(cha.getMinShopDistance(), this, cha, true))
 				{
@@ -4749,7 +4727,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// Check if the new target is visible
-			if ((newTarget != null) && !isInParty && !newTarget.isVisible())
+			if ((newTarget != null) && !isInParty && !newTarget.isSpawned())
 			{
 				newTarget = null;
 			}
@@ -6548,15 +6526,14 @@ public final class L2PcInstance extends L2Playable
 	{
 		sendPacket(new UserInfo(this));
 		sendPacket(new ExBrExtraUserInfo(this));
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
 			player.sendPacket(new RelationChanged(this, getRelation(player), isAutoAttackable(player)));
 			if (hasSummon())
 			{
 				player.sendPacket(new RelationChanged(getSummon(), getRelation(player), isAutoAttackable(player)));
 			}
-		}
+		});
 	}
 	
 	/**
@@ -6568,14 +6545,14 @@ public final class L2PcInstance extends L2Playable
 		su.addAttribute(StatusUpdate.KARMA, getKarma());
 		sendPacket(su);
 		
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
 			player.sendPacket(new RelationChanged(this, getRelation(player), isAutoAttackable(player)));
 			if (hasSummon())
 			{
 				player.sendPacket(new RelationChanged(getSummon(), getRelation(player), isAutoAttackable(player)));
 			}
-		}
+		});
 	}
 	
 	/**
@@ -11451,16 +11428,6 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		// Remove all L2Object from _knownObjects and _knownPlayer of the L2Character then cancel Attak or Cast and notify AI
-		try
-		{
-			getKnownList().removeAllKnownObjects();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "deleteMe()", e);
-		}
-		
 		if (getClanId() > 0)
 		{
 			getClan().broadcastToOtherOnlineMembers(new PledgeShowMemberListUpdate(this), this);
@@ -13020,7 +12987,7 @@ public final class L2PcInstance extends L2Playable
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
-			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
+			Integer oldrelation = getKnownRelations().get(activeChar.getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation1))
 			{
 				activeChar.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(activeChar)));
@@ -13029,7 +12996,7 @@ public final class L2PcInstance extends L2Playable
 					activeChar.sendPacket(new RelationChanged(getSummon(), relation1, isAutoAttackable(activeChar)));
 				}
 			}
-			oldrelation = activeChar.getKnownList().getKnownRelations().get(getObjectId());
+			oldrelation = activeChar.getKnownRelations().get(getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation2))
 			{
 				sendPacket(new RelationChanged(activeChar, relation2, activeChar.isAutoAttackable(this)));
@@ -13047,7 +13014,7 @@ public final class L2PcInstance extends L2Playable
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
-			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
+			Integer oldrelation = getKnownRelations().get(activeChar.getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation1))
 			{
 				activeChar.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(activeChar)));
@@ -13056,7 +13023,7 @@ public final class L2PcInstance extends L2Playable
 					activeChar.sendPacket(new RelationChanged(getSummon(), relation1, isAutoAttackable(activeChar)));
 				}
 			}
-			oldrelation = activeChar.getKnownList().getKnownRelations().get(getObjectId());
+			oldrelation = activeChar.getKnownRelations().get(getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation2))
 			{
 				sendPacket(new RelationChanged(activeChar, relation2, activeChar.isAutoAttackable(this)));
@@ -13073,7 +13040,7 @@ public final class L2PcInstance extends L2Playable
 			activeChar.sendPacket(new ExBrExtraUserInfo(this));
 			final int relation1 = getRelation(activeChar);
 			final int relation2 = activeChar.getRelation(this);
-			Integer oldrelation = getKnownList().getKnownRelations().get(activeChar.getObjectId());
+			Integer oldrelation = getKnownRelations().get(activeChar.getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation1))
 			{
 				activeChar.sendPacket(new RelationChanged(this, relation1, isAutoAttackable(activeChar)));
@@ -13082,7 +13049,7 @@ public final class L2PcInstance extends L2Playable
 					activeChar.sendPacket(new RelationChanged(getSummon(), relation1, isAutoAttackable(activeChar)));
 				}
 			}
-			oldrelation = activeChar.getKnownList().getKnownRelations().get(getObjectId());
+			oldrelation = activeChar.getKnownRelations().get(getObjectId());
 			if ((oldrelation != null) && (oldrelation != relation2))
 			{
 				sendPacket(new RelationChanged(activeChar, relation2, activeChar.isAutoAttackable(this)));

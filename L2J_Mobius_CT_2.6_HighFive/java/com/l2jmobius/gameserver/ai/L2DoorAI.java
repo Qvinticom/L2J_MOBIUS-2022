@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.ai;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DefenderInstance;
@@ -164,13 +165,13 @@ public class L2DoorAI extends L2CharacterAI
 		@Override
 		public void run()
 		{
-			for (L2DefenderInstance guard : _door.getKnownDefenders())
+			L2World.getInstance().forEachVisibleObject(_door, L2DefenderInstance.class, guard ->
 			{
-				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanHelpRange(), false, true) && (Math.abs(_attacker.getZ() - guard.getZ()) < 200))
+				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanHelpRange(), true, true))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}
-			}
+			});
 		}
 	}
 }

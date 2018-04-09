@@ -17,13 +17,13 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -136,18 +135,11 @@ public class CorpseClan implements ITargetTypeHandler
 			
 			targetList.add(activeChar);
 			
-			final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-			final int maxTargets = skill.getAffectLimit();
-			for (L2Object newTarget : objs)
+			for (L2Npc newTarget : L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, skill.getCastRange()))
 			{
-				if (newTarget.isNpc() && npc.isInMyClan((L2Npc) newTarget))
+				if (npc.isInMyClan(newTarget))
 				{
-					if (!Util.checkIfInRange(skill.getCastRange(), activeChar, newTarget, true))
-					{
-						continue;
-					}
-					
-					if (targetList.size() >= maxTargets)
+					if (targetList.size() >= skill.getAffectLimit())
 					{
 						break;
 					}

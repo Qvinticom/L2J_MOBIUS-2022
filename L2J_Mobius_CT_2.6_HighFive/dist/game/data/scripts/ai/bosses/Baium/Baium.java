@@ -23,11 +23,13 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -333,9 +335,9 @@ public final class Baium extends AbstractNpcAI
 					else
 					{
 						boolean found = false;
-						for (L2Character creature : mob.getKnownList().getKnownCharactersInRadius(1000))
+						for (L2Playable creature : L2World.getInstance().getVisibleObjects(mob, L2Playable.class, 1000))
 						{
-							if ((creature != null) && creature.isPlayable() && zone.isInsideZone(creature) && !creature.isDead())
+							if (zone.isInsideZone(creature) && !creature.isDead())
 							{
 								if (mob.getTarget() != creature)
 								{
@@ -775,9 +777,9 @@ public final class Baium extends AbstractNpcAI
 	
 	private L2PcInstance getRandomPlayer(L2Npc npc)
 	{
-		for (L2Character creature : npc.getKnownList().getKnownCharactersInRadius(2000))
+		for (L2Character creature : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 2000))
 		{
-			if ((creature != null) && creature.isPlayer() && zone.isInsideZone(creature) && !creature.isDead())
+			if ((creature != null) && zone.isInsideZone(creature) && !creature.isDead())
 			{
 				return (L2PcInstance) creature;
 			}

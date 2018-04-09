@@ -90,7 +90,7 @@ public final class OpenDoor extends AbstractEffect
 			return;
 		}
 		
-		if ((Rnd.get(100) < _chance) && !door.getOpen())
+		if ((Rnd.get(100) < _chance) && !door.isOpen())
 		{
 			door.openMe();
 		}

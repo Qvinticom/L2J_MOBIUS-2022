@@ -23,7 +23,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
-import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.BypassHandler;
@@ -280,8 +279,8 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				{
 					if (bypassOriginId > 0)
 					{
-						final L2Object bypassOrigin = activeChar.getKnownList().getKnownObjects().get(bypassOriginId);
-						if ((bypassOrigin != null) && bypassOrigin.isInstanceTypes(InstanceType.L2Character))
+						L2Object bypassOrigin = L2World.getInstance().findObject(bypassOriginId);
+						if ((bypassOrigin != null) && bypassOrigin.isCharacter())
 						{
 							handler.useBypass(_command, activeChar, (L2Character) bypassOrigin);
 						}

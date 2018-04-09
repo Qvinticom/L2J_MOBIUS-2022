@@ -21,6 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -41,27 +42,27 @@ public class Ground implements ITargetTypeHandler
 		final int maxTargets = skill.getAffectLimit();
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		
-		for (L2Character character : activeChar.getKnownList().getKnownCharacters())
+		L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
 		{
 			if ((character != null) && character.isInsideRadius(player.getCurrentSkillWorldPosition(), skill.getAffectRange(), false, false))
 			{
 				if (!Skill.checkForAreaOffensiveSkills(activeChar, character, skill, srcInArena))
 				{
-					continue;
+					return;
 				}
 				
 				if (character.isDoor())
 				{
-					continue;
+					return;
 				}
 				
 				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
-					break;
+					return;
 				}
 				targetList.add(character);
 			}
-		}
+		});
 		
 		if (targetList.isEmpty())
 		{

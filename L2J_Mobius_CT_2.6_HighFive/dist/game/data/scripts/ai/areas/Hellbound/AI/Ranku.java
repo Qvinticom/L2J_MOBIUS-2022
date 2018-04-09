@@ -16,10 +16,12 @@
  */
 package ai.areas.Hellbound.AI;
 
+import java.util.List;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -57,8 +59,8 @@ public final class Ranku extends AbstractNpcAI
 			{
 				if ((minion != null) && !minion.isDead() && MY_TRACKING_SET.contains(minion.getObjectId()))
 				{
-					final L2PcInstance[] players = minion.getKnownList().getKnownPlayers().values().toArray(new L2PcInstance[minion.getKnownList().getKnownPlayers().size()]);
-					final L2PcInstance killer = players[getRandom(players.length)];
+					final List<L2PcInstance> players = L2World.getInstance().getVisibleObjects(minion, L2PcInstance.class);
+					final L2PcInstance killer = players.get(getRandom(players.size()));
 					minion.reduceCurrentHp(minion.getMaxHp() / 100, killer, null);
 				}
 			}

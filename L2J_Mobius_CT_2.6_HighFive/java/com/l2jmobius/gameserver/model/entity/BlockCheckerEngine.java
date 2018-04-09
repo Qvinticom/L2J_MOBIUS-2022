@@ -584,7 +584,7 @@ public final class BlockCheckerEngine
 			for (L2ItemInstance item : _drops)
 			{
 				// a player has it, it will be deleted later
-				if (!item.isVisible() || (item.getOwnerId() != 0))
+				if (!item.isSpawned() || (item.getOwnerId() != 0))
 				{
 					continue;
 				}

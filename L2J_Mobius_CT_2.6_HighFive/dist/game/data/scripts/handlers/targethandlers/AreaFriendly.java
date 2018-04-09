@@ -17,14 +17,13 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
@@ -70,25 +69,20 @@ public class AreaFriendly implements ITargetTypeHandler
 		if (target != null)
 		{
 			final int maxTargets = skill.getAffectLimit();
-			final Collection<L2Character> objs = target.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
-			
-			// TODO: Chain Heal - The recovery amount decreases starting from the most injured person.
-			Collections.sort(targetList, new CharComparator());
-			
-			for (L2Character obj : objs)
+			L2World.getInstance().forEachVisibleObjectInRange(target, L2Character.class, skill.getAffectRange(), obj ->
 			{
 				if (!checkTarget(player, obj) || (obj == activeChar))
 				{
-					continue;
+					return;
 				}
 				
 				if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 				{
-					break;
+					return;
 				}
 				
 				targetList.add(obj);
-			}
+			});
 		}
 		
 		if (targetList.isEmpty())

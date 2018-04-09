@@ -19,11 +19,11 @@ package com.l2jmobius.gameserver.ai;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.MobGroup;
 import com.l2jmobius.gameserver.model.MobGroupTable;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -285,22 +285,17 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			// notify aggression
 			if (((L2Npc) _actor).getTemplate().getClans() != null)
 			{
-				for (L2Object obj : _actor.getKnownList().getKnownObjects().values())
+				L2World.getInstance().forEachVisibleObject(_actor, L2Npc.class, npc ->
 				{
-					if (!(obj instanceof L2Npc))
-					{
-						continue;
-					}
-					final L2Npc npc = (L2Npc) obj;
 					if (!npc.isInMyClan((L2Npc) _actor))
 					{
-						continue;
+						return;
 					}
-					if (_actor.isInsideRadius(npc, npc.getTemplate().getClanHelpRange(), false, true) && (Math.abs(getAttackTarget().getZ() - npc.getZ()) < 200))
+					if (_actor.isInsideRadius(npc, npc.getTemplate().getClanHelpRange(), true, true))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getAttackTarget(), 1);
 					}
-				}
+				});
 			}
 			
 			_actor.setTarget(getAttackTarget());
@@ -416,8 +411,17 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	
 	private L2Character findNextRndTarget()
 	{
-		final List<L2Character> potentialTarget = _actor.getKnownList().getKnownCharactersInRadius(getActiveChar().getAggroRange()).stream().filter(this::checkAutoAttackCondition).collect(Collectors.toList());
-		return potentialTarget.isEmpty() ? null : potentialTarget.get(Rnd.nextInt(potentialTarget.size()));
+		final List<L2Character> potentialTarget = new ArrayList<>();
+		L2World.getInstance().forEachVisibleObject(_actor, L2Character.class, target ->
+		{
+			if (Util.checkIfInShortRange(((L2Attackable) _actor).getAggroRange(), _actor, target, true) && checkAutoAttackCondition(target))
+			{
+				potentialTarget.add(target);
+			}
+		});
+		
+		return !potentialTarget.isEmpty() ? potentialTarget.get(Rnd.nextInt(potentialTarget.size())) : null;
+		
 	}
 	
 	private L2ControllableMobInstance findNextGroupTarget()

@@ -17,11 +17,11 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
@@ -55,21 +55,20 @@ public class AreaCorpseMob implements ITargetTypeHandler
 		targetList.add(target);
 		
 		final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
-		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharacters();
-		for (L2Character obj : objs)
+		L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, obj ->
 		{
 			if (!(obj.isAttackable() || obj.isPlayable()) || !Util.checkIfInRange(skill.getAffectRange(), target, obj, true))
 			{
-				continue;
+				return;
 			}
 			
 			if (!Skill.checkForAreaOffensiveSkills(activeChar, obj, skill, srcInArena))
 			{
-				continue;
+				return;
 			}
 			
 			targetList.add(obj);
-		}
+		});
 		
 		if (targetList.isEmpty())
 		{

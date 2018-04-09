@@ -25,9 +25,9 @@ import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
@@ -459,7 +459,7 @@ public final class Valakas extends AbstractNpcAI
 		}
 		
 		// Pickup a target if no or dead victim. 10% luck he decides to reconsiders his target.
-		if ((_actualVictim == null) || _actualVictim.isDead() || !npc.getKnownList().knowsObject(_actualVictim) || (getRandom(10) == 0))
+		if ((_actualVictim == null) || _actualVictim.isDead() || !(npc.isInSurroundingRegion(_actualVictim)) || (getRandom(10) == 0))
 		{
 			_actualVictim = getRandomTarget(npc);
 		}
@@ -519,7 +519,7 @@ public final class Valakas extends AbstractNpcAI
 		}
 		
 		// Valakas will use mass spells if he feels surrounded.
-		if (Util.getPlayersCountInRadius(1200, npc, false, false) >= 20)
+		if (L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 1200).size() >= 20)
 		{
 			return VALAKAS_AOE_SKILLS[getRandom(VALAKAS_AOE_SKILLS.length)];
 		}
@@ -541,17 +541,17 @@ public final class Valakas extends AbstractNpcAI
 	{
 		final List<L2Playable> result = new ArrayList<>();
 		
-		for (L2Character obj : npc.getKnownList().getKnownCharacters())
+		L2World.getInstance().forEachVisibleObject(npc, L2Playable.class, obj ->
 		{
 			if ((obj == null) || obj.isPet())
 			{
-				continue;
+				return;
 			}
 			else if (!obj.isDead() && obj.isPlayable())
 			{
-				result.add((L2Playable) obj);
+				result.add(obj);
 			}
-		}
+		});
 		
 		return result.isEmpty() ? null : result.get(getRandom(result.size()));
 	}

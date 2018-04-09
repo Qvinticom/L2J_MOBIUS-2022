@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.actor;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -55,13 +56,13 @@ public abstract class L2Decoy extends L2Character
 	@Override
 	public void updateAbnormalEffect()
 	{
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if (player != null)
+			if (isVisibleFor(player))
 			{
 				player.sendPacket(new CharInfo(this, false));
 			}
-		}
+		});
 	}
 	
 	public void stopDecay()
@@ -120,13 +121,12 @@ public abstract class L2Decoy extends L2Character
 	public void deleteMe(L2PcInstance owner)
 	{
 		decayMe();
-		getKnownList().removeAllKnownObjects();
 		owner.setDecoy(null);
 	}
 	
 	public synchronized void unSummon(L2PcInstance owner)
 	{
-		if (!isVisible() || isDead())
+		if (!isSpawned() || isDead())
 		{
 			return;
 		}
@@ -136,7 +136,6 @@ public abstract class L2Decoy extends L2Character
 		}
 		owner.setDecoy(null);
 		decayMe();
-		getKnownList().removeAllKnownObjects();
 	}
 	
 	public final L2PcInstance getOwner()

@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
-import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -65,19 +63,23 @@ public class AdminZone implements IAdminCommandHandler
 			getGeoRegionXY(activeChar);
 			activeChar.sendMessage("Closest Town: " + MapRegionManager.getInstance().getClosestTownName(activeChar));
 			
-			Location loc;
-			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
-			activeChar.sendMessage("TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
-			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
-			activeChar.sendMessage("TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
-			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
-			activeChar.sendMessage("TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
-			
-			loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
-			activeChar.sendMessage("TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			// Prevent exit instance variable deletion.
+			if (activeChar.getInstanceId() == 0)
+			{
+				Location loc;
+				
+				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
+				activeChar.sendMessage("TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				
+				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
+				activeChar.sendMessage("TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				
+				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
+				activeChar.sendMessage("TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				
+				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
+				activeChar.sendMessage("TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual"))
 		{
@@ -129,29 +131,26 @@ public class AdminZone implements IAdminCommandHandler
 		adminReply.replace("%DANGER%", (activeChar.isInsideZone(ZoneId.DANGER_AREA) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%NOSTORE%", (activeChar.isInsideZone(ZoneId.NO_STORE) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
 		adminReply.replace("%SCRIPT%", (activeChar.isInsideZone(ZoneId.SCRIPT) ? "<font color=\"LEVEL\">YES</font>" : "NO"));
+		
 		final StringBuilder zones = new StringBuilder(100);
-		final L2WorldRegion region = L2World.getInstance().getRegion(activeChar.getX(), activeChar.getY());
-		for (L2ZoneType zone : region.getZones())
+		for (L2ZoneType zone : ZoneManager.getInstance().getZones(activeChar))
 		{
-			if (zone.isCharacterInZone(activeChar))
+			if (zone.getName() != null)
 			{
-				if (zone.getName() != null)
+				zones.append(zone.getName());
+				if (zone.getId() < 300000)
 				{
-					zones.append(zone.getName());
-					if (zone.getId() < 300000)
-					{
-						zones.append(" (");
-						zones.append(zone.getId());
-						zones.append(")");
-					}
-					zones.append("<br1>");
-				}
-				else
-				{
+					zones.append(" (");
 					zones.append(zone.getId());
+					zones.append(")");
 				}
-				zones.append(" ");
+				zones.append("<br1>");
 			}
+			else
+			{
+				zones.append(zone.getId());
+			}
+			zones.append(" ");
 		}
 		for (NpcSpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
 		{
@@ -166,8 +165,8 @@ public class AdminZone implements IAdminCommandHandler
 	{
 		final int worldX = activeChar.getX();
 		final int worldY = activeChar.getY();
-		final int geoX = ((((worldX - (-327680)) >> 4) >> 11) + 10);
-		final int geoY = ((((worldY - (-262144)) >> 4) >> 11) + 10);
+		final int geoX = (((worldX - -327680) >> 4) >> 11) + 10;
+		final int geoY = (((worldY - -262144) >> 4) >> 11) + 10;
 		activeChar.sendMessage("GeoRegion: " + geoX + "_" + geoY + "");
 	}
 	

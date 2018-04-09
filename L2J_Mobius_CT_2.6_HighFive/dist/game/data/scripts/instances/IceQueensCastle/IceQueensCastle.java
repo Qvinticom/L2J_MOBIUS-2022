@@ -19,6 +19,7 @@ package instances.IceQueensCastle;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -79,7 +80,7 @@ public final class IceQueensCastle extends AbstractInstance
 		{
 			case "ATTACK_KNIGHT":
 			{
-				for (L2Character character : npc.getKnownList().getKnownCharacters())
+				L2World.getInstance().forEachVisibleObject(npc, L2Character.class, character ->
 				{
 					if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 					{
@@ -87,7 +88,7 @@ public final class IceQueensCastle extends AbstractInstance
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character);
 						((L2Attackable) npc).addDamageHate(character, 0, 999999);
 					}
-				}
+				});
 				startQuestTimer("ATTACK_KNIGHT", 3000, npc, null);
 				break;
 			}
@@ -140,7 +141,7 @@ public final class IceQueensCastle extends AbstractInstance
 	{
 		if (creature.isPlayer() && npc.isScriptValue(0))
 		{
-			for (L2Character character : npc.getKnownList().getKnownCharacters())
+			L2World.getInstance().forEachVisibleObject(npc, L2Character.class, character ->
 			{
 				if ((character.getId() == ARCHERY_KNIGHT) && !character.isDead() && !((L2Attackable) character).isDecayed())
 				{
@@ -150,7 +151,7 @@ public final class IceQueensCastle extends AbstractInstance
 					npc.setScriptValue(1);
 					startQuestTimer("ATTACK_KNIGHT", 5000, npc, null);
 				}
-			}
+			});
 			npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.S1_MAY_THE_PROTECTION_OF_THE_GODS_BE_UPON_YOU, creature.getName());
 		}
 		return super.onSeeCreature(npc, creature, isSummon);

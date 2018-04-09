@@ -17,9 +17,9 @@
 package ai.areas.PlainsOfLizardman;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -100,16 +100,12 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 		if (event.equals("fantasy_mushroom") && (npc != null) && (player != null))
 		{
 			npc.doCast(FANTASY_MUSHROOM_SKILL.getSkill());
-			for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(200))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 200, monster ->
 			{
-				if ((target != null) && target.isAttackable())
-				{
-					final L2Npc monster = (L2Npc) target;
-					npc.setTarget(monster);
-					npc.doCast(STUN_EFFECT.getSkill());
-					addAttackDesire(monster, player);
-				}
-			}
+				npc.setTarget(monster);
+				npc.doCast(STUN_EFFECT.getSkill());
+				addAttackDesire(monster, player);
+			});
 			npc.doDie(player);
 		}
 		return null;
@@ -152,18 +148,14 @@ public final class PlainsOfLizardman extends AbstractNpcAI
 				{
 					npc.setScriptValue(1);
 					npc.setIsInvul(true);
-					for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(1000))
+					L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 1000, monster ->
 					{
-						if ((target != null) && target.isAttackable())
+						if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
 						{
-							final L2Attackable monster = (L2Attackable) target;
-							if ((monster.getId() == TANTA_MAGICIAN) || (monster.getId() == TANTA_SCOUT))
-							{
-								target.setRunning();
-								target.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX(), npc.getY(), npc.getZ(), 0));
-							}
+							monster.setRunning();
+							monster.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(npc.getX(), npc.getY(), npc.getZ(), 0));
 						}
-					}
+					});
 					startQuestTimer("fantasy_mushroom", 4000, npc, attacker);
 				}
 				break;

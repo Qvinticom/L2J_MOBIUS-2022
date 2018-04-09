@@ -22,7 +22,6 @@ import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 import java.util.StringJoiner;
@@ -34,8 +33,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.file.filter.ExtFilter;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
-import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
@@ -234,6 +233,50 @@ public final class Util
 		}
 		
 		return calculateDistance(obj1, obj2, includeZAxis, false) <= range;
+	}
+	
+	/**
+	 * Checks if the cube intersects the sphere.
+	 * @param x1 the cube's first point x
+	 * @param y1 the cube's first point y
+	 * @param z1 the cube's first point z
+	 * @param x2 the cube's second point x
+	 * @param y2 the cube's second point y
+	 * @param z2 the cube's second point z
+	 * @param sX the sphere's middle x
+	 * @param sY the sphere's middle y
+	 * @param sZ the sphere's middle z
+	 * @param radius the sphere's radius
+	 * @return {@code true} if cube intersects sphere, {@code false} otherwise
+	 */
+	public static boolean cubeIntersectsSphere(int x1, int y1, int z1, int x2, int y2, int z2, int sX, int sY, int sZ, int radius)
+	{
+		double d = radius * radius;
+		if (sX < x1)
+		{
+			d -= Math.pow(sX - x1, 2);
+		}
+		else if (sX > x2)
+		{
+			d -= Math.pow(sX - x2, 2);
+		}
+		if (sY < y1)
+		{
+			d -= Math.pow(sY - y1, 2);
+		}
+		else if (sY > y2)
+		{
+			d -= Math.pow(sY - y2, 2);
+		}
+		if (sZ < z1)
+		{
+			d -= Math.pow(sZ - z1, 2);
+		}
+		else if (sZ > z2)
+		{
+			d -= Math.pow(sZ - z2, 2);
+		}
+		return d > 0;
 	}
 	
 	/**
@@ -630,42 +673,6 @@ public final class Util
 		activeChar.sendPacket(new ShowBoard(Arrays.asList("0", "0", "0", "0", "0", "0", activeChar.getName(), Integer.toString(activeChar.getObjectId()), activeChar.getAccountName(), "9", " ", " ", text.replaceAll("<br>", Config.EOL), "0", "0", "0", "0")));
 	}
 	
-	/**
-	 * Return the number of playable characters in a defined radius around the specified object.
-	 * @param range : the radius in which to look for players
-	 * @param npc : the object whose knownlist to check
-	 * @param playable : if {@code true}, count summons and pets aswell
-	 * @param invisible : if {@code true}, count invisible characters aswell
-	 * @return the number of targets found
-	 */
-	public static int getPlayersCountInRadius(int range, L2Object npc, boolean playable, boolean invisible)
-	{
-		int count = 0;
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
-		for (L2Object obj : objs)
-		{
-			if ((obj != null) && playable && (obj.isPlayable() || obj.isPet()))
-			{
-				if (!invisible && obj.isInvisible())
-				{
-					continue;
-				}
-				
-				final L2Character cha = (L2Character) obj;
-				if (((cha.getZ() < (npc.getZ() - 100)) && (cha.getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(cha, npc))
-				{
-					continue;
-				}
-				
-				if (Util.checkIfInRange(range, npc, obj, true) && !cha.isDead())
-				{
-					count++;
-				}
-			}
-		}
-		return count;
-	}
-	
 	public static String formatTime(int time)
 	{
 		if (time == 0)
@@ -702,8 +709,8 @@ public final class Util
 	
 	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
 	{
-		final L2Object target = obj.getKnownList().getKnownObjects().get(targetObjId);
-		return (target != null) && (obj.calculateDistance(target, false, false) <= radius);
+		final L2Object target = L2World.getInstance().findObject(targetObjId);
+		return (target != null) && (obj.calculateDistance(target, true, false) <= radius);
 	}
 	
 	public static int min(int value1, int value2, int... values)

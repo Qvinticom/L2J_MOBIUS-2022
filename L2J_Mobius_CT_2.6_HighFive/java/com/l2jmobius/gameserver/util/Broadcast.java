@@ -48,15 +48,13 @@ public final class Broadcast
 	 */
 	public static void toPlayersTargettingMyself(L2Character character, IClientOutgoingPacket mov)
 	{
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 		{
-			if (player.getTarget() != character)
+			if (player.getTarget() == character)
 			{
-				continue;
+				player.sendPacket(mov);
 			}
-			
-			player.sendPacket(mov);
-		}
+		});
 	}
 	
 	/**
@@ -70,19 +68,15 @@ public final class Broadcast
 	 */
 	public static void toKnownPlayers(L2Character character, IClientOutgoingPacket mov)
 	{
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
 		{
-			if (player == null)
-			{
-				continue;
-			}
 			try
 			{
 				player.sendPacket(mov);
 				if ((mov instanceof CharInfo) && character.isPlayer())
 				{
 					final int relation = ((L2PcInstance) character).getRelation(player);
-					final Integer oldrelation = character.getKnownList().getKnownRelations().get(player.getObjectId());
+					final Integer oldrelation = character.getKnownRelations().get(player.getObjectId());
 					if ((oldrelation != null) && (oldrelation != relation))
 					{
 						player.sendPacket(new RelationChanged((L2PcInstance) character, relation, character.isAutoAttackable(player)));
@@ -97,7 +91,7 @@ public final class Broadcast
 			{
 				_log.log(Level.WARNING, e.getMessage(), e);
 			}
-		}
+		});
 	}
 	
 	/**
@@ -117,13 +111,7 @@ public final class Broadcast
 			radius = 1500;
 		}
 		
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
-		{
-			if (character.isInsideRadius(player, radius, false, false))
-			{
-				player.sendPacket(mov);
-			}
-		}
+		L2World.getInstance().forEachVisibleObjectInRange(character, L2PcInstance.class, radius, mov::sendTo);
 	}
 	
 	/**
@@ -157,13 +145,7 @@ public final class Broadcast
 			character.sendPacket(mov);
 		}
 		
-		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
-		{
-			if ((player != null) && Util.checkIfInRange(radius, character, player, false))
-			{
-				player.sendPacket(mov);
-			}
-		}
+		L2World.getInstance().forEachVisibleObjectInRange(character, L2PcInstance.class, radius, mov::sendTo);
 	}
 	
 	/**

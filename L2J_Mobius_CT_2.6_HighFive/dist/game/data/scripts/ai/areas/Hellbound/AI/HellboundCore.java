@@ -16,6 +16,7 @@
  */
 package ai.areas.Hellbound.AI;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -46,14 +47,14 @@ public final class HellboundCore extends AbstractNpcAI
 	{
 		if (event.equalsIgnoreCase("cast") && (HellboundEngine.getInstance().getLevel() <= 6))
 		{
-			for (L2Character naia : npc.getKnownList().getKnownCharactersInRadius(900))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Character.class, 900, naia ->
 			{
 				if ((naia != null) && naia.isMonster() && (naia.getId() == NAIA) && !naia.isDead() && !naia.isChanneling())
 				{
 					naia.setTarget(npc);
 					naia.doSimultaneousCast(BEAM.getSkill());
 				}
-			}
+			});
 			startQuestTimer("cast", 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);

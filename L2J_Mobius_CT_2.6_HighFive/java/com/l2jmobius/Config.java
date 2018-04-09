@@ -1904,8 +1904,6 @@ public final class Config
 			MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 20);
 			MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
 			MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 20);
-			MOVE_BASED_KNOWNLIST = General.getBoolean("MoveBasedKnownlist", false);
-			KNOWNLIST_UPDATE_INTERVAL = General.getLong("KnownListUpdateInterval", 1250);
 			GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
 			GRID_NEIGHBOR_TURNON_TIME = General.getInt("GridNeighborTurnOnTime", 1);
 			GRID_NEIGHBOR_TURNOFF_TIME = General.getInt("GridNeighborTurnOffTime", 90);

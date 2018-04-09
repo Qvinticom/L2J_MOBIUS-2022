@@ -20,6 +20,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -174,7 +175,7 @@ public class DrChaos extends AbstractNpcAI
 		{
 			if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 			{
-				for (L2PcInstance obj : npc.getKnownList().getKnownPlayersInRadius(500))
+				for (L2PcInstance obj : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 500))
 				{
 					if (obj.isDead())
 					{

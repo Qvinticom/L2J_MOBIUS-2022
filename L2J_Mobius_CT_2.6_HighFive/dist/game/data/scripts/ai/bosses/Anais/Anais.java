@@ -17,9 +17,9 @@
 package ai.bosses.Anais;
 
 import java.util.ArrayList;
-import java.util.Map;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -85,13 +85,8 @@ public final class Anais extends AbstractNpcAI
 				}
 				if ((_current != null) || (_pot < 4))
 				{
-					final Map<Integer, L2PcInstance> players = npc.getKnownList().getKnownPlayers();
-					final L2PcInstance target = players.get(getRandom(players.size() - 1));
-					_nextTarget = target;
-					if (_nextTarget == null)
-					{
-						_nextTarget = (L2PcInstance) npc.getTarget();
-					}
+					final L2Object target = npc.getTarget();
+					_nextTarget = target instanceof L2PcInstance ? (L2PcInstance) target : null;
 					final L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);

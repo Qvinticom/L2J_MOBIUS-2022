@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.handler.IChatHandler;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.handler.VoicedCommandHandler;
 import com.l2jmobius.gameserver.model.BlockList;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -86,13 +87,13 @@ public final class ChatGeneral implements IChatHandler
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
-			for (L2PcInstance player : activeChar.getKnownList().getKnownPlayers().values())
+			L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, 1250, player ->
 			{
-				if ((player != null) && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
+				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
 					player.sendPacket(cs);
 				}
-			}
+			});
 			
 			activeChar.sendPacket(cs);
 		}

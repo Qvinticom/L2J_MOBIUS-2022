@@ -1372,9 +1372,9 @@ public final class CrystalCaverns extends AbstractInstance
 				
 				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
 				int minDist = 300000;
-				for (L2Object object : L2World.getInstance().getVisibleObjects(npc, 300))
+				for (L2ItemInstance object : L2World.getInstance().getVisibleObjects(npc, L2ItemInstance.class, 300))
 				{
-					if (object.isItem() && (object.getId() == CRYSTALFOOD))
+					if (object.getId() == CRYSTALFOOD)
 					{
 						final int dx = npc.getX() - object.getX();
 						final int dy = npc.getY() - object.getY();
@@ -1382,7 +1382,7 @@ public final class CrystalCaverns extends AbstractInstance
 						if (d < minDist)
 						{
 							minDist = d;
-							cryGolem.foodItem = (L2ItemInstance) object;
+							cryGolem.foodItem = object;
 						}
 					}
 				}
@@ -1420,7 +1420,7 @@ public final class CrystalCaverns extends AbstractInstance
 				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
 				int dx;
 				int dy;
-				if ((cryGolem.foodItem == null) || !cryGolem.foodItem.isVisible())
+				if ((cryGolem.foodItem == null) || !cryGolem.foodItem.isSpawned())
 				{
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, cryGolem.oldLoc);
 					cancelQuestTimers("reachFood");
@@ -2027,7 +2027,7 @@ public final class CrystalCaverns extends AbstractInstance
 					{
 						if (door.getId() == (room + 24220000))
 						{
-							if (door.getOpen())
+							if (door.isOpen())
 							{
 								return "";
 							}
@@ -2090,7 +2090,7 @@ public final class CrystalCaverns extends AbstractInstance
 					{
 						if (door.getId() == doorId)
 						{
-							if (door.getOpen() && (world.openedDoors.get(door) == character))
+							if (door.isOpen() && (world.openedDoors.get(door) == character))
 							{
 								door.closeMe();
 								world.openedDoors.remove(door);

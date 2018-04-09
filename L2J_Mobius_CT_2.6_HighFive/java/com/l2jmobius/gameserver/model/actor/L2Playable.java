@@ -21,7 +21,6 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.PlayableKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.PlayableStat;
 import com.l2jmobius.gameserver.model.actor.status.PlayableStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -65,18 +64,6 @@ public abstract class L2Playable extends L2Character
 		super(template);
 		setInstanceType(InstanceType.L2Playable);
 		setIsInvul(false);
-	}
-	
-	@Override
-	public PlayableKnownList getKnownList()
-	{
-		return (PlayableKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new PlayableKnownList(this));
 	}
 	
 	@Override

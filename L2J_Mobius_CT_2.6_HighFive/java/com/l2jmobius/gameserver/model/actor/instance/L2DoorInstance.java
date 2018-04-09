@@ -16,9 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.logging.Level;
@@ -36,11 +34,10 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.knownlist.DoorKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.DoorStat;
 import com.l2jmobius.gameserver.model.actor.status.DoorStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
@@ -128,18 +125,6 @@ public class L2DoorInstance extends L2Character
 			delay += Rnd.get(getTemplate().getRandomTime());
 		}
 		ThreadPool.schedule(new TimerOpen(), delay * 1000);
-	}
-	
-	@Override
-	public final DoorKnownList getKnownList()
-	{
-		return (DoorKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new DoorKnownList(this));
 	}
 	
 	@Override
@@ -232,7 +217,7 @@ public class L2DoorInstance extends L2Character
 	/**
 	 * @return Returns the open.
 	 */
-	public boolean getOpen()
+	public boolean isOpen()
 	{
 		return _open;
 	}
@@ -433,7 +418,7 @@ public class L2DoorInstance extends L2Character
 	@Override
 	public void broadcastStatusUpdate()
 	{
-		final Collection<L2PcInstance> knownPlayers = getKnownList().getKnownPlayers().values();
+		Collection<L2PcInstance> knownPlayers = L2World.getInstance().getVisibleObjects(this, L2PcInstance.class);
 		if ((knownPlayers == null) || knownPlayers.isEmpty())
 		{
 			return;
@@ -445,7 +430,7 @@ public class L2DoorInstance extends L2Character
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
-			oe = new OnEventTrigger(this, getOpen());
+			oe = new OnEventTrigger(this, isOpen());
 		}
 		
 		for (L2PcInstance player : knownPlayers)
@@ -514,7 +499,7 @@ public class L2DoorInstance extends L2Character
 				first = door;
 			}
 			
-			if (door.getOpen() != open)
+			if (door.isOpen() != open)
 			{
 				door.setOpen(open);
 				door.broadcastStatusUpdate();
@@ -577,19 +562,6 @@ public class L2DoorInstance extends L2Character
 	public int getZMax()
 	{
 		return getTemplate().getNodeZ() + getTemplate().getHeight();
-	}
-	
-	public List<L2DefenderInstance> getKnownDefenders()
-	{
-		final List<L2DefenderInstance> result = new ArrayList<>();
-		for (L2Object obj : getKnownList().getKnownObjects().values())
-		{
-			if (obj instanceof L2DefenderInstance)
-			{
-				result.add((L2DefenderInstance) obj);
-			}
-		}
-		return result;
 	}
 	
 	public void setMeshIndex(int mesh)
@@ -694,7 +666,7 @@ public class L2DoorInstance extends L2Character
 		{
 			if (getEmitter() > 0)
 			{
-				activeChar.sendPacket(new OnEventTrigger(this, getOpen()));
+				activeChar.sendPacket(new OnEventTrigger(this, isOpen()));
 			}
 			
 			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
@@ -759,7 +731,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			if (getOpen())
+			if (isOpen())
 			{
 				closeMe();
 			}
@@ -771,7 +743,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			final boolean open = getOpen();
+			final boolean open = isOpen();
 			if (open)
 			{
 				closeMe();

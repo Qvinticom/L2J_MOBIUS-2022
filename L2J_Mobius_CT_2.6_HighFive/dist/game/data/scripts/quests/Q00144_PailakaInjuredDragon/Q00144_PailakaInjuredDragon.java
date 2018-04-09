@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -642,9 +643,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				final int[] zoneTeleport = NOEXIT_ZONES.get(zone.getId());
 				if (zoneTeleport != null)
 				{
-					for (L2Character npcs : character.getKnownList().getKnownCharactersInRadius(700))
+					for (L2Character npc : L2World.getInstance().getVisibleObjects(character, L2Npc.class, 700))
 					{
-						if (!(npcs instanceof L2Npc) || npcs.isDead())
+						if (npc.isDead())
 						{
 							continue;
 						}
@@ -670,7 +671,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// This function will check if there is other mob alive in this wall of mobs. If all mobs in the first row are dead then despawn the second row mobs, the mages.
 	private final void checkIfLastInWall(L2Npc npc)
 	{
-		final Collection<L2Character> knowns = npc.getKnownList().getKnownCharactersInRadius(700);
+		final Collection<L2Character> knowns = L2World.getInstance().getVisibleObjects(npc, L2Character.class, 700);
 		for (L2Character npcs : knowns)
 		{
 			if (!(npcs instanceof L2Npc) || npcs.isDead())

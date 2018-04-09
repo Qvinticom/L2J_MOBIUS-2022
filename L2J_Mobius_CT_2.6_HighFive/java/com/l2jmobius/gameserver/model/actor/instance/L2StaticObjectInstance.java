@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.knownlist.StaticObjectKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.StaticObjStat;
 import com.l2jmobius.gameserver.model.actor.status.StaticObjStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
@@ -70,18 +69,6 @@ public final class L2StaticObjectInstance extends L2Character
 	public int getId()
 	{
 		return _staticObjectId;
-	}
-	
-	@Override
-	public final StaticObjectKnownList getKnownList()
-	{
-		return (StaticObjectKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new StaticObjectKnownList(this));
 	}
 	
 	@Override

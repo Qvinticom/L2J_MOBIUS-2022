@@ -429,7 +429,7 @@ public abstract class AbstractSagaQuest extends Quest
 				case "Mob_3 Timer 1":
 				{
 					final L2Npc Mob_2 = FindSpawn(player, (L2Npc) L2World.getInstance().findObject(st.getInt("Mob_2")));
-					if (npc.getKnownList().knowsObject(Mob_2))
+					if (L2World.getInstance().getVisibleObjects(npc, L2Npc.class).contains(Mob_2))
 					{
 						((L2Attackable) npc).addDamageHate(Mob_2, 0, 99999);
 						npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, Mob_2, null);

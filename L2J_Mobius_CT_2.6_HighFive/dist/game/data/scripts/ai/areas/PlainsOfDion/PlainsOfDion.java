@@ -16,13 +16,14 @@
  */
 package ai.areas.PlainsOfDion;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -75,15 +76,14 @@ public final class PlainsOfDion extends AbstractNpcAI
 				npc.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_MSG[i]);
 			}
 			
-			for (L2Character obj : npc.getKnownList().getKnownCharactersInRadius(npc.getTemplate().getClanHelpRange()))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, npc.getTemplate().getClanHelpRange(), obj ->
 			{
-				if (obj.isMonster() && Util.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoEngine.getInstance().canSeeTarget(npc, obj))
+				if (CommonUtil.contains(DELU_LIZARDMEN, obj.getId()) && !obj.isAttackingNow() && !obj.isDead() && GeoEngine.getInstance().canSeeTarget(npc, obj))
 				{
-					final L2Npc monster = (L2Npc) obj;
-					addAttackDesire(monster, player);
-					monster.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[getRandom(3)]);
+					addAttackDesire(obj, player);
+					obj.broadcastSay(ChatType.NPC_GENERAL, MONSTERS_ASSIST_MSG[getRandom(3)]);
 				}
-			}
+			});
 			npc.setScriptValue(1);
 		}
 		return super.onAttack(npc, player, damage, isSummon);

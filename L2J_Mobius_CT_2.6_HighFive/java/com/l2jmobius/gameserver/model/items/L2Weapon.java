@@ -16,8 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.items;
 
-import java.util.Objects;
-
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -422,16 +421,10 @@ public final class L2Weapon extends L2Item
 				target
 			};
 			
-			//@formatter:off
-			caster.getKnownList().getKnownObjects().values().stream()
-				.filter(Objects::nonNull)
-				.filter(npc -> npc.isNpc())
-				.filter(npc -> Util.checkIfInRange(1000, npc, caster, false))
-				.forEach(npc -> 
-				{
-					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee((L2Npc) npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc);
-				});
-			//@formatter:on
+			L2World.getInstance().forEachVisibleObjectInRange(caster, L2Npc.class, 1000, npc ->
+			{
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npc, caster.getActingPlayer(), onMagicSkill, targets, false), npc);
+			});
 		}
 		if (caster.isPlayer())
 		{

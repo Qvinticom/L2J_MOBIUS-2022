@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.AbstractZoneSettings;
@@ -419,24 +418,24 @@ public class L2BossZone extends L2ZoneType
 		getSettings().getPlayerAllowedReEntryTimes().remove(player.getObjectId());
 	}
 	
-	public void updateKnownList(L2Npc npc)
-	{
-		if ((_characterList == null) || _characterList.isEmpty())
-		{
-			return;
-		}
-		
-		final Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
-		for (L2Character character : getCharactersInside())
-		{
-			if ((character != null) && character.isPlayer())
-			{
-				final L2PcInstance player = character.getActingPlayer();
-				if (player.isOnline())
-				{
-					npcKnownPlayers.put(player.getObjectId(), player);
-				}
-			}
-		}
-	}
+	// public void updateKnownList(L2Npc npc)
+	// {
+	// if ((_characterList == null) || _characterList.isEmpty())
+	// {
+	// return;
+	// }
+	//
+	// final Map<Integer, L2PcInstance> npcKnownPlayers = npc.getKnownList().getKnownPlayers();
+	// for (L2Character character : getCharactersInside())
+	// {
+	// if ((character != null) && character.isPlayer())
+	// {
+	// final L2PcInstance player = character.getActingPlayer();
+	// if (player.isOnline())
+	// {
+	// npcKnownPlayers.put(player.getObjectId(), player);
+	// }
+	// }
+	// }
+	// }
 }

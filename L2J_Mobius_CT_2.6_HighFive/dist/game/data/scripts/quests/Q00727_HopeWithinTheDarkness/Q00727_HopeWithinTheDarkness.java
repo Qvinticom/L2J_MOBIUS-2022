@@ -17,7 +17,6 @@
 package quests.Q00727_HopeWithinTheDarkness;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +27,7 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -244,8 +244,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		else if (event.equalsIgnoreCase("buff"))
 		{
-			final Collection<L2PcInstance> players = npc.getKnownList().getKnownPlayers().values();
-			for (L2PcInstance pl : players)
+			for (L2PcInstance pl : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class))
 			{
 				if ((pl != null) && Util.checkIfInRange(75, npc, pl, false) && (NPC_BUFFS.get(npc.getId()) != null))
 				{
@@ -260,7 +259,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 			{
-				for (L2Character foe : npc.getKnownList().getKnownCharactersInRadius(npc.getAggroRange()))
+				for (L2Character foe : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 				{
 					if ((foe instanceof L2Attackable) && !(foe instanceof L2QuestGuardInstance))
 					{

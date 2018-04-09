@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -207,7 +208,7 @@ public class L2CharacterAI extends AbstractAI
 		// This is only for mobs - town npcs are handled in their constructor
 		if (_actor instanceof L2Attackable)
 		{
-			((L2Npc) _actor).startRandomAnimationTimer();
+			((L2Npc) _actor).startRandomAnimationTask();
 		}
 		
 		// Launch the Think Event
@@ -1429,7 +1430,7 @@ public class L2CharacterAI extends AbstractAI
 	{
 		if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB))
 		{
-			for (L2Object target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+			for (L2Object target : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, sk.getAffectRange()))
 			{
 				if (target == getAttackTarget())
 				{
@@ -1447,7 +1448,7 @@ public class L2CharacterAI extends AbstractAI
 			if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB))
 			{
 				boolean cancast = true;
-				for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+				for (L2Character target : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, sk.getAffectRange()))
 				{
 					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 					{
@@ -1466,7 +1467,7 @@ public class L2CharacterAI extends AbstractAI
 			else if ((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA))
 			{
 				boolean cancast = true;
-				for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+				for (L2Character target : L2World.getInstance().getVisibleObjects(getAttackTarget(), L2Character.class, sk.getAffectRange()))
 				{
 					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target == null) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 					{
@@ -1486,7 +1487,7 @@ public class L2CharacterAI extends AbstractAI
 		else if ((sk.getTargetType() == L2TargetType.AURA) || (sk.getTargetType() == L2TargetType.BEHIND_AURA) || (sk.getTargetType() == L2TargetType.FRONT_AURA) || (sk.getTargetType() == L2TargetType.AURA_CORPSE_MOB))
 		{
 			boolean cancast = false;
-			for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+			for (L2Character target : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, sk.getAffectRange()))
 			{
 				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
@@ -1505,7 +1506,7 @@ public class L2CharacterAI extends AbstractAI
 		else if ((sk.getTargetType() == L2TargetType.AREA) || (sk.getTargetType() == L2TargetType.BEHIND_AREA) || (sk.getTargetType() == L2TargetType.FRONT_AREA))
 		{
 			boolean cancast = true;
-			for (L2Character target : getAttackTarget().getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+			for (L2Character target : L2World.getInstance().getVisibleObjects(getAttackTarget(), L2Character.class, sk.getAffectRange()))
 			{
 				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
 				{
@@ -1530,13 +1531,13 @@ public class L2CharacterAI extends AbstractAI
 		{
 			int count = 0;
 			int ccount = 0;
-			for (L2Character target : _actor.getKnownList().getKnownCharactersInRadius(sk.getAffectRange()))
+			for (L2Attackable target : L2World.getInstance().getVisibleObjects(_actor, L2Attackable.class, sk.getAffectRange()))
 			{
-				if (!(target instanceof L2Attackable) || !GeoEngine.getInstance().canSeeTarget(_actor, target))
+				if (!GeoEngine.getInstance().canSeeTarget(_actor, target))
 				{
 					continue;
 				}
-				if (((L2Npc) target).isInMyClan((L2Npc) _actor))
+				if (target.isInMyClan((L2Npc) _actor))
 				{
 					count++;
 					if (target.isAffectedBySkill(sk.getId()))

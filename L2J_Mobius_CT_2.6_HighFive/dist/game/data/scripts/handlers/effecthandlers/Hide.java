@@ -17,6 +17,7 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -61,7 +62,7 @@ public final class Hide extends AbstractEffect
 				activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			}
 			
-			for (L2Character target : activeChar.getKnownList().getKnownCharacters())
+			L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, target ->
 			{
 				if ((target != null) && (target.getTarget() == activeChar))
 				{
@@ -70,7 +71,7 @@ public final class Hide extends AbstractEffect
 					target.abortCast();
 					target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				}
-			}
+			});
 		}
 	}
 }

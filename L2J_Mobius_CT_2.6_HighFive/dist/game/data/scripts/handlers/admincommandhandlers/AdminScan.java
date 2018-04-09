@@ -125,7 +125,7 @@ public class AdminScan implements IAdminCommandHandler
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/scan.htm");
 		final StringBuilder sb = new StringBuilder();
-		for (L2Character character : activeChar.getKnownList().getKnownCharactersInRadius(radius))
+		for (L2Character character : L2World.getInstance().getVisibleObjects(activeChar, L2Character.class, radius))
 		{
 			if (character instanceof L2Npc)
 			{

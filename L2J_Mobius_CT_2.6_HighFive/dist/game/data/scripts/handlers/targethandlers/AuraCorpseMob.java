@@ -17,11 +17,12 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
@@ -36,11 +37,10 @@ public class AuraCorpseMob implements ITargetTypeHandler
 	{
 		final List<L2Character> targetList = new ArrayList<>();
 		// Go through the L2Character _knownList
-		final Collection<L2Character> objs = activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange());
 		final int maxTargets = skill.getAffectLimit();
-		for (L2Character obj : objs)
+		for (L2Attackable obj : L2World.getInstance().getVisibleObjects(activeChar, L2Attackable.class, skill.getAffectRange()))
 		{
-			if (obj.isAttackable() && obj.isDead())
+			if (obj.isDead())
 			{
 				if (onlyFirst)
 				{

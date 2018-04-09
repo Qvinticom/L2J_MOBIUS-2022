@@ -230,7 +230,7 @@ public final class DayNightSpawnManager
 			}
 			case 1:
 			{
-				if (!boss.isVisible())
+				if (!boss.isSpawned())
 				{
 					boss.spawnMe();
 				}

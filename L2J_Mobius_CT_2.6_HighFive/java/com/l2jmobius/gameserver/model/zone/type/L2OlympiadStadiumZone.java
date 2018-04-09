@@ -94,7 +94,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	{
 		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
-			if ((door != null) && !door.getOpen())
+			if ((door != null) && !door.isOpen())
 			{
 				door.openMe();
 			}
@@ -105,7 +105,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	{
 		for (L2DoorInstance door : InstanceManager.getInstance().getInstance(getInstanceId()).getDoors())
 		{
-			if ((door != null) && door.getOpen())
+			if ((door != null) && door.isOpen())
 			{
 				door.closeMe();
 			}
@@ -116,7 +116,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	{
 		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
-			if ((buffer instanceof L2OlympiadManagerInstance) && !buffer.isVisible())
+			if ((buffer instanceof L2OlympiadManagerInstance) && !buffer.isSpawned())
 			{
 				buffer.spawnMe();
 			}
@@ -127,7 +127,7 @@ public class L2OlympiadStadiumZone extends L2ZoneRespawn
 	{
 		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getInstanceId()).getNpcs())
 		{
-			if ((buffer instanceof L2OlympiadManagerInstance) && buffer.isVisible())
+			if ((buffer instanceof L2OlympiadManagerInstance) && buffer.isSpawned())
 			{
 				buffer.decayMe();
 			}

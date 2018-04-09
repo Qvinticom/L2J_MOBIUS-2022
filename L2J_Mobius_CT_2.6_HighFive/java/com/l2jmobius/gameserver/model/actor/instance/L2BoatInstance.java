@@ -86,9 +86,9 @@ public class L2BoatInstance extends L2Vehicle
 	}
 	
 	@Override
-	public void stopMove(Location loc, boolean updateKnownObjects)
+	public void stopMove(Location loc)
 	{
-		super.stopMove(loc, updateKnownObjects);
+		super.stopMove(loc);
 		
 		broadcastPacket(new VehicleStarted(this, 0));
 		broadcastPacket(new VehicleInfo(this));

@@ -68,7 +68,6 @@ import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.CharKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.character.FlyToLocationTask;
@@ -266,6 +265,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Future Skill Cast */
 	protected Future<?> _skillCast;
 	protected Future<?> _skillCast2;
+	
+	private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
 	
 	/**
 	 * Creates a creature.
@@ -536,14 +537,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if (player != null)
+			if (isVisibleFor(player))
 			{
 				player.sendPacket(mov);
 			}
-		}
+		});
 	}
 	
 	/**
@@ -556,14 +556,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
 	{
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, radiusInKnownlist, player ->
 		{
-			if ((player != null) && isInsideRadius(player, radiusInKnownlist, false, false))
+			if (isVisibleFor(player))
 			{
 				player.sendPacket(mov);
 			}
-		}
+		});
 	}
 	
 	/**
@@ -666,7 +665,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			doRevive();
 		}
 		
-		stopMove(null, false);
+		stopMove(null);
 		abortAttack();
 		abortCast();
 		
@@ -878,7 +877,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			if (!isAlikeDead())
 			{
-				if ((isNpc() && target.isAlikeDead()) || !getKnownList().knowsObject(target))
+				if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
 				{
 					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
@@ -969,8 +968,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
-			target.getKnownList().addKnownObject(this);
 			
 			final L2Weapon weaponItem = getActiveWeaponItem();
 			final int timeAtk = calculateTimeBetweenAttacks();
@@ -1353,64 +1350,45 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
 		double attackpercent = 85;
-		L2Character temp;
-		final Collection<L2Object> objs = getKnownList().getKnownObjects().values();
-		
-		for (L2Object obj : objs)
+		for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
 		{
 			if (obj == target)
 			{
 				continue; // do not hit twice
 			}
-			// Check if the L2Object is a L2Character
-			if (obj instanceof L2Character)
+			
+			if (obj.isPet() && isPlayer() && (((L2PetInstance) obj).getOwner() == getActingPlayer()))
 			{
-				if (obj.isPet() && isPlayer() && (((L2PetInstance) obj).getOwner() == getActingPlayer()))
+				continue;
+			}
+			
+			if (!isFacing(obj, maxAngleDiff))
+			{
+				continue;
+			}
+			
+			if (isAttackable() && obj.isPlayer() && getTarget().isAttackable())
+			{
+				continue;
+			}
+			
+			if (isAttackable() && obj.isAttackable() && !((L2Attackable) this).isChaos())
+			{
+				continue;
+			}
+			
+			// Launch a simple attack against the L2Character targeted
+			if (!obj.isAlikeDead())
+			{
+				if ((obj == getAI().getAttackTarget()) || obj.isAutoAttackable(this))
 				{
-					continue;
-				}
-				
-				if (!Util.checkIfInRange(maxRadius, this, obj, false))
-				{
-					continue;
-				}
-				
-				// otherwise hit too high/low. 650 because mob z coord
-				// sometimes wrong on hills
-				if (Math.abs(obj.getZ() - getZ()) > 650)
-				{
-					continue;
-				}
-				if (!isFacing(obj, maxAngleDiff))
-				{
-					continue;
-				}
-				
-				if (isAttackable() && obj.isPlayer() && getTarget().isAttackable())
-				{
-					continue;
-				}
-				
-				if (isAttackable() && obj.isAttackable() && !((L2Attackable) this).isChaos())
-				{
-					continue;
-				}
-				
-				temp = (L2Character) obj;
-				
-				// Launch a simple attack against the L2Character targeted
-				if (!temp.isAlikeDead())
-				{
-					if ((temp == getAI().getAttackTarget()) || temp.isAutoAttackable(this))
+					hitted |= doAttackHitSimple(attack, obj, attackpercent, sAtk);
+					attackpercent /= 1.15;
+					
+					attackcount++;
+					if (attackcount > attackRandomCountMax)
 					{
-						hitted |= doAttackHitSimple(attack, temp, attackpercent, sAtk);
-						attackpercent /= 1.15;
-						
-						attackcount++;
-						if (attackcount > attackRandomCountMax)
-						{
-							break;
-						}
+						break;
 					}
 				}
 			}
@@ -2851,14 +2829,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		else if (isNpc())
 		{
-			final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-			for (L2PcInstance player : plrs)
+			L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 			{
-				if ((player == null) || !isVisibleFor(player))
+				if (!isVisibleFor(player))
 				{
-					continue;
+					return;
 				}
-				else if (getRunSpeed() == 0)
+				
+				if (getRunSpeed() == 0)
 				{
 					player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
 				}
@@ -2866,7 +2844,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					player.sendPacket(new AbstractNpcInfo.NpcInfo((L2Npc) this, player));
 				}
-			}
+			});
 		}
 	}
 	
@@ -2939,18 +2917,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public final void setIsFlying(boolean mode)
 	{
 		_isFlying = mode;
-	}
-	
-	@Override
-	public CharKnownList getKnownList()
-	{
-		return ((CharKnownList) super.getKnownList());
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new CharKnownList(this));
 	}
 	
 	public CharStat getStat()
@@ -3465,23 +3431,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void addStatFuncs(List<AbstractFunction> functions)
 	{
-		if (!isPlayer() && getKnownList().getKnownPlayers().isEmpty())
+		final List<Stats> modifiedStats = new ArrayList<>();
+		for (AbstractFunction f : functions)
 		{
-			for (AbstractFunction f : functions)
-			{
-				addStatFunc(f);
-			}
+			modifiedStats.add(f.getStat());
+			addStatFunc(f);
 		}
-		else
-		{
-			final List<Stats> modifiedStats = new ArrayList<>();
-			for (AbstractFunction f : functions)
-			{
-				modifiedStats.add(f.getStat());
-				addStatFunc(f);
-			}
-			broadcastModifiedStats(modifiedStats);
-		}
+		broadcastModifiedStats(modifiedStats);
 	}
 	
 	/**
@@ -3560,24 +3516,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public final void removeStatFuncs(AbstractFunction[] functions)
 	{
-		if (!isPlayer() && getKnownList().getKnownPlayers().isEmpty())
+		final List<Stats> modifiedStats = new ArrayList<>();
+		for (AbstractFunction f : functions)
 		{
-			for (AbstractFunction f : functions)
-			{
-				removeStatFunc(f);
-			}
+			modifiedStats.add(f.getStat());
+			removeStatFunc(f);
 		}
-		else
-		{
-			final List<Stats> modifiedStats = new ArrayList<>();
-			for (AbstractFunction f : functions)
-			{
-				modifiedStats.add(f.getStat());
-				removeStatFunc(f);
-			}
-			
-			broadcastModifiedStats(modifiedStats);
-		}
+		
+		broadcastModifiedStats(modifiedStats);
 	}
 	
 	/**
@@ -3710,13 +3656,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (broadcastFull)
 				{
-					final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-					for (L2PcInstance player : plrs)
+					L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 					{
-						if ((player == null) || !isVisibleFor(player))
+						if (!isVisibleFor(player))
 						{
-							continue;
+							return;
 						}
+						
 						if (getRunSpeed() == 0)
 						{
 							player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
@@ -3725,7 +3671,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							player.sendPacket(new AbstractNpcInfo.NpcInfo((L2Npc) this, player));
 						}
-					}
+					});
 				}
 				else if (su.hasAttributes())
 				{
@@ -3943,7 +3889,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		if (!isVisible())
+		if (!isSpawned())
 		{
 			_move = null;
 			return true;
@@ -4050,23 +3996,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		if (distFraction > 1)
 		{
-			ThreadPool.execute(() ->
-			{
-				try
-				{
-					if (Config.MOVE_BASED_KNOWNLIST)
-					{
-						getKnownList().findObjects();
-					}
-					
-					getAI().notifyEvent(CtrlEvent.EVT_ARRIVED);
-				}
-				catch (Throwable e)
-				{
-					_log.log(Level.WARNING, "", e);
-				}
-			});
-			
+			ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
 			return true;
 		}
 		
@@ -4075,11 +4005,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void revalidateZone(boolean force)
 	{
-		if (getWorldRegion() == null)
-		{
-			return;
-		}
-		
 		// This function is called too often from movement code
 		if (force)
 		{
@@ -4115,11 +4040,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void stopMove(Location loc)
 	{
-		stopMove(loc, false);
-	}
-	
-	public void stopMove(Location loc, boolean updateKnownObjects)
-	{
 		// Delete movement data of the L2Character
 		_move = null;
 		_cursorKeyMovement = false;
@@ -4132,10 +4052,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			revalidateZone(true);
 		}
 		broadcastPacket(new StopMove(this));
-		if (Config.MOVE_BASED_KNOWNLIST && updateKnownObjects)
-		{
-			getKnownList().findObjects();
-		}
 	}
 	
 	/**
@@ -4169,15 +4085,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void setTarget(L2Object object)
 	{
-		if ((object != null) && !object.isVisible())
+		if ((object != null) && !object.isSpawned())
 		{
 			object = null;
-		}
-		
-		if ((object != null) && (object != _target))
-		{
-			getKnownList().addKnownObject(object);
-			object.getKnownList().addKnownObject(this);
 		}
 		
 		_target = object;
@@ -4727,7 +4637,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
-		if ((isNpc() && target.isAlikeDead()) || target.isDead() || (!getKnownList().knowsObject(target) && !isDoor()))
+		if ((isNpc() && target.isAlikeDead()) || target.isDead() || (!isInSurroundingRegion(target) && !isDoor()))
 		{
 			// getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 			// Some times attack is processed but target die before the hit
@@ -5815,52 +5725,43 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				// Mobs in range 1000 see spell
-				final Collection<L2Object> objs = player.getKnownList().getKnownObjects().values();
-				for (L2Object spMob : objs)
+				L2World.getInstance().forEachVisibleObjectInRange(player, L2Npc.class, 1000, npcMob ->
 				{
-					if ((spMob != null) && spMob.isNpc())
+					EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, targets, isSummon()), npcMob);
+					
+					// On Skill See logic
+					if (npcMob.isAttackable())
 					{
-						final L2Npc npcMob = (L2Npc) spMob;
-						if ((npcMob.isInsideRadius(player, 1000, true, true)))
+						final L2Attackable attackable = (L2Attackable) npcMob;
+						
+						int skillEffectPoint = skill.getEffectPoint();
+						
+						if (player.hasSummon())
 						{
-							EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, targets, isSummon()), npcMob);
-							
-							// On Skill See logic
-							if (npcMob.isAttackable())
+							if ((targets.length == 1) && Util.contains(targets, player.getSummon()))
 							{
-								final L2Attackable attackable = (L2Attackable) npcMob;
-								
-								int skillEffectPoint = skill.getEffectPoint();
-								
-								if (player.hasSummon())
+								skillEffectPoint = 0;
+							}
+						}
+						
+						if (skillEffectPoint > 0)
+						{
+							if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
+							{
+								L2Object npcTarget = attackable.getTarget();
+								for (L2Object skillTarget : targets)
 								{
-									if ((targets.length == 1) && Util.contains(targets, player.getSummon()))
+									if ((npcTarget == skillTarget) || (npcMob == skillTarget))
 									{
-										skillEffectPoint = 0;
-									}
-								}
-								
-								if (skillEffectPoint > 0)
-								{
-									if (attackable.hasAI() && (attackable.getAI().getIntention() == AI_INTENTION_ATTACK))
-									{
-										final L2Object npcTarget = attackable.getTarget();
-										for (L2Object skillTarget : targets)
-										{
-											if ((npcTarget == skillTarget) || (npcMob == skillTarget))
-											{
-												final L2Character originalCaster = isSummon() ? getSummon() : player;
-												attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
-											}
-										}
+										L2Character originalCaster = isSummon() ? this : player;
+										attackable.addDamageHate(originalCaster, 0, (skillEffectPoint * 150) / (attackable.getLevel() + 7));
 									}
 								}
 							}
 						}
 					}
-				}
+				});
 			}
-			
 			// Notify AI
 			if (skill.isBad() && !skill.hasEffectType(L2EffectType.HATE))
 			{
@@ -6851,6 +6752,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public int getSiegeSide()
 	{
 		return 0;
+	}
+	
+	public final Map<Integer, Integer> getKnownRelations()
+	{
+		return _knownRelations;
 	}
 	
 	public int getMinShopDistance()

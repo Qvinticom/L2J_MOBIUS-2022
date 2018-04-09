@@ -16,14 +16,13 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.stats.Formulas;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Transfer Hate effect implementation.
@@ -55,27 +54,21 @@ public final class TransferHate extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (!Util.checkIfInRange(info.getSkill().getEffectRange(), info.getEffector(), info.getEffected(), true))
+		L2World.getInstance().forEachVisibleObjectInRange(info.getEffector(), L2Attackable.class, info.getSkill().getAffectRange(), hater ->
 		{
-			return;
-		}
-		
-		for (L2Character obj : info.getEffector().getKnownList().getKnownCharactersInRadius(info.getSkill().getAffectRange()))
-		{
-			if ((obj == null) || !obj.isAttackable() || obj.isDead())
+			if ((hater == null) || hater.isDead())
 			{
-				continue;
+				return;
 			}
 			
-			final L2Attackable hater = ((L2Attackable) obj);
 			final int hate = hater.getHating(info.getEffector());
 			if (hate <= 0)
 			{
-				continue;
+				return;
 			}
 			
 			hater.reduceHate(info.getEffector(), -hate);
 			hater.addDamageHate(info.getEffected(), 0, hate);
-		}
+		});
 	}
 }

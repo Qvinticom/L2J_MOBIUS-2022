@@ -22,7 +22,7 @@ import java.util.List;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.conditions.Condition;
@@ -80,13 +80,8 @@ public final class Confuse extends AbstractEffect
 		
 		final List<L2Character> targetList = new ArrayList<>();
 		// Getting the possible targets
-		for (L2Object obj : info.getEffected().getKnownList().getKnownObjects().values())
-		{
-			if (((info.getEffected().isMonster() && obj.isAttackable()) || (obj instanceof L2Character)) && (obj != info.getEffected()))
-			{
-				targetList.add((L2Character) obj);
-			}
-		}
+		
+		L2World.getInstance().forEachVisibleObject(info.getEffected(), L2Character.class, targetList::add);
 		
 		// if there is no target, exit function
 		if (!targetList.isEmpty())

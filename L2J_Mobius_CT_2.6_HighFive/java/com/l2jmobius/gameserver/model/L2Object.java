@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.ObjectKnownList;
 import com.l2jmobius.gameserver.model.actor.poly.ObjectPoly;
 import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
@@ -63,7 +62,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	private L2WorldRegion _worldRegion;
 	/** Instance type */
 	private InstanceType _instanceType = null;
-	private volatile Map<String, Object> _scripts = new ConcurrentHashMap<>();
+	private volatile Map<String, Object> _scripts;
 	/** X coordinate */
 	private final AtomicInteger _x = new AtomicInteger(0);
 	/** Y coordinate */
@@ -74,15 +73,13 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	private final AtomicInteger _heading = new AtomicInteger(0);
 	/** Instance id of object. 0 - Global */
 	private final AtomicInteger _instanceId = new AtomicInteger(0);
-	private boolean _isVisible;
+	private boolean _isSpawned;
 	private boolean _isInvisible;
-	private ObjectKnownList _knownList;
 	
 	public L2Object(int objectId)
 	{
 		setInstanceType(InstanceType.L2Object);
 		_objectId = objectId;
-		initKnownList();
 	}
 	
 	/**
@@ -147,27 +144,21 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void onSpawn()
 	{
+		broadcastInfo(); // Tempfix for invisible spawns.
 	}
 	
 	@Override
 	public boolean decayMe()
 	{
-		assert getWorldRegion() != null;
-		
 		final L2WorldRegion reg = getWorldRegion();
-		
 		synchronized (this)
 		{
-			_isVisible = false;
+			_isSpawned = false;
 			setWorldRegion(null);
 		}
 		
-		// this can synchronize on others instances, so it's out of
-		// synchronized, to avoid deadlocks
-		// Remove the L2Object from the world
 		L2World.getInstance().removeVisibleObject(this, reg);
 		L2World.getInstance().removeObject(this);
-		
 		return true;
 	}
 	
@@ -181,12 +172,10 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public final boolean spawnMe()
 	{
-		assert (getWorldRegion() == null) && (getLocation().getX() != 0) && (getLocation().getY() != 0) && (getLocation().getZ() != 0);
-		
 		synchronized (this)
 		{
 			// Set the x,y,z position of the L2Object spawn and update its _worldregion
-			_isVisible = true;
+			_isSpawned = true;
 			setWorldRegion(L2World.getInstance().getRegion(getLocation()));
 			
 			// Add the L2Object spawn in the _allobjects of L2World
@@ -207,13 +196,8 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public final void spawnMe(int x, int y, int z)
 	{
-		assert getWorldRegion() == null;
-		
 		synchronized (this)
 		{
-			// Set the x,y,z position of the L2Object spawn and update its _worldregion
-			_isVisible = true;
-			
 			if (x > L2World.MAP_MAX_X)
 			{
 				x = L2World.MAP_MAX_X - 5000;
@@ -230,25 +214,21 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			{
 				y = L2World.MAP_MIN_Y + 5000;
 			}
+			if (z > L2World.MAP_MAX_Z)
+			{
+				z = L2World.MAP_MAX_Z - 1000;
+			}
+			if (z < L2World.MAP_MIN_Z)
+			{
+				z = L2World.MAP_MIN_Z + 1000;
+			}
 			
+			// Set the x,y,z position of the WorldObject. If flagged with _isSpawned, setXYZ will automatically update world region, so avoid that.
 			setXYZ(x, y, z);
-			setWorldRegion(L2World.getInstance().getRegion(getLocation()));
-			
-			// Add the L2Object spawn in the _allobjects of L2World
 		}
 		
-		L2World.getInstance().addObject(this);
-		
-		// these can synchronize on others instances, so they're out of
-		// synchronized, to avoid deadlocks
-		
-		// Add the L2Object spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
-		getWorldRegion().addVisibleObject(this);
-		
-		// Add the L2Object spawn in the world as a visible object
-		L2World.getInstance().addVisibleObject(this, getWorldRegion());
-		
-		onSpawn();
+		// Spawn and update its _worldregion
+		spawnMe();
 	}
 	
 	/**
@@ -262,45 +242,18 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public abstract boolean isAutoAttackable(L2Character attacker);
 	
-	public final boolean isVisible()
+	public final boolean isSpawned()
 	{
 		return getWorldRegion() != null;
 	}
 	
-	public final void setIsVisible(boolean value)
+	public final void setSpawned(boolean value)
 	{
-		_isVisible = value;
-		if (!_isVisible)
+		_isSpawned = value;
+		if (!_isSpawned)
 		{
 			setWorldRegion(null);
 		}
-	}
-	
-	public void toggleVisible()
-	{
-		if (isVisible())
-		{
-			decayMe();
-		}
-		else
-		{
-			spawnMe();
-		}
-	}
-	
-	public ObjectKnownList getKnownList()
-	{
-		return _knownList;
-	}
-	
-	public void initKnownList()
-	{
-		_knownList = new ObjectKnownList(this);
-	}
-	
-	public final void setKnownList(ObjectKnownList value)
-	{
-		_knownList = value;
 	}
 	
 	@Override
@@ -520,6 +473,17 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public final <T> T addScript(T script)
 	{
+		if (_scripts == null)
+		{
+			// Double-checked locking
+			synchronized (this)
+			{
+				if (_scripts == null)
+				{
+					_scripts = new ConcurrentHashMap<>();
+				}
+			}
+		}
 		_scripts.put(script.getClass().getName(), script);
 		return script;
 	}
@@ -532,7 +496,11 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@SuppressWarnings("unchecked")
 	public final <T> T removeScript(Class<T> script)
 	{
-		return _scripts == null ? null : (T) _scripts.remove(script.getName());
+		if (_scripts == null)
+		{
+			return null;
+		}
+		return (T) _scripts.remove(script.getName());
 	}
 	
 	/**
@@ -543,29 +511,20 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@SuppressWarnings("unchecked")
 	public final <T> T getScript(Class<T> script)
 	{
-		return _scripts == null ? null : (T) _scripts.get(script.getName());
+		if (_scripts == null)
+		{
+			return null;
+		}
+		return (T) _scripts.get(script.getName());
 	}
 	
 	public void removeStatusListener(L2Character object)
 	{
-	}
-	
-	protected void badCoords()
-	{
-		if (isCharacter())
-		{
-			decayMe();
-		}
-		else if (isPlayer())
-		{
-			((L2Character) this).teleToLocation(new Location(0, 0, 0), false);
-			((L2Character) this).sendMessage("Error with your coords, Please ask a GM for help!");
-		}
+		
 	}
 	
 	public final void setXYZInvisible(int x, int y, int z)
 	{
-		assert getWorldRegion() == null;
 		if (x > L2World.MAP_MAX_X)
 		{
 			x = L2World.MAP_MAX_X - 5000;
@@ -584,31 +543,12 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		}
 		
 		setXYZ(x, y, z);
-		setIsVisible(false);
+		setSpawned(false);
 	}
 	
 	public final void setLocationInvisible(ILocational loc)
 	{
 		setXYZInvisible(loc.getX(), loc.getY(), loc.getZ());
-	}
-	
-	public void updateWorldRegion()
-	{
-		if (!isVisible())
-		{
-			return;
-		}
-		
-		final L2WorldRegion newRegion = L2World.getInstance().getRegion(getLocation());
-		if (newRegion == getWorldRegion())
-		{
-			return;
-		}
-		
-		getWorldRegion().removeVisibleObject(this);
-		setWorldRegion(newRegion);
-		// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
-		getWorldRegion().addVisibleObject(this);
 	}
 	
 	public final L2WorldRegion getWorldRegion()
@@ -618,18 +558,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public void setWorldRegion(L2WorldRegion value)
 	{
-		if ((getWorldRegion() != null) && isCharacter()) // confirm revalidation of old region's zones
-		{
-			if (value != null)
-			{
-				getWorldRegion().revalidateZones((L2Character) this); // at world region change
-			}
-			else
-			{
-				getWorldRegion().removeFromZones((L2Character) this); // at world region change
-			}
-		}
-		
 		_worldRegion = value;
 	}
 	
@@ -730,24 +658,26 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 * @param newZ the Z coordinate
 	 */
 	@Override
-	public final void setXYZ(int newX, int newY, int newZ)
+	public void setXYZ(int newX, int newY, int newZ)
 	{
-		assert getWorldRegion() != null;
-		
 		setX(newX);
 		setY(newY);
 		setZ(newZ);
 		
-		try
+		if (_isSpawned)
 		{
-			if (L2World.getInstance().getRegion(getLocation()) != getWorldRegion())
+			final L2WorldRegion oldRegion = getWorldRegion();
+			final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
+			if ((newRegion != null) && (newRegion != oldRegion))
 			{
-				updateWorldRegion();
+				if (oldRegion != null)
+				{
+					oldRegion.removeVisibleObject(this);
+				}
+				newRegion.addVisibleObject(this);
+				L2World.getInstance().switchRegion(this, newRegion);
+				setWorldRegion(newRegion);
 			}
-		}
-		catch (Exception e)
-		{
-			badCoords();
 		}
 	}
 	
@@ -830,7 +760,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		}
 		
 		_instanceId.set(instanceId);
-		if (_isVisible && (_knownList != null))
+		if (_isSpawned)
 		{
 			// We don't want some ugly looking disappear/appear effects, so don't update
 			// the knownlist here, but players usually enter instancezones through teleporting
@@ -840,6 +770,25 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 				decayMe();
 				spawnMe();
 			}
+		}
+	}
+	
+	/**
+	 * Sends an instance update for player.
+	 * @param instance the instance to update
+	 * @param hide if {@code true} hide the player
+	 */
+	private final void sendInstanceUpdate(Instance instance, boolean hide)
+	{
+		final int startTime = (int) ((System.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
+		final int endTime = (int) ((instance.getInstanceEndTime() - instance.getInstanceStartTime()) / 1000);
+		if (instance.isTimerIncrease())
+		{
+			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, true, startTime, endTime, instance.getTimerText()));
+		}
+		else
+		{
+			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, false, endTime - startTime, 0, instance.getTimerText()));
 		}
 	}
 	
@@ -902,25 +851,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	}
 	
 	/**
-	 * Sends an instance update for player.
-	 * @param instance the instance to update
-	 * @param hide if {@code true} hide the player
-	 */
-	private final void sendInstanceUpdate(Instance instance, boolean hide)
-	{
-		final int startTime = (int) ((System.currentTimeMillis() - instance.getInstanceStartTime()) / 1000);
-		final int endTime = (int) ((instance.getInstanceEndTime() - instance.getInstanceStartTime()) / 1000);
-		if (instance.isTimerIncrease())
-		{
-			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, true, startTime, endTime, instance.getTimerText()));
-		}
-		else
-		{
-			sendPacket(new ExSendUIEvent(getActingPlayer(), hide, false, endTime - startTime, 0, instance.getTimerText()));
-		}
-	}
-	
-	/**
 	 * @return {@code true} if this object is invisible, {@code false} otherwise.
 	 */
 	public boolean isInvisible()
@@ -938,13 +868,13 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		if (invis)
 		{
 			final DeleteObject deletePacket = new DeleteObject(this);
-			for (L2Object obj : getKnownList().getKnownObjects().values())
+			L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 			{
-				if ((obj != null) && obj.isPlayer() && !isVisibleFor(obj.getActingPlayer()))
+				if (!isVisibleFor(player))
 				{
-					obj.sendPacket(deletePacket);
+					player.sendPacket(deletePacket);
 				}
-			}
+			});
 		}
 		
 		// Broadcast information regarding the object to those which are suppose to see.
@@ -965,13 +895,35 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public void broadcastInfo()
 	{
-		for (L2Object obj : getKnownList().getKnownObjects().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if ((obj != null) && obj.isPlayer() && isVisibleFor(obj.getActingPlayer()))
+			if (isVisibleFor(player))
 			{
-				sendInfo(obj.getActingPlayer());
+				sendInfo(player);
 			}
+		});
+	}
+	
+	public boolean isInSurroundingRegion(L2Object worldObject)
+	{
+		if (worldObject == null)
+		{
+			return false;
 		}
+		
+		final L2WorldRegion worldRegion1 = worldObject.getWorldRegion();
+		if (worldRegion1 == null)
+		{
+			return false;
+		}
+		
+		final L2WorldRegion worldRegion2 = getWorldRegion();
+		if (worldRegion2 == null)
+		{
+			return false;
+		}
+		
+		return worldRegion1.isSurroundingRegion(worldRegion2);
 	}
 	
 	@Override

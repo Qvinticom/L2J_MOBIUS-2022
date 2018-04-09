@@ -21,6 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -38,7 +39,7 @@ public class Aura implements ITargetTypeHandler
 	{
 		final List<L2Character> targetList = new ArrayList<>();
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
-		for (L2Character obj : activeChar.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
+		for (L2Character obj : L2World.getInstance().getVisibleObjects(activeChar, L2Character.class, skill.getAffectRange()))
 		{
 			if (obj.isDoor() || obj.isAttackable() || obj.isPlayable())
 			{

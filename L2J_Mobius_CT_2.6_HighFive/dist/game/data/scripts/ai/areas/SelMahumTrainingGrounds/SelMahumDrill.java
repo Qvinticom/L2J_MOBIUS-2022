@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -203,9 +204,9 @@ public final class SelMahumDrill extends AbstractNpcAI
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
 	{
 		// group hate
-		for (L2Character ch : npc.getKnownList().getKnownCharacters())
+		for (L2Character ch : L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class))
 		{
-			if (!ch.isInCombat() && ch.isMonster() && (((L2Npc) ch).getSpawn().getName() == npc.getSpawn().getName()))
+			if (!ch.isInCombat() && (((L2Npc) ch).getSpawn().getName() == npc.getSpawn().getName()))
 			{
 				((L2MonsterInstance) ch).addDamageHate(attacker, 0, 1000);
 			}

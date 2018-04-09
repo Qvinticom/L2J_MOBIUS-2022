@@ -17,7 +17,8 @@
 package ai.areas.GiantsCave;
 
 import com.l2jmobius.gameserver.enums.ChatType;
-import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -57,13 +58,13 @@ public final class GiantsCave extends AbstractNpcAI
 				npc.broadcastSay(ChatType.NPC_SHOUT, NpcStringId.OH_GIANTS_AN_INTRUDER_HAS_BEEN_DISCOVERED);
 			}
 			
-			for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(450))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 450, characters ->
 			{
-				if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
+				if ((getRandomBoolean()))
 				{
-					addAttackDesire((L2Npc) characters, player);
+					addAttackDesire(characters, player);
 				}
-			}
+			});
 		}
 		else if (event.equals("CLEAR") && (npc != null) && !npc.isDead())
 		{

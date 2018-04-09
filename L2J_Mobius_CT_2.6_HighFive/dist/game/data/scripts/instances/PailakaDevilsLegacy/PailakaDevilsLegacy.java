@@ -21,11 +21,13 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -184,16 +186,12 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 				{
 					if ((damage > 0) && npc.isScriptValue(0))
 					{
-						for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(600))
+						L2World.getInstance().forEachVisibleObjectInRange(npc, L2MonsterInstance.class, 600, monster ->
 						{
-							if ((characters != null) && characters.isMonster())
-							{
-								final L2Attackable monster = (L2Attackable) characters;
-								monster.addDamageHate(npc, 0, 999);
-								monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
-								monster.reduceCurrentHp(500 + getRandom(0, 200), npc, BOOM.getSkill());
-							}
-						}
+							monster.addDamageHate(npc, 0, 999);
+							monster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc);
+							monster.reduceCurrentHp(500 + getRandom(0, 200), npc, BOOM.getSkill());
+						});
 						npc.doCast(BOOM.getSkill());
 						npc.setScriptValue(1);
 						startQuestTimer("DELETE", 2000, npc, null);
@@ -310,7 +308,6 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 				{
 					tigress.getAI().stopAITask();
 				}
-				tigress.getKnownList().removeAllKnownObjects();
 				tigress.setTarget(null);
 			}
 			tigress.decayMe();

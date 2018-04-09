@@ -17,11 +17,11 @@
 package handlers.targethandlers;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
@@ -70,9 +70,8 @@ public class PartyClan implements ITargetTypeHandler
 		}
 		
 		// Get all visible objects in a spherical area near the L2Character
-		final Collection<L2PcInstance> objs = activeChar.getKnownList().getKnownPlayersInRadius(radius);
 		final int maxTargets = skill.getAffectLimit();
-		for (L2PcInstance obj : objs)
+		for (L2PcInstance obj : L2World.getInstance().getVisibleObjects(activeChar, L2PcInstance.class, radius))
 		{
 			if (obj == null)
 			{

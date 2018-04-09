@@ -34,7 +34,7 @@ public final class DoorStatusUpdate implements IClientOutgoingPacket
 	{
 		OutgoingPackets.DOOR_STATUS_UPDATE.writeId(packet);
 		packet.writeD(_door.getObjectId());
-		packet.writeD(_door.getOpen() ? 0 : 1);
+		packet.writeD(_door.isOpen() ? 0 : 1);
 		packet.writeD(_door.getDamage());
 		packet.writeD(_door.isEnemy() ? 1 : 0);
 		packet.writeD(_door.getId());

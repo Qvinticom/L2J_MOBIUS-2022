@@ -401,7 +401,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		final int usedtime = 5000;
 		_lifeTimeRemaining -= usedtime;
 		
-		if (isDead() || !isVisible())
+		if (isDead() || !isSpawned())
 		{
 			if (_summonLifeTask != null)
 			{

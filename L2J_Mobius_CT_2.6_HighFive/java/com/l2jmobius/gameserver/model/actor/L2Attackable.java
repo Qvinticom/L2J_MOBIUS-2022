@@ -54,7 +54,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.AttackableKnownList;
 import com.l2jmobius.gameserver.model.actor.status.AttackableStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.attackable.CommandChannelTimer;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -117,18 +116,6 @@ public class L2Attackable extends L2Npc
 		setInstanceType(InstanceType.L2Attackable);
 		setIsInvul(false);
 		_mustGiveExpSp = true;
-	}
-	
-	@Override
-	public AttackableKnownList getKnownList()
-	{
-		return (AttackableKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new AttackableKnownList(this));
 	}
 	
 	@Override
@@ -454,7 +441,7 @@ public class L2Attackable extends L2Npc
 					if (attackerParty == null)
 					{
 						// Calculate Exp and SP rewards
-						if (attacker.getKnownList().knowsObject(this))
+						if (isInSurroundingRegion(attacker))
 						{
 							// Calculate the difference of level between this attacker (player or servitor owner) and the L2Attackable
 							// mob = 24, atk = 10, diff = -14 (full xp)
@@ -906,7 +893,7 @@ public class L2Attackable extends L2Npc
 			}
 		}
 		
-		if (!ai.getAttacker().isVisible() || ai.getAttacker().isInvisible())
+		if (!ai.getAttacker().isSpawned() || ai.getAttacker().isInvisible())
 		{
 			_aggroList.remove(target);
 			return 0;

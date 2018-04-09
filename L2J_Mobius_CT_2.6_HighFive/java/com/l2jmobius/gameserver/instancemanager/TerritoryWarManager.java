@@ -981,7 +981,7 @@ public final class TerritoryWarManager implements Siegable
 			{
 				if ((ward.getNpc() != null) && (t.getOwnerClan() != null))
 				{
-					if (!ward.getNpc().isVisible())
+					if (!ward.getNpc().isSpawned())
 					{
 						ward.setNPC(ward.getNpc().getSpawn().doSpawn());
 					}
@@ -1091,11 +1091,11 @@ public final class TerritoryWarManager implements Siegable
 			{
 				if (ward.getNpc() != null)
 				{
-					if (!ward.getNpc().isVisible() && SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+					if (!ward.getNpc().isSpawned() && SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
 					{
 						ward.setNPC(ward.getNpc().getSpawn().doSpawn());
 					}
-					else if (ward.getNpc().isVisible() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+					else if (ward.getNpc().isSpawned() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
 					{
 						ward.getNpc().decayMe();
 					}

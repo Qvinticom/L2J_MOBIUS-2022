@@ -36,6 +36,7 @@ import com.l2jmobius.gameserver.instancemanager.RaidBossSpawnManager.StatusEnum;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
@@ -766,13 +767,13 @@ public final class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn_agent_7"))
 		{
-			for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(300))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 300, pl ->
 			{
 				if (pl != null)
 				{
 					pl.teleToLocation(-12176, 279696, -10492, true);
 				}
-			}
+			});
 			
 			allowAgentSpawn_7th = true;
 			spawnedAgent = null;
@@ -780,13 +781,13 @@ public final class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("cube_68_despawn"))
 		{
-			for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(500))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 500, pl ->
 			{
 				if (pl != null)
 				{
 					pl.teleToLocation(-12176, 279696, -10492, true);
 				}
-			}
+			});
 			
 			npc.deleteMe();
 			startQuestTimer("start_7th_floor_spawn", 120000, null, null);

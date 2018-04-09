@@ -45,6 +45,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.L2SiegeClan.SiegeClanType;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.SiegeScheduleDate;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
@@ -588,11 +589,11 @@ public class Siege implements Siegable
 				}
 				member.sendPacket(new UserInfo(member));
 				member.sendPacket(new ExBrExtraUserInfo(member));
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				L2World.getInstance().forEachVisibleObject(member, L2PcInstance.class, player ->
 				{
-					if (player == null)
+					if (!member.isVisibleFor(player))
 					{
-						continue;
+						return;
 					}
 					
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
@@ -600,7 +601,7 @@ public class Siege implements Siegable
 					{
 						player.sendPacket(new RelationChanged(member.getSummon(), member.getRelation(player), member.isAutoAttackable(player)));
 					}
-				}
+				});
 			}
 		}
 		for (L2SiegeClan siegeclan : getDefenderClans())
@@ -638,18 +639,18 @@ public class Siege implements Siegable
 				member.sendPacket(new UserInfo(member));
 				member.sendPacket(new ExBrExtraUserInfo(member));
 				
-				for (L2PcInstance player : member.getKnownList().getKnownPlayers().values())
+				L2World.getInstance().forEachVisibleObject(member, L2PcInstance.class, player ->
 				{
-					if (player == null)
+					if (!member.isVisibleFor(player))
 					{
-						continue;
+						return;
 					}
 					player.sendPacket(new RelationChanged(member, member.getRelation(player), member.isAutoAttackable(player)));
 					if (member.hasSummon())
 					{
 						player.sendPacket(new RelationChanged(member.getSummon(), member.getRelation(player), member.isAutoAttackable(player)));
 					}
-				}
+				});
 			}
 		}
 	}

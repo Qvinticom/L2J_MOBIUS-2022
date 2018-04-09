@@ -17,9 +17,11 @@
 package ai.areas.Gracia.AI.NPC.ZealotOfShilen;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 import ai.AbstractNpcAI;
@@ -56,13 +58,13 @@ public final class ZealotOfShilen extends AbstractNpcAI
 		startQuestTimer("WATCHING", 10000, npc, null, true);
 		if (event.equalsIgnoreCase("WATCHING") && !npc.isAttackingNow())
 		{
-			for (L2Character character : npc.getKnownList().getKnownCharacters())
+			for (L2Character monster : L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class))
 			{
-				if (character.isMonster() && !character.isDead() && !((L2Attackable) character).isDecayed())
+				if (!monster.isDead() && !((L2Attackable) monster).isDecayed())
 				{
 					npc.setRunning();
-					((L2Attackable) npc).addDamageHate(character, 0, 999);
-					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, character, null);
+					((L2Attackable) npc).addDamageHate(monster, 0, 999);
+					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, monster, null);
 				}
 			}
 		}

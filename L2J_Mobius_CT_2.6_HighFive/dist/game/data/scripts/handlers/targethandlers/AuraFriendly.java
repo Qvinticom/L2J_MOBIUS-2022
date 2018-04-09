@@ -22,6 +22,7 @@ import java.util.List;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
@@ -41,20 +42,20 @@ public class AuraFriendly implements ITargetTypeHandler
 		List<L2Character> targetList = new ArrayList<>();
 		L2PcInstance player = activeChar.getActingPlayer();
 		int maxTargets = skill.getAffectLimit();
-		for (L2Character obj : player.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
+		L2World.getInstance().forEachVisibleObject(player, L2Character.class, obj ->
 		{
 			if ((obj == activeChar) || !checkTarget(player, obj))
 			{
-				continue;
+				return;
 			}
 			
 			if ((maxTargets > 0) && (targetList.size() >= maxTargets))
 			{
-				break;
+				return;
 			}
 			
 			targetList.add(obj);
-		}
+		});
 		
 		if (targetList.isEmpty())
 		{

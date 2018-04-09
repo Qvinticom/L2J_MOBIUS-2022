@@ -19,7 +19,6 @@ package ai.areas.Gracia.vehicles.AirShipGludioGracia;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
@@ -149,16 +148,13 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	private final L2Npc findController()
 	{
 		// check objects around the ship
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(_ship, 600))
+		for (L2Npc obj : L2World.getInstance().getVisibleObjects(_ship, L2Npc.class, 600))
 		{
-			if (obj.isNpc())
+			for (int id : CONTROLLERS)
 			{
-				for (int id : CONTROLLERS)
+				if (obj.getId() == id)
 				{
-					if (obj.getId() == id)
-					{
-						return (L2Npc) obj;
-					}
+					return obj;
 				}
 			}
 		}

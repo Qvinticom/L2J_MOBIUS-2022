@@ -53,7 +53,6 @@ import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.NullKnownList;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAugment;
 import com.l2jmobius.gameserver.model.events.impl.character.player.inventory.OnPlayerItemDrop;
@@ -226,12 +225,6 @@ public final class L2ItemInstance extends L2Object
 		this(IdFactory.getInstance().getNextId(), itemId);
 	}
 	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new NullKnownList(this));
-	}
-	
 	/**
 	 * Remove a L2ItemInstance from the world and send server->client GetItem packets.<BR>
 	 * <BR>
@@ -264,7 +257,7 @@ public final class L2ItemInstance extends L2Object
 		
 		synchronized (this)
 		{
-			setIsVisible(false);
+			setSpawned(false);
 			setWorldRegion(null);
 		}
 		
@@ -1558,7 +1551,7 @@ public final class L2ItemInstance extends L2Object
 			synchronized (_itm)
 			{
 				// Set the x,y,z position of the L2ItemInstance dropped and update its _worldregion
-				_itm.setIsVisible(true);
+				_itm.setSpawned(true);
 				_itm.setXYZ(_x, _y, _z);
 				_itm.setWorldRegion(L2World.getInstance().getRegion(getLocation()));
 				

@@ -106,7 +106,7 @@ public final class HellboundEngine extends AbstractNpcAI
 			{
 				spawn.stopRespawn();
 				
-				if ((npc != null) && npc.isVisible())
+				if ((npc != null) && npc.isSpawned())
 				{
 					npc.deleteMe();
 					deleted++;
@@ -130,9 +130,9 @@ public final class HellboundEngine extends AbstractNpcAI
 					{
 						npc.doRevive();
 					}
-					if (!npc.isVisible())
+					if (!npc.isSpawned())
 					{
-						npc.setIsVisible(true);
+						npc.setSpawned(true);
 						added++;
 					}
 					
@@ -265,7 +265,7 @@ public final class HellboundEngine extends AbstractNpcAI
 			try
 			{
 				final L2DoorInstance door = DoorData.getInstance().getDoor(doorData[0]);
-				if (door.getOpen())
+				if (door.isOpen())
 				{
 					if (newLevel < doorData[1])
 					{

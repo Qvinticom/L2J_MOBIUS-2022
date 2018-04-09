@@ -272,8 +272,6 @@ public final class WalkingManager implements IGameXmlReader
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, node);
 					walk.setWalkCheckTask(ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000)); // start walk check task, for resuming walk after fight
 					
-					npc.getKnownList().startTrackingTask();
-					
 					_activeRoutes.put(npc.getObjectId(), walk); // register route
 				}
 				else
@@ -325,7 +323,6 @@ public final class WalkingManager implements IGameXmlReader
 			return;
 		}
 		walk.getWalkCheckTask().cancel(true);
-		npc.getKnownList().stopTrackingTask();
 	}
 	
 	/**

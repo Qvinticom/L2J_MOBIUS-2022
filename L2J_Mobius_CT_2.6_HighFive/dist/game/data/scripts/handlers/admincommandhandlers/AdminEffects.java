@@ -16,7 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
 import java.util.StringTokenizer;
 
 import com.l2jmobius.gameserver.datatables.SkillData;
@@ -220,37 +219,24 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_para_all"))
 		{
-			try
+			L2World.getInstance().forEachVisibleObject(activeChar, L2PcInstance.class, player ->
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
+				if (!player.isGM())
 				{
-					if (!player.isGM())
-					{
-						player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-						player.setIsParalyzed(true);
-						player.startParalyze();
-					}
+					player.startAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+					player.setIsParalyzed(true);
+					player.startParalyze();
 				}
-			}
-			catch (Exception e)
-			{
-			}
+			});
 		}
 		else if (command.equals("admin_unpara_all"))
 		{
-			try
+			L2World.getInstance().forEachVisibleObject(activeChar, L2PcInstance.class, player ->
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
-				{
-					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
-					player.setIsParalyzed(false);
-				}
-			}
-			catch (Exception e)
-			{
-			}
+				player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.PARALYZE);
+				player.setIsParalyzed(false);
+				
+			});
 		}
 		else if (command.startsWith("admin_para")) // || command.startsWith("admin_para_menu"))
 		{
@@ -395,18 +381,11 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_clearteams"))
 		{
-			try
+			L2World.getInstance().forEachVisibleObject(activeChar, L2PcInstance.class, player ->
 			{
-				final Collection<L2PcInstance> plrs = activeChar.getKnownList().getKnownPlayers().values();
-				for (L2PcInstance player : plrs)
-				{
-					player.setTeam(Team.NONE);
-					player.broadcastUserInfo();
-				}
-			}
-			catch (Exception e)
-			{
-			}
+				player.setTeam(Team.NONE);
+				player.broadcastUserInfo();
+			});
 		}
 		else if (command.startsWith("admin_setteam_close"))
 		{
@@ -419,12 +398,8 @@ public class AdminEffects implements IAdminCommandHandler
 					radius = Integer.parseInt(st.nextToken());
 				}
 				final Team team = Team.valueOf(val.toUpperCase());
-				final Collection<L2Character> plrs = activeChar.getKnownList().getKnownCharactersInRadius(radius);
 				
-				for (L2Character player : plrs)
-				{
-					player.setTeam(team);
-				}
+				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, radius, player -> player.setTeam(team));
 			}
 			catch (Exception e)
 			{
@@ -477,14 +452,7 @@ public class AdminEffects implements IAdminCommandHandler
 							try
 							{
 								final int radius = Integer.parseInt(target);
-								final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-								for (L2Object object : objs)
-								{
-									if (activeChar.isInsideRadius(object, radius, false, false))
-									{
-										performSocial(social, object, activeChar);
-									}
-								}
+								L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Object.class, radius, object -> performSocial(social, object, activeChar));
 								activeChar.sendMessage(radius + " units radius affected by your request.");
 							}
 							catch (NumberFormatException nbe)
@@ -550,13 +518,7 @@ public class AdminEffects implements IAdminCommandHandler
 				
 				if (radius > 0)
 				{
-					for (L2Object object : activeChar.getKnownList().getKnownObjects().values())
-					{
-						if (activeChar.isInsideRadius(object, radius, false, false))
-						{
-							performAbnormalVisualEffect(ave, object);
-						}
-					}
+					L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Object.class, radius, object -> performAbnormalVisualEffect(ave, object));
 					activeChar.sendMessage("Affected all characters in radius " + param2 + " by " + param1 + " abnormal visual effect.");
 				}
 				else

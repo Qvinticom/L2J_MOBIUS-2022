@@ -44,7 +44,7 @@ public final class AggroInfo
 	
 	public int checkHate(L2Character owner)
 	{
-		if (_attacker.isAlikeDead() || !_attacker.isVisible() || !owner.getKnownList().knowsObject(_attacker))
+		if (_attacker.isAlikeDead() || !_attacker.isSpawned() || !owner.isInSurroundingRegion(_attacker))
 		{
 			_hate = 0;
 		}

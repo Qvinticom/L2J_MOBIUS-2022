@@ -64,7 +64,7 @@ public class FindPvP implements IBypassHandler
 			}
 			
 			int count = 0;
-			for (L2PcInstance pl : player.getKnownList().getKnownPlayers().values())
+			for (L2PcInstance pl : L2World.getInstance().getVisibleObjects(player, L2PcInstance.class))
 			{
 				if ((pl.getPvpFlag() > 0) && !pl.isInsideZone(ZoneId.PEACE))
 				{
@@ -91,7 +91,7 @@ public class FindPvP implements IBypassHandler
 					allyId = activeChar.getClanId();
 				}
 				clanNumbers.put(allyId, 1);
-				for (L2PcInstance known : mostPvP.getKnownList().getKnownPlayers().values())
+				for (L2PcInstance known : L2World.getInstance().getVisibleObjects(mostPvP, L2PcInstance.class))
 				{
 					int knownAllyId = known.getAllyId();
 					if (knownAllyId == 0)

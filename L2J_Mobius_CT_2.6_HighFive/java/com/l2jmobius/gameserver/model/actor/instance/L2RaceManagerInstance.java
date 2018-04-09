@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.MonsterRace;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.knownlist.RaceManagerKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -125,18 +124,6 @@ public class L2RaceManagerInstance extends L2Npc
 			ThreadPool.scheduleAtFixedRate(new Announcement(SystemMessageId.THEY_RE_OFF), 9 * MINUTE, 10 * MINUTE);
 		}
 		_managers.add(this);
-	}
-	
-	@Override
-	public final RaceManagerKnownList getKnownList()
-	{
-		return (RaceManagerKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new RaceManagerKnownList(this));
 	}
 	
 	class Announcement implements Runnable

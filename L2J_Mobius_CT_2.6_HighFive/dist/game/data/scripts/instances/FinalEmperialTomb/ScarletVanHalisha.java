@@ -21,12 +21,12 @@ import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_FOLLOW;
 import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DecoyInstance;
@@ -209,58 +209,55 @@ public final class ScarletVanHalisha extends AbstractNpcAI
 	
 	private L2Character getRandomTarget(L2Npc npc, Skill skill)
 	{
-		final Collection<L2Object> objs = npc.getKnownList().getKnownObjects().values();
 		final ArrayList<L2Character> result = new ArrayList<>();
+		for (L2Object obj : L2World.getInstance().getVisibleObjects(npc, L2Object.class))
 		{
-			for (L2Object obj : objs)
+			if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
 			{
-				if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
+				if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
 				{
-					if (obj.isPlayer() && obj.getActingPlayer().isInvisible())
-					{
-						continue;
-					}
-					
-					if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
-					{
-						continue;
-					}
+					continue;
 				}
-				if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
+				
+				if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 				{
-					int skillRange = 150;
-					if (skill != null)
+					continue;
+				}
+			}
+			if (obj.isPlayable() || (obj instanceof L2DecoyInstance))
+			{
+				int skillRange = 150;
+				if (skill != null)
+				{
+					switch (skill.getId())
 					{
-						switch (skill.getId())
+						case 5014:
 						{
-							case 5014:
-							{
-								skillRange = 150;
-								break;
-							}
-							case 5015:
-							{
-								skillRange = 400;
-								break;
-							}
-							case 5016:
-							{
-								skillRange = 200;
-								break;
-							}
-							case 5018:
-							case 5019:
-							{
-								_lastRangedSkillTime = System.currentTimeMillis();
-								skillRange = 550;
-								break;
-							}
+							skillRange = 150;
+							break;
+						}
+						case 5015:
+						{
+							skillRange = 400;
+							break;
+						}
+						case 5016:
+						{
+							skillRange = 200;
+							break;
+						}
+						case 5018:
+						case 5019:
+						{
+							_lastRangedSkillTime = System.currentTimeMillis();
+							skillRange = 550;
+							break;
 						}
 					}
-					if (Util.checkIfInRange(skillRange, npc, obj, true) && !((L2Character) obj).isDead())
-					{
-						result.add((L2Character) obj);
-					}
+				}
+				if (Util.checkIfInRange(skillRange, npc, obj, true) && !((L2Character) obj).isDead())
+				{
+					result.add((L2Character) obj);
 				}
 			}
 		}

@@ -16,20 +16,17 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.knownlist.GuardKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 /**
  * This class manages all Guards in the world. It inherits all methods from L2Attackable and adds some more such as tracking PK and aggressive L2MonsterInstance.
@@ -46,24 +43,16 @@ public class L2GuardInstance extends L2Attackable
 		setInstanceType(InstanceType.L2GuardInstance);
 	}
 	
-	@Override
-	public final GuardKnownList getKnownList()
-	{
-		return (GuardKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new GuardKnownList(this));
-	}
-	
 	/**
 	 * Return True if hte attacker is a L2MonsterInstance.
 	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
+		if (attacker.isPlayer())
+		{
+			return ((L2PcInstance) attacker).getKarma() > 0;
+		}
 		return attacker instanceof L2MonsterInstance;
 	}
 	
@@ -77,7 +66,7 @@ public class L2GuardInstance extends L2Attackable
 		super.onSpawn();
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		final L2WorldRegion region = L2World.getInstance().getRegion(getX(), getY());
+		final L2WorldRegion region = L2World.getInstance().getRegion(this);
 		if ((region != null) && (!region.isActive()))
 		{
 			getAI().stopAITask();
@@ -161,10 +150,6 @@ public class L2GuardInstance extends L2Attackable
 				}
 				else
 				{
-					// Send a Server->Client packet SocialAction to the all L2PcInstance on the _knownPlayer of the L2NpcInstance
-					// to display a social action of the L2GuardInstance on their client
-					broadcastPacket(new SocialAction(getObjectId(), Rnd.nextInt(8)));
-					
 					player.setLastFolkNPC(this);
 					
 					// Open a chat window on client with the text of the L2GuardInstance

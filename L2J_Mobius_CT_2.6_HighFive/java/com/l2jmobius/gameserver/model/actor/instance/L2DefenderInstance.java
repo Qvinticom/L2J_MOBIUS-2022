@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.knownlist.DefenderKnownList;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -49,18 +48,6 @@ public class L2DefenderInstance extends L2Attackable
 	{
 		super(template);
 		setInstanceType(InstanceType.L2DefenderInstance);
-	}
-	
-	@Override
-	public DefenderKnownList getKnownList()
-	{
-		return (DefenderKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new DefenderKnownList(this));
 	}
 	
 	@Override

@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -324,14 +325,13 @@ public final class PrimevalIsle extends AbstractNpcAI
 			{
 				npc.setScriptValue(1);
 				final L2Playable playable = isSummon ? attacker.getSummon() : attacker;
-				for (L2Character characters : npc.getKnownList().getKnownCharactersInRadius(500))
+				L2World.getInstance().forEachVisibleObjectInRange(npc, L2Attackable.class, 500, monster ->
 				{
-					if ((characters != null) && (characters.isAttackable()) && (getRandomBoolean()))
+					if ((getRandomBoolean()))
 					{
-						final L2Attackable monster = (L2Attackable) characters;
 						addAttackDesire(monster, playable);
 					}
-				}
+				});
 			}
 		}
 		else if (Util.contains(TREX, npc.getId()))

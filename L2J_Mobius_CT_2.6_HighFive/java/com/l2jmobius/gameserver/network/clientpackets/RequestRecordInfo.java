@@ -16,10 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.Collection;
-
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -47,8 +46,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 		activeChar.sendPacket(new UserInfo(activeChar));
 		activeChar.sendPacket(new ExBrExtraUserInfo(activeChar));
 		
-		final Collection<L2Object> objs = activeChar.getKnownList().getKnownObjects().values();
-		for (L2Object object : objs)
+		L2World.getInstance().forEachVisibleObject(activeChar, L2Object.class, object ->
 		{
 			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 			{
@@ -74,6 +72,6 @@ public class RequestRecordInfo implements IClientIncomingPacket
 					}
 				}
 			}
-		}
+		});
 	}
 }

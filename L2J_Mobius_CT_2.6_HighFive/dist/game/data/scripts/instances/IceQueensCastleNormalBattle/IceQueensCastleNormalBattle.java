@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -652,13 +653,10 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 						final L2Attackable mob = (L2Attackable) npc;
 						mob.clearAggroList();
 						
-						for (L2Character characters : npc.getKnownList().getKnownPlayersInRadius(1000))
+						L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 1000, characters ->
 						{
-							if ((characters != null))
-							{
-								mob.addDamageHate(characters, 0, getRandom(10000, 20000));
-							}
-						}
+							mob.addDamageHate(characters, 0, getRandom(10000, 20000));
+						});
 						startQuestTimer("LEADER_RANDOMIZE", 25000, npc, null);
 						break;
 					}

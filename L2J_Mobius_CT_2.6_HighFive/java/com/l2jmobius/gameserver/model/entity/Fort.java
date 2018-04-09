@@ -519,7 +519,7 @@ public final class Fort extends AbstractResidence
 	{
 		for (L2DoorInstance door : _doors)
 		{
-			if (door.getOpen())
+			if (door.isOpen())
 			{
 				door.closeMe();
 			}

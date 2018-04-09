@@ -34,10 +34,10 @@ import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.SummonKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import com.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -118,10 +118,10 @@ public abstract class L2Summon extends L2Playable
 		setFollowStatus(true);
 		updateAndBroadcastStatus(0);
 		sendPacket(new RelationChanged(this, getOwner().getRelation(getOwner()), false));
-		for (L2PcInstance player : getOwner().getKnownList().getKnownPlayersInRadius(800))
+		L2World.getInstance().forEachVisibleObjectInRange(getOwner(), L2PcInstance.class, 800, player ->
 		{
 			player.sendPacket(new RelationChanged(this, getOwner().getRelation(player), isAutoAttackable(player)));
-		}
+		});
 		final L2Party party = getOwner().getParty();
 		if (party != null)
 		{
@@ -135,18 +135,6 @@ public abstract class L2Summon extends L2Playable
 		
 		// Notify to scripts
 		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonSpawn(this), this);
-	}
-	
-	@Override
-	public final SummonKnownList getKnownList()
-	{
-		return (SummonKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new SummonKnownList(this));
 	}
 	
 	@Override
@@ -205,10 +193,10 @@ public abstract class L2Summon extends L2Playable
 	@Override
 	public void updateAbnormalEffect()
 	{
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
 			player.sendPacket(new SummonInfo(this, player, 1));
-		}
+		});
 	}
 	
 	/**
@@ -314,23 +302,19 @@ public abstract class L2Summon extends L2Playable
 		final L2PcInstance owner = getOwner();
 		if (owner != null)
 		{
-			for (L2Character TgMob : getKnownList().getKnownCharacters())
+			L2World.getInstance().forEachVisibleObject(this, L2Attackable.class, TgMob ->
 			{
-				// get the mobs which have aggro on the this instance
-				if (TgMob instanceof L2Attackable)
+				if (TgMob.isDead())
 				{
-					if (TgMob.isDead())
-					{
-						continue;
-					}
-					
-					final AggroInfo info = ((L2Attackable) TgMob).getAggroList().get(this);
-					if (info != null)
-					{
-						((L2Attackable) TgMob).addDamageHate(owner, info.getDamage(), info.getHate());
-					}
+					return;
 				}
-			}
+				
+				AggroInfo info = TgMob.getAggroList().get(this);
+				if (info != null)
+				{
+					TgMob.addDamageHate(owner, info.getDamage(), info.getHate());
+				}
+			});
 		}
 		
 		DecayTaskManager.getInstance().add(this);
@@ -386,7 +370,6 @@ public abstract class L2Summon extends L2Playable
 			getInventory().destroyAllItems("pet deleted", getOwner(), this);
 		}
 		decayMe();
-		getKnownList().removeAllKnownObjects();
 		if (owner != null)
 		{
 			owner.setPet(null);
@@ -396,7 +379,7 @@ public abstract class L2Summon extends L2Playable
 	
 	public void unSummon(L2PcInstance owner)
 	{
-		if (isVisible() && !isDead())
+		if (isSpawned() && !isDead())
 		{
 			getAI().stopFollow();
 			if (owner != null)
@@ -440,7 +423,7 @@ public abstract class L2Summon extends L2Playable
 			{
 				oldRegion.removeFromZones(this);
 			}
-			getKnownList().removeAllKnownObjects();
+			
 			setTarget(null);
 			if (owner != null)
 			{
@@ -861,7 +844,7 @@ public abstract class L2Summon extends L2Playable
 		
 		sendPacket(new PetInfo(this, val));
 		sendPacket(new PetStatusUpdate(this));
-		if (isVisible())
+		if (isSpawned())
 		{
 			broadcastNpcInfo(val);
 		}
@@ -875,14 +858,14 @@ public abstract class L2Summon extends L2Playable
 	
 	public void broadcastNpcInfo(int val)
 	{
-		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if ((player == null) || (player == getOwner()))
+			if ((player == getOwner()))
 			{
-				continue;
+				return;
 			}
 			player.sendPacket(new SummonInfo(this, player, val));
-		}
+		});
 	}
 	
 	public boolean isHungry()

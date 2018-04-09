@@ -19,8 +19,8 @@ package ai.areas.MonasteryOfSilence;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -87,16 +87,15 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 		{
 			case "TRAINING":
 			{
-				for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(400))
+				L2World.getInstance().forEachVisibleObjectInRange(npc, L2Npc.class, 400, character ->
 				{
-					if ((getRandom(100) < 30) && character.isNpc() && !character.isDead() && !character.isInCombat())
+					if ((getRandom(100) < 30) && !character.isDead() && !character.isInCombat())
 					{
 						if ((character.getId() == CAPTAIN) && (getRandom(100) < 10) && npc.isScriptValue(0))
 						{
-							final L2Npc captain = (L2Npc) character;
-							captain.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
-							captain.setScriptValue(1);
-							startQuestTimer("TIMER", 10000, captain, null);
+							character.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
+							character.setScriptValue(1);
+							startQuestTimer("TIMER", 10000, character, null);
 						}
 						else if (character.getId() == KNIGHT)
 						{
@@ -105,7 +104,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 							character.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, npc, null);
 						}
 					}
-				}
+				});
 				break;
 			}
 			case "DO_CAST":

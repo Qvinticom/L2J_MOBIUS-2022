@@ -28,6 +28,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -169,7 +170,17 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			// Check if actor is not dead
 			if (!_actor.isAlikeDead())
 			{
-				intention = ((L2Attackable) _actor).getKnownList().getKnownPlayers().isEmpty() ? AI_INTENTION_IDLE : AI_INTENTION_ACTIVE;
+				L2Attackable npc = (L2Attackable) _actor;
+				
+				// If its _knownPlayer isn't empty set the Intention to AI_INTENTION_ACTIVE
+				if (!L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class).isEmpty())
+				{
+					intention = AI_INTENTION_ACTIVE;
+				}
+				else
+				{
+					intention = AI_INTENTION_IDLE;
+				}
 			}
 			
 			if (intention == AI_INTENTION_IDLE)
@@ -246,17 +257,13 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		// A L2Attackable isn't aggressive during 10s after its spawn because _globalAggro is set to -10
 		if (_globalAggro >= 0)
 		{
-			for (L2Character target : npc.getKnownList().getKnownCharactersInRadius(_attackRange))
+			L2World.getInstance().forEachVisibleObjectInRange(npc, L2Character.class, _attackRange, target ->
 			{
-				if (target == null)
-				{
-					continue;
-				}
 				if (autoAttackCondition(target) && (npc.getHating(target) == 0)) // check aggression
 				{
 					npc.addDamageHate(target, 0, 1);
 				}
-			}
+			});
 			
 			// Chose a target from its aggroList
 			final L2Character hated = _actor.isConfused() ? getAttackTarget() : npc.getMostHated();
@@ -344,12 +351,8 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		
 		// Go through all L2Character that belong to its faction
 		// for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(((L2NpcInstance) _actor).getFactionRange()+_actor.getTemplate().collisionRadius))
-		for (L2Character cha : _actor.getKnownList().getKnownCharactersInRadius(1000))
+		for (L2Character cha : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, 1000))
 		{
-			if (cha == null)
-			{
-				continue;
-			}
 			if (!(cha instanceof L2Npc))
 			{
 				if (_selfAnalysis.hasHealOrResurrect && (cha instanceof L2PcInstance) && (((L2Npc) _actor).getCastle().getSiege().checkIsDefender(((L2PcInstance) cha).getClan()))//
@@ -512,10 +515,9 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Check if the L2SiegeGuardInstance is attacking, knows the target and can't run
-			if (!_actor.isAttackingNow() && (_actor.getRunSpeed() == 0) && _actor.getKnownList().knowsObject(attackTarget))
+			if (!(_actor.isAttackingNow()) && (_actor.getRunSpeed() == 0) && (_actor.isInSurroundingRegion(attackTarget)))
 			{
 				// Cancel the target
-				_actor.getKnownList().removeKnownObject(attackTarget);
 				_actor.setTarget(null);
 				setIntention(AI_INTENTION_IDLE, null, null);
 			}
@@ -528,10 +530,10 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 				final double homeY = attackTarget.getY() - sGuard.getSpawn().getY();
 				
 				// Check if the L2SiegeGuardInstance isn't too far from it's home location
-				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) && _actor.getKnownList().knowsObject(attackTarget))
+				if ((((dx * dx) + (dy * dy)) > 10000) && (((homeX * homeX) + (homeY * homeY)) > 3240000) // 1800 * 1800
+					&& (_actor.isInSurroundingRegion(attackTarget)))
 				{
 					// Cancel the target
-					_actor.getKnownList().removeKnownObject(attackTarget);
 					_actor.setTarget(null);
 					setIntention(AI_INTENTION_IDLE, null, null);
 				}

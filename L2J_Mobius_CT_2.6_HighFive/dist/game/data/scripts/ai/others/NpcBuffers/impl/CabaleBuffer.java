@@ -16,12 +16,11 @@
  */
 package ai.others.NpcBuffers.impl;
 
-import java.util.Collection;
-
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
@@ -117,7 +116,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			if ((_npc == null) || !_npc.isVisible())
+			if ((_npc == null) || !_npc.isSpawned())
 			{
 				return;
 			}
@@ -137,8 +136,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 				losingCabal = SevenSigns.CABAL_DAWN;
 			}
 			
-			final Collection<L2PcInstance> plrs = _npc.getKnownList().getKnownPlayers().values();
-			for (L2PcInstance player : plrs)
+			for (L2PcInstance player : L2World.getInstance().getVisibleObjects(_npc, L2PcInstance.class))
 			{
 				if ((player == null) || player.isInvul())
 				{
@@ -244,7 +242,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		 */
 		private boolean handleCast(L2PcInstance player, int skillId)
 		{
-			if (player.isDead() || !player.isVisible() || !_npc.isInsideRadius(player, DISTANCE_TO_WATCH_OBJECT, false, false))
+			if (player.isDead() || !player.isSpawned() || !_npc.isInsideRadius(player, DISTANCE_TO_WATCH_OBJECT, false, false))
 			{
 				return false;
 			}

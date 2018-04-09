@@ -2698,7 +2698,7 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
 		}
-		else if (!door.getOpen())
+		else if (!door.isOpen())
 		{
 			door.openMe();
 		}
@@ -2716,7 +2716,7 @@ public abstract class AbstractScript extends ManagedScript
 		{
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
 		}
-		else if (door.getOpen())
+		else if (door.isOpen())
 		{
 			door.closeMe();
 		}

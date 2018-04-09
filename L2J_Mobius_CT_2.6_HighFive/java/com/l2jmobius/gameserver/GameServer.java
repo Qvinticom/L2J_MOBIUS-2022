@@ -136,7 +136,6 @@ import com.l2jmobius.gameserver.network.ClientNetworkManager;
 import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
-import com.l2jmobius.gameserver.taskmanager.KnownListUpdateTaskManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
 
 public final class GameServer
@@ -370,7 +369,6 @@ public final class GameServer
 		LOGGER.info("IdFactory: Free ObjectID's remaining: " + IdFactory.getInstance().size());
 		
 		TvTManager.getInstance();
-		KnownListUpdateTaskManager.getInstance();
 		
 		if ((Config.OFFLINE_TRADE_ENABLE || Config.OFFLINE_CRAFT_ENABLE) && Config.RESTORE_OFFLINERS)
 		{

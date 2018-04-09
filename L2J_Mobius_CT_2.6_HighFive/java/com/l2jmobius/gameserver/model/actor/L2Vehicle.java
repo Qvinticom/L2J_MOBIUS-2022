@@ -16,12 +16,10 @@
  */
 package com.l2jmobius.gameserver.model.actor;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -33,7 +31,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.VehicleKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.VehicleStat;
 import com.l2jmobius.gameserver.model.actor.templates.L2CharTemplate;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -182,12 +179,6 @@ public abstract class L2Vehicle extends L2Character
 	}
 	
 	@Override
-	public void initKnownList()
-	{
-		setKnownList(new VehicleKnownList(this));
-	}
-	
-	@Override
 	public VehicleStat getStat()
 	{
 		return (VehicleStat) super.getStat();
@@ -290,38 +281,26 @@ public abstract class L2Vehicle extends L2Character
 	 */
 	public void payForRide(int itemId, int count, int oustX, int oustY, int oustZ)
 	{
-		final Collection<L2PcInstance> passengers = getKnownList().getKnownPlayersInRadius(1000);
-		if ((passengers == null) || passengers.isEmpty())
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2PcInstance.class, 1000, player ->
 		{
-			return;
-		}
-		
-		L2ItemInstance ticket;
-		InventoryUpdate iu;
-		for (L2PcInstance player : passengers)
-		{
-			if (player == null)
-			{
-				continue;
-			}
 			if (player.isInBoat() && (player.getBoat() == this))
 			{
 				if (itemId > 0)
 				{
-					ticket = player.getInventory().getItemByItemId(itemId);
+					L2ItemInstance ticket = player.getInventory().getItemByItemId(itemId);
 					if ((ticket == null) || (player.getInventory().destroyItem("Boat", ticket, count, player, this) == null))
 					{
 						player.sendPacket(SystemMessageId.YOU_DO_NOT_POSSESS_THE_CORRECT_TICKET_TO_BOARD_THE_BOAT);
 						player.teleToLocation(new Location(oustX, oustY, oustZ), true);
-						continue;
+						return;
 					}
-					iu = new InventoryUpdate();
+					InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(ticket);
 					player.sendPacket(iu);
 				}
 				addPassenger(player);
 			}
-		}
+		});
 	}
 	
 	@Override
@@ -346,7 +325,7 @@ public abstract class L2Vehicle extends L2Character
 	{
 		if (isMoving())
 		{
-			stopMove(null, false);
+			stopMove(null);
 		}
 		
 		setIsTeleporting(true);
@@ -362,7 +341,7 @@ public abstract class L2Vehicle extends L2Character
 		}
 		
 		decayMe();
-		setXYZ(loc.getX(), loc.getY(), loc.getZ());
+		setXYZ(loc);
 		
 		// temporary fix for heading on teleports
 		if (loc.getHeading() != 0)
@@ -375,19 +354,14 @@ public abstract class L2Vehicle extends L2Character
 	}
 	
 	@Override
-	public void stopMove(Location loc, boolean updateKnownObjects)
+	public void stopMove(Location loc)
 	{
 		_move = null;
 		if (loc != null)
 		{
-			setXYZ(loc.getX(), loc.getY(), loc.getZ());
+			setXYZ(loc);
 			setHeading(loc.getHeading());
 			revalidateZone(true);
-		}
-		
-		if (Config.MOVE_BASED_KNOWNLIST && updateKnownObjects)
-		{
-			getKnownList().findObjects();
 		}
 	}
 	
@@ -417,7 +391,7 @@ public abstract class L2Vehicle extends L2Character
 			_log.log(Level.SEVERE, "Failed oustPlayers().", e);
 		}
 		
-		final L2WorldRegion oldRegion = getWorldRegion();
+		final L2WorldRegion oldZoneRegion = getWorldRegion();
 		
 		try
 		{
@@ -428,18 +402,9 @@ public abstract class L2Vehicle extends L2Character
 			_log.log(Level.SEVERE, "Failed decayMe().", e);
 		}
 		
-		if (oldRegion != null)
+		if (oldZoneRegion != null)
 		{
-			oldRegion.removeFromZones(this);
-		}
-		
-		try
-		{
-			getKnownList().removeAllKnownObjects();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "Failed cleaning knownlist.", e);
+			oldZoneRegion.removeFromZones(this);
 		}
 		
 		// Remove L2Object object from _allObjects of L2World

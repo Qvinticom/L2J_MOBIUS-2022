@@ -228,7 +228,7 @@ public class MinionList
 		@Override
 		public void run()
 		{
-			if (_master.isAlikeDead() || !_master.isVisible() || _minion.isVisible())
+			if (_master.isAlikeDead() || !_master.isSpawned() || _minion.isSpawned())
 			{
 				return;
 			}

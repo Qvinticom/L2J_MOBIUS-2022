@@ -17,6 +17,7 @@
 package ai.others.NpcBuffers;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -42,7 +43,7 @@ public class NpcBufferAI implements Runnable
 	@Override
 	public void run()
 	{
-		if ((_npc == null) || !_npc.isVisible() || _npc.isDecayed() || _npc.isDead() || (_skillData == null) || (_skillData.getSkill() == null))
+		if ((_npc == null) || !_npc.isSpawned() || _npc.isDecayed() || _npc.isDead() || (_skillData == null) || (_skillData.getSkill() == null))
 		{
 			return;
 		}
@@ -80,7 +81,7 @@ public class NpcBufferAI implements Runnable
 			}
 			case RANGE:
 			{
-				for (L2Character target : _npc.getKnownList().getKnownCharactersInRadius(skill.getAffectRange()))
+				for (L2Character target : L2World.getInstance().getVisibleObjects(_npc, L2Character.class, skill.getAffectRange()))
 				{
 					switch (_skillData.getAffectObject())
 					{

@@ -29,12 +29,9 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class handles following admin commands: - server_shutdown [sec] = shows menu or shuts down server in sec seconds
- * @version $Revision: 1.5.2.1.2.4 $ $Date: 2005/04/11 10:06:06 $
  */
 public class AdminShutdown implements IAdminCommandHandler
 {
-	// private static Logger _log = Logger.getLogger(AdminShutdown.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_server_shutdown",
@@ -110,7 +107,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
 		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/shutdown.htm");
-		adminReply.replace("%count%", String.valueOf(L2World.getInstance().getAllPlayersCount()));
+		adminReply.replace("%count%", String.valueOf(L2World.getInstance().getPlayers().size()));
 		adminReply.replace("%used%", String.valueOf(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
 		adminReply.replace("%time%", format.format(cal.getTime()));
 		activeChar.sendPacket(adminReply);
@@ -125,5 +122,4 @@ public class AdminShutdown implements IAdminCommandHandler
 	{
 		Shutdown.getInstance().abort(activeChar);
 	}
-	
 }

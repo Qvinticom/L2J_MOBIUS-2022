@@ -63,7 +63,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TeleporterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrainerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2WarehouseInstance;
-import com.l2jmobius.gameserver.model.actor.knownlist.NpcKnownList;
 import com.l2jmobius.gameserver.model.actor.stat.NpcStat;
 import com.l2jmobius.gameserver.model.actor.status.NpcStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -273,7 +272,7 @@ public class L2Npc extends L2Character
 					_npc.onRandomAnimation(Rnd.get(2, 3));
 				}
 				
-				_npc.startRandomAnimationTimer();
+				_npc.startRandomAnimationTask();
 			}
 			catch (Exception e)
 			{
@@ -299,7 +298,7 @@ public class L2Npc extends L2Character
 	/**
 	 * Create a RandomAnimation Task that will be launched after the calculated delay.
 	 */
-	public void startRandomAnimationTimer()
+	public void startRandomAnimationTask()
 	{
 		if (!hasRandomAnimation())
 		{
@@ -340,18 +339,6 @@ public class L2Npc extends L2Character
 	public boolean isRandomAnimationEnabled()
 	{
 		return _isRandomAnimationEnabled;
-	}
-	
-	@Override
-	public NpcKnownList getKnownList()
-	{
-		return (NpcKnownList) super.getKnownList();
-	}
-	
-	@Override
-	public void initKnownList()
-	{
-		setKnownList(new NpcKnownList(this));
 	}
 	
 	@Override
@@ -446,14 +433,13 @@ public class L2Npc extends L2Character
 	@Override
 	public void updateAbnormalEffect()
 	{
-		// Send a Server->Client packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
-		final Collection<L2PcInstance> plrs = getKnownList().getKnownPlayers().values();
-		for (L2PcInstance player : plrs)
+		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if ((player == null) || !isVisibleFor(player))
+			if (!isVisibleFor(player))
 			{
-				continue;
+				return;
 			}
+			
 			if (getRunSpeed() == 0)
 			{
 				player.sendPacket(new ServerObjectInfo(this, player));
@@ -462,7 +448,7 @@ public class L2Npc extends L2Character
 			{
 				player.sendPacket(new AbstractNpcInfo.NpcInfo(this, player));
 			}
-		}
+		});
 	}
 	
 	public boolean isEventMob()
@@ -1365,16 +1351,6 @@ public class L2Npc extends L2Character
 			oldRegion.removeFromZones(this);
 		}
 		
-		// Remove all L2Object from _knownObjects and _knownPlayer of the L2Character then cancel Attack or Cast and notify AI
-		try
-		{
-			getKnownList().removeAllKnownObjects();
-		}
-		catch (Exception e)
-		{
-			_log.log(Level.SEVERE, "Failed removing cleaning knownlist.", e);
-		}
-		
 		// Remove L2Object object from _allObjects of L2World
 		L2World.getInstance().removeObject(this);
 		
@@ -1747,13 +1723,13 @@ public class L2Npc extends L2Character
 	 */
 	public void broadcastEvent(String eventName, int radius, L2Object reference)
 	{
-		for (L2Object obj : L2World.getInstance().getVisibleObjects(this, radius))
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2Npc.class, radius, obj ->
 		{
 			if (obj.isNpc() && obj.hasListener(EventType.ON_NPC_EVENT_RECEIVED))
 			{
-				EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, (L2Npc) obj, reference), obj);
+				EventDispatcher.getInstance().notifyEventAsync(new OnNpcEventReceived(eventName, this, obj, reference), obj);
 			}
-		}
+		});
 	}
 	
 	/**

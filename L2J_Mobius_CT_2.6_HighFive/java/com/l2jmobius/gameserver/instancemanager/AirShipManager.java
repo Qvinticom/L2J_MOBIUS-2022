@@ -183,7 +183,7 @@ public class AirShipManager
 	public boolean hasAirShip(int ownerId)
 	{
 		final L2AirShipInstance ship = _airShips.get(ownerId);
-		return (ship != null) && (ship.isVisible() || ship.isTeleporting());
+		return (ship != null) && (ship.isSpawned() || ship.isTeleporting());
 	}
 	
 	public void registerAirShipTeleportList(int dockId, int locationId, VehiclePathPoint[][] tp, int[] fuelConsumption)

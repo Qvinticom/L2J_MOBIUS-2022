@@ -21,6 +21,7 @@ import java.util.GregorianCalendar;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
@@ -80,13 +81,13 @@ public class Lindvior extends AbstractNpcAI
 			{
 				if (npc != null)
 				{
-					for (L2PcInstance pl : npc.getKnownList().getKnownPlayersInRadius(4000))
+					L2World.getInstance().forEachVisibleObjectInRange(npc, L2PcInstance.class, 4000, pl ->
 					{
 						if ((pl.getZ() >= 1100) && (pl.getZ() <= 3100))
 						{
 							pl.showQuestMovie(LINDVIOR_SCENE_ID);
 						}
-					}
+					});
 				}
 				break;
 			}
