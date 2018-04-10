@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -124,6 +125,28 @@ public class CharacterSelect implements IClientIncomingPacket
 						msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
 						client.sendPacket(msg);
 						return;
+					}
+					
+					if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_BALANCE_ONLINE_PLAYERS)
+					{
+						if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage();
+							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
+						if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
+						{
+							final NpcHtmlMessage msg = new NpcHtmlMessage();
+							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
+							msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
+							client.sendPacket(msg);
+							return;
+						}
 					}
 					
 					// load up character from disk

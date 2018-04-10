@@ -349,7 +349,7 @@ public final class L2PcInstance extends L2Playable
 	
 	// Character Character SQL String Definitions:
 	private static final String INSERT_CHARACTER = "INSERT INTO characters (account_name,charId,char_name,level,maxHp,curHp,maxCp,curCp,maxMp,curMp,face,hairStyle,hairColor,sex,exp,sp,karma,fame,pvpkills,pkkills,clanid,race,classid,deletetime,cancraft,title,title_color,accesslevel,online,isin7sdungeon,clan_privs,wantspeace,base_class,newbie,nobless,power_grade,createDate) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=? WHERE charId=?";
+	private static final String UPDATE_CHARACTER = "UPDATE characters SET level=?,maxHp=?,curHp=?,maxCp=?,curCp=?,maxMp=?,curMp=?,face=?,hairStyle=?,hairColor=?,sex=?,heading=?,x=?,y=?,z=?,exp=?,expBeforeDeath=?,sp=?,karma=?,fame=?,pvpkills=?,pkkills=?,clanid=?,race=?,classid=?,deletetime=?,title=?,title_color=?,accesslevel=?,online=?,isin7sdungeon=?,clan_privs=?,wantspeace=?,base_class=?,onlinetime=?,newbie=?,nobless=?,power_grade=?,subpledge=?,lvl_joined_academy=?,apprentice=?,sponsor=?,clan_join_expiry_time=?,clan_create_expiry_time=?,char_name=?,death_penalty_level=?,bookmarkslot=?,vitality_points=?,language=?,faction=? WHERE charId=?";
 	private static final String RESTORE_CHARACTER = "SELECT * FROM characters WHERE charId=?";
 	
 	// Character Teleport Bookmark:
@@ -575,6 +575,10 @@ public final class L2PcInstance extends L2Playable
 	/** Premium System */
 	private boolean _premiumStatus = false;
 	
+	/** Faction System */
+	private boolean _isGood = false;
+	private boolean _isEvil = false;
+	
 	/** The L2FolkInstance corresponding to the last Folk which one the player talked. */
 	private L2Npc _lastFolkNpc = null;
 	
@@ -593,7 +597,7 @@ public final class L2PcInstance extends L2Playable
 	private final Set<L2PcInstance> _snoopListener = ConcurrentHashMap.newKeySet(1);
 	private final Set<L2PcInstance> _snoopedPlayer = ConcurrentHashMap.newKeySet(1);
 	
-	// hennas
+	/** Hennas */
 	private final L2Henna[] _henna = new L2Henna[3];
 	private int _hennaSTR;
 	private int _hennaINT;
@@ -5436,6 +5440,16 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
+		if (this == player_target)
+		{
+			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && target.isPlayer() && ((isGood() && player_target.isEvil()) || (isEvil() && player_target.isGood())))
+		{
+			return;
+		}
+		
 		if (isInDuel() && (player_target.getDuelId() == getDuelId()))
 		{
 			return;
@@ -6715,6 +6729,16 @@ public final class L2PcInstance extends L2Playable
 					player.setNewbie(rset.getInt("newbie"));
 					player.setNoble(rset.getInt("nobless") == 1);
 					
+					final int factionId = rset.getInt("faction");
+					if (factionId == 1)
+					{
+						player.setGood();
+					}
+					if (factionId == 2)
+					{
+						player.setEvil();
+					}
+					
 					player.setClanJoinExpiryTime(rset.getLong("clan_join_expiry_time"));
 					if (player.getClanJoinExpiryTime() < System.currentTimeMillis())
 					{
@@ -7282,7 +7306,18 @@ public final class L2PcInstance extends L2Playable
 			ps.setInt(47, getBookMarkSlot());
 			ps.setInt(48, getVitalityPoints());
 			ps.setString(49, getLang());
-			ps.setInt(50, getObjectId());
+			
+			int factionId = 0;
+			if (isGood())
+			{
+				factionId = 1;
+			}
+			if (isEvil())
+			{
+				factionId = 2;
+			}
+			ps.setInt(50, factionId);
+			ps.setInt(51, getObjectId());
 			
 			ps.execute();
 		}
@@ -8226,7 +8261,11 @@ public final class L2PcInstance extends L2Playable
 		// Check if the attacker is in olympia and olympia start
 		if (attacker.isPlayer() && attacker.getActingPlayer().isInOlympiadMode())
 		{
-			return isInOlympiadMode() && isOlympiadStart() && (((L2PcInstance) attacker).getOlympiadGameId() == getOlympiadGameId());
+			if (isInOlympiadMode() && isOlympiadStart() && (((L2PcInstance) attacker).getOlympiadGameId() == getOlympiadGameId()))
+			{
+				return true;
+			}
+			return false;
 		}
 		
 		// Check if the attacker is in TvT and TvT is started
@@ -8295,8 +8334,14 @@ public final class L2PcInstance extends L2Playable
 			{
 				return true;
 			}
+			
+			if (Config.FACTION_SYSTEM_ENABLED && ((isGood() && attackerPlayer.isEvil()) || (isEvil() && attackerPlayer.isGood())))
+			{
+				return true;
+			}
 		}
-		else if (attacker instanceof L2DefenderInstance)
+		
+		if (attacker instanceof L2DefenderInstance)
 		{
 			if (getClan() != null)
 			{
@@ -14299,6 +14344,28 @@ public final class L2PcInstance extends L2Playable
 	public boolean hasCharmOfCourage()
 	{
 		return _hasCharmOfCourage;
+	}
+	
+	public boolean isGood()
+	{
+		return _isGood;
+	}
+	
+	public boolean isEvil()
+	{
+		return _isEvil;
+	}
+	
+	public void setGood()
+	{
+		_isGood = true;
+		_isEvil = false;
+	}
+	
+	public void setEvil()
+	{
+		_isGood = false;
+		_isEvil = true;
 	}
 	
 	/**

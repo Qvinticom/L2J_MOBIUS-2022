@@ -16,16 +16,17 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 
 /**
@@ -49,11 +50,24 @@ public class L2GuardInstance extends L2Attackable
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if (attacker.isPlayer())
+		if (attacker.isMonster())
 		{
-			return ((L2PcInstance) attacker).getKarma() > 0;
+			return true;
 		}
-		return attacker instanceof L2MonsterInstance;
+		return super.isAutoAttackable(attacker);
+	}
+	
+	@Override
+	public void addDamage(L2Character attacker, int damage, Skill skill)
+	{
+		super.addDamage(attacker, damage, skill);
+		getAI().startFollow(attacker);
+		addDamageHate(attacker, 0, 10);
+		L2World.getInstance().forEachVisibleObjectInRange(this, L2GuardInstance.class, 500, guard ->
+		{
+			guard.getAI().startFollow(attacker);
+			guard.addDamageHate(attacker, 0, 10);
+		});
 	}
 	
 	/**
@@ -65,12 +79,13 @@ public class L2GuardInstance extends L2Attackable
 		setIsNoRndWalk(true);
 		super.onSpawn();
 		
+		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 		// check the region where this mob is, do not activate the AI if region is inactive.
-		final L2WorldRegion region = L2World.getInstance().getRegion(this);
-		if ((region != null) && (!region.isActive()))
-		{
-			getAI().stopAITask();
-		}
+		// final L2WorldRegion region = L2World.getInstance().getRegion(this);
+		// if ((region != null) && (!region.isActive()))
+		// {
+		// getAI().stopAITask();
+		// }
 	}
 	
 	/**
@@ -124,6 +139,13 @@ public class L2GuardInstance extends L2Attackable
 		if (!canTarget(player))
 		{
 			return;
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+		{
+			interact = false;
+			// TODO: Fix normal targeting
+			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}
 		
 		// Check if the L2PcInstance already target the L2GuardInstance

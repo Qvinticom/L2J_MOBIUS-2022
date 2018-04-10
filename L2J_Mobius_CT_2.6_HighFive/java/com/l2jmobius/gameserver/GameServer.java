@@ -98,6 +98,7 @@ import com.l2jmobius.gameserver.instancemanager.CoupleManager;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
+import com.l2jmobius.gameserver.instancemanager.FactionManager;
 import com.l2jmobius.gameserver.instancemanager.FishingChampionshipManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -236,6 +237,11 @@ public final class GameServer
 		RaidBossPointsManager.getInstance();
 		PetDataTable.getInstance();
 		CharSummonTable.getInstance().init();
+		
+		if (Config.FACTION_SYSTEM_ENABLED)
+		{
+			FactionManager.getInstance();
+		}
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{

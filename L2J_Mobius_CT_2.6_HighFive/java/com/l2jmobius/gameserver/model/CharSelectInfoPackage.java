@@ -54,6 +54,8 @@ public class CharSelectInfoPackage
 	private int _y = 0;
 	private int _z = 0;
 	private String _htmlPrefix = null;
+	private boolean _isGood = false;
+	private boolean _isEvil = false;
 	private int _vitalityPoints = 0;
 	private int _accessLevel = 0;
 	
@@ -96,6 +98,28 @@ public class CharSelectInfoPackage
 	public void setAccessLevel(int level)
 	{
 		_accessLevel = level;
+	}
+	
+	public boolean isGood()
+	{
+		return _isGood;
+	}
+	
+	public void setGood()
+	{
+		_isGood = true;
+		_isEvil = false;
+	}
+	
+	public boolean isEvil()
+	{
+		return _isEvil;
+	}
+	
+	public void setEvil()
+	{
+		_isGood = false;
+		_isEvil = true;
 	}
 	
 	public int getClanId()

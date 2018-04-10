@@ -25,6 +25,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -84,6 +85,10 @@ public final class L2World
 	
 	/** Map containing all the players in game. */
 	private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Good players in game. */
+	private static final Map<Integer, L2PcInstance> _allGoodPlayers = new ConcurrentHashMap<>();
+	/** Map containing all the Evil players in game. */
+	private static final Map<Integer, L2PcInstance> _allEvilPlayers = new ConcurrentHashMap<>();
 	/** Map containing all visible objects. */
 	private final Map<Integer, L2Object> _allObjects = new ConcurrentHashMap<>();
 	/** Map with the pets instances and their owner ID. */
@@ -139,6 +144,10 @@ public final class L2World
 				Disconnection.of(newPlayer).defaultSequence(false);
 				LOGGER.warning(getClass().getSimpleName() + ": Duplicate character!? Disconnected both characters (" + newPlayer.getName() + ")");
 			}
+			else if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				addFactionPlayerToWorld(newPlayer);
+			}
 		}
 	}
 	
@@ -163,6 +172,18 @@ public final class L2World
 				return;
 			}
 			_allPlayers.remove(object.getObjectId());
+			
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if (player.isGood())
+				{
+					_allGoodPlayers.remove(player.getObjectId());
+				}
+				else if (player.isEvil())
+				{
+					_allEvilPlayers.remove(player.getObjectId());
+				}
+			}
 		}
 	}
 	
@@ -196,6 +217,16 @@ public final class L2World
 	public Collection<L2PcInstance> getPlayers()
 	{
 		return _allPlayers.values();
+	}
+	
+	public Collection<L2PcInstance> getAllGoodPlayers()
+	{
+		return _allGoodPlayers.values();
+	}
+	
+	public Collection<L2PcInstance> getAllEvilPlayers()
+	{
+		return _allEvilPlayers.values();
 	}
 	
 	/**
@@ -321,6 +352,18 @@ public final class L2World
 				EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((L2Npc) object, (L2Character) wo, wo.isSummon()), (L2Npc) object);
 			}
 		});
+	}
+	
+	public static void addFactionPlayerToWorld(L2PcInstance player)
+	{
+		if (player.isGood())
+		{
+			_allGoodPlayers.put(player.getObjectId(), player);
+		}
+		else if (player.isEvil())
+		{
+			_allEvilPlayers.put(player.getObjectId(), player);
+		}
 	}
 	
 	/**

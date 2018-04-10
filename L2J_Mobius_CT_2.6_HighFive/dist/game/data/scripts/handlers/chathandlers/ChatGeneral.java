@@ -87,11 +87,33 @@ public final class ChatGeneral implements IChatHandler
 			}
 			
 			final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), text);
+			final CreatureSay csRandom = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
 			L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, 1250, player ->
 			{
 				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
-					player.sendPacket(cs);
+					if (Config.FACTION_SYSTEM_ENABLED)
+					{
+						if (Config.FACTION_SPECIFIC_CHAT)
+						{
+							if ((activeChar.isGood() && player.isEvil()) || (activeChar.isEvil() && player.isGood()))
+							{
+								player.sendPacket(csRandom);
+							}
+							else
+							{
+								player.sendPacket(cs);
+							}
+						}
+						else
+						{
+							player.sendPacket(cs);
+						}
+					}
+					else
+					{
+						player.sendPacket(cs);
+					}
 				}
 			});
 			

@@ -33,3 +33,4 @@ What is done
 -Dropped SQL spawnlist
 -Sell buffs command
 -Dropped knownlists
+-Faction System (Good vs Evil)

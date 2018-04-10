@@ -672,11 +672,11 @@ public class NpcData implements IGameXmlReader
 	 */
 	private int getOrCreateClanId(String clanName)
 	{
-		Integer id = _clans.get(clanName.toUpperCase());
+		Integer id = _clans.get(clanName);
 		if (id == null)
 		{
 			id = _clans.size();
-			_clans.put(clanName.toUpperCase(), id);
+			_clans.put(clanName, id);
 		}
 		return id;
 	}
@@ -688,7 +688,7 @@ public class NpcData implements IGameXmlReader
 	 */
 	public int getClanId(String clanName)
 	{
-		final Integer id = _clans.get(clanName.toUpperCase());
+		final Integer id = _clans.get(clanName);
 		return id != null ? id : -1;
 	}
 	

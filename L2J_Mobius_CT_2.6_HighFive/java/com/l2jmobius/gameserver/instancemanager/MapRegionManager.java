@@ -25,6 +25,7 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.model.L2MapRegion;
@@ -158,7 +159,11 @@ public final class MapRegionManager implements IGameXmlReader
 	public final int getMapRegionLocId(int locX, int locY)
 	{
 		final L2MapRegion region = getMapRegion(locX, locY);
-		return region != null ? region.getLocId() : 0;
+		if (region != null)
+		{
+			return region.getLocId();
+		}
+		return 0;
 	}
 	
 	/**
@@ -402,6 +407,18 @@ public final class MapRegionManager implements IGameXmlReader
 						return loc;
 					}
 				}
+			}
+		}
+		
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_RESPAWN_AT_BASE)
+		{
+			if (activeChar.getActingPlayer().isGood())
+			{
+				return Config.FACTION_GOOD_BASE_LOCATION;
+			}
+			if (activeChar.getActingPlayer().isEvil())
+			{
+				return Config.FACTION_EVIL_BASE_LOCATION;
 			}
 		}
 		

@@ -653,7 +653,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public void addDamageHate(L2Character attacker, int damage, int aggro)
 	{
-		if (attacker == null)
+		if ((attacker == null) || (attacker == this))
 		{
 			return;
 		}
