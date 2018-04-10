@@ -327,6 +327,7 @@ public class NpcData implements IGameXmlReader
 									set.set("unique", parseBoolean(attrs, "unique"));
 									set.set("attackable", parseBoolean(attrs, "attackable"));
 									set.set("targetable", parseBoolean(attrs, "targetable"));
+									set.set("talkable", parseBoolean(attrs, "talkable"));
 									set.set("undying", parseBoolean(attrs, "undying"));
 									set.set("showName", parseBoolean(attrs, "showName"));
 									set.set("flying", parseBoolean(attrs, "flying"));
