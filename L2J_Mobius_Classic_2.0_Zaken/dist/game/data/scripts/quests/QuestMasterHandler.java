@@ -152,6 +152,9 @@ import quests.Q10996_TemplesDecorations.Q10996_TemplesDecorations;
 import quests.Q11000_MoonKnight.Q11000_MoonKnight;
 import quests.Q11001_TombsOfAncestors.Q11001_TombsOfAncestors;
 import quests.Q11002_HelpWithTempleRestoration.Q11002_HelpWithTempleRestoration;
+import quests.Q11003_PerfectLeatherArmor1.Q11003_PerfectLeatherArmor1;
+import quests.Q11004_PerfectLeatherArmor2.Q11004_PerfectLeatherArmor2;
+import quests.Q11005_PerfectLeatherArmor3.Q11005_PerfectLeatherArmor3;
 import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
 import quests.Q11008_PreparationForDungeon.Q11008_PreparationForDungeon;
 import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
@@ -300,6 +303,9 @@ public class QuestMasterHandler
 		Q11000_MoonKnight.class,
 		Q11001_TombsOfAncestors.class,
 		Q11002_HelpWithTempleRestoration.class,
+		Q11003_PerfectLeatherArmor1.class,
+		Q11004_PerfectLeatherArmor2.class,
+		Q11005_PerfectLeatherArmor3.class,
 		Q11007_NoiseInWoods.class,
 		Q11008_PreparationForDungeon.class,
 		Q11013_ShilensHunt.class,
