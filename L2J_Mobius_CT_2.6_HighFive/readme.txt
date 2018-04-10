@@ -32,4 +32,4 @@ What is done
 -Replaced MMOCore with Netty
 -Dropped SQL spawnlist
 -Sell buffs command
--Dropped knowlists
+-Dropped knownlists
