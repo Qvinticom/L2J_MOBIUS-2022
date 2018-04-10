@@ -2514,7 +2514,11 @@ public final class L2PcInstance extends L2Playable
 			giveAvailableAutoGetSkills();
 		}
 		
-		checkPlayerSkills();
+		if (Config.DECREASE_SKILL_LEVEL && !canOverrideCond(PcCondOverride.SKILL_CONDITIONS))
+		{
+			checkPlayerSkills();
+		}
+		
 		checkItemRestriction();
 		sendSkillList();
 	}
