@@ -112,7 +112,7 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		OutgoingPackets.ACQUIRE_SKILL_DONE.writeId(packet);
+		OutgoingPackets.ACQUIRE_SKILL_INFO.writeId(packet);
 		packet.writeD(_id);
 		packet.writeD(_level);
 		packet.writeD(_spCost);
