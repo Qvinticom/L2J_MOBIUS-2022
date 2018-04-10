@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 
 /**
  * @author Mobius
@@ -30,6 +31,12 @@ public final class Compelling extends AbstractEffect
 {
 	public Compelling(StatsSet params)
 	{
+	}
+	
+	@Override
+	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
+	{
+		return Formulas.calcProbability(100, effector, effected, skill);
 	}
 	
 	@Override

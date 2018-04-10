@@ -1134,6 +1134,7 @@ public final class Formulas
 	 * DeleteHateOfMe,<br>
 	 * TransferHate,<br>
 	 * Confuse<br>
+	 * Compelling,<br>
 	 * Knockback<br>
 	 * Pull<br>
 	 * @param baseChance chance from effect parameter
