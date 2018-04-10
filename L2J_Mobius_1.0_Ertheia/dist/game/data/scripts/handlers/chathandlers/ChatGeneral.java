@@ -91,7 +91,7 @@ public final class ChatGeneral implements IChatHandler
 			final CreatureSay csRandom = new CreatureSay(activeChar.getObjectId(), type, activeChar.getAppearance().getVisibleName(), ChatRandomizer.randomize(text));
 			L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, 1250, player ->
 			{
-				if ((player != null) && activeChar.isInsideRadius(player, 1250, false, true) && !BlockList.isBlocked(player, activeChar))
+				if ((player != null) && !BlockList.isBlocked(player, activeChar))
 				{
 					if (Config.FACTION_SYSTEM_ENABLED)
 					{
