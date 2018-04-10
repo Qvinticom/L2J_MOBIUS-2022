@@ -150,7 +150,7 @@ public final class L2World
 			}
 			else if (Config.FACTION_SYSTEM_ENABLED)
 			{
-				addFactionPlayerToWorld(existingPlayer);
+				addFactionPlayerToWorld(newPlayer);
 			}
 		}
 	}
