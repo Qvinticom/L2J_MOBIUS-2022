@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -31,6 +32,7 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneEnter;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureZoneExit;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
@@ -58,6 +60,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	private boolean _allowStore;
 	protected boolean _enabled;
 	private AbstractZoneSettings _settings;
+	private int _instanceTemplateId = -1;
 	private int _instanceId = -1;
 	
 	protected L2ZoneType(int id)
@@ -182,7 +185,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		}
 		else if (name.equals("instanceId"))
 		{
-			_instanceId = Integer.parseInt(value);
+			_instanceTemplateId = Integer.parseInt(value);
 		}
 		else
 		{
@@ -196,6 +199,16 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	private boolean isAffected(L2Character character)
 	{
+		// Check instance Template Id
+		if (_instanceTemplateId > 0)
+		{
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			if ((world != null) && (world.getTemplateId() != _instanceTemplateId))
+			{
+				return false;
+			}
+		}
+		
 		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl) || !character.isInstanceTypes(_target))
 		{
 			return false;
@@ -321,6 +334,24 @@ public abstract class L2ZoneType extends ListenersContainer
 	}
 	
 	/**
+	 * Set the zone instance Template Id .
+	 * @param instanceTemplateId
+	 */
+	public void setInstanceTemplateId(int instanceTemplateId)
+	{
+		_instanceTemplateId = instanceTemplateId;
+	}
+	
+	/**
+	 * Returns zone instance TemplateId
+	 * @return
+	 */
+	public int getInstanceTemplateId()
+	{
+		return _instanceTemplateId;
+	}
+	
+	/**
 	 * Checks if the given coordinates are within zone's plane
 	 * @param x
 	 * @param y
@@ -351,31 +382,6 @@ public abstract class L2ZoneType extends ListenersContainer
 	public boolean isInsideZone(int x, int y, int z)
 	{
 		return _zone.isInsideZone(x, y, z);
-	}
-	
-	/**
-	 * Checks if the given coordinates are within the zone and the instanceId used matched the zone's instanceId
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param instanceId
-	 * @return
-	 */
-	public boolean isInsideZone(int x, int y, int z, int instanceId)
-	{
-		// It will check if coords are within the zone if the given instanceId or
-		// the zone's _instanceId are in the multiverse or they match
-		return ((_instanceId == -1) || (instanceId == -1) || (_instanceId == instanceId)) && _zone.isInsideZone(x, y, z);
-	}
-	
-	/**
-	 * Checks if the given object is inside the zone.
-	 * @param object
-	 * @return
-	 */
-	public boolean isInsideZone(L2Object object)
-	{
-		return isInsideZone(object.getX(), object.getY(), object.getZ(), object.getInstanceId());
 	}
 	
 	public double getDistanceToZone(int x, int y)
