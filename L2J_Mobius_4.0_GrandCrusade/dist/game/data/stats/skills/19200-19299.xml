@@ -2231,12 +2231,13 @@
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
 		<!-- Updated to GRAND CRUSADE -->
+		<!-- Level: 1 Increases bonus XP/SP by 30%. -->
+		<!-- Level: 2 Increases bonus XP/SP by 100%. -->
 		<icon>icon.s_vitality_of_honors1</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effectPoint>100</effectPoint>
-		<!-- Level: 1 Increases bonus XP/SP by 30%. -->
-		<!-- Level: 2 Increases bonus XP/SP by 100%. -->
+		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="ExpModify">
 				<amount>
