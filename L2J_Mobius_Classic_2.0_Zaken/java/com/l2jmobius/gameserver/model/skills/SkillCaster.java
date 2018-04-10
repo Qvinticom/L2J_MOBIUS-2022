@@ -526,6 +526,12 @@ public class SkillCaster implements Runnable
 		// Launch the magic skill in order to calculate its effects
 		try
 		{
+			// Mobius: Disabled characters should not be able to finish bad skills.
+			if (caster.isAttackingDisabled() && skill.isBad())
+			{
+				return;
+			}
+			
 			// Check if the toggle skill effects are already in progress on the L2Character
 			if (skill.isToggle() && caster.isAffectedBySkill(skill.getId()))
 			{
