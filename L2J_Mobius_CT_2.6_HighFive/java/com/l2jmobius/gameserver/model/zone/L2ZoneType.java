@@ -24,7 +24,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -50,8 +49,6 @@ public abstract class L2ZoneType extends ListenersContainer
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;
 	private String _name = null;
-	private int _instanceId = -1;
-	private String _instanceTemplate = "";
 	private int _minLvl;
 	private int _maxLvl;
 	private int[] _race;
@@ -61,6 +58,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	private boolean _allowStore;
 	protected boolean _enabled;
 	private AbstractZoneSettings _settings;
+	private int _instanceId = -1;
 	
 	protected L2ZoneType(int id)
 	{
@@ -99,15 +97,6 @@ public abstract class L2ZoneType extends ListenersContainer
 		if (name.equals("name"))
 		{
 			_name = value;
-		}
-		else if (name.equals("instanceId"))
-		{
-			_instanceId = Integer.parseInt(value);
-		}
-		else if (name.equals("instanceTemplate"))
-		{
-			_instanceTemplate = value;
-			_instanceId = InstanceManager.getInstance().createDynamicInstance(value);
 		}
 		// Minimum level
 		else if (name.equals("affectedLvlMin"))
@@ -190,6 +179,10 @@ public abstract class L2ZoneType extends ListenersContainer
 		else if (name.equals("default_enabled"))
 		{
 			_enabled = Boolean.parseBoolean(value);
+		}
+		else if (name.equals("instanceId"))
+		{
+			_instanceId = Integer.parseInt(value);
 		}
 		else
 		{
@@ -325,15 +318,6 @@ public abstract class L2ZoneType extends ListenersContainer
 	public int getInstanceId()
 	{
 		return _instanceId;
-	}
-	
-	/**
-	 * Returns zone instanceTemplate
-	 * @return
-	 */
-	public String getInstanceTemplate()
-	{
-		return _instanceTemplate;
 	}
 	
 	/**

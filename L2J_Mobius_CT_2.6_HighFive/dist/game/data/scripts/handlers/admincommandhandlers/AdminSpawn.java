@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
-import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;

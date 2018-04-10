@@ -38,8 +38,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2SiegeFlagInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
-import com.l2jmobius.gameserver.model.entity.Instance;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
 

@@ -259,15 +259,15 @@ public final class GameServer
 		}
 		
 		printSection("NPCs");
+		DoorData.getInstance();
 		SkillLearnData.getInstance();
 		NpcData.getInstance();
 		WalkingManager.getInstance();
 		StaticObjectData.getInstance();
-		ZoneManager.getInstance();
-		DoorData.getInstance();
 		ItemAuctionManager.getInstance();
 		CastleManager.getInstance().loadInstances();
 		NpcBufferTable.getInstance();
+		ZoneManager.getInstance();
 		GrandBossManager.getInstance().initZones();
 		EventDroplist.getInstance();
 		

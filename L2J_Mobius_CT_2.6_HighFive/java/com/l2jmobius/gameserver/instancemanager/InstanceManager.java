@@ -31,7 +31,7 @@ import org.w3c.dom.Node;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 
 /**
@@ -314,22 +314,6 @@ public final class InstanceManager implements IGameXmlReader
 	
 	/**
 	 * @param id
-	 * @return
-	 */
-	public boolean createInstance(int id)
-	{
-		if (getInstance(id) != null)
-		{
-			return false;
-		}
-		
-		final Instance instance = new Instance(id);
-		INSTANCES.put(id, instance);
-		return true;
-	}
-	
-	/**
-	 * @param id
 	 * @param template
 	 * @return
 	 */
@@ -343,6 +327,8 @@ public final class InstanceManager implements IGameXmlReader
 		final Instance instance = new Instance(id);
 		INSTANCES.put(id, instance);
 		instance.loadInstanceTemplate(template);
+		instance.spawnDoors();
+		instance.spawnGroup("general");
 		return true;
 	}
 	
@@ -367,6 +353,8 @@ public final class InstanceManager implements IGameXmlReader
 		if (template != null)
 		{
 			instance.loadInstanceTemplate(template);
+			instance.spawnDoors();
+			instance.spawnGroup("general");
 		}
 		return _dynamic;
 	}

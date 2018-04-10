@@ -14,14 +14,13 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.model.entity;
+package com.l2jmobius.gameserver.model.instancezone;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.DayOfWeek;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -56,7 +55,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
-import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -68,7 +66,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public final class Instance
 {
-	private static final Logger _log = Logger.getLogger(Instance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
 	
 	private final int _id;
 	private String _name;
@@ -77,8 +75,9 @@ public final class Instance
 	private boolean _allowRandomWalk = true;
 	private final List<Integer> _players = new CopyOnWriteArrayList<>();
 	private final List<L2Npc> _npcs = new CopyOnWriteArrayList<>();
+	private final List<StatsSet> _doorTemplates = new CopyOnWriteArrayList<>();
 	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
-	private final Map<String, List<L2Spawn>> _manualSpawn = new HashMap<>();
+	private final List<StatsSet> _spawnTemplates = new CopyOnWriteArrayList<>();
 	// private StartPosType _enterLocationOrder; TODO implement me
 	private List<Location> _enterLocations = null;
 	private Location _exitLocation = null;
@@ -260,22 +259,35 @@ public final class Instance
 	
 	/**
 	 * Adds a door into the instance
-	 * @param doorId - from Doors.xml
 	 * @param set - StatsSet for initializing door
 	 */
-	public void addDoor(int doorId, StatsSet set)
+	public void addDoor(StatsSet set)
 	{
-		if (_doors.containsKey(doorId))
+		if (_doorTemplates.contains(set))
 		{
-			_log.warning("Door ID " + doorId + " already exists in instance " + getId());
+			LOGGER.warning("Door ID " + set.getInt("DoorId") + " already exists in instance " + getId());
 			return;
 		}
-		
-		final L2DoorInstance newdoor = new L2DoorInstance(new L2DoorTemplate(set));
-		newdoor.setInstanceId(getId());
-		newdoor.setCurrentHp(newdoor.getMaxHp());
-		newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
-		_doors.put(doorId, newdoor);
+		_doorTemplates.add(set);
+	}
+	
+	/**
+	 * Spawn doors inside instance world.
+	 */
+	public void spawnDoors()
+	{
+		for (StatsSet template : _doorTemplates)
+		{
+			// Create new door instance
+			final int doorId = template.getInt("DoorId");
+			final StatsSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
+			final L2DoorInstance newdoor = new L2DoorInstance(new L2DoorTemplate(doorTemplate));
+			newdoor.setInstanceId(getId());
+			newdoor.setCurrentHp(newdoor.getMaxHp());
+			newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
+			
+			_doors.put(doorId, newdoor);
+		}
 	}
 	
 	public List<Integer> getPlayers()
@@ -392,7 +404,6 @@ public final class Instance
 			}
 		}
 		_npcs.clear();
-		_manualSpawn.clear();
 	}
 	
 	public void removeDoors()
@@ -416,29 +427,51 @@ public final class Instance
 	}
 	
 	/**
-	 * Spawns group of instance NPC's
+	 * Spawns group of instance NPCs
 	 * @param groupName - name of group from XML definition to spawn
-	 * @return list of spawned NPC's
+	 * @return list of spawned NPCs
 	 */
 	public List<L2Npc> spawnGroup(String groupName)
 	{
-		List<L2Npc> ret = null;
-		if (_manualSpawn.containsKey(groupName))
+		List<L2Npc> spawnedNpcs = new ArrayList<>();
+		for (StatsSet set : _spawnTemplates)
 		{
-			final List<L2Spawn> manualSpawn = _manualSpawn.get(groupName);
-			ret = new ArrayList<>(manualSpawn.size());
-			
-			for (L2Spawn spawnDat : manualSpawn)
+			if (set.getString("spawnGroup").equals(groupName))
 			{
-				ret.add(spawnDat.doSpawn());
+				try
+				{
+					final L2Spawn spawnDat = new L2Spawn(set.getInt("npcId"));
+					
+					spawnDat.setX(set.getInt("x"));
+					spawnDat.setY(set.getInt("y"));
+					spawnDat.setZ(set.getInt("z"));
+					spawnDat.setAmount(1);
+					spawnDat.setHeading(set.getInt("heading"));
+					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
+					if (set.getInt("respawn") == 0)
+					{
+						spawnDat.stopRespawn();
+					}
+					else
+					{
+						spawnDat.startRespawn();
+					}
+					spawnDat.setInstanceId(getId());
+					spawnDat.setIsNoRndWalk(set.getBoolean("allowRandomWalk"));
+					final L2Npc spawned = spawnDat.doSpawn();
+					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
+					{
+						((L2Attackable) spawned).setOnKillDelay(set.getInt("delay"));
+					}
+				}
+				catch (Exception e)
+				{
+					e.printStackTrace();
+				}
 			}
 		}
-		else
-		{
-			_log.warning(getName() + " instance: cannot spawn NPC's, wrong group name: " + groupName);
-		}
 		
-		return ret;
+		return spawnedNpcs;
 	}
 	
 	public void loadInstanceTemplate(String filename)
@@ -463,11 +496,11 @@ public final class Instance
 		}
 		catch (IOException e)
 		{
-			_log.log(Level.WARNING, "Instance: can not find " + xml.getAbsolutePath() + " ! " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Instance: can not find " + xml.getAbsolutePath() + " ! " + e.getMessage(), e);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Instance: error while loading " + xml.getAbsolutePath() + " ! " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Instance: error while loading " + xml.getAbsolutePath() + " ! " + e.getMessage(), e);
 		}
 	}
 	
@@ -553,7 +586,7 @@ public final class Instance
 						{
 							doorId = Integer.parseInt(d.getAttributes().getNamedItem("doorId").getNodeValue());
 							final StatsSet set = new StatsSet();
-							set.add(DoorData.getInstance().getDoorTemplate(doorId));
+							set.set("DoorId", doorId);
 							for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
 							{
 								if ("set".equalsIgnoreCase(bean.getNodeName()))
@@ -564,7 +597,7 @@ public final class Instance
 									set.set(setname, value);
 								}
 							}
-							addDoor(doorId, set);
+							addDoor(set);
 						}
 					}
 					break;
@@ -576,14 +609,12 @@ public final class Instance
 						if ("group".equalsIgnoreCase(group.getNodeName()))
 						{
 							final String spawnGroup = group.getAttributes().getNamedItem("name").getNodeValue();
-							final List<L2Spawn> manualSpawn = new ArrayList<>();
 							for (Node d = group.getFirstChild(); d != null; d = d.getNextSibling())
 							{
 								int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
 								Boolean allowRandomWalk = null;
 								if ("spawn".equalsIgnoreCase(d.getNodeName()))
 								{
-									
 									npcId = Integer.parseInt(d.getAttributes().getNamedItem("npcId").getNodeValue());
 									x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
 									y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
@@ -603,48 +634,26 @@ public final class Instance
 										allowRandomWalk = Boolean.valueOf(d.getAttributes().getNamedItem("allowRandomWalk").getNodeValue());
 									}
 									
-									final L2Spawn spawnDat = new L2Spawn(npcId);
-									spawnDat.setX(x);
-									spawnDat.setY(y);
-									spawnDat.setZ(z);
-									spawnDat.setAmount(1);
-									spawnDat.setHeading(heading);
-									spawnDat.setRespawnDelay(respawn, respawnRandom);
-									if (respawn == 0)
-									{
-										spawnDat.stopRespawn();
-									}
-									else
-									{
-										spawnDat.startRespawn();
-									}
-									spawnDat.setInstanceId(getId());
+									final StatsSet spawnSet = new StatsSet();
+									spawnSet.set("spawnGroup", spawnGroup);
+									spawnSet.set("npcId", npcId);
+									spawnSet.set("x", x);
+									spawnSet.set("y", y);
+									spawnSet.set("z", z);
+									spawnSet.set("heading", heading);
+									spawnSet.set("delay", delay);
+									spawnSet.set("respawn", respawn);
+									spawnSet.set("respawnRandom", respawnRandom);
 									if (allowRandomWalk == null)
 									{
-										spawnDat.setIsNoRndWalk(!_allowRandomWalk);
+										spawnSet.set("allowRandomWalk", !_allowRandomWalk);
 									}
 									else
 									{
-										spawnDat.setIsNoRndWalk(!allowRandomWalk);
+										spawnSet.set("allowRandomWalk", !allowRandomWalk);
 									}
-									if (spawnGroup.equals("general"))
-									{
-										final L2Npc spawned = spawnDat.doSpawn();
-										if ((delay >= 0) && (spawned instanceof L2Attackable))
-										{
-											((L2Attackable) spawned).setOnKillDelay(delay);
-										}
-									}
-									else
-									{
-										manualSpawn.add(spawnDat);
-									}
+									_spawnTemplates.add(spawnSet);
 								}
-							}
-							
-							if (!manualSpawn.isEmpty())
-							{
-								_manualSpawn.put(spawnGroup, manualSpawn);
 							}
 						}
 					}
@@ -674,7 +683,7 @@ public final class Instance
 							}
 							catch (Exception e)
 							{
-								_log.log(Level.WARNING, "Error parsing instance xml: " + e.getMessage(), e);
+								LOGGER.log(Level.WARNING, "Error parsing instance xml: " + e.getMessage(), e);
 							}
 						}
 					}

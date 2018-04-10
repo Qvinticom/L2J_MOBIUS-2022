@@ -595,16 +595,13 @@ public class Duel
 		}
 		
 		final String instanceName = DuelManager.getInstance().getDuelArena();
-		final L2OlympiadStadiumZone zone = ZoneManager.getInstance().getAllZones(L2OlympiadStadiumZone.class) //
-			.stream().filter(z -> z.getInstanceTemplate().equals(instanceName)).findFirst().orElse(null);
-		
+		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(instanceName);
+		final L2OlympiadStadiumZone zone = ZoneManager.getInstance().getZone(InstanceManager.getInstance().getInstance(_duelInstanceId).getNpcs().get(0), L2OlympiadStadiumZone.class);
 		if (zone == null)
 		{
 			throw new RuntimeException("Unable to find a party duel arena!");
 		}
-		
 		final List<Location> spawns = zone.getSpawns();
-		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(instanceName);
 		
 		// Remove Olympiad buffers
 		for (L2Npc buffer : InstanceManager.getInstance().getInstance(getDueldInstanceId()).getNpcs())

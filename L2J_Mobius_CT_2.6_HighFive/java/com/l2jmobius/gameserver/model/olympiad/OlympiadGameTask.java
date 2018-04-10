@@ -103,9 +103,10 @@ public final class OlympiadGameTask implements Runnable
 		IDLE
 	}
 	
-	public OlympiadGameTask(L2OlympiadStadiumZone zone)
+	public OlympiadGameTask(L2OlympiadStadiumZone zone, int instanceId)
 	{
 		_zone = zone;
+		_zone.setInstanceId(instanceId);
 		zone.registerTask(this);
 	}
 	

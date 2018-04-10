@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
-import com.l2jmobius.gameserver.model.entity.Instance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 

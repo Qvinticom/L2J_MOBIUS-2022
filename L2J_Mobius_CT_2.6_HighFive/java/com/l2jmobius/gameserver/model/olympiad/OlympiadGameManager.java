@@ -21,6 +21,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
@@ -45,9 +46,33 @@ public class OlympiadGameManager implements Runnable
 		
 		_tasks = new OlympiadGameTask[zones.size()];
 		int i = 0;
+		int instanceId = 0;
 		for (L2OlympiadStadiumZone zone : zones)
 		{
-			_tasks[i++] = new OlympiadGameTask(zone);
+			switch (zone.getName())
+			{
+				case "Grassy Arena":
+				{
+					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadGrassyArena.xml");
+					break;
+				}
+				case "Three Bridges Arena":
+				{
+					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadThreeBridgesArena.xml");
+					break;
+				}
+				case "Heros's Vestiges Arena":
+				{
+					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadHerossVestigesArena.xml");
+					break;
+				}
+				case "Orbis Arena":
+				{
+					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadOrbisArena.xml");
+					break;
+				}
+			}
+			_tasks[i++] = new OlympiadGameTask(zone, instanceId);
 		}
 		
 		_log.log(Level.INFO, "Olympiad System: Loaded " + _tasks.length + " stadiums.");

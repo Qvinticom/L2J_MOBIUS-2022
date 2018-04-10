@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 public final class DuelManager
 {
-	private static final List<String> ARENAS = Arrays.asList("OlympiadGrassyArena.xml", "OlympiadHerossVestigesArena.xml", "OlympiadOrbisArena.xml", "OlympiadThreeBridgesArena.xml");
+	private static final List<String> ARENAS = Arrays.asList("OlympiadGrassyArena.xml", "OlympiadThreeBridgesArena.xml", "OlympiadHerossVestigesArena.xml", "OlympiadOrbisArena.xml");
 	private final Map<Integer, Duel> _duels = new ConcurrentHashMap<>();
 	private final AtomicInteger _currentDuelId = new AtomicInteger();
 	

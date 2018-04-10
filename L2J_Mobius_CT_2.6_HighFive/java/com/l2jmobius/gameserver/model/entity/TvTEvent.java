@@ -47,6 +47,7 @@ import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventFinish;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventKill;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventRegistrationStart;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventStart;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
