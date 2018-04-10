@@ -104,31 +104,31 @@ public final class Config
 	// --------------------------------------------------
 	// Custom Config File Definitions
 	// --------------------------------------------------
-	public static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./Config/Custom/AllowedPlayerRaces.ini";
-	public static final String CUSTOM_ANTIFEED_CONFIG_FILE = "./Config/Custom/AntiFeed.ini";
-	public static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./Config/Custom/AutoPotions.ini";
-	public static final String CUSTOM_BANKING_CONFIG_FILE = "./Config/Custom/Banking.ini";
-	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./Config/Custom/ChampionMonsters.ini";
-	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./Config/Custom/ChatModeration.ini";
-	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./Config/Custom/CommunityBoard.ini";
-	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./Config/Custom/DualboxCheck.ini";
-	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./Config/Custom/FindPvP.ini";
-	public static final String CUSTOM_HELLBOUND_STATUS_CONFIG_FILE = "./Config/Custom/HellboundStatus.ini";
-	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./Config/Custom/OfflineTrade.ini";
-	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./Config/Custom/PasswordChange.ini";
-	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./Config/Custom/PremiumSystem.ini";
-	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./Config/Custom/PrivateStoreRange.ini";
-	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./Config/Custom/PvpAnnounce.ini";
-	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./Config/Custom/RandomSpawns.ini";
-	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./Config/Custom/ScreenWelcomeMessage.ini";
+	public static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
+	public static final String CUSTOM_ANTIFEED_CONFIG_FILE = "./config/Custom/AntiFeed.ini";
+	public static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+	public static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
+	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
+	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
+	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
+	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
+	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
+	public static final String CUSTOM_HELLBOUND_STATUS_CONFIG_FILE = "./config/Custom/HellboundStatus.ini";
+	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
+	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
+	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
+	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
+	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
+	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
+	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
 	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./Config/Custom/ServerTime.ini";
-	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./Config/Custom/StartingLocation.ini";
-	public static final String CUSTOM_TVT_CONFIG_FILE = "./Config/Custom/TeamVersusTeam.ini";
-	public static final String CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE = "./Config/Custom/WarehouseSorting.ini";
-	public static final String CUSTOM_WEDDING_CONFIG_FILE = "./Config/Custom/Wedding.ini";
-	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./Config/Custom/MultilingualSupport.ini";
-	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./Config/Custom/WalkerBotProtection.ini";
+	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
+	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
+	public static final String CUSTOM_TVT_CONFIG_FILE = "./config/Custom/TeamVersusTeam.ini";
+	public static final String CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE = "./config/Custom/WarehouseSorting.ini";
+	public static final String CUSTOM_WEDDING_CONFIG_FILE = "./config/Custom/Wedding.ini";
+	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
+	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
 	
 	// --------------------------------------------------
 	// Variable Definitions
