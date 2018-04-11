@@ -91,7 +91,7 @@ public class Q11017_PrepareForTrade3 extends Quest
 			{
 				qs.startQuest();
 				qs.setCond(2);
-				showOnScreenMsg(player, NpcStringId.LECTOR_WANTS_YOU_TO_BRING_HIM_MATERIALS_FOR_NEW_ARMOR_N_GO_HUNTING_AND_KILL_GIANT_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
+				showOnScreenMsg(player, NpcStringId.GO_HUNTING_AND_KILL_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
 				giveItems(player, SUPPLIES_CERTIFICATE, 1);
 				htmltext = event;
 				break;
