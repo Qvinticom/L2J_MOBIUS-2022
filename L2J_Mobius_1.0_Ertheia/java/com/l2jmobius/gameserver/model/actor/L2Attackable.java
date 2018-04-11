@@ -73,6 +73,7 @@ import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -251,6 +252,19 @@ public class L2Attackable extends L2Npc
 		if (attacker != null)
 		{
 			addDamage(attacker, (int) value, skill);
+			
+			// Check Raidboss attack. Character will be petrified if attacking a raid that's more than 8 levels lower. In retail you deal damage to raid before curse.
+			if (isRaid() && giveRaidCurse() && !Config.RAID_DISABLE_CURSE)
+			{
+				if (attacker.getLevel() > (getLevel() + 8))
+				{
+					final Skill raidCurse = CommonSkill.RAID_CURSE2.getSkill();
+					if (raidCurse != null)
+					{
+						raidCurse.applyEffects(this, attacker);
+					}
+				}
+			}
 		}
 		
 		// If this L2Attackable is a L2MonsterInstance and it has spawned minions, call its minions to battle
