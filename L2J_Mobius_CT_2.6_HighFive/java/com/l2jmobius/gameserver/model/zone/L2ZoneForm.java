@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.zone;
 
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
 /**
@@ -55,5 +56,5 @@ public abstract class L2ZoneForm
 		ZoneManager.getInstance().getDebugItems().add(item);
 	}
 	
-	public abstract int[] getRandomPoint();
+	public abstract Location getRandomPoint();
 }

@@ -191,7 +191,6 @@ public final class QuestManager
 		{
 			old.unload();
 			LOGGER.info("Replaced quest " + old.getName() + " (" + old.getId() + ") with a new version!");
-			
 		}
 		
 		if (Config.ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS)

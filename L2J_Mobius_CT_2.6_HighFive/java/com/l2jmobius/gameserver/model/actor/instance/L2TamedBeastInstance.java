@@ -26,7 +26,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.Location;

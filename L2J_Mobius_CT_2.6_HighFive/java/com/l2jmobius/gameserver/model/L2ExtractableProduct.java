@@ -28,7 +28,7 @@ public class L2ExtractableProduct
 	
 	/**
 	 * Create Extractable product
-	 * @param id crete item id
+	 * @param id create item id
 	 * @param min item count max
 	 * @param max item count min
 	 * @param chance chance for creating

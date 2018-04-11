@@ -218,7 +218,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public int getLeaderId()
 	{
-		return (_leader != null ? _leader.getObjectId() : 0);
+		return _leader != null ? _leader.getObjectId() : 0;
 	}
 	
 	/**
@@ -260,7 +260,6 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 			exLeader.getClanPrivileges().clear();
 			exLeader.broadcastUserInfo();
-			
 		}
 		else
 		{
@@ -377,6 +376,7 @@ public class L2Clan implements IIdentifiable, INamable
 		player.setPledgeClass(L2ClanMember.calculatePledgeClass(player));
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(new PledgeSkillList(this));
+		
 		addSkillEffects(player);
 		
 		// Notify to scripts
@@ -1333,7 +1333,6 @@ public class L2Clan implements IIdentifiable, INamable
 		Skill oldSkill = null;
 		if (newSkill != null)
 		{
-			
 			if (subType == -2)
 			{
 				oldSkill = _skills.put(newSkill.getId(), newSkill);
@@ -1792,12 +1791,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public final SubPledge getSubPledge(int pledgeType)
 	{
-		if (_subPledges == null)
-		{
-			return null;
-		}
-		
-		return _subPledges.get(pledgeType);
+		return _subPledges == null ? null : _subPledges.get(pledgeType);
 	}
 	
 	/**
@@ -1998,21 +1992,15 @@ public class L2Clan implements IIdentifiable, INamable
 	
 	public void initializePrivs()
 	{
-		RankPrivs privs;
 		for (int i = 1; i < 10; i++)
 		{
-			privs = new RankPrivs(i, 0, new EnumIntBitmask<>(ClanPrivilege.class, false));
-			_privs.put(i, privs);
+			_privs.put(i, new RankPrivs(i, 0, new EnumIntBitmask<>(ClanPrivilege.class, false)));
 		}
 	}
 	
 	public EnumIntBitmask<ClanPrivilege> getRankPrivs(int rank)
 	{
-		if (_privs.get(rank) != null)
-		{
-			return _privs.get(rank).getPrivs();
-		}
-		return new EnumIntBitmask<>(ClanPrivilege.class, false);
+		return _privs.get(rank) != null ? _privs.get(rank).getPrivs() : new EnumIntBitmask<>(ClanPrivilege.class, false);
 	}
 	
 	public void setRankPrivs(int rank, int privs)
@@ -2079,12 +2067,7 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public final RankPrivs[] getAllRankPrivs()
 	{
-		if (_privs == null)
-		{
-			return new RankPrivs[0];
-		}
-		
-		return _privs.values().toArray(new RankPrivs[_privs.values().size()]);
+		return _privs == null ? new RankPrivs[0] : _privs.values().toArray(new RankPrivs[_privs.values().size()]);
 	}
 	
 	public int getLeaderSubPledge(int leaderId)
@@ -2416,13 +2399,10 @@ public class L2Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER);
 			return;
 		}
-		if (getAllyPenaltyExpiryTime() > System.currentTimeMillis())
+		if ((getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (getAllyPenaltyType() == L2Clan.PENALTY_TYPE_DISSOLVE_ALLY))
 		{
-			if (getAllyPenaltyType() == L2Clan.PENALTY_TYPE_DISSOLVE_ALLY)
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_OF_DISSOLUTION);
-				return;
-			}
+			player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_OF_DISSOLUTION);
+			return;
 		}
 		if (getDissolvingExpiryTime() > System.currentTimeMillis())
 		{

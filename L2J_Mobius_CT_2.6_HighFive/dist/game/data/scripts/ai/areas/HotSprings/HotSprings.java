@@ -16,7 +16,7 @@
  */
 package ai.areas.HotSprings;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;

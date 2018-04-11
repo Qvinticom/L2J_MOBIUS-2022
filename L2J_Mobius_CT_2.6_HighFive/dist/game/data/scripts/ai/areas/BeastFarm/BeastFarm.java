@@ -23,7 +23,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -283,7 +283,7 @@ public final class BeastFarm extends AbstractNpcAI
 			final SkillData st = SkillData.getInstance();
 			for (SkillHolder sh : beast.getSkills())
 			{
-				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLvl()));
+				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLevel()));
 			}
 			
 			Q00020_BringUpWithLove.checkJewelOfInnocence(player);

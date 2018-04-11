@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;

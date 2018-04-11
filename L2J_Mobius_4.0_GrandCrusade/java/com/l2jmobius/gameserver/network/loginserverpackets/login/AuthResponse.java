@@ -23,7 +23,6 @@ import com.l2jmobius.commons.network.BaseRecievePacket;
  */
 public class AuthResponse extends BaseRecievePacket
 {
-	
 	private final int _serverId;
 	private final String _serverName;
 	
@@ -52,5 +51,4 @@ public class AuthResponse extends BaseRecievePacket
 	{
 		return _serverName;
 	}
-	
 }

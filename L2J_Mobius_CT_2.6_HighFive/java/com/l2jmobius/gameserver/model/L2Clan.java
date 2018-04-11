@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -930,7 +930,7 @@ public class L2Clan implements IIdentifiable, INamable
 	/**
 	 * Store in database current clan's reputation.
 	 */
-	public void updateClanScoreInDB()
+	public void updateInDB()
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET reputation_score=? WHERE clan_id=?"))
@@ -1723,7 +1723,7 @@ public class L2Clan implements IIdentifiable, INamable
 	public static class RankPrivs
 	{
 		private final int _rankId;
-		private final int _party;// TODO find out what this stuff means and implement it
+		private final int _party; // TODO find out what this stuff means and implement it
 		private final EnumIntBitmask<ClanPrivilege> _rankPrivs;
 		
 		public RankPrivs(int rank, int party, int privs)
@@ -1825,6 +1825,11 @@ public class L2Clan implements IIdentifiable, INamable
 	 */
 	public final SubPledge[] getAllSubPledges()
 	{
+		if (_subPledges == null)
+		{
+			return new SubPledge[0];
+		}
+		
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
@@ -1899,7 +1904,7 @@ public class L2Clan implements IIdentifiable, INamable
 	{
 		if (_subPledges.get(pledgeType) != null)
 		{
-			// _log.warning("found sub-unit with id: "+pledgeType);
+			// LOGGER.warning("found sub-unit with id: "+pledgeType);
 			switch (pledgeType)
 			{
 				case SUBUNIT_ACADEMY:
@@ -1963,15 +1968,15 @@ public class L2Clan implements IIdentifiable, INamable
 		{
 			// Retrieve all skills of this L2PcInstance from the database
 			ps.setInt(1, getId());
-			// _log.warning("clanPrivs restore for ClanId : "+getClanId());
-			try (ResultSet rs = ps.executeQuery())
+			// LOGGER.warning("clanPrivs restore for ClanId : "+getClanId());
+			try (ResultSet rset = ps.executeQuery())
 			{
 				// Go though the recordset of this SQL query
-				while (rs.next())
+				while (rset.next())
 				{
-					final int rank = rs.getInt("rank");
+					final int rank = rset.getInt("rank");
 					// int party = rset.getInt("party");
-					final int privileges = rs.getInt("privs");
+					final int privileges = rset.getInt("privs");
 					// Create a SubPledge object for each record
 					if (rank == -1)
 					{
@@ -2133,7 +2138,7 @@ public class L2Clan implements IIdentifiable, INamable
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
 		if (save)
 		{
-			updateClanScoreInDB();
+			updateInDB();
 		}
 	}
 	

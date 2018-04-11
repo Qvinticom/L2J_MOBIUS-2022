@@ -427,7 +427,7 @@ public final class SellBuffsManager implements IGameXmlReader
 		}
 		else if (player.isMounted() || player.isFlyingMounted() || player.isFlying())
 		{
-			player.sendMessage("You can't sell buffs in Mounth state!");
+			player.sendMessage("You can't sell buffs in Mount state!");
 			return false;
 		}
 		else if (player.isTransformed())

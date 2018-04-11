@@ -99,7 +99,7 @@ public class L2NoRestartZone extends L2ZoneType
 			return;
 		}
 		
-		if (((System.currentTimeMillis() - player.getLastAccess()) > getRestartTime()) && ((System.currentTimeMillis() - GameServer.getInstance().getStartedTime()) > getRestartAllowedTime()))
+		if (((System.currentTimeMillis() - player.getLastAccess()) > getRestartTime()) && ((System.currentTimeMillis() - GameServer.dateTimeServerStarted.getTimeInMillis()) > getRestartAllowedTime()))
 		{
 			player.teleToLocation(TeleportWhereType.TOWN);
 		}

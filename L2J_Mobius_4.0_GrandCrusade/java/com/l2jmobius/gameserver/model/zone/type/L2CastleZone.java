@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
  */
 public final class L2CastleZone extends L2ResidenceZone
 {
-	
 	public L2CastleZone(int id)
 	{
 		super(id);

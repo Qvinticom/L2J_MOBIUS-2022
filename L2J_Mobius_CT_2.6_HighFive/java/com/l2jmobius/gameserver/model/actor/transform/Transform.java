@@ -338,7 +338,7 @@ public final class Transform implements IIdentifiable
 		{
 			for (AdditionalSkillHolder holder : template.getAdditionalSkills())
 			{
-				if ((player.getLevel() >= holder.getMinLevel()) && (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLvl()))
+				if ((player.getLevel() >= holder.getMinLevel()) && (player.getSkillLevel(holder.getSkillId()) < holder.getSkillLevel()))
 				{
 					player.addSkill(holder.getSkill(), false);
 					player.addTransformSkill(holder.getSkill());

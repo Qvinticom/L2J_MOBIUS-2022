@@ -170,12 +170,7 @@ public class CharNameTable
 	
 	public final int getAccessLevelById(int objectId)
 	{
-		if (getNameById(objectId) != null)
-		{
-			return _accessLevels.get(objectId);
-		}
-		
-		return 0;
+		return getNameById(objectId) != null ? _accessLevels.get(objectId) : 0;
 	}
 	
 	public synchronized boolean doesCharNameExist(String name)

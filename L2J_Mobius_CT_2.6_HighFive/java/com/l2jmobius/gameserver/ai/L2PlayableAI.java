@@ -32,12 +32,9 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public abstract class L2PlayableAI extends L2CharacterAI
 {
-	/**
-	 * @param creature the creature
-	 */
-	public L2PlayableAI(L2Playable creature)
+	public L2PlayableAI(L2Playable playable)
 	{
-		super(creature);
+		super(playable);
 	}
 	
 	@Override
@@ -84,7 +81,7 @@ public abstract class L2PlayableAI extends L2CharacterAI
 	@Override
 	protected void onIntentionCast(Skill skill, L2Object target)
 	{
-		if ((target instanceof L2Playable) && skill.isBad())
+		if ((target.isPlayable()) && skill.isBad())
 		{
 			if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getKarma() > 0) && !target.isInsideZone(ZoneId.PVP))
 			{

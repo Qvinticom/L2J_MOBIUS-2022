@@ -26,7 +26,6 @@ public class BlowFishKeygen
 {
 	private static final int CRYPT_KEYS_SIZE = 20;
 	private static final byte[][] CRYPT_KEYS = new byte[CRYPT_KEYS_SIZE][16];
-	
 	static
 	{
 		// init the GS encryption keys on class load
@@ -54,7 +53,6 @@ public class BlowFishKeygen
 	// block instantiation
 	private BlowFishKeygen()
 	{
-		
 	}
 	
 	/**

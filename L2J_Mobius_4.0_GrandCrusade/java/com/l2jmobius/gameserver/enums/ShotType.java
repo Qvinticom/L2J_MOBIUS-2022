@@ -31,7 +31,7 @@ public enum ShotType
 	
 	private ShotType()
 	{
-		_mask = (1 << ordinal());
+		_mask = 1 << ordinal();
 	}
 	
 	public int getMask()

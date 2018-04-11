@@ -782,7 +782,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	public final double calculateDistance(int x, int y, int z, boolean includeZAxis, boolean squared)
 	{
 		final double distance = Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + (includeZAxis ? Math.pow(z - getZ(), 2) : 0);
-		return (squared) ? distance : Math.sqrt(distance);
+		return squared ? distance : Math.sqrt(distance);
 	}
 	
 	/**
@@ -898,12 +898,12 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public boolean equals(Object obj)
 	{
-		return ((obj instanceof L2Object) && (((L2Object) obj).getObjectId() == getObjectId()));
+		return (obj instanceof L2Object) && (((L2Object) obj).getObjectId() == getObjectId());
 	}
 	
 	@Override
 	public String toString()
 	{
-		return (getClass().getSimpleName() + ":" + getName() + "[" + getObjectId() + "]");
+		return getClass().getSimpleName() + ":" + getName() + "[" + getObjectId() + "]";
 	}
 }

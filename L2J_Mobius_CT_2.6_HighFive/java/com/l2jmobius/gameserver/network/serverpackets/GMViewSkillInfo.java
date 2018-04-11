@@ -20,7 +20,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;

@@ -815,7 +815,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 								{
 									_world.OnSong = element;
 									broadCastPacket(_world, new ExShowScreenMessage(2, -1, 2, 0, 0, 0, 0, true, 4000, false, null, element.songName, null));
-									broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, element.skill.getSkillId(), element.skill.getSkillLvl(), element.skill.getSkill().getHitTime(), 0));
+									broadCastPacket(_world, new MagicSkillUse(_world.frintezza, _world.frintezza, element.skill.getSkillId(), element.skill.getSkillLevel(), element.skill.getSkill().getHitTime(), 0));
 									_world.songEffectTask = ThreadPool.schedule(new SongTask(_world, 1), element.skill.getSkill().getHitTime() - 10000);
 									_world.songTask = ThreadPool.schedule(new SongTask(_world, 0), element.skill.getSkill().getHitTime());
 									break;

@@ -204,14 +204,7 @@ public class Forum
 	public Forum getChildByName(String name)
 	{
 		vload();
-		for (Forum f : _children)
-		{
-			if (f.getName().equals(name))
-			{
-				return f;
-			}
-		}
-		return null;
+		return _children.stream().filter(f -> f.getName().equals(name)).findFirst().orElse(null);
 	}
 	
 	/**
@@ -220,7 +213,6 @@ public class Forum
 	public void rmTopicByID(int id)
 	{
 		_topic.remove(id);
-		
 	}
 	
 	public void insertIntoDb()

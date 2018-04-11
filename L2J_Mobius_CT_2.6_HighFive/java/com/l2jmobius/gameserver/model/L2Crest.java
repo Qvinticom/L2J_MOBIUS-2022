@@ -36,7 +36,7 @@ public final class L2Crest implements IIdentifiable
 		
 		private final int _id;
 		
-		private CrestType(int id)
+		CrestType(int id)
 		{
 			_id = id;
 		}

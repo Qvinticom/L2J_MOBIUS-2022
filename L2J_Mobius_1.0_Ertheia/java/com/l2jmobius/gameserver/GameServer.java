@@ -180,7 +180,7 @@ public class GameServer
 		if (!IdFactory.getInstance().isInitialized())
 		{
 			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
-			throw new Exception("Could not initialize the ID factory");
+			throw new Exception("Could not initialize the ID factory!");
 		}
 		
 		// load script engines
@@ -265,6 +265,7 @@ public class GameServer
 		
 		if (Config.PREMIUM_SYSTEM_ENABLED)
 		{
+			LOGGER.info("PremiumManager: Premium system is enabled.");
 			PremiumManager.getInstance();
 		}
 		
@@ -458,7 +459,7 @@ public class GameServer
 		
 		/*** Main ***/
 		// Create log folder
-		final File logFolder = new File(".", LOG_FOLDER);
+		final File logFolder = new File(Config.DATAPACK_ROOT, LOG_FOLDER);
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory

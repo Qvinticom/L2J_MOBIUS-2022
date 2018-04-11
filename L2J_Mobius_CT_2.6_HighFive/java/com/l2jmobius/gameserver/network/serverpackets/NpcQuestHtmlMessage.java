@@ -24,11 +24,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  * NpcQuestHtmlMessage server packet implementation.
  * @author HorridoJoho
  */
-public final class ExNpcQuestHtmlMessage extends AbstractHtmlPacket
+public final class NpcQuestHtmlMessage extends AbstractHtmlPacket
 {
 	private final int _questId;
 	
-	public ExNpcQuestHtmlMessage(int npcObjId, int questId)
+	public NpcQuestHtmlMessage(int npcObjId, int questId)
 	{
 		super(npcObjId);
 		_questId = questId;

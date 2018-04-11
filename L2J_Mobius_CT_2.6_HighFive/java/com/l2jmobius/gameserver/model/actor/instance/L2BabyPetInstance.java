@@ -24,7 +24,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2PetData.L2PetSkillLearn;

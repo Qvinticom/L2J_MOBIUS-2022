@@ -60,11 +60,7 @@ public class TopicBBSManager extends BaseBBSManager
 	public int getMaxID(Forum f)
 	{
 		final Integer i = _maxId.get(f);
-		if (i == null)
-		{
-			return 0;
-		}
-		return i;
+		return i == null ? 0 : i;
 	}
 	
 	public Topic getTopicByID(int idf)
@@ -146,20 +142,8 @@ public class TopicBBSManager extends BaseBBSManager
 			st.nextToken();
 			st.nextToken();
 			final int idf = Integer.parseInt(st.nextToken());
-			String index = null;
-			if (st.hasMoreTokens())
-			{
-				index = st.nextToken();
-			}
-			int ind = 0;
-			if (index == null)
-			{
-				ind = 1;
-			}
-			else
-			{
-				ind = Integer.parseInt(index);
-			}
+			final String index = st.hasMoreTokens() ? st.nextToken() : null;
+			final int ind = index == null ? 1 : Integer.parseInt(index);
 			showTopics(ForumsBBSManager.getInstance().getForumByID(idf), activeChar, ind, idf);
 		}
 		else if (command.startsWith("_bbstopics;crea"))

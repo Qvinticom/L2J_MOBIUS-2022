@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;

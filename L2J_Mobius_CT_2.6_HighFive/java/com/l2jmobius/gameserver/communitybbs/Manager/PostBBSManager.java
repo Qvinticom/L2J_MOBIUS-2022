@@ -89,21 +89,14 @@ public class PostBBSManager extends BaseBBSManager
 	
 	private void showEditPost(Topic topic, Forum forum, L2PcInstance activeChar, int idp)
 	{
-		if (topic == null)
+		final Post p = getGPosttByTopic(topic);
+		if ((forum == null) || (topic == null) || (p == null))
 		{
-			CommunityBoardHandler.separateAndSend("<html><body><br><br><center>Error: This topic does not exist!</center></body></html>", activeChar);
+			CommunityBoardHandler.separateAndSend("<html><body><br><br><center>Error, this forum, topic or post does not exist!</center><br><br></body></html>", activeChar);
 		}
 		else
 		{
-			final Post p = getGPosttByTopic(topic);
-			if ((forum == null) || (p == null))
-			{
-				CommunityBoardHandler.separateAndSend("<html><body><br><br><center>Error: This forum or post does not exist!</center></body></html>", activeChar);
-			}
-			else
-			{
-				showHtmlEditPost(topic, activeChar, forum, p);
-			}
+			showHtmlEditPost(topic, activeChar, forum, p);
 		}
 	}
 	
@@ -132,10 +125,9 @@ public class PostBBSManager extends BaseBBSManager
 	
 	private void showMemoPost(Topic topic, L2PcInstance activeChar, Forum forum)
 	{
-		//
-		Post p = getGPosttByTopic(topic);
-		Locale locale = Locale.getDefault();
-		DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
+		final Post p = getGPosttByTopic(topic);
+		final Locale locale = Locale.getDefault();
+		final DateFormat dateFormat = DateFormat.getDateInstance(DateFormat.FULL, locale);
 		
 		String mes = p.getCPost(0).postTxt.replace(">", "&gt;");
 		mes = mes.replace("<", "&lt;");

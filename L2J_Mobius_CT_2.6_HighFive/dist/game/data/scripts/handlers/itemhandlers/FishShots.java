@@ -87,7 +87,7 @@ public class FishShots implements IItemHandler
 		final L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
-		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLvl(), 0, 0));
+		Broadcast.toSelfAndKnownPlayers(activeChar, new MagicSkillUse(activeChar, skills[0].getSkillId(), skills[0].getSkillLevel(), 0, 0));
 		activeChar.setTarget(oldTarget);
 		return true;
 	}

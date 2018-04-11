@@ -208,7 +208,6 @@ public enum IncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_PACKET(0xD0, ExPacket::new, ConnectionState.values()); // This packet has its own connection state checking so we allow all of them
 	
 	public static final IncomingPackets[] PACKET_ARRAY;
-	
 	static
 	{
 		final short maxPacketId = (short) Arrays.stream(values()).mapToInt(IIncomingPackets::getPacketId).max().orElse(0);

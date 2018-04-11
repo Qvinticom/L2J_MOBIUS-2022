@@ -39,11 +39,11 @@ public class L2PlayerAI extends L2PlayableAI
 {
 	private boolean _thinking; // to prevent recursive thinking
 	
-	private IntentionCommand _nextIntention = null;
+	IntentionCommand _nextIntention = null;
 	
-	public L2PlayerAI(L2PcInstance creature)
+	public L2PlayerAI(L2PcInstance player)
 	{
-		super(creature);
+		super(player);
 	}
 	
 	void saveNextIntention(CtrlIntention intention, Object arg0, Object arg1)

@@ -332,8 +332,8 @@ public final class L2TrapInstance extends L2Npc
 		else
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
-			sm.addCharName(this);
-			sm.addCharName(target);
+			sm.addString(this.getName());
+			sm.addString(target.getName());
 			sm.addInt(damage);
 			_owner.sendPacket(sm);
 		}

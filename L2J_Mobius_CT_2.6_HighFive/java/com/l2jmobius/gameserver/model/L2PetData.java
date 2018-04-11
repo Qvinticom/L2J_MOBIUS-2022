@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
 /**
@@ -184,7 +184,7 @@ public class L2PetData
 			{
 				continue;
 			}
-			if (temp.getSkillLvl() == 0)
+			if (temp.getSkillLevel() == 0)
 			{
 				if (petLvl < 70)
 				{
@@ -207,9 +207,9 @@ public class L2PetData
 				}
 				break;
 			}
-			if ((temp.getMinLevel() <= petLvl) && (temp.getSkillLvl() > lvl))
+			if ((temp.getMinLevel() <= petLvl) && (temp.getSkillLevel() > lvl))
 			{
-				lvl = temp.getSkillLvl();
+				lvl = temp.getSkillLevel();
 			}
 		}
 		return lvl;

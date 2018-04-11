@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class L2ClanMember
 {
-	private static final Logger _log = Logger.getLogger(L2ClanMember.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2ClanMember.class.getName());
 	
 	private final L2Clan _clan;
 	private int _objectId;
@@ -241,7 +241,7 @@ public class L2ClanMember
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not update pledge type: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not update pledge type: " + e.getMessage(), e);
 		}
 	}
 	
@@ -286,7 +286,7 @@ public class L2ClanMember
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not update power _grade: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not update power _grade: " + e.getMessage(), e);
 		}
 	}
 	
@@ -798,7 +798,7 @@ public class L2ClanMember
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not save apprentice/sponsor: " + e.getMessage(), e);
 		}
 	}
 }

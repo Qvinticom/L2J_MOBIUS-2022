@@ -29,7 +29,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;

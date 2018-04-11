@@ -61,7 +61,7 @@ public class TaskClanLeaderApply extends Task
 				clan.setNewLeader(member);
 			}
 		}
-		_log.info(getClass().getSimpleName() + ": launched.");
+		LOGGER.info(getClass().getSimpleName() + ": launched.");
 	}
 	
 	@Override

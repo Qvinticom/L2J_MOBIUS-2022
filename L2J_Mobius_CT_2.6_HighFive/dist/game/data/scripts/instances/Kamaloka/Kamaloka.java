@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.logging.Level;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Spawn;

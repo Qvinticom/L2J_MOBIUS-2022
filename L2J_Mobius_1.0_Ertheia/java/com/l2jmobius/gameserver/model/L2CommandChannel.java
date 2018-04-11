@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public class L2CommandChannel extends AbstractPlayerGroup
 {
 	private final List<L2Party> _parties = new CopyOnWriteArrayList<>();
-	private L2PcInstance _commandLeader = null;
+	private L2PcInstance _commandLeader;
 	private int _channelLvl;
 	
 	/**

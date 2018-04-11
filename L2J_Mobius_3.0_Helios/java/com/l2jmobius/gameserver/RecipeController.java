@@ -60,6 +60,7 @@ public class RecipeController
 	
 	protected RecipeController()
 	{
+		// Prevent external initialization.
 	}
 	
 	public void requestBookOpen(L2PcInstance player, boolean isDwarvenCraft)
@@ -336,7 +337,6 @@ public class RecipeController
 			
 			if (Config.ALT_GAME_CREATION && !_items.isEmpty())
 			{
-				
 				if (!calculateStatUse(true, true))
 				{
 					return; // check stat use

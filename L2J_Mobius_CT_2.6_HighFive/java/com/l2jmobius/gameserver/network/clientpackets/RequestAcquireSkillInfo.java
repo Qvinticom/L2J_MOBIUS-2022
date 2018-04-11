@@ -17,8 +17,8 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;

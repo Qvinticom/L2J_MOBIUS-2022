@@ -223,7 +223,6 @@ public final class L2WorldRegion
 		}
 		
 		assert object.getWorldRegion() == this;
-		
 		if (_visibleObjects == null)
 		{
 			synchronized (object)

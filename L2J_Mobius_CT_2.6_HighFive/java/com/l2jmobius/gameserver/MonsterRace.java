@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 
 public class MonsterRace
 {
-	protected static final Logger _log = Logger.getLogger(MonsterRace.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(MonsterRace.class.getName());
 	
 	private final L2Npc[] _monsters;
 	private int[][] _speeds;
@@ -38,11 +38,6 @@ public class MonsterRace
 		_speeds = new int[8][20];
 		_first = new int[2];
 		_second = new int[2];
-	}
-	
-	public static MonsterRace getInstance()
-	{
-		return SingletonHolder._instance;
 	}
 	
 	public void newRace()
@@ -72,7 +67,7 @@ public class MonsterRace
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Unable to create monster!", e);
+				LOGGER.log(Level.WARNING, "Unable to create monster!", e);
 			}
 		}
 		newSpeeds();
@@ -131,6 +126,11 @@ public class MonsterRace
 	public int getSecondPlace()
 	{
 		return _second[0];
+	}
+	
+	public static MonsterRace getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder

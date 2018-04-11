@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.communitybbs.BB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,9 +30,9 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
-public final class Forum
+public class Forum
 {
-	private static final Logger _log = Logger.getLogger(Forum.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Forum.class.getName());
 	
 	// type
 	public static final int ROOT = 0;
@@ -46,7 +46,7 @@ public final class Forum
 	public static final int CLANMEMBERONLY = 2;
 	public static final int OWNERONLY = 3;
 	
-	private final List<Forum> _children = new ArrayList<>();
+	private final List<Forum> _children;
 	private final Map<Integer, Topic> _topic = new ConcurrentHashMap<>();
 	private final int _forumId;
 	private String _forumName;
@@ -66,6 +66,7 @@ public final class Forum
 	{
 		_forumId = Forumid;
 		_fParent = FParent;
+		_children = new CopyOnWriteArrayList<>();
 	}
 	
 	/**
@@ -84,6 +85,7 @@ public final class Forum
 		_forumPerm = perm;
 		_fParent = parent;
 		_ownerID = OwnerID;
+		_children = new CopyOnWriteArrayList<>();
 		parent._children.add(this);
 		ForumsBBSManager.getInstance().addForum(this);
 		_loaded = true;
@@ -109,7 +111,7 @@ public final class Forum
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -131,7 +133,7 @@ public final class Forum
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Data error on Forum " + _forumId + " : " + e.getMessage(), e);
 		}
 	}
 	
@@ -153,7 +155,7 @@ public final class Forum
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Data error on Forum (children): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Data error on Forum (children): " + e.getMessage(), e);
 		}
 	}
 	
@@ -229,18 +231,17 @@ public final class Forum
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while saving new Forum to db " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while saving new Forum to db " + e.getMessage(), e);
 		}
 	}
 	
 	public void vload()
 	{
-		if (_loaded)
+		if (!_loaded)
 		{
-			return;
+			load();
+			getChildren();
+			_loaded = true;
 		}
-		load();
-		getChildren();
-		_loaded = true;
 	}
 }

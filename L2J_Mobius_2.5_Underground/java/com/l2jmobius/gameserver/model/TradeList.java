@@ -149,11 +149,7 @@ public class TradeList
 			{
 				if (exclItem.getItem().getId() == item.getId())
 				{
-					if (item.getCount() <= exclItem.getCount())
-					{
-						return null;
-					}
-					return new TradeItem(item, item.getCount() - exclItem.getCount(), item.getReferencePrice());
+					return item.getCount() <= exclItem.getCount() ? null : new TradeItem(item, item.getCount() - exclItem.getCount(), item.getReferencePrice());
 				}
 			}
 		}
@@ -440,11 +436,7 @@ public class TradeList
 					{
 						partnerList.lock();
 						lock();
-						if (!partnerList.validate())
-						{
-							return false;
-						}
-						if (!validate())
+						if (!partnerList.validate() || !validate())
 						{
 							return false;
 						}
@@ -616,12 +608,12 @@ public class TradeList
 		boolean success = false;
 		
 		// check weight and slots
-		if ((!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight())) || !(partnerList.getOwner().getInventory().validateWeight(calcItemsWeight())))
+		if (!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight()) || !partnerList.getOwner().getInventory().validateWeight(calcItemsWeight()))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 			getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 		}
-		else if ((!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner()))) || (!partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner()))))
+		else if (!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner())) || !partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner())))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 			getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
@@ -846,42 +838,36 @@ public class TradeList
 			}
 			
 			// Send messages about the transaction to both players
+			SystemMessage msg;
 			if (newItem.isStackable())
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
+				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 				_owner.sendPacket(msg);
-				
 				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
-				player.sendPacket(msg);
 			}
 			else
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
+				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				_owner.sendPacket(msg);
-				
 				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
-				player.sendPacket(msg);
 			}
+			player.sendPacket(msg);
 		}
 		
 		// Send inventory update packet
 		_owner.sendInventoryUpdate(ownerIU);
 		player.sendInventoryUpdate(playerIU);
-		if (ok)
-		{
-			return 0;
-		}
-		return 2;
+		return ok ? 0 : 2;
 	}
 	
 	/**
@@ -892,12 +878,7 @@ public class TradeList
 	 */
 	public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] requestedItems)
 	{
-		if (_locked)
-		{
-			return false;
-		}
-		
-		if (!_owner.isOnline() || !player.isOnline())
+		if (_locked || !_owner.isOnline() || !player.isOnline())
 		{
 			return false;
 		}
@@ -1037,32 +1018,30 @@ public class TradeList
 			}
 			
 			// Send messages about the transaction to both players
+			SystemMessage msg;
 			if (newItem.isStackable())
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
+				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S3_S2_S_FROM_C1);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
 				_owner.sendPacket(msg);
-				
 				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S3_S2_S);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
 				msg.addLong(item.getCount());
-				player.sendPacket(msg);
 			}
 			else
 			{
-				SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
+				msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_PURCHASED_S2_FROM_C1);
 				msg.addString(player.getName());
 				msg.addItemName(newItem);
 				_owner.sendPacket(msg);
-				
 				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_PURCHASED_S2);
 				msg.addString(_owner.getName());
 				msg.addItemName(newItem);
-				player.sendPacket(msg);
 			}
+			player.sendPacket(msg);
 		}
 		
 		if (totalPrice > 0)

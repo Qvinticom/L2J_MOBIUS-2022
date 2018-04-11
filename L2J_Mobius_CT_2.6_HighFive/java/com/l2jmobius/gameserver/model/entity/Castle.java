@@ -32,8 +32,8 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
@@ -726,26 +726,23 @@ public final class Castle extends AbstractResidence
 		{
 			_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, 0, false));
 		}
+		else if ((lvl == 0) && (lease == 0))
+		{
+			removeFunction(type);
+		}
 		else
 		{
-			if ((lvl == 0) && (lease == 0))
+			final int diffLease = lease - _function.get(type).getLease();
+			if (diffLease > 0)
 			{
-				removeFunction(type);
+				_function.remove(type);
+				_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
 			}
 			else
 			{
-				final int diffLease = lease - _function.get(type).getLease();
-				if (diffLease > 0)
-				{
-					_function.remove(type);
-					_function.put(type, new CastleFunction(type, lvl, lease, 0, rate, -1, false));
-				}
-				else
-				{
-					_function.get(type).setLease(lease);
-					_function.get(type).setLvl(lvl);
-					_function.get(type).dbSave();
-				}
+				_function.get(type).setLease(lease);
+				_function.get(type).setLvl(lvl);
+				_function.get(type).dbSave();
 			}
 		}
 		return true;

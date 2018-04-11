@@ -159,4 +159,10 @@ public final class LinePointIterator3D
 	{
 		return _srcZ;
 	}
+	
+	@Override
+	public String toString()
+	{
+		return "[" + _srcX + ", " + _srcY + ", " + _srcZ + "]";
+	}
 }

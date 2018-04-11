@@ -45,5 +45,4 @@ public interface IParserAdvUtils extends IParserUtils
 	Duration getDuration(String key);
 	
 	<T extends Enum<T>> T getEnum(String key, Class<T> clazz);
-	
 }

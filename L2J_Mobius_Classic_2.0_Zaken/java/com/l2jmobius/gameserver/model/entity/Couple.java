@@ -99,7 +99,7 @@ public class Couple
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Could not create couple:", e);
+			_log.log(Level.SEVERE, "Could not create couple: " + e.getMessage(), e);
 		}
 	}
 	

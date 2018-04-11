@@ -440,24 +440,23 @@ public final class Fort extends AbstractResidence
 	public void removeOwner(boolean updateDB)
 	{
 		final L2Clan clan = getOwnerClan();
-		if (clan == null)
+		if (clan != null)
 		{
-			return;
-		}
-		for (L2PcInstance member : clan.getOnlineMembers(0))
-		{
-			removeResidentialSkills(member);
-			member.sendSkillList();
-		}
-		clan.setFortId(0);
-		clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-		setOwnerClan(null);
-		setSupplyLvL(0);
-		saveFortVariables();
-		removeAllFunctions();
-		if (updateDB)
-		{
-			updateOwnerInDB();
+			for (L2PcInstance member : clan.getOnlineMembers(0))
+			{
+				removeResidentialSkills(member);
+				member.sendSkillList();
+			}
+			clan.setFortId(0);
+			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
+			setOwnerClan(null);
+			setSupplyLvL(0);
+			saveFortVariables();
+			removeAllFunctions();
+			if (updateDB)
+			{
+				updateOwnerInDB();
+			}
 		}
 	}
 	
@@ -539,12 +538,11 @@ public final class Fort extends AbstractResidence
 	public void upgradeDoor(int doorId, int hp, int pDef, int mDef)
 	{
 		final L2DoorInstance door = getDoor(doorId);
-		if (door == null)
+		if (door != null)
 		{
-			return;
+			door.setCurrentHp(door.getMaxHp() + hp);
+			saveDoorUpgrade(doorId, hp, pDef, mDef);
 		}
-		door.setCurrentHp(door.getMaxHp() + hp);
-		saveDoorUpgrade(doorId, hp, pDef, mDef);
 	}
 	
 	// This method loads fort

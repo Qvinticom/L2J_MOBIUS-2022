@@ -75,7 +75,7 @@ public class MobGroupTable
 	
 	public boolean removeGroup(int groupKey)
 	{
-		return (_groupMap.remove(groupKey) != null);
+		return _groupMap.remove(groupKey) != null;
 	}
 	
 	private static class SingletonHolder

@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.zone.form;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 
@@ -48,13 +49,55 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		return ((_x > ax1) && (_x < ax2) && (_y > ay1) && (_y < ay2)) || //
-			((Math.pow(ax1 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) || //
-			((Math.pow(ax1 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) || //
-			((Math.pow(ax2 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) || //
-			((Math.pow(ax2 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) || //
-			((_x > ax1) && (_x < ax2) && ((Math.abs(_y - ay2) < _rad) || (Math.abs(_y - ay1) < _rad))) || //
-			((_y > ay1) && (_y < ay2) && ((Math.abs(_x - ax2) < _rad) || (Math.abs(_x - ax1) < _rad)));
+		// Circles point inside the rectangle?
+		if ((_x > ax1) && (_x < ax2) && (_y > ay1) && (_y < ay2))
+		{
+			return true;
+		}
+		
+		// Any point of the rectangle intersecting the Circle?
+		if ((Math.pow(ax1 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS)
+		{
+			return true;
+		}
+		if ((Math.pow(ax1 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS)
+		{
+			return true;
+		}
+		if ((Math.pow(ax2 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS)
+		{
+			return true;
+		}
+		if ((Math.pow(ax2 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS)
+		{
+			return true;
+		}
+		
+		// Collision on any side of the rectangle?
+		if ((_x > ax1) && (_x < ax2))
+		{
+			if (Math.abs(_y - ay2) < _rad)
+			{
+				return true;
+			}
+			if (Math.abs(_y - ay1) < _rad)
+			{
+				return true;
+			}
+		}
+		if ((_y > ay1) && (_y < ay2))
+		{
+			if (Math.abs(_x - ax2) < _rad)
+			{
+				return true;
+			}
+			if (Math.abs(_x - ax1) < _rad)
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 	
 	@Override
@@ -88,20 +131,15 @@ public class ZoneCylinder extends L2ZoneForm
 	}
 	
 	@Override
-	public int[] getRandomPoint()
+	public Location getRandomPoint()
 	{
-		double x, y;
-		final double q = Rnd.get() * 2 * Math.PI;
-		final double r = Math.sqrt(Rnd.get());
+		int x, y, q, r;
 		
-		x = (_rad * r * Math.cos(q)) + _x;
-		y = (_rad * r * Math.sin(q)) + _y;
+		q = (int) (Rnd.get() * 2 * Math.PI);
+		r = (int) Math.sqrt(Rnd.get());
+		x = (int) ((_rad * r * Math.cos(q)) + _x);
+		y = (int) ((_rad * r * Math.sin(q)) + _y);
 		
-		return new int[]
-		{
-			(int) x,
-			(int) y,
-			GeoEngine.getInstance().getHeight((int) x, (int) y, _z1)
-		};
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
 	}
 }

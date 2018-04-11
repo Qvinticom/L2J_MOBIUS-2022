@@ -89,8 +89,8 @@
 							<xs:simpleType>
 								<xs:restriction base="xs:token">
 									<xs:enumeration value="NONE" />
-									<xs:enumeration value="ON_INSTANCE_ENTER" />
-									<xs:enumeration value="ON_INSTANCE_FINISH" />
+									<xs:enumeration value="ON_ENTER" />
+									<xs:enumeration value="ON_FINISH" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>

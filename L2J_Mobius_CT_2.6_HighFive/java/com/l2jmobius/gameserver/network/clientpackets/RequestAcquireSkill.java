@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
@@ -454,7 +454,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					for (SkillHolder skill : s.getPreReqSkills())
 					{
-						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLvl())
+						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLevel())
 						{
 							if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
 							{

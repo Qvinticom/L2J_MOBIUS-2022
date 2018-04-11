@@ -151,8 +151,8 @@ public class L2ClanMember
 	}
 	
 	/**
-	 * Checks if is online.
-	 * @return true, if is online
+	 * Verifies if the clan member is online.
+	 * @return {@code true} if is online
 	 */
 	public boolean isOnline()
 	{
@@ -263,11 +263,7 @@ public class L2ClanMember
 	 */
 	public int getPowerGrade()
 	{
-		if (_player != null)
-		{
-			return _player.getPowerGrade();
-		}
-		return _powerGrade;
+		return _player != null ? _player.getPowerGrade() : _powerGrade;
 	}
 	
 	/**
@@ -323,11 +319,7 @@ public class L2ClanMember
 	 */
 	public int getRaceOrdinal()
 	{
-		if (_player != null)
-		{
-			return _player.getRace().ordinal();
-		}
-		return _raceOrdinal;
+		return _player != null ? _player.getRace().ordinal() : _raceOrdinal;
 	}
 	
 	/**
@@ -336,11 +328,7 @@ public class L2ClanMember
 	 */
 	public boolean getSex()
 	{
-		if (_player != null)
-		{
-			return _player.getAppearance().getSex();
-		}
-		return _sex;
+		return _player != null ? _player.getAppearance().getSex() : _sex;
 	}
 	
 	/**
@@ -349,11 +337,7 @@ public class L2ClanMember
 	 */
 	public int getSponsor()
 	{
-		if (_player != null)
-		{
-			return _player.getSponsor();
-		}
-		return _sponsor;
+		return _player != null ? _player.getSponsor() : _sponsor;
 	}
 	
 	/**
@@ -362,11 +346,7 @@ public class L2ClanMember
 	 */
 	public int getApprentice()
 	{
-		if (_player != null)
-		{
-			return _player.getApprentice();
-		}
-		return _apprentice;
+		return _player != null ? _player.getApprentice() : _apprentice;
 	}
 	
 	/**

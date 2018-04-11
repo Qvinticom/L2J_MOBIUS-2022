@@ -28,7 +28,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.IVoicedCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CoupleManager;

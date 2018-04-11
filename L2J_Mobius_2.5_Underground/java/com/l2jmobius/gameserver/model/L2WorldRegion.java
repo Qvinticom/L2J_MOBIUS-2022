@@ -136,7 +136,6 @@ public final class L2WorldRegion
 			}
 			LOGGER.finer(c + " mobs were turned on");
 		}
-		
 	}
 	
 	public boolean isActive()

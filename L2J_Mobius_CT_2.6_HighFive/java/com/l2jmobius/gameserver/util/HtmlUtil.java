@@ -195,7 +195,7 @@ public class HtmlUtil
 		}
 		else
 		{
-			int tdWidth = (width - 10) / 2;
+			final int tdWidth = (width - 10) / 2;
 			sb.append("<table cellpadding=0 cellspacing=0>");
 			sb.append("<tr>");
 			sb.append("<td width=");

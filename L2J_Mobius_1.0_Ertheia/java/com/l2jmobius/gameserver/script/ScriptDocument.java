@@ -63,7 +63,6 @@ public class ScriptDocument
 		{
 			// Parser with specified options can't be built
 			_log.log(Level.WARNING, "", pce);
-			
 		}
 		catch (IOException ioe)
 		{
@@ -90,5 +89,4 @@ public class ScriptDocument
 	{
 		return _name;
 	}
-	
 }

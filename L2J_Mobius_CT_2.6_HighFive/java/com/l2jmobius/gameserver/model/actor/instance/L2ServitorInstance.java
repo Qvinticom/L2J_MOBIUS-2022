@@ -30,7 +30,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.CharSummonTable;
 import com.l2jmobius.gameserver.data.sql.impl.SummonEffectsTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;

@@ -18,10 +18,11 @@ package com.l2jmobius.gameserver.model;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -47,7 +48,7 @@ public class TradeList
 	
 	private final L2PcInstance _owner;
 	private L2PcInstance _partner;
-	private final List<TradeItem> _items = new CopyOnWriteArrayList<>();
+	private final Set<TradeItem> _items = ConcurrentHashMap.newKeySet();
 	private String _title;
 	private boolean _packaged;
 	
@@ -117,7 +118,7 @@ public class TradeList
 	 * @param inventory
 	 * @return L2ItemInstance : items in inventory
 	 */
-	public List<TradeItem> getAvailableItems(PcInventory inventory)
+	public Collection<TradeItem> getAvailableItems(PcInventory inventory)
 	{
 		final List<TradeItem> list = new LinkedList<>();
 		for (TradeItem item : _items)

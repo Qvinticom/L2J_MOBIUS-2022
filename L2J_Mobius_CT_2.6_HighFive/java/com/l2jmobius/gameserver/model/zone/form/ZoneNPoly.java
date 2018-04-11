@@ -20,6 +20,7 @@ import java.awt.Polygon;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 
@@ -108,7 +109,7 @@ public class ZoneNPoly extends L2ZoneForm
 	}
 	
 	@Override
-	public int[] getRandomPoint()
+	public Location getRandomPoint()
 	{
 		int x, y;
 		
@@ -127,12 +128,7 @@ public class ZoneNPoly extends L2ZoneForm
 			y = Rnd.get(_minY, _maxY);
 		}
 		
-		return new int[]
-		{
-			x,
-			y,
-			GeoEngine.getInstance().getHeight(x, y, _z1)
-		};
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
 	}
 	
 	public int[] getX()

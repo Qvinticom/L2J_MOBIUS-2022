@@ -192,12 +192,7 @@ public final class Fort extends AbstractResidence
 					}
 					if ((getOwnerClan().getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						int fee = _fee;
-						if (getEndTime() == -1)
-						{
-							fee = _tempFee;
-						}
-						
+						final int fee = getEndTime() == -1 ? _tempFee : _fee;
 						setEndTime(System.currentTimeMillis() + getRate());
 						dbSave();
 						if (_cwh)
@@ -549,7 +544,6 @@ public final class Fort extends AbstractResidence
 		if (door != null)
 		{
 			door.setCurrentHp(door.getMaxHp() + hp);
-			
 			saveDoorUpgrade(doorId, hp, pDef, mDef);
 		}
 	}
@@ -589,7 +583,7 @@ public final class Fort extends AbstractResidence
 				long initial = System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis();
 				while (initial > (Config.FS_UPDATE_FRQ * 60000L))
 				{
-					initial -= (Config.FS_UPDATE_FRQ * 60000L);
+					initial -= Config.FS_UPDATE_FRQ * 60000L;
 				}
 				initial = (Config.FS_UPDATE_FRQ * 60000L) - initial;
 				if ((Config.FS_MAX_OWN_TIME <= 0) || (getOwnedTime() < (Config.FS_MAX_OWN_TIME * 3600)))
@@ -609,7 +603,6 @@ public final class Fort extends AbstractResidence
 			{
 				setOwnerClan(null);
 			}
-			
 		}
 		catch (Exception e)
 		{
@@ -675,12 +668,9 @@ public final class Fort extends AbstractResidence
 		{
 			return false;
 		}
-		if (lease > 0)
+		if ((lease > 0) && !player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
 		{
-			if (!player.destroyItemByItemId("Consume", Inventory.ADENA_ID, lease, null, true))
-			{
-				return false;
-			}
+			return false;
 		}
 		if (addNew)
 		{
@@ -690,20 +680,16 @@ public final class Fort extends AbstractResidence
 		{
 			removeFunction(type);
 		}
+		else if ((lease - _function.get(type).getLease()) > 0)
+		{
+			_function.remove(type);
+			_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
+		}
 		else
 		{
-			final int diffLease = lease - _function.get(type).getLease();
-			if (diffLease > 0)
-			{
-				_function.remove(type);
-				_function.put(type, new FortFunction(type, lvl, lease, 0, rate, -1, false));
-			}
-			else
-			{
-				_function.get(type).setLease(lease);
-				_function.get(type).setLvl(lvl);
-				_function.get(type).dbSave();
-			}
+			_function.get(type).setLease(lease);
+			_function.get(type).setLvl(lvl);
+			_function.get(type).dbSave();
 		}
 		return true;
 	}
@@ -934,31 +920,17 @@ public final class Fort extends AbstractResidence
 	
 	public final int getOwnedTime()
 	{
-		if (_lastOwnedTime.getTimeInMillis() == 0)
-		{
-			return 0;
-		}
-		
-		return (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) ((System.currentTimeMillis() - _lastOwnedTime.getTimeInMillis()) / 1000);
 	}
 	
 	public final int getTimeTillRebelArmy()
 	{
-		if (_lastOwnedTime.getTimeInMillis() == 0)
-		{
-			return 0;
-		}
-		
-		return (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000L)) - System.currentTimeMillis()) / 1000L);
+		return _lastOwnedTime.getTimeInMillis() == 0 ? 0 : (int) (((_lastOwnedTime.getTimeInMillis() + (Config.FS_MAX_OWN_TIME * 3600000L)) - System.currentTimeMillis()) / 1000L);
 	}
 	
 	public final long getTimeTillNextFortUpdate()
 	{
-		if (_FortUpdater[0] == null)
-		{
-			return 0;
-		}
-		return _FortUpdater[0].getDelay(TimeUnit.SECONDS);
+		return _FortUpdater[0] == null ? 0 : _FortUpdater[0].getDelay(TimeUnit.SECONDS);
 	}
 	
 	public void updateClansReputation(L2Clan owner, boolean removePoints)
@@ -999,7 +971,6 @@ public final class Fort extends AbstractResidence
 				_log.log(Level.WARNING, "Exception in endFortressSiege " + e.getMessage(), e);
 			}
 		}
-		
 	}
 	
 	/**

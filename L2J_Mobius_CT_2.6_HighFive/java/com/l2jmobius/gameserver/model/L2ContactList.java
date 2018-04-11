@@ -19,8 +19,8 @@ package com.l2jmobius.gameserver.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,9 +39,10 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class L2ContactList
 {
-	private final Logger _log = Logger.getLogger(getClass().getName());
+	private static final Logger LOGGER = Logger.getLogger(L2ContactList.class.getName());
+	
 	private final L2PcInstance activeChar;
-	private final List<String> _contacts = new CopyOnWriteArrayList<>();
+	private final Set<String> _contacts = ConcurrentHashMap.newKeySet();
 	
 	private static final String QUERY_ADD = "INSERT INTO character_contacts (charId, contactId) VALUES (?, ?)";
 	private static final String QUERY_REMOVE = "DELETE FROM character_contacts WHERE charId = ? and contactId = ?";
@@ -58,16 +59,16 @@ public class L2ContactList
 		_contacts.clear();
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(QUERY_LOAD))
+			PreparedStatement statement = con.prepareStatement(QUERY_LOAD))
 		{
-			ps.setInt(1, activeChar.getObjectId());
-			try (ResultSet rs = ps.executeQuery())
+			statement.setInt(1, activeChar.getObjectId());
+			try (ResultSet rset = statement.executeQuery())
 			{
 				int contactId;
 				String contactName;
-				while (rs.next())
+				while (rset.next())
 				{
-					contactId = rs.getInt(1);
+					contactId = rset.getInt(1);
 					contactName = CharNameTable.getInstance().getNameById(contactId);
 					if ((contactName == null) || contactName.equals(activeChar.getName()) || (contactId == activeChar.getObjectId()))
 					{
@@ -80,7 +81,7 @@ public class L2ContactList
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
 		}
 	}
 	
@@ -124,11 +125,11 @@ public class L2ContactList
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(QUERY_ADD))
+			PreparedStatement statement = con.prepareStatement(QUERY_ADD))
 		{
-			ps.setInt(1, activeChar.getObjectId());
-			ps.setInt(2, contactId);
-			ps.execute();
+			statement.setInt(1, activeChar.getObjectId());
+			statement.setInt(2, contactId);
+			statement.execute();
 			
 			_contacts.add(name);
 			
@@ -138,7 +139,7 @@ public class L2ContactList
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
 		}
 		return true;
 	}
@@ -161,11 +162,11 @@ public class L2ContactList
 		_contacts.remove(name);
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement(QUERY_REMOVE))
+			PreparedStatement statement = con.prepareStatement(QUERY_REMOVE))
 		{
-			ps.setInt(1, activeChar.getObjectId());
-			ps.setInt(2, contactId);
-			ps.execute();
+			statement.setInt(1, activeChar.getObjectId());
+			statement.setInt(2, contactId);
+			statement.execute();
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WAS_SUCCESSFULLY_DELETED_FROM_YOUR_CONTACT_LIST);
 			sm.addString(name);
@@ -173,11 +174,11 @@ public class L2ContactList
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error found in " + activeChar.getName() + "'s ContactsList: " + e.getMessage(), e);
 		}
 	}
 	
-	public List<String> getAllContacts()
+	public Set<String> getAllContacts()
 	{
 		return _contacts;
 	}

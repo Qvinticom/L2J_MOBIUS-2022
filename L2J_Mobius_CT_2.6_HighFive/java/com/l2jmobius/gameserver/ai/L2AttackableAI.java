@@ -30,7 +30,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;

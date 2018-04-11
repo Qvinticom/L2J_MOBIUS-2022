@@ -316,7 +316,6 @@ public final class MapRegionManager implements IGameXmlReader
 								return flags.stream().findAny().get().getLocation();
 							}
 						}
-						
 					}
 					else if (fort != null)
 					{

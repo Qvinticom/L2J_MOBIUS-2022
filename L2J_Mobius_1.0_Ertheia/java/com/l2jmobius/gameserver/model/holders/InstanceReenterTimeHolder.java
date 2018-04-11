@@ -30,7 +30,7 @@ public final class InstanceReenterTimeHolder
 	private int _minute = -1;
 	private long _time = -1;
 	
-	public InstanceReenterTimeHolder(int time)
+	public InstanceReenterTimeHolder(long time)
 	{
 		_time = TimeUnit.MINUTES.toMillis(time);
 	}

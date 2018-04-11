@@ -110,22 +110,15 @@ public class BitSetIDFactory extends IdFactory
 		_freeIds.set(newID);
 		_freeIdCount.decrementAndGet();
 		
-		int nextFree = _freeIds.nextClearBit(newID);
+		final int nextFree = _freeIds.nextClearBit(newID) < 0 ? _freeIds.nextClearBit(0) : _freeIds.nextClearBit(newID);
 		
 		if (nextFree < 0)
 		{
-			nextFree = _freeIds.nextClearBit(0);
-		}
-		if (nextFree < 0)
-		{
-			if (_freeIds.size() < FREE_OBJECT_ID_SIZE)
-			{
-				increaseBitSetCapacity();
-			}
-			else
+			if (_freeIds.size() >= FREE_OBJECT_ID_SIZE)
 			{
 				throw new NullPointerException("Ran out of valid Id's.");
 			}
+			increaseBitSetCapacity();
 		}
 		
 		_nextFreeId.set(nextFree);

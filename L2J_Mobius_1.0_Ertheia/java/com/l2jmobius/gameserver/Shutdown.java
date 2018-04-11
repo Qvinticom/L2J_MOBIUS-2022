@@ -263,11 +263,10 @@ public class Shutdown extends Thread
 			try
 			{
 				DatabaseFactory.getInstance().close();
-				LOGGER.info("L2Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
+				LOGGER.info("Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)
 			{
-				
 			}
 			
 			// server will quit, when this function ends.
@@ -536,9 +535,6 @@ public class Shutdown extends Thread
 			}
 		}
 		
-		/*
-		 * if (Config.ACTIVATE_POSITION_RECORDER) Universe.getInstance().implode(true);
-		 */
 		final TimeCounter tc = new TimeCounter();
 		
 		// Save all raidboss and GrandBoss status ^_^
@@ -590,7 +586,7 @@ public class Shutdown extends Thread
 		if (Config.BOTREPORT_ENABLE)
 		{
 			BotReportTable.getInstance().saveReportedCharData();
-			LOGGER.info("Bot Report Table: Sucessfully saved reports to database!");
+			LOGGER.info("Bot Report Table: Successfully saved reports to database!");
 		}
 		
 		try

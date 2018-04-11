@@ -52,19 +52,21 @@ public class CharNameTable
 	
 	public final void addName(L2PcInstance player)
 	{
-		if (player == null)
+		if (player != null)
 		{
-			return;
+			addName(player.getObjectId(), player.getName());
+			_accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
 		}
-		addName(player.getObjectId(), player.getName());
-		_accessLevels.put(player.getObjectId(), player.getAccessLevel().getLevel());
 	}
 	
 	private final void addName(int objectId, String name)
 	{
-		if ((name != null) && !name.equals(_chars.get(objectId)))
+		if (name != null)
 		{
-			_chars.put(objectId, name);
+			if (!name.equals(_chars.get(objectId)))
+			{
+				_chars.put(objectId, name);
+			}
 		}
 	}
 	
@@ -105,8 +107,8 @@ public class CharNameTable
 			{
 				while (rs.next())
 				{
-					id = rs.getInt(1);
-					accessLevel = rs.getInt(2);
+					id = rs.getInt("charId");
+					accessLevel = rs.getInt("accesslevel");
 				}
 			}
 		}
@@ -115,14 +117,14 @@ public class CharNameTable
 			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char name: " + e.getMessage(), e);
 		}
 		
-		if (id <= 0)
+		if (id > 0)
 		{
-			return -1; // not found
+			_chars.put(id, name);
+			_accessLevels.put(id, accessLevel);
+			return id;
 		}
 		
-		_chars.put(id, name);
-		_accessLevels.put(id, accessLevel);
-		return id;
+		return -1; // not found
 	}
 	
 	public final String getNameById(int id)
@@ -151,9 +153,9 @@ public class CharNameTable
 			{
 				if (rset.next())
 				{
-					name = rset.getString(1);
+					name = rset.getString("char_name");
 					_chars.put(id, name);
-					_accessLevels.put(id, rset.getInt(2));
+					_accessLevels.put(id, rset.getInt("accesslevel"));
 					return name;
 				}
 			}
@@ -173,14 +175,17 @@ public class CharNameTable
 	
 	public synchronized boolean doesCharNameExist(String name)
 	{
-		boolean result = true;
+		boolean result = false;
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT account_name FROM characters WHERE char_name=?"))
+			PreparedStatement ps = con.prepareStatement("SELECT COUNT(*) as count FROM characters WHERE char_name=?"))
 		{
 			ps.setString(1, name);
 			try (ResultSet rs = ps.executeQuery())
 			{
-				result = rs.next();
+				if (rs.next())
+				{
+					result = rs.getInt("count") > 0;
+				}
 			}
 		}
 		catch (SQLException e)
@@ -193,20 +198,20 @@ public class CharNameTable
 	public int getAccountCharacterCount(String account)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("SELECT COUNT(char_name) FROM characters WHERE account_name=?"))
+			PreparedStatement ps = con.prepareStatement("SELECT COUNT(char_name) as count FROM characters WHERE account_name=?"))
 		{
 			ps.setString(1, account);
 			try (ResultSet rset = ps.executeQuery())
 			{
-				while (rset.next())
+				if (rset.next())
 				{
-					return rset.getInt(1);
+					return rset.getInt("count");
 				}
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char count: " + e.getMessage(), e);
+			_log.log(Level.WARNING, "Couldn't retrieve account for id: " + e.getMessage(), e);
 		}
 		return 0;
 	}
@@ -219,14 +224,14 @@ public class CharNameTable
 		{
 			while (rs.next())
 			{
-				final int id = rs.getInt(1);
-				_chars.put(id, rs.getString(2));
-				_accessLevels.put(id, rs.getInt(3));
+				final int id = rs.getInt("charId");
+				_chars.put(id, rs.getString("char_name"));
+				_accessLevels.put(id, rs.getInt("accesslevel"));
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load char name: " + e.getMessage(), e);
+			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't retrieve all char id/name/access: " + e.getMessage(), e);
 		}
 		_log.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
 	}

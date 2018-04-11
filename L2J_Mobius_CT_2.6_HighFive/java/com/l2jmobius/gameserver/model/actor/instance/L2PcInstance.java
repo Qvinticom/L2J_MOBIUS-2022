@@ -75,9 +75,9 @@ import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerXpPercentLostData;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
@@ -9948,11 +9948,11 @@ public final class L2PcInstance extends L2Playable
 			
 			for (SkillHolder holder : _transformation.getTemplate(this).getSkills())
 			{
-				ts.putIfAbsent(holder.getSkillId(), holder.getSkillLvl());
+				ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
 				
-				if (ts.get(holder.getSkillId()) < holder.getSkillLvl())
+				if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
 				{
-					ts.put(holder.getSkillId(), holder.getSkillLvl());
+					ts.put(holder.getSkillId(), holder.getSkillLevel());
 				}
 			}
 			
@@ -9960,10 +9960,10 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (getLevel() >= holder.getMinLevel())
 				{
-					ts.putIfAbsent(holder.getSkillId(), holder.getSkillLvl());
-					if (ts.get(holder.getSkillId()) < holder.getSkillLvl())
+					ts.putIfAbsent(holder.getSkillId(), holder.getSkillLevel());
+					if (ts.get(holder.getSkillId()) < holder.getSkillLevel())
 					{
-						ts.put(holder.getSkillId(), holder.getSkillLvl());
+						ts.put(holder.getSkillId(), holder.getSkillLevel());
 					}
 				}
 			}
@@ -12415,7 +12415,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 				sm.addPcName(target.getActingPlayer());
-				sm.addCharName(this);
+				sm.addString(getName());
 				target.sendPacket(sm);
 			}
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_S_ATTACK_WENT_ASTRAY);
@@ -12456,7 +12456,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_DONE_S3_POINTS_OF_DAMAGE_TO_C2);
 			sm.addPcName(this);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			sm.addInt(damage);
 		}
 		sendPacket(sm);

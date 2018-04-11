@@ -20,7 +20,6 @@ import com.l2jmobius.commons.network.BaseRecievePacket;
 
 public class LoginServerFail extends BaseRecievePacket
 {
-	
 	private static final String[] REASONS =
 	{
 		"None",
@@ -52,5 +51,4 @@ public class LoginServerFail extends BaseRecievePacket
 	{
 		return _reason;
 	}
-	
 }

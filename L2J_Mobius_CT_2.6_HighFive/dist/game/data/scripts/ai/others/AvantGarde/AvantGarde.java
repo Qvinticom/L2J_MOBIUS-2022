@@ -20,8 +20,8 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;

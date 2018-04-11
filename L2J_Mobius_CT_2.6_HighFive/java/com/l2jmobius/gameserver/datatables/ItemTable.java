@@ -63,7 +63,6 @@ public class ItemTable
 	private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
 	private final Map<Integer, L2Armor> _armors = new HashMap<>();
 	private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
-	
 	static
 	{
 		SLOTS.put("shirt", L2Item.SLOT_UNDERWEAR);
@@ -143,10 +142,10 @@ public class ItemTable
 			}
 		}
 		buildFastLookupTable(highest);
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _etcItems.size() + " Etc Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _armors.size() + " Armor Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _weapons.size() + " Weapon Items");
-		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _etcItems.size() + " Etc Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _armors.size() + " Armor Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _weapons.size() + " Weapon Items");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded: " + (_etcItems.size() + _armors.size() + _weapons.size()) + " Items in total.");
 	}
 	
 	/**
@@ -156,7 +155,7 @@ public class ItemTable
 	private void buildFastLookupTable(int size)
 	{
 		// Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-		LOGGER.info(getClass().getSimpleName() + ": Highest item id used:" + size);
+		LOGGER.info(getClass().getSimpleName() + ": Highest item id used: " + size);
 		_allTemplates = new L2Item[size + 1];
 		
 		// Insert armor item in Fast Look Up Table
@@ -364,7 +363,7 @@ public class ItemTable
 				}
 				catch (Exception e)
 				{
-					LOGGER.log(Level.WARNING, "could not delete pet objectid:", e);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not delete pet objectid:", e);
 				}
 			}
 		}

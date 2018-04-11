@@ -79,7 +79,6 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader
 		{
 			if ("list".equalsIgnoreCase(n.getNodeName()))
 			{
-				
 				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 				{
 					if ("item".equalsIgnoreCase(d.getNodeName()))

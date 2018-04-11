@@ -32,7 +32,6 @@ import com.l2jmobius.Config;
 public class GMAudit
 {
 	private static final Logger _log = Logger.getLogger(GMAudit.class.getName());
-	
 	static
 	{
 		new File("log/GMAudit").mkdirs();

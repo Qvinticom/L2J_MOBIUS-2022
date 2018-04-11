@@ -25,7 +25,6 @@ import com.l2jmobius.commons.network.BaseSendablePacket;
  */
 public class ReplyCharacters extends BaseSendablePacket
 {
-	
 	public ReplyCharacters(String account, int chars, List<Long> timeToDel)
 	{
 		writeC(0x08);
@@ -43,5 +42,4 @@ public class ReplyCharacters extends BaseSendablePacket
 	{
 		return getBytes();
 	}
-	
 }

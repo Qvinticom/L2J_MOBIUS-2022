@@ -191,8 +191,7 @@ public final class MobGroup
 				final int y = player.getY() + Rnd.nextInt(50);
 				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
-				final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-				ai.follow(player);
+				((L2ControllableMobAI) mobInst.getAI()).follow(player);
 			}
 		}
 	}
@@ -294,8 +293,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.forceAttack(target);
+			((L2ControllableMobAI) mobInst.getAI()).forceAttack(target);
 		}
 	}
 	
@@ -310,8 +308,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.stop();
+			((L2ControllableMobAI) mobInst.getAI()).stop();
 		}
 	}
 	
@@ -347,8 +344,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.follow(character);
+			((L2ControllableMobAI) mobInst.getAI()).follow(character);
 		}
 	}
 	
@@ -363,8 +359,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.setAlternateAI(L2ControllableMobAI.AI_CAST);
+			((L2ControllableMobAI) mobInst.getAI()).setAlternateAI(L2ControllableMobAI.AI_CAST);
 		}
 	}
 	
@@ -379,8 +374,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
-			ai.setNotMoving(enabled);
+			((L2ControllableMobAI) mobInst.getAI()).setNotMoving(enabled);
 		}
 	}
 	

@@ -35,7 +35,7 @@ public enum ArmorType implements ItemType
 	/**
 	 * Constructor of the ArmorType.
 	 */
-	private ArmorType()
+	ArmorType()
 	{
 		_mask = 1 << (ordinal() + WeaponType.values().length);
 	}

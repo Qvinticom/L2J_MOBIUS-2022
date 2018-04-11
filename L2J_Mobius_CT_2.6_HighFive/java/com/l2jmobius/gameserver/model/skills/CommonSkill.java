@@ -52,7 +52,7 @@ public enum CommonSkill
 	
 	private final SkillHolder _holder;
 	
-	private CommonSkill(int id, int level)
+	CommonSkill(int id, int level)
 	{
 		_holder = new SkillHolder(id, level);
 	}
@@ -64,7 +64,7 @@ public enum CommonSkill
 	
 	public int getLevel()
 	{
-		return _holder.getSkillLvl();
+		return _holder.getSkillLevel();
 	}
 	
 	public Skill getSkill()

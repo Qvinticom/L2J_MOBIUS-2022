@@ -29,8 +29,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;

@@ -35,7 +35,7 @@ public class EventDroplist
 	/**
 	 * The table containing all DataDrop object
 	 */
-	private static final List<DateDrop> _allNpcDateDrops = new CopyOnWriteArrayList<>();
+	private static final List<DateDrop> ALL_NPC_DATE_DROPS = new CopyOnWriteArrayList<>();
 	
 	public static class DateDrop
 	{
@@ -74,7 +74,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(int[] itemIdList, int[] count, int chance, DateRange dateRange)
 	{
-		_allNpcDateDrops.add(new DateDrop(dateRange, new EventDrop(itemIdList, count[0], count[1], chance)));
+		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, new EventDrop(itemIdList, count[0], count[1], chance)));
 	}
 	
 	/**
@@ -86,7 +86,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(int itemId, long min, long max, int chance, DateRange dateRange)
 	{
-		_allNpcDateDrops.add(new DateDrop(dateRange, new EventDrop(itemId, min, max, chance)));
+		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, new EventDrop(itemId, min, max, chance)));
 	}
 	
 	/**
@@ -96,7 +96,7 @@ public class EventDroplist
 	 */
 	public void addGlobalDrop(DateRange dateRange, EventDrop eventDrop)
 	{
-		_allNpcDateDrops.add(new DateDrop(dateRange, eventDrop));
+		ALL_NPC_DATE_DROPS.add(new DateDrop(dateRange, eventDrop));
 	}
 	
 	/**
@@ -106,7 +106,7 @@ public class EventDroplist
 	{
 		final List<DateDrop> list = new LinkedList<>();
 		final Date currentDate = new Date();
-		for (DateDrop drop : _allNpcDateDrops)
+		for (DateDrop drop : ALL_NPC_DATE_DROPS)
 		{
 			if (drop._dateRange.isWithinRange(currentDate))
 			{

@@ -27,7 +27,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.instancemanager.HandysBlockCheckerManager;
@@ -583,6 +583,12 @@ public final class BlockCheckerEngine
 			
 			for (L2ItemInstance item : _drops)
 			{
+				// npe
+				if (item == null)
+				{
+					continue;
+				}
+				
 				// a player has it, it will be deleted later
 				if (!item.isSpawned() || (item.getOwnerId() != 0))
 				{

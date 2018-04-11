@@ -153,7 +153,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	protected void onLoad()
 	{
-		
 	}
 	
 	/**
@@ -164,7 +163,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onSave()
 	{
-		
 	}
 	
 	/**
@@ -1054,7 +1052,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String onDeath(L2Character killer, L2Character victim, QuestState qs)
 	{
-		return onAdvEvent("", ((killer instanceof L2Npc) ? ((L2Npc) killer) : null), qs.getPlayer());
+		return onAdvEvent("", (killer instanceof L2Npc) ? (L2Npc) killer : null, qs.getPlayer());
 	}
 	
 	/**
@@ -1387,7 +1385,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onOlympiadMatchFinish(Participant winner, Participant looser, CompetitionType type)
 	{
-		
 	}
 	
 	/**
@@ -1397,7 +1394,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onOlympiadLose(L2PcInstance loser, CompetitionType type)
 	{
-		
 	}
 	
 	/**
@@ -1406,7 +1402,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onMoveFinished(L2Npc npc)
 	{
-		
 	}
 	
 	/**
@@ -1415,7 +1410,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onNodeArrived(L2Npc npc)
 	{
-		
 	}
 	
 	/**
@@ -1424,7 +1418,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public void onRouteFinished(L2Npc npc)
 	{
-		
 	}
 	
 	/**
@@ -2622,11 +2615,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				}
 			}
 		}
-		if ((luckyPlayer != null) && checkDistanceToTarget(luckyPlayer, npc))
-		{
-			return luckyPlayer;
-		}
-		return null;
+		return (luckyPlayer != null) && checkDistanceToTarget(luckyPlayer, npc) ? luckyPlayer : null;
 	}
 	
 	/**
@@ -2661,15 +2650,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		QuestState qs = player.getQuestState(getName());
 		if (!player.isInParty())
 		{
-			if (!checkPartyMemberConditions(qs, condition, target))
-			{
-				return null;
-			}
-			if (!checkDistanceToTarget(player, target))
-			{
-				return null;
-			}
-			return qs;
+			return !checkPartyMemberConditions(qs, condition, target) || !checkDistanceToTarget(player, target) ? null : qs;
 		}
 		
 		final List<QuestState> candidates = new ArrayList<>();
@@ -2701,21 +2682,17 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		
 		qs = candidates.get(getRandom(candidates.size()));
-		if (!checkDistanceToTarget(qs.getPlayer(), target))
-		{
-			return null;
-		}
-		return qs;
+		return !checkDistanceToTarget(qs.getPlayer(), target) ? null : qs;
 	}
 	
 	private boolean checkPartyMemberConditions(QuestState qs, int condition, L2Npc npc)
 	{
-		return ((qs != null) && ((condition == -1) ? qs.isStarted() : qs.isCond(condition)) && checkPartyMember(qs, npc));
+		return (qs != null) && ((condition == -1) ? qs.isStarted() : qs.isCond(condition)) && checkPartyMember(qs, npc);
 	}
 	
 	private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target)
 	{
-		return ((target == null) || com.l2jmobius.gameserver.util.Util.checkIfInRange(1500, player, target, true));
+		return (target == null) || com.l2jmobius.gameserver.util.Util.checkIfInRange(1500, player, target, true);
 	}
 	
 	/**
@@ -2823,7 +2800,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	{
 		for (int id : items)
 		{
-			if (ItemTable.getInstance().getTemplate(id) == null)
+			if ((id != 0) && (ItemTable.getInstance().getTemplate(id) == null))
 			{
 				_log.severe(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
 			}

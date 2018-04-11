@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
@@ -45,7 +45,7 @@ public class SkillHolder
 		return _skillId;
 	}
 	
-	public final int getSkillLvl()
+	public final int getSkillLevel()
 	{
 		return _skillLvl;
 	}

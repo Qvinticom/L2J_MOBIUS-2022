@@ -43,5 +43,4 @@ public class InitLS extends BaseRecievePacket
 		final int size = readD();
 		_key = readB(size);
 	}
-	
 }

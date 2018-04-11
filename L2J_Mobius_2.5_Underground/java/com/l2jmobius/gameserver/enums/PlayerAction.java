@@ -30,7 +30,7 @@ public enum PlayerAction
 	
 	private PlayerAction()
 	{
-		_mask = (1 << ordinal());
+		_mask = 1 << ordinal();
 	}
 	
 	public int getMask()

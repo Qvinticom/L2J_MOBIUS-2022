@@ -21,7 +21,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.L2Object;

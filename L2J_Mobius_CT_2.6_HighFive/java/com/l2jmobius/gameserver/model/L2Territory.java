@@ -107,7 +107,21 @@ public class L2Territory
 		}
 		
 		final double dx1 = p1._x - x;
-		return ((dx1 >= 0) && ((p2._x - x) >= 0)) || (((dx1 >= 0) || ((p2._x - x) >= 0)) && (((dy1 * (p1._x - p2._x)) / (p1._y - p2._y)) <= dx1));
+		final double dx2 = p2._x - x;
+		
+		if ((dx1 >= 0) && (dx2 >= 0))
+		{
+			return true;
+		}
+		
+		if ((dx1 < 0) && (dx2 < 0))
+		{
+			return false;
+		}
+		
+		final double dx0 = (dy1 * (p1._x - p2._x)) / (p1._y - p2._y);
+		
+		return dx0 <= dx1;
 	}
 	
 	public boolean isInside(int x, int y)
@@ -115,7 +129,10 @@ public class L2Territory
 		int intersect_count = 0;
 		for (int i = 0; i < _points.size(); i++)
 		{
-			if (isIntersect(x, y, _points.get(i > 0 ? i - 1 : _points.size() - 1), _points.get(i)))
+			final Point p1 = _points.get(i > 0 ? i - 1 : _points.size() - 1);
+			final Point p2 = _points.get(i);
+			
+			if (isIntersect(x, y, p1, p2))
 			{
 				intersect_count++;
 			}

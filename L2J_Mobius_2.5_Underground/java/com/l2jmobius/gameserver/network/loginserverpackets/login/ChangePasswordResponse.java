@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class ChangePasswordResponse extends BaseRecievePacket
 {
-	
 	public ChangePasswordResponse(byte[] decrypt)
 	{
 		super(decrypt);

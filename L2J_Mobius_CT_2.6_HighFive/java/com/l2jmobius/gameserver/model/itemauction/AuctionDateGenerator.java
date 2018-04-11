@@ -72,7 +72,7 @@ public final class AuctionDateGenerator
 		return calcDestTime(_calendar.getTimeInMillis(), date, TimeUnit.MILLISECONDS.convert(_interval, TimeUnit.DAYS));
 	}
 	
-	private final long calcDestTime(long time, long date, long add)
+	private long calcDestTime(long time, long date, long add)
 	{
 		if (time < date)
 		{
@@ -85,7 +85,7 @@ public final class AuctionDateGenerator
 		return time;
 	}
 	
-	private final void checkDayOfWeek(int defaultValue)
+	private void checkDayOfWeek(int defaultValue)
 	{
 		if ((_day_of_week < 1) || (_day_of_week > 7))
 		{
@@ -101,7 +101,7 @@ public final class AuctionDateGenerator
 		}
 	}
 	
-	private final void checkHourOfDay(int defaultValue)
+	private void checkHourOfDay(int defaultValue)
 	{
 		if ((_hour_of_day < 0) || (_hour_of_day > 23))
 		{
@@ -113,7 +113,7 @@ public final class AuctionDateGenerator
 		}
 	}
 	
-	private final void checkMinuteOfHour(int defaultValue)
+	private void checkMinuteOfHour(int defaultValue)
 	{
 		if ((_minute_of_hour < 0) || (_minute_of_hour > 59))
 		{

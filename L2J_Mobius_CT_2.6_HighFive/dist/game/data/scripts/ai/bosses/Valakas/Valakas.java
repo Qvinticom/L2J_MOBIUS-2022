@@ -21,7 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;

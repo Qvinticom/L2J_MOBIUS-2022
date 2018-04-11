@@ -50,7 +50,7 @@ public class TaskNevit extends Task
 			player.getVariables().set("hunting_time", 0);
 			player.sendPacket(new ExNevitAdventTimeChange(0, true));
 		}
-		_log.info("Nevit system reseted.");
+		LOGGER.info("Nevit system reseted.");
 	}
 	
 	@Override

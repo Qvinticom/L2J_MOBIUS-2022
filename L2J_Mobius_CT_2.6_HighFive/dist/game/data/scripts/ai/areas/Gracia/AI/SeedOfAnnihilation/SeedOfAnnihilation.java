@@ -20,7 +20,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;

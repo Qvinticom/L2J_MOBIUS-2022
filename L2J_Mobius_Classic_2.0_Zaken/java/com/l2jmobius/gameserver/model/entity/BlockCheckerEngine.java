@@ -454,21 +454,18 @@ public final class BlockCheckerEngine
 			
 			switch (_round)
 			{
-				case 1:
+				case 1: // Schedule second spawn round
 				{
-					// Schedule second spawn round
 					_task = ThreadPool.schedule(new SpawnRound(20, 2), 60000);
 					break;
 				}
-				case 2:
+				case 2: // Schedule third spawn round
 				{
-					// Schedule third spawn round
 					_task = ThreadPool.schedule(new SpawnRound(14, 3), 60000);
 					break;
 				}
-				case 3:
+				case 3: // Schedule Event End Count Down
 				{
-					// Schedule Event End Count Down
 					_task = ThreadPool.schedule(new EndEvent(), 180000);
 					break;
 				}
@@ -572,7 +569,7 @@ public final class BlockCheckerEngine
 	
 	/*
 	 * private class CountDown implements Runnable {
-	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_WILL_END_IN_5_SECONDS)); ThreadPoolManager.schedule(new EndEvent(), 5000); } }
+	 * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPoolManager.schedule(new EndEvent(), 5000); } }
 	 */
 	
 	/**
@@ -652,7 +649,7 @@ public final class BlockCheckerEngine
 		}
 		
 		/**
-		 * Reward the speicifed team as a winner team 1) Higher score - 8 extra 2) Higher score - 5 extra
+		 * Reward the specified team as a winner team 1) Higher score - 8 extra 2) Higher score - 5 extra
 		 * @param isRed
 		 */
 		private void rewardAsWinner(boolean isRed)
@@ -714,8 +711,7 @@ public final class BlockCheckerEngine
 		 */
 		private void rewardAsLooser(boolean isRed)
 		{
-			final Map<L2PcInstance, Integer> tempPoints = isRed ? _redTeamPoints : _blueTeamPoints;
-			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
+			for (Entry<L2PcInstance, Integer> entry : (isRed ? _redTeamPoints : _blueTeamPoints).entrySet())
 			{
 				final L2PcInstance player = entry.getKey();
 				if ((player != null) && (entry.getValue() >= 10))
@@ -726,7 +722,7 @@ public final class BlockCheckerEngine
 		}
 		
 		/**
-		 * Telport players back, give status back and send final packet
+		 * Teleport players back, give status back and send final packet
 		 */
 		private void setPlayersBack()
 		{
@@ -748,13 +744,11 @@ public final class BlockCheckerEngine
 				final PcInventory inv = player.getInventory();
 				if (inv.getItemByItemId(13787) != null)
 				{
-					final long count = inv.getInventoryItemCount(13787, 0);
-					inv.destroyItemByItemId("Handys Block Checker", 13787, count, player, player);
+					inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
 				}
 				if (inv.getItemByItemId(13788) != null)
 				{
-					final long count = inv.getInventoryItemCount(13788, 0);
-					inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
+					inv.destroyItemByItemId("Handys Block Checker", 13788, inv.getInventoryItemCount(13788, 0), player, player);
 				}
 				broadcastRelationChanged(player);
 				// Teleport Back

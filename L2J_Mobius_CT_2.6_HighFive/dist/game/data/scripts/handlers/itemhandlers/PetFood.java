@@ -20,7 +20,7 @@ import java.util.List;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.PetDataTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -51,7 +51,7 @@ public class PetFood implements IItemHandler
 		{
 			for (SkillHolder sk : skills)
 			{
-				useFood(playable, sk.getSkillId(), sk.getSkillLvl(), item);
+				useFood(playable, sk.getSkillId(), sk.getSkillLevel(), item);
 			}
 		}
 		return true;

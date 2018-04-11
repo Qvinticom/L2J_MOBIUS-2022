@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.zone.type;
 
 import java.util.List;
 
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 
 /**
@@ -42,7 +43,7 @@ public class NpcSpawnTerritory
 		return _name;
 	}
 	
-	public int[] getRandomPoint()
+	public Location getRandomPoint()
 	{
 		return _territory.getRandomPoint();
 	}

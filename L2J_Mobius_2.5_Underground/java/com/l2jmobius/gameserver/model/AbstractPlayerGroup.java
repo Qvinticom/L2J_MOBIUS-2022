@@ -78,7 +78,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public boolean isLeader(L2PcInstance player)
 	{
-		return (getLeaderObjectId() == player.getObjectId());
+		return getLeaderObjectId() == player.getObjectId();
 	}
 	
 	/**

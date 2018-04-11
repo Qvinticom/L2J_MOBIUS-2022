@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public abstract class AbstractAI implements Ctrl
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	private NextAction _nextAction;
 	
@@ -121,7 +121,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			catch (Exception e)
 			{
-				_log.warning(getClass().getSimpleName() + ": Error: " + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + ": Error: " + e.getMessage());
 			}
 		}
 	}
@@ -159,10 +159,6 @@ public abstract class AbstractAI implements Ctrl
 	private static final int FOLLOW_INTERVAL = 1000;
 	private static final int ATTACK_FOLLOW_INTERVAL = 500;
 	
-	/**
-	 * Constructor of AbstractAI.
-	 * @param creature the creature
-	 */
 	protected AbstractAI(L2Character creature)
 	{
 		_actor = creature;

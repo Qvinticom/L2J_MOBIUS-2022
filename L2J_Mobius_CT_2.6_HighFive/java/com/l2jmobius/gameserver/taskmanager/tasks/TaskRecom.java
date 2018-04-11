@@ -61,7 +61,7 @@ public class TaskRecom extends Task
 		}
 		catch (Exception e)
 		{
-			_log.severe(getClass().getSimpleName() + ": Could not reset Recommendations System: " + e);
+			LOGGER.severe(getClass().getSimpleName() + ": Could not reset Recommendations System: " + e);
 		}
 		
 		// Refresh reco bonus for online players
@@ -73,7 +73,7 @@ public class TaskRecom extends Task
 				player.startNevitHourglassTask();
 			}
 		}
-		_log.info("Recommendations System reseted");
+		LOGGER.info("Recommendations System reseted");
 	}
 	
 	@Override

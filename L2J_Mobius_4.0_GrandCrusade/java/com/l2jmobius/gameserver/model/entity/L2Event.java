@@ -46,7 +46,8 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 /**
- * @since $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:29:32 $ This ancient thingie got reworked by Nik at $Date: 2011/05/17 21:51:39 $ Yeah, for 6 years no one bothered reworking this buggy event engine.
+ * @author Nik
+ * @Since 2011/05/17 21:51:39
  */
 public class L2Event
 {
@@ -164,7 +165,6 @@ public class L2Event
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(_npcId);
-			
 			spawn.setX(target.getX() + 50);
 			spawn.setY(target.getY() + 50);
 			spawn.setZ(target.getZ());
@@ -184,13 +184,11 @@ public class L2Event
 			spawn.getLastSpawn().broadcastPacket(new MagicSkillUse(spawn.getLastSpawn(), spawn.getLastSpawn(), 1034, 1, 1, 1));
 			
 			// _npcs.add(spawn.getLastSpawn());
-			
 		}
 		catch (Exception e)
 		{
 			_log.log(Level.WARNING, "Exception on spawn(): " + e.getMessage(), e);
 		}
-		
 	}
 	
 	/**
@@ -274,7 +272,6 @@ public class L2Event
 	 */
 	public static void removeAndResetPlayer(L2PcInstance player)
 	{
-		
 		try
 		{
 			if (isParticipant(player))
@@ -475,7 +472,6 @@ public class L2Event
 				biggestLvlPlayer.setEventStatus();
 				i = (i + 1) % _teamsNumber;
 			}
-			
 		}
 		catch (Exception e)
 		{

@@ -38,6 +38,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -95,7 +96,7 @@ public final class BotReportTable
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "BotReportTable: Could not load punishments from /config/BotReportPunishments.xml", e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load punishments from /config/BotReportPunishments.xml", e);
 			}
 			
 			loadReportedCharData();
@@ -130,7 +131,6 @@ public final class BotReportTable
 			}
 			catch (Exception e)
 			{
-				
 			}
 			
 			while (rset.next())
@@ -165,11 +165,11 @@ public final class BotReportTable
 				}
 			}
 			
-			LOGGER.info("BotReportTable: Loaded " + _reports.size() + " bot reports");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _reports.size() + " bot reports");
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "BotReportTable: Could not load reported char data!", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load reported char data!", e);
 		}
 	}
 	
@@ -187,19 +187,18 @@ public final class BotReportTable
 			
 			for (Map.Entry<Integer, ReportedCharData> entrySet : _reports.entrySet())
 			{
-				final Map<Integer, Long> reportTable = entrySet.getValue()._reporters;
-				for (int reporterId : reportTable.keySet())
+				for (int reporterId : entrySet.getValue()._reporters.keySet())
 				{
 					ps.setInt(1, entrySet.getKey());
 					ps.setInt(2, reporterId);
-					ps.setLong(3, reportTable.get(reporterId));
+					ps.setLong(3, entrySet.getValue()._reporters.get(reporterId));
 					ps.execute();
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "BotReportTable: Could not update reported char data in database!", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Could not update reported char data in database!", e);
 		}
 	}
 	
@@ -211,7 +210,6 @@ public final class BotReportTable
 	public boolean reportBot(L2PcInstance reporter)
 	{
 		final L2Object target = reporter.getTarget();
-		
 		if (target == null)
 		{
 			return false;
@@ -321,11 +319,11 @@ public final class BotReportTable
 		}
 		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_WAS_REPORTED_AS_A_BOT);
-		sm.addCharName(bot);
+		sm.addString(bot.getName());
 		reporter.sendPacket(sm);
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_USED_A_REPORT_POINT_ON_C1_YOU_HAVE_S2_POINTS_REMAINING_ON_THIS_ACCOUNT);
-		sm.addCharName(bot);
+		sm.addString(bot.getName());
 		sm.addInt(rcdRep.getPointsLeft());
 		reporter.sendPacket(sm);
 		
@@ -391,7 +389,7 @@ public final class BotReportTable
 		}
 		else
 		{
-			LOGGER.warning("BotReportTable: Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
+			LOGGER.warning(getClass().getSimpleName() + ": Could not add punishment for " + neededReports + " report(s): Skill " + skillId + "-" + skillLevel + " does not exist!");
 		}
 	}
 	
@@ -427,7 +425,7 @@ public final class BotReportTable
 		catch (Exception e)
 		{
 			ThreadPool.schedule(new ResetPointTask(), 24 * 3600 * 1000);
-			LOGGER.log(Level.WARNING, "BotReportTable: Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
 		}
 	}
 	

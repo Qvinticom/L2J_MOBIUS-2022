@@ -43,7 +43,7 @@ public class HtmCache
 	private static final Pattern ABSTRACT_BLOCK_PATTERN = Pattern.compile("<abstract block=\"([a-zA-Z0-9-_. ]*)\" ?/>", Pattern.DOTALL);
 	private static final Pattern BLOCK_PATTERN = Pattern.compile("<block name=\"([a-zA-Z0-9-_. ]*)\">(.*?)</block>", Pattern.DOTALL);
 	
-	private final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
+	private static final Map<String, String> _cache = Config.LAZY_CACHE ? new ConcurrentHashMap<>() : new HashMap<>();
 	
 	private int _loadedFiles;
 	private long _bytesBuffLen;

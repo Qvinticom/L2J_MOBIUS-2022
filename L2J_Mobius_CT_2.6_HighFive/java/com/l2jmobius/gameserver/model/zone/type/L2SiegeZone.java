@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;

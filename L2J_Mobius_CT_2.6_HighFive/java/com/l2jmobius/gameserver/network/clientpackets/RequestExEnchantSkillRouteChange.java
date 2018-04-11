@@ -24,7 +24,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2EnchantSkillGroup.EnchantSkillHolder;
 import com.l2jmobius.gameserver.model.L2EnchantSkillLearn;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;

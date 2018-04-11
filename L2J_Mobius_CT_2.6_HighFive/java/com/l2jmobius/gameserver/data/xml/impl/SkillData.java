@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.datatables;
+package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -22,7 +22,6 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Logger;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.engines.DocumentEngine;
 import com.l2jmobius.gameserver.model.skills.Skill;
 

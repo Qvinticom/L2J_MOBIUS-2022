@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class HtmCache
 {
-	private static final Logger _log = Logger.getLogger(HtmCache.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HtmCache.class.getName());
 	
 	private static final HTMLFilter HTML_FILTER = new HTMLFilter();
 	
@@ -57,23 +57,23 @@ public class HtmCache
 	{
 		if (!Config.LAZY_CACHE)
 		{
-			_log.info("Html cache start...");
+			LOGGER.info("Html cache start...");
 			parseDir(f);
-			_log.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + getLoadedFiles() + " files loaded");
+			LOGGER.info("Cache[HTML]: " + String.format("%.3f", getMemoryUsage()) + " megabytes on " + getLoadedFiles() + " files loaded");
 		}
 		else
 		{
 			_cache.clear();
 			_loadedFiles = 0;
 			_bytesBuffLen = 0;
-			_log.info("Cache[HTML]: Running lazy cache");
+			LOGGER.info("Cache[HTML]: Running lazy cache");
 		}
 	}
 	
 	public void reloadPath(File f)
 	{
 		parseDir(f);
-		_log.info("Cache[HTML]: Reloaded specified path.");
+		LOGGER.info("Cache[HTML]: Reloaded specified path.");
 	}
 	
 	public double getMemoryUsage()
@@ -137,7 +137,7 @@ public class HtmCache
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Problem with htm file " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Problem with htm file " + e.getMessage(), e);
 		}
 		return content;
 	}
@@ -148,7 +148,7 @@ public class HtmCache
 		if (content == null)
 		{
 			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
-			_log.warning("Cache[HTML]: Missing HTML page: " + path);
+			LOGGER.warning("Cache[HTML]: Missing HTML page: " + path);
 		}
 		return content;
 	}

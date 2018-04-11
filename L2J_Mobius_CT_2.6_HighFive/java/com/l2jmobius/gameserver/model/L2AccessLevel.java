@@ -28,7 +28,7 @@ public class L2AccessLevel
 	/** The access level name. */
 	private String _name = null;
 	/** Child access levels. */
-	private L2AccessLevel _childsAccessLevel = null;
+	L2AccessLevel _childsAccessLevel = null;
 	/** Child access levels. */
 	private int _child = 0;
 	/** The name color for the access level. */
@@ -87,8 +87,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Gets the access level.
-	 * @return the access level
+	 * Returns the access level<br>
+	 * <br>
+	 * @return int: access level<br>
 	 */
 	public int getLevel()
 	{
@@ -96,8 +97,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Gets the access level name.
-	 * @return the access level name
+	 * Returns the access level name<br>
+	 * <br>
+	 * @return String: access level name<br>
 	 */
 	public String getName()
 	{
@@ -105,8 +107,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Gets the name color of the access level.
-	 * @return the name color for the access level
+	 * Returns the name color of the access level<br>
+	 * <br>
+	 * @return int: the name color for the access level<br>
 	 */
 	public int getNameColor()
 	{
@@ -114,8 +117,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Gets the title color color of the access level.
-	 * @return the title color for the access level
+	 * Returns the title color color of the access level<br>
+	 * <br>
+	 * @return int: the title color for the access level<br>
 	 */
 	public int getTitleColor()
 	{
@@ -123,8 +127,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level has GM access or not.
-	 * @return {@code true} if access level have GM access, otherwise {@code false}
+	 * Retuns if the access level has gm access or not<br>
+	 * <br>
+	 * @return boolean: true if access level have gm access, otherwise false<br>
 	 */
 	public boolean isGm()
 	{
@@ -132,8 +137,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level is allowed to attack in peace zone or not.
-	 * @return {@code true} if the access level is allowed to attack in peace zone, otherwise {@code false}
+	 * Returns if the access level is allowed to attack in peace zone or not<br>
+	 * <br>
+	 * @return boolean: true if the access level is allowed to attack in peace zone, otherwise false<br>
 	 */
 	public boolean allowPeaceAttack()
 	{
@@ -141,8 +147,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level is allowed to use fixed resurrection or not.
-	 * @return {@ode true} if the access level is allowed to use fixed resurrection, otherwise {@code false}
+	 * Retruns if the access level is allowed to use fixed res or not<br>
+	 * <br>
+	 * @return true if the access level is allowed to use fixed res, otherwise false<br>
 	 */
 	public boolean allowFixedRes()
 	{
@@ -150,8 +157,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level is allowed to perform transactions or not.
-	 * @return {@ode true} if access level is allowed to perform transactions, otherwise {@code false}
+	 * Returns if the access level is allowed to perform transactions or not<br>
+	 * <br>
+	 * @return boolean: true if access level is allowed to perform transactions, otherwise false<br>
 	 */
 	public boolean allowTransaction()
 	{
@@ -159,8 +167,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level is allowed to use AltG commands or not.
-	 * @return {@ode true} if access level is allowed to use AltG commands, otherwise {@code false}
+	 * Returns if the access level is allowed to use AltG commands or not<br>
+	 * <br>
+	 * @return boolean: true if access level is allowed to use AltG commands, otherwise false<br>
 	 */
 	public boolean allowAltG()
 	{
@@ -168,8 +177,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level can give damage or not.
-	 * @return {@ode true} if the access level can give damage, otherwise {@code false}
+	 * Returns if the access level can give damage or not<br>
+	 * <br>
+	 * @return boolean: true if the access level can give damage, otherwise false<br>
 	 */
 	public boolean canGiveDamage()
 	{
@@ -177,8 +187,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level can take aggro or not.
-	 * @return {@ode true} if the access level can take aggro, otherwise {@code false}
+	 * Returns if the access level can take aggro or not<br>
+	 * <br>
+	 * @return boolean: true if the access level can take aggro, otherwise false<br>
 	 */
 	public boolean canTakeAggro()
 	{
@@ -186,8 +197,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Verifies if the access level can gain exp or not.
-	 * @return {@ode true} if the access level can gain exp, otherwise {@code false}
+	 * Returns if the access level can gain exp or not<br>
+	 * <br>
+	 * @return boolean: true if the access level can gain exp, otherwise false<br>
 	 */
 	public boolean canGainExp()
 	{
@@ -195,9 +207,9 @@ public class L2AccessLevel
 	}
 	
 	/**
-	 * Returns if the access level contains allowedAccess as child.
-	 * @param accessLevel the parent access level
-	 * @return {@ode true} if a child access level is equals to allowedAccess, otherwise {@code false}
+	 * Returns if the access level contains allowedAccess as child<br>
+	 * @param accessLevel as AccessLevel<br>
+	 * @return boolean: true if a child access level is equals to allowedAccess, otherwise false<br>
 	 */
 	public boolean hasChildAccess(L2AccessLevel accessLevel)
 	{
@@ -210,6 +222,6 @@ public class L2AccessLevel
 			
 			_childsAccessLevel = AdminData.getInstance().getAccessLevel(_child);
 		}
-		return (_childsAccessLevel.getLevel() == accessLevel.getLevel()) || _childsAccessLevel.hasChildAccess(accessLevel);
+		return (_childsAccessLevel != null) && ((_childsAccessLevel.getLevel() == accessLevel.getLevel()) || _childsAccessLevel.hasChildAccess(accessLevel));
 	}
 }

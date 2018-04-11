@@ -30,9 +30,9 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class L2DoorAI extends L2CharacterAI
 {
-	public L2DoorAI(L2DoorInstance creature)
+	public L2DoorAI(L2DoorInstance door)
 	{
-		super(creature);
+		super(door);
 	}
 	
 	@Override

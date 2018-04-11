@@ -49,17 +49,7 @@ public final class DamageDoneInfo
 	@Override
 	public final boolean equals(Object obj)
 	{
-		if (this == obj)
-		{
-			return true;
-		}
-		
-		if (obj instanceof DamageDoneInfo)
-		{
-			return (((DamageDoneInfo) obj).getAttacker() == _attacker);
-		}
-		
-		return false;
+		return (this == obj) || ((obj instanceof DamageDoneInfo) && (((DamageDoneInfo) obj).getAttacker() == _attacker));
 	}
 	
 	@Override

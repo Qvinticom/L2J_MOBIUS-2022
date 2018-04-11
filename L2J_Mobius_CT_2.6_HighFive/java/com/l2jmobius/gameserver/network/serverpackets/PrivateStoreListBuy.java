@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.TradeItem;
@@ -27,7 +27,7 @@ public class PrivateStoreListBuy extends AbstractItemPacket
 {
 	private final int _objId;
 	private final long _playerAdena;
-	private final List<TradeItem> _items;
+	private final Collection<TradeItem> _items;
 	
 	public PrivateStoreListBuy(L2PcInstance player, L2PcInstance storePlayer)
 	{

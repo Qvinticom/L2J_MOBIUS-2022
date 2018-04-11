@@ -114,7 +114,7 @@ public class DeadLockDetector extends Thread
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "DeadLockDetector: ", e);
 			}
 		}
 	}

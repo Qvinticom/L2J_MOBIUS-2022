@@ -87,7 +87,6 @@ public final class ItemsAutoDestroy
 						ItemsOnGroundManager.getInstance().removeObject(item);
 					}
 				}
-				
 			}
 		}
 	}

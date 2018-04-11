@@ -28,11 +28,11 @@ public abstract class L2VehicleAI extends L2CharacterAI
 {
 	/**
 	 * Simple AI for vehicles
-	 * @param creature
+	 * @param vehicle
 	 */
-	public L2VehicleAI(L2Vehicle creature)
+	public L2VehicleAI(L2Vehicle vehicle)
 	{
-		super(creature);
+		super(vehicle);
 	}
 	
 	@Override

@@ -43,11 +43,7 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		if (((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) > _radS) || (z < _z1) || (z > _z2))
-		{
-			return false;
-		}
-		return true;
+		return ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) <= _radS) && (z >= _z1) && (z <= _z2);
 	}
 	
 	@Override
@@ -130,9 +126,7 @@ public class ZoneCylinder extends L2ZoneForm
 		final double angle = (2 * Math.PI) / count;
 		for (int i = 0; i < count; i++)
 		{
-			final int x = (int) (Math.cos(angle * i) * _rad);
-			final int y = (int) (Math.sin(angle * i) * _rad);
-			dropDebugItem(Inventory.ADENA_ID, 1, _x + x, _y + y, z);
+			dropDebugItem(Inventory.ADENA_ID, 1, _x + (int) (Math.cos(angle * i) * _rad), _y + (int) (Math.sin(angle * i) * _rad), z);
 		}
 	}
 	

@@ -150,12 +150,11 @@ public abstract class DocumentBase
 	protected final Logger _log = Logger.getLogger(getClass().getName());
 	
 	private final File _file;
-	protected Map<String, String[]> _tables;
+	protected final Map<String, String[]> _tables = new HashMap<>();
 	
 	protected DocumentBase(File pFile)
 	{
 		_file = pFile;
-		_tables = new HashMap<>();
 	}
 	
 	public Document parse()

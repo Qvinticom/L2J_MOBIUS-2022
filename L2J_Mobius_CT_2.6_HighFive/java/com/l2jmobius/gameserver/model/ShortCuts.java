@@ -86,16 +86,16 @@ public class ShortCuts implements IRestorable
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
+			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,class_index) values(?,?,?,?,?,?,?)"))
 		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, shortcut.getSlot());
-			ps.setInt(3, shortcut.getPage());
-			ps.setInt(4, shortcut.getType().ordinal());
-			ps.setInt(5, shortcut.getId());
-			ps.setInt(6, shortcut.getLevel());
-			ps.setInt(7, _owner.getClassIndex());
-			ps.execute();
+			statement.setInt(1, _owner.getObjectId());
+			statement.setInt(2, shortcut.getSlot());
+			statement.setInt(3, shortcut.getPage());
+			statement.setInt(4, shortcut.getType().ordinal());
+			statement.setInt(5, shortcut.getId());
+			statement.setInt(6, shortcut.getLevel());
+			statement.setInt(7, _owner.getClassIndex());
+			statement.execute();
 		}
 		catch (Exception e)
 		{
@@ -154,13 +154,13 @@ public class ShortCuts implements IRestorable
 	private void deleteShortCutFromDb(Shortcut shortcut)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
-			PreparedStatement ps = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
+			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
 		{
-			ps.setInt(1, _owner.getObjectId());
-			ps.setInt(2, shortcut.getSlot());
-			ps.setInt(3, shortcut.getPage());
-			ps.setInt(4, _owner.getClassIndex());
-			ps.execute();
+			statement.setInt(1, _owner.getObjectId());
+			statement.setInt(2, shortcut.getSlot());
+			statement.setInt(3, shortcut.getPage());
+			statement.setInt(4, _owner.getClassIndex());
+			statement.execute();
 		}
 		catch (Exception e)
 		{

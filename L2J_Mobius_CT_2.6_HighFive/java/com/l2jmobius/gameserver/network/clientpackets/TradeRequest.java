@@ -115,7 +115,7 @@ public final class TradeRequest implements IClientIncomingPacket
 				if (!effect.checkCondition(BotReportTable.TRADE_ACTION_BLOCK_ID))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_IS_CURRENTLY_BEING_INVESTIGATED);
-					sm.addCharName(partner);
+					sm.addString(partner.getName());
 					player.sendPacket(sm);
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 					return;
@@ -172,7 +172,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		if (BlockList.isBlocked(partner, player))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
-			sm.addCharName(partner);
+			sm.addString(partner.getName());
 			player.sendPacket(sm);
 			return;
 		}

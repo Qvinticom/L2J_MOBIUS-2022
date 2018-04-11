@@ -43,6 +43,5 @@ public abstract class Task
 	
 	public void onDestroy()
 	{
-		
 	}
 }

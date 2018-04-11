@@ -55,13 +55,10 @@ public class ShortCuts implements IRestorable
 	{
 		Shortcut sc = _shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
 		// Verify shortcut
-		if ((sc != null) && (sc.getType() == ShortcutType.ITEM))
+		if ((sc != null) && (sc.getType() == ShortcutType.ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null))
 		{
-			if (_owner.getInventory().getItemByObjectId(sc.getId()) == null)
-			{
-				deleteShortCut(sc.getSlot(), sc.getPage());
-				sc = null;
-			}
+			deleteShortCut(sc.getSlot(), sc.getPage());
+			sc = null;
 		}
 		return sc;
 	}
@@ -78,8 +75,7 @@ public class ShortCuts implements IRestorable
 			}
 			shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
 		}
-		final Shortcut oldShortCut = _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut);
-		registerShortCutInDb(shortcut, oldShortCut);
+		registerShortCutInDb(shortcut, _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
 	}
 	
 	private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut)

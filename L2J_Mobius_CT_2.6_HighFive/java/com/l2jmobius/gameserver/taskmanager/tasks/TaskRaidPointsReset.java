@@ -125,7 +125,7 @@ public class TaskRaidPointsReset extends Task
 			}
 			
 			RaidBossPointsManager.getInstance().cleanUp();
-			_log.info("Raid Points Reset Global Task: launched.");
+			LOGGER.info("Raid Points Reset Global Task: launched.");
 		}
 	}
 	

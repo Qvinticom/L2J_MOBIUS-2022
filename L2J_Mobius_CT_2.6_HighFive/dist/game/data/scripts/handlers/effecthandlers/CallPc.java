@@ -85,7 +85,7 @@ public final class CallPc extends AbstractEffect
 			
 			target.addScript(new SummonRequestHolder(activeChar, info.getSkill()));
 			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
-			confirm.addCharName(activeChar);
+			confirm.addString(activeChar.getName());
 			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			confirm.addTime(30000);
 			confirm.addRequesterId(activeChar.getObjectId());
@@ -139,7 +139,7 @@ public final class CallPc extends AbstractEffect
 		if (target.inObserverMode())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_STATE_WHICH_PREVENTS_SUMMONING);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			activeChar.sendPacket(sm);
 			return false;
 		}

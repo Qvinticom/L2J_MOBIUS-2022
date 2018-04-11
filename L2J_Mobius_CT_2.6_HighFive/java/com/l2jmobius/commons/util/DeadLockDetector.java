@@ -21,12 +21,11 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.MonitorInfo;
 import java.lang.management.ThreadInfo;
 import java.lang.management.ThreadMXBean;
+import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.Shutdown;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Thread to check for deadlocked threads.
@@ -34,16 +33,17 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class DeadLockDetector extends Thread
 {
-	private static Logger _log = Logger.getLogger(DeadLockDetector.class.getName());
+	private static Logger LOGGER = Logger.getLogger(DeadLockDetector.class.getName());
 	
-	/** Interval to check for deadlocked threads */
-	private static final int _sleepTime = Config.DEADLOCK_CHECK_INTERVAL * 1000;
-	
+	private final Duration _checkInterval;
+	private final Runnable _deadLockCallback;
 	private final ThreadMXBean tmx;
 	
-	public DeadLockDetector()
+	public DeadLockDetector(Duration checkInterval, Runnable deadLockCallback)
 	{
 		super("DeadLockDetector");
+		_checkInterval = checkInterval;
+		_deadLockCallback = deadLockCallback;
 		tmx = ManagementFactory.getThreadMXBean();
 	}
 	
@@ -102,19 +102,19 @@ public class DeadLockDetector extends Thread
 							info.append(Config.EOL);
 						}
 					}
-					_log.warning(info.toString());
 					
-					if (Config.RESTART_ON_DEADLOCK)
+					LOGGER.warning(info.toString());
+					
+					if (_deadLockCallback != null)
 					{
-						Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
-						Shutdown.getInstance().startTelnetShutdown("DeadLockDetector - Auto Restart", 60, true);
+						_deadLockCallback.run();
 					}
 				}
-				Thread.sleep(_sleepTime);
+				Thread.sleep(_checkInterval.toMillis());
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "DeadLockDetector: ", e);
+				LOGGER.log(Level.WARNING, "DeadLockDetector: ", e);
 			}
 		}
 	}

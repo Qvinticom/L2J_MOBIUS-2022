@@ -66,7 +66,6 @@ import com.l2jmobius.gameserver.util.Util;
 public class ClanTable
 {
 	private static final Logger LOGGER = Logger.getLogger(ClanTable.class.getName());
-	
 	private final Map<Integer, L2Clan> _clans = new ConcurrentHashMap<>();
 	
 	protected ClanTable()
@@ -440,16 +439,13 @@ public class ClanTable
 		for (L2Clan clan : _clans.values())
 		{
 			final int allyId = clan.getAllyId();
-			if ((allyId != 0) && (clan.getId() != allyId))
+			if ((allyId != 0) && (clan.getId() != allyId) && !_clans.containsKey(allyId))
 			{
-				if (!_clans.containsKey(allyId))
-				{
-					clan.setAllyId(0);
-					clan.setAllyName(null);
-					clan.changeAllyCrest(0, true);
-					clan.updateClanInDB();
-					LOGGER.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
-				}
+				clan.setAllyId(0);
+				clan.setAllyName(null);
+				clan.changeAllyCrest(0, true);
+				clan.updateClanInDB();
+				LOGGER.info(getClass().getSimpleName() + ": Removed alliance from clan: " + clan);
 			}
 		}
 	}

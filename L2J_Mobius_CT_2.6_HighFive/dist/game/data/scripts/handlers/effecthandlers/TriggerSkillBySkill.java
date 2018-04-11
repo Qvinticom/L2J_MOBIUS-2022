@@ -62,7 +62,7 @@ public final class TriggerSkillBySkill extends AbstractEffect
 	
 	public void onSkillUseEvent(OnCreatureSkillUse event)
 	{
-		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0) || (_castSkillId == 0)))
+		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0) || (_castSkillId == 0)))
 		{
 			return;
 		}

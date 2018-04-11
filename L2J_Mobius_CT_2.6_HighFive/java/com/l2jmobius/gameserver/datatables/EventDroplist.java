@@ -16,9 +16,10 @@
  */
 package com.l2jmobius.gameserver.datatables;
 
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.script.DateRange;
 import com.l2jmobius.gameserver.script.EventDrop;
@@ -34,7 +35,7 @@ public class EventDroplist
 	/**
 	 * The table containing all DataDrop object
 	 */
-	private static final List<DateDrop> ALL_NPC_DATE_DROPS = new ArrayList<>();
+	private static final List<DateDrop> ALL_NPC_DATE_DROPS = new CopyOnWriteArrayList<>();
 	
 	public static class DateDrop
 	{
@@ -103,7 +104,7 @@ public class EventDroplist
 	 */
 	public List<DateDrop> getAllDrops()
 	{
-		final List<DateDrop> list = new ArrayList<>();
+		final List<DateDrop> list = new LinkedList<>();
 		final Date currentDate = new Date();
 		for (DateDrop drop : ALL_NPC_DATE_DROPS)
 		{

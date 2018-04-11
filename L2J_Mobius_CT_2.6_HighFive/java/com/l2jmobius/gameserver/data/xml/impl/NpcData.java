@@ -36,7 +36,6 @@ import org.w3c.dom.Node;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.DropType;
 import com.l2jmobius.gameserver.model.StatsSet;

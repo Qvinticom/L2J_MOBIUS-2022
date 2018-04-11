@@ -83,7 +83,7 @@ public enum TraitType
 	{
 		_type = type;
 	}
-
+	
 	public int getType()
 	{
 		return _type;

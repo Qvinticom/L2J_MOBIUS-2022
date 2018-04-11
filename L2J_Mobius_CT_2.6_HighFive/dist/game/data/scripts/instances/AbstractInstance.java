@@ -82,7 +82,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			onEnterInstance(player, instance, true);
 			
 			final Instance inst = InstanceManager.getInstance().getInstance(instance.getInstanceId());
-			if (inst.getReenterType() == InstanceReenterType.ON_INSTANCE_ENTER)
+			if (inst.getReenterType() == InstanceReenterType.ON_ENTER)
 			{
 				handleReenterTime(instance);
 			}
@@ -103,7 +103,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		
-		if (inst.getReenterType() == InstanceReenterType.ON_INSTANCE_FINISH)
+		if (inst.getReenterType() == InstanceReenterType.ON_FINISH)
 		{
 			handleReenterTime(world);
 		}

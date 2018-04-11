@@ -76,7 +76,7 @@ public final class RequestFriendInvite implements IClientIncomingPacket
 		if (BlockList.isBlocked(activeChar, friend))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_BLOCKED_C1);
-			sm.addCharName(friend);
+			sm.addString(friend.getName());
 			activeChar.sendPacket(sm);
 			return;
 		}

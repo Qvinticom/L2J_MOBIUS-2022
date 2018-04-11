@@ -28,8 +28,8 @@ import org.w3c.dom.NodeList;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.cache.HtmCache;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -422,7 +422,7 @@ public final class SellBuffsManager implements IGameXmlReader
 		}
 		else if (player.isMounted() || player.isFlyingMounted() || player.isFlying())
 		{
-			player.sendMessage("You can't sell buffs in Mounth state!");
+			player.sendMessage("You can't sell buffs in Mount state!");
 			return false;
 		}
 		else if (player.isTransformed())

@@ -34,7 +34,6 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SkillLearn;

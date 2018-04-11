@@ -20,6 +20,7 @@ import java.awt.Rectangle;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 
@@ -125,16 +126,11 @@ public class ZoneCuboid extends L2ZoneForm
 	}
 	
 	@Override
-	public int[] getRandomPoint()
+	public Location getRandomPoint()
 	{
 		final int x = Rnd.get(_r.x, _r.x + _r.width);
 		final int y = Rnd.get(_r.y, _r.y + _r.height);
 		
-		return new int[]
-		{
-			x,
-			y,
-			GeoEngine.getInstance().getHeight(x, y, _z1)
-		};
+		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
 	}
 }

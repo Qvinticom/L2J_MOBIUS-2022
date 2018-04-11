@@ -28,7 +28,6 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 
@@ -106,7 +105,7 @@ public class PetSkillData implements IGameXmlReader
 			{
 				continue;
 			}
-			if (skillHolder.getSkillLvl() == 0)
+			if (skillHolder.getSkillLevel() == 0)
 			{
 				if (pet.getLevel() < 70)
 				{
@@ -131,9 +130,9 @@ public class PetSkillData implements IGameXmlReader
 			}
 			else if (1 <= pet.getLevel())
 			{
-				if (skillHolder.getSkillLvl() > lvl)
+				if (skillHolder.getSkillLevel() > lvl)
 				{
-					lvl = skillHolder.getSkillLvl();
+					lvl = skillHolder.getSkillLevel();
 				}
 			}
 		}

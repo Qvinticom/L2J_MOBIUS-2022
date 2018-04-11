@@ -65,7 +65,7 @@ import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.ExNpcQuestHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
@@ -2295,7 +2295,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * The lucky member is chosen by standard loot roll rules -<br>
 	 * each member rolls a random number, the one with the highest roll wins.
 	 * @param player the player whose party to check
-	 * @param npc the NPC used for distance and other checks (if {@link #checkPartyMember(L2PcInstance, L2Npc)} is overridden)
+	 * @param npc the NPC used for distance and other checks (if {@link #checkPartyMember(L2PcInstance, L2Npc)} is overriden)
 	 * @return the random party member or {@code null}
 	 */
 	public L2PcInstance getRandomPartyMember(L2PcInstance player, L2Npc npc)
@@ -2333,7 +2333,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	/**
 	 * This method is called for every party member in {@link #getRandomPartyMember(L2PcInstance, L2Npc)}.<br>
-	 * It is intended to be overridden by the specific quest implementations.
+	 * It is intended to be overriden by the specific quest implementations.
 	 * @param player the player to check
 	 * @param npc the NPC that was passed to {@link #getRandomPartyMember(L2PcInstance, L2Npc)}
 	 * @return {@code true} if this party member passes the check, {@code false} otherwise
@@ -2410,7 +2410,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	/**
 	 * This method is called for every party member in {@link #getRandomPartyMemberState(L2PcInstance, int, int, L2Npc)} if/after all the standard checks are passed.<br>
-	 * It is intended to be overridden by the specific quest implementations.<br>
+	 * It is intended to be overriden by the specific quest implementations.<br>
 	 * It can be used in cases when there are more checks performed than simply a quest condition check,<br>
 	 * for example, if an item is required in the player's inventory.
 	 * @param qs the {@link QuestState} object of the party member
@@ -2460,7 +2460,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			
 			if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999))
 			{
-				final ExNpcQuestHtmlMessage npcReply = new ExNpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
+				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
 				npcReply.setHtml(content);
 				npcReply.replace("%playername%", player.getName());
 				player.sendPacket(npcReply);

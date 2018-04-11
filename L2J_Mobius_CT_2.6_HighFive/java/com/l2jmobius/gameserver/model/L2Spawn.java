@@ -52,7 +52,7 @@ import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
  */
 public class L2Spawn implements IPositionable, IIdentifiable, INamable
 {
-	protected static final Logger _log = Logger.getLogger(L2Spawn.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2Spawn.class.getName());
 	
 	/** String identifier of this spawn */
 	private String _name;
@@ -100,7 +100,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 			
 			_scheduledCount--;
@@ -532,7 +532,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "NPC " + _template.getId() + " class not found", e);
+			LOGGER.log(Level.WARNING, "NPC " + _template.getId() + " class not found", e);
 		}
 		return null;
 	}
@@ -551,10 +551,10 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		// New method
 		if (isTerritoryBased())
 		{
-			final int[] p = _spawnTerritory.getRandomPoint();
-			newlocx = p[0];
-			newlocy = p[1];
-			newlocz = p[2];
+			final Location p = _spawnTerritory.getRandomPoint();
+			newlocx = p.getX();
+			newlocy = p.getY();
+			newlocz = p.getZ();
 		}
 		// Old method (for backward compatibility)
 		else if ((getX() == 0) && (getY() == 0))
@@ -698,7 +698,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		{
 			if (delay < 0)
 			{
-				_log.warning("respawn delay is negative for spawn:" + this);
+				LOGGER.warning("respawn delay is negative for spawn:" + this);
 			}
 			
 			final int minDelay = delay - randomInterval;

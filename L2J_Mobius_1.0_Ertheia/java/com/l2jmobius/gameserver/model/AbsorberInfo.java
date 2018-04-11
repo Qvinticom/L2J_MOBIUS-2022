@@ -1,14 +1,12 @@
 /*
- * Copyright (C) 2004-2015 L2J Server
+ * This file is part of the L2J Mobius project.
  * 
- * This file is part of L2J Server.
- * 
- * L2J Server is free software: you can redistribute it and/or modify
+ * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * L2J Server is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -58,17 +56,7 @@ public final class AbsorberInfo implements IUniqueId
 	@Override
 	public final boolean equals(Object obj)
 	{
-		if (this == obj)
-		{
-			return true;
-		}
-		
-		if (obj instanceof AbsorberInfo)
-		{
-			return (((AbsorberInfo) obj).getObjectId() == _objectId);
-		}
-		
-		return false;
+		return (this == obj) || ((obj instanceof AbsorberInfo) && (((AbsorberInfo) obj).getObjectId() == _objectId));
 	}
 	
 	@Override

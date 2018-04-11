@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
  */
 public abstract class Task
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	public void initializate()
 	{

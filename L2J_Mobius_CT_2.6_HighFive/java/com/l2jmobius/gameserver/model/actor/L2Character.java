@@ -6251,7 +6251,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_EVADED_C2_S_ATTACK);
 			sm.addPcName(target.getActingPlayer());
-			sm.addCharName(this);
+			sm.addString(getName());
 			target.sendPacket(sm);
 		}
 	}
@@ -6656,7 +6656,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		if (_invulAgainst != null)
 		{
 			final SkillHolder holder = getInvulAgainstSkills().get(skillId);
-			return ((holder != null) && ((holder.getSkillLvl() < 1) || (holder.getSkillLvl() == skillLvl)));
+			return ((holder != null) && ((holder.getSkillLevel() < 1) || (holder.getSkillLevel() == skillLvl)));
 		}
 		return false;
 	}

@@ -60,7 +60,7 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 	
 	public void onAvoidEvent(OnCreatureAttackAvoid event)
 	{
-		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLvl() == 0)))
+		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
 		{
 			return;
 		}

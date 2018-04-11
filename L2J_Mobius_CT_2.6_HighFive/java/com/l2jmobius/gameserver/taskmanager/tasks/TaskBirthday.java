@@ -50,7 +50,7 @@ public class TaskBirthday extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		_log.info("BirthdayManager: " + giveBirthdayGifts(task.getLastActivation()) + " gifts sent.");
+		LOGGER.info("BirthdayManager: " + giveBirthdayGifts(task.getLastActivation()) + " gifts sent.");
 	}
 	
 	private int giveBirthdayGifts(long lastActivation)
@@ -74,7 +74,7 @@ public class TaskBirthday extends Task
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Error checking birthdays: " + e.getMessage());
+			LOGGER.warning("Error checking birthdays: " + e.getMessage());
 		}
 		return birthdayGiftCount;
 	}

@@ -4,7 +4,7 @@
 	<allowSummon val="false" />
 	<emptyDestroyTime val="1200" />
 	<exitPoint x="149442" y="173520" z="-5024" />
-	<reenter additionStyle="ON_INSTANCE_ENTER" >
+	<reenter additionStyle="ON_ENTER" >
 		<reset time="86400000" />
 	</reenter>
 	<doorlist>

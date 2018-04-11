@@ -19,10 +19,10 @@ package com.l2jmobius.gameserver.communitybbs.Manager;
 import java.text.DateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.gameserver.communitybbs.BB.Forum;
@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class TopicBBSManager extends BaseBBSManager
 {
 	private final List<Topic> _table = new CopyOnWriteArrayList<>();
-	private final Map<Forum, Integer> _maxId = new HashMap<>();
+	private final Map<Forum, Integer> _maxId = new ConcurrentHashMap<>();
 	
 	protected TopicBBSManager()
 	{
@@ -244,7 +244,7 @@ public class TopicBBSManager extends BaseBBSManager
 			{
 				break;
 			}
-			Topic t = forum.getTopic(j);
+			final Topic t = forum.getTopic(j);
 			if (t != null)
 			{
 				if (i++ >= (12 * (index - 1)))

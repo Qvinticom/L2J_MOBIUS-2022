@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.communitybbs.Manager.TopicBBSManager;
 
 public class Topic
 {
-	private static final Logger _log = Logger.getLogger(Topic.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Topic.class.getName());
 	
 	public static final int MORMAL = 0;
 	public static final int MEMO = 1;
@@ -86,7 +86,7 @@ public class Topic
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while saving new Topic to db " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while saving new Topic to db " + e.getMessage(), e);
 		}
 	}
 	
@@ -138,7 +138,7 @@ public class Topic
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while deleting topic: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while deleting topic: " + e.getMessage(), e);
 		}
 	}
 	

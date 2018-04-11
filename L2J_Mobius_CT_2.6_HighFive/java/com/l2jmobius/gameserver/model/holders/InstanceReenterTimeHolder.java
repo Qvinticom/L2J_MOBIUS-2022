@@ -45,7 +45,7 @@ public final class InstanceReenterTimeHolder
 		_minute = minute;
 	}
 	
-	public final Long getTime()
+	public final long getTime()
 	{
 		return _time;
 	}

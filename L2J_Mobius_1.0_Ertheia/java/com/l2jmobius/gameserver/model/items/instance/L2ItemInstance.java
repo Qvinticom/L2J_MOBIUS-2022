@@ -1795,7 +1795,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean isTimeLimitedItem()
 	{
-		return (_time > 0);
+		return _time > 0;
 	}
 	
 	/**

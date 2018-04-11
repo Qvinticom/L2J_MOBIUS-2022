@@ -23,7 +23,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable;
 import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable.NpcBufferData;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -159,7 +159,7 @@ public class L2NpcBufferInstance extends L2Npc
 					}
 				}
 				
-				final Skill skill = SkillData.getInstance().getSkill(npcBuffGroupInfo.getSkill().getSkillId(), npcBuffGroupInfo.getSkill().getSkillLvl());
+				final Skill skill = SkillData.getInstance().getSkill(npcBuffGroupInfo.getSkill().getSkillId(), npcBuffGroupInfo.getSkill().getSkillLevel());
 				if (skill != null)
 				{
 					skill.applyEffects(player, target);

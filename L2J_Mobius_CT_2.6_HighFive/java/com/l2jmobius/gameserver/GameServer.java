@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.lang.management.ManagementFactory;
+import java.time.Duration;
 import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.LogManager;
@@ -71,6 +72,7 @@ import com.l2jmobius.gameserver.data.xml.impl.PrimeShopData;
 import com.l2jmobius.gameserver.data.xml.impl.RecipeData;
 import com.l2jmobius.gameserver.data.xml.impl.SecondaryAuthData;
 import com.l2jmobius.gameserver.data.xml.impl.SiegeScheduleData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillLearnData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.data.xml.impl.StaticObjectData;
@@ -81,7 +83,6 @@ import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.datatables.MerchantPriceConfigTable;
-import com.l2jmobius.gameserver.datatables.SkillData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.EffectHandler;
@@ -138,8 +139,9 @@ import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
+import com.l2jmobius.gameserver.util.Broadcast;
 
-public final class GameServer
+public class GameServer
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
 	
@@ -174,8 +176,6 @@ public final class GameServer
 			LOGGER.severe(getClass().getSimpleName() + ": Could not read object IDs from database. Please check your configuration.");
 			throw new Exception("Could not initialize the ID factory!");
 		}
-		
-		new File("log/game").mkdirs();
 		
 		// load script engines
 		printSection("Scripting Engines");
@@ -398,7 +398,14 @@ public final class GameServer
 		
 		if (Config.DEADLOCK_DETECTOR)
 		{
-			_deadDetectThread = new DeadLockDetector();
+			_deadDetectThread = new DeadLockDetector(Duration.ofSeconds(Config.DEADLOCK_CHECK_INTERVAL), () ->
+			{
+				if (Config.RESTART_ON_DEADLOCK)
+				{
+					Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
+					Shutdown.getInstance().startTelnetShutdown("DeadLockDetector - Auto Restart", 60, true);
+				}
+			});
 			_deadDetectThread.setDaemon(true);
 			_deadDetectThread.start();
 		}
@@ -459,6 +466,8 @@ public final class GameServer
 		{
 			LogManager.getLogManager().readConfiguration(is);
 		}
+		
+		new File("log/game").mkdirs();
 		
 		// Initialize config
 		Config.load();

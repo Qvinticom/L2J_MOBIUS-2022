@@ -228,13 +228,15 @@ public class MinionList
 		@Override
 		public void run()
 		{
-			if (_master.isAlikeDead() || !_master.isSpawned() || _minion.isSpawned())
+			if (!_master.isAlikeDead() && _master.isSpawned())
 			{
-				return;
+				// minion can be already spawned or deleted
+				if (!_minion.isSpawned())
+				{
+					_minion.refreshID();
+					initializeNpcInstance(_master, _minion);
+				}
 			}
-			
-			_minion.refreshID();
-			initializeNpcInstance(_master, _minion);
 		}
 	}
 	

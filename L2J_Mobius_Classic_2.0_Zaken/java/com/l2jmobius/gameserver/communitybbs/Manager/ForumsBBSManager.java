@@ -46,9 +46,7 @@ public class ForumsBBSManager extends BaseBBSManager
 		{
 			while (rs.next())
 			{
-				final int forumId = rs.getInt("forum_id");
-				final Forum f = new Forum(forumId, null);
-				addForum(f);
+				addForum(new Forum(rs.getInt("forum_id"), null));
 			}
 		}
 		catch (Exception e)
@@ -62,10 +60,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	 */
 	public void initRoot()
 	{
-		for (Forum f : _table)
-		{
-			f.vload();
-		}
+		_table.forEach(f -> f.vload());
 		_log.info(getClass().getSimpleName() + ": Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
 	}
 	

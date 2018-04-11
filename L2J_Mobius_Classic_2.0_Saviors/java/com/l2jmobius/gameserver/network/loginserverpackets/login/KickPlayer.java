@@ -20,7 +20,6 @@ import com.l2jmobius.commons.network.BaseRecievePacket;
 
 public class KickPlayer extends BaseRecievePacket
 {
-	
 	private final String _account;
 	
 	/**
@@ -39,5 +38,4 @@ public class KickPlayer extends BaseRecievePacket
 	{
 		return _account;
 	}
-	
 }

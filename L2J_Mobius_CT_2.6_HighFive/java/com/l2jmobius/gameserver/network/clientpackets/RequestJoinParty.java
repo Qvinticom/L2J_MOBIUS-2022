@@ -78,7 +78,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		if (target.isPartyBanned())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_JOIN_A_PARTY);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
 		}
@@ -101,7 +101,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		if (BlockList.isBlocked(target, requestor))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_PLACED_YOU_ON_HIS_HER_IGNORE_LIST);
-			sm.addCharName(target);
+			sm.addString(target.getName());
 			requestor.sendPacket(sm);
 			return;
 		}
@@ -134,7 +134,7 @@ public final class RequestJoinParty implements IClientIncomingPacket
 		}
 		
 		sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_INVITED_TO_THE_PARTY);
-		sm.addCharName(target);
+		sm.addString(target.getName());
 		requestor.sendPacket(sm);
 		
 		if (!requestor.isInParty())

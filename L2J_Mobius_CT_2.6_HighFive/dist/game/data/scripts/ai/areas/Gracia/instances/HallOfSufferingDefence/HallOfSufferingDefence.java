@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;

@@ -49,13 +49,13 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public boolean isInsideZone(int x, int y, int z)
 	{
-		return (_r.contains(x, y) && (z >= _z1) && (z <= _z2));
+		return _r.contains(x, y) && (z >= _z1) && (z <= _z2);
 	}
 	
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		return (_r.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1)));
+		return _r.intersects(Math.min(ax1, ax2), Math.min(ay1, ay2), Math.abs(ax2 - ax1), Math.abs(ay2 - ay1));
 	}
 	
 	@Override
@@ -65,9 +65,9 @@ public class ZoneCuboid extends L2ZoneForm
 		final int _x2 = _r.x + _r.width;
 		final int _y1 = _r.y;
 		final int _y2 = _r.y + _r.height;
-		double test, shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
+		double test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
+		double shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
 		
-		test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
 		if (test < shortestDist)
 		{
 			shortestDist = test;

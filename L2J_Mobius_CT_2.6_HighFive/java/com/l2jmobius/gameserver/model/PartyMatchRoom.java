@@ -83,7 +83,7 @@ public class PartyMatchRoom implements IIdentifiable
 		for (L2PcInstance _member : _members)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_LEFT_THE_PARTY_ROOM);
-			sm.addCharName(player);
+			sm.addString(player.getName());
 			_member.sendPacket(sm);
 			_member.sendPacket(new ExManagePartyRoomMember(player, this, 2));
 		}

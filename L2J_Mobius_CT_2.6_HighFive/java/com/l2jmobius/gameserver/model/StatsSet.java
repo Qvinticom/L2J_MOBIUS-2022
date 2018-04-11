@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.interfaces.IParserAdvUtils;
  */
 public class StatsSet implements IParserAdvUtils
 {
-	private static final Logger _log = Logger.getLogger(StatsSet.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(StatsSet.class.getName());
 	/** Static empty immutable map, used to avoid multiple null checks over the source. */
 	public static final StatsSet EMPTY_STATSET = new StatsSet(Collections.<String, Object> emptyMap());
 	
@@ -623,7 +623,7 @@ public class StatsSet implements IParserAdvUtils
 		assert ((min > max) || ((value >= min) && (value < max)));
 		if ((min <= max) && ((value < min) || (value >= max)))
 		{
-			_log.log(Level.SEVERE, "Incorrect value: " + value + "for: " + key + "Ref: " + reference);
+			LOGGER.log(Level.SEVERE, "Incorrect value: " + value + "for: " + key + "Ref: " + reference);
 		}
 		
 		set(key, value);

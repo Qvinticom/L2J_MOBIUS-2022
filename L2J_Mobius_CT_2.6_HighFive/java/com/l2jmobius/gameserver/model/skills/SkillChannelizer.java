@@ -22,7 +22,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;

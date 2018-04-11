@@ -76,7 +76,7 @@ public final class HealPercent extends AbstractEffect
 		if (info.getEffector().getObjectId() != target.getObjectId())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
-			sm.addCharName(info.getEffector());
+			sm.addString(info.getEffector().getName());
 		}
 		else
 		{

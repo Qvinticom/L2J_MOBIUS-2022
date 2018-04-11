@@ -25,7 +25,7 @@ import java.util.Map;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.datatables.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoDManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;

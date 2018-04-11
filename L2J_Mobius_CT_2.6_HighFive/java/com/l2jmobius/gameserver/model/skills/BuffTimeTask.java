@@ -48,7 +48,7 @@ public class BuffTimeTask implements Runnable
 	@Override
 	public void run()
 	{
-		if (_time.incrementAndGet() > _info.getAbnormalTime())
+		if ((_info.getEffected() != null) && (_time.incrementAndGet() > _info.getAbnormalTime()))
 		{
 			_info.getEffected().getEffectList().stopSkillEffects(false, _info.getSkill().getId());
 		}
