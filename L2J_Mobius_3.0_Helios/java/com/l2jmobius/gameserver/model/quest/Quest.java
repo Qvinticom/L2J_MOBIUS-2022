@@ -78,6 +78,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Quest main class.
@@ -2695,7 +2696,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target)
 	{
-		return (target == null) || com.l2jmobius.gameserver.util.Util.checkIfInRange(1500, player, target, true);
+		return (target == null) || Util.checkIfInRange(1500, player, target, true);
 	}
 	
 	/**
