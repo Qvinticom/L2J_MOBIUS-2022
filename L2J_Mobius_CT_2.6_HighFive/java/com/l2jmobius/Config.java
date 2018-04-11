@@ -128,6 +128,7 @@ public final class Config
 	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
 	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
 	public static final String CUSTOM_TVT_CONFIG_FILE = "./config/Custom/TeamVersusTeam.ini";
+	public static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
 	public static final String CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE = "./config/Custom/WarehouseSorting.ini";
 	public static final String CUSTOM_WEDDING_CONFIG_FILE = "./config/Custom/Wedding.ini";
 	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
@@ -1296,6 +1297,27 @@ public final class Config
 	public static long SELLBUFF_MIN_PRICE;
 	public static long SELLBUFF_MAX_PRICE;
 	public static int SELLBUFF_MAX_BUFFS;
+	public static boolean ALLOW_NETWORK_VOTE_REWARD;
+	public static String NETWORK_SERVER_LINK;
+	public static int NETWORK_VOTES_DIFFERENCE;
+	public static int NETWORK_REWARD_CHECK_TIME;
+	public static Map<Integer, Integer> NETWORK_REWARD = new HashMap<>();
+	public static int NETWORK_DUALBOXES_ALLOWED;
+	public static boolean ALLOW_NETWORK_GAME_SERVER_REPORT;
+	public static boolean ALLOW_TOPZONE_VOTE_REWARD;
+	public static String TOPZONE_SERVER_LINK;
+	public static int TOPZONE_VOTES_DIFFERENCE;
+	public static int TOPZONE_REWARD_CHECK_TIME;
+	public static Map<Integer, Integer> TOPZONE_REWARD = new HashMap<>();
+	public static int TOPZONE_DUALBOXES_ALLOWED;
+	public static boolean ALLOW_TOPZONE_GAME_SERVER_REPORT;
+	public static boolean ALLOW_HOPZONE_VOTE_REWARD;
+	public static String HOPZONE_SERVER_LINK;
+	public static int HOPZONE_VOTES_DIFFERENCE;
+	public static int HOPZONE_REWARD_CHECK_TIME;
+	public static Map<Integer, Integer> HOPZONE_REWARD = new HashMap<>();
+	public static int HOPZONE_DUALBOXES_ALLOWED;
+	public static boolean ALLOW_HOPZONE_GAME_SERVER_REPORT;
 	
 	/**
 	 * This class initializes all global variables for configuration.<br>
@@ -3200,6 +3222,49 @@ public final class Config
 					MULTILANG_NS_ALLOWED.add(lang);
 				}
 			}
+			
+			// Load VoteReward config file (if exists)
+			final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);
+			
+			ALLOW_NETWORK_VOTE_REWARD = VoteReward.getBoolean("AllowNetworkVoteReward", false);
+			NETWORK_SERVER_LINK = VoteReward.getString("NetworkServerLink", "");
+			NETWORK_VOTES_DIFFERENCE = VoteReward.getInt("NetworkVotesDifference", 5);
+			NETWORK_REWARD_CHECK_TIME = VoteReward.getInt("NetworkRewardCheckTime", 5);
+			String NETWORK_SMALL_REWARD_VALUE = VoteReward.getString("NetworkReward", "57,100000000;");
+			String[] NETWORK_small_reward_splitted_1 = NETWORK_SMALL_REWARD_VALUE.split(";");
+			for (String i : NETWORK_small_reward_splitted_1)
+			{
+				String[] NETWORK_small_reward_splitted_2 = i.split(",");
+				NETWORK_REWARD.put(Integer.parseInt(NETWORK_small_reward_splitted_2[0]), Integer.parseInt(NETWORK_small_reward_splitted_2[1]));
+			}
+			NETWORK_DUALBOXES_ALLOWED = VoteReward.getInt("NetworkDualboxesAllowed", 1);
+			ALLOW_NETWORK_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowNetworkGameServerReport", false);
+			ALLOW_TOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowTopzoneVoteReward", false);
+			TOPZONE_SERVER_LINK = VoteReward.getString("TopzoneServerLink", "");
+			TOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("TopzoneVotesDifference", 5);
+			TOPZONE_REWARD_CHECK_TIME = VoteReward.getInt("TopzoneRewardCheckTime", 5);
+			String TOPZONE_SMALL_REWARD_VALUE = VoteReward.getString("TopzoneReward", "57,100000000;");
+			String[] topzone_small_reward_splitted_1 = TOPZONE_SMALL_REWARD_VALUE.split(";");
+			for (String i : topzone_small_reward_splitted_1)
+			{
+				String[] topzone_small_reward_splitted_2 = i.split(",");
+				TOPZONE_REWARD.put(Integer.parseInt(topzone_small_reward_splitted_2[0]), Integer.parseInt(topzone_small_reward_splitted_2[1]));
+			}
+			TOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("TopzoneDualboxesAllowed", 1);
+			ALLOW_TOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowTopzoneGameServerReport", false);
+			ALLOW_HOPZONE_VOTE_REWARD = VoteReward.getBoolean("AllowHopzoneVoteReward", false);
+			HOPZONE_SERVER_LINK = VoteReward.getString("HopzoneServerLink", "");
+			HOPZONE_VOTES_DIFFERENCE = VoteReward.getInt("HopzoneVotesDifference", 5);
+			HOPZONE_REWARD_CHECK_TIME = VoteReward.getInt("HopzoneRewardCheckTime", 5);
+			String HOPZONE_SMALL_REWARD_VALUE = VoteReward.getString("HopzoneReward", "57,100000000;");
+			String[] hopzone_small_reward_splitted_1 = HOPZONE_SMALL_REWARD_VALUE.split(";");
+			for (String i : hopzone_small_reward_splitted_1)
+			{
+				String[] hopzone_small_reward_splitted_2 = i.split(",");
+				HOPZONE_REWARD.put(Integer.parseInt(hopzone_small_reward_splitted_2[0]), Integer.parseInt(hopzone_small_reward_splitted_2[1]));
+			}
+			HOPZONE_DUALBOXES_ALLOWED = VoteReward.getInt("HopzoneDualboxesAllowed", 1);
+			ALLOW_HOPZONE_GAME_SERVER_REPORT = VoteReward.getBoolean("AllowHopzoneGameServerReport", false);
 			
 			// Load WalkerBotProtection config file (if exists)
 			final PropertiesParser WalkerBotProtection = new PropertiesParser(CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE);

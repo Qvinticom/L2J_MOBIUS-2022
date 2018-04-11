@@ -134,6 +134,7 @@ import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.entity.TvTManager;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
+import com.l2jmobius.gameserver.model.votereward.VoteSystem;
 import com.l2jmobius.gameserver.network.ClientNetworkManager;
 import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
@@ -325,6 +326,7 @@ public class GameServer
 		FourSepulchersManager.getInstance().init();
 		DimensionalRiftManager.getInstance();
 		RaidBossSpawnManager.getInstance();
+		VoteSystem.initialize();
 		
 		printSection("Siege");
 		SiegeManager.getInstance().getSieges();
