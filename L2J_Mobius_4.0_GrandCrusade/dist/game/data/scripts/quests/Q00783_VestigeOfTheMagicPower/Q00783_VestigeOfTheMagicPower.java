@@ -203,6 +203,7 @@ public class Q00783_VestigeOfTheMagicPower extends Quest
 						htmltext = "31595-00a.htm";
 						break;
 					}
+					qs.setState(State.CREATED);
 					htmltext = "31595-01.htm";
 					break;
 				}
