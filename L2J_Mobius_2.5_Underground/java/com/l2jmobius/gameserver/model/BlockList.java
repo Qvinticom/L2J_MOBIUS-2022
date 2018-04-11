@@ -174,9 +174,7 @@ public class BlockList
 		
 		if (listOwner.getFriendList().contains(targetId))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
-			sm.addString(charName);
-			listOwner.sendPacket(sm);
+			listOwner.sendPacket(SystemMessageId.THIS_PLAYER_IS_ALREADY_REGISTERED_ON_YOUR_FRIENDS_LIST);
 			return;
 		}
 		
