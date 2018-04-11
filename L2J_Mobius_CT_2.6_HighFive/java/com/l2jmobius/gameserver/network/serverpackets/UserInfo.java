@@ -110,7 +110,7 @@ public final class UserInfo implements IClientOutgoingPacket
 		packet.writeD((int) Math.round(_activeChar.getCurrentHp()));
 		packet.writeD(_activeChar.getMaxMp());
 		packet.writeD((int) Math.round(_activeChar.getCurrentMp()));
-		packet.writeD(_activeChar.getSp());
+		packet.writeD((int) _activeChar.getSp());
 		packet.writeD(_activeChar.getCurrentLoad());
 		packet.writeD(_activeChar.getMaxLoad());
 		

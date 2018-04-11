@@ -192,6 +192,7 @@ public final class Config
 	public static int MAX_EVASION;
 	public static int MIN_ABNORMAL_STATE_SUCCESS_RATE;
 	public static int MAX_ABNORMAL_STATE_SUCCESS_RATE;
+	public static long MAX_SP;
 	public static byte MAX_SUBCLASS;
 	public static byte BASE_SUBCLASS_LEVEL;
 	public static byte MAX_SUBCLASS_LEVEL;
@@ -269,8 +270,6 @@ public final class Config
 	public static int MAX_PETITIONS_PENDING;
 	public static boolean FREE_TELEPORTING;
 	public static int DELETE_DAYS;
-	public static float ALT_GAME_EXPONENT_XP;
-	public static float ALT_GAME_EXPONENT_SP;
 	public static String PARTY_XP_CUTOFF_METHOD;
 	public static double PARTY_XP_CUTOFF_PERCENT;
 	public static int PARTY_XP_CUTOFF_LEVEL;
@@ -1641,6 +1640,7 @@ public final class Config
 			MAX_EVASION = Character.getInt("MaxEvasion", 250);
 			MIN_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MinAbnormalStateSuccessRate", 10);
 			MAX_ABNORMAL_STATE_SUCCESS_RATE = Character.getInt("MaxAbnormalStateSuccessRate", 90);
+			MAX_SP = Character.getLong("MaxSp", 50000000000L) >= 0 ? Character.getLong("MaxSp", 50000000000L) : Long.MAX_VALUE;
 			MAX_SUBCLASS = Character.getByte("MaxSubclass", (byte) 3);
 			BASE_SUBCLASS_LEVEL = Character.getByte("BaseSubclassLevel", (byte) 40);
 			MAX_SUBCLASS_LEVEL = Character.getByte("MaxSubclassLevel", (byte) 80);
@@ -1804,8 +1804,6 @@ public final class Config
 			MAX_PETITIONS_PENDING = Character.getInt("MaxPetitionsPending", 25);
 			FREE_TELEPORTING = Character.getBoolean("FreeTeleporting", false);
 			DELETE_DAYS = Character.getInt("DeleteCharAfterDays", 7);
-			ALT_GAME_EXPONENT_XP = Character.getFloat("AltGameExponentXp", 0);
-			ALT_GAME_EXPONENT_SP = Character.getFloat("AltGameExponentSp", 0);
 			PARTY_XP_CUTOFF_METHOD = Character.getString("PartyXpCutoffMethod", "highfive");
 			PARTY_XP_CUTOFF_PERCENT = Character.getDouble("PartyXpCutoffPercent", 3);
 			PARTY_XP_CUTOFF_LEVEL = Character.getInt("PartyXpCutoffLevel", 20);

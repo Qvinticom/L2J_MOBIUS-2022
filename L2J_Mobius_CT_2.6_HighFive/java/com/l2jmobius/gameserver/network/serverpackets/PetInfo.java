@@ -127,7 +127,7 @@ public class PetInfo implements IClientOutgoingPacket
 		packet.writeD(_maxHp);// max hp
 		packet.writeD((int) _summon.getCurrentMp());// current mp
 		packet.writeD(_maxMp);// max mp
-		packet.writeD(_summon.getStat().getSp()); // sp
+		packet.writeD((int) _summon.getStat().getSp()); // sp
 		packet.writeD(_summon.getLevel());// lvl
 		packet.writeQ(_summon.getStat().getExp());
 		

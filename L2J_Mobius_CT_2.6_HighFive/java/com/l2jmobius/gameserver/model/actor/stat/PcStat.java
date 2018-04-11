@@ -113,7 +113,7 @@ public class PcStat extends PlayableStat
 		return true;
 	}
 	
-	public boolean addExpAndSp(long addToExp, int addToSp, boolean useBonuses)
+	public boolean addExpAndSp(double addToExp, double addToSp, boolean useBonuses)
 	{
 		final L2PcInstance activeChar = getActiveChar();
 		
@@ -130,8 +130,8 @@ public class PcStat extends PlayableStat
 			addToSp *= Config.PREMIUM_RATE_SP;
 		}
 		
-		final long baseExp = addToExp;
-		final int baseSp = addToSp;
+		final double baseExp = addToExp;
+		final double baseSp = addToSp;
 		
 		double bonusExp = 1.;
 		double bonusSp = 1.;
@@ -161,7 +161,7 @@ public class PcStat extends PlayableStat
 		addToExp *= bonusExp;
 		addToSp *= bonusSp;
 		
-		float ratioTakenByPlayer = 0;
+		double ratioTakenByPlayer = 0;
 		
 		// if this player has a pet and it is in his range he takes from the owner's Exp, give the pet Exp now
 		if (activeChar.hasPet() && Util.checkIfInShortRange(Config.ALT_PARTY_RANGE, activeChar, activeChar.getSummon(), false))
@@ -178,55 +178,45 @@ public class PcStat extends PlayableStat
 			
 			if (!pet.isDead())
 			{
-				pet.addExpAndSp((long) (addToExp * (1 - ratioTakenByPlayer)), (int) (addToSp * (1 - ratioTakenByPlayer)));
+				pet.addExpAndSp(addToExp * (1 - ratioTakenByPlayer), addToSp * (1 - ratioTakenByPlayer));
 			}
 			
 			// now adjust the max ratio to avoid the owner earning negative exp/sp
-			addToExp = (long) (addToExp * ratioTakenByPlayer);
-			addToSp = (int) (addToSp * ratioTakenByPlayer);
+			addToExp *= ratioTakenByPlayer;
+			addToSp *= ratioTakenByPlayer;
 		}
 		
-		if (!addExp(addToExp))
-		{
-			addToExp = 0;
-		}
-		
-		if (!addSp(addToSp))
-		{
-			addToSp = 0;
-		}
-		
-		if ((addToExp == 0) && (addToSp == 0))
-		{
-			return false;
-		}
+		final long finalExp = Math.round(addToExp);
+		final long finalSp = Math.round(addToSp);
+		final boolean expAdded = addExp(finalExp);
+		final boolean spAdded = addSp(finalSp);
 		
 		SystemMessage sm = null;
-		if ((addToExp == 0) && (addToSp != 0))
+		if (!expAdded && spAdded)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_SP);
-			sm.addInt(addToSp);
+			sm.addLong(finalSp);
 		}
-		else if ((addToSp == 0) && (addToExp != 0))
+		else if (expAdded && !spAdded)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE);
-			sm.addLong(addToExp);
+			sm.addLong(finalExp);
 		}
 		else
 		{
 			if ((addToExp - baseExp) > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_ACQUIRED_S1_EXP_BONUS_S2_AND_S3_SP_BONUS_S4);
-				sm.addLong(addToExp);
-				sm.addLong(addToExp - baseExp);
-				sm.addInt(addToSp);
-				sm.addInt(addToSp - baseSp);
+				sm.addLong(finalExp);
+				sm.addLong(Math.round(addToExp - baseExp));
+				sm.addLong(finalSp);
+				sm.addLong(Math.round(addToSp - baseSp));
 			}
 			else
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_EXPERIENCE_AND_S2_SP);
-				sm.addLong(addToExp);
-				sm.addInt(addToSp);
+				sm.addLong((long) addToExp);
+				sm.addLong((long) addToSp);
 			}
 		}
 		activeChar.sendPacket(sm);
@@ -234,12 +224,12 @@ public class PcStat extends PlayableStat
 	}
 	
 	@Override
-	public boolean removeExpAndSp(long addToExp, int addToSp)
+	public boolean removeExpAndSp(long addToExp, long addToSp)
 	{
 		return removeExpAndSp(addToExp, addToSp, true);
 	}
 	
-	public boolean removeExpAndSp(long addToExp, int addToSp, boolean sendMessage)
+	public boolean removeExpAndSp(long addToExp, long addToSp, boolean sendMessage)
 	{
 		final int level = getLevel();
 		if (!super.removeExpAndSp(addToExp, addToSp))
@@ -254,7 +244,7 @@ public class PcStat extends PlayableStat
 			sm.addLong(addToExp);
 			getActiveChar().sendPacket(sm);
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-			sm.addInt(addToSp);
+			sm.addLong(addToSp);
 			getActiveChar().sendPacket(sm);
 			if (getLevel() < level)
 			{
@@ -349,7 +339,7 @@ public class PcStat extends PlayableStat
 	}
 	
 	@Override
-	public boolean addSp(int value)
+	public boolean addSp(long value)
 	{
 		if (!super.addSp(value))
 		{
@@ -357,7 +347,7 @@ public class PcStat extends PlayableStat
 		}
 		
 		final StatusUpdate su = new StatusUpdate(getActiveChar());
-		su.addAttribute(StatusUpdate.SP, getSp());
+		su.addAttribute(StatusUpdate.SP, (int) getSp());
 		getActiveChar().sendPacket(su);
 		
 		return true;
@@ -562,7 +552,7 @@ public class PcStat extends PlayableStat
 	}
 	
 	@Override
-	public final int getSp()
+	public final long getSp()
 	{
 		if (getActiveChar().isSubClassActive())
 		{
@@ -572,13 +562,13 @@ public class PcStat extends PlayableStat
 		return super.getSp();
 	}
 	
-	public final int getBaseSp()
+	public final long getBaseSp()
 	{
 		return super.getSp();
 	}
 	
 	@Override
-	public final void setSp(int value)
+	public final void setSp(long value)
 	{
 		if (getActiveChar().isSubClassActive())
 		{
@@ -907,7 +897,10 @@ public class PcStat extends PlayableStat
 		
 		// Check for abnormal bonuses
 		bonus = Math.max(bonus, 1);
-		bonus = Math.min(bonus, Config.MAX_BONUS_EXP);
+		if (Config.MAX_BONUS_EXP > 0)
+		{
+			bonus = Math.min(bonus, Config.MAX_BONUS_EXP);
+		}
 		
 		return bonus;
 	}
@@ -951,7 +944,10 @@ public class PcStat extends PlayableStat
 		
 		// Check for abnormal bonuses
 		bonus = Math.max(bonus, 1);
-		bonus = Math.min(bonus, Config.MAX_BONUS_SP);
+		if (Config.MAX_BONUS_SP > 0)
+		{
+			bonus = Math.min(bonus, Config.MAX_BONUS_SP);
+		}
 		
 		return bonus;
 	}

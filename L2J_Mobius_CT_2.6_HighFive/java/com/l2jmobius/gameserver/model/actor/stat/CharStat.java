@@ -37,7 +37,7 @@ public class CharStat
 	
 	private final L2Character _activeChar;
 	private long _exp = 0;
-	private int _sp = 0;
+	private long _sp = 0;
 	private byte _level = 1;
 	private final float[] _attackTraits = new float[TraitType.values().length];
 	private final int[] _attackTraitsCount = new int[TraitType.values().length];
@@ -592,12 +592,12 @@ public class CharStat
 		return (int) calcStat(Stats.SHIELD_DEFENCE, 0);
 	}
 	
-	public int getSp()
+	public long getSp()
 	{
 		return _sp;
 	}
 	
-	public void setSp(int value)
+	public void setSp(long value)
 	{
 		_sp = value;
 	}

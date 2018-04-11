@@ -473,6 +473,10 @@ public class L2Attackable extends L2Npc
 						// Calculate Exp and SP rewards
 						if (isInSurroundingRegion(attacker))
 						{
+							// Calculate the difference of level between this attacker (player or servitor owner) and the L2Attackable
+							// mob = 24, atk = 10, diff = -14 (full xp)
+							// mob = 24, atk = 28, diff = 4 (some xp)
+							// mob = 24, atk = 50, diff = 26 (no xp)
 							final double[] expSp = calculateExpAndSp(attacker.getLevel(), damage, totalDamage);
 							double exp = expSp[0];
 							double sp = expSp[1];
@@ -1356,67 +1360,70 @@ public class L2Attackable extends L2Npc
 	 */
 	private double[] calculateExpAndSp(int charLevel, int damage, long totalDamage)
 	{
-		final int levelDiff = Math.abs(charLevel - getLevel());
-		double xp = Math.max(0, (getExpReward() * damage) / totalDamage);
-		double sp = Math.max(0, (getSpReward() * damage) / totalDamage);
-		double mul;
-		switch (levelDiff)
+		final int levelDiff = charLevel - getLevel();
+		double xp = 0;
+		double sp = 0;
+		
+		if ((levelDiff < 11) && (levelDiff > -11))
 		{
-			case 0:
-			case 1:
-			case 2:
+			xp = Math.max(0, (getExpReward() * damage) / totalDamage);
+			sp = Math.max(0, (getSpReward() * damage) / totalDamage);
+			
+			if ((charLevel > 84) && (levelDiff <= -3))
 			{
-				mul = 1.;
-				break;
-			}
-			case 3:
-			{
-				mul = 0.97;
-				break;
-			}
-			case 4:
-			{
-				mul = 0.67;
-				break;
-			}
-			case 5:
-			{
-				mul = 0.42;
-				break;
-			}
-			case 6:
-			{
-				mul = 0.25;
-				break;
-			}
-			case 7:
-			{
-				mul = 0.15;
-				break;
-			}
-			case 8:
-			{
-				mul = 0.09;
-				break;
-			}
-			case 9:
-			{
-				mul = 0.05;
-				break;
-			}
-			case 10:
-			{
-				mul = 0.03;
-				break;
-			}
-			default:
-			{
-				mul = 0.;
-				break;
+				double mul;
+				switch (levelDiff)
+				{
+					case -3:
+					{
+						mul = 0.97;
+						break;
+					}
+					case -4:
+					{
+						mul = 0.67;
+						break;
+					}
+					case -5:
+					{
+						mul = 0.42;
+						break;
+					}
+					case -6:
+					{
+						mul = 0.25;
+						break;
+					}
+					case -7:
+					{
+						mul = 0.15;
+						break;
+					}
+					case -8:
+					{
+						mul = 0.09;
+						break;
+					}
+					case -9:
+					{
+						mul = 0.05;
+						break;
+					}
+					case -10:
+					{
+						mul = 0.03;
+						break;
+					}
+					default:
+					{
+						mul = 1.;
+						break;
+					}
+				}
+				xp *= mul;
+				sp *= mul;
 			}
 		}
-		xp *= mul;
-		sp *= mul;
 		
 		return new double[]
 		{

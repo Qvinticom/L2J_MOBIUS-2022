@@ -447,11 +447,9 @@ public class L2Attackable extends L2Npc
 							// mob = 24, atk = 10, diff = -14 (full xp)
 							// mob = 24, atk = 28, diff = 4 (some xp)
 							// mob = 24, atk = 50, diff = 26 (no xp)
-							final int levelDiff = attacker.getLevel() - getLevel();
-							
-							final int[] expSp = calculateExpAndSp(levelDiff, damage, totalDamage);
-							long exp = expSp[0];
-							int sp = expSp[1];
+							final double[] expSp = calculateExpAndSp(attacker.getLevel(), damage, totalDamage);
+							double exp = expSp[0];
+							double sp = expSp[1];
 							
 							if (Config.CHAMPION_ENABLE && isChampion())
 							{
@@ -487,7 +485,7 @@ public class L2Attackable extends L2Npc
 					{
 						// share with party members
 						int partyDmg = 0;
-						float partyMul = 1;
+						double partyMul = 1;
 						int partyLvl = 0;
 						
 						// Get all L2Character that can be rewarded in the party
@@ -551,16 +549,13 @@ public class L2Attackable extends L2Npc
 						// If the party didn't killed this L2Attackable alone
 						if (partyDmg < totalDamage)
 						{
-							partyMul = (float) partyDmg / totalDamage;
+							partyMul = ((double) partyDmg / totalDamage);
 						}
 						
-						// Calculate the level difference between Party and L2Attackable
-						final int levelDiff = partyLvl - getLevel();
-						
 						// Calculate Exp and SP rewards
-						final int[] expSp = calculateExpAndSp(levelDiff, partyDmg, totalDamage);
-						long exp = expSp[0];
-						int sp = expSp[1];
+						final double[] expSp = calculateExpAndSp(partyLvl, partyDmg, totalDamage);
+						double exp = expSp[0];
+						double sp = expSp[1];
 						
 						if (Config.CHAMPION_ENABLE && isChampion())
 						{
@@ -1282,61 +1277,86 @@ public class L2Attackable extends L2Npc
 	
 	/**
 	 * Calculate the Experience and SP to distribute to attacker (L2PcInstance, L2ServitorInstance or L2Party) of the L2Attackable.
-	 * @param diff The difference of level between attacker (L2PcInstance, L2ServitorInstance or L2Party) and the L2Attackable
+	 * @param charLevel The killer level
 	 * @param damage The damages given by the attacker (L2PcInstance, L2ServitorInstance or L2Party)
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int diff, int damage, long totalDamage)
+	private double[] calculateExpAndSp(int charLevel, int damage, long totalDamage)
 	{
-		double xp;
-		double sp;
+		final int levelDiff = charLevel - getLevel();
+		double xp = 0;
+		double sp = 0;
 		
-		if (diff < -5)
+		if ((levelDiff < 11) && (levelDiff > -11))
 		{
-			diff = -5; // makes possible to use ALT_GAME_EXPONENT configuration
-		}
-		
-		xp = ((double) getExpReward() * damage) / totalDamage;
-		if (Config.ALT_GAME_EXPONENT_XP != 0)
-		{
-			xp *= Math.pow(2., -diff / Config.ALT_GAME_EXPONENT_XP);
-		}
-		
-		sp = ((double) getSpReward() * damage) / totalDamage;
-		if (Config.ALT_GAME_EXPONENT_SP != 0)
-		{
-			sp *= Math.pow(2., -diff / Config.ALT_GAME_EXPONENT_SP);
-		}
-		
-		if ((Config.ALT_GAME_EXPONENT_XP == 0) && (Config.ALT_GAME_EXPONENT_SP == 0))
-		{
-			if (diff > 5) // formula revised May 07
-			{
-				final double pow = Math.pow((double) 5 / 6, diff - 5);
-				xp = xp * pow;
-				sp = sp * pow;
-			}
+			xp = Math.max(0, (getExpReward() * damage) / totalDamage);
+			sp = Math.max(0, (getSpReward() * damage) / totalDamage);
 			
-			if (xp <= 0)
+			if ((charLevel > 84) && (levelDiff <= -3))
 			{
-				xp = 0;
-				sp = 0;
-			}
-			else if (sp <= 0)
-			{
-				sp = 0;
+				double mul;
+				switch (levelDiff)
+				{
+					case -3:
+					{
+						mul = 0.97;
+						break;
+					}
+					case -4:
+					{
+						mul = 0.67;
+						break;
+					}
+					case -5:
+					{
+						mul = 0.42;
+						break;
+					}
+					case -6:
+					{
+						mul = 0.25;
+						break;
+					}
+					case -7:
+					{
+						mul = 0.15;
+						break;
+					}
+					case -8:
+					{
+						mul = 0.09;
+						break;
+					}
+					case -9:
+					{
+						mul = 0.05;
+						break;
+					}
+					case -10:
+					{
+						mul = 0.03;
+						break;
+					}
+					default:
+					{
+						mul = 1.;
+						break;
+					}
+				}
+				xp *= mul;
+				sp *= mul;
 			}
 		}
-		final int[] tmp =
+		
+		return new double[]
 		{
-			(int) xp,
-			(int) sp
+			xp,
+			sp
 		};
-		return tmp;
 	}
 	
-	public long calculateOverhitExp(long normalExp)
+	public double calculateOverhitExp(double exp)
 	{
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
 		double overhitPercentage = ((getOverhitDamage() * 100) / getMaxHp());
@@ -1349,11 +1369,7 @@ public class L2Attackable extends L2Npc
 		
 		// Get the overhit exp bonus according to the above over-hit damage percentage
 		// (1/1 basis - 13% of over-hit damage, 13% of extra exp is given, and so on...)
-		final double overhitExp = ((overhitPercentage / 100) * normalExp);
-		
-		// Return the rounded ammount of exp points to be added to the player's normal exp reward
-		final long bonusOverhit = Math.round(overhitExp);
-		return bonusOverhit;
+		return (overhitPercentage / 100) * exp;
 	}
 	
 	/**

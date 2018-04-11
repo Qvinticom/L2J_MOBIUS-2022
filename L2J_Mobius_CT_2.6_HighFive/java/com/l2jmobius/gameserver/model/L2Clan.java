@@ -2702,7 +2702,7 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		// the player should know that he has less sp now :p
 		final StatusUpdate su = new StatusUpdate(player);
-		su.addAttribute(StatusUpdate.SP, player.getSp());
+		su.addAttribute(StatusUpdate.SP, (int) player.getSp());
 		player.sendPacket(su);
 		
 		player.sendPacket(new ItemList(player, false));

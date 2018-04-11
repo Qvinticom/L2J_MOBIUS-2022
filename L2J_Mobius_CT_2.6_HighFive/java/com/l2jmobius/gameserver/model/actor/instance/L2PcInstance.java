@@ -2668,7 +2668,7 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * @return the SP amount of the L2PcInstance.
 	 */
-	public int getSp()
+	public long getSp()
 	{
 		return getStat().getSp();
 	}
@@ -2677,7 +2677,7 @@ public final class L2PcInstance extends L2Playable
 	 * Set the SP amount of the L2PcInstance.
 	 * @param sp
 	 */
-	public void setSp(int sp)
+	public void setSp(long sp)
 	{
 		if (sp < 0)
 		{
@@ -6647,7 +6647,7 @@ public final class L2PcInstance extends L2Playable
 			ps.setInt(13, getAppearance().getHairColor());
 			ps.setInt(14, getAppearance().getSex() ? 1 : 0);
 			ps.setLong(15, getExp());
-			ps.setInt(16, getSp());
+			ps.setLong(16, getSp());
 			ps.setInt(17, getKarma());
 			ps.setInt(18, getFame());
 			ps.setInt(19, getPvpKills());
@@ -7246,7 +7246,7 @@ public final class L2PcInstance extends L2Playable
 		// Get the exp, level, and sp of base class to store in base table
 		final long exp = getStat().getBaseExp();
 		final int level = getStat().getBaseLevel();
-		final int sp = getStat().getBaseSp();
+		final long sp = getStat().getBaseSp();
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_CHARACTER))
 		{
@@ -7267,7 +7267,7 @@ public final class L2PcInstance extends L2Playable
 			ps.setInt(15, _observerMode ? _lastLoc.getZ() : getZ());
 			ps.setLong(16, exp);
 			ps.setLong(17, getExpBeforeDeath());
-			ps.setInt(18, sp);
+			ps.setLong(18, sp);
 			ps.setInt(19, getKarma());
 			ps.setInt(20, getFame());
 			ps.setInt(21, getPvpKills());
@@ -7341,7 +7341,7 @@ public final class L2PcInstance extends L2Playable
 			for (SubClass subClass : getSubClasses().values())
 			{
 				ps.setLong(1, subClass.getExp());
-				ps.setInt(2, subClass.getSp());
+				ps.setLong(2, subClass.getSp());
 				ps.setInt(3, subClass.getLevel());
 				ps.setInt(4, subClass.getClassId());
 				ps.setInt(5, getObjectId());
@@ -10026,7 +10026,7 @@ public final class L2PcInstance extends L2Playable
 				ps.setInt(1, getObjectId());
 				ps.setInt(2, newClass.getClassId());
 				ps.setLong(3, newClass.getExp());
-				ps.setInt(4, newClass.getSp());
+				ps.setLong(4, newClass.getSp());
 				ps.setInt(5, newClass.getLevel());
 				ps.setInt(6, newClass.getClassIndex()); // <-- Added
 				ps.execute();
@@ -10830,22 +10830,22 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	@Override
-	public void addExpAndSp(long addToExp, int addToSp)
+	public void addExpAndSp(double addToExp, double addToSp)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, false);
 	}
 	
-	public void addExpAndSp(long addToExp, int addToSp, boolean useVitality)
+	public void addExpAndSp(double addToExp, double addToSp, boolean useVitality)
 	{
 		getStat().addExpAndSp(addToExp, addToSp, useVitality);
 	}
 	
-	public void removeExpAndSp(long removeExp, int removeSp)
+	public void removeExpAndSp(long removeExp, long removeSp)
 	{
 		getStat().removeExpAndSp(removeExp, removeSp, true);
 	}
 	
-	public void removeExpAndSp(long removeExp, int removeSp, boolean sendMessage)
+	public void removeExpAndSp(long removeExp, long removeSp, boolean sendMessage)
 	{
 		getStat().removeExpAndSp(removeExp, removeSp, sendMessage);
 	}

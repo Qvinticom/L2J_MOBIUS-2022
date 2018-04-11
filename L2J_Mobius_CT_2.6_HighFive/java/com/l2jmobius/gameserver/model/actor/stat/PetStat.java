@@ -48,15 +48,16 @@ public class PetStat extends SummonStat
 		return true;
 	}
 	
-	public boolean addExpAndSp(long addToExp, int addToSp)
+	public boolean addExpAndSp(double addToExp, double addToSp)
 	{
-		if (getActiveChar().isUncontrollable() || !addExp(addToExp))
+		final long finalExp = Math.round(addToExp);
+		if (getActiveChar().isUncontrollable() || !addExp(finalExp))
 		{
 			return false;
 		}
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_EXPERIENCE_POINTS);
-		sm.addLong(addToExp);
+		sm.addLong(finalExp);
 		getActiveChar().updateAndBroadcastStatus(1);
 		getActiveChar().sendPacket(sm);
 		return true;

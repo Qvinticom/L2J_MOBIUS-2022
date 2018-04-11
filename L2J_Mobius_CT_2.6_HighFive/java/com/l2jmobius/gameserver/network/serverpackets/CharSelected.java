@@ -57,7 +57,7 @@ public class CharSelected implements IClientOutgoingPacket
 		
 		packet.writeF(_activeChar.getCurrentHp());
 		packet.writeF(_activeChar.getCurrentMp());
-		packet.writeD(_activeChar.getSp());
+		packet.writeD((int) _activeChar.getSp());
 		packet.writeQ(_activeChar.getExp());
 		packet.writeD(_activeChar.getLevel());
 		packet.writeD(_activeChar.getKarma()); // thx evill33t

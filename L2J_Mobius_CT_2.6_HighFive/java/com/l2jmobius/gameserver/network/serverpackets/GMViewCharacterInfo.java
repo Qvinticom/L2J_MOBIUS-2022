@@ -68,7 +68,7 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD((int) _activeChar.getCurrentHp());
 		packet.writeD(_activeChar.getMaxMp());
 		packet.writeD((int) _activeChar.getCurrentMp());
-		packet.writeD(_activeChar.getSp());
+		packet.writeD((int) _activeChar.getSp());
 		packet.writeD(_activeChar.getCurrentLoad());
 		packet.writeD(_activeChar.getMaxLoad());
 		packet.writeD(_activeChar.getPkKills());

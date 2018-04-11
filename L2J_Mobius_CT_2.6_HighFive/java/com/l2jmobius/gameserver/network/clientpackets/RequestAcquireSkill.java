@@ -499,7 +499,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					player.setSp(player.getSp() - levelUpSp);
 					final StatusUpdate su = new StatusUpdate(player);
-					su.addAttribute(StatusUpdate.SP, player.getSp());
+					su.addAttribute(StatusUpdate.SP, (int) player.getSp());
 					player.sendPacket(su);
 				}
 				return true;

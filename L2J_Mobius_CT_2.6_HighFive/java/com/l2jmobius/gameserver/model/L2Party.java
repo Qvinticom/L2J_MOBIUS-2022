@@ -741,7 +741,7 @@ public class L2Party extends AbstractPlayerGroup
 	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(long xpReward, int spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
+	public void distributeXpAndSp(double xpReward, double spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
 	{
 		final List<L2PcInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
 		
@@ -774,8 +774,8 @@ public class L2Party extends AbstractPlayerGroup
 				final double preCalculation = (sqLevel / sqLevelSum) * penalty;
 				
 				// Add the XP/SP points to the requested party member
-				long addexp = Math.round(member.calcStat(Stats.EXPSP_RATE, xpReward * preCalculation, null, null));
-				final int addsp = (int) member.calcStat(Stats.EXPSP_RATE, spReward * preCalculation, null, null);
+				double addexp = Math.round(member.calcStat(Stats.EXPSP_RATE, xpReward * preCalculation, null, null));
+				final double addsp = member.calcStat(Stats.EXPSP_RATE, spReward * preCalculation, null, null);
 				
 				addexp = calculateExpSpPartyCutoff(member.getActingPlayer(), topLvl, addexp, addsp, useVitalityRate);
 				if (addexp > 0)
@@ -790,10 +790,10 @@ public class L2Party extends AbstractPlayerGroup
 		}
 	}
 	
-	private final long calculateExpSpPartyCutoff(L2PcInstance player, int topLvl, long addExp, int addSp, boolean vit)
+	private double calculateExpSpPartyCutoff(L2PcInstance player, int topLvl, double addExp, double addSp, boolean vit)
 	{
-		long xp = addExp;
-		int sp = addSp;
+		double xp = addExp;
+		double sp = addSp;
 		if (Config.PARTY_XP_CUTOFF_METHOD.equalsIgnoreCase("highfive"))
 		{
 			int i = 0;
