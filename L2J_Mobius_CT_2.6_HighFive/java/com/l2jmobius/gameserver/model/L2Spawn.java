@@ -77,7 +77,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The generic constructor of L2NpcInstance managed by this L2Spawn */
 	private Constructor<? extends L2Npc> _constructor;
 	/** If True a L2NpcInstance is respawned each time that another is killed */
-	private boolean _doRespawn;
+	private boolean _doRespawn = true;
 	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private Map<Integer, Location> _lastSpawnPoints;
