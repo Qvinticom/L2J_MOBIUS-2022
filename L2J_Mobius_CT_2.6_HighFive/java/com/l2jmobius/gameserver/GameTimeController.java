@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver;
 
 import java.util.Calendar;
+import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -109,7 +110,10 @@ public final class GameTimeController extends Thread
 			return;
 		}
 		
-		_movingObjects.add(cha);
+		if (!_movingObjects.contains(cha))
+		{
+			_movingObjects.add(cha);
+		}
 	}
 	
 	/**
@@ -123,8 +127,9 @@ public final class GameTimeController extends Thread
 	 * <li>Create a task to update the _knownObject and _knowPlayers of each L2Character that finished its movement and of their already known L2Object then notify AI with EVT_ARRIVED</li>
 	 * </ul>
 	 */
-	private final void moveObjects()
+	private void moveObjects()
 	{
+		_movingObjects.removeAll(Collections.singleton(null));
 		_movingObjects.removeIf(L2Character::updatePosition);
 	}
 	
