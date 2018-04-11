@@ -163,6 +163,37 @@ public class EnterWorld implements IClientIncomingPacket
 		// LOGGER.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
 		// }
 		
+		if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED)
+		{
+			if ((activeChar.getPvpKills() >= (Config.PVP_AMOUNT1)) && (activeChar.getPvpKills() < (Config.PVP_AMOUNT2)))
+			{
+				activeChar.setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
+				activeChar.getAppearance().setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
+			}
+			else if ((activeChar.getPvpKills() >= (Config.PVP_AMOUNT2)) && (activeChar.getPvpKills() < (Config.PVP_AMOUNT3)))
+			{
+				activeChar.setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
+				activeChar.getAppearance().setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
+			}
+			else if ((activeChar.getPvpKills() >= (Config.PVP_AMOUNT3)) && (activeChar.getPvpKills() < (Config.PVP_AMOUNT4)))
+			{
+				activeChar.setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
+				activeChar.getAppearance().setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
+			}
+			else if ((activeChar.getPvpKills() >= (Config.PVP_AMOUNT4)) && (activeChar.getPvpKills() < (Config.PVP_AMOUNT5)))
+			{
+				activeChar.setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
+				activeChar.getAppearance().setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
+			}
+			else if (activeChar.getPvpKills() >= (Config.PVP_AMOUNT5))
+			{
+				activeChar.setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
+				activeChar.getAppearance().setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+			}
+			activeChar.sendMessage("Welcome " + activeChar.getName() + ", you PvP kill count is " + activeChar.getPvpKills() + " and get a special title.");
+			activeChar.broadcastTitleInfo();
+		}
+		
 		// Apply special GM properties to the GM when entering
 		if (activeChar.isGM())
 		{
