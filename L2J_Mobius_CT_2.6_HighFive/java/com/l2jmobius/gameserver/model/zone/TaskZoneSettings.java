@@ -47,11 +47,10 @@ public class TaskZoneSettings extends AbstractZoneSettings
 	@Override
 	public void clear()
 	{
-		if (_task == null)
+		if (_task != null)
 		{
-			return;
+			_task.cancel(true);
+			_task = null;
 		}
-		_task.cancel(true);
-		_task = null;
 	}
 }

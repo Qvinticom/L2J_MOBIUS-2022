@@ -46,7 +46,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	private final int _id;
 	protected L2ZoneForm _zone;
-	protected Map<Integer, L2Character> _characterList;
+	protected Map<Integer, L2Character> _characterList = new ConcurrentHashMap<>();
 	
 	/** Parameters to affect specific characters */
 	private boolean _checkAffected = false;
@@ -66,7 +66,6 @@ public abstract class L2ZoneType extends ListenersContainer
 	protected L2ZoneType(int id)
 	{
 		_id = id;
-		_characterList = new ConcurrentHashMap<>();
 		
 		_minLvl = 0;
 		_maxLvl = 0xFF;
@@ -359,7 +358,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	public boolean isInsideZone(int x, int y)
 	{
-		return _zone.isInsideZone(x, y, _zone.getHighZ());
+		return isInsideZone(x, y, _zone.getHighZ());
 	}
 	
 	/**
@@ -369,7 +368,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	public boolean isInsideZone(ILocational loc)
 	{
-		return _zone.isInsideZone(loc.getX(), loc.getY(), loc.getZ());
+		return isInsideZone(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**
@@ -396,24 +395,19 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public void revalidateInZone(L2Character character)
 	{
-		// If the character can't be affected by this zone return
-		if (_checkAffected && !isAffected(character))
-		{
-			return;
-		}
-		
 		// If the object is inside the zone...
 		if (isInsideZone(character))
 		{
-			// Was the character not yet inside this zone?
-			if (!_characterList.containsKey(character.getObjectId()))
+			// If the character can't be affected by this zone return
+			if (_checkAffected && !isAffected(character))
+			{
+				return;
+			}
+			
+			if (_characterList.putIfAbsent(character.getObjectId(), character) == null)
 			{
 				// Notify to scripts.
 				EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(character, this), this);
-				
-				// Register player.
-				_characterList.put(character.getObjectId(), character);
-				
 				// Notify Zone implementation.
 				onEnter(character);
 			}
