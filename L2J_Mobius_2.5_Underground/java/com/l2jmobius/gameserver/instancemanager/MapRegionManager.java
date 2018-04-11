@@ -213,13 +213,7 @@ public final class MapRegionManager implements IGameXmlReader
 	public String getClosestTownName(L2Character activeChar)
 	{
 		final L2MapRegion region = getMapRegion(activeChar);
-		
-		if (region == null)
-		{
-			return "Aden Castle Town";
-		}
-		
-		return region.getTown();
+		return region == null ? "Aden Castle Town" : region.getTown();
 	}
 	
 	/**
@@ -419,7 +413,7 @@ public final class MapRegionManager implements IGameXmlReader
 	{
 		try
 		{
-			final L2PcInstance player = ((L2PcInstance) activeChar);
+			final L2PcInstance player = (L2PcInstance) activeChar;
 			final L2MapRegion region = _regions.get(point);
 			
 			if (region.getBannedRace().containsKey(player.getRace()))

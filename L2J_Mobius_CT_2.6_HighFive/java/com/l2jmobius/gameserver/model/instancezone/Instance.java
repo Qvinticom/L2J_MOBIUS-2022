@@ -86,7 +86,7 @@ public final class Instance
 	private long _lastLeft = -1;
 	private long _instanceStartTime = -1;
 	private long _instanceEndTime = -1;
-	private boolean _isPvPInstance = false;
+	private boolean _isPvP = false;
 	private boolean _showTimer = false;
 	private boolean _isTimerIncrease = true;
 	private String _timerText = "";
@@ -171,18 +171,18 @@ public final class Instance
 	 * Returns true if entire instance is PvP zone
 	 * @return
 	 */
-	public boolean isPvPInstance()
+	public boolean isPvP()
 	{
-		return _isPvPInstance;
+		return _isPvP;
 	}
 	
 	/**
 	 * Sets PvP zone status of the instance
-	 * @param b
+	 * @param value
 	 */
-	public void setPvPInstance(boolean b)
+	public void setIsPvP(boolean value)
 	{
-		_isPvPInstance = b;
+		_isPvP = value;
 	}
 	
 	/**
@@ -573,7 +573,7 @@ public final class Instance
 					a = n.getAttributes().getNamedItem("val");
 					if (a != null)
 					{
-						setPvPInstance(Boolean.parseBoolean(a.getNodeValue()));
+						setIsPvP(Boolean.parseBoolean(a.getNodeValue()));
 					}
 					break;
 				}

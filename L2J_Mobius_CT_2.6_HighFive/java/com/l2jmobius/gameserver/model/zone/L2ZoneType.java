@@ -198,7 +198,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	 */
 	private boolean isAffected(L2Character character)
 	{
-		// Check instance Template Id
+		// Check instance
 		if (_instanceTemplateId > 0)
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
@@ -208,7 +208,14 @@ public abstract class L2ZoneType extends ListenersContainer
 			}
 		}
 		
-		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl) || !character.isInstanceTypes(_target))
+		// Check lvl
+		if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl))
+		{
+			return false;
+		}
+		
+		// check obj class
+		if (!character.isInstanceTypes(_target))
 		{
 			return false;
 		}

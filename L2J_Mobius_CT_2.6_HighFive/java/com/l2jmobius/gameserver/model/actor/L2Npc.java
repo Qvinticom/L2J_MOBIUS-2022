@@ -1347,9 +1347,6 @@ public class L2Npc extends L2Character
 		
 		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
 		
-		// Remove L2Object object from _allObjects of L2World
-		// L2World.getInstance().removeObject(this);
-		
 		return super.deleteMe();
 	}
 	

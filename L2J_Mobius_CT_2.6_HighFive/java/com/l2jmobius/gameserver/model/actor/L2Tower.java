@@ -28,10 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
  */
 public abstract class L2Tower extends L2Npc
 {
-	/**
-	 * Creates an abstract Tower.
-	 * @param template the tower template
-	 */
 	public L2Tower(L2NpcTemplate template)
 	{
 		super(template);

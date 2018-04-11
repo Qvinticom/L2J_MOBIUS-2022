@@ -391,7 +391,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			case PVP:
 			{
-				if ((instance != null) && instance.isPvPInstance())
+				if ((instance != null) && instance.isPvP())
 				{
 					return true;
 				}
@@ -399,7 +399,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			case PEACE:
 			{
-				if ((instance != null) && instance.isPvPInstance())
+				if ((instance != null) && instance.isPvP())
 				{
 					return false;
 				}
@@ -4936,7 +4936,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			return false;
 		}
-		if (InstanceManager.getInstance().getInstance(getInstanceId()).isPvPInstance())
+		if (InstanceManager.getInstance().getInstance(getInstanceId()).isPvP())
 		{
 			return false;
 		}
@@ -6711,6 +6711,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public Race getRace()
 	{
 		return getTemplate().getRace();
+	}
+	
+	@Override
+	public final void setXYZ(int newX, int newY, int newZ)
+	{
+		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
+		final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
+		if (oldZoneRegion != newZoneRegion)
+		{
+			oldZoneRegion.removeFromZones(this);
+			newZoneRegion.revalidateZones(this);
+		}
+		
+		super.setXYZ(newX, newY, newZ);
 	}
 	
 	public boolean isInDuel()

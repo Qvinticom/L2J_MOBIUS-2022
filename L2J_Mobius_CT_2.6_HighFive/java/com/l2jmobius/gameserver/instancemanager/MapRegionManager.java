@@ -426,7 +426,11 @@ public final class MapRegionManager implements IGameXmlReader
 		try
 		{
 			final L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
-			return zone != null ? getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc() : getMapRegion(activeChar).getSpawnLoc();
+			if (zone != null)
+			{
+				return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
+			}
+			return getMapRegion(activeChar).getSpawnLoc();
 		}
 		catch (Exception e)
 		{

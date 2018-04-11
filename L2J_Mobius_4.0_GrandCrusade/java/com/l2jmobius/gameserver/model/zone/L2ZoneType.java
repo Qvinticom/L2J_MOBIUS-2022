@@ -416,12 +416,9 @@ public abstract class L2ZoneType extends ListenersContainer
 		if (isInsideZone(character))
 		{
 			// If the character can't be affected by this zone return
-			if (_checkAffected)
+			if (_checkAffected && !isAffected(character))
 			{
-				if (!isAffected(character))
-				{
-					return;
-				}
+				return;
 			}
 			
 			if (_characterList.putIfAbsent(character.getObjectId(), character) == null)

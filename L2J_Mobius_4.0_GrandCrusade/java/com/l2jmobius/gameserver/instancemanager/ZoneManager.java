@@ -357,7 +357,7 @@ public final class ZoneManager implements IGameXmlReader
 						}
 						if (checkId(zoneId))
 						{
-							LOGGER.info(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previos definition.");
+							LOGGER.config(getClass().getSimpleName() + ": Caution: Zone (" + zoneId + ") from file: " + f.getName() + " overrides previos definition.");
 						}
 						
 						if ((zoneName != null) && !zoneName.isEmpty())
@@ -669,7 +669,7 @@ public final class ZoneManager implements IGameXmlReader
 		{
 			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
 			{
-				return ((L2ArenaZone) temp);
+				return (L2ArenaZone) temp;
 			}
 		}
 		
@@ -692,7 +692,7 @@ public final class ZoneManager implements IGameXmlReader
 		{
 			if ((temp instanceof L2OlympiadStadiumZone) && temp.isCharacterInZone(character))
 			{
-				return ((L2OlympiadStadiumZone) temp);
+				return (L2OlympiadStadiumZone) temp;
 			}
 		}
 		return null;
