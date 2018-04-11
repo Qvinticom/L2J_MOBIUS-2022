@@ -29,7 +29,7 @@ public class CharSelectInfoPackage
 	private String _name;
 	private int _objectId = 0;
 	private long _exp = 0;
-	private int _sp = 0;
+	private long _sp = 0;
 	private int _clanId = 0;
 	private int _race = 0;
 	private int _classId = 0;
@@ -302,12 +302,12 @@ public class CharSelectInfoPackage
 		_sex = sex;
 	}
 	
-	public int getSp()
+	public long getSp()
 	{
 		return _sp;
 	}
 	
-	public void setSp(int sp)
+	public void setSp(long sp)
 	{
 		_sp = sp;
 	}

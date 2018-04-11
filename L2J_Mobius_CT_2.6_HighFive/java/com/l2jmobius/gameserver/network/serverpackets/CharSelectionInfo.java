@@ -117,7 +117,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeF(charInfoPackage.getCurrentHp());
 			packet.writeF(charInfoPackage.getCurrentMp());
 			
-			packet.writeD(charInfoPackage.getSp());
+			packet.writeD((int) charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
 			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
 																																																																									// Five
@@ -259,7 +259,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		charInfopackage.setSex(chardata.getInt("sex"));
 		
 		charInfopackage.setExp(chardata.getLong("exp"));
-		charInfopackage.setSp(chardata.getInt("sp"));
+		charInfopackage.setSp(chardata.getLong("sp"));
 		charInfopackage.setVitalityPoints(chardata.getInt("vitality_points"));
 		charInfopackage.setClanId(chardata.getInt("clanid"));
 		

@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -133,7 +134,7 @@ public class AdminExpSp implements IAdminCommandHandler
 		try
 		{
 			expval = Long.parseLong(exp);
-			spval = Long.parseLong(sp);
+			spval = Math.min(Long.parseLong(sp), Config.MAX_SP);
 		}
 		catch (Exception e)
 		{
@@ -172,11 +173,11 @@ public class AdminExpSp implements IAdminCommandHandler
 		final String exp = st.nextToken();
 		final String sp = st.nextToken();
 		long expval = 0;
-		int spval = 0;
+		long spval = 0;
 		try
 		{
 			expval = Long.parseLong(exp);
-			spval = Integer.parseInt(sp);
+			spval = Long.parseLong(sp);
 		}
 		catch (Exception e)
 		{
