@@ -179,6 +179,62 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		
 		_collisionRadiusGrown = set.getDouble("collisionRadiusGrown", 0);
 		_collisionHeightGrown = set.getDouble("collisionHeightGrown", 0);
+		
+		if (Config.ENABLE_NPC_STAT_MULTIPIERS) // Custom NPC Stat Multipliers
+		{
+			switch (_type)
+			{
+				case "L2Monster":
+				{
+					_baseHpMax *= Config.MONSTER_HP_MULTIPLIER;
+					_baseMpMax *= Config.MONSTER_MP_MULTIPLIER;
+					_basePAtk *= Config.MONSTER_PATK_MULTIPLIER;
+					_baseMAtk *= Config.MONSTER_MATK_MULTIPLIER;
+					_basePDef *= Config.MONSTER_PDEF_MULTIPLIER;
+					_baseMDef *= Config.MONSTER_MDEF_MULTIPLIER;
+					_aggroRange *= Config.MONSTER_AGRRO_RANGE_MULTIPLIER;
+					_clanHelpRange *= Config.MONSTER_CLAN_HELP_RANGE_MULTIPLIER;
+					break;
+				}
+				case "L2RaidBoss":
+				case "L2GrandBoss":
+				{
+					_baseHpMax *= Config.RAIDBOSS_HP_MULTIPLIER;
+					_baseMpMax *= Config.RAIDBOSS_MP_MULTIPLIER;
+					_basePAtk *= Config.RAIDBOSS_PATK_MULTIPLIER;
+					_baseMAtk *= Config.RAIDBOSS_MATK_MULTIPLIER;
+					_basePDef *= Config.RAIDBOSS_PDEF_MULTIPLIER;
+					_baseMDef *= Config.RAIDBOSS_MDEF_MULTIPLIER;
+					_aggroRange *= Config.RAIDBOSS_AGRRO_RANGE_MULTIPLIER;
+					_clanHelpRange *= Config.RAIDBOSS_CLAN_HELP_RANGE_MULTIPLIER;
+					break;
+				}
+				case "L2Guard":
+				{
+					_baseHpMax *= Config.GUARD_HP_MULTIPLIER;
+					_baseMpMax *= Config.GUARD_MP_MULTIPLIER;
+					_basePAtk *= Config.GUARD_PATK_MULTIPLIER;
+					_baseMAtk *= Config.GUARD_MATK_MULTIPLIER;
+					_basePDef *= Config.GUARD_PDEF_MULTIPLIER;
+					_baseMDef *= Config.GUARD_MDEF_MULTIPLIER;
+					_aggroRange *= Config.GUARD_AGRRO_RANGE_MULTIPLIER;
+					_clanHelpRange *= Config.GUARD_CLAN_HELP_RANGE_MULTIPLIER;
+					break;
+				}
+				case "L2Defender":
+				{
+					_baseHpMax *= Config.DEFENDER_HP_MULTIPLIER;
+					_baseMpMax *= Config.DEFENDER_MP_MULTIPLIER;
+					_basePAtk *= Config.DEFENDER_PATK_MULTIPLIER;
+					_baseMAtk *= Config.DEFENDER_MATK_MULTIPLIER;
+					_basePDef *= Config.DEFENDER_PDEF_MULTIPLIER;
+					_baseMDef *= Config.DEFENDER_MDEF_MULTIPLIER;
+					_aggroRange *= Config.DEFENDER_AGRRO_RANGE_MULTIPLIER;
+					_clanHelpRange *= Config.DEFENDER_CLAN_HELP_RANGE_MULTIPLIER;
+					break;
+				}
+			}
+		}
 	}
 	
 	@Override
