@@ -118,7 +118,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, dont add new skill
-					_log.info("> Couldnt parse " + skill + " in weapon enchant skills! item " + this);
+					LOGGER.info("> Couldnt parse " + skill + " in weapon enchant skills! item " + this);
 				}
 				if ((id > 0) && (level > 0))
 				{
@@ -144,7 +144,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info("> Couldnt parse " + skill + " in weapon onmagic skills! item " + this);
+					LOGGER.info("> Couldnt parse " + skill + " in weapon onmagic skills! item " + this);
 				}
 				if ((id > 0) && (level > 0) && (chance > 0))
 				{
@@ -171,7 +171,7 @@ public final class L2Weapon extends L2Item
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info("> Couldnt parse " + skill + " in weapon oncrit skills! item " + this);
+					LOGGER.info("> Couldnt parse " + skill + " in weapon oncrit skills! item " + this);
 				}
 				if ((id > 0) && (level > 0) && (chance > 0))
 				{

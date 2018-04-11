@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class SoIManager
 {
-	protected static final Logger _log = Logger.getLogger(SoIManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(SoIManager.class.getName());
 	
 	private static final long SOI_OPEN_TIME = 24 * 60 * 60 * 1000L;
 	
@@ -61,7 +61,7 @@ public class SoIManager
 		{
 			openSeed(getOpenedTime());
 		}
-		_log.info("Seed of Infinity Manager: Loaded. Current stage is: " + getCurrentStage());
+		LOGGER.info("Seed of Infinity Manager: Loaded. Current stage is: " + getCurrentStage());
 	}
 	
 	public static int getCurrentStage()
@@ -97,7 +97,7 @@ public class SoIManager
 		setEkimusCount(0);
 		setHoEDefCount(0);
 		checkStageAndSpawn();
-		_log.info("Seed of Infinity Manager: Set to stage " + stage);
+		LOGGER.info("Seed of Infinity Manager: Set to stage " + stage);
 	}
 	
 	public static boolean isSeedOpen()
@@ -112,7 +112,7 @@ public class SoIManager
 			return;
 		}
 		GlobalVariablesManager.getInstance().set("SoI_opened", (System.currentTimeMillis() + time) / 1000L);
-		_log.info("Seed of Infinity Manager: Opening the seed for " + Util.formatTime((int) time / 1000));
+		LOGGER.info("Seed of Infinity Manager: Opening the seed for " + Util.formatTime((int) time / 1000));
 		spawnOpenedSeed();
 		DoorData.getInstance().getDoor(14240102).openMe();
 		
@@ -125,7 +125,7 @@ public class SoIManager
 	
 	public static void closeSeed()
 	{
-		_log.info("Seed of Infinity Manager: Closing the seed.");
+		LOGGER.info("Seed of Infinity Manager: Closing the seed.");
 		GlobalVariablesManager.getInstance().remove("SoI_opened");
 		// EnergySeeds.SoiSeedStop();
 		DoorData.getInstance().getDoor(14240102).closeMe();

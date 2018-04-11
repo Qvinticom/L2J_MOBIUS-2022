@@ -106,7 +106,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		if ((_level < 1) || (_level > 100) || (_id < 1) || (_id > 32000))
 		{
 			Util.handleIllegalPlayerAction(activeChar, "Wrong Packet Data in Aquired Skill", Config.DEFAULT_PUNISH);
-			_log.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + activeChar);
+			LOGGER.warning("Recived Wrong Packet Data in Aquired Skill - id: " + _id + " level: " + _level + " for " + activeChar);
 			return;
 		}
 		
@@ -125,7 +125,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		final Skill skill = SkillData.getInstance().getSkill(_id, _level, existingSkill == null ? 0 : existingSkill.getSubLevel());
 		if (skill == null)
 		{
-			_log.warning(RequestAcquireSkill.class.getSimpleName() + ": Player " + activeChar.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");
+			LOGGER.warning(RequestAcquireSkill.class.getSimpleName() + ": Player " + activeChar.getName() + " is trying to learn a null skill Id: " + _id + " level: " + _level + "!");
 			return;
 		}
 		
@@ -135,7 +135,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		{
 			if (prevSkillLevel == _level)
 			{
-				_log.warning("Player " + activeChar.getName() + " is trying to learn a skill that already knows, Id: " + _id + " level: " + _level + "!");
+				LOGGER.warning("Player " + activeChar.getName() + " is trying to learn a skill that already knows, Id: " + _id + " level: " + _level + "!");
 				return;
 			}
 			
@@ -517,7 +517,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.warning("Recived Wrong Packet Data in Aquired Skill, unknown skill type:" + _skillType);
+				LOGGER.warning("Recived Wrong Packet Data in Aquired Skill, unknown skill type:" + _skillType);
 				break;
 			}
 		}

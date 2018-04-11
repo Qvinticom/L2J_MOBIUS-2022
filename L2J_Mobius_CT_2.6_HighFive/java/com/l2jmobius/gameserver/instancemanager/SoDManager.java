@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 
 public final class SoDManager
 {
-	private static final Logger _log = Logger.getLogger(SoDManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SoDManager.class.getName());
 	
 	public static String ENERGY_SEEDS = "EnergySeeds";
 	
@@ -44,7 +44,7 @@ public final class SoDManager
 		_SoDLastStateChangeDate = Calendar.getInstance();
 		loadData();
 		handleSodStages();
-		_log.info("Seed of Destruction Manager: Loaded. Current stage is: " + getSoDState());
+		LOGGER.info("Seed of Destruction Manager: Loaded. Current stage is: " + getSoDState());
 	}
 	
 	public void saveData(byte seedType)
@@ -71,7 +71,7 @@ public final class SoDManager
 			}
 			default:
 			{
-				_log.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
+				LOGGER.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
 				break;
 			}
 		}
@@ -125,7 +125,7 @@ public final class SoDManager
 			}
 			default:
 			{
-				_log.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
+				LOGGER.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
 			}
 		}
 	}
@@ -135,7 +135,7 @@ public final class SoDManager
 		final Quest quest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
 		if (quest == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 		}
 		else
 		{
@@ -156,7 +156,7 @@ public final class SoDManager
 			final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
 			if (esQuest == null)
 			{
-				_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+				LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 			}
 			else
 			{
@@ -172,7 +172,7 @@ public final class SoDManager
 	
 	public void setSoDState(int value, boolean doSave)
 	{
-		_log.info(getClass().getSimpleName() + ": New Seed of Destruction state -> " + value + ".");
+		LOGGER.info(getClass().getSimpleName() + ": New Seed of Destruction state -> " + value + ".");
 		_SoDLastStateChangeDate.setTimeInMillis(System.currentTimeMillis());
 		_SoDState = value;
 		// reset number of Tiat kills

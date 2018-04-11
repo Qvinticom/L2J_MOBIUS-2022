@@ -42,7 +42,7 @@ public final class L2Augmentation
 	
 	public static class AugmentationStatBoni
 	{
-		private static final Logger _log = Logger.getLogger(AugmentationStatBoni.class.getName());
+		private static final Logger LOGGER = Logger.getLogger(AugmentationStatBoni.class.getName());
 		private final List<Options> _options = new ArrayList<>();
 		private boolean _active;
 		
@@ -62,7 +62,7 @@ public final class L2Augmentation
 				}
 				else
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find option: " + stat);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find option: " + stat);
 				}
 			}
 		}

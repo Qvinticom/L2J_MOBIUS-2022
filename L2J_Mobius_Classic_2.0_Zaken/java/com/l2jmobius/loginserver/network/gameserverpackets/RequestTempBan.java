@@ -31,7 +31,7 @@ import com.l2jmobius.loginserver.LoginController;
  */
 public class RequestTempBan extends BaseRecievePacket
 {
-	private static final Logger _log = Logger.getLogger(RequestTempBan.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RequestTempBan.class.getName());
 	
 	private final String _accountName;
 	@SuppressWarnings("unused")
@@ -69,7 +69,7 @@ public class RequestTempBan extends BaseRecievePacket
 		}
 		catch (SQLException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		try

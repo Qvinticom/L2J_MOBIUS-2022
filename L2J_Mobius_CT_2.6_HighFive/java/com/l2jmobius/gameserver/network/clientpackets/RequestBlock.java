@@ -109,7 +109,7 @@ public final class RequestBlock implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.info("Unknown 0xA9 block type: " + _type);
+				LOGGER.info("Unknown 0xA9 block type: " + _type);
 			}
 		}
 	}

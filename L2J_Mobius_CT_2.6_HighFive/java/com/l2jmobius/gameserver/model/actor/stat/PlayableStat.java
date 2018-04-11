@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
 
 public class PlayableStat extends CharStat
 {
-	protected static final Logger _log = Logger.getLogger(PlayableStat.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(PlayableStat.class.getName());
 	
 	public PlayableStat(L2Playable activeChar)
 	{
@@ -179,7 +179,7 @@ public class PlayableStat extends CharStat
 	{
 		if (value < 0)
 		{
-			_log.warning("wrong usage");
+			LOGGER.warning("wrong usage");
 			return false;
 		}
 		final long currentSp = getSp();

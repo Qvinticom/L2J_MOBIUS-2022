@@ -50,7 +50,7 @@ public class RequestGetBossRecord implements IClientIncomingPacket
 		
 		if (_bossId != 0)
 		{
-			_log.info("C5: RequestGetBossRecord: d: " + _bossId + " ActiveChar: " + activeChar); // should be always 0, log it if isnt 0 for furture research
+			LOGGER.info("C5: RequestGetBossRecord: d: " + _bossId + " ActiveChar: " + activeChar); // should be always 0, log it if isnt 0 for furture research
 		}
 		
 		final int points = RaidBossPointsManager.getInstance().getPointsByOwnerId(activeChar.getObjectId());

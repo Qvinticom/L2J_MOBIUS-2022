@@ -22,6 +22,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
@@ -43,6 +44,8 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  */
 public final class DocumentItem extends DocumentBase implements IGameXmlReader
 {
+	Logger LOGGER = Logger.getLogger(DocumentItem.class.getName());
+	
 	private Item _currentItem = null;
 	private final List<L2Item> _itemsInFile = new LinkedList<>();
 	
@@ -92,7 +95,7 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader
 						}
 						catch (Exception e)
 						{
-							_log.log(Level.WARNING, "Cannot create item " + _currentItem.id, e);
+							LOGGER.log(Level.WARNING, "Cannot create item " + _currentItem.id, e);
 						}
 					}
 				}

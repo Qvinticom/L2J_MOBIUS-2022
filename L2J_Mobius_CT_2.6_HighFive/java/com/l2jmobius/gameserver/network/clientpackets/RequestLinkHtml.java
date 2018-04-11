@@ -50,20 +50,20 @@ public final class RequestLinkHtml implements IClientIncomingPacket
 		
 		if (_link.isEmpty())
 		{
-			_log.warning("Player " + actor.getName() + " sent empty html link!");
+			LOGGER.warning("Player " + actor.getName() + " sent empty html link!");
 			return;
 		}
 		
 		if (_link.contains(".."))
 		{
-			_log.warning("Player " + actor.getName() + " sent invalid html link: link " + _link);
+			LOGGER.warning("Player " + actor.getName() + " sent invalid html link: link " + _link);
 			return;
 		}
 		
 		final int htmlObjectId = actor.validateHtmlAction("link " + _link);
 		if (htmlObjectId == -1)
 		{
-			_log.warning("Player " + actor.getName() + " sent non cached  html link: link " + _link);
+			LOGGER.warning("Player " + actor.getName() + " sent non cached  html link: link " + _link);
 			return;
 		}
 		

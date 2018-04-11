@@ -30,7 +30,7 @@ import handlers.effecthandlers.*;
  */
 public final class EffectMasterHandler
 {
-	private static final Logger _log = Logger.getLogger(EffectMasterHandler.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EffectMasterHandler.class.getName());
 	
 	private static final Class<?>[] EFFECTS =
 	{
@@ -211,11 +211,11 @@ public final class EffectMasterHandler
 		// And lets try get size
 		try
 		{
-			_log.log(Level.INFO, EffectMasterHandler.class.getSimpleName() + ": Loaded " + EffectHandler.getInstance().size() + " effect handlers.");
+			LOGGER.log(Level.INFO, EffectMasterHandler.class.getSimpleName() + ": Loaded " + EffectHandler.getInstance().size() + " effect handlers.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed invoking size method for handler: " + EffectMasterHandler.class.getSimpleName(), e);
+			LOGGER.log(Level.WARNING, "Failed invoking size method for handler: " + EffectMasterHandler.class.getSimpleName(), e);
 		}
 	}
 }

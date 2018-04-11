@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class OlympiadGameManager implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(OlympiadGameManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OlympiadGameManager.class.getName());
 	private static final int STADIUM_COUNT = 80; // TODO dynamic
 	
 	private volatile boolean _battleStarted = false;
@@ -60,7 +60,7 @@ public class OlympiadGameManager implements Runnable
 			_tasks.add(stadium);
 		}
 		
-		_log.info("Olympiad System: Loaded " + _tasks.size() + " stadiums.");
+		LOGGER.info("Olympiad System: Loaded " + _tasks.size() + " stadiums.");
 	}
 	
 	public static OlympiadGameManager getInstance()
@@ -188,7 +188,7 @@ public class OlympiadGameManager implements Runnable
 			{
 				OlympiadManager.getInstance().clearRegistered();
 				_battleStarted = false;
-				_log.info("Olympiad System: All current games finished.");
+				LOGGER.info("Olympiad System: All current games finished.");
 			}
 		}
 	}

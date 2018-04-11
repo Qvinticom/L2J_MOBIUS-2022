@@ -66,7 +66,7 @@ public final class RestorationRandom extends AbstractEffect
 		
 		if (exSkill.getProductItems().isEmpty())
 		{
-			_log.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + info.getSkill().getId());
+			LOGGER.warning("Extractable Skill with no data, probably wrong/empty table in Skill Id: " + info.getSkill().getId());
 			return;
 		}
 		

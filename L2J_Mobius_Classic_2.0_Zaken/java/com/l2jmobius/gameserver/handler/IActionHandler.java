@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public interface IActionHandler
 {
-	Logger _log = Logger.getLogger(IActionHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(IActionHandler.class.getName());
 	
 	boolean action(L2PcInstance activeChar, L2Object target, boolean interact);
 	

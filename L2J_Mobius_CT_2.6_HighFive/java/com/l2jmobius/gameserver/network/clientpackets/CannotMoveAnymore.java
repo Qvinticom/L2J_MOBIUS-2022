@@ -63,7 +63,7 @@ public final class CannotMoveAnymore implements IClientIncomingPacket
 		// player.stopMove();
 		//
 		// if (Config.DEBUG)
-		// _log.fine("client: x:"+_x+" y:"+_y+" z:"+_z+
+		// LOGGER.fine("client: x:"+_x+" y:"+_y+" z:"+_z+
 		// " server x:"+player.getX()+" y:"+player.getZ()+" z:"+player.getZ());
 		// StopMove smwl = new StopMove(player);
 		// getClient().getActiveChar().sendPacket(smwl);

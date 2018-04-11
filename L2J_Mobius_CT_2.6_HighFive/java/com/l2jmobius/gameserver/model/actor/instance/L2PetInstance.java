@@ -556,7 +556,7 @@ public class L2PetInstance extends L2Summon
 			final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
 			if (handler == null)
 			{
-				_log.warning("No item handler registered for item ID: " + target.getId() + ".");
+				LOGGER.warning("No item handler registered for item ID: " + target.getId() + ".");
 			}
 			else
 			{
@@ -751,7 +751,7 @@ public class L2PetInstance extends L2Summon
 			
 			if (removedItem == null)
 			{
-				_log.warning("Couldn't destroy pet control item for " + owner + " pet: " + this + " evolve: " + evolve);
+				LOGGER.warning("Couldn't destroy pet control item for " + owner + " pet: " + this + " evolve: " + evolve);
 			}
 			else
 			{
@@ -1036,7 +1036,7 @@ public class L2PetInstance extends L2Summon
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not store pet effect data: ", e);
+			LOGGER.log(Level.WARNING, "Could not store pet effect data: ", e);
 		}
 	}
 	
@@ -1075,7 +1075,7 @@ public class L2PetInstance extends L2Summon
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
 		}
 		finally
 		{
@@ -1339,7 +1339,7 @@ public class L2PetInstance extends L2Summon
 		}
 		else
 		{
-			_log.log(Level.WARNING, "Pet control item null, for pet: " + toString());
+			LOGGER.log(Level.WARNING, "Pet control item null, for pet: " + toString());
 		}
 		super.setName(name);
 	}

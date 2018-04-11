@@ -340,7 +340,7 @@ import handlers.voicedcommandhandlers.StatsVCmd;
  */
 public class MasterHandler
 {
-	private static final Logger _log = Logger.getLogger(MasterHandler.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MasterHandler.class.getName());
 	
 	private static final IHandler<?, ?>[] LOAD_INSTANCES =
 	{
@@ -678,7 +678,7 @@ public class MasterHandler
 	
 	public static void main(String[] args)
 	{
-		_log.info("Loading Handlers...");
+		LOGGER.info("Loading Handlers...");
 		
 		final Map<IHandler<?, ?>, Method> registerHandlerMethods = new HashMap<>();
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
@@ -695,7 +695,7 @@ public class MasterHandler
 		
 		registerHandlerMethods.entrySet().stream().filter(e -> e.getValue() == null).forEach(e ->
 		{
-			_log.warning("Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
+			LOGGER.warning("Failed loading handlers of: " + e.getKey().getClass().getSimpleName() + " seems registerHandler function does not exist.");
 		});
 		
 		for (Class<?> classes[] : HANDLERS)
@@ -720,7 +720,7 @@ public class MasterHandler
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
+					LOGGER.log(Level.WARNING, "Failed loading handler: " + c.getSimpleName(), e);
 					continue;
 				}
 			}
@@ -757,9 +757,9 @@ public class MasterHandler
 		
 		for (IHandler<?, ?> loadInstance : LOAD_INSTANCES)
 		{
-			_log.info(loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
+			LOGGER.info(loadInstance.getClass().getSimpleName() + ": Loaded " + loadInstance.size() + " Handlers");
 		}
 		
-		_log.info("Handlers Loaded...");
+		LOGGER.info("Handlers Loaded...");
 	}
 }

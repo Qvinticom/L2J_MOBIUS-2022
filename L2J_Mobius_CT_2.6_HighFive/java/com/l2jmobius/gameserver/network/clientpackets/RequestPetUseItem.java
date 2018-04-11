@@ -136,7 +136,7 @@ public final class RequestPetUseItem implements IClientIncomingPacket
 			else
 			{
 				activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
-				_log.warning("No item handler registered for itemId: " + item.getId());
+				LOGGER.warning("No item handler registered for itemId: " + item.getId());
 			}
 		}
 	}

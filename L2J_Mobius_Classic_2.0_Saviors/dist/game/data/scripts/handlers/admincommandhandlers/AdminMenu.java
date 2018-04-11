@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class AdminMenu implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminMenu.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminMenu.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -112,7 +112,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 		else if (command.startsWith("admin_recall_clan_menu"))
@@ -141,7 +141,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 		else if (command.startsWith("admin_goto_char_menu"))
@@ -190,7 +190,7 @@ public class AdminMenu implements IAdminCommandHandler
 				if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access right to use this command!");
-					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
+					LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
 				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
@@ -207,7 +207,7 @@ public class AdminMenu implements IAdminCommandHandler
 				if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access right to use this command!");
-					_log.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
+					LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
 					return false;
 				}
 				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);

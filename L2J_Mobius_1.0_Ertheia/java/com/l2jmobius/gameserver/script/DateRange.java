@@ -27,7 +27,7 @@ import java.util.logging.Logger;
  */
 public class DateRange
 {
-	protected static final Logger _log = Logger.getLogger(DateRange.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(DateRange.class.getName());
 	private final Date _startDate, _endDate;
 	
 	public DateRange(Date from, Date to)
@@ -47,7 +47,7 @@ public class DateRange
 			}
 			catch (ParseException e)
 			{
-				_log.log(Level.WARNING, "Invalid Date Format.", e);
+				LOGGER.log(Level.WARNING, "Invalid Date Format.", e);
 			}
 		}
 		return new DateRange(null, null);

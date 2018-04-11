@@ -56,11 +56,11 @@ final class GeoEnginePathfinding extends GeoEngine
 			}
 			catch (Exception e)
 			{
-				_log.warning("GeoEnginePathfinding: Can not load buffer setting: " + buf);
+				LOGGER.warning("GeoEnginePathfinding: Can not load buffer setting: " + buf);
 			}
 		}
 		
-		_log.info("GeoEnginePathfinding: Loaded " + count + " node buffers.");
+		LOGGER.info("GeoEnginePathfinding: Loaded " + count + " node buffers.");
 	}
 	
 	@Override
@@ -108,7 +108,7 @@ final class GeoEnginePathfinding extends GeoEngine
 		}
 		catch (Exception e)
 		{
-			_log.warning(e.getMessage());
+			LOGGER.warning(e.getMessage());
 			return null;
 		}
 		finally

@@ -161,7 +161,7 @@ public final class RequestBuyItem implements IClientIncomingPacket
 			long price = product.getPrice();
 			if (price < 0)
 			{
-				_log.warning("ERROR, no price found .. wrong buylist ??");
+				LOGGER.warning("ERROR, no price found .. wrong buylist ??");
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}

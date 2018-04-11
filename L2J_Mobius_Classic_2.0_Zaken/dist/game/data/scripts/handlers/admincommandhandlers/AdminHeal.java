@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class AdminHeal implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminRes.class.getName());
+	private static Logger LOGGER = Logger.getLogger(AdminRes.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_heal"
@@ -57,7 +57,7 @@ public class AdminHeal implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					_log.warning("Heal error: " + e);
+					LOGGER.warning("Heal error: " + e);
 				}
 				activeChar.sendMessage("Incorrect target/radius specified.");
 			}

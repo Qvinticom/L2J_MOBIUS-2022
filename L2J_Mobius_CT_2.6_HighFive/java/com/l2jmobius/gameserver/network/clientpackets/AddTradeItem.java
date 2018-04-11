@@ -57,7 +57,7 @@ public final class AddTradeItem implements IClientIncomingPacket
 		final TradeList trade = player.getActiveTradeList();
 		if (trade == null)
 		{
-			_log.warning("Character: " + player.getName() + " requested item:" + _objectId + " add without active tradelist:" + _tradeId);
+			LOGGER.warning("Character: " + player.getName() + " requested item:" + _objectId + " add without active tradelist:" + _tradeId);
 			return;
 		}
 		
@@ -67,7 +67,7 @@ public final class AddTradeItem implements IClientIncomingPacket
 			// Trade partner not found, cancel trade
 			if (partner != null)
 			{
-				_log.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
+				LOGGER.warning("Character:" + player.getName() + " requested invalid trade object: " + _objectId);
 			}
 			player.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
 			player.cancelActiveTrade();

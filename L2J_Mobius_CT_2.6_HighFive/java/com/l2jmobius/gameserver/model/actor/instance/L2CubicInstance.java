@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public final class L2CubicInstance implements IIdentifiable
 {
-	private static final Logger _log = Logger.getLogger(L2CubicInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2CubicInstance.class.getName());
 	
 	// Type of Cubics
 	public static final int STORM_CUBIC = 1;
@@ -486,7 +486,7 @@ public final class L2CubicInstance implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "", e);
+			LOGGER.log(Level.SEVERE, "", e);
 		}
 	}
 	

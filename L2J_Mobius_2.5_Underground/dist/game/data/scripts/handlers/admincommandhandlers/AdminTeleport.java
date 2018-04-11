@@ -50,7 +50,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class AdminTeleport implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminTeleport.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminTeleport.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -525,7 +525,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (template1 == null)
 			{
 				activeChar.sendMessage("Incorrect monster template.");
-				_log.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
+				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
 				return;
 			}
 			
@@ -533,7 +533,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (spawn == null)
 			{
 				activeChar.sendMessage("Incorrect monster spawn.");
-				_log.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
+				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
 				return;
 			}
 			final int respawnTime = spawn.getRespawnDelay() / 1000;
@@ -575,7 +575,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			if (spawn == null)
 			{
 				activeChar.sendMessage("Incorrect raid spawn.");
-				_log.warning("ERROR: NPC Id" + target.getId() + " has a 'null' spawn.");
+				LOGGER.warning("ERROR: NPC Id" + target.getId() + " has a 'null' spawn.");
 				return;
 			}
 			DBSpawnManager.getInstance().deleteSpawn(spawn, true);

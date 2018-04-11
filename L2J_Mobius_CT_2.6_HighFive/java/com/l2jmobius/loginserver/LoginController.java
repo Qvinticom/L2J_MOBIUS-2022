@@ -51,7 +51,7 @@ import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason
 
 public class LoginController
 {
-	protected static final Logger _log = Logger.getLogger(LoginController.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(LoginController.class.getName());
 	
 	private static LoginController _instance;
 	
@@ -78,7 +78,7 @@ public class LoginController
 	
 	private LoginController() throws GeneralSecurityException
 	{
-		_log.info("Loading LoginController...");
+		LOGGER.info("Loading LoginController...");
 		
 		_keyPairs = new ScrambledKeyPair[10];
 		_blowfishKeyGenerator = KeyGenerator.getInstance("Blowfish");
@@ -91,7 +91,7 @@ public class LoginController
 			_keyPairs[i] = new ScrambledKeyPair(rsaKeyPairGenerator.generateKeyPair());
 		}
 		
-		_log.info("Cached 10 KeyPairs for RSA communication.");
+		LOGGER.info("Cached 10 KeyPairs for RSA communication.");
 		
 		final Thread purge = new PurgeThread();
 		purge.setDaemon(true);
@@ -156,7 +156,7 @@ public class LoginController
 			addBanForAddress(addr, Config.LOGIN_BLOCK_AFTER_BAN * 1000);
 			// we need to clear the failed login attempts here, so after the ip ban is over the client has another 5 attempts
 			clearFailedLoginAttemps(addr);
-			_log.warning("Added banned address " + addr.getHostAddress() + "! Too many login attemps.");
+			LOGGER.warning("Added banned address " + addr.getHostAddress() + "! Too many login attemps.");
 		}
 	}
 	
@@ -218,16 +218,16 @@ public class LoginController
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception while auto creating account for '" + login + "'!", e);
+				LOGGER.log(Level.WARNING, "Exception while auto creating account for '" + login + "'!", e);
 				return null;
 			}
 			
-			_log.info("Auto created account '" + login + "'.");
+			LOGGER.info("Auto created account '" + login + "'.");
 			return retriveAccountInfo(addr, login, password, false);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception while retriving account info for '" + login + "'!", e);
+			LOGGER.log(Level.WARNING, "Exception while retriving account info for '" + login + "'!", e);
 			return null;
 		}
 	}
@@ -301,7 +301,7 @@ public class LoginController
 			if ((bi > 0) && (bi < System.currentTimeMillis()))
 			{
 				_bannedIps.remove(address);
-				_log.info("Removed expired ip address ban " + address.getHostAddress() + ".");
+				LOGGER.info("Removed expired ip address ban " + address.getHostAddress() + ".");
 				return false;
 			}
 			return true;
@@ -414,7 +414,7 @@ public class LoginController
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, "Could not set lastServer: " + e.getMessage(), e);
 				}
 			}
 			return loginOk;
@@ -433,7 +433,7 @@ public class LoginController
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not set accessLevel: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not set accessLevel: " + e.getMessage(), e);
 		}
 	}
 	
@@ -452,7 +452,7 @@ public class LoginController
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not set last tracert: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not set last tracert: " + e.getMessage(), e);
 		}
 	}
 	
@@ -532,13 +532,13 @@ public class LoginController
 			{
 				if (!ipWhiteList.isEmpty() && !ipWhiteList.contains(address))
 				{
-					_log.warning("Account checkin attemp from address(" + address.getHostAddress() + ") not present on whitelist for account '" + info.getLogin() + "'.");
+					LOGGER.warning("Account checkin attemp from address(" + address.getHostAddress() + ") not present on whitelist for account '" + info.getLogin() + "'.");
 					return false;
 				}
 				
 				if (!ipBlackList.isEmpty() && ipBlackList.contains(address))
 				{
-					_log.warning("Account checkin attemp from address(" + address.getHostAddress() + ") on blacklist for account '" + info.getLogin() + "'.");
+					LOGGER.warning("Account checkin attemp from address(" + address.getHostAddress() + ") on blacklist for account '" + info.getLogin() + "'.");
 					return false;
 				}
 			}
@@ -558,7 +558,7 @@ public class LoginController
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not finish login process!", e);
+			LOGGER.log(Level.WARNING, "Could not finish login process!", e);
 			return false;
 		}
 	}

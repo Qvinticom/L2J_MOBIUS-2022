@@ -23,6 +23,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -67,6 +68,8 @@ import instances.AbstractInstance;
  */
 public final class Stage1 extends AbstractInstance implements IGameXmlReader
 {
+	Logger LOGGER = Logger.getLogger(Stage1.class.getName());
+	
 	protected static class SODSpawn
 	{
 		public boolean isZone = false;
@@ -207,7 +210,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 	public void load()
 	{
 		parseDatapackFile("data/scripts/ai/bosses/Tiat/SeedOfDestruction.xml");
-		_log.info("[Seed of Destruction] Loaded " + _spawnZoneList.size() + " spawn zones data.");
+		LOGGER.info("[Seed of Destruction] Loaded " + _spawnZoneList.size() + " spawn zones data.");
 	}
 	
 	@Override
@@ -346,7 +349,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 				}
 				else
 				{
-					_log.info("[Seed of Destruction] Missing zone: " + spw.zone);
+					LOGGER.info("[Seed of Destruction] Missing zone: " + spw.zone);
 				}
 				
 			}

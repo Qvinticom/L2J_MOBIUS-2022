@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class CHSiegeManager
 {
-	private static final Logger _log = Logger.getLogger(CHSiegeManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CHSiegeManager.class.getName());
 	private static final String SQL_LOAD_HALLS = "SELECT * FROM siegable_clanhall";
 	
 	private final Map<Integer, SiegableHall> _siegableHalls = new HashMap<>();
@@ -76,11 +76,11 @@ public final class CHSiegeManager
 				_siegableHalls.put(id, hall);
 				ClanHallManager.addClanHall(hall);
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + _siegableHalls.size() + " conquerable clan halls.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _siegableHalls.size() + " conquerable clan halls.");
 		}
 		catch (Exception e)
 		{
-			_log.warning("CHSiegeManager: Could not load siegable clan halls!:" + e.getMessage());
+			LOGGER.warning("CHSiegeManager: Could not load siegable clan halls!:" + e.getMessage());
 		}
 	}
 	

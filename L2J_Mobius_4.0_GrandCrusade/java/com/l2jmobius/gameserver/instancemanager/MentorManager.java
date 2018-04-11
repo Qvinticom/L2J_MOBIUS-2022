@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.model.variables.PlayerVariables;
  */
 public class MentorManager
 {
-	private static final Logger _log = Logger.getLogger(MentorManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MentorManager.class.getName());
 	
 	private final Map<Integer, Map<Integer, L2Mentee>> _menteeData = new ConcurrentHashMap<>();
 	private final Map<Integer, L2Mentee> _mentors = new ConcurrentHashMap<>();
@@ -65,7 +65,7 @@ public class MentorManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
@@ -85,7 +85,7 @@ public class MentorManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
@@ -104,7 +104,7 @@ public class MentorManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		finally
 		{

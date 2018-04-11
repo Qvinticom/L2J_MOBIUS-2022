@@ -86,7 +86,7 @@ public class ChangePassword implements IVoicedCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("A problem occured while changing password!");
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 		else

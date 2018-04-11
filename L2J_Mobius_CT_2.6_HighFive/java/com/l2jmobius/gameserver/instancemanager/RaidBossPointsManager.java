@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RaidBossPointsManager
 {
-	private static final Logger _log = Logger.getLogger(RaidBossPointsManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RaidBossPointsManager.class.getName());
 	
 	private final Map<Integer, Map<Integer, Integer>> _list = new ConcurrentHashMap<>();
 	
@@ -68,11 +68,11 @@ public class RaidBossPointsManager
 				values.put(bossId, points);
 				_list.put(charId, values);
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + _list.size() + " Characters Raid Points.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _list.size() + " Characters Raid Points.");
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt load raid points ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldnt load raid points ", e);
 		}
 	}
 	
@@ -88,7 +88,7 @@ public class RaidBossPointsManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update char raid points for player: " + player, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update char raid points for player: " + player, e);
 		}
 	}
 	
@@ -130,7 +130,7 @@ public class RaidBossPointsManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't clean raid points", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't clean raid points", e);
 		}
 	}
 	

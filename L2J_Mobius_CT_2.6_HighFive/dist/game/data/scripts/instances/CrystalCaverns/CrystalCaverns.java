@@ -1707,7 +1707,7 @@ public final class CrystalCaverns extends AbstractInstance
 						}
 						default:
 						{
-							_log.warning("CrystalCavern-SteamCorridor: status " + world.getStatus() + " error. OracleOrder not found in " + world.getInstanceId());
+							LOGGER.warning("CrystalCavern-SteamCorridor: status " + world.getStatus() + " error. OracleOrder not found in " + world.getInstanceId());
 							return "";
 						}
 					}

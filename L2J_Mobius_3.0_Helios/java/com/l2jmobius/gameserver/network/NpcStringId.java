@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 public final class NpcStringId
 {
-	private static final Logger _log = Logger.getLogger(NpcStringId.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(NpcStringId.class.getName());
 	public static final NpcStringId[] EMPTY_ARRAY = new NpcStringId[0];
 	private static Map<Integer, NpcStringId> VALUES = new HashMap<>();
 	
@@ -37969,7 +37969,7 @@ public final class NpcStringId
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
+					LOGGER.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
 				}
 			}
 		}

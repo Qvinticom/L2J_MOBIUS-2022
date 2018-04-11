@@ -624,7 +624,7 @@ public class L2Npc extends L2Character
 			}
 			else
 			{
-				_log.info(getClass().getSimpleName() + ": Unknown NPC bypass: \"" + command + "\" NpcId: " + getId());
+				LOGGER.info(getClass().getSimpleName() + ": Unknown NPC bypass: \"" + command + "\" NpcId: " + getId());
 			}
 		}
 	}
@@ -1189,7 +1189,7 @@ public class L2Npc extends L2Character
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed decayMe().", e);
+			LOGGER.log(Level.SEVERE, "Failed decayMe().", e);
 		}
 		
 		if (isChannelized())
@@ -1560,7 +1560,7 @@ public class L2Npc extends L2Character
 			
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
-				_log.severe("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+				LOGGER.severe("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
 				return null;
 			}
 			

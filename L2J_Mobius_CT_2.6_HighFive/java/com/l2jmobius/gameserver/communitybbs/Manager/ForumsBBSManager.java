@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class ForumsBBSManager extends BaseBBSManager
 {
-	private static Logger _log = Logger.getLogger(ForumsBBSManager.class.getName());
+	private static Logger LOGGER = Logger.getLogger(ForumsBBSManager.class.getName());
 	private final List<Forum> _table;
 	private int _lastid = 1;
 	
@@ -51,7 +51,7 @@ public class ForumsBBSManager extends BaseBBSManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
 		}
 	}
 	
@@ -61,7 +61,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	public void initRoot()
 	{
 		_table.forEach(f -> f.vload());
-		_log.info(getClass().getSimpleName() + ": Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _table.size() + " forums. Last forum id used: " + _lastid);
 	}
 	
 	/**

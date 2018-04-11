@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.data.xml.impl.UIData;
  */
 public class UIKeysSettings
 {
-	private static final Logger _log = Logger.getLogger(UIKeysSettings.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(UIKeysSettings.class.getName());
 	
 	private final int _playerObjId;
 	private Map<Integer, List<ActionKey>> _storedKeys;
@@ -111,7 +111,7 @@ public class UIKeysSettings
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
 		}
 		
 		query = "REPLACE INTO character_ui_actions (`charId`, `cat`, `order`, `cmd`, `key`, `tgKey1`, `tgKey2`, `show`) VALUES";
@@ -132,7 +132,7 @@ public class UIKeysSettings
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: saveInDB(): " + e.getMessage(), e);
 		}
 		_saved = true;
 	}
@@ -160,7 +160,7 @@ public class UIKeysSettings
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: getCatsFromDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: getCatsFromDB(): " + e.getMessage(), e);
 		}
 		
 		if (_storedCategories.isEmpty())
@@ -193,7 +193,7 @@ public class UIKeysSettings
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: getKeysFromDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: getKeysFromDB(): " + e.getMessage(), e);
 		}
 		
 		if (_storedKeys.isEmpty())

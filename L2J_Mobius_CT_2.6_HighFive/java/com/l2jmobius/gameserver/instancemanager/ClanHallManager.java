@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
  */
 public final class ClanHallManager
 {
-	protected static final Logger _log = Logger.getLogger(ClanHallManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ClanHallManager.class.getName());
 	
 	private final Map<Integer, AuctionableHall> _clanHall = new ConcurrentHashMap<>();
 	private final Map<Integer, AuctionableHall> _freeClanHall = new ConcurrentHashMap<>();
@@ -99,13 +99,13 @@ public final class ClanHallManager
 					ClanHallAuctionManager.getInstance().initNPC(id);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded: " + getClanHalls().size() + " clan halls");
-			_log.info(getClass().getSimpleName() + ": Loaded: " + getFreeClanHalls().size() + " free clan halls");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getClanHalls().size() + " clan halls");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getFreeClanHalls().size() + " free clan halls");
 			_loaded = true;
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: ClanHallManager.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: ClanHallManager.load(): " + e.getMessage(), e);
 		}
 	}
 	

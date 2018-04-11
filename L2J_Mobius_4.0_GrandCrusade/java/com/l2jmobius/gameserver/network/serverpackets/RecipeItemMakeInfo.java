@@ -77,7 +77,7 @@ public class RecipeItemMakeInfo implements IClientOutgoingPacket
 			packet.writeQ(_offeringMaximumAdena); // Adena worth of items for maximum offering.
 			return true;
 		}
-		_log.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
+		LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
 		return false;
 	}
 }

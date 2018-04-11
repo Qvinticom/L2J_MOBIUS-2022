@@ -324,7 +324,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			world.setTemplateId(INSTANCEID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
-			_log.info("Heart Infinity Attack started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Heart Infinity Attack started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
 			if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 			{

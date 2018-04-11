@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStop;
  */
 public class AttackStanceTaskManager
 {
-	protected static final Logger _log = Logger.getLogger(AttackStanceTaskManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(AttackStanceTaskManager.class.getName());
 	
 	protected static final Map<L2Character, Long> _attackStanceTasks = new ConcurrentHashMap<>();
 	
@@ -138,7 +138,7 @@ public class AttackStanceTaskManager
 			catch (Exception e)
 			{
 				// Unless caught here, players remain in attack positions.
-				_log.log(Level.WARNING, "Error in FightModeScheduler: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Error in FightModeScheduler: " + e.getMessage(), e);
 			}
 		}
 	}

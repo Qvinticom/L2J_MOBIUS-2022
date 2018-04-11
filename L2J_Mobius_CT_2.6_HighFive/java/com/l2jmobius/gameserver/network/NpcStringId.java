@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
 public final class NpcStringId
 {
-	private static final Logger _log = Logger.getLogger(NpcStringId.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(NpcStringId.class.getName());
 	private static final NSLocalisation[] EMPTY_NSL_ARRAY = new NSLocalisation[0];
 	public static final NpcStringId[] EMPTY_ARRAY = new NpcStringId[0];
 	
@@ -17812,7 +17812,7 @@ public final class NpcStringId
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
+					LOGGER.log(Level.WARNING, "NpcStringId: Failed field access for '" + field.getName() + "'", e);
 				}
 			}
 		}
@@ -17878,7 +17878,7 @@ public final class NpcStringId
 		
 		if (!Config.MULTILANG_NS_ENABLE)
 		{
-			_log.log(Level.INFO, "NpcStringId: MultiLanguage disabled.");
+			LOGGER.log(Level.INFO, "NpcStringId: MultiLanguage disabled.");
 			return;
 		}
 		
@@ -17901,7 +17901,7 @@ public final class NpcStringId
 				continue;
 			}
 			
-			_log.log(Level.INFO, "NpcStringId: Loading localisation for '" + lang + "'");
+			LOGGER.log(Level.INFO, "NpcStringId: Loading localisation for '" + lang + "'");
 			
 			try
 			{
@@ -17927,21 +17927,21 @@ public final class NpcStringId
 								}
 								if (nsId == null)
 								{
-									_log.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "NpcStringId: Unknown NSID '" + node.getNodeValue() + "', lang '" + lang + "'.");
 									continue;
 								}
 								
 								node = nnmb.getNamedItem("text");
 								if (node == null)
 								{
-									_log.log(Level.WARNING, "NpcStringId: No text defined for NSID '" + nsId + "', lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "NpcStringId: No text defined for NSID '" + nsId + "', lang '" + lang + "'.");
 									continue;
 								}
 								
 								text = node.getNodeValue();
 								if (text.isEmpty() || (text.length() > 255))
 								{
-									_log.log(Level.WARNING, "NpcStringId: Invalid text defined for NSID '" + nsId + "' (to long or empty), lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "NpcStringId: Invalid text defined for NSID '" + nsId + "' (to long or empty), lang '" + lang + "'.");
 									continue;
 								}
 								
@@ -17953,7 +17953,7 @@ public final class NpcStringId
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "NpcStringId: Failed loading '" + file + "'", e);
+				LOGGER.log(Level.SEVERE, "NpcStringId: Failed loading '" + file + "'", e);
 			}
 		}
 	}

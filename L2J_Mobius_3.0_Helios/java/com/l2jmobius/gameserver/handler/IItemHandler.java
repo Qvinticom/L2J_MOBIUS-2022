@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public interface IItemHandler
 {
-	Logger _log = Logger.getLogger(IItemHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(IItemHandler.class.getName());
 	
 	/**
 	 * Launch task associated to the item.

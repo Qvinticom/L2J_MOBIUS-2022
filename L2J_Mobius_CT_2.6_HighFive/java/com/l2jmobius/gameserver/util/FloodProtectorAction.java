@@ -40,7 +40,7 @@ public final class FloodProtectorAction
 	/**
 	 * Logger
 	 */
-	private static final Logger _log = Logger.getLogger(FloodProtectorAction.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FloodProtectorAction.class.getName());
 	/**
 	 * Client for this instance of flood protector.
 	 */
@@ -94,7 +94,7 @@ public final class FloodProtectorAction
 		
 		if ((curTick < _nextGameTick) || _punishmentInProgress)
 		{
-			if (_config.LOG_FLOODING && !_logged && _log.isLoggable(Level.WARNING))
+			if (_config.LOG_FLOODING && !_logged && LOGGER.isLoggable(Level.WARNING))
 			{
 				log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK), " ms after previous command");
 				_logged = true;
@@ -124,7 +124,7 @@ public final class FloodProtectorAction
 			return false;
 		}
 		
-		if ((_count.get() > 0) && _config.LOG_FLOODING && _log.isLoggable(Level.WARNING))
+		if ((_count.get() > 0) && _config.LOG_FLOODING && LOGGER.isLoggable(Level.WARNING))
 		{
 			log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
 		}
@@ -142,7 +142,7 @@ public final class FloodProtectorAction
 	{
 		Disconnection.of(_client).defaultSequence(false);
 		
-		if (_log.isLoggable(Level.WARNING))
+		if (LOGGER.isLoggable(Level.WARNING))
 		{
 			log("kicked for flooding");
 		}
@@ -154,7 +154,7 @@ public final class FloodProtectorAction
 	private void banAccount()
 	{
 		PunishmentManager.getInstance().startPunishment(new PunishmentTask(_client.getAccountName(), PunishmentAffect.ACCOUNT, PunishmentType.BAN, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
-		if (_log.isLoggable(Level.WARNING))
+		if (LOGGER.isLoggable(Level.WARNING))
 		{
 			log(" banned for flooding ", _config.PUNISHMENT_TIME <= 0 ? "forever" : "for " + (_config.PUNISHMENT_TIME / 60000) + " mins");
 		}
@@ -176,7 +176,7 @@ public final class FloodProtectorAction
 			PunishmentManager.getInstance().startPunishment(new PunishmentTask(charId, PunishmentAffect.CHARACTER, PunishmentType.JAIL, System.currentTimeMillis() + _config.PUNISHMENT_TIME, "", getClass().getSimpleName()));
 		}
 		
-		if (_log.isLoggable(Level.WARNING))
+		if (LOGGER.isLoggable(Level.WARNING))
 		{
 			log(" jailed for flooding ", _config.PUNISHMENT_TIME <= 0 ? "forever" : "for " + (_config.PUNISHMENT_TIME / 60000) + " mins");
 		}
@@ -238,6 +238,6 @@ public final class FloodProtectorAction
 		
 		Arrays.stream(lines).forEach(output::append);
 		
-		_log.warning(output.toString());
+		LOGGER.warning(output.toString());
 	}
 }

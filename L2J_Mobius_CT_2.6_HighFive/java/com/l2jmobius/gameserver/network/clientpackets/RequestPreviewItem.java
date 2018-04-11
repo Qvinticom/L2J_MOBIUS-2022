@@ -73,7 +73,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
@@ -152,7 +152,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		final L2MerchantInstance merchant = (target instanceof L2MerchantInstance) ? (L2MerchantInstance) target : null;
 		if (merchant == null)
 		{
-			_log.warning(getClass().getName() + " Null merchant!");
+			LOGGER.warning(getClass().getName() + " Null merchant!");
 			return;
 		}
 		

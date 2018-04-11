@@ -63,7 +63,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class TerritoryWarManager implements Siegable
 {
-	private static final Logger _log = Logger.getLogger(TerritoryWarManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TerritoryWarManager.class.getName());
 	
 	// SQL
 	private static final String DELETE = "DELETE FROM territory_registrations WHERE castleId = ? and registeredId = ?";
@@ -453,7 +453,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		else
 		{
-			_log.warning(getClass().getSimpleName() + ": Missing territory for new Ward owner: " + newOwnerId + ";" + territoryId);
+			LOGGER.warning(getClass().getSimpleName() + ": Missing territory for new Ward owner: " + newOwnerId + ";" + territoryId);
 		}
 		return ret;
 	}
@@ -743,7 +743,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": " + e.getMessage(), e);
 		}
 		return null;
 	}
@@ -760,7 +760,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: Territory War registration: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: Territory War registration: " + e.getMessage(), e);
 		}
 	}
 	
@@ -781,7 +781,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: Territory Data update: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: Territory Data update: " + e.getMessage(), e);
 		}
 	}
 	
@@ -832,14 +832,14 @@ public final class TerritoryWarManager implements Siegable
 					}
 					default:
 					{
-						_log.warning(getClass().getSimpleName() + ": Unknown npc type for " + rs.getInt("id"));
+						LOGGER.warning(getClass().getSimpleName() + ": Unknown npc type for " + rs.getInt("id"));
 					}
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": SpawnList error: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": SpawnList error: " + e.getMessage(), e);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -877,7 +877,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": territory list error(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": territory list error(): " + e.getMessage(), e);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -908,7 +908,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": registration list error: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": registration list error: " + e.getMessage(), e);
 		}
 	}
 	
@@ -916,7 +916,7 @@ public final class TerritoryWarManager implements Siegable
 	{
 		if (_territoryList == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": TerritoryList is NULL!");
+			LOGGER.warning(getClass().getSimpleName() + ": TerritoryList is NULL!");
 			return;
 		}
 		final List<Territory> activeTerritoryList = new LinkedList<>();
@@ -932,7 +932,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
+				LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
 			}
 		}
 		
@@ -963,7 +963,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
+				LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
 			}
 			if (fort != null)
 			{
@@ -975,7 +975,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
+				LOGGER.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
 			}
 			for (TerritoryNPCSpawn ward : t.getOwnedWard())
 			{
@@ -1015,7 +1015,7 @@ public final class TerritoryWarManager implements Siegable
 		_isTWInProgress = false;
 		if (_territoryList == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": TerritoryList is NULL!");
+			LOGGER.warning(getClass().getSimpleName() + ": TerritoryList is NULL!");
 			return;
 		}
 		final List<Territory> activeTerritoryList = new LinkedList<>();
@@ -1031,7 +1031,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
+				LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
 			}
 		}
 		
@@ -1067,7 +1067,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
+				LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
 			}
 			
 			if (fort != null)
@@ -1079,7 +1079,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
+				LOGGER.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
 			}
 			
 			if (t.getHQ() != null)
@@ -1132,7 +1132,7 @@ public final class TerritoryWarManager implements Siegable
 		final Quest twQuest = QuestManager.getInstance().getQuest(qn);
 		if (twQuest == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": missing main Quest!");
+			LOGGER.warning(getClass().getSimpleName() + ": missing main Quest!");
 			return false;
 		}
 		for (int castleId : _registeredClans.keySet())
@@ -1255,7 +1255,7 @@ public final class TerritoryWarManager implements Siegable
 	
 	protected class ScheduleStartTWTask implements Runnable
 	{
-		private final Logger _log = Logger.getLogger(ScheduleStartTWTask.class.getName());
+		private final Logger LOGGER = Logger.getLogger(ScheduleStartTWTask.class.getName());
 		
 		@Override
 		public void run()
@@ -1323,14 +1323,14 @@ public final class TerritoryWarManager implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
 	
 	private class ScheduleEndTWTask implements Runnable
 	{
-		private final Logger _log = Logger.getLogger(ScheduleEndTWTask.class.getName());
+		private final Logger LOGGER = Logger.getLogger(ScheduleEndTWTask.class.getName());
 		
 		protected ScheduleEndTWTask()
 		{
@@ -1387,7 +1387,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
@@ -1515,7 +1515,7 @@ public final class TerritoryWarManager implements Siegable
 	
 	public class Territory
 	{
-		private final Logger _log = Logger.getLogger(Territory.class.getName());
+		private final Logger LOGGER = Logger.getLogger(Territory.class.getName());
 		
 		private final int _territoryId;
 		private final int _castleId; // territory Castle
@@ -1556,20 +1556,20 @@ public final class TerritoryWarManager implements Siegable
 					return _territoryWardSpawnPlace;
 				}
 			}
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": no free Ward spawn found for territory: " + _territoryId);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": no free Ward spawn found for territory: " + _territoryId);
 			for (int i = 0; i < _territoryWardSpawnPlaces.length; i++)
 			{
 				if (_territoryWardSpawnPlaces[i] == null)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " is null!");
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " is null!");
 				}
 				else if (_territoryWardSpawnPlaces[i].getNpc() != null)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " has npc name: " + _territoryWardSpawnPlaces[i].getNpc().getName());
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " has npc name: " + _territoryWardSpawnPlaces[i].getNpc().getName());
 				}
 				else
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " is empty!");
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": territory ward spawn place " + i + " is empty!");
 				}
 			}
 			return null;
@@ -1584,7 +1584,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			if ((type < 0) || (type > 3))
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": wrong type(" + type + ") for NPCs spawn change!");
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": wrong type(" + type + ") for NPCs spawn change!");
 				return;
 			}
 			for (TerritoryNPCSpawn twSpawn : _spawnList)
@@ -1621,7 +1621,7 @@ public final class TerritoryWarManager implements Siegable
 					return;
 				}
 			}
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Can't delete wardId: " + wardId + " for territory: " + _territoryId);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Can't delete wardId: " + wardId + " for territory: " + _territoryId);
 		}
 		
 		public int getTerritoryId()

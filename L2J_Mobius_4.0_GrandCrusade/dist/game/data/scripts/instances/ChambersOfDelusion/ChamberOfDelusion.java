@@ -430,7 +430,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Error occured in room change task: ", e);
+					LOGGER.log(Level.WARNING, "Error occured in room change task: ", e);
 				}
 			}, nextInterval - 5000);
 			world.setParameter("roomChangeTask", roomChangeTask);

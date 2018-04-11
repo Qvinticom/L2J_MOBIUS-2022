@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
  */
 public final class EventDispatcher
 {
-	private static final Logger _log = Logger.getLogger(EventDispatcher.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EventDispatcher.class.getName());
 	
 	protected EventDispatcher()
 	{
@@ -83,7 +83,7 @@ public final class EventDispatcher
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
 		}
 		return null;
 	}
@@ -172,7 +172,7 @@ public final class EventDispatcher
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't notify event " + event.getClass().getSimpleName(), e);
 		}
 		return null;
 	}
@@ -237,7 +237,7 @@ public final class EventDispatcher
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception during notification of event: " + event.getClass().getSimpleName() + " listener: " + listener.getClass().getSimpleName(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception during notification of event: " + event.getClass().getSimpleName() + " listener: " + listener.getClass().getSimpleName(), e);
 			}
 		}
 		

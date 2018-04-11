@@ -54,7 +54,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class Wedding implements IVoicedCommandHandler
 {
-	static final Logger _log = Logger.getLogger(Wedding.class.getName());
+	static final Logger LOGGER = Logger.getLogger(Wedding.class.getName());
 	private static final String[] _voicedCommands =
 	{
 		"divorce",
@@ -228,7 +228,7 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		catch (Exception e)
 		{
-			_log.warning("could not read friend data:" + e);
+			LOGGER.warning("could not read friend data:" + e);
 		}
 		
 		if (!FoundOnFriendList)
@@ -257,7 +257,7 @@ public class Wedding implements IVoicedCommandHandler
 		if (activeChar.getPartnerId() == 0)
 		{
 			activeChar.sendMessage("Couldn't find your fiance in the Database - Inform a Gamemaster.");
-			_log.severe("Married but couldn't find parter for " + activeChar.getName());
+			LOGGER.severe("Married but couldn't find parter for " + activeChar.getName());
 			return false;
 		}
 		
@@ -515,7 +515,7 @@ public class Wedding implements IVoicedCommandHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}

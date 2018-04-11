@@ -48,7 +48,7 @@ public class L2ClanHallZone extends L2ResidenceZone
 			}
 			else
 			{
-				_log.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
+				LOGGER.warning("L2ClanHallZone: Clan hall with id " + getResidenceId() + " does not exist!");
 			}
 		}
 		else

@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ShuttleInstance;
  */
 public class L2ShuttleEngine implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(L2ShuttleEngine.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2ShuttleEngine.class.getName());
 	
 	private static final int DELAY = 15 * 1000;
 	
@@ -117,7 +117,7 @@ public class L2ShuttleEngine implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.INFO, e.getMessage(), e);
+			LOGGER.log(Level.INFO, e.getMessage(), e);
 		}
 	}
 }

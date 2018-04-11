@@ -77,7 +77,7 @@ public class RequestPledgeBonusReward implements IClientIncomingPacket
 			}
 			else
 			{
-				_log.warning(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
+				LOGGER.warning(player + " Attempting to claim reward but clan(" + clan + ") doesn't have such!");
 			}
 		}
 	}

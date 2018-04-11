@@ -93,7 +93,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 			if (!(Arrays.binarySearch(allowedActions, _actionId) >= 0))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
-				_log.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
+				LOGGER.warning("Player " + activeChar + " used action which he does not have! Id = " + _actionId + " transform: " + activeChar.getTransformation().orElse(null));
 				return;
 			}
 		}
@@ -143,7 +143,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.warning(activeChar.getName() + ": unhandled action type " + _actionId);
+				LOGGER.warning(activeChar.getName() + ": unhandled action type " + _actionId);
 				break;
 			}
 		}

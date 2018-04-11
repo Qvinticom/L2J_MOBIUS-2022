@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentType;
  */
 public final class PunishmentManager
 {
-	private static final Logger _log = Logger.getLogger(PunishmentManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PunishmentManager.class.getName());
 	
 	private final Map<PunishmentAffect, PunishmentHolder> _tasks = new ConcurrentHashMap<>();
 	
@@ -83,10 +83,10 @@ public final class PunishmentManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while loading punishments: ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while loading punishments: ", e);
 		}
 		
-		_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + initiated + " active and " + expired + " expired punishments.");
+		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + initiated + " active and " + expired + " expired punishments.");
 	}
 	
 	public void startPunishment(PunishmentTask task)

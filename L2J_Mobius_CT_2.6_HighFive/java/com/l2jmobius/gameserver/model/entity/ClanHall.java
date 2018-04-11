@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 
 public abstract class ClanHall
 {
-	protected static final Logger _log = Logger.getLogger(ClanHall.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	private final int _clanHallId;
 	private ArrayList<L2DoorInstance> _doors;
@@ -173,7 +173,7 @@ public abstract class ClanHall
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.SEVERE, "", e);
+					LOGGER.log(Level.SEVERE, "", e);
 				}
 			}
 		}
@@ -193,7 +193,7 @@ public abstract class ClanHall
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "Exception: ClanHall.updateFunctions(int type, int lvl, int lease, long rate, long time, boolean addNew): " + e.getMessage(), e);
+				LOGGER.log(Level.SEVERE, "Exception: ClanHall.updateFunctions(int type, int lvl, int lease, long rate, long time, boolean addNew): " + e.getMessage(), e);
 			}
 		}
 	}
@@ -433,7 +433,7 @@ public abstract class ClanHall
 		}
 		else
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Zone is null for clan hall: " + getId() + " " + getName());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Zone is null for clan hall: " + getId() + " " + getName());
 		}
 	}
 	
@@ -454,7 +454,7 @@ public abstract class ClanHall
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: ClanHall.loadFunctions(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: ClanHall.loadFunctions(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -474,7 +474,7 @@ public abstract class ClanHall
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: ClanHall.removeFunctions(int functionType): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: ClanHall.removeFunctions(int functionType): " + e.getMessage(), e);
 		}
 	}
 	

@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
  */
 public class BoatGiranTalking implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(BoatGiranTalking.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BoatGiranTalking.class.getName());
 	
 	// Time: 868s
 	private static final VehiclePathPoint[] GIRAN_TO_TALKING =
@@ -304,7 +304,7 @@ public class BoatGiranTalking implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage());
+			LOGGER.log(Level.WARNING, e.getMessage());
 		}
 	}
 	

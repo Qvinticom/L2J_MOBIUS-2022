@@ -160,7 +160,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "could not delete pet objectid: ", e);
+				LOGGER.log(Level.WARNING, "could not delete pet objectid: ", e);
 			}
 		}
 		if (itemToRemove.isTimeLimitedItem())

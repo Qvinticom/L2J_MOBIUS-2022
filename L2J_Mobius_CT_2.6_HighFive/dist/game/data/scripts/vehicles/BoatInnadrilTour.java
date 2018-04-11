@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
  */
 public class BoatInnadrilTour implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(BoatInnadrilTour.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BoatInnadrilTour.class.getName());
 	
 	// Time: 1867s
 	private static final VehiclePathPoint[] TOUR =
@@ -187,7 +187,7 @@ public class BoatInnadrilTour implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage());
+			LOGGER.log(Level.WARNING, e.getMessage());
 		}
 	}
 	

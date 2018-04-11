@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
  */
 public class L2Event
 {
-	protected static final Logger _log = Logger.getLogger(L2Event.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2Event.class.getName());
 	public static EventState eventState = EventState.OFF;
 	public static String _eventName = "";
 	public static String _eventCreator = "";
@@ -151,7 +151,7 @@ public class L2Event
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception on showEventHtml(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception on showEventHtml(): " + e.getMessage(), e);
 			}
 		}
 	}
@@ -187,7 +187,7 @@ public class L2Event
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on spawn(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on spawn(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -308,7 +308,7 @@ public class L2Event
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error at unregisterAndResetPlayer in the event:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error at unregisterAndResetPlayer in the event:" + e.getMessage(), e);
 		}
 	}
 	
@@ -399,7 +399,7 @@ public class L2Event
 		}
 		catch (Exception e)
 		{
-			_log.warning("L2Event: " + e.getMessage());
+			LOGGER.warning("L2Event: " + e.getMessage());
 			return "Cannot start event participation, an error has occured.";
 		}
 		
@@ -475,7 +475,7 @@ public class L2Event
 		}
 		catch (Exception e)
 		{
-			_log.warning("L2Event: " + e.getMessage());
+			LOGGER.warning("L2Event: " + e.getMessage());
 			return "Cannot start event, an error has occured.";
 		}
 		

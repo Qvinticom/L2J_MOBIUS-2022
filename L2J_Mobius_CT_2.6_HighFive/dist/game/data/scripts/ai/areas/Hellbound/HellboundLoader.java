@@ -67,7 +67,7 @@ import quests.Q00133_ThatsBloodyHot.Q00133_ThatsBloodyHot;
  */
 public final class HellboundLoader
 {
-	private static final Logger _log = Logger.getLogger(HellboundLoader.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(HellboundLoader.class.getName());
 	
 	private static final Class<?>[] SCRIPTS =
 	{
@@ -117,7 +117,7 @@ public final class HellboundLoader
 	
 	public static void main(String[] args)
 	{
-		_log.info(HellboundLoader.class.getSimpleName() + ": Loading Hellbound related scripts:");
+		LOGGER.info(HellboundLoader.class.getSimpleName() + ": Loading Hellbound related scripts:");
 		// Data
 		HellboundPointData.getInstance();
 		HellboundSpawns.getInstance();
@@ -139,7 +139,7 @@ public final class HellboundLoader
 			}
 			catch (Exception e)
 			{
-				_log.severe(HellboundLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":" + e.getMessage());
+				LOGGER.severe(HellboundLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":" + e.getMessage());
 			}
 		}
 	}

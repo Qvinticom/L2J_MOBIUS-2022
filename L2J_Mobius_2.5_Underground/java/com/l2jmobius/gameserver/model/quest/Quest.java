@@ -84,7 +84,7 @@ import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
  */
 public class Quest extends AbstractScript implements IIdentifiable
 {
-	public static final Logger _log = Logger.getLogger(Quest.class.getName());
+	public static final Logger LOGGER = Logger.getLogger(Quest.class.getName());
 	
 	/** Map containing lists of timers from the name of the timer. */
 	private volatile Map<String, List<QuestTimer>> _questTimers = null;
@@ -523,7 +523,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 			{
 				showError(trigger.getActingPlayer(), e);
 			}
-			_log.log(Level.WARNING, "Exception on onTrapAction() in notifyTrapAction(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onTrapAction() in notifyTrapAction(): " + e.getMessage(), e);
 			return;
 		}
 		if (trigger.getActingPlayer() != null)
@@ -543,7 +543,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onSpawn() in notifySpawn(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onSpawn() in notifySpawn(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -558,7 +558,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onTeleport() in notifyTeleport(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onTeleport() in notifyTeleport(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -864,7 +864,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onEventReceived() in notifyEventReceived(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onEventReceived() in notifyEventReceived(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -933,7 +933,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Execution on onOlympiadMatchFinish() in notifyOlympiadMatch(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Execution on onOlympiadMatchFinish() in notifyOlympiadMatch(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -948,7 +948,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onMoveFinished() in notifyMoveFinished(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onMoveFinished() in notifyMoveFinished(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -963,7 +963,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onNodeArrived() in notifyNodeArrived(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onNodeArrived() in notifyNodeArrived(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -978,7 +978,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onRouteFinished() in notifyRouteFinished(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onRouteFinished() in notifyRouteFinished(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -995,7 +995,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onCanSeeMe() in notifyOnCanSeeMe(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onCanSeeMe() in notifyOnCanSeeMe(): " + e.getMessage(), e);
 		}
 		return false;
 	}
@@ -1008,7 +1008,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on onSummonAgathion() in notifySummonAgathion(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on onSummonAgathion() in notifySummonAgathion(): " + e.getMessage(), e);
 			return;
 		}
 	}
@@ -1513,10 +1513,10 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public boolean showError(L2PcInstance player, Throwable t)
 	{
-		_log.log(Level.WARNING, getScriptFile().toAbsolutePath().toString(), t);
+		LOGGER.log(Level.WARNING, getScriptFile().toAbsolutePath().toString(), t);
 		if (t.getMessage() == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + t.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + t.getMessage());
 		}
 		if ((player != null) && player.getAccessLevel().isGm())
 		{
@@ -1607,7 +1607,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 					final Quest q = QuestManager.getInstance().getQuest(questId);
 					if (q == null)
 					{
-						_log.finer("Unknown quest " + questId + " for player " + player.getName());
+						LOGGER.finer("Unknown quest " + questId + " for player " + player.getName());
 						if (Config.AUTODELETE_INVALID_QUEST_DATA)
 						{
 							invalidQuestData.setInt(1, player.getObjectId());
@@ -1638,7 +1638,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 						final QuestState qs = player.getQuestState(questId);
 						if (qs == null)
 						{
-							_log.finer("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
+							LOGGER.finer("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
 							if (Config.AUTODELETE_INVALID_QUEST_DATA)
 							{
 								invalidQuestDataVar.setInt(1, player.getObjectId());
@@ -1656,7 +1656,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not insert char quest:", e);
+			LOGGER.log(Level.WARNING, "could not insert char quest:", e);
 		}
 	}
 	
@@ -1680,7 +1680,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not insert char quest:", e);
+			LOGGER.log(Level.WARNING, "could not insert char quest:", e);
 		}
 	}
 	
@@ -1703,7 +1703,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not update char quest:", e);
+			LOGGER.log(Level.WARNING, "could not update char quest:", e);
 		}
 	}
 	
@@ -1724,7 +1724,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Unable to delete char quest!", e);
+			LOGGER.log(Level.WARNING, "Unable to delete char quest!", e);
 		}
 	}
 	
@@ -1748,7 +1748,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not delete char quest:", e);
+			LOGGER.log(Level.WARNING, "could not delete char quest:", e);
 		}
 	}
 	
@@ -2804,7 +2804,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		{
 			if ((id != 0) && (ItemTable.getInstance().getTemplate(id) == null))
 			{
-				_log.severe(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
+				LOGGER.severe(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
 			}
 		}
 		_questItemIds = items;

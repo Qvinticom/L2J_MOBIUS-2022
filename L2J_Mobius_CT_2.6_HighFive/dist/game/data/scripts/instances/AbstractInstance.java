@@ -42,7 +42,7 @@ import ai.AbstractNpcAI;
  */
 public abstract class AbstractInstance extends AbstractNpcAI
 {
-	public final Logger _log = Logger.getLogger(getClass().getSimpleName());
+	public final Logger LOGGER = Logger.getLogger(getClass().getSimpleName());
 	
 	public AbstractInstance()
 	{

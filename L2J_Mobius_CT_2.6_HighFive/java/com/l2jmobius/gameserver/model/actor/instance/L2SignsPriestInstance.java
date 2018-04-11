@@ -95,7 +95,7 @@ public class L2SignsPriestInstance extends L2Npc
 						}
 						catch (Exception e3)
 						{
-							_log.warning("Failed to retrieve cabal from bypass command. NpcId: " + getId() + "; Command: " + command);
+							LOGGER.warning("Failed to retrieve cabal from bypass command. NpcId: " + getId() + "; Command: " + command);
 						}
 					}
 				}
@@ -608,7 +608,7 @@ public class L2SignsPriestInstance extends L2Npc
 						}
 						else
 						{
-							_log.warning("Problem with HTML text " + path);
+							LOGGER.warning("Problem with HTML text " + path);
 						}
 					}
 					break;
@@ -709,7 +709,7 @@ public class L2SignsPriestInstance extends L2Npc
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "SevenSigns: Error occurred while teleporting player: " + e.getMessage(), e);
+						LOGGER.log(Level.WARNING, "SevenSigns: Error occurred while teleporting player: " + e.getMessage(), e);
 					}
 					break;
 				}
@@ -843,7 +843,7 @@ public class L2SignsPriestInstance extends L2Npc
 					}
 					else
 					{
-						_log.warning("Problem with HTML text " + SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_17.htm: " + path);
+						LOGGER.warning("Problem with HTML text " + SevenSigns.SEVEN_SIGNS_HTML_PATH + "signs_17.htm: " + path);
 					}
 					break;
 				}

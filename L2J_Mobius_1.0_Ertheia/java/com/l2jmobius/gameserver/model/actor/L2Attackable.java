@@ -636,7 +636,7 @@ public class L2Attackable extends L2Npc
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "", e);
+			LOGGER.log(Level.SEVERE, "", e);
 		}
 	}
 	
@@ -694,7 +694,7 @@ public class L2Attackable extends L2Npc
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
@@ -807,7 +807,7 @@ public class L2Attackable extends L2Npc
 		final AggroInfo ai = getAggroList().get(target);
 		if (ai == null)
 		{
-			_log.info("target " + target + " not present in aggro list of " + this);
+			LOGGER.info("target " + target + " not present in aggro list of " + this);
 			return;
 		}
 		

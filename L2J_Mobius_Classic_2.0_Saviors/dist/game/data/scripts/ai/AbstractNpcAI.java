@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public abstract class AbstractNpcAI extends Quest
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	public AbstractNpcAI()
 	{

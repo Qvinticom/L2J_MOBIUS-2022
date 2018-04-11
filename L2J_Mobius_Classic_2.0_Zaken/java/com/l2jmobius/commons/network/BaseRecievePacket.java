@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  */
 public abstract class BaseRecievePacket
 {
-	private static final Logger _log = Logger.getLogger(BaseRecievePacket.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BaseRecievePacket.class.getName());
 	
 	private final byte[] _decrypt;
 	private int _off;
@@ -78,7 +78,7 @@ public abstract class BaseRecievePacket
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		return result;

@@ -337,7 +337,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			world.setTemplateId(INSTANCEID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
-			_log.info("Heart Infinity Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Heart Infinity Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
 			if (player.isGM())
 			{

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentType;
  */
 public interface IPunishmentHandler
 {
-	Logger _log = Logger.getLogger(IPunishmentHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(IPunishmentHandler.class.getName());
 	
 	void onStart(PunishmentTask task);
 	

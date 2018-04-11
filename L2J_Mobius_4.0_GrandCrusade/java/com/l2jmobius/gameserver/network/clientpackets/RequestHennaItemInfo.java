@@ -52,7 +52,7 @@ public final class RequestHennaItemInfo implements IClientIncomingPacket
 		{
 			if (_symbolId != 0)
 			{
-				_log.warning(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);
+				LOGGER.warning(getClass().getSimpleName() + ": Invalid Henna Id: " + _symbolId + " from player " + activeChar);
 			}
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.Disconnection;
  */
 public final class IllegalPlayerActionTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger("audit");
+	private static final Logger LOGGER = Logger.getLogger("audit");
 	
 	private final String _message;
 	private final IllegalActionPunishmentType _punishment;
@@ -81,7 +81,7 @@ public final class IllegalPlayerActionTask implements Runnable
 		//@formatter:off
 		record.setParameters(new Object[] { _actor, _punishment	});
 		//@formatter:on
-		_log.log(record);
+		LOGGER.log(record);
 		
 		AdminData.getInstance().broadcastMessageToGMs(_message);
 		if (!_actor.isGM())

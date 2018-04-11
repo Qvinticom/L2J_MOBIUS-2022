@@ -742,7 +742,7 @@ public final class Kamaloka extends AbstractInstance
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 		return null;

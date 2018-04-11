@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 
 public class CursedWeapon implements INamable
 {
-	private static final Logger _log = Logger.getLogger(CursedWeapon.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CursedWeapon.class.getName());
 	
 	// _name is the name of the cursed weapon associated with its ID.
 	private final String _name;
@@ -97,7 +97,7 @@ public class CursedWeapon implements INamable
 			if ((_player != null) && _player.isOnline())
 			{
 				// Remove from player
-				_log.info(_name + " being removed online.");
+				LOGGER.info(_name + " being removed online.");
 				
 				_player.abortAttack();
 				
@@ -136,7 +136,7 @@ public class CursedWeapon implements INamable
 			else
 			{
 				// Remove from Db
-				_log.info(_name + " being removed offline.");
+				LOGGER.info(_name + " being removed offline.");
 				
 				try (Connection con = DatabaseFactory.getInstance().getConnection();
 					PreparedStatement del = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
@@ -147,7 +147,7 @@ public class CursedWeapon implements INamable
 					del.setInt(2, _itemId);
 					if (del.executeUpdate() != 1)
 					{
-						_log.warning("Error while deleting itemId " + _itemId + " from userId " + _playerId);
+						LOGGER.warning("Error while deleting itemId " + _itemId + " from userId " + _playerId);
 					}
 					
 					// Restore the karma
@@ -156,12 +156,12 @@ public class CursedWeapon implements INamable
 					ps.setInt(3, _playerId);
 					if (ps.executeUpdate() != 1)
 					{
-						_log.warning("Error while updating karma & pkkills for userId " + _playerId);
+						LOGGER.warning("Error while updating karma & pkkills for userId " + _playerId);
 					}
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "Could not delete : " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, "Could not delete : " + e.getMessage(), e);
 				}
 			}
 		}
@@ -197,7 +197,7 @@ public class CursedWeapon implements INamable
 		{
 			_item.decayMe();
 			L2World.getInstance().removeObject(_item);
-			_log.info(_name + " item has been removed from World.");
+			LOGGER.info(_name + " item has been removed from World.");
 		}
 		
 		// Delete infos from table if any
@@ -496,7 +496,7 @@ public class CursedWeapon implements INamable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "CursedWeapon: Failed to save data.", e);
+			LOGGER.log(Level.SEVERE, "CursedWeapon: Failed to save data.", e);
 		}
 	}
 	

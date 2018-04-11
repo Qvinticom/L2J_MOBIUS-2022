@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class QuestState
 {
-	protected static final Logger _log = Logger.getLogger(QuestState.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(QuestState.class.getName());
 	
 	/** The name of the quest of this QuestState */
 	private final String _questName;
@@ -277,7 +277,7 @@ public final class QuestState
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, _player.getName() + ", " + getQuestName() + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, _player.getName() + ", " + getQuestName() + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
 		
@@ -449,7 +449,7 @@ public final class QuestState
 		}
 		catch (NumberFormatException nfe)
 		{
-			_log.log(Level.INFO, "Quest " + getQuestName() + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char Id: " + _player.getObjectId(), nfe);
+			LOGGER.log(Level.INFO, "Quest " + getQuestName() + ", method getInt(" + var + "), tried to parse a non-integer value (" + variable + "). Char Id: " + _player.getObjectId(), nfe);
 		}
 		
 		return varint;

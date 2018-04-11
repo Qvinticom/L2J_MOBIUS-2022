@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.network.serverpackets.QuestList;
  */
 public class AdminShowQuests implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminShowQuests.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminShowQuests.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -312,7 +312,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		catch (Exception e)
 		{
 			actor.sendMessage("There was an error.");
-			_log.warning(AdminShowQuests.class.getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(AdminShowQuests.class.getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	

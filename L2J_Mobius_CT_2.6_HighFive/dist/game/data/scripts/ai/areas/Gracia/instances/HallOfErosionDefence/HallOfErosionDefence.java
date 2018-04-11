@@ -340,7 +340,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			world.setStatus(0);
 			((HEDWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hall Of Erosion Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Hall Of Erosion Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
 			if (player.isInParty())
 			{

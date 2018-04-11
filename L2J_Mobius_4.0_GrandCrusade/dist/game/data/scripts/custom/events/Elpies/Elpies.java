@@ -88,7 +88,7 @@ public final class Elpies extends Event
 		// Check Custom Table - we use custom NPCs
 		if (!Config.CUSTOM_NPC_DATA)
 		{
-			_log.info(getName() + ": Event can't be started because custom NPC table is disabled!");
+			LOGGER.info(getName() + ": Event can't be started because custom NPC table is disabled!");
 			eventMaker.sendMessage("Event " + getName() + " can't be started because custom NPC table is disabled!");
 			return false;
 		}

@@ -139,7 +139,7 @@ public class L2SiegeZone extends L2ZoneType
 			}
 			else
 			{
-				_log.warning("L2SiegeZone: Siegable clan hall with id " + value + " does not exist!");
+				LOGGER.warning("L2SiegeZone: Siegable clan hall with id " + value + " does not exist!");
 			}
 		}
 		else

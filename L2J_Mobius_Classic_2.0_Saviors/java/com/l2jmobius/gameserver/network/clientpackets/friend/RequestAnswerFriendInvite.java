@@ -102,7 +102,7 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Could not add friend objectid: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Could not add friend objectid: " + e.getMessage(), e);
 			}
 		}
 		else

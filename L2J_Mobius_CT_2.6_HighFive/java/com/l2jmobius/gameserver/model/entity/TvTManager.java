@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class TvTManager
 {
-	protected static final Logger _log = Logger.getLogger(TvTManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(TvTManager.class.getName());
 	
 	/**
 	 * Task for event cycles<br>
@@ -46,11 +46,11 @@ public class TvTManager
 			TvTEvent.init();
 			
 			scheduleEventStart();
-			_log.info("TvTEventEngine[TvTManager.TvTManager()]: Started.");
+			LOGGER.info("TvTEventEngine[TvTManager.TvTManager()]: Started.");
 		}
 		else
 		{
-			_log.info("TvTEventEngine[TvTManager.TvTManager()]: Engine is disabled.");
+			LOGGER.info("TvTEventEngine[TvTManager.TvTManager()]: Engine is disabled.");
 		}
 	}
 	
@@ -101,7 +101,7 @@ public class TvTManager
 		}
 		catch (Exception e)
 		{
-			_log.warning("TvTEventEngine[TvTManager.scheduleEventStart()]: Error figuring out a start time. Check TvTEventInterval in config file.");
+			LOGGER.warning("TvTEventEngine[TvTManager.scheduleEventStart()]: Error figuring out a start time. Check TvTEventInterval in config file.");
 		}
 	}
 	
@@ -113,7 +113,7 @@ public class TvTManager
 		if (!TvTEvent.startParticipation())
 		{
 			Broadcast.toAllOnlinePlayers("TvT Event: Event was cancelled.");
-			_log.warning("TvTEventEngine[TvTManager.run()]: Error spawning event npc for participation.");
+			LOGGER.warning("TvTEventEngine[TvTManager.run()]: Error spawning event npc for participation.");
 			
 			scheduleEventStart();
 		}
@@ -135,7 +135,7 @@ public class TvTManager
 		if (!TvTEvent.startFight())
 		{
 			Broadcast.toAllOnlinePlayers("TvT Event: Event cancelled due to lack of Participation.");
-			_log.info("TvTEventEngine[TvTManager.run()]: Lack of registration, abort event.");
+			LOGGER.info("TvTEventEngine[TvTManager.run()]: Lack of registration, abort event.");
 			
 			scheduleEventStart();
 		}

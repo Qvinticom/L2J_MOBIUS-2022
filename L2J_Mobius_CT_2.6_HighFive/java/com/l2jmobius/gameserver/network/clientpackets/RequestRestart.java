@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.util.OfflineTradeUtil;
  */
 public final class RequestRestart implements IClientIncomingPacket
 {
-	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
@@ -69,7 +69,7 @@ public final class RequestRestart implements IClientIncomingPacket
 		
 		if (player.isLocked())
 		{
-			_log.warning("Player " + player.getName() + " tried to restart during class change.");
+			LOGGER.warning("Player " + player.getName() + " tried to restart during class change.");
 			client.sendPacket(RestartResponse.valueOf(false));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -133,7 +133,7 @@ public final class RequestRestart implements IClientIncomingPacket
 		{
 			client
 		});
-		LOG_ACCOUNTING.log(record);
+		LOGGER_ACCOUNTING.log(record);
 		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{

@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class ClanWarsList implements IUserCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(ClanWarsList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanWarsList.class.getName());
 	private static final int[] COMMAND_IDS =
 	{
 		88,
@@ -119,7 +119,7 @@ public class ClanWarsList implements IUserCommandHandler
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 		}
 		return true;
 	}

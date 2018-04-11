@@ -63,7 +63,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class L2VillageMasterInstance extends L2NpcInstance
 {
-	private static Logger _log = Logger.getLogger(L2VillageMasterInstance.class.getName());
+	private static Logger LOGGER = Logger.getLogger(L2VillageMasterInstance.class.getName());
 	
 	/**
 	 * Creates a village master.
@@ -352,7 +352,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			}
 			catch (Exception NumberFormatException)
 			{
-				_log.warning(L2VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
+				LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Wrong numeric values for command " + command);
 			}
 			
 			Set<PlayerClass> subsAvailable = null;
@@ -502,7 +502,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("add subclass"))
 					{
-						_log.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -570,7 +570,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
 					{
-						_log.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -661,7 +661,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 					 */
 					if (!player.getFloodProtectors().getSubclass().tryPerformAction("change class"))
 					{
-						_log.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
+						LOGGER.warning(L2VillageMasterInstance.class.getName() + ": Player " + player.getName() + " has performed a subclass change too fast");
 						return;
 					}
 					
@@ -1248,7 +1248,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 		catch (PatternSyntaxException e)
 		{
-			_log.warning("ERROR: Wrong pattern for clan name!");
+			LOGGER.warning("ERROR: Wrong pattern for clan name!");
 			pattern = Pattern.compile(".*");
 		}
 		return pattern.matcher(name).matches();

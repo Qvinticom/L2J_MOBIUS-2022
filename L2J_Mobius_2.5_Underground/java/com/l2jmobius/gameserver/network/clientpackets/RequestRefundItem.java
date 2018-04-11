@@ -194,7 +194,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 			final L2ItemInstance item = player.getRefund().transferItem("Refund", objectIds[i], Long.MAX_VALUE, player.getInventory(), player, player.getLastFolkNPC());
 			if (item == null)
 			{
-				_log.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
+				LOGGER.warning("Error refunding object for char " + player.getName() + " (newitem == null)");
 				continue;
 			}
 		}

@@ -142,14 +142,14 @@ public final class EnchantScroll extends AbstractEnchantItem
 	{
 		if (EnchantItemGroupsData.getInstance().getScrollGroup(_scrollGroupId) == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
+			LOGGER.warning(getClass().getSimpleName() + ": Unexistent enchant scroll group specified for enchant scroll: " + getId());
 			return -1;
 		}
 		
 		final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
 		if (group == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
+			LOGGER.warning(getClass().getSimpleName() + ": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
 			return -1;
 		}
 		return group.getChance(enchantItem.getEnchantLevel());

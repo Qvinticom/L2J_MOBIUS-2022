@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public interface IBypassHandler
 {
-	Logger _log = Logger.getLogger(IBypassHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(IBypassHandler.class.getName());
 	
 	/**
 	 * This is the worker method that is called when someone uses an bypass command.

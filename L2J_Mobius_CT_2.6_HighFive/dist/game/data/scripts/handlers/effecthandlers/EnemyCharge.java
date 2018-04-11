@@ -62,7 +62,7 @@ public final class EnemyCharge extends AbstractEffect
 		final double distance = Math.sqrt((dx * dx) + (dy * dy));
 		if (distance > 2000)
 		{
-			_log.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
+			LOGGER.info("EffectEnemyCharge was going to use invalid coordinates for characters, getEffector: " + curX + "," + curY + " and getEffected: " + info.getEffected().getX() + "," + info.getEffected().getY());
 			return;
 		}
 		

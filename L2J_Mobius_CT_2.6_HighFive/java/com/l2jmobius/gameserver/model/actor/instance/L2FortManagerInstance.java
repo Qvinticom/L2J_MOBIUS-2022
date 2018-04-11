@@ -255,7 +255,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 							}
 							else
 							{
-								_log.warning("Missing htm: " + htmFile + " !");
+								LOGGER.warning("Missing htm: " + htmFile + " !");
 							}
 						}
 						else
@@ -1012,7 +1012,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		}
 		else
 		{
-			_log.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + val);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

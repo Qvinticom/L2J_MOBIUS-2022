@@ -59,7 +59,7 @@ public class EventItem implements IItemHandler
 			}
 			default:
 			{
-				_log.warning("EventItemHandler: Item with id: " + itemId + " is not handled");
+				LOGGER.warning("EventItemHandler: Item with id: " + itemId + " is not handled");
 			}
 		}
 		return used;
@@ -103,7 +103,7 @@ public class EventItem implements IItemHandler
 			});
 			return true;
 		}
-		_log.warning("Char: " + castor.getName() + "[" + castor.getObjectId() + "] has unknown block checker arena");
+		LOGGER.warning("Char: " + castor.getName() + "[" + castor.getObjectId() + "] has unknown block checker arena");
 		return false;
 	}
 }

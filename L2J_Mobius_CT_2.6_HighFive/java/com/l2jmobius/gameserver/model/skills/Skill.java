@@ -69,7 +69,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class Skill implements IIdentifiable
 {
-	private static final Logger _log = Logger.getLogger(Skill.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	
 	private static final L2Object[] EMPTY_TARGET_LIST = new L2Object[0];
 	
@@ -297,7 +297,7 @@ public final class Skill implements IIdentifiable
 					}
 					catch (Exception e)
 					{
-						_log.warning("Bad data in rideState for skill " + this + " !\n" + e);
+						LOGGER.warning("Bad data in rideState for skill " + this + " !\n" + e);
 					}
 				}
 			}
@@ -373,7 +373,7 @@ public final class Skill implements IIdentifiable
 		{
 			if (capsuled_items.isEmpty())
 			{
-				_log.warning("Empty Extractable Item Skill data in Skill Id: " + _id);
+				LOGGER.warning("Empty Extractable Item Skill data in Skill Id: " + _id);
 			}
 			
 			_extractableItems = parseExtractableSkill(_id, _level, capsuled_items);
@@ -1104,7 +1104,7 @@ public final class Skill implements IIdentifiable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception in L2Skill.getTargetList(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception in L2Skill.getTargetList(): " + e.getMessage(), e);
 			}
 		}
 		activeChar.sendMessage("Target type of skill is not currently handled.");
@@ -1700,7 +1700,7 @@ public final class Skill implements IIdentifiable
 			prodData = prodList.split(",");
 			if (prodData.length < 3)
 			{
-				_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
+				LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> wrong seperator!");
 			}
 			List<ItemHolder> items = null;
 			double chance = 0;
@@ -1714,7 +1714,7 @@ public final class Skill implements IIdentifiable
 					final int quantity = Integer.parseInt(prodData[j + 1]);
 					if ((prodId <= 0) || (quantity <= 0))
 					{
-						_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " wrong production Id: " + prodId + " or wrond quantity: " + quantity + "!");
+						LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " wrong production Id: " + prodId + " or wrond quantity: " + quantity + "!");
 					}
 					items.add(new ItemHolder(prodId, quantity));
 				}
@@ -1722,14 +1722,14 @@ public final class Skill implements IIdentifiable
 			}
 			catch (Exception e)
 			{
-				_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> incomplete/invalid production data or wrong seperator!");
+				LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> incomplete/invalid production data or wrong seperator!");
 			}
 			products.add(new L2ExtractableProductItem(items, chance));
 		}
 		
 		if (products.isEmpty())
 		{
-			_log.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> There are no production items!");
+			LOGGER.warning("Extractable skills data: Error in Skill Id: " + skillId + " Level: " + skillLvl + " -> There are no production items!");
 		}
 		return new L2ExtractableSkill(SkillData.getSkillHashCode(skillId, skillLvl), products);
 	}

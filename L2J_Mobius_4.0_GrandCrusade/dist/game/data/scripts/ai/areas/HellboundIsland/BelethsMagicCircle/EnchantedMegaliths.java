@@ -196,7 +196,7 @@ public class EnchantedMegaliths extends AbstractNpcAI
 	private void updateMegalithStage()
 	{
 		GlobalVariablesManager.getInstance().set(HB_MEGALITH_STAGE, stage);
-		_log.info("[Hellbound] - Enchanted Megaliths stage: " + stage);
+		LOGGER.info("[Hellbound] - Enchanted Megaliths stage: " + stage);
 		
 		switch (stage)
 		{

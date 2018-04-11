@@ -1771,7 +1771,7 @@ public class L2ClanHallManagerInstance extends L2MerchantInstance
 		}
 		else
 		{
-			_log.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + val);
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

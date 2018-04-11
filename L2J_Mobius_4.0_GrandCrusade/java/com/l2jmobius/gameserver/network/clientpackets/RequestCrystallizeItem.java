@@ -61,7 +61,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		if (activeChar == null)
 		{
-			_log.finer("RequestCrystalizeItem: activeChar was null");
+			LOGGER.finer("RequestCrystalizeItem: activeChar was null");
 			return;
 		}
 		
@@ -90,7 +90,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().ordinal() != 117) && (activeChar.getClassId().ordinal() != 55))
 			{
-				_log.info("Player " + activeChar + " used crystalize with classid: " + activeChar.getClassId().ordinal());
+				LOGGER.info("Player " + activeChar + " used crystalize with classid: " + activeChar.getClassId().ordinal());
 			}
 			return;
 		}

@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class Couple
 {
-	private static final Logger _log = Logger.getLogger(Couple.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Couple.class.getName());
 	
 	private int _Id = 0;
 	private int _player1Id = 0;
@@ -67,7 +67,7 @@ public class Couple
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Couple.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Couple.load(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -99,7 +99,7 @@ public class Couple
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Could not create couple: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Could not create couple: " + e.getMessage(), e);
 		}
 	}
 	
@@ -117,7 +117,7 @@ public class Couple
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Could not marry: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Could not marry: " + e.getMessage(), e);
 		}
 	}
 	
@@ -131,7 +131,7 @@ public class Couple
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Couple.divorce(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Couple.divorce(): " + e.getMessage(), e);
 		}
 	}
 	

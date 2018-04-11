@@ -71,7 +71,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class SevenSignsFestival implements SpawnListener
 {
-	protected static final Logger _log = Logger.getLogger(SevenSignsFestival.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(SevenSignsFestival.class.getName());
 	
 	private static final String GET_CLAN_NAME = "SELECT clan_name FROM clan_data WHERE clan_id = (SELECT clanid FROM characters WHERE char_name = ?)";
 	
@@ -792,7 +792,7 @@ public class SevenSignsFestival implements SpawnListener
 		
 		if (SevenSigns.getInstance().isSealValidationPeriod())
 		{
-			_log.info("SevenSignsFestival: Initialization bypassed due to Seal Validation in effect.");
+			LOGGER.info("SevenSignsFestival: Initialization bypassed due to Seal Validation in effect.");
 			return;
 		}
 		
@@ -933,7 +933,7 @@ public class SevenSignsFestival implements SpawnListener
 		setNextFestivalStart(Config.ALT_FESTIVAL_MANAGER_START + FESTIVAL_SIGNUP_TIME);
 		_managerScheduledTask = ThreadPool.scheduleAtFixedRate(_managerInstance, Config.ALT_FESTIVAL_MANAGER_START, Config.ALT_FESTIVAL_CYCLE_LENGTH);
 		
-		_log.info("SevenSignsFestival: The first Festival of Darkness cycle begins in " + (Config.ALT_FESTIVAL_MANAGER_START / 60000) + " minute(s).");
+		LOGGER.info("SevenSignsFestival: The first Festival of Darkness cycle begins in " + (Config.ALT_FESTIVAL_MANAGER_START / 60000) + " minute(s).");
 	}
 	
 	/**
@@ -971,7 +971,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
 		}
 		
 		final StringBuilder query = new StringBuilder();
@@ -1005,7 +1005,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to load configuration: " + e.getMessage(), e);
 		}
 	}
 	
@@ -1035,7 +1035,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "SevenSignsFestival: Failed to save configuration: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "SevenSignsFestival: Failed to save configuration: " + e.getMessage(), e);
 		}
 		
 		// Updates Seven Signs DB data also, so call only if really necessary.
@@ -1144,7 +1144,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Could not get clan name of " + partyMemberName + ": " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Could not get clan name of " + partyMemberName + ": " + e.getMessage(), e);
 			}
 		}
 	}
@@ -1220,7 +1220,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 		}
 		
-		_log.info("SevenSignsFestival: Reinitialized engine for next competition period.");
+		LOGGER.info("SevenSignsFestival: Reinitialized engine for next competition period.");
 	}
 	
 	public final int getCurrentFestivalCycle()
@@ -2004,7 +2004,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			catch (Exception e)
 			{
-				_log.warning(e.getMessage());
+				LOGGER.warning(e.getMessage());
 			}
 		}
 		
@@ -2153,7 +2153,7 @@ public class SevenSignsFestival implements SpawnListener
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "SevenSignsFestival: Error while spawning Festival Witch ID " + _witchSpawn._npcId + ": " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "SevenSignsFestival: Error while spawning Festival Witch ID " + _witchSpawn._npcId + ": " + e.getMessage(), e);
 			}
 			
 			// Make it appear as though the Witch has apparated there.
@@ -2296,7 +2296,7 @@ public class SevenSignsFestival implements SpawnListener
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "SevenSignsFestival: Error while spawning NPC ID " + currSpawn._npcId + ": " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, "SevenSignsFestival: Error while spawning NPC ID " + currSpawn._npcId + ": " + e.getMessage(), e);
 				}
 			}
 		}

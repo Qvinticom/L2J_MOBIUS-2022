@@ -56,7 +56,7 @@ public class RecipeItemMakeInfo implements IClientOutgoingPacket
 			packet.writeD(_success ? 1 : 0); // item creation success/failed
 			return true;
 		}
-		_log.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
+		LOGGER.info("Character: " + _activeChar + ": Requested unexisting recipe with id = " + _id);
 		return false;
 	}
 }

@@ -66,7 +66,7 @@ public abstract class L2ZoneRespawn extends L2ZoneType
 				}
 				default:
 				{
-					_log.warning(getClass().getSimpleName() + ": Unknown location type: " + type);
+					LOGGER.warning(getClass().getSimpleName() + ": Unknown location type: " + type);
 				}
 			}
 		}

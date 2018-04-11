@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class MercTicketManager
 {
-	private static final Logger _log = Logger.getLogger(MercTicketManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
 	private static final List<L2ItemInstance> DROPPED_TICKETS = new CopyOnWriteArrayList<>();
 	
@@ -200,11 +200,11 @@ public final class MercTicketManager
 			rs.close();
 			s.close();
 			
-			_log.info(getClass().getSimpleName() + ": Loaded: " + DROPPED_TICKETS.size() + " Mercenary Tickets");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + DROPPED_TICKETS.size() + " Mercenary Tickets");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: loadMercenaryData(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: loadMercenaryData(): " + e.getMessage(), e);
 		}
 	}
 	

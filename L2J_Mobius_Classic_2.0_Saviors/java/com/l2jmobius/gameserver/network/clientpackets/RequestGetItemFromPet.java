@@ -79,7 +79,7 @@ public final class RequestGetItemFromPet implements IClientIncomingPacket
 		
 		if (pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet) == null)
 		{
-			_log.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
+			LOGGER.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
 		}
 	}
 }

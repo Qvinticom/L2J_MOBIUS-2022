@@ -75,7 +75,7 @@ public final class Selina extends AbstractNpcAI
 		}
 		else
 		{
-			_log.warning(Selina.class.getSimpleName() + " AI: player " + player + " sent invalid bypass: " + event);
+			LOGGER.warning(Selina.class.getSimpleName() + " AI: player " + player + " sent invalid bypass: " + event);
 		}
 		return "31556-02.html";
 	}

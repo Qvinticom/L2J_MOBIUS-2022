@@ -98,7 +98,7 @@ public final class TriggerSkillByAttack extends AbstractEffect
 		final ITargetTypeHandler targetHandler = TargetHandler.getInstance().getHandler(_targetType);
 		if (targetHandler == null)
 		{
-			_log.warning("Handler for target type: " + _targetType + " does not exist.");
+			LOGGER.warning("Handler for target type: " + _targetType + " does not exist.");
 			return;
 		}
 		

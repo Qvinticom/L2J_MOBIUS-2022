@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class FactionManager
 {
-	private static Logger _log = Logger.getLogger(FactionManager.class.getName());
+	private static Logger LOGGER = Logger.getLogger(FactionManager.class.getName());
 	private final Map<Integer, Integer> _playerFactions = new ConcurrentHashMap<>();
 	
 	protected FactionManager()
@@ -57,9 +57,9 @@ public class FactionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load character faction information: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load character faction information: " + e.getMessage(), e);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " character faction values.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _playerFactions.size() + " character faction values.");
 	}
 	
 	public final int getFactionByCharId(int id)
@@ -91,7 +91,7 @@ public class FactionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
 		}
 		
 		return 0; // not found

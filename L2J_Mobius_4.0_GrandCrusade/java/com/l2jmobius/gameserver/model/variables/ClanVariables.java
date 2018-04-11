@@ -31,7 +31,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
  */
 public class ClanVariables extends AbstractVariables
 {
-	private static final Logger _log = Logger.getLogger(ClanVariables.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ClanVariables.class.getName());
 	
 	// SQL Queries.
 	private static final String SELECT_QUERY = "SELECT * FROM clan_variables WHERE clanId = ?";
@@ -64,7 +64,7 @@ public class ClanVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -107,7 +107,7 @@ public class ClanVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -134,7 +134,7 @@ public class ClanVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
 			return false;
 		}
 		return true;

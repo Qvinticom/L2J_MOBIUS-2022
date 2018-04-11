@@ -61,7 +61,7 @@ public class ItemSkillsTemplate implements IItemHandler
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
-			_log.info("Item " + item + " does not have registered any skill for handler.");
+			LOGGER.info("Item " + item + " does not have registered any skill for handler.");
 			return false;
 		}
 		

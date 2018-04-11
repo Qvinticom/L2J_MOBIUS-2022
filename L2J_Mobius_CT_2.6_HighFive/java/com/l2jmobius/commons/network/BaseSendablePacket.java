@@ -26,7 +26,7 @@ import java.util.logging.Logger;
  */
 public abstract class BaseSendablePacket
 {
-	private static final Logger _log = Logger.getLogger(BaseSendablePacket.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BaseSendablePacket.class.getName());
 	
 	private final ByteArrayOutputStream _bao;
 	
@@ -78,7 +78,7 @@ public abstract class BaseSendablePacket
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		_bao.write(0);
@@ -93,7 +93,7 @@ public abstract class BaseSendablePacket
 		}
 		catch (IOException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	

@@ -41,7 +41,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AdminAdmin implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminAdmin.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminAdmin.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -121,7 +121,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				_log.warning("An error occured while ending olympiad: " + e);
+				LOGGER.warning("An error occured while ending olympiad: " + e);
 			}
 			activeChar.sendMessage("Heroes formed.");
 		}

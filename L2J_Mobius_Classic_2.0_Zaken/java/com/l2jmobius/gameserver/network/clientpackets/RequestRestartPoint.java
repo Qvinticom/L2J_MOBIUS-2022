@@ -91,7 +91,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 		}
 		else if (!activeChar.isDead())
 		{
-			_log.warning("Living player [" + activeChar.getName() + "] called RestartPointPacket! Ban this player!");
+			LOGGER.warning("Living player [" + activeChar.getName() + "] called RestartPointPacket! Ban this player!");
 			return;
 		}
 		
@@ -143,7 +143,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if ((activeChar.getClan() == null) || (activeChar.getClan().getHideoutId() == 0))
 				{
-					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
+					LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Clanhall and he doesn't have Clanhall!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
@@ -171,7 +171,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 					}
 					else
 					{
-						_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
+						LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Castle and he doesn't have Castle!");
 						return;
 					}
 				}
@@ -194,7 +194,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if ((activeChar.getClan() == null) || (activeChar.getClan().getFortId() == 0))
 				{
-					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
+					LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.FORTRESS);
@@ -223,7 +223,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 				
 				if (((siegeClan == null) || siegeClan.getFlag().isEmpty()))
 				{
-					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
+					LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Siege HQ and he doesn't have Siege HQ!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
@@ -233,7 +233,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 			{
 				if (!activeChar.isGM() && !activeChar.getInventory().haveItemForSelfResurrection())
 				{
-					_log.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - Fixed and he isn't festival participant!");
+					LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - Fixed and he isn't festival participant!");
 					return;
 				}
 				if (activeChar.isGM() || activeChar.destroyItemByItemId("Feather", 10649, 1, activeChar, false) || activeChar.destroyItemByItemId("Feather", 13300, 1, activeChar, false) || activeChar.destroyItemByItemId("Feather", 13128, 1, activeChar, false))

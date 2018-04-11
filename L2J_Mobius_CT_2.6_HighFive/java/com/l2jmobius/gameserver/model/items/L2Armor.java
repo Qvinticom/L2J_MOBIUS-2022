@@ -85,7 +85,7 @@ public final class L2Armor extends L2Item
 		catch (Exception nfe)
 		{
 			// Incorrect syntax, don't add new skill
-			_log.info("> Couldnt parse " + skill + " in armor enchant skills! item " + this);
+			LOGGER.info("> Couldnt parse " + skill + " in armor enchant skills! item " + this);
 		}
 		if ((id > 0) && (level > 0))
 		{

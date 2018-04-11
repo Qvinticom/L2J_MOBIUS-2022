@@ -26,6 +26,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -77,6 +78,8 @@ import instances.AbstractInstance;
  */
 public final class FinalEmperialTomb extends AbstractInstance implements IGameXmlReader
 {
+	Logger LOGGER = Logger.getLogger(FinalEmperialTomb.class.getName());
+	
 	protected class FETWorld extends InstanceWorld
 	{
 		protected Lock lock = new ReentrantLock();
@@ -253,8 +256,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		_spawnList.clear();
 		_spawnZoneList.clear();
 		parseDatapackFile("data/scripts/instances/FinalEmperialTomb/final_emperial_tomb.xml");
-		_log.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
-		_log.info("[Final Emperial Tomb] Loaded " + _spawnCount + " spawns data.");
+		LOGGER.info("[Final Emperial Tomb] Loaded " + _spawnZoneList.size() + " spawn zones data.");
+		LOGGER.info("[Final Emperial Tomb] Loaded " + _spawnCount + " spawns data.");
 	}
 	
 	@Override
@@ -275,7 +278,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 							Node att = attrs.getNamedItem("npcId");
 							if (att == null)
 							{
-								_log.severe("[Final Emperial Tomb] Missing npcId in npc List, skipping");
+								LOGGER.severe("[Final Emperial Tomb] Missing npcId in npc List, skipping");
 								continue;
 							}
 							final int npcId = Integer.parseInt(attrs.getNamedItem("npcId").getNodeValue());
@@ -283,7 +286,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 							att = attrs.getNamedItem("flag");
 							if (att == null)
 							{
-								_log.severe("[Final Emperial Tomb] Missing flag in npc List npcId: " + npcId + ", skipping");
+								LOGGER.severe("[Final Emperial Tomb] Missing flag in npc List npcId: " + npcId + ", skipping");
 								continue;
 							}
 							
@@ -397,21 +400,21 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 							Node att = attrs.getNamedItem("id");
 							if (att == null)
 							{
-								_log.severe("[Final Emperial Tomb] Missing id in spawnZones List, skipping");
+								LOGGER.severe("[Final Emperial Tomb] Missing id in spawnZones List, skipping");
 								continue;
 							}
 							final int id = Integer.parseInt(att.getNodeValue());
 							att = attrs.getNamedItem("minZ");
 							if (att == null)
 							{
-								_log.severe("[Final Emperial Tomb] Missing minZ in spawnZones List id: " + id + ", skipping");
+								LOGGER.severe("[Final Emperial Tomb] Missing minZ in spawnZones List id: " + id + ", skipping");
 								continue;
 							}
 							final int minz = Integer.parseInt(att.getNodeValue());
 							att = attrs.getNamedItem("maxZ");
 							if (att == null)
 							{
-								_log.severe("[Final Emperial Tomb] Missing maxZ in spawnZones List id: " + id + ", skipping");
+								LOGGER.severe("[Final Emperial Tomb] Missing maxZ in spawnZones List id: " + id + ", skipping");
 								continue;
 							}
 							final int maxz = Integer.parseInt(att.getNodeValue());
@@ -574,7 +577,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 							}
 							else
 							{
-								_log.info("[Final Emperial Tomb] Missing zone: " + spw.zone);
+								LOGGER.info("[Final Emperial Tomb] Missing zone: " + spw.zone);
 							}
 						}
 					}
@@ -599,7 +602,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			{
 				if (debug)
 				{
-					_log.info("[Final Emperial Tomb] Starting " + world.getStatus() + ". status.");
+					LOGGER.info("[Final Emperial Tomb] Starting " + world.getStatus() + ". status.");
 				}
 				world.npcList.clear();
 				switch (world.getStatus())
@@ -745,7 +748,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			{
 				if (debug)
 				{
-					_log.info("[Final Emperial Tomb] Instance is deleted or all Portraits is killed.");
+					LOGGER.info("[Final Emperial Tomb] Instance is deleted or all Portraits is killed.");
 				}
 				return;
 			}
@@ -1462,7 +1465,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 				ThreadPool.schedule(new StatusTask(world, 0), 2000);
 				if (debug)
 				{
-					_log.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
+					LOGGER.info("[Final Emperial Tomb] Hall alarm is disabled, doors will open!");
 				}
 			}
 			else if (npc.getId() == DARK_CHOIR_PLAYER)
@@ -1473,7 +1476,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					ThreadPool.schedule(new StatusTask(world, 2), 2000);
 					if (debug)
 					{
-						_log.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");
+						LOGGER.info("[Final Emperial Tomb] All Dark Choir Players are killed, doors will open!");
 					}
 				}
 			}

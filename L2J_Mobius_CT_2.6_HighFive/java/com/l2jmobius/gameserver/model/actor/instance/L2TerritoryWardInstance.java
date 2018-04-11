@@ -81,7 +81,7 @@ public final class L2TerritoryWardInstance extends L2Attackable
 		
 		if (getCastle() == null)
 		{
-			_log.warning("L2TerritoryWardInstance(" + getName() + ") spawned outside Castle Zone!");
+			LOGGER.warning("L2TerritoryWardInstance(" + getName() + ") spawned outside Castle Zone!");
 		}
 	}
 	

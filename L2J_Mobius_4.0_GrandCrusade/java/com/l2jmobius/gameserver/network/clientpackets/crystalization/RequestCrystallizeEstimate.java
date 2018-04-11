@@ -101,7 +101,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			_log.warning(activeChar + ": tried to crystallize " + item.getItem());
+			LOGGER.warning(activeChar + ": tried to crystallize " + item.getItem());
 			return;
 		}
 		

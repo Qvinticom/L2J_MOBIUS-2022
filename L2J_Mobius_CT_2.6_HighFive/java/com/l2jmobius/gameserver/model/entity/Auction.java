@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 
 public class Auction
 {
-	protected static final Logger _log = Logger.getLogger(Auction.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Auction.class.getName());
 	private int _id = 0;
 	private long _endDate;
 	private int _highestBidderId = 0;
@@ -130,7 +130,7 @@ public class Auction
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
@@ -186,7 +186,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: Auction.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: Auction.load(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -217,7 +217,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: Auction.loadBid(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: Auction.loadBid(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -255,7 +255,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: saveAuctionDate(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: saveAuctionDate(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -295,14 +295,14 @@ public class Auction
 		final L2Clan clan = ClanTable.getInstance().getClanByName(clanName);
 		if (clan == null)
 		{
-			_log.warning("Clan " + clanName + " doesn't exist!");
+			LOGGER.warning("Clan " + clanName + " doesn't exist!");
 			return;
 		}
 		
 		final ItemContainer cwh = clan.getWarehouse();
 		if (cwh == null)
 		{
-			_log.warning("There has been a problem with " + clanName + "'s clan warehouse!");
+			LOGGER.warning("There has been a problem with " + clanName + "'s clan warehouse!");
 			return;
 		}
 		
@@ -387,7 +387,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Auction.updateInDB(L2PcInstance bidder, int bid): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.updateInDB(L2PcInstance bidder, int bid): " + e.getMessage(), e);
 		}
 	}
 	
@@ -402,7 +402,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Auction.deleteFromDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.deleteFromDB(): " + e.getMessage(), e);
 		}
 		
 		for (Bidder b : _bidders.values())
@@ -432,7 +432,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Auction.deleteFromDB(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.deleteFromDB(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -489,7 +489,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Auction.cancelBid(String bidder): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.cancelBid(String bidder): " + e.getMessage(), e);
 		}
 		
 		returnItem(_bidders.get(bidder).getClanName(), _bidders.get(bidder).getBid(), true);
@@ -529,7 +529,7 @@ public class Auction
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: Auction.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: Auction.load(): " + e.getMessage(), e);
 		}
 	}
 	

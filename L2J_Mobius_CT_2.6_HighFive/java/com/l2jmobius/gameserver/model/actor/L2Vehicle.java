@@ -380,7 +380,7 @@ public abstract class L2Vehicle extends L2Character
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed stopMove().", e);
+			LOGGER.log(Level.SEVERE, "Failed stopMove().", e);
 		}
 		
 		try
@@ -389,7 +389,7 @@ public abstract class L2Vehicle extends L2Character
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed oustPlayers().", e);
+			LOGGER.log(Level.SEVERE, "Failed oustPlayers().", e);
 		}
 		
 		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
@@ -400,7 +400,7 @@ public abstract class L2Vehicle extends L2Character
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed decayMe().", e);
+			LOGGER.log(Level.SEVERE, "Failed decayMe().", e);
 		}
 		
 		oldZoneRegion.removeFromZones(this);

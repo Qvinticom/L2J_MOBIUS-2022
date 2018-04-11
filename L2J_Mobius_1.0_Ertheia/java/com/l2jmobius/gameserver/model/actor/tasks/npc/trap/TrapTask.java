@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
  */
 public class TrapTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(TrapTask.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(TrapTask.class.getName());
 	private static final int TICK = 1000; // 1s
 	private final L2TrapInstance _trap;
 	
@@ -65,7 +65,7 @@ public class TrapTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.severe(TrapTask.class.getSimpleName() + ": " + e.getMessage());
+			LOGGER.severe(TrapTask.class.getSimpleName() + ": " + e.getMessage());
 			_trap.unSummon();
 		}
 	}

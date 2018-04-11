@@ -87,7 +87,7 @@ public final class SummonMulti extends AbstractEffect
 		if (summon.getLevel() >= ExperienceData.getInstance().getMaxLevel())
 		{
 			summon.getStat().setExp(ExperienceData.getInstance().getExpForLevel(ExperienceData.getInstance().getMaxLevel() - 1));
-			_log.warning(getClass().getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxLevel() + ". Please rectify.");
+			LOGGER.warning(getClass().getSimpleName() + ": (" + summon.getName() + ") NpcID: " + summon.getId() + " has a level above " + ExperienceData.getInstance().getMaxLevel() + ". Please rectify.");
 		}
 		else
 		{

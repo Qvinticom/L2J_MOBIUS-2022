@@ -172,13 +172,13 @@ public final class SendWareHouseWithDrawList implements IClientIncomingPacket
 			final L2ItemInstance oldItem = warehouse.getItemByObjectId(i.getId());
 			if ((oldItem == null) || (oldItem.getCount() < i.getCount()))
 			{
-				_log.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
+				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (olditem == null)");
 				return;
 			}
 			final L2ItemInstance newItem = warehouse.transferItem(warehouse.getName(), i.getId(), i.getCount(), player.getInventory(), player, manager);
 			if (newItem == null)
 			{
-				_log.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
+				LOGGER.warning("Error withdrawing a warehouse object for char " + player.getName() + " (newitem == null)");
 				return;
 			}
 			

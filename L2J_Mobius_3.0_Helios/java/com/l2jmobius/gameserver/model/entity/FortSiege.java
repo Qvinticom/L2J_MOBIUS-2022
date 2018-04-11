@@ -59,7 +59,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class FortSiege implements Siegable
 {
-	protected static final Logger _log = Logger.getLogger(FortSiege.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(FortSiege.class.getName());
 	
 	// SQL
 	private static final String DELETE_FORT_SIEGECLANS_BY_CLAN_ID = "DELETE FROM fortsiege_clans WHERE fort_id = ? AND clan_id = ?";
@@ -82,7 +82,7 @@ public class FortSiege implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleEndSiegeTask() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleEndSiegeTask() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -169,12 +169,12 @@ public class FortSiege implements Siegable
 				}
 				else
 				{
-					_log.warning(getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask(): unknown siege time: " + _time);
+					LOGGER.warning(getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask(): unknown siege time: " + _time);
 				}
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask() for Fort: " + _fortInst.getName() + " " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleStartSiegeTask() for Fort: " + _fortInst.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -195,7 +195,7 @@ public class FortSiege implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleSuspicoiusMerchantSpawn() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleSuspicoiusMerchantSpawn() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -218,7 +218,7 @@ public class FortSiege implements Siegable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleSiegeRestore() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: ScheduleSiegeRestore() for Fort: " + _fort.getName() + " " + e.getMessage(), e);
 			}
 		}
 	}
@@ -293,7 +293,7 @@ public class FortSiege implements Siegable
 				getFort().setVisibleFlag(true);
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort finished.");
+			LOGGER.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort finished.");
 			
 			// Notify to scripts.
 			EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeFinish(this), getFort());
@@ -343,7 +343,7 @@ public class FortSiege implements Siegable
 			announceToPlayer(sm);
 			saveFortSiege();
 			
-			_log.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort started.");
+			LOGGER.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort started.");
 			
 			// Notify to scripts.
 			EventDispatcher.getInstance().notifyEventAsync(new OnFortSiegeStart(this), getFort());
@@ -533,7 +533,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: clearSiegeClan(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: clearSiegeClan(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -689,7 +689,7 @@ public class FortSiege implements Siegable
 			}
 			else
 			{
-				_log.warning(getClass().getSimpleName() + ": FortSiege.killedCommander(): killed commander, but commander not registered for fortress. NpcId: " + instance.getId() + " FortId: " + getFort().getResidenceId());
+				LOGGER.warning(getClass().getSimpleName() + ": FortSiege.killedCommander(): killed commander, but commander not registered for fortress. NpcId: " + instance.getId() + " FortId: " + getFort().getResidenceId());
 			}
 		}
 	}
@@ -816,7 +816,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception on removeSiegeClan: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception on removeSiegeClan: " + e.getMessage(), e);
 		}
 	}
 	
@@ -875,7 +875,7 @@ public class FortSiege implements Siegable
 					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(60), 0);
 				}
 				
-				_log.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort: " + getFort().getSiegeDate().getTime());
+				LOGGER.info(getClass().getSimpleName() + ": Siege of " + getFort().getName() + " fort: " + getFort().getSiegeDate().getTime());
 			}
 		}
 	}
@@ -1013,7 +1013,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: loadSiegeClan(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: loadSiegeClan(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -1066,7 +1066,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeDate(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeDate(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -1092,7 +1092,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeClan(L2Clan clan): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: saveSiegeClan(L2Clan clan): " + e.getMessage(), e);
 		}
 	}
 	
@@ -1120,7 +1120,7 @@ public class FortSiege implements Siegable
 		catch (Exception e)
 		{
 			// problem with initializing spawn, go to next one
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": FortSiege.spawnCommander: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": FortSiege.spawnCommander: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -1172,7 +1172,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error loading siege guard for fort " + getFort().getName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading siege guard for fort " + getFort().getName() + ": " + e.getMessage(), e);
 		}
 	}
 	
@@ -1198,7 +1198,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error spawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error spawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
 		}
 	}
 	
@@ -1217,7 +1217,7 @@ public class FortSiege implements Siegable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error unspawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error unspawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
 		}
 	}
 	

@@ -31,7 +31,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
  */
 public class Announcement implements IAnnouncement
 {
-	protected static final Logger _log = Logger.getLogger(Announcement.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Announcement.class.getName());
 	
 	private static final String INSERT_QUERY = "INSERT INTO announcements (type, content, author) VALUES (?, ?, ?)";
 	private static final String UPDATE_QUERY = "UPDATE announcements SET type = ?, content = ?, author = ? WHERE id = ?";
@@ -125,7 +125,7 @@ public class Announcement implements IAnnouncement
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store announcement: ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store announcement: ", e);
 			return false;
 		}
 		return true;
@@ -145,7 +145,7 @@ public class Announcement implements IAnnouncement
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store announcement: ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't store announcement: ", e);
 			return false;
 		}
 		return true;
@@ -162,7 +162,7 @@ public class Announcement implements IAnnouncement
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't remove announcement: ", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't remove announcement: ", e);
 			return false;
 		}
 		return true;

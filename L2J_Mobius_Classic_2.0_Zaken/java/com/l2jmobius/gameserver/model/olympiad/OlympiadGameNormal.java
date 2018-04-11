@@ -167,7 +167,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 			return false;
 		}
 		return result;
@@ -388,7 +388,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
+						LOGGER.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
 					}
 				}
 				if (_playerTwo.isDefaulted())
@@ -415,7 +415,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
+						LOGGER.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
 					}
 				}
 				if (winside == 1)
@@ -431,7 +431,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
 				return;
 			}
 		}
@@ -536,7 +536,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
 				return;
 			}
 		}
@@ -673,7 +673,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception on validateWinner(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -758,7 +758,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "SQL exception while saving olympiad fight.", e);
+			LOGGER.log(Level.SEVERE, "SQL exception while saving olympiad fight.", e);
 		}
 	}
 	

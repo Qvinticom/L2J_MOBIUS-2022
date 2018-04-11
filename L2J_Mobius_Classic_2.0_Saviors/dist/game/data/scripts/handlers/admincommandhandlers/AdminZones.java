@@ -64,7 +64,7 @@ import ai.AbstractNpcAI;
  */
 public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminPathNode.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminPathNode.class.getName());
 	private final Map<Integer, ZoneNodeHolder> _zones = new ConcurrentHashMap<>();
 	
 	private static final String[] COMMANDS =
@@ -484,7 +484,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			catch (Exception e)
 			{
 				activeChar.sendMessage("Failed writing the dump: " + e.getMessage());
-				_log.log(Level.WARNING, "Failed writing point picking dump for " + activeChar.getName() + ":" + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Failed writing point picking dump for " + activeChar.getName() + ":" + e.getMessage(), e);
 			}
 		}
 	}

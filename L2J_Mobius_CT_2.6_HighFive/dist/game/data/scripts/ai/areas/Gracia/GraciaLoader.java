@@ -54,7 +54,7 @@ import ai.areas.Gracia.vehicles.SoIController.SoIController;
  */
 public final class GraciaLoader
 {
-	private static final Logger _log = Logger.getLogger(GraciaLoader.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GraciaLoader.class.getName());
 	
 	private static final Class<?>[] SCRIPTS =
 	{
@@ -95,7 +95,7 @@ public final class GraciaLoader
 	
 	public static void main(String[] args)
 	{
-		_log.info(GraciaLoader.class.getSimpleName() + ": Loading Gracia related scripts.");
+		LOGGER.info(GraciaLoader.class.getSimpleName() + ": Loading Gracia related scripts.");
 		for (Class<?> script : SCRIPTS)
 		{
 			try
@@ -104,7 +104,7 @@ public final class GraciaLoader
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, GraciaLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":", e);
+				LOGGER.log(Level.SEVERE, GraciaLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":", e);
 			}
 		}
 	}

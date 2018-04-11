@@ -92,7 +92,7 @@ public class BeastSpiritShot implements IItemHandler
 		
 		if (skills == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": is missing skills!");
+			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		

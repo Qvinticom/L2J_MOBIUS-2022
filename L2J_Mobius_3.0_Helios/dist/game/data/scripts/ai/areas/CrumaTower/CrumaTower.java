@@ -76,7 +76,7 @@ public final class CrumaTower extends AbstractNpcAI
 		}
 		catch (Exception e)
 		{
-			_log.warning("Invalid location for Cruma Tower teleport device.");
+			LOGGER.warning("Invalid location for Cruma Tower teleport device.");
 		}
 	}
 	

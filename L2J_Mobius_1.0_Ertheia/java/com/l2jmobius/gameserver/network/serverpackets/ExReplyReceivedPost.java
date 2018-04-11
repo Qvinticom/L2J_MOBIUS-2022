@@ -46,7 +46,7 @@ public class ExReplyReceivedPost extends AbstractItemPacket
 			}
 			else
 			{
-				_log.warning("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
+				LOGGER.warning("Message " + msg.getId() + " has attachments but itemcontainer is empty.");
 			}
 		}
 	}

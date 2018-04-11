@@ -58,7 +58,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public abstract class L2Item extends ListenersContainer implements IIdentifiable
 {
-	protected static final Logger _log = Logger.getLogger(L2Item.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2Item.class.getName());
 	
 	public static final int TYPE1_WEAPON_RING_EARRING_NECKLACE = 0;
 	public static final int TYPE1_SHIELD_ARMOR = 1;
@@ -220,13 +220,13 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 					
 					if (id == 0)
 					{
-						_log.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill id is 0!");
+						LOGGER.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill id is 0!");
 						continue;
 					}
 					
 					if (level == 0)
 					{
-						_log.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill level is 0!");
+						LOGGER.info("Ignoring item_skill(" + element + ") for item " + this + ". Skill level is 0!");
 						continue;
 					}
 					
@@ -235,7 +235,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				}
 				catch (Exception e)
 				{
-					_log.warning("Failed to parse item_skill(" + element + ") for item " + this + "! Format: SkillId0-SkillLevel0[;SkillIdN-SkillLevelN]");
+					LOGGER.warning("Failed to parse item_skill(" + element + ") for item " + this + "! Format: SkillId0-SkillLevel0[;SkillIdN-SkillLevelN]");
 				}
 			}
 			
@@ -264,7 +264,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				catch (Exception nfe)
 				{
 					// Incorrect syntax, don't add new skill
-					_log.info("Couldnt parse " + skills + " in weapon unequip skills! item " + this);
+					LOGGER.info("Couldnt parse " + skills + " in weapon unequip skills! item " + this);
 				}
 				if ((id > 0) && (level > 0))
 				{

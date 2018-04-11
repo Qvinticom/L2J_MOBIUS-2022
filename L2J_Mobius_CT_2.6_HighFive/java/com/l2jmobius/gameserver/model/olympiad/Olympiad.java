@@ -54,7 +54,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class Olympiad extends ListenersContainer
 {
-	protected static final Logger _log = Logger.getLogger(Olympiad.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
 	protected static final Logger _logResults = Logger.getLogger("olympiad");
 	
 	private static final Map<Integer, StatsSet> NOBLES = new ConcurrentHashMap<>();
@@ -192,12 +192,12 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Olympiad System: Error loading olympiad data from database: ", e);
+			LOGGER.log(Level.WARNING, "Olympiad System: Error loading olympiad data from database: ", e);
 		}
 		
 		if (!loaded)
 		{
-			_log.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
+			LOGGER.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
 			
 			final Properties OlympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(Config.OLYMPIAD_CONFIG_FILE))
@@ -206,7 +206,7 @@ public class Olympiad extends ListenersContainer
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "Olympiad System: Error loading olympiad properties: ", e);
+				LOGGER.log(Level.SEVERE, "Olympiad System: Error loading olympiad properties: ", e);
 				return;
 			}
 			
@@ -249,7 +249,7 @@ public class Olympiad extends ListenersContainer
 			}
 			default:
 			{
-				_log.warning("Olympiad System: Omg something went wrong in loading!! Period = " + _period);
+				LOGGER.warning("Olympiad System: Omg something went wrong in loading!! Period = " + _period);
 				return;
 			}
 		}
@@ -280,19 +280,19 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database: ", e);
+			LOGGER.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database: ", e);
 		}
 		
 		synchronized (this)
 		{
-			_log.info("Olympiad System: Loading Olympiad System....");
+			LOGGER.info("Olympiad System: Loading Olympiad System....");
 			if (_period == 0)
 			{
-				_log.info("Olympiad System: Currently in Olympiad Period");
+				LOGGER.info("Olympiad System: Currently in Olympiad Period");
 			}
 			else
 			{
-				_log.info("Olympiad System: Currently in Validation Period");
+				LOGGER.info("Olympiad System: Currently in Validation Period");
 			}
 			
 			long milliToEnd;
@@ -305,17 +305,17 @@ public class Olympiad extends ListenersContainer
 				milliToEnd = getMillisToValidationEnd();
 			}
 			
-			_log.info("Olympiad System: " + (milliToEnd / 60000) + " minutes until period ends");
+			LOGGER.info("Olympiad System: " + (milliToEnd / 60000) + " minutes until period ends");
 			
 			if (_period == 0)
 			{
 				milliToEnd = getMillisToWeekChange();
 				
-				_log.info("Olympiad System: Next weekly change is in " + (milliToEnd / 60000) + " minutes");
+				LOGGER.info("Olympiad System: Next weekly change is in " + (milliToEnd / 60000) + " minutes");
 			}
 		}
 		
-		_log.info("Olympiad System: Loaded " + NOBLES.size() + " Nobles");
+		LOGGER.info("Olympiad System: Loaded " + NOBLES.size() + " Nobles");
 	}
 	
 	public void loadNoblesRank()
@@ -334,7 +334,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database for Ranking: ", e);
+			LOGGER.log(Level.WARNING, "Olympiad System: Error loading noblesse data from database for Ranking: ", e);
 		}
 		
 		int rank1 = (int) Math.round(tmpPlace.size() * 0.01);
@@ -505,9 +505,9 @@ public class Olympiad extends ListenersContainer
 			final int numHours = (int) Math.floor(countDown % 24);
 			final int numDays = (int) Math.floor((countDown - numHours) / 24);
 			
-			_log.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
+			LOGGER.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
 			
-			_log.info("Olympiad System: Event starts/started : " + _compStart.getTime());
+			LOGGER.info("Olympiad System: Event starts/started : " + _compStart.getTime());
 		}
 		
 		_scheduledCompStart = ThreadPool.schedule(() ->
@@ -520,7 +520,7 @@ public class Olympiad extends ListenersContainer
 			_inCompPeriod = true;
 			
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
-			_log.info("Olympiad System: Olympiad Game Started");
+			LOGGER.info("Olympiad System: Olympiad Game Started");
 			_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
 			_gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
@@ -543,7 +543,7 @@ public class Olympiad extends ListenersContainer
 				}
 				_inCompPeriod = false;
 				Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_OVER));
-				_log.info("Olympiad System: Olympiad Game Ended");
+				LOGGER.info("Olympiad System: Olympiad Game Ended");
 				
 				while (OlympiadGameManager.getInstance().isBattleStarted()) // cleared in game manager
 				{
@@ -654,7 +654,7 @@ public class Olympiad extends ListenersContainer
 					}
 					else
 					{
-						_log.warning("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
+						LOGGER.warning("Invalid config value for Config.ALT_OLY_PERIOD_MULTIPLIER, must be >= 7");
 					}
 					break;
 				}
@@ -746,7 +746,7 @@ public class Olympiad extends ListenersContainer
 		_compStart.add(Calendar.HOUR_OF_DAY, 24);
 		_compEnd = _compStart.getTimeInMillis() + COMP_PERIOD;
 		
-		_log.info("Olympiad System: New Schedule @ " + _compStart.getTime());
+		LOGGER.info("Olympiad System: New Schedule @ " + _compStart.getTime());
 		
 		return _compStart.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 	}
@@ -772,9 +772,9 @@ public class Olympiad extends ListenersContainer
 		_scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(() ->
 		{
 			addWeeklyPoints();
-			_log.info("Olympiad System: Added weekly points to nobles");
+			LOGGER.info("Olympiad System: Added weekly points to nobles");
 			resetWeeklyMatches();
-			_log.info("Olympiad System: Reset weekly matches to nobles");
+			LOGGER.info("Olympiad System: Reset weekly matches to nobles");
 			
 			_nextWeeklyChange = Calendar.getInstance().getTimeInMillis() + WEEKLY_PERIOD;
 		}, getMillisToWeekChange(), WEEKLY_PERIOD);
@@ -901,7 +901,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "Olympiad System: Failed to save noblesse data to database: ", e);
+			LOGGER.log(Level.SEVERE, "Olympiad System: Failed to save noblesse data to database: ", e);
 		}
 	}
 	
@@ -929,7 +929,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "Olympiad System: Failed to save olympiad data to database: ", e);
+			LOGGER.log(Level.SEVERE, "Olympiad System: Failed to save olympiad data to database: ", e);
 		}
 		//@formatter:off
 		/*
@@ -945,7 +945,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Olympiad System: Unable to save olympiad properties to file: ", e);
+			LOGGER.log(Level.WARNING, "Olympiad System: Unable to save olympiad properties to file: ", e);
 		}
 		*/
 		//@formatter:on
@@ -962,7 +962,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "Olympiad System: Failed to update monthly noblese data: ", e);
+			LOGGER.log(Level.SEVERE, "Olympiad System: Failed to update monthly noblese data: ", e);
 		}
 	}
 	
@@ -1119,7 +1119,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Olympiad System: Couldnt load heros from DB");
+			LOGGER.warning("Olympiad System: Couldnt load heros from DB");
 		}
 	}
 	
@@ -1141,7 +1141,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Olympiad System: Couldn't load olympiad leaders from DB!");
+			LOGGER.warning("Olympiad System: Couldn't load olympiad leaders from DB!");
 		}
 		return names;
 	}
@@ -1224,7 +1224,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not load last olympiad points:", e);
+			LOGGER.log(Level.WARNING, "Could not load last olympiad points:", e);
 		}
 		return result;
 	}
@@ -1333,7 +1333,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Olympiad System: Couldn't delete nobles from DB!");
+			LOGGER.warning("Olympiad System: Couldn't delete nobles from DB!");
 		}
 		NOBLES.clear();
 	}

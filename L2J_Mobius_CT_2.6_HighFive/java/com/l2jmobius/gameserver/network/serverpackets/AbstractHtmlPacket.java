@@ -75,7 +75,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 	{
 		if (html.length() > 17200)
 		{
-			_log.log(Level.WARNING, "Html is too long! this will crash the client!", new Throwable());
+			LOGGER.log(Level.WARNING, "Html is too long! this will crash the client!", new Throwable());
 			_html = html.substring(0, 17200);
 		}
 		
@@ -93,7 +93,7 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");
-			_log.warning("missing html page " + path);
+			LOGGER.warning("missing html page " + path);
 			return false;
 		}
 		

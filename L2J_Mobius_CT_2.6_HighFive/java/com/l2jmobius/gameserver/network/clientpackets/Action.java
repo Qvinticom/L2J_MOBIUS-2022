@@ -154,7 +154,7 @@ public final class Action implements IClientIncomingPacket
 			default:
 			{
 				// Invalid action detected (probably client cheating), log this
-				_log.warning("[C] Action: Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
+				LOGGER.warning("[C] Action: Character: " + activeChar.getName() + " requested invalid action: " + _actionId);
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				break;
 			}

@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  */
 public abstract class AbstractEffect
 {
-	protected static final Logger _log = Logger.getLogger(AbstractEffect.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(AbstractEffect.class.getName());
 	
 	// Conditions
 	/** Attach condition. */
@@ -84,7 +84,7 @@ public abstract class AbstractEffect
 		final Class<? extends AbstractEffect> handler = EffectHandler.getInstance().getHandler(name);
 		if (handler == null)
 		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent effect handler: " + name);
+			LOGGER.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent effect handler: " + name);
 			return null;
 		}
 		
@@ -95,7 +95,7 @@ public abstract class AbstractEffect
 		}
 		catch (NoSuchMethodException | SecurityException e)
 		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent constructor for effect handler: " + name + ": " + e.getMessage());
+			LOGGER.warning(AbstractEffect.class.getSimpleName() + ": Requested unexistent constructor for effect handler: " + name + ": " + e.getMessage());
 			return null;
 		}
 		
@@ -105,7 +105,7 @@ public abstract class AbstractEffect
 		}
 		catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException e)
 		{
-			_log.warning(AbstractEffect.class.getSimpleName() + ": Unable to initialize effect handler: " + name + ": " + e.getMessage());
+			LOGGER.warning(AbstractEffect.class.getSimpleName() + ": Unable to initialize effect handler: " + name + ": " + e.getMessage());
 		}
 		return null;
 	}

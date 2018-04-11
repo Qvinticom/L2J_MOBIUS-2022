@@ -47,7 +47,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public abstract class AbstractOlympiadGame
 {
-	protected static final Logger _log = Logger.getLogger(AbstractOlympiadGame.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(AbstractOlympiadGame.class.getName());
 	protected static final Logger _logResults = Logger.getLogger("olympiad");
 	
 	protected static final String POINTS = "olympiad_points";
@@ -190,7 +190,7 @@ public abstract class AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 			return false;
 		}
 		return true;
@@ -292,7 +292,7 @@ public abstract class AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
@@ -336,7 +336,7 @@ public abstract class AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
@@ -387,7 +387,7 @@ public abstract class AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "portPlayersToArena()", e);
+			LOGGER.log(Level.WARNING, "portPlayersToArena()", e);
 		}
 	}
 	
@@ -443,7 +443,7 @@ public abstract class AbstractOlympiadGame
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	

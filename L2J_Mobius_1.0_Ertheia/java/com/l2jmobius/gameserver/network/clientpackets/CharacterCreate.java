@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.util.Util;
 @SuppressWarnings("unused")
 public final class CharacterCreate implements IClientIncomingPacket
 {
-	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	// cSdddddddddddd
 	private String _name;
@@ -124,7 +124,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		if ((_face > 2) || (_face < 0))
 		{
-			_log.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
+			LOGGER.warning("Character Creation Failure: Character face " + _face + " is invalid. Possible client hack. " + client);
 			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
@@ -132,7 +132,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		if ((_hairStyle < 0) || ((_sex == 0) && (_hairStyle > 4)) || ((_sex != 0) && (_hairStyle > 6)))
 		{
-			_log.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
+			LOGGER.warning("Character Creation Failure: Character hair style " + _hairStyle + " is invalid. Possible client hack. " + client);
 			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
@@ -140,7 +140,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		if ((_hairColor > 3) || (_hairColor < 0))
 		{
-			_log.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
+			LOGGER.warning("Character Creation Failure: Character hair color " + _hairColor + " is invalid. Possible client hack. " + client);
 			
 			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 			return;
@@ -252,7 +252,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		initNewChar(client, newChar);
 		
-		LOG_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
+		LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
 	}
 	
 	private static boolean isValidName(String text)
@@ -308,7 +308,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 				final L2ItemInstance item = newChar.getInventory().addItem("Init", ie.getId(), ie.getCount(), newChar, null);
 				if (item == null)
 				{
-					_log.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
+					LOGGER.warning("Could not create item during char creation: itemId " + ie.getId() + ", amount " + ie.getCount() + ".");
 					continue;
 				}
 				

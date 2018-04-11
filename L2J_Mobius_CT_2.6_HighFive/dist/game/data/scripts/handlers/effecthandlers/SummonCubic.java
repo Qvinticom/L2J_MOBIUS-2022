@@ -72,7 +72,7 @@ public final class SummonCubic extends AbstractEffect
 		
 		if (_cubicId < 0)
 		{
-			_log.warning(SummonCubic.class.getSimpleName() + ": Invalid Cubic ID:" + _cubicId + " in skill ID: " + info.getSkill().getId());
+			LOGGER.warning(SummonCubic.class.getSimpleName() + ": Invalid Cubic ID:" + _cubicId + " in skill ID: " + info.getSkill().getId());
 			return;
 		}
 		

@@ -59,7 +59,7 @@ public final class MaxCp extends AbstractEffect
 		
 		if (params.isEmpty())
 		{
-			_log.warning(getClass().getSimpleName() + ": must have parameters.");
+			LOGGER.warning(getClass().getSimpleName() + ": must have parameters.");
 		}
 	}
 	

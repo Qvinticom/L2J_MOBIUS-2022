@@ -839,7 +839,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	{
 		if (DEBUG || player.isGM())
 		{
-			_log.info("SoD is now in test mode - DEBUG OR GM PLAYER");
+			LOGGER.info("SoD is now in test mode - DEBUG OR GM PLAYER");
 			return true;
 		}
 		if (player.getParty() == null)
@@ -941,7 +941,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 					door.setIsAttackableDoor(true);
 				}
 			}
-			_log.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+			LOGGER.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 			((SODWorld) world).ZoneWaitForTP = true;
 			teleto.instanceId = instanceId;
 			
@@ -1610,7 +1610,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				}
 				else if (npc.getId() == SPAWN_DEVICE)
 				{
-					_log.info("portal kill");
+					LOGGER.info("portal kill");
 					final Skill skilla = SkillData.getInstance().getSkill(5699, 7);
 					skilla.applyEffects(world._tiat, world._tiat);
 					final Skill skillb = SkillData.getInstance().getSkill(5700, 7);
@@ -1674,7 +1674,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	{
 		if (DEBUG)
 		{
-			_log.info("FirstTalkEvent: NPC " + npc.getId() + ".");
+			LOGGER.info("FirstTalkEvent: NPC " + npc.getId() + ".");
 		}
 		
 		if (npc.getId() == TELEPORT)

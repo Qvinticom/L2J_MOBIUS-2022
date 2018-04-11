@@ -74,14 +74,14 @@ public class L2MerchantInstance extends L2NpcInstance
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
 		if (buyList == null)
 		{
-			_log.warning("BuyList not found! BuyListId:" + val);
+			LOGGER.warning("BuyList not found! BuyListId:" + val);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (!buyList.isNpcAllowed(getId()))
 		{
-			_log.warning("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
+			LOGGER.warning("Npc not allowed in BuyList! BuyListId:" + val + " NpcId:" + getId());
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

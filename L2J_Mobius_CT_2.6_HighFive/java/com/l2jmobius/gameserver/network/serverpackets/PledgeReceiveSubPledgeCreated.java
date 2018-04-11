@@ -60,7 +60,7 @@ public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 		}
 		else if (_clan.getClanMember(LeaderId) == null)
 		{
-			_log.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");
+			LOGGER.warning("SubPledgeLeader: " + LeaderId + " is missing from clan: " + _clan.getName() + "[" + _clan.getId() + "]");
 			return "";
 		}
 		else

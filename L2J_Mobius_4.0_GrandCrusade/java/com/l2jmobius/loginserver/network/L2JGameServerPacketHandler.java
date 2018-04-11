@@ -38,7 +38,7 @@ import com.l2jmobius.loginserver.network.loginserverpackets.LoginServerFail;
  */
 public class L2JGameServerPacketHandler
 {
-	protected static Logger _log = Logger.getLogger(L2JGameServerPacketHandler.class.getName());
+	protected static Logger LOGGER = Logger.getLogger(L2JGameServerPacketHandler.class.getName());
 	
 	public enum GameServerState
 	{
@@ -65,7 +65,7 @@ public class L2JGameServerPacketHandler
 					}
 					default:
 					{
-						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
+						LOGGER.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
 					}
@@ -83,7 +83,7 @@ public class L2JGameServerPacketHandler
 					}
 					default:
 					{
-						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
+						LOGGER.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
 					}
@@ -146,7 +146,7 @@ public class L2JGameServerPacketHandler
 					}
 					default:
 					{
-						_log.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
+						LOGGER.warning("Unknown Opcode (" + Integer.toHexString(opcode).toUpperCase() + ") in state " + state.name() + " from GameServer, closing connection.");
 						server.forceClose(LoginServerFail.NOT_AUTHED);
 						break;
 					}

@@ -67,7 +67,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class AdminEditChar implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminEditChar.class.getName());
+	private static Logger LOGGER = Logger.getLogger(AdminEditChar.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -218,7 +218,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					_log.warning("Set reputation error: " + e);
+					LOGGER.warning("Set reputation error: " + e);
 				}
 				activeChar.sendMessage("Usage: //setreputation <new_reputation_value>");
 			}
@@ -261,7 +261,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					_log.warning("Set pk error: " + e);
+					LOGGER.warning("Set pk error: " + e);
 				}
 				activeChar.sendMessage("Usage: //setpk <pk_count>");
 			}
@@ -291,7 +291,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					_log.warning("Set pvp error: " + e);
+					LOGGER.warning("Set pvp error: " + e);
 				}
 				activeChar.sendMessage("Usage: //setpvp <pvp_count>");
 			}
@@ -321,7 +321,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				if (Config.DEVELOPER)
 				{
-					_log.warning("Set Fame error: " + e);
+					LOGGER.warning("Set Fame error: " + e);
 				}
 				activeChar.sendMessage("Usage: //setfame <new_fame_value>");
 			}

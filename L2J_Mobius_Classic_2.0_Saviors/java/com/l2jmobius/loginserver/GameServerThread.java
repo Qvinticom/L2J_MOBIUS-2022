@@ -45,7 +45,7 @@ import com.l2jmobius.loginserver.network.loginserverpackets.RequestCharacters;
  */
 public class GameServerThread extends Thread
 {
-	protected static final Logger _log = Logger.getLogger(GameServerThread.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GameServerThread.class.getName());
 	private final Socket _connection;
 	private InputStream _in;
 	private OutputStream _out;
@@ -69,7 +69,7 @@ public class GameServerThread extends Thread
 		_connectionIPAddress = _connection.getInetAddress().getHostAddress();
 		if (GameServerThread.isBannedGameserverIP(_connectionIPAddress))
 		{
-			_log.info("GameServerRegistration: IP Address " + _connectionIPAddress + " is on Banned IP list.");
+			LOGGER.info("GameServerRegistration: IP Address " + _connectionIPAddress + " is on Banned IP list.");
 			forceClose(LoginServerFail.REASON_IP_BANNED);
 			// ensure no further processing for this connection
 			return;
@@ -92,7 +92,7 @@ public class GameServerThread extends Thread
 				
 				if ((lengthHi < 0) || _connection.isClosed())
 				{
-					_log.finer("LoginServerThread: Login terminated the connection.");
+					LOGGER.finer("LoginServerThread: Login terminated the connection.");
 					break;
 				}
 				
@@ -110,7 +110,7 @@ public class GameServerThread extends Thread
 				
 				if (receivedBytes != (length - 2))
 				{
-					_log.warning("Incomplete Packet is sent to the server, closing connection.(LS)");
+					LOGGER.warning("Incomplete Packet is sent to the server, closing connection.(LS)");
 					break;
 				}
 				
@@ -119,7 +119,7 @@ public class GameServerThread extends Thread
 				checksumOk = NewCrypt.verifyChecksum(data);
 				if (!checksumOk)
 				{
-					_log.warning("Incorrect packet checksum, closing connection (LS)");
+					LOGGER.warning("Incorrect packet checksum, closing connection (LS)");
 					return;
 				}
 				
@@ -130,14 +130,14 @@ public class GameServerThread extends Thread
 		{
 			final String serverName = getServerId() != -1 ? "[" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) : "(" + _connectionIPAddress + ")";
 			final String msg = "GameServer " + serverName + ": Connection lost: " + e.getMessage();
-			_log.info(msg);
+			LOGGER.info(msg);
 		}
 		finally
 		{
 			if (isAuthed())
 			{
 				_gsi.setDown();
-				_log.info("Server [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " is now set as disconnected");
+				LOGGER.info("Server [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " is now set as disconnected");
 			}
 			L2LoginServer.getInstance().getGameServerListener().removeGameServer(this);
 			L2LoginServer.getInstance().getGameServerListener().removeFloodProtection(_connectionIp);
@@ -185,7 +185,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			_log.finer("GameServerThread: Failed disconnecting banned server, server already disconnected.");
+			LOGGER.finer("GameServerThread: Failed disconnecting banned server, server already disconnected.");
 		}
 	}
 	
@@ -209,7 +209,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		final ScrambledKeyPair pair = LoginController.getInstance().getScrambledRSAKeyPair();
 		_privateKey = (RSAPrivateKey) pair.getPrivateKey();
@@ -241,7 +241,7 @@ public class GameServerThread extends Thread
 		}
 		catch (IOException e)
 		{
-			_log.severe("IOException while sending packet " + sl.getClass().getSimpleName());
+			LOGGER.severe("IOException while sending packet " + sl.getClass().getSimpleName());
 		}
 	}
 	
@@ -265,7 +265,7 @@ public class GameServerThread extends Thread
 	 */
 	public void setGameHosts(String[] hosts)
 	{
-		_log.info("Updated Gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP's:");
+		LOGGER.info("Updated Gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()) + " IP's:");
 		
 		_gsi.clearServerAddresses();
 		for (int i = 0; i < hosts.length; i += 2)
@@ -276,13 +276,13 @@ public class GameServerThread extends Thread
 			}
 			catch (Exception e)
 			{
-				_log.warning("Couldn't resolve hostname \"" + e + "\"");
+				LOGGER.warning("Couldn't resolve hostname \"" + e + "\"");
 			}
 		}
 		
 		for (String s : _gsi.getServerAddresses())
 		{
-			_log.info(s);
+			LOGGER.info(s);
 		}
 	}
 	

@@ -73,7 +73,7 @@ public final class RequestOustPledgeMember implements IClientIncomingPacket
 		final L2ClanMember member = clan.getClanMember(_target);
 		if (member == null)
 		{
-			_log.warning("Target (" + _target + ") is not member of the clan");
+			LOGGER.warning("Target (" + _target + ") is not member of the clan");
 			return;
 		}
 		if (member.isOnline() && member.getPlayerInstance().isInCombat())

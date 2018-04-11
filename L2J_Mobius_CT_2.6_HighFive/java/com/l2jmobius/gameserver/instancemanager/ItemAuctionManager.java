@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.model.itemauction.ItemAuctionInstance;
  */
 public final class ItemAuctionManager
 {
-	private static final Logger _log = Logger.getLogger(ItemAuctionManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
 	
 	private final Map<Integer, ItemAuctionInstance> _managerInstances = new HashMap<>();
 	private final AtomicInteger _auctionIds;
@@ -54,7 +54,7 @@ public final class ItemAuctionManager
 		
 		if (!Config.ALT_ITEM_AUCTION_ENABLED)
 		{
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Disabled by config.");
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Disabled by config.");
 			return;
 		}
 		
@@ -69,13 +69,13 @@ public final class ItemAuctionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions.", e);
 		}
 		
 		final File file = new File(Config.DATAPACK_ROOT, "data/ItemAuctions.xml");
 		if (!file.exists())
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Missing ItemAuctions.xml!");
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Missing ItemAuctions.xml!");
 			return;
 		}
 		
@@ -107,11 +107,11 @@ public final class ItemAuctionManager
 					}
 				}
 			}
-			_log.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
+			LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded " + _managerInstances.size() + " instance(s).");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed loading auctions from xml.", e);
 		}
 	}
 	
@@ -151,7 +151,7 @@ public final class ItemAuctionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
+			LOGGER.log(Level.SEVERE, "L2ItemAuctionManagerInstance: Failed deleting auction: " + auctionId, e);
 		}
 	}
 	

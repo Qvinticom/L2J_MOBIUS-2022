@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public abstract class ItemContainer
 {
-	protected static final Logger _log = Logger.getLogger(ItemContainer.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ItemContainer.class.getName());
 	
 	protected final Map<Integer, L2ItemInstance> _items = new ConcurrentHashMap<>();
 	
@@ -287,7 +287,7 @@ public abstract class ItemContainer
 				final L2Item template = ItemTable.getInstance().getTemplate(itemId);
 				if (template == null)
 				{
-					_log.log(Level.WARNING, (actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
+					LOGGER.log(Level.WARNING, (actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
 					return null;
 				}
 				
@@ -702,7 +702,7 @@ public abstract class ItemContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not restore container:", e);
+			LOGGER.log(Level.WARNING, "could not restore container:", e);
 		}
 	}
 	

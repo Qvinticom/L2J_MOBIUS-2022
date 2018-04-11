@@ -1245,7 +1245,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				}
 				default:
 				{
-					_log.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
+					LOGGER.warning(getClass().getSimpleName() + ": Player " + player.getName() + " (" + player.getObjectId() + ") send unknown request id " + evt.getRequest() + "!");
 				}
 			}
 		}

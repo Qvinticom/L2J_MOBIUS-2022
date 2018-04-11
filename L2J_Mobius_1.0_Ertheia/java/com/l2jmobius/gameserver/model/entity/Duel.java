@@ -52,7 +52,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Duel
 {
-	protected static final Logger _log = Logger.getLogger(Duel.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Duel.class.getName());
 	
 	public static final int DUELSTATE_NODUEL = 0;
 	public static final int DUELSTATE_DUELLING = 1;
@@ -223,7 +223,7 @@ public class Duel
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "There has been a problem while runing a duel task!", e);
+				LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel task!", e);
 			}
 		}
 	}
@@ -266,7 +266,7 @@ public class Duel
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "There has been a problem while runing a duel start task!", e);
+				LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel start task!", e);
 			}
 		}
 	}
@@ -291,7 +291,7 @@ public class Duel
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "There has been a problem while runing a duel end task!", e);
+				LOGGER.log(Level.SEVERE, "There has been a problem while runing a duel end task!", e);
 			}
 		}
 	}
@@ -994,7 +994,7 @@ public class Duel
 		{
 			if ((player != _playerA) && (player != _playerB))
 			{
-				_log.warning("Error in onPlayerDefeat(): player is not part of this 1vs1 duel");
+				LOGGER.warning("Error in onPlayerDefeat(): player is not part of this 1vs1 duel");
 			}
 			
 			if (_playerA == player)

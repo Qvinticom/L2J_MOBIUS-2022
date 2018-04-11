@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class CharSelectionInfo implements IClientOutgoingPacket
 {
-	private static Logger _log = Logger.getLogger(CharSelectionInfo.class.getName());
+	private static Logger LOGGER = Logger.getLogger(CharSelectionInfo.class.getName());
 	private final String _loginName;
 	private final int _sessionId;
 	private int _activeId;
@@ -240,7 +240,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore char info: " + e.getMessage(), e);
 		}
 		return new CharSelectInfoPackage[0];
 	}
@@ -265,7 +265,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore char subclass info: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore char subclass info: " + e.getMessage(), e);
 		}
 	}
 	
@@ -377,7 +377,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Could not restore augmentation info: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Could not restore augmentation info: " + e.getMessage(), e);
 			}
 		}
 		

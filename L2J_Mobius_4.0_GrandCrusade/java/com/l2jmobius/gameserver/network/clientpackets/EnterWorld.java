@@ -142,7 +142,7 @@ public class EnterWorld implements IClientIncomingPacket
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{
-			_log.warning("EnterWorld failed! activeChar returned 'null'.");
+			LOGGER.warning("EnterWorld failed! activeChar returned 'null'.");
 			Disconnection.of(client).defaultSequence(false);
 			return;
 		}
@@ -173,7 +173,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		// if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
 		// {
-		// _log.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
+		// LOGGER.warning("User already exists in Object ID map! User " + activeChar.getName() + " is a character clone.");
 		// }
 		
 		if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED)

@@ -307,7 +307,7 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		else
 		{
-			_log.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + val);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

@@ -74,7 +74,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, "Error while saving petition feedback");
+			LOGGER.log(Level.SEVERE, "Error while saving petition feedback");
 		}
 	}
 }

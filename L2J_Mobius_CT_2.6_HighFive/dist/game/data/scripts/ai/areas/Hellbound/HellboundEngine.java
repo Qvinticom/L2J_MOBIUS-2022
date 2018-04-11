@@ -62,9 +62,9 @@ public final class HellboundEngine extends AbstractNpcAI
 		
 		startQuestTimer(UPDATE_EVENT, 1000, null, null);
 		
-		_log.info(HellboundEngine.class.getSimpleName() + ": Level: " + getLevel());
-		_log.info(HellboundEngine.class.getSimpleName() + ": Trust: " + getTrust());
-		_log.info(HellboundEngine.class.getSimpleName() + ": Status: " + (isLocked() ? "locked." : "unlocked."));
+		LOGGER.info(HellboundEngine.class.getSimpleName() + ": Level: " + getLevel());
+		LOGGER.info(HellboundEngine.class.getSimpleName() + ": Trust: " + getTrust());
+		LOGGER.info(HellboundEngine.class.getSimpleName() + ": Status: " + (isLocked() ? "locked." : "unlocked."));
 	}
 	
 	@Override
@@ -144,11 +144,11 @@ public final class HellboundEngine extends AbstractNpcAI
 		
 		if (added > 0)
 		{
-			_log.info(getClass().getSimpleName() + ": Spawned " + added + " NPCs.");
+			LOGGER.info(getClass().getSimpleName() + ": Spawned " + added + " NPCs.");
 		}
 		if (deleted > 0)
 		{
-			_log.info(getClass().getSimpleName() + ": Removed " + deleted + " NPCs.");
+			LOGGER.info(getClass().getSimpleName() + ": Removed " + deleted + " NPCs.");
 		}
 	}
 	
@@ -172,7 +172,7 @@ public final class HellboundEngine extends AbstractNpcAI
 			return;
 		}
 		
-		_log.info(HellboundEngine.class.getSimpleName() + ": Changing level from " + getLevel() + " to " + lvl + ".");
+		LOGGER.info(HellboundEngine.class.getSimpleName() + ": Changing level from " + getLevel() + " to " + lvl + ".");
 		
 		GlobalVariablesManager.getInstance().set("HBLevel", lvl);
 	}
@@ -282,14 +282,14 @@ public final class HellboundEngine extends AbstractNpcAI
 			}
 			catch (Exception e)
 			{
-				_log.warning(getClass().getSimpleName() + " : Doors problem!" + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + " : Doors problem!" + e.getMessage());
 			}
 		}
 		
 		if (_cachedLevel > 0)
 		{
 			Broadcast.toAllOnlinePlayers(ANNOUNCEMENT.replace("%lvl%", String.valueOf(newLevel)));
-			_log.info(HellboundEngine.class.getSimpleName() + ": New level: " + newLevel);
+			LOGGER.info(HellboundEngine.class.getSimpleName() + ": New level: " + newLevel);
 		}
 		_cachedLevel = newLevel;
 	}

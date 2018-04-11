@@ -628,7 +628,7 @@ public final class Antharas extends AbstractNpcAI
 		{
 			if (!zone.isCharacterInZone(attacker) || (getStatus() != IN_FIGHT))
 			{
-				_log.warning(getClass().getSimpleName() + ": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
+				LOGGER.warning(getClass().getSimpleName() + ": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
 				attacker.teleToLocation(80464, 152294, -3534);
 			}
 			

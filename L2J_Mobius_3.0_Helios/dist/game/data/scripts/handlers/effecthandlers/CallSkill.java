@@ -74,7 +74,7 @@ public final class CallSkill extends AbstractEffect
 		}
 		else
 		{
-			_log.warning("Skill not found effect called from " + skill);
+			LOGGER.warning("Skill not found effect called from " + skill);
 		}
 	}
 }

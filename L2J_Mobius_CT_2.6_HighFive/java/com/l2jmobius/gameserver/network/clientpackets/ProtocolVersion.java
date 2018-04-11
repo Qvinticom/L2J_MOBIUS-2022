@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.KeyPacket;
  */
 public final class ProtocolVersion implements IClientIncomingPacket
 {
-	private static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
+	private static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private int _version;
 	
@@ -59,7 +59,7 @@ public final class ProtocolVersion implements IClientIncomingPacket
 				_version,
 				client
 			});
-			LOG_ACCOUNTING.log(record);
+			LOGGER_ACCOUNTING.log(record);
 			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 0);
 			client.setProtocolOk(false);
 			client.close(pk);

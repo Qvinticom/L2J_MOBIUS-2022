@@ -44,8 +44,8 @@ public final class RequestPledgeMemberPowerInfo implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		// _log.info("C5: RequestPledgeMemberPowerInfo d:"+_unk1);
-		// _log.info("C5: RequestPledgeMemberPowerInfo S:"+_player);
+		// LOGGER.info("C5: RequestPledgeMemberPowerInfo d:"+_unk1);
+		// LOGGER.info("C5: RequestPledgeMemberPowerInfo S:"+_player);
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{

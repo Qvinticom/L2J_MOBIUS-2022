@@ -144,7 +144,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 		if (!storeList.privateStoreSell(player, _items))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
-			_log.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+			LOGGER.warning("PrivateStore sell has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			return;
 		}
 		

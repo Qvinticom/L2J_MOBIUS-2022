@@ -47,7 +47,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class LongTimeEvent extends Quest
 {
-	protected Logger _log = Logger.getLogger(getClass().getName());
+	protected Logger LOGGER = Logger.getLogger(getClass().getName());
 	protected String _eventName;
 	boolean _enableShrines = false;
 	
@@ -86,17 +86,17 @@ public class LongTimeEvent extends Quest
 			if (_eventPeriod.isWithinRange(new Date()))
 			{
 				startEvent();
-				_log.info("Event " + _eventName + " active till " + _eventPeriod.getEndDate());
+				LOGGER.info("Event " + _eventName + " active till " + _eventPeriod.getEndDate());
 			}
 			else if (_eventPeriod.getStartDate().after(new Date()))
 			{
 				final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
 				ThreadPool.schedule(new ScheduleStart(), delay);
-				_log.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
+				LOGGER.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
 			}
 			else
 			{
-				_log.info("Event " + _eventName + " has passed... Ignored ");
+				LOGGER.info("Event " + _eventName + " has passed... Ignored ");
 			}
 		}
 	}
@@ -179,19 +179,19 @@ public class LongTimeEvent extends Quest
 										
 										if (ItemTable.getInstance().getTemplate(itemId) == null)
 										{
-											_log.warning(getScriptName() + " event: " + itemId + " is wrong item id, item was not added in droplist");
+											LOGGER.warning(getScriptName() + " event: " + itemId + " is wrong item id, item was not added in droplist");
 											continue;
 										}
 										
 										if (minCount > maxCount)
 										{
-											_log.warning(getScriptName() + " event: item " + itemId + " - min greater than max, item was not added in droplist");
+											LOGGER.warning(getScriptName() + " event: item " + itemId + " - min greater than max, item was not added in droplist");
 											continue;
 										}
 										
 										if ((finalChance < 10000) || (finalChance > 1000000))
 										{
-											_log.warning(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
+											LOGGER.warning(getScriptName() + " event: item " + itemId + " - incorrect drop chance, item was not added in droplist");
 											continue;
 										}
 										
@@ -199,7 +199,7 @@ public class LongTimeEvent extends Quest
 									}
 									catch (NumberFormatException nfe)
 									{
-										_log.warning("Wrong number format in config.xml droplist block for " + getScriptName() + " event");
+										LOGGER.warning("Wrong number format in config.xml droplist block for " + getScriptName() + " event");
 									}
 								}
 							}
@@ -221,7 +221,7 @@ public class LongTimeEvent extends Quest
 										
 										if (NpcData.getInstance().getTemplate(npcId) == null)
 										{
-											_log.warning(getScriptName() + " event: " + npcId + " is wrong NPC id, NPC was not added in spawnlist");
+											LOGGER.warning(getScriptName() + " event: " + npcId + " is wrong NPC id, NPC was not added in spawnlist");
 											continue;
 										}
 										
@@ -229,7 +229,7 @@ public class LongTimeEvent extends Quest
 									}
 									catch (NumberFormatException nfe)
 									{
-										_log.warning("Wrong number format in config.xml spawnlist block for " + getScriptName() + " event");
+										LOGGER.warning("Wrong number format in config.xml spawnlist block for " + getScriptName() + " event");
 									}
 								}
 							}

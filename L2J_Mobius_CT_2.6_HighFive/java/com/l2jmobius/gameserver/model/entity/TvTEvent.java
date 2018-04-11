@@ -72,7 +72,7 @@ public class TvTEvent
 		REWARDING
 	}
 	
-	protected static final Logger _log = Logger.getLogger(TvTEvent.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(TvTEvent.class.getName());
 	/** html path **/
 	private static final String htmlPath = "data/scripts/custom/events/TvT/TvTManager/";
 	/**
@@ -143,7 +143,7 @@ public class TvTEvent
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "TvTEventEngine[TvTEvent.startParticipation()]: exception: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "TvTEventEngine[TvTEvent.startParticipation()]: exception: " + e.getMessage(), e);
 			return false;
 		}
 		
@@ -276,7 +276,7 @@ public class TvTEvent
 			catch (Exception e)
 			{
 				_TvTEventInstance = 0;
-				_log.log(Level.WARNING, "TvTEventEngine[TvTEvent.createDynamicInstance]: exception: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "TvTEventEngine[TvTEvent.createDynamicInstance]: exception: " + e.getMessage(), e);
 			}
 		}
 		

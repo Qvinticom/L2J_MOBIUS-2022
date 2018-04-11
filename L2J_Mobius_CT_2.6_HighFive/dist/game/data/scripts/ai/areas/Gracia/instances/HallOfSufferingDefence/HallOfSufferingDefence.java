@@ -277,7 +277,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 			world.setStatus(0);
 			((HSDWorld) world).storeTime[0] = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hall Of Suffering Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Hall Of Suffering Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			runTumors((HSDWorld) world);
 			
 			if (player.getParty() == null)

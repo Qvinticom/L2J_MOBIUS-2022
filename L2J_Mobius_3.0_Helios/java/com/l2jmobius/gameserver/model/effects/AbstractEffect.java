@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public abstract class AbstractEffect
 {
-	protected static final Logger _log = Logger.getLogger(AbstractEffect.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(AbstractEffect.class.getName());
 	
 	private int _ticks;
 	

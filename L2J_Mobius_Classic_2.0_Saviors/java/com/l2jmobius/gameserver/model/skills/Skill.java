@@ -67,7 +67,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class Skill implements IIdentifiable
 {
-	private static final Logger _log = Logger.getLogger(Skill.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Skill.class.getName());
 	
 	/** Skill ID. */
 	private final int _id;
@@ -295,7 +295,7 @@ public final class Skill implements IIdentifiable
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "Bad data in rideState for skill " + this + "!", e);
+						LOGGER.log(Level.WARNING, "Bad data in rideState for skill " + this + "!", e);
 					}
 				}
 			}
@@ -426,7 +426,7 @@ public final class Skill implements IIdentifiable
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "Skill ID[" + _id + "] Expected AbnormalType for abnormalResists but found " + s, e);
+						LOGGER.log(Level.WARNING, "Skill ID[" + _id + "] Expected AbnormalType for abnormalResists but found " + s, e);
 					}
 				}
 			}
@@ -1139,7 +1139,7 @@ public final class Skill implements IIdentifiable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception in Skill.getTarget(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception in Skill.getTarget(): " + e.getMessage(), e);
 			}
 		}
 		activeChar.sendMessage("Target type of skill " + this + " is not currently handled.");
@@ -1168,7 +1168,7 @@ public final class Skill implements IIdentifiable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception in Skill.getTargetsAffected(): " + e.getMessage(), e);
 			}
 		}
 		activeChar.sendMessage("Target affect scope of skill " + this + " is not currently handled.");
@@ -1196,7 +1196,7 @@ public final class Skill implements IIdentifiable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Exception in Skill.forEachTargetAffected(): " + e.getMessage(), e);
 			}
 		}
 		else
@@ -1608,7 +1608,7 @@ public final class Skill implements IIdentifiable
 				}
 				else
 				{
-					_log.warning("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
+					LOGGER.warning("Invalid AbnormalVisualEffect(" + this + ") found for Skill(" + aveString + ")");
 				}
 			}
 			

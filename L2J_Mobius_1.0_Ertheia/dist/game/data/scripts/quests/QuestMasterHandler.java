@@ -454,7 +454,7 @@ import quests.Q10800_ReconnaissanceAtDragonValley.Q10800_ReconnaissanceAtDragonV
  */
 public class QuestMasterHandler
 {
-	private static final Logger _log = Logger.getLogger(QuestMasterHandler.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(QuestMasterHandler.class.getName());
 	
 	private static final Class<?>[] QUESTS =
 	{
@@ -899,7 +899,7 @@ public class QuestMasterHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, QuestMasterHandler.class.getSimpleName() + ": Failed loading " + quest.getSimpleName() + ":", e);
+				LOGGER.log(Level.SEVERE, QuestMasterHandler.class.getSimpleName() + ": Failed loading " + quest.getSimpleName() + ":", e);
 			}
 		}
 	}

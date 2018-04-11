@@ -25,7 +25,7 @@ import java.util.logging.Logger;
  */
 public interface ITelnetHandler
 {
-	Logger _log = Logger.getLogger(ITelnetHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(ITelnetHandler.class.getName());
 	
 	/**
 	 * this is the worker method that is called when someone uses an bypass command

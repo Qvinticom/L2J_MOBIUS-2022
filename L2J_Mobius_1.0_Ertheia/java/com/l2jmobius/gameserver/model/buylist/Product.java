@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.model.items.type.EtcItemType;
  */
 public final class Product
 {
-	private static final Logger _log = Logger.getLogger(Product.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Product.class.getName());
 	
 	private final int _buyListId;
 	private final L2Item _item;
@@ -179,7 +179,7 @@ public final class Product
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + getItemId(), e);
+			LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + getItemId(), e);
 		}
 	}
 }

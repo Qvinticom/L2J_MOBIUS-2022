@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public abstract class L2ZoneType extends ListenersContainer
 {
-	protected static final Logger _log = Logger.getLogger(L2ZoneType.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(L2ZoneType.class.getName());
 	
 	private final int _id;
 	protected L2ZoneForm _zone;
@@ -188,7 +188,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		}
 		else
 		{
-			_log.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + getId());
+			LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + getId());
 		}
 	}
 	

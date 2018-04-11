@@ -121,7 +121,7 @@ public class ItemAuctionLink implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		
 		return true;

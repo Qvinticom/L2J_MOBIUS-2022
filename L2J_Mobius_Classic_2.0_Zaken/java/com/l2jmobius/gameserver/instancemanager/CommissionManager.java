@@ -60,7 +60,7 @@ import com.l2jmobius.gameserver.network.serverpackets.commission.ExResponseCommi
  */
 public final class CommissionManager
 {
-	private static final Logger _log = Logger.getLogger(CommissionManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CommissionManager.class.getName());
 	
 	private static final int INTERACTION_DISTANCE = 250;
 	private static final int ITEMS_LIMIT_PER_REQUEST = 999;
@@ -103,7 +103,7 @@ public final class CommissionManager
 					final L2ItemInstance itemInstance = itemInstances.get(rs.getInt("item_object_id"));
 					if (itemInstance == null)
 					{
-						_log.warning(getClass().getSimpleName() + ": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
+						LOGGER.warning(getClass().getSimpleName() + ": Failed loading commission item with commission id " + commissionId + " because item instance does not exist or failed to load.");
 						continue;
 					}
 					final CommissionItem commissionItem = new CommissionItem(commissionId, itemInstance, rs.getLong("price_per_unit"), rs.getTimestamp("start_time").toInstant(), rs.getByte("duration_in_days"));
@@ -121,7 +121,7 @@ public final class CommissionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading commission items.", e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed loading commission items.", e);
 		}
 	}
 	
@@ -270,7 +270,7 @@ public final class CommissionManager
 			}
 			catch (SQLException e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed inserting commission item. ItemInstance: " + itemInstance, e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed inserting commission item. ItemInstance: " + itemInstance, e);
 				player.sendPacket(SystemMessageId.THE_ITEM_HAS_FAILED_TO_BE_REGISTERED);
 				player.sendPacket(ExResponseCommissionRegister.FAILED);
 			}
@@ -409,7 +409,7 @@ public final class CommissionManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed deleting commission item. Commission ID: " + commissionId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed deleting commission item. Commission ID: " + commissionId, e);
 		}
 		return false;
 	}

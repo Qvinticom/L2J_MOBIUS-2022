@@ -48,7 +48,7 @@ public final class EndScenePlayer implements IClientIncomingPacket
 		}
 		if (activeChar.getMovieId() != _movieId)
 		{
-			_log.warning("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
+			LOGGER.warning("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
 			return;
 		}
 		activeChar.setMovieId(0);

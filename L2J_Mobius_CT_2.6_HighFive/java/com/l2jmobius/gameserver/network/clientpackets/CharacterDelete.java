@@ -83,7 +83,7 @@ public final class CharacterDelete implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error:", e);
+			LOGGER.log(Level.SEVERE, "Error:", e);
 		}
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1, 0);

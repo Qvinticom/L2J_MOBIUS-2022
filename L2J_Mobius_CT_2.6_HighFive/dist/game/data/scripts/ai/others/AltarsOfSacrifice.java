@@ -257,7 +257,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 	@Override
 	public boolean unload(boolean removeFromList)
 	{
-		_log.info(getClass().getSimpleName() + ": Unloading altars due to script unloading.");
+		LOGGER.info(getClass().getSimpleName() + ": Unloading altars due to script unloading.");
 		
 		for (Altar altar : _altars)
 		{
@@ -281,7 +281,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Failed to spawn altar boss.", e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Failed to spawn altar boss.", e);
 				// let's try again to spawn it in 5 seconds
 				startQuestTimer(event, 5000, null, null);
 			}

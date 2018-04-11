@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class PcInventory extends Inventory
 {
-	private static final Logger _log = Logger.getLogger(PcInventory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PcInventory.class.getName());
 	
 	private final L2PcInstance _owner;
 	private L2ItemInstance _adena;
@@ -722,7 +722,7 @@ public class PcInventory extends Inventory
 				if (_questSlots < 0)
 				{
 					_questSlots = 0;
-					_log.warning(this + ": QuestInventory size < 0!");
+					LOGGER.warning(this + ": QuestInventory size < 0!");
 				}
 			}
 		}
@@ -773,7 +773,7 @@ public class PcInventory extends Inventory
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
 		}
 		return paperdoll;
 	}

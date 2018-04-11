@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.L2GameClient;
  */
 public final class OfflineTradeUtil
 {
-	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private OfflineTradeUtil()
 	{
@@ -145,7 +145,7 @@ public final class OfflineTradeUtil
 		}
 		
 		Disconnection.of(player).storeMe().close(false);
-		LOG_ACCOUNTING.info("Entering offline mode, " + client);
+		LOGGER_ACCOUNTING.info("Entering offline mode, " + client);
 		return true;
 	}
 }

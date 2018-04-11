@@ -47,7 +47,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class FortSiegeManager
 {
-	private static final Logger _log = Logger.getLogger(FortSiegeManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FortSiegeManager.class.getName());
 	
 	private int _attackerMaxClans = 500; // Max number of clans
 	
@@ -102,7 +102,7 @@ public final class FortSiegeManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: checkIsRegistered(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: checkIsRegistered(): " + e.getMessage(), e);
 		}
 		return register;
 	}
@@ -123,7 +123,7 @@ public final class FortSiegeManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while loading Fort Siege Manager settings!", e);
+			LOGGER.log(Level.WARNING, "Error while loading Fort Siege Manager settings!", e);
 		}
 		
 		// Siege setting
@@ -164,7 +164,7 @@ public final class FortSiegeManager
 				}
 				catch (Exception e)
 				{
-					_log.warning("Error while loading commander(s) for " + fort.getName() + " fort.");
+					LOGGER.warning("Error while loading commander(s) for " + fort.getName() + " fort.");
 				}
 			}
 			
@@ -190,7 +190,7 @@ public final class FortSiegeManager
 				}
 				catch (Exception e)
 				{
-					_log.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
+					LOGGER.warning("Error while loading flag(s) for " + fort.getName() + " fort.");
 				}
 			}
 			_flagList.put(fort.getResidenceId(), flagSpawns);

@@ -32,7 +32,7 @@ import org.xml.sax.SAXException;
  */
 public class ScriptDocument
 {
-	private static final Logger _log = Logger.getLogger(ScriptDocument.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ScriptDocument.class.getName());
 	
 	private Document _document;
 	private final String _name;
@@ -48,17 +48,17 @@ public class ScriptDocument
 		}
 		catch (SAXException sxe)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + (sxe.getException() != null ? sxe.getException() : sxe).getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + (sxe.getException() != null ? sxe.getException() : sxe).getMessage());
 		}
 		catch (ParserConfigurationException pce)
 		{
 			// Parser with specified options can't be built
-			_log.log(Level.WARNING, "", pce);
+			LOGGER.log(Level.WARNING, "", pce);
 		}
 		catch (IOException ioe)
 		{
 			// I/O error
-			_log.log(Level.WARNING, "", ioe);
+			LOGGER.log(Level.WARNING, "", ioe);
 		}
 	}
 	

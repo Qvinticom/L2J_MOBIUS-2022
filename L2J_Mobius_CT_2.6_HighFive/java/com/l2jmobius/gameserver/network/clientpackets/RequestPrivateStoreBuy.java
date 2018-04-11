@@ -146,7 +146,7 @@ public final class RequestPrivateStoreBuy implements IClientIncomingPacket
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			if (result > 1)
 			{
-				_log.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
+				LOGGER.warning("PrivateStore buy has failed due to invalid list or request. Player: " + player.getName() + ", Private store of: " + storePlayer.getName());
 			}
 			return;
 		}

@@ -71,13 +71,13 @@ public final class SiegableHall extends ClanHall
 				}
 				catch (Exception e)
 				{
-					_log.warning("SiegableHall - " + getName() + ": Wrong schedule_config parameters!");
+					LOGGER.warning("SiegableHall - " + getName() + ": Wrong schedule_config parameters!");
 				}
 			}
 		}
 		else
 		{
-			_log.warning(getName() + ": Wrong schedule_config value in siegable_halls table, using default (7 days)");
+			LOGGER.warning(getName() + ": Wrong schedule_config value in siegable_halls table, using default (7 days)");
 		}
 		
 		_nextSiege = Calendar.getInstance();
@@ -140,7 +140,7 @@ public final class SiegableHall extends ClanHall
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: SiegableHall.updateDb(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: SiegableHall.updateDb(): " + e.getMessage(), e);
 		}
 	}
 	

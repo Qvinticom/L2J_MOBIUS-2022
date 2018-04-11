@@ -63,7 +63,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
  */
 public final class CharEffectList
 {
-	private static final Logger _log = Logger.getLogger(CharEffectList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CharEffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
 	private volatile Queue<BuffInfo> _actives;
 	/** List containing all passives for this effect list. They bypass most of the actions and they are not included in most operations. */
@@ -897,7 +897,7 @@ public final class CharEffectList
 		// Passive effects don't need stack type!
 		if (!skill.getAbnormalType().isNone())
 		{
-			_log.warning("Passive " + skill + " with abnormal type: " + skill.getAbnormalType() + "!");
+			LOGGER.warning("Passive " + skill + " with abnormal type: " + skill.getAbnormalType() + "!");
 		}
 		
 		// Check for passive skill conditions.

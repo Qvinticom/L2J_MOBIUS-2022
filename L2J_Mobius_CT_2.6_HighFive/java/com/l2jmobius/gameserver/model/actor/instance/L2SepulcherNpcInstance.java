@@ -389,7 +389,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 			}
 			catch (Exception e)
 			{
-				_log.warning(e.getMessage());
+				LOGGER.warning(e.getMessage());
 			}
 		}
 	}

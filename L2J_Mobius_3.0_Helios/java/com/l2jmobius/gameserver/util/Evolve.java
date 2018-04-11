@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class Evolve
 {
-	protected static final Logger _log = Logger.getLogger(Evolve.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Evolve.class.getName());
 	
 	public static boolean doEvolve(L2PcInstance player, L2Npc npc, int itemIdtake, int itemIdgive, int petminlvl)
 	{
@@ -287,7 +287,7 @@ public final class Evolve
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 	}
@@ -314,7 +314,7 @@ public final class Evolve
 			}
 			catch (Throwable e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 		}
 	}

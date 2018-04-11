@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class ItemAuction
 {
-	static final Logger _log = Logger.getLogger(ItemAuctionManager.class.getName());
+	static final Logger LOGGER = Logger.getLogger(ItemAuctionManager.class.getName());
 	private static final long ENDING_TIME_EXTEND_5 = TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES);
 	private static final long ENDING_TIME_EXTEND_3 = TimeUnit.MILLISECONDS.convert(3, TimeUnit.MINUTES);
 	
@@ -206,7 +206,7 @@ public final class ItemAuction
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 		}
 	}
 	
@@ -240,7 +240,7 @@ public final class ItemAuction
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 		}
 	}
 	

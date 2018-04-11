@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.entity.Auction;
  */
 public final class ClanHallAuctionManager
 {
-	protected static final Logger _log = Logger.getLogger(ClanHallAuctionManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ClanHallAuctionManager.class.getName());
 	private final List<Auction> _auctions = new ArrayList<>();
 	
 	private static final String[] ITEM_INIT_DATA =
@@ -106,11 +106,11 @@ public final class ClanHallAuctionManager
 			{
 				_auctions.add(new Auction(rs.getInt("id")));
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded: " + _auctions.size() + " auction(s)");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _auctions.size() + " auction(s)");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: AuctionManager.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: AuctionManager.load(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -159,7 +159,7 @@ public final class ClanHallAuctionManager
 		}
 		if ((i >= ItemInitDataId.length) || (ItemInitDataId[i] != id))
 		{
-			_log.warning(getClass().getSimpleName() + ": Clan Hall auction not found for Id :" + id);
+			LOGGER.warning(getClass().getSimpleName() + ": Clan Hall auction not found for Id :" + id);
 			return;
 		}
 		
@@ -168,11 +168,11 @@ public final class ClanHallAuctionManager
 		{
 			s.executeUpdate("INSERT INTO `auction` VALUES " + ITEM_INIT_DATA[i]);
 			_auctions.add(new Auction(id));
-			_log.info(getClass().getSimpleName() + ": Created auction for ClanHall: " + id);
+			LOGGER.info(getClass().getSimpleName() + ": Created auction for ClanHall: " + id);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Exception: Auction.initNPC(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Exception: Auction.initNPC(): " + e.getMessage(), e);
 		}
 	}
 	

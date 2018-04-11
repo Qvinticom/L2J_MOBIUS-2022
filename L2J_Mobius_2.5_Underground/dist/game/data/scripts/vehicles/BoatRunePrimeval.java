@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
  */
 public class BoatRunePrimeval implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(BoatRunePrimeval.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BoatRunePrimeval.class.getName());
 	
 	// Time: 239s
 	private static final VehiclePathPoint[] RUNE_TO_PRIMEVAL =
@@ -168,7 +168,7 @@ public class BoatRunePrimeval implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.warning(e.getMessage());
+			LOGGER.warning(e.getMessage());
 		}
 	}
 	

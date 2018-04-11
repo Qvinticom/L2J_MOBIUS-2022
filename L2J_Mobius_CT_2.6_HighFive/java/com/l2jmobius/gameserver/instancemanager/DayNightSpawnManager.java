@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
  */
 public final class DayNightSpawnManager
 {
-	private static Logger _log = Logger.getLogger(DayNightSpawnManager.class.getName());
+	private static Logger LOGGER = Logger.getLogger(DayNightSpawnManager.class.getName());
 	
 	private final List<L2Spawn> _dayCreatures = new ArrayList<>();
 	private final List<L2Spawn> _nightCreatures = new ArrayList<>();
@@ -106,7 +106,7 @@ public final class DayNightSpawnManager
 						i++;
 					}
 				}
-				_log.info("DayNightSpawnManager: Removed " + i + " " + UnspawnLogInfo + " creatures");
+				LOGGER.info("DayNightSpawnManager: Removed " + i + " " + UnspawnLogInfo + " creatures");
 			}
 			
 			int i = 0;
@@ -121,11 +121,11 @@ public final class DayNightSpawnManager
 				i++;
 			}
 			
-			_log.info("DayNightSpawnManager: Spawned " + i + " " + SpawnLogInfo + " creatures");
+			LOGGER.info("DayNightSpawnManager: Spawned " + i + " " + SpawnLogInfo + " creatures");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while spawning creatures: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while spawning creatures: " + e.getMessage(), e);
 		}
 	}
 	
@@ -152,7 +152,7 @@ public final class DayNightSpawnManager
 			}
 			default:
 			{
-				_log.warning("DayNightSpawnManager: Wrong mode sent");
+				LOGGER.warning("DayNightSpawnManager: Wrong mode sent");
 				break;
 			}
 		}
@@ -173,7 +173,7 @@ public final class DayNightSpawnManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while notifyChangeMode(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while notifyChangeMode(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -214,7 +214,7 @@ public final class DayNightSpawnManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error while specialNoghtBoss(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error while specialNoghtBoss(): " + e.getMessage(), e);
 		}
 	}
 	
@@ -225,7 +225,7 @@ public final class DayNightSpawnManager
 			case 0:
 			{
 				boss.deleteMe();
-				_log.info(getClass().getSimpleName() + ": Deleting Hellman raidboss");
+				LOGGER.info(getClass().getSimpleName() + ": Deleting Hellman raidboss");
 				break;
 			}
 			case 1:
@@ -234,7 +234,7 @@ public final class DayNightSpawnManager
 				{
 					boss.spawnMe();
 				}
-				_log.info(getClass().getSimpleName() + ": Spawning Hellman raidboss");
+				LOGGER.info(getClass().getSimpleName() + ": Spawning Hellman raidboss");
 				break;
 			}
 		}

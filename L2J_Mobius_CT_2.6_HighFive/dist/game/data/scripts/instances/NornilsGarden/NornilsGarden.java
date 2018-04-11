@@ -283,7 +283,7 @@ public final class NornilsGarden extends AbstractInstance
 		world.setInstanceId(instanceId);
 		world.setTemplateId(TEMPLATE_ID);
 		InstanceManager.getInstance().addWorld(world);
-		_log.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
+		LOGGER.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		
 		prepareInstance((NornilsWorld) world);
 		

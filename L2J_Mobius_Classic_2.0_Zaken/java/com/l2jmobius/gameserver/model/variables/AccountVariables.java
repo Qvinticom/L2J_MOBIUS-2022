@@ -31,7 +31,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
  */
 public class AccountVariables extends AbstractVariables
 {
-	private static final Logger _log = Logger.getLogger(AccountVariables.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AccountVariables.class.getName());
 	
 	// SQL Queries.
 	private static final String SELECT_QUERY = "SELECT * FROM account_gsdata WHERE account_name = ?";
@@ -64,7 +64,7 @@ public class AccountVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _accountName, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _accountName, e);
 			return false;
 		}
 		finally
@@ -107,7 +107,7 @@ public class AccountVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _accountName, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _accountName, e);
 			return false;
 		}
 		finally
@@ -134,7 +134,7 @@ public class AccountVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _accountName, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _accountName, e);
 			return false;
 		}
 		return true;

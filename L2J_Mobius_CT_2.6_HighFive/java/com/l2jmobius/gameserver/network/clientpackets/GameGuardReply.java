@@ -79,7 +79,7 @@ public class GameGuardReply implements IClientIncomingPacket
 		}
 		catch (NoSuchAlgorithmException e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 		}
 	}
 }

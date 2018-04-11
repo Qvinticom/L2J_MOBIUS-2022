@@ -55,7 +55,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class L2VillageMasterInstance extends L2NpcInstance
 {
-	private static Logger _log = Logger.getLogger(L2VillageMasterInstance.class.getName());
+	private static Logger LOGGER = Logger.getLogger(L2VillageMasterInstance.class.getName());
 	
 	public L2VillageMasterInstance(L2NpcTemplate template)
 	{
@@ -627,7 +627,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 		catch (PatternSyntaxException e)
 		{
-			_log.warning("ERROR: Wrong pattern for clan name!");
+			LOGGER.warning("ERROR: Wrong pattern for clan name!");
 			pattern = Pattern.compile(".*");
 		}
 		return pattern.matcher(name).matches();

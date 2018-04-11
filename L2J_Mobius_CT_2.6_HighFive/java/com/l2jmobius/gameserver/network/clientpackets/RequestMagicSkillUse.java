@@ -79,7 +79,7 @@ public final class RequestMagicSkillUse implements IClientIncomingPacket
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					if (_magicId > 0)
 					{
-						_log.warning("Skill Id " + _magicId + " not found in player: " + activeChar);
+						LOGGER.warning("Skill Id " + _magicId + " not found in player: " + activeChar);
 					}
 					return;
 				}

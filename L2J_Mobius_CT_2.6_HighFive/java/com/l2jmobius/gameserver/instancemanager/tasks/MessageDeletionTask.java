@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class MessageDeletionTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(MessageDeletionTask.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MessageDeletionTask.class.getName());
 	
 	final int _msgId;
 	
@@ -76,7 +76,7 @@ public final class MessageDeletionTask implements Runnable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Error returning items:" + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error returning items:" + e.getMessage(), e);
 			}
 		}
 		MailManager.getInstance().deleteMessageInDb(msg.getId());

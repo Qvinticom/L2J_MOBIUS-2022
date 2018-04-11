@@ -42,8 +42,8 @@ public final class RequestPledgeWarList implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		// _log.info("C5: RequestPledgeWarList d:"+_unk1);
-		// _log.info("C5: RequestPledgeWarList d:"+_tab);
+		// LOGGER.info("C5: RequestPledgeWarList d:"+_unk1);
+		// LOGGER.info("C5: RequestPledgeWarList d:"+_tab);
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{

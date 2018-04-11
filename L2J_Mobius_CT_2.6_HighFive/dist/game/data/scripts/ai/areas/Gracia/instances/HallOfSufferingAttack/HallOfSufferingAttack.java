@@ -277,7 +277,7 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 			world.setStatus(0);
 			((HSAWorld) world).storeTime[0] = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
-			_log.info("Hall Of Suffering Attack started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Hall Of Suffering Attack started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			runTumors((HSAWorld) world);
 			
 			if (player.getParty() == null)

@@ -94,7 +94,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 		if (player.getActiveWarehouse() == null)
 		{
 			// Something went wrong!
-			_log.warning("error while sending withdraw request to: " + player.getName());
+			LOGGER.warning("error while sending withdraw request to: " + player.getName());
 			return;
 		}
 		

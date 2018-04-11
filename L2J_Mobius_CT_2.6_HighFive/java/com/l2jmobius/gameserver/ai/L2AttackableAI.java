@@ -951,7 +951,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						npc.setTarget(npc);
 						npc.doCast(sk);
 						npc.setTarget(target);
-						// _log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on itself");
+						// LOGGER.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on itself");
 						return;
 					}
 				}
@@ -1067,7 +1067,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 						npc.setTarget(npc);
 						npc.doCast(sk);
 						npc.setTarget(target);
-						// _log.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on party");
+						// LOGGER.info(this.getActor().getName() + " used heal skill " + sk.getName() + " on party");
 						return;
 					}
 				}
@@ -1105,7 +1105,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				clientStopMoving(null);
 				npc.doCast(shortRangeSkill);
-				// _log.info(this.getActor().getName() + " used short range skill " + shortRangeSkill.getName() + " on " + npc.getTarget().getName());
+				// LOGGER.info(this.getActor().getName() + " used short range skill " + shortRangeSkill.getName() + " on " + npc.getTarget().getName());
 				return;
 			}
 		}
@@ -1117,7 +1117,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			{
 				clientStopMoving(null);
 				npc.doCast(longRangeSkill);
-				// _log.info(this.getActor().getName() + " used long range skill " + longRangeSkill.getName() + " on " + npc.getTarget().getName());
+				// LOGGER.info(this.getActor().getName() + " used long range skill " + longRangeSkill.getName() + " on " + npc.getTarget().getName());
 				return;
 			}
 		}
@@ -1715,7 +1715,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		catch (NullPointerException e)
 		{
 			setIntention(AI_INTENTION_ACTIVE);
-			// _log.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - failed executing movementDisable()!");
+			// LOGGER.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - failed executing movementDisable()!");
 			return;
 		}
 	}
@@ -2162,7 +2162,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		}
 		catch (Exception e)
 		{
-			// _log.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - onEvtThink() failed!");
+			// LOGGER.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - onEvtThink() failed!");
 		}
 		finally
 		{

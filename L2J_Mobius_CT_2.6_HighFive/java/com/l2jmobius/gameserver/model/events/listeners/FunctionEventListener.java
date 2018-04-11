@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
  */
 public class FunctionEventListener extends AbstractEventListener
 {
-	private static final Logger _log = Logger.getLogger(FunctionEventListener.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FunctionEventListener.class.getName());
 	private final Function<IBaseEvent, ? extends AbstractEventReturn> _callback;
 	
 	@SuppressWarnings("unchecked")
@@ -50,7 +50,7 @@ public class FunctionEventListener extends AbstractEventListener
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while invoking " + event + " on " + getOwner(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while invoking " + event + " on " + getOwner(), e);
 		}
 		return null;
 	}

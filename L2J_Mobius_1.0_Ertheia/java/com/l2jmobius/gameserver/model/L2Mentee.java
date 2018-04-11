@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class L2Mentee
 {
-	private static final Logger _log = Logger.getLogger(L2Mentee.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2Mentee.class.getName());
 	
 	private final int _objectId;
 	private String _name;
@@ -65,7 +65,7 @@ public class L2Mentee
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				LOGGER.log(Level.WARNING, e.getMessage(), e);
 			}
 		}
 		else

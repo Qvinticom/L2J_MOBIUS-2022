@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class TerritoryWard
 {
-	// private static final Logger _log = Logger.getLogger(CombatFlag.class.getName());
+	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class.getName());
 	
 	protected L2PcInstance _player = null;
 	public int playerId = 0;

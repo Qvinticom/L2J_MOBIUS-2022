@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SendMacroList;
 
 public class MacroList implements IRestorable
 {
-	private static final Logger _log = Logger.getLogger(MacroList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(MacroList.class.getName());
 	
 	private final L2PcInstance _owner;
 	private int _macroId;
@@ -154,7 +154,7 @@ public class MacroList implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not store macro:", e);
+			LOGGER.log(Level.WARNING, "could not store macro:", e);
 		}
 	}
 	
@@ -169,7 +169,7 @@ public class MacroList implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not delete macro:", e);
+			LOGGER.log(Level.WARNING, "could not delete macro:", e);
 		}
 	}
 	
@@ -215,7 +215,7 @@ public class MacroList implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not store shortcuts:", e);
+			LOGGER.log(Level.WARNING, "could not store shortcuts:", e);
 			return false;
 		}
 		return true;

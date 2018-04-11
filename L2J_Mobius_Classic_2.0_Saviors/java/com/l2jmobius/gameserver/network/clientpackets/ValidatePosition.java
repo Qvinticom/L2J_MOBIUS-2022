@@ -64,8 +64,8 @@ public class ValidatePosition implements IClientIncomingPacket
 		
 		if (Config.DEVELOPER)
 		{
-			_log.finer("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
-			_log.finer("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
+			LOGGER.finer("client pos: " + _x + " " + _y + " " + _z + " head " + _heading);
+			LOGGER.finer("server pos: " + realX + " " + realY + " " + realZ + " head " + activeChar.getHeading());
 		}
 		
 		if ((_x == 0) && (_y == 0))
@@ -191,7 +191,7 @@ public class ValidatePosition implements IClientIncomingPacket
 				{
 					if (Config.DEVELOPER)
 					{
-						_log.info(activeChar.getName() + ": Synchronizing position Server --> Client");
+						LOGGER.info(activeChar.getName() + ": Synchronizing position Server --> Client");
 					}
 					
 					activeChar.sendPacket(new ValidateLocation(activeChar));

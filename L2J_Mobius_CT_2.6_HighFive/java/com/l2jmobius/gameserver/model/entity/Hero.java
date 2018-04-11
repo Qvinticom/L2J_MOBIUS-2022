@@ -62,7 +62,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class Hero
 {
-	private static final Logger _log = Logger.getLogger(Hero.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Hero.class.getName());
 	
 	private static final String GET_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId AND heroes.played = 1";
 	private static final String GET_ALL_HEROES = "SELECT heroes.charId, characters.char_name, heroes.class_id, heroes.count, heroes.played, heroes.claimed FROM heroes, characters WHERE characters.charId = heroes.charId";
@@ -151,11 +151,11 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Hero System: Couldnt load Heroes: " + e.getMessage());
+			LOGGER.warning("Hero System: Couldnt load Heroes: " + e.getMessage());
 		}
 		
-		_log.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
-		_log.info("Hero System: Loaded " + COMPLETE_HEROS.size() + " all time Heroes.");
+		LOGGER.info("Hero System: Loaded " + HEROES.size() + " Heroes.");
+		LOGGER.info("Hero System: Loaded " + COMPLETE_HEROS.size() + " all time Heroes.");
 	}
 	
 	private void processHeros(PreparedStatement ps, int charId, StatsSet hero) throws SQLException
@@ -217,7 +217,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
+			LOGGER.warning("Hero System: Couldnt load Hero Message for CharId: " + charId + ": " + e.getMessage());
 		}
 	}
 	
@@ -268,11 +268,11 @@ public class Hero
 			}
 			HERO_DIARY.put(charId, diary);
 			
-			_log.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			LOGGER.info("Hero System: Loaded " + diaryentries + " diary entries for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
+			LOGGER.warning("Hero System: Couldnt load Hero Diary for CharId: " + charId + ": " + e.getMessage());
 		}
 	}
 	
@@ -401,11 +401,11 @@ public class Hero
 			HERO_COUNTS.put(charId, heroCountData);
 			HERO_FIGHTS.put(charId, fights);
 			
-			_log.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
+			LOGGER.info("Hero System: Loaded " + numberoffights + " fights for Hero: " + CharNameTable.getInstance().getNameById(charId));
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
+			LOGGER.warning("Hero System: Couldnt load Hero fights history for CharId: " + charId + ": " + e);
 		}
 	}
 	
@@ -773,7 +773,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Hero System: Couldnt update Heroes: " + e.getMessage());
+			LOGGER.warning("Hero System: Couldnt update Heroes: " + e.getMessage());
 		}
 	}
 	
@@ -833,7 +833,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.severe("SQL exception while saving DiaryData: " + e.getMessage());
+			LOGGER.severe("SQL exception while saving DiaryData: " + e.getMessage());
 		}
 	}
 	
@@ -867,7 +867,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.severe("SQL exception while saving HeroMessage:" + e.getMessage());
+			LOGGER.severe("SQL exception while saving HeroMessage:" + e.getMessage());
 		}
 	}
 	
@@ -880,7 +880,7 @@ public class Hero
 		}
 		catch (SQLException e)
 		{
-			_log.warning("Heroes: " + e.getMessage());
+			LOGGER.warning("Heroes: " + e.getMessage());
 		}
 	}
 	

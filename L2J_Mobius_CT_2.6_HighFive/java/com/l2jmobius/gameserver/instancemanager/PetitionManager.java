@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class PetitionManager
 {
-	protected static final Logger _log = Logger.getLogger(PetitionManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(PetitionManager.class.getName());
 	
 	private final Map<Integer, Petition> _pendingPetitions;
 	private final Map<Integer, Petition> _completedPetitions;
@@ -55,7 +55,7 @@ public final class PetitionManager
 		final int numPetitions = getPendingPetitionCount();
 		
 		getCompletedPetitions().clear();
-		_log.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petition(s) removed.");
+		LOGGER.info(getClass().getSimpleName() + ": Completed petition data cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
 	public void clearPendingPetitions()
@@ -63,7 +63,7 @@ public final class PetitionManager
 		final int numPetitions = getPendingPetitionCount();
 		
 		getPendingPetitions().clear();
-		_log.info(getClass().getSimpleName() + ": Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
+		LOGGER.info(getClass().getSimpleName() + ": Pending petition queue cleared. " + numPetitions + " petition(s) removed.");
 	}
 	
 	public boolean acceptPetition(L2PcInstance respondingAdmin, int petitionId)

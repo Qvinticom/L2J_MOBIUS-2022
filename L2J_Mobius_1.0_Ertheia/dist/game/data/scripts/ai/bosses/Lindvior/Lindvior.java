@@ -271,12 +271,12 @@ public class Lindvior extends AbstractNpcAI
 		if (!_zoneLair.isInsideZone(attacker))
 		{
 			attacker.doDie(null);
-			_log.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " out of the boss zone!");
+			LOGGER.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " out of the boss zone!");
 		}
 		if (!_zoneLair.isInsideZone(npc))
 		{
 			npc.teleToLocation(CENTER_LOCATION, true);
-			_log.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " wich is out of the boss zone!");
+			LOGGER.warning(getName() + ": Character: " + attacker.getName() + " attacked: " + npc.getName() + " wich is out of the boss zone!");
 		}
 		
 		double percent = ((npc.getCurrentHp() - damage) / npc.getMaxHp()) * 100;

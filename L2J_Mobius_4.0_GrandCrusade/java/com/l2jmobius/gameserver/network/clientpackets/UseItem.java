@@ -272,7 +272,7 @@ public final class UseItem implements IClientIncomingPacket
 			{
 				if ((etcItem != null) && (etcItem.getHandlerName() != null))
 				{
-					_log.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
+					LOGGER.warning("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
 				}
 			}
 			else if (handler.useItem(activeChar, item, _ctrlPressed))

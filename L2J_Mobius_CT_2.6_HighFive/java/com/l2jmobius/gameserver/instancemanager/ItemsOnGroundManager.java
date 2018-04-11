@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public final class ItemsOnGroundManager implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(ItemsOnGroundManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemsOnGroundManager.class.getName());
 	
 	private final List<L2ItemInstance> _items = new CopyOnWriteArrayList<>();
 	
@@ -88,7 +88,7 @@ public final class ItemsOnGroundManager implements Runnable
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error while updating table ItemsOnGround " + e.getMessage(), e);
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while updating table ItemsOnGround " + e.getMessage(), e);
 			}
 		}
 		
@@ -131,11 +131,11 @@ public final class ItemsOnGroundManager implements Runnable
 					}
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + count + " items.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + count + " items.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading ItemsOnGround " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while loading ItemsOnGround " + e.getMessage(), e);
 		}
 		
 		if (Config.EMPTY_DROPPED_ITEM_TABLE_AFTER_LOAD)
@@ -180,7 +180,7 @@ public final class ItemsOnGroundManager implements Runnable
 		}
 		catch (Exception e1)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error while cleaning table ItemsOnGround " + e1.getMessage(), e1);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while cleaning table ItemsOnGround " + e1.getMessage(), e1);
 		}
 	}
 	
@@ -225,13 +225,13 @@ public final class ItemsOnGroundManager implements Runnable
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.SEVERE, getClass().getSimpleName() + ": Error while inserting into table ItemsOnGround: " + e.getMessage(), e);
+					LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Error while inserting into table ItemsOnGround: " + e.getMessage(), e);
 				}
 			}
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.SEVERE, getClass().getSimpleName() + ": SQL error while storing items on ground: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": SQL error while storing items on ground: " + e.getMessage(), e);
 		}
 	}
 	

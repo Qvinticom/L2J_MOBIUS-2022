@@ -124,7 +124,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			final InstanceTemplate template = manager.getInstanceTemplate(templateId);
 			if (template == null)
 			{
-				_log.warning("Player " + player.getName() + " (" + player.getObjectId() + ") wants to create instance with unknown template id " + templateId + "!");
+				LOGGER.warning("Player " + player.getName() + " (" + player.getObjectId() + ") wants to create instance with unknown template id " + templateId + "!");
 				return;
 			}
 			
@@ -133,7 +133,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			// When nobody can enter
 			if (enterGroup == null)
 			{
-				_log.warning("Instance " + template.getName() + " (" + templateId + ") has invalid group size limits!");
+				LOGGER.warning("Instance " + template.getName() + " (" + templateId + ") has invalid group size limits!");
 				return;
 			}
 			
@@ -214,7 +214,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		}
 		else
 		{
-			_log.warning("Missing start location for instance instance.getName() (" + instance.getId() + ")");
+			LOGGER.warning("Missing start location for instance instance.getName() (" + instance.getId() + ")");
 		}
 	}
 	

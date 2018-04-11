@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class PlayerVariables extends AbstractVariables
 {
-	private static final Logger _log = Logger.getLogger(PlayerVariables.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PlayerVariables.class.getName());
 	
 	// SQL Queries.
 	private static final String SELECT_QUERY = "SELECT * FROM character_variables WHERE charId = ?";
@@ -90,7 +90,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + getPlayer(), e);
 			return false;
 		}
 		finally
@@ -133,7 +133,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + getPlayer(), e);
 			return false;
 		}
 		finally
@@ -160,7 +160,7 @@ public class PlayerVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + getPlayer(), e);
 			return false;
 		}
 		return true;

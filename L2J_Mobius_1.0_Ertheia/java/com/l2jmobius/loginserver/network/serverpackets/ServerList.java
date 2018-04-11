@@ -61,7 +61,7 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  */
 public final class ServerList implements IOutgoingPacket
 {
-	protected static final Logger _log = Logger.getLogger(ServerList.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(ServerList.class.getName());
 	
 	private final List<ServerData> _servers;
 	private final int _lastServer;
@@ -90,7 +90,7 @@ public final class ServerList implements IOutgoingPacket
 			}
 			catch (UnknownHostException e)
 			{
-				_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 				_ip = new byte[4];
 				_ip[0] = 127;
 				_ip[1] = 0;

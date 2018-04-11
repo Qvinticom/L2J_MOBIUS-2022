@@ -55,17 +55,17 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 		final Castle castle = CastleManager.getInstance().getCastleById(_castleId);
 		if ((activeChar == null) || (castle == null))
 		{
-			_log.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId);
+			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId);
 			return;
 		}
 		if ((castle.getOwnerId() > 0) && (castle.getOwnerId() != activeChar.getClanId()))
 		{
-			_log.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
+			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date of not his own castle!");
 			return;
 		}
 		else if (!activeChar.isClanLeader())
 		{
-			_log.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
+			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but is not clan leader!");
 			return;
 		}
 		else if (!castle.getIsTimeRegistrationOver())
@@ -82,12 +82,12 @@ public class RequestSetCastleSiegeTime implements IClientIncomingPacket
 			}
 			else
 			{
-				_log.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to an invalid time (" + new Date(_time) + " !");
+				LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to an invalid time (" + new Date(_time) + " !");
 			}
 		}
 		else
 		{
-			_log.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but currently not possible!");
+			LOGGER.log(Level.WARNING, "[C]RequestSetCastleSiegeTime: activeChar: " + activeChar + " castle: " + castle + " castleId: " + _castleId + " is trying to change siege date but currently not possible!");
 		}
 	}
 	

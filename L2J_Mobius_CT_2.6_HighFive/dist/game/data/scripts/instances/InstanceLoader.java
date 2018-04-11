@@ -55,7 +55,7 @@ import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
  */
 public final class InstanceLoader
 {
-	private static final Logger _log = Logger.getLogger(InstanceLoader.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(InstanceLoader.class.getName());
 	
 	private static final Class<?>[] SCRIPTS =
 	{
@@ -92,7 +92,7 @@ public final class InstanceLoader
 	
 	public static void main(String[] args)
 	{
-		_log.info(InstanceLoader.class.getSimpleName() + ": Loading Instances scripts.");
+		LOGGER.info(InstanceLoader.class.getSimpleName() + ": Loading Instances scripts.");
 		for (Class<?> script : SCRIPTS)
 		{
 			try
@@ -101,7 +101,7 @@ public final class InstanceLoader
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, InstanceLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":", e);
+				LOGGER.log(Level.SEVERE, InstanceLoader.class.getSimpleName() + ": Failed loading " + script.getSimpleName() + ":", e);
 			}
 		}
 	}

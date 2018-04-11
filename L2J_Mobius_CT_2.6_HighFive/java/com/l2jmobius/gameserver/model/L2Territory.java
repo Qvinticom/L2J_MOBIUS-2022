@@ -28,7 +28,7 @@ import com.l2jmobius.commons.util.Rnd;
  */
 public class L2Territory
 {
-	private static Logger _log = Logger.getLogger(L2Territory.class.getName());
+	private static Logger LOGGER = Logger.getLogger(L2Territory.class.getName());
 	
 	protected static class Point
 	{
@@ -176,7 +176,7 @@ public class L2Territory
 				return new Location(x, y, Rnd.get(zmin, _zMax));
 			}
 		}
-		_log.warning("Can't make point for territory " + _terr);
+		LOGGER.warning("Can't make point for territory " + _terr);
 		return null;
 	}
 	

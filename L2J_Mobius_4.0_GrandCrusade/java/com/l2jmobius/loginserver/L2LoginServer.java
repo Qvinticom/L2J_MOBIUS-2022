@@ -38,7 +38,7 @@ import com.l2jmobius.loginserver.network.ClientNetworkManager;
  */
 public final class L2LoginServer
 {
-	private final Logger _log = Logger.getLogger(L2LoginServer.class.getName());
+	private final Logger LOGGER = Logger.getLogger(L2LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
 	private static L2LoginServer _instance;
@@ -77,7 +77,7 @@ public final class L2LoginServer
 		}
 		catch (IOException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 		
 		// Load Config
@@ -92,7 +92,7 @@ public final class L2LoginServer
 		}
 		catch (GeneralSecurityException e)
 		{
-			_log.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed initializing LoginController. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
@@ -104,11 +104,11 @@ public final class L2LoginServer
 		{
 			_gameServerListener = new GameServerListener();
 			_gameServerListener.start();
-			_log.info("Listening for GameServers on " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
+			LOGGER.info("Listening for GameServers on " + Config.GAME_SERVER_LOGIN_HOST + ":" + Config.GAME_SERVER_LOGIN_PORT);
 		}
 		catch (IOException e)
 		{
-			_log.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "FATAL: Failed to start the Game Server Listener. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
 		
@@ -148,7 +148,7 @@ public final class L2LoginServer
 							}
 							catch (NumberFormatException nfe)
 							{
-								_log.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
+								LOGGER.warning("Skipped: Incorrect ban duration (" + parts[1] + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
 								return;
 							}
 						}
@@ -159,25 +159,25 @@ public final class L2LoginServer
 						}
 						catch (UnknownHostException e)
 						{
-							_log.warning("Skipped: Invalid address (" + address + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
+							LOGGER.warning("Skipped: Invalid address (" + address + ") on (" + bannedFile.getName() + "). Line: " + lnr.getLineNumber());
 						}
 					});
 				//@formatter:on
 			}
 			catch (IOException e)
 			{
-				_log.log(Level.WARNING, "Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Error while reading the bans file (" + bannedFile.getName() + "). Details: " + e.getMessage(), e);
 			}
-			_log.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
+			LOGGER.info("Loaded " + LoginController.getInstance().getBannedIps().size() + " IP Bans.");
 		}
 		else
 		{
-			_log.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
+			LOGGER.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
 		}
 		
 		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
 		{
-			_log.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
 			_restartLoginServer = new LoginServerRestart();
 			_restartLoginServer.setDaemon(true);
 			_restartLoginServer.start();

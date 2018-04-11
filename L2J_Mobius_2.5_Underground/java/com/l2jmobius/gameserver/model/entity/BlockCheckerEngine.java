@@ -56,7 +56,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class BlockCheckerEngine
 {
-	protected static final Logger _log = Logger.getLogger(BlockCheckerEngine.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(BlockCheckerEngine.class.getName());
 	// The object which holds all basic members info
 	protected ArenaParticipantsHolder _holder;
 	// Maps to hold player of each team and his points
@@ -309,7 +309,7 @@ public final class BlockCheckerEngine
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Couldnt end Block Checker event at " + _arena, e);
+			LOGGER.log(Level.SEVERE, "Couldnt end Block Checker event at " + _arena, e);
 		}
 	}
 	
@@ -417,7 +417,7 @@ public final class BlockCheckerEngine
 			// Wrong arena passed, stop event
 			if (_arena == -1)
 			{
-				_log.severe("Couldnt set up the arena Id for the Block Checker event, cancelling event...");
+				LOGGER.severe("Couldnt set up the arena Id for the Block Checker event, cancelling event...");
 				return;
 			}
 			_isStarted = true;
@@ -508,7 +508,7 @@ public final class BlockCheckerEngine
 			}
 			catch (Exception e)
 			{
-				_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+				LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 			}
 			
 			// Spawn the block carrying girl
@@ -530,8 +530,8 @@ public final class BlockCheckerEngine
 				}
 				catch (Exception e)
 				{
-					_log.warning("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?");
-					_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+					LOGGER.warning("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?");
+					LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 				}
 			}
 			
@@ -558,7 +558,7 @@ public final class BlockCheckerEngine
 		{
 			if (_spawn == null)
 			{
-				_log.warning("HBCE: Block Carrying Girl is null");
+				LOGGER.warning("HBCE: Block Carrying Girl is null");
 				return;
 			}
 			SpawnTable.getInstance().deleteSpawn(_spawn, false);

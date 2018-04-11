@@ -31,7 +31,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
  */
 public class ItemVariables extends AbstractVariables
 {
-	private static final Logger _log = Logger.getLogger(ItemVariables.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ItemVariables.class.getName());
 	
 	// SQL Queries.
 	private static final String SELECT_QUERY = "SELECT * FROM item_variables WHERE id = ?";
@@ -69,7 +69,7 @@ public class ItemVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, ItemVariables.class.getSimpleName() + ": Couldn't select variables count for: " + objectId, e);
+			LOGGER.log(Level.WARNING, ItemVariables.class.getSimpleName() + ": Couldn't select variables count for: " + objectId, e);
 			return false;
 		}
 		return true;
@@ -93,7 +93,7 @@ public class ItemVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't restore variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -136,7 +136,7 @@ public class ItemVariables extends AbstractVariables
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update variables for: " + _objectId, e);
 			return false;
 		}
 		finally
@@ -163,7 +163,7 @@ public class ItemVariables extends AbstractVariables
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't delete variables for: " + _objectId, e);
 			return false;
 		}
 		return true;

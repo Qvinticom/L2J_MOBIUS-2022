@@ -150,7 +150,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 		if (fort == null)
 		{
 			npc.deleteMe();
-			_log.warning("Spawned: " + npc + " location: " + npc.getLocation() + " without fort!");
+			LOGGER.warning("Spawned: " + npc + " location: " + npc.getLocation() + " without fort!");
 			return null;
 		}
 		

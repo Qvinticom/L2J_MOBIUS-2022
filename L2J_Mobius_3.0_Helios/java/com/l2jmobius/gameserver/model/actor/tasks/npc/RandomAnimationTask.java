@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
  */
 public class RandomAnimationTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(RandomAnimationTask.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(RandomAnimationTask.class.getName());
 	private final L2Npc _npc;
 	private boolean _stopTask;
 	
@@ -70,7 +70,7 @@ public class RandomAnimationTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Execution of RandomAnimationTask has failed.", e);
+			LOGGER.log(Level.SEVERE, "Execution of RandomAnimationTask has failed.", e);
 		}
 	}
 	

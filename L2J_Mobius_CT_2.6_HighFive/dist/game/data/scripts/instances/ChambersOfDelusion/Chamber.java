@@ -132,7 +132,7 @@ public abstract class Chamber extends AbstractInstance
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, getClass().getSimpleName() + " ChangeRoomTask exception : " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, getClass().getSimpleName() + " ChangeRoomTask exception : " + e.getMessage(), e);
 				}
 			}
 		}

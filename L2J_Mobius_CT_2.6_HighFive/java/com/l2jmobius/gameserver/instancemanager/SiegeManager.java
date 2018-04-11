@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 
 public final class SiegeManager
 {
-	private static final Logger _log = Logger.getLogger(SiegeManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SiegeManager.class.getName());
 	
 	private final Map<Integer, List<TowerSpawn>> _controlTowers = new HashMap<>();
 	private final Map<Integer, List<TowerSpawn>> _flameTowers = new HashMap<>();
@@ -103,7 +103,7 @@ public final class SiegeManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Exception: checkIsRegistered(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Exception: checkIsRegistered(): " + e.getMessage(), e);
 		}
 		return register;
 	}
@@ -152,7 +152,7 @@ public final class SiegeManager
 				}
 				catch (Exception e)
 				{
-					_log.warning(getClass().getSimpleName() + ": Error while loading control tower(s) for " + castle.getName() + " castle.");
+					LOGGER.warning(getClass().getSimpleName() + ": Error while loading control tower(s) for " + castle.getName() + " castle.");
 				}
 			}
 			
@@ -183,7 +183,7 @@ public final class SiegeManager
 				}
 				catch (Exception e)
 				{
-					_log.warning(getClass().getSimpleName() + ": Error while loading flame tower(s) for " + castle.getName() + " castle.");
+					LOGGER.warning(getClass().getSimpleName() + ": Error while loading flame tower(s) for " + castle.getName() + " castle.");
 				}
 			}
 			_controlTowers.put(castle.getResidenceId(), controlTowers);
@@ -290,7 +290,7 @@ public final class SiegeManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: loadTrapUpgrade(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: loadTrapUpgrade(): " + e.getMessage(), e);
 		}
 	}
 	

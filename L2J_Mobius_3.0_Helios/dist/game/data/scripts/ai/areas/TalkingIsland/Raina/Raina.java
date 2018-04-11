@@ -319,7 +319,7 @@ public final class Raina extends AbstractNpcAI
 				
 				if (cType == null)
 				{
-					_log.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
+					LOGGER.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
 				}
 				
 				final StringBuilder sb = new StringBuilder();
@@ -404,7 +404,7 @@ public final class Raina extends AbstractNpcAI
 				
 				if (cType == null)
 				{
-					_log.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
+					LOGGER.warning(getClass().getSimpleName() + ": Cannot parse CategoryType, event: " + event);
 				}
 				
 				final StringBuilder sb = new StringBuilder();
@@ -894,7 +894,7 @@ public final class Raina extends AbstractNpcAI
 		final String text = getHtm(player.getHtmlPrefix(), fileName);
 		if (text == null)
 		{
-			_log.info("Cannot find HTML file for " + Raina.class.getSimpleName() + " AI: " + fileName);
+			LOGGER.info("Cannot find HTML file for " + Raina.class.getSimpleName() + " AI: " + fileName);
 			return null;
 		}
 		html.setHtml(text);

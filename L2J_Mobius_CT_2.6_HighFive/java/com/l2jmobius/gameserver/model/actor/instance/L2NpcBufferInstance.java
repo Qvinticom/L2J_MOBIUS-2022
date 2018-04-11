@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class L2NpcBufferInstance extends L2Npc
 {
-	private static final Logger _log = Logger.getLogger(L2NpcBufferInstance.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2NpcBufferInstance.class.getName());
 	
 	private static final Map<Integer, Integer> pageVal = new HashMap<>();
 	
@@ -118,7 +118,7 @@ public class L2NpcBufferInstance extends L2Npc
 			{
 				if (buffGroupList == null)
 				{
-					_log.warning("NPC Buffer Warning: npcId = " + npcId + " has no buffGroup set in the bypass for the buff selected.");
+					LOGGER.warning("NPC Buffer Warning: npcId = " + npcId + " has no buffGroup set in the bypass for the buff selected.");
 					return;
 				}
 				
@@ -127,7 +127,7 @@ public class L2NpcBufferInstance extends L2Npc
 				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(npcId, buffGroup);
 				if (npcBuffGroupInfo == null)
 				{
-					_log.warning("NPC Buffer Warning: npcId = " + npcId + " Location: " + getX() + ", " + getY() + ", " + getZ() + " Player: " + player.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
+					LOGGER.warning("NPC Buffer Warning: npcId = " + npcId + " Location: " + getX() + ", " + getY() + ", " + getZ() + " Player: " + player.getName() + " has tried to use skill group (" + buffGroup + ") not assigned to the NPC Buffer!");
 					return;
 				}
 				

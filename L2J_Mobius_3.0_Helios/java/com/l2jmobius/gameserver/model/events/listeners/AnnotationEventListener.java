@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
  */
 public class AnnotationEventListener extends AbstractEventListener
 {
-	private static final Logger _log = Logger.getLogger(AnnotationEventListener.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AnnotationEventListener.class.getName());
 	private final Method _callback;
 	
 	public AnnotationEventListener(ListenersContainer container, EventType type, Method callback, Object owner, int priority)
@@ -54,7 +54,7 @@ public class AnnotationEventListener extends AbstractEventListener
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while invoking " + _callback.getName() + " on " + getOwner(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while invoking " + _callback.getName() + " on " + getOwner(), e);
 		}
 		return null;
 	}

@@ -60,7 +60,7 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 			}
 			case -1:
 			{
-			// Remove Player (me)
+				// Remove Player (me)
 			}
 			{
 				final int team = HandysBlockCheckerManager.getInstance().getHolder(_arena).getPlayerTeam(player);
@@ -74,7 +74,7 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.warning("Wrong Cube Game Team ID: " + _team);
+				LOGGER.warning("Wrong Cube Game Team ID: " + _team);
 				break;
 			}
 		}

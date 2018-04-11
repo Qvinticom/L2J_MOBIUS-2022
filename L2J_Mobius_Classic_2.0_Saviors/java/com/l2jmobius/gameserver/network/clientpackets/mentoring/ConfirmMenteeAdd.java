@@ -94,7 +94,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				LOGGER.log(Level.WARNING, e.getMessage(), e);
 			}
 		}
 	}

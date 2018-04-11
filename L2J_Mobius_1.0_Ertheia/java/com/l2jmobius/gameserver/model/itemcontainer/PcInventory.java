@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 
 public class PcInventory extends Inventory
 {
-	private static final Logger _log = Logger.getLogger(PcInventory.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PcInventory.class.getName());
 	
 	private final L2PcInstance _owner;
 	private L2ItemInstance _adena;
@@ -761,7 +761,7 @@ public class PcInventory extends Inventory
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
 		}
 		return paperdoll;
 	}
@@ -970,7 +970,7 @@ public class PcInventory extends Inventory
 	{
 		if ((type != EtcItemType.ARROW) && (type != EtcItemType.BOLT))
 		{
-			_log.log(Level.WARNING, type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
+			LOGGER.log(Level.WARNING, type.toString(), " which is not arrow type passed to PlayerInstance.reduceArrowCount()");
 			return;
 		}
 		

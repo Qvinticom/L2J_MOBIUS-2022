@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 
 public class CharStatus
 {
-	protected static final Logger _log = Logger.getLogger(CharStatus.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(CharStatus.class.getName());
 	
 	private final L2Character _activeChar;
 	
@@ -449,7 +449,7 @@ public class CharStatus
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}

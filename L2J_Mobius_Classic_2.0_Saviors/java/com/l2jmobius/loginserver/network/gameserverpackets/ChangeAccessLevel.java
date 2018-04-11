@@ -27,7 +27,7 @@ import com.l2jmobius.loginserver.LoginController;
  */
 public class ChangeAccessLevel extends BaseRecievePacket
 {
-	protected static Logger _log = Logger.getLogger(ChangeAccessLevel.class.getName());
+	protected static Logger LOGGER = Logger.getLogger(ChangeAccessLevel.class.getName());
 	
 	/**
 	 * @param decrypt
@@ -40,6 +40,6 @@ public class ChangeAccessLevel extends BaseRecievePacket
 		final String account = readS();
 		
 		LoginController.getInstance().setAccountAccessLevel(account, level);
-		_log.info("Changed " + account + " access level to " + level);
+		LOGGER.info("Changed " + account + " access level to " + level);
 	}
 }

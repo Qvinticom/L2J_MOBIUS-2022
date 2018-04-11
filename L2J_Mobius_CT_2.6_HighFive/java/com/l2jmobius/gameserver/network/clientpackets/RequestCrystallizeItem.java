@@ -57,7 +57,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		if (activeChar == null)
 		{
-			_log.fine("RequestCrystalizeItem: activeChar was null");
+			LOGGER.fine("RequestCrystalizeItem: activeChar was null");
 			return;
 		}
 		
@@ -86,7 +86,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			if ((activeChar.getRace() != Race.DWARF) && (activeChar.getClassId().ordinal() != 117) && (activeChar.getClassId().ordinal() != 55))
 			{
-				_log.info("Player " + client + " used crystalize with classid: " + activeChar.getClassId().ordinal());
+				LOGGER.info("Player " + client + " used crystalize with classid: " + activeChar.getClassId().ordinal());
 			}
 			return;
 		}
@@ -120,7 +120,7 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		
 		if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == CrystalType.NONE))
 		{
-			_log.warning(activeChar.getName() + " (" + activeChar.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
+			LOGGER.warning(activeChar.getName() + " (" + activeChar.getObjectId() + ") tried to crystallize " + itemToRemove.getItem().getId());
 			return;
 		}
 		

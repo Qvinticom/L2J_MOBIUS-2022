@@ -32,7 +32,7 @@ import com.l2jmobius.Config;
  */
 public abstract class FloodProtectedListener extends Thread
 {
-	private final Logger _log = Logger.getLogger(FloodProtectedListener.class.getName());
+	private final Logger LOGGER = Logger.getLogger(FloodProtectedListener.class.getName());
 	private final Map<String, ForeignConnection> _floodProtection = new ConcurrentHashMap<>();
 	private ServerSocket _serverSocket;
 	
@@ -70,7 +70,7 @@ public abstract class FloodProtectedListener extends Thread
 							fConnection.connectionNumber -= 1;
 							if (!fConnection.isFlooding)
 							{
-								_log.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
+								LOGGER.warning("Potential Flood from " + connection.getInetAddress().getHostAddress());
 							}
 							fConnection.isFlooding = true;
 							continue;
@@ -78,7 +78,7 @@ public abstract class FloodProtectedListener extends Thread
 						if (fConnection.isFlooding) // if connection was flooding server but now passed the check
 						{
 							fConnection.isFlooding = false;
-							_log.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
+							LOGGER.info(connection.getInetAddress().getHostAddress() + " is not considered as flooding anymore.");
 						}
 						fConnection.lastConnection = System.currentTimeMillis();
 					}
@@ -102,7 +102,7 @@ public abstract class FloodProtectedListener extends Thread
 					}
 					catch (IOException io)
 					{
-						_log.log(Level.INFO, "", io);
+						LOGGER.log(Level.INFO, "", io);
 					}
 					break;
 				}
@@ -145,7 +145,7 @@ public abstract class FloodProtectedListener extends Thread
 		}
 		else
 		{
-			_log.warning("Removing a flood protection for a GameServer that was not in the connection map??? :" + ip);
+			LOGGER.warning("Removing a flood protection for a GameServer that was not in the connection map??? :" + ip);
 		}
 	}
 	
@@ -157,7 +157,7 @@ public abstract class FloodProtectedListener extends Thread
 		}
 		catch (IOException e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 }

@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public abstract class AbstractEnchantItem
 {
-	protected static final Logger _log = Logger.getLogger(AbstractEnchantItem.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(AbstractEnchantItem.class.getName());
 	
 	private static final ItemType[] ENCHANT_TYPES = new ItemType[]
 	{

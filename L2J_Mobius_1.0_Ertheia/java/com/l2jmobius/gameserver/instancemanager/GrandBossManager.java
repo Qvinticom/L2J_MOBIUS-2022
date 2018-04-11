@@ -47,7 +47,7 @@ public final class GrandBossManager implements IStorable
 	private static final String UPDATE_GRAND_BOSS_DATA = "UPDATE grandboss_data set loc_x = ?, loc_y = ?, loc_z = ?, heading = ?, respawn_time = ?, currentHP = ?, currentMP = ?, status = ? where boss_id = ?";
 	private static final String UPDATE_GRAND_BOSS_DATA2 = "UPDATE grandboss_data set status = ? where boss_id = ?";
 	
-	protected static Logger _log = Logger.getLogger(GrandBossManager.class.getName());
+	protected static Logger LOGGER = Logger.getLogger(GrandBossManager.class.getName());
 	
 	protected static Map<Integer, L2GrandBossInstance> _bosses = new ConcurrentHashMap<>();
 	
@@ -83,26 +83,26 @@ public final class GrandBossManager implements IStorable
 					final int status = rs.getInt("status");
 					_bossStatus.put(bossId, status);
 					_storedInfo.put(bossId, info);
-					_log.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status);
+					LOGGER.info(getClass().getSimpleName() + ": " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status is " + status);
 					if (status > 0)
 					{
-						_log.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")));
+						LOGGER.info(getClass().getSimpleName() + ": Next spawn date of " + NpcData.getInstance().getTemplate(bossId).getName() + " is " + new Date(info.getLong("respawn_time")));
 					}
 				}
 				else
 				{
-					_log.warning(getClass().getSimpleName() + ": Could not find GrandBoss NPC template for " + bossId);
+					LOGGER.warning(getClass().getSimpleName() + ": Could not find GrandBoss NPC template for " + bossId);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _storedInfo.size() + " Instances.");
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not load grandboss_data table: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not load grandboss_data table: " + e.getMessage(), e);
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
 		}
 		ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
 	}
@@ -115,7 +115,7 @@ public final class GrandBossManager implements IStorable
 	public void setBossStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);
-		_log.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status);
+		LOGGER.info(getClass().getSimpleName() + ": Updated " + NpcData.getInstance().getTemplate(bossId).getName() + "(" + bossId + ") status to " + status);
 		updateDb(bossId, true);
 	}
 	
@@ -194,7 +194,7 @@ public final class GrandBossManager implements IStorable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Couldn't store grandbosses to database: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Couldn't store grandbosses to database: " + e.getMessage(), e);
 			return false;
 		}
 		return true;
@@ -242,7 +242,7 @@ public final class GrandBossManager implements IStorable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Couldn't update grandbosses to database:" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Couldn't update grandbosses to database:" + e.getMessage(), e);
 		}
 	}
 	

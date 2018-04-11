@@ -60,7 +60,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		"watchmatch",
 		"arenachange"
 	};
-	private static final Logger _LOG = Logger.getLogger(OlyManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(OlyManager.class.getName());
 	
 	private OlyManager()
 	{
@@ -351,7 +351,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 					final List<Location> spectatorSpawns = nextArena.getStadium().getZone().getSpectatorSpawns();
 					if (spectatorSpawns.isEmpty())
 					{
-						_LOG.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
+						LOGGER.warning(getClass().getSimpleName() + ": Zone: " + nextArena.getStadium().getZone() + " doesn't have specatator spawns defined!");
 						return false;
 					}
 					final Location loc = spectatorSpawns.get(Rnd.get(spectatorSpawns.size()));
@@ -362,7 +362,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_LOG.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		return false;
 	}

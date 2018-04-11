@@ -44,6 +44,6 @@ public class RequestGetBossRecord implements IClientIncomingPacket
 			return;
 		}
 		
-		_log.warning("Player " + activeChar + " (boss ID: " + _bossId + ") used unsuded packet " + RequestGetBossRecord.class.getSimpleName());
+		LOGGER.warning("Player " + activeChar + " (boss ID: " + _bossId + ") used unsuded packet " + RequestGetBossRecord.class.getSimpleName());
 	}
 }

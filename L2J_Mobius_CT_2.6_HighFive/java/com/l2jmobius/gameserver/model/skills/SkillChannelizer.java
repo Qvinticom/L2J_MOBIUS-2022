@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class SkillChannelizer implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(SkillChannelizer.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SkillChannelizer.class.getName());
 	
 	private final L2Character _channelizer;
 	private List<L2Character> _channelized;
@@ -71,7 +71,7 @@ public class SkillChannelizer implements Runnable
 		// Verify for same status.
 		if (isChanneling())
 		{
-			_log.warning("Character: " + _channelizer + " is attempting to channel skill but he already does!");
+			LOGGER.warning("Character: " + _channelizer + " is attempting to channel skill but he already does!");
 			return;
 		}
 		
@@ -85,7 +85,7 @@ public class SkillChannelizer implements Runnable
 		// Verify for same status.
 		if (!isChanneling())
 		{
-			_log.warning("Character: " + _channelizer + " is attempting to stop channel skill but he does not!");
+			LOGGER.warning("Character: " + _channelizer + " is attempting to stop channel skill but he does not!");
 			return;
 		}
 		
@@ -150,7 +150,7 @@ public class SkillChannelizer implements Runnable
 				final Skill baseSkill = SkillData.getInstance().getSkill(_skill.getChannelingSkillId(), 1);
 				if (baseSkill == null)
 				{
-					_log.warning(getClass().getSimpleName() + ": skill " + _skill + " couldn't find effect id skill: " + _skill.getChannelingSkillId() + " !");
+					LOGGER.warning(getClass().getSimpleName() + ": skill " + _skill + " couldn't find effect id skill: " + _skill.getChannelingSkillId() + " !");
 					_channelizer.abortCast();
 					return;
 				}
@@ -193,7 +193,7 @@ public class SkillChannelizer implements Runnable
 							final Skill skill = SkillData.getInstance().getSkill(_skill.getChannelingSkillId(), skillLevel);
 							if (skill == null)
 							{
-								_log.warning(getClass().getSimpleName() + ": Non existent channeling skill requested: " + _skill);
+								LOGGER.warning(getClass().getSimpleName() + ": Non existent channeling skill requested: " + _skill);
 								_channelizer.abortCast();
 								return;
 							}
@@ -226,7 +226,7 @@ public class SkillChannelizer implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.warning("Error while channelizing skill: " + _skill + " channelizer: " + _channelizer + " channelized: " + _channelized + "; " + e.getMessage());
+			LOGGER.warning("Error while channelizing skill: " + _skill + " channelizer: " + _channelizer + " channelized: " + _channelized + "; " + e.getMessage());
 		}
 	}
 }

@@ -133,7 +133,7 @@ public final class AuctionableHall extends ClanHall
 	/** Fee Task */
 	protected class FeeTask implements Runnable
 	{
-		private final Logger _log = Logger.getLogger(FeeTask.class.getName());
+		private final Logger LOGGER = Logger.getLogger(FeeTask.class.getName());
 		
 		@Override
 		public void run()
@@ -207,7 +207,7 @@ public final class AuctionableHall extends ClanHall
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}
@@ -226,7 +226,7 @@ public final class AuctionableHall extends ClanHall
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: updateOwnerInDB(L2Clan clan): " + e.getMessage(), e);
 		}
 	}
 }

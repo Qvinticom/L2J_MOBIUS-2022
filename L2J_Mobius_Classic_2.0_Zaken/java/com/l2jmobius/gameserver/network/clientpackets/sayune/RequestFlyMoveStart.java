@@ -71,7 +71,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 		if (zone.getMapId() == -1)
 		{
 			activeChar.sendMessage("That zone is not supported yet!");
-			_log.warning(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on zone with no map id set");
+			LOGGER.warning(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on zone with no map id set");
 			return;
 		}
 		
@@ -79,7 +79,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 		if (map == null)
 		{
 			activeChar.sendMessage("This zone is not handled yet!!");
-			_log.warning(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on unhandled map zone " + zone.getName());
+			LOGGER.warning(getClass().getSimpleName() + ": " + activeChar + " Requested sayune on unhandled map zone " + zone.getName());
 			return;
 		}
 		

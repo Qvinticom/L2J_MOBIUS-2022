@@ -96,7 +96,7 @@ public class TerritoryWarSuperClass extends Quest
 				GlobalVariablesManager.getInstance().set(TerritoryWarManager.GLOBAL_VARIABLE, cal.getTimeInMillis());
 			}
 			TerritoryWarManager.getInstance().setTWStartTimeInMillis(cal.getTimeInMillis());
-			_log.info(getClass().getSimpleName() + ": Siege date: " + cal.getTime());
+			LOGGER.info(getClass().getSimpleName() + ": Siege date: " + cal.getTime());
 		}
 	}
 	
@@ -271,7 +271,7 @@ public class TerritoryWarSuperClass extends Quest
 				}
 				else
 				{
-					_log.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
+					LOGGER.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
 				}
 			}
 		}
@@ -399,7 +399,7 @@ public class TerritoryWarSuperClass extends Quest
 						}
 						else
 						{
-							_log.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
+							LOGGER.warning("TerritoryWar: Missing Kill the quest for player " + player.getName() + " whose class id: " + player.getClassId().getId());
 						}
 					}
 				}

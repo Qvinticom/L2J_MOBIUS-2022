@@ -31,7 +31,7 @@ import com.l2jmobius.Config;
  */
 public class GMAudit
 {
-	private static final Logger _log = Logger.getLogger(GMAudit.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GMAudit.class.getName());
 	static
 	{
 		new File("log/GMAudit").mkdirs();
@@ -61,7 +61,7 @@ public class GMAudit
 		}
 		catch (IOException e)
 		{
-			_log.log(Level.SEVERE, "GMAudit for GM " + gmName + " could not be saved: ", e);
+			LOGGER.log(Level.SEVERE, "GMAudit for GM " + gmName + " could not be saved: ", e);
 		}
 	}
 	

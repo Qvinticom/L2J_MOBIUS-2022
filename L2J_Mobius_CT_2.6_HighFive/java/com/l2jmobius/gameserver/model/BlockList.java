@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class BlockList
 {
-	private static Logger _log = Logger.getLogger(BlockList.class.getName());
+	private static Logger LOGGER = Logger.getLogger(BlockList.class.getName());
 	private static final Map<Integer, List<Integer>> OFFLINE_LIST = new ConcurrentHashMap<>();
 	
 	private final L2PcInstance _owner;
@@ -90,7 +90,7 @@ public class BlockList
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error found in " + ObjId + " FriendList while loading BlockList: " + e.getMessage(), e);
 		}
 		return list;
 	}
@@ -121,7 +121,7 @@ public class BlockList
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not add block player: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not add block player: " + e.getMessage(), e);
 		}
 	}
 	

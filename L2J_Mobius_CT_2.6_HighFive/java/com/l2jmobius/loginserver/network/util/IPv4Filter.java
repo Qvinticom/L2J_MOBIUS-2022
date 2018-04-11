@@ -30,7 +30,7 @@ import java.util.logging.Logger;
  */
 public class IPv4Filter implements Runnable
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	private final HashMap<Integer, Flood> _ipFloodMap;
 	private static final long SLEEP_TIME = 5000;
@@ -69,7 +69,7 @@ public class IPv4Filter implements Runnable
 		final InetAddress addr = sc.socket().getInetAddress();
 		if (!(addr instanceof Inet4Address))
 		{
-			_log.info("Someone tried to connect from something other than IPv4: " + addr.getHostAddress());
+			LOGGER.info("Someone tried to connect from something other than IPv4: " + addr.getHostAddress());
 			return false;
 		}
 		

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 
 public final class GraciaSeedsManager
 {
-	private static final Logger _log = Logger.getLogger(GraciaSeedsManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GraciaSeedsManager.class.getName());
 	
 	public static String ENERGY_SEEDS = "EnergySeeds";
 	
@@ -70,7 +70,7 @@ public final class GraciaSeedsManager
 			}
 			default:
 			{
-				_log.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
+				LOGGER.warning(getClass().getSimpleName() + ": Unknown SeedType in SaveData: " + seedType);
 				break;
 			}
 		}
@@ -124,7 +124,7 @@ public final class GraciaSeedsManager
 			}
 			default:
 			{
-				_log.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
+				LOGGER.warning(getClass().getSimpleName() + ": Unknown Seed of Destruction state(" + _SoDState + ")! ");
 			}
 		}
 	}
@@ -134,7 +134,7 @@ public final class GraciaSeedsManager
 		final Quest quest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
 		if (quest == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+			LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 		}
 		else
 		{
@@ -155,7 +155,7 @@ public final class GraciaSeedsManager
 			final Quest esQuest = QuestManager.getInstance().getQuest(ENERGY_SEEDS);
 			if (esQuest == null)
 			{
-				_log.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
+				LOGGER.warning(getClass().getSimpleName() + ": missing EnergySeeds Quest!");
 			}
 			else
 			{
@@ -171,7 +171,7 @@ public final class GraciaSeedsManager
 	
 	public void setSoDState(int value, boolean doSave)
 	{
-		_log.info(getClass().getSimpleName() + ": New Seed of Destruction state -> " + value + ".");
+		LOGGER.info(getClass().getSimpleName() + ": New Seed of Destruction state -> " + value + ".");
 		_SoDLastStateChangeDate.setTimeInMillis(System.currentTimeMillis());
 		_SoDState = value;
 		// reset number of Tiat kills

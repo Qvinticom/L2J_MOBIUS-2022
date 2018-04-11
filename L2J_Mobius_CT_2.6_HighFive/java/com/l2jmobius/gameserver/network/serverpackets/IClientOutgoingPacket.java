@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
  */
 public interface IClientOutgoingPacket extends IOutgoingPacket
 {
-	Logger _log = Logger.getLogger(IClientOutgoingPacket.class.getName());
+	Logger LOGGER = Logger.getLogger(IClientOutgoingPacket.class.getName());
 	
 	static final int[] PAPERDOLL_ORDER = new int[]
 	{

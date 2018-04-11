@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
  */
 public class GameGuardCheckTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(GameGuardCheckTask.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(GameGuardCheckTask.class.getName());
 	
 	private final L2PcInstance _player;
 	
@@ -53,7 +53,7 @@ public class GameGuardCheckTask implements Runnable
 		}
 		
 		AdminData.getInstance().broadcastMessageToGMs("Client " + client + " failed to reply GameGuard query and is being kicked!");
-		_log.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
+		LOGGER.info("Client " + client + " failed to reply GameGuard query and is being kicked!");
 		client.close(LeaveWorld.STATIC_PACKET);
 	}
 }

@@ -43,7 +43,7 @@ public enum BaseStats
 	MEN(new MEN()),
 	NONE(new NONE());
 	
-	private static final Logger _log = Logger.getLogger(BaseStats.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(BaseStats.class.getName());
 	
 	public static final int MAX_STAT_VALUE = 100;
 	
@@ -173,7 +173,7 @@ public enum BaseStats
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "[BaseStats] Could not parse file: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "[BaseStats] Could not parse file: " + e.getMessage(), e);
 			}
 			
 			if (doc != null)
@@ -201,7 +201,7 @@ public enum BaseStats
 									}
 									catch (Exception e)
 									{
-										_log.severe("[BaseStats] Invalid stats value: " + value.getNodeValue() + ", skipping");
+										LOGGER.severe("[BaseStats] Invalid stats value: " + value.getNodeValue() + ", skipping");
 										continue;
 									}
 									
@@ -231,7 +231,7 @@ public enum BaseStats
 									}
 									else
 									{
-										_log.severe("[BaseStats] Invalid stats name: " + statName + ", skipping");
+										LOGGER.severe("[BaseStats] Invalid stats name: " + statName + ", skipping");
 									}
 								}
 							}

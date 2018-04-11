@@ -70,7 +70,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class L2Party extends AbstractPlayerGroup
 {
-	private static final Logger _log = Logger.getLogger(L2Party.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2Party.class.getName());
 	
 	// @formatter:off
 	private static final double[] BONUS_EXP_SP =
@@ -536,7 +536,7 @@ public class L2Party extends AbstractPlayerGroup
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 			
 			SystemMessage msg;

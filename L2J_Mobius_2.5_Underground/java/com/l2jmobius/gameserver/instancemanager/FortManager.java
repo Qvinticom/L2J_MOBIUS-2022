@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 
 public final class FortManager implements InstanceListManager
 {
-	protected static final Logger _log = Logger.getLogger(FortManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
 	private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 	
@@ -131,7 +131,7 @@ public final class FortManager implements InstanceListManager
 				_forts.put(fortId, new Fort(fortId));
 			}
 			
-			_log.info(getClass().getSimpleName() + ": Loaded: " + getForts().size() + " fortress");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getForts().size() + " fortress");
 			for (Fort fort : getForts())
 			{
 				fort.getSiege().loadSiegeGuard();
@@ -139,7 +139,7 @@ public final class FortManager implements InstanceListManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: loadFortData(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: loadFortData(): " + e.getMessage(), e);
 		}
 	}
 	

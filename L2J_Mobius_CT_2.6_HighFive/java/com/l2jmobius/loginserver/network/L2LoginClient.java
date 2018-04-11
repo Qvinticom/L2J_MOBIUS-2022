@@ -46,7 +46,7 @@ import io.netty.channel.ChannelHandlerContext;
  */
 public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 {
-	private static final Logger _log = Logger.getLogger(L2LoginClient.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(L2LoginClient.class.getName());
 	
 	// Crypt
 	private final ScrambledKeyPair _scrambledPair;
@@ -105,7 +105,7 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 		}
 		catch (Exception e)
 		{
-			_log.warning(getClass().getSimpleName() + ": " + e.getMessage());
+			LOGGER.warning(getClass().getSimpleName() + ": " + e.getMessage());
 		}
 	}
 	

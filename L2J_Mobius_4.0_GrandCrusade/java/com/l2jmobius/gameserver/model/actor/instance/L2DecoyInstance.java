@@ -100,7 +100,7 @@ public class L2DecoyInstance extends L2Character
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "Decoy Error: ", e);
+				LOGGER.log(Level.SEVERE, "Decoy Error: ", e);
 			}
 		}
 	}
@@ -126,7 +126,7 @@ public class L2DecoyInstance extends L2Character
 			}
 			catch (Throwable e)
 			{
-				_log.log(Level.SEVERE, "Decoy Error: ", e);
+				LOGGER.log(Level.SEVERE, "Decoy Error: ", e);
 			}
 		}
 	}

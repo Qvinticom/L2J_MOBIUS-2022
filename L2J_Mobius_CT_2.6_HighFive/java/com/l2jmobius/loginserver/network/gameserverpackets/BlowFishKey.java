@@ -32,7 +32,7 @@ import com.l2jmobius.loginserver.network.L2JGameServerPacketHandler.GameServerSt
  */
 public class BlowFishKey extends BaseRecievePacket
 {
-	protected static final Logger _log = Logger.getLogger(BlowFishKey.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
 	
 	/**
 	 * @param decrypt
@@ -67,7 +67,7 @@ public class BlowFishKey extends BaseRecievePacket
 		}
 		catch (GeneralSecurityException e)
 		{
-			_log.log(Level.SEVERE, "Error While decrypting blowfish key (RSA): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Error While decrypting blowfish key (RSA): " + e.getMessage(), e);
 		}
 	}
 }

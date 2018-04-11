@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
  */
 public class AdminShop implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminShop.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminShop.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -106,7 +106,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			_log.warning("admin buylist failed:" + command);
+			LOGGER.warning("admin buylist failed:" + command);
 		}
 		
 		final ProductList buyList = BuyListData.getInstance().getBuyList(val);
@@ -117,7 +117,7 @@ public class AdminShop implements IAdminCommandHandler
 		}
 		else
 		{
-			_log.warning("no buylist with id:" + val);
+			LOGGER.warning("no buylist with id:" + val);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}

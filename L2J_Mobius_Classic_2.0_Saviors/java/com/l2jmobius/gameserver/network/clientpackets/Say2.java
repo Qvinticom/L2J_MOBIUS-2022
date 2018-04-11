@@ -109,7 +109,7 @@ public final class Say2 implements IClientIncomingPacket
 		ChatType chatType = ChatType.findByClientId(_type);
 		if (chatType == null)
 		{
-			_log.warning("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + _text);
+			LOGGER.warning("Say2: Invalid type: " + _type + " Player : " + activeChar.getName() + " text: " + _text);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			Disconnection.of(activeChar).defaultSequence(false);
 			return;
@@ -117,7 +117,7 @@ public final class Say2 implements IClientIncomingPacket
 		
 		if (_text.isEmpty())
 		{
-			_log.warning(activeChar.getName() + ": sending empty text. Possible packet hack!");
+			LOGGER.warning(activeChar.getName() + ": sending empty text. Possible packet hack!");
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			Disconnection.of(activeChar).defaultSequence(false);
 			return;
@@ -224,7 +224,7 @@ public final class Say2 implements IClientIncomingPacket
 		}
 		else
 		{
-			_log.info("No handler registered for ChatType: " + _type + " Player: " + client);
+			LOGGER.info("No handler registered for ChatType: " + _type + " Player: " + client);
 		}
 	}
 	
@@ -271,7 +271,7 @@ public final class Say2 implements IClientIncomingPacket
 			
 			if (item == null)
 			{
-				_log.info(client + " trying publish item which doesnt own! ID:" + id);
+				LOGGER.info(client + " trying publish item which doesnt own! ID:" + id);
 				return false;
 			}
 			item.publish();
@@ -279,7 +279,7 @@ public final class Say2 implements IClientIncomingPacket
 			pos1 = _text.indexOf(8, pos) + 1;
 			if (pos1 == 0) // missing ending tag
 			{
-				_log.info(client + " sent invalid publish item msg! ID:" + id);
+				LOGGER.info(client + " sent invalid publish item msg! ID:" + id);
 				return false;
 			}
 		}

@@ -147,7 +147,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		
 		if (((_soulCrystalOptions != null) && CommonUtil.contains(_soulCrystalOptions, null)) || ((_soulCrystalSpecialOptions != null) && CommonUtil.contains(_soulCrystalSpecialOptions, null)))
 		{
-			_log.severe("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
+			LOGGER.severe("Character: " + player.getName() + " requested multisell entry with invalid soul crystal options. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -155,14 +155,14 @@ public class MultiSellChoose implements IClientIncomingPacket
 		final MultisellEntryHolder entry = list.getEntries().get(_entryId - 1); // Entry Id begins from 1. We currently use entry IDs as index pointer.
 		if (entry == null)
 		{
-			_log.severe("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
+			LOGGER.severe("Character: " + player.getName() + " requested inexistant prepared multisell entry. Multisell: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
 		
 		if (!entry.isStackable() && (_amount > 1))
 		{
-			_log.severe("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
+			LOGGER.severe("Character: " + player.getName() + " is trying to set amount > 1 on non-stackable multisell. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -190,7 +190,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			))
 		//@formatter:on
 		{
-			_log.severe("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
+			LOGGER.severe("Character: " + player.getName() + " is trying to upgrade equippable item, but the stats doesn't match. Id: " + _listId + " entry: " + _entryId);
 			player.setMultiSell(null);
 			return;
 		}
@@ -355,7 +355,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						default:
 						{
-							_log.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
+							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special ingredient with id: " + ingredient.getId() + ".");
 							return;
 						}
 					}
@@ -453,7 +453,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 						}
 						default:
 						{
-							_log.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
+							LOGGER.severe("Character: " + player.getName() + " has suffered possible item loss by using multisell " + _listId + " which has non-implemented special product with id: " + product.getId() + ".");
 							return;
 						}
 					}
@@ -616,7 +616,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				}
 				default:
 				{
-					_log.severe("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
+					LOGGER.severe("Multisell: " + _listId + " is using a non-implemented special ingredient with id: " + ingredientId + ".");
 					return false;
 				}
 			}

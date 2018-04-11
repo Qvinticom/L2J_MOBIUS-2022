@@ -22,6 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.Logger;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
@@ -57,6 +58,8 @@ import quests.Q00620_FourGoblets.Q00620_FourGoblets;
  */
 public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReader
 {
+	Logger LOGGER = Logger.getLogger(FourSepulchers.class.getName());
+	
 	// NPCs
 	private static final int CONQUEROR_MANAGER = 31921;
 	private static final int EMPEROR_MANAGER = 31922;
@@ -678,7 +681,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	{
 		ROOM_SPAWN_DATA.clear();
 		parseDatapackFile("data/scripts/ai/areas/ImperialTomb/FourSepulchers/FourSepulchers.xml");
-		_log.info("[Four Sepulchers] Loaded " + ROOM_SPAWN_DATA.size() + " spawn zones data.");
+		LOGGER.info("[Four Sepulchers] Loaded " + ROOM_SPAWN_DATA.size() + " spawn zones data.");
 	}
 	
 	@Override

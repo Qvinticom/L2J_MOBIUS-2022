@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.entity.Couple;
  */
 public final class CoupleManager
 {
-	private static final Logger _log = Logger.getLogger(CoupleManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CoupleManager.class.getName());
 	
 	private final List<Couple> _couples = new CopyOnWriteArrayList<>();
 	
@@ -59,11 +59,11 @@ public final class CoupleManager
 			{
 				getCouples().add(new Couple(rs.getInt("id")));
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded: " + getCouples().size() + " couples(s)");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getCouples().size() + " couples(s)");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Exception: CoupleManager.load(): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Exception: CoupleManager.load(): " + e.getMessage(), e);
 		}
 	}
 	

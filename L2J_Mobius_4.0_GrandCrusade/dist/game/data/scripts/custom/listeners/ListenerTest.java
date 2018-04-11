@@ -63,7 +63,7 @@ public class ListenerTest extends AbstractNpcAI
 		// Manual listener registration
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_DLG_ANSWER, (OnPlayerDlgAnswer event) ->
 		{
-			_log.info(getClass().getSimpleName() + ": " + event.getActiveChar() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId());
+			LOGGER.info(getClass().getSimpleName() + ": " + event.getActiveChar() + " OnPlayerDlgAnswer: Answer: " + event.getAnswer() + " MessageId: " + event.getMessageId());
 		}, this));
 	}
 	
@@ -73,7 +73,7 @@ public class ListenerTest extends AbstractNpcAI
 	 */
 	private void onAttackableAttack(OnAttackableAttack event)
 	{
-		_log.info(getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget() + " damage: " + event.getDamage() + " skill: " + event.getSkill());
+		LOGGER.info(getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget() + " damage: " + event.getDamage() + " skill: " + event.getSkill());
 	}
 	
 	/**
@@ -88,7 +88,7 @@ public class ListenerTest extends AbstractNpcAI
 	@Id(22228)
 	private void onCreatureKill(OnCreatureDeath event)
 	{
-		_log.info(getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget());
+		LOGGER.info(getClass().getSimpleName() + ": " + event.getClass().getSimpleName() + " invoked attacker: " + event.getAttacker() + " target: " + event.getTarget());
 	}
 	
 	/**
@@ -101,7 +101,7 @@ public class ListenerTest extends AbstractNpcAI
 	@Range(from = 1, to = 9)
 	private void onSiegeStart(OnCastleSiegeStart event)
 	{
-		_log.info(getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getResidenceId() + ") has started!");
+		LOGGER.info(getClass().getSimpleName() + ": The siege of " + event.getSiege().getCastle().getName() + " (" + event.getSiege().getCastle().getResidenceId() + ") has started!");
 	}
 	
 	/**
@@ -114,7 +114,7 @@ public class ListenerTest extends AbstractNpcAI
 	@Id(5575)
 	private void onItemCreate(OnItemCreate event)
 	{
-		_log.info(getClass().getSimpleName() + ": Item [" + event.getItem() + "] has been created actor: " + event.getActiveChar() + " process: " + event.getProcess() + " reference: " + event.getReference());
+		LOGGER.info(getClass().getSimpleName() + ": Item [" + event.getItem() + "] has been created actor: " + event.getActiveChar() + " process: " + event.getProcess() + " reference: " + event.getReference());
 	}
 	
 	/**
@@ -152,7 +152,7 @@ public class ListenerTest extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void OnPlayerLogin(OnPlayerLogin event)
 	{
-		_log.info(getClass().getSimpleName() + ": Player: " + event.getActiveChar() + " has logged in!");
+		LOGGER.info(getClass().getSimpleName() + ": Player: " + event.getActiveChar() + " has logged in!");
 	}
 	
 	/**
@@ -170,7 +170,7 @@ public class ListenerTest extends AbstractNpcAI
 	{
 		if (event.getTarget().isGM())
 		{
-			_log.info(getClass().getSimpleName() + ": Player: " + event.getTarget() + " was prevented from dying!");
+			LOGGER.info(getClass().getSimpleName() + ": Player: " + event.getTarget() + " was prevented from dying!");
 			return new TerminateReturn(true, true, true);
 		}
 		return null;

@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 
 public final class FortSiegeGuardManager
 {
-	private static final Logger _log = Logger.getLogger(FortSiegeGuardManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
 	private final Fort _fort;
 	private final Map<Integer, List<L2Spawn>> _siegeGuards = new HashMap<>();
@@ -68,7 +68,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error spawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error spawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
 		}
 	}
 	
@@ -94,7 +94,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error unspawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error unspawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
 		}
 	}
 	
@@ -130,7 +130,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error loading siege guard for fort " + getFort().getName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error loading siege guard for fort " + getFort().getName() + ": " + e.getMessage(), e);
 		}
 	}
 	

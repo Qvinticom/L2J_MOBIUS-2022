@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class OlympiadGameTask implements Runnable
 {
-	protected static final Logger _log = Logger.getLogger(OlympiadGameTask.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(OlympiadGameTask.class.getName());
 	
 	private static final int[] TELEPORT_TO_ARENA_TIMES =
 	{
@@ -163,7 +163,7 @@ public final class OlympiadGameTask implements Runnable
 	{
 		if ((game != null) && (_state != GameState.IDLE))
 		{
-			_log.warning("Attempt to overwrite non-finished game in state " + _state);
+			LOGGER.warning("Attempt to overwrite non-finished game in state " + _state);
 			return;
 		}
 		
@@ -352,14 +352,14 @@ public final class OlympiadGameTask implements Runnable
 				case CLEANUP:
 				case IDLE:
 				{
-					_log.warning("Unable to return players back in town, exception: " + e.getMessage());
+					LOGGER.warning("Unable to return players back in town, exception: " + e.getMessage());
 					_state = GameState.IDLE;
 					_game = null;
 					return;
 				}
 			}
 			
-			_log.log(Level.WARNING, "Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
 			_state = GameState.GAME_STOPPED;
 			ThreadPool.schedule(this, 1000);
 		}
@@ -417,7 +417,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		return false;
 	}
@@ -446,7 +446,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		return false;
 	}
@@ -463,7 +463,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		return true;
@@ -480,7 +480,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -489,7 +489,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -498,7 +498,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -507,7 +507,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 	
@@ -522,7 +522,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -531,7 +531,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -540,7 +540,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -549,7 +549,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 		
 		try
@@ -558,7 +558,7 @@ public final class OlympiadGameTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, e.getMessage(), e);
+			LOGGER.log(Level.WARNING, e.getMessage(), e);
 		}
 	}
 }

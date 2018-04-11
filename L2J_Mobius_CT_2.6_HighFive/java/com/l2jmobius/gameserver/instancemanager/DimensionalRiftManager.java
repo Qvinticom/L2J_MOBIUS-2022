@@ -52,7 +52,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class DimensionalRiftManager
 {
-	private static Logger _log = Logger.getLogger(DimensionalRiftManager.class.getName());
+	private static Logger LOGGER = Logger.getLogger(DimensionalRiftManager.class.getName());
 	private final Map<Byte, Map<Byte, DimensionalRiftRoom>> _rooms = new HashMap<>(7);
 	private static final int DIMENSIONAL_FRAGMENT_ITEM_ID = 7079;
 	
@@ -106,7 +106,7 @@ public final class DimensionalRiftManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Can't load Dimension Rift zones. " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Can't load Dimension Rift zones. " + e.getMessage(), e);
 		}
 		
 		final int typeSize = _rooms.keySet().size();
@@ -117,7 +117,7 @@ public final class DimensionalRiftManager
 			roomSize += _rooms.get(b).keySet().size();
 		}
 		
-		_log.info(getClass().getSimpleName() + ": Loaded " + typeSize + " room types with " + roomSize + " rooms.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + typeSize + " room types with " + roomSize + " rooms.");
 	}
 	
 	public void loadSpawns()
@@ -132,7 +132,7 @@ public final class DimensionalRiftManager
 			final File file = new File(Config.DATAPACK_ROOT, "data/DimensionalRift.xml");
 			if (!file.exists())
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find data/" + file.getName());
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find data/" + file.getName());
 				return;
 			}
 			
@@ -170,11 +170,11 @@ public final class DimensionalRiftManager
 											
 											if (!_rooms.containsKey(type))
 											{
-												_log.warning("Type " + type + " not found!");
+												LOGGER.warning("Type " + type + " not found!");
 											}
 											else if (!_rooms.get(type).containsKey(roomId))
 											{
-												_log.warning("Room " + roomId + " in Type " + type + " not found!");
+												LOGGER.warning("Room " + roomId + " in Type " + type + " not found!");
 											}
 											
 											for (int i = 0; i < count; i++)
@@ -213,9 +213,9 @@ public final class DimensionalRiftManager
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Error on loading dimensional rift spawns: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error on loading dimensional rift spawns: " + e.getMessage(), e);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + countGood + " dimensional rift spawns, " + countBad + " errors.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + countGood + " dimensional rift spawns, " + countBad + " errors.");
 	}
 	
 	public void reload()
@@ -444,7 +444,7 @@ public final class DimensionalRiftManager
 		showHtmlFile(player, "data/html/seven_signs/rift/Cheater.htm", npc);
 		if (!player.isGM())
 		{
-			_log.warning("Player " + player.getName() + "(" + player.getObjectId() + ") was cheating in dimension rift area!");
+			LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") was cheating in dimension rift area!");
 			Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to cheat in dimensional rift.", Config.DEFAULT_PUNISH);
 		}
 	}

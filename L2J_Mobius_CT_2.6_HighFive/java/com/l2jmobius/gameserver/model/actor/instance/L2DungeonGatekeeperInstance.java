@@ -174,7 +174,7 @@ public class L2DungeonGatekeeperInstance extends L2Npc
 		}
 		else
 		{
-			_log.warning("No teleport destination with id:" + val);
+			LOGGER.warning("No teleport destination with id:" + val);
 		}
 		
 		player.sendPacket(ActionFailed.STATIC_PACKET);

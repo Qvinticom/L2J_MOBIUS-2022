@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminUnblockIp implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminUnblockIp.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminUnblockIp.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -68,7 +68,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 	private boolean unblockIp(String ipAddress, L2PcInstance activeChar)
 	{
 		// LoginServerThread.getInstance().unBlockip(ipAddress);
-		_log.warning("IP removed by GM " + activeChar.getName());
+		LOGGER.warning("IP removed by GM " + activeChar.getName());
 		return true;
 	}
 }

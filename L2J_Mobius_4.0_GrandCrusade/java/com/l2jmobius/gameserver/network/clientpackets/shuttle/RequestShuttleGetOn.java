@@ -60,7 +60,7 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 				activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
 				break;
 			}
-			_log.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance(activeChar, true, false));
+			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance(activeChar, true, false));
 		}
 	}
 }

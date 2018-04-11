@@ -92,7 +92,7 @@ public final class L2EtcItem extends L2Item
 				final String[] data = part.split(",");
 				if (data.length != 4)
 				{
-					_log.info("> Couldnt parse " + part + " in capsuled_items! item " + this);
+					LOGGER.info("> Couldnt parse " + part + " in capsuled_items! item " + this);
 					continue;
 				}
 				final int itemId = Integer.parseInt(data[0]);
@@ -101,7 +101,7 @@ public final class L2EtcItem extends L2Item
 				final double chance = Double.parseDouble(data[3]);
 				if (max < min)
 				{
-					_log.info("> Max amount < Min amount in " + part + ", item " + this);
+					LOGGER.info("> Max amount < Min amount in " + part + ", item " + this);
 					continue;
 				}
 				final L2ExtractableProduct product = new L2ExtractableProduct(itemId, min, max, chance);
@@ -112,7 +112,7 @@ public final class L2EtcItem extends L2Item
 			// check for handler
 			if (_handler == null)
 			{
-				_log.warning("Item " + this + " define capsuled_items but missing handler.");
+				LOGGER.warning("Item " + this + " define capsuled_items but missing handler.");
 				_handler = "ExtractableItems";
 			}
 		}

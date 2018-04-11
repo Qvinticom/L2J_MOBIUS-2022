@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class PetFeedTask implements Runnable
 {
-	private static final Logger _log = Logger.getLogger(PetFeedTask.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(PetFeedTask.class.getName());
 	
 	private final L2PcInstance _player;
 	
@@ -100,7 +100,7 @@ public class PetFeedTask implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Mounted Pet [NpcId: " + _player.getMountNpcId() + "] a feed task error has occurred", e);
+			LOGGER.log(Level.SEVERE, "Mounted Pet [NpcId: " + _player.getMountNpcId() + "] a feed task error has occurred", e);
 		}
 	}
 }

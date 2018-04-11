@@ -49,7 +49,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
  */
 public abstract class Inventory extends ItemContainer
 {
-	protected static final Logger _log = Logger.getLogger(Inventory.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(Inventory.class.getName());
 	
 	public interface PaperdollListener
 	{
@@ -322,7 +322,7 @@ public abstract class Inventory extends ItemContainer
 					}
 					else
 					{
-						_log.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + skillInfo + ".");
+						LOGGER.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + skillInfo + ".");
 					}
 				}
 			}
@@ -457,7 +457,7 @@ public abstract class Inventory extends ItemContainer
 					}
 					else
 					{
-						_log.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + skillInfo + ".");
+						LOGGER.warning("Inventory.ItemSkillsListener.Weapon: Incorrect skill: " + skillInfo + ".");
 					}
 				}
 			}
@@ -544,7 +544,7 @@ public abstract class Inventory extends ItemContainer
 							}
 							else
 							{
-								_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+								LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 							}
 						}
 					}
@@ -560,7 +560,7 @@ public abstract class Inventory extends ItemContainer
 							}
 							else
 							{
-								_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+								LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 							}
 						}
 					}
@@ -576,7 +576,7 @@ public abstract class Inventory extends ItemContainer
 							}
 							else
 							{
-								_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+								LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 							}
 						}
 					}
@@ -593,7 +593,7 @@ public abstract class Inventory extends ItemContainer
 					}
 					else
 					{
-						_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+						LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 					}
 				}
 			}
@@ -678,7 +678,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						else
 						{
-							_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+							LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 						}
 					}
 				}
@@ -694,7 +694,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						else
 						{
-							_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+							LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 						}
 					}
 				}
@@ -710,7 +710,7 @@ public abstract class Inventory extends ItemContainer
 						}
 						else
 						{
-							_log.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
+							LOGGER.warning("Inventory.ArmorSetListener: Incorrect skill: " + holder + ".");
 						}
 					}
 				}
@@ -1442,8 +1442,8 @@ public abstract class Inventory extends ItemContainer
 			}
 			default:
 			{
-				_log.info("Unhandled slot type: " + slot);
-				_log.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
+				LOGGER.info("Unhandled slot type: " + slot);
+				LOGGER.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
 			}
 		}
 		if (pdollSlot >= 0)
@@ -1707,7 +1707,7 @@ public abstract class Inventory extends ItemContainer
 			}
 			default:
 			{
-				_log.warning("Unknown body slot " + targetSlot + " for Item ID:" + item.getId());
+				LOGGER.warning("Unknown body slot " + targetSlot + " for Item ID:" + item.getId());
 			}
 		}
 	}
@@ -1837,7 +1837,7 @@ public abstract class Inventory extends ItemContainer
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore inventory: " + e.getMessage(), e);
 		}
 	}
 	

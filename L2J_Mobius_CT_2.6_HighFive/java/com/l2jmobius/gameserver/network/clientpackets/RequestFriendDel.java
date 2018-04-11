@@ -100,7 +100,7 @@ public final class RequestFriendDel implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "could not del friend objectid: ", e);
+			LOGGER.log(Level.WARNING, "could not del friend objectid: ", e);
 		}
 	}
 }

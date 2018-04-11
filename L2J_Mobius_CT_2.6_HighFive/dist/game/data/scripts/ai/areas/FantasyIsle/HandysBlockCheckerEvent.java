@@ -95,11 +95,11 @@ public class HandysBlockCheckerEvent extends AbstractNpcAI
 		if (Config.ENABLE_BLOCK_CHECKER_EVENT)
 		{
 			new HandysBlockCheckerEvent();
-			_log.info("Handy's Block Checker Event is enabled");
+			LOGGER.info("Handy's Block Checker Event is enabled");
 		}
 		else
 		{
-			_log.info("Handy's Block Checker Event is disabled");
+			LOGGER.info("Handy's Block Checker Event is disabled");
 		}
 	}
 }

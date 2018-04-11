@@ -132,7 +132,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Could not save Item Mall transaction: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Could not save Item Mall transaction: " + e.getMessage(), e);
 		}
 	}
 }

@@ -29,7 +29,7 @@ import com.l2jmobius.commons.network.BaseSendablePacket;
  */
 public class BlowFishKey extends BaseSendablePacket
 {
-	private static Logger _log = Logger.getLogger(BlowFishKey.class.getName());
+	private static Logger LOGGER = Logger.getLogger(BlowFishKey.class.getName());
 	
 	/**
 	 * @param blowfishKey
@@ -48,7 +48,7 @@ public class BlowFishKey extends BaseSendablePacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error While encrypting blowfish key for transmision (Crypt error): " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Error While encrypting blowfish key for transmision (Crypt error): " + e.getMessage(), e);
 		}
 	}
 	

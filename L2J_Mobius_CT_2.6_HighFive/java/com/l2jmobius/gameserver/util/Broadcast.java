@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
  */
 public final class Broadcast
 {
-	private static Logger _log = Logger.getLogger(Broadcast.class.getName());
+	private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
 	
 	/**
 	 * Send a packet to all L2PcInstance in the _KnownPlayers of the L2Character that have the Character targeted.<BR>
@@ -89,7 +89,7 @@ public final class Broadcast
 			}
 			catch (NullPointerException e)
 			{
-				_log.log(Level.WARNING, e.getMessage(), e);
+				LOGGER.log(Level.WARNING, e.getMessage(), e);
 			}
 		});
 	}

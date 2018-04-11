@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortCutRegister;
 
 public class ShortCuts implements IRestorable
 {
-	private static Logger _log = Logger.getLogger(ShortCuts.class.getName());
+	private static Logger LOGGER = Logger.getLogger(ShortCuts.class.getName());
 	private static final int MAX_SHORTCUTS_PER_BAR = 12;
 	private final L2PcInstance _owner;
 	private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();
@@ -99,7 +99,7 @@ public class ShortCuts implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not store character shortcut: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not store character shortcut: " + e.getMessage(), e);
 		}
 	}
 	
@@ -164,7 +164,7 @@ public class ShortCuts implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not delete character shortcut: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not delete character shortcut: " + e.getMessage(), e);
 		}
 	}
 	
@@ -190,7 +190,7 @@ public class ShortCuts implements IRestorable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore character shortcuts: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore character shortcuts: " + e.getMessage(), e);
 			return false;
 		}
 		

@@ -38,7 +38,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class SystemMessageId
 {
-	private static final Logger _log = Logger.getLogger(SystemMessageId.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(SystemMessageId.class.getName());
 	private static final SMLocalisation[] EMPTY_SML_ARRAY = new SMLocalisation[0];
 	public static final SystemMessageId[] EMPTY_ARRAY = new SystemMessageId[0];
 	
@@ -9775,7 +9775,7 @@ public final class SystemMessageId
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "SystemMessageId: Failed field access for '" + field.getName() + "'", e);
+					LOGGER.log(Level.WARNING, "SystemMessageId: Failed field access for '" + field.getName() + "'", e);
 				}
 			}
 		}
@@ -9836,7 +9836,7 @@ public final class SystemMessageId
 		
 		if (!Config.MULTILANG_SM_ENABLE)
 		{
-			_log.log(Level.INFO, "SystemMessageId: MultiLanguage disabled.");
+			LOGGER.log(Level.INFO, "SystemMessageId: MultiLanguage disabled.");
 			return;
 		}
 		
@@ -9859,7 +9859,7 @@ public final class SystemMessageId
 				continue;
 			}
 			
-			_log.log(Level.INFO, "SystemMessageId: Loading localisation for '" + lang + "'");
+			LOGGER.log(Level.INFO, "SystemMessageId: Loading localisation for '" + lang + "'");
 			
 			try
 			{
@@ -9885,21 +9885,21 @@ public final class SystemMessageId
 								}
 								if (smId == null)
 								{
-									_log.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "SystemMessageId: Unknown SMID '" + node.getNodeValue() + "', lang '" + lang + "'.");
 									continue;
 								}
 								
 								node = nnmb.getNamedItem("text");
 								if (node == null)
 								{
-									_log.log(Level.WARNING, "SystemMessageId: No text defined for SMID '" + smId + "', lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "SystemMessageId: No text defined for SMID '" + smId + "', lang '" + lang + "'.");
 									continue;
 								}
 								
 								text = node.getNodeValue();
 								if (text.isEmpty() || (text.length() > 255))
 								{
-									_log.log(Level.WARNING, "SystemMessageId: Invalid text defined for SMID '" + smId + "' (to long or empty), lang '" + lang + "'.");
+									LOGGER.log(Level.WARNING, "SystemMessageId: Invalid text defined for SMID '" + smId + "' (to long or empty), lang '" + lang + "'.");
 									continue;
 								}
 								
@@ -9911,7 +9911,7 @@ public final class SystemMessageId
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "SystemMessageId: Failed loading '" + file + "'", e);
+				LOGGER.log(Level.SEVERE, "SystemMessageId: Failed loading '" + file + "'", e);
 			}
 		}
 	}

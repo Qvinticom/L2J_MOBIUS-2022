@@ -151,7 +151,7 @@ public class L2RaceManagerInstance extends L2Npc
 			case 817: // SystemMessageId.MONSRACE_TICKETS_NOW_AVAILABLE_FOR_S1_RACE
 			{
 				if (_state != ACCEPTING_BETS)
-				{// _log.info("Race Initializing");
+				{// LOGGER.info("Race Initializing");
 					_state = ACCEPTING_BETS;
 					startRace();
 				} // else{_log.info("Race open");}
@@ -172,7 +172,7 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			case 819: // SystemMessageId.MONSRACE_S1_TICKET_SALES_CLOSED
 			{
-				// _log.info("Sales closed");
+				// LOGGER.info("Sales closed");
 				sm.addInt(_raceNumber);
 				_state = WAITING;
 				_minutes = 2;
@@ -188,7 +188,7 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			case 826: // SystemMessageId.MONSRACE_FIRST_PLACE_S1_SECOND_S2
 			{
-				// _log.info("Placing");
+				// LOGGER.info("Placing");
 				_state = RACE_END;
 				sm.addInt(MonsterRace.getInstance().getFirstPlace());
 				sm.addInt(MonsterRace.getInstance().getSecondPlace());
@@ -196,13 +196,13 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 		}
 		// _logn.info("Counter: "+minutes);
-		// _log.info("State: "+state);
+		// LOGGER.info("State: "+state);
 		broadcast(sm);
-		// _log.info("Player's known: "+getKnownPlayers().size());
+		// LOGGER.info("Player's known: "+getKnownPlayers().size());
 		
 		if (type == SystemMessageId.THEY_RE_OFF)
 		{
-			// _log.info("Starting race");
+			// LOGGER.info("Starting race");
 			_state = STARTING_RACE;
 			startRace();
 			_minutes = 5;

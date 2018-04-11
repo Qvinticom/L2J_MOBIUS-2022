@@ -42,6 +42,6 @@ public class RequestExChangeName implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		_log.info("Recieved " + getClass().getSimpleName() + " name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
+		LOGGER.info("Recieved " + getClass().getSimpleName() + " name: " + _newName + " type: " + _type + " CharSlot: " + _charSlot);
 	}
 }

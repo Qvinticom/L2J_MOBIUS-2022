@@ -46,7 +46,7 @@ import com.l2jmobius.loginserver.network.serverpackets.ServerList;
  */
 public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 {
-	private static Logger _log = Logger.getLogger(RequestAuthLogin.class.getName());
+	private static Logger LOGGER = Logger.getLogger(RequestAuthLogin.class.getName());
 	
 	private final byte[] _raw1 = new byte[128];
 	private final byte[] _raw2 = new byte[128];
@@ -89,7 +89,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 		}
 		catch (GeneralSecurityException e)
 		{
-			_log.log(Level.INFO, "", e);
+			LOGGER.log(Level.INFO, "", e);
 			return;
 		}
 		
@@ -108,7 +108,7 @@ public class RequestAuthLogin implements IIncomingPacket<L2LoginClient>
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "", e);
+			LOGGER.log(Level.WARNING, "", e);
 			return;
 		}
 		

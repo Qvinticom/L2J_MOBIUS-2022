@@ -62,7 +62,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class FourSepulchersManager
 {
-	private static final Logger _log = Logger.getLogger(FourSepulchersManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FourSepulchersManager.class.getName());
 	
 	private static final int QUEST_ID = 620;
 	
@@ -205,25 +205,25 @@ public final class FourSepulchersManager
 		{
 			clean();
 			_changeEntryTimeTask = ThreadPool.schedule(new FourSepulchersChangeEntryTimeTask(), 0);
-			_log.info(getClass().getSimpleName() + ": Beginning in Entry time");
+			LOGGER.info(getClass().getSimpleName() + ": Beginning in Entry time");
 		}
 		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd)) // warmup time check
 		{
 			clean();
 			_changeWarmUpTimeTask = ThreadPool.schedule(new FourSepulchersChangeWarmUpTimeTask(), 0);
-			_log.info(getClass().getSimpleName() + ": Beginning in WarmUp time");
+			LOGGER.info(getClass().getSimpleName() + ": Beginning in WarmUp time");
 		}
 		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd)) // attack time check
 		{
 			clean();
 			_changeAttackTimeTask = ThreadPool.schedule(new FourSepulchersChangeAttackTimeTask(), 0);
-			_log.info(getClass().getSimpleName() + ": Beginning in Attack time");
+			LOGGER.info(getClass().getSimpleName() + ": Beginning in Attack time");
 		}
 		else
 		// else cooldown time and without cleanup because it's already implemented
 		{
 			_changeCoolDownTimeTask = ThreadPool.schedule(new FourSepulchersChangeCoolDownTimeTask(), 0);
-			_log.info(getClass().getSimpleName() + ": Beginning in Cooldown time");
+			LOGGER.info(getClass().getSimpleName() + ": Beginning in Cooldown time");
 		}
 	}
 	
@@ -316,11 +316,11 @@ public final class FourSepulchersManager
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 				spawnDat.doSpawn();
 				spawnDat.startRespawn();
-				_log.info(getClass().getSimpleName() + ": spawned " + spawnDat.getTemplate().getName());
+				LOGGER.info(getClass().getSimpleName() + ": spawned " + spawnDat.getTemplate().getName());
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Error while spawning managers: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Error while spawning managers: " + e.getMessage(), e);
 			}
 		}
 	}
@@ -432,12 +432,12 @@ public final class FourSepulchersManager
 					_mysteriousBoxSpawns.put(keyNpcId, spawnDat);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": loaded " + _mysteriousBoxSpawns.size() + " Mysterious-Box spawns.");
+			LOGGER.info(getClass().getSimpleName() + ": loaded " + _mysteriousBoxSpawns.size() + " Mysterious-Box spawns.");
 		}
 		catch (Exception e)
 		{
 			// problem with initializing spawn, go to next one
-			_log.log(Level.WARNING, "FourSepulchersManager.LoadMysteriousBox: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FourSepulchersManager.LoadMysteriousBox: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -459,7 +459,7 @@ public final class FourSepulchersManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "FourSepulchersManager.InitKeyBoxSpawns: Spawn could not be initialized: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "FourSepulchersManager.InitKeyBoxSpawns: Spawn could not be initialized: " + e.getMessage(), e);
 			}
 		}
 	}
@@ -503,11 +503,11 @@ public final class FourSepulchersManager
 					_physicalMonsters.put(keyNpcId, _physicalSpawns);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": loaded " + loaded + " Physical type monsters spawns.");
+			LOGGER.info(getClass().getSimpleName() + ": loaded " + loaded + " Physical type monsters spawns.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "FourSepulchersManager.LoadPhysicalMonsters: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FourSepulchersManager.LoadPhysicalMonsters: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -551,11 +551,11 @@ public final class FourSepulchersManager
 					_magicalMonsters.put(keyNpcId, _magicalSpawns);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": loaded " + loaded + " Magical type monsters spawns.");
+			LOGGER.info(getClass().getSimpleName() + ": loaded " + loaded + " Magical type monsters spawns.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "FourSepulchersManager.LoadMagicalMonsters: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FourSepulchersManager.LoadMagicalMonsters: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -603,11 +603,11 @@ public final class FourSepulchersManager
 					_archonSpawned.put(keyNpcId, false);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": loaded " + loaded + " Church of duke monsters spawns.");
+			LOGGER.info(getClass().getSimpleName() + ": loaded " + loaded + " Church of duke monsters spawns.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "FourSepulchersManager.LoadDukeMonsters: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FourSepulchersManager.LoadDukeMonsters: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -651,11 +651,11 @@ public final class FourSepulchersManager
 					_emperorsGraveNpcs.put(keyNpcId, _emperorsGraveSpawns);
 				}
 			}
-			_log.info(getClass().getSimpleName() + ": loaded " + loaded + " Emperor's grave NPC spawns.");
+			LOGGER.info(getClass().getSimpleName() + ": loaded " + loaded + " Emperor's grave NPC spawns.");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "FourSepulchersManager.LoadEmperorsGraveMonsters: Spawn could not be initialized: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FourSepulchersManager.LoadEmperorsGraveMonsters: Spawn could not be initialized: " + e.getMessage(), e);
 		}
 	}
 	
@@ -687,7 +687,7 @@ public final class FourSepulchersManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "Error on InitLocationShadowSpawns", e);
+				LOGGER.log(Level.SEVERE, "Error on InitLocationShadowSpawns", e);
 			}
 		}
 	}
@@ -710,7 +710,7 @@ public final class FourSepulchersManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "FourSepulchersManager.InitExecutionerSpawns: Spawn could not be initialized: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "FourSepulchersManager.InitExecutionerSpawns: Spawn could not be initialized: " + e.getMessage(), e);
 			}
 		}
 	}
@@ -845,7 +845,7 @@ public final class FourSepulchersManager
 		final Quest hostQuest = QuestManager.getInstance().getQuest(QUEST_ID);
 		if (hostQuest == null)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find quest: " + QUEST_ID);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't find quest: " + QUEST_ID);
 			return;
 		}
 		final int npcId = npc.getId();
@@ -864,7 +864,7 @@ public final class FourSepulchersManager
 			{
 				if (!player.isGM())
 				{
-					_log.warning("Player " + player.getName() + "(" + player.getObjectId() + ") tried to cheat in four sepulchers.");
+					LOGGER.warning("Player " + player.getName() + "(" + player.getObjectId() + ") tried to cheat in four sepulchers.");
 					Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " tried to enter four sepulchers with invalid npc id.", Config.DEFAULT_PUNISH);
 				}
 				return;
@@ -1139,7 +1139,7 @@ public final class FourSepulchersManager
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, "FourSepulchersManager.SpawnMonster: Spawn could not be initialized: " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, "FourSepulchersManager.SpawnMonster: Spawn could not be initialized: " + e.getMessage(), e);
 				}
 				
 				spawnedKeyBoxMob = true;
@@ -1375,7 +1375,7 @@ public final class FourSepulchersManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed deleting mob.", e);
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed deleting mob.", e);
 			}
 		}
 		_allMobs.clear();
@@ -1394,12 +1394,12 @@ public final class FourSepulchersManager
 				}
 				else
 				{
-					_log.warning(getClass().getSimpleName() + ": Attempted to close undefined door. doorId: " + doorId);
+					LOGGER.warning(getClass().getSimpleName() + ": Attempted to close undefined door. doorId: " + doorId);
 				}
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, getClass().getSimpleName() + ": Failed closing door", e);
+				LOGGER.log(Level.SEVERE, getClass().getSimpleName() + ": Failed closing door", e);
 			}
 		}
 	}
@@ -1526,12 +1526,12 @@ public final class FourSepulchersManager
 			{
 				if (temp == null)
 				{
-					_log.warning(getClass().getSimpleName() + ": managerSay(): manager is null");
+					LOGGER.warning(getClass().getSimpleName() + ": managerSay(): manager is null");
 					continue;
 				}
 				if (!(temp.getLastSpawn() instanceof L2SepulcherNpcInstance))
 				{
-					_log.warning(getClass().getSimpleName() + ": managerSay(): manager is not Sepulcher instance");
+					LOGGER.warning(getClass().getSimpleName() + ": managerSay(): manager is not Sepulcher instance");
 					continue;
 				}
 				// hall not used right now, so its manager will not tell you anything :)
@@ -1553,12 +1553,12 @@ public final class FourSepulchersManager
 			{
 				if (temp == null)
 				{
-					_log.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
+					LOGGER.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
 					continue;
 				}
 				if (!(temp.getLastSpawn() instanceof L2SepulcherNpcInstance))
 				{
-					_log.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
+					LOGGER.warning(getClass().getSimpleName() + ": Something goes wrong in managerSay()...");
 					continue;
 				}
 				((L2SepulcherNpcInstance) temp.getLastSpawn()).sayInShout(msg1);

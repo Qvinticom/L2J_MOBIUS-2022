@@ -76,14 +76,14 @@ public final class SummonPet extends AbstractEffect
 		final PetItemHolder holder = player.removeScript(PetItemHolder.class);
 		if (holder == null)
 		{
-			_log.log(Level.WARNING, "Summoning pet without attaching PetItemHandler!", new Throwable());
+			LOGGER.log(Level.WARNING, "Summoning pet without attaching PetItemHandler!", new Throwable());
 			return;
 		}
 		
 		final L2ItemInstance item = holder.getItem();
 		if (player.getInventory().getItemByObjectId(item.getObjectId()) != item)
 		{
-			_log.log(Level.WARNING, "Player: " + player + " is trying to summon pet from item that he doesn't owns.");
+			LOGGER.log(Level.WARNING, "Player: " + player + " is trying to summon pet from item that he doesn't owns.");
 			return;
 		}
 		

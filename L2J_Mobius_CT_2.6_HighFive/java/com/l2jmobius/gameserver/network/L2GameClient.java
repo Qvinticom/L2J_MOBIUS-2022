@@ -59,7 +59,7 @@ import io.netty.channel.ChannelHandlerContext;
 public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2GameClient.class.getName());
-	protected static final Logger LOG_ACCOUNTING = Logger.getLogger("accounting");
+	protected static final Logger LOGGER_ACCOUNTING = Logger.getLogger("accounting");
 	
 	private final int _objectId;
 	
@@ -107,13 +107,13 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		final InetSocketAddress address = (InetSocketAddress) ctx.channel().remoteAddress();
 		_addr = address.getAddress();
 		_channel = ctx.channel();
-		LOG_ACCOUNTING.finer("Client Connected: " + ctx.channel());
+		LOGGER_ACCOUNTING.finer("Client Connected: " + ctx.channel());
 	}
 	
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx)
 	{
-		LOG_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
+		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
 		
 		LoginServerThread.getInstance().sendLogout(getAccountName());
 		IdFactory.getInstance().releaseId(getObjectId());
@@ -333,7 +333,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 						objectId,
 						this
 					});
-					LOG_ACCOUNTING.log(record);
+					LOGGER_ACCOUNTING.log(record);
 				}
 			}
 			return answer;
@@ -370,7 +370,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			objectId,
 			this
 		});
-		LOG_ACCOUNTING.log(record);
+		LOGGER_ACCOUNTING.log(record);
 	}
 	
 	public static void deleteCharByObjId(int objid)

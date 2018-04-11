@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.Shutdown;
  */
 public class ServerRestartManager
 {
-	static final Logger _log = Logger.getLogger(ServerRestartManager.class.getName());
+	static final Logger LOGGER = Logger.getLogger(ServerRestartManager.class.getName());
 	
 	private String nextRestartTime = "unknown";
 	
@@ -72,12 +72,12 @@ public class ServerRestartManager
 			{
 				nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
 				ThreadPool.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
-				_log.info("Scheduled server restart at " + lastRestart.getTime() + ".");
+				LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
 			}
 		}
 		catch (Exception e)
 		{
-			_log.info("The scheduled server restart config is not set properly, please correct it!");
+			LOGGER.info("The scheduled server restart config is not set properly, please correct it!");
 		}
 	}
 	

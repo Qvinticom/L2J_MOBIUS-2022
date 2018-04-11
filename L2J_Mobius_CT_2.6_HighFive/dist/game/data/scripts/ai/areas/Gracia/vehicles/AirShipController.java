@@ -74,7 +74,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		}
 	}
 	
-	public static final Logger _log = Logger.getLogger(AirShipController.class.getName());
+	public static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
 	protected int _dockZone = 0;
 	protected int _shipSpawnX = 0;
 	protected int _shipSpawnY = 0;
@@ -350,7 +350,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		final L2ScriptZone zone = ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class);
 		if (zone == null)
 		{
-			_log.log(Level.WARNING, getName() + ": Invalid zone " + _dockZone + ", controller disabled");
+			LOGGER.log(Level.WARNING, getName() + ": Invalid zone " + _dockZone + ", controller disabled");
 			_isBusy = true;
 			return;
 		}
@@ -360,7 +360,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		{
 			if (_arrivalPath.length == 0)
 			{
-				_log.log(Level.WARNING, getName() + ": Zero arrival path length.");
+				LOGGER.log(Level.WARNING, getName() + ": Zero arrival path length.");
 				_arrivalPath = null;
 			}
 			else
@@ -368,7 +368,7 @@ public abstract class AirShipController extends AbstractNpcAI
 				p = _arrivalPath[_arrivalPath.length - 1];
 				if (!zone.isInsideZone(p.getLocation()))
 				{
-					_log.log(Level.WARNING, getName() + ": Arrival path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") not in zone " + _dockZone);
+					LOGGER.log(Level.WARNING, getName() + ": Arrival path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") not in zone " + _dockZone);
 					_arrivalPath = null;
 				}
 			}
@@ -377,7 +377,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		{
 			if (!ZoneManager.getInstance().getZoneById(_dockZone, L2ScriptZone.class).isInsideZone(_shipSpawnX, _shipSpawnY, _shipSpawnZ))
 			{
-				_log.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
+				LOGGER.log(Level.WARNING, getName() + ": Arrival path is null and spawn point not in zone " + _dockZone + ", controller disabled");
 				_isBusy = true;
 				return;
 			}
@@ -387,7 +387,7 @@ public abstract class AirShipController extends AbstractNpcAI
 		{
 			if (_departPath.length == 0)
 			{
-				_log.log(Level.WARNING, getName() + ": Zero depart path length.");
+				LOGGER.log(Level.WARNING, getName() + ": Zero depart path length.");
 				_departPath = null;
 			}
 			else
@@ -395,7 +395,7 @@ public abstract class AirShipController extends AbstractNpcAI
 				p = _departPath[_departPath.length - 1];
 				if (zone.isInsideZone(p.getLocation()))
 				{
-					_log.log(Level.WARNING, getName() + ": Departure path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") in zone " + _dockZone);
+					LOGGER.log(Level.WARNING, getName() + ": Departure path finish point (" + p.getX() + "," + p.getY() + "," + p.getZ() + ") in zone " + _dockZone);
 					_departPath = null;
 				}
 			}
@@ -405,13 +405,13 @@ public abstract class AirShipController extends AbstractNpcAI
 		{
 			if (_fuelTable == null)
 			{
-				_log.log(Level.WARNING, getName() + ": Fuel consumption not defined.");
+				LOGGER.log(Level.WARNING, getName() + ": Fuel consumption not defined.");
 			}
 			else
 			{
 				if (_teleportsTable.length != _fuelTable.length)
 				{
-					_log.log(Level.WARNING, getName() + ": Fuel consumption not match teleport list.");
+					LOGGER.log(Level.WARNING, getName() + ": Fuel consumption not match teleport list.");
 				}
 				else
 				{

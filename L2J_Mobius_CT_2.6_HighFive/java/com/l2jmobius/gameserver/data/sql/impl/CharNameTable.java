@@ -37,7 +37,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class CharNameTable
 {
-	private static Logger _log = Logger.getLogger(CharNameTable.class.getName());
+	private static Logger LOGGER = Logger.getLogger(CharNameTable.class.getName());
 	
 	private final Map<Integer, String> _chars = new ConcurrentHashMap<>();
 	private final Map<Integer, Integer> _accessLevels = new ConcurrentHashMap<>();
@@ -114,7 +114,7 @@ public class CharNameTable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char name: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char name: " + e.getMessage(), e);
 		}
 		
 		if (id > 0)
@@ -162,7 +162,7 @@ public class CharNameTable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing char id: " + e.getMessage(), e);
 		}
 		
 		return null; // not found
@@ -190,7 +190,7 @@ public class CharNameTable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing charname: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Could not check existing charname: " + e.getMessage(), e);
 		}
 		return result;
 	}
@@ -211,7 +211,7 @@ public class CharNameTable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "Couldn't retrieve account for id: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Couldn't retrieve account for id: " + e.getMessage(), e);
 		}
 		return 0;
 	}
@@ -231,9 +231,9 @@ public class CharNameTable
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't retrieve all char id/name/access: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't retrieve all char id/name/access: " + e.getMessage(), e);
 		}
-		_log.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _chars.size() + " char names.");
 	}
 	
 	public static CharNameTable getInstance()

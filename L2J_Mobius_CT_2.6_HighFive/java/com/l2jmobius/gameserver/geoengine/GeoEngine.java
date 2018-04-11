@@ -50,7 +50,7 @@ import com.l2jmobius.gameserver.util.MathUtil;
  */
 public class GeoEngine
 {
-	protected static final Logger _log = Logger.getLogger(GeoEngine.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(GeoEngine.class.getName());
 	
 	private final ABlock[][] _blocks;
 	private final BlockNull _nullBlock;
@@ -69,7 +69,7 @@ public class GeoEngine
 	 */
 	public GeoEngine()
 	{
-		_log.info("GeoEngine: Initializing...");
+		LOGGER.info("GeoEngine: Initializing...");
 		
 		// initialize block container
 		_blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
@@ -103,7 +103,7 @@ public class GeoEngine
 			}
 		}
 		
-		_log.info("GeoEngine: Loaded " + loaded + " geodata files.");
+		LOGGER.info("GeoEngine: Loaded " + loaded + " geodata files.");
 		
 		// avoid wrong configs when no files are loaded
 		if (loaded == 0)
@@ -111,12 +111,12 @@ public class GeoEngine
 			if (Config.PATHFINDING)
 			{
 				Config.PATHFINDING = false;
-				_log.info("GeoEngine: Forcing PathFinding setting to false.");
+				LOGGER.info("GeoEngine: Forcing PathFinding setting to false.");
 			}
 			if (Config.COORD_SYNCHRONIZE == 2)
 			{
 				Config.COORD_SYNCHRONIZE = -1;
-				_log.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
+				LOGGER.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
 			}
 		}
 		
@@ -183,7 +183,7 @@ public class GeoEngine
 			// check data consistency
 			if (buffer.remaining() > 0)
 			{
-				_log.warning("GeoEngine: Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
+				LOGGER.warning("GeoEngine: Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
 			}
 			
 			// loading was successful
@@ -192,8 +192,8 @@ public class GeoEngine
 		catch (Exception e)
 		{
 			// an error occured while loading, load null blocks
-			_log.warning("GeoEngine: Error while loading " + filename + " region file.");
-			_log.warning(e.getMessage());
+			LOGGER.warning("GeoEngine: Error while loading " + filename + " region file.");
+			LOGGER.warning(e.getMessage());
 			e.printStackTrace();
 			
 			// replace whole region file with null blocks
@@ -298,7 +298,7 @@ public class GeoEngine
 		if (block == null) // null block check
 		{
 			// TODO: Find when this can be null. (Bad geodata? Check L2World getRegion method.)
-			// _log.warning("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
+			// LOGGER.warning("Could not find geodata block at " + getWorldX(geoX) + ", " + getWorldY(geoY) + ".");
 			return false;
 		}
 		return block.hasGeoPos();

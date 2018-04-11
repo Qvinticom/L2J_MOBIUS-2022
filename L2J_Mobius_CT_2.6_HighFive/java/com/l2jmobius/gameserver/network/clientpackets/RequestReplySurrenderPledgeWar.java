@@ -54,7 +54,7 @@ public final class RequestReplySurrenderPledgeWar implements IClientIncomingPack
 		}
 		else
 		{
-			_log.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
+			LOGGER.info(getClass().getSimpleName() + ": Missing implementation for answer: " + _answer + " and name: " + _reqName + "!");
 		}
 		activeChar.onTransactionRequest(requestor);
 	}

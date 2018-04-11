@@ -28,7 +28,7 @@ import com.l2jmobius.loginserver.GameServerThread;
  */
 public class ServerStatus extends BaseRecievePacket
 {
-	protected static Logger _log = Logger.getLogger(ServerStatus.class.getName());
+	protected static Logger LOGGER = Logger.getLogger(ServerStatus.class.getName());
 	
 	public static final int SERVER_LIST_STATUS = 0x01;
 	public static final int SERVER_TYPE = 0x02;

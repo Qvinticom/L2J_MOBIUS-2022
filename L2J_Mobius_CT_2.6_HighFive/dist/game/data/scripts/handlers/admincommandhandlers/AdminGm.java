@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminGm implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminGm.class.getName());
+	private static Logger LOGGER = Logger.getLogger(AdminGm.class.getName());
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_gm"
@@ -42,7 +42,7 @@ public class AdminGm implements IAdminCommandHandler
 			AdminData.getInstance().deleteGm(activeChar);
 			activeChar.setAccessLevel(0);
 			activeChar.sendMessage("You no longer have GM status.");
-			_log.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
+			LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") turned his GM status off");
 		}
 		return true;
 	}

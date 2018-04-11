@@ -80,7 +80,7 @@ public final class SummonNpc extends AbstractEffect
 		
 		if ((_npcId <= 0) || (_npcCount <= 0))
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
+			LOGGER.warning(SummonNpc.class.getSimpleName() + ": Invalid NPC ID or count skill ID: " + skill.getId());
 			return;
 		}
 		
@@ -93,7 +93,7 @@ public final class SummonNpc extends AbstractEffect
 		final L2NpcTemplate npcTemplate = NpcData.getInstance().getTemplate(_npcId);
 		if (npcTemplate == null)
 		{
-			_log.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());
+			LOGGER.warning(SummonNpc.class.getSimpleName() + ": Spawn of the nonexisting NPC ID: " + _npcId + ", skill ID:" + skill.getId());
 			return;
 		}
 		
@@ -162,7 +162,7 @@ public final class SummonNpc extends AbstractEffect
 				}
 				catch (Exception e)
 				{
-					_log.log(Level.WARNING, SummonNpc.class.getSimpleName() + ": Unable to create spawn. " + e.getMessage(), e);
+					LOGGER.log(Level.WARNING, SummonNpc.class.getSimpleName() + ": Unable to create spawn. " + e.getMessage(), e);
 					return;
 				}
 				

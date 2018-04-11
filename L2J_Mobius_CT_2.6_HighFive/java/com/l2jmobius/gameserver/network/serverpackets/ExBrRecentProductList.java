@@ -59,7 +59,7 @@ public class ExBrRecentProductList implements IClientOutgoingPacket
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Could not restore Item Mall transaction: " + e.getMessage(), e);
+			LOGGER.log(Level.SEVERE, "Could not restore Item Mall transaction: " + e.getMessage(), e);
 		}
 	}
 	

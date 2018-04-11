@@ -60,7 +60,7 @@ public class NpcBuffer extends AbstractNpcAI
 	
 	private static void print(Exception e)
 	{
-		_log.warning(">>>" + e + "<<<");
+		LOGGER.warning(">>>" + e + "<<<");
 		if (DEBUG)
 		{
 			e.printStackTrace();

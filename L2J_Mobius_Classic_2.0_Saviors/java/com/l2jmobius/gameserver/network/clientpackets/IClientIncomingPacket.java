@@ -27,5 +27,5 @@ import com.l2jmobius.gameserver.network.L2GameClient;
  */
 public interface IClientIncomingPacket extends IIncomingPacket<L2GameClient>
 {
-	Logger _log = Logger.getLogger(IClientIncomingPacket.class.getName());
+	Logger LOGGER = Logger.getLogger(IClientIncomingPacket.class.getName());
 }

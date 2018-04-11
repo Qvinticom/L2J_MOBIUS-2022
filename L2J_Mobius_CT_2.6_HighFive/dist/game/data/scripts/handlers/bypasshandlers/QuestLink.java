@@ -230,7 +230,7 @@ public class QuestLink implements IBypassHandler
 		final L2NpcTemplate template = NpcData.getInstance().getTemplate(npcId);
 		if (template == null)
 		{
-			_log.log(Level.WARNING, QuestLink.class.getSimpleName() + ": " + player.getName() + " requested quests for talk on non existing npc " + npcId);
+			LOGGER.log(Level.WARNING, QuestLink.class.getSimpleName() + ": " + player.getName() + " requested quests for talk on non existing npc " + npcId);
 			return states;
 		}
 		
@@ -268,7 +268,7 @@ public class QuestLink implements IBypassHandler
 			final Quest quest = state.getQuest();
 			if (quest == null)
 			{
-				_log.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
+				LOGGER.log(Level.WARNING, player + " Requested incorrect quest state for non existing quest: " + state.getQuestName());
 				continue;
 			}
 			if ((quest.getId() > 0) && (quest.getId() < 20000))

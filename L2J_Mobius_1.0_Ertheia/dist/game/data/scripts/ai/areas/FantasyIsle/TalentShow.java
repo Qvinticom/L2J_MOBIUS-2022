@@ -303,7 +303,7 @@ public final class TalentShow extends AbstractNpcAI
 		hourDiff *= 3600000;
 		minDiff *= 60000;
 		diff = hourDiff + minDiff;
-		_log.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
+		LOGGER.info("Fantasy Isle: MC show script starting at " + (new SimpleDateFormat("dd/MM/yyyy HH:mm:ss")).format(System.currentTimeMillis() + diff) + " and is scheduled each next 4 hours.");
 		startQuestTimer("Start", diff, null, null); // first start
 	}
 	
@@ -368,7 +368,7 @@ public final class TalentShow extends AbstractNpcAI
 	{
 		if ((event == null) || event.isEmpty())
 		{
-			_log.warning("MC_Show: Null/Empty event for npc " + npc + " and player " + player + "!");
+			LOGGER.warning("MC_Show: Null/Empty event for npc " + npc + " and player " + player + "!");
 			return null;
 		}
 		

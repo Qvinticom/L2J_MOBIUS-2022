@@ -636,7 +636,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		ThreadPool.schedule(new spawnNpcs((CAUWorld) world), INITIAL_SPAWN_DELAY);
 		if (DEBUG)
 		{
-			_log.info("Castle HopeWithinTheDarkness started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+			LOGGER.info("Castle HopeWithinTheDarkness started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
 		}
 		
 		// Teleport players
@@ -699,7 +699,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			}
 			catch (Exception e)
 			{
-				_log.warning("Castle HopeWithinTheDarkness NPC Spawn error: " + e);
+				LOGGER.warning("Castle HopeWithinTheDarkness NPC Spawn error: " + e);
 			}
 		}
 	}
@@ -740,7 +740,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			}
 			catch (Exception e)
 			{
-				_log.warning("Castle HopeWithinTheDarkness Monster Spawn error: " + e);
+				LOGGER.warning("Castle HopeWithinTheDarkness Monster Spawn error: " + e);
 			}
 		}
 	}
@@ -806,7 +806,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			}
 			catch (Exception e)
 			{
-				_log.warning("Complete dungeon manage error: " + e);
+				LOGGER.warning("Complete dungeon manage error: " + e);
 			}
 		}
 	}

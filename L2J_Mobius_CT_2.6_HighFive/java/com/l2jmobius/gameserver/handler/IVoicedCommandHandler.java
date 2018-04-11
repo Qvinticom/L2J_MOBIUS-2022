@@ -22,7 +22,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public interface IVoicedCommandHandler
 {
-	Logger _log = Logger.getLogger(IVoicedCommandHandler.class.getName());
+	Logger LOGGER = Logger.getLogger(IVoicedCommandHandler.class.getName());
 	
 	/**
 	 * this is the worker method that is called when someone uses an admin command.

@@ -254,7 +254,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					default:
 					{
-						_log.warning("Olympiad System: Couldnt send packet for request " + val);
+						LOGGER.warning("Olympiad System: Couldnt send packet for request " + val);
 						break;
 					}
 				}
@@ -272,21 +272,21 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				if (!Util.isDigit(params[1]))
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
+					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid buffGroup set in the bypass for the buff selected: " + params[1]);
 					return false;
 				}
 				
 				final int index = Integer.parseInt(params[1]);
 				if ((index < 0) || (index > BUFFS.length))
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid index sent in the bypass: " + index);
+					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid index sent in the bypass: " + index);
 					return false;
 				}
 				
 				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[index]);
 				if (npcBuffGroupInfo == null)
 				{
-					_log.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
+					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
 					return false;
 				}
 				
@@ -382,7 +382,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					default:
 					{
-						_log.warning("Olympiad System: Couldnt send packet for request " + val);
+						LOGGER.warning("Olympiad System: Couldnt send packet for request " + val);
 						break;
 					}
 				}
@@ -390,7 +390,7 @@ public class OlympiadManagerLink implements IBypassHandler
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
+			LOGGER.log(Level.WARNING, "Exception in " + getClass().getSimpleName(), e);
 		}
 		
 		return true;

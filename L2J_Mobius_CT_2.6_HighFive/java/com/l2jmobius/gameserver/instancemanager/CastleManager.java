@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 
 public final class CastleManager implements InstanceListManager
 {
-	private static final Logger _log = Logger.getLogger(CastleManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(CastleManager.class.getName());
 	
 	private final List<Castle> _castles = new ArrayList<>();
 	
@@ -291,7 +291,7 @@ public final class CastleManager implements InstanceListManager
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "Failed to remove castle circlets offline for player " + member.getName() + ": " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, "Failed to remove castle circlets offline for player " + member.getName() + ": " + e.getMessage(), e);
 			}
 		}
 	}
@@ -307,11 +307,11 @@ public final class CastleManager implements InstanceListManager
 			{
 				_castles.add(new Castle(rs.getInt("id")));
 			}
-			_log.info(getClass().getSimpleName() + ": Loaded: " + _castles.size() + " castles");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _castles.size() + " castles");
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception: loadCastleData(): " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Exception: loadCastleData(): " + e.getMessage(), e);
 		}
 	}
 	

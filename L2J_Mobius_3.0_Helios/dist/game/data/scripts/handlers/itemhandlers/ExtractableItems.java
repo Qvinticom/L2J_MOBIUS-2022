@@ -54,7 +54,7 @@ public class ExtractableItems implements IItemHandler
 		final List<L2ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{
-			_log.info("No extractable data defined for " + etcitem);
+			LOGGER.info("No extractable data defined for " + etcitem);
 			return false;
 		}
 		

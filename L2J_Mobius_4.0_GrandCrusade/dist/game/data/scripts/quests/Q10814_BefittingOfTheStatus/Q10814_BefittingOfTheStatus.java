@@ -274,7 +274,7 @@ public final class Q10814_BefittingOfTheStatus extends Quest
 		final String text = getHtm(player.getHtmlPrefix(), fileName);
 		if (text == null)
 		{
-			_log.info("Cannot find HTML file for " + Q10814_BefittingOfTheStatus.class.getSimpleName() + " Quest: " + fileName);
+			LOGGER.info("Cannot find HTML file for " + Q10814_BefittingOfTheStatus.class.getSimpleName() + " Quest: " + fileName);
 			return null;
 		}
 		html.setHtml(text);

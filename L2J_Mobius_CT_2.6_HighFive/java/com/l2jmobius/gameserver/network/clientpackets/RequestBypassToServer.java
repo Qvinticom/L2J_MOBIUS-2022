@@ -88,7 +88,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 		
 		if (_command.isEmpty())
 		{
-			_log.warning("Player " + activeChar.getName() + " sent empty bypass!");
+			LOGGER.warning("Player " + activeChar.getName() + " sent empty bypass!");
 			Disconnection.of(client, activeChar).defaultSequence(false);
 			return;
 		}
@@ -109,7 +109,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 			bypassOriginId = activeChar.validateHtmlAction(_command);
 			if (bypassOriginId == -1)
 			{
-				_log.warning("Player " + activeChar.getName() + " sent non cached bypass: '" + _command + "'");
+				LOGGER.warning("Player " + activeChar.getName() + " sent non cached bypass: '" + _command + "'");
 				return;
 			}
 			
@@ -139,14 +139,14 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 					{
 						activeChar.sendMessage("The command " + command.substring(6) + " does not exist!");
 					}
-					_log.warning(activeChar + " requested not registered admin command '" + command + "'");
+					LOGGER.warning(activeChar + " requested not registered admin command '" + command + "'");
 					return;
 				}
 				
 				if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
 				{
 					activeChar.sendMessage("You don't have the access rights to use this command!");
-					_log.warning("Character " + activeChar.getName() + " tried to use admin command " + command + ", without proper access level!");
+					LOGGER.warning("Character " + activeChar.getName() + " tried to use admin command " + command + ", without proper access level!");
 					return;
 				}
 				
@@ -224,7 +224,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				}
 				catch (NumberFormatException nfe)
 				{
-					_log.log(Level.WARNING, "NFE for command [" + _command + "]", nfe);
+					LOGGER.log(Level.WARNING, "NFE for command [" + _command + "]", nfe);
 				}
 			}
 			else if (_command.startsWith("_match"))
@@ -296,13 +296,13 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				}
 				else
 				{
-					_log.warning(client + " sent not handled RequestBypassToServer: [" + _command + "]");
+					LOGGER.warning(client + " sent not handled RequestBypassToServer: [" + _command + "]");
 				}
 			}
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Exception processing bypass from player " + activeChar.getName() + ": " + _command, e);
+			LOGGER.log(Level.WARNING, "Exception processing bypass from player " + activeChar.getName() + ": " + _command, e);
 			
 			if (activeChar.isGM())
 			{

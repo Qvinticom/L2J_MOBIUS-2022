@@ -376,7 +376,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not store summon effect data: ", e);
+			LOGGER.log(Level.WARNING, "Could not store summon effect data: ", e);
 		}
 	}
 	
@@ -442,7 +442,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Could not restore " + this + " active effect data: " + e.getMessage(), e);
 		}
 		finally
 		{

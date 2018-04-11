@@ -237,7 +237,7 @@ public class L2DoorInstance extends L2Character
 			}
 			else
 			{
-				_log.log(Level.WARNING, getClass().getSimpleName() + ": cannot find child id: " + getChildId());
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": cannot find child id: " + getChildId());
 			}
 		}
 	}

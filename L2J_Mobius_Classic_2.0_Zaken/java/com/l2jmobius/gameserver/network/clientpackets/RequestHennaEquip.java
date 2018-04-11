@@ -67,7 +67,7 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 		final L2Henna henna = HennaData.getInstance().getHenna(_symbolId);
 		if (henna == null)
 		{
-			_log.warning("Invalid Henna Id: " + _symbolId + " from player " + activeChar);
+			LOGGER.warning("Invalid Henna Id: " + _symbolId + " from player " + activeChar);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

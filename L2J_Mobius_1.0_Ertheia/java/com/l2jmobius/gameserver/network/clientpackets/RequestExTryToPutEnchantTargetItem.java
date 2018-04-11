@@ -72,7 +72,7 @@ public class RequestExTryToPutEnchantTargetItem implements IClientIncomingPacket
 			client.sendPacket(new ExPutEnchantTargetItemResult(0));
 			if (scrollTemplate == null)
 			{
-				_log.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
+				LOGGER.warning(getClass().getSimpleName() + ": Undefined scroll have been used id: " + scroll.getId());
 			}
 			return;
 		}

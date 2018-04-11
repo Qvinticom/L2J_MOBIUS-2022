@@ -37,6 +37,6 @@ public final class RequestPCCafeCouponUse implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		_log.info("C5: RequestPCCafeCouponUse: S: " + _str);
+		LOGGER.info("C5: RequestPCCafeCouponUse: S: " + _str);
 	}
 }

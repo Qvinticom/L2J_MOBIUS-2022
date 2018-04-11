@@ -123,7 +123,7 @@ public class L2DefenderInstance extends L2Attackable
 		
 		if ((_fort == null) && (_castle == null))
 		{
-			_log.warning("L2DefenderInstance spawned outside of Fortress or Castle zone!" + this);
+			LOGGER.warning("L2DefenderInstance spawned outside of Fortress or Castle zone!" + this);
 		}
 	}
 	

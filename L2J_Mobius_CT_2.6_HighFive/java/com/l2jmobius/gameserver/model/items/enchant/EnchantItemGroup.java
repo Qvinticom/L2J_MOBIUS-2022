@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.holders.RangeChanceHolder;
  */
 public final class EnchantItemGroup
 {
-	private static final Logger _log = Logger.getLogger(EnchantItemGroup.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EnchantItemGroup.class.getName());
 	private final List<RangeChanceHolder> _chances = new ArrayList<>();
 	private final String _name;
 	
@@ -68,10 +68,10 @@ public final class EnchantItemGroup
 					return holder.getChance();
 				}
 			}
-			_log.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't match proper chance for item group: " + _name, new IllegalStateException());
 			return _chances.get(_chances.size() - 1).getChance();
 		}
-		_log.log(Level.WARNING, getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
+		LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": item group: " + _name + " doesn't have any chances!");
 		return -1;
 	}
 }

@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class QuestTimer
 {
-	protected static final Logger _log = Logger.getLogger(QuestTimer.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(QuestTimer.class.getName());
 	
 	public class ScheduleTimerTask implements Runnable
 	{
@@ -48,7 +48,7 @@ public class QuestTimer
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.SEVERE, "", e);
+				LOGGER.log(Level.SEVERE, "", e);
 			}
 		}
 	}

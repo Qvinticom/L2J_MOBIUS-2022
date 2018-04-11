@@ -49,7 +49,7 @@ public class SoulShots implements IItemHandler
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
-			_log.warning(getClass().getSimpleName() + ": is missing skills!");
+			LOGGER.warning(getClass().getSimpleName() + ": is missing skills!");
 			return false;
 		}
 		

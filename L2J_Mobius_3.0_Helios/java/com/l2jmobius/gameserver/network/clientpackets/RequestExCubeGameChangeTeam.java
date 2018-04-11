@@ -74,7 +74,7 @@ public final class RequestExCubeGameChangeTeam implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.warning("Wrong Cube Game Team ID: " + _team);
+				LOGGER.warning("Wrong Cube Game Team ID: " + _team);
 				break;
 			}
 		}

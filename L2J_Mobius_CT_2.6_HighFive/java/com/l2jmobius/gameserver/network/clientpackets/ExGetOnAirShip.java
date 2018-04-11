@@ -43,9 +43,9 @@ public class ExGetOnAirShip implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
-		_log.info("[T1:ExGetOnAirShip] x: " + _x);
-		_log.info("[T1:ExGetOnAirShip] y: " + _y);
-		_log.info("[T1:ExGetOnAirShip] z: " + _z);
-		_log.info("[T1:ExGetOnAirShip] ship ID: " + _shipId);
+		LOGGER.info("[T1:ExGetOnAirShip] x: " + _x);
+		LOGGER.info("[T1:ExGetOnAirShip] y: " + _y);
+		LOGGER.info("[T1:ExGetOnAirShip] z: " + _z);
+		LOGGER.info("[T1:ExGetOnAirShip] ship ID: " + _shipId);
 	}
 }

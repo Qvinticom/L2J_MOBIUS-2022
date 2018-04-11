@@ -58,7 +58,7 @@ public final class RequestSurrenderPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		_log.info("RequestSurrenderPledgeWar by " + client.getActiveChar().getClan().getName() + " with " + _pledgeName);
+		LOGGER.info("RequestSurrenderPledgeWar by " + client.getActiveChar().getClan().getName() + " with " + _pledgeName);
 		
 		if (!_clan.isAtWarWith(clan.getId()))
 		{

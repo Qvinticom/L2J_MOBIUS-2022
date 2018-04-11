@@ -59,7 +59,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class AdminSkill implements IAdminCommandHandler
 {
-	private static Logger _log = Logger.getLogger(AdminSkill.class.getName());
+	private static Logger LOGGER = Logger.getLogger(AdminSkill.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -526,7 +526,7 @@ public class AdminSkill implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				_log.log(Level.WARNING, "", e);
+				LOGGER.log(Level.WARNING, "", e);
 			}
 			if (skill != null)
 			{

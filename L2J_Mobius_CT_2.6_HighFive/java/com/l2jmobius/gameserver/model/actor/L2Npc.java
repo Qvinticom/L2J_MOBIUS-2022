@@ -743,7 +743,7 @@ public class L2Npc extends L2Character
 				}
 				else
 				{
-					_log.info(getClass().getSimpleName() + ": Unknown NPC bypass: \"" + command + "\" NpcId: " + getId());
+					LOGGER.info(getClass().getSimpleName() + ": Unknown NPC bypass: \"" + command + "\" NpcId: " + getId());
 				}
 			}
 		}
@@ -1337,7 +1337,7 @@ public class L2Npc extends L2Character
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Failed decayMe().", e);
+			LOGGER.log(Level.SEVERE, "Failed decayMe().", e);
 		}
 		
 		if (isChannelized())
@@ -1492,7 +1492,7 @@ public class L2Npc extends L2Character
 		final NpcHtmlMessage noTeachMsg = new NpcHtmlMessage(getObjectId());
 		if (html == null)
 		{
-			_log.warning("Npc " + npcId + " missing noTeach html!");
+			LOGGER.warning("Npc " + npcId + " missing noTeach html!");
 			noTeachMsg.setHtml("<html><body>I cannot teach you any skills.<br>You must find your current class teachers.</body></html>");
 		}
 		else
@@ -1777,7 +1777,7 @@ public class L2Npc extends L2Character
 			
 			if (ItemTable.getInstance().getTemplate(itemId) == null)
 			{
-				_log.log(Level.SEVERE, "Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
+				LOGGER.log(Level.SEVERE, "Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
 				return null;
 			}
 			

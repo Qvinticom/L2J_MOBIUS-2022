@@ -65,7 +65,7 @@ public final class RequestExCubeGameReadyAnswer implements IClientIncomingPacket
 			}
 			default:
 			{
-				_log.warning("Unknown Cube Game Answer ID: " + _answer);
+				LOGGER.warning("Unknown Cube Game Answer ID: " + _answer);
 				break;
 			}
 		}

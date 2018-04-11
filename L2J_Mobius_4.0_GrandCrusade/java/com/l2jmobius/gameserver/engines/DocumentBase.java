@@ -147,7 +147,7 @@ import com.l2jmobius.gameserver.model.stats.functions.FuncTemplate;
  */
 public abstract class DocumentBase
 {
-	protected final Logger _log = Logger.getLogger(getClass().getName());
+	protected final Logger LOGGER = Logger.getLogger(getClass().getName());
 	
 	private final File _file;
 	protected final Map<String, String[]> _tables = new HashMap<>();
@@ -170,7 +170,7 @@ public abstract class DocumentBase
 		}
 		catch (Exception e)
 		{
-			_log.log(Level.SEVERE, "Error loading file " + _file, e);
+			LOGGER.log(Level.SEVERE, "Error loading file " + _file, e);
 		}
 		return doc;
 	}
@@ -343,7 +343,7 @@ public abstract class DocumentBase
 		}
 		if ((cond.conditions == null) || (cond.conditions.length == 0))
 		{
-			_log.severe("Empty <and> condition in " + _file);
+			LOGGER.severe("Empty <and> condition in " + _file);
 		}
 		return cond;
 	}
@@ -360,7 +360,7 @@ public abstract class DocumentBase
 		}
 		if ((cond.conditions == null) || (cond.conditions.length == 0))
 		{
-			_log.severe("Empty <or> condition in " + _file);
+			LOGGER.severe("Empty <or> condition in " + _file);
 		}
 		return cond;
 	}
@@ -374,7 +374,7 @@ public abstract class DocumentBase
 				return new ConditionLogicNot(parseCondition(n, template));
 			}
 		}
-		_log.severe("Empty <not> condition in " + _file);
+		LOGGER.severe("Empty <not> condition in " + _file);
 		return null;
 	}
 	
@@ -893,7 +893,7 @@ public abstract class DocumentBase
 		
 		if (cond == null)
 		{
-			_log.severe("Unrecognized <player> condition in " + _file);
+			LOGGER.severe("Unrecognized <player> condition in " + _file);
 		}
 		return cond;
 	}
@@ -1088,7 +1088,7 @@ public abstract class DocumentBase
 		
 		if (cond == null)
 		{
-			_log.severe("Unrecognized <target> condition in " + _file);
+			LOGGER.severe("Unrecognized <target> condition in " + _file);
 		}
 		return cond;
 	}
@@ -1128,7 +1128,7 @@ public abstract class DocumentBase
 						
 						if (old == mask)
 						{
-							_log.info("[parseUsingCondition=\"kind\"] Unknown item type name: " + item);
+							LOGGER.info("[parseUsingCondition=\"kind\"] Unknown item type name: " + item);
 						}
 					}
 					cond = joinAnd(cond, new ConditionUsingItemType(mask));
@@ -1149,7 +1149,7 @@ public abstract class DocumentBase
 						
 						if (old == mask)
 						{
-							_log.info("[parseUsingCondition=\"slot\"] Unknown item slot name: " + item);
+							LOGGER.info("[parseUsingCondition=\"slot\"] Unknown item slot name: " + item);
 						}
 					}
 					cond = joinAnd(cond, new ConditionUsingSlotType(mask));
@@ -1185,7 +1185,7 @@ public abstract class DocumentBase
 		
 		if (cond == null)
 		{
-			_log.severe("Unrecognized <using> condition in " + _file);
+			LOGGER.severe("Unrecognized <using> condition in " + _file);
 		}
 		return cond;
 	}
@@ -1215,7 +1215,7 @@ public abstract class DocumentBase
 		}
 		if (cond == null)
 		{
-			_log.severe("Unrecognized <game> condition in " + _file);
+			LOGGER.severe("Unrecognized <game> condition in " + _file);
 		}
 		return cond;
 	}

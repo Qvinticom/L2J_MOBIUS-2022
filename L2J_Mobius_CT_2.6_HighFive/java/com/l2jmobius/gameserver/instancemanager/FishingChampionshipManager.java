@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class FishingChampionshipManager
 {
-	protected static final Logger _log = Logger.getLogger(FishingChampionshipManager.class.getName());
+	protected static final Logger LOGGER = Logger.getLogger(FishingChampionshipManager.class.getName());
 	
 	private static final String INSERT = "INSERT INTO fishing_championship(player_name,fish_length,rewarded) VALUES (?,?,?)";
 	private static final String DELETE = "DELETE FROM fishing_championship";
@@ -120,7 +120,7 @@ public class FishingChampionshipManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "FishingChampionshipManager: can't restore fishing championship info: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FishingChampionshipManager: can't restore fishing championship info: " + e.getMessage(), e);
 		}
 	}
 	
@@ -384,7 +384,7 @@ public class FishingChampionshipManager
 		}
 		catch (SQLException e)
 		{
-			_log.log(Level.WARNING, "FishingChampionshipManager: can't update infos: " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "FishingChampionshipManager: can't update infos: " + e.getMessage(), e);
 		}
 	}
 	
@@ -470,7 +470,7 @@ public class FishingChampionshipManager
 			setEndOfChamp();
 			shutdown();
 			
-			_log.info("FishingChampionshipManager : new event period start.");
+			LOGGER.info("FishingChampionshipManager : new event period start.");
 			ThreadPool.schedule(new finishChamp(), _enddate - System.currentTimeMillis());
 		}
 	}

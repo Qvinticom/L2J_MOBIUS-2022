@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class AdminPunishment implements IAdminCommandHandler
 {
-	private static final Logger _log = Logger.getLogger(AdminPunishment.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminPunishment.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -86,7 +86,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					}
 					else
 					{
-						_log.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment.htm is missing");
+						LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment.htm is missing");
 					}
 				}
 				else
@@ -149,7 +149,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							else
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment-info.htm is missing");
+								LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment-info.htm is missing");
 							}
 							break;
 						}
@@ -186,7 +186,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							else
 							{
-								_log.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment-player.htm is missing");
+								LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": data/html/admin/punishment-player.htm is missing");
 							}
 							break;
 						}

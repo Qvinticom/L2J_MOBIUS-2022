@@ -61,7 +61,7 @@ public class L2ControlTowerInstance extends L2Tower
 					}
 					catch (Exception e)
 					{
-						_log.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
+						LOGGER.log(Level.WARNING, "Error at L2ControlTowerInstance", e);
 					}
 				}
 				_guards.clear();
