@@ -478,7 +478,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	
 	public L2Npc doSpawn()
 	{
-		return doSpawn(false);
+		return _doRespawn ? doSpawn(false) : null;
 	}
 	
 	/**
