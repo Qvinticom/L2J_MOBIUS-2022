@@ -5077,15 +5077,14 @@ public final class L2PcInstance extends L2Playable
 		if ((!isInsideZone(ZoneId.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM))
 		{
 			boolean isKarmaDrop = false;
-			final int pkLimit = Config.KARMA_PK_LIMIT;
-			
 			int dropEquip = 0;
 			int dropEquipWeapon = 0;
 			int dropItem = 0;
 			int dropLimit = 0;
 			int dropPercent = 0;
 			
-			if ((getReputation() < 0) && (getPkKills() >= pkLimit))
+			// Classic calculation.
+			if (killer.isPlayable() && (getReputation() < 0) && (getPkKills() >= Config.KARMA_PK_LIMIT))
 			{
 				isKarmaDrop = true;
 				dropPercent = Config.KARMA_RATE_DROP;
@@ -5094,7 +5093,7 @@ public final class L2PcInstance extends L2Playable
 				dropItem = Config.KARMA_RATE_DROP_ITEM;
 				dropLimit = Config.KARMA_DROP_LIMIT;
 			}
-			else if (killer.isNpc() && (getLevel() > 4))
+			else if (killer.isNpc())
 			{
 				dropPercent = Config.PLAYER_RATE_DROP;
 				dropEquip = Config.PLAYER_RATE_DROP_EQUIP;
