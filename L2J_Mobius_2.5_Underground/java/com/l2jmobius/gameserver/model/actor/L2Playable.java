@@ -203,20 +203,12 @@ public abstract class L2Playable extends L2Character
 	{
 		final L2PcInstance player = getActingPlayer();
 		
-		if ((player == null) || (target == null) || (player == target))
-		{
-			return true;
-		}
-		
-		if (target.isOnDarkSide())
-		{
-			return true;
-		}
-		else if (target.getReputation() < 0)
-		{
-			return true;
-		}
-		else if ((player.getPvpFlag() > 0) && (target.getPvpFlag() > 0))
+		if ((player == null) //
+			|| (target == null) //
+			|| (player == target) //
+			|| (target.getReputation() < 0) //
+			|| (target.getPvpFlag() > 0) //
+			|| target.isOnDarkSide())
 		{
 			return true;
 		}

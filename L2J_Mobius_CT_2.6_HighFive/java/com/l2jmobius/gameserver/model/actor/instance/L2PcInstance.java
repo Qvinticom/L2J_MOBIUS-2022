@@ -5450,7 +5450,6 @@ public final class L2PcInstance extends L2Playable
 	public void updatePvPStatus(L2Character target)
 	{
 		final L2PcInstance player_target = target.getActingPlayer();
-		
 		if (player_target == null)
 		{
 			return;

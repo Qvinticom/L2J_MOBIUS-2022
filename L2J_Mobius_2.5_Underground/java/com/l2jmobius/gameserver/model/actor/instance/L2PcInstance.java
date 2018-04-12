@@ -5302,11 +5302,10 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		
-		if ((isInDuel() && (player_target.getDuelId() == getDuelId())))
+		if (isInDuel() && (player_target.getDuelId() == getDuelId()))
 		{
 			return;
 		}
-		
 		if ((!isInsideZone(ZoneId.PVP) || !player_target.isInsideZone(ZoneId.PVP)) && (player_target.getReputation() >= 0))
 		{
 			if (checkIfPvP(player_target))
@@ -5317,7 +5316,6 @@ public final class L2PcInstance extends L2Playable
 			{
 				setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
 			}
-			
 			if (getPvpFlag() == 0)
 			{
 				startPvPFlag();

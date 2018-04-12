@@ -200,10 +200,12 @@ public abstract class L2Playable extends L2Character
 		{
 			return false; // Target is null
 		}
+		
 		if (target == this)
 		{
 			return false; // Target is self
 		}
+		
 		if (!target.isPlayable())
 		{
 			return false; // Target is not a L2Playable
@@ -230,30 +232,18 @@ public abstract class L2Playable extends L2Character
 		{
 			return false; // Target player is self
 		}
+		
 		if (targetPlayer.getKarma() != 0)
 		{
 			return false; // Target player has karma
 		}
+		
 		if (targetPlayer.getPvpFlag() == 0)
 		{
-			return false;
+			return false; // Target player is not flagged
 		}
 		
 		return true;
-		// Even at war, there should be PvP flag
-		// if(
-		// player.getClan() == null ||
-		// targetPlayer.getClan() == null ||
-		// (
-		// !targetPlayer.getClan().isAtWarWith(player.getClanId()) &&
-		// targetPlayer.getWantsPeace() == 0 &&
-		// player.getWantsPeace() == 0
-		// )
-		// )
-		// {
-		// return true;
-		// }
-		// return false;
 	}
 	
 	/**
