@@ -3037,13 +3037,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					((L2Npc) summoner).removeSummonedNpc(getObjectId());
 				}
-				L2World.getInstance().removeObject(this);
 				final L2Spawn spawn = npc.getSpawn();
 				if ((spawn != null) && spawn.isRespawnEnabled())
 				{
 					spawn.decreaseCount(npc);
-					spawn.doSpawn();
 				}
+				final Instance instance = getInstanceWorld();
+				if (instance != null)
+				{
+					instance.removeNpc(npc);
+				}
+				L2World.getInstance().removeObject(this);
 			}
 			else
 			{
