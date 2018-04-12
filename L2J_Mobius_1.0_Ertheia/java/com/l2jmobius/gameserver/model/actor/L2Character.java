@@ -65,6 +65,7 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
+import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.CreatureContainer;
@@ -73,6 +74,7 @@ import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
@@ -3021,17 +3023,33 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 			else if (isServitor())
 			{
-				((L2ServitorInstance) this).unSummon(((L2ServitorInstance) this).getOwner());
+				final L2ServitorInstance servitor = (L2ServitorInstance) this;
+				servitor.unSummon(servitor.getOwner());
 			}
 			else if (isNpc())
 			{
-				LOGGER.warning("Deleting npc " + getName() + " NPCID[" + ((L2Npc) this).getId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
+				final L2Npc npc = (L2Npc) this;
+				LOGGER.warning("Deleting npc " + getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
 				deleteMe();
+				WalkingManager.getInstance().onDeath(npc);
+				final L2Character summoner = getSummoner();
+				if ((summoner != null) && summoner.isNpc())
+				{
+					((L2Npc) summoner).removeSummonedNpc(getObjectId());
+				}
+				L2World.getInstance().removeObject(this);
+				final L2Spawn spawn = npc.getSpawn();
+				if ((spawn != null) && spawn.isRespawnEnabled())
+				{
+					spawn.decreaseCount(npc);
+					spawn.doSpawn();
+				}
 			}
 			else
 			{
 				LOGGER.warning("Deleting object " + getName() + " OID[" + getObjectId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
 				deleteMe();
+				L2World.getInstance().removeObject(this);
 			}
 		}
 	}
