@@ -69,6 +69,7 @@ import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.character.FlyToLocationTask;
@@ -4002,7 +4003,32 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		ZoneManager.getInstance().getRegion(this).revalidateZones(this);
+		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+		if (region != null)
+		{
+			region.revalidateZones(this);
+		}
+		else // Precaution. Moved at invalid region?
+		{
+			if (isPlayer())
+			{
+				stopMove(((L2PcInstance) this).getLastServerPosition());
+			}
+			else if (isServitor())
+			{
+				((L2ServitorInstance) this).unSummon(((L2ServitorInstance) this).getOwner());
+			}
+			else if (isNpc())
+			{
+				LOGGER.warning("Deleting npc " + getName() + " NPCID[" + ((L2Npc) this).getId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
+				deleteMe();
+			}
+			else
+			{
+				LOGGER.warning("Deleting object " + getName() + " OID[" + getObjectId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
+				deleteMe();
+			}
+		}
 	}
 	
 	/**
