@@ -2491,18 +2491,19 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		boolean increaseClanLevel = false;
 		
+		// Such as https://l2wiki.com/classic/Clans_β€“_Clan_Level
 		switch (getLevel())
 		{
 			case 0:
 			{
 				// Upgrade to 1
-				if ((player.getSp() >= 20000) && (player.getAdena() >= 650000))
+				if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (getMembersCount() >= 1))
 				{
-					if (player.reduceAdena("ClanLvl", 650000, player.getTarget(), true))
+					if (player.reduceAdena("ClanLvl", 150000, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 20000);
+						player.setSp(player.getSp() - 1000);
 						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(20000);
+						sp.addInt(1000);
 						player.sendPacket(sp);
 						increaseClanLevel = true;
 					}
@@ -2512,13 +2513,13 @@ public class L2Clan implements IIdentifiable, INamable
 			case 1:
 			{
 				// Upgrade to 2
-				if ((player.getSp() >= 100000) && (player.getAdena() >= 2500000))
+				if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (getMembersCount() >= 1))
 				{
-					if (player.reduceAdena("ClanLvl", 2500000, player.getTarget(), true))
+					if (player.reduceAdena("ClanLvl", 300000, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 100000);
+						player.setSp(player.getSp() - 15000);
 						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(100000);
+						sp.addInt(15000);
 						player.sendPacket(sp);
 						increaseClanLevel = true;
 					}
@@ -2528,15 +2529,14 @@ public class L2Clan implements IIdentifiable, INamable
 			case 2:
 			{
 				// Upgrade to 3
-				if ((player.getSp() >= 350000) && (player.getInventory().getItemByItemId(1419) != null))
+				if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (getMembersCount() >= 1))
 				{
-					// TODO unhardcode these item IDs
 					// itemId 1419 == Blood Mark
-					if (player.destroyItemByItemId("ClanLvl", 1419, 1, player.getTarget(), false))
+					if (player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 350000);
+						player.setSp(player.getSp() - 100000);
 						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(350000);
+						sp.addInt(100000);
 						player.sendPacket(sp);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
 						sm.addItemName(1419);
@@ -2549,17 +2549,17 @@ public class L2Clan implements IIdentifiable, INamable
 			case 3:
 			{
 				// Upgrade to 4
-				if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(3874) != null))
+				if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (getMembersCount() >= 1))
 				{
-					// itemId 3874 == Alliance Manifesto
-					if (player.destroyItemByItemId("ClanLvl", 3874, 1, player.getTarget(), false))
+					// itemId 1419 == Blood Mark
+					if (player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true))
 					{
 						player.setSp(player.getSp() - 1000000);
 						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
 						sp.addInt(1000000);
 						player.sendPacket(sp);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-						sm.addItemName(3874);
+						sm.addItemName(1419);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
 					}
@@ -2569,114 +2569,20 @@ public class L2Clan implements IIdentifiable, INamable
 			case 4:
 			{
 				// Upgrade to 5
-				if ((player.getSp() >= 2500000) && (player.getInventory().getItemByItemId(3870) != null))
+				if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (getMembersCount() >= 1))
 				{
-					// itemId 3870 == Seal of Aspiration
-					if (player.destroyItemByItemId("ClanLvl", 3870, 1, player.getTarget(), false))
+					// itemId 1419 == Blood Mark
+					if (player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true))
 					{
-						player.setSp(player.getSp() - 2500000);
+						player.setSp(player.getSp() - 5000000);
 						final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
-						sp.addInt(2500000);
+						sp.addInt(5000000);
 						player.sendPacket(sp);
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_DISAPPEARED);
-						sm.addItemName(3870);
+						sm.addItemName(1419);
 						player.sendPacket(sm);
 						increaseClanLevel = true;
 					}
-				}
-				break;
-			}
-			case 5:
-			{
-				// Upgrade to 6
-				if ((getReputationScore() >= Config.CLAN_LEVEL_6_COST) && (getMembersCount() >= Config.CLAN_LEVEL_6_REQUIREMENT))
-				{
-					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_6_COST, true);
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-					cr.addInt(Config.CLAN_LEVEL_6_COST);
-					player.sendPacket(cr);
-					increaseClanLevel = true;
-				}
-				break;
-			}
-			case 6:
-			{
-				// Upgrade to 7
-				if ((getReputationScore() >= Config.CLAN_LEVEL_7_COST) && (getMembersCount() >= Config.CLAN_LEVEL_7_REQUIREMENT))
-				{
-					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_7_COST, true);
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-					cr.addInt(Config.CLAN_LEVEL_7_COST);
-					player.sendPacket(cr);
-					increaseClanLevel = true;
-				}
-				break;
-			}
-			case 7:
-			{
-				// Upgrade to 8
-				if ((getReputationScore() >= Config.CLAN_LEVEL_8_COST) && (getMembersCount() >= Config.CLAN_LEVEL_8_REQUIREMENT))
-				{
-					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_8_COST, true);
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-					cr.addInt(Config.CLAN_LEVEL_8_COST);
-					player.sendPacket(cr);
-					increaseClanLevel = true;
-				}
-				break;
-			}
-			case 8:
-			{
-				// Upgrade to 9
-				if ((getReputationScore() >= Config.CLAN_LEVEL_9_COST) && (player.getInventory().getItemByItemId(9910) != null) && (getMembersCount() >= Config.CLAN_LEVEL_9_REQUIREMENT))
-				{
-					// itemId 9910 == Blood Oath
-					if (player.destroyItemByItemId("ClanLvl", 9910, 150, player.getTarget(), false))
-					{
-						setReputationScore(getReputationScore() - Config.CLAN_LEVEL_9_COST, true);
-						final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-						cr.addInt(Config.CLAN_LEVEL_9_COST);
-						player.sendPacket(cr);
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-						sm.addItemName(9910);
-						sm.addLong(150);
-						player.sendPacket(sm);
-						increaseClanLevel = true;
-					}
-				}
-				break;
-			}
-			case 9:
-			{
-				// Upgrade to 10
-				if ((getReputationScore() >= Config.CLAN_LEVEL_10_COST) && (player.getInventory().getItemByItemId(9911) != null) && (getMembersCount() >= Config.CLAN_LEVEL_10_REQUIREMENT))
-				{
-					// itemId 9911 == Blood Alliance
-					if (player.destroyItemByItemId("ClanLvl", 9911, 5, player.getTarget(), false))
-					{
-						setReputationScore(getReputationScore() - Config.CLAN_LEVEL_10_COST, true);
-						final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-						cr.addInt(Config.CLAN_LEVEL_10_COST);
-						player.sendPacket(cr);
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S1_S_DISAPPEARED);
-						sm.addItemName(9911);
-						sm.addLong(5);
-						player.sendPacket(sm);
-						increaseClanLevel = true;
-					}
-				}
-				break;
-			}
-			case 10:
-			{
-				// Upgrade to 11
-				if ((getReputationScore() >= Config.CLAN_LEVEL_11_COST) && (getMembersCount() >= Config.CLAN_LEVEL_11_REQUIREMENT))
-				{
-					setReputationScore(getReputationScore() - Config.CLAN_LEVEL_11_COST, true);
-					final SystemMessage cr = SystemMessage.getSystemMessage(SystemMessageId.S1_POINT_S_HAVE_BEEN_DEDUCTED_FROM_THE_CLAN_S_REPUTATION);
-					cr.addInt(Config.CLAN_LEVEL_11_COST);
-					player.sendPacket(cr);
-					increaseClanLevel = true;
 				}
 				break;
 			}
