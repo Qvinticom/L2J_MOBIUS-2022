@@ -57,7 +57,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
-import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
@@ -495,7 +494,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void onDecay()
 	{
 		decayMe();
-		ZoneManager.getInstance().getRegion(this).removeFromZones(this);
+		final ZoneRegion region = ZoneManager.getInstance().getRegion(this);
+		if (region != null)
+		{
+			region.removeFromZones(this);
+		}
 	}
 	
 	@Override
@@ -4052,30 +4055,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				final L2Npc npc = (L2Npc) this;
 				LOGGER.warning("Deleting npc " + getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
-				deleteMe();
-				WalkingManager.getInstance().onDeath(npc);
-				final L2Character summoner = getSummoner();
-				if ((summoner != null) && summoner.isNpc())
-				{
-					((L2Npc) summoner).removeSummonedNpc(getObjectId());
-				}
 				final L2Spawn spawn = npc.getSpawn();
-				if ((spawn != null) && spawn.isRespawnEnabled())
+				if (spawn != null)
 				{
-					spawn.decreaseCount(npc);
+					LOGGER.warning("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
 				}
-				final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
-				if (instance != null)
-				{
-					instance.removeNpc(npc);
-				}
-				L2World.getInstance().removeObject(this);
+				deleteMe();
 			}
 			else
 			{
 				LOGGER.warning("Deleting object " + getName() + " OID[" + getObjectId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
 				deleteMe();
-				L2World.getInstance().removeObject(this);
 			}
 		}
 	}
