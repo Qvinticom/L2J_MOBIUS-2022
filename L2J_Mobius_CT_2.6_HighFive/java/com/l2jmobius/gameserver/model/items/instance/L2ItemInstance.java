@@ -189,6 +189,7 @@ public final class L2ItemInstance extends L2Object
 		_dropTime = 0;
 		_mana = _item.getDuration();
 		_time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + ((long) _item.getTime() * 60 * 1000);
+		_enchantLevel = 0;
 		scheduleLifeTimeTask();
 	}
 	
