@@ -27,6 +27,7 @@ import java.util.regex.PatternSyntaxException;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
@@ -107,6 +108,12 @@ public final class CharacterCreate implements IClientIncomingPacket
 					return;
 				}
 			}
+		}
+		
+		if (FakePlayerData.getInstance().getProperName(_name) != null)
+		{
+			client.sendPacket(new CharCreateFail(CharCreateFail.REASON_INCORRECT_NAME));
+			return;
 		}
 		
 		// Last Verified: May 30, 2009 - Gracia Final

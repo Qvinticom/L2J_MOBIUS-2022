@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.PcStat;
@@ -189,7 +188,7 @@ public class PcStatus extends PlayableStatus
 						}
 					}
 					
-					if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))
+					if ((attacker.isPlayable() || attacker.isFakePlayer()) && (caster.getCurrentCp() > 0))
 					{
 						if (caster.getCurrentCp() > transferDmg)
 						{
@@ -211,7 +210,7 @@ public class PcStatus extends PlayableStatus
 				}
 			}
 			
-			if (!ignoreCP && (attacker instanceof L2Playable))
+			if (!ignoreCP && (attacker.isPlayable() || attacker.isFakePlayer()))
 			{
 				if (getCurrentCp() >= value)
 				{

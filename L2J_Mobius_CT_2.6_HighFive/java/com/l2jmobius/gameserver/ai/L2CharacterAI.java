@@ -42,7 +42,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -859,7 +858,7 @@ public class L2CharacterAI extends AbstractAI
 		// Kill the actor client side by sending Server->Client packet AutoAttackStop, StopMove/StopRotation, Die (broadcast)
 		clientNotifyDead();
 		
-		if (!(_actor instanceof L2Playable))
+		if (!_actor.isPlayable() && !_actor.isFakePlayer())
 		{
 			_actor.setWalking();
 		}

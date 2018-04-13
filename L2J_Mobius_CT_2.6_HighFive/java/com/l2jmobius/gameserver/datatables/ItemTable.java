@@ -38,6 +38,7 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2EventMonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -200,11 +201,11 @@ public class ItemTable
 	 * @param process : String Identifier of process triggering this action
 	 * @param itemId : int Item Identifier of the item to be created
 	 * @param count : int Quantity of items to be created for stackable items
-	 * @param actor : L2PcInstance Player requesting the item creation
+	 * @param actor : L2Character requesting the item creation
 	 * @param reference : Object Object referencing current action like NPC selling item or previous item in transformation
 	 * @return L2ItemInstance corresponding to the new item
 	 */
-	public L2ItemInstance createItem(String process, int itemId, long count, L2PcInstance actor, Object reference)
+	public L2ItemInstance createItem(String process, int itemId, long count, L2Character actor, Object reference)
 	{
 		// Create and Init the L2ItemInstance corresponding to the Item Identifier
 		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);

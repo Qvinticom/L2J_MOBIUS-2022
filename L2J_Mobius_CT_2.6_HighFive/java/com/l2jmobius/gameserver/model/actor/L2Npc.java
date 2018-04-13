@@ -83,18 +83,22 @@ import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.variables.NpcVariables;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
+import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 import com.l2jmobius.gameserver.util.Broadcast;
 
@@ -132,6 +136,7 @@ public class L2Npc extends L2Character
 	/** Support for random animation switching */
 	private boolean _isRandomAnimationEnabled = true;
 	private boolean _isTalkable = getTemplate().isTalkable();
+	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
 	protected RandomAnimationTask _rAniTask = null;
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
@@ -321,7 +326,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && !getAiType().equals(AIType.CORPSE));
+		return ((Config.MAX_NPC_ANIMATION > 0) && isRandomAnimationEnabled() && !getAiType().equals(AIType.CORPSE));
 	}
 	
 	/**
@@ -338,7 +343,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean isRandomAnimationEnabled()
 	{
-		return _isRandomAnimationEnabled;
+		return !isFakePlayer() && _isRandomAnimationEnabled;
 	}
 	
 	@Override
@@ -440,7 +445,11 @@ public class L2Npc extends L2Character
 				return;
 			}
 			
-			if (getRunSpeed() == 0)
+			if (isFakePlayer())
+			{
+				player.sendPacket(new FakePlayerInfo(this));
+			}
+			else if (getRunSpeed() == 0)
 			{
 				player.sendPacket(new ServerObjectInfo(this, player));
 			}
@@ -1239,6 +1248,74 @@ public class L2Npc extends L2Character
 		final L2Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 		
+		if (isFakePlayer() && (killer != null) && killer.isPlayable())
+		{
+			final L2PcInstance player = killer.getActingPlayer();
+			if (isScriptValue(0) && (getKarma() < 0))
+			{
+				if (Config.FAKE_PLAYER_KILL_KARMA)
+				{
+					player.setKarma(player.getKarma() + Formulas.calculateKarmaGain(player.getPkKills(), killer.isSummon()));
+					player.setPkKills(player.getPkKills() + 1);
+					player.broadcastUserInfo();
+					player.checkItemRestriction();
+					// pk item rewards
+					if (Config.REWARD_PK_ITEM)
+					{
+						if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+							!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+						{
+							player.addItem("PK Item Reward", Config.REWARD_PK_ITEM_ID, Config.REWARD_PK_ITEM_AMOUNT, this, Config.REWARD_PK_ITEM_MESSAGE);
+						}
+					}
+					// announce pk
+					if (Config.ANNOUNCE_PK_PVP && !player.isGM())
+					{
+						final String msg = Config.ANNOUNCE_PK_MSG.replace("$killer", player.getName()).replace("$target", getName());
+						if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
+						{
+							final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
+							sm.addString(msg);
+							Broadcast.toAllOnlinePlayers(sm);
+						}
+						else
+						{
+							Broadcast.toAllOnlinePlayers(msg, false);
+						}
+					}
+				}
+			}
+			else if (Config.FAKE_PLAYER_KILL_PVP)
+			{
+				player.setPvpKills(player.getPvpKills() + 1);
+				player.broadcastUserInfo();
+				// pvp item rewards
+				if (Config.REWARD_PVP_ITEM)
+				{
+					if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
+						!(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP)))
+					{
+						player.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
+					}
+				}
+				// announce pvp
+				if (Config.ANNOUNCE_PK_PVP && !player.isGM())
+				{
+					final String msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", player.getName()).replace("$target", getName());
+					if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE)
+					{
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
+						sm.addString(msg);
+						Broadcast.toAllOnlinePlayers(sm);
+					}
+					else
+					{
+						Broadcast.toAllOnlinePlayers(msg, false);
+					}
+				}
+			}
+		}
+		
 		DecayTaskManager.getInstance().add(this);
 		return true;
 	}
@@ -1456,7 +1533,11 @@ public class L2Npc extends L2Character
 				activeChar.sendMessage("Added NPC: " + getName());
 			}
 			
-			if (getRunSpeed() == 0)
+			if (isFakePlayer())
+			{
+				activeChar.sendPacket(new FakePlayerInfo(this));
+			}
+			else if (getRunSpeed() == 0)
 			{
 				activeChar.sendPacket(new ServerObjectInfo(this, activeChar));
 			}
@@ -1595,7 +1676,20 @@ public class L2Npc extends L2Character
 	@Override
 	public void rechargeShots(boolean physical, boolean magic)
 	{
-		if ((_soulshotamount > 0) || (_spiritshotamount > 0))
+		if (isFakePlayer() && Config.FAKE_PLAYER_USE_SHOTS)
+		{
+			if (physical)
+			{
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2154, 1, 0, 0), 600);
+				setChargedShot(ShotType.SOULSHOTS, true);
+			}
+			if (magic)
+			{
+				Broadcast.toSelfAndKnownPlayersInRadius(this, new MagicSkillUse(this, this, 2061, 1, 0, 0), 600);
+				setChargedShot(ShotType.SPIRITSHOTS, true);
+			}
+		}
+		else if ((_soulshotamount > 0) || (_spiritshotamount > 0))
 		{
 			if (physical)
 			{
@@ -1757,12 +1851,12 @@ public class L2Npc extends L2Character
 	
 	/**
 	 * Drops an item.
-	 * @param player the last attacker or main damage dealer
+	 * @param character the last attacker or main damage dealer
 	 * @param itemId the item ID
 	 * @param itemCount the item count
 	 * @return the dropped item
 	 */
-	public L2ItemInstance dropItem(L2PcInstance player, int itemId, long itemCount)
+	public L2ItemInstance dropItem(L2Character character, int itemId, long itemCount)
 	{
 		L2ItemInstance item = null;
 		for (int i = 0; i < itemCount; i++)
@@ -1778,15 +1872,15 @@ public class L2Npc extends L2Character
 				return null;
 			}
 			
-			item = ItemTable.getInstance().createItem("Loot", itemId, itemCount, player, this);
+			item = ItemTable.getInstance().createItem("Loot", itemId, itemCount, character, this);
 			if (item == null)
 			{
 				return null;
 			}
 			
-			if (player != null)
+			if (character != null)
 			{
-				item.getDropProtection().protect(player);
+				item.getDropProtection().protect(character);
 			}
 			
 			item.dropMe(this, newX, newY, newZ);
@@ -1811,14 +1905,14 @@ public class L2Npc extends L2Character
 	}
 	
 	/**
-	 * Method overload for {@link L2Attackable#dropItem(L2PcInstance, int, long)}
-	 * @param player the last attacker or main damage dealer
+	 * Method overload for {@link L2Attackable#dropItem(L2Character, int, long)}
+	 * @param character the last attacker or main damage dealer
 	 * @param item the item holder
 	 * @return the dropped item
 	 */
-	public L2ItemInstance dropItem(L2PcInstance player, ItemHolder item)
+	public L2ItemInstance dropItem(L2Character character, ItemHolder item)
 	{
-		return dropItem(player, item.getId(), item.getCount());
+		return dropItem(character, item.getId(), item.getCount());
 	}
 	
 	@Override
@@ -1874,6 +1968,12 @@ public class L2Npc extends L2Character
 	public int getKillingBlowWeapon()
 	{
 		return _killingBlowWeaponId;
+	}
+	
+	@Override
+	public boolean isFakePlayer()
+	{
+		return _isFakePlayer;
 	}
 	
 	/**

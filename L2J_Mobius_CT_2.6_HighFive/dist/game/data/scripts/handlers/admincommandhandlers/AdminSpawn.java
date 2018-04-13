@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -411,6 +412,12 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			// First parameter wasn't just numbers so go by name not ID
 			template = NpcData.getInstance().getTemplateByName(monsterId.replace('_', ' '));
+		}
+		
+		if (!Config.FAKE_PLAYERS_ENABLED && template.isFakePlayer())
+		{
+			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
+			return;
 		}
 		
 		try

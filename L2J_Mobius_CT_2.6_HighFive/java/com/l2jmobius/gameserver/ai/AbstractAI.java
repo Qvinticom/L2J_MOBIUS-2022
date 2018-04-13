@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.AutoAttackStart;
@@ -625,6 +626,11 @@ public abstract class AbstractAI implements Ctrl
 		{
 			clientActionFailed();
 		}
+	}
+	
+	public void moveTo(ILocational loc)
+	{
+		moveTo(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**

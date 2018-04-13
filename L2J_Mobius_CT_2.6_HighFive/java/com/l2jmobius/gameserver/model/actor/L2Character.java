@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.TimeUnit;
@@ -54,6 +55,7 @@ import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -136,6 +138,7 @@ import com.l2jmobius.gameserver.network.serverpackets.Attack;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeMoveType;
 import com.l2jmobius.gameserver.network.serverpackets.ChangeWaitType;
 import com.l2jmobius.gameserver.network.serverpackets.ExRotation;
+import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillCanceled;
@@ -207,6 +210,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private double _hpUpdateDecCheck = .0;
 	private double _hpUpdateInterval = .0;
 	
+	private int _karma = 0;
+	
 	/** Table of Calculators containing all used calculator */
 	private Calculator[] _calculators;
 	/** Map containing all skills of this character. */
@@ -272,6 +277,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	protected Future<?> _skillCast2;
 	
 	private final Map<Integer, Integer> _knownRelations = new ConcurrentHashMap<>();
+	
+	/** A list containing the dropped items of this fake player. */
+	private final List<L2ItemInstance> _fakePlayerDrops = new CopyOnWriteArrayList<>();
 	
 	/**
 	 * Creates a creature.
@@ -1030,6 +1038,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					_attackEndTime = System.nanoTime() + TimeUnit.NANOSECONDS.convert(timeAtk, TimeUnit.MILLISECONDS);
 					hitted = doAttackHitSimple(attack, target, timeToHit);
 					break;
+				}
+			}
+			
+			if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer()))
+			{
+				final L2Npc npc = ((L2Npc) this);
+				if (!npc.isScriptValue(1))
+				{
+					npc.setScriptValue(1); // in combat
+					broadcastInfo(); // update flag status
+					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
 				}
 			}
 			
@@ -2818,7 +2837,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 				
-				if (getRunSpeed() == 0)
+				if (isFakePlayer())
+				{
+					player.sendPacket(new FakePlayerInfo((L2Npc) this));
+				}
+				else if (getRunSpeed() == 0)
 				{
 					player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
 				}
@@ -3645,7 +3668,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							return;
 						}
 						
-						if (getRunSpeed() == 0)
+						if (isFakePlayer())
+						{
+							player.sendPacket(new FakePlayerInfo((L2Npc) this));
+						}
+						else if (getRunSpeed() == 0)
 						{
 							player.sendPacket(new ServerObjectInfo((L2Npc) this, player));
 						}
@@ -4664,6 +4691,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		
+		// Check if fake players should aggro each other.
+		if (isFakePlayer() && !Config.FAKE_PLAYER_AGGRO_FPC && target.isFakePlayer())
+		{
+			return;
+		}
+		
 		if ((isNpc() && target.isAlikeDead()) || target.isDead() || (!isInSurroundingRegion(target) && !isDoor()))
 		{
 			// getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
@@ -4976,11 +5009,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public boolean isInsidePeaceZone(L2Object attacker, L2Object target)
 	{
-		if (target == null)
-		{
-			return false;
-		}
-		if (!(target.isPlayable() && attacker.isPlayable()))
+		if ((target == null) || !((target.isPlayable() || target.isFakePlayer()) && attacker.isPlayable()))
 		{
 			return false;
 		}
@@ -5749,6 +5778,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 							}
 						}
 					}
+					if (target.isFakePlayer())
+					{
+						player.updatePvPStatus();
+					}
 				}
 				
 				// Mobs in range 1000 see spell
@@ -5801,6 +5834,20 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							// Notify target AI about the attack
 							creature.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
+						}
+					}
+					
+					if (isFakePlayer()) // fake player attacks player
+					{
+						if (target.isPlayable() || target.isFakePlayer())
+						{
+							final L2Npc npc = ((L2Npc) this);
+							if (!npc.isScriptValue(1))
+							{
+								npc.setScriptValue(1); // in combat
+								npc.broadcastInfo(); // update flag status
+								QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
+							}
 						}
 					}
 				}
@@ -6800,6 +6847,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		return _knownRelations;
 	}
 	
+	public int getKarma()
+	{
+		return _karma;
+	}
+	
+	public void setKarma(int karma)
+	{
+		_karma = karma;
+	}
+	
 	public int getMinShopDistance()
 	{
 		return 0;
@@ -6808,5 +6865,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void setCursorKeyMovement(boolean value)
 	{
 		_cursorKeyMovement = value;
+	}
+	
+	public List<L2ItemInstance> getFakePlayerDrops()
+	{
+		return _fakePlayerDrops;
 	}
 }

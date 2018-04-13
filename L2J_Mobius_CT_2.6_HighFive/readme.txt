@@ -34,3 +34,4 @@ What is done
 -Sell buffs command
 -Dropped knownlists
 -Faction System (Good vs Evil)
+-Fake players

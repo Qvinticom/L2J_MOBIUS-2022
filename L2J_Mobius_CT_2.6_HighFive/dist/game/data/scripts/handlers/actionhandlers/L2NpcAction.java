@@ -129,9 +129,13 @@ public class L2NpcAction implements IActionHandler
 							npc.showChatWindow(activeChar);
 						}
 					}
-					if ((Config.PLAYER_MOVEMENT_BLOCK_TIME > 0) && !activeChar.isGM())
+					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0)
 					{
 						activeChar.updateNotMoveUntil();
+					}
+					if (npc.isFakePlayer() && GeoEngine.getInstance().canSeeTarget(activeChar, npc))
+					{
+						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, npc);
 					}
 				}
 			}

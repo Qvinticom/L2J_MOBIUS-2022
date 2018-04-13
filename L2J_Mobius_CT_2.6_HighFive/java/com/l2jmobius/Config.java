@@ -112,8 +112,10 @@ public final class Config
 	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
 	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
 	public static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
+	public static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
 	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
 	public static final String CUSTOM_HELLBOUND_STATUS_CONFIG_FILE = "./config/Custom/HellboundStatus.ini";
+	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	public static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
 	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
 	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
@@ -131,7 +133,6 @@ public final class Config
 	public static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
 	public static final String CUSTOM_WAREHOUSE_SORTING_CONFIG_FILE = "./config/Custom/WarehouseSorting.ini";
 	public static final String CUSTOM_WEDDING_CONFIG_FILE = "./config/Custom/Wedding.ini";
-	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
 	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
 	
 	// --------------------------------------------------
@@ -1280,6 +1281,16 @@ public final class Config
 	public static boolean FACTION_SPECIFIC_CHAT;
 	public static boolean FACTION_BALANCE_ONLINE_PLAYERS;
 	public static int FACTION_BALANCE_PLAYER_EXCEED_LIMIT;
+	public static boolean FAKE_PLAYERS_ENABLED;
+	public static boolean FAKE_PLAYER_CHAT;
+	public static boolean FAKE_PLAYER_USE_SHOTS;
+	public static boolean FAKE_PLAYER_KILL_PVP;
+	public static boolean FAKE_PLAYER_KILL_KARMA;
+	public static boolean FAKE_PLAYER_AGGRO_MONSTERS;
+	public static boolean FAKE_PLAYER_AGGRO_PLAYERS;
+	public static boolean FAKE_PLAYER_AGGRO_FPC;
+	public static boolean FAKE_PLAYER_CAN_DROP_ITEMS;
+	public static boolean FAKE_PLAYER_CAN_PICKUP;
 	public static boolean ENABLE_FIND_PVP;
 	public static boolean PREMIUM_SYSTEM_ENABLED;
 	public static float PREMIUM_RATE_XP;
@@ -2379,17 +2390,17 @@ public final class Config
 				KARMA_LIST_NONDROPPABLE_ITEMS[i] = Integer.parseInt(karma[i]);
 			}
 			
+			ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
+			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
+			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
+			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
+			
 			// sorting so binarySearch can be used later
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_PET_ITEMS);
 			Arrays.sort(KARMA_LIST_NONDROPPABLE_ITEMS);
 			
 			PVP_NORMAL_TIME = PVPSettings.getInt("PvPVsNormalTime", 120000);
 			PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
-			
-			ANTIFEED_ENABLE = PVPSettings.getBoolean("AntiFeedEnable", false);
-			ANTIFEED_DUALBOX = PVPSettings.getBoolean("AntiFeedDualbox", true);
-			ANTIFEED_DISCONNECTED_AS_DUALBOX = PVPSettings.getBoolean("AntiFeedDisconnectedAsDualbox", true);
-			ANTIFEED_INTERVAL = PVPSettings.getInt("AntiFeedInterval", 120) * 1000;
 			
 			// Load Olympiad config file (if exists)
 			final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
@@ -2766,6 +2777,19 @@ public final class Config
 			FACTION_BALANCE_ONLINE_PLAYERS = FactionSystem.getBoolean("BalanceOnlinePlayers", true);
 			FACTION_BALANCE_PLAYER_EXCEED_LIMIT = FactionSystem.getInt("BalancePlayerExceedLimit", 20);
 			
+			// Load FakePlayers config file (if exists)
+			final PropertiesParser FakePlayers = new PropertiesParser(CUSTOM_FAKE_PLAYERS_CONFIG_FILE);
+			FAKE_PLAYERS_ENABLED = Boolean.valueOf(FakePlayers.getBoolean("EnableFakePlayers", false));
+			FAKE_PLAYER_CHAT = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerChat", false));
+			FAKE_PLAYER_USE_SHOTS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUseShots", false));
+			FAKE_PLAYER_KILL_PVP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerKillsRewardPvP", false));
+			FAKE_PLAYER_KILL_KARMA = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerUnflaggedKillsKarma", false));
+			FAKE_PLAYER_AGGRO_MONSTERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroMonsters", false));
+			FAKE_PLAYER_AGGRO_PLAYERS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroPlayers", false));
+			FAKE_PLAYER_AGGRO_FPC = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerAggroFPC", false));
+			FAKE_PLAYER_CAN_DROP_ITEMS = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanDropItems", false));
+			FAKE_PLAYER_CAN_PICKUP = Boolean.valueOf(FakePlayers.getBoolean("FakePlayerCanPickup", false));
+			
 			// Load FindPvP config file (if exists)
 			final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
 			
@@ -2775,6 +2799,43 @@ public final class Config
 			final PropertiesParser HellboundStatus = new PropertiesParser(CUSTOM_HELLBOUND_STATUS_CONFIG_FILE);
 			
 			HELLBOUND_STATUS = HellboundStatus.getBoolean("HellboundStatus", false);
+			
+			// Load MultilingualSupport config file (if exists)
+			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
+			
+			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
+			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
+			String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
+			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
+			for (String lang : allowed)
+			{
+				MULTILANG_ALLOWED.add(lang);
+			}
+			if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT))
+			{
+				LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
+			}
+			MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
+			MULTILANG_SM_ENABLE = MultilingualSupport.getBoolean("MultiLangSystemMessageEnable", false);
+			allowed = MultilingualSupport.getString("MultiLangSystemMessageAllowed", "").split(";");
+			MULTILANG_SM_ALLOWED = new ArrayList<>(allowed.length);
+			for (String lang : allowed)
+			{
+				if (!lang.isEmpty())
+				{
+					MULTILANG_SM_ALLOWED.add(lang);
+				}
+			}
+			MULTILANG_NS_ENABLE = MultilingualSupport.getBoolean("MultiLangNpcStringEnable", false);
+			allowed = MultilingualSupport.getString("MultiLangNpcStringAllowed", "").split(";");
+			MULTILANG_NS_ALLOWED = new ArrayList<>(allowed.length);
+			for (String lang : allowed)
+			{
+				if (!lang.isEmpty())
+				{
+					MULTILANG_NS_ALLOWED.add(lang);
+				}
+			}
 			
 			// Load OfflineTrade config file (if exists)
 			final PropertiesParser OfflineTrade = new PropertiesParser(CUSTOM_OFFLINE_TRADE_CONFIG_FILE);
@@ -2861,7 +2922,7 @@ public final class Config
 				}
 			}
 			
-			// Load CustomSettings config file (if exists)
+			// Load PrivateStoreRange config file (if exists)
 			final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);
 			
 			SHOP_MIN_RANGE_FROM_PLAYER = PrivateStoreRange.getInt("ShopMinRangeFromPlayer", 50);
@@ -3183,45 +3244,6 @@ public final class Config
 			WEDDING_SAMESEX = Wedding.getBoolean("WeddingAllowSameSex", false);
 			WEDDING_FORMALWEAR = Wedding.getBoolean("WeddingFormalWear", true);
 			WEDDING_DIVORCE_COSTS = Wedding.getInt("WeddingDivorceCosts", 20);
-			
-			// Load MultilingualSupport config file (if exists)
-			final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
-			
-			MULTILANG_DEFAULT = MultilingualSupport.getString("MultiLangDefault", "en");
-			MULTILANG_ENABLE = MultilingualSupport.getBoolean("MultiLangEnable", false);
-			String[] allowed = MultilingualSupport.getString("MultiLangAllowed", MULTILANG_DEFAULT).split(";");
-			MULTILANG_ALLOWED = new ArrayList<>(allowed.length);
-			for (String lang : allowed)
-			{
-				MULTILANG_ALLOWED.add(lang);
-			}
-			
-			if (!MULTILANG_ALLOWED.contains(MULTILANG_DEFAULT))
-			{
-				LOGGER.warning("MultiLang[Config.load()]: default language: " + MULTILANG_DEFAULT + " is not in allowed list !");
-			}
-			
-			MULTILANG_VOICED_ALLOW = MultilingualSupport.getBoolean("MultiLangVoiceCommand", true);
-			MULTILANG_SM_ENABLE = MultilingualSupport.getBoolean("MultiLangSystemMessageEnable", false);
-			allowed = MultilingualSupport.getString("MultiLangSystemMessageAllowed", "").split(";");
-			MULTILANG_SM_ALLOWED = new ArrayList<>(allowed.length);
-			for (String lang : allowed)
-			{
-				if (!lang.isEmpty())
-				{
-					MULTILANG_SM_ALLOWED.add(lang);
-				}
-			}
-			MULTILANG_NS_ENABLE = MultilingualSupport.getBoolean("MultiLangNpcStringEnable", false);
-			allowed = MultilingualSupport.getString("MultiLangNpcStringAllowed", "").split(";");
-			MULTILANG_NS_ALLOWED = new ArrayList<>(allowed.length);
-			for (String lang : allowed)
-			{
-				if (!lang.isEmpty())
-				{
-					MULTILANG_NS_ALLOWED.add(lang);
-				}
-			}
 			
 			// Load VoteReward config file (if exists)
 			final PropertiesParser VoteReward = new PropertiesParser(CUSTOM_VOTE_REWARD_CONFIG_FILE);

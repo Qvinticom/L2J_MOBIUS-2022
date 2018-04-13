@@ -335,6 +335,8 @@ public class NpcData implements IGameXmlReader
 									set.set("passableDoor", parseBoolean(attrs, "passableDoor"));
 									set.set("hasSummoner", parseBoolean(attrs, "hasSummoner"));
 									set.set("canBeSown", parseBoolean(attrs, "canBeSown"));
+									set.set("fakePlayer", parseBoolean(attrs, "fakePlayer"));
+									set.set("fakePlayerTalkable", parseBoolean(attrs, "fakePlayerTalkable"));
 									break;
 								}
 								case "skilllist":

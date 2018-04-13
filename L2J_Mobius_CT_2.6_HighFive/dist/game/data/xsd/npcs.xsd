@@ -285,5 +285,7 @@
 		<xs:attribute name="passableDoor" type="xs:boolean" />
 		<xs:attribute name="hasSummoner" type="xs:boolean" />
 		<xs:attribute name="canBeSown" type="xs:boolean" />
+		<xs:attribute name="fakePlayer" type="xs:boolean" />
+		<xs:attribute name="fakePlayerTalkable" type="xs:boolean" />
 	</xs:complexType>
 </xs:schema>

@@ -319,8 +319,6 @@ public abstract class L2Playable extends L2Character
 	
 	public abstract void doPickupItem(L2Object object);
 	
-	public abstract int getKarma();
-	
 	public abstract byte getPvpFlag();
 	
 	public abstract boolean useMagic(Skill skill, boolean forceUse, boolean dontMove);

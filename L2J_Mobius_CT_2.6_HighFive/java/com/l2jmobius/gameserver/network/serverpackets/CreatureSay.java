@@ -21,6 +21,7 @@ import java.util.List;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -35,6 +36,22 @@ public final class CreatureSay implements IClientOutgoingPacket
 	private String _text = null;
 	private int _npcString = -1;
 	private List<String> _parameters;
+	
+	/**
+	 * Used by fake players.
+	 * @param sender
+	 * @param receiver
+	 * @param name
+	 * @param messageType
+	 * @param text
+	 */
+	public CreatureSay(L2Npc sender, L2PcInstance receiver, String name, ChatType messageType, String text)
+	{
+		_objectId = sender.getObjectId();
+		_textType = messageType;
+		_charName = name;
+		_text = text;
+	}
 	
 	/**
 	 * @param objectId

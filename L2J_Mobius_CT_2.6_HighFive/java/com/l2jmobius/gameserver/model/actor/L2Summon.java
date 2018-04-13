@@ -951,6 +951,10 @@ public abstract class L2Summon extends L2Playable
 			{
 				setTarget(target);
 				getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				if (target.isFakePlayer())
+				{
+					getOwner().updatePvPStatus();
+				}
 			}
 		}
 	}

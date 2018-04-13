@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.concurrent.ScheduledFuture;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -60,6 +61,28 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
+		if (isFakePlayer())
+		{
+			return isInCombat() || attacker.isMonster() || (getScriptValue() > 0);
+		}
+		
+		// Check if the L2MonsterInstance target is aggressive
+		if (Config.GUARD_ATTACK_AGGRO_MOB && isAggressive() && (attacker instanceof L2GuardInstance))
+		{
+			return true;
+		}
+		
+		if (attacker.isMonster())
+		{
+			return attacker.isFakePlayer();
+		}
+		
+		// Anything considers monsters friendly except Players, Attackables (Guards, Friendly NPC), Traps and EffectPoints.
+		if (!attacker.isPlayable() && !attacker.isAttackable() && !(attacker instanceof L2TrapInstance) && !(attacker instanceof L2EffectPointInstance))
+		{
+			return false;
+		}
+		
 		return super.isAutoAttackable(attacker) && !isEventMob();
 	}
 	

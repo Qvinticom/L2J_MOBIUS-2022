@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
+import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -56,6 +57,8 @@ import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableFactionCall;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.attackable.OnAttackableHate;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.targets.L2TargetType;
@@ -489,6 +492,74 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					return;
 				}
 				
+				if (npc.isFakePlayer() && npc.isAggressive())
+				{
+					final List<L2ItemInstance> droppedItems = npc.getFakePlayerDrops();
+					if (droppedItems.isEmpty())
+					{
+						L2Character nearestTarget = null;
+						double closestDistance = Double.MAX_VALUE;
+						for (L2Character t : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+						{
+							if ((t == _actor) || (t == null) || t.isDead())
+							{
+								continue;
+							}
+							if ((Config.FAKE_PLAYER_AGGRO_FPC && t.isFakePlayer()) //
+								|| (Config.FAKE_PLAYER_AGGRO_MONSTERS && t.isMonster() && !t.isFakePlayer()) //
+								|| (Config.FAKE_PLAYER_AGGRO_PLAYERS && t.isPlayer()))
+							{
+								final int hating = npc.getHating(t);
+								final double distance = npc.calculateDistance(t, false, false);
+								if ((hating == 0) && (closestDistance > distance))
+								{
+									nearestTarget = t;
+									closestDistance = distance;
+								}
+							}
+						}
+						if (nearestTarget != null)
+						{
+							npc.addDamageHate(nearestTarget, 0, 1);
+						}
+					}
+					else if (!npc.isInCombat()) // must pickup items
+					{
+						final int itemIndex = npc.getFakePlayerDrops().size() - 1; // last item dropped - can also use 0 for first item dropped
+						final L2ItemInstance droppedItem = npc.getFakePlayerDrops().get(itemIndex);
+						if ((droppedItem != null) && droppedItem.isSpawned())
+						{
+							if (npc.calculateDistance(droppedItem, false, false) > 50)
+							{
+								moveTo(droppedItem);
+							}
+							else
+							{
+								npc.getFakePlayerDrops().remove(itemIndex);
+								droppedItem.pickupMe(npc);
+								if (Config.SAVE_DROPPED_ITEM)
+								{
+									ItemsOnGroundManager.getInstance().removeObject(droppedItem);
+								}
+								if (droppedItem.getItem().hasExImmediateEffect())
+								{
+									for (SkillHolder skillHolder : droppedItem.getItem().getSkills())
+									{
+										npc.doSimultaneousCast(skillHolder.getSkill());
+									}
+									npc.broadcastInfo(); // ? check if this is necessary
+								}
+							}
+						}
+						else
+						{
+							npc.getFakePlayerDrops().remove(itemIndex);
+						}
+						npc.setRunning();
+					}
+					return;
+				}
+				
 				/*
 				 * Check to see if this is a festival mob spawn. If it is, then check to see if the aggro trigger is a festival participant...if so, move to attack it.
 				 */
@@ -505,6 +576,18 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 				// For each L2Character check if the target is autoattackable
 				if (autoAttackCondition(target)) // check aggression
 				{
+					if (target.isFakePlayer())
+					{
+						if (!npc.isFakePlayer() || (npc.isFakePlayer() && Config.FAKE_PLAYER_AGGRO_FPC))
+						{
+							final int hating = npc.getHating(target);
+							if (hating == 0)
+							{
+								npc.addDamageHate(target, 0, 1);
+							}
+						}
+						return;
+					}
 					if (target.isPlayable())
 					{
 						final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), target.getActingPlayer(), target.isSummon()), getActiveChar(), TerminateReturn.class);
@@ -752,7 +835,10 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE);
 			
-			npc.setWalking();
+			if (!_actor.isFakePlayer())
+			{
+				npc.setWalking();
+			}
 			return;
 		}
 		

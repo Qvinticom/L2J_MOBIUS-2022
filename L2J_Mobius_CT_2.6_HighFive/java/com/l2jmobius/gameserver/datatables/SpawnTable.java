@@ -89,6 +89,11 @@ public final class SpawnTable implements IGameXmlReader
 			return false;
 		}
 		
+		if (!Config.FAKE_PLAYERS_ENABLED && npcTemplate.isFakePlayer())
+		{
+			return false;
+		}
+		
 		return true;
 	}
 	
