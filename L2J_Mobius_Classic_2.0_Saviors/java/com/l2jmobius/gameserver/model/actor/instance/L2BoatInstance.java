@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.network.serverpackets.VehicleStarted;
  */
 public class L2BoatInstance extends L2Vehicle
 {
-	protected static final Logger _logBoat = Logger.getLogger(L2BoatInstance.class.getName());
+	protected static final Logger LOGGER_BOAT = Logger.getLogger(L2BoatInstance.class.getName());
 	
 	public L2BoatInstance(L2CharTemplate template)
 	{

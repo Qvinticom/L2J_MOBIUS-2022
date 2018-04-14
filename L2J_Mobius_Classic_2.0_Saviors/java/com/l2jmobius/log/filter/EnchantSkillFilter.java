@@ -24,6 +24,6 @@ public class EnchantSkillFilter implements Filter
 	@Override
 	public boolean isLoggable(LogRecord record)
 	{
-		return record.getLoggerName().equalsIgnoreCase("skill");
+		return record.getLoggerName().equalsIgnoreCase("enchant.skills");
 	}
 }

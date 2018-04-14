@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public final class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 {
-	private static final Logger _logEnchant = Logger.getLogger("enchant");
+	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	
 	private int _skillId;
 	private int _skillLvl;
@@ -162,7 +162,7 @@ public final class RequestExEnchantSkillUntrain implements IClientIncomingPacket
 				spb
 			});
 			record.setLoggerName("skill");
-			_logEnchant.log(record);
+			LOGGER_ENCHANT.log(record);
 		}
 		
 		player.addSkill(skill, true);

@@ -366,7 +366,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 								points,
 								getType().toString()
 							});
-							_logResults.log(record);
+							LOGGER_OLYMPIAD.log(record);
 						}
 					}
 					catch (Exception e)
@@ -405,7 +405,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 								points,
 								getType().toString()
 							});
-							_logResults.log(record);
+							LOGGER_OLYMPIAD.log(record);
 						}
 					}
 					catch (Exception e)
@@ -468,7 +468,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 							pointDiff,
 							getType().toString()
 						});
-						_logResults.log(record);
+						LOGGER_OLYMPIAD.log(record);
 					}
 					
 					// Notify to scripts
@@ -506,7 +506,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 							pointDiff,
 							getType().toString()
 						});
-						_logResults.log(record);
+						LOGGER_OLYMPIAD.log(record);
 					}
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -539,7 +539,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 							pointDiff,
 							getType().toString()
 						});
-						_logResults.log(record);
+						LOGGER_OLYMPIAD.log(record);
 					}
 				}
 				
@@ -711,7 +711,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					pointDiff,
 					getType().toString()
 				});
-				_logResults.log(record);
+				LOGGER_OLYMPIAD.log(record);
 			}
 		}
 		catch (Exception e)

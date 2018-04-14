@@ -43,7 +43,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Say2 implements IClientIncomingPacket
 {
-	private static Logger _logChat = Logger.getLogger("chat");
+	private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 	
 	private static final String[] WALKER_COMMAND_LIST =
 	{
@@ -187,11 +187,11 @@ public final class Say2 implements IClientIncomingPacket
 		{
 			if (chatType == ChatType.WHISPER)
 			{
-				_logChat.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
+				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
 			}
 			else
 			{
-				_logChat.info(chatType.name() + " [" + activeChar + "] " + _text);
+				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + "] " + _text);
 			}
 			
 		}

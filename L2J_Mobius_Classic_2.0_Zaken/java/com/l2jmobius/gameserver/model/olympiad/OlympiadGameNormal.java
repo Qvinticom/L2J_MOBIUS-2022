@@ -383,7 +383,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							_logResults.info(_playerOne.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
+							LOGGER_OLYMPIAD.info(_playerOne.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
 					}
 					catch (Exception e)
@@ -410,7 +410,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							_logResults.info(_playerTwo.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
+							LOGGER_OLYMPIAD.info(_playerTwo.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
 					}
 					catch (Exception e)
@@ -461,7 +461,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						_logResults.info(_playerTwo.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
+						LOGGER_OLYMPIAD.info(_playerTwo.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
 					
 					// Notify to scripts
@@ -487,7 +487,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						_logResults.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
+						LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -508,7 +508,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						_logResults.info("both crash," + _playerOne.getName() + "," + _playerOne + ",0,0,0,0," + _playerTwo + "," + pointDiff + "," + getType());
+						LOGGER_OLYMPIAD.info("both crash," + _playerOne.getName() + "," + _playerOne + ",0,0,0,0," + _playerTwo + "," + pointDiff + "," + getType());
 					}
 				}
 				
@@ -668,7 +668,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			
 			if (Config.ALT_OLY_LOG_FIGHTS)
 			{
-				_logResults.info(winner + "," + _playerOne.getName() + "," + _playerOne + "," + _playerTwo + "," + playerOneHp + "," + playerTwoHp + "," + _damageP1 + "," + _damageP2 + "," + pointDiff + "," + getType());
+				LOGGER_OLYMPIAD.info(winner + "," + _playerOne.getName() + "," + _playerOne + "," + _playerTwo + "," + playerOneHp + "," + playerTwoHp + "," + _damageP1 + "," + _damageP2 + "," + pointDiff + "," + getType());
 			}
 		}
 		catch (Exception e)

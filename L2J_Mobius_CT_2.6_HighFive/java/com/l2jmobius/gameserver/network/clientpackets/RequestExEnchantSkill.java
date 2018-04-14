@@ -46,7 +46,7 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public final class RequestExEnchantSkill implements IClientIncomingPacket
 {
-	private static final Logger _logEnchant = Logger.getLogger("enchant");
+	private static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.skills");
 	
 	private int _skillId;
 	private int _skillLvl;
@@ -164,7 +164,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 						rate
 					});
 					record.setLoggerName("skill");
-					_logEnchant.log(record);
+					LOGGER_ENCHANT.log(record);
 				}
 				
 				player.addSkill(skill, true);
@@ -191,7 +191,7 @@ public final class RequestExEnchantSkill implements IClientIncomingPacket
 						rate
 					});
 					record.setLoggerName("skill");
-					_logEnchant.log(record);
+					LOGGER_ENCHANT.log(record);
 				}
 			}
 			

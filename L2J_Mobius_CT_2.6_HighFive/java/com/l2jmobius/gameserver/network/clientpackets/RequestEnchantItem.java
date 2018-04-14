@@ -44,7 +44,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class RequestEnchantItem implements IClientIncomingPacket
 {
-	protected static final Logger _logEnchant = Logger.getLogger("enchant");
+	protected static final Logger LOGGER_ENCHANT = Logger.getLogger("enchant.items");
 	
 	private int _objectId;
 	private int _supportId;
@@ -198,7 +198,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 							support,
 						});
 						record.setLoggerName("item");
-						_logEnchant.log(record);
+						LOGGER_ENCHANT.log(record);
 					}
 					
 					// announce the success
@@ -250,7 +250,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 								support,
 							});
 							record.setLoggerName("item");
-							_logEnchant.log(record);
+							LOGGER_ENCHANT.log(record);
 						}
 					}
 					else
@@ -302,7 +302,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 									support,
 								});
 								record.setLoggerName("item");
-								_logEnchant.log(record);
+								LOGGER_ENCHANT.log(record);
 							}
 						}
 						else
@@ -327,7 +327,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 										support,
 									});
 									record.setLoggerName("item");
-									_logEnchant.log(record);
+									LOGGER_ENCHANT.log(record);
 								}
 								return;
 							}
@@ -363,7 +363,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 									support,
 								});
 								record.setLoggerName("item");
-								_logEnchant.log(record);
+								LOGGER_ENCHANT.log(record);
 							}
 						}
 					}

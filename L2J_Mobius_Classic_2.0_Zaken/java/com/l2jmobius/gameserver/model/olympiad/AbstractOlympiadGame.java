@@ -48,7 +48,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public abstract class AbstractOlympiadGame
 {
 	protected static final Logger LOGGER = Logger.getLogger(AbstractOlympiadGame.class.getName());
-	protected static final Logger _logResults = Logger.getLogger("olympiad");
+	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
 	protected static final String POINTS = "olympiad_points";
 	protected static final String COMP_DONE = "competitions_done";

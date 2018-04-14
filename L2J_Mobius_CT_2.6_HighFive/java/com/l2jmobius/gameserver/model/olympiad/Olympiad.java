@@ -55,7 +55,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class Olympiad extends ListenersContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
-	protected static final Logger _logResults = Logger.getLogger("olympiad");
+	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
 	private static final Map<Integer, StatsSet> NOBLES = new ConcurrentHashMap<>();
 	private static final List<StatsSet> HEROS_TO_BE = new ArrayList<>();
@@ -521,7 +521,7 @@ public class Olympiad extends ListenersContainer
 			
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
 			LOGGER.info("Olympiad System: Olympiad Game Started");
-			_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
+			LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
 			_gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
 			if (Config.ALT_OLY_ANNOUNCE_GAMES)
@@ -974,7 +974,7 @@ public class Olympiad extends ListenersContainer
 		}
 		
 		LogRecord record;
-		_logResults.info("Noble,charid,classid,compDone,points");
+		LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
 		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 		{
 			final StatsSet nobleInfo = entry.getValue();
@@ -997,7 +997,7 @@ public class Olympiad extends ListenersContainer
 				compDone,
 				points
 			});
-			_logResults.log(record);
+			LOGGER_OLYMPIAD.log(record);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -1032,7 +1032,7 @@ public class Olympiad extends ListenersContainer
 								hero.getInt(CHAR_ID),
 								hero.getInt(CLASS_ID)
 							});
-							_logResults.log(record);
+							LOGGER_OLYMPIAD.log(record);
 							HEROS_TO_BE.add(hero);
 						}
 					}
@@ -1059,7 +1059,7 @@ public class Olympiad extends ListenersContainer
 						hero.getInt(CHAR_ID),
 						hero.getInt(CLASS_ID)
 					});
-					_logResults.log(record);
+					LOGGER_OLYMPIAD.log(record);
 					HEROS_TO_BE.add(hero);
 					break;
 				}
@@ -1111,7 +1111,7 @@ public class Olympiad extends ListenersContainer
 						hero.getInt(CHAR_ID),
 						hero.getInt(CLASS_ID)
 					});
-					_logResults.log(record);
+					LOGGER_OLYMPIAD.log(record);
 					HEROS_TO_BE.add(hero);
 					break;
 				}

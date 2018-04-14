@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.L2FriendSay;
  */
 public final class RequestSendFriendMsg implements IClientIncomingPacket
 {
-	private static Logger _logChat = Logger.getLogger("chat");
+	private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 	
 	private String _message;
 	private String _reciever;
@@ -78,7 +78,7 @@ public final class RequestSendFriendMsg implements IClientIncomingPacket
 				"[" + activeChar.getName() + " to " + _reciever + "]"
 			});
 			
-			_logChat.log(record);
+			LOGGER_CHAT.log(record);
 		}
 		
 		targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));

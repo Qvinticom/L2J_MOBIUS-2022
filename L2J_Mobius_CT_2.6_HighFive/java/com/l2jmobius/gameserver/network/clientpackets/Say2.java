@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Say2 implements IClientIncomingPacket
 {
-	private static Logger _logChat = Logger.getLogger("chat");
+	private static Logger LOGGER_CHAT = Logger.getLogger("chat");
 	
 	private static final String[] WALKER_COMMAND_LIST =
 	{
@@ -192,7 +192,7 @@ public final class Say2 implements IClientIncomingPacket
 				});
 			}
 			
-			_logChat.log(record);
+			LOGGER_CHAT.log(record);
 		}
 		
 		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(activeChar))

@@ -58,7 +58,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
 public class Olympiad extends ListenersContainer
 {
 	protected static final Logger LOGGER = Logger.getLogger(Olympiad.class.getName());
-	protected static final Logger _logResults = Logger.getLogger("olympiad");
+	protected static final Logger LOGGER_OLYMPIAD = Logger.getLogger("olympiad");
 	
 	private static final Map<Integer, StatsSet> _nobles = new ConcurrentHashMap<>();
 	private static final Map<Integer, Integer> _noblesRank = new HashMap<>();
@@ -486,7 +486,7 @@ public class Olympiad extends ListenersContainer
 			
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_OLYMPIAD_MANAGER_BATTLES_IN_THE_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
 			LOGGER.info(getClass().getSimpleName() + ": Olympiad Games have started.");
-			_logResults.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
+			LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
 			_gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
 			if (Config.ALT_OLY_ANNOUNCE_GAMES)
@@ -941,7 +941,7 @@ public class Olympiad extends ListenersContainer
 		
 		if (_nobles != null)
 		{
-			_logResults.info("Noble,charid,classid,compDone,points");
+			LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
 			StatsSet nobleInfo;
 			for (Entry<Integer, StatsSet> entry : _nobles.entrySet())
 			{
@@ -957,7 +957,7 @@ public class Olympiad extends ListenersContainer
 				final int points = nobleInfo.getInt(POINTS);
 				final int compDone = nobleInfo.getInt(COMP_DONE);
 				
-				_logResults.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
+				LOGGER_OLYMPIAD.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
 			}
 		}
 		
@@ -980,7 +980,7 @@ public class Olympiad extends ListenersContainer
 						hero.set(CHAR_ID, rset.getInt(CHAR_ID));
 						hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
 						
-						_logResults.info("Hero " + hero.getString(CHAR_NAME) + "," + hero.getInt(CHAR_ID) + "," + hero.getInt(CLASS_ID));
+						LOGGER_OLYMPIAD.info("Hero " + hero.getString(CHAR_NAME) + "," + hero.getInt(CHAR_ID) + "," + hero.getInt(CLASS_ID));
 						heroesToBe.add(hero);
 					}
 				}
