@@ -50,7 +50,7 @@ public class OptionData implements IGameXmlReader
 	public synchronized void load()
 	{
 		_optionData.clear();
-		parseDatapackDirectory("data/stats/options", false);
+		parseDatapackDirectory("data/stats/augmentation/options", false);
 		LOGGER.log(Level.INFO, getClass().getSimpleName() + ": Loaded: " + _optionData.size() + " Options.");
 	}
 	
