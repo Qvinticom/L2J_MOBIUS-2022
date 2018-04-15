@@ -127,7 +127,7 @@ public final class SkillTreesData implements IGameXmlReader
 		_gameMasterAuraSkillTree.clear();
 		
 		// Load files.
-		parseDatapackDirectory("data/skillTrees/", false);
+		parseDatapackDirectory("data/skillTrees/", true);
 		
 		// Generate check arrays.
 		generateCheckArrays();
