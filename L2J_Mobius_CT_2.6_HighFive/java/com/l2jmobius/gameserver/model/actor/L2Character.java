@@ -6803,6 +6803,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		final ZoneRegion oldZoneRegion = ZoneManager.getInstance().getRegion(this);
 		final ZoneRegion newZoneRegion = ZoneManager.getInstance().getRegion(newX, newY);
+		
+		// Mobius: Prevent moving to nonexistent regions.
+		if (newZoneRegion == null)
+		{
+			return;
+		}
+		
 		if (oldZoneRegion != newZoneRegion)
 		{
 			oldZoneRegion.removeFromZones(this);
