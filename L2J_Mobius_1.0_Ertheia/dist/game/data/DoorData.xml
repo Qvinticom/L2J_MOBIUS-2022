@@ -17265,4 +17265,43 @@
 		<status showHp="false" />
 		<openStatus default="close" />
 	</door>
+	<door id="25140004" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-1630">
+			<node x="190891" y="-115627" />
+			<node x="190944" y="-115628" />
+			<node x="190945" y="-115430" />
+			<node x="190892" y="-115430" />
+		</nodes>
+		<location x="190918" y="-115529" z="-1529" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" closeTime="3600" />
+	</door>
+	<door id="25140005" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-1068">
+			<node x="189571" y="-108551" />
+			<node x="189580" y="-108510" />
+			<node x="189388" y="-108473" />
+			<node x="189380" y="-108507" />
+		</nodes>
+		<location x="189480" y="-108511" z="-964" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" closeTime="3600" />
+	</door>
+	<door id="25140006" name="Godad_Dragoncave_S.1F_UP.Godad_DC_door">
+		<!-- AUTO GENERATED DOOR -->
+		<nodes nodeZ="-1066">
+			<node x="191357" y="-108120" />
+			<node x="191369" y="-108154" />
+			<node x="191558" y="-108095" />
+			<node x="191549" y="-108058" />
+		</nodes>
+		<location x="191458" y="-108107" z="-962" />
+		<stats basePDef="644" baseMDef="518" baseHpMax="169710" />
+		<status showHp="false" />
+		<openStatus default="close" closeTime="3600" />
+	</door>
 </list>
