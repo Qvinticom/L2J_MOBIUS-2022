@@ -49,6 +49,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2AttackableAI;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.TransformData;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.BasicProperty;
@@ -3975,6 +3976,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		Skill oldSkill = null;
 		if (newSkill != null)
 		{
+			// Mobius: Keep sublevel on skill level increase.
+			final Skill existingSkill = _skills.get(newSkill.getId());
+			if ((existingSkill != null) && (existingSkill.getSubLevel() > 0) && (newSkill.getSubLevel() == 0) && (existingSkill.getLevel() < newSkill.getLevel()))
+			{
+				newSkill = SkillData.getInstance().getSkill(newSkill.getId(), newSkill.getLevel(), existingSkill.getSubLevel());
+			}
+			
 			// Replace oldSkill by newSkill or Add the newSkill
 			oldSkill = _skills.put(newSkill.getId(), newSkill);
 			// If an old skill has been replaced, remove all its Func objects
