@@ -8,6 +8,7 @@ Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Parsed item data from client
 -Proper Daily Mission rewards
 -Zone changes to match starting locations
+-Parsed recipes from client
 -Parsed skill names from client
 -Parsed NPC names from client
 -Temporary NPC info from Interlude retail files
@@ -56,6 +57,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki
+-Parsed recipes from client
 -Added raidbosses according to map
 -Zaken boss AI
 -TODO: Newbie quest changes

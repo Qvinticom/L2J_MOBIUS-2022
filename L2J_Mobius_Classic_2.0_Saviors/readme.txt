@@ -10,6 +10,7 @@ Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Parsed item data from client
 -Proper Daily Mission rewards
 -Zone changes to match starting locations
+-Parsed recipes from client
 -Parsed skill names from client
 -Parsed NPC names from client
 -Temporary NPC info from Interlude retail files
