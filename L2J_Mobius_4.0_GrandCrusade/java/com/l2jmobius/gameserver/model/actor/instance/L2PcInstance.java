@@ -13499,7 +13499,7 @@ public final class L2PcInstance extends L2Playable
 	public int getAbilityPoints()
 	{
 		// Grand Crusade: 1 point per level after 84
-		return getLevel() - 84;
+		return Math.max(0, getLevel() - 84);
 	}
 	
 	/**
