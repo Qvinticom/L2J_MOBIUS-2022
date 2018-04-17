@@ -43,7 +43,7 @@ public final class AntiFeedManager
 	 * Set time of the last player's death to current
 	 * @param objectId Player's objectId
 	 */
-	public final void setLastDeathTime(int objectId)
+	public void setLastDeathTime(int objectId)
 	{
 		_lastDeathTimes.put(objectId, System.currentTimeMillis());
 	}
@@ -54,7 +54,7 @@ public final class AntiFeedManager
 	 * @param target Target character
 	 * @return True if kill is non-feeded.
 	 */
-	public final boolean check(L2Character attacker, L2Character target)
+	public boolean check(L2Character attacker, L2Character target)
 	{
 		if (!Config.ANTIFEED_ENABLE)
 		{
@@ -111,7 +111,7 @@ public final class AntiFeedManager
 	/**
 	 * Clears all timestamps
 	 */
-	public final void clear()
+	public void clear()
 	{
 		_lastDeathTimes.clear();
 	}
@@ -120,9 +120,9 @@ public final class AntiFeedManager
 	 * Register new event for dualbox check. Should be called only once.
 	 * @param eventId
 	 */
-	public final void registerEvent(int eventId)
+	public void registerEvent(int eventId)
 	{
-		_eventIPs.putIfAbsent(eventId, new ConcurrentHashMap<Integer, AtomicInteger>());
+		_eventIPs.putIfAbsent(eventId, new ConcurrentHashMap<>());
 	}
 	
 	/**
@@ -132,7 +132,7 @@ public final class AntiFeedManager
 	 * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
 	 *         False if number of all simultaneous connections from player's IP address higher than max.
 	 */
-	public final boolean tryAddPlayer(int eventId, L2PcInstance player, int max)
+	public boolean tryAddPlayer(int eventId, L2PcInstance player, int max)
 	{
 		return tryAddClient(eventId, player.getClient(), max);
 	}
@@ -144,7 +144,7 @@ public final class AntiFeedManager
 	 * @return If number of all simultaneous connections from player's IP address lower than max then increment connection count and return true.<br>
 	 *         False if number of all simultaneous connections from player's IP address higher than max.
 	 */
-	public final boolean tryAddClient(int eventId, L2GameClient client, int max)
+	public boolean tryAddClient(int eventId, L2GameClient client, int max)
 	{
 		if (client == null)
 		{
@@ -175,7 +175,7 @@ public final class AntiFeedManager
 	 * @param player
 	 * @return true if success and false if any problem detected.
 	 */
-	public final boolean removePlayer(int eventId, L2PcInstance player)
+	public boolean removePlayer(int eventId, L2PcInstance player)
 	{
 		return removeClient(eventId, player.getClient());
 	}
@@ -186,7 +186,7 @@ public final class AntiFeedManager
 	 * @param client
 	 * @return true if success and false if any problem detected.
 	 */
-	public final boolean removeClient(int eventId, L2GameClient client)
+	public boolean removeClient(int eventId, L2GameClient client)
 	{
 		if (client == null)
 		{
@@ -215,7 +215,7 @@ public final class AntiFeedManager
 	 * Remove player connection IP address from all registered events lists.
 	 * @param client
 	 */
-	public final void onDisconnect(L2GameClient client)
+	public void onDisconnect(L2GameClient client)
 	{
 		if ((client == null) || (client.getConnectionAddress() == null))
 		{
@@ -232,7 +232,7 @@ public final class AntiFeedManager
 	 * Clear all entries for this eventId.
 	 * @param eventId
 	 */
-	public final void clear(int eventId)
+	public void clear(int eventId)
 	{
 		final Map<Integer, AtomicInteger> event = _eventIPs.get(eventId);
 		if (event != null)
@@ -246,7 +246,7 @@ public final class AntiFeedManager
 	 * @param max
 	 * @return maximum number of allowed connections (whitelist + max)
 	 */
-	public final int getLimit(L2PcInstance player, int max)
+	public int getLimit(L2PcInstance player, int max)
 	{
 		return getLimit(player.getClient(), max);
 	}
@@ -256,7 +256,7 @@ public final class AntiFeedManager
 	 * @param max
 	 * @return maximum number of allowed connections (whitelist + max)
 	 */
-	public final int getLimit(L2GameClient client, int max)
+	public int getLimit(L2GameClient client, int max)
 	{
 		if (client == null)
 		{

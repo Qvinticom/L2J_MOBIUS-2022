@@ -11116,9 +11116,6 @@ public final class L2PcInstance extends L2Playable
 			L2Event.savePlayerEventStatus(this);
 		}
 		
-		// Anti Feed
-		AntiFeedManager.getInstance().onDisconnect(getClient());
-		
 		try
 		{
 			notifyFriends(L2FriendStatus.MODE_OFFLINE);

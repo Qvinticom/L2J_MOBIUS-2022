@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
@@ -89,6 +90,9 @@ public final class Disconnection
 	{
 		_client = getClient(client, activeChar);
 		_activeChar = getActiveChar(client, activeChar);
+		
+		// Anti Feed
+		AntiFeedManager.getInstance().onDisconnect(_client);
 		
 		if (_client != null)
 		{

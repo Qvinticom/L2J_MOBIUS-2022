@@ -8213,14 +8213,43 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
+		if ((getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
+		{
+			return false;
+		}
+		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(this) && !(isGM() && Config.GM_RESTART_FIGHTING))
 		{
+			sendPacket(SystemMessageId.YOU_CANNOT_EXIT_THE_GAME_WHILE_IN_COMBAT);
 			return false;
 		}
 		
 		if (isBlockedFromExit())
 		{
 			return false;
+		}
+		
+		if (L2Event.isParticipant(this))
+		{
+			sendMessage("A superior power doesn't allow you to leave the event.");
+			return false;
+		}
+		
+		// Prevent player from logging out if they are a festival participant
+		// and it is in progress, otherwise notify party members that the player
+		// is not longer a participant.
+		if (isFestivalParticipant())
+		{
+			if (SevenSignsFestival.getInstance().isFestivalInitialized())
+			{
+				sendMessage("You cannot log out while you are a participant in a Festival.");
+				return false;
+			}
+			
+			if (isInParty())
+			{
+				getParty().broadcastPacket(SystemMessage.sendString(getName() + " has been removed from the upcoming Festival."));
+			}
 		}
 		
 		return true;
@@ -11518,9 +11547,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			L2Event.savePlayerEventStatus(this);
 		}
-		
-		// Anti Feed
-		AntiFeedManager.getInstance().onDisconnect(getClient());
 		
 		// Remove L2Object object from _allObjects of L2World
 		L2World.getInstance().removeObject(this);
