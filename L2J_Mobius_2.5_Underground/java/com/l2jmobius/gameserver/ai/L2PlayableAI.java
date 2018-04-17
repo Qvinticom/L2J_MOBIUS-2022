@@ -81,7 +81,7 @@ public abstract class L2PlayableAI extends L2CharacterAI
 	@Override
 	protected void onIntentionCast(Skill skill, L2Object target, L2ItemInstance item, boolean forceUse, boolean dontMove)
 	{
-		if ((target.isPlayable()) && skill.isBad())
+		if ((target != null) && (target.isPlayable()) && skill.isBad())
 		{
 			if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getReputation() < 0) && !target.isInsideZone(ZoneId.PVP))
 			{
