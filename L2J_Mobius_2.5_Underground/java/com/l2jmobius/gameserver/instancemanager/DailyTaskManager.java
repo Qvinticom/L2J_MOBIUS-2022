@@ -105,6 +105,11 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	@ScheduleTarget
 	private void onVitalityReset()
 	{
+		if (!Config.ENABLE_VITALITY)
+		{
+			return;
+		}
+		
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			player.setVitalityPoints(PcStat.MAX_VITALITY_POINTS, false);
