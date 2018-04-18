@@ -37,7 +37,7 @@ public class Op2hWeaponSkillCondition implements ISkillCondition
 	
 	public Op2hWeaponSkillCondition(StatsSet params)
 	{
-		final List<String> weaponTypes = params.getList("weaponTypes", String.class);
+		final List<String> weaponTypes = params.getList("weaponType", String.class);
 		if (weaponTypes != null)
 		{
 			weaponTypes.stream().map(WeaponType::valueOf).forEach(_weaponTypes::add);
