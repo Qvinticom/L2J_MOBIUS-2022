@@ -24,9 +24,9 @@
 			</schedule>
 
 			<!-- Schedule the vitality reset task every WEDNESDAY at 6:30 -->
-			<schedule name="vitalityReset" hour="06" minute="30" dayOfWeek="3">
+			<!-- <schedule name="vitalityReset" hour="06" minute="30" dayOfWeek="3">
 				<event name="#onVitalityReset" />
-			</schedule>
+			</schedule> -->
 
 
 			<!-- Attach condition to reset if server boots up in after 6:30 and hasn't reset yet -->
