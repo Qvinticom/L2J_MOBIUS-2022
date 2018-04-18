@@ -36,5 +36,4 @@ public class OpNotOlympiadSkillCondition implements ISkillCondition
 	{
 		return (caster.isPlayer() && !caster.getActingPlayer().isInOlympiadMode());
 	}
-	
 }

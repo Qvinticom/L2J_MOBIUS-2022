@@ -21,9 +21,10 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.zone.ZoneId;
 
 /**
- * @author
+ * @author Mobius
  */
 public class OpFishingPumpingSkillCondition implements ISkillCondition
 {
@@ -35,6 +36,6 @@ public class OpFishingPumpingSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		return false;
+		return caster.isInsideZone(ZoneId.FISHING);
 	}
 }

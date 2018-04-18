@@ -22,9 +22,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
-/**
- * @author
- */
 public class CanEnchantAttributeSkillCondition implements ISkillCondition
 {
 	public CanEnchantAttributeSkillCondition(StatsSet params)
@@ -35,7 +32,6 @@ public class CanEnchantAttributeSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		// TODO !
-		return true;
+		return true; // TODO
 	}
 }
