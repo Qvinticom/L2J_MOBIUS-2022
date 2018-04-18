@@ -437,7 +437,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (Config.PLAYER_SPAWN_PROTECTION > 0)
 		{
-			activeChar.setProtection(true);
+			activeChar.setSpawnProtection(true);
 		}
 		
 		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());

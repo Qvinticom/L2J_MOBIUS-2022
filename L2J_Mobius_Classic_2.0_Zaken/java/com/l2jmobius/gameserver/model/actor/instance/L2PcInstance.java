@@ -668,25 +668,14 @@ public final class L2PcInstance extends L2Playable
 	private final L2Request _request = new L2Request(this);
 	
 	// Used for protection after teleport
-	private long _protectEndTime = 0;
+	private long _spawnProtectEndTime = 0;
+	private long _teleportProtectEndTime = 0;
 	
 	private volatile Map<Integer, ExResponseCommissionInfo> _lastCommissionInfos;
 	
 	@SuppressWarnings("rawtypes")
 	private volatile Map<Class<? extends AbstractEvent>, AbstractEvent<?>> _events;
 	private boolean _isOnCustomEvent = false;
-	
-	public boolean isSpawnProtected()
-	{
-		return _protectEndTime > GameTimeController.getInstance().getGameTicks();
-	}
-	
-	private long _teleportProtectEndTime = 0;
-	
-	public boolean isTeleportProtected()
-	{
-		return _teleportProtectEndTime > GameTimeController.getInstance().getGameTicks();
-	}
 	
 	// protects a char from aggro mobs when getting up from fake death
 	private long _recentFakeDeathEndTime = 0;
@@ -3854,24 +3843,24 @@ public final class L2PcInstance extends L2Playable
 		return item;
 	}
 	
-	public void setProtection(boolean protect)
+	public boolean isSpawnProtected()
 	{
-		if (Config.DEVELOPER && (protect || (_protectEndTime > 0)))
-		{
-			LOGGER.warning(getName() + ": Protection " + (protect ? "ON " + (GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeController.TICKS_PER_SECOND)) : "OFF") + " (currently " + GameTimeController.getInstance().getGameTicks() + ")");
-		}
-		
-		_protectEndTime = protect ? GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
+		return _spawnProtectEndTime > System.currentTimeMillis();
+	}
+	
+	public boolean isTeleportProtected()
+	{
+		return _teleportProtectEndTime > System.currentTimeMillis();
+	}
+	
+	public void setSpawnProtection(boolean protect)
+	{
+		_spawnProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_SPAWN_PROTECTION * 1000) : 0;
 	}
 	
 	public void setTeleportProtection(boolean protect)
 	{
-		if (Config.DEVELOPER && (protect || (_teleportProtectEndTime > 0)))
-		{
-			LOGGER.warning(getName() + ": Tele Protection " + (protect ? "ON " + (GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeController.TICKS_PER_SECOND)) : "OFF") + " (currently " + GameTimeController.getInstance().getGameTicks() + ")");
-		}
-		
-		_teleportProtectEndTime = protect ? GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
+		_teleportProtectEndTime = protect ? System.currentTimeMillis() + (Config.PLAYER_TELEPORT_PROTECTION * 1000) : 0;
 	}
 	
 	/**
@@ -10216,7 +10205,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (isSpawnProtected())
 		{
-			setProtection(false);
+			setSpawnProtection(false);
 			if (!isInsideZone(ZoneId.PEACE))
 			{
 				sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);

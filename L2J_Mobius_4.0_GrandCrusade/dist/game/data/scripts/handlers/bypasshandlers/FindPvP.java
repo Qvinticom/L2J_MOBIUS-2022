@@ -130,7 +130,7 @@ public class FindPvP implements IBypassHandler
 			}
 			
 			activeChar.teleToLocation((mostPvP.getX() + Rnd.get(300)) - 150, (mostPvP.getY() + Rnd.get(300)) - 150, mostPvP.getZ());
-			activeChar.setProtection(true);
+			activeChar.setSpawnProtection(true);
 			if (!activeChar.isGM())
 			{
 				activeChar.setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
