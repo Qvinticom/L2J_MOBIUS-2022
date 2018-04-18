@@ -140,7 +140,6 @@ public final class Wastelands extends AbstractNpcAI
 					{
 						guard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 						monster.reduceCurrentHp(1, guard, null);
-						guard.setCanStopAttackByTime(false);
 						
 						if ((guard.getId() != COMMANDO) && (guard.getId() != COMMANDO_CAPTAIN))
 						{
@@ -161,7 +160,6 @@ public final class Wastelands extends AbstractNpcAI
 							{
 								decoGuard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 								monster.reduceCurrentHp(1, decoGuard, null);
-								decoGuard.setCanStopAttackByTime(false);
 								decoGuard.setIsInvul(true);
 							}
 						}
@@ -303,7 +301,6 @@ public final class Wastelands extends AbstractNpcAI
 					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
 					sakum.reduceCurrentHp(1, commander, null);
-					commander.setCanStopAttackByTime(false);
 					
 					notifyEvent("START_ATTACK", commander, null);
 				}
@@ -319,7 +316,6 @@ public final class Wastelands extends AbstractNpcAI
 					
 					commander.reduceCurrentHp(1, sakum, null); // TODO: Find better way for attack
 					sakum.reduceCurrentHp(1, commander, null);
-					commander.setCanStopAttackByTime(false);
 					
 					notifyEvent("START_ATTACK", commander, null);
 				}

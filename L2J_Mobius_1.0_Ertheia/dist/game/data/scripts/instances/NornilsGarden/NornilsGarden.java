@@ -300,7 +300,6 @@ public class NornilsGarden extends AbstractInstance
 		final Instance world = npc.getInstanceWorld();
 		if (isInInstance(world) && (CommonUtil.contains(ATTACABLE_MONSTERS, npc.getId())))
 		{
-			((L2Attackable) npc).setCanStopAttackByTime(false);
 			((L2Attackable) npc).setCanReturnToSpawnPoint(false);
 			startQuestTimer("check_agrro", 1000, npc, null, true);
 		}

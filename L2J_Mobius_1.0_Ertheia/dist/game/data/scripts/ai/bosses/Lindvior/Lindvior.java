@@ -521,7 +521,6 @@ public class Lindvior extends AbstractNpcAI
 			}
 			case LYN_DRACO_ATTACKER_GENERATORS:
 			{
-				((L2Attackable) npc).setCanStopAttackByTime(false);
 				((L2Attackable) npc).setCanReturnToSpawnPoint(false);
 				startQuestTimer("attack_generator", 10000, npc, null, true);
 				break;

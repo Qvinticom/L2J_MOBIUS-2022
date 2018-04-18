@@ -827,17 +827,27 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		
 		// Check if target is dead or if timeout is expired to stop this attack
 		final L2Character originalAttackTarget = getAttackTarget();
-		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead() || (_attackTimeout < GameTimeController.getInstance().getGameTicks()))
+		if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead())
 		{
 			// Stop hating this target after the attack timeout or if target is dead
 			npc.stopHating(originalAttackTarget);
-			
+			return;
+		}
+		
+		if (_attackTimeout < GameTimeController.getInstance().getGameTicks())
+		{
 			// Set the AI Intention to AI_INTENTION_ACTIVE
 			setIntention(AI_INTENTION_ACTIVE);
 			
 			if (!_actor.isFakePlayer())
 			{
 				npc.setWalking();
+			}
+			
+			// Monster teleport to spawn
+			if (npc.isMonster() && (npc.getSpawn() != null))
+			{
+				npc.teleToLocation(npc.getSpawn(), false);
 			}
 			return;
 		}
