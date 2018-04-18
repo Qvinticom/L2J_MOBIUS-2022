@@ -940,10 +940,12 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
 					{
 						final int newZ = npc.getZ() + 30;
-						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()))
-						{
-							moveTo(newX, newY, newZ);
-						}
+						
+						// fixes monsters not avoiding obstacles
+						// if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()))
+						// {
+						moveTo(newX, newY, newZ);
+						// }
 					}
 					return;
 				}
