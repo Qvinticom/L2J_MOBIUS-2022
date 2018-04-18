@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.geoengine.pathfinding;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.locks.ReentrantLock;
 
 import com.l2jmobius.Config;
@@ -111,36 +109,6 @@ public class NodeBuffer
 		while ((_current != null) && (++count < Config.MAX_ITERATIONS));
 		
 		return null;
-	}
-	
-	/**
-	 * Creates list of Nodes to show debug path.
-	 * @return List<Node> : nodes
-	 */
-	public final List<Node> debugPath()
-	{
-		List<Node> result = new ArrayList<>();
-		
-		for (Node n = _current; n.getParent() != null; n = n.getParent())
-		{
-			result.add(n);
-			n.setCost(-n.getCost());
-		}
-		
-		for (Node[] nodes : _buffer)
-		{
-			for (Node node : nodes)
-			{
-				if ((node.getLoc() == null) || (node.getCost() <= 0))
-				{
-					continue;
-				}
-				
-				result.add(node);
-			}
-		}
-		
-		return result;
 	}
 	
 	public final boolean isLocked()

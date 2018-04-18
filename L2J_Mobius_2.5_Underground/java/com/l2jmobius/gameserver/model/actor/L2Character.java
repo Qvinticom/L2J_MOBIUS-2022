@@ -3365,9 +3365,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						}
 						
 						m.disregardingGeodata = true;
-						x = originalX;
-						y = originalY;
-						z = originalZ;
+						
+						// Mobius: Verify destination. Prevents wall collisions issues.
+						final Location newDestination = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
+						x = newDestination.getX();
+						y = newDestination.getY();
+						z = newDestination.getZ();
+						
 						distance = originalDistance;
 					}
 					else
