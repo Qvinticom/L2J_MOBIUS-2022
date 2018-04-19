@@ -526,7 +526,10 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			
 			if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 			{
-				player.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+				if (player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1) > 0)
+				{
+					player.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+				}
 				world.addAllowed(player.getObjectId());
 				teleportPlayer(player, ENTER_TELEPORT, world.getInstanceId(), false);
 			}
@@ -534,7 +537,10 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			{
 				for (L2PcInstance channelMember : player.getParty().getCommandChannel().getMembers())
 				{
-					channelMember.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, channelMember.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+					if (player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1) > 0)
+					{
+						channelMember.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, channelMember.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
+					}
 					world.addAllowed(channelMember.getObjectId());
 					teleportPlayer(channelMember, ENTER_TELEPORT, world.getInstanceId(), false);
 				}
