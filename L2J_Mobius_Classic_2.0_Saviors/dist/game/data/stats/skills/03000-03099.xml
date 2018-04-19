@@ -37,8 +37,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
-		<targetType>NONE</targetType>
-		<affectScope>NONE</affectScope>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DamOverTime">
 				<power>44</power>

@@ -66,7 +66,6 @@ public final class Q00213_TrialOfTheSeeker extends Quest
 	private static final int TERRYS_REPORT = 2672;
 	// Reward
 	private static final int MARK_OF_SEEKER = 2673;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monsters
 	private static final int ANT_CAPTAIN = 20080;
 	private static final int ANT_WARRIOR_CAPTAIN = 20088;
@@ -113,16 +112,6 @@ public final class Q00213_TrialOfTheSeeker extends Quest
 						giveItems(player, DUFNERS_LETTER, 1);
 					}
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 128);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30106-05a.htm";
-					}
-					else
-					{
-						htmltext = "30106-05.htm";
-					}
 				}
 				break;
 			}

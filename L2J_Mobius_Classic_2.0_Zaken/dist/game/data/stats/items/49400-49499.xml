@@ -1073,16 +1073,22 @@
 	</item>
 	<item id="49466" name="Warrior Experience Rune" additionalName="30-day" type="EtcItem">
 		<!-- 30-day item. Increases XP and SP gain by 20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.skill19226" />
+		<set name="icon" val="icon.skill70094" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="time" val="43200" />
+		<set name="is_premium" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="time" val="43200" />
 		<skills>
 			<skill id="39057" level="1" /> <!-- Hero Experience Rune -->
 		</skills>

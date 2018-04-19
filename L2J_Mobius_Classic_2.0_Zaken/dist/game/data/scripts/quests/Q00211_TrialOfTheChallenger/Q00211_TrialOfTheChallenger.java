@@ -21,10 +21,8 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Util;
@@ -41,17 +39,19 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	private static final int MARTIAN = 30645;
 	private static final int RALDO = 30646;
 	private static final int CHEST_OF_SHYSLASSYS = 30647;
+	// Monsters
+	private static final int SHYSLASSYS = 27110;
+	private static final int CAVEBASILISK = 27111;
+	private static final int GORR = 27112;
+	private static final int BARAHAM = 27113;
+	private static final int QUEEN_OF_SUCCUBUS = 27114;
 	// Items
 	private static final int LETTER_OF_KASH = 2628;
 	private static final int WATCHERS_EYE1 = 2629;
 	private static final int WATCHERS_EYE2 = 2630;
 	private static final int SCROLL_OF_SHYSLASSYS = 2631;
 	private static final int BROKEN_KEY = 2632;
-	// Monsters
-	private static final int SHYSLASSYS = 27110;
-	private static final int GORR = 27112;
-	private static final int BARAHAM = 27113;
-	private static final int QUEEN_OF_SUCCUBUS = 27114;
+	
 	// Rewards
 	private static final int ELVEN_NECKLACE_BEADS = 1904;
 	private static final int WHITE_TUNIC_PATTERN = 1936;
@@ -62,7 +62,6 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 	private static final int BRIGAMDINE_GAUNTLET_PATTERN = 2927;
 	private static final int TOME_OF_BLOOD_PAGE = 2030;
 	private static final int MARK_OF_CHALLENGER = 2627;
-	private static final ItemHolder DIMENSIONAL_DIAMONDS = new ItemHolder(7562, 61);
 	// Misc
 	private static final int MIN_LVL = 35;
 	
@@ -71,7 +70,7 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 		super(211);
 		addStartNpc(KASH);
 		addTalkId(FILAUR, KASH, MARTIAN, RALDO, CHEST_OF_SHYSLASSYS);
-		addKillId(SHYSLASSYS, GORR, BARAHAM, QUEEN_OF_SUCCUBUS);
+		addKillId(SHYSLASSYS, CAVEBASILISK, GORR, BARAHAM, QUEEN_OF_SUCCUBUS);
 		registerQuestItems(LETTER_OF_KASH, WATCHERS_EYE1, WATCHERS_EYE2, SCROLL_OF_SHYSLASSYS, BROKEN_KEY);
 	}
 	
@@ -105,21 +104,8 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 			}
 			case "30644-06.htm":
 			{
-				if (qs.isCreated())
-				{
-					final PlayerVariables vars = player.getVariables();
-					if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMONDS);
-						vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = event;
-					}
-					else
-					{
-						htmltext = "30644-05.htm";
-					}
-					qs.startQuest();
-				}
+				qs.startQuest();
+				htmltext = event;
 				break;
 			}
 			case "30647-02.html":
@@ -333,15 +319,6 @@ public final class Q00211_TrialOfTheChallenger extends Quest
 						addExpAndSp(talker, 1067606, 69242);
 						giveAdena(talker, 194556, true);
 						giveItems(talker, MARK_OF_CHALLENGER, 1);
-						
-						// redundant retail check - already rewarded at beginning of quest
-						final PlayerVariables vars = talker.getVariables();
-						if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-						{
-							giveItems(talker, DIMENSIONAL_DIAMONDS);
-							vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
-						}
-						
 						talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
 						qs.exitQuest(false, true);
 						htmltext = "30646-07.html";

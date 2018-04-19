@@ -105,7 +105,6 @@ public final class Q00230_TestOfTheSummoner extends Quest
 	private static final int CRYSTAL_OF_VICTORY_6TH = 3389;
 	// Reward
 	private static final int MARK_OF_SUMMONER = 3336;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int NOBLE_ANT = 20089;
 	private static final int NOBLE_ANT_LEADER = 20090;
@@ -209,16 +208,6 @@ public final class Q00230_TestOfTheSummoner extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, GALATEAS_LETTER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 122);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30634-08a.htm";
-					}
-					else
-					{
-						htmltext = "30634-08.htm";
-					}
 				}
 				break;
 			}

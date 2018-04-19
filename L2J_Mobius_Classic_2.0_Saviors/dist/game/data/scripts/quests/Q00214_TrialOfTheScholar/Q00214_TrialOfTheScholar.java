@@ -94,7 +94,6 @@ public final class Q00214_TrialOfTheScholar extends Quest
 	private static final int SYMBOL_OF_CRONOS = 2720;
 	// Reward
 	private static final int MARK_OF_SCHOLAR = 2674;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monsters
 	private static final int MONSTER_EYE_DESTREOYER = 20068;
 	private static final int MEDUSA = 20158;
@@ -141,16 +140,6 @@ public final class Q00214_TrialOfTheScholar extends Quest
 						giveItems(player, MIRIENS_1ST_SIGIL, 1);
 					}
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 168);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30461-04a.htm";
-					}
-					else
-					{
-						htmltext = "30461-04.htm";
-					}
 				}
 				break;
 			}

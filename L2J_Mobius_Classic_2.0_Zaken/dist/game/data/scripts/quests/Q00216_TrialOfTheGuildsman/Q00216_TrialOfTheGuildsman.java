@@ -62,7 +62,6 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 	private static final int JOURNEYMAN_RING = 3139;
 	// Reward
 	private static final int MARK_OF_GUILDSMAN = 3119;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monsters
 	private static final int ANT = 20079;
 	private static final int ANT_CAPTAIN = 20080;
@@ -116,16 +115,6 @@ public final class Q00216_TrialOfTheGuildsman extends Quest
 						giveItems(player, VALKONS_RECOMMENDATION, 1);
 					}
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 85);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30103-06d.htm";
-					}
-					else
-					{
-						htmltext = "30103-06.htm";
-					}
 				}
 				else
 				{

@@ -273,6 +273,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39207" level="1" /> <!-- Dimensional Gift -->
+		</skills>
 	</item>
 	<item id="90137" name="Pendant Matte Varnish" type="EtcItem">
 		<!-- Varnish that enhances effects of a Pendant. For Fire Dragon Pendant enchanted up to +6 or Land Dragon Pendant enchanted up to +6. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. Depending on the Pendant, additional special effects are activated starting from +4 enchantment. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->

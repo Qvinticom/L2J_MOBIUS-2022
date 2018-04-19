@@ -68,7 +68,6 @@ public final class Q00225_TestOfTheSearcher extends Quest
 	private static final int ALEXS_RECOMMEND = 2808;
 	// Reward
 	private static final int MARK_OF_SEARCHER = 2809;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int HANGMAN_TREE = 20144;
 	private static final int ROAD_SCAVENGER = 20551;
@@ -110,23 +109,6 @@ public final class Q00225_TestOfTheSearcher extends Quest
 					qs.setMemoState(1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, LUTHERS_LETTER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						if (player.getClassId() == ClassId.SCAVENGER)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 82);
-						}
-						else
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 96);
-						}
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30690-05a.htm";
-					}
-					else
-					{
-						htmltext = "30690-05.htm";
-					}
 				}
 				break;
 			}

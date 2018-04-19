@@ -20,12 +20,10 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.model.variables.PlayerVariables;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -64,7 +62,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	private static final int SKELETON_RAIDER = 20191;
 	private static final int STRAIN = 20200;
 	private static final int GHOUL = 20201;
-	private static final int BREKA_ORC_OVERLORD = 20270;
+	private static final int BREKA_ORC_PREFECT = 20270;
 	private static final int LETO_LIZARDMAN = 20577;
 	private static final int LETO_LIZARDMAN_ARCHER = 20578;
 	private static final int LETO_LIZARDMAN_SOLDIER = 20579;
@@ -74,7 +72,6 @@ public final class Q00212_TrialOfDuty extends Quest
 	private static final int SPIRIT_OF_SIR_HEROD = 27119;
 	// Rewards
 	private static final int MARK_OF_DUTY = 2633;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Misc
 	private static final int MIN_LEVEL = 35;
 	
@@ -83,7 +80,7 @@ public final class Q00212_TrialOfDuty extends Quest
 		super(212);
 		addStartNpc(HANNAVALT);
 		addTalkId(HANNAVALT, DUSTIN, SIR_COLLIN_WINDAWOOD, SIR_ARON_TANFORD, SIR_KIEL_NIGHTHAWK, ISAEL_SILVERSHADOW, SPIRIT_OF_SIR_TALIANUS);
-		addKillId(HANGMAN_TREE, SKELETON_MARAUDER, SKELETON_RAIDER, STRAIN, GHOUL, BREKA_ORC_OVERLORD, LETO_LIZARDMAN, LETO_LIZARDMAN_ARCHER, LETO_LIZARDMAN_SOLDIER, LETO_LIZARDMAN_WARRIOR, LETO_LIZARDMAN_SHAMAN, LETO_LIZARDMAN_OVERLORD, SPIRIT_OF_SIR_HEROD);
+		addKillId(HANGMAN_TREE, SKELETON_MARAUDER, SKELETON_RAIDER, STRAIN, GHOUL, BREKA_ORC_PREFECT, LETO_LIZARDMAN, LETO_LIZARDMAN_ARCHER, LETO_LIZARDMAN_SOLDIER, LETO_LIZARDMAN_WARRIOR, LETO_LIZARDMAN_SHAMAN, LETO_LIZARDMAN_OVERLORD, SPIRIT_OF_SIR_HEROD);
 		registerQuestItems(LETTER_OF_DUSTIN, KNIGHTS_TEAR, MIRROR_OF_ORPIC, TEAR_OF_CONFESSION, REPORT_PIECE.getId(), TALIANUSS_REPORT, TEAR_OF_LOYALTY, MILITAS_ARTICLE.getId(), SAINTS_ASHES_URN, ATHEBALDTS_SKULL, ATHEBALDTS_RIBS, ATHEBALDTS_SHIN, LETTER_OF_WINDAWOOD, OLD_KNIGHTS_SWORD);
 	}
 	
@@ -107,15 +104,6 @@ public final class Q00212_TrialOfDuty extends Quest
 					qs.startQuest();
 					qs.setMemoState(1);
 					qs.set("flag", 0);
-					
-					if (rewardDimensionalDiamonds(player))
-					{
-						html = "30109-04a.htm";
-					}
-					else
-					{
-						html = "30109-04.htm";
-					}
 				}
 				break;
 			}
@@ -236,7 +224,7 @@ public final class Q00212_TrialOfDuty extends Quest
 				}
 				break;
 			}
-			case BREKA_ORC_OVERLORD:
+			case BREKA_ORC_PREFECT:
 			{
 				if (qs.isMemoState(11))
 				{
@@ -307,7 +295,6 @@ public final class Q00212_TrialOfDuty extends Quest
 								giveItems(talker, MARK_OF_DUTY, 1);
 								qs.exitQuest(false, true);
 								talker.sendPacket(new SocialAction(talker.getObjectId(), 3));
-								rewardDimensionalDiamonds(talker);
 							}
 							break;
 						}
@@ -562,26 +549,5 @@ public final class Q00212_TrialOfDuty extends Quest
 			}
 		}
 		return html;
-	}
-	
-	private static boolean rewardDimensionalDiamonds(L2PcInstance player)
-	{
-		final PlayerVariables vars = player.getVariables();
-		
-		if (vars.getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-		{
-			if (player.getClassId() == ClassId.KNIGHT)
-			{
-				rewardItems(player, DIMENSIONAL_DIAMOND, 45);
-			}
-			else
-			{
-				rewardItems(player, DIMENSIONAL_DIAMOND, 61);
-			}
-			
-			vars.set("2ND_CLASS_DIAMOND_REWARD", 1);
-			return true;
-		}
-		return false;
 	}
 }

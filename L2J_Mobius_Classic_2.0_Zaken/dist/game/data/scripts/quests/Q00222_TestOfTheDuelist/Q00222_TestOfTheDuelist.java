@@ -58,7 +58,6 @@ public final class Q00222_TestOfTheDuelist extends Quest
 	private static final int LAKINS_MACE = 2783;
 	// Reward
 	private static final int MARK_OF_DUELIST = 2762;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int PUNCHER = 20085;
 	private static final int NOBLE_ANT_LEADER = 20090;
@@ -111,23 +110,6 @@ public final class Q00222_TestOfTheDuelist extends Quest
 					giveItems(player, ORDER_OREN, 1);
 					giveItems(player, ORDER_ADEN, 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						if (player.getClassId() == ClassId.PALUS_KNIGHT)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 104);
-						}
-						else
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 72);
-						}
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30623-07a.htm";
-					}
-					else
-					{
-						htmltext = "30623-07.htm";
-					}
 				}
 				break;
 			}

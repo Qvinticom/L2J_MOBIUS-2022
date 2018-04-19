@@ -68,7 +68,6 @@ public final class Q00228_TestOfMagus extends Quest
 	private static final int SERPENT_CHARM = 2863;
 	// Reward
 	private static final int MARK_OF_MAGUS = 2840;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int HARPY = 20145;
 	private static final int MARSH_STAKATO = 20157;
@@ -117,16 +116,6 @@ public final class Q00228_TestOfMagus extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, RUKALS_LETTER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 122);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30629-04a.htm";
-					}
-					else
-					{
-						htmltext = "30629-04.htm";
-					}
 				}
 				break;
 			}

@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -60,7 +59,6 @@ public final class Q00226_TestOfTheHealer extends Quest
 	private static final int SECRET_LETTER4 = 2819;
 	// Reward
 	private static final int MARK_OF_HEALER = 2820;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Quest Monster
 	private static final int LERO_LIZARDMAN_AGENT = 27122;
 	private static final int LERO_LIZARDMAN_LEADER = 27123;
@@ -101,31 +99,6 @@ public final class Q00226_TestOfTheHealer extends Quest
 					qs.setMemoState(1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, REPORT_OF_PERRIN, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						if (player.getClassId() == ClassId.CLERIC)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 60);
-						}
-						else if (player.getClassId() == ClassId.KNIGHT)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 104);
-						}
-						else if (player.getClassId() == ClassId.ORACLE)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 45);
-						}
-						else
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 72);
-						}
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30473-04a.htm";
-					}
-					else
-					{
-						htmltext = "30473-04.htm";
-					}
 				}
 				break;
 			}

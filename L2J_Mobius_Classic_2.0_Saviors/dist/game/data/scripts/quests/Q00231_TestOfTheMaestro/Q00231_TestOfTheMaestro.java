@@ -60,7 +60,6 @@ public final class Q00231_TestOfTheMaestro extends Quest
 	private static final int BROKEN_TELEPORT_DEVICE = 2916;
 	// Reward
 	private static final int MARK_OF_MAESTRO = 2867;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int KING_BUGBEAR = 20150;
 	private static final int GIANT_MIST_LEECH = 20225;
@@ -99,16 +98,6 @@ public final class Q00231_TestOfTheMaestro extends Quest
 					qs.startQuest();
 					qs.setMemoState(1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 23);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30531-04a.htm";
-					}
-					else
-					{
-						htmltext = "30531-04.htm";
-					}
 				}
 				break;
 			}

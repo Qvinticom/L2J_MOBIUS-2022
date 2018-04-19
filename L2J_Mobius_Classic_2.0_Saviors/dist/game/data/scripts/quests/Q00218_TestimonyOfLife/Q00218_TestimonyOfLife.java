@@ -75,7 +75,6 @@ public final class Q00218_TestimonyOfLife extends Quest
 	private static final int TALINS_PERIDOT = 3171;
 	// Reward
 	private static final int MARK_OF_LIFE = 3140;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int ANT_RECRUIT = 20082;
 	private static final int ANT_PATROL = 20084;
@@ -125,16 +124,7 @@ public final class Q00218_TestimonyOfLife extends Quest
 						giveItems(player, CARDIENS_LETTER, 1);
 					}
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 102);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30460-04a.htm";
-					}
-					else
-					{
-						htmltext = "30460-04.htm";
-					}
+					htmltext = "30460-04.htm";
 				}
 				break;
 			}

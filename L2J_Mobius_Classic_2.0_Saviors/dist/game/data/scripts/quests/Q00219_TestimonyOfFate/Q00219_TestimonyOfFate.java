@@ -76,7 +76,6 @@ public final class Q00219_TestimonyOfFate extends Quest
 	private static final int ARKENIAS_LETTER = 3202;
 	// Reward
 	private static final int MARK_OF_FATE = 3172;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int HANGMAN_TREE = 20144;
 	private static final int MARSH_STAKATO = 20157;
@@ -125,16 +124,6 @@ public final class Q00219_TestimonyOfFate extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, KAIRAS_LETTER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 98);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30476-05a.htm";
-					}
-					else
-					{
-						htmltext = "30476-05.htm";
-					}
 				}
 				break;
 			}

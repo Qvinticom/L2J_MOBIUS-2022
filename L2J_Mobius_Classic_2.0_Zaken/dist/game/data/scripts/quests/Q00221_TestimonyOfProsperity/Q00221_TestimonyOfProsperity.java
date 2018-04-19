@@ -98,7 +98,6 @@ public final class Q00221_TestimonyOfProsperity extends Quest
 	private static final int CRYSTAL_BROOCH = 3428;
 	// Reward
 	private static final int MARK_OF_PROSPERITY = 3238;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int MANDRAGORA_SPROUT1 = 20154;
 	private static final int MANDRAGORA_SAPLING = 20155;
@@ -145,16 +144,6 @@ public final class Q00221_TestimonyOfProsperity extends Quest
 						giveItems(player, RING_OF_TESTIMONY_1ST, 1);
 					}
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 50);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30104-04e.htm";
-					}
-					else
-					{
-						htmltext = "30104-04.htm";
-					}
 				}
 				break;
 			}

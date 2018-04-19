@@ -84,7 +84,6 @@ public final class Q00220_TestimonyOfGlory extends Quest
 	private static final int RITUAL_BOX = 3237;
 	// Reward
 	private static final int MARK_OF_GLORY = 3203;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int TYRANT = 20192;
 	private static final int TYRANT_KINGPIN = 20193;
@@ -139,16 +138,6 @@ public final class Q00220_TestimonyOfGlory extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, VOKIANS_ORDER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 109);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30514-05a.htm";
-					}
-					else
-					{
-						htmltext = "30514-05.htm";
-					}
 				}
 				break;
 			}

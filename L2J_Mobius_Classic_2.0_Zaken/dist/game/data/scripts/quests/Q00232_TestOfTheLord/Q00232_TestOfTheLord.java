@@ -77,7 +77,6 @@ public final class Q00232_TestOfTheLord extends Quest
 	private static final int IMMORTAL_FLAME = 3416;
 	// Reward
 	private static final int MARK_OF_LORD = 3390;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int MARSH_SPIDER = 20233;
 	private static final int BREKA_ORC_SHAMAN = 20269;
@@ -123,16 +122,6 @@ public final class Q00232_TestOfTheLord extends Quest
 				{
 					qs.startQuest();
 					giveItems(player, ORDEAL_NECKLACE, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 92);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30565-05b.htm";
-					}
-					else
-					{
-						htmltext = "30565-05.htm";
-					}
 				}
 				break;
 			}

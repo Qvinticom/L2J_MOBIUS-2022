@@ -72,7 +72,6 @@ public final class Q00227_TestOfTheReformer extends Quest
 	private static final int LETTER_GREETINGS2 = 5568;
 	// Rewards
 	private static final int MARK_OF_REFORMER = 2821;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monsters
 	private static final int MISERY_SKELETON = 20022;
 	private static final int SKELETON_ARCHER = 20100;
@@ -147,16 +146,6 @@ public final class Q00227_TestOfTheReformer extends Quest
 					qs.setMemoState(1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, BOOK_OF_REFORM, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 60);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30118-04b.htm";
-					}
-					else
-					{
-						htmltext = "30118-04.htm";
-					}
 				}
 				break;
 			}

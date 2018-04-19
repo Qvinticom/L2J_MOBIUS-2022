@@ -81,7 +81,6 @@ public final class Q00229_TestOfWitchcraft extends Quest
 	private static final int BRIMSTONE_2ND = 3335;
 	// Reward
 	private static final int MARK_OF_WITCHCRAFT = 3307;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int DIRE_WYRM = 20557;
 	private static final int ENCHANTED_STONE_GOLEM = 20565;
@@ -133,23 +132,6 @@ public final class Q00229_TestOfWitchcraft extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, ORIMS_DIAGRAM, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						if (player.getClassId() == ClassId.WIZARD)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 122);
-						}
-						else
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 104);
-						}
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30630-08a.htm";
-					}
-					else
-					{
-						htmltext = "30630-08.htm";
-					}
 				}
 				break;
 			}

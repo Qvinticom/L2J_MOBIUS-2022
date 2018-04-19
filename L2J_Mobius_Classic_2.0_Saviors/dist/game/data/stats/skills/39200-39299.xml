@@ -36,9 +36,41 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39207" toLevel="1" name="Dimensional Gift">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_box_of_adventure_5_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90136</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="60">
+						<item id="35669" count="1" />
+					</item>
+					<item chance="30">
+						<item id="49541" count="1" />
+					</item>
+					<item chance="5">
+						<item id="952" count="1" />
+					</item>
+					<item chance="5">
+						<item id="951" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39208" toLevel="1" name="Pendant Matte Varnish">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

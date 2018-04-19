@@ -59,7 +59,6 @@ public final class Q00215_TrialOfThePilgrim extends Quest
 	private static final int TAG_OF_RUMOR = 2733;
 	// Reward
 	private static final int MARK_OF_PILGRIM = 2721;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Quest Monster
 	private static final int LAVA_SALAMANDER = 27116;
 	private static final int NAHIR = 27117;
@@ -96,16 +95,6 @@ public final class Q00215_TrialOfThePilgrim extends Quest
 					qs.setMemoState(1);
 					giveItems(player, VOUCHER_OF_TRIAL, 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 49);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30648-04a.htm";
-					}
-					else
-					{
-						htmltext = "30648-04.htm";
-					}
 				}
 				break;
 			}

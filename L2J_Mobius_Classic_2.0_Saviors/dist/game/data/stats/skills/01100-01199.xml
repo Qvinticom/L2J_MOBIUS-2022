@@ -649,27 +649,6 @@
 					<value level="17">14127</value>
 					<value level="18">14128</value>
 				</npcId>
-				<consumeItemId>3031</consumeItemId>
-				<consumeItemCount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">1</value>
-					<value level="8">1</value>
-					<value level="9">1</value>
-					<value level="10">1</value>
-					<value level="11">1</value>
-					<value level="12">1</value>
-					<value level="13">2</value>
-					<value level="14">2</value>
-					<value level="15">2</value>
-					<value level="16">2</value>
-					<value level="17">2</value>
-					<value level="18">2</value>
-				</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -1308,27 +1287,6 @@
 					<value level="17">14495</value>
 					<value level="18">14496</value>
 				</npcId>
-				<consumeItemId>3031</consumeItemId>
-				<consumeItemCount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">1</value>
-					<value level="7">1</value>
-					<value level="8">1</value>
-					<value level="9">1</value>
-					<value level="10">1</value>
-					<value level="11">1</value>
-					<value level="12">1</value>
-					<value level="13">2</value>
-					<value level="14">2</value>
-					<value level="15">2</value>
-					<value level="16">2</value>
-					<value level="17">2</value>
-					<value level="18">2</value>
-				</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -1440,25 +1398,6 @@
 					<value level="15">15198</value>
 					<value level="16">15199</value>
 				</npcId>
-				<consumeItemId>3031</consumeItemId>
-				<consumeItemCount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">1</value>
-					<value level="4">1</value>
-					<value level="5">1</value>
-					<value level="6">2</value>
-					<value level="7">2</value>
-					<value level="8">0</value>
-					<value level="9">0</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
-					<value level="13">0</value>
-					<value level="14">0</value>
-					<value level="15">0</value>
-					<value level="16">0</value>
-				</consumeItemCount>
 			</effect>
 		</effects>
 	</skill>
@@ -1835,6 +1774,8 @@
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1148</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>2508</itemConsumeId> <!-- Cursed Bone -->
 		<magicLvl>
 			<value level="1">44</value>
 			<value level="2">48</value>
@@ -2361,7 +2302,7 @@
 			<value level="22">74</value>
 			<value level="23">76</value>
 			<value level="24">77</value>
-			<value level="25">78</value>	
+			<value level="25">78</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">36</value>

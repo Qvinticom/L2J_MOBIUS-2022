@@ -79,7 +79,6 @@ public final class Q00233_TestOfTheWarSpirit extends Quest
 	private static final int KIRUNAS_REMAINS2 = 2914;
 	// Reward
 	private static final int MARK_OF_WARSPIRIT = 2879;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int NOBLE_ANT = 20089;
 	private static final int NOBLE_ANT_LEADER = 20090;
@@ -122,16 +121,6 @@ public final class Q00233_TestOfTheWarSpirit extends Quest
 				if (qs.isCreated())
 				{
 					qs.startQuest();
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 92);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30510-05e.htm";
-					}
-					else
-					{
-						htmltext = "30510-05.htm";
-					}
 				}
 				break;
 			}

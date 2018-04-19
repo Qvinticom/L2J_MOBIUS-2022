@@ -73,7 +73,6 @@ public final class Q00217_TestimonyOfTrust extends Quest
 	private static final int HEART_OF_PORTA = 2761;
 	// Reward
 	private static final int MARK_OF_TRUST = 2734;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int DRYAD = 20013;
 	private static final int DRYAD_ELDER = 20019;
@@ -127,16 +126,6 @@ public final class Q00217_TestimonyOfTrust extends Quest
 					giveItems(player, LETTER_TO_ELF, 1);
 					giveItems(player, LETTER_TO_DARKELF, 1);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						giveItems(player, DIMENSIONAL_DIAMOND, 96);
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30191-04a.htm";
-					}
-					else
-					{
-						htmltext = "30191-04.htm";
-					}
 				}
 				break;
 			}

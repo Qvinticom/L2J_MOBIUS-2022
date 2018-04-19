@@ -55,7 +55,6 @@ public final class Q00223_TestOfTheChampion extends Quest
 	private static final int LETO_LIZARDMAN_FANG = 3292;
 	// Reward
 	private static final int MARK_OF_CHAMPION = 3276;
-	private static final int DIMENSIONAL_DIAMOND = 7562;
 	// Monster
 	private static final int HARPY = 20145;
 	private static final int MEDUSA = 20158;
@@ -103,23 +102,6 @@ public final class Q00223_TestOfTheChampion extends Quest
 					qs.startQuest();
 					playSound(player, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 					giveItems(player, ASCALONS_1ST_LETTER, 1);
-					if (player.getVariables().getInt("2ND_CLASS_DIAMOND_REWARD", 0) == 0)
-					{
-						if (player.getClassId() == ClassId.WARRIOR)
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 72);
-						}
-						else
-						{
-							giveItems(player, DIMENSIONAL_DIAMOND, 64);
-						}
-						player.getVariables().set("2ND_CLASS_DIAMOND_REWARD", 1);
-						htmltext = "30624-06a.htm";
-					}
-					else
-					{
-						htmltext = "30624-06.htm";
-					}
 				}
 				break;
 			}
