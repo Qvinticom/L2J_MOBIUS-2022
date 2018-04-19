@@ -206,8 +206,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
 	}
 	
-	@Override
-	protected boolean checkConditions(L2PcInstance player, int templateId)
+	private boolean checkConditions(L2PcInstance player, int templateId)
 	{
 		if (player.canOverrideCond(PcCondOverride.INSTANCE_CONDITIONS))
 		{
@@ -291,15 +290,24 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		if (event.equals("enter60"))
 		{
-			enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay60.xml", TEMPLATE_ID_60);
+			if (checkConditions(player, TEMPLATE_ID_60))
+			{
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay60.xml", TEMPLATE_ID_60);
+			}
 		}
 		else if (event.equals("enter60night"))
 		{
-			enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldNight60.xml", TEMPLATE_ID_60_NIGHT);
+			if (checkConditions(player, TEMPLATE_ID_60_NIGHT))
+			{
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldNight60.xml", TEMPLATE_ID_60_NIGHT);
+			}
 		}
 		else if (event.equals("enter83"))
 		{
-			enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay83.xml", TEMPLATE_ID_83);
+			if (checkConditions(player, TEMPLATE_ID_83))
+			{
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay83.xml", TEMPLATE_ID_83);
+			}
 		}
 		else
 		{

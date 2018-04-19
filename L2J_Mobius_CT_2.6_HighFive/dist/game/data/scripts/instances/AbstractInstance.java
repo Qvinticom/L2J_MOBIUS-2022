@@ -184,11 +184,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected abstract void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance);
 	
-	protected boolean checkConditions(L2PcInstance player, int templateId)
-	{
-		return checkConditions(player);
-	}
-	
 	protected boolean checkConditions(L2PcInstance player)
 	{
 		return true;
