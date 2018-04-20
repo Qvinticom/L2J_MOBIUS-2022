@@ -845,7 +845,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Monster teleport to spawn
-			if (npc.isMonster() && (npc.getSpawn() != null))
+			if (npc.isMonster() && (npc.getSpawn() != null) && (npc.getInstanceId() == 0))
 			{
 				npc.teleToLocation(npc.getSpawn(), false);
 			}
