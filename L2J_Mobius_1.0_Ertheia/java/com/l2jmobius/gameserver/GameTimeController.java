@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver;
 
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
@@ -129,7 +128,6 @@ public final class GameTimeController extends Thread
 	 */
 	private void moveObjects()
 	{
-		_movingObjects.removeAll(Collections.singleton(null));
 		_movingObjects.removeIf(L2Character::updatePosition);
 	}
 	

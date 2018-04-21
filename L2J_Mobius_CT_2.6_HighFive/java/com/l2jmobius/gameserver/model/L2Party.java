@@ -329,7 +329,6 @@ public class L2Party extends AbstractPlayerGroup
 			broadcastPacket(new ExPartyPetWindowAdd(player.getSummon()));
 		}
 		
-		
 		// adjust party level
 		if (player.getLevel() > _partyLvl)
 		{
