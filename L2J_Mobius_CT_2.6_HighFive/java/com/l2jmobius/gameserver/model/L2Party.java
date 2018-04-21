@@ -291,6 +291,10 @@ public class L2Party extends AbstractPlayerGroup
 		{
 			finishLootRequest(false); // cancel on invite
 		}
+		
+		// add player to party
+		getMembers().add(player);
+		
 		// sends new member party window for all members
 		// we do all actions before adding member to a list, this speeds things up a little
 		player.sendPacket(new PartySmallWindowAll(player, this));
@@ -311,7 +315,9 @@ public class L2Party extends AbstractPlayerGroup
 		msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_JOINED_THE_PARTY);
 		msg.addString(player.getName());
 		broadcastPacket(msg);
-		broadcastPacket(new PartySmallWindowAdd(player, this));
+		
+		getMembers().stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
+		
 		// send the position of all party members to the new party member
 		// player.sendPacket(new PartyMemberPosition(this));
 		// send the position of the new party member to all party members (except the new one - he knows his own position)
@@ -323,8 +329,8 @@ public class L2Party extends AbstractPlayerGroup
 			broadcastPacket(new ExPartyPetWindowAdd(player.getSummon()));
 		}
 		
-		// add player to party, adjust party level
-		getMembers().add(player);
+		
+		// adjust party level
 		if (player.getLevel() > _partyLvl)
 		{
 			_partyLvl = player.getLevel();
