@@ -54,6 +54,12 @@ public final class Wastelands extends AbstractNpcAI
 	private static final int SAKUM = 27453;
 	private static final int COMMANDO = 19126;
 	private static final int COMMANDO_CAPTAIN = 19127;
+	// Misc
+	private static final NpcStringId[] GUARD_SHOUT =
+	{
+		NpcStringId.ATTACK_2,
+		NpcStringId.FOLLOW_ME_3
+	};
 	// Locations
 	private static final Location GUARD_POSLOF_LOC = new Location(-29474, 187083, -3912);
 	private static final Location[] COMMANDO_SAKUM_LOC =
@@ -84,6 +90,7 @@ public final class Wastelands extends AbstractNpcAI
 			case "SOCIAL_SHOW":
 			{
 				npc.broadcastSocialAction(4);
+				npc.broadcastSay(ChatType.NPC_GENERAL, GUARD_SHOUT[getRandom(2)], 1000);
 				
 				L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 500).stream().filter(n -> n.getId() == GUARD).forEach(guard ->
 				{
@@ -136,10 +143,16 @@ public final class Wastelands extends AbstractNpcAI
 						.orElse(null);
 					//@formatter:on
 					
-					if ((monster != null) && !guard.isInCombat())
+					if (monster != null)
 					{
-						guard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
-						monster.reduceCurrentHp(1, guard, null);
+						L2World.getInstance().forEachVisibleObjectInRange(guard, L2Npc.class, 1000, chars ->
+						{
+							if (chars.getId() == attackId)
+							{
+								addAttackDesire(guard, chars);
+								return;
+							}
+						});
 						
 						if ((guard.getId() != COMMANDO) && (guard.getId() != COMMANDO_CAPTAIN))
 						{
@@ -158,8 +171,6 @@ public final class Wastelands extends AbstractNpcAI
 							
 							if (decoGuard != null)
 							{
-								decoGuard.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
-								monster.reduceCurrentHp(1, decoGuard, null);
 								decoGuard.setIsInvul(true);
 							}
 						}
