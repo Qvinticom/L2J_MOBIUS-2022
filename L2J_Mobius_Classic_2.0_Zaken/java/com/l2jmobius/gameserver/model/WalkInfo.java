@@ -57,7 +57,7 @@ public class WalkInfo
 	 */
 	public L2NpcWalkerNode getCurrentNode()
 	{
-		return getRoute().getNodeList().get(_currentNode);
+		return getRoute().getNodeList().get(Math.min(Math.max(0, _currentNode), getRoute().getNodeList().size() - 1));
 	}
 	
 	/**
