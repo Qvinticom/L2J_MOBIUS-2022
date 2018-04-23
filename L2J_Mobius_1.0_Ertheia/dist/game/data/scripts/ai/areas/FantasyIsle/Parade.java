@@ -145,7 +145,13 @@ public final class Parade extends AbstractNpcAI
 	
 	void clean()
 	{
-		spawns.forEach(L2Npc::deleteMe);
+		for (L2Npc spawn : spawns)
+		{
+			if (spawn != null)
+			{
+				spawn.deleteMe();
+			}
+		}
 		spawns.clear();
 	}
 	
@@ -239,9 +245,18 @@ public final class Parade extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			spawnTask.cancel(true);
-			deleteTask.cancel(true);
-			cleanTask.cancel(true);
+			if (spawnTask != null)
+			{
+				spawnTask.cancel(true);
+			}
+			if (deleteTask != null)
+			{
+				deleteTask.cancel(true);
+			}
+			if (cleanTask != null)
+			{
+				cleanTask.cancel(true);
+			}
 			clean();
 		}
 	}
