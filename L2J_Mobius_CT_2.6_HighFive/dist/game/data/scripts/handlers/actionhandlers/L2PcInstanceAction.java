@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IActionHandler;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -105,13 +104,8 @@ public class L2PcInstanceAction implements IActionHandler
 						if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
 						{
 							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, player);
+							activeChar.onActionRequest();
 						}
-						else
-						{
-							final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), player.getX(), player.getY(), player.getZ(), activeChar.getInstanceId());
-							activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
-						}
-						activeChar.onActionRequest();
 					}
 				}
 				else
@@ -121,11 +115,6 @@ public class L2PcInstanceAction implements IActionHandler
 					if (GeoEngine.getInstance().canSeeTarget(activeChar, player))
 					{
 						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
-					}
-					else
-					{
-						final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), player.getX(), player.getY(), player.getZ(), activeChar.getInstanceId());
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, destination);
 					}
 				}
 			}

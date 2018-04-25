@@ -3167,13 +3167,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public void moveToLocation(int x, int y, int z, int offset)
 	{
-		// Do not move while character is attacking or casting.
-		// Fixes player attack glitch while target is moving.
-		if (isAttackingNow() || isCastingNow())
-		{
-			return;
-		}
-		
 		// Get the Move Speed of the L2Charcater
 		final double speed = getMoveSpeed();
 		if ((speed <= 0) || isMovementDisabled())

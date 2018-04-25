@@ -72,12 +72,9 @@ public class L2SummonAction implements IActionHandler
 				{
 					activeChar.updateNotMoveUntil();
 				}
-				else
+				else if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
-					if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
-					{
-						activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
-					}
+					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, target);
 				}
 			}
 		}
