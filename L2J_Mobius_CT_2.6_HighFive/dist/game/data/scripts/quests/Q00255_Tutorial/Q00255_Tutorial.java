@@ -237,10 +237,6 @@ public class Q00255_Tutorial extends Quest
 						html = element[2];
 					}
 				}
-				if (!hasQuestItems(player, 5588))
-				{
-					giveItems(player, 5588, 1);
-				}
 				qs.playTutorialVoice(voice);
 				qs.set("Ex", "-3");
 				cancelQuestTimers("QT");
