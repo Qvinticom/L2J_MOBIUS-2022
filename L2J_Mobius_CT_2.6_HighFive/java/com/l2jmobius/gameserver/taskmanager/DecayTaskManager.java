@@ -18,9 +18,11 @@ package com.l2jmobius.gameserver.taskmanager;
 
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
@@ -33,6 +35,8 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
  */
 public final class DecayTaskManager
 {
+	protected static final Logger LOGGER = Logger.getLogger(DecayTaskManager.class.getName());
+	
 	protected final Map<L2Character, ScheduledFuture<?>> _decayTasks = new ConcurrentHashMap<>();
 	
 	/**
@@ -63,9 +67,16 @@ public final class DecayTaskManager
 			delay += Config.SPOILED_CORPSE_EXTEND_TIME;
 		}
 		
-		if (!_decayTasks.containsKey(character))
+		// Remove entries that became null.
+		_decayTasks.entrySet().removeIf(Objects::isNull);
+		
+		try
 		{
-			_decayTasks.put(character, ThreadPool.schedule(new DecayTask(character), delay * 1000));
+			_decayTasks.putIfAbsent(character, ThreadPool.schedule(new DecayTask(character), delay * 1000));
+		}
+		catch (Exception e)
+		{
+			LOGGER.warning("DecayTaskManager add " + character + " caused [" + e.getMessage() + "] exception.");
 		}
 	}
 	
