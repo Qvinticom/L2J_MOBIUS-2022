@@ -88,11 +88,13 @@ public class OlympiadStadium
 	
 	public final void spawnBuffers()
 	{
+		_buffers.forEach(L2Spawn::startRespawn);
 		_buffers.forEach(L2Spawn::doSpawn);
 	}
 	
 	public final void deleteBuffers()
 	{
+		_buffers.forEach(L2Spawn::stopRespawn);
 		_buffers.stream().map(L2Spawn::getLastSpawn).filter(Objects::nonNull).forEach(L2Npc::deleteMe);
 	}
 	
