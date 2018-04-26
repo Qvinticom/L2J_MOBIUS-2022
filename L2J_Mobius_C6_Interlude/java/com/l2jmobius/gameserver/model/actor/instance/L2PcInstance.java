@@ -10128,7 +10128,11 @@ public final class L2PcInstance extends L2Playable
 				// L2World.getInstance().storeObject(player);
 				
 				// Set the x,y,z position of the L2PcInstance and make it invisible
-				player.setXYZInvisible(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
+				final int x = rset.getInt("x");
+				final int y = rset.getInt("y");
+				final int z = rset.getInt("z");
+				player.setXYZInvisible(x, y, z);
+				player.setLastServerPosition(x, y, z);
 				
 				// Retrieve the name and ID of the other characters assigned to this account.
 				PreparedStatement stmt = con.prepareStatement("SELECT obj_Id, char_name FROM characters WHERE account_name=? AND obj_Id<>?");
@@ -15479,6 +15483,11 @@ public final class L2PcInstance extends L2Playable
 		final double dz = z - _lastClientPosition.getZ();
 		
 		return (int) Math.sqrt((dx * dx) + (dy * dy) + (dz * dz));
+	}
+	
+	public Location getLastServerPosition()
+	{
+		return _lastServerPosition;
 	}
 	
 	/**

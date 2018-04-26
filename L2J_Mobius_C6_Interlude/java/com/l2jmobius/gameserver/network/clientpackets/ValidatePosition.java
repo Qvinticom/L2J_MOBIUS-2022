@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.datatables.csv.DoorTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
@@ -162,6 +163,11 @@ public final class ValidatePosition extends L2GameClientPacket
 		activeChar.setClientY(_y);
 		activeChar.setClientZ(_z);
 		activeChar.setClientHeading(_heading); // No real need to validate heading.
-		activeChar.setLastServerPosition(realX, realY, realZ);
+		
+		// Mobius: Check for possible door logout and move over exploit. Also checked at MoveBackwardToLocation.
+		if (!DoorTable.getInstance().checkIfDoorsBetween(realX, realY, realZ, _x, _y, _z))
+		{
+			activeChar.setLastServerPosition(realX, realY, realZ);
+		}
 	}
 }

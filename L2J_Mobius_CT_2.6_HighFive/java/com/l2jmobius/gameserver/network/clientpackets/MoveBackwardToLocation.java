@@ -86,6 +86,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		if ((_targetX == _originX) && (_targetY == _originY) && (_targetZ == _originZ))
 		{
 			activeChar.sendPacket(new StopMove(activeChar));
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
@@ -93,6 +94,7 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		if (DoorData.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ, activeChar.getInstanceId(), false))
 		{
 			activeChar.stopMove(activeChar.getLastServerPosition());
+			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		

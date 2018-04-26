@@ -6655,7 +6655,11 @@ public final class L2PcInstance extends L2Playable
 					CursedWeaponsManager.getInstance().checkPlayer(player);
 					
 					// Set the x,y,z position of the L2PcInstance and make it invisible
-					player.setXYZInvisible(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
+					final int x = rset.getInt("x");
+					final int y = rset.getInt("y");
+					final int z = rset.getInt("z");
+					player.setXYZInvisible(x, y, z);
+					player.setLastServerPosition(x, y, z);
 					
 					// Set Teleport Bookmark Slot
 					player.setBookMarkSlot(rset.getInt("BookmarkSlot"));
