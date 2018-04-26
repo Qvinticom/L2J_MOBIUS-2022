@@ -80,7 +80,7 @@ public class LoginServerThread extends Thread
 	protected static final Logger ACCOUNTING_LOGGER = Logger.getLogger("accounting");
 	
 	/**
-	 * @see com.l2jmobius.loginserver.L2LoginServer#PROTOCOL_REV
+	 * @see com.l2jmobius.loginserver.LoginServer#PROTOCOL_REV
 	 */
 	private static final int REVISION = 0x0106;
 	private final String _hostname;

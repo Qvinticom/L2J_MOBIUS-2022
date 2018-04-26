@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.loginserver.network.loginserverpackets;
 
-import com.l2jmobius.loginserver.L2LoginServer;
+import com.l2jmobius.loginserver.LoginServer;
 import com.l2jmobius.loginserver.network.serverpackets.ServerBasePacket;
 
 /**
@@ -33,7 +33,7 @@ public class InitLS extends ServerBasePacket
 	public InitLS(byte[] publickey)
 	{
 		writeC(0x00);
-		writeD(L2LoginServer.PROTOCOL_REV);
+		writeD(LoginServer.PROTOCOL_REV);
 		writeD(publickey.length);
 		writeB(publickey);
 	}

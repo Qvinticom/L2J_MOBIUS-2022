@@ -30,7 +30,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerTable;
-import com.l2jmobius.loginserver.L2LoginServer;
+import com.l2jmobius.loginserver.LoginServer;
 import com.l2jmobius.loginserver.LoginController;
 
 public class LoginStatusThread extends Thread
@@ -243,14 +243,14 @@ public class LoginStatusThread extends Thread
 				}
 				else if (_usrCommand.startsWith("shutdown"))
 				{
-					L2LoginServer.getInstance().shutdown(false);
+					LoginServer.getInstance().shutdown(false);
 					_print.println("Bye Bye!");
 					_print.flush();
 					_cSocket.close();
 				}
 				else if (_usrCommand.startsWith("restart"))
 				{
-					L2LoginServer.getInstance().shutdown(true);
+					LoginServer.getInstance().shutdown(true);
 					_print.println("Bye Bye!");
 					_print.flush();
 					_cSocket.close();

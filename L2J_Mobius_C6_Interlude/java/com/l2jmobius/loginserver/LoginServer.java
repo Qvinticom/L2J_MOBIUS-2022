@@ -35,13 +35,13 @@ import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.status.Status;
 
-public class L2LoginServer
+public class LoginServer
 {
-	private final Logger LOGGER = Logger.getLogger(L2LoginServer.class.getName());
+	private final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0102;
 	
-	private static L2LoginServer _instance;
+	private static LoginServer _instance;
 	
 	private GameServerListener _gameServerListener;
 	private SelectorThread<L2LoginClient> _selectorThread;
@@ -49,15 +49,15 @@ public class L2LoginServer
 	
 	public static void main(String[] args)
 	{
-		_instance = new L2LoginServer();
+		_instance = new LoginServer();
 	}
 	
-	public static L2LoginServer getInstance()
+	public static LoginServer getInstance()
 	{
 		return _instance;
 	}
 	
-	public L2LoginServer()
+	public LoginServer()
 	{
 		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;

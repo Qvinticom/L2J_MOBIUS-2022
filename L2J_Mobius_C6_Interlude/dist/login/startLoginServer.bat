@@ -5,7 +5,7 @@ title L2J Mobius - Login Server Console
 echo Starting Login Server.
 echo.
 
-java -version:1.8 -server -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -Xms128m -Xmx256m -cp ./lib/*;LoginServer.jar com.l2jmobius.loginserver.L2LoginServer
+java -version:1.8 -server -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -Xms128m -Xmx256m -cp ./lib/*;LoginServer.jar com.l2jmobius.loginserver.LoginServer
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error

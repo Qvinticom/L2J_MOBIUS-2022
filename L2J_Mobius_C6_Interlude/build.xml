@@ -80,7 +80,7 @@
 				<attribute name="Built-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
-				<attribute name="Main-Class" value="com.l2jmobius.loginserver.L2LoginServer" />
+				<attribute name="Main-Class" value="com.l2jmobius.loginserver.LoginServer" />
 			</manifest>
 		</jar>
 		<jar destfile="${build.dist.game}/GameServer.jar" level="9">

@@ -36,26 +36,26 @@ import com.l2jmobius.loginserver.network.ClientNetworkManager;
 /**
  * @author KenM
  */
-public final class L2LoginServer
+public final class LoginServer
 {
-	private final Logger LOGGER = Logger.getLogger(L2LoginServer.class.getName());
+	private final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
-	private static L2LoginServer _instance;
+	private static LoginServer _instance;
 	private GameServerListener _gameServerListener;
 	private Thread _restartLoginServer;
 	
 	public static void main(String[] args) throws Exception
 	{
-		new L2LoginServer();
+		new LoginServer();
 	}
 	
-	public static L2LoginServer getInstance()
+	public static LoginServer getInstance()
 	{
 		return _instance;
 	}
 	
-	private L2LoginServer() throws Exception
+	private LoginServer() throws Exception
 	{
 		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
