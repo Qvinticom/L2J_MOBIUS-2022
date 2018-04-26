@@ -46,7 +46,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("GUARD_AGGRO") && (npc != null) && !npc.isDead() && !npc.isInCombat())
+		if ((npc != null) && !npc.isDead() && !npc.isInCombat())
 		{
 			final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 1000);
 			if (!nearbyMonsters.isEmpty())
@@ -57,6 +57,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 					npc.reduceCurrentHp(1, monster, null); // TODO: Find better way for attack
 				}
 			}
+			startQuestTimer("GUARD_AGGRO" + npc.getObjectId(), 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -65,7 +66,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setIsInvul(true);
-		startQuestTimer("GUARD_AGGRO", 5000, npc, null, true);
+		startQuestTimer("GUARD_AGGRO" + npc.getObjectId(), 5000, npc, null);
 		return super.onSpawn(npc);
 	}
 	

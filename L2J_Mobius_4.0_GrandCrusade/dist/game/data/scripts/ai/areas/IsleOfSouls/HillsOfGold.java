@@ -29,7 +29,7 @@ import ai.AbstractNpcAI;
  */
 public final class HillsOfGold extends AbstractNpcAI
 {
-	// Npcs
+	// NPCs
 	private static final int GOLEM_OF_REPAIRS = 19309;
 	private static final int EXCAVATOR_GOLEM = 19312;
 	private static final int DRILL_GOLEM = 19310;
@@ -59,7 +59,7 @@ public final class HillsOfGold extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if (event.equals("SPICULA_AGGRO") && (npc != null) && !npc.isDead())
+		if ((npc != null) && !npc.isDead())
 		{
 			L2World.getInstance().forEachVisibleObject(npc, L2MonsterInstance.class, npc.getAggroRange(), nearby ->
 			{
@@ -73,7 +73,7 @@ public final class HillsOfGold extends AbstractNpcAI
 					return;
 				}
 			});
-			startQuestTimer("SPICULA_AGGRO", 10000, npc, null);
+			startQuestTimer("SPICULA_AGGRO" + npc.getObjectId(), 10000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -98,7 +98,7 @@ public final class HillsOfGold extends AbstractNpcAI
 	{
 		if ((npc.getId() == SPICULA_1) || (npc.getId() == SPICULA_2))
 		{
-			startQuestTimer("SPICULA_AGGRO", 5000, npc, null);
+			startQuestTimer("SPICULA_AGGRO" + npc.getObjectId(), 5000, npc, null);
 		}
 		else
 		{

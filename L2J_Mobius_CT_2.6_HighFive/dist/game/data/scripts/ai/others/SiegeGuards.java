@@ -122,7 +122,7 @@ public class SiegeGuards extends AbstractNpcAI
 					}
 				}
 			}
-			startQuestTimer("AGGRO_CHECK" + npc.getId(), 3000, npc, null);
+			startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), 3000, npc, null);
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -149,7 +149,7 @@ public class SiegeGuards extends AbstractNpcAI
 		final Castle castle = npc.getCastle();
 		final Fort fortress = npc.getFort();
 		npc.setScriptValue(fortress != null ? fortress.getResidenceId() : (castle != null ? castle.getResidenceId() : 0));
-		startQuestTimer("AGGRO_CHECK" + npc.getId(), getRandom(1000, 10000), npc, null);
+		startQuestTimer("AGGRO_CHECK" + npc.getObjectId(), getRandom(1000, 10000), npc, null);
 		return super.onSpawn(npc);
 	}
 	
