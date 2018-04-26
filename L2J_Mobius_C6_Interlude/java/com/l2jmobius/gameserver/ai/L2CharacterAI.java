@@ -151,7 +151,7 @@ public class L2CharacterAI extends AbstractAI
 			// This is only for mobs - town npcs are handled in their constructor
 			if (_actor instanceof L2Attackable)
 			{
-				((L2NpcInstance) _actor).startRandomAnimationTimer();
+				((L2NpcInstance) _actor).startRandomAnimationTask();
 			}
 			
 			// Launch the Think Event
@@ -1219,7 +1219,7 @@ public class L2CharacterAI extends AbstractAI
 			// This is only for mobs - town npcs are handled in their constructor
 			if (_actor instanceof L2Attackable)
 			{
-				((L2NpcInstance) _actor).startRandomAnimationTimer();
+				((L2NpcInstance) _actor).startRandomAnimationTask();
 			}
 			
 			// Launch the Think Event

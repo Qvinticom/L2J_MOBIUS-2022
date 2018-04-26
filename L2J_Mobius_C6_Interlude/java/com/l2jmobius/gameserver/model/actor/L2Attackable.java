@@ -485,8 +485,8 @@ public class L2Attackable extends L2NpcInstance
 		}
 		/*
 		 * // CommandChannel if(_commandChannelTimer == null && isRaid() && attacker != null) { if(attacker.isInParty() && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) { _firstCommandChannelAttacked =
-		 * attacker.getParty().getCommandChannel(); _commandChannelTimer = new CommandChannelTimer(this, attacker.getParty().getCommandChannel()); ThreadPoolManager.scheduleGeneral(_commandChannelTimer, 300000); // 5 min _firstCommandChannelAttacked.broadcastToChannelMembers(new
-		 * CreatureSay(0, Say2.PARTYROOM_ALL, "", "You have looting rights!")); } }
+		 * attacker.getParty().getCommandChannel(); _commandChannelTimer = new CommandChannelTimer(this, attacker.getParty().getCommandChannel()); ThreadPoolManager.scheduleGeneral(_commandChannelTimer, 300000); // 5 min _firstCommandChannelAttacked.broadcastToChannelMembers(new CreatureSay(0,
+		 * Say2.PARTYROOM_ALL, "", "You have looting rights!")); } }
 		 */
 		if (isEventMob)
 		{
@@ -3340,12 +3340,6 @@ public class L2Attackable extends L2NpcInstance
 	public boolean hasRandomAnimation()
 	{
 		return (Config.MAX_MONSTER_ANIMATION > 0) && !(this instanceof L2GrandBossInstance);
-	}
-	
-	@Override
-	public boolean isMob()
-	{
-		return true; // This means we use MAX_MONSTER_ANIMATION instead of MAX_NPC_ANIMATION
 	}
 	
 	protected void setCommandChannelTimer(CommandChannelTimer commandChannelTimer)

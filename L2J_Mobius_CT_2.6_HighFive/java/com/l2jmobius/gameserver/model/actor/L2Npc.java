@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor;
 
-import static com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -65,6 +63,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2TrainerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2WarehouseInstance;
 import com.l2jmobius.gameserver.model.actor.stat.NpcStat;
 import com.l2jmobius.gameserver.model.actor.status.NpcStatus;
+import com.l2jmobius.gameserver.model.actor.tasks.npc.RandomAnimationTask;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -138,7 +137,7 @@ public class L2Npc extends L2Character
 	private boolean _isTalkable = getTemplate().isTalkable();
 	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
-	protected RandomAnimationTask _rAniTask = null;
+	protected RandomAnimationTask _rAniTask;
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
 	private int _currentEnchant; // normally this shouldn't change from the template, but there exist exceptions
@@ -241,47 +240,34 @@ public class L2Npc extends L2Character
 		return getTemplate().getAISkills(AISkillScope.SHORT_RANGE);
 	}
 	
-	/** Task launching the function onRandomAnimation() */
-	protected static class RandomAnimationTask implements Runnable
+	public void startRandomAnimationTask()
 	{
-		private final L2Npc _npc;
-		
-		protected RandomAnimationTask(L2Npc npc)
+		if (!hasRandomAnimation())
 		{
-			_npc = npc;
+			return;
 		}
 		
-		@Override
-		public void run()
+		if (_rAniTask == null)
 		{
-			try
+			synchronized (this)
 			{
-				if (_npc.isMob())
+				if (_rAniTask == null)
 				{
-					// Cancel further animation timers until intention is changed to ACTIVE again.
-					if (_npc.getAI().getIntention() != AI_INTENTION_ACTIVE)
-					{
-						return;
-					}
+					_rAniTask = new RandomAnimationTask(this);
 				}
-				else
-				{
-					if (!_npc.isInActiveRegion())
-					{
-						return;
-					}
-				}
-				
-				if (!(_npc.isDead() || _npc.isStunned() || _npc.isSleeping() || _npc.isParalyzed()))
-				{
-					_npc.onRandomAnimation(Rnd.get(2, 3));
-				}
-				
-				_npc.startRandomAnimationTask();
 			}
-			catch (Exception e)
-			{
-			}
+		}
+		
+		_rAniTask.startRandomAnimationTimer();
+	}
+	
+	public void stopRandomAnimationTask()
+	{
+		final RandomAnimationTask rAniTask = _rAniTask;
+		if (rAniTask != null)
+		{
+			rAniTask.stopRandomAnimationTimer();
+			_rAniTask = null;
 		}
 	}
 	
@@ -298,27 +284,6 @@ public class L2Npc extends L2Character
 			_lastSocialBroadcast = now;
 			broadcastPacket(new SocialAction(getObjectId(), animationId));
 		}
-	}
-	
-	/**
-	 * Create a RandomAnimation Task that will be launched after the calculated delay.
-	 */
-	public void startRandomAnimationTask()
-	{
-		if (!hasRandomAnimation())
-		{
-			return;
-		}
-		
-		final int minWait = isMob() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION;
-		final int maxWait = isMob() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION;
-		
-		// Calculate the delay before the next animation
-		final int interval = Rnd.get(minWait, maxWait) * 1000;
-		
-		// Create a RandomAnimation Task that will be launched after the calculated delay
-		_rAniTask = new RandomAnimationTask(this);
-		ThreadPool.schedule(_rAniTask, interval);
 	}
 	
 	/**
@@ -1458,11 +1423,6 @@ public class L2Npc extends L2Character
 			DecayTaskManager.getInstance().cancel(this);
 			onDecay();
 		}
-	}
-	
-	public boolean isMob() // rather delete this check
-	{
-		return false; // This means we use MAX_NPC_ANIMATION instead of MAX_MONSTER_ANIMATION
 	}
 	
 	// Two functions to change the appearance of the equipped weapons on the NPC

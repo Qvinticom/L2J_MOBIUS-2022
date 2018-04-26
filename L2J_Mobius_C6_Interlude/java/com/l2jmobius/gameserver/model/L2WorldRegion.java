@@ -265,7 +265,7 @@ public final class L2WorldRegion
 				{
 					// Create a RandomAnimation Task that will be launched after the calculated delay if the server allow it
 					// L2Monsterinstance/L2Attackable socials are handled by AI (TODO: check the instances)
-					((L2NpcInstance) o).startRandomAnimationTimer();
+					((L2NpcInstance) o).startRandomAnimationTask();
 				}
 			}
 			if (Config.DEBUG)
