@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.status;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
@@ -195,7 +194,7 @@ public class CharStatus
 			final int period = Formulas.getRegeneratePeriod(getActiveChar());
 			
 			// Create the HP/MP/CP Regeneration task
-			_regTask = ThreadPool.scheduleAtFixedRate(new RegenTask(), period, period);
+			_regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
 		}
 	}
 	
@@ -367,43 +366,16 @@ public class CharStatus
 	
 	protected void doRegeneration()
 	{
-		// Modify the current HP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentHp() < getActiveChar().getMaxRecoverableHp())
+		// Modify the current HP/MP of the L2Character and broadcast Server->Client packet StatusUpdate
+		if (!getActiveChar().isDead() && ((getCurrentHp() < getActiveChar().getMaxRecoverableHp()) || (getCurrentMp() < getActiveChar().getMaxRecoverableMp())))
 		{
-			setCurrentHp(getCurrentHp() + Formulas.calcHpRegen(getActiveChar()), false);
+			final double newHp = getCurrentHp() + Formulas.calcHpRegen(getActiveChar());
+			final double newMp = getCurrentMp() + Formulas.calcMpRegen(getActiveChar());
+			setCurrentHpMp(newHp, newMp);
 		}
-		
-		// Modify the current MP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentMp() < getActiveChar().getMaxRecoverableMp())
-		{
-			setCurrentMp(getCurrentMp() + Formulas.calcMpRegen(getActiveChar()), false);
-		}
-		
-		if ((getCurrentHp() >= getActiveChar().getMaxRecoverableHp()) && (getCurrentMp() >= getActiveChar().getMaxMp()))
+		else
 		{
 			stopHpMpRegeneration();
-		}
-		
-		if (getActiveChar().isInActiveRegion())
-		{
-			getActiveChar().broadcastStatusUpdate();
-		}
-	}
-	
-	/** Task of HP/MP regeneration */
-	class RegenTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			try
-			{
-				doRegeneration();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, "", e);
-			}
 		}
 	}
 	

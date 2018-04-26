@@ -20,13 +20,11 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureHpChange;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -210,7 +208,7 @@ public class CharStatus
 			final int period = Formulas.getRegeneratePeriod(getActiveChar());
 			
 			// Create the HP/MP/CP Regeneration task
-			_regTask = ThreadPool.scheduleAtFixedRate(new RegenTask(), period, period);
+			_regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
 		}
 	}
 	
@@ -408,49 +406,16 @@ public class CharStatus
 	
 	protected void doRegeneration()
 	{
-		final CharStat charstat = getActiveChar().getStat();
-		
-		// Modify the current HP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentHp() < charstat.getMaxRecoverableHp())
+		// Modify the current HP/MP of the L2Character and broadcast Server->Client packet StatusUpdate
+		if (!getActiveChar().isDead() && ((getCurrentHp() < getActiveChar().getMaxRecoverableHp()) || (getCurrentMp() < getActiveChar().getMaxRecoverableMp())))
 		{
-			setCurrentHp(getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE), false);
-		}
-		
-		// Modify the current MP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentMp() < charstat.getMaxRecoverableMp())
-		{
-			setCurrentMp(getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE), false);
-		}
-		
-		if (!getActiveChar().isInActiveRegion())
-		{
-			// no broadcast necessary for characters that are in inactive regions.
-			// stop regeneration for characters who are filled up and in an inactive region.
-			if ((getCurrentHp() == charstat.getMaxRecoverableHp()) && (getCurrentMp() == charstat.getMaxMp()))
-			{
-				stopHpMpRegeneration();
-			}
+			final double newHp = getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE);
+			final double newMp = getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE);
+			setCurrentHpMp(newHp, newMp);
 		}
 		else
 		{
-			getActiveChar().broadcastStatusUpdate(); // send the StatusUpdate packet
-		}
-	}
-	
-	/** Task of HP/MP regeneration */
-	class RegenTask implements Runnable
-	{
-		@Override
-		public void run()
-		{
-			try
-			{
-				doRegeneration();
-			}
-			catch (Exception e)
-			{
-				LOGGER.log(Level.SEVERE, "", e);
-			}
+			stopHpMpRegeneration();
 		}
 	}
 	
