@@ -64,7 +64,7 @@ import com.l2jmobius.gameserver.util.Util;
 /**
  * This class manages AI of L2Attackable.
  */
-public class L2AttackableAI extends L2CharacterAI implements Runnable
+public class L2AttackableAI extends L2CharacterAI
 {
 	private static final Logger LOGGER = Logger.getLogger(L2AttackableAI.class.getName());
 	
@@ -96,13 +96,6 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		super(attackable);
 		_attackTimeout = Integer.MAX_VALUE;
 		_globalAggro = -10; // 10 seconds timeout of ATTACK after respawn
-	}
-	
-	@Override
-	public void run()
-	{
-		// Launch actions corresponding to the Event Think
-		onEvtThink();
 	}
 	
 	/**
@@ -206,7 +199,7 @@ public class L2AttackableAI extends L2CharacterAI implements Runnable
 		// If not idle - create an AI task (schedule onEvtThink repeatedly)
 		if (_aiTask == null)
 		{
-			_aiTask = ThreadPool.scheduleAtFixedRate(this, 1000, 1000);
+			_aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
 		}
 	}
 	
