@@ -4489,6 +4489,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getStatus().reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
 		}
+		else if (isPlayer())
+		{
+			getActingPlayer().getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false, directlyToHp);
+		}
 		else
 		{
 			getStatus().reduceHp(value, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
