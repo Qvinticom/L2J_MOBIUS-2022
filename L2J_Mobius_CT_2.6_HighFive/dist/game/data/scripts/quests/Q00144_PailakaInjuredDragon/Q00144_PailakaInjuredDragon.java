@@ -20,12 +20,14 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -35,6 +37,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -42,35 +45,16 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * Pailaka Injured Dragon (based on same quest by Synerge?)
+ * Pailaka Injured Dragon
  * @author Pandragon
  */
 public class Q00144_PailakaInjuredDragon extends Quest
 {
-	private static final int MIN_LEVEL = 73;
-	private static final int MAX_LEVEL = 77;
-	private static final int MAX_SUMMON_LEVEL = 80;
-	private static final int EXIT_TIME = 5;
-	private static final int INSTANCE_ID = 45;
-	static final Location TELEPORT = new Location(125757, -40928, -3736);
-	// @formatter:off
-	// NO EXIT ZONES
-	private static final Map<Integer, int[]> NOEXIT_ZONES = new HashMap<>();
-	static
-	{
-		NOEXIT_ZONES.put(200001, new int[]{123167, -45743, -3023});
-		NOEXIT_ZONES.put(200002, new int[]{117783, -46398, -2560});
-		NOEXIT_ZONES.put(200003, new int[]{116791, -51556, -2584});
-		NOEXIT_ZONES.put(200004, new int[]{117993, -52505, -2480});
-		NOEXIT_ZONES.put(200005, new int[]{113226, -44080, -2776});
-		NOEXIT_ZONES.put(200006, new int[]{110326, -45016, -2444});
-		NOEXIT_ZONES.put(200007, new int[]{118341, -55951, -2280});
-		NOEXIT_ZONES.put(200008, new int[]{110127, -41562, -2332});
-	}
-	// Npcs
+	// NPCs
 	private static final int KETRA_ORC_SHAMAN = 32499;
 	private static final int KETRA_ORC_SUPPORTER = 32502;
 	private static final int KETRA_ORC_SUPPORTER2 = 32512;
@@ -114,15 +98,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// Rewards
 	private static final int PSHIRT = 13296;
 	private static final int SCROLL_OF_ESCAPE = 736;
-	private static int buff_counter = 5;
 	// Arrays
-	private static final int[] NPCS =
-	{
-		KETRA_ORC_SHAMAN,
-		KETRA_ORC_SUPPORTER,
-		KETRA_ORC_INTELIGENCE_OFFICER,
-		KETRA_ORC_SUPPORTER2
-	};
 	private static final int[] WALL_MONSTERS =
 	{
 		// 1st Row Mobs
@@ -148,6 +124,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		VARKA_SILENOS_MEDIUM,
 		VARKA_SILENOS_PRIEST
 	};
+	private static final List<ItemChanceHolder> DROPLIST = new ArrayList<>();
+	{
+		DROPLIST.add(new ItemChanceHolder(HEAL_POTION, 80));
+		DROPLIST.add(new ItemChanceHolder(SHIELD_POTION, 30));
+	}
 	private static final int[] OTHER_MONSTERS =
 	{
 		ANTYLOPE_1,
@@ -165,6 +146,18 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		SHIELD_POTION,
 		HEAL_POTION
 	};
+	// @formatter:off
+	private static final Map<Integer, int[]> NOEXIT_ZONES = new HashMap<>();
+	{
+		NOEXIT_ZONES.put(200001, new int[]{123167, -45743, -3023});
+		NOEXIT_ZONES.put(200002, new int[]{117783, -46398, -2560});
+		NOEXIT_ZONES.put(200003, new int[]{116791, -51556, -2584});
+		NOEXIT_ZONES.put(200004, new int[]{117993, -52505, -2480});
+		NOEXIT_ZONES.put(200005, new int[]{113226, -44080, -2776});
+		NOEXIT_ZONES.put(200006, new int[]{110326, -45016, -2444});
+		NOEXIT_ZONES.put(200007, new int[]{118341, -55951, -2280});
+		NOEXIT_ZONES.put(200008, new int[]{110127, -41562, -2332});
+	}
 	private static final int[][] BUFFS =
 	{
 		{4357,2}, // Haste Lv2
@@ -180,56 +173,45 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		{4354,4}, // Vampiric Rage Lv4
 		{4347,6}  // Blessed Body Lv6
 	};
-	private static final ArrayList<PailakaDrop> DROPLIST = new ArrayList<>();
-	static
-	{
-		DROPLIST.add(new PailakaDrop(HEAL_POTION, 80));
-		DROPLIST.add(new PailakaDrop(SHIELD_POTION, 30));
-	}
 	private static final int[][] HP_HERBS_DROPLIST =
 	{
 		// itemId, count, chance
-		{ 8601, 1, 40 }, { 8600, 1, 70 }
+		{ 8601, 1, 40 },
+		{ 8600, 1, 70 }
 	};
 	private static final int[][] MP_HERBS_DROPLIST =
 	{
 		// itemId, count, chance
-		{ 8604, 1, 40 }, { 8603, 1, 70 }
+		{ 8604, 1, 40 },
+		{ 8603, 1, 70 }
 	};
 	// @formatter:on
+	
+	static final Location TELEPORT = new Location(125757, -40928, -3736);
+	private static final int MIN_LEVEL = 73;
+	private static final int MAX_LEVEL = 77;
+	private static final int MAX_SUMMON_LEVEL = 80;
+	private static final int EXIT_TIME = 5;
+	private static final int INSTANCE_ID = 45;
+	private int buff_counter = 5;
 	
 	public Q00144_PailakaInjuredDragon()
 	{
 		super(144);
-		addStartNpc(KETRA_ORC_SHAMAN);
+		addStartNpc(KETRA_ORC_SHAMAN, KETRA_ORC_INTELIGENCE_OFFICER);
+		addFirstTalkId(KETRA_ORC_SUPPORTER, KETRA_ORC_INTELIGENCE_OFFICER, KETRA_ORC_SUPPORTER2);
+		addTalkId(KETRA_ORC_SHAMAN, KETRA_ORC_SUPPORTER, KETRA_ORC_INTELIGENCE_OFFICER, KETRA_ORC_SUPPORTER2);
+		addSpawnId(WALL_MONSTERS);
+		addKillId(WALL_MONSTERS);
+		addKillId(OTHER_MONSTERS);
 		addKillId(LATANA);
-		
-		_questItemIds = ITEMS;
-		
-		for (int npcId : NPCS)
-		{
-			addTalkId(npcId);
-		}
-		
-		for (int mobId : OTHER_MONSTERS)
-		{
-			addKillId(mobId);
-		}
-		
-		for (int mobId : WALL_MONSTERS)
-		{
-			addSpawnId(mobId);
-			addKillId(mobId);
-		}
-		
-		for (int zoneid : NOEXIT_ZONES.keySet())
-		{
-			addEnterZoneId(zoneid);
-		}
+		addSeeCreatureId(LATANA);
+		addEnterZoneId(NOEXIT_ZONES.keySet());
+		registerQuestItems(ITEMS);
 	}
 	
 	@Override
-	public final String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
@@ -237,7 +219,6 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			return null;
 		}
 		
-		final int cond = qs.getCond();
 		if (event.equals("enter"))
 		{
 			enterInstance(player);
@@ -250,7 +231,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 		else if (event.equals("32499-02.htm"))
 		{
-			if (cond == 0)
+			if (qs.getCond() == 0)
 			{
 				qs.startQuest();
 			}
@@ -287,6 +268,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 					takeItems(player, SPEAR, -1);
 					takeItems(player, STAGE1, -1);
 					giveItems(player, ENCHSPEAR, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket()); // TODO: Set proper cond.
 					return "32509-02.html";
 				}
 			}
@@ -305,10 +287,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 					takeItems(player, ENCHSPEAR, -1);
 					takeItems(player, STAGE2, -1);
 					giveItems(player, LASTSPEAR, 1);
-					
-					// Spawns Latana.
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_MIDDLE.getPacket()); // TODO: Set proper cond.
 					addSpawn(LATANA, 105732, -41787, -1782, 35742, false, 0, false, npc.getInstanceId());
-					
 					return "32509-03.html";
 				}
 			}
@@ -348,6 +328,98 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			
 			qs.exitQuest(false, true);
 		}
+		else if (event.equals("LATANA_INTRO_CAMERA_START"))
+		{
+			npc.setScriptValue(1);
+			npc.abortAttack();
+			npc.abortCast();
+			npc.setIsInvul(true);
+			npc.setIsImmobilized(true);
+			npc.disableAllSkills();
+			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			player.abortAttack();
+			player.abortCast();
+			player.stopMove(null);
+			player.setTarget(null);
+			if (player.hasSummon())
+			{
+				player.getSummon().abortAttack();
+				player.getSummon().abortCast();
+				player.getSummon().stopMove(null);
+				player.getSummon().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+			}
+			player.sendPacket(new SpecialCamera(npc, 600, 200, 5, 0, 15000, 10000, (-10), 8, 1, 1, 1));
+			startQuestTimer("LATANA_INTRO_CAMERA_2", 2000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_2"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 400, 200, 5, 4000, 15000, 10000, (-10), 8, 1, 1, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_3", 4000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_3"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 300, 195, 4, 1500, 15000, 10000, (-5), 10, 1, 1, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_4", 1700, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_4"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 130, 2, 5, 0, 15000, 10000, 0, 0, 1, 0, 1));
+			startQuestTimer("LATANA_INTRO_CAMERA_5", 2000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_5"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 220, 0, 4, 800, 15000, 10000, 5, 10, 1, 0, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_6", 2000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_6"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 250, 185, 5, 4000, 15000, 10000, (-5), 10, 1, 1, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_7", 4000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_7"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 200, 0, 5, 2000, 15000, 10000, 0, 25, 1, 0, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_8", 4530, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_8"))
+		{
+			npc.doCast(SkillData.getInstance().getSkill(5759, 1));
+			player.sendPacket(new SpecialCamera(npc, 300, (-3), 5, 3500, 15000, 6000, 0, 6, 1, 0, 0));
+			startQuestTimer("LATANA_INTRO_CAMERA_9", 10000, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_INTRO_CAMERA_9"))
+		{
+			npc.setIsInvul(false);
+			npc.setIsImmobilized(false);
+			npc.enableAllSkills();
+			npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, player);
+			return null;
+		}
+		else if (event.equals("LATANA_DEATH_CAMERA_START"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 450, 200, 3, 0, 15000, 10000, (-15), 20, 1, 1, 1));
+			startQuestTimer("LATANA_DEATH_CAMERA_1", 100, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_DEATH_CAMERA_1"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 350, 200, 5, 5600, 15000, 10000, (-15), 10, 1, 1, 0));
+			startQuestTimer("LATANA_DEATH_CAMERA_2", 5600, npc, player);
+			return null;
+		}
+		else if (event.equals("LATANA_DEATH_CAMERA_2"))
+		{
+			player.sendPacket(new SpecialCamera(npc, 360, 200, 5, 1000, 15000, 2000, (-15), 10, 1, 1, 0));
+			return null;
+		}
 		else if (event.startsWith("buff"))
 		{
 			if (buff_counter > 0)
@@ -358,37 +430,20 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			}
 			return "32509-05.html";
 		}
-		else if (event.equals("latana_animation"))
-		{
-			npc.abortAttack();
-			npc.abortCast();
-			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.abortAttack();
-			player.abortCast();
-			player.stopMove(null);
-			if (player.hasSummon())
-			{
-				player.getSummon().abortAttack();
-				player.getSummon().abortCast();
-				player.getSummon().stopMove(null);
-			}
-			return null;
-		}
-		else if (event.equals("latana_animation2"))
-		{
-			npc.doCast(SkillData.getInstance().getSkill(5759, 1));
-			npc.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, player);
-			return null;
-		}
 		return event;
 	}
 	
 	@Override
-	public final String onTalk(L2Npc npc, L2PcInstance player)
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		return npc.getId() + ".html";
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, true);
 		
-		final int cond = qs.getCond();
 		switch (npc.getId())
 		{
 			case KETRA_ORC_SHAMAN:
@@ -417,11 +472,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 						{
 							return "32499-over.html";
 						}
-						if (cond == 1)
+						if (qs.isCond(1))
 						{
 							return "32499-06.html";
 						}
-						else if (cond >= 2)
+						else if (qs.getCond() >= 2)
 						{
 							return "32499-09.html";
 						}
@@ -439,15 +494,11 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			}
 			case KETRA_ORC_SUPPORTER:
 			{
-				if (cond > 2)
+				if (qs.getCond() > 2)
 				{
 					return "32502-04.html";
 				}
 				return "32502-00.html";
-			}
-			case KETRA_ORC_INTELIGENCE_OFFICER:
-			{
-				return "32509-00.html";
 			}
 			case KETRA_ORC_SUPPORTER2:
 			{
@@ -455,19 +506,18 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				{
 					return "32512-03.html";
 				}
-				else if (cond == 4)
+				else if (qs.isCond(4))
 				{
 					return "32512-01.html";
 				}
 				break;
 			}
 		}
-		
 		return getNoQuestMsg(player);
 	}
 	
 	@Override
-	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState qs = player.getQuestState(getName());
 		if ((qs == null) || (qs.getState() != State.STARTED))
@@ -486,6 +536,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_MEDIUM);
@@ -499,6 +550,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_PRIEST);
@@ -512,6 +564,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_SHAMAN);
@@ -526,6 +579,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, SPEAR) && !hasQuestItems(player, STAGE1) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE1, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_SEER);
@@ -540,6 +594,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_MAGNUS);
@@ -553,6 +608,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, DISCIPLE_OF_PROPHET);
@@ -566,6 +622,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_HEAD_MAGUS);
@@ -579,6 +636,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				if (qs.isCond(3) && hasQuestItems(player, ENCHSPEAR) && !hasQuestItems(player, STAGE2) && (Rnd.get(100) < 25))
 				{
 					giveItems(player, STAGE2, 1);
+					player.sendPacket(QuestSound.ITEMSOUND_QUEST_ITEMGET.getPacket());
 				}
 				// Spawns Mage Type silenos behind the one that was killed.
 				spawnMageBehind(npc, player, VARKA_SILENOS_GREAT_SEER);
@@ -589,7 +647,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			case LATANA:
 			{
 				qs.setCond(4, true);
-				// Spawns Ketra Orc Supporter.
+				startQuestTimer("LATANA_DEATH_CAMERA_START", 1000, npc, player);
 				addSpawn(KETRA_ORC_SUPPORTER2, npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0, false, npc.getInstanceId());
 				break;
 			}
@@ -610,6 +668,182 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			}
 		}
 		return super.onKill(npc, player, isSummon);
+	}
+	
+	// Spawns Mage Type silenos behind the one that was killed. Aggro against the player that kill the mob.
+	private void spawnMageBehind(L2Npc npc, L2PcInstance player, int mageId)
+	{
+		final double rads = Math.toRadians(Util.convertHeadingToDegree(npc.getSpawn().getHeading()) + 180);
+		final int mageX = (int) (npc.getX() + (150 * Math.cos(rads)));
+		final int mageY = (int) (npc.getY() + (150 * Math.sin(rads)));
+		final L2Npc mageBack = addSpawn(mageId, mageX, mageY, npc.getZ(), npc.getSpawn().getHeading(), false, 0, true, npc.getInstanceId());
+		mageBack.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 1000);
+	}
+	
+	// This function will check if there is other mob alive in this wall of mobs. If all mobs in the first row are dead then despawn the second row mobs, the mages.
+	private void checkIfLastInWall(L2Npc npc)
+	{
+		final Collection<L2Npc> knowns = L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 700);
+		for (L2Npc npcs : knowns)
+		{
+			if (npcs.isDead())
+			{
+				continue;
+			}
+			
+			switch (npc.getId())
+			{
+				case VARKA_SILENOS_FOOTMAN:
+				case VARKA_SILENOS_RECRUIT:
+				case VARKA_SILENOS_WARRIOR:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_FOOTMAN:
+						case VARKA_SILENOS_RECRUIT:
+						case VARKA_SILENOS_WARRIOR:
+						{
+							return;
+						}
+					}
+					break;
+				}
+				case VARKA_ELITE_GUARD:
+				case VARKAS_COMMANDER:
+				case VARKA_SILENOS_OFFICER:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_ELITE_GUARD:
+						case VARKAS_COMMANDER:
+						case VARKA_SILENOS_OFFICER:
+						{
+							return;
+						}
+					}
+					break;
+				}
+				case VARKA_SILENOS_GREAT_MAGUS:
+				case VARKA_SILENOS_GENERAL:
+				case VARKAS_PROPHET:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_GREAT_MAGUS:
+						case VARKA_SILENOS_GENERAL:
+						case VARKAS_PROPHET:
+						{
+							return;
+						}
+					}
+					break;
+				}
+				case VARKA_SILENOS_HEAD_GUARD:
+				case PROPHET_GUARD:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_HEAD_GUARD:
+						case PROPHET_GUARD:
+						{
+							return;
+						}
+					}
+					break;
+				}
+			}
+		}
+		
+		// We didnt find any mob on the first row alive, so despawn the second row mobs.
+		for (L2Character npcs : knowns)
+		{
+			if (npcs.isDead())
+			{
+				continue;
+			}
+			
+			switch (npc.getId())
+			{
+				case VARKA_SILENOS_FOOTMAN:
+				case VARKA_SILENOS_RECRUIT:
+				case VARKA_SILENOS_WARRIOR:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_MEDIUM:
+						case VARKA_SILENOS_PRIEST:
+						{
+							npcs.abortCast();
+							npcs.deleteMe();
+							break;
+						}
+					}
+					break;
+				}
+				case VARKA_ELITE_GUARD:
+				case VARKAS_COMMANDER:
+				case VARKA_SILENOS_OFFICER:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_SHAMAN:
+						case VARKA_SILENOS_SEER:
+						{
+							npcs.abortCast();
+							npcs.deleteMe();
+							break;
+						}
+					}
+					break;
+				}
+				case VARKA_SILENOS_GREAT_MAGUS:
+				case VARKA_SILENOS_GENERAL:
+				case VARKAS_PROPHET:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_SILENOS_MAGNUS:
+						case DISCIPLE_OF_PROPHET:
+						{
+							npcs.abortCast();
+							npcs.deleteMe();
+							break;
+						}
+					}
+					break;
+				}
+				case VARKA_SILENOS_HEAD_GUARD:
+				case PROPHET_GUARD:
+				{
+					switch (npcs.getId())
+					{
+						case VARKA_HEAD_MAGUS:
+						case VARKA_SILENOS_GREAT_SEER:
+						{
+							npcs.abortCast();
+							npcs.deleteMe();
+							break;
+						}
+					}
+					break;
+				}
+			}
+		}
+	}
+	
+	@Override
+	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
+	{
+		if (creature.isPlayer() && npc.isScriptValue(0))
+		{
+			final QuestState qs = getQuestState(creature.getActingPlayer(), false);
+			if ((qs == null) || (qs.getState() != State.STARTED) || isSummon)
+			{
+				return null;
+			}
+			startQuestTimer("LATANA_INTRO_CAMERA_START", 600, npc, creature.getActingPlayer());
+		}
+		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	@Override
@@ -658,192 +892,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		return super.onEnterZone(character, zone);
 	}
 	
-	// Spawns Mage Type silenos behind the one that was killed. Aggro against the player that kill the mob.
-	private final void spawnMageBehind(L2Npc npc, L2PcInstance player, int mageId)
-	{
-		final double rads = Math.toRadians(Util.convertHeadingToDegree(npc.getSpawn().getHeading()) + 180);
-		final int mageX = (int) (npc.getX() + (150 * Math.cos(rads)));
-		final int mageY = (int) (npc.getY() + (150 * Math.sin(rads)));
-		final L2Npc mageBack = addSpawn(mageId, mageX, mageY, npc.getZ(), npc.getSpawn().getHeading(), false, 0, true, npc.getInstanceId());
-		mageBack.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, player, 1000);
-	}
-	
-	// This function will check if there is other mob alive in this wall of mobs. If all mobs in the first row are dead then despawn the second row mobs, the mages.
-	private final void checkIfLastInWall(L2Npc npc)
-	{
-		final Collection<L2Character> knowns = L2World.getInstance().getVisibleObjects(npc, L2Character.class, 700);
-		for (L2Character npcs : knowns)
-		{
-			if (!(npcs instanceof L2Npc) || npcs.isDead())
-			{
-				continue;
-			}
-			
-			final L2Npc knownNpc = (L2Npc) npcs;
-			switch (npc.getId())
-			{
-				case VARKA_SILENOS_FOOTMAN:
-				case VARKA_SILENOS_RECRUIT:
-				case VARKA_SILENOS_WARRIOR:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_FOOTMAN:
-						case VARKA_SILENOS_RECRUIT:
-						case VARKA_SILENOS_WARRIOR:
-						{
-							return;
-						}
-					}
-					break;
-				}
-				case VARKA_ELITE_GUARD:
-				case VARKAS_COMMANDER:
-				case VARKA_SILENOS_OFFICER:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_ELITE_GUARD:
-						case VARKAS_COMMANDER:
-						case VARKA_SILENOS_OFFICER:
-						{
-							return;
-						}
-					}
-					break;
-				}
-				case VARKA_SILENOS_GREAT_MAGUS:
-				case VARKA_SILENOS_GENERAL:
-				case VARKAS_PROPHET:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_GREAT_MAGUS:
-						case VARKA_SILENOS_GENERAL:
-						case VARKAS_PROPHET:
-						{
-							return;
-						}
-					}
-					break;
-				}
-				case VARKA_SILENOS_HEAD_GUARD:
-				case PROPHET_GUARD:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_HEAD_GUARD:
-						case PROPHET_GUARD:
-						{
-							return;
-						}
-					}
-					break;
-				}
-			}
-		}
-		
-		// We didnt find any mob on the first row alive, so despawn the second row mobs.
-		for (L2Character npcs : knowns)
-		{
-			if (!(npcs instanceof L2Npc) || npcs.isDead())
-			{
-				continue;
-			}
-			
-			final L2Npc knownNpc = (L2Npc) npcs;
-			switch (npc.getId())
-			{
-				case VARKA_SILENOS_FOOTMAN:
-				case VARKA_SILENOS_RECRUIT:
-				case VARKA_SILENOS_WARRIOR:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_MEDIUM:
-						case VARKA_SILENOS_PRIEST:
-						{
-							knownNpc.abortCast();
-							knownNpc.deleteMe();
-							break;
-						}
-					}
-					break;
-				}
-				case VARKA_ELITE_GUARD:
-				case VARKAS_COMMANDER:
-				case VARKA_SILENOS_OFFICER:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_SHAMAN:
-						case VARKA_SILENOS_SEER:
-						{
-							knownNpc.abortCast();
-							knownNpc.deleteMe();
-							break;
-						}
-					}
-					break;
-				}
-				case VARKA_SILENOS_GREAT_MAGUS:
-				case VARKA_SILENOS_GENERAL:
-				case VARKAS_PROPHET:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_SILENOS_MAGNUS:
-						case DISCIPLE_OF_PROPHET:
-						{
-							knownNpc.abortCast();
-							knownNpc.deleteMe();
-							break;
-						}
-					}
-					break;
-				}
-				case VARKA_SILENOS_HEAD_GUARD:
-				case PROPHET_GUARD:
-				{
-					switch (knownNpc.getId())
-					{
-						case VARKA_HEAD_MAGUS:
-						case VARKA_SILENOS_GREAT_SEER:
-						{
-							knownNpc.abortCast();
-							knownNpc.deleteMe();
-							break;
-						}
-					}
-					break;
-				}
-			}
-		}
-	}
-	
-	private static class PailakaDrop
-	{
-		private final int _itemId;
-		private final int _chance;
-		
-		public PailakaDrop(int itemId, int chance)
-		{
-			_itemId = itemId;
-			_chance = chance;
-		}
-		
-		public int getItemID()
-		{
-			return _itemId;
-		}
-		
-		public int getChance()
-		{
-			return _chance;
-		}
-	}
-	
-	private static void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
+	private void dropHerb(L2Npc mob, L2PcInstance player, int[][] drop)
 	{
 		final int chance = Rnd.get(100);
 		for (int[] element : drop)
@@ -856,35 +905,35 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		}
 	}
 	
-	private static void dropItem(L2Npc mob, L2PcInstance player)
+	private void dropItem(L2Npc mob, L2PcInstance player)
 	{
 		// To make random drops, we shuffle the droplist every time its used.
 		Collections.shuffle(DROPLIST);
-		for (PailakaDrop pd : DROPLIST)
+		for (ItemChanceHolder drop : DROPLIST)
 		{
-			if (Rnd.get(100) < pd.getChance())
+			if (Rnd.get(100) < drop.getChance())
 			{
-				((L2MonsterInstance) mob).dropItem(player, pd.getItemID(), Rnd.get(1, 6));
+				((L2MonsterInstance) mob).dropItem(player, drop.getId(), Rnd.get(1, 6));
 				return;
 			}
 		}
 	}
 	
-	private static void giveBuff(L2Npc npc, L2PcInstance player, int skillId, int level)
+	private void giveBuff(L2Npc npc, L2PcInstance player, int skillId, int level)
 	{
+		buff_counter--;
 		npc.setTarget(player);
 		npc.doCast(SkillData.getInstance().getSkill(skillId, level));
-		buff_counter--;
 	}
 	
-	private static void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
+	private void teleportPlayer(L2PcInstance player, int[] coords, int instanceId)
 	{
 		player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		player.setInstanceId(instanceId);
 		player.teleToLocation(coords[0], coords[1], coords[2], true);
 	}
 	
-	private final synchronized void enterInstance(L2PcInstance player)
+	private synchronized void enterInstance(L2PcInstance player)
 	{
 		// Check for existing instances for this player.
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -920,7 +969,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	}
 	
 	// Checks if the summon or pet that the player has can be used.
-	private final void checkMaxSummonLevel(L2PcInstance player)
+	private void checkMaxSummonLevel(L2PcInstance player)
 	{
 		final L2Summon pet = player.getSummon();
 		if (pet instanceof L2PetInstance)
