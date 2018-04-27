@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -42,6 +43,11 @@ public final class FinishRotating implements IClientIncomingPacket
 	@Override
 	public void run(L2GameClient client)
 	{
+		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
+		{
+			return;
+		}
+		
 		final L2PcInstance activeChar = client.getActiveChar();
 		if (activeChar == null)
 		{

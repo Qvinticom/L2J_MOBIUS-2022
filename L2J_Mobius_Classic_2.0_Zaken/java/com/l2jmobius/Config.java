@@ -267,6 +267,7 @@ public final class Config
 	public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
 	public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 	public static List<Integer> AUTO_LOOT_ITEM_IDS;
+	public static boolean ENABLE_KEYBOARD_MOVEMENT;
 	public static int UNSTUCK_INTERVAL;
 	public static int TELEPORT_WATCHDOG_TIMEOUT;
 	public static int PLAYER_SPAWN_PROTECTION;
@@ -1662,6 +1663,7 @@ public final class Config
 					AUTO_LOOT_ITEM_IDS.add(itm);
 				}
 			}
+			ENABLE_KEYBOARD_MOVEMENT = Character.getBoolean("KeyboardMovement", true);
 			UNSTUCK_INTERVAL = Character.getInt("UnstuckInterval", 300);
 			TELEPORT_WATCHDOG_TIMEOUT = Character.getInt("TeleportWatchdogTimeout", 0);
 			PLAYER_SPAWN_PROTECTION = Character.getInt("PlayerSpawnProtection", 0);

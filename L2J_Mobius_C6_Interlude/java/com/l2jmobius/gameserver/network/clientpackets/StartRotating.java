@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.network.serverpackets.BeginRotation;
 
 public final class StartRotating extends L2GameClientPacket
@@ -33,6 +34,11 @@ public final class StartRotating extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
+		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
+		{
+			return;
+		}
+		
 		if (getClient().getActiveChar() == null)
 		{
 			return;

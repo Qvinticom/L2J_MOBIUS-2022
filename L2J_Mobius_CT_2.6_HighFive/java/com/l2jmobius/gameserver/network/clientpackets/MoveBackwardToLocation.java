@@ -118,6 +118,10 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		}
 		else // 0
 		{
+			if (!Config.ENABLE_KEYBOARD_MOVEMENT)
+			{
+				return;
+			}
 			activeChar.setCursorKeyMovement(true);
 		}
 		

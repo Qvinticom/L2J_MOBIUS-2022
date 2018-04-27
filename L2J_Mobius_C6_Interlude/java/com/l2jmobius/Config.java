@@ -273,6 +273,7 @@ public final class Config
 	public static List<int[]> STARTING_CUSTOM_ITEMS_F = new ArrayList<>();
 	public static List<int[]> STARTING_CUSTOM_ITEMS_M = new ArrayList<>();
 	public static boolean DEEPBLUE_DROP_RULES;
+	public static boolean ENABLE_KEYBOARD_MOVEMENT;
 	public static int UNSTUCK_INTERVAL;
 	public static int DEATH_PENALTY_CHANCE;
 	public static int PLAYER_SPAWN_PROTECTION;
@@ -1607,6 +1608,7 @@ public final class Config
 				}
 			}
 			
+			ENABLE_KEYBOARD_MOVEMENT = Boolean.parseBoolean(otherSettings.getProperty("KeyboardMovement", "true"));
 			UNSTUCK_INTERVAL = Integer.parseInt(otherSettings.getProperty("UnstuckInterval", "300"));
 			
 			/* Player protection after teleport or login */

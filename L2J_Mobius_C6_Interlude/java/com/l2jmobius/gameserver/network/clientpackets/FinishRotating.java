@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 
@@ -34,6 +35,11 @@ public final class FinishRotating extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
+		if (!Config.ENABLE_KEYBOARD_MOVEMENT)
+		{
+			return;
+		}
+		
 		final L2PcInstance player = getClient().getActiveChar();
 		if (player == null)
 		{
