@@ -448,6 +448,13 @@ public final class Instance
 					spawnDat.setAmount(1);
 					spawnDat.setHeading(set.getInt("heading"));
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
+					spawnDat.setInstanceId(getId());
+					spawnDat.setIsNoRndWalk(set.getBoolean("allowRandomWalk"));
+					final L2Npc spawned = spawnDat.doSpawn();
+					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
+					{
+						((L2Attackable) spawned).setOnKillDelay(set.getInt("delay"));
+					}
 					if (set.getInt("respawn") == 0)
 					{
 						spawnDat.stopRespawn();
@@ -455,13 +462,6 @@ public final class Instance
 					else
 					{
 						spawnDat.startRespawn();
-					}
-					spawnDat.setInstanceId(getId());
-					spawnDat.setIsNoRndWalk(set.getBoolean("allowRandomWalk"));
-					final L2Npc spawned = spawnDat.doSpawn();
-					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
-					{
-						((L2Attackable) spawned).setOnKillDelay(set.getInt("delay"));
 					}
 				}
 				catch (Exception e)
