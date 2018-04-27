@@ -2937,10 +2937,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				dz = m._zDestination - zPrev; // climbing
 			}
-			else
-			{
-				zPrev = geoHeight;
-			}
 		}
 		else
 		{
