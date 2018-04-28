@@ -64,7 +64,7 @@ public final class IceQueensCastle extends AbstractInstance
 	private static final int ICE_QUEEN_DOOR = 23140101;
 	private static final int MIN_LV = 82;
 	
-	public IceQueensCastle()
+	private IceQueensCastle()
 	{
 		addStartNpc(JINIA);
 		addTalkId(JINIA);
@@ -210,5 +210,10 @@ public final class IceQueensCastle extends AbstractInstance
 			return false;
 		}
 		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		new IceQueensCastle();
 	}
 }

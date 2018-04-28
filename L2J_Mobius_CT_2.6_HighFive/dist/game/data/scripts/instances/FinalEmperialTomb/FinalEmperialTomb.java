@@ -234,7 +234,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 	};
 	// @formatter:on
 	
-	public FinalEmperialTomb()
+	private FinalEmperialTomb()
 	{
 		load();
 		addAttackId(SCARLET1, FRINTEZZA);
@@ -1531,5 +1531,10 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			return null;
 		}
 		return "";
+	}
+	
+	public static void main(String[] args)
+	{
+		new FinalEmperialTomb();
 	}
 }

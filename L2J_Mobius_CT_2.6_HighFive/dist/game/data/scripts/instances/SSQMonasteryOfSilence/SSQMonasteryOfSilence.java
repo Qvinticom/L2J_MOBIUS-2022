@@ -182,7 +182,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 		21100104
 	};
 	
-	public SSQMonasteryOfSilence()
+	private SSQMonasteryOfSilence()
 	{
 		addFirstTalkId(TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4);
 		addKillId(SOLINAS_GUARDIAN_1, SOLINAS_GUARDIAN_2, SOLINAS_GUARDIAN_3, SOLINAS_GUARDIAN_4, GUARDIAN_OF_THE_TOMB_1, GUARDIAN_OF_THE_TOMB_2, GUARDIAN_OF_THE_TOMB_3, GUARDIAN_OF_THE_TOMB_4, ETIS_VAN_ETINA);
@@ -556,5 +556,10 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 		world.elcadia = addSpawn(ELCADIA_INSTANCE, player.getX(), player.getY(), player.getZ(), 0, false, 0, false, world.getInstanceId());
 		startQuestTimer("FOLLOW", 5000, world.elcadia, player);
 		startQuestTimer("DIALOG", 10000, world.elcadia, player);
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQMonasteryOfSilence();
 	}
 }

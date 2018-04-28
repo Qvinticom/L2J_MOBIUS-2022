@@ -198,7 +198,7 @@ public final class NornilsGarden extends AbstractInstance
 		}
 	}
 	
-	public NornilsGarden()
+	private NornilsGarden()
 	{
 		addStartNpc(_garden_guard);
 		addFirstTalkId(_garden_guard);
@@ -639,5 +639,10 @@ public final class NornilsGarden extends AbstractInstance
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		
+	}
+	
+	public static void main(String[] args)
+	{
+		new NornilsGarden();
 	}
 }

@@ -47,9 +47,14 @@ public final class ChamberOfDelusionTower extends Chamber
 	private static final int INSTANCEID = 132; // this is the client number
 	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionTower.xml";
 	
-	public ChamberOfDelusionTower()
+	private ChamberOfDelusionTower()
 	{
-		super(ChamberOfDelusionTower.class.getSimpleName(), "instances", INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
+		super(ChamberOfDelusionTower.class.getSimpleName(), INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
 		ROOM_ENTER_POINTS = ENTER_POINTS;
+	}
+	
+	public static void main(String[] args)
+	{
+		new ChamberOfDelusionTower();
 	}
 }

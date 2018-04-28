@@ -491,7 +491,7 @@ public final class CrystalCaverns extends AbstractInstance
 	private static final int DRAGONSCALETIME = 3000;
 	private static final int DRAGONCLAWTIME = 3000;
 	
-	public CrystalCaverns()
+	private CrystalCaverns()
 	{
 		addStartNpc(ORACLE_GUIDE_1, ORACLE_GUIDE_4);
 		addTalkId(ORACLE_GUIDE_1, ORACLE_GUIDE_3, ORACLE_GUIDE_4, 32275, 32276, 32277);
@@ -2103,5 +2103,10 @@ public final class CrystalCaverns extends AbstractInstance
 			}
 		}
 		return super.onExitZone(character, zone);
+	}
+	
+	public static void main(String[] args)
+	{
+		new CrystalCaverns();
 	}
 }

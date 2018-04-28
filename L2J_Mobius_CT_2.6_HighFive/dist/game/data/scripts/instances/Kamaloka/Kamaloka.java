@@ -382,7 +382,7 @@ public final class Kamaloka extends AbstractInstance
 		public L2Npc boss = null; // boss
 	}
 	
-	public Kamaloka()
+	private Kamaloka()
 	{
 		addFirstTalkId(TELEPORTER);
 		addTalkId(TELEPORTER);
@@ -929,5 +929,10 @@ public final class Kamaloka extends AbstractInstance
 	public void onEnterInstance(L2PcInstance player, InstanceWorld world, boolean firstEntrance)
 	{
 		
+	}
+	
+	public static void main(String[] args)
+	{
+		new Kamaloka();
 	}
 }

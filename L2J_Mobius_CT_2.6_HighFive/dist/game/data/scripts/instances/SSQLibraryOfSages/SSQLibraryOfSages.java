@@ -62,7 +62,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 156;
 	
-	public SSQLibraryOfSages()
+	private SSQLibraryOfSages()
 	{
 		addFirstTalkId(SOPHIA2, ELCADIA_INSTANCE, PILE_OF_BOOKS1, PILE_OF_BOOKS2, PILE_OF_BOOKS3, PILE_OF_BOOKS4, PILE_OF_BOOKS5);
 		addStartNpc(SOPHIA1, SOPHIA2, SOPHIA3);
@@ -137,5 +137,10 @@ public final class SSQLibraryOfSages extends AbstractInstance
 		}
 		world.elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
 		startQuestTimer("FOLLOW", 3000, world.elcadia, player);
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQLibraryOfSages();
 	}
 }

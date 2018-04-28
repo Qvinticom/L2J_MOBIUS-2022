@@ -179,7 +179,7 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 		23140216,
 	};
 	
-	public IceQueensCastleNormalBattle()
+	private IceQueensCastleNormalBattle()
 	{
 		addStartNpc(SIRRA, SUPP_KEGOR, SUPP_JINIA);
 		addFirstTalkId(SUPP_KEGOR, SUPP_JINIA);
@@ -1392,5 +1392,10 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 				players.showQuestMovie(movie);
 			}
 		}
+	}
+	
+	public static void main(String[] args)
+	{
+		new IceQueensCastleNormalBattle();
 	}
 }

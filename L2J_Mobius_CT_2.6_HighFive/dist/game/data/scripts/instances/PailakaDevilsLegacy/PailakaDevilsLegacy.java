@@ -91,7 +91,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	private static final int TIGRESS_LVL1 = 14916;
 	private static final int TIGRESS_LVL2 = 14917;
 	
-	public PailakaDevilsLegacy()
+	private PailakaDevilsLegacy()
 	{
 		addTalkId(SURVIVOR);
 		addAttackId(POWDER_KEG, TREASURE_BOX, LEMATAN);
@@ -335,5 +335,10 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 			((DIWorld) world)._lematanNpc = (L2Attackable) addSpawn(LEMATAN, LEMATAN_SPAWN, false, 0, false, world.getInstanceId());
 		}
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
+	}
+	
+	public static void main(String[] args)
+	{
+		new PailakaDevilsLegacy();
 	}
 }

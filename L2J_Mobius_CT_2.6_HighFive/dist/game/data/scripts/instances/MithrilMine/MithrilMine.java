@@ -67,7 +67,7 @@ public final class MithrilMine extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 138;
 	
-	public MithrilMine()
+	private MithrilMine()
 	{
 		addFirstTalkId(KEGOR);
 		addKillId(KEGOR, MITHRIL_MILLIPEDE);
@@ -232,5 +232,10 @@ public final class MithrilMine extends AbstractInstance
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+	}
+	
+	public static void main(String[] args)
+	{
+		new MithrilMine();
 	}
 }

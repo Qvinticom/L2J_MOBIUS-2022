@@ -83,7 +83,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 		new Location(-79939, 205857, -7888),
 	};
 	
-	public SSQSanctumOfTheLordsOfDawn()
+	private SSQSanctumOfTheLordsOfDawn()
 	{
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
@@ -247,5 +247,10 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 		npc.broadcastPacket(new MagicSkillUse(npc, player, GUARD_SKILL.getSkillId(), 1, 2000, 1));
 		startQuestTimer("teleportPlayer", 2000, npc, player);
 		return super.onAggroRangeEnter(npc, player, isSummon);
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQSanctumOfTheLordsOfDawn();
 	}
 }

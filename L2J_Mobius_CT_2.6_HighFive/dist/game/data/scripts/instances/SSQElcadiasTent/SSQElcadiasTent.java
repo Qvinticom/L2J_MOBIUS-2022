@@ -49,7 +49,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 158;
 	
-	public SSQElcadiasTent()
+	private SSQElcadiasTent()
 	{
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
@@ -96,5 +96,10 @@ public final class SSQElcadiasTent extends AbstractInstance
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQElcadiasTent();
 	}
 }

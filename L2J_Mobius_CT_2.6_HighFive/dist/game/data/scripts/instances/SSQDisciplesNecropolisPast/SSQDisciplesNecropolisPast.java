@@ -119,7 +119,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		ANAKIM_SPAWN.put(ANAKIMS_EXECUTOR, new Location(-83031, 216604, -7492, 17071));
 	}
 	
-	public SSQDisciplesNecropolisPast()
+	private SSQDisciplesNecropolisPast()
 	{
 		addAttackId(SEAL_DEVICE);
 		addFirstTalkId(SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
@@ -471,5 +471,10 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 			}
 		}
 		return htmltext;
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQDisciplesNecropolisPast();
 	}
 }

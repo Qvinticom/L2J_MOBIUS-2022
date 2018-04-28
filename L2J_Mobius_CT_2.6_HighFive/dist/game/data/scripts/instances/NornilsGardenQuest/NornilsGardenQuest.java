@@ -130,4 +130,9 @@ public final class NornilsGardenQuest extends AbstractInstance
 		}
 		return htmltext;
 	}
+	
+	public static void main(String[] args)
+	{
+		new NornilsGardenQuest();
+	}
 }

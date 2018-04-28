@@ -38,7 +38,7 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 140;
 	
-	public JiniaGuildHideout1()
+	private JiniaGuildHideout1()
 	{
 		addStartNpc(RAFFORTY);
 		addTalkId(RAFFORTY);
@@ -64,5 +64,10 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
+	}
+	
+	public static void main(String[] args)
+	{
+		new JiniaGuildHideout1();
 	}
 }

@@ -155,7 +155,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	};
 	//@formatter:on
 	
-	public CavernOfThePirateCaptain()
+	private CavernOfThePirateCaptain()
 	{
 		addStartNpc(PATHFINDER);
 		addTalkId(PATHFINDER);
@@ -522,5 +522,10 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		world._zaken = spawnNpc(world._is83 ? ZAKEN_83 : world._isNight ? ZAKEN_60_NIGHT : ZAKEN_60, world._zakenRoom, null, world);
 		world._zaken.setInvisible(true);
 		world._zaken.setIsParalyzed(true);
+	}
+	
+	public static void main(String[] args)
+	{
+		new CavernOfThePirateCaptain();
 	}
 }

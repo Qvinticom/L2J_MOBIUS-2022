@@ -204,7 +204,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	};
 	// @formatter:on
 	
-	public DarkCloudMansion()
+	private DarkCloudMansion()
 	{
 		addFirstTalkId(BSM, SOTruth);
 		addStartNpc(YIYEN);
@@ -1145,5 +1145,10 @@ public final class DarkCloudMansion extends AbstractInstance
 			}
 		}
 		return "";
+	}
+	
+	public static void main(String[] args)
+	{
+		new DarkCloudMansion();
 	}
 }

@@ -43,7 +43,7 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
-	public SSQHideoutOfTheDawn()
+	private SSQHideoutOfTheDawn()
 	{
 		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
@@ -86,5 +86,10 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, WOOD_LOC, world.getInstanceId(), false);
+	}
+	
+	public static void main(String[] args)
+	{
+		new SSQHideoutOfTheDawn();
 	}
 }

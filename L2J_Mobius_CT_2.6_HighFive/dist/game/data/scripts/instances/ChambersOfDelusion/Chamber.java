@@ -171,7 +171,7 @@ public abstract class Chamber extends AbstractInstance
 	// Misc
 	private static final String RETURN = Chamber.class.getSimpleName() + "_return";
 	
-	protected Chamber(String name, String descr, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
+	protected Chamber(String name, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
 		INSTANCEID = instanceId;
 		INSTANCE_TEMPLATE = instanceTemplateName;

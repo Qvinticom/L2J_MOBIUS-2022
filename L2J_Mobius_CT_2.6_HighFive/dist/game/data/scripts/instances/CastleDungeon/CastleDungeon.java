@@ -101,7 +101,7 @@ public final class CastleDungeon extends AbstractInstance
 		25569, // Jax the Destroyer
 	};
 	
-	public CastleDungeon()
+	private CastleDungeon()
 	{
 		addFirstTalkId(CASTLE_DUNGEON.keySet());
 		addStartNpc(CASTLE_DUNGEON.keySet());
@@ -228,5 +228,10 @@ public final class CastleDungeon extends AbstractInstance
 		}
 		
 		addSpawn(spawnId, RAIDS_LOC, false, 0, false, world.getInstanceId());
+	}
+	
+	public static void main(String[] args)
+	{
+		new CastleDungeon();
 	}
 }
