@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.SanctumOftheLordsOfDawn;
+package instances.SSQSanctumOfTheLordsOfDawn;
 
 import java.util.HashMap;
 import java.util.List;
@@ -41,7 +41,7 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  * Sanctum of the Lords of Dawn instance zone.
  * @author Adry_85
  */
-public final class SanctumOftheLordsOfDawn extends AbstractInstance
+public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 {
 	protected static final class HSWorld extends InstanceWorld
 	{
@@ -83,7 +83,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 		new Location(-79939, 205857, -7888),
 	};
 	
-	public SanctumOftheLordsOfDawn()
+	public SSQSanctumOfTheLordsOfDawn()
 	{
 		addStartNpc(LIGHT_OF_DAWN);
 		addTalkId(LIGHT_OF_DAWN, IDENTITY_CONFIRM_DEVICE, PASSWORD_ENTRY_DEVICE, DARKNESS_OF_DAWN, SHELF);
@@ -168,7 +168,7 @@ public final class SanctumOftheLordsOfDawn extends AbstractInstance
 				final QuestState qs = talker.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
 				if ((qs != null) && qs.isCond(3) && hasQuestItems(talker, IDENTITY_CARD) && (talker.getTransformationId() == 113))
 				{
-					enterInstance(talker, new HSWorld(), "SanctumoftheLordsofDawn.xml", TEMPLATE_ID);
+					enterInstance(talker, new HSWorld(), "SSQSanctumOfTheLordsOfDawn.xml", TEMPLATE_ID);
 					return "32575-01.html";
 				}
 				return "32575-02.html";

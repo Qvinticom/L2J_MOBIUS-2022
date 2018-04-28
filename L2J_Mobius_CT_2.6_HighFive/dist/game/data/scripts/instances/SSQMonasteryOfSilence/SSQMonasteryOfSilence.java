@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.MonasteryOfSilence1;
+package instances.SSQMonasteryOfSilence;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -37,7 +37,7 @@ import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOne
  * Monastery of Silence instance zone.
  * @author Adry_85
  */
-public final class MonasteryOfSilence1 extends AbstractInstance
+public final class SSQMonasteryOfSilence extends AbstractInstance
 {
 	protected static final class MoSWorld extends InstanceWorld
 	{
@@ -182,7 +182,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 		21100104
 	};
 	
-	public MonasteryOfSilence1()
+	public SSQMonasteryOfSilence()
 	{
 		addFirstTalkId(TELEPORT_CONTROL_DEVICE1, TELEPORT_CONTROL_DEVICE2, TELEPORT_CONTROL_DEVICE3, TELEPORT_CONTROL_DEVICE4);
 		addKillId(SOLINAS_GUARDIAN_1, SOLINAS_GUARDIAN_2, SOLINAS_GUARDIAN_3, SOLINAS_GUARDIAN_4, GUARDIAN_OF_THE_TOMB_1, GUARDIAN_OF_THE_TOMB_2, GUARDIAN_OF_THE_TOMB_3, GUARDIAN_OF_THE_TOMB_4, ETIS_VAN_ETINA);
@@ -542,7 +542,7 @@ public final class MonasteryOfSilence1 extends AbstractInstance
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
-			enterInstance(talker, new MoSWorld(), "MonasteryOfSilence.xml", TEMPLATE_ID);
+			enterInstance(talker, new MoSWorld(), "SSQMonasteryOfSilence.xml", TEMPLATE_ID);
 		}
 		return super.onTalk(npc, talker);
 	}

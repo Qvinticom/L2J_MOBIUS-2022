@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.DisciplesNecropolisPast;
+package instances.SSQDisciplesNecropolisPast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -41,7 +41,7 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  * Disciple's Necropolis Past instance zone.
  * @author Adry_85
  */
-public final class DisciplesNecropolisPast extends AbstractInstance
+public final class SSQDisciplesNecropolisPast extends AbstractInstance
 {
 	protected class DNPWorld extends InstanceWorld
 	{
@@ -119,7 +119,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 		ANAKIM_SPAWN.put(ANAKIMS_EXECUTOR, new Location(-83031, 216604, -7492, 17071));
 	}
 	
-	public DisciplesNecropolisPast()
+	public SSQDisciplesNecropolisPast()
 	{
 		addAttackId(SEAL_DEVICE);
 		addFirstTalkId(SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
@@ -437,7 +437,7 @@ public final class DisciplesNecropolisPast extends AbstractInstance
 			{
 				if (qs.isCond(3) || qs.isCond(4))
 				{
-					enterInstance(talker, new DNPWorld(), "DisciplesNecropolisPast.xml", TEMPLATE_ID);
+					enterInstance(talker, new DNPWorld(), "SSQDisciplesNecropolisPast.xml", TEMPLATE_ID);
 					return "";
 				}
 				break;

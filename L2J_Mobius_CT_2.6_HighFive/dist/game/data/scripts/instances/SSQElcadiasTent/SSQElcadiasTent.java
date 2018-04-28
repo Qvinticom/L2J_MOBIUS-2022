@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.ElcadiasTent;
+package instances.SSQElcadiasTent;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -33,7 +33,7 @@ import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOne
  * Elcadia's Tent instance zone.
  * @author Adry_85
  */
-public final class ElcadiasTent extends AbstractInstance
+public final class SSQElcadiasTent extends AbstractInstance
 {
 	protected class ETWorld extends InstanceWorld
 	{
@@ -49,7 +49,7 @@ public final class ElcadiasTent extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 158;
 	
-	public ElcadiasTent()
+	public SSQElcadiasTent()
 	{
 		addFirstTalkId(GRUFF_LOOKING_MAN, ELCADIA);
 		addStartNpc(GRUFF_LOOKING_MAN, ELCADIA);
@@ -71,7 +71,7 @@ public final class ElcadiasTent extends AbstractInstance
 				|| ((Q10293 != null) && Q10293.isCompleted() && (Q10294 == null)) //
 				|| ((Q10296 != null) && (Q10296.getMemoState() > 2) && (Q10296.getMemoState() < 4)))
 			{
-				enterInstance(talker, new ETWorld(), "ElcadiasTent.xml", TEMPLATE_ID);
+				enterInstance(talker, new ETWorld(), "SSQElcadiasTent.xml", TEMPLATE_ID);
 			}
 			else
 			{

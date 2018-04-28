@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package instances.HideoutOfTheDawn;
+package instances.SSQHideoutOfTheDawn;
 
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -27,7 +27,7 @@ import instances.AbstractInstance;
  * Hideout of the Dawn instance zone.
  * @author Adry_85
  */
-public final class HideoutOfTheDawn extends AbstractInstance
+public final class SSQHideoutOfTheDawn extends AbstractInstance
 {
 	protected class HotDWorld extends InstanceWorld
 	{
@@ -43,7 +43,7 @@ public final class HideoutOfTheDawn extends AbstractInstance
 	// Misc
 	private static final int TEMPLATE_ID = 113;
 	
-	public HideoutOfTheDawn()
+	public SSQHideoutOfTheDawn()
 	{
 		addFirstTalkId(JAINA);
 		addStartNpc(WOOD);
@@ -71,7 +71,7 @@ public final class HideoutOfTheDawn extends AbstractInstance
 			}
 			case "32593-01.html":
 			{
-				enterInstance(player, new HotDWorld(), "HideoutOfTheDawn.xml", TEMPLATE_ID);
+				enterInstance(player, new HotDWorld(), "SSQHideoutOfTheDawn.xml", TEMPLATE_ID);
 				htmltext = event;
 			}
 		}

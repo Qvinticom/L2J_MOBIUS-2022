@@ -29,10 +29,7 @@ import instances.ChambersOfDelusion.ChamberOfDelusionTower;
 import instances.ChambersOfDelusion.ChamberOfDelusionWest;
 import instances.CrystalCaverns.CrystalCaverns;
 import instances.DarkCloudMansion.DarkCloudMansion;
-import instances.DisciplesNecropolisPast.DisciplesNecropolisPast;
-import instances.ElcadiasTent.ElcadiasTent;
 import instances.FinalEmperialTomb.FinalEmperialTomb;
-import instances.HideoutOfTheDawn.HideoutOfTheDawn;
 import instances.IceQueensCastle.IceQueensCastle;
 import instances.IceQueensCastleNormalBattle.IceQueensCastleNormalBattle;
 import instances.JiniaGuildHideout1.JiniaGuildHideout1;
@@ -40,14 +37,17 @@ import instances.JiniaGuildHideout2.JiniaGuildHideout2;
 import instances.JiniaGuildHideout3.JiniaGuildHideout3;
 import instances.JiniaGuildHideout4.JiniaGuildHideout4;
 import instances.Kamaloka.Kamaloka;
-import instances.LibraryOfSages.LibraryOfSages;
 import instances.MithrilMine.MithrilMine;
-import instances.MonasteryOfSilence1.MonasteryOfSilence1;
 import instances.NornilsGarden.NornilsGarden;
 import instances.NornilsGardenQuest.NornilsGardenQuest;
 import instances.PailakaDevilsLegacy.PailakaDevilsLegacy;
 import instances.PailakaSongOfIceAndFire.PailakaSongOfIceAndFire;
-import instances.SanctumOftheLordsOfDawn.SanctumOftheLordsOfDawn;
+import instances.SSQDisciplesNecropolisPast.SSQDisciplesNecropolisPast;
+import instances.SSQElcadiasTent.SSQElcadiasTent;
+import instances.SSQHideoutOfTheDawn.SSQHideoutOfTheDawn;
+import instances.SSQLibraryOfSages.SSQLibraryOfSages;
+import instances.SSQMonasteryOfSilence.SSQMonasteryOfSilence;
+import instances.SSQSanctumOfTheLordsOfDawn.SSQSanctumOfTheLordsOfDawn;
 
 /**
  * Instance class-loader.
@@ -63,10 +63,7 @@ public final class InstanceLoader
 		CavernOfThePirateCaptain.class,
 		CrystalCaverns.class,
 		DarkCloudMansion.class,
-		DisciplesNecropolisPast.class,
-		ElcadiasTent.class,
 		FinalEmperialTomb.class,
-		HideoutOfTheDawn.class,
 		ChamberOfDelusionEast.class,
 		ChamberOfDelusionNorth.class,
 		ChamberOfDelusionSouth.class,
@@ -80,14 +77,17 @@ public final class InstanceLoader
 		JiniaGuildHideout3.class,
 		JiniaGuildHideout4.class,
 		Kamaloka.class,
-		LibraryOfSages.class,
 		MithrilMine.class,
-		MonasteryOfSilence1.class,
 		NornilsGarden.class,
 		NornilsGardenQuest.class,
 		PailakaDevilsLegacy.class,
 		PailakaSongOfIceAndFire.class,
-		SanctumOftheLordsOfDawn.class,
+		SSQDisciplesNecropolisPast.class,
+		SSQElcadiasTent.class,
+		SSQHideoutOfTheDawn.class,
+		SSQLibraryOfSages.class,
+		SSQMonasteryOfSilence.class,
+		SSQSanctumOfTheLordsOfDawn.class,
 	};
 	
 	public static void main(String[] args)
