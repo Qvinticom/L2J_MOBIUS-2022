@@ -71,7 +71,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 				|| ((Q10293 != null) && Q10293.isCompleted() && (Q10294 == null)) //
 				|| ((Q10296 != null) && (Q10296.getMemoState() > 2) && (Q10296.getMemoState() < 4)))
 			{
-				enterInstance(talker, new ETWorld(), "SSQElcadiasTent.xml", TEMPLATE_ID);
+				enterInstance(talker, new ETWorld(), TEMPLATE_ID);
 			}
 			else
 			{

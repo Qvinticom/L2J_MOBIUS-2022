@@ -272,7 +272,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			return ret;
 		}
 		final L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
 		final Instance ins = InstanceManager.getInstance().getInstance(instanceId);
 		ins.setExitLoc(new Location(player));
 		world = new PAWORLD();

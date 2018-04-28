@@ -165,16 +165,14 @@ public abstract class Chamber extends AbstractInstance
 	
 	// Following values vary between scripts
 	private final int INSTANCEID;
-	private final String INSTANCE_TEMPLATE;
 	
 	protected Location[] ROOM_ENTER_POINTS;
 	// Misc
 	private static final String RETURN = Chamber.class.getSimpleName() + "_return";
 	
-	protected Chamber(String name, int instanceId, String instanceTemplateName, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
+	protected Chamber(String name, int instanceId, int entranceGKId, int roomGKFirstId, int roomGKLastId, int aenkinelId, int boxId)
 	{
 		INSTANCEID = instanceId;
-		INSTANCE_TEMPLATE = instanceTemplateName;
 		ENTRANCE_GATEKEEPER = entranceGKId;
 		ROOM_GATEKEEPER_FIRST = roomGKFirstId;
 		ROOM_GATEKEEPER_LAST = roomGKLastId;
@@ -629,7 +627,7 @@ public abstract class Chamber extends AbstractInstance
 			if (checkConditions(player))
 			{
 				final L2Party party = player.getParty();
-				enterInstance(player, new CDWorld(party), INSTANCE_TEMPLATE, INSTANCEID);
+				enterInstance(player, new CDWorld(party), INSTANCEID);
 			}
 		}
 		

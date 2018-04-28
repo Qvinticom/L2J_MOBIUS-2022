@@ -953,8 +953,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		// New instance.
 		else
 		{
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance("PailakaInjuredDragon.xml");
-			
+			final int instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID);
 			world = new InstanceWorld();
 			world.setInstanceId(instanceId);
 			world.setTemplateId(INSTANCE_ID);

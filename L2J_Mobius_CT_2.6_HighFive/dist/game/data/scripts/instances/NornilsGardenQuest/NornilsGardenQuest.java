@@ -72,7 +72,7 @@ public final class NornilsGardenQuest extends AbstractInstance
 				{
 					final NornilsGardenQuestWorld world = new NornilsGardenQuestWorld();
 					world.ORIGIN_LOC = player.getLocation();
-					enterInstance(player, world, "NornilsGardenQuest.xml", TEMPLATE_ID);
+					enterInstance(player, world, TEMPLATE_ID);
 					q236.setCond(16, true);
 					htmltext = "32190-02.html";
 				}

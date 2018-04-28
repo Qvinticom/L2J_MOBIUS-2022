@@ -53,22 +53,22 @@ public class OlympiadGameManager implements Runnable
 			{
 				case "Grassy Arena":
 				{
-					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadGrassyArena.xml");
+					instanceId = InstanceManager.getInstance().createDynamicInstance(147);
 					break;
 				}
 				case "Three Bridges Arena":
 				{
-					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadThreeBridgesArena.xml");
+					instanceId = InstanceManager.getInstance().createDynamicInstance(148);
 					break;
 				}
 				case "Heros's Vestiges Arena":
 				{
-					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadHerossVestigesArena.xml");
+					instanceId = InstanceManager.getInstance().createDynamicInstance(149);
 					break;
 				}
 				case "Orbis Arena":
 				{
-					instanceId = InstanceManager.getInstance().createDynamicInstance("OlympiadOrbisArena.xml");
+					instanceId = InstanceManager.getInstance().createDynamicInstance(150);
 					break;
 				}
 			}

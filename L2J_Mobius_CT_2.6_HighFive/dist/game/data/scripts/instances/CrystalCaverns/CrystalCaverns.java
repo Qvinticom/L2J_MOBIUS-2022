@@ -1771,7 +1771,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		if (npcId == ORACLE_GUIDE_1)
 		{
-			enterInstance(player, new CCWorld(System.currentTimeMillis() + 5400000), "CrystalCaverns.xml", TEMPLATE_ID);
+			enterInstance(player, new CCWorld(System.currentTimeMillis() + 5400000), TEMPLATE_ID);
 			return "";
 		}
 		

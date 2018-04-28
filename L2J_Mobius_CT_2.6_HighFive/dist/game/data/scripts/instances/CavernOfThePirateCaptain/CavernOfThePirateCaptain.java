@@ -292,21 +292,21 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			if (checkConditions(player, TEMPLATE_ID_60))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay60.xml", TEMPLATE_ID_60);
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_60);
 			}
 		}
 		else if (event.equals("enter60night"))
 		{
 			if (checkConditions(player, TEMPLATE_ID_60_NIGHT))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldNight60.xml", TEMPLATE_ID_60_NIGHT);
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_60_NIGHT);
 			}
 		}
 		else if (event.equals("enter83"))
 		{
 			if (checkConditions(player, TEMPLATE_ID_83))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), "CavernOfThePirateCaptainWorldDay83.xml", TEMPLATE_ID_83);
+				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_83);
 			}
 		}
 		else

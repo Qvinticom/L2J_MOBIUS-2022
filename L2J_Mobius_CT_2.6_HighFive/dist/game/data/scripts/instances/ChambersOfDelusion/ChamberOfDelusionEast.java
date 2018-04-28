@@ -41,11 +41,10 @@ public final class ChamberOfDelusionEast extends Chamber
 		new Location(-121424, -220124, -6720), // Raid room
 	};
 	private static final int INSTANCEID = 127;
-	private static final String INSTANCE_TEMPLATE = "ChamberOfDelusionEast.xml";
 	
 	private ChamberOfDelusionEast()
 	{
-		super(ChamberOfDelusionEast.class.getSimpleName(), INSTANCEID, INSTANCE_TEMPLATE, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
+		super(ChamberOfDelusionEast.class.getSimpleName(), INSTANCEID, ENTRANCE_GATEKEEPER, ROOM_GATEKEEPER_FIRST, ROOM_GATEKEEPER_LAST, AENKINEL, BOX);
 		ROOM_ENTER_POINTS = ENTER_POINTS;
 	}
 	

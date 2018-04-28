@@ -82,7 +82,7 @@ public final class RankuFloor extends AbstractInstance
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, new RFWorld(), "Ranku.xml", TEMPLATE_ID);
+				enterInstance(player, new RFWorld(), TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == CUBE)

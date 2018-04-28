@@ -66,7 +66,7 @@ public final class SecretArea extends AbstractInstance
 		final String htmltext = getNoQuestMsg(player);
 		if ((npc.getId() == GINBY) && event.equalsIgnoreCase("enter"))
 		{
-			enterInstance(player, "SecretArea.xml", TEMPLATE_ID);
+			enterInstance(player, TEMPLATE_ID);
 			return "32566-01.html";
 		}
 		else if ((npc.getId() == LELRIKIA) && event.equalsIgnoreCase("exit"))

@@ -437,7 +437,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 			{
 				if (qs.isCond(3) || qs.isCond(4))
 				{
-					enterInstance(talker, new DNPWorld(), "SSQDisciplesNecropolisPast.xml", TEMPLATE_ID);
+					enterInstance(talker, new DNPWorld(), TEMPLATE_ID);
 					return "";
 				}
 				break;

@@ -114,7 +114,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, new LoSWorld(), "SSQLibraryOfSages.xml", TEMPLATE_ID);
+		enterInstance(talker, new LoSWorld(), TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	

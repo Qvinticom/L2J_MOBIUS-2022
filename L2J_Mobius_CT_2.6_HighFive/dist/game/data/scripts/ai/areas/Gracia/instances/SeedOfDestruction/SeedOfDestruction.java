@@ -905,7 +905,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		return 2;
 	}
 	
-	protected int enterInstance(L2PcInstance player, String template, teleCoord teleto)
+	protected int enterInstance(L2PcInstance player, teleCoord teleto)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		final int inst = checkworld(player);
@@ -927,7 +927,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			{
 				return 0;
 			}
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+			final int instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID);
 			world = new SODWorld(System.currentTimeMillis() + 5400000);
 			world.setTemplateId(INSTANCE_ID);
 			world.setInstanceId(instanceId);
@@ -941,7 +941,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 					door.setIsAttackableDoor(true);
 				}
 			}
-			LOGGER.info("Seed of Destruction started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+			LOGGER.info("Seed of Destruction started " + INSTANCE_ID + " Instance: " + instanceId + " created by player: " + player.getName());
 			((SODWorld) world).ZoneWaitForTP = true;
 			teleto.instanceId = instanceId;
 			
@@ -1640,7 +1640,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				tele.x = -242759;
 				tele.y = 219981;
 				tele.z = -9986;
-				enterInstance(player, "SeedOfDestruction.xml", tele);
+				enterInstance(player, tele);
 			}
 			else if (SoDManager.getInstance().getSoDState() == 2)
 			{

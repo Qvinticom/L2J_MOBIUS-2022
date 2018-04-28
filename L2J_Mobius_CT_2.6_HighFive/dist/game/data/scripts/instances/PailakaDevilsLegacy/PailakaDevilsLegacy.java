@@ -111,7 +111,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 		if (event.equals("enter"))
 		{
 			final QuestState qs = player.getQuestState(Q00129_PailakaDevilsLegacy.class.getSimpleName());
-			enterInstance(player, new DIWorld(), "PailakaDevilsLegacy.xml", TEMPLATE_ID);
+			enterInstance(player, new DIWorld(), TEMPLATE_ID);
 			if (qs.isCond(1))
 			{
 				qs.setCond(2, true);

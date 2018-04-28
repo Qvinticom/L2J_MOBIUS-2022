@@ -1523,7 +1523,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		getQuestState(player, true);
 		if (npc.getId() == GUIDE)
 		{
-			enterInstance(player, new FETWorld(), "FinalEmperialTomb.xml", TEMPLATE_ID);
+			enterInstance(player, new FETWorld(), TEMPLATE_ID);
 		}
 		else if (npc.getId() == CUBE)
 		{

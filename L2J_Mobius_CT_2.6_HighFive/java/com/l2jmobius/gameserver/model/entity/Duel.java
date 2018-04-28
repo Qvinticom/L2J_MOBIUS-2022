@@ -594,8 +594,7 @@ public class Duel
 			return;
 		}
 		
-		final String instanceName = DuelManager.getInstance().getDuelArena();
-		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(instanceName);
+		_duelInstanceId = InstanceManager.getInstance().createDynamicInstance(Rnd.get(147, 150)); // Random Olympiad arena.
 		final L2OlympiadStadiumZone zone = ZoneManager.getInstance().getZone(InstanceManager.getInstance().getInstance(_duelInstanceId).getNpcs().get(0), L2OlympiadStadiumZone.class);
 		if (zone == null)
 		{

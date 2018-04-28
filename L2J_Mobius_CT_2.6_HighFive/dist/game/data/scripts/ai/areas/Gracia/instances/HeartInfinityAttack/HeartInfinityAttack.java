@@ -296,7 +296,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, String template, int[] coords)
+	protected void enterInstance(L2PcInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		
@@ -314,11 +314,11 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HIAWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			world.setTemplateId(INSTANCEID);
 			world.setStatus(0);
 			InstanceManager.getInstance().addWorld(world);
-			LOGGER.info("Heart Infinity Attack started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Heart Infinity Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
 			if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 			{
@@ -487,7 +487,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		
 		if (npcId == ABYSSGAZE)
 		{
-			enterInstance(player, "HeartInfinityAttack.xml", ENTER_TELEPORT);
+			enterInstance(player, ENTER_TELEPORT);
 		}
 		return "";
 	}

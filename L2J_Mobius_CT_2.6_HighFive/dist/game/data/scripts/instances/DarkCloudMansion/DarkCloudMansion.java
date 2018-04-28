@@ -1113,7 +1113,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		final int npcId = npc.getId();
 		if (npcId == YIYEN)
 		{
-			enterInstance(player, new DMCWorld(), "DarkCloudMansion.xml", TEMPLATE_ID);
+			enterInstance(player, new DMCWorld(), TEMPLATE_ID);
 		}
 		else
 		{

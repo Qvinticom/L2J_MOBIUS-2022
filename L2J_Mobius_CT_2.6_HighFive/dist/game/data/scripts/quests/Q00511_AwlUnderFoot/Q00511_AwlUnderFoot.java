@@ -260,7 +260,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		return null;
 	}
 	
-	protected String enterInstance(L2PcInstance player, String template, int[] coords, FortDungeon dungeon, String ret)
+	protected String enterInstance(L2PcInstance player, int[] coords, FortDungeon dungeon, String ret)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -286,7 +286,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			return ret;
 		}
 		final L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(template);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
 		final Instance ins = InstanceManager.getInstance().getInstance(instanceId);
 		ins.setExitLoc(new Location(player));
 		world = new FAUWorld();
@@ -295,7 +295,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		world.setStatus(0);
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
 		InstanceManager.getInstance().addWorld(world);
-		LOGGER.info("Fortress AwlUnderFoot started " + template + " Instance: " + instanceId + " created by player: " + player.getName());
+		LOGGER.info("Fortress AwlUnderFoot started " + dungeon.getInstanceId() + " Instance: " + instanceId + " created by player: " + player.getName());
 		ThreadPool.schedule(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
 		
 		// teleport players
@@ -326,7 +326,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 			tele[0] = 53322;
 			tele[1] = 246380;
 			tele[2] = -6580;
-			return enterInstance(player, "fortdungeon.xml", tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
+			return enterInstance(player, tele, _fortDungeons.get(npc.getId()), checkFortCondition(player, npc, true));
 		}
 		final QuestState st = getQuestState(player, true);
 		

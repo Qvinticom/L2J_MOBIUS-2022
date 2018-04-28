@@ -50,7 +50,7 @@ public final class JiniaGuildHideout4 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10287_StoryOfThoseLeft.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, "JiniaGuildHideout4.xml", TEMPLATE_ID);
+			enterInstance(talker, TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

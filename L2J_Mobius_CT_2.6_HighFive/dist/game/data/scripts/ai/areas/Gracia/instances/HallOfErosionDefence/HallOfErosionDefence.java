@@ -312,7 +312,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		return true;
 	}
 	
-	protected void enterInstance(L2PcInstance player, String template, int[] coords)
+	protected void enterInstance(L2PcInstance player, int[] coords)
 	{
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
@@ -329,12 +329,12 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HEDWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			world.setTemplateId(INSTANCEID);
 			world.setStatus(0);
 			((HEDWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
-			LOGGER.info("Hall Of Erosion Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Hall Of Erosion Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
 			if (player.isInParty())
 			{
@@ -469,7 +469,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
-			enterInstance(player, "HallOfErosionDefence.xml", ENTER_TELEPORT);
+			enterInstance(player, ENTER_TELEPORT);
 			return "";
 		}
 		return "";

@@ -207,7 +207,7 @@ public final class CastleDungeon extends AbstractInstance
 			}
 		}
 		
-		enterInstance(player, new CDWorld(), "CastleDungeon.xml", CASTLE_DUNGEON.get(npc.getId()));
+		enterInstance(player, new CDWorld(), CASTLE_DUNGEON.get(npc.getId()));
 		return super.onTalk(npc, player);
 	}
 	

@@ -81,7 +81,7 @@ public final class DemonPrinceFloor extends AbstractInstance
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, new DPFWorld(), "DemonPrince.xml", TEMPLATE_ID);
+				enterInstance(player, new DPFWorld(), TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == CUBE)

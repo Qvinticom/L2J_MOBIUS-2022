@@ -129,7 +129,7 @@ public final class UrbanArea extends AbstractInstance
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, new UrbanAreaWorld(), "UrbanArea.xml", TEMPLATE_ID);
+				enterInstance(player, new UrbanAreaWorld(), TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == TOMBSTONE)

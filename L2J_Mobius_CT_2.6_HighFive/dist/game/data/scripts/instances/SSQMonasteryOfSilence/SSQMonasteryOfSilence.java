@@ -542,7 +542,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	{
 		if (npc.getId() == ODD_GLOBE)
 		{
-			enterInstance(talker, new MoSWorld(), "SSQMonasteryOfSilence.xml", TEMPLATE_ID);
+			enterInstance(talker, new MoSWorld(), TEMPLATE_ID);
 		}
 		return super.onTalk(npc, talker);
 	}

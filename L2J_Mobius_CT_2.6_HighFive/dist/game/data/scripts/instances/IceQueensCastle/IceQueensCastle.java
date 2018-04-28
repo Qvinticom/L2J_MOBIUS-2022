@@ -185,7 +185,7 @@ public final class IceQueensCastle extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, new IQCWorld(), "IceQueensCastle.xml", TEMPLATE_ID);
+		enterInstance(talker, new IQCWorld(), TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	

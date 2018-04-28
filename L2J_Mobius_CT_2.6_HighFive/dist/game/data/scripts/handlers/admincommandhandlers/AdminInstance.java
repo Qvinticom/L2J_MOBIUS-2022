@@ -24,6 +24,8 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author evill33t, GodKratos
@@ -50,16 +52,16 @@ public class AdminInstance implements IAdminCommandHandler
 		if (command.startsWith("admin_createinstance"))
 		{
 			final String[] parts = command.split(" ");
-			if (parts.length != 3)
+			if ((parts.length != 3) || !Util.isDigit(parts[2]))
 			{
-				activeChar.sendMessage("Example: //createinstance <id> <templatefile> - ids => 300000 are reserved for dynamic instances");
+				activeChar.sendMessage("Example: //createinstance <id> <templateId> - ids => 300000 are reserved for dynamic instances");
 			}
 			else
 			{
 				try
 				{
 					final int id = Integer.parseInt(parts[1]);
-					if ((id < 300000) && InstanceManager.getInstance().createInstanceFromTemplate(id, parts[2]))
+					if ((id < 300000) && InstanceManager.getInstance().createInstanceFromTemplate(id, Integer.parseInt(parts[2])))
 					{
 						activeChar.sendMessage("Instance created.");
 					}
@@ -78,9 +80,19 @@ public class AdminInstance implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_listinstances"))
 		{
-			for (Instance temp : InstanceManager.getInstance().getInstances().values())
+			int counter = 0;
+			for (Instance instance : InstanceManager.getInstance().getInstances().values())
 			{
-				activeChar.sendMessage("Id: " + temp.getId() + " Name: " + temp.getName());
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(instance.getId());
+				if (world != null)
+				{
+					counter++;
+					activeChar.sendMessage("Id: " + instance.getId() + " Name: " + InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
+				}
+			}
+			if (counter == 0)
+			{
+				activeChar.sendMessage("No active instances.");
 			}
 		}
 		else if (command.startsWith("admin_setinstance"))

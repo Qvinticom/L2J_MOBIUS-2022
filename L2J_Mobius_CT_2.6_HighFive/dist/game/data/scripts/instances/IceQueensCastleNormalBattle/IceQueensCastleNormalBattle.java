@@ -194,11 +194,11 @@ public final class IceQueensCastleNormalBattle extends AbstractInstance
 	{
 		if (event.equals("enterEasy"))
 		{
-			enterInstance(player, new IQCNBWorld(), "IceQueensCastleNormalBattleEasy.xml", TEMPLATE_ID_EASY);
+			enterInstance(player, new IQCNBWorld(), TEMPLATE_ID_EASY);
 		}
 		else if (event.equals("enterHardcore"))
 		{
-			enterInstance(player, new IQCNBWorld(), "IceQueensCastleNormalBattleHardcore.xml", TEMPLATE_ID_HARD);
+			enterInstance(player, new IQCNBWorld(), TEMPLATE_ID_HARD);
 		}
 		else
 		{

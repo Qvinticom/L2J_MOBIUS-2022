@@ -202,7 +202,7 @@ public final class MithrilMine extends AbstractInstance
 						giveItems(talker, COLD_RESISTANCE_POTION, 1);
 					}
 					qs.setCond(4, true);
-					enterInstance(talker, new MMWorld(), "MithrilMine.xml", TEMPLATE_ID);
+					enterInstance(talker, new MMWorld(), TEMPLATE_ID);
 				}
 				break;
 			}

@@ -207,7 +207,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		player.teleToLocation(coords[0], coords[1], coords[2]);
 	}
 	
-	protected void enterInstance(L2PcInstance player, String template, int[] coords)
+	protected void enterInstance(L2PcInstance player, int[] coords)
 	{
 		// check for existing instances for this player
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
@@ -226,12 +226,12 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HSDWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(template));
+			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			world.setTemplateId(INSTANCEID);
 			world.setStatus(0);
 			((HSDWorld) world).storeTime[0] = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
-			LOGGER.info("Hall Of Suffering Defence started " + template + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
+			LOGGER.info("Hall Of Suffering Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			runTumors((HSDWorld) world);
 			
 			if (player.getParty() == null)
@@ -592,7 +592,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	{
 		if (npc.getId() == MOUTHOFEKIMUS)
 		{
-			enterInstance(player, "HallOfSufferingDefence.xml", ENTER_TELEPORT);
+			enterInstance(player, ENTER_TELEPORT);
 			return null;
 		}
 		return "";

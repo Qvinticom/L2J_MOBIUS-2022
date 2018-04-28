@@ -69,7 +69,6 @@ public final class Instance
 	private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
 	
 	private final int _id;
-	private String _name;
 	private int _ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
 	/** Allow random walk for NPCs, global parameter. */
 	private boolean _allowRandomWalk = true;
@@ -78,7 +77,6 @@ public final class Instance
 	private final List<StatsSet> _doorTemplates = new CopyOnWriteArrayList<>();
 	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
 	private final List<StatsSet> _spawnTemplates = new CopyOnWriteArrayList<>();
-	// private StartPosType _enterLocationOrder; TODO implement me
 	private List<Location> _enterLocations = null;
 	private Location _exitLocation = null;
 	private boolean _allowSummon = true;
@@ -106,32 +104,12 @@ public final class Instance
 		_instanceStartTime = System.currentTimeMillis();
 	}
 	
-	public Instance(int id, String name)
-	{
-		_id = id;
-		_name = name;
-		_instanceStartTime = System.currentTimeMillis();
-	}
-	
 	/**
 	 * @return the ID of this instance.
 	 */
 	public int getId()
 	{
 		return _id;
-	}
-	
-	/**
-	 * @return the name of this instance
-	 */
-	public String getName()
-	{
-		return _name;
-	}
-	
-	public void setName(String name)
-	{
-		_name = name;
 	}
 	
 	/**
@@ -474,11 +452,11 @@ public final class Instance
 		return spawnedNpcs;
 	}
 	
-	public void loadInstanceTemplate(String filename)
+	public void loadInstanceTemplate(int templateId)
 	{
+		// TODO: Cache templates.
 		Document doc = null;
-		final File xml = new File(Config.DATAPACK_ROOT, "data/instances/" + filename);
-		
+		final File xml = new File(Config.DATAPACK_ROOT, "data/instances/" + InstanceManager.getInstance().getInstanceTemplateFileName(templateId));
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -506,7 +484,6 @@ public final class Instance
 	
 	private void parseInstance(Node n) throws Exception
 	{
-		_name = n.getAttributes().getNamedItem("name").getNodeValue();
 		Node a = n.getAttributes().getNamedItem("ejectTime");
 		if (a != null)
 		{

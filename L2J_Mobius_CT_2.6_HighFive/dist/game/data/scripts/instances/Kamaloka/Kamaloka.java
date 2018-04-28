@@ -533,7 +533,7 @@ public final class Kamaloka extends AbstractInstance
 	 * @param player party leader
 	 * @param index (0-18) kamaloka index in arrays
 	 */
-	private final synchronized void enterInstance(L2PcInstance player, int index)
+	private final synchronized void enterKamalokaInstance(L2PcInstance player, int index)
 	{
 		int templateId;
 		try
@@ -580,10 +580,8 @@ public final class Kamaloka extends AbstractInstance
 		}
 		
 		// Creating dynamic instance without template
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(null);
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(templateId);
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-		// set name for the kamaloka
-		inst.setName(InstanceManager.getInstance().getInstanceIdName(templateId));
 		// set return location
 		inst.setExitLoc(new Location(player));
 		// disable summon friend into instance
@@ -738,7 +736,7 @@ public final class Kamaloka extends AbstractInstance
 		{
 			try
 			{
-				enterInstance(player, Integer.parseInt(event));
+				enterKamalokaInstance(player, Integer.parseInt(event));
 			}
 			catch (Exception e)
 			{

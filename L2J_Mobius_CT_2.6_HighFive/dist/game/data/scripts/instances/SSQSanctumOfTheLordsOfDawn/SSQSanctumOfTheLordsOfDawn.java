@@ -168,7 +168,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 				final QuestState qs = talker.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
 				if ((qs != null) && qs.isCond(3) && hasQuestItems(talker, IDENTITY_CARD) && (talker.getTransformationId() == 113))
 				{
-					enterInstance(talker, new HSWorld(), "SSQSanctumOfTheLordsOfDawn.xml", TEMPLATE_ID);
+					enterInstance(talker, new HSWorld(), TEMPLATE_ID);
 					return "32575-01.html";
 				}
 				return "32575-02.html";

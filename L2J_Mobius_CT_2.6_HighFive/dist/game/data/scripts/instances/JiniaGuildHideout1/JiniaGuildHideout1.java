@@ -50,7 +50,7 @@ public final class JiniaGuildHideout1 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 		if ((qs != null) && qs.isCond(1))
 		{
-			enterInstance(talker, "JiniaGuildHideout1.xml", TEMPLATE_ID);
+			enterInstance(talker, TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

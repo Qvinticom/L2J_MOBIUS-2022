@@ -71,7 +71,7 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 			}
 			case "32593-01.html":
 			{
-				enterInstance(player, new HotDWorld(), "SSQHideoutOfTheDawn.xml", TEMPLATE_ID);
+				enterInstance(player, new HotDWorld(), TEMPLATE_ID);
 				htmltext = event;
 			}
 		}

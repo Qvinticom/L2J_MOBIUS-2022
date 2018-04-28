@@ -1081,7 +1081,7 @@ public final class Config
 	public static boolean CHAMPION_ENABLE_IN_INSTANCES;
 	public static boolean TVT_EVENT_ENABLED;
 	public static boolean TVT_EVENT_IN_INSTANCE;
-	public static String TVT_EVENT_INSTANCE_FILE;
+	public static int TVT_EVENT_INSTANCE_ID;
 	public static String[] TVT_EVENT_INTERVAL;
 	public static int TVT_EVENT_PARTICIPATION_TIME;
 	public static int TVT_EVENT_RUNNING_TIME;
@@ -3025,7 +3025,7 @@ public final class Config
 			
 			TVT_EVENT_ENABLED = TeamVersusTeam.getBoolean("TvTEventEnabled", false);
 			TVT_EVENT_IN_INSTANCE = TeamVersusTeam.getBoolean("TvTEventInInstance", false);
-			TVT_EVENT_INSTANCE_FILE = TeamVersusTeam.getString("TvTEventInstanceFile", "coliseum.xml");
+			TVT_EVENT_INSTANCE_ID = TeamVersusTeam.getInt("TvTEventInstanceId", 3049);
 			TVT_EVENT_INTERVAL = TeamVersusTeam.getString("TvTEventInterval", "20:00").split(",");
 			TVT_EVENT_PARTICIPATION_TIME = TeamVersusTeam.getInt("TvTEventParticipationTime", 3600);
 			TVT_EVENT_RUNNING_TIME = TeamVersusTeam.getInt("TvTEventRunningTime", 1800);

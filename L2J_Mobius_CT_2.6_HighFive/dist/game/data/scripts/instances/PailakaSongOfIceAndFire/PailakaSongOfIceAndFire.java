@@ -79,7 +79,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 		{
 			case "enter":
 			{
-				enterInstance(player, "PailakaSongOfIceAndFire.xml", TEMPLATE_ID);
+				enterInstance(player, TEMPLATE_ID);
 				break;
 			}
 			case "GARGOS_LAUGH":

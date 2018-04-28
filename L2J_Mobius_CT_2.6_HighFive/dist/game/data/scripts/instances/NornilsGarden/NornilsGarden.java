@@ -271,10 +271,8 @@ public final class NornilsGarden extends AbstractInstance
 			return result;
 		}
 		
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance("NornilsGarden.xml");
+		final int instanceId = InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID);
 		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-		
-		inst.setName(InstanceManager.getInstance().getInstanceIdName(TEMPLATE_ID));
 		inst.setExitLoc(new Location(player));
 		inst.setAllowSummon(false);
 		inst.setDuration(DURATION_TIME * 60000);

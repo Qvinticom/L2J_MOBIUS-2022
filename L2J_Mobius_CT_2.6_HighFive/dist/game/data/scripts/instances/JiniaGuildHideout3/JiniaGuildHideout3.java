@@ -50,7 +50,7 @@ public final class JiniaGuildHideout3 extends AbstractInstance
 		final QuestState qs = talker.getQuestState(Q10286_ReunionWithSirra.class.getSimpleName());
 		if ((qs != null) && qs.isMemoState(1))
 		{
-			enterInstance(talker, "JiniaGuildHideout3.xml", TEMPLATE_ID);
+			enterInstance(talker, TEMPLATE_ID);
 			qs.setCond(2, true);
 		}
 		return super.onTalk(npc, talker);

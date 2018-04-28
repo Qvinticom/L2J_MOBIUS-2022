@@ -44,6 +44,8 @@ public final class InstanceManager implements IGameXmlReader
 	private int _dynamic = 300000;
 	// InstanceId Names
 	private static final Map<Integer, String> _instanceIdNames = new HashMap<>();
+	// Instance templates
+	private final Map<Integer, String> _instanceTemplates = new HashMap<>();
 	private final Map<Integer, Map<Integer, Long>> _playerInstanceTimes = new ConcurrentHashMap<>();
 	// SQL Queries
 	private static final String ADD_INSTANCE_TIME = "INSERT INTO character_instance_time (charId,instanceId,time) values (?,?,?) ON DUPLICATE KEY UPDATE time=?";
@@ -53,10 +55,10 @@ public final class InstanceManager implements IGameXmlReader
 	protected InstanceManager()
 	{
 		// Creates the multiverse.
-		INSTANCES.put(-1, new Instance(-1, "multiverse"));
+		INSTANCES.put(-1, new Instance(-1));
 		LOGGER.info(getClass().getSimpleName() + ": Multiverse Instance created.");
 		// Creates the universe.
-		INSTANCES.put(0, new Instance(0, "universe"));
+		INSTANCES.put(0, new Instance(0));
 		LOGGER.info(getClass().getSimpleName() + ": Universe Instance created.");
 		load();
 	}
@@ -67,6 +69,10 @@ public final class InstanceManager implements IGameXmlReader
 		_instanceIdNames.clear();
 		parseDatapackFile("data/InstanceNames.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceIdNames.size() + " instance names.");
+		// Load instance templates
+		_instanceTemplates.clear();
+		parseDatapackDirectory("data/instances", true);
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _instanceTemplates.size() + " instance templates.");
 	}
 	
 	/**
@@ -203,16 +209,26 @@ public final class InstanceManager implements IGameXmlReader
 	{
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())
 		{
-			if ("list".equals(n.getNodeName()))
+			switch (n.getNodeName())
 			{
-				NamedNodeMap attrs;
-				for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+				case "list":
 				{
-					if ("instance".equals(d.getNodeName()))
+					NamedNodeMap attrs;
+					for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
 					{
-						attrs = d.getAttributes();
-						_instanceIdNames.put(parseInteger(attrs, "id"), attrs.getNamedItem("name").getNodeValue());
+						if ("instance".equals(d.getNodeName()))
+						{
+							attrs = d.getAttributes();
+							_instanceIdNames.put(parseInteger(attrs, "id"), attrs.getNamedItem("name").getNodeValue());
+						}
 					}
+					break;
+				}
+				case "instance":
+				{
+					NamedNodeMap attrs = n.getAttributes();
+					_instanceTemplates.put(parseInteger(attrs, "id"), new File("data/instances/").toURI().relativize(f.toURI()).getPath());
+					break;
 				}
 			}
 		}
@@ -314,10 +330,10 @@ public final class InstanceManager implements IGameXmlReader
 	
 	/**
 	 * @param id
-	 * @param template
+	 * @param templateId
 	 * @return
 	 */
-	public boolean createInstanceFromTemplate(int id, String template)
+	public boolean createInstanceFromTemplate(int id, int templateId)
 	{
 		if (getInstance(id) != null)
 		{
@@ -326,7 +342,7 @@ public final class InstanceManager implements IGameXmlReader
 		
 		final Instance instance = new Instance(id);
 		INSTANCES.put(id, instance);
-		instance.loadInstanceTemplate(template);
+		instance.loadInstanceTemplate(templateId);
 		instance.spawnDoors();
 		instance.spawnGroup("general");
 		return true;
@@ -334,10 +350,10 @@ public final class InstanceManager implements IGameXmlReader
 	
 	/**
 	 * Create a new instance with a dynamic instance id based on a template (or null)
-	 * @param template xml file
+	 * @param templateId the instance template id
 	 * @return
 	 */
-	public int createDynamicInstance(String template)
+	public int createDynamicInstance(int templateId)
 	{
 		while (getInstance(_dynamic) != null)
 		{
@@ -350,13 +366,23 @@ public final class InstanceManager implements IGameXmlReader
 		}
 		final Instance instance = new Instance(_dynamic);
 		INSTANCES.put(_dynamic, instance);
-		if (template != null)
+		if (templateId > 0)
 		{
-			instance.loadInstanceTemplate(template);
+			instance.loadInstanceTemplate(templateId);
 			instance.spawnDoors();
 			instance.spawnGroup("general");
 		}
 		return _dynamic;
+	}
+	
+	/**
+	 * Get instance template file name by template ID.
+	 * @param id template id of instance
+	 * @return instance template if found, otherwise {@code null}
+	 */
+	public String getInstanceTemplateFileName(int id)
+	{
+		return _instanceTemplates.get(id);
 	}
 	
 	/**
