@@ -482,7 +482,7 @@ public final class SpawnTable implements IGameXmlReader
 			final int x = ((spawn.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 			final int y = ((spawn.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
 			final int npcSpawnTemplateId = spawn.getNpcSpawnTemplateId();
-			final File spawnFile = npcSpawnTemplateId != -1 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
+			final File spawnFile = npcSpawnTemplateId > 0 ? new File(_spawnTemplates.get(npcSpawnTemplateId)) : new File(OTHER_XML_FOLDER + "/" + x + "_" + y + ".xml");
 			final File tempFile = new File(spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/') + ".tmp");
 			try
 			{
@@ -537,7 +537,7 @@ public final class SpawnTable implements IGameXmlReader
 				spawnFile.delete();
 				tempFile.renameTo(spawnFile);
 				// Delete empty file
-				if (lineCount < 7)
+				if (lineCount < 5)
 				{
 					LOGGER.info(getClass().getSimpleName() + ": Deleted empty file: " + spawnFile.getAbsolutePath().substring(Config.DATAPACK_ROOT.getAbsolutePath().length() + 1).replace('\\', '/'));
 					spawnFile.delete();
