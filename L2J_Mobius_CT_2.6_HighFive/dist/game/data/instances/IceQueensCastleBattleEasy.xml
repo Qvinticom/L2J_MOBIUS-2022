@@ -10,12 +10,12 @@
 	</reenter>
 	<removeBuffs type="ALL"/>
 	<doorlist>
-		<door doorId="23140101" />
+		<door id="23140101" />
 	</doorlist>
 	<spawnlist>
 		<group name="general">
 			<!-- Sirra -->
-			<spawn npcId="32762" x="114766" y="-113141" z="-11200" heading="15956" respawn="60" />
+			<npc id="32762" x="114766" y="-113141" z="-11200" heading="15956" respawn="60" />
 		</group>
 	</spawnlist>
 </instance>

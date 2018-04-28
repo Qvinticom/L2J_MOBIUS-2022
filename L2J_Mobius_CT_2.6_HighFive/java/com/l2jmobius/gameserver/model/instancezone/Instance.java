@@ -561,7 +561,7 @@ public final class Instance
 						int doorId = 0;
 						if ("door".equalsIgnoreCase(d.getNodeName()))
 						{
-							doorId = Integer.parseInt(d.getAttributes().getNamedItem("doorId").getNodeValue());
+							doorId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
 							final StatsSet set = new StatsSet();
 							set.set("DoorId", doorId);
 							for (Node bean = d.getFirstChild(); bean != null; bean = bean.getNextSibling())
@@ -590,9 +590,9 @@ public final class Instance
 							{
 								int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
 								Boolean allowRandomWalk = null;
-								if ("spawn".equalsIgnoreCase(d.getNodeName()))
+								if ("npc".equalsIgnoreCase(d.getNodeName()))
 								{
-									npcId = Integer.parseInt(d.getAttributes().getNamedItem("npcId").getNodeValue());
+									npcId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
 									x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
 									y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
 									z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
