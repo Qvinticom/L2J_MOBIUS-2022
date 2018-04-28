@@ -58,14 +58,8 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		public long startTime = 0;
 		public ScheduledFuture<?> finishTask = null;
 		
-		public synchronized void addTag(int value)
-		{
-			tag += value;
-		}
-		
 		public HEDWorld()
 		{
-			tag = -1;
 		}
 	}
 	
@@ -521,7 +515,8 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			final HEDWorld world = (HEDWorld) tmpworld;
 			if (npc.getId() == TUMOR_DEAD)
 			{
-				world.addTag(1);
+				final int tag = world.getParameters().getInt("tag", -1);
+				world.getParameters().set("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);

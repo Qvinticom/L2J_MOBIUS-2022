@@ -60,52 +60,6 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 		
 		public HSAWorld()
 		{
-			tag = -1;
-		}
-		
-		protected void calcRewardItemId()
-		{
-			final Long finishDiff = storeTime[1] - storeTime[0];
-			if (finishDiff < 1260000)
-			{
-				tag = 13777;
-			}
-			else if (finishDiff < 1380000)
-			{
-				tag = 13778;
-			}
-			else if (finishDiff < 1500000)
-			{
-				tag = 13779;
-			}
-			else if (finishDiff < 1620000)
-			{
-				tag = 13780;
-			}
-			else if (finishDiff < 1740000)
-			{
-				tag = 13781;
-			}
-			else if (finishDiff < 1860000)
-			{
-				tag = 13782;
-			}
-			else if (finishDiff < 1980000)
-			{
-				tag = 13783;
-			}
-			else if (finishDiff < 2100000)
-			{
-				tag = 13784;
-			}
-			else if (finishDiff < 2220000)
-			{
-				tag = 13785;
-			}
-			else
-			{
-				tag = 13786;
-			}
 		}
 	}
 	
@@ -565,7 +519,49 @@ public class HallOfSufferingAttack extends AbstractNpcAI
 				{
 					world.incStatus();
 					world.storeTime[1] = System.currentTimeMillis();
-					world.calcRewardItemId();
+					
+					final Long finishDiff = world.storeTime[1] - world.storeTime[0];
+					if (finishDiff < 1260000)
+					{
+						world.getParameters().set("tag", 13777);
+					}
+					else if (finishDiff < 1380000)
+					{
+						world.getParameters().set("tag", 13778);
+					}
+					else if (finishDiff < 1500000)
+					{
+						world.getParameters().set("tag", 13779);
+					}
+					else if (finishDiff < 1620000)
+					{
+						world.getParameters().set("tag", 13780);
+					}
+					else if (finishDiff < 1740000)
+					{
+						world.getParameters().set("tag", 13781);
+					}
+					else if (finishDiff < 1860000)
+					{
+						world.getParameters().set("tag", 13782);
+					}
+					else if (finishDiff < 1980000)
+					{
+						world.getParameters().set("tag", 13783);
+					}
+					else if (finishDiff < 2100000)
+					{
+						world.getParameters().set("tag", 13784);
+					}
+					else if (finishDiff < 2220000)
+					{
+						world.getParameters().set("tag", 13785);
+					}
+					else
+					{
+						world.getParameters().set("tag", 13786);
+					}
+					
 					world.klanikus = null;
 					world.klodekus = null;
 					cancelQuestTimers("ressurectTwin");

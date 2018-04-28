@@ -64,14 +64,8 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			tumorCount += value;
 		}
 		
-		public synchronized void addTag(int value)
-		{
-			tag += value;
-		}
-		
 		public HEAWorld()
 		{
-			tag = -1;
 		}
 	}
 	
@@ -538,7 +532,8 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			
 			if (npc.getId() == TUMOR_DEAD)
 			{
-				world.addTag(1);
+				final int tag = world.getParameters().getInt("tag", -1);
+				world.getParameters().set("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);
@@ -659,7 +654,8 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final L2Npc tumor = addSpawn(TUMOR_ALIVE, _deadTumor.getLocation(), _world.getInstanceId());
 			_world.npcList.add(tumor);
 			_deadTumor.deleteMe();
-			_world.addTag(-1);
+			final int tag = _world.getParameters().getInt("tag", -1);
+			_world.getParameters().set("tag", tag - 1);
 		}
 	}
 	

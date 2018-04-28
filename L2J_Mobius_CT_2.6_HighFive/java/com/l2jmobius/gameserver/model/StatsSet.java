@@ -23,10 +23,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IParserAdvUtils;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class is meant to hold a set of (key,value) pairs.<br>
@@ -187,11 +189,10 @@ public class StatsSet implements IParserAdvUtils
 		}
 		if (val instanceof Number)
 		{
-			final byte[] result =
+			return new byte[]
 			{
 				((Number) val).byteValue()
 			};
-			return result;
 		}
 		int c = 0;
 		final String[] vals = ((String) val).split(splitOn);
@@ -319,11 +320,10 @@ public class StatsSet implements IParserAdvUtils
 		}
 		if (val instanceof Number)
 		{
-			final int[] result =
+			return new int[]
 			{
 				((Number) val).intValue()
 			};
-			return result;
 		}
 		int c = 0;
 		final String[] vals = ((String) val).split(splitOn);
@@ -499,7 +499,11 @@ public class StatsSet implements IParserAdvUtils
 	public String getString(String key, String defaultValue)
 	{
 		final Object val = _set.get(key);
-		return val == null ? defaultValue : String.valueOf(val);
+		if (val == null)
+		{
+			return defaultValue;
+		}
+		return String.valueOf(val);
 	}
 	
 	@Override
@@ -552,20 +556,168 @@ public class StatsSet implements IParserAdvUtils
 	public final <A> A getObject(String name, Class<A> type)
 	{
 		final Object obj = _set.get(name);
-		return (obj == null) || !type.isAssignableFrom(obj.getClass()) ? null : (A) obj;
+		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
+		{
+			return null;
+		}
+		
+		return (A) obj;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public final <A> A getObject(String name, Class<A> type, A defaultValue)
+	{
+		final Object obj = _set.get(name);
+		if ((obj == null) || !type.isAssignableFrom(obj.getClass()))
+		{
+			return defaultValue;
+		}
+		
+		return (A) obj;
 	}
 	
 	public SkillHolder getSkillHolder(String key)
 	{
 		final Object obj = _set.get(key);
-		return (obj == null) || !(obj instanceof SkillHolder) ? null : (SkillHolder) obj;
+		if ((obj == null) || !(obj instanceof SkillHolder))
+		{
+			return null;
+		}
+		
+		return (SkillHolder) obj;
+	}
+	
+	public Location getLocation(String key)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof Location))
+		{
+			return null;
+		}
+		return (Location) obj;
 	}
 	
 	@SuppressWarnings("unchecked")
 	public List<MinionHolder> getMinionList(String key)
 	{
 		final Object obj = _set.get(key);
-		return (obj == null) || !(obj instanceof List<?>) ? Collections.emptyList() : (List<MinionHolder>) obj;
+		if ((obj == null) || !(obj instanceof List<?>))
+		{
+			return Collections.emptyList();
+		}
+		
+		return (List<MinionHolder>) obj;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T> List<T> getList(String key, Class<T> clazz)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof List<?>))
+		{
+			return null;
+		}
+		
+		final List<Object> originalList = (List<Object>) obj;
+		if (!originalList.isEmpty() && !originalList.stream().allMatch(clazz::isInstance))
+		{
+			if (clazz.getSuperclass() == Enum.class)
+			{
+				throw new IllegalAccessError("Please use getEnumList if you want to get list of Enums!");
+			}
+			
+			// Attempt to convert the list
+			final List<T> convertedList = convertList(originalList, clazz);
+			if (convertedList == null)
+			{
+				LOGGER.log(Level.WARNING, "getList(\"" + key + "\", " + clazz.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+				return null;
+			}
+			
+			// Overwrite the existing list with proper generic type
+			_set.put(key, convertedList);
+			return convertedList;
+		}
+		return (List<T>) obj;
+	}
+	
+	public <T> List<T> getList(String key, Class<T> clazz, List<T> defaultValue)
+	{
+		final List<T> list = getList(key, clazz);
+		return list == null ? defaultValue : list;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <T extends Enum<T>> List<T> getEnumList(String key, Class<T> clazz)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof List<?>))
+		{
+			return null;
+		}
+		
+		final List<Object> originalList = (List<Object>) obj;
+		if (!originalList.isEmpty() && (obj.getClass().getGenericInterfaces()[0] != clazz) && originalList.stream().allMatch(name -> Util.isEnum(name.toString(), clazz)))
+		{
+			final List<T> convertedList = originalList.stream().map(Object::toString).map(name -> Enum.valueOf(clazz, name)).map(clazz::cast).collect(Collectors.toList());
+			
+			// Overwrite the existing list with proper generic type
+			_set.put(key, convertedList);
+			return convertedList;
+		}
+		return (List<T>) obj;
+	}
+	
+	/**
+	 * @param <T>
+	 * @param originalList
+	 * @param clazz
+	 * @return
+	 */
+	private <T> List<T> convertList(List<Object> originalList, Class<T> clazz)
+	{
+		if (clazz == Integer.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isInteger))
+			{
+				return originalList.stream().map(Object::toString).map(Integer::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		else if (clazz == Float.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isFloat))
+			{
+				return originalList.stream().map(Object::toString).map(Float::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		else if (clazz == Double.class)
+		{
+			if (originalList.stream().map(Object::toString).allMatch(Util::isDouble))
+			{
+				return originalList.stream().map(Object::toString).map(Double::valueOf).map(clazz::cast).collect(Collectors.toList());
+			}
+		}
+		return null;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public <K, V> Map<K, V> getMap(String key, Class<K> keyClass, Class<V> valueClass)
+	{
+		final Object obj = _set.get(key);
+		if ((obj == null) || !(obj instanceof Map<?, ?>))
+		{
+			return null;
+		}
+		
+		final Map<?, ?> originalList = (Map<?, ?>) obj;
+		if (!originalList.isEmpty())
+		{
+			if ((!originalList.keySet().stream().allMatch(keyClass::isInstance)) || (!originalList.values().stream().allMatch(valueClass::isInstance)))
+			{
+				LOGGER.log(Level.WARNING, "getMap(\"" + key + "\", " + keyClass.getSimpleName() + ", " + valueClass.getSimpleName() + ") requested with wrong generic type: " + obj.getClass().getGenericInterfaces()[0] + "!", new ClassNotFoundException());
+			}
+		}
+		return (Map<K, V>) obj;
 	}
 	
 	public void set(String name, Object value)
@@ -618,14 +770,19 @@ public class StatsSet implements IParserAdvUtils
 		_set.put(key, value);
 	}
 	
-	public void safeSet(String key, int value, int min, int max, String reference)
+	public void remove(String key)
 	{
-		assert ((min > max) || ((value >= min) && (value < max)));
-		if ((min <= max) && ((value < min) || (value >= max)))
-		{
-			LOGGER.log(Level.SEVERE, "Incorrect value: " + value + "for: " + key + "Ref: " + reference);
-		}
-		
-		set(key, value);
+		_set.remove(key);
+	}
+	
+	public boolean contains(String name)
+	{
+		return _set.containsKey(name);
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "StatsSet{_set=" + _set + '}';
 	}
 }

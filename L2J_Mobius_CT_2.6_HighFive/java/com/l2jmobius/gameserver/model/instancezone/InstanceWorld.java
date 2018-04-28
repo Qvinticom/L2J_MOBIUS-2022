@@ -18,9 +18,9 @@ package com.l2jmobius.gameserver.model.instancezone;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
+import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
@@ -34,8 +34,7 @@ public class InstanceWorld
 	private int _instanceId;
 	private int _templateId = -1;
 	private final List<Integer> _allowed = new CopyOnWriteArrayList<>();
-	private final AtomicInteger _status = new AtomicInteger();
-	public int tag = -1;
+	private final StatsSet _parameters = new StatsSet();
 	
 	public List<Integer> getAllowed()
 	{
@@ -93,24 +92,69 @@ public class InstanceWorld
 		_templateId = templateId;
 	}
 	
+	/**
+	 * Set instance world parameter.
+	 * @param key parameter name
+	 * @param val parameter value
+	 */
+	public void setParameter(String key, Object val)
+	{
+		if (val == null)
+		{
+			_parameters.remove(key);
+		}
+		else
+		{
+			_parameters.set(key, val);
+		}
+	}
+	
+	/**
+	 * Get instance world parameters.
+	 * @return instance parameters
+	 */
+	public StatsSet getParameters()
+	{
+		return _parameters;
+	}
+	
+	/**
+	 * Get status of instance world.
+	 * @return instance status, otherwise 0
+	 */
 	public int getStatus()
 	{
-		return _status.get();
+		return _parameters.getInt("INSTANCE_STATUS", 0);
 	}
 	
+	/**
+	 * Check if instance status is equal to {@code status}.
+	 * @param status number used for status comparison
+	 * @return {@code true} when instance status and {@code status} are equal, otherwise {@code false}
+	 */
 	public boolean isStatus(int status)
 	{
-		return _status.get() == status;
+		return getStatus() == status;
 	}
 	
-	public void setStatus(int status)
+	/**
+	 * Set status of instance world.
+	 * @param value new world status
+	 */
+	public void setStatus(int value)
 	{
-		_status.set(status);
+		_parameters.set("INSTANCE_STATUS", value);
 	}
 	
-	public void incStatus()
+	/**
+	 * Increment instance world status
+	 * @return new world status
+	 */
+	public int incStatus()
 	{
-		_status.incrementAndGet();
+		final int status = getStatus() + 1;
+		setStatus(status);
+		return status;
 	}
 	
 	/**

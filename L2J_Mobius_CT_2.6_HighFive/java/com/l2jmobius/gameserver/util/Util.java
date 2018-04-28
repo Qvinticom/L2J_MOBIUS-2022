@@ -361,6 +361,91 @@ public final class Util
 	
 	/**
 	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is integer, {@code false} otherwise
+	 */
+	public static boolean isInteger(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Integer.parseInt(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is float, {@code false} otherwise
+	 */
+	public static boolean isFloat(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Float.parseFloat(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is double, {@code false} otherwise
+	 */
+	public static boolean isDouble(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Double.parseDouble(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param <T>
+	 * @param name - the text to check
+	 * @param enumType
+	 * @return {@code true} if {@code text} is enum, {@code false} otherwise
+	 */
+	public static <T extends Enum<T>> boolean isEnum(String name, Class<T> enumType)
+	{
+		if ((name == null) || name.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			return Enum.valueOf(enumType, name) != null;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
 	 * @return {@code true} if {@code text} contains only letters and/or numbers, {@code false} otherwise
 	 */
 	public static boolean isAlphaNumeric(String text)

@@ -108,7 +108,8 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 						
 						if ((world != null) && (world.getTemplateId() == 116))
 						{
-							if (world.tag == -1)
+							final int tag = world.getParameters().getInt("tag", -1);
+							if (tag == -1)
 							{
 								htmltext = "32530-11.html";
 							}
@@ -119,7 +120,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 									final QuestState qs1 = member.getQuestState(getName());
 									if (qs1 != null)
 									{
-										if (world.tag == 13777)
+										if (tag == 13777)
 										{
 											giveItems(member, 13777, 1);
 											giveItems(member, SOE, 1);
@@ -129,7 +130,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-00.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13778)
+										else if (tag == 13778)
 										{
 											giveItems(member, 13778, 1);
 											giveItems(member, SOE, 1);
@@ -139,7 +140,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-01.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13779)
+										else if (tag == 13779)
 										{
 											giveItems(member, 13779, 1);
 											giveItems(member, SOE, 1);
@@ -149,7 +150,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-02.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13780)
+										else if (tag == 13780)
 										{
 											giveItems(member, 13780, 1);
 											giveItems(member, SOE, 1);
@@ -159,7 +160,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-03.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13781)
+										else if (tag == 13781)
 										{
 											giveItems(member, 13781, 1);
 											giveItems(member, SOE, 1);
@@ -169,7 +170,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-04.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13782)
+										else if (tag == 13782)
 										{
 											giveItems(member, 13782, 1);
 											giveItems(member, SOE, 1);
@@ -179,7 +180,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-05.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13783)
+										else if (tag == 13783)
 										{
 											giveItems(member, 13783, 1);
 											giveItems(member, SOE, 1);
@@ -189,7 +190,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-06.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13784)
+										else if (tag == 13784)
 										{
 											giveItems(member, 13784, 1);
 											giveItems(member, SOE, 1);
@@ -199,7 +200,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-07.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13785)
+										else if (tag == 13785)
 										{
 											giveItems(member, 13785, 1);
 											giveItems(member, SOE, 1);
@@ -209,7 +210,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 											htmltext = "32530-08.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13786)
+										else if (tag == 13786)
 										{
 											giveItems(member, 13786, 1);
 											giveItems(member, SOE, 1);

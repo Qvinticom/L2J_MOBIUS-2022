@@ -99,7 +99,8 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 						final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 						if ((world != null) && (world.getTemplateId() == 115))
 						{
-							if (world.tag == -1)
+							final int tag = world.getParameters().getInt("tag", -1);
+							if (tag == -1)
 							{
 								htmltext = "32530-11.html";
 							}
@@ -110,7 +111,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 									final QuestState qs1 = member.getQuestState(getName());
 									if (qs1 != null)
 									{
-										if (world.tag == 13777)
+										if (tag == 13777)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -124,7 +125,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-00.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13778)
+										else if (tag == 13778)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -138,7 +139,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-01.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13779)
+										else if (tag == 13779)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -152,7 +153,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-02.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13780)
+										else if (tag == 13780)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -166,7 +167,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-03.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13781)
+										else if (tag == 13781)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -180,7 +181,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-04.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13782)
+										else if (tag == 13782)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -194,7 +195,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-05.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13783)
+										else if (tag == 13783)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -208,7 +209,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-06.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13784)
+										else if (tag == 13784)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -222,7 +223,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-07.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13785)
+										else if (tag == 13785)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{
@@ -236,7 +237,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 											htmltext = "32530-08.html";
 											finishInstance(player);
 										}
-										else if (world.tag == 13786)
+										else if (tag == 13786)
 										{
 											if (getQuestItemsCount(member, MARK) == 0)
 											{

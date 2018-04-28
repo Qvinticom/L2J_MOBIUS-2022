@@ -69,14 +69,8 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			tumorCount += value;
 		}
 		
-		public synchronized void addTag(int value)
-		{
-			tag += value;
-		}
-		
 		public HIAWorld()
 		{
-			tag = -1;
 		}
 	}
 	
@@ -585,7 +579,8 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			
 			if (npc.getId() == DEADTUMOR)
 			{
-				world.addTag(1);
+				final int tag = world.getParameters().getInt("tag", -1);
+				world.getParameters().set("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);
@@ -661,7 +656,8 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			notifyTumorRevival(_world);
 			_world.npcList.add(alivetumor);
 			_deadTumor.deleteMe();
-			_world.addTag(-1);
+			final int tag = _world.getParameters().getInt("tag", -1);
+			_world.getParameters().set("tag", tag - 1);
 		}
 	}
 	
