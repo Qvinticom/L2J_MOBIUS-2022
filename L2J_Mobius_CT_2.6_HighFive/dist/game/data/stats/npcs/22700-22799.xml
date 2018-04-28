@@ -3056,6 +3056,9 @@
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="mobile_type" value="1" />
+			<minions name="Privates">
+				<npc id="22744" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
 			<param name="ProbPhysicalSpecial2" value="5" />
@@ -3154,6 +3157,9 @@
 		<parameters>
 			<param name="ag_type" value="0" />
 			<param name="mobile_type" value="1" />
+			<minions name="Privates">
+				<npc id="22745" count="4" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="33" />
 			<param name="ProbPhysicalSpecial2" value="20" />

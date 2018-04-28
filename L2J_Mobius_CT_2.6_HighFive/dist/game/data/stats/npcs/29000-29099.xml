@@ -2,6 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="29001" level="40" type="L2GrandBoss" name="Queen Ant">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="29003" count="6" respawnTime="10" weightPoint="1" />
+				<npc id="29005" count="8" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>BUG</race>
 		<sex>FEMALE</sex>
 		<acquire exp="2179535" sp="140740" raidPoints="1680" />
@@ -257,6 +263,13 @@
 	</npc>
 	<npc id="29006" level="50" type="L2GrandBoss" name="Core">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="29008" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="29011" count="4" respawnTime="360" weightPoint="1" />
+				<npc id="29007" count="10" respawnTime="360" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<acquire exp="2041407" sp="153786" raidPoints="1508" />
@@ -680,6 +693,9 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="80" />
+			<minions name="Privates">
+				<npc id="29016" count="4" respawnTime="360" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
@@ -3314,6 +3330,10 @@
 	<npc id="29062" level="80" type="L2RaidBoss" name="Andreas Van Halter" title="Seer of Pagan">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="29063" count="3" respawnTime="360" weightPoint="1" />
+				<npc id="29064" count="1" respawnTime="360" weightPoint="1" />
+			</minions>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<param name="doSummonNPC" value="1" />
 			<skill name="SelfRangeDebuff_a" id="4188" level="10" /> <!-- Bleed -->

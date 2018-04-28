@@ -1534,6 +1534,9 @@
 	<npc id="22621" level="82" type="L2Monster" name="Male Spiked Stakato">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="22620" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ai_type" value="n_male_spike_stakato_c" />
 			<param name="silhouette" value="22622" /> <!-- Male Spiked Stakato -->
 			<skill name="PhysicalSpecial" id="4032" level="9" /> <!-- NPC Strike -->
@@ -1852,6 +1855,9 @@
 	<npc id="22625" level="83" type="L2Monster" name="Cannibalistic Stakato Leader">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="22624" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<skill name="PhysicalSpecial1" id="6168" level="9" /> <!-- Shock -->
 			<skill name="buff" id="4028" level="3" /> <!-- NPC Might -->
 			<skill name="EffectSkill" id="4485" level="1" /> <!-- Eating Follower -->
@@ -2255,6 +2261,9 @@
 	<npc id="22630" level="83" type="L2Monster" name="Spiked Stakato Nurse">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="22632" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ai_type" value="n_nurse_spike_stakato_c" />
 			<param name="silhouette" value="22631" /> <!-- Spiked Stakato Nurse -->
 			<skill name="SelfRangeDDMagic" id="4571" level="9" /> <!-- NPC Blazing Circle -->
@@ -5062,6 +5071,9 @@
 	<npc id="22666" level="82" type="L2Monster" name="Barif">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="22667" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ShoutTarget" value="1" />
 			<param name="SetHateGroup" value="ATTACKER_GROUP" />
 			<param name="SetHateGroupRatio" value="25" />
@@ -5344,6 +5356,10 @@
 	<npc id="22670" level="80" type="L2Monster" name="Cursed Lord">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
+			<minions name="Privates">
+				<npc id="22671" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22672" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<skill name="SelfRangeDDMagic" id="4072" level="9" /> <!-- Stun -->
 		</parameters>
 		<race>ANIMAL</race>

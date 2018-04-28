@@ -29,6 +29,7 @@ import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
@@ -589,6 +590,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		_spawnedNpcs.add(npc);
 		_currentCount++;
+		
+		// Minions
+		if (npc.isMonster() && NpcData.getMasterMonsterIDs().contains(npc.getId()))
+		{
+			((L2MonsterInstance) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
+		}
+		
 		return npc;
 	}
 	

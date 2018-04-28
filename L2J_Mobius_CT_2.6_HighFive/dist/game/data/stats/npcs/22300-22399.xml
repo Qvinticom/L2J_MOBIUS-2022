@@ -396,6 +396,9 @@
 			<param name="Party_Loyalty" value="0" />
 			<param name="Party_OneShot" value="50" />
 			<skill name="Skill01_ID" id="5273" level="3" /> <!-- NPC(party) - Physical Single Close Range Attack -->
+			<minions name="Privates">
+				<npc id="22308" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -479,6 +482,10 @@
 			<param name="Skill02_Dist_Max" value="150" />
 			<skill name="Skill01_ID" id="5312" level="4" /> <!-- NPC(party) -Magic Single Long Range DD - Fire -->
 			<skill name="Skill02_ID" id="5314" level="4" /> <!-- NPC(party) -Magic Range Close Range DD - Fire -->
+			<minions name="Privates">
+				<npc id="22308" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22309" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -559,6 +566,11 @@
 			<param name="Skill01_Check_Dist" value="1" />
 			<param name="Skill01_Dist_Max" value="150" />
 			<skill name="Skill01_ID" id="5340" level="3" /> <!-- NPC(party) - Physical Range Close Range Attack - Fire -->
+			<minions name="Privates">
+				<npc id="22308" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22309" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22310" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -1485,6 +1497,10 @@
 			<skill name="Skill01_ID" id="4592" level="9" /> <!-- Decrease P. Def. -->
 			<skill name="Skill02_ID" id="5331" level="3" /> <!-- NPC HP Drain -->
 			<skill name="Skill03_ID" id="5334" level="4" /> <!-- NPC(party) - Physical Single Close Range Attack -->
+			<minions name="Privates">
+				<npc id="22322" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22323" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -1583,6 +1599,10 @@
 			<skill name="Skill02_ID" id="5310" level="3" /> <!-- NPC(party) - Magic Close Range DD - less powerful -->
 			<skill name="Skill03_ID" id="4466" level="2" /> <!-- Surrender To Darkness -->
 			<skill name="Skill04_ID" id="5332" level="3" /> <!-- NPC MP Burn -->
+			<minions name="Privates">
+				<npc id="22322" count="1" respawnTime="0" weightPoint="1" />
+				<npc id="22323" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
@@ -3378,6 +3398,9 @@
 			<param name="FieldCycle_Quantity" value="1" />
 			<skill name="Skill01_ID" id="5298" level="4" /> <!-- NPC(party) - Physical Single Long Range Attack - Dark -->
 			<skill name="Skill02_ID" id="4047" level="10" /> <!-- Hold -->
+			<minions name="Privates">
+				<npc id="22347" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -4577,6 +4600,9 @@
 			<skill name="Skill01_ID" id="5334" level="5" /> <!-- NPC(party) - Physical Single Close Range Attack -->
 			<skill name="Death_Word" id="5256" level="1" /> <!-- Announcement of Death -->
 			<skill name="Real_Death_Word" id="5257" level="1" /> <!-- Death -->
+			<minions name="Privates">
+				<npc id="22364" count="4" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
@@ -5202,6 +5228,9 @@
 			<param name="Threshold_Level_Max" value="11" />
 			<param name="FieldCycle_Quantity" value="15" />
 			<skill name="Skill01_ID" id="5362" level="5" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="22371" count="4" respawnTime="120" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -5854,6 +5883,10 @@
 			<param name="Skill02_Probablity" value="1000" />
 			<skill name="Skill01_ID" id="5358" level="3" /> <!-- NPC(party) - Physical Single Close Range Attack - Dark -->
 			<skill name="Skill02_ID" id="5362" level="3" /> <!-- Stun -->
+			<minions name="Privates">
+				<npc id="22378" count="2" respawnTime="0" weightPoint="1" />
+				<npc id="22379" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
@@ -6999,6 +7032,9 @@
 			<param name="Skill02_Dist_Min" value="300" />
 			<skill name="Skill01_ID" id="5358" level="3" /> <!-- NPC(party) - Physical Single Close Range Attack - Dark -->
 			<skill name="Skill02_ID" id="4117" level="9" /> <!-- Paralysis -->
+			<minions name="Privates">
+				<npc id="22391" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>

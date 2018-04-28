@@ -2435,6 +2435,9 @@
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="90" />
 			<param name="MoveAroundSocial2" value="187" />
+			<minions name="Privates">
+				<npc id="22027" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="SoulShot" value="100" />
 			<param name="SoulShotRate" value="10" />
 			<param name="SpiritShot" value="100" />
@@ -7483,6 +7486,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="5" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="22079" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -7857,6 +7863,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="5" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="22083" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
@@ -8619,6 +8628,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagicSlow" id="4247" level="5" /> <!-- NPC Windstrike - Slow -->
+			<minions name="Privates">
+				<npc id="22091" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
@@ -8971,6 +8983,9 @@
 			<param name="SpiritShotRate" value="5" />
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4032" level="5" /> <!-- NPC Strike -->
+			<minions name="Privates">
+				<npc id="22095" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>

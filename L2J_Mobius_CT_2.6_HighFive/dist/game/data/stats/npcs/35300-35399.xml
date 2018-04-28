@@ -3386,6 +3386,16 @@
 	</npc>
 	<npc id="35375" level="73" type="L2Monster" name="Bloody Lord Nurka">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="35376" count="2" respawnTime="60" weightPoint="1" />
+				<npc id="35377" count="8" respawnTime="60" weightPoint="1" />
+				<npc id="35378" count="4" respawnTime="60" weightPoint="1" />
+				<npc id="35379" count="1" respawnTime="60" weightPoint="1" />
+				<npc id="35380" count="2" respawnTime="60" weightPoint="1" />
+				<npc id="35381" count="2" respawnTime="60" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- rhand: Stormbringer -->

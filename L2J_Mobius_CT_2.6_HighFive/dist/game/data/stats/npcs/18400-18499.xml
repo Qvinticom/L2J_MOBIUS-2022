@@ -3535,6 +3535,9 @@
 			<param name="FieldCycle" value="1" />
 			<param name="Threshold_Level_Min" value="6" />
 			<param name="Threshold_Level_Max" value="6" />
+			<minions name="Privates">
+				<npc id="22422" count="4" respawnTime="0" weightPoint="1" />
+			</minions>
 		</parameters>
 		<race>ETC</race>
 		<sex>ETC</sex>
@@ -3838,6 +3841,11 @@
 	</npc>
 	<npc id="18491" level="87" type="L2Monster" name="Lock" title="Tower of Naia">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="18493" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

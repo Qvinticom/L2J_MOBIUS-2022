@@ -849,6 +849,11 @@
 	</npc>
 	<npc id="32324" level="70" type="L2Npc" name="Black Stone Monolith">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="18369" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">

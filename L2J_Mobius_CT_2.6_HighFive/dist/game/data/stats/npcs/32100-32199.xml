@@ -1095,6 +1095,11 @@
 	</npc>
 	<npc id="32128" level="70" type="L2Npc" name="Guardian Wizard of the Cloth">
 		<!-- Confirmed CT2.5 -->
+		<parameters>
+			<minions name="Privates">
+				<npc id="32127" count="6" respawnTime="0" weightPoint="1" />
+			</minions>
+		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="4900" /> <!-- rhand: Staff of Evil Spirits - Magic Focus -->

@@ -56,7 +56,7 @@ public class NpcData implements IGameXmlReader
 {
 	private final Map<Integer, L2NpcTemplate> _npcs = new ConcurrentHashMap<>();
 	private final Map<String, Integer> _clans = new ConcurrentHashMap<>();
-	private MinionData _minionData;
+	private static final List<Integer> _masterMonsterIDs = new ArrayList<>();
 	
 	protected NpcData()
 	{
@@ -66,7 +66,7 @@ public class NpcData implements IGameXmlReader
 	@Override
 	public synchronized void load()
 	{
-		_minionData = new MinionData();
+		_masterMonsterIDs.clear();
 		
 		parseDatapackDirectory("data/stats/npcs", false);
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _npcs.size() + " NPCs.");
@@ -78,7 +78,6 @@ public class NpcData implements IGameXmlReader
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + (_npcs.size() - npcCount) + " Custom NPCs.");
 		}
 		
-		_minionData = null;
 		loadNpcsSkillLearn();
 	}
 	
@@ -520,15 +519,6 @@ public class NpcData implements IGameXmlReader
 							template.set(set);
 						}
 						
-						if (_minionData._tempMinions.containsKey(npcId))
-						{
-							if (parameters == null)
-							{
-								parameters = new HashMap<>();
-							}
-							parameters.putIfAbsent("Privates", _minionData._tempMinions.get(npcId));
-						}
-						
 						template.setParameters(parameters != null ? new StatsSet(Collections.unmodifiableMap(parameters)) : StatsSet.EMPTY_STATSET);
 						
 						if (skills != null)
@@ -661,6 +651,14 @@ public class NpcData implements IGameXmlReader
 								}
 							}
 						}
+						
+						if (!template.getParameters().getMinionList("Privates").isEmpty())
+						{
+							if (template.getParameters().getSet().get("SummonPrivateRate") == null)
+							{
+								_masterMonsterIDs.add(template.getId());
+							}
+						}
 					}
 				}
 			}
@@ -788,55 +786,11 @@ public class NpcData implements IGameXmlReader
 	}
 	
 	/**
-	 * This class handles minions from Spawn System<br>
-	 * Once Spawn System gets reworked delete this class<br>
-	 * @author Zealar
+	 * @return the IDs of monsters that have minions.
 	 */
-	private final class MinionData implements IGameXmlReader
+	public static List<Integer> getMasterMonsterIDs()
 	{
-		public final Map<Integer, List<MinionHolder>> _tempMinions = new HashMap<>();
-		
-		protected MinionData()
-		{
-			load();
-		}
-		
-		@Override
-		public void load()
-		{
-			_tempMinions.clear();
-			parseDatapackFile("data/MinionData.xml");
-			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _tempMinions.size() + " minions data.");
-		}
-		
-		@Override
-		public void parseDocument(Document doc, File f)
-		{
-			for (Node node = doc.getFirstChild(); node != null; node = node.getNextSibling())
-			{
-				if ("list".equals(node.getNodeName()))
-				{
-					for (Node listNode = node.getFirstChild(); listNode != null; listNode = listNode.getNextSibling())
-					{
-						if ("npc".equals(listNode.getNodeName()))
-						{
-							final List<MinionHolder> minions = new ArrayList<>(1);
-							NamedNodeMap attrs = listNode.getAttributes();
-							final int id = parseInteger(attrs, "id");
-							for (Node npcNode = listNode.getFirstChild(); npcNode != null; npcNode = npcNode.getNextSibling())
-							{
-								if ("minion".equals(npcNode.getNodeName()))
-								{
-									attrs = npcNode.getAttributes();
-									minions.add(new MinionHolder(parseInteger(attrs, "id"), parseInteger(attrs, "count"), parseInteger(attrs, "respawnTime"), 0));
-								}
-							}
-							_tempMinions.put(id, minions);
-						}
-					}
-				}
-			}
-		}
+		return _masterMonsterIDs;
 	}
 	
 	/**

@@ -195,6 +195,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22201" count="3" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="mobile_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
@@ -475,6 +478,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22204" count="4" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="mobile_type" value="1" />
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="33" />
@@ -739,6 +745,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
+			<minions name="Privates">
+				<npc id="22209" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
 			<param name="ProbPhysicalSpecial2" value="5" />
@@ -994,6 +1003,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="mobile_type" value="1" />
+			<minions name="Privates">
+				<npc id="22212" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="3" />
 			<param name="ProbPhysicalSpecial2" value="33" />
@@ -1926,6 +1938,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="1" />
+			<minions name="Privates">
+				<npc id="22197" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="3" />
 			<param name="ProbPhysicalSpecial2" value="20" />
@@ -2010,6 +2025,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22201" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="50" />
 			<param name="ProbPhysicalSpecial1" value="33" />
 			<param name="ProbPhysicalSpecial2" value="5" />
@@ -2104,6 +2122,9 @@
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="ag_type" value="0" />
+			<minions name="Privates">
+				<npc id="22204" count="1" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="ProbSelfRangeBuff1" value="100" />
 			<param name="ProbPhysicalSpecial1" value="33" />
 			<param name="ProbPhysicalSpecial2" value="20" />
@@ -6342,6 +6363,9 @@
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
 			<param name="MoveAroundSocial2" value="114" />
+			<minions name="Privates">
+				<npc id="22276" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
 			<param name="MoveArounding" value="0" />
@@ -6510,6 +6534,9 @@
 			<param name="MoveAroundSocial" value="135" />
 			<param name="MoveAroundSocial1" value="135" />
 			<param name="MoveAroundSocial2" value="135" />
+			<minions name="Privates">
+				<npc id="22278" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
 			<param name="IsAggressive" value="1" />
 			<param name="Aggressive_Time" value="0" />
 			<param name="MoveArounding" value="0" />
