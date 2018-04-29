@@ -24,7 +24,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
@@ -181,17 +180,6 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	protected boolean checkConditions(L2PcInstance player)
 	{
 		return true;
-	}
-	
-	/**
-	 * Spawns group of instance NPCs
-	 * @param groupName the name of group from XML definition to spawn
-	 * @param instanceId the instance ID
-	 * @return list of spawned NPCs
-	 */
-	protected List<L2Npc> spawnGroup(String groupName, int instanceId)
-	{
-		return InstanceManager.getInstance().getInstance(instanceId).spawnGroup(groupName);
 	}
 	
 	/**

@@ -244,4 +244,14 @@ public class InstanceWorld
 	{
 		return getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
 	}
+	
+	/**
+	 * Spawns group of instance NPCs
+	 * @param groupName the name of group from XML definition to spawn
+	 * @return list of spawned NPCs
+	 */
+	public List<L2Npc> spawnGroup(String groupName)
+	{
+		return _instance.spawnGroup(groupName);
+	}
 }

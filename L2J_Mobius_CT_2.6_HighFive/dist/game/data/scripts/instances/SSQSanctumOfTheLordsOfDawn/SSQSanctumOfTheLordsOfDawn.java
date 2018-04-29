@@ -84,7 +84,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 				if (world != null)
 				{
-					spawnGroup("high_priest_of_dawn", world.getInstanceId());
+					world.spawnGroup("high_priest_of_dawn");
 					player.sendPacket(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS);
 				}
 				break;
@@ -170,10 +170,10 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 		if (firstEntrance)
 		{
 			world.addAllowed(player.getObjectId());
-			world.setParameter("save_point1", spawnGroup("save_point1", world.getInstanceId()));
-			world.setParameter("save_point2", spawnGroup("save_point2", world.getInstanceId()));
-			world.setParameter("save_point3", spawnGroup("save_point3", world.getInstanceId()));
-			world.setParameter("save_point4", spawnGroup("save_point4", world.getInstanceId()));
+			world.setParameter("save_point1", world.spawnGroup("save_point1"));
+			world.setParameter("save_point2", world.spawnGroup("save_point2"));
+			world.setParameter("save_point3", world.spawnGroup("save_point3"));
+			world.setParameter("save_point4", world.spawnGroup("save_point4"));
 		}
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
