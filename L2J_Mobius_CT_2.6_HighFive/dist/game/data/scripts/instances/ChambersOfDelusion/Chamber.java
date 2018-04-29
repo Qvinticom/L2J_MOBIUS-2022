@@ -50,94 +50,6 @@ import instances.AbstractInstance;
  */
 public abstract class Chamber extends AbstractInstance
 {
-	protected class CDWorld extends InstanceWorld
-	{
-		protected int currentRoom;
-		protected final L2Party partyInside;
-		protected final ScheduledFuture<?> _banishTask;
-		protected ScheduledFuture<?> _roomChangeTask;
-		
-		protected CDWorld(L2Party party)
-		{
-			currentRoom = 0;
-			partyInside = party;
-			_banishTask = ThreadPool.scheduleAtFixedRate(new BanishTask(), 60000, 60000);
-		}
-		
-		protected L2Party getPartyInside()
-		{
-			return partyInside;
-		}
-		
-		protected void scheduleRoomChange(boolean bossRoom)
-		{
-			final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
-			final long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
-			
-			// Schedule next room change only if remaining time is enough
-			if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
-			{
-				_roomChangeTask = ThreadPool.schedule(new ChangeRoomTask(), nextInterval - 5000);
-			}
-		}
-		
-		protected void stopBanishTask()
-		{
-			_banishTask.cancel(true);
-		}
-		
-		protected void stopRoomChangeTask()
-		{
-			_roomChangeTask.cancel(true);
-		}
-		
-		protected class BanishTask implements Runnable
-		{
-			@Override
-			public void run()
-			{
-				final Instance inst = InstanceManager.getInstance().getInstance(getInstanceId());
-				
-				if ((inst == null) || ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
-				{
-					_banishTask.cancel(false);
-				}
-				else
-				{
-					for (int objId : inst.getPlayers())
-					{
-						final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-						if ((pl != null) && pl.isOnline())
-						{
-							if ((partyInside == null) || !pl.isInParty() || (partyInside != pl.getParty()))
-							{
-								exitInstance(pl);
-							}
-						}
-					}
-				}
-			}
-		}
-		
-		protected class ChangeRoomTask implements Runnable
-		{
-			@Override
-			public void run()
-			{
-				try
-				{
-					earthQuake(CDWorld.this);
-					Thread.sleep(5000);
-					changeRoom(CDWorld.this);
-				}
-				catch (Exception e)
-				{
-					LOGGER.log(Level.WARNING, getClass().getSimpleName() + " ChangeRoomTask exception : " + e.getMessage(), e);
-				}
-			}
-		}
-	}
-	
 	// Items
 	private static final int ENRIA = 4042;
 	private static final int ASOFE = 4043;
@@ -197,9 +109,9 @@ public abstract class Chamber extends AbstractInstance
 		return ((INSTANCEID == 131) || (INSTANCEID == 132));
 	}
 	
-	private boolean isBossRoom(CDWorld world)
+	private boolean isBossRoom(InstanceWorld world)
 	{
-		return (world.currentRoom == (ROOM_ENTER_POINTS.length - 1));
+		return (world.getParameters().getInt("currentRoom", 0) == (ROOM_ENTER_POINTS.length - 1));
 	}
 	
 	@Override
@@ -255,7 +167,7 @@ public abstract class Chamber extends AbstractInstance
 	
 	private void markRestriction(InstanceWorld world)
 	{
-		if (world instanceof CDWorld)
+		if (world != null)
 		{
 			final Calendar reenter = Calendar.getInstance();
 			final Calendar now = Calendar.getInstance();
@@ -266,23 +178,23 @@ public abstract class Chamber extends AbstractInstance
 				reenter.add(Calendar.DAY_OF_WEEK, 1);
 			}
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
+			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getInstance().getTemplateId()));
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
 			{
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getInstance().getTemplateId(), reenter.getTimeInMillis());
 					player.sendPacket(sm);
 				}
 			}
 		}
 	}
 	
-	protected void changeRoom(CDWorld world)
+	protected void changeRoom(InstanceWorld world)
 	{
-		final L2Party party = world.getPartyInside();
+		final L2Party party = world.getParameters().getObject("PartyInside", L2Party.class);
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 		
 		if ((party == null) || (inst == null))
@@ -290,7 +202,7 @@ public abstract class Chamber extends AbstractInstance
 			return;
 		}
 		
-		int newRoom = world.currentRoom;
+		int newRoom = world.getParameters().getInt("currentRoom", 0);
 		
 		// Do nothing, if there are raid room of Sqare or Tower Chamber
 		if (isBigChamber() && isBossRoom(world))
@@ -312,7 +224,7 @@ public abstract class Chamber extends AbstractInstance
 		
 		else
 		{
-			while (newRoom == world.currentRoom) // otherwise teleport to another room, except current
+			while (newRoom == world.getParameters().getInt("currentRoom", 0)) // otherwise teleport to another room, except current
 			{
 				newRoom = getRandom(ROOM_ENTER_POINTS.length - 1);
 			}
@@ -327,7 +239,7 @@ public abstract class Chamber extends AbstractInstance
 			}
 		}
 		
-		world.currentRoom = newRoom;
+		world.setParameter("currentRoom", newRoom);
 		
 		// Do not schedule room change for Square and Tower Chambers, if raid room is reached
 		if (isBigChamber() && isBossRoom(world))
@@ -344,13 +256,13 @@ public abstract class Chamber extends AbstractInstance
 		}
 		else
 		{
-			world.scheduleRoomChange(false);
+			scheduleRoomChange(world, false);
 		}
 	}
 	
-	private void enter(CDWorld world)
+	private void enter(InstanceWorld world)
 	{
-		final L2Party party = world.getPartyInside();
+		final L2Party party = world.getParameters().getObject("PartyInside", L2Party.class);
 		
 		if (party == null)
 		{
@@ -379,9 +291,9 @@ public abstract class Chamber extends AbstractInstance
 		changeRoom(world);
 	}
 	
-	protected void earthQuake(CDWorld world)
+	protected void earthQuake(InstanceWorld world)
 	{
-		final L2Party party = world.getPartyInside();
+		final L2Party party = world.getParameters().getObject("PartyInside", L2Party.class);
 		
 		if (party == null)
 		{
@@ -402,12 +314,13 @@ public abstract class Chamber extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			enter((CDWorld) world);
+			world.setParameter("PartyInside", player.getParty());
+			world.setParameter("banishTask", ThreadPool.scheduleAtFixedRate(new BanishTask(world), 60000, 60000));
+			enter(world);
 		}
 		else
 		{
-			final CDWorld currentWorld = (CDWorld) world;
-			teleportPlayer(player, ROOM_ENTER_POINTS[currentWorld.currentRoom], world.getInstanceId());
+			teleportPlayer(player, ROOM_ENTER_POINTS[world.getParameters().getInt("currentRoom", 0)], world.getInstanceId());
 		}
 	}
 	
@@ -450,12 +363,10 @@ public abstract class Chamber extends AbstractInstance
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
 		String htmltext = "";
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		
-		if ((player != null) && (tmpworld != null) && (tmpworld instanceof CDWorld) && (npc.getId() >= ROOM_GATEKEEPER_FIRST) && (npc.getId() <= ROOM_GATEKEEPER_LAST))
+		if ((player != null) && (world != null) && (npc.getId() >= ROOM_GATEKEEPER_FIRST) && (npc.getId() <= ROOM_GATEKEEPER_LAST))
 		{
-			final CDWorld world = (CDWorld) tmpworld;
-			
 			// Change room from dialog
 			if (event.equals("next_room"))
 			{
@@ -463,19 +374,16 @@ public abstract class Chamber extends AbstractInstance
 				{
 					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_party.html");
 				}
-				
 				else if (player.getParty().getLeaderObjectId() != player.getObjectId())
 				{
 					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_leader.html");
 				}
-				
 				else if (hasQuestItems(player, DELUSION_MARK))
 				{
 					takeItems(player, DELUSION_MARK, 1);
-					world.stopRoomChangeTask();
+					stopRoomChangeTask(world);
 					changeRoom(world);
 				}
-				
 				else
 				{
 					htmltext = getHtm(player.getHtmlPrefix(), "data/scripts/instances/ChambersOfDelusion/no_item.html");
@@ -495,8 +403,8 @@ public abstract class Chamber extends AbstractInstance
 				{
 					final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 					
-					world.stopRoomChangeTask();
-					world.stopBanishTask();
+					stopRoomChangeTask(world);
+					stopBanishTask(world);
 					
 					for (L2PcInstance partyMember : player.getParty().getMembers())
 					{
@@ -508,9 +416,9 @@ public abstract class Chamber extends AbstractInstance
 			}
 			else if (event.equals("look_party"))
 			{
-				if ((player.getParty() != null) && (player.getParty() == world.getPartyInside()))
+				if ((player.getParty() != null) && (player.getParty() == world.getParameters().getObject("PartyInside", L2Party.class)))
 				{
-					teleportPlayer(player, ROOM_ENTER_POINTS[world.currentRoom], world.getInstanceId(), false);
+					teleportPlayer(player, ROOM_ENTER_POINTS[world.getParameters().getInt("currentRoom", 0)], world.getInstanceId(), false);
 				}
 			}
 		}
@@ -573,17 +481,15 @@ public abstract class Chamber extends AbstractInstance
 				break;
 			}
 		}
-		
 		return null;
 	}
 	
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isPet)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if ((tmpworld != null) && (tmpworld instanceof CDWorld))
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		if (world != null)
 		{
-			final CDWorld world = (CDWorld) tmpworld;
 			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 			
 			if (isBigChamber())
@@ -596,8 +502,8 @@ public abstract class Chamber extends AbstractInstance
 			}
 			else
 			{
-				world.stopRoomChangeTask();
-				world.scheduleRoomChange(true);
+				stopRoomChangeTask(world);
+				scheduleRoomChange(world, true);
 			}
 			
 			inst.spawnGroup("boxes");
@@ -626,11 +532,108 @@ public abstract class Chamber extends AbstractInstance
 		{
 			if (checkConditions(player))
 			{
-				final L2Party party = player.getParty();
-				enterInstance(player, new CDWorld(party), INSTANCEID);
+				enterInstance(player, INSTANCEID);
 			}
 		}
-		
 		return "";
+	}
+	
+	protected L2Party getPartyInside(InstanceWorld world)
+	{
+		return world.getParameters().getObject("PartyInside", L2Party.class);
+	}
+	
+	protected void scheduleRoomChange(InstanceWorld world, boolean bossRoom)
+	{
+		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
+		final long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
+		
+		// Schedule next room change only if remaining time is enough
+		if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)
+		{
+			world.setParameter("roomChangeTask", ThreadPool.schedule(new ChangeRoomTask(world), nextInterval - 5000));
+		}
+	}
+	
+	protected void stopBanishTask(InstanceWorld world)
+	{
+		final ScheduledFuture<?> banishTask = world.getParameters().getObject("banishTask", ScheduledFuture.class);
+		if (banishTask != null)
+		{
+			banishTask.cancel(true);
+		}
+	}
+	
+	protected void stopRoomChangeTask(InstanceWorld world)
+	{
+		final ScheduledFuture<?> roomChangeTask = world.getParameters().getObject("roomChangeTask", ScheduledFuture.class);
+		if (roomChangeTask != null)
+		{
+			roomChangeTask.cancel(true);
+		}
+	}
+	
+	protected class BanishTask implements Runnable
+	{
+		final InstanceWorld _world;
+		
+		public BanishTask(InstanceWorld world)
+		{
+			_world = world;
+		}
+		
+		@Override
+		public void run()
+		{
+			final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
+			if ((inst == null) || ((inst.getInstanceEndTime() - System.currentTimeMillis()) < 60000))
+			{
+				final ScheduledFuture<?> banishTask = _world.getParameters().getObject("banishTask", ScheduledFuture.class);
+				if (banishTask != null)
+				{
+					banishTask.cancel(true);
+				}
+			}
+			else
+			{
+				for (int objId : inst.getPlayers())
+				{
+					final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
+					if ((pl != null) && pl.isOnline())
+					{
+						final L2Party party = _world.getParameters().getObject("PartyInside", L2Party.class);
+						if ((party == null) || !pl.isInParty() || (party != pl.getParty()))
+						{
+							exitInstance(pl);
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	protected class ChangeRoomTask implements Runnable
+	{
+		final InstanceWorld _world;
+		
+		public ChangeRoomTask(InstanceWorld world)
+		{
+			_world = world;
+		}
+		
+		@Override
+		public void run()
+		{
+			try
+			{
+				earthQuake(_world);
+				Thread.sleep(5000);
+				changeRoom(_world);
+			}
+			catch (Exception e)
+			{
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + " ChangeRoomTask exception : " + e.getMessage(), e);
+			}
+		}
 	}
 }

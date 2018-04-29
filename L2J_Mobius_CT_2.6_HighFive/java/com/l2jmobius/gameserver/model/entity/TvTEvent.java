@@ -268,7 +268,7 @@ public class TvTEvent
 		{
 			try
 			{
-				_TvTEventInstance = InstanceManager.getInstance().createDynamicInstance(Config.TVT_EVENT_INSTANCE_ID);
+				_TvTEventInstance = InstanceManager.getInstance().createDynamicInstance(Config.TVT_EVENT_INSTANCE_ID).getId();
 				InstanceManager.getInstance().getInstance(_TvTEventInstance).setAllowSummon(false);
 				InstanceManager.getInstance().getInstance(_TvTEventInstance).setIsPvP(true);
 				InstanceManager.getInstance().getInstance(_TvTEventInstance).setEmptyDestroyTime((Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY * 1000) + 60000L);

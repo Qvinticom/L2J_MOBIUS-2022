@@ -551,7 +551,7 @@ public final class Kamaloka extends AbstractInstance
 		if (world != null)
 		{
 			// but not in kamaloka
-			if (!(world instanceof KamaWorld) || (world.getTemplateId() != templateId))
+			if (!(world instanceof KamaWorld) || (world.getInstance().getTemplateId() != templateId))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
@@ -579,25 +579,21 @@ public final class Kamaloka extends AbstractInstance
 			return;
 		}
 		
-		// Creating dynamic instance without template
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(templateId);
-		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-		// set return location
-		inst.setExitLoc(new Location(player));
-		// disable summon friend into instance
-		inst.setAllowSummon(false);
-		// set duration and empty destroy time
-		inst.setDuration(DURATION[index] * 60000);
-		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
-		
 		// Creating new instanceWorld, using our instanceId and templateId
 		world = new KamaWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(templateId);
+		world.setInstance(InstanceManager.getInstance().createDynamicInstance(templateId));
+		
+		// set return location
+		world.getInstance().setExitLoc(new Location(player));
+		// disable summon friend into instance
+		world.getInstance().setAllowSummon(false);
+		// set duration and empty destroy time
+		world.getInstance().setDuration(DURATION[index] * 60000);
+		world.getInstance().setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		
 		// set index for easy access to the arrays
 		((KamaWorld) world).index = index;
 		InstanceManager.getInstance().addWorld(world);
-		world.setStatus(0);
 		// spawn npcs
 		spawnKama((KamaWorld) world);
 		
@@ -607,7 +603,7 @@ public final class Kamaloka extends AbstractInstance
 		{
 			world.addAllowed(partyMember.getObjectId());
 			removeBuffs(partyMember);
-			teleportPlayer(partyMember, TELEPORTS[index], instanceId);
+			teleportPlayer(partyMember, TELEPORTS[index], world.getInstanceId());
 		}
 		return;
 	}
@@ -631,7 +627,7 @@ public final class Kamaloka extends AbstractInstance
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-			sm.addInstanceName(world.getTemplateId());
+			sm.addInstanceName(world.getInstance().getTemplateId());
 			
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
@@ -639,7 +635,7 @@ public final class Kamaloka extends AbstractInstance
 				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
 				if ((obj != null) && obj.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getInstance().getTemplateId(), reenter.getTimeInMillis());
 					obj.sendPacket(sm);
 				}
 			}
@@ -760,7 +756,7 @@ public final class Kamaloka extends AbstractInstance
 			// only party leader can talk with escape teleporter
 			if ((party != null) && party.isLeader(player))
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 				if (world instanceof KamaWorld)
 				{
 					// party members must be in the instance
@@ -808,7 +804,7 @@ public final class Kamaloka extends AbstractInstance
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpWorld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpWorld instanceof KamaWorld)
 		{
 			final KamaWorld world = (KamaWorld) tmpWorld;

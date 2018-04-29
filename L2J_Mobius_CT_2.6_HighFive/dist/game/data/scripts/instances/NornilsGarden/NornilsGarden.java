@@ -229,7 +229,7 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void exitInstance(L2PcInstance player)
 	{
-		final InstanceWorld inst = InstanceManager.getInstance().getWorld(player.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(player);
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
@@ -243,7 +243,7 @@ public final class NornilsGarden extends AbstractInstance
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != TEMPLATE_ID))
+			if (!(world instanceof NornilsWorld) || (world.getInstance().getTemplateId() != TEMPLATE_ID))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return null;
@@ -271,16 +271,14 @@ public final class NornilsGarden extends AbstractInstance
 			return result;
 		}
 		
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID);
-		final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-		inst.setExitLoc(new Location(player));
-		inst.setAllowSummon(false);
-		inst.setDuration(DURATION_TIME * 60000);
-		inst.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
 		world = new NornilsWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(TEMPLATE_ID);
+		world.setInstance(InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID));
 		InstanceManager.getInstance().addWorld(world);
+		world.getInstance().setExitLoc(new Location(player));
+		world.getInstance().setAllowSummon(false);
+		world.getInstance().setDuration(DURATION_TIME * 60000);
+		world.getInstance().setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		final int instanceId = world.getInstanceId();
 		LOGGER.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		
 		prepareInstance((NornilsWorld) world);
@@ -312,7 +310,7 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn1(L2Npc npc)
 	{
-		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc);
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
@@ -330,7 +328,7 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn2(L2Npc npc)
 	{
-		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(npc);
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
@@ -348,7 +346,7 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn3(L2Character cha)
 	{
-		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha);
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
@@ -366,7 +364,7 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private void spawn4(L2Character cha)
 	{
-		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha.getInstanceId());
+		final InstanceWorld inst = InstanceManager.getInstance().getWorld(cha);
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
@@ -385,7 +383,7 @@ public final class NornilsGarden extends AbstractInstance
 	public void openDoor(QuestState st, L2PcInstance player, int doorId)
 	{
 		st.unset("correct");
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 		if (tmpworld instanceof NornilsWorld)
 		{
 			openDoor(doorId, tmpworld.getInstanceId());
@@ -469,7 +467,7 @@ public final class NornilsGarden extends AbstractInstance
 	{
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
 			if (tmpworld instanceof NornilsWorld)
 			{
 				for (int _auto[] : _auto_gates)
@@ -618,7 +616,7 @@ public final class NornilsGarden extends AbstractInstance
 				// Check if gatekeeper should open bridge, and open it
 				if (_gk[2] > 0)
 				{
-					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 					if (tmpworld instanceof NornilsWorld)
 					{
 						openDoor(_gk[2], tmpworld.getInstanceId());

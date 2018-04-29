@@ -314,9 +314,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HIAWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			world.setTemplateId(INSTANCEID);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Heart Infinity Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
@@ -495,7 +493,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
 		{
 			final HIAWorld world = (HIAWorld) tmpworld;
@@ -515,7 +513,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
 		{
 			final HIAWorld world = (HIAWorld) tmpworld;
@@ -526,14 +524,14 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-				sm.addInstanceName(tmpworld.getTemplateId());
+				sm.addInstanceName(INSTANCEID);
 				
 				for (int objectId : tmpworld.getAllowed())
 				{
 					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.getTemplateId(), reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -567,7 +565,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			npc.setIsImmobilized(true);
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
 		{
 			final HIAWorld world = (HIAWorld) tmpworld;
@@ -580,7 +578,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			if (npc.getId() == DEADTUMOR)
 			{
 				final int tag = world.getParameters().getInt("tag", -1);
-				world.getParameters().set("tag", tag + 1);
+				world.setParameter("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);
@@ -589,7 +587,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIAWorld)
 		{
 			final HIAWorld world = (HIAWorld) tmpworld;
@@ -657,7 +655,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			_world.npcList.add(alivetumor);
 			_deadTumor.deleteMe();
 			final int tag = _world.getParameters().getInt("tag", -1);
-			_world.getParameters().set("tag", tag - 1);
+			_world.setParameter("tag", tag - 1);
 		}
 	}
 	

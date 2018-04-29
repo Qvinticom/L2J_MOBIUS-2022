@@ -16,11 +16,6 @@
  */
 package instances.SSQSanctumOfTheLordsOfDawn;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -43,17 +38,6 @@ import quests.Q00195_SevenSignsSecretRitualOfThePriests.Q00195_SevenSignsSecretR
  */
 public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 {
-	protected static final class HSWorld extends InstanceWorld
-	{
-		protected int doorst = 0;
-		protected static final Map<Integer, List<L2Npc>> _save_point = new HashMap<>();
-		
-		public static Map<Integer, List<L2Npc>> getMonsters()
-		{
-			return _save_point;
-		}
-	}
-	
 	// NPCs
 	private static final int GUARDS_OF_THE_DAWN = 18834;
 	private static final int GUARDS_OF_THE_DAWN_2 = 18835;
@@ -97,10 +81,9 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 		{
 			case "spawn":
 			{
-				final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-				if (tmpworld instanceof HSWorld)
+				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+				if (world != null)
 				{
-					final HSWorld world = (HSWorld) tmpworld;
 					spawnGroup("high_priest_of_dawn", world.getInstanceId());
 					player.sendPacket(SystemMessageId.BY_USING_THE_SKILL_OF_EINHASAD_S_HOLY_SWORD_DEFEAT_THE_EVIL_LILIMS);
 				}
@@ -127,14 +110,52 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 					}
 				}
 				
-				OUTTER: for (Entry<Integer, List<L2Npc>> entry : HSWorld._save_point.entrySet())
+				InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+				if (world != null)
 				{
-					for (L2Npc monster : entry.getValue())
+					boolean teleported = false;
+					for (L2Npc monster : world.getParameters().getList("save_point1", L2Npc.class))
 					{
-						if (monster.getObjectId() == npc.getObjectId())
+						if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
 						{
-							player.teleToLocation(SAVE_POINT[entry.getKey()]);
-							break OUTTER;
+							teleported = true;
+							player.teleToLocation(SAVE_POINT[1]);
+							break;
+						}
+					}
+					if (!teleported)
+					{
+						for (L2Npc monster : world.getParameters().getList("save_point2", L2Npc.class))
+						{
+							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
+							{
+								teleported = true;
+								player.teleToLocation(SAVE_POINT[2]);
+								break;
+							}
+						}
+					}
+					if (!teleported)
+					{
+						for (L2Npc monster : world.getParameters().getList("save_point3", L2Npc.class))
+						{
+							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
+							{
+								teleported = true;
+								player.teleToLocation(SAVE_POINT[3]);
+								break;
+							}
+						}
+					}
+					if (!teleported)
+					{
+						for (L2Npc monster : world.getParameters().getList("save_point4", L2Npc.class))
+						{
+							if ((monster != null) && (monster.getObjectId() == npc.getObjectId()))
+							{
+								player.teleToLocation(SAVE_POINT[4]);
+								break;
+							}
 						}
 					}
 				}
@@ -149,11 +170,10 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 		if (firstEntrance)
 		{
 			world.addAllowed(player.getObjectId());
-			final Map<Integer, List<L2Npc>> save_point = HSWorld.getMonsters();
-			save_point.put(0, spawnGroup("save_point1", world.getInstanceId()));
-			save_point.put(1, spawnGroup("save_point2", world.getInstanceId()));
-			save_point.put(2, spawnGroup("save_point3", world.getInstanceId()));
-			save_point.put(3, spawnGroup("save_point4", world.getInstanceId()));
+			world.setParameter("save_point1", spawnGroup("save_point1", world.getInstanceId()));
+			world.setParameter("save_point2", spawnGroup("save_point2", world.getInstanceId()));
+			world.setParameter("save_point3", spawnGroup("save_point3", world.getInstanceId()));
+			world.setParameter("save_point4", spawnGroup("save_point4", world.getInstanceId()));
 		}
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
@@ -168,32 +188,32 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 				final QuestState qs = talker.getQuestState(Q00195_SevenSignsSecretRitualOfThePriests.class.getSimpleName());
 				if ((qs != null) && qs.isCond(3) && hasQuestItems(talker, IDENTITY_CARD) && (talker.getTransformationId() == 113))
 				{
-					enterInstance(talker, new HSWorld(), TEMPLATE_ID);
+					enterInstance(talker, TEMPLATE_ID);
 					return "32575-01.html";
 				}
 				return "32575-02.html";
 			}
 			case IDENTITY_CONFIRM_DEVICE:
 			{
-				final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-				if (tmpworld instanceof HSWorld)
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+				if (world != null)
 				{
 					if (hasQuestItems(talker, IDENTITY_CARD) && (talker.getTransformationId() == 113))
 					{
-						final HSWorld world = (HSWorld) tmpworld;
-						if (world.doorst == 0)
+						final int doorst = world.getParameters().getInt("doorst", 0);
+						if (doorst == 0)
 						{
 							openDoor(DOOR_ONE, world.getInstanceId());
 							talker.sendPacket(SystemMessageId.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE);
 							talker.sendPacket(SystemMessageId.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT);
 							talker.sendPacket(SystemMessageId.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE);
-							world.doorst++;
+							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
 						}
-						else if (world.doorst == 1)
+						else if (doorst == 1)
 						{
 							openDoor(DOOR_TWO, world.getInstanceId());
-							world.doorst++;
+							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
 							for (int objId : world.getAllowed())
 							{
@@ -213,10 +233,9 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 			}
 			case PASSWORD_ENTRY_DEVICE:
 			{
-				final InstanceWorld tmworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-				if (tmworld instanceof HSWorld)
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+				if (world != null)
 				{
-					final HSWorld world = (HSWorld) tmworld;
 					openDoor(DOOR_THREE, world.getInstanceId());
 					return "32577-01.html";
 				}
@@ -231,7 +250,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 			}
 			case SHELF:
 			{
-				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 				InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(300000);
 				talker.teleToLocation(-75925, 213399, -7128);
 				return "32580-01.html";

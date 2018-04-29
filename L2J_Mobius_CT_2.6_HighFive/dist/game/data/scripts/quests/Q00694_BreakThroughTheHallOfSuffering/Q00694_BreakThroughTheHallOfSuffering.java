@@ -36,6 +36,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 	private static final int TEPIOS2 = 32530;
 	private static final int MARK = 13691;
 	private static final int SOE = 736;
+	private static final int TEMPLATE_ID = 115;
 	
 	public Q00694_BreakThroughTheHallOfSuffering()
 	{
@@ -97,7 +98,7 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 					case TEPIOS2:
 					{
 						final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-						if ((world != null) && (world.getTemplateId() == 115))
+						if ((world != null) && (world.getInstance().getTemplateId() == TEMPLATE_ID))
 						{
 							final int tag = world.getParameters().getInt("tag", -1);
 							if (tag == -1)
@@ -290,14 +291,14 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		reenter.set(Calendar.HOUR_OF_DAY, 6);
 		
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-		sm.addInstanceName(world.getTemplateId());
+		sm.addInstanceName(TEMPLATE_ID);
 		
 		for (int objectId : world.getAllowed())
 		{
 			final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
 			if ((obj != null) && obj.isOnline())
 			{
-				InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
+				InstanceManager.getInstance().setInstanceTime(objectId, TEMPLATE_ID, reenter.getTimeInMillis());
 				obj.sendPacket(sm);
 			}
 		}

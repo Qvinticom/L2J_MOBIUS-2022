@@ -226,9 +226,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HSDWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			world.setTemplateId(INSTANCEID);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			((HSDWorld) world).storeTime[0] = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Suffering Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
@@ -373,7 +371,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
 		{
 			final HSDWorld world = (HSDWorld) tmpworld;
@@ -436,7 +434,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
 		{
 			final HSDWorld world = (HSDWorld) tmpworld;
@@ -447,7 +445,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-				sm.addInstanceName(tmpworld.getTemplateId());
+				sm.addInstanceName(INSTANCEID);
 				
 				// set instance reenter time for all allowed players
 				for (int objectId : tmpworld.getAllowed())
@@ -455,7 +453,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.getTemplateId(), reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -489,7 +487,7 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HSDWorld)
 		{
 			final HSDWorld world = (HSDWorld) tmpworld;
@@ -523,43 +521,43 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 					final Long finishDiff = world.storeTime[1] - world.storeTime[0];
 					if (finishDiff < 1260000)
 					{
-						world.getParameters().set("tag", 13777);
+						world.setParameter("tag", 13777);
 					}
 					else if (finishDiff < 1380000)
 					{
-						world.getParameters().set("tag", 13778);
+						world.setParameter("tag", 13778);
 					}
 					else if (finishDiff < 1500000)
 					{
-						world.getParameters().set("tag", 13779);
+						world.setParameter("tag", 13779);
 					}
 					else if (finishDiff < 1620000)
 					{
-						world.getParameters().set("tag", 13780);
+						world.setParameter("tag", 13780);
 					}
 					else if (finishDiff < 1740000)
 					{
-						world.getParameters().set("tag", 13781);
+						world.setParameter("tag", 13781);
 					}
 					else if (finishDiff < 1860000)
 					{
-						world.getParameters().set("tag", 13782);
+						world.setParameter("tag", 13782);
 					}
 					else if (finishDiff < 1980000)
 					{
-						world.getParameters().set("tag", 13783);
+						world.setParameter("tag", 13783);
 					}
 					else if (finishDiff < 2100000)
 					{
-						world.getParameters().set("tag", 13784);
+						world.setParameter("tag", 13784);
 					}
 					else if (finishDiff < 2220000)
 					{
-						world.getParameters().set("tag", 13785);
+						world.setParameter("tag", 13785);
 					}
 					else
 					{
-						world.getParameters().set("tag", 13786);
+						world.setParameter("tag", 13786);
 					}
 					
 					world.klanikus = null;

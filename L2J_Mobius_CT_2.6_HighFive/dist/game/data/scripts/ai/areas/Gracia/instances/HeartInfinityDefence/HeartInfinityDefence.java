@@ -333,9 +333,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HIDWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			world.setTemplateId(INSTANCEID);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Heart Infinity Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
 			
@@ -536,7 +534,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
 		{
 			final HIDWorld world = (HIDWorld) tmpworld;
@@ -562,7 +560,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 			npc.setIsImmobilized(true);
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
 		{
 			if (npc.getId() == SOULWAGON)
@@ -577,7 +575,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HIDWorld)
 		{
 			final HIDWorld world = (HIDWorld) tmpworld;
@@ -746,7 +744,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		if (character instanceof L2Attackable)
 		{
 			final L2Attackable npc = (L2Attackable) character;
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof HIDWorld)
 			{
 				final HIDWorld world = (HIDWorld) tmpworld;

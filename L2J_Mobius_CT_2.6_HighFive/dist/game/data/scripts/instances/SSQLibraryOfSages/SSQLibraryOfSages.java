@@ -32,11 +32,6 @@ import instances.AbstractInstance;
  */
 public final class SSQLibraryOfSages extends AbstractInstance
 {
-	protected class LoSWorld extends InstanceWorld
-	{
-		protected L2Npc elcadia = null;
-	}
-	
 	// NPCs
 	private static final int SOPHIA1 = 32596;
 	private static final int PILE_OF_BOOKS1 = 32809;
@@ -72,23 +67,22 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if (tmpworld instanceof LoSWorld)
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		if (world != null)
 		{
-			final LoSWorld world = (LoSWorld) tmpworld;
 			switch (event)
 			{
 				case "TELEPORT2":
 				{
 					teleportPlayer(player, LIBRARY_LOC, world.getInstanceId());
-					world.elcadia.teleToLocation(LIBRARY_LOC.getX(), LIBRARY_LOC.getY(), LIBRARY_LOC.getZ(), 0, world.getInstanceId());
+					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(LIBRARY_LOC.getX(), LIBRARY_LOC.getY(), LIBRARY_LOC.getZ(), 0, world.getInstanceId());
 					break;
 				}
 				case "exit":
 				{
 					cancelQuestTimer("FOLLOW", npc, player);
 					player.teleToLocation(EXIT_LOC);
-					world.elcadia.deleteMe();
+					world.getParameters().getObject("elcadia", L2Npc.class).deleteMe();
 					break;
 				}
 				case "FOLLOW":
@@ -103,7 +97,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 				{
 					cancelQuestTimer("FOLLOW", npc, player);
 					teleportPlayer(player, START_LOC, world.getInstanceId());
-					world.elcadia.teleToLocation(START_LOC.getX(), START_LOC.getY(), START_LOC.getZ(), 0, world.getInstanceId());
+					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(START_LOC.getX(), START_LOC.getY(), START_LOC.getZ(), 0, world.getInstanceId());
 					break;
 				}
 			}
@@ -114,7 +108,7 @@ public final class SSQLibraryOfSages extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, new LoSWorld(), TEMPLATE_ID);
+		enterInstance(talker, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
@@ -126,17 +120,18 @@ public final class SSQLibraryOfSages extends AbstractInstance
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
-		spawnElcadia(player, (LoSWorld) world);
+		spawnElcadia(player, world);
 	}
 	
-	private void spawnElcadia(L2PcInstance player, LoSWorld world)
+	private void spawnElcadia(L2PcInstance player, InstanceWorld world)
 	{
-		if (world.elcadia != null)
+		final L2Npc elcadia = world.getParameters().getObject("elcadia", L2Npc.class);
+		if (elcadia != null)
 		{
-			world.elcadia.deleteMe();
+			elcadia.deleteMe();
 		}
-		world.elcadia = addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId());
-		startQuestTimer("FOLLOW", 3000, world.elcadia, player);
+		world.setParameter("elcadia", addSpawn(ELCADIA_INSTANCE, player, false, 0, false, player.getInstanceId()));
+		startQuestTimer("FOLLOW", 3000, elcadia, player);
 	}
 	
 	public static void main(String[] args)

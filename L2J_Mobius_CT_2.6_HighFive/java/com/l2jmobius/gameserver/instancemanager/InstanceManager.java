@@ -30,6 +30,7 @@ import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -252,6 +253,15 @@ public final class InstanceManager implements IGameXmlReader
 	}
 	
 	/**
+	 * @param object
+	 * @return the InstanceWorld of the object
+	 */
+	public InstanceWorld getWorld(L2Object object)
+	{
+		return _instanceWorlds.get(object.getInstanceId());
+	}
+	
+	/**
 	 * Check if the player have a World Instance where it's allowed to enter.
 	 * @param player the player to check
 	 * @return the instance world
@@ -353,7 +363,7 @@ public final class InstanceManager implements IGameXmlReader
 	 * @param templateId the instance template id
 	 * @return
 	 */
-	public int createDynamicInstance(int templateId)
+	public Instance createDynamicInstance(int templateId)
 	{
 		while (getInstance(_dynamic) != null)
 		{
@@ -372,7 +382,7 @@ public final class InstanceManager implements IGameXmlReader
 			instance.spawnDoors();
 			instance.spawnGroup("general");
 		}
-		return _dynamic;
+		return instance;
 	}
 	
 	/**

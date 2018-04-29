@@ -36,11 +36,6 @@ import instances.AbstractInstance;
  */
 public final class RankuFloor extends AbstractInstance
 {
-	protected class RFWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int GK_9 = 32752;
 	private static final int CUBE = 32374;
@@ -82,13 +77,13 @@ public final class RankuFloor extends AbstractInstance
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, new RFWorld(), TEMPLATE_ID);
+				enterInstance(player, TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == CUBE)
 		{
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (world instanceof RFWorld)
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+			if (world != null)
 			{
 				teleportPlayer(player, EXIT_POINT, 0);
 			}
@@ -103,7 +98,7 @@ public final class RankuFloor extends AbstractInstance
 		if (instanceId > 0)
 		{
 			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 			inst.setExitLoc(EXIT_POINT);
 			finishInstance(world);
 			addSpawn(CUBE, -19056, 278732, -15000, 0, false, 0, false, instanceId);

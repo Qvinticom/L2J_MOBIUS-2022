@@ -43,13 +43,6 @@ import quests.Q00196_SevenSignsSealOfTheEmperor.Q00196_SevenSignsSealOfTheEmpero
  */
 public final class SSQDisciplesNecropolisPast extends AbstractInstance
 {
-	protected class DNPWorld extends InstanceWorld
-	{
-		protected final List<L2Npc> anakimGroup = new ArrayList<>();
-		protected final List<L2Npc> lilithGroup = new ArrayList<>();
-		protected int countKill = 0;
-	}
-	
 	// NPCs
 	private static final int SEAL_DEVICE = 27384;
 	private static final int PROMISE_OF_MAMMON = 32585;
@@ -130,24 +123,27 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		addTalkId(PROMISE_OF_MAMMON, SHUNAIMAN, LEON, DISCIPLES_GATEKEEPER);
 	}
 	
-	protected void spawnNPC(DNPWorld world)
+	protected void spawnNPC(InstanceWorld world)
 	{
+		final List<L2Npc> lilithGroup = new ArrayList<>();
 		for (Map.Entry<Integer, Location> entry : LILITH_SPAWN.entrySet())
 		{
-			final L2Npc npc = addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId());
-			world.lilithGroup.add(npc);
+			lilithGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}
+		world.setParameter("lilithGroup", lilithGroup);
+		final List<L2Npc> anakimGroup = new ArrayList<>();
 		for (Map.Entry<Integer, Location> entry : ANAKIM_SPAWN.entrySet())
 		{
-			final L2Npc enpc = addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId());
-			world.anakimGroup.add(enpc);
+			anakimGroup.add(addSpawn(entry.getKey(), entry.getValue(), false, 0, false, world.getInstanceId()));
 		}
+		world.getParameters().set("anakimGroup", anakimGroup);
 	}
 	
-	private synchronized void checkDoors(L2Npc npc, DNPWorld world)
+	private synchronized void checkDoors(L2Npc npc, InstanceWorld world)
 	{
-		world.countKill++;
-		switch (world.countKill)
+		final int countKill = world.getParameters().getInt("countKill", 0) + 1;
+		world.setParameter("countKill", countKill);
+		switch (countKill)
 		{
 			case 4:
 			{
@@ -182,7 +178,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			spawnNPC((DNPWorld) world);
+			spawnNPC(world);
 			world.addAllowed(player.getObjectId());
 		}
 		teleportPlayer(player, ENTER, world.getInstanceId());
@@ -200,10 +196,9 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if (tmpworld instanceof DNPWorld)
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		if (world != null)
 		{
-			final DNPWorld world = (DNPWorld) tmpworld;
 			switch (event)
 			{
 				case "FINISH":
@@ -222,11 +217,13 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 				}
 				case "FIGHT":
 				{
-					for (L2Npc caster : world.anakimGroup)
+					final List<L2Npc> anakimGroup = world.getParameters().getList("anakimGroup", L2Npc.class, new ArrayList<>());
+					final List<L2Npc> lilithGroup = world.getParameters().getList("lilithGroup", L2Npc.class, new ArrayList<>());
+					for (L2Npc caster : anakimGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow())
 						{
-							makeCast(caster, world.lilithGroup);
+							makeCast(caster, lilithGroup);
 						}
 						if ((caster != null) && (caster.getId() == ANAKIM))
 						{
@@ -241,11 +238,11 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 							}
 						}
 					}
-					for (L2Npc caster : world.lilithGroup)
+					for (L2Npc caster : lilithGroup)
 					{
 						if ((caster != null) && !caster.isCastingNow())
 						{
-							makeCast(caster, world.anakimGroup);
+							makeCast(caster, anakimGroup);
 						}
 						if ((caster != null) && (caster.getId() == 32715))
 						{
@@ -352,8 +349,8 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if (tmpworld instanceof DNPWorld)
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		if (world != null)
 		{
 			if (npc.isScriptValue(0))
 			{
@@ -383,10 +380,9 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getPlayerWorld(player);
-		if (tmpworld instanceof DNPWorld)
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		if (world != null)
 		{
-			final DNPWorld world = (DNPWorld) tmpworld;
 			checkDoors(npc, world);
 		}
 		
@@ -437,7 +433,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 			{
 				if (qs.isCond(3) || qs.isCond(4))
 				{
-					enterInstance(talker, new DNPWorld(), TEMPLATE_ID);
+					enterInstance(talker, TEMPLATE_ID);
 					return "";
 				}
 				break;
@@ -458,10 +454,9 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 			{
 				if (qs.getCond() >= 3)
 				{
-					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-					if (tmpworld instanceof DNPWorld)
+					final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+					if (world != null)
 					{
-						final DNPWorld world = (DNPWorld) tmpworld;
 						openDoor(DISCIPLES_NECROPOLIS_DOOR, world.getInstanceId());
 						talker.showQuestMovie(12);
 						startQuestTimer("FIGHT", 1000, null, talker);

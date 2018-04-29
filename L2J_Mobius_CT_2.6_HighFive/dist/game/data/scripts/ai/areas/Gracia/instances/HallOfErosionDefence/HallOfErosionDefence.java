@@ -329,9 +329,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HEDWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			world.setTemplateId(INSTANCEID);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			((HEDWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Erosion Defence started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
@@ -478,7 +476,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
@@ -509,14 +507,14 @@ public class HallOfErosionDefence extends AbstractNpcAI
 			((L2QuestGuardInstance) npc).setPassive(true);
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
 			if (npc.getId() == TUMOR_DEAD)
 			{
 				final int tag = world.getParameters().getInt("tag", -1);
-				world.getParameters().set("tag", tag + 1);
+				world.setParameter("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);
@@ -525,7 +523,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;
@@ -556,7 +554,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	
 	public String onKillByMob(L2Npc npc, L2Npc killer)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEDWorld)
 		{
 			final HEDWorld world = (HEDWorld) tmpworld;

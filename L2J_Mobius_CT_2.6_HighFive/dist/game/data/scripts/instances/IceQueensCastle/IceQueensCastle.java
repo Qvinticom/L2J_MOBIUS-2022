@@ -41,11 +41,6 @@ import quests.Q10285_MeetingSirra.Q10285_MeetingSirra;
  */
 public final class IceQueensCastle extends AbstractInstance
 {
-	protected class IQCWorld extends InstanceWorld
-	{
-		L2PcInstance player = null;
-	}
-	
 	// NPCs
 	private static final int FREYA = 18847;
 	private static final int BATTALION_LEADER = 18848;
@@ -168,15 +163,13 @@ public final class IceQueensCastle extends AbstractInstance
 	@Override
 	public String onSpellFinished(L2Npc npc, L2PcInstance player, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		
-		if ((tmpworld != null) && (tmpworld instanceof IQCWorld))
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		if (world != null)
 		{
-			final IQCWorld world = (IQCWorld) tmpworld;
-			
-			if ((skill == ETHERNAL_BLIZZARD.getSkill()) && (world.player != null))
+			final L2PcInstance leader = world.getParameters().getObject("player", L2PcInstance.class);
+			if ((skill == ETHERNAL_BLIZZARD.getSkill()) && (leader != null))
 			{
-				startQuestTimer("TIMER_SCENE_21", 1000, npc, world.player);
+				startQuestTimer("TIMER_SCENE_21", 1000, npc, leader);
 			}
 		}
 		return super.onSpellFinished(npc, player, skill);
@@ -185,7 +178,7 @@ public final class IceQueensCastle extends AbstractInstance
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance talker)
 	{
-		enterInstance(talker, new IQCWorld(), TEMPLATE_ID);
+		enterInstance(talker, TEMPLATE_ID);
 		return super.onTalk(npc, talker);
 	}
 	
@@ -195,7 +188,7 @@ public final class IceQueensCastle extends AbstractInstance
 		if (firstEntrance)
 		{
 			world.addAllowed(player.getObjectId());
-			((IQCWorld) world).player = player;
+			world.setParameter("player", player);
 			openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);

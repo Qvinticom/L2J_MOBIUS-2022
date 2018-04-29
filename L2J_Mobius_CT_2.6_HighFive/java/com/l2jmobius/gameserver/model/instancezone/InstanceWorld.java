@@ -18,10 +18,13 @@ package com.l2jmobius.gameserver.model.instancezone;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Collectors;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -31,8 +34,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class InstanceWorld
 {
-	private int _instanceId;
-	private int _templateId = -1;
+	private Instance _instance;
 	private final List<Integer> _allowed = new CopyOnWriteArrayList<>();
 	private final StatsSet _parameters = new StatsSet();
 	
@@ -57,39 +59,30 @@ public class InstanceWorld
 	}
 	
 	/**
+	 * Sets the instance.
+	 * @param instance the instance
+	 */
+	public void setInstance(Instance instance)
+	{
+		_instance = instance;
+	}
+	
+	/**
+	 * Gets the instance.
+	 * @return the instance
+	 */
+	public Instance getInstance()
+	{
+		return _instance;
+	}
+	
+	/**
 	 * Gets the dynamically generated instance ID.
 	 * @return the instance ID
 	 */
 	public int getInstanceId()
 	{
-		return _instanceId;
-	}
-	
-	/**
-	 * Sets the instance ID.
-	 * @param instanceId the instance ID
-	 */
-	public void setInstanceId(int instanceId)
-	{
-		_instanceId = instanceId;
-	}
-	
-	/**
-	 * Gets the client's template instance ID.
-	 * @return the template ID
-	 */
-	public int getTemplateId()
-	{
-		return _templateId;
-	}
-	
-	/**
-	 * Sets the template ID.
-	 * @param templateId the template ID
-	 */
-	public void setTemplateId(int templateId)
-	{
-		_templateId = templateId;
+		return _instance.getId();
 	}
 	
 	/**
@@ -176,5 +169,79 @@ public class InstanceWorld
 		sm.addInt(instance.getEjectTime() / 60 / 1000);
 		victim.getActingPlayer().sendPacket(sm);
 		instance.addEjectDeadTask(victim.getActingPlayer());
+	}
+	
+	/**
+	 * Get spawned NPCs from instance.
+	 * @return set of NPCs from instance
+	 */
+	public List<L2Npc> getNpcs()
+	{
+		return _instance.getNpcs();
+	}
+	
+	/**
+	 * Get alive NPCs from instance.
+	 * @return set of NPCs from instance
+	 */
+	public List<L2Npc> getAliveNpcs()
+	{
+		return getNpcs().stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Get spawned NPCs from instance with specific IDs.
+	 * @param id IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	public List<L2Npc> getNpcs(int... id)
+	{
+		return getNpcs().stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Get spawned NPCs from instance with specific IDs and class type.
+	 * @param <T>
+	 * @param clazz
+	 * @param ids IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	@SafeVarargs
+	public final <T extends L2Character> List<T> getNpcs(Class<T> clazz, int... ids)
+	{
+		return getNpcs().stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Get spawned and alive NPCs from instance with specific IDs and class type.
+	 * @param <T>
+	 * @param clazz
+	 * @param ids IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	@SafeVarargs
+	public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids)
+	{
+		return getNpcs().stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Get alive NPCs from instance with specific IDs.
+	 * @param id IDs of NPCs which should be found
+	 * @return list of filtered NPCs from instance
+	 */
+	public List<L2Npc> getAliveNpcs(int... id)
+	{
+		return getNpcs().stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+	}
+	
+	/**
+	 * Get first found spawned NPC with specific ID.
+	 * @param id ID of NPC to be found
+	 * @return first found NPC with specified ID, otherwise {@code null}
+	 */
+	public L2Npc getNpc(int id)
+	{
+		return getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
 	}
 }

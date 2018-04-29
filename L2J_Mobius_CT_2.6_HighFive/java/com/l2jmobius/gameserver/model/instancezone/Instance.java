@@ -69,6 +69,7 @@ public final class Instance
 	private static final Logger LOGGER = Logger.getLogger(Instance.class.getName());
 	
 	private final int _id;
+	private int _templateId = -1;
 	private int _ejectTime = Config.EJECT_DEAD_PLAYER_TIME;
 	/** Allow random walk for NPCs, global parameter. */
 	private boolean _allowRandomWalk = true;
@@ -110,6 +111,15 @@ public final class Instance
 	public int getId()
 	{
 		return _id;
+	}
+	
+	/**
+	 * Get template ID of instance world.
+	 * @return instance template ID
+	 */
+	public int getTemplateId()
+	{
+		return _templateId;
 	}
 	
 	/**
@@ -484,6 +494,7 @@ public final class Instance
 	
 	private void parseInstance(Node n) throws Exception
 	{
+		_templateId = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 		Node a = n.getAttributes().getNamedItem("ejectTime");
 		if (a != null)
 		{

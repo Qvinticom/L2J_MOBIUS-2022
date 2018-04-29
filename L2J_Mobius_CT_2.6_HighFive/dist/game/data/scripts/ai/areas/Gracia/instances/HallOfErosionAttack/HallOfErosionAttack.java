@@ -328,9 +328,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 		if (checkConditions(player))
 		{
 			world = new HEAWorld();
-			world.setInstanceId(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
-			world.setTemplateId(INSTANCEID);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCEID));
 			((HEAWorld) world).startTime = System.currentTimeMillis();
 			InstanceManager.getInstance().addWorld(world);
 			LOGGER.info("Hall Of Erosion Attack started " + INSTANCEID + " Instance: " + world.getInstanceId() + " created by player: " + player.getName());
@@ -457,7 +455,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	@Override
 	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
@@ -477,7 +475,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
@@ -488,14 +486,14 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				reenter.add(Calendar.HOUR, INSTANCEPENALTY);
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-				sm.addInstanceName(tmpworld.getTemplateId());
+				sm.addInstanceName(INSTANCEID);
 				
 				for (int objectId : tmpworld.getAllowed())
 				{
 					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, tmpworld.getTemplateId(), reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -513,7 +511,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			npc.setIsImmobilized(true);
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
@@ -533,7 +531,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			if (npc.getId() == TUMOR_DEAD)
 			{
 				final int tag = world.getParameters().getInt("tag", -1);
-				world.getParameters().set("tag", tag + 1);
+				world.setParameter("tag", tag + 1);
 			}
 		}
 		return super.onSpawn(npc);
@@ -542,7 +540,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof HEAWorld)
 		{
 			final HEAWorld world = (HEAWorld) tmpworld;
@@ -615,14 +613,14 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			reenter.set(Calendar.HOUR_OF_DAY, 6);
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-			sm.addInstanceName(world.getTemplateId());
+			sm.addInstanceName(INSTANCEID);
 			
 			for (int objectId : world.getAllowed())
 			{
 				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
 				if ((obj != null) && obj.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
 					obj.sendPacket(sm);
 				}
 			}
@@ -655,7 +653,7 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			_world.npcList.add(tumor);
 			_deadTumor.deleteMe();
 			final int tag = _world.getParameters().getInt("tag", -1);
-			_world.getParameters().set("tag", tag - 1);
+			_world.setParameter("tag", tag - 1);
 		}
 	}
 	

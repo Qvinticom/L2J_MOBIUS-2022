@@ -35,11 +35,6 @@ import quests.Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.Q10296_SevenSignsOne
  */
 public final class SSQElcadiasTent extends AbstractInstance
 {
-	protected class ETWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int ELCADIA = 32784;
 	private static final int GRUFF_LOOKING_MAN = 32862;
@@ -71,7 +66,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 				|| ((Q10293 != null) && Q10293.isCompleted() && (Q10294 == null)) //
 				|| ((Q10296 != null) && (Q10296.getMemoState() > 2) && (Q10296.getMemoState() < 4)))
 			{
-				enterInstance(talker, new ETWorld(), TEMPLATE_ID);
+				enterInstance(talker, TEMPLATE_ID);
 			}
 			else
 			{

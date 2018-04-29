@@ -36,11 +36,6 @@ import instances.AbstractInstance;
  */
 public final class DemonPrinceFloor extends AbstractInstance
 {
-	protected class DPFWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int GK_4 = 32748;
 	private static final int CUBE = 32375;
@@ -81,13 +76,13 @@ public final class DemonPrinceFloor extends AbstractInstance
 			
 			if (htmltext == null)
 			{
-				enterInstance(player, new DPFWorld(), TEMPLATE_ID);
+				enterInstance(player, TEMPLATE_ID);
 			}
 		}
 		else if (npc.getId() == CUBE)
 		{
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			if (world instanceof DPFWorld)
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+			if (world != null)
 			{
 				world.removeAllowed(player.getObjectId());
 				teleportPlayer(player, EXIT_POINT, 0);
@@ -103,7 +98,7 @@ public final class DemonPrinceFloor extends AbstractInstance
 		if (instanceId > 0)
 		{
 			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 			inst.setExitLoc(EXIT_POINT);
 			
 			finishInstance(world);

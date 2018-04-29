@@ -43,13 +43,13 @@ public final class Sirra extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		
-		if ((world != null) && (world.getTemplateId() == FREYA_INSTID))
+		if ((world != null) && (world.getInstance().getTemplateId() == FREYA_INSTID))
 		{
 			return (world.isStatus(0)) ? "32762-easy.html" : "32762-easyfight.html";
 		}
-		else if ((world != null) && (world.getTemplateId() == FREYA_HARD_INSTID))
+		else if ((world != null) && (world.getInstance().getTemplateId() == FREYA_HARD_INSTID))
 		{
 			return (world.isStatus(0)) ? "32762-hard.html" : "32762-hardfight.html";
 		}

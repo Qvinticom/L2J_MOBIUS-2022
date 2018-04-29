@@ -39,11 +39,6 @@ import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
  */
 public final class MithrilMine extends AbstractInstance
 {
-	protected class MMWorld extends InstanceWorld
-	{
-		protected int _count = 0;
-	}
-	
 	// NPCs
 	private static final int KEGOR = 18846;
 	private static final int MITHRIL_MILLIPEDE = 22766;
@@ -78,7 +73,7 @@ public final class MithrilMine extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		
 		switch (event)
 		{
@@ -94,7 +89,7 @@ public final class MithrilMine extends AbstractInstance
 			}
 			case "TIMER":
 			{
-				if (world instanceof MMWorld)
+				if (world != null)
 				{
 					for (Location loc : MOB_SPAWNS)
 					{
@@ -156,8 +151,7 @@ public final class MithrilMine extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		final MMWorld _world = ((MMWorld) world);
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		
 		if (npc.getId() == KEGOR)
 		{
@@ -168,10 +162,11 @@ public final class MithrilMine extends AbstractInstance
 		{
 			if (npc.isScriptValue(1))
 			{
-				_world._count++;
+				final int count = world.getParameters().getInt("count", 0);
+				world.setParameter("count", count + 1);
 			}
 			
-			if (_world._count >= 5)
+			if (world.getParameters().getInt("count", 0) >= 5)
 			{
 				final QuestState qs = player.getQuestState(Q10284_AcquisitionOfDivineSword.class.getSimpleName());
 				if ((qs != null) && qs.isMemoState(2))
@@ -202,7 +197,7 @@ public final class MithrilMine extends AbstractInstance
 						giveItems(talker, COLD_RESISTANCE_POTION, 1);
 					}
 					qs.setCond(4, true);
-					enterInstance(talker, new MMWorld(), TEMPLATE_ID);
+					enterInstance(talker, TEMPLATE_ID);
 				}
 				break;
 			}

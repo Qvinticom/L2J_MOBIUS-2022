@@ -39,17 +39,6 @@ import instances.AbstractInstance;
  */
 public final class CavernOfThePirateCaptain extends AbstractInstance
 {
-	protected class CavernOfThePirateCaptainWorld extends InstanceWorld
-	{
-		protected List<L2PcInstance> playersInside = new ArrayList<>();
-		protected L2Attackable _zaken;
-		protected long storeTime = 0;
-		protected boolean _is83;
-		protected boolean _isNight;
-		protected int _zakenRoom;
-		protected int _blueFounded;
-	}
-	
 	// NPCs
 	private static final int PATHFINDER = 32713; // Pathfinder Worker
 	private static final int ZAKEN_60 = 29176; // Zaken
@@ -168,30 +157,34 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			final CavernOfThePirateCaptainWorld curworld = (CavernOfThePirateCaptainWorld) world;
-			curworld._is83 = curworld.getTemplateId() == TEMPLATE_ID_83;
-			curworld._isNight = curworld.getTemplateId() == TEMPLATE_ID_60_NIGHT;
-			curworld.storeTime = System.currentTimeMillis();
+			world.setParameter("is83", world.getInstance().getTemplateId() == TEMPLATE_ID_83);
+			world.setParameter("isNight", world.getInstance().getTemplateId() == TEMPLATE_ID_60_NIGHT);
+			world.setParameter("storeTime", System.currentTimeMillis());
 			
+			final List<L2PcInstance> playersInside = new ArrayList<>();
 			if (!player.isInParty())
 			{
-				managePlayerEnter(player, curworld);
+				playersInside.add(player);
+				managePlayerEnter(player, world);
 			}
 			else if (player.getParty().isInCommandChannel())
 			{
-				for (L2PcInstance players : player.getParty().getCommandChannel().getMembers())
+				for (L2PcInstance member : player.getParty().getCommandChannel().getMembers())
 				{
-					managePlayerEnter(players, curworld);
+					playersInside.add(member);
+					managePlayerEnter(member, world);
 				}
 			}
 			else
 			{
-				for (L2PcInstance players : player.getParty().getMembers())
+				for (L2PcInstance member : player.getParty().getMembers())
 				{
-					managePlayerEnter(players, curworld);
+					playersInside.add(member);
+					managePlayerEnter(member, world);
 				}
 			}
-			manageNpcSpawn(curworld);
+			world.setParameter("playersInside", playersInside);
+			manageNpcSpawn(world);
 		}
 		else
 		{
@@ -199,9 +192,8 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		}
 	}
 	
-	private void managePlayerEnter(L2PcInstance player, CavernOfThePirateCaptainWorld world)
+	private void managePlayerEnter(L2PcInstance player, InstanceWorld world)
 	{
-		world.playersInside.add(player);
 		world.addAllowed(player.getObjectId());
 		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
 	}
@@ -292,31 +284,28 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		{
 			if (checkConditions(player, TEMPLATE_ID_60))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_60);
+				enterInstance(player, TEMPLATE_ID_60);
 			}
 		}
 		else if (event.equals("enter60night"))
 		{
 			if (checkConditions(player, TEMPLATE_ID_60_NIGHT))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_60_NIGHT);
+				enterInstance(player, TEMPLATE_ID_60_NIGHT);
 			}
 		}
 		else if (event.equals("enter83"))
 		{
 			if (checkConditions(player, TEMPLATE_ID_83))
 			{
-				enterInstance(player, new CavernOfThePirateCaptainWorld(), TEMPLATE_ID_83);
+				enterInstance(player, TEMPLATE_ID_83);
 			}
 		}
 		else
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-			
-			if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+			if (world != null)
 			{
-				final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
-				
 				switch (event)
 				{
 					case "BURN_BLUE":
@@ -325,7 +314,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 						{
 							npc.setRHandId(FIRE);
 							startQuestTimer("BURN_BLUE2", 3000, npc, player);
-							if (world._blueFounded == 4)
+							if (world.getParameters().getInt("blueFounded", 0) == 4)
 							{
 								startQuestTimer("SHOW_ZAKEN", 5000, npc, player);
 							}
@@ -356,24 +345,24 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 							final int room = getRoomByCandle(npc);
 							npc.setRHandId(RED);
 							manageScreenMsg(world, NpcStringId.THE_CANDLES_CAN_LEAD_YOU_TO_ZAKEN_DESTROY_HIM);
-							spawnNpc(world._is83 ? DOLL_BLADER_83 : DOLL_BLADER_60, room, player, world);
-							spawnNpc(world._is83 ? VALE_MASTER_83 : VALE_MASTER_60, room, player, world);
-							spawnNpc(world._is83 ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, room, player, world);
-							spawnNpc(world._is83 ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, room, player, world);
+							spawnNpc(world.getParameters().getBoolean("is83", false) ? DOLL_BLADER_83 : DOLL_BLADER_60, room, player, world);
+							spawnNpc(world.getParameters().getBoolean("is83", false) ? VALE_MASTER_83 : VALE_MASTER_60, room, player, world);
+							spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, room, player, world);
+							spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, room, player, world);
 						}
 						break;
 					}
 					case "SHOW_ZAKEN":
 					{
-						if (world._is83)
+						if (world.getParameters().getBoolean("is83", false))
 						{
 							manageScreenMsg(world, NpcStringId.WHO_DARES_AWAKEN_THE_MIGHTY_ZAKEN);
 						}
-						world._zaken.setInvisible(false);
-						world._zaken.setIsParalyzed(false);
-						spawnNpc(world._is83 ? DOLL_BLADER_83 : DOLL_BLADER_60, world._zakenRoom, player, world);
-						spawnNpc(world._is83 ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, world._zakenRoom, player, world);
-						spawnNpc(world._is83 ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, world._zakenRoom, player, world);
+						world.getParameters().getObject("zaken", L2Npc.class).setInvisible(false);
+						world.getParameters().getObject("zaken", L2Npc.class).setIsParalyzed(false);
+						spawnNpc(world.getParameters().getBoolean("is83", false) ? DOLL_BLADER_83 : DOLL_BLADER_60, world.getParameters().getInt("zakenRoom", 0), player, world);
+						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_83 : PIRATES_ZOMBIE_60, world.getParameters().getInt("zakenRoom", 0), player, world);
+						spawnNpc(world.getParameters().getBoolean("is83", false) ? PIRATES_ZOMBIE_CAPTAIN_83 : PIRATES_ZOMBIE_CAPTAIN_60, world.getParameters().getInt("zakenRoom", 0), player, world);
 						break;
 					}
 				}
@@ -385,19 +374,16 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		
-		if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		if (world != null)
 		{
-			final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
-			
 			if (npc.getId() == ZAKEN_83)
 			{
-				for (L2PcInstance playersInside : world.playersInside)
+				for (L2PcInstance playersInside : world.getParameters().getList("playersInside", L2PcInstance.class))
 				{
 					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius(npc, 1500, true, true)))
 					{
-						final long time = System.currentTimeMillis() - world.storeTime;
+						final long time = System.currentTimeMillis() - world.getParameters().getLong("storeTime", 0);
 						if (time <= 300000) // 5 minutes
 						{
 							if (getRandomBoolean())
@@ -430,18 +416,18 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		
-		if ((tmpworld != null) && (tmpworld instanceof CavernOfThePirateCaptainWorld))
+		final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		if (world != null)
 		{
-			final CavernOfThePirateCaptainWorld world = (CavernOfThePirateCaptainWorld) tmpworld;
 			final boolean isBlue = npc.getVariables().getInt("isBlue", 0) == 1;
 			
 			if (npc.isScriptValue(0))
 			{
 				if (isBlue)
 				{
-					world._blueFounded++;
+					int blueFounded = world.getParameters().getInt("blueFounded", 0);
+					blueFounded++;
+					world.setParameter("blueFounded", blueFounded);
 					startQuestTimer("BURN_BLUE", 500, npc, player);
 				}
 				else
@@ -481,9 +467,9 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		return 0;
 	}
 	
-	private void manageScreenMsg(CavernOfThePirateCaptainWorld world, NpcStringId stringId)
+	private void manageScreenMsg(InstanceWorld world, NpcStringId stringId)
 	{
-		for (L2PcInstance players : world.playersInside)
+		for (L2PcInstance players : world.getParameters().getList("playersInside", L2PcInstance.class))
 		{
 			if ((players != null) && (players.getInstanceId() == world.getInstanceId()))
 			{
@@ -492,7 +478,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		}
 	}
 	
-	private L2Attackable spawnNpc(int npcId, int roomId, L2PcInstance player, CavernOfThePirateCaptainWorld world)
+	private L2Attackable spawnNpc(int npcId, int roomId, L2PcInstance player, InstanceWorld world)
 	{
 		if ((player != null) && (npcId != ZAKEN_60) && (npcId != ZAKEN_83))
 		{
@@ -503,10 +489,10 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		return (L2Attackable) addSpawn(npcId, ROOM_DATA[roomId - 1][0], ROOM_DATA[roomId - 1][1], ROOM_DATA[roomId - 1][2], 0, false, 0, false, world.getInstanceId());
 	}
 	
-	private void manageNpcSpawn(CavernOfThePirateCaptainWorld world)
+	private void manageNpcSpawn(InstanceWorld world)
 	{
 		final List<L2Npc> candles = new ArrayList<>();
-		world._zakenRoom = getRandom(1, 15);
+		world.setParameter("zakenRoom", getRandom(1, 15));
 		
 		for (int i = 0; i < 36; i++)
 		{
@@ -517,11 +503,12 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 		
 		for (int i = 3; i < 7; i++)
 		{
-			candles.get(ROOM_DATA[world._zakenRoom - 1][i] - 1).getVariables().set("isBlue", 1);
+			candles.get(ROOM_DATA[world.getParameters().getInt("zakenRoom", 0) - 1][i] - 1).getVariables().set("isBlue", 1);
 		}
-		world._zaken = spawnNpc(world._is83 ? ZAKEN_83 : world._isNight ? ZAKEN_60_NIGHT : ZAKEN_60, world._zakenRoom, null, world);
-		world._zaken.setInvisible(true);
-		world._zaken.setIsParalyzed(true);
+		final L2Npc zaken = spawnNpc(world.getParameters().getBoolean("is83", false) ? ZAKEN_83 : world.getParameters().getBoolean("isNight", false) ? ZAKEN_60_NIGHT : ZAKEN_60, world.getParameters().getInt("zakenRoom", 0), null, world);
+		zaken.setInvisible(true);
+		zaken.setIsParalyzed(true);
+		world.setParameter("zaken", zaken);
 	}
 	
 	public static void main(String[] args)

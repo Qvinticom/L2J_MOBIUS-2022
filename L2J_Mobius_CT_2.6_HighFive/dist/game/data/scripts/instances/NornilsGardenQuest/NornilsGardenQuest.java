@@ -32,11 +32,6 @@ import quests.Q00236_SeedsOfChaos.Q00236_SeedsOfChaos;
  */
 public final class NornilsGardenQuest extends AbstractInstance
 {
-	protected static final class NornilsGardenQuestWorld extends InstanceWorld
-	{
-		protected Location ORIGIN_LOC;
-	}
-	
 	// NPCs
 	private static final int RODENPICULA = 32237;
 	private static final int MOTHER_NORNIL = 32239;
@@ -70,9 +65,9 @@ public final class NornilsGardenQuest extends AbstractInstance
 			{
 				if (checkConditions(player))
 				{
-					final NornilsGardenQuestWorld world = new NornilsGardenQuestWorld();
-					world.ORIGIN_LOC = player.getLocation();
-					enterInstance(player, world, TEMPLATE_ID);
+					final Location originLoc = player.getLocation();
+					enterInstance(player, TEMPLATE_ID);
+					InstanceManager.getInstance().getPlayerWorld(player).setParameter("ORIGIN_LOC", originLoc);
 					q236.setCond(16, true);
 					htmltext = "32190-02.html";
 				}
@@ -86,12 +81,11 @@ public final class NornilsGardenQuest extends AbstractInstance
 			{
 				if ((q236 != null) && q236.isCompleted())
 				{
-					final NornilsGardenQuestWorld world = (NornilsGardenQuestWorld) InstanceManager.getInstance().getPlayerWorld(player);
+					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 					world.removeAllowed(player.getObjectId());
 					finishInstance(world, 5000);
-					
 					player.setInstanceId(0);
-					player.teleToLocation(world.ORIGIN_LOC);
+					player.teleToLocation(world.getParameters().getLocation("ORIGIN_LOC"));
 					htmltext = "32239-03.html";
 				}
 				break;

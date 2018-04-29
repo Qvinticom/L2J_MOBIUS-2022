@@ -286,15 +286,12 @@ public final class Q00511_AwlUnderFoot extends Quest
 			return ret;
 		}
 		final L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
-		final Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		ins.setExitLoc(new Location(player));
 		world = new FAUWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(dungeon.getInstanceId());
-		world.setStatus(0);
+		world.setInstance(InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId()));
+		world.getInstance().setExitLoc(new Location(player));
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTERTIME);
 		InstanceManager.getInstance().addWorld(world);
+		final int instanceId = world.getInstanceId();
 		LOGGER.info("Fortress AwlUnderFoot started " + dungeon.getInstanceId() + " Instance: " + instanceId + " created by player: " + player.getName());
 		ThreadPool.schedule(new spawnRaid((FAUWorld) world), RAID_SPAWN_DELAY);
 		
@@ -373,7 +370,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof FAUWorld)
 		{
 			final FAUWorld world = (FAUWorld) tmpworld;

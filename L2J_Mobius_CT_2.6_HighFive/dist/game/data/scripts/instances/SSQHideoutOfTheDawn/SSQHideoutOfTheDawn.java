@@ -29,11 +29,6 @@ import instances.AbstractInstance;
  */
 public final class SSQHideoutOfTheDawn extends AbstractInstance
 {
-	protected class HotDWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// NPCs
 	private static final int WOOD = 32593;
 	private static final int JAINA = 32617;
@@ -71,7 +66,7 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 			}
 			case "32593-01.html":
 			{
-				enterInstance(player, new HotDWorld(), TEMPLATE_ID);
+				enterInstance(player, TEMPLATE_ID);
 				htmltext = event;
 			}
 		}

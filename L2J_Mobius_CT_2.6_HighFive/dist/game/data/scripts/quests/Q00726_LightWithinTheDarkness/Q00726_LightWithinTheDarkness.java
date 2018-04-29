@@ -214,7 +214,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			return null;
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof PAWORLD)
 		{
 			final PAWORLD world = (PAWORLD) tmpworld;
@@ -272,20 +272,16 @@ public class Q00726_LightWithinTheDarkness extends Quest
 			return ret;
 		}
 		final L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
-		final Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		ins.setExitLoc(new Location(player));
 		world = new PAWORLD();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(dungeon.getInstanceId());
-		world.setStatus(0);
+		world.setInstance(InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId()));
+		world.getInstance().setExitLoc(new Location(player));
 		dungeon.setReEnterTime(System.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);
 		
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			teleportPlayer(partyMember, coords, instanceId);
+			teleportPlayer(partyMember, coords, world.getInstanceId());
 			world.addAllowed(partyMember.getObjectId());
 			if (partyMember.getQuestState(getName()) == null)
 			{

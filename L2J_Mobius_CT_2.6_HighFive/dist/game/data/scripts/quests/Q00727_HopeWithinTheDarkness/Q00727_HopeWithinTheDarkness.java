@@ -216,7 +216,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		else if (event.equalsIgnoreCase("suicide"))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			tmpworld.setStatus(5);
 			final Instance inst = InstanceManager.getInstance().getInstance(npc.getInstanceId());
 			if (inst != null)
@@ -297,7 +297,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 		if (tmpworld instanceof CAUWorld)
 		{
 			final CAUWorld world = (CAUWorld) tmpworld;
@@ -327,7 +327,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		
 		if ((npc.getId() >= NPC_KNIGHT) && (npc.getId() <= NPC_WARRIOR))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 			if ((tmpworld != null) && (tmpworld instanceof CAUWorld))
 			{
 				final CAUWorld world = (CAUWorld) tmpworld;
@@ -443,7 +443,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			return null;
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof CAUWorld)
 		{
 			final CAUWorld world = (CAUWorld) tmpworld;
@@ -624,13 +624,10 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		}
 		
 		final L2Party party = player.getParty();
-		final int instanceId = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
-		final Instance ins = InstanceManager.getInstance().getInstance(instanceId);
-		ins.setExitLoc(new Location(player));
 		world = new CAUWorld();
-		world.setInstanceId(instanceId);
-		world.setTemplateId(dungeon.getInstanceId());
-		world.setStatus(0);
+		world.setInstance(InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId()));
+		world.getInstance().setExitLoc(new Location(player));
+		final int instanceId = world.getInstanceId();
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTER_INTERVAL);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((CAUWorld) world), INITIAL_SPAWN_DELAY);

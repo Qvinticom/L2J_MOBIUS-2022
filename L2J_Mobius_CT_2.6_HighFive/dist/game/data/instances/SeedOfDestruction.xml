@@ -4,6 +4,10 @@
 	<allowSummon val="false" />
 	<emptyDestroyTime val="900" />
 	<exitPoint x="-248717" y="250260" z="4337" />
+	<reenter additionStyle="ON_FINISH" >
+		<reset day="Wednesday" hour="6" minute="30" />
+		<reset day="Saturday" hour="6" minute="30" />
+	</reenter>
 	<doorlist>
 		<door id="12240001" />
 		<door id="12240002" />

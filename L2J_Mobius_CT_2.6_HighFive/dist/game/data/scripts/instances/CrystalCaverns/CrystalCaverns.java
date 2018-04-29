@@ -26,6 +26,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
@@ -862,19 +863,12 @@ public final class CrystalCaverns extends AbstractInstance
 		return true;
 	}
 	
-	/*
-	 * protected void runBaylorRoom(CCWorld world) { world.status = 30; addSpawn(29101,152758,143479,-12706,52961,false,0,false,world.getInstanceId(),0);//up power addSpawn(29101,151951,142078,-12706,65203,false,0,false,world.getInstanceId(),0);//up power
-	 * addSpawn(29101,154396,140667,-12706,22197,false,0,false,world.getInstanceId(),0);//up power addSpawn(29102,152162,141249,-12706,5511,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,153571,140458,-12706,16699,false,0,false,world.getInstanceId(),0);//down power
-	 * addSpawn(29102,154976,141265,-12706,26908,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,155203,142071,-12706,31560,false,0,false,world.getInstanceId(),0);//down power addSpawn(29102,154380,143468,-12708,43943,false,0,false,world.getInstanceId(),0);//down power
-	 * addSpawn(32271,153573,142069,-9722,11175,false,0,false,world.getInstanceId()); world.Baylor = addSpawn(BAYLOR,153557,142089,-12735,11175,false,0,false,world.getInstanceId(),0); }
-	 */
-	
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		if (npc.getId() == ORACLE_GUIDE_1)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -888,7 +882,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if ((npc.getId() >= 32275) && (npc.getId() <= 32277))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -902,7 +896,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if (npc.getId() == 32274)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				return "no.htm"; // TODO: Missing HTML.
@@ -963,7 +957,7 @@ public final class CrystalCaverns extends AbstractInstance
 		
 		if ((npc.getId() >= 32275) && (npc.getId() <= 32277) && (skill.getId() != 2360) && (skill.getId() != 2369))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if ((tmpworld instanceof CCWorld) && (getRandom(100) < 15))
 			{
 				for (L2Npc oracle : ((CCWorld) tmpworld).oracles.keySet())
@@ -982,7 +976,7 @@ public final class CrystalCaverns extends AbstractInstance
 			{
 				return super.onSkillSee(npc, caster, skill, targets, isSummon);
 			}
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -1009,7 +1003,7 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		else if (npc.isInvul() && (npc.getId() == TEARS) && (skill.getId() == 2369) && (caster != null))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -1040,7 +1034,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (npc.getId() == TEARS)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -1119,7 +1113,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if ((npc.getId() == BAYLOR) && (skill.getId() == 5225))
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof CCWorld)
 			{
 				((CCWorld) tmpworld)._raidStatus++;
@@ -1131,7 +1125,7 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof CCWorld)
 		{
 			final CCWorld world = (CCWorld) tmpworld;
@@ -1520,7 +1514,7 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof CCWorld)
 		{
 			final CCWorld world = (CCWorld) tmpworld;
@@ -1771,11 +1765,41 @@ public final class CrystalCaverns extends AbstractInstance
 		}
 		if (npcId == ORACLE_GUIDE_1)
 		{
-			enterInstance(player, new CCWorld(System.currentTimeMillis() + 5400000), TEMPLATE_ID);
+			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+			if (world != null)
+			{
+				if (world.getInstance().getTemplateId() == TEMPLATE_ID)
+				{
+					onEnterInstance(player, world, false);
+					return "";
+				}
+				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
+				return "";
+			}
+			
+			if (checkConditions(player))
+			{
+				final InstanceWorld instance = new CCWorld(System.currentTimeMillis() + 5400000);
+				instance.setInstance(InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID));
+				InstanceManager.getInstance().addWorld(instance);
+				onEnterInstance(player, instance, true);
+				
+				final Instance inst = InstanceManager.getInstance().getInstance(instance.getInstanceId());
+				if (inst.getReenterType() == InstanceReenterType.ON_ENTER)
+				{
+					handleReenterTime(instance);
+				}
+				
+				if (inst.isRemoveBuffEnabled())
+				{
+					handleRemoveBuffs(instance);
+				}
+			}
+			
 			return "";
 		}
 		
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof CCWorld)
 		{
 			final CCWorld world = (CCWorld) tmpworld;
@@ -1965,7 +1989,7 @@ public final class CrystalCaverns extends AbstractInstance
 	@Override
 	public String onTrapAction(L2TrapInstance trap, L2Character trigger, TrapAction action)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(trap);
 		if (tmpworld instanceof CCWorld)
 		{
 			final CCWorld world = (CCWorld) tmpworld;
@@ -1990,7 +2014,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (character instanceof L2PcInstance)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;
@@ -2057,7 +2081,7 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		if (character instanceof L2PcInstance)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
 			if (tmpworld instanceof CCWorld)
 			{
 				final CCWorld world = (CCWorld) tmpworld;

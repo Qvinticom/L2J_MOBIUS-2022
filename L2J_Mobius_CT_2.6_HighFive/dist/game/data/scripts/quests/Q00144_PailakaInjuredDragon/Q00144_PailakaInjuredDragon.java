@@ -870,8 +870,8 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	{
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
-			final InstanceWorld world = InstanceManager.getInstance().getWorld(character.getInstanceId());
-			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
+			final InstanceWorld world = InstanceManager.getInstance().getWorld(character);
+			if ((world != null) && (world.getInstance().getTemplateId() == INSTANCE_ID))
 			{
 				// If a player wants to go by a mob wall without kill it, he will be returned back to a spawn point.
 				final int[] zoneTeleport = NOEXIT_ZONES.get(zone.getId());
@@ -939,7 +939,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (world.getTemplateId() != INSTANCE_ID)
+			if (world.getInstance().getTemplateId() != INSTANCE_ID)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
@@ -953,17 +953,15 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		// New instance.
 		else
 		{
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID);
 			world = new InstanceWorld();
-			world.setInstanceId(instanceId);
-			world.setTemplateId(INSTANCE_ID);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID));
 			InstanceManager.getInstance().addWorld(world);
 			
 			// Check max summon levels.
 			checkMaxSummonLevel(player);
 			
 			world.addAllowed(player.getObjectId());
-			teleportPlayer(player, TELEPORT, instanceId);
+			teleportPlayer(player, TELEPORT, world.getInstanceId());
 		}
 	}
 	

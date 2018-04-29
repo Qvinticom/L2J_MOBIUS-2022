@@ -41,11 +41,6 @@ import instances.AbstractInstance;
  */
 public final class CastleDungeon extends AbstractInstance
 {
-	protected class CDWorld extends InstanceWorld
-	{
-		
-	}
-	
 	// Locations
 	private static final Location[] ENTER_LOC =
 	{
@@ -130,8 +125,7 @@ public final class CastleDungeon extends AbstractInstance
 				}
 			}
 			
-			world.setStatus(0);
-			spawnRaid((CDWorld) world);
+			spawnRaid(world);
 		}
 		else
 		{
@@ -148,10 +142,9 @@ public final class CastleDungeon extends AbstractInstance
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
-		InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
-		if (tmpworld instanceof CDWorld)
+		InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
+		if (world != null)
 		{
-			CDWorld world = (CDWorld) tmpworld;
 			if (Util.contains(RAIDS3, npc.getId()))
 			{
 				finishInstance(world);
@@ -207,11 +200,11 @@ public final class CastleDungeon extends AbstractInstance
 			}
 		}
 		
-		enterInstance(player, new CDWorld(), CASTLE_DUNGEON.get(npc.getId()));
+		enterInstance(player, CASTLE_DUNGEON.get(npc.getId()));
 		return super.onTalk(npc, player);
 	}
 	
-	protected void spawnRaid(CDWorld world)
+	protected void spawnRaid(InstanceWorld world)
 	{
 		int spawnId;
 		if (world.getStatus() == 0)

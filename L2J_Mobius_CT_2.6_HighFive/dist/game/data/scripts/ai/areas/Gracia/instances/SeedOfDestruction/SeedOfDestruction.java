@@ -927,13 +927,11 @@ public class SeedOfDestruction extends AbstractNpcAI
 			{
 				return 0;
 			}
-			final int instanceId = InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID);
 			world = new SODWorld(System.currentTimeMillis() + 5400000);
-			world.setTemplateId(INSTANCE_ID);
-			world.setInstanceId(instanceId);
-			world.setStatus(0);
+			world.setInstance(InstanceManager.getInstance().createDynamicInstance(INSTANCE_ID));
 			InstanceManager.getInstance().addWorld(world);
 			spawnState((SODWorld) world);
+			final int instanceId = world.getInstanceId();
 			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
 			{
 				if (contains(ATTACKABLE_DOORS, door.getId()))
@@ -1267,7 +1265,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isPet, Skill skill)
 	{
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof SODWorld)
 		{
 			final SODWorld world = (SODWorld) tmpworld;
@@ -1308,11 +1306,11 @@ public class SeedOfDestruction extends AbstractNpcAI
 		
 		if (npc != null)
 		{
-			tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			tmpworld = InstanceManager.getInstance().getWorld(npc);
 		}
 		else
 		{
-			tmpworld = InstanceManager.getInstance().getWorld(player.getInstanceId());
+			tmpworld = InstanceManager.getInstance().getWorld(player);
 		}
 		
 		if (tmpworld instanceof SODWorld)
@@ -1542,7 +1540,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			cancelQuestTimer("Spawn", npc, null);
 			return "";
 		}
-		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 		if (tmpworld instanceof SODWorld)
 		{
 			final SODWorld world = (SODWorld) tmpworld;
@@ -1654,7 +1652,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 		else if (npcId == TELEPORT)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof SODWorld)
 			{
 				final SODWorld world = (SODWorld) tmpworld;
@@ -1679,7 +1677,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 		
 		if (npc.getId() == TELEPORT)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);
 			if (tmpworld instanceof SODWorld)
 			{
 				final SODWorld world = (SODWorld) tmpworld;
@@ -1707,7 +1705,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	{
 		if (character instanceof L2PcInstance)
 		{
-			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character.getInstanceId());
+			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
 			if (tmpworld instanceof SODWorld)
 			{
 				final SODWorld world = (SODWorld) tmpworld;
