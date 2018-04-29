@@ -233,7 +233,7 @@ public final class Parade extends AbstractNpcAI
 					}
 				}
 			}
-			if (spawns.size() == 0)
+			if ((spawns.size() == 0) && (deleteTask != null))
 			{
 				deleteTask.cancel(false);
 			}
