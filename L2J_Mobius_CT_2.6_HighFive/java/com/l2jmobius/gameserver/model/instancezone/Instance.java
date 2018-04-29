@@ -607,8 +607,14 @@ public final class Instance
 									x = Integer.parseInt(d.getAttributes().getNamedItem("x").getNodeValue());
 									y = Integer.parseInt(d.getAttributes().getNamedItem("y").getNodeValue());
 									z = Integer.parseInt(d.getAttributes().getNamedItem("z").getNodeValue());
-									heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
-									respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
+									if (d.getAttributes().getNamedItem("heading") != null)
+									{
+										heading = Integer.parseInt(d.getAttributes().getNamedItem("heading").getNodeValue());
+									}
+									if (d.getAttributes().getNamedItem("respawn") != null)
+									{
+										respawn = Integer.parseInt(d.getAttributes().getNamedItem("respawn").getNodeValue());
+									}
 									if (d.getAttributes().getNamedItem("onKillDelay") != null)
 									{
 										delay = Integer.parseInt(d.getAttributes().getNamedItem("onKillDelay").getNodeValue());
