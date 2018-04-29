@@ -300,7 +300,7 @@ public final class NornilsGarden extends AbstractInstance
 	{
 		world.first_npc = addSpawn(18362, -109702, 74696, -12528, 49568, false, 0, false, world.getInstanceId());
 		
-		final L2DoorInstance door = getDoor(16200010, world.getInstanceId());
+		final L2DoorInstance door = world.getInstance().getDoor(16200010);
 		if (door != null)
 		{
 			door.setTargetable(false);
@@ -386,7 +386,7 @@ public final class NornilsGarden extends AbstractInstance
 		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 		if (tmpworld instanceof NornilsWorld)
 		{
-			openDoor(doorId, tmpworld.getInstanceId());
+			tmpworld.openDoor(doorId);
 		}
 	}
 	
@@ -474,7 +474,7 @@ public final class NornilsGarden extends AbstractInstance
 				{
 					if (zone.getId() == _auto[0])
 					{
-						openDoor(_auto[1], tmpworld.getInstanceId());
+						tmpworld.openDoor(_auto[1]);
 					}
 					if (zone.getId() == 20111)
 					{
@@ -619,7 +619,7 @@ public final class NornilsGarden extends AbstractInstance
 					final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(player);
 					if (tmpworld instanceof NornilsWorld)
 					{
-						openDoor(_gk[2], tmpworld.getInstanceId());
+						tmpworld.openDoor(_gk[2]);
 					}
 				}
 			}

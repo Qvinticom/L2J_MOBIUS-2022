@@ -203,7 +203,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 						final int doorst = world.getParameters().getInt("doorst", 0);
 						if (doorst == 0)
 						{
-							openDoor(DOOR_ONE, world.getInstanceId());
+							world.openDoor(DOOR_ONE);
 							talker.sendPacket(SystemMessageId.BY_USING_THE_INVISIBLE_SKILL_SNEAK_INTO_THE_DAWN_S_DOCUMENT_STORAGE);
 							talker.sendPacket(SystemMessageId.MALE_GUARDS_CAN_DETECT_THE_CONCEALMENT_BUT_THE_FEMALE_GUARDS_CANNOT);
 							talker.sendPacket(SystemMessageId.FEMALE_GUARDS_NOTICE_THE_DISGUISES_FROM_FAR_AWAY_BETTER_THAN_THE_MALE_GUARDS_DO_SO_BEWARE);
@@ -212,7 +212,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 						}
 						else if (doorst == 1)
 						{
-							openDoor(DOOR_TWO, world.getInstanceId());
+							world.openDoor(DOOR_TWO);
 							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
 							for (int objId : world.getAllowed())
@@ -236,7 +236,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 				final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 				if (world != null)
 				{
-					openDoor(DOOR_THREE, world.getInstanceId());
+					world.openDoor(DOOR_THREE);
 					return "32577-01.html";
 				}
 				break;

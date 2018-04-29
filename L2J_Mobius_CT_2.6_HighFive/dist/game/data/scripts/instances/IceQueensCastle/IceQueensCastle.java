@@ -189,7 +189,7 @@ public final class IceQueensCastle extends AbstractInstance
 		{
 			world.addAllowed(player.getObjectId());
 			world.setParameter("player", player);
-			openDoor(ICE_QUEEN_DOOR, world.getInstanceId());
+			world.openDoor(ICE_QUEEN_DOOR);
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}

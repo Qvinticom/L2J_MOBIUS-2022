@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -253,5 +254,31 @@ public class InstanceWorld
 	public List<L2Npc> spawnGroup(String groupName)
 	{
 		return _instance.spawnGroup(groupName);
+	}
+	
+	/**
+	 * Open a door if it is present in the instance and its not open.
+	 * @param doorId the ID of the door to open
+	 */
+	public void openDoor(int doorId)
+	{
+		final L2DoorInstance door = _instance.getDoor(doorId);
+		if ((door != null) && !door.isOpen())
+		{
+			door.openMe();
+		}
+	}
+	
+	/**
+	 * Close a door if it is present in the instance and its open.
+	 * @param doorId the ID of the door to close
+	 */
+	public void closeDoor(int doorId)
+	{
+		final L2DoorInstance door = _instance.getDoor(doorId);
+		if ((door != null) && door.isOpen())
+		{
+			door.closeMe();
+		}
 	}
 }

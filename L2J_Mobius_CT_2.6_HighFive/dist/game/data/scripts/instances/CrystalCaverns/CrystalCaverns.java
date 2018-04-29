@@ -751,15 +751,15 @@ public final class CrystalCaverns extends AbstractInstance
 	{
 		world.setStatus(1);
 		runFirst(world);
-		openDoor(DOOR1, world.getInstanceId());
+		world.openDoor(DOOR1);
 	}
 	
 	protected void runCoral(CCWorld world)
 	{
 		world.setStatus(1);
 		runHall(world);
-		openDoor(DOOR2, world.getInstanceId());
-		openDoor(DOOR5, world.getInstanceId());
+		world.openDoor(DOOR2);
+		world.openDoor(DOOR5);
 	}
 	
 	protected void runHall(CCWorld world)
@@ -821,8 +821,8 @@ public final class CrystalCaverns extends AbstractInstance
 		
 		addSpawn(DARNEL, 152759, 145949, -12588, 21592, false, 0, false, world.getInstanceId());
 		// TODO: missing traps
-		openDoor(24220005, world.getInstanceId());
-		openDoor(24220006, world.getInstanceId());
+		world.openDoor(24220005);
+		world.openDoor(24220006);
 	}
 	
 	protected void runSteamRooms(CCWorld world, int[][] spawnList, int status)
@@ -1161,8 +1161,8 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					startQuestTimer("spawnGuards", SPAWN[0], npc, null);
 					cancelQuestTimers("checkKechiAttack");
-					closeDoor(DOOR4, npc.getInstanceId());
-					closeDoor(DOOR3, npc.getInstanceId());
+					world.closeDoor(DOOR4);
+					world.closeDoor(DOOR3);
 				}
 				else
 				{
@@ -1440,7 +1440,7 @@ public final class CrystalCaverns extends AbstractInstance
 						world.correctGolems++;
 						if (world.correctGolems >= 2)
 						{
-							openDoor(24220026, world.getInstanceId());
+							world.openDoor(24220026);
 							world.setStatus(4);
 						}
 					}
@@ -1666,7 +1666,7 @@ public final class CrystalCaverns extends AbstractInstance
 					{
 						case 22:
 						{
-							closeDoor(DOOR6, npc.getInstanceId());
+							world.closeDoor(DOOR6);
 							oracleOrder = ordreOracle1;
 							break;
 						}
@@ -1693,8 +1693,8 @@ public final class CrystalCaverns extends AbstractInstance
 							}
 							cancelQuestTimers("Timer5");
 							cancelQuestTimers("Timer51");
-							openDoor(DOOR3, npc.getInstanceId());
-							openDoor(DOOR4, npc.getInstanceId());
+							world.openDoor(DOOR3);
+							world.openDoor(DOOR4);
 							final L2Npc kechi = addSpawn(KECHI, 154069, 149525, -12158, 51165, false, 0, false, world.getInstanceId());
 							startQuestTimer("checkKechiAttack", 1000, kechi, null);
 							return "";
@@ -1999,7 +1999,7 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					if (trap.getId() == DOOR_OPENING_TRAP[0])
 					{
-						openDoor(24220001, world.getInstanceId());
+						world.openDoor(24220001);
 						runEmeraldRooms(world, ROOM1_SPAWNS, 1);
 					}
 					break;

@@ -319,7 +319,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				{
 					for (int doorId : DOORS)
 					{
-						openDoor(doorId, world.getInstanceId());
+						world.openDoor(doorId);
 					}
 					break;
 				}
@@ -373,7 +373,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				{
 					for (int doorId : FAKE_TOMB_DOORS)
 					{
-						closeDoor(doorId, world.getInstanceId());
+						world.closeDoor(doorId);
 					}
 					break;
 				}
@@ -381,7 +381,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				{
 					for (int doorId : FAKE_TOMB_DOORS)
 					{
-						openDoor(doorId, world.getInstanceId());
+						world.openDoor(doorId);
 					}
 					
 					addSpawn(GUARDIAN_OF_THE_TOMB_1, GUARDIAN_OF_THE_TOMB_1_LOC, false, 0, false, world.getInstanceId());
@@ -466,7 +466,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					world.setParameter("deadTombGuardianCount", deadTombGuardianCount);
 					if (deadTombGuardianCount == 4)
 					{
-						openDoor(TOMB_DOOR, world.getInstanceId());
+						world.openDoor(TOMB_DOOR);
 						final QuestState st = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
 						if ((st != null) && st.isMemoState(2))
 						{

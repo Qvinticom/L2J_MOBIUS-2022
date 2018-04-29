@@ -196,12 +196,12 @@ public final class IceQueensCastleBattle extends AbstractInstance
 				final L2Npc freya = params.getObject("freya", L2Npc.class);
 				switch (event)
 				{
-					case "openDoor":
+					case "world.openDoor":
 					{
 						if (npc.isScriptValue(0))
 						{
 							npc.setScriptValue(1);
-							openDoor(DOOR_ID, world.getInstanceId());
+							world.openDoor(DOOR_ID);
 							final L2Npc control = addSpawn(INVISIBLE_NPC, CONTROLLER_LOC, false, 0, true, world.getInstanceId());
 							for (Location loc : STATUES_LOC)
 							{
@@ -256,7 +256,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					}
 					case "STAGE_1_MOVIE":
 					{
-						closeDoor(DOOR_ID, world.getInstanceId());
+						world.closeDoor(DOOR_ID);
 						world.setStatus(1);
 						manageMovie(world, 15);
 						startQuestTimer("STAGE_1_START", 53500, controller, null);

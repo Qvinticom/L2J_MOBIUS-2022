@@ -581,7 +581,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			{
 				for (int doorId : FIRST_ROUTE_DOORS)
 				{
-					openDoor(doorId, world.getInstanceId());
+					world.openDoor(doorId);
 				}
 				spawnFlaggedNPCs(world, world.getStatus());
 				break;
@@ -590,7 +590,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			{
 				for (int doorId : SECOND_ROUTE_DOORS)
 				{
-					openDoor(doorId, world.getInstanceId());
+					world.openDoor(doorId);
 				}
 				ThreadPool.schedule(new IntroTask(world, 0), 600000);
 				break;
@@ -652,19 +652,19 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 				InstanceManager.getInstance().getInstance(world.getInstanceId()).setDuration(300000);
 				for (int doorId : FIRST_ROOM_DOORS)
 				{
-					openDoor(doorId, world.getInstanceId());
+					world.openDoor(doorId);
 				}
 				for (int doorId : FIRST_ROUTE_DOORS)
 				{
-					openDoor(doorId, world.getInstanceId());
+					world.openDoor(doorId);
 				}
 				for (int doorId : SECOND_ROUTE_DOORS)
 				{
-					openDoor(doorId, world.getInstanceId());
+					world.openDoor(doorId);
 				}
 				for (int doorId : SECOND_ROOM_DOORS)
 				{
-					closeDoor(doorId, world.getInstanceId());
+					world.closeDoor(doorId);
 				}
 				break;
 			}
@@ -892,19 +892,19 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 				{
 					for (int doorId : FIRST_ROOM_DOORS)
 					{
-						closeDoor(doorId, _world.getInstanceId());
+						_world.closeDoor(doorId);
 					}
 					for (int doorId : FIRST_ROUTE_DOORS)
 					{
-						closeDoor(doorId, _world.getInstanceId());
+						_world.closeDoor(doorId);
 					}
 					for (int doorId : SECOND_ROOM_DOORS)
 					{
-						closeDoor(doorId, _world.getInstanceId());
+						_world.closeDoor(doorId);
 					}
 					for (int doorId : SECOND_ROUTE_DOORS)
 					{
-						closeDoor(doorId, _world.getInstanceId());
+						_world.closeDoor(doorId);
 					}
 					addSpawn(29061, -87904, -141296, -9168, 0, false, 0, false, _world.getInstanceId());
 					break;
@@ -1353,7 +1353,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					ThreadPool.schedule(new StatusTask(_world, 1), 2000);
 					for (int doorId : FIRST_ROOM_DOORS)
 					{
-						openDoor(doorId, _world.getInstanceId());
+						_world.openDoor(doorId);
 					}
 					break;
 				}
@@ -1367,7 +1367,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					ThreadPool.schedule(new StatusTask(_world, 3), 100);
 					for (int doorId : SECOND_ROOM_DOORS)
 					{
-						openDoor(doorId, _world.getInstanceId());
+						_world.openDoor(doorId);
 					}
 					break;
 				}

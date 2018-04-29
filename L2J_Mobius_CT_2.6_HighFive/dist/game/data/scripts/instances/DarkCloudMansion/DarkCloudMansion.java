@@ -394,7 +394,7 @@ public final class DarkCloudMansion extends AbstractInstance
 	{
 		spawnHall(world);
 		world.setStatus(1);
-		openDoor(D1, world.getInstanceId());
+		world.openDoor(D1);
 	}
 	
 	protected void runFirstRoom(InstanceWorld world)
@@ -436,7 +436,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		
 		world.setParameter("FirstRoom", FirstRoom);
 		world.setStatus(2);
-		openDoor(D2, world.getInstanceId());
+		world.openDoor(D2);
 	}
 	
 	protected void runHall2(InstanceWorld world)
@@ -493,7 +493,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		
 		world.setParameter("SecondRoom", SecondRoom);
 		world.setStatus(4);
-		openDoor(D3, world.getInstanceId());
+		world.openDoor(D3);
 	}
 	
 	protected void runHall3(InstanceWorld world)
@@ -546,7 +546,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		ThirdRoom.npcList.add(thisnpc);
 		world.setParameter("ThirdRoom", ThirdRoom);
 		world.setStatus(6);
-		openDoor(D4, world.getInstanceId());
+		world.openDoor(D4);
 	}
 	
 	protected void runThirdRoom2(InstanceWorld world)
@@ -639,14 +639,14 @@ public final class DarkCloudMansion extends AbstractInstance
 		
 		world.setParameter("ForthRoom", ForthRoom);
 		world.setStatus(7);
-		openDoor(D5, world.getInstanceId());
+		world.openDoor(D5);
 	}
 	
 	protected void runFifthRoom(InstanceWorld world)
 	{
 		spawnFifthRoom(world);
 		world.setStatus(9);
-		openDoor(D6, world.getInstanceId());
+		world.openDoor(D6);
 	}
 	
 	private void spawnFifthRoom(InstanceWorld world)
@@ -876,7 +876,7 @@ public final class DarkCloudMansion extends AbstractInstance
 				{
 					if ((mob.order == i) && (ForthRoom.counter == i))
 					{
-						openDoor(W1 + i, world.getInstanceId());
+						world.openDoor(W1 + i);
 						ForthRoom.counter += 1;
 						if (ForthRoom.counter == 7)
 						{

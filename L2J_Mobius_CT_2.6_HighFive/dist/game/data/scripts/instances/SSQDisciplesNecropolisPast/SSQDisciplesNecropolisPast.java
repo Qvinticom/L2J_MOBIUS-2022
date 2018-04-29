@@ -147,27 +147,27 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		{
 			case 4:
 			{
-				openDoor(DOOR_1, world.getInstanceId());
+				world.openDoor(DOOR_1);
 				break;
 			}
 			case 10:
 			{
-				openDoor(DOOR_2, world.getInstanceId());
+				world.openDoor(DOOR_2);
 				break;
 			}
 			case 18:
 			{
-				openDoor(DOOR_3, world.getInstanceId());
+				world.openDoor(DOOR_3);
 				break;
 			}
 			case 28:
 			{
-				openDoor(DOOR_4, world.getInstanceId());
+				world.openDoor(DOOR_4);
 				break;
 			}
 			case 40:
 			{
-				openDoor(DOOR_5, world.getInstanceId());
+				world.openDoor(DOOR_5);
 				break;
 			}
 		}
@@ -457,7 +457,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 					final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 					if (world != null)
 					{
-						openDoor(DISCIPLES_NECROPOLIS_DOOR, world.getInstanceId());
+						world.openDoor(DISCIPLES_NECROPOLIS_DOOR);
 						talker.showQuestMovie(12);
 						startQuestTimer("FIGHT", 1000, null, talker);
 					}

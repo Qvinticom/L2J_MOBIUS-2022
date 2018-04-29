@@ -19,6 +19,7 @@ package ai.areas.PaganTemple.PaganTeleporters;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -67,13 +68,13 @@ public final class PaganTeleporters extends AbstractNpcAI
 		{
 			case "Close_Door1":
 			{
-				closeDoor(19160001, 0);
+				DoorData.getInstance().getDoor(19160001).closeMe();
 				break;
 			}
 			case "Close_Door2":
 			{
-				closeDoor(19160010, 0);
-				closeDoor(19160011, 0);
+				DoorData.getInstance().getDoor(19160010).closeMe();
+				DoorData.getInstance().getDoor(19160011).closeMe();
 				break;
 			}
 		}
@@ -101,13 +102,13 @@ public final class PaganTeleporters extends AbstractNpcAI
 				{
 					return "noItem.htm";
 				}
-				openDoor(19160001, 0);
+				DoorData.getInstance().getDoor(19160001).openMe();
 				startQuestTimer("Close_Door1", 10000, null, null);
 				return "FadedMark.htm";
 			}
 			case 32035:
 			{
-				openDoor(19160001, 0);
+				DoorData.getInstance().getDoor(19160001).openMe();
 				startQuestTimer("Close_Door1", 10000, null, null);
 				return "FadedMark.htm";
 			}
@@ -117,15 +118,15 @@ public final class PaganTeleporters extends AbstractNpcAI
 				{
 					return "noMark.htm";
 				}
+				DoorData.getInstance().getDoor(19160010).openMe();
+				DoorData.getInstance().getDoor(19160011).openMe();
 				startQuestTimer("Close_Door2", 10000, null, null);
-				openDoor(19160010, 0);
-				openDoor(19160011, 0);
-				return "openDoor.htm";
+				return "world.openDoor.htm";
 			}
 			case 32037:
 			{
-				openDoor(19160010, 0);
-				openDoor(19160011, 0);
+				DoorData.getInstance().getDoor(19160010).openMe();
+				DoorData.getInstance().getDoor(19160011).openMe();
 				startQuestTimer("Close_Door2", 10000, null, null);
 				return "FadedMark.htm";
 			}

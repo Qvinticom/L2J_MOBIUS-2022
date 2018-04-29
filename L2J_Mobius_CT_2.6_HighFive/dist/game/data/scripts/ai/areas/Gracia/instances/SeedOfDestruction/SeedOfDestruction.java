@@ -1046,8 +1046,8 @@ public class SeedOfDestruction extends AbstractNpcAI
 				spawn(world, ENTRANCE_GROUND_SPAWNS_1, true, false);
 				spawn(world, ENTRANCE_GROUND_SPAWNS_2, false, false);
 				spawn(world, ENTRANCE_UPPER_SPAWNS, false, true);
-				closeDoor(SCOUTPASS_DOOR, world.getInstanceId());
-				closeDoor(THRONE_DOOR, world.getInstanceId());
+				world.closeDoor(SCOUTPASS_DOOR);
+				world.closeDoor(THRONE_DOOR);
 				break;
 			}
 			case 1:
@@ -1056,7 +1056,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				sendScreenMessage(world, message1);
 				for (int i : ENTRANCE_ROOM_DOORS)
 				{
-					openDoor(i, world.getInstanceId());
+					world.openDoor(i);
 				}
 				spawn(world, SQUARE_SPAWNS_STATIC, false, true);
 				spawn(world, SQUARE_SPAWNS_MAIN, true, false);
@@ -1074,7 +1074,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				sendScreenMessage(world, message2);
 				for (int i : SQUARE_DOORS)
 				{
-					openDoor(i, world.getInstanceId());
+					world.openDoor(i);
 				}
 				spawn(world, CORRIDOR_SPAWNS_UPPER, false, true);
 				spawn(world, CORRIDOR_SPAWNS_GROUND, false, false);
@@ -1083,7 +1083,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			case 5:
 			{
-				openDoor(SCOUTPASS_DOOR, world.getInstanceId());
+				world.openDoor(SCOUTPASS_DOOR);
 				spawn(world, SQUARE_SPAWNS_HALF, false, false);
 				spawn(world, SCOUTPASS_SPAWNS_UPPER, false, true);
 				spawn(world, SCOUTPASS_SPAWNS_GROUND, false, false);
@@ -1098,7 +1098,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			case 6:
 			{
 				runThrone(world);
-				openDoor(THRONE_DOOR, world.getInstanceId());
+				world.openDoor(THRONE_DOOR);
 				spawn(world, FORT_PORTALS, false, true);
 				break;
 			}

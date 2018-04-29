@@ -36,13 +36,11 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.Location;
@@ -50,7 +48,6 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
@@ -110,7 +107,6 @@ import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
@@ -2684,66 +2680,6 @@ public abstract class AbstractScript extends ManagedScript
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		// To be overridden in quest scripts.
-	}
-	
-	/**
-	 * Open a door if it is present on the instance and its not open.
-	 * @param doorId the ID of the door to open
-	 * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
-	 */
-	public void openDoor(int doorId, int instanceId)
-	{
-		final L2DoorInstance door = getDoor(doorId, instanceId);
-		if (door == null)
-		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called openDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
-		}
-		else if (!door.isOpen())
-		{
-			door.openMe();
-		}
-	}
-	
-	/**
-	 * Close a door if it is present in a specified the instance and its open.
-	 * @param doorId the ID of the door to close
-	 * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
-	 */
-	public void closeDoor(int doorId, int instanceId)
-	{
-		final L2DoorInstance door = getDoor(doorId, instanceId);
-		if (door == null)
-		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": called closeDoor(" + doorId + ", " + instanceId + "); but door wasnt found!", new NullPointerException());
-		}
-		else if (door.isOpen())
-		{
-			door.closeMe();
-		}
-	}
-	
-	/**
-	 * Retrieve a door from an instance or the real world.
-	 * @param doorId the ID of the door to get
-	 * @param instanceId the ID of the instance the door is in (0 if the door is not not inside an instance)
-	 * @return the found door or {@code null} if no door with that ID and instance ID was found
-	 */
-	public L2DoorInstance getDoor(int doorId, int instanceId)
-	{
-		L2DoorInstance door = null;
-		if (instanceId <= 0)
-		{
-			door = DoorData.getInstance().getDoor(doorId);
-		}
-		else
-		{
-			final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
-			if (inst != null)
-			{
-				door = inst.getDoor(doorId);
-			}
-		}
-		return door;
 	}
 	
 	/**
