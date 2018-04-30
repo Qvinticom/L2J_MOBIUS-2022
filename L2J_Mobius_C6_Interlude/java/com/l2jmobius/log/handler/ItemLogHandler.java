@@ -14,17 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.handler;
 
 import java.io.IOException;
 import java.util.logging.FileHandler;
 
 /**
- * @author ProGramMoS, scoria dev
+ * @author ProGramMoS
  */
-public class ErrorLogHandler extends FileHandler
+public class ItemLogHandler extends FileHandler
 {
-	public ErrorLogHandler() throws IOException, SecurityException
+	public ItemLogHandler() throws IOException, SecurityException
 	{
 		super();
 	}

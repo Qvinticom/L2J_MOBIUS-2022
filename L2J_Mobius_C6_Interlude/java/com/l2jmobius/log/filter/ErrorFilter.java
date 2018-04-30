@@ -14,29 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.filter;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.logging.Formatter;
+import java.util.logging.Filter;
 import java.util.logging.LogRecord;
 
 /**
- * @author Nos
+ * @author ProGramMoS
  */
-public abstract class AbstractFormatter extends Formatter
+public class ErrorFilter implements Filter
 {
-	private final DateFormat _dateFormat = new SimpleDateFormat("dd/MM HH:mm:ss");
-	
 	@Override
-	public String format(LogRecord record)
+	public boolean isLoggable(LogRecord record)
 	{
-		final StringBuilder sb = new StringBuilder(32);
-		sb.append("[");
-		sb.append(_dateFormat.format(new Date(record.getMillis())));
-		sb.append("] ");
-		sb.append(record.getMessage());
-		return sb.toString();
+		return record.getThrown() != null;
 	}
 }

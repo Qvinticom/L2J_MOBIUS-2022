@@ -14,15 +14,34 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.formatter;
 
-import java.io.IOException;
-import java.util.logging.FileHandler;
+import java.util.logging.LogRecord;
 
-public class ChatLogHandler extends FileHandler
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Util;
+
+public class ConsoleLogFormatter extends AbstractFormatter
 {
-	public ChatLogHandler() throws IOException, SecurityException
+	@Override
+	public String format(LogRecord record)
 	{
-		super();
+		final StringBuilder output = new StringBuilder(128);
+		output.append(super.format(record));
+		output.append(Config.EOL);
+		
+		if (record.getThrown() != null)
+		{
+			try
+			{
+				output.append(Util.getStackTrace(record.getThrown()));
+				output.append(Config.EOL);
+			}
+			catch (Exception ex)
+			{
+			}
+		}
+		
+		return output.toString();
 	}
 }

@@ -1,7 +1,7 @@
 @echo off
 title SQL Account Manager
 color 17
-java -version:1.8 -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -cp ./../libs/*;LoginServer.jar com.l2jmobius.tools.accountmanager.SQLAccountManager
+java -version:1.8 -Djava.util.logging.config.file=console.cfg -cp ./../libs/*;LoginServer.jar com.l2jmobius.tools.accountmanager.SQLAccountManager
 if %errorlevel% == 0 (
 echo.
 echo Execution successful

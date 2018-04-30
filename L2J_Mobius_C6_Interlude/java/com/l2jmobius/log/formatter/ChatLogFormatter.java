@@ -14,33 +14,32 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.formatter;
 
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.util.Util;
 
-public class ConsoleLogFormatter extends AbstractFormatter
+public class ChatLogFormatter extends AbstractFormatter
 {
 	@Override
 	public String format(LogRecord record)
 	{
-		final StringBuilder output = new StringBuilder(128);
+		Object[] params = record.getParameters();
+		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
 		output.append(super.format(record));
-		output.append(Config.EOL);
 		
-		if (record.getThrown() != null)
+		if (params != null)
 		{
-			try
+			for (Object p : params)
 			{
-				output.append(Util.getStackTrace(record.getThrown()));
-				output.append(Config.EOL);
-			}
-			catch (Exception ex)
-			{
+				output.append(p);
+				output.append(" ");
 			}
 		}
+		
+		output.append(record.getMessage());
+		output.append(Config.EOL);
 		
 		return output.toString();
 	}

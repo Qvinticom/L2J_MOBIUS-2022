@@ -14,17 +14,16 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.formatter;
 
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 
 /**
- * @author Advi
+ * @author zabbix
  */
-public class ItemLogFormatter extends AbstractFormatter
+public class AuditFormatter extends AbstractFormatter
 {
 	@Override
 	public String format(LogRecord record)
@@ -33,33 +32,15 @@ public class ItemLogFormatter extends AbstractFormatter
 		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
 		output.append(super.format(record));
 		
-		for (Object p : record.getParameters())
+		if (params != null)
 		{
-			if (p == null)
+			for (Object p : params)
 			{
-				continue;
-			}
-			output.append(", ");
-			if (p instanceof L2ItemInstance)
-			{
-				L2ItemInstance item = (L2ItemInstance) p;
-				output.append("item ");
-				output.append(item.getObjectId());
-				output.append(":");
-				if (item.getEnchantLevel() > 0)
+				if (p == null)
 				{
-					output.append("+");
-					output.append(item.getEnchantLevel());
-					output.append(" ");
+					continue;
 				}
-				
-				output.append(item.getItem().getName());
-				output.append("(");
-				output.append(item.getCount());
-				output.append(")");
-			}
-			else
-			{
+				output.append(", ");
 				output.append(p);
 			}
 		}

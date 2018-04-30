@@ -63,7 +63,7 @@ public class LoginServer
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		// Local Constants
 		final String LOG_FOLDER = "log"; // Name of folder for log file
-		final String LOG_NAME = "./config/others/log.cfg"; // Name of log file
+		final String LOG_NAME = "./log.cfg"; // Name of log file
 		
 		/*** Main ***/
 		// Create log folder

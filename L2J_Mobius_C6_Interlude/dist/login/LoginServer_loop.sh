@@ -3,8 +3,9 @@
 err=1
 until [ $err == 0 ]; 
 do
-	java -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -Xms128m -Xmx128m -cp lib/*:LoginServer.jar com.l2jmobius.loginserver.LoginServer > log/stdout.log 2>&1
+	[ -f log/java0.log.0 ] && mv log/java0.log.0 "log/`date +%Y-%m-%d_%H-%M-%S`_java.log"
+	[ -f log/stdout.log ] && mv log/stdout.log "log/`date +%Y-%m-%d_%H-%M-%S`_stdout.log"
+	java -Xms128m -Xmx256m -jar LoginServer.jar > log/stdout.log 2>&1
 	err=$?
-#	/etc/init.d/mysql restart
 	sleep 10;
 done

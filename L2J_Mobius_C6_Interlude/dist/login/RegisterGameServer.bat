@@ -1,2 +1,5 @@
-@java -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -cp lib/*;LoginServer.jar com.l2jmobius.tools.gsregistering.GameServerRegister
-@pause
+@echo off
+title Register Game Server
+color 17
+java -version:1.8 -Djava.util.logging.config.file=console.cfg -cp ./../libs/*;LoginServer.jar com.l2jmobius.tools.gsregistering.BaseGameServerRegister -c
+pause

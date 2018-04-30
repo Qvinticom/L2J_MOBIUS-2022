@@ -149,7 +149,7 @@ public class GameServer
 	
 	// Local Constants
 	private static final String LOG_FOLDER = "log"; // Name of folder for log file
-	private static final String LOG_NAME = "./config/others/log.cfg"; // Name of log file
+	private static final String LOG_NAME = "./log.cfg"; // Name of log file
 	
 	private static SelectorThread<L2GameClient> _selectorThread;
 	private static LoginServerThread _loginThread;

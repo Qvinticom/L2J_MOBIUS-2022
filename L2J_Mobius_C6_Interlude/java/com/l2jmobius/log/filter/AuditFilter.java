@@ -14,18 +14,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.log;
+package com.l2jmobius.log.filter;
 
-import java.io.IOException;
-import java.util.logging.FileHandler;
+import java.util.logging.Filter;
+import java.util.logging.LogRecord;
 
 /**
  * @author ProGramMoS, Lets drink to code!
  */
-public class AuditLogHandler extends FileHandler
+public class AuditFilter implements Filter
 {
-	public AuditLogHandler() throws IOException, SecurityException
+	@Override
+	public boolean isLoggable(LogRecord record)
 	{
-		super();
+		return record.getLoggerName().equalsIgnoreCase("audit");
 	}
 }

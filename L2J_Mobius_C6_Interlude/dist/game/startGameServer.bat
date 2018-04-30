@@ -5,52 +5,33 @@ title L2J Mobius - Game Server Console
 echo Starting Game Server.
 echo.
 
-java -version:1.8 -server -Dfile.encoding=UTF-8 -Djava.util.logging.config.file=config/others/log.cfg -XX:+AggressiveOpts -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseParNewGC -XX:SurvivorRatio=8 -Xmx4g -Xms2g -Xmn1g -cp ./libs/*;Gameserver.jar com.l2jmobius.gameserver.GameServer
+REM java -Djava.util.logging.manager=com.l2jmobius.log.L2LogManager -Dpython.cachedir=../cachedir -Xms1024m -Xmx1536m -jar GameServer.jar
+java -version:1.8 -server -Dfile.encoding=UTF-8 -Djava.util.logging.manager=com.l2jmobius.log.L2LogManager -XX:+AggressiveOpts -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseParNewGC -XX:SurvivorRatio=8 -Xmx4g -Xms2g -Xmn1g -jar GameServer.jar
 
-if ERRORLEVEL 7 goto telldown
-if ERRORLEVEL 6 goto tellrestart
-if ERRORLEVEL 5 goto taskrestart
-if ERRORLEVEL 4 goto taskdown
-REM 3 - abort
+REM NOTE: If you have a powerful machine, you could modify/add some extra parameters for performance, like:
+REM -Xms1536m
+REM -Xmx3072m
+REM -XX:+AggressiveOpts
+REM Use this parameters carefully, some of them could cause abnormal behavior, deadlocks, etc.
+REM More info here: http://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html
+
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end
-:tellrestart
-echo.
-echo Telnet server Restart ...
-echo.
-goto start
-:taskrestart
-echo.
-echo Auto Task Restart ...
-echo.
-goto start
+
 :restart
 echo.
-echo Admin Restart ...
+echo Admin Restarted Game Server.
 echo.
 goto start
-:taskdown
-echo .
-echo Server terminated (Auto task)
-echo .
-:telldown
-echo .
-echo Server terminated (Telnet)
-echo .
+
 :error
 echo.
-echo Server terminated abnormally
+echo Game Server Terminated Abnormally!
 echo.
+
 :end
 echo.
-echo server terminated
+echo Game Server Terminated.
 echo.
-:question
-set choix=q
-set /p choix=Restart(r) or Quit(q)
-if /i %choix%==r goto start
-if /i %choix%==q goto exit
-:exit
-exit
 pause
