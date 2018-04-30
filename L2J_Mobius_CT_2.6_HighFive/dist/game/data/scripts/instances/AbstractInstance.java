@@ -52,7 +52,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (world.getInstance().getTemplateId() == templateId)
+			if (world.getTemplateId() == templateId)
 			{
 				onEnterInstance(player, world, false);
 				
@@ -191,11 +191,11 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	{
 		for (int objectId : world.getAllowed())
 		{
-			InstanceManager.getInstance().setInstanceTime(objectId, world.getInstance().getTemplateId(), time);
+			InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), time);
 			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			if ((player != null) && player.isOnline())
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstanceIdName(world.getInstance().getTemplateId())));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId())));
 			}
 		}
 	}

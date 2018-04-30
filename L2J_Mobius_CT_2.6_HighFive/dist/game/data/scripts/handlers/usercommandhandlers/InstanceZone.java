@@ -51,10 +51,10 @@ public class InstanceZone implements IUserCommandHandler
 		}
 		
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(activeChar);
-		if ((world != null) && (world.getInstance().getTemplateId() >= 0))
+		if ((world != null) && (world.getTemplateId() >= 0))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_CURRENTLY_IN_USE_S1);
-			sm.addInstanceName(world.getInstance().getTemplateId());
+			sm.addInstanceName(world.getTemplateId());
 			activeChar.sendPacket(sm);
 		}
 		

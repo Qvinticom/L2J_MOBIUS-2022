@@ -1195,7 +1195,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.setParameter("isHardCore", world.getInstance().getTemplateId() == TEMPLATE_ID_HARD);
+			world.setParameter("isHardCore", world.getTemplateId() == TEMPLATE_ID_HARD);
 			
 			final List<L2PcInstance> playersInside = new ArrayList<>();
 			if (!player.isInParty())

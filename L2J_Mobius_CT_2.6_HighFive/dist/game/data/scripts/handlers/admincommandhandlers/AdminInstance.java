@@ -87,7 +87,7 @@ public class AdminInstance implements IAdminCommandHandler
 				if (world != null)
 				{
 					counter++;
-					activeChar.sendMessage("Id: " + instance.getId() + " Name: " + InstanceManager.getInstance().getInstanceIdName(world.getInstance().getTemplateId()));
+					activeChar.sendMessage("Id: " + instance.getId() + " Name: " + InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 				}
 			}
 			if (counter == 0)

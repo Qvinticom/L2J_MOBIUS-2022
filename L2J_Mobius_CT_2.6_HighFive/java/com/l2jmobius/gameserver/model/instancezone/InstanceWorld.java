@@ -48,21 +48,21 @@ public class InstanceWorld
 	}
 	
 	/**
-	 * Gets the instance.
-	 * @return the instance
-	 */
-	public Instance getInstance()
-	{
-		return _instance;
-	}
-	
-	/**
 	 * Gets the dynamically generated instance ID.
 	 * @return the instance ID
 	 */
 	public int getInstanceId()
 	{
 		return _instance.getId();
+	}
+	
+	/**
+	 * Get template ID of instance world.
+	 * @return instance template ID
+	 */
+	public int getTemplateId()
+	{
+		return _instance.getTemplateId();
 	}
 	
 	public List<Integer> getAllowed()

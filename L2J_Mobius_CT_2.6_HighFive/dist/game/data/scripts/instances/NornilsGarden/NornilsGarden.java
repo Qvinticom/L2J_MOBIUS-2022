@@ -240,10 +240,10 @@ public final class NornilsGarden extends AbstractInstance
 	
 	private final synchronized String enterInstance(L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
+		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (!(world instanceof NornilsWorld) || (world.getInstance().getTemplateId() != TEMPLATE_ID))
+			if (!(world instanceof NornilsWorld) || (world.getTemplateId() != TEMPLATE_ID))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return null;
@@ -271,17 +271,24 @@ public final class NornilsGarden extends AbstractInstance
 			return result;
 		}
 		
-		world = new NornilsWorld();
-		world.setInstance(InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID));
+		final NornilsWorld newWorld = new NornilsWorld();
+		final Instance instance = InstanceManager.getInstance().createDynamicInstance(TEMPLATE_ID);
+		newWorld.setInstance(instance);
 		InstanceManager.getInstance().addWorld(world);
-		world.getInstance().setExitLoc(new Location(player));
-		world.getInstance().setAllowSummon(false);
-		world.getInstance().setDuration(DURATION_TIME * 60000);
-		world.getInstance().setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
-		final int instanceId = world.getInstanceId();
+		instance.setExitLoc(new Location(player));
+		instance.setAllowSummon(false);
+		instance.setDuration(DURATION_TIME * 60000);
+		instance.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		final int instanceId = newWorld.getInstanceId();
 		LOGGER.info("Nornils Garden: started, Instance: " + instanceId + " created by player: " + player.getName());
 		
-		prepareInstance((NornilsWorld) world);
+		newWorld.first_npc = addSpawn(18362, -109702, 74696, -12528, 49568, false, 0, false, newWorld.getInstanceId());
+		final L2DoorInstance door = instance.getDoor(16200010);
+		if (door != null)
+		{
+			door.setTargetable(false);
+			door.setMeshIndex(2);
+		}
 		
 		// and finally teleport party into instance
 		final L2Party party = player.getParty();
@@ -289,23 +296,11 @@ public final class NornilsGarden extends AbstractInstance
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				world.addAllowed(partyMember.getObjectId());
+				newWorld.addAllowed(partyMember.getObjectId());
 				teleportPlayer(partyMember, SPAWN_PPL, instanceId);
 			}
 		}
 		return null;
-	}
-	
-	private void prepareInstance(NornilsWorld world)
-	{
-		world.first_npc = addSpawn(18362, -109702, 74696, -12528, 49568, false, 0, false, world.getInstanceId());
-		
-		final L2DoorInstance door = world.getInstance().getDoor(16200010);
-		if (door != null)
-		{
-			door.setTargetable(false);
-			door.setMeshIndex(2);
-		}
 	}
 	
 	private void spawn1(L2Npc npc)

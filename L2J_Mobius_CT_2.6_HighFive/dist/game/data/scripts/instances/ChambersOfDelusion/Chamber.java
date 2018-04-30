@@ -178,14 +178,14 @@ public abstract class Chamber extends AbstractInstance
 				reenter.add(Calendar.DAY_OF_WEEK, 1);
 			}
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getInstance().getTemplateId()));
+			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
 			{
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getInstance().getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
 					player.sendPacket(sm);
 				}
 			}

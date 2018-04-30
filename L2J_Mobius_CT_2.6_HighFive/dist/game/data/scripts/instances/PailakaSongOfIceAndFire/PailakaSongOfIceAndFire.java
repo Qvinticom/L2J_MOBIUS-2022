@@ -170,7 +170,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 		if ((character.isPlayer()) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character);
-			if ((world != null) && (world.getInstance().getTemplateId() == TEMPLATE_ID))
+			if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 			{
 				startQuestTimer("TELEPORT", 1000, null, (L2PcInstance) character);
 			}

@@ -1768,7 +1768,7 @@ public final class CrystalCaverns extends AbstractInstance
 			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 			if (world != null)
 			{
-				if (world.getInstance().getTemplateId() == TEMPLATE_ID)
+				if (world.getTemplateId() == TEMPLATE_ID)
 				{
 					onEnterInstance(player, world, false);
 					return "";

@@ -871,7 +871,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		if ((character instanceof L2PcInstance) && !character.isDead() && !character.isTeleporting() && ((L2PcInstance) character).isOnline())
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character);
-			if ((world != null) && (world.getInstance().getTemplateId() == INSTANCE_ID))
+			if ((world != null) && (world.getTemplateId() == INSTANCE_ID))
 			{
 				// If a player wants to go by a mob wall without kill it, he will be returned back to a spawn point.
 				final int[] zoneTeleport = NOEXIT_ZONES.get(zone.getId());
@@ -939,7 +939,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 		InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			if (world.getInstance().getTemplateId() != INSTANCE_ID)
+			if (world.getTemplateId() != INSTANCE_ID)
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;

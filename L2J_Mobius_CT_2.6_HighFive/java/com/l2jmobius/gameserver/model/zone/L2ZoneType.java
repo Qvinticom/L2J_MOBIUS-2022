@@ -202,7 +202,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		if (_instanceTemplateId > 0)
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(character);
-			if ((world != null) && (world.getInstance().getTemplateId() != _instanceTemplateId))
+			if ((world != null) && (world.getTemplateId() != _instanceTemplateId))
 			{
 				return false;
 			}

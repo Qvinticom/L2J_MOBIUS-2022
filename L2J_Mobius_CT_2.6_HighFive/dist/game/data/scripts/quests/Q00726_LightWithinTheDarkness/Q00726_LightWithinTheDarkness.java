@@ -273,8 +273,9 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		}
 		final L2Party party = player.getParty();
 		world = new PAWORLD();
-		world.setInstance(InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId()));
-		world.getInstance().setExitLoc(new Location(player));
+		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
+		world.setInstance(instance);
+		instance.setExitLoc(new Location(player));
 		dungeon.setReEnterTime(System.currentTimeMillis() + 14400000);
 		InstanceManager.getInstance().addWorld(world);
 		ThreadPool.schedule(new spawnNpcs((PAWORLD) world), 10000);

@@ -157,8 +157,8 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.setParameter("is83", world.getInstance().getTemplateId() == TEMPLATE_ID_83);
-			world.setParameter("isNight", world.getInstance().getTemplateId() == TEMPLATE_ID_60_NIGHT);
+			world.setParameter("is83", world.getTemplateId() == TEMPLATE_ID_83);
+			world.setParameter("isNight", world.getTemplateId() == TEMPLATE_ID_60_NIGHT);
 			world.setParameter("storeTime", System.currentTimeMillis());
 			
 			final List<L2PcInstance> playersInside = new ArrayList<>();

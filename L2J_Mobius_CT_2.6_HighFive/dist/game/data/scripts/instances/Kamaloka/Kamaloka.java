@@ -551,7 +551,7 @@ public final class Kamaloka extends AbstractInstance
 		if (world != null)
 		{
 			// but not in kamaloka
-			if (!(world instanceof KamaWorld) || (world.getInstance().getTemplateId() != templateId))
+			if (!(world instanceof KamaWorld) || (world.getTemplateId() != templateId))
 			{
 				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
 				return;
@@ -581,15 +581,16 @@ public final class Kamaloka extends AbstractInstance
 		
 		// Creating new instanceWorld, using our instanceId and templateId
 		world = new KamaWorld();
-		world.setInstance(InstanceManager.getInstance().createDynamicInstance(templateId));
+		final Instance instance = InstanceManager.getInstance().createDynamicInstance(templateId);
+		world.setInstance(instance);
 		
 		// set return location
-		world.getInstance().setExitLoc(new Location(player));
+		instance.setExitLoc(new Location(player));
 		// disable summon friend into instance
-		world.getInstance().setAllowSummon(false);
+		instance.setAllowSummon(false);
 		// set duration and empty destroy time
-		world.getInstance().setDuration(DURATION[index] * 60000);
-		world.getInstance().setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
+		instance.setDuration(DURATION[index] * 60000);
+		instance.setEmptyDestroyTime(EMPTY_DESTROY_TIME * 60000);
 		
 		// set index for easy access to the arrays
 		((KamaWorld) world).index = index;
@@ -627,7 +628,7 @@ public final class Kamaloka extends AbstractInstance
 			reenter.set(Calendar.HOUR_OF_DAY, RESET_HOUR);
 			
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
-			sm.addInstanceName(world.getInstance().getTemplateId());
+			sm.addInstanceName(world.getTemplateId());
 			
 			// set instance reenter time for all allowed players
 			for (int objectId : world.getAllowed())
@@ -635,7 +636,7 @@ public final class Kamaloka extends AbstractInstance
 				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
 				if ((obj != null) && obj.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getInstance().getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
 					obj.sendPacket(sm);
 				}
 			}

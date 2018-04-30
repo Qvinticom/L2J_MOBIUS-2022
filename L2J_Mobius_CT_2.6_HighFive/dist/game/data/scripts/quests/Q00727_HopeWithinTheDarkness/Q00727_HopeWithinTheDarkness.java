@@ -625,8 +625,9 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		
 		final L2Party party = player.getParty();
 		world = new CAUWorld();
-		world.setInstance(InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId()));
-		world.getInstance().setExitLoc(new Location(player));
+		final Instance instance = InstanceManager.getInstance().createDynamicInstance(dungeon.getInstanceId());
+		world.setInstance(instance);
+		instance.setExitLoc(new Location(player));
 		final int instanceId = world.getInstanceId();
 		dungeon.setReEnterTime(System.currentTimeMillis() + REENTER_INTERVAL);
 		InstanceManager.getInstance().addWorld(world);

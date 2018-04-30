@@ -107,7 +107,7 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 					{
 						final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 						
-						if ((world != null) && (world.getInstance().getTemplateId() == TEMPLATE_ID))
+						if ((world != null) && (world.getTemplateId() == TEMPLATE_ID))
 						{
 							final int tag = world.getParameters().getInt("tag", -1);
 							if (tag == -1)
