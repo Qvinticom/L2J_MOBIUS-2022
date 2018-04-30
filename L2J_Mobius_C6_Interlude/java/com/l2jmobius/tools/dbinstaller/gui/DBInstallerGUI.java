@@ -28,7 +28,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 import com.l2jmobius.tools.dbinstaller.DBOutputInterface;
-import com.l2jmobius.tools.dbinstaller.images.ImagesTable;
 
 /**
  * @author mrTJO
@@ -41,10 +40,10 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 	
 	public DBInstallerGUI(Connection con)
 	{
-		super("Database Installer");
+		super("Mobius - DB Installer");
 		setLayout(new BorderLayout());
 		setDefaultLookAndFeelDecorated(true);
-		setIconImage(ImagesTable.getImage("l2j.png").getImage());
+		setIconImage(Toolkit.getDefaultToolkit().getImage("..\\images\\l2jmobius.png"));
 		
 		_con = con;
 		

@@ -31,7 +31,6 @@ import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
 import com.l2jmobius.tools.dbinstaller.RunTasks;
-import com.l2jmobius.tools.dbinstaller.images.ImagesTable;
 import com.l2jmobius.tools.dbinstaller.util.mysql.MySqlConnect;
 import com.l2jmobius.tools.dbinstaller.util.swing.SpringUtilities;
 
@@ -53,10 +52,10 @@ public class DBConfigGUI extends JFrame
 	
 	public DBConfigGUI(String db, String dir)
 	{
-		super("Database Installer");
+		super("Mobius - DB Installer");
 		setLayout(new SpringLayout());
 		setDefaultLookAndFeelDecorated(true);
-		setIconImage(ImagesTable.getImage("l2j.png").getImage());
+		setIconImage(Toolkit.getDefaultToolkit().getImage("..\\images\\l2jmobius.png"));
 		
 		_db = db;
 		_dir = dir;
