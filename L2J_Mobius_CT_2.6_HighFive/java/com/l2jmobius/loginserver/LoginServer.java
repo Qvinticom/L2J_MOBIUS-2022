@@ -60,18 +60,13 @@ public final class LoginServer
 		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		
-		// Local Constants
-		final String LOG_FOLDER = "log"; // Name of folder for log file
-		final String LOG_NAME = "./log.cfg"; // Name of log file
-		
-		/*** Main ***/
 		// Create log folder
-		final File logFolder = new File(".", LOG_FOLDER);
+		final File logFolder = new File(".", "log");
 		logFolder.mkdir();
 		
 		// Create input stream for log file -- or store file data into memory
 		
-		try (InputStream is = new FileInputStream(new File(LOG_NAME)))
+		try (InputStream is = new FileInputStream(new File("./log.cfg")))
 		{
 			LogManager.getLogManager().readConfiguration(is);
 		}

@@ -14,7 +14,7 @@ echo Possible reasons for this to happen:
 echo.
 echo - Missing .jar files or ../libs directory.
 echo - MySQL server not running or incorrect MySQL settings:
-echo    check ./config/loginserver.properties
+echo    check ./config/loginserver.ini
 echo - Wrong data types or values out of range were provided:
 echo    specify correct values for each required field
 echo.
