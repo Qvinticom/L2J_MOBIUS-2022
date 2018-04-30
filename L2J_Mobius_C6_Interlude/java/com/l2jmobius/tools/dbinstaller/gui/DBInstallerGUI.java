@@ -18,9 +18,13 @@ package com.l2jmobius.tools.dbinstaller.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
@@ -43,7 +47,14 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		super("Mobius - DB Installer");
 		setLayout(new BorderLayout());
 		setDefaultLookAndFeelDecorated(true);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("..\\images\\l2jmobius.png"));
+		
+		// Set icons.
+		List<Image> icons = new ArrayList<>();
+		icons.add(new ImageIcon("..\\images\\l2jmobius_16x16.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_128x128.png").getImage());
+		setIconImages(icons);
 		
 		_con = con;
 		

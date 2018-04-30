@@ -17,10 +17,14 @@
 package com.l2jmobius.tools.dbinstaller.gui;
 
 import java.awt.Dimension;
+import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.prefs.Preferences;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,6 +34,7 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
 
+import com.l2jmobius.commons.util.SplashScreen;
 import com.l2jmobius.tools.dbinstaller.RunTasks;
 import com.l2jmobius.tools.dbinstaller.util.mysql.MySqlConnect;
 import com.l2jmobius.tools.dbinstaller.util.swing.SpringUtilities;
@@ -50,12 +55,25 @@ public class DBConfigGUI extends JFrame
 	
 	Preferences _prop;
 	
+	boolean _isVisible = true;
+	
 	public DBConfigGUI(String db, String dir)
 	{
 		super("Mobius - DB Installer");
+		setVisible(false);
 		setLayout(new SpringLayout());
 		setDefaultLookAndFeelDecorated(true);
-		setIconImage(Toolkit.getDefaultToolkit().getImage("..\\images\\l2jmobius.png"));
+		
+		// Set icons.
+		List<Image> icons = new ArrayList<>();
+		icons.add(new ImageIcon("..\\images\\l2jmobius_16x16.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());
+		icons.add(new ImageIcon("..\\images\\l2jmobius_128x128.png").getImage());
+		setIconImages(icons);
+		
+		// Show SplashScreen.
+		new SplashScreen("..\\images\\splash.png", 5000, this);
 		
 		_db = db;
 		_dir = dir;
@@ -159,6 +177,7 @@ public class DBConfigGUI extends JFrame
 						System.exit(0);
 					}
 				}
+				_isVisible = false;
 				dbi.setVisible(true);
 				
 				final RunTasks task = new RunTasks(dbi, _db, _dir);
@@ -173,7 +192,11 @@ public class DBConfigGUI extends JFrame
 		add(btnConnect);
 		
 		SpringUtilities.makeCompactGrid(getContentPane(), 6, 2, 5, 5, 5, 5);
-		
-		setVisible(true);
+	}
+	
+	@Override
+	public boolean isVisible()
+	{
+		return _isVisible;
 	}
 }

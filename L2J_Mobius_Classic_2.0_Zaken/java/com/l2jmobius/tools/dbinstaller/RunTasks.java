@@ -60,7 +60,6 @@ public class RunTasks extends Thread
 			JOptionPane.showMessageDialog(null, "Cannot close MySQL Connection: " + e.getMessage(), "Connection Error", JOptionPane.ERROR_MESSAGE);
 		}
 		
-		_frame.setFrameVisible(false);
 		_frame.showMessage("Done!", "Database Installation Complete!", JOptionPane.INFORMATION_MESSAGE);
 		System.exit(0);
 	}
