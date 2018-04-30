@@ -21,7 +21,6 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.CommonUtil;
-import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -38,26 +37,6 @@ public class InstanceWorld
 	private Instance _instance;
 	private final List<Integer> _allowed = new CopyOnWriteArrayList<>();
 	private final StatsSet _parameters = new StatsSet();
-	
-	public List<Integer> getAllowed()
-	{
-		return _allowed;
-	}
-	
-	public void removeAllowed(int id)
-	{
-		_allowed.remove(_allowed.indexOf(Integer.valueOf(id)));
-	}
-	
-	public void addAllowed(int id)
-	{
-		_allowed.add(id);
-	}
-	
-	public boolean isAllowed(int id)
-	{
-		return _allowed.contains(id);
-	}
 	
 	/**
 	 * Sets the instance.
@@ -84,6 +63,26 @@ public class InstanceWorld
 	public int getInstanceId()
 	{
 		return _instance.getId();
+	}
+	
+	public List<Integer> getAllowed()
+	{
+		return _allowed;
+	}
+	
+	public void removeAllowed(int id)
+	{
+		_allowed.remove(_allowed.indexOf(Integer.valueOf(id)));
+	}
+	
+	public void addAllowed(int id)
+	{
+		_allowed.add(id);
+	}
+	
+	public boolean isAllowed(int id)
+	{
+		return _allowed.contains(id);
 	}
 	
 	/**
@@ -157,19 +156,14 @@ public class InstanceWorld
 	 */
 	public void onDeath(L2Character killer, L2Character victim)
 	{
-		if ((victim == null) || !victim.isPlayer())
-		{
-			return;
-		}
-		final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
-		if (instance == null)
+		if ((victim == null) || !victim.isPlayer() || (_instance == null))
 		{
 			return;
 		}
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-		sm.addInt(instance.getEjectTime() / 60 / 1000);
+		sm.addInt(_instance.getEjectTime() / 60 / 1000);
 		victim.getActingPlayer().sendPacket(sm);
-		instance.addEjectDeadTask(victim.getActingPlayer());
+		_instance.addEjectDeadTask(victim.getActingPlayer());
 	}
 	
 	/**
