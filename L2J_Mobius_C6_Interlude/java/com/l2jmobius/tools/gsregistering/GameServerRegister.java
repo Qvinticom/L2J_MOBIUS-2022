@@ -19,134 +19,309 @@ package com.l2jmobius.tools.gsregistering;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
-import java.math.BigInteger;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Map;
-import java.util.logging.Logger;
+import java.util.Map.Entry;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.Server;
-import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.thread.LoginServerThread;
 import com.l2jmobius.loginserver.GameServerTable;
 
-public class GameServerRegister
+public class GameServerRegister extends BaseGameServerRegister
 {
-	private static final Logger LOGGER = Logger.getLogger(GameServerRegister.class.getName());
-	private static String _choice;
-	private static boolean _choiceOk;
+	private LineNumberReader _in;
 	
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args)
 	{
-		Server.serverMode = Server.MODE_LOGINSERVER;
-		Config.load();
-		final LineNumberReader _in = new LineNumberReader(new InputStreamReader(System.in));
-		try
+		// Backwards compatibility, redirect to the new one
+		BaseGameServerRegister.main(args);
+	}
+	
+	public GameServerRegister()
+	{
+		super();
+		load();
+		
+		if (GameServerTable.getInstance().getServerNames().size() == 0)
 		{
-			GameServerTable.load();
-		}
-		catch (Exception e)
-		{
-			LOGGER.info("FATAL: Failed loading GameServerTable. Reason: " + e.getMessage());
-			e.printStackTrace();
+			System.out.println("No available names for GameServer, verify servername.xml file exists in the LoginServer folder.");
 			System.exit(1);
 		}
-		final GameServerTable gameServerTable = GameServerTable.getInstance();
-		LOGGER.info("Welcome to L2JMobius GameServer Registering");
-		LOGGER.info("Enter The id of the server you want to register");
-		LOGGER.info("Type 'help' to get a list of ids.");
-		LOGGER.info("Type 'clean' to unregister all currently registered gameservers on this LoginServer.");
-		while (!_choiceOk)
+	}
+	
+	public void consoleUI() throws IOException
+	{
+		_in = new LineNumberReader(new InputStreamReader(System.in));
+		boolean choiceOk = false;
+		String choice;
+		
+		while (true)
 		{
-			LOGGER.info("Your choice:");
-			_choice = _in.readLine();
-			if (_choice.equalsIgnoreCase("help"))
+			hr();
+			System.out.println("GSRegister");
+			System.out.println(Config.EOL);
+			System.out.println("1 - Register GameServer");
+			System.out.println("2 - List GameServers Names and IDs");
+			System.out.println("3 - Remove GameServer");
+			System.out.println("4 - Remove ALL GameServers");
+			System.out.println("5 - Exit");
+			
+			do
 			{
-				for (Map.Entry<Integer, String> entry : gameServerTable.getServerNames().entrySet())
-				{
-					LOGGER.info("Server: ID: " + entry.getKey() + "\t- " + entry.getValue() + " - In Use: " + (gameServerTable.hasRegisteredGameServerOnId(entry.getKey()) ? "YES" : "NO"));
-				}
-				LOGGER.info("You can also see servername.xml");
-			}
-			else if (_choice.equalsIgnoreCase("clean"))
-			{
-				System.out.print("This is going to UNREGISTER ALL servers from this LoginServer. Are you sure? (y/n) ");
-				_choice = _in.readLine();
-				if (_choice.equals("y"))
-				{
-					GameServerRegister.cleanRegisteredGameServersFromDB();
-					gameServerTable.getRegisteredGameServers().clear();
-				}
-				else
-				{
-					LOGGER.info("ABORTED");
-				}
-			}
-			else
-			{
+				System.out.print("Choice: ");
+				choice = _in.readLine();
 				try
 				{
-					final int id = Integer.parseInt(_choice);
-					final int size = gameServerTable.getServerNames().size();
-					if (size == 0)
-					{
-						LOGGER.info("No server names avalible, please make sure that servername.xml is in the LoginServer directory.");
-						System.exit(1);
-					}
+					final int choiceNumber = Integer.parseInt(choice);
+					choiceOk = true;
 					
-					_choice = "";
-					
-					while (!_choice.equalsIgnoreCase(""))
+					switch (choiceNumber)
 					{
-						LOGGER.info("External Server Ip:");
-						_choice = _in.readLine();
-					}
-					
-					final String ip = _choice;
-					
-					final String name = gameServerTable.getServerNameById(id);
-					if (name == null)
-					{
-						LOGGER.info("No name for id: " + id);
-						continue;
-					}
-					
-					if (gameServerTable.hasRegisteredGameServerOnId(id))
-					{
-						LOGGER.info("This id is not free");
-					}
-					else
-					{
-						final byte[] hexId = LoginServerThread.generateHex(16);
-						gameServerTable.registerServerOnDB(hexId, id, ip);
-						Config.saveHexid(id, new BigInteger(hexId).toString(16), "hexid.txt");
-						LOGGER.info("Server Registered hexid saved to 'hexid.txt'");
-						LOGGER.info("Put this file in the /config folder of your gameserver.");
-						return;
+						case 1:
+						{
+							registerNewGS();
+							break;
+						}
+						case 2:
+						{
+							listGSNames();
+							break;
+						}
+						case 3:
+						{
+							unregisterSingleGS();
+							break;
+						}
+						case 4:
+						{
+							unregisterAllGS();
+							break;
+						}
+						case 5:
+						{
+							System.exit(0);
+							break;
+						}
+						default:
+						{
+							System.out.printf("Invalid Choice: %s" + Config.EOL, choice);
+							choiceOk = false;
+						}
 					}
 				}
 				catch (NumberFormatException nfe)
 				{
-					LOGGER.info("Please, type a number or 'help'");
+					System.out.printf("Invalid Choice: %s" + Config.EOL, choice);
 				}
+			}
+			while (!choiceOk);
+		}
+	}
+	
+	/**
+	 * 
+	 */
+	private void hr()
+	{
+		System.out.println("_____________________________________________________" + Config.EOL);
+	}
+	
+	/**
+	 * 
+	 */
+	private void listGSNames()
+	{
+		int idMaxLen = 0;
+		int nameMaxLen = 0;
+		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet())
+		{
+			if (e.getKey().toString().length() > idMaxLen)
+			{
+				idMaxLen = e.getKey().toString().length();
+			}
+			if (e.getValue().length() > nameMaxLen)
+			{
+				nameMaxLen = e.getValue().length();
+			}
+		}
+		idMaxLen += 2;
+		nameMaxLen += 2;
+		
+		String id;
+		boolean inUse;
+		final String gsInUse = "In Use";
+		final String gsFree = "Free";
+		final int gsStatusMaxLen = Math.max(gsInUse.length(), gsFree.length()) + 2;
+		for (Entry<Integer, String> e : GameServerTable.getInstance().getServerNames().entrySet())
+		{
+			id = e.getKey().toString();
+			System.out.print(id);
+			
+			for (int i = id.length(); i < idMaxLen; i++)
+			{
+				System.out.print(' ');
+			}
+			System.out.print("| ");
+			
+			System.out.print(e.getValue());
+			
+			for (int i = e.getValue().length(); i < nameMaxLen; i++)
+			{
+				System.out.print(' ');
+			}
+			System.out.print("| ");
+			
+			inUse = GameServerTable.getInstance().hasRegisteredGameServerOnId(e.getKey());
+			final String inUseStr = inUse ? gsInUse : gsFree;
+			System.out.print(inUseStr);
+			
+			for (int i = inUseStr.length(); i < gsStatusMaxLen; i++)
+			{
+				System.out.print(' ');
+			}
+			System.out.println('|');
+		}
+	}
+	
+	/**
+	 * @throws IOException
+	 */
+	private void unregisterAllGS() throws IOException
+	{
+		if (yesNoQuestion("Are you sure you want to remove ALL GameServers?"))
+		{
+			try
+			{
+				BaseGameServerRegister.unregisterAllGameServers();
+				System.out.println("All GameServers were successfully removed.");
+			}
+			catch (SQLException e)
+			{
+				showError("An SQL error occurred while trying to remove ALL GameServers.", e);
 			}
 		}
 	}
 	
-	public static void cleanRegisteredGameServersFromDB()
+	private boolean yesNoQuestion(String question) throws IOException
 	{
-		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		do
 		{
-			statement = con.prepareStatement("DELETE FROM gameservers");
-			statement.executeUpdate();
-			statement.close();
+			hr();
+			System.out.println(question);
+			System.out.println("1 - Yes");
+			System.out.println("2 - No");
+			System.out.print("Choice: ");
+			String choice;
+			choice = _in.readLine();
+			if (choice != null)
+			{
+				if (choice.equals("1"))
+				{
+					return true;
+				}
+				else if (choice.equals("2"))
+				{
+					return false;
+				}
+				else
+				{
+					System.out.printf("Invalid Choice: %s" + Config.EOL, choice);
+				}
+			}
 		}
-		catch (SQLException e)
+		while (true);
+	}
+	
+	/**
+	 * @throws IOException
+	 */
+	private void unregisterSingleGS() throws IOException
+	{
+		String line;
+		int id = Integer.MIN_VALUE;
+		
+		do
 		{
-			LOGGER.info("SQL error while cleaning registered servers: " + e);
+			System.out.print("Enter desired ID: ");
+			line = _in.readLine();
+			try
+			{
+				id = Integer.parseInt(line);
+			}
+			catch (NumberFormatException e)
+			{
+				System.out.printf("Invalid Choice: %s" + Config.EOL, line);
+			}
 		}
+		while (id == Integer.MIN_VALUE);
+		
+		final String name = GameServerTable.getInstance().getServerNameById(id);
+		if (name == null)
+		{
+			System.out.printf("No name for ID: %d" + Config.EOL, id);
+		}
+		else if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
+		{
+			System.out.printf("Are you sure you want to remove GameServer %d - %s?" + Config.EOL, id, name);
+			try
+			{
+				BaseGameServerRegister.unregisterGameServer(id);
+				System.out.printf("GameServer ID: %d was successfully removed from LoginServer." + Config.EOL, id);
+			}
+			catch (SQLException e)
+			{
+				showError("An SQL error occurred while trying to remove the GameServer.", e);
+			}
+		}
+		else
+		{
+			System.out.printf("No GameServer is registered on ID: %d" + Config.EOL, id);
+		}
+	}
+	
+	private void registerNewGS() throws IOException
+	{
+		String line;
+		int id = Integer.MIN_VALUE;
+		
+		do
+		{
+			System.out.println("Enter desired ID:");
+			line = _in.readLine();
+			try
+			{
+				id = Integer.parseInt(line);
+			}
+			catch (NumberFormatException e)
+			{
+				System.out.printf("Invalid Choice: %s" + Config.EOL, line);
+			}
+		}
+		while (id == Integer.MIN_VALUE);
+		
+		if (GameServerTable.getInstance().getServerNameById(id) == null)
+		{
+			System.out.printf("No name for ID: %d" + Config.EOL, id);
+		}
+		else if (GameServerTable.getInstance().hasRegisteredGameServerOnId(id))
+		{
+			System.out.println("This ID is not available.");
+		}
+		else
+		{
+			try
+			{
+				BaseGameServerRegister.registerGameServer(id, ".");
+			}
+			catch (IOException e)
+			{
+				showError("An error saving the hexid file occurred while trying to register the GameServer.", e);
+			}
+		}
+	}
+	
+	@Override
+	public void showError(String msg, Throwable t)
+	{
+		msg += Config.EOL + "Reason: " + t.getLocalizedMessage();
+		System.out.println("Error: " + msg);
 	}
 }

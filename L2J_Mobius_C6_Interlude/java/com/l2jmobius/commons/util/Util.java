@@ -152,4 +152,25 @@ public class Util
 		t.printStackTrace(new PrintWriter(sw));
 		return sw.toString();
 	}
+	
+	/**
+	 * Method to generate a random sequence of bytes returned as byte array
+	 * @param size number of random bytes to generate
+	 * @return byte array with sequence of random bytes
+	 */
+	public static byte[] generateHex(int size)
+	{
+		final byte[] array = new byte[size];
+		Rnd.nextBytes(array);
+		
+		// Don't allow 0s inside the array!
+		for (int i = 0; i < array.length; i++)
+		{
+			while (array[i] == 0)
+			{
+				array[i] = (byte) Rnd.get(Byte.MAX_VALUE);
+			}
+		}
+		return array;
+	}
 }
