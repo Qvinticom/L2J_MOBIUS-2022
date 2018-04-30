@@ -883,12 +883,12 @@ public final class Instance implements IIdentifiable, INamable
 	// Listeners
 	// ---------------------------------------------
 	/**
-	 * This method is called when player dead inside instance.
+	 * This method is called when player dies inside instance.
 	 * @param player
 	 */
 	public void onDeath(L2PcInstance player)
 	{
-		if (!player.isOnCustomEvent())
+		if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0))
 		{
 			// Send message
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);

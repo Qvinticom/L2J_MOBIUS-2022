@@ -169,12 +169,12 @@ public abstract class L2Playable extends L2Character
 			}
 		}
 		// Notify instance
-		if (getInstanceId() > 0)
+		if ((getInstanceId() > 0) && isPlayer())
 		{
 			final Instance instance = InstanceManager.getInstance().getInstance(getInstanceId());
 			if (instance != null)
 			{
-				instance.notifyDeath(killer, this);
+				instance.notifyDeath(actingPlayer);
 			}
 		}
 		

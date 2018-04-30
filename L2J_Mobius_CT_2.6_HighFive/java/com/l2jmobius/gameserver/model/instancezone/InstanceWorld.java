@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Basic instance zone data transfer object.
@@ -148,22 +146,6 @@ public class InstanceWorld
 		final int status = getStatus() + 1;
 		setStatus(status);
 		return status;
-	}
-	
-	/**
-	 * @param killer
-	 * @param victim
-	 */
-	public void onDeath(L2Character killer, L2Character victim)
-	{
-		if ((victim == null) || !victim.isPlayer() || (_instance == null))
-		{
-			return;
-		}
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
-		sm.addInt(_instance.getEjectTime() / 60 / 1000);
-		victim.getActingPlayer().sendPacket(sm);
-		_instance.addEjectDeadTask(victim.getActingPlayer());
 	}
 	
 	/**

@@ -49,7 +49,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -872,10 +871,20 @@ public final class Instance
 		}
 	}
 	
-	public void addEjectDeadTask(L2PcInstance player)
+	/**
+	 * This method is called when player dies inside instance.
+	 * @param player
+	 */
+	public void notifyDeath(L2PcInstance player)
 	{
-		if (player != null)
+		if (!player.isOnEvent() && (_ejectTime > 0))
 		{
+			// Send message
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTES_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
+			sm.addInt(_ejectTime / 60 / 1000);
+			player.sendPacket(sm);
+			
+			// Start eject task
 			_ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
 			{
 				if (player.isDead() && (player.getInstanceId() == getId()))
@@ -891,19 +900,6 @@ public final class Instance
 					}
 				}
 			}, _ejectTime));
-		}
-	}
-	
-	/**
-	 * @param killer the character that killed the {@code victim}
-	 * @param victim the character that was killed by the {@code killer}
-	 */
-	public final void notifyDeath(L2Character killer, L2Character victim)
-	{
-		final InstanceWorld instance = InstanceManager.getInstance().getPlayerWorld(victim.getActingPlayer());
-		if (instance != null)
-		{
-			instance.onDeath(killer, victim);
 		}
 	}
 	
