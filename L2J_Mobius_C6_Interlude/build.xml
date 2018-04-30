@@ -21,8 +21,7 @@
 	<property name="build" location="../build" />
 	<property name="build.bin" location="${build}/bin" />
 	<property name="build.dist" location="${build}/dist" />
-	<property name="build.dist.game" location="${build.dist}/game" />
-	<property name="build.dist.login" location="${build.dist}/login" />
+	<property name="build.dist.libs" location="${build.dist}/libs" />
 	<property name="build.dist.dbinstaller" location="${build.dist}/db_installer" />
 	<property name="datapack" location="dist" />
 	<property name="libs" location="${datapack}/libs" />
@@ -70,10 +69,10 @@
 			<format property="time.stamp" pattern="yyyy-MM-dd HH:mm:ss" />
 		</tstamp>
 
-		<jar destfile="${build.dist.login}/LoginServer.jar" level="9">
+		<jar destfile="${build.dist.libs}/LoginServer.jar" level="9">
 			<fileset dir="${build.bin}">
-				<exclude name="**/gameserver/**" />
 				<exclude name="**/dbinstaller/**" />
+				<exclude name="**/gameserver/**" />
 			</fileset>
 			<manifest>
 				<attribute name="Built-By" value="${user.name}" />
@@ -83,7 +82,7 @@
 				<attribute name="Main-Class" value="com.l2jmobius.loginserver.LoginServer" />
 			</manifest>
 		</jar>
-		<jar destfile="${build.dist.game}/GameServer.jar" level="9">
+		<jar destfile="${build.dist.libs}/GameServer.jar" level="9">
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/loginserver/**" />

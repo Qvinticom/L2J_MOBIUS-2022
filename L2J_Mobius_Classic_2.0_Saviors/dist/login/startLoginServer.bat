@@ -5,8 +5,7 @@ title L2J Mobius - Login Server Console
 echo Starting Login Server.
 echo.
 
-REM java -Xms128m -Xmx256m -jar LoginServer.jar
-java -version:1.8 -server -Xms128m -Xmx256m -jar LoginServer.jar
+java -version:1.8 -server -Xms128m -Xmx256m -jar ../libs/LoginServer.jar
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
