@@ -1,3 +1,4 @@
+@set /p parameters=<java.cfg
 @echo off
 title L2J Mobius - Game Server Console
 
@@ -5,7 +6,7 @@ title L2J Mobius - Game Server Console
 echo Starting Game Server.
 echo.
 
-java -version:1.8 -server -Dfile.encoding=UTF-8 -Djava.util.logging.manager=com.l2jmobius.log.L2LogManager -XX:+AggressiveOpts -Xnoclassgc -XX:+UseConcMarkSweepGC -XX:+CMSParallelRemarkEnabled -XX:+UseParNewGC -XX:SurvivorRatio=8 -Xmx4g -Xms2g -Xmn1g -jar ../libs/GameServer.jar
+java %parameters% -jar ../libs/GameServer.jar
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error

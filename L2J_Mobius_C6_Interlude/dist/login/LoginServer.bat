@@ -1,3 +1,4 @@
+@set /p parameters=<java.cfg
 @echo off
 title L2J Mobius - Login Server Console
 
@@ -5,7 +6,7 @@ title L2J Mobius - Login Server Console
 echo Starting Login Server.
 echo.
 
-java -version:1.8 -server -Xms128m -Xmx256m -jar ../libs/LoginServer.jar
+java %parameters% -jar ../libs/LoginServer.jar
 
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
