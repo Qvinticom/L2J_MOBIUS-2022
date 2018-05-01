@@ -48,8 +48,6 @@ public final class TaskRestart extends Task
 	public void onTimeElapsed(ExecutedTask task)
 	{
 		LOGGER.info("[GlobalTask] Server Restart launched.");
-		
-		final Shutdown handler = new Shutdown(Integer.valueOf(task.getParams()[2]), true, true, false);
-		handler.start();
+		Shutdown.getInstance().startShutdown(null, Integer.valueOf(task.getParams()[2]), true);
 	}
 }

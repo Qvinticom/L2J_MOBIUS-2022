@@ -47,7 +47,7 @@ public class ServerRestart implements ITelnetCommand
 			return null;
 		}
 		final int time = Integer.parseInt(args[0]);
-		Shutdown.getInstance().startTelnetShutdown(ctx.channel().remoteAddress().toString(), time, true);
+		Shutdown.getInstance().startShutdown(null, time, true);
 		return "Server will restart in " + time + " seconds!";
 	}
 }

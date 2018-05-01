@@ -55,11 +55,7 @@ public class Shutdown extends Thread
 		SIGTERM("Terminating"),
 		SHUTDOWN("Shutting down"),
 		RESTART("Restarting"),
-		ABORT("Aborting"),
-		TASK_SHUT("Shuting down"),
-		TASK_RES("Restarting"),
-		TELL_SHUT("Shuting down"),
-		TELL_RES("Restarting");
+		ABORT("Aborting");
 		
 		private final String _modeText;
 		
@@ -93,78 +89,14 @@ public class Shutdown extends Thread
 	public static final int GM_RESTART = 2;
 	/** 3 */
 	public static final int ABORT = 3;
-	/** 4 */
-	public static final int TASK_SHUTDOWN = 4;
-	/** 5 */
-	public static final int TASK_RESTART = 5;
-	/** 6 */
-	public static final int TELL_SHUTDOWN = 6;
-	/** 7 */
-	public static final int TELL_RESTART = 7;
 	
 	private static final String[] MODE_TEXT =
 	{
 		"SIGTERM",
 		"shutting down",
 		"restarting",
-		"aborting", // standart
-		"shutting down",
-		"restarting", // task
-		"shutting down",
-		"restarting"
-	}; // telnet
-	
-	/**
-	 * This function starts a shutdown count down from Telnet (Copied from Function startShutdown())
-	 * @param IP Which Issued shutdown command
-	 * @param seconds seconds until shutdown
-	 * @param restart true if the server will restart after shutdown
-	 */
-	
-	public void startTelnetShutdown(String IP, int seconds, boolean restart)
-	{
-		final Announcements _an = Announcements.getInstance();
-		LOGGER.warning("IP: " + IP + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-		_an.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-		
-		if (restart)
-		{
-			_shutdownMode = TELL_RESTART;
-		}
-		else
-		{
-			_shutdownMode = TELL_SHUTDOWN;
-		}
-		
-		if (_shutdownMode > 0)
-		{
-			_an.announceToAll("Server is " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-			_an.announceToAll("Please exit game now!!");
-		}
-		
-		if (_counterInstance != null)
-		{
-			_counterInstance._abort();
-		}
-		_counterInstance = new Shutdown(seconds, restart, false, true);
-		_counterInstance.start();
-	}
-	
-	/**
-	 * This function aborts a running countdown
-	 * @param IP IP Which Issued shutdown command
-	 */
-	public void telnetAbort(String IP)
-	{
-		Announcements _an = Announcements.getInstance();
-		LOGGER.warning("IP: " + IP + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
-		_an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
-		
-		if (_counterInstance != null)
-		{
-			_counterInstance._abort();
-		}
-	}
+		"aborting"
+	};
 	
 	/**
 	 * Default constructor is only used internal to create the shutdown-hook instance
@@ -180,10 +112,8 @@ public class Shutdown extends Thread
 	 * This creates a count down instance of Shutdown.
 	 * @param seconds how many seconds until shutdown
 	 * @param restart true is the server shall restart after shutdown
-	 * @param task
-	 * @param telnet
 	 */
-	public Shutdown(int seconds, boolean restart, boolean task, boolean telnet)
+	private Shutdown(int seconds, boolean restart)
 	{
 		if (seconds < 0)
 		{
@@ -192,30 +122,11 @@ public class Shutdown extends Thread
 		_secondsShut = seconds;
 		if (restart)
 		{
-			if (!task)
-			{
-				_shutdownMode = GM_RESTART;
-			}
-			else if (telnet)
-			{
-				_shutdownMode = TELL_RESTART;
-			}
-			else
-			{
-				_shutdownMode = TASK_RESTART;
-			}
-		}
-		else if (!task)
-		{
-			_shutdownMode = GM_SHUTDOWN;
-		}
-		else if (telnet)
-		{
-			_shutdownMode = TELL_SHUTDOWN;
+			_shutdownMode = GM_RESTART;
 		}
 		else
 		{
-			_shutdownMode = TASK_SHUTDOWN;
+			_shutdownMode = GM_SHUTDOWN;
 		}
 		
 		_shutdownStarted = false;
@@ -254,10 +165,6 @@ public class Shutdown extends Thread
 	@Override
 	public void run()
 	{
-		/*
-		 * // disallow new logins try { //Doesnt actually do anything //Server.gameServer.getLoginController().setMaxAllowedOnlinePlayers(0); } catch(Throwable t) { if(Config.ENABLE_ALL_EXCEPTIONS) t.printStackTrace(); }
-		 */
-		
 		if (this == _instance)
 		{
 			closeServer();
@@ -287,14 +194,7 @@ public class Shutdown extends Thread
 	{
 		Announcements _an = Announcements.getInstance();
 		
-		if (activeChar != null)
-		{
-			LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-		}
-		else
-		{
-			LOGGER.warning("External Service issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-		}
+		LOGGER.warning((activeChar != null ? "GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" : "Server") + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
 		
 		if (restart)
 		{
@@ -317,7 +217,7 @@ public class Shutdown extends Thread
 		}
 		
 		// the main instance should only run for shutdown hook, so we start a new instance
-		_counterInstance = new Shutdown(seconds, restart, false, false);
+		_counterInstance = new Shutdown(seconds, restart);
 		_counterInstance.start();
 	}
 	
@@ -334,14 +234,7 @@ public class Shutdown extends Thread
 	{
 		Announcements _an = Announcements.getInstance();
 		
-		if (activeChar != null)
-		{
-			LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
-		}
-		else
-		{
-			LOGGER.warning("External Service issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
-		}
+		LOGGER.warning((activeChar != null ? "GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ")" : "Server") + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		
 		_an.announceToAll("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!");
 		
@@ -350,14 +243,6 @@ public class Shutdown extends Thread
 			_counterInstance._abort();
 		}
 	}
-	
-	/**
-	 * set the shutdown mode
-	 * @param mode what mode shall be set
-	 */
-	/*
-	 * private void setMode(int mode) { _shutdownMode = mode; }
-	 */
 	
 	/**
 	 * set shutdown mode to ABORT
@@ -425,8 +310,7 @@ public class Shutdown extends Thread
 	
 	private void closeServer()
 	{
-		// last byebye, save all data and quit this server
-		// logging doesnt work here :(
+		// Save all data and quit this server.
 		_shutdownStarted = true;
 		
 		try
@@ -494,31 +378,9 @@ public class Shutdown extends Thread
 		
 		LOGGER.info("[STATUS] Server shutdown successfully.");
 		
-		// server will quit, when this function ends.
-		/*
-		 * switch (_shutdownMode) { case GM_SHUTDOWN: _instance.setMode(GM_SHUTDOWN); System.exit(0); break; case GM_RESTART: _instance.setMode(GM_RESTART); System.exit(2); break; case TASK_SHUTDOWN: _instance.setMode(TASK_SHUTDOWN); System.exit(4); break; case TASK_RESTART:
-		 * _instance.setMode(TASK_RESTART); System.exit(5); break; case TELL_SHUTDOWN: _instance.setMode(TELL_SHUTDOWN); System.exit(6); break; case TELL_RESTART: _instance.setMode(TELL_RESTART); System.exit(7); break; }
-		 */
-		
 		if (_instance._shutdownMode == GM_RESTART)
 		{
 			Runtime.getRuntime().halt(2);
-		}
-		else if (_instance._shutdownMode == TASK_RESTART)
-		{
-			Runtime.getRuntime().halt(5);
-		}
-		else if (_instance._shutdownMode == TASK_SHUTDOWN)
-		{
-			Runtime.getRuntime().halt(4);
-		}
-		else if (_instance._shutdownMode == TELL_RESTART)
-		{
-			Runtime.getRuntime().halt(7);
-		}
-		else if (_instance._shutdownMode == TELL_SHUTDOWN)
-		{
-			Runtime.getRuntime().halt(6);
 		}
 		else
 		{
@@ -547,26 +409,6 @@ public class Shutdown extends Thread
 			case GM_RESTART:
 			{
 				LOGGER.info("GM restart received. Restarting NOW!");
-				break;
-			}
-			case TASK_SHUTDOWN:
-			{
-				LOGGER.info("Auto task shutdown received. Shutting down NOW!");
-				break;
-			}
-			case TASK_RESTART:
-			{
-				LOGGER.info("Auto task restart received. Restarting NOW!");
-				break;
-			}
-			case TELL_SHUTDOWN:
-			{
-				LOGGER.info("Telnet shutdown received. Shutting down NOW!");
-				break;
-			}
-			case TELL_RESTART:
-			{
-				LOGGER.info("Telnet restart received. Restarting NOW!");
 				break;
 			}
 		}
@@ -640,7 +482,7 @@ public class Shutdown extends Thread
 		
 		// Save data CountStore
 		TradeController.getInstance().dataCountStore();
-		LOGGER.info("TradeController: All count Item Saved");
+		LOGGER.info("TradeController: All count Item Saved!!");
 		
 		// Save Olympiad status
 		try
@@ -661,11 +503,11 @@ public class Shutdown extends Thread
 		
 		// Save Fishing tournament data
 		FishingChampionshipManager.getInstance().shutdown();
-		LOGGER.info("Fishing Championship data has been saved.");
+		LOGGER.info("Fishing Championship data has been saved!!");
 		
 		// Schemes save.
 		BufferTable.getInstance().saveSchemes();
-		LOGGER.info("BufferTable data has been saved.");
+		LOGGER.info("BufferTable data has been saved!!");
 		
 		// Save all global (non-player specific) Quest data that needs to persist after reboot
 		if (!Config.ALT_DEV_NO_QUESTS)
@@ -744,5 +586,4 @@ public class Shutdown extends Thread
 			}
 		}
 	}
-	
 }

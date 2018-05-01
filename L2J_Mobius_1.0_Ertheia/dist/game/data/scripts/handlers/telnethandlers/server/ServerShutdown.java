@@ -47,7 +47,7 @@ public class ServerShutdown implements ITelnetCommand
 			return null;
 		}
 		final int time = Integer.parseInt(args[0]);
-		Shutdown.getInstance().startTelnetShutdown(ctx.channel().remoteAddress().toString(), time, false);
+		Shutdown.getInstance().startShutdown(null, time, false);
 		return "Server will shutdown in " + time + " seconds!";
 	}
 }

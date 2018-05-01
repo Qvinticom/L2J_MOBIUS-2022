@@ -41,7 +41,7 @@ public class ServerAbort implements ITelnetCommand
 	@Override
 	public String handle(ChannelHandlerContext ctx, String[] args)
 	{
-		Shutdown.getInstance().telnetAbort(ctx.channel().remoteAddress().toString());
+		Shutdown.getInstance().abort(null);
 		return "Server shutdown/restart aborted!";
 	}
 }

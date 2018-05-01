@@ -84,65 +84,6 @@ public class Shutdown extends Thread
 		Broadcast.toAllOnlinePlayers(sysm);
 	}
 	
-	public void startTelnetShutdown(String IP, int seconds, boolean restart)
-	{
-		LOGGER.warning("IP: " + IP + " issued shutdown command. " + MODE_TEXT[_shutdownMode] + " in " + seconds + " seconds!");
-		
-		_shutdownMode = restart ? GM_RESTART : GM_SHUTDOWN;
-		
-		if (_shutdownMode > 0)
-		{
-			switch (seconds)
-			{
-				case 540:
-				case 480:
-				case 420:
-				case 360:
-				case 300:
-				case 240:
-				case 180:
-				case 120:
-				case 60:
-				case 30:
-				case 10:
-				case 5:
-				case 4:
-				case 3:
-				case 2:
-				case 1:
-				{
-					break;
-				}
-				default:
-				{
-					SendServerQuit(seconds);
-				}
-			}
-		}
-		
-		if (_counterInstance != null)
-		{
-			_counterInstance._abort();
-		}
-		_counterInstance = new Shutdown(seconds, restart);
-		_counterInstance.start();
-	}
-	
-	/**
-	 * This function aborts a running countdown
-	 * @param IP IP Which Issued shutdown command
-	 */
-	public void telnetAbort(String IP)
-	{
-		LOGGER.warning("IP: " + IP + " issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
-		
-		if (_counterInstance != null)
-		{
-			_counterInstance._abort();
-			Broadcast.toAllOnlinePlayers("Server aborts " + MODE_TEXT[_shutdownMode] + " and continues normal operation!", false);
-		}
-	}
-	
 	/**
 	 * Default constructor is only used internal to create the shutdown-hook instance
 	 */
@@ -383,7 +324,7 @@ public class Shutdown extends Thread
 	 */
 	public void abort(L2PcInstance activeChar)
 	{
-		LOGGER.warning("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
+		LOGGER.warning("GM: " + (activeChar != null ? activeChar.getName() + "(" + activeChar.getObjectId() + ") " : "") + "issued shutdown ABORT. " + MODE_TEXT[_shutdownMode] + " has been stopped!");
 		if (_counterInstance != null)
 		{
 			_counterInstance._abort();

@@ -400,7 +400,7 @@ public class GameServer
 				if (Config.RESTART_ON_DEADLOCK)
 				{
 					Broadcast.toAllOnlinePlayers("Server has stability issues - restarting now.");
-					Shutdown.getInstance().startTelnetShutdown("DeadLockDetector - Auto Restart", 60, true);
+					Shutdown.getInstance().startShutdown(null, 60, true);
 				}
 			});
 			_deadDetectThread.setDaemon(true);

@@ -456,7 +456,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final int val = Integer.parseInt(_usrCommand.substring(9));
-						Shutdown.getInstance().startTelnetShutdown(_cSocket.getInetAddress().getHostAddress(), val, false);
+						Shutdown.getInstance().startShutdown(null, val, false);
 						_print.println("Server Will Shutdown In " + val + " Seconds!");
 						_print.println("Type \"abort\" To Abort Shutdown!");
 					}
@@ -474,7 +474,7 @@ public class GameStatusThread extends Thread
 					try
 					{
 						final int val = Integer.parseInt(_usrCommand.substring(8));
-						Shutdown.getInstance().startTelnetShutdown(_cSocket.getInetAddress().getHostAddress(), val, true);
+						Shutdown.getInstance().startShutdown(null, val, true);
 						_print.println("Server Will Restart In " + val + " Seconds!");
 						_print.println("Type \"abort\" To Abort Restart!");
 					}
@@ -489,7 +489,7 @@ public class GameStatusThread extends Thread
 				}
 				else if (_usrCommand.startsWith("abort"))
 				{
-					Shutdown.getInstance().telnetAbort(_cSocket.getInetAddress().getHostAddress());
+					Shutdown.getInstance().abort(null);
 					_print.println("OK! - Shutdown/Restart Aborted.");
 				}
 				else if (_usrCommand.equals("quit"))
