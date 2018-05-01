@@ -1201,7 +1201,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = getStat().getPhysicalAttackRadius();
-			final int halfAttackAngle = getStat().getPhysicalAttackAngle() / 2;
+			final int physicalAttackAngle = getStat().getPhysicalAttackAngle();
 			for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
 			{
 				// Skip main target.
@@ -1211,7 +1211,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				// Check if target is within attack angle.
-				if (Math.abs(calculateDirectionTo(obj) - headingAngle) > halfAttackAngle)
+				if (Math.abs(calculateDirectionTo(obj) - headingAngle) > physicalAttackAngle)
 				{
 					continue;
 				}
