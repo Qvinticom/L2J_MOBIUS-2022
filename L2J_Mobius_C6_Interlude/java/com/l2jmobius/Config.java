@@ -212,6 +212,10 @@ public final class Config
 	public static String DATABASE_PASSWORD;
 	public static int DATABASE_MAX_CONNECTIONS;
 	public static int DATABASE_MAX_IDLE_TIME;
+	public static boolean BACKUP_DATABASE;
+	public static String MYSQL_BIN_PATH;
+	public static String BACKUP_PATH;
+	public static int BACKUP_DAYS;
 	public static boolean RESERVE_HOST_ON_LOGIN = false;
 	public static boolean RWHO_LOG;
 	public static int RWHO_FORCE_INC;
@@ -1366,6 +1370,11 @@ public final class Config
 			DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 			DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
 			DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
+			
+			BACKUP_DATABASE = Boolean.valueOf(serverSettings.getProperty("BackupDatabase", "false"));
+			MYSQL_BIN_PATH = serverSettings.getProperty("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = serverSettings.getProperty("BackupPath", "../backup/");
+			BACKUP_DAYS = Integer.parseInt(serverSettings.getProperty("BackupDays", "30"));
 			
 			DATAPACK_ROOT = new File(serverSettings.getProperty("DatapackRoot", ".")).getCanonicalFile();
 			
@@ -3815,6 +3824,11 @@ public final class Config
 			DATABASE_PASSWORD = serverSettings.getProperty("Password", "");
 			DATABASE_MAX_CONNECTIONS = Integer.parseInt(serverSettings.getProperty("MaximumDbConnections", "10"));
 			DATABASE_MAX_IDLE_TIME = Integer.parseInt(serverSettings.getProperty("MaximumDbIdleTime", "0"));
+			
+			BACKUP_DATABASE = Boolean.valueOf(serverSettings.getProperty("BackupDatabase", "false"));
+			MYSQL_BIN_PATH = serverSettings.getProperty("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = serverSettings.getProperty("BackupPath", "../backup/");
+			BACKUP_DAYS = Integer.parseInt(serverSettings.getProperty("BackupDays", "30"));
 			
 			// Anti Brute force attack on login
 			BRUT_AVG_TIME = Integer.parseInt(serverSettings.getProperty("BrutAvgTime", "30")); // in Seconds

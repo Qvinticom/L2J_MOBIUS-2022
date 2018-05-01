@@ -35,3 +35,4 @@ What is done
 -Dropped knownlists
 -Faction System (Good vs Evil)
 -Fake players
+-Automated database backups

@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
+import com.l2jmobius.commons.database.DatabaseBackup;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.NetcoreConfig;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
@@ -189,6 +190,12 @@ public class LoginServer
 	
 	public void shutdown(boolean restart)
 	{
+		// Backup database.
+		if (Config.BACKUP_DATABASE)
+		{
+			DatabaseBackup.performBackup();
+		}
+		
 		LoginController.getInstance().shutdown();
 		System.gc();
 		Runtime.getRuntime().exit(restart ? 2 : 0);

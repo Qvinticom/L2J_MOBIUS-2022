@@ -754,6 +754,10 @@ public final class Config
 	public static String DATABASE_PASSWORD;
 	public static int DATABASE_MAX_CONNECTIONS;
 	public static int DATABASE_MAX_IDLE_TIME;
+	public static boolean BACKUP_DATABASE;
+	public static String MYSQL_BIN_PATH;
+	public static String BACKUP_PATH;
+	public static int BACKUP_DAYS;
 	public static int MAXIMUM_ONLINE_USERS;
 	public static boolean HARDWARE_INFO_ENABLED;
 	public static int MAX_PLAYERS_PER_HWID;
@@ -1280,6 +1284,11 @@ public final class Config
 			DATABASE_PASSWORD = serverSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = serverSettings.getInt("MaximumDbIdleTime", 0);
+			
+			BACKUP_DATABASE = serverSettings.getBoolean("BackupDatabase", false);
+			MYSQL_BIN_PATH = serverSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = serverSettings.getString("BackupPath", "../backup/");
+			BACKUP_DAYS = serverSettings.getInt("BackupDays", 30);
 			
 			try
 			{
@@ -2972,6 +2981,11 @@ public final class Config
 			DATABASE_PASSWORD = ServerSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
 			DATABASE_MAX_IDLE_TIME = ServerSettings.getInt("MaximumDbIdleTime", 0);
+			
+			BACKUP_DATABASE = ServerSettings.getBoolean("BackupDatabase", false);
+			MYSQL_BIN_PATH = ServerSettings.getString("MySqlBinLocation", "C:/xampp/mysql/bin/");
+			BACKUP_PATH = ServerSettings.getString("BackupPath", "../backup/");
+			BACKUP_DAYS = ServerSettings.getInt("BackupDays", 30);
 			
 			SHOW_LICENCE = ServerSettings.getBoolean("ShowLicence", true);
 			SHOW_PI_AGREEMENT = ServerSettings.getBoolean("ShowPIAgreement", false);

@@ -21,6 +21,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.database.DatabaseBackup;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
@@ -267,6 +268,12 @@ public class Shutdown extends Thread
 			}
 			catch (Throwable t)
 			{
+			}
+			
+			// Backup database.
+			if (Config.BACKUP_DATABASE)
+			{
+				DatabaseBackup.performBackup();
 			}
 			
 			// server will quit, when this function ends.

@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.Server;
+import com.l2jmobius.commons.database.DatabaseBackup;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.loginserver.network.ClientNetworkManager;
 
@@ -206,6 +207,10 @@ public final class LoginServer
 	
 	public void shutdown(boolean restart)
 	{
+		if (Config.BACKUP_DATABASE)
+		{
+			DatabaseBackup.performBackup();
+		}
 		Runtime.getRuntime().exit(restart ? 2 : 0);
 	}
 }

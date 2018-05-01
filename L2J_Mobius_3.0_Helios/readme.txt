@@ -124,6 +124,7 @@ Customs:
 -Sell buffs
 -Starting location
 -Vote reward
+-Automated database backups
 
 Others:
 -Reworked tax system
