@@ -49,14 +49,14 @@ public class SplashScreen extends JWindow
 		ImageIcon imageIcon = new ImageIcon(image);
 		setSize(imageIcon.getIconWidth(), imageIcon.getIconHeight());
 		setLocationRelativeTo(null);
+		setAlwaysOnTop(true);
 		setVisible(true);
 		
-		// Schedule to dispose.
-		Executors.newScheduledThreadPool(1).schedule(this::dispose, imageIcon.getIconWidth() > 0 ? time : 100, TimeUnit.MILLISECONDS);
+		// Schedule to close.
+		Executors.newScheduledThreadPool(1).schedule(this::close, imageIcon.getIconWidth() > 0 ? time : 100, TimeUnit.MILLISECONDS);
 	}
 	
-	@Override
-	public void dispose()
+	public void close()
 	{
 		setVisible(false);
 		if (parentFrame != null)
@@ -65,9 +65,9 @@ public class SplashScreen extends JWindow
 			parentFrame.setVisible(true);
 			// Focus parent window.
 			parentFrame.toFront();
+			parentFrame.setState(Frame.ICONIFIED);
 			parentFrame.setState(Frame.NORMAL);
 		}
-		super.dispose();
 	}
 	
 	@Override
