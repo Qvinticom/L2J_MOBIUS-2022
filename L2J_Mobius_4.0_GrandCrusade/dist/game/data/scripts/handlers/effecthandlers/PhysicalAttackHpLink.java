@@ -110,7 +110,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			// Skill specific mods.
 			final double wpnMod = effector.getAttackType().isRanged() ? 70 : 77;
 			final double rangedBonus = effector.getAttackType().isRanged() ? (attack + _power) : 0;
-			final double critMod = critical ? (2 * Formulas.calcCritDamage(effector, effected, skill)) : 1;
+			final double critMod = critical ? Formulas.calcCritDamage(effector, effected, skill) : 1;
 			double ssmod = 1;
 			if (skill.useSoulShot())
 			{

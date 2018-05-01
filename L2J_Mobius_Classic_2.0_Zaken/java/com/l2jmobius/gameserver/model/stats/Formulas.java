@@ -134,7 +134,7 @@ public final class Formulas
 	{
 		// Bonus Spirit shot
 		final double shotsBonus = bss ? (4 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : sps ? (2 * attacker.getStat().getValue(Stats.SHOTS_BONUS)) : 1;
-		final double critMod = mcrit ? (2 * calcCritDamage(attacker, target, skill)) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
+		final double critMod = mcrit ? calcCritDamage(attacker, target, skill) : 1; // TODO not really a proper way... find how it works then implement. // damage += attacker.getStat().getValue(Stats.MAGIC_CRIT_DMG_ADD, 0);
 		
 		// Trait, elements
 		final double generalTraitMod = calcGeneralTraitBonus(attacker, target, skill.getTraitType(), true);
@@ -328,7 +328,7 @@ public final class Formulas
 			defenceCriticalDamage = target.getStat().getValue(Stats.DEFENCE_CRITICAL_DAMAGE, 1);
 		}
 		
-		return criticalDamage * defenceCriticalDamage;
+		return 2 * criticalDamage * defenceCriticalDamage;
 	}
 	
 	/**
@@ -1335,7 +1335,7 @@ public final class Formulas
 		final boolean isRanged = (weapon != null) && weapon.getItemType().isRanged();
 		final double shotsBonus = attacker.getStat().getValue(Stats.SHOTS_BONUS);
 		
-		final double cAtk = crit ? (2 * calcCritDamage(attacker, target, null)) : 1;
+		final double cAtk = crit ? calcCritDamage(attacker, target, null) : 1;
 		final double cAtkAdd = crit ? calcCritDamageAdd(attacker, target, null) : 0;
 		final double critMod = crit ? (isRanged ? 0.5 : 1) : 0;
 		final double ssBonus = ss ? 2 * shotsBonus : 1;
