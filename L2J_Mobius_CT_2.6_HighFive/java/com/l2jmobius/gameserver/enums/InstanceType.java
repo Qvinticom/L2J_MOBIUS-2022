@@ -103,7 +103,7 @@ public enum InstanceType
 	L2ClanHallDoormenInstance(L2DoormenInstance),
 	// Custom
 	L2ClassMasterInstance(L2NpcInstance),
-	L2NpcBufferInstance(L2Npc),
+	L2SchemeBufferInstance(L2Npc),
 	L2EventMobInstance(L2Npc);
 	
 	private final InstanceType _parent;

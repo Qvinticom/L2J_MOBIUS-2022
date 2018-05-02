@@ -21,9 +21,8 @@ import java.util.List;
 import java.util.logging.Level;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable;
-import com.l2jmobius.gameserver.data.sql.impl.NpcBufferTable.NpcBufferData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -283,16 +282,10 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				final NpcBufferData npcBuffGroupInfo = NpcBufferTable.getInstance().getSkillInfo(target.getId(), BUFFS[index]);
-				if (npcBuffGroupInfo == null)
-				{
-					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " Location: " + target.getX() + ", " + target.getY() + ", " + target.getZ() + " Player: " + activeChar.getName() + " has tried to use skill group (" + params[1] + ") not assigned to the NPC Buffer!");
-					return false;
-				}
-				
 				if (buffCount > 0)
 				{
-					final Skill skill = npcBuffGroupInfo.getSkill().getSkill();
+					// TODO: Add allowed buff list check?
+					final Skill skill = SkillData.getInstance().getSkill(target.getId(), BUFFS[index]);
 					if (skill != null)
 					{
 						target.setTarget(activeChar);
