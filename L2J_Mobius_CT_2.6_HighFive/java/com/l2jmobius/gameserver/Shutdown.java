@@ -26,6 +26,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
+import com.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import com.l2jmobius.gameserver.instancemanager.CHSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.CastleManorManager;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
@@ -540,6 +541,10 @@ public class Shutdown extends Thread
 			FishingChampionshipManager.getInstance().shutdown();
 			LOGGER.info("Fishing Championship data has been saved.");
 		}
+		
+		// Schemes save.
+		SchemeBufferTable.getInstance().saveSchemes();
+		LOGGER.info("SchemeBufferTable data has been saved.");
 		
 		// Save items on ground before closing
 		if (Config.SAVE_DROPPED_ITEM)

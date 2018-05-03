@@ -92,7 +92,7 @@ public class SchemeBufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Failed to load buff schemes : " + e);
+			LOGGER.warning("SchemeBufferTable: Failed to load buff schemes : " + e);
 		}
 		
 		try
@@ -128,9 +128,9 @@ public class SchemeBufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Failed to load buff info : " + e);
+			LOGGER.warning("SchemeBufferTable: Failed to load buff info : " + e);
 		}
-		LOGGER.info("BufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
+		LOGGER.info("SchemeBufferTable: Loaded " + count + " players schemes and " + _availableBuffs.size() + " available buffs.");
 	}
 	
 	public void saveSchemes()
@@ -173,7 +173,7 @@ public class SchemeBufferTable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("BufferTable: Error while saving schemes : " + e);
+			LOGGER.warning("BufferTableScheme: Error while saving schemes : " + e);
 		}
 	}
 	
