@@ -18,10 +18,8 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -74,9 +72,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_earthquake_menu",
 		"admin_bighead",
 		"admin_shrinkhead",
-		"admin_gmspeed",
-		"admin_gmspeed_menu",
-		"admin_gmspeed_menu_main",
 		"admin_unpara_all",
 		"admin_para_all",
 		"admin_unpara",
@@ -348,35 +343,6 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-			}
-		}
-		
-		else if (command.startsWith("admin_gmspeed"))
-		{
-			try
-			{
-				final int val = Integer.parseInt(st.nextToken());
-				final boolean sendMessage = activeChar.getFirstEffect(7029) != null;
-				
-				activeChar.stopSkillEffects(7029);
-				
-				if ((val == 0) && sendMessage)
-				{
-					activeChar.sendPacket(new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED).addSkillName(7029));
-				}
-				else if ((val >= 1) && (val <= 4))
-				{
-					final L2Skill gmSpeedSkill = SkillTable.getInstance().getInfo(7029, val);
-					activeChar.doCast(gmSpeedSkill);
-				}
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("Use //gmspeed value (0=off...4=max).");
-			}
-			finally
-			{
-				activeChar.updateEffectIcons();
 			}
 		}
 		

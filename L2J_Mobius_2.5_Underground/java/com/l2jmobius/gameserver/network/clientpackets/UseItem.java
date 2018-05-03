@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.NextAction;
 import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
@@ -95,7 +96,7 @@ public final class UseItem implements IClientIncomingPacket
 				final L2Object obj = L2World.getInstance().findObject(_objectId);
 				if (obj instanceof L2ItemInstance)
 				{
-					activeChar.useAdminCommand("admin_use_item " + _objectId);
+					AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
 				}
 			}
 			return;

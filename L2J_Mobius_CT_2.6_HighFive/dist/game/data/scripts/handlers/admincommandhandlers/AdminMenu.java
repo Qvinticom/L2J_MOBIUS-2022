@@ -21,7 +21,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -189,14 +188,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				final String subCommand = "admin_ban_char";
-				if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
-				{
-					activeChar.sendMessage("You don't have the access right to use this command!");
-					LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
-					return false;
-				}
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand + command.substring(14), activeChar);
+				AdminCommandHandler.getInstance().useAdminCommand(activeChar, subCommand + command.substring(14), true);
 			}
 			showMainPage(activeChar);
 		}
@@ -206,14 +198,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (st.countTokens() > 1)
 			{
 				final String subCommand = "admin_unban_char";
-				if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
-				{
-					activeChar.sendMessage("You don't have the access right to use this command!");
-					LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
-					return false;
-				}
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-				ach.useAdminCommand(subCommand + command.substring(16), activeChar);
+				AdminCommandHandler.getInstance().useAdminCommand(activeChar, subCommand + command.substring(16), true);
 			}
 			showMainPage(activeChar);
 		}

@@ -47,6 +47,9 @@ public class CharStat
 	/** The _level. */
 	private int _level = 1;
 	
+	/** Speed multiplier set by admin gmspeed command */
+	private float _gmSpeedMultiplier = 1;
+	
 	// =========================================================
 	// Constructor
 	/**
@@ -597,7 +600,12 @@ public class CharStat
 			return 1;
 		}
 		
-		return (getRunSpeed() * 1f) / _activeChar.getTemplate().baseRunSpd;
+		return getRunSpeed() / _activeChar.getTemplate().baseRunSpd;
+	}
+	
+	public void setGmSpeedMultiplier(float multipier)
+	{
+		_gmSpeedMultiplier = multipier;
 	}
 	
 	/**
@@ -920,13 +928,13 @@ public class CharStat
 		if (_activeChar.isFlying())
 		{
 			val += Config.WYVERN_SPEED;
-			return val;
+			return (int) (val * _gmSpeedMultiplier);
 		}
 		
 		if (_activeChar.isRiding())
 		{
 			val += Config.STRIDER_SPEED;
-			return val;
+			return (int) (val * _gmSpeedMultiplier);
 		}
 		
 		val /= _activeChar.getArmourExpertisePenalty();
@@ -936,7 +944,7 @@ public class CharStat
 			val = Config.MAX_RUN_SPEED;
 		}
 		
-		return val;
+		return (int) (val * _gmSpeedMultiplier);
 	}
 	
 	/**

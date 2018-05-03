@@ -437,6 +437,69 @@ public final class Util
 	}
 	
 	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is integer, {@code false} otherwise
+	 */
+	public static boolean isInteger(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Integer.parseInt(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is float, {@code false} otherwise
+	 */
+	public static boolean isFloat(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Float.parseFloat(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
+	 * @param text - the text to check
+	 * @return {@code true} if {@code text} is double, {@code false} otherwise
+	 */
+	public static boolean isDouble(String text)
+	{
+		if ((text == null) || text.isEmpty())
+		{
+			return false;
+		}
+		try
+		{
+			Double.parseDouble(text);
+			return true;
+		}
+		catch (Exception e)
+		{
+			return false;
+		}
+	}
+	
+	/**
 	 * Replaces most invalid characters for the given string with an underscore.
 	 * @param str the string that may contain invalid characters
 	 * @return the string with invalid character replaced by underscores

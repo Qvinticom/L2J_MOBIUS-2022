@@ -16,14 +16,10 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * This class handles all GM commands triggered by //command
@@ -56,33 +52,6 @@ public final class SendBypassBuildCmd implements IClientIncomingPacket
 			return;
 		}
 		
-		final String command = "admin_" + _command.split(" ")[0];
-		
-		final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
-		
-		if (ach == null)
-		{
-			if (activeChar.isGM())
-			{
-				activeChar.sendMessage("The command " + command.substring(6) + " does not exists!");
-			}
-			
-			LOGGER.warning("No handler registered for admin command '" + command + "'");
-			return;
-		}
-		
-		if (!AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
-		{
-			activeChar.sendMessage("You don't have the access right to use this command!");
-			LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + command + ", but have no access to it!");
-			return;
-		}
-		
-		if (Config.GMAUDIT)
-		{
-			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", _command, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
-		}
-		
-		ach.useAdminCommand("admin_" + _command, activeChar);
+		AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_" + _command, true);
 	}
 }

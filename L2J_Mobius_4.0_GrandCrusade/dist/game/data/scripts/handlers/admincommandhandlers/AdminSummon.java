@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -28,8 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminSummon implements IAdminCommandHandler
 {
-	private static final Logger LOGGER = Logger.getLogger(AdminSummon.class.getName());
-	
 	public static final String[] ADMIN_COMMANDS =
 	{
 		"admin_summon"
@@ -62,34 +57,24 @@ public class AdminSummon implements IAdminCommandHandler
 			return false;
 		}
 		
-		String subCommand;
+		final String subCommand;
 		if (id < 1000000)
 		{
 			subCommand = "admin_create_item";
-			if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
-			{
-				activeChar.sendMessage("You don't have the access right to use this command!");
-				LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
-				return false;
-			}
-			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
-			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
 		else
 		{
 			subCommand = "admin_spawn_once";
-			if (!AdminData.getInstance().hasAccess(subCommand, activeChar.getAccessLevel()))
-			{
-				activeChar.sendMessage("You don't have the access right to use this command!");
-				LOGGER.warning("Character " + activeChar.getName() + " tryed to use admin command " + subCommand + ", but have no access to it!");
-				return false;
-			}
-			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(subCommand);
 			
 			activeChar.sendMessage("This is only a temporary spawn.  The mob(s) will NOT respawn.");
 			id -= 1000000;
-			ach.useAdminCommand(subCommand + " " + id + " " + count, activeChar);
 		}
+		
+		if ((id > 0) && (count > 0))
+		{
+			AdminCommandHandler.getInstance().useAdminCommand(activeChar, subCommand + " " + id + " " + count, true);
+		}
+		
 		return true;
 	}
 }

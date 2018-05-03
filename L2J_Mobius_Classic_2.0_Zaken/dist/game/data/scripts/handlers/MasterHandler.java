@@ -84,9 +84,11 @@ import handlers.admincommandhandlers.AdminFortSiege;
 import handlers.admincommandhandlers.AdminGeodata;
 import handlers.admincommandhandlers.AdminGm;
 import handlers.admincommandhandlers.AdminGmChat;
+import handlers.admincommandhandlers.AdminGmSpeed;
 import handlers.admincommandhandlers.AdminGraciaSeeds;
 import handlers.admincommandhandlers.AdminGrandBoss;
 import handlers.admincommandhandlers.AdminHeal;
+import handlers.admincommandhandlers.AdminHide;
 import handlers.admincommandhandlers.AdminHtml;
 import handlers.admincommandhandlers.AdminHwid;
 import handlers.admincommandhandlers.AdminInstance;
@@ -125,6 +127,7 @@ import handlers.admincommandhandlers.AdminShutdown;
 import handlers.admincommandhandlers.AdminSkill;
 import handlers.admincommandhandlers.AdminSpawn;
 import handlers.admincommandhandlers.AdminSummon;
+import handlers.admincommandhandlers.AdminSuperHaste;
 import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
@@ -415,9 +418,11 @@ public class MasterHandler
 			AdminGeodata.class,
 			AdminGm.class,
 			AdminGmChat.class,
+			AdminGmSpeed.class,
 			AdminGraciaSeeds.class,
 			AdminGrandBoss.class,
 			AdminHeal.class,
+			AdminHide.class,
 			AdminHtml.class,
 			AdminHwid.class,
 			AdminInstance.class,
@@ -456,6 +461,7 @@ public class MasterHandler
 			AdminSkill.class,
 			AdminSpawn.class,
 			AdminSummon.class,
+			AdminSuperHaste.class,
 			AdminTarget.class,
 			AdminTargetSay.class,
 			AdminTeleport.class,

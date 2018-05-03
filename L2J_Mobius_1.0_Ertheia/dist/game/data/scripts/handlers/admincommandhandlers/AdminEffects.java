@@ -19,7 +19,6 @@ package handlers.admincommandhandlers;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -34,7 +33,6 @@ import com.l2jmobius.gameserver.model.html.PageBuilder;
 import com.l2jmobius.gameserver.model.html.PageResult;
 import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Earthquake;
 import com.l2jmobius.gameserver.network.serverpackets.ExRedSky;
@@ -81,8 +79,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_earthquake_menu",
 		"admin_bighead",
 		"admin_shrinkhead",
-		"admin_gmspeed",
-		"admin_gmspeed_menu",
 		"admin_unpara_all",
 		"admin_para_all",
 		"admin_unpara",
@@ -349,35 +345,6 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-			}
-		}
-		else if (command.startsWith("admin_gmspeed"))
-		{
-			try
-			{
-				final int val = Integer.parseInt(st.nextToken());
-				final boolean sendMessage = activeChar.isAffectedBySkill(7029);
-				activeChar.stopSkillEffects((val == 0) && sendMessage, 7029);
-				if ((val >= 1) && (val <= 4))
-				{
-					int time = 0;
-					if (st.hasMoreTokens())
-					{
-						time = Integer.parseInt(st.nextToken());
-					}
-					
-					final Skill gmSpeedSkill = SkillData.getInstance().getSkill(7029, val);
-					gmSpeedSkill.applyEffects(activeChar, activeChar, true, time);
-				}
-			}
-			catch (Exception e)
-			{
-				activeChar.sendMessage("Usage: //gmspeed <Effect level (0-4)> <Time in seconds>");
-			}
-			if (command.contains("_menu"))
-			{
-				command = "";
-				AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 			}
 		}
 		else if (command.startsWith("admin_polyself"))

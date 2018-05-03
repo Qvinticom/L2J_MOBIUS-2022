@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -45,7 +46,7 @@ public class RequestTutorialLinkHtml implements IClientIncomingPacket
 		
 		if (_bypass.startsWith("admin_"))
 		{
-			player.useAdminCommand(_bypass);
+			AdminCommandHandler.getInstance().useAdminCommand(player, _bypass, true);
 		}
 		else
 		{

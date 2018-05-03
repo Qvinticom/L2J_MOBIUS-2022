@@ -116,6 +116,12 @@ public final class Config
 	public static final String EOL = System.lineSeparator();
 	
 	public static boolean EVERYBODY_HAS_ADMIN_RIGHTS;
+	public static int MASTERACCESS_LEVEL;
+	public static int USERACCESS_LEVEL;
+	public static boolean MASTERACCESS_NAME_COLOR_ENABLED;
+	public static boolean MASTERACCESS_TITLE_COLOR_ENABLED;
+	public static int MASTERACCESS_NAME_COLOR;
+	public static int MASTERACCESS_TITLE_COLOR;
 	public static boolean SHOW_GM_LOGIN;
 	public static boolean GM_STARTUP_INVISIBLE;
 	public static boolean GM_SPECIAL_EFFECT;
@@ -123,14 +129,10 @@ public final class Config
 	public static boolean GM_STARTUP_AUTO_LIST;
 	public static String GM_ADMIN_MENU_STYLE;
 	public static boolean GM_HERO_AURA;
+	public static boolean GM_STARTUP_BUILDER_HIDE;
 	public static boolean GM_STARTUP_INVULNERABLE;
 	public static boolean GM_ANNOUNCER_NAME;
-	public static int MASTERACCESS_LEVEL;
-	public static int USERACCESS_LEVEL;
-	public static boolean MASTERACCESS_NAME_COLOR_ENABLED;
-	public static boolean MASTERACCESS_TITLE_COLOR_ENABLED;
-	public static int MASTERACCESS_NAME_COLOR;
-	public static int MASTERACCESS_TITLE_COLOR;
+	public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 	
 	public static boolean CHECK_KNOWN;
 	public static String DEFAULT_GLOBAL_CHAT;
@@ -1214,21 +1216,23 @@ public final class Config
 			is.close();
 			
 			EVERYBODY_HAS_ADMIN_RIGHTS = Boolean.parseBoolean(AccessSettings.getProperty("EverybodyHasAdminRights", "false"));
-			GM_STARTUP_AUTO_LIST = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupAutoList", "true"));
-			GM_ADMIN_MENU_STYLE = AccessSettings.getProperty("GMAdminMenuStyle", "modern");
-			GM_HERO_AURA = Boolean.parseBoolean(AccessSettings.getProperty("GMHeroAura", "false"));
-			GM_STARTUP_INVULNERABLE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupInvulnerable", "true"));
-			GM_ANNOUNCER_NAME = Boolean.parseBoolean(AccessSettings.getProperty("AnnounceGmName", "false"));
-			SHOW_GM_LOGIN = Boolean.parseBoolean(AccessSettings.getProperty("ShowGMLogin", "false"));
-			GM_STARTUP_INVISIBLE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupInvisible", "true"));
-			GM_SPECIAL_EFFECT = Boolean.parseBoolean(AccessSettings.getProperty("GmLoginSpecialEffect", "false"));
-			GM_STARTUP_SILENCE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupSilence", "true"));
 			MASTERACCESS_LEVEL = Integer.parseInt(AccessSettings.getProperty("MasterAccessLevel", "1"));
 			MASTERACCESS_NAME_COLOR_ENABLED = Boolean.parseBoolean(AccessSettings.getProperty("MasterNameColorEnabled", "false"));
 			MASTERACCESS_TITLE_COLOR_ENABLED = Boolean.parseBoolean(AccessSettings.getProperty("MasterTitleColorEnabled", "false"));
 			MASTERACCESS_NAME_COLOR = Integer.decode("0x" + AccessSettings.getProperty("MasterNameColor", "00FF00"));
 			MASTERACCESS_TITLE_COLOR = Integer.decode("0x" + AccessSettings.getProperty("MasterTitleColor", "00FF00"));
 			USERACCESS_LEVEL = Integer.parseInt(AccessSettings.getProperty("UserAccessLevel", "0"));
+			GM_STARTUP_AUTO_LIST = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupAutoList", "true"));
+			GM_ADMIN_MENU_STYLE = AccessSettings.getProperty("GMAdminMenuStyle", "modern");
+			GM_HERO_AURA = Boolean.parseBoolean(AccessSettings.getProperty("GMHeroAura", "false"));
+			GM_STARTUP_BUILDER_HIDE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupBuilderHide", "true"));
+			GM_STARTUP_INVULNERABLE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupInvulnerable", "true"));
+			GM_ANNOUNCER_NAME = Boolean.parseBoolean(AccessSettings.getProperty("AnnounceGmName", "false"));
+			SHOW_GM_LOGIN = Boolean.parseBoolean(AccessSettings.getProperty("ShowGMLogin", "false"));
+			GM_STARTUP_INVISIBLE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupInvisible", "true"));
+			GM_SPECIAL_EFFECT = Boolean.parseBoolean(AccessSettings.getProperty("GmLoginSpecialEffect", "false"));
+			GM_STARTUP_SILENCE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupSilence", "true"));
+			USE_SUPER_HASTE_AS_GM_SPEED = Boolean.parseBoolean(AccessSettings.getProperty("UseSuperHasteAsGMSpeed", "false"));
 		}
 		catch (Exception e)
 		{

@@ -98,6 +98,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Enter World Packet Handler
@@ -205,35 +206,50 @@ public class EnterWorld implements IClientIncomingPacket
 		// Apply special GM properties to the GM when entering
 		if (activeChar.isGM())
 		{
-			if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel()))
+			gmStartupProcess:
 			{
-				activeChar.setIsInvul(true);
-			}
-			
-			if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel()))
-			{
-				activeChar.setInvisible(true);
-				activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
-			}
-			
-			if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel()))
-			{
-				activeChar.setSilenceMode(true);
-			}
-			
-			if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel()))
-			{
-				activeChar.setDietMode(true);
-				activeChar.refreshOverloaded(true);
-			}
-			
-			if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()))
-			{
-				AdminData.getInstance().addGm(activeChar, false);
-			}
-			else
-			{
-				AdminData.getInstance().addGm(activeChar, true);
+				if (Config.GM_STARTUP_BUILDER_HIDE && AdminData.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel()))
+				{
+					BuilderUtil.setHiding(activeChar, true);
+					
+					BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
+					BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
+					BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
+					
+					// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+					break gmStartupProcess;
+				}
+				
+				if (Config.GM_STARTUP_INVULNERABLE && AdminData.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel()))
+				{
+					activeChar.setIsInvul(true);
+				}
+				
+				if (Config.GM_STARTUP_INVISIBLE && AdminData.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel()))
+				{
+					activeChar.setInvisible(true);
+					activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
+				}
+				
+				if (Config.GM_STARTUP_SILENCE && AdminData.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel()))
+				{
+					activeChar.setSilenceMode(true);
+				}
+				
+				if (Config.GM_STARTUP_DIET_MODE && AdminData.getInstance().hasAccess("admin_diet", activeChar.getAccessLevel()))
+				{
+					activeChar.setDietMode(true);
+					activeChar.refreshOverloaded(true);
+				}
+				
+				if (Config.GM_STARTUP_AUTO_LIST && AdminData.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()))
+				{
+					AdminData.getInstance().addGm(activeChar, false);
+				}
+				else
+				{
+					AdminData.getInstance().addGm(activeChar, true);
+				}
 			}
 			
 			if (Config.GM_GIVE_SPECIAL_SKILLS)

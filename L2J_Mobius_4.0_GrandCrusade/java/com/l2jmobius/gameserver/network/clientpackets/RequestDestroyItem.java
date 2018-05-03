@@ -24,6 +24,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -107,7 +108,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 					{
 						count = ((L2ItemInstance) obj).getCount();
 					}
-					activeChar.useAdminCommand("admin_delete_item " + _objectId + " " + count);
+					AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_delete_item " + _objectId + " " + count, true);
 				}
 				return;
 			}

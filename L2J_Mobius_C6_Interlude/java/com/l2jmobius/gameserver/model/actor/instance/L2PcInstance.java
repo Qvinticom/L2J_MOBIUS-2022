@@ -15018,19 +15018,23 @@ public final class L2PcInstance extends L2Playable
 		// jail task
 		updatePunishState();
 		
-		if (_isInvul)
+		if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE)
 		{
-			sendMessage("Entering world in Invulnerable mode.");
-		}
-		
-		if (getAppearance().getInvisible())
-		{
-			sendMessage("Entering world in Invisible mode.");
-		}
-		
-		if (isInRefusalMode())
-		{
-			sendMessage("Entering world in Message Refusal mode.");
+			// Bleah, see L2J custom below.
+			if (_isInvul)
+			{
+				sendMessage("Entering world in Invulnerable mode.");
+			}
+			
+			if (getAppearance().getInvisible())
+			{
+				sendMessage("Entering world in Invisible mode.");
+			}
+			
+			if (isInRefusalMode())
+			{
+				sendMessage("Entering world in Message Refusal mode.");
+			}
 		}
 		
 		revalidateZone(true);

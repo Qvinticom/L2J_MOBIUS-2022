@@ -19,7 +19,6 @@ package handlers.actionshifthandlers;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IActionShiftHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -36,11 +35,7 @@ public class L2SummonActionShift implements IActionShiftHandler
 				activeChar.setTarget(target);
 			}
 			
-			final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler("admin_summon_info");
-			if (ach != null)
-			{
-				ach.useAdminCommand("admin_summon_info", activeChar);
-			}
+			AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_summon_info", true);
 		}
 		return true;
 	}

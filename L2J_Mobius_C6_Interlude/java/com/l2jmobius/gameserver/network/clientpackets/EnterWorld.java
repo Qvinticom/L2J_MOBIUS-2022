@@ -96,6 +96,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SignsSky;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.thread.TaskPriority;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -599,6 +600,47 @@ public class EnterWorld extends L2GameClientPacket
 	{
 		if (activeChar.isGM())
 		{
+			gmStartupProcess:
+			{
+				if (Config.GM_STARTUP_BUILDER_HIDE && AdminCommandAccessRights.getInstance().hasAccess("admin_hide", activeChar.getAccessLevel()))
+				{
+					activeChar.setInRefusalMode(true);
+					activeChar.setIsInvul(true);
+					activeChar.getAppearance().setInvisible();
+					
+					BuilderUtil.sendSysMessage(activeChar, "hide is default for builder.");
+					BuilderUtil.sendSysMessage(activeChar, "FriendAddOff is default for builder.");
+					BuilderUtil.sendSysMessage(activeChar, "whisperoff is default for builder.");
+					
+					// It isn't recommend to use the below custom L2J GMStartup functions together with retail-like GMStartupBuilderHide, so breaking the process at that stage.
+					break gmStartupProcess;
+				}
+				
+				if (Config.GM_STARTUP_INVULNERABLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel()))
+				{
+					activeChar.setIsInvul(true);
+				}
+				
+				if (Config.GM_STARTUP_INVISIBLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel()))
+				{
+					activeChar.getAppearance().setInvisible();
+				}
+				
+				if (Config.GM_STARTUP_SILENCE && AdminCommandAccessRights.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel()))
+				{
+					activeChar.setInRefusalMode(true);
+				}
+				
+				if (Config.GM_STARTUP_AUTO_LIST && AdminCommandAccessRights.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()))
+				{
+					GmListTable.getInstance().addGm(activeChar, false);
+				}
+				else
+				{
+					GmListTable.getInstance().addGm(activeChar, true);
+				}
+			}
+			
 			if (Config.GM_SPECIAL_EFFECT)
 			{
 				activeChar.broadcastPacket(new Earthquake(activeChar.getX(), activeChar.getY(), activeChar.getZ(), 50, 4));
@@ -607,30 +649,6 @@ public class EnterWorld extends L2GameClientPacket
 			if (Config.SHOW_GM_LOGIN)
 			{
 				Announcements.getInstance().announceToAll("GM " + activeChar.getName() + " has logged on.");
-			}
-			
-			if (Config.GM_STARTUP_INVULNERABLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invul", activeChar.getAccessLevel()))
-			{
-				activeChar.setIsInvul(true);
-			}
-			
-			if (Config.GM_STARTUP_INVISIBLE && AdminCommandAccessRights.getInstance().hasAccess("admin_invisible", activeChar.getAccessLevel()))
-			{
-				activeChar.getAppearance().setInvisible();
-			}
-			
-			if (Config.GM_STARTUP_SILENCE && AdminCommandAccessRights.getInstance().hasAccess("admin_silence", activeChar.getAccessLevel()))
-			{
-				activeChar.setInRefusalMode(true);
-			}
-			
-			if (Config.GM_STARTUP_AUTO_LIST && AdminCommandAccessRights.getInstance().hasAccess("admin_gmliston", activeChar.getAccessLevel()))
-			{
-				GmListTable.getInstance().addGm(activeChar, false);
-			}
-			else
-			{
-				GmListTable.getInstance().addGm(activeChar, true);
 			}
 			
 			if (Config.MASTERACCESS_NAME_COLOR_ENABLED)

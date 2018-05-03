@@ -46,6 +46,8 @@ public class CharStat
 	private final int[] _traitsInvul = new int[TraitType.values().length];
 	/** Creature's maximum buff count. */
 	private int _maxBuffCount = Config.BUFFS_MAX_AMOUNT;
+	/** Speed multiplier set by admin gmspeed command */
+	private double _gmSpeedMultiplier = 1;
 	
 	public CharStat(L2Character activeChar)
 	{
@@ -411,6 +413,11 @@ public class CharStat
 		return getMoveSpeed() * (1. / baseSpeed);
 	}
 	
+	public void setGmSpeedMultiplier(double multipier)
+	{
+		_gmSpeedMultiplier = multipier;
+	}
+	
 	/**
 	 * @return the RunSpeed (base+modifier) of the L2Character in function of the Armour Expertise Penalty.
 	 */
@@ -422,7 +429,7 @@ public class CharStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseRunSpd, null, null);
+		return calcStat(Stats.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
 	}
 	
 	/**
@@ -436,7 +443,7 @@ public class CharStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseWalkSpd);
+		return calcStat(Stats.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
 	}
 	
 	/**
@@ -450,7 +457,7 @@ public class CharStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseRunSpd, null, null);
+		return calcStat(Stats.MOVE_SPEED, baseRunSpd * _gmSpeedMultiplier, null, null);
 	}
 	
 	/**
@@ -464,7 +471,7 @@ public class CharStat
 			return 0;
 		}
 		
-		return calcStat(Stats.MOVE_SPEED, baseWalkSpd);
+		return calcStat(Stats.MOVE_SPEED, baseWalkSpd * _gmSpeedMultiplier);
 	}
 	
 	/**

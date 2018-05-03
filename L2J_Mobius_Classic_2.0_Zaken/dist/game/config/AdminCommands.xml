@@ -158,8 +158,6 @@
 	<admin command="admin_earthquake_menu" accessLevel="100" />
 	<admin command="admin_bighead" accessLevel="100" />
 	<admin command="admin_shrinkhead" accessLevel="100" />
-	<admin command="admin_gmspeed" accessLevel="100" />
-	<admin command="admin_gmspeed_menu" accessLevel="100" />
 	<admin command="admin_unpara_all" accessLevel="100" />
 	<admin command="admin_para_all" accessLevel="100" />
 	<admin command="admin_unpara" accessLevel="100" />
@@ -189,6 +187,13 @@
 	<admin command="admin_set_displayeffect_menu" accessLevel="100" />
 	<admin command="admin_playmovie" accessLevel="100" />
 
+	<!-- ADMIN SPEED -->
+	<admin command="admin_gmspeed" accessLevel="100" />
+	<admin command="admin_superhaste" accessLevel="100" />
+	<admin command="admin_superhaste_menu" accessLevel="100" />
+	<admin command="admin_speed" accessLevel="100" />
+	<admin command="admin_speed_menu" accessLevel="100" />
+	
 	<!-- ADMIN ELEMENT -->
 	<admin command="admin_setlh" accessLevel="100" />
 	<admin command="admin_setlc" accessLevel="100" />
@@ -612,4 +617,7 @@
 	<admin command="banchat" accessLevel="100" />
 	<admin command="debug" accessLevel="100" />
 	<admin command="unbanchat" accessLevel="100" />
+
+	<!-- HIDE -->
+	<admin command="admin_hide" accessLevel="100" />
 </list>

@@ -101,8 +101,6 @@ import com.l2jmobius.gameserver.enums.SubclassInfoType;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
-import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -345,7 +343,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.EnumIntBitmask;
 import com.l2jmobius.gameserver.util.FloodProtectors;
-import com.l2jmobius.gameserver.util.GMAudit;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -10058,8 +10055,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		startWarnUserTakeBreak();
 		
-		if (isGM())
+		if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE)
 		{
+			// Bleah, see L2J custom below.
 			if (isInvul())
 			{
 				sendMessage("Entering world in Invulnerable mode.");
@@ -13772,50 +13770,6 @@ public final class L2PcInstance extends L2Playable
 	public boolean isVisibleFor(L2PcInstance player)
 	{
 		return (super.isVisibleFor(player) || ((player.getParty() != null) && (player.getParty() == getParty())));
-	}
-	
-	/**
-	 * @param fullCommand
-	 */
-	public void useAdminCommand(String fullCommand)
-	{
-		final String command = fullCommand.split(" ")[0];
-		
-		final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
-		if (ach == null)
-		{
-			if (isGM())
-			{
-				sendMessage("The command " + command.substring(6) + " does not exist!");
-			}
-			LOGGER.warning("No handler registered for admin command '" + command + "'");
-			return;
-		}
-		
-		if (!AdminData.getInstance().hasAccess(command, getAccessLevel()))
-		{
-			sendMessage("You don't have the access rights to use this command!");
-			LOGGER.warning("Character " + getName() + " tried to use admin command " + command + ", without proper access level!");
-			return;
-		}
-		
-		if (AdminData.getInstance().requireConfirm(command))
-		{
-			setAdminConfirmCmd(fullCommand);
-			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.S1_3);
-			dlg.addString("Are you sure you want execute command " + fullCommand.substring(6) + " ?");
-			addAction(PlayerAction.ADMIN_COMMAND);
-			sendPacket(dlg);
-		}
-		else
-		{
-			if (Config.GMAUDIT)
-			{
-				GMAudit.auditGMAction(getName() + " [" + getObjectId() + "]", fullCommand, (getTarget() != null ? getTarget().getName() : "no-target"));
-			}
-			
-			ach.useAdminCommand(fullCommand, this);
-		}
 	}
 	
 	/**

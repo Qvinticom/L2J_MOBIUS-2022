@@ -10518,8 +10518,9 @@ public final class L2PcInstance extends L2Playable
 			}
 		}
 		
-		if (isGM())
+		if (isGM() && !Config.GM_STARTUP_BUILDER_HIDE)
 		{
+			// Bleah, see L2J custom below.
 			if (isInvul())
 			{
 				sendMessage("Entering world in Invulnerable mode.");

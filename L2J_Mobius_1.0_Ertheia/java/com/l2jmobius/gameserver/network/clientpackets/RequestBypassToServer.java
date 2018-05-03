@@ -23,6 +23,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
+import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.BypassHandler;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
@@ -133,7 +134,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 		{
 			if (_command.startsWith("admin_"))
 			{
-				activeChar.useAdminCommand(_command);
+				AdminCommandHandler.getInstance().useAdminCommand(activeChar, _command, true);
 			}
 			else if (CommunityBoardHandler.getInstance().isCommunityBoardCommand(_command))
 			{

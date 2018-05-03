@@ -399,6 +399,7 @@ public final class Config
 	public static int DEFAULT_ACCESS_LEVEL;
 	public static boolean SERVER_GMONLY;
 	public static boolean GM_HERO_AURA;
+	public static boolean GM_STARTUP_BUILDER_HIDE;
 	public static boolean GM_STARTUP_INVULNERABLE;
 	public static boolean GM_STARTUP_INVISIBLE;
 	public static boolean GM_STARTUP_SILENCE;
@@ -412,6 +413,7 @@ public final class Config
 	public static boolean GM_CRITANNOUNCER_NAME;
 	public static boolean GM_GIVE_SPECIAL_SKILLS;
 	public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
+	public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 	public static boolean GAMEGUARD_ENFORCE;
 	public static boolean GAMEGUARD_PROHIBITACTION;
 	public static boolean LOG_CHAT;
@@ -1744,6 +1746,7 @@ public final class Config
 			DEFAULT_ACCESS_LEVEL = General.getInt("DefaultAccessLevel", 0);
 			SERVER_GMONLY = General.getBoolean("ServerGMOnly", false);
 			GM_HERO_AURA = General.getBoolean("GMHeroAura", false);
+			GM_STARTUP_BUILDER_HIDE = General.getBoolean("GMStartupBuilderHide", false);
 			GM_STARTUP_INVULNERABLE = General.getBoolean("GMStartupInvulnerable", false);
 			GM_STARTUP_INVISIBLE = General.getBoolean("GMStartupInvisible", false);
 			GM_STARTUP_SILENCE = General.getBoolean("GMStartupSilence", false);
@@ -1757,6 +1760,7 @@ public final class Config
 			GM_CRITANNOUNCER_NAME = General.getBoolean("GMShowCritAnnouncerName", false);
 			GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
 			GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
+			USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 			GAMEGUARD_ENFORCE = General.getBoolean("GameGuardEnforce", false);
 			GAMEGUARD_PROHIBITACTION = General.getBoolean("GameGuardProhibitAction", false);
 			LOG_CHAT = General.getBoolean("LogChat", false);

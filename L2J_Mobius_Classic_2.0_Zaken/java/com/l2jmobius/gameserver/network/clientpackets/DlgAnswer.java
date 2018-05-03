@@ -16,12 +16,9 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PlayerAction;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
-import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
@@ -30,7 +27,6 @@ import com.l2jmobius.gameserver.model.holders.DoorRequestHolder;
 import com.l2jmobius.gameserver.model.holders.SummonRequestHolder;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
  * @author Dezmond_snz
@@ -75,16 +71,9 @@ public final class DlgAnswer implements IClientIncomingPacket
 				{
 					return;
 				}
-				final String command = cmd.split(" ")[0];
-				final IAdminCommandHandler ach = AdminCommandHandler.getInstance().getHandler(command);
-				if (AdminData.getInstance().hasAccess(command, activeChar.getAccessLevel()))
-				{
-					if (Config.GMAUDIT)
-					{
-						GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, (activeChar.getTarget() != null ? activeChar.getTarget().getName() : "no-target"));
-					}
-					ach.useAdminCommand(cmd, activeChar);
-				}
+				
+				// The 'useConfirm' must be disabled here, as we don't want to repeat that process.
+				AdminCommandHandler.getInstance().useAdminCommand(activeChar, cmd, false);
 			}
 		}
 		else if ((_messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))
