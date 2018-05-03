@@ -34,7 +34,6 @@ import javax.swing.JWindow;
 public class SplashScreen extends JWindow
 {
 	Image image;
-	JFrame parentFrame;
 	
 	/**
 	 * @param path of image file
@@ -43,7 +42,6 @@ public class SplashScreen extends JWindow
 	 */
 	public SplashScreen(String path, long time, JFrame parent)
 	{
-		parentFrame = parent;
 		setBackground(new Color(0, 255, 0, 0)); // Transparency.
 		image = Toolkit.getDefaultToolkit().getImage(path);
 		ImageIcon imageIcon = new ImageIcon(image);
@@ -58,14 +56,14 @@ public class SplashScreen extends JWindow
 			public void run()
 			{
 				setVisible(false);
-				if (parentFrame != null)
+				if (parent != null)
 				{
 					// Make parent visible.
-					parentFrame.setVisible(true);
+					parent.setVisible(true);
 					// Focus parent window.
-					parentFrame.toFront();
-					parentFrame.setState(Frame.ICONIFIED);
-					parentFrame.setState(Frame.NORMAL);
+					parent.toFront();
+					parent.setState(Frame.ICONIFIED);
+					parent.setState(Frame.NORMAL);
 				}
 				dispose();
 			}
