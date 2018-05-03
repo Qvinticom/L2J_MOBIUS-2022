@@ -65,10 +65,10 @@ public final class GameServerTable implements IGameXmlReader
 		load();
 		
 		loadRegisteredGameServers();
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers.");
+		LOGGER.info("Loaded " + GAME_SERVER_TABLE.size() + " registered Game Servers.");
 		
 		initRSAKeys();
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
+		LOGGER.info("Cached " + _keyPairs.length + " RSA keys for Game Server communication.");
 	}
 	
 	@Override
@@ -76,7 +76,7 @@ public final class GameServerTable implements IGameXmlReader
 	{
 		SERVER_NAMES.clear();
 		parseDatapackFile("data/servername.xml");
-		LOGGER.info(GameServerTable.class.getSimpleName() + ": Loaded " + SERVER_NAMES.size() + " server names.");
+		LOGGER.info("Loaded " + SERVER_NAMES.size() + " server names.");
 	}
 	
 	@Override
@@ -106,7 +106,7 @@ public final class GameServerTable implements IGameXmlReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.severe(GameServerTable.class.getSimpleName() + ": Error loading RSA keys for Game Server communication!");
+			LOGGER.severe("Error loading RSA keys for Game Server communication!");
 		}
 	}
 	
@@ -128,7 +128,7 @@ public final class GameServerTable implements IGameXmlReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.severe(GameServerTable.class.getSimpleName() + ": Error loading registered game servers!");
+			LOGGER.severe("Error loading registered game servers!");
 		}
 	}
 	
@@ -232,7 +232,7 @@ public final class GameServerTable implements IGameXmlReader
 		}
 		catch (Exception e)
 		{
-			LOGGER.severe(GameServerTable.class.getSimpleName() + ": Error while saving gameserver!");
+			LOGGER.severe("Error while saving gameserver!");
 		}
 	}
 	

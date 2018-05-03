@@ -42,7 +42,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.ScrambledKeyPair;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
@@ -133,8 +132,6 @@ public class LoginController
 	
 	private LoginController() throws GeneralSecurityException
 	{
-		Util.printSection("LoginController");
-		
 		_hackProtection = new HashMap<>();
 		
 		_keyPairs = new ScrambledKeyPair[10];

@@ -34,7 +34,6 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.mmocore.NetcoreConfig;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
-import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.ui.Gui;
 import com.l2jmobius.status.Status;
@@ -88,7 +87,6 @@ public class LoginServer
 		// Load LoginServer Configs
 		Config.load();
 		
-		Util.printSection("Database");
 		// Prepare Database
 		DatabaseFactory.getInstance();
 		
