@@ -196,7 +196,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 				final L2Npc freya = params.getObject("freya", L2Npc.class);
 				switch (event)
 				{
-					case "world.openDoor":
+					case "openDoor":
 					{
 						if (npc.isScriptValue(0))
 						{
