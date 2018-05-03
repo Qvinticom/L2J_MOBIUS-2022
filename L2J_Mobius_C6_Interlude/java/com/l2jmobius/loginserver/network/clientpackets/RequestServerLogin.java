@@ -18,7 +18,9 @@ package com.l2jmobius.loginserver.network.clientpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.LoginController;
+import com.l2jmobius.loginserver.LoginServer;
 import com.l2jmobius.loginserver.SessionKey;
+import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.loginserver.network.serverpackets.LoginFail.LoginFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayFail.PlayFailReason;
 import com.l2jmobius.loginserver.network.serverpackets.PlayOk;
@@ -77,7 +79,11 @@ public class RequestServerLogin extends L2LoginClientPacket
 		// if we didnt showed the license we cant check these values
 		if (!Config.SHOW_LICENCE || sk.checkLoginPair(_skey1, _skey2))
 		{
-			if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
+			if ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_DOWN) || ((LoginServer.getInstance().getStatus() == ServerStatus.STATUS_GM_ONLY) && (getClient().getAccessLevel() < 1)))
+			{
+				getClient().close(LoginFailReason.REASON_ACCESS_FAILED);
+			}
+			else if (LoginController.getInstance().isLoginPossible(getClient(), _serverId))
 			{
 				getClient().setJoinedGS(true);
 				getClient().sendPacket(new PlayOk(sk));

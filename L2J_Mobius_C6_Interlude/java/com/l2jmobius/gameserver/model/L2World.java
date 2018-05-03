@@ -29,6 +29,7 @@ import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.object.L2ObjectMap;
 import com.l2jmobius.commons.util.object.L2ObjectSet;
 import com.l2jmobius.gameserver.datatables.GmListTable;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -413,10 +414,10 @@ public final class L2World
 	 */
 	public void addVisibleObject(L2Object object, L2WorldRegion newRegion, L2Character dropper)
 	{
-		// If selected L2Object is a L2PcIntance, add it in L2ObjectHashSet(L2PcInstance) _allPlayers of L2World
-		//
 		if (object instanceof L2PcInstance)
 		{
+			PlayerCountManager.getInstance().incConnectedCount();
+			
 			L2PcInstance player = (L2PcInstance) object;
 			L2PcInstance tmp = _allPlayers.get(player.getName().toLowerCase());
 			if ((tmp != null) && (tmp != player)) // just kick the player previous instance
@@ -610,6 +611,12 @@ public final class L2World
 			// If selected L2Object is a L2PcIntance, remove it from L2ObjectHashSet(L2PcInstance) _allPlayers of L2World
 			if (object instanceof L2PcInstance)
 			{
+				PlayerCountManager.getInstance().decConnectedCount();
+				if (object.getActingPlayer().isInOfflineMode())
+				{
+					PlayerCountManager.getInstance().decOfflineTradeCount();
+				}
+				
 				if (!((L2PcInstance) object).isTeleporting())
 				{
 					removeFromAllPlayers((L2PcInstance) object);

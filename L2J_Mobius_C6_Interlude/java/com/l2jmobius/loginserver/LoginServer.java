@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.loginserver;
 
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -34,34 +35,40 @@ import com.l2jmobius.commons.mmocore.NetcoreConfig;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.commons.util.Util;
+import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
+import com.l2jmobius.loginserver.ui.Gui;
 import com.l2jmobius.status.Status;
 
 public class LoginServer
 {
-	private final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	public final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0102;
-	
-	private static LoginServer _instance;
-	
+	private static LoginServer INSTANCE;
 	private GameServerListener _gameServerListener;
 	private SelectorThread<L2LoginClient> _selectorThread;
 	private Status _statusServer;
+	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
 	public static void main(String[] args)
 	{
-		_instance = new LoginServer();
+		INSTANCE = new LoginServer();
 	}
 	
 	public static LoginServer getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	public LoginServer()
 	{
-		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
+		
+		// GUI
+		if (!GraphicsEnvironment.isHeadless())
+		{
+			new Gui();
+		}
 		
 		// Create log folder
 		final File logFolder = new File(".", "log");
@@ -199,5 +206,15 @@ public class LoginServer
 		LoginController.getInstance().shutdown();
 		System.gc();
 		Runtime.getRuntime().exit(restart ? 2 : 0);
+	}
+	
+	public int getStatus()
+	{
+		return _loginStatus;
+	}
+	
+	public void setStatus(int status)
+	{
+		_loginStatus = status;
 	}
 }

@@ -24,6 +24,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.L2ManufactureItem;
 import com.l2jmobius.gameserver.model.L2ManufactureList;
 import com.l2jmobius.gameserver.model.L2World;
@@ -275,6 +276,7 @@ public class OfflineTradeTable
 					player.setOnlineStatus(true);
 					player.restoreEffects();
 					player.broadcastUserInfo();
+					PlayerCountManager.getInstance().incOfflineTradeCount();
 					nTraders++;
 				}
 				catch (Exception e)

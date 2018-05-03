@@ -409,7 +409,18 @@ public final class GameServerTable implements IGameXmlReader
 		 */
 		public void setStatus(int status)
 		{
-			_status = status;
+			if (LoginServer.getInstance().getStatus() == ServerStatus.STATUS_DOWN)
+			{
+				_status = ServerStatus.STATUS_DOWN;
+			}
+			else if (LoginServer.getInstance().getStatus() == ServerStatus.STATUS_GM_ONLY)
+			{
+				_status = ServerStatus.STATUS_GM_ONLY;
+			}
+			else
+			{
+				_status = status;
+			}
 		}
 		
 		/**

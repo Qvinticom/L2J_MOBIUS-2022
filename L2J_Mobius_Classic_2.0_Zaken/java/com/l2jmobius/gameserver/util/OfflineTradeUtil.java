@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.sql.impl.OfflineTradersTable;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
@@ -99,6 +100,8 @@ public final class OfflineTradeUtil
 		{
 			return false;
 		}
+		
+		PlayerCountManager.getInstance().incOfflineTradeCount();
 		
 		final L2GameClient client = player.getClient();
 		client.setDetached(true);

@@ -75,8 +75,8 @@
 				<exclude name="**/gameserver/**" />
 			</fileset>
 			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Build-By" value="${user.name}" />
+				<attribute name="Build-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Main-Class" value="com.l2jmobius.loginserver.LoginServer" />
@@ -90,8 +90,8 @@
 				<exclude name="**/gsregistering/**" />
 			</fileset>
 			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Build-By" value="${user.name}" />
+				<attribute name="Build-Date" value="${time.stamp}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Main-Class" value="com.l2jmobius.gameserver.GameServer" />
@@ -105,8 +105,8 @@
 				<exclude name="**/LauncherLS*" />
 			</fileset>
 			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Build-By" value="${user.name}" />
+				<attribute name="Build-Date" value="${time.stamp}" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Main-Class" value="com.l2jmobius.tools.dbinstaller.LauncherGS" />
@@ -120,8 +120,8 @@
 				<exclude name="**/LauncherGS*" />
 			</fileset>
 			<manifest>
-				<attribute name="Built-By" value="${user.name}" />
-				<attribute name="Built-Date" value="${time.stamp}" />
+				<attribute name="Build-By" value="${user.name}" />
+				<attribute name="Build-Date" value="${time.stamp}" />
 				<attribute name="Class-Path" value="${manifest.libs}" />
 				<attribute name="Implementation-URL" value="http://www.l2jmobius.com/" />
 				<attribute name="Main-Class" value="com.l2jmobius.tools.dbinstaller.LauncherLS" />

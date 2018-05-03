@@ -21,8 +21,8 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -52,22 +52,24 @@ public class SplashScreen extends JWindow
 		setAlwaysOnTop(true);
 		setVisible(true);
 		
-		// Schedule to close.
-		Executors.newScheduledThreadPool(1).schedule(this::close, imageIcon.getIconWidth() > 0 ? time : 100, TimeUnit.MILLISECONDS);
-	}
-	
-	public void close()
-	{
-		setVisible(false);
-		if (parentFrame != null)
+		new Timer().schedule(new TimerTask()
 		{
-			// Make parent visible.
-			parentFrame.setVisible(true);
-			// Focus parent window.
-			parentFrame.toFront();
-			parentFrame.setState(Frame.ICONIFIED);
-			parentFrame.setState(Frame.NORMAL);
-		}
+			@Override
+			public void run()
+			{
+				setVisible(false);
+				if (parentFrame != null)
+				{
+					// Make parent visible.
+					parentFrame.setVisible(true);
+					// Focus parent window.
+					parentFrame.toFront();
+					parentFrame.setState(Frame.ICONIFIED);
+					parentFrame.setState(Frame.NORMAL);
+				}
+				dispose();
+			}
+		}, imageIcon.getIconWidth() > 0 ? time : 100);
 	}
 	
 	@Override

@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver;
 
+import java.awt.GraphicsEnvironment;
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
@@ -149,6 +150,7 @@ import com.l2jmobius.gameserver.network.loginserver.LoginServerNetworkManager;
 import com.l2jmobius.gameserver.network.telnet.TelnetServer;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 import com.l2jmobius.gameserver.taskmanager.TaskManager;
+import com.l2jmobius.gameserver.ui.Gui;
 import com.l2jmobius.gameserver.util.Broadcast;
 
 public class GameServer
@@ -172,6 +174,28 @@ public class GameServer
 	public GameServer() throws Exception
 	{
 		final long serverLoadStart = System.currentTimeMillis();
+		Server.serverMode = Server.MODE_GAMESERVER;
+		
+		// GUI
+		if (!GraphicsEnvironment.isHeadless())
+		{
+			new Gui();
+		}
+		
+		// Create log folder
+		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
+		logFolder.mkdir();
+		
+		// Create input stream for log file -- or store file data into memory
+		try (InputStream is = new FileInputStream(new File("./log.cfg")))
+		{
+			LogManager.getLogManager().readConfiguration(is);
+		}
+		
+		// Initialize config
+		Config.load();
+		printSection("Database");
+		DatabaseFactory.getInstance();
 		
 		printSection("ThreadPool");
 		ThreadPool.init();
@@ -459,24 +483,6 @@ public class GameServer
 	
 	public static void main(String[] args) throws Exception
 	{
-		Server.serverMode = Server.MODE_GAMESERVER;
-		
-		/*** Main ***/
-		// Create log folder
-		final File logFolder = new File(Config.DATAPACK_ROOT, "log");
-		logFolder.mkdir();
-		
-		// Create input stream for log file -- or store file data into memory
-		try (InputStream is = new FileInputStream(new File("./log.cfg")))
-		{
-			LogManager.getLogManager().readConfiguration(is);
-		}
-		
-		// Initialize config
-		Config.load();
-		printSection("Database");
-		DatabaseFactory.getInstance();
-		
 		INSTANCE = new GameServer();
 	}
 	

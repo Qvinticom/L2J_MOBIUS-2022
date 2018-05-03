@@ -32,6 +32,7 @@ import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -135,6 +136,8 @@ public final class L2World
 		
 		if (object.isPlayer())
 		{
+			PlayerCountManager.getInstance().incConnectedCount();
+			
 			final L2PcInstance newPlayer = (L2PcInstance) object;
 			if (newPlayer.isTeleporting()) // TODO: drop when we stop removing player from the world while teleporting.
 			{
@@ -170,6 +173,8 @@ public final class L2World
 		_allObjects.remove(object.getObjectId());
 		if (object.isPlayer())
 		{
+			PlayerCountManager.getInstance().decConnectedCount();
+			
 			final L2PcInstance player = (L2PcInstance) object;
 			if (player.isTeleporting()) // TODO: drop when we stop removing player from the world while teleportingq.
 			{

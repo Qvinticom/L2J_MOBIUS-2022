@@ -115,7 +115,7 @@ public class Util
 	public static void printSection(String s)
 	{
 		s = "=[ " + s + " ]";
-		while (s.length() < 62)
+		while (s.length() < 61)
 		{
 			s = "-" + s;
 		}

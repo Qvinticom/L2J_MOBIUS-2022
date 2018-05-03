@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.loginserver;
 
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -32,34 +33,42 @@ import com.l2jmobius.Config;
 import com.l2jmobius.Server;
 import com.l2jmobius.commons.database.DatabaseBackup;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.gameserver.network.loginserverpackets.game.ServerStatus;
 import com.l2jmobius.loginserver.network.ClientNetworkManager;
+import com.l2jmobius.loginserver.ui.Gui;
 
 /**
  * @author KenM
  */
 public final class LoginServer
 {
-	private final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
+	public final Logger LOGGER = Logger.getLogger(LoginServer.class.getName());
 	
 	public static final int PROTOCOL_REV = 0x0106;
-	private static LoginServer _instance;
+	private static LoginServer INSTANCE;
 	private GameServerListener _gameServerListener;
 	private Thread _restartLoginServer;
+	private static int _loginStatus = ServerStatus.STATUS_NORMAL;
 	
 	public static void main(String[] args) throws Exception
 	{
-		new LoginServer();
+		INSTANCE = new LoginServer();
 	}
 	
 	public static LoginServer getInstance()
 	{
-		return _instance;
+		return INSTANCE;
 	}
 	
 	private LoginServer() throws Exception
 	{
-		_instance = this;
 		Server.serverMode = Server.MODE_LOGINSERVER;
+		
+		// GUI
+		if (!GraphicsEnvironment.isHeadless())
+		{
+			new Gui();
+		}
 		
 		// Create log folder
 		final File logFolder = new File(".", "log");
@@ -96,6 +105,14 @@ public final class LoginServer
 		
 		loadBanFile();
 		
+		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
+		{
+			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
+			_restartLoginServer = new LoginServerRestart();
+			_restartLoginServer.setDaemon(true);
+			_restartLoginServer.start();
+		}
+		
 		try
 		{
 			_gameServerListener = new GameServerListener();
@@ -116,7 +133,7 @@ public final class LoginServer
 		return _gameServerListener;
 	}
 	
-	private void loadBanFile()
+	public void loadBanFile()
 	{
 		final File bannedFile = new File("./banned_ip.cfg");
 		if (bannedFile.exists() && bannedFile.isFile())
@@ -170,14 +187,6 @@ public final class LoginServer
 		{
 			LOGGER.warning("IP Bans file (" + bannedFile.getName() + ") is missing or is a directory, skipped.");
 		}
-		
-		if (Config.LOGIN_SERVER_SCHEDULE_RESTART)
-		{
-			LOGGER.info("Scheduled LS restart after " + Config.LOGIN_SERVER_SCHEDULE_RESTART_TIME + " hours");
-			_restartLoginServer = new LoginServerRestart();
-			_restartLoginServer.setDaemon(true);
-			_restartLoginServer.start();
-		}
 	}
 	
 	class LoginServerRestart extends Thread
@@ -212,5 +221,15 @@ public final class LoginServer
 			DatabaseBackup.performBackup();
 		}
 		Runtime.getRuntime().exit(restart ? 2 : 0);
+	}
+	
+	public int getStatus()
+	{
+		return _loginStatus;
+	}
+	
+	public void setStatus(int status)
+	{
+		_loginStatus = status;
 	}
 }

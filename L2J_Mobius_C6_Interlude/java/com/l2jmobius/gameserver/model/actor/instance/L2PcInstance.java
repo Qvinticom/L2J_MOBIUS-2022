@@ -84,6 +84,7 @@ import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.TownManager;
@@ -9050,12 +9051,10 @@ public final class L2PcInstance extends L2Playable
 		
 		if ((_privatestore == STORE_PRIVATE_NONE) && ((getClient() == null) || isInOfflineMode()))
 		{
-			/*
-			 * if(this._originalNameColorOffline!=0) getAppearance().setNameColor(this._originalNameColorOffline); else getAppearance().setNameColor(_accessLevel.getNameColor());
-			 */
 			store();
 			if (Config.OFFLINE_DISCONNECT_FINISHED)
 			{
+				PlayerCountManager.getInstance().decOfflineTradeCount();
 				deleteMe();
 				
 				if (getClient() != null)

@@ -31,6 +31,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -302,6 +303,7 @@ public class OfflineTradersTable
 					player.setOnlineStatus(true, true);
 					player.restoreEffects();
 					player.broadcastUserInfo();
+					PlayerCountManager.getInstance().incOfflineTradeCount();
 					nTraders++;
 				}
 				catch (Exception e)
@@ -455,6 +457,8 @@ public class OfflineTradersTable
 	
 	public static synchronized void removeTrader(int traderObjId)
 	{
+		PlayerCountManager.getInstance().decOfflineTradeCount();
+		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER))

@@ -42,6 +42,7 @@ import com.l2jmobius.gameserver.datatables.OfflineTradeTable;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.instancemanager.AwayManager;
+import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
@@ -560,7 +561,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			getConnection().close(gsp);
 		}
-		
 	}
 	
 	/**
@@ -866,7 +866,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 							}
 							
 							OfflineTradeTable.storeOffliner(player);
-							
+							PlayerCountManager.getInstance().incOfflineTradeCount();
 							return;
 						}
 					}

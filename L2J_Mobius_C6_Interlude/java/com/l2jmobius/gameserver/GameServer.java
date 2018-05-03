@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver;
 
+import java.awt.GraphicsEnvironment;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -140,6 +141,7 @@ import com.l2jmobius.gameserver.thread.LoginServerThread;
 import com.l2jmobius.gameserver.thread.daemons.DeadlockDetector;
 import com.l2jmobius.gameserver.thread.daemons.ItemsAutoDestroy;
 import com.l2jmobius.gameserver.thread.daemons.PcPoint;
+import com.l2jmobius.gameserver.ui.Gui;
 import com.l2jmobius.gameserver.util.DynamicExtension;
 import com.l2jmobius.status.Status;
 
@@ -157,6 +159,12 @@ public class GameServer
 	public static void main(String[] args) throws Exception
 	{
 		Server.serverMode = Server.MODE_GAMESERVER;
+		
+		// GUI
+		if (!GraphicsEnvironment.isHeadless())
+		{
+			new Gui();
+		}
 		
 		// Create log folder
 		final File logFolder = new File(Config.DATAPACK_ROOT, "log");

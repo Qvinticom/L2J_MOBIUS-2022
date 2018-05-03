@@ -35,5 +35,4 @@ public class Disconnection implements Runnable
 	{
 		_activeChar.closeNetConnection();
 	}
-	
 }
