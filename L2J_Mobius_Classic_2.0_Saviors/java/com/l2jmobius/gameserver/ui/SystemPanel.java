@@ -32,6 +32,7 @@ import javax.swing.border.LineBorder;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
+import com.l2jmobius.gameserver.util.Locator;
 
 /**
  * @author Mobius
