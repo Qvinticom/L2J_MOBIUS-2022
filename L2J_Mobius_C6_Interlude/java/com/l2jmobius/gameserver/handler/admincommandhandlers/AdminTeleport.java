@@ -35,6 +35,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
@@ -102,6 +103,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		// Alt+g window (instant move)
 		if (command.equals("admin_instant_move"))
 		{
+			BuilderUtil.sendSysMessage(activeChar, "Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(1);
 		}
 		// Send player to town (alt+g)
@@ -470,6 +472,7 @@ public class AdminTeleport implements IAdminCommandHandler
 					}
 					case "r":
 					{
+						BuilderUtil.sendSysMessage(activeChar, "Instant move ready. Click where you want to go.");
 						activeChar.setTeleMode(2);
 						break;
 					}

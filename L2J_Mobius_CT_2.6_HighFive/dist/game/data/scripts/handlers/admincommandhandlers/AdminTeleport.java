@@ -39,6 +39,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2RaidBossInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
@@ -83,11 +84,12 @@ public class AdminTeleport implements IAdminCommandHandler
 		}
 		if (command.equals("admin_instant_move"))
 		{
-			activeChar.sendMessage("Instant move ready. Click where you want to go.");
+			BuilderUtil.sendSysMessage(activeChar, "Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(1);
 		}
 		if (command.equals("admin_teleto r"))
 		{
+			BuilderUtil.sendSysMessage(activeChar, "Instant move ready. Click where you want to go.");
 			activeChar.setTeleMode(2);
 		}
 		if (command.equals("admin_teleto end"))
