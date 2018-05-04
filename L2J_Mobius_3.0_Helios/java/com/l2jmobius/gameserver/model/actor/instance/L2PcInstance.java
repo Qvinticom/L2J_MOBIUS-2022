@@ -2569,7 +2569,8 @@ public final class L2PcInstance extends L2Playable
 		
 		for (Skill skill : skills)
 		{
-			if (getKnownSkill(skill.getId()) == skill)
+			final Skill oldSkill = getKnownSkill(skill.getId());
+			if (oldSkill == skill)
 			{
 				continue;
 			}
@@ -2583,6 +2584,12 @@ public final class L2PcInstance extends L2Playable
 			if (skill.isToggle() && !skill.isNecessaryToggle() && isAffectedBySkill(skill.getId()))
 			{
 				stopSkillEffects(true, skill.getId());
+			}
+			
+			// Mobius: Keep sublevel on skill level increase.
+			if ((oldSkill != null) && (oldSkill.getSubLevel() > 0) && (skill.getSubLevel() == 0) && (oldSkill.getLevel() < skill.getLevel()))
+			{
+				skill = SkillData.getInstance().getSkill(skill.getId(), skill.getLevel(), oldSkill.getSubLevel());
 			}
 			
 			addSkill(skill, false);
