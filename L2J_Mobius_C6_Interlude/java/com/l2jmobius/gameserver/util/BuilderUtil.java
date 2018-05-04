@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.util;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.clientpackets.Say2;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -37,7 +38,14 @@ public final class BuilderUtil
 	 */
 	public static void sendSysMessage(L2PcInstance player, String message)
 	{
-		player.sendPacket(new CreatureSay(0, Say2.ALL, "SYS", message));
+		if (Config.GM_STARTUP_BUILDER_HIDE)
+		{
+			player.sendPacket(new CreatureSay(0, Say2.ALL, "SYS", message));
+		}
+		else
+		{
+			player.sendMessage(message);
+		}
 	}
 	
 	/**
