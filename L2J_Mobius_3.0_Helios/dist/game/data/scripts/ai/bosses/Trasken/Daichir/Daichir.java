@@ -85,7 +85,7 @@ public class Daichir extends AbstractNpcAI
 				if ((members.size() < Config.TRASKEN_MIN_PLAYERS) || (members.size() > Config.TRASKEN_MAX_PLAYERS))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "30537-4.html"));
+					packet.setHtml(getHtm(player, "30537-4.html"));
 					packet.replace("%min%", Integer.toString(Config.TRASKEN_MIN_PLAYERS));
 					packet.replace("%max%", Integer.toString(Config.TRASKEN_MAX_PLAYERS));
 					player.sendPacket(packet);
@@ -96,7 +96,7 @@ public class Daichir extends AbstractNpcAI
 					if (member.getLevel() < Config.TRASKEN_MIN_PLAYER_LVL)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "30537-5.html"));
+						packet.setHtml(getHtm(player, "30537-5.html"));
 						packet.replace("%minlvl%", Integer.toString(Config.TRASKEN_MIN_PLAYER_LVL));
 						player.sendPacket(packet);
 						return null;

@@ -118,7 +118,7 @@ public class CharacterSelect implements IClientIncomingPacket
 					if ((Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddClient(AntiFeedManager.GAME_ID, client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP))
 					{
 						final NpcHtmlMessage msg = new NpcHtmlMessage();
-						msg.setFile(info.getHtmlPrefix(), "data/html/mods/IPRestriction.htm");
+						msg.setFile(null, "data/html/mods/IPRestriction.htm");
 						msg.replace("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(client, Config.DUALBOX_CHECK_MAX_PLAYERS_PER_IP)));
 						client.sendPacket(msg);
 						return;
@@ -129,7 +129,7 @@ public class CharacterSelect implements IClientIncomingPacket
 						if (info.isGood() && (L2World.getInstance().getAllGoodPlayers().size() >= (L2World.getInstance().getAllEvilPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 						{
 							final NpcHtmlMessage msg = new NpcHtmlMessage();
-							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
 							msg.replace("%more%", Config.FACTION_GOOD_TEAM_NAME);
 							msg.replace("%less%", Config.FACTION_EVIL_TEAM_NAME);
 							client.sendPacket(msg);
@@ -138,7 +138,7 @@ public class CharacterSelect implements IClientIncomingPacket
 						if (info.isEvil() && (L2World.getInstance().getAllEvilPlayers().size() >= (L2World.getInstance().getAllGoodPlayers().size() + Config.FACTION_BALANCE_PLAYER_EXCEED_LIMIT)))
 						{
 							final NpcHtmlMessage msg = new NpcHtmlMessage();
-							msg.setFile(info.getHtmlPrefix(), "data/html/mods/Faction/ExceededOnlineLimit.htm");
+							msg.setFile(null, "data/html/mods/Faction/ExceededOnlineLimit.htm");
 							msg.replace("%more%", Config.FACTION_EVIL_TEAM_NAME);
 							msg.replace("%less%", Config.FACTION_GOOD_TEAM_NAME);
 							client.sendPacket(msg);

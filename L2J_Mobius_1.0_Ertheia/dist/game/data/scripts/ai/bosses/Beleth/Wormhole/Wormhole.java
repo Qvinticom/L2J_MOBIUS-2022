@@ -66,7 +66,7 @@ public final class Wormhole extends AbstractNpcAI
 			if (!player.isInParty())
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
+				packet.setHtml(getHtm(player, "33901-2.html"));
 				packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
 				player.sendPacket(packet);
 				return null;
@@ -83,7 +83,7 @@ public final class Wormhole extends AbstractNpcAI
 			else if ((members.size() < Config.BELETH_MIN_PLAYERS) || (members.size() > Config.BELETH_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-2.html"));
+				packet.setHtml(getHtm(player, "33901-2.html"));
 				packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
 				player.sendPacket(packet);
 			}
@@ -105,7 +105,7 @@ public final class Wormhole extends AbstractNpcAI
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-		packet.setHtml(getHtm(player.getHtmlPrefix(), "33901-1.html"));
+		packet.setHtml(getHtm(player, "33901-1.html"));
 		packet.replace("%min%", Integer.toString(Config.BELETH_MIN_PLAYERS));
 		packet.replace("%max%", Integer.toString(Config.BELETH_MAX_PLAYERS));
 		player.sendPacket(packet);

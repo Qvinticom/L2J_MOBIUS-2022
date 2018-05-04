@@ -227,7 +227,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-		msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/zone_editor.htm");
+		msg.setFile(activeChar, "data/html/admin/zone_editor.htm");
 		msg.replace("%zones%", sb.toString());
 		activeChar.sendPacket(msg);
 	}
@@ -506,7 +506,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	private void buildHtmlWindow(final L2PcInstance activeChar, final int page)
 	{
 		final NpcHtmlMessage msg = new NpcHtmlMessage(0, 1);
-		msg.setFile(activeChar.getHtmlPrefix(), "data/html/admin/zone_editor_create.htm");
+		msg.setFile(activeChar, "data/html/admin/zone_editor_create.htm");
 		final ZoneNodeHolder holder = _zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder());
 		final AtomicInteger position = new AtomicInteger(page * 20);
 		final PageResult result = HtmlUtil.createPage(holder.getNodes(), page, 20, i ->

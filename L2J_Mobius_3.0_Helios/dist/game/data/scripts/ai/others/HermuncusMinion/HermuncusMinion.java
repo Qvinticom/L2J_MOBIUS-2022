@@ -120,7 +120,7 @@ public final class HermuncusMinion extends AbstractNpcAI
 				{
 					sb.append(generateButton(teleportLoc));
 				}
-				htmltext = getHtm(player.getHtmlPrefix(), "HermuncusMinion-01.html").replace("%locations%", sb.toString());
+				htmltext = getHtm(player, "HermuncusMinion-01.html").replace("%locations%", sb.toString());
 			}
 		}
 		else if (event.equals("teleport") && st.hasMoreTokens())

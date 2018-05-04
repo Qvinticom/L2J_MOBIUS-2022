@@ -511,7 +511,7 @@ public class EnterWorld implements IClientIncomingPacket
 		if (showClanNotice)
 		{
 			final NpcHtmlMessage notice = new NpcHtmlMessage();
-			notice.setFile(activeChar.getHtmlPrefix(), "data/html/clanNotice.htm");
+			notice.setFile(activeChar, "data/html/clanNotice.htm");
 			notice.replace("%clan_name%", activeChar.getClan().getName());
 			notice.replace("%notice_text%", activeChar.getClan().getNotice());
 			notice.disableValidation();
@@ -519,7 +519,7 @@ public class EnterWorld implements IClientIncomingPacket
 		}
 		else if (Config.SERVER_NEWS)
 		{
-			final String serverNews = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/servnews.htm");
+			final String serverNews = HtmCache.getInstance().getHtm(activeChar, "data/html/servnews.htm");
 			if (serverNews != null)
 			{
 				client.sendPacket(new NpcHtmlMessage(serverNews));

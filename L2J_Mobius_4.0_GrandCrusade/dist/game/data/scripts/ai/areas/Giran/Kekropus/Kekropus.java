@@ -87,7 +87,7 @@ public final class Kekropus extends AbstractNpcAI
 					if (!player.isInParty())
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "34222-01.html"));
+						packet.setHtml(getHtm(player, "34222-01.html"));
 						packet.replace("%min%", Integer.toString(Config.HELIOS_MIN_PLAYER));
 						packet.replace("%minlvl%", Integer.toString(Config.HELIOS_MIN_PLAYER_LVL));
 						player.sendPacket(packet);
@@ -104,7 +104,7 @@ public final class Kekropus extends AbstractNpcAI
 					if (members.size() < Config.HELIOS_MIN_PLAYER)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "34222-01.html"));
+						packet.setHtml(getHtm(player, "34222-01.html"));
 						packet.replace("%min%", Integer.toString(Config.HELIOS_MIN_PLAYER));
 						packet.replace("%minlvl%", Integer.toString(Config.HELIOS_MIN_PLAYER_LVL));
 						player.sendPacket(packet);
@@ -115,7 +115,7 @@ public final class Kekropus extends AbstractNpcAI
 						if (member.getLevel() < Config.HELIOS_MIN_PLAYER_LVL)
 						{
 							final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-							packet.setHtml(getHtm(player.getHtmlPrefix(), "34222-01.html"));
+							packet.setHtml(getHtm(player, "34222-01.html"));
 							packet.replace("%min%", Integer.toString(Config.HELIOS_MIN_PLAYER));
 							packet.replace("%minlvl%", Integer.toString(Config.HELIOS_MIN_PLAYER_LVL));
 							player.sendPacket(packet);

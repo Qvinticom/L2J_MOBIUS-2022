@@ -83,7 +83,7 @@ public final class Q10351_OwnerOfHall extends Quest
 					addExpAndSp(player, 897850000, 215484);
 					giveItems(player, OCTAVIS_BRACELET, 1);
 					qs.exitQuest(false, true);
-					htmltext = getHtm(player.getHtmlPrefix(), "32892-08.html").replace("%name%", player.getName());
+					htmltext = getHtm(player, "32892-08.html").replace("%name%", player.getName());
 				}
 				break;
 			}

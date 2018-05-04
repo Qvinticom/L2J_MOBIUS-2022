@@ -91,7 +91,7 @@ public class L2DungeonGatekeeperInstance extends L2Npc
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				filename += "necro_no.htm";
-				html.setFile(player.getHtmlPrefix(), filename);
+				html.setFile(player, filename);
 				player.sendPacket(html);
 			}
 			else
@@ -136,7 +136,7 @@ public class L2DungeonGatekeeperInstance extends L2Npc
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 				filename += "cata_no.htm";
-				html.setFile(player.getHtmlPrefix(), filename);
+				html.setFile(player, filename);
 				player.sendPacket(html);
 			}
 			else

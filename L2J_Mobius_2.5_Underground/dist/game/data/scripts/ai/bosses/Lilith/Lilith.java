@@ -518,7 +518,7 @@ public class Lilith extends AbstractNpcAI
 			if (!player.isInParty())
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-02.html"));
+				packet.setHtml(getHtm(player, "31118-02.html"));
 				packet.replace("%min%", Integer.toString(Config.LILITH_MIN_PLAYERS));
 				player.sendPacket(packet);
 				return null;
@@ -535,7 +535,7 @@ public class Lilith extends AbstractNpcAI
 			if ((members.size() < Config.LILITH_MIN_PLAYERS) || (members.size() > Config.LILITH_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-02.html"));
+				packet.setHtml(getHtm(player, "31118-02.html"));
 				packet.replace("%min%", Integer.toString(Config.LILITH_MIN_PLAYERS));
 				player.sendPacket(packet);
 				return null;
@@ -546,7 +546,7 @@ public class Lilith extends AbstractNpcAI
 				if ((member.getLevel() < Config.LILITH_MIN_PLAYER_LVL) || (member.getLevel() > Config.LILITH_MAX_PLAYER_LVL))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "31118-04.html"));
+					packet.setHtml(getHtm(player, "31118-04.html"));
 					packet.replace("%minlvl%", Integer.toString(Config.LILITH_MIN_PLAYER_LVL));
 					packet.replace("%maxlvl%", Integer.toString(Config.LILITH_MAX_PLAYER_LVL));
 					player.sendPacket(packet);

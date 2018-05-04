@@ -80,7 +80,7 @@ public final class AdminInstance implements IAdminCommandHandler
 			case "admin_instances":
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/instances.htm");
+				html.setFile(activeChar, "data/html/admin/instances.htm");
 				html.replace("%instCount%", InstanceManager.getInstance().getInstances().size());
 				html.replace("%tempCount%", InstanceManager.getInstance().getInstanceTemplates().size());
 				activeChar.sendPacket(html);
@@ -204,7 +204,7 @@ public final class AdminInstance implements IAdminCommandHandler
 			final InstanceTemplate template = InstanceManager.getInstance().getInstanceTemplate(templateId);
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			final StringBuilder sb = new StringBuilder();
-			html.setFile(player.getHtmlPrefix(), "data/html/admin/instances_detail.htm");
+			html.setFile(player, "data/html/admin/instances_detail.htm");
 			html.replace("%templateId%", template.getId());
 			html.replace("%templateName%", template.getName());
 			html.replace("%activeWorlds%", template.getWorldCount() + " / " + (template.getMaxWorlds() == -1 ? "Unlimited" : template.getMaxWorlds()));
@@ -245,7 +245,7 @@ public final class AdminInstance implements IAdminCommandHandler
 	private void sendTemplateList(L2PcInstance player, int page, BypassParser parser)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		html.setFile(player.getHtmlPrefix(), "data/html/admin/instances_list.htm");
+		html.setFile(player, "data/html/admin/instances_list.htm");
 		
 		final InstanceManager instManager = InstanceManager.getInstance();
 		final List<InstanceTemplate> templateList = instManager.getInstanceTemplates().stream().sorted(Comparator.comparingLong(InstanceTemplate::getWorldCount).reversed()).filter(template -> !CommonUtil.contains(IGNORED_TEMPLATES, template.getId())).collect(Collectors.toList());

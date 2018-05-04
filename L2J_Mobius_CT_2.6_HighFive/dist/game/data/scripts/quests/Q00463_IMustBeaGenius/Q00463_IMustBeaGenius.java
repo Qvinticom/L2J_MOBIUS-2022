@@ -129,12 +129,12 @@ public class Q00463_IMustBeaGenius extends Quest
 				final int number = getRandom(51) + 550;
 				qs.set("number", String.valueOf(number));
 				qs.set("chance", String.valueOf(getRandom(4)));
-				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%num%", String.valueOf(number));
+				htmltext = getHtm(player, event).replace("%num%", String.valueOf(number));
 				break;
 			}
 			case "32069-05.htm":
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%num%", qs.get("number"));
+				htmltext = getHtm(player, event).replace("%num%", qs.get("number"));
 				break;
 			}
 			case "reward":

@@ -139,9 +139,9 @@ public class DropSearchBoard implements IParseBoardHandler
 	@Override
 	public boolean parseCommunityBoardCommand(String command, L2PcInstance player)
 	{
-		final String navigation = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), NAVIGATION_PATH);
+		final String navigation = HtmCache.getInstance().getHtm(player, NAVIGATION_PATH);
 		String[] params = command.split(" ");
-		String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/CommunityBoard/Custom/dropsearch/main.html");
+		String html = HtmCache.getInstance().getHtm(player, "data/html/CommunityBoard/Custom/dropsearch/main.html");
 		switch (params[0])
 		{
 			case "_bbs_search_item":

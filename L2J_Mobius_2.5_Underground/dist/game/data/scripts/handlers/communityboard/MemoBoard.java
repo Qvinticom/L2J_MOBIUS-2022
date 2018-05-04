@@ -44,7 +44,7 @@ public class MemoBoard implements IWriteBoardHandler
 	{
 		CommunityBoardHandler.getInstance().addBypass(activeChar, "Memo Command", command);
 		
-		final String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/memo.html");
+		final String html = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/memo.html");
 		CommunityBoardHandler.separateAndSend(html, activeChar);
 		return true;
 	}

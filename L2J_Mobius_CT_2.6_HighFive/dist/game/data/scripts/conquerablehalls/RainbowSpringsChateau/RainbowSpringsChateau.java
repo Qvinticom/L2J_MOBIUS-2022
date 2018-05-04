@@ -304,7 +304,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		if (npcId == MESSENGER)
 		{
 			final String main = (_rainbow.getOwnerId() > 0) ? "messenger_yetti001.htm" : "messenger_yetti001a.htm";
-			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/conquerablehalls/RainbowSpringsChateau/" + main);
+			html = HtmCache.getInstance().getHtm(player, "data/scripts/conquerablehalls/RainbowSpringsChateau/" + main);
 			html = html.replace("%time%", _registrationEnds);
 			if (_rainbow.getOwnerId() > 0)
 			{

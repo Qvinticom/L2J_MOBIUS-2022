@@ -50,7 +50,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		if (currentCommand.startsWith("menu"))
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player.getHtmlPrefix(), getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -65,7 +65,7 @@ public class L2SchemeBufferInstance extends L2Npc
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player.getHtmlPrefix(), getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -81,7 +81,7 @@ public class L2SchemeBufferInstance extends L2Npc
 			}
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-			html.setFile(player.getHtmlPrefix(), getHtmlPath(getId(), 0));
+			html.setFile(player, getHtmlPath(getId(), 0));
 			html.replace("%objectId%", getObjectId());
 			player.sendPacket(html);
 		}
@@ -250,7 +250,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), getHtmlPath(getId(), 1));
+		html.setFile(player, getHtmlPath(getId(), 1));
 		html.replace("%schemes%", sb.toString());
 		html.replace("%max_schemes%", Config.BUFFER_MAX_SCHEMES);
 		html.replace("%objectId%", getObjectId());
@@ -269,7 +269,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		final List<Integer> schemeSkills = SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName);
 		
-		html.setFile(player.getHtmlPrefix(), getHtmlPath(getId(), 2));
+		html.setFile(player, getHtmlPath(getId(), 2));
 		html.replace("%schemename%", schemeName);
 		html.replace("%count%", schemeSkills.size() + " / " + player.getStat().getMaxBuffCount());
 		html.replace("%typesframe%", getTypesFrame(groupType, schemeName));

@@ -292,7 +292,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		boolean isPlayerWin = false;
 		boolean isNpcWin = false;
 		String htmltext;
-		final String table = getHtm(player.getHtmlPrefix(), "table.html");
+		final String table = getHtm(player, "table.html");
 		
 		if (isPlayerTurn)
 		{
@@ -316,25 +316,25 @@ public class Q00663_SeductiveWhispers extends Quest
 				}
 				
 				isPlayerWin = true;
-				htmltext = getHtm(player.getHtmlPrefix(), isPractice ? "30846-07.html" : "30846-18.html");
+				htmltext = getHtm(player, isPractice ? "30846-07.html" : "30846-18.html");
 				htmltext = htmltext.replace("%table%", table);
 				htmltext = htmltext.replaceAll("%win_count%", "" + winCount);
 			}
 			else
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), isPractice ? "30846-22.html" : "30846-16.html");
+				htmltext = getHtm(player, isPractice ? "30846-22.html" : "30846-16.html");
 				htmltext = htmltext.replace("%table%", table);
 			}
 		}
 		else if ((playerCard != null) && (npcCard != null) && isWinner(playerCard, npcCard, false))
 		{
-			htmltext = getHtm(player.getHtmlPrefix(), isPractice ? "30846-24.html" : "30846-21.html");
+			htmltext = getHtm(player, isPractice ? "30846-24.html" : "30846-21.html");
 			htmltext = htmltext.replace("%table%", table);
 			isNpcWin = true;
 		}
 		else
 		{
-			htmltext = getHtm(player.getHtmlPrefix(), isPractice ? "30846-23.html" : "30846-17.html");
+			htmltext = getHtm(player, isPractice ? "30846-23.html" : "30846-17.html");
 			htmltext = htmltext.replace("%table%", table);
 		}
 		

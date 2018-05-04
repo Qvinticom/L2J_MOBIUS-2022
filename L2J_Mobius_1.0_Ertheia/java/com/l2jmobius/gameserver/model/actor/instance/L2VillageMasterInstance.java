@@ -244,11 +244,11 @@ public class L2VillageMasterInstance extends L2NpcInstance
 				if (clan.getNewLeaderId() == 0)
 				{
 					clan.setNewLeaderId(member.getObjectId(), true);
-					msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-success.htm");
+					msg.setFile(player, "data/scripts/village_master/Clan/9000-07-success.htm");
 				}
 				else
 				{
-					msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-in-progress.htm");
+					msg.setFile(player, "data/scripts/village_master/Clan/9000-07-in-progress.htm");
 				}
 				player.sendPacket(msg);
 			}
@@ -266,7 +266,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			if (clan.getNewLeaderId() != 0)
 			{
 				clan.setNewLeaderId(0, true);
-				msg.setFile(player.getHtmlPrefix(), "data/scripts/village_master/Clan/9000-07-canceled.htm");
+				msg.setFile(player, "data/scripts/village_master/Clan/9000-07-canceled.htm");
 			}
 			else
 			{
@@ -581,7 +581,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		if (!player.isClanLeader())
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/NotClanLeader.htm");
+			html.setFile(player, "data/html/villagemaster/NotClanLeader.htm");
 			player.sendPacket(html);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -607,7 +607,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			else
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage();
-				html.setFile(player.getHtmlPrefix(), "data/html/villagemaster/NoMoreSkills.htm");
+				html.setFile(player, "data/html/villagemaster/NoMoreSkills.htm");
 				player.sendPacket(html);
 			}
 		}

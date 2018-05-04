@@ -140,7 +140,7 @@ public class NpcViewMod implements IBypassHandler
 	public static void sendNpcView(L2PcInstance activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "data/html/mods/NpcView/Info.htm");
+		html.setFile(activeChar, "data/html/mods/NpcView/Info.htm");
 		html.replace("%name%", npc.getName());
 		html.replace("%hpGauge%", HtmlUtil.getHpGauge(250, (long) npc.getCurrentHp(), npc.getMaxHp(), false));
 		html.replace("%mpGauge%", HtmlUtil.getMpGauge(250, (long) npc.getCurrentMp(), npc.getMaxMp(), false));
@@ -434,7 +434,7 @@ public class NpcViewMod implements IBypassHandler
 		bodySb.append("</td>");
 		bodySb.append("</tr></table>");
 		
-		String html = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/mods/NpcView/DropList.htm");
+		String html = HtmCache.getInstance().getHtm(activeChar, "data/html/mods/NpcView/DropList.htm");
 		if (html == null)
 		{
 			LOGGER.warning(NpcViewMod.class.getSimpleName() + ": The html file data/html/mods/NpcView/DropList.htm could not be found.");

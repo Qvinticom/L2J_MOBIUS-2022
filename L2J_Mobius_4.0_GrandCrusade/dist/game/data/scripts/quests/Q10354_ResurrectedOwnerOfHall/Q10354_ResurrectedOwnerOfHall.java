@@ -82,7 +82,7 @@ public final class Q10354_ResurrectedOwnerOfHall extends Quest
 					addExpAndSp(player, 897850000, 215484);
 					giveItems(player, OCTAVIS_SOUL_BOTTLE, 1);
 					qs.exitQuest(false, true);
-					htmltext = getHtm(player.getHtmlPrefix(), "32892-07.html").replace("%name%", player.getName());
+					htmltext = getHtm(player, "32892-07.html").replace("%name%", player.getName());
 				}
 				break;
 			}

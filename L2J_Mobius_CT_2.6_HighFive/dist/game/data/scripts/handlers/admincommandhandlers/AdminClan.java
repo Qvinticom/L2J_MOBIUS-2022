@@ -69,7 +69,7 @@ public class AdminClan implements IAdminCommandHandler
 				}
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/claninfo.htm"));
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/claninfo.htm"));
 				html.replace("%clan_name%", clan.getName());
 				html.replace("%clan_leader%", clan.getLeaderName());
 				html.replace("%clan_level%", String.valueOf(clan.getLevel()));
@@ -116,7 +116,7 @@ public class AdminClan implements IAdminCommandHandler
 			case "admin_clan_show_pending":
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/clanchanges.htm"));
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/clanchanges.htm"));
 				final StringBuilder sb = new StringBuilder();
 				for (L2Clan clan : ClanTable.getInstance().getClans())
 				{

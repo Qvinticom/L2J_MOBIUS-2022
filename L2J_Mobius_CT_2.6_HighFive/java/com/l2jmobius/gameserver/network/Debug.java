@@ -47,7 +47,7 @@ public class Debug
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(attacker.getActingPlayer().getHtmlPrefix(), "data/html/admin/skilldebug.htm");
+		msg.setFile(attacker.getActingPlayer(), "data/html/admin/skilldebug.htm");
 		msg.replace("%patk%", target.getPAtk(target));
 		msg.replace("%matk%", target.getMAtk(target, skill));
 		msg.replace("%pdef%", target.getPDef(target));
@@ -86,7 +86,7 @@ public class Debug
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(player.getHtmlPrefix(), "data/html/admin/itemdebug.htm");
+		msg.setFile(player, "data/html/admin/itemdebug.htm");
 		msg.replace("%itemName%", item.getName());
 		msg.replace("%itemSlot%", getBodyPart(item.getItem().getBodyPart()));
 		msg.replace("%itemType%", item.isArmor() ? "Armor" : item.isWeapon() ? "Weapon" : "Etc");

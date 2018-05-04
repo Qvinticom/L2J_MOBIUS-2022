@@ -106,7 +106,7 @@ public class AdminShutdown implements IAdminCommandHandler
 		final Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.HOUR_OF_DAY, h);
 		cal.set(Calendar.MINUTE, m);
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/shutdown.htm");
+		adminReply.setFile(activeChar, "data/html/admin/shutdown.htm");
 		adminReply.replace("%count%", String.valueOf(L2World.getInstance().getPlayers().size()));
 		adminReply.replace("%used%", String.valueOf(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()));
 		adminReply.replace("%time%", format.format(cal.getTime()));

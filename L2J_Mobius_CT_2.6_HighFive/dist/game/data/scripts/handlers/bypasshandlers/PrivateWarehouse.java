@@ -60,7 +60,7 @@ public class PrivateWarehouse implements IBypassHandler
 				if (Config.ENABLE_WAREHOUSESORTING_PRIVATE)
 				{
 					final NpcHtmlMessage msg = new NpcHtmlMessage(((L2Npc) target).getObjectId());
-					msg.setFile(activeChar.getHtmlPrefix(), "data/html/mods/WhSortedP.htm");
+					msg.setFile(activeChar, "data/html/mods/WhSortedP.htm");
 					msg.replace("%objectId%", String.valueOf(((L2Npc) target).getObjectId()));
 					activeChar.sendPacket(msg);
 				}

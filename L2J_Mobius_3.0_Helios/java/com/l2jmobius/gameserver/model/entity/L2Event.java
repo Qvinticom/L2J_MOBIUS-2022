@@ -131,11 +131,11 @@ public class L2Event
 				
 				if (_registeredPlayers.contains(player))
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participating.htm");
+					htmContent = HtmCache.getInstance().getHtm(player, "data/html/mods/EventEngine/Participating.htm");
 				}
 				else
 				{
-					htmContent = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/mods/EventEngine/Participation.htm");
+					htmContent = HtmCache.getInstance().getHtm(player, "data/html/mods/EventEngine/Participation.htm");
 				}
 				
 				if (htmContent != null)

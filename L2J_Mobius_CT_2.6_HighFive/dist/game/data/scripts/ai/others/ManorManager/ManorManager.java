@@ -99,7 +99,7 @@ public final class ManorManager extends AbstractNpcAI
 			}
 			return "manager.htm";
 		}
-		return getHtm(player.getHtmlPrefix(), "data/html/npcdefault.htm");
+		return getHtm(player, "data/html/npcdefault.htm");
 	}
 	
 	// @formatter:off

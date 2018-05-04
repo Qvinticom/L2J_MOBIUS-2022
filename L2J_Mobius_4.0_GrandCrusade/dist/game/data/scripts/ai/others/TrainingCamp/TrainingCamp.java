@@ -141,7 +141,7 @@ public final class TrainingCamp extends AbstractNpcAI
 						{
 							final long expGained = (long) ((Config.TRAINING_CAMP_EXP_MULTIPLIER * ((trainingTime * (ExperienceData.getInstance().getExpForLevel(holder.getLevel()) * ExperienceData.getInstance().getTrainingRate(holder.getLevel()))) / TrainingHolder.getTrainingDivider())) / 60);
 							final long spGained = (long) (Config.TRAINING_CAMP_SP_MULTIPLIER * (expGained / 250L));
-							String html = getHtm(player.getHtmlPrefix(), "4378-04.htm");
+							String html = getHtm(player, "4378-04.htm");
 							html = html.replace("%training_level%", String.valueOf(holder.getLevel()));
 							html = html.replace("%training_time%", String.valueOf(trainingTime));
 							html = html.replace("%training_exp%", String.valueOf(expGained));

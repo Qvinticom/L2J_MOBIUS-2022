@@ -179,7 +179,7 @@ public final class TeleportHolder
 		
 		// Send html message
 		final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
-		msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/teleports.htm");
+		msg.setFile(player, "data/html/teleporter/teleports.htm");
 		msg.replace("%locations%", sb_f.toString());
 		player.sendPacket(msg);
 	}
@@ -221,7 +221,7 @@ public final class TeleportHolder
 			if (npc.getCastle().getSiege().isInProgress())
 			{
 				final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
-				msg.setFile(player.getHtmlPrefix(), "data/html/teleporter/castleteleporter-busy.htm");
+				msg.setFile(player, "data/html/teleporter/castleteleporter-busy.htm");
 				player.sendPacket(msg);
 				return;
 			}

@@ -107,10 +107,10 @@ public class Q10407_LetsGoFishing extends Quest
 				if (!hasQuestItems(player, PRACTICE_FISHING_ROD))
 				{
 					giveItems(player, PRACTICE_FISHING_ROD, 1);
-					htmltext = getHtm(player.getHtmlPrefix(), "GiveRod.html").replace("%name%", npc.getName());
+					htmltext = getHtm(player, "GiveRod.html").replace("%name%", npc.getName());
 					break;
 				}
-				htmltext = getHtm(player.getHtmlPrefix(), "noNeed.html").replace("%name%", npc.getName());
+				htmltext = getHtm(player, "noNeed.html").replace("%name%", npc.getName());
 				break;
 			}
 			case "give_bait":
@@ -118,10 +118,10 @@ public class Q10407_LetsGoFishing extends Quest
 				if (!hasQuestItems(player, PRACTICE_BAIT))
 				{
 					giveItems(player, PRACTICE_BAIT, 20);
-					htmltext = getHtm(player.getHtmlPrefix(), "GiveBait.html").replace("%name%", npc.getName());
+					htmltext = getHtm(player, "GiveBait.html").replace("%name%", npc.getName());
 					break;
 				}
-				htmltext = getHtm(player.getHtmlPrefix(), "noNeed.html").replace("%name%", npc.getName());
+				htmltext = getHtm(player, "noNeed.html").replace("%name%", npc.getName());
 				break;
 			}
 			case "31572-03.htm":
@@ -172,15 +172,15 @@ public class Q10407_LetsGoFishing extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "31572-12.html").replace("%name%", npc.getName());
+					htmltext = getHtm(player, "31572-12.html").replace("%name%", npc.getName());
 				}
 				else if (qs.isCond(2))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "31572-07.html").replace("%name%", npc.getName());
+					htmltext = getHtm(player, "31572-07.html").replace("%name%", npc.getName());
 				}
 				else if (qs.isCond(3))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "31572-13.html").replace("%name%", npc.getName());
+					htmltext = getHtm(player, "31572-13.html").replace("%name%", npc.getName());
 				}
 				break;
 			}

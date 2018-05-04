@@ -120,12 +120,12 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 						case 2:
 						case 3: // First 3 weeks of month is 1v1 + 1v1 class matches
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "OlyManager-joinMatch.html");
+							htmltext = getHtm(player, "OlyManager-joinMatch.html");
 							break;
 						}
 						default:// Rest is only 1v1 class matches
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "OlyManager-joinMatchClass.html");
+							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
 							break;
 						}
 					}
@@ -279,7 +279,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				final int classId = Integer.parseInt(event.replace("rank_", ""));
 				final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
-				htmltext = getHtm(player.getHtmlPrefix(), "OlyManager-rankDetail.html");
+				htmltext = getHtm(player, "OlyManager-rankDetail.html");
 				
 				int index = 1;
 				for (String name : names)

@@ -41,6 +41,16 @@ public final class BuilderUtil
 	}
 	
 	/**
+	 * Sends builder html message to the player.
+	 * @param player
+	 * @param message
+	 */
+	public static void sendHtmlMessage(L2PcInstance player, String message)
+	{
+		player.sendPacket(new CreatureSay(0, ChatType.GENERAL, "HTML", message));
+	}
+	
+	/**
 	 * Changes player's hiding state.
 	 * @param player
 	 * @param hide

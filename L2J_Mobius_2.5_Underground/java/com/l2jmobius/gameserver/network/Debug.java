@@ -50,7 +50,7 @@ public class Debug
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(creature.getActingPlayer().getHtmlPrefix(), "data/html/admin/statsdebug.htm");
+		msg.setFile(creature.getActingPlayer(), "data/html/admin/statsdebug.htm");
 		msg.replace("%stat%", String.valueOf(stat));
 		msg.replace("%mulValue%", Util.formatDouble(creature.getStat().getMul(stat), "#.##"));
 		msg.replace("%addValue%", creature.getStat().getAdd(stat));
@@ -77,7 +77,7 @@ public class Debug
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(attacker.getActingPlayer().getHtmlPrefix(), "data/html/admin/skilldebug.htm");
+		msg.setFile(attacker.getActingPlayer(), "data/html/admin/skilldebug.htm");
 		msg.replace("%patk%", target.getPAtk());
 		msg.replace("%matk%", target.getMAtk());
 		msg.replace("%pdef%", target.getPDef());
@@ -116,7 +116,7 @@ public class Debug
 		}
 		
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		msg.setFile(player.getHtmlPrefix(), "data/html/admin/itemdebug.htm");
+		msg.setFile(player, "data/html/admin/itemdebug.htm");
 		msg.replace("%itemName%", item.getName());
 		msg.replace("%itemSlot%", getBodyPart(item.getItem().getBodyPart()));
 		msg.replace("%itemType%", item.isArmor() ? "Armor" : item.isWeapon() ? "Weapon" : "Etc");

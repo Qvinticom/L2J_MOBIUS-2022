@@ -214,12 +214,12 @@ public final class Q00454_CompletelyLost extends Quest
 						{
 							qs.startQuest();
 							qs.setMemoState(1);
-							htmltext = getHtm(player.getHtmlPrefix(), "32738-04a.htm");
+							htmltext = getHtm(player, "32738-04a.htm");
 							htmltext = htmltext.replaceAll("leader", leader.getName());
 						}
 						else
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "32738-01b.htm");
+							htmltext = getHtm(player, "32738-01b.htm");
 							htmltext = htmltext.replaceAll("leader", leader.getName());
 						}
 					}
@@ -476,13 +476,13 @@ public final class Q00454_CompletelyLost extends Quest
 						final L2PcInstance leader = npc.getVariables().getObject("leader", L2PcInstance.class);
 						if (leader.isInParty() && leader.getParty().containsPlayer(player))
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "32738-01a.htm");
+							htmltext = getHtm(player, "32738-01a.htm");
 							htmltext = htmltext.replaceAll("leader", leader.getName());
 							htmltext = htmltext.replaceAll("name", player.getName());
 						}
 						else
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "32738-01b.htm");
+							htmltext = getHtm(player, "32738-01b.htm");
 							htmltext = htmltext.replaceAll("leader", leader.getName());
 						}
 					}

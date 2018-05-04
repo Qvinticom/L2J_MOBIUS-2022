@@ -192,7 +192,7 @@ public final class Q00386_StolenDignity extends Quest
 				case 18:
 				{
 					selectBingoNumber(qs, (ask - 10) + 1);
-					return fillBoard(player, qs, getHtm(player.getHtmlPrefix(), "30843-13.html"));
+					return fillBoard(player, qs, getHtm(player, "30843-13.html"));
 				}
 				case 19:
 				{
@@ -282,38 +282,38 @@ public final class Q00386_StolenDignity extends Quest
 			
 			if (i3 == 2)
 			{
-				html = getHtm(player.getHtmlPrefix(), "30843-14.html");
+				html = getHtm(player, "30843-14.html");
 			}
 			else if (i3 == 3)
 			{
-				html = getHtm(player.getHtmlPrefix(), "30843-16.html");
+				html = getHtm(player, "30843-16.html");
 			}
 			else if (i3 == 4)
 			{
-				html = getHtm(player.getHtmlPrefix(), "30843-18.html");
+				html = getHtm(player, "30843-18.html");
 			}
 			else if (i3 == 5)
 			{
-				html = getHtm(player.getHtmlPrefix(), "30843-20.html");
+				html = getHtm(player, "30843-20.html");
 			}
 			return fillBoard(player, qs, html);
 		}
 		i3 = getBingoSelectCount(qs);
 		if (i3 == 1)
 		{
-			html = getHtm(player.getHtmlPrefix(), "30843-15.html");
+			html = getHtm(player, "30843-15.html");
 		}
 		else if (i3 == 2)
 		{
-			html = getHtm(player.getHtmlPrefix(), "30843-17.html");
+			html = getHtm(player, "30843-17.html");
 		}
 		else if (i3 == 3)
 		{
-			html = getHtm(player.getHtmlPrefix(), "30843-19.html");
+			html = getHtm(player, "30843-19.html");
 		}
 		else if (i3 == 4)
 		{
-			html = getHtm(player.getHtmlPrefix(), "30843-21.html");
+			html = getHtm(player, "30843-21.html");
 		}
 		return fillBoard(player, qs, html);
 	}
@@ -356,20 +356,20 @@ public final class Q00386_StolenDignity extends Quest
 			if ((i3 == 3) && (getBingoSelectCount(qs) == 6))
 			{
 				reward(player, qs, 4);
-				html = getHtm(player.getHtmlPrefix(), "30843-22.html");
+				html = getHtm(player, "30843-22.html");
 			}
 			else if ((i3 == 0) && (getBingoSelectCount(qs) == 6))
 			{
 				reward(player, qs, 10);
-				html = getHtm(player.getHtmlPrefix(), "30843-24.html");
+				html = getHtm(player, "30843-24.html");
 			}
 			else
 			{
-				html = getHtm(player.getHtmlPrefix(), "30843-23.html");
+				html = getHtm(player, "30843-23.html");
 			}
 			return colorBoard(player, qs, html);
 		}
-		return fillBoard(player, qs, getHtm(player.getHtmlPrefix(), "30843-25.html"));
+		return fillBoard(player, qs, getHtm(player, "30843-25.html"));
 	}
 	
 	private void reward(L2PcInstance player, QuestState qs, int count)

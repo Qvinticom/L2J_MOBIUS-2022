@@ -45,7 +45,7 @@ public class Link implements IBypassHandler
 			return false;
 		}
 		
-		final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/" + htmlPath);
+		final String content = HtmCache.getInstance().getHtm(activeChar, "data/html/" + htmlPath);
 		final NpcHtmlMessage html = new NpcHtmlMessage(target != null ? target.getObjectId() : 0);
 		html.setHtml(content.replace("%objectId%", String.valueOf(target != null ? target.getObjectId() : 0)));
 		activeChar.sendPacket(html);

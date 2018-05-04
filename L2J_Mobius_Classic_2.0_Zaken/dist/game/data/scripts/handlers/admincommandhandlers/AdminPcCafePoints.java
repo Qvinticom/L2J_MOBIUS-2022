@@ -191,7 +191,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 		final L2PcInstance target = getTarget(activeChar);
 		final int points = target.getPcCafePoints();
-		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/pccafe.htm"));
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/pccafe.htm"));
 		html.replace("%points%", Util.formatAdena(points));
 		html.replace("%targetName%", target.getName());
 		activeChar.sendPacket(html);

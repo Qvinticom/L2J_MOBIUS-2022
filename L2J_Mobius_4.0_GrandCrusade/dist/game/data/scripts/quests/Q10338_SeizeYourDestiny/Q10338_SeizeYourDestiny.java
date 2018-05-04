@@ -156,7 +156,7 @@ public final class Q10338_SeizeYourDestiny extends Quest
 				else if (player.getLevel() > 84)
 				{
 					// htmltext = "33477-01.htm";
-					player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), getHtm(player.getHtmlPrefix(), "33477-01.htm")));
+					player.sendPacket(new NpcHtmlMessage(npc.getObjectId(), getHtm(player, "33477-01.htm")));
 					htmltext = null;
 				}
 				else

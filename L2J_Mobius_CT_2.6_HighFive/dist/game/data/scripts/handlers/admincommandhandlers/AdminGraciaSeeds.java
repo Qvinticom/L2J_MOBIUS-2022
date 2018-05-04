@@ -67,7 +67,7 @@ public class AdminGraciaSeeds implements IAdminCommandHandler
 	private void showMenu(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/graciaseeds.htm");
+		html.setFile(activeChar, "data/html/admin/graciaseeds.htm");
 		// Seed of destruction
 		html.replace("%sodstage%", String.valueOf(SoDManager.getInstance().getSoDState()));
 		html.replace("%sodtiatkill%", String.valueOf(SoDManager.getInstance().getSoDTiatKilled()));

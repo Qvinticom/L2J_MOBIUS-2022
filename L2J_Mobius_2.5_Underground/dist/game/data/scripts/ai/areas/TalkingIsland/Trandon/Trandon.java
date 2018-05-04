@@ -118,7 +118,7 @@ public final class Trandon extends AbstractNpcAI
 				final int level = SUB_SKILL_LEVELS[index];
 				if (player.getLevel() < level)
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "33490-16.html").replace("%level%", String.valueOf(level));
+					htmltext = getHtm(player, "33490-16.html").replace("%level%", String.valueOf(level));
 				}
 				else if (player.getVariables().hasVariable(getSubSkillVariableName(player, level)))
 				{
@@ -126,7 +126,7 @@ public final class Trandon extends AbstractNpcAI
 				}
 				else
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "33490-18.html");
+					htmltext = getHtm(player, "33490-18.html");
 					htmltext = htmltext.replace("%level%", String.valueOf(level));
 					htmltext = htmltext.replace("%index%", String.valueOf(index));
 				}
@@ -242,17 +242,17 @@ public final class Trandon extends AbstractNpcAI
 				final PlayerVariables vars = player.getVariables();
 				if (vars.hasVariable(getDualSkillVariableName(level)))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "33490-27.html");
+					htmltext = getHtm(player, "33490-27.html");
 				}
 				else if ((player.getLevel() < level) || (player.getStat().getBaseLevel() < level))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "33490-28.html");
+					htmltext = getHtm(player, "33490-28.html");
 				}
 				else
 				{
 					vars.set(getDualSkillVariableName(level), true);
 					giveItems(player, DUAL_CERTIFICATE, 1);
-					htmltext = getHtm(player.getHtmlPrefix(), "33490-29.html");
+					htmltext = getHtm(player, "33490-29.html");
 				}
 				htmltext = htmltext.replace("%level%", String.valueOf(level));
 				break;

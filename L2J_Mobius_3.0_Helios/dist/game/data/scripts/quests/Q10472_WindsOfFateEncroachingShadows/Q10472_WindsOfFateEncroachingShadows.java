@@ -160,7 +160,7 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 			}
 			case "31092-02.html": // Black Marketeer Mammon
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), event).replace("%playerName%", player.getName());
+				htmltext = getHtm(player, event).replace("%playerName%", player.getName());
 				break;
 			}
 			case "31092-03.html":
@@ -448,7 +448,7 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 		{
 			if (qs.isCond(18))
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), "33933-01.html");
+				htmltext = getHtm(player, "33933-01.html");
 				htmltext = htmltext.replace("%playerName%", player.getName());
 			}
 			else if (qs.isCond(19))
@@ -460,7 +460,7 @@ public final class Q10472_WindsOfFateEncroachingShadows extends Quest
 		{
 			if (qs.isStarted() && qs.isCond(19))
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), "33491-01.html");
+				htmltext = getHtm(player, "33491-01.html");
 				htmltext = htmltext.replace("%playerName%", player.getName());
 			}
 			else if (qs.isCompleted())

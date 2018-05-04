@@ -40,7 +40,7 @@ public class ExPCCafeRequestOpenWindowWithoutNPC implements IClientIncomingPacke
 		if ((activeChar != null) && Config.PC_CAFE_ENABLED)
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(activeChar.getHtmlPrefix(), "data/html/pccafe.htm");
+			html.setFile(activeChar, "data/html/pccafe.htm");
 			activeChar.sendPacket(html);
 		}
 	}

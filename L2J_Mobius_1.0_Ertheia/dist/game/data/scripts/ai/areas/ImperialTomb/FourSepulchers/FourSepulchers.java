@@ -279,7 +279,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 					else
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player.getHtmlPrefix(), "data/scripts/ai/areas/ImperialTomb/FourSepulchers/Gatekeeper-no.html");
+						html.setFile(player, "data/scripts/ai/areas/ImperialTomb/FourSepulchers/Gatekeeper-no.html");
 						html.replace("%npcname%", npc.getName());
 						player.sendPacket(html);
 					}
@@ -668,7 +668,7 @@ public final class FourSepulchers extends AbstractNpcAI implements IGameXmlReade
 	private void showHtmlFile(L2PcInstance player, String file, L2Npc npc, L2PcInstance member)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(player.getHtmlPrefix(), "data/scripts/ai/areas/ImperialTomb/FourSepulchers/" + file);
+		html.setFile(player, "data/scripts/ai/areas/ImperialTomb/FourSepulchers/" + file);
 		if (member != null)
 		{
 			html.replace("%member%", member.getName());

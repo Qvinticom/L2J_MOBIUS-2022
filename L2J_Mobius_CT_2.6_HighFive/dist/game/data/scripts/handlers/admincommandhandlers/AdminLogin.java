@@ -166,7 +166,7 @@ public class AdminLogin implements IAdminCommandHandler
 	private void showMainPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
-		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/login.htm");
+		html.setFile(activeChar, "data/html/admin/login.htm");
 		html.replace("%server_name%", LoginServerThread.getInstance().getServerName());
 		html.replace("%status%", LoginServerThread.getInstance().getStatusString());
 		html.replace("%clock%", getServerTypeName(Config.SERVER_LIST_TYPE));

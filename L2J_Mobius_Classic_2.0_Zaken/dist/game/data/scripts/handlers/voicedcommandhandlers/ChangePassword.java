@@ -95,7 +95,7 @@ public class ChangePassword implements IVoicedCommandHandler
 		else
 		{
 			// showHTML(activeChar);
-			String html = HtmCache.getInstance().getHtm("en", "data/html/mods/ChangePassword.htm");
+			String html = HtmCache.getInstance().getHtm(null, "data/html/mods/ChangePassword.htm");
 			if (html == null)
 			{
 				html = "<html><body><br><br><center><font color=LEVEL>404:</font> File Not Found</center></body></html>";

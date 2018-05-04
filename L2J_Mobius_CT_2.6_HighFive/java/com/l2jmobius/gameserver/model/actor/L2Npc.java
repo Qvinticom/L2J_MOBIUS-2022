@@ -702,7 +702,7 @@ public class L2Npc extends L2Character
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/npcbusy.htm");
+				html.setFile(player, "data/html/npcbusy.htm");
 				html.replace("%busymessage%", getBusyMessage());
 				html.replace("%npcname%", getName());
 				html.replace("%playername%", player.getName());
@@ -861,7 +861,7 @@ public class L2Npc extends L2Character
 	 */
 	private boolean showPkDenyChatWindow(L2PcInstance player, String type)
 	{
-		final String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/" + type + "/" + getId() + "-pk.htm");
+		final String html = HtmCache.getInstance().getHtm(player, "data/html/" + type + "/" + getId() + "-pk.htm");
 		if (html != null)
 		{
 			insertObjectIdAndShowChatWindow(player, html);
@@ -1129,7 +1129,7 @@ public class L2Npc extends L2Character
 		
 		// Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		
 		if (this instanceof L2MerchantInstance)
 		{
@@ -1157,7 +1157,7 @@ public class L2Npc extends L2Character
 	{
 		// Send a Server->Client NpcHtmlMessage containing the text of the L2NpcInstance to the L2PcInstance
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		player.sendPacket(html);
 		
@@ -1515,15 +1515,15 @@ public class L2Npc extends L2Character
 		
 		if (this instanceof L2WarehouseInstance)
 		{
-			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/warehouse/" + npcId + "-noteach.htm");
+			html = HtmCache.getInstance().getHtm(player, "data/html/warehouse/" + npcId + "-noteach.htm");
 		}
 		else if (this instanceof L2TrainerInstance)
 		{
-			html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/trainer/" + npcId + "-noteach.htm");
+			html = HtmCache.getInstance().getHtm(player, "data/html/trainer/" + npcId + "-noteach.htm");
 			// Trainer Healer?
 			if (html == null)
 			{
-				html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/scripts/ai/npc/Trainers/HealerTrainer/" + npcId + "-noteach.html");
+				html = HtmCache.getInstance().getHtm(player, "data/scripts/ai/npc/Trainers/HealerTrainer/" + npcId + "-noteach.html");
 			}
 		}
 		

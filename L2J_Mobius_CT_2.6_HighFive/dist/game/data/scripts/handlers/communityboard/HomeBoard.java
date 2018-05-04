@@ -118,13 +118,13 @@ public final class HomeBoard implements IParseBoardHandler
 		}
 		
 		String returnHtml = null;
-		final String navigation = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), NAVIGATION_PATH);
+		final String navigation = HtmCache.getInstance().getHtm(activeChar, NAVIGATION_PATH);
 		if (command.equals("_bbshome") || command.equals("_bbstop"))
 		{
 			final String customPath = Config.CUSTOM_CB_ENABLED ? "Custom/" : "";
 			CommunityBoardHandler.getInstance().addBypass(activeChar, "Home", command);
 			
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + "home.html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + "home.html");
 			if (!Config.CUSTOM_CB_ENABLED)
 			{
 				returnHtml = returnHtml.replaceAll("%fav_count%", Integer.toString(getFavoriteCount(activeChar)));
@@ -138,7 +138,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String path = command.replace("_bbstop;", "");
 			if ((path.length() > 0) && path.endsWith(".html"))
 			{
-				returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/" + customPath + path);
+				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/" + customPath + path);
 			}
 		}
 		else if (command.startsWith("_bbsmultisell"))
@@ -147,7 +147,7 @@ public final class HomeBoard implements IParseBoardHandler
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, false);
 		}
 		else if (command.startsWith("_bbsexcmultisell"))
@@ -156,13 +156,13 @@ public final class HomeBoard implements IParseBoardHandler
 			final String[] buypassOptions = fullBypass.split(",");
 			final int multisellId = Integer.parseInt(buypassOptions[0]);
 			final String page = buypassOptions[1];
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			MultisellData.getInstance().separateAndSend(multisellId, activeChar, null, true);
 		}
 		else if (command.startsWith("_bbssell"))
 		{
 			final String page = command.replace("_bbssell;", "");
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 			activeChar.sendPacket(new BuyList(BuyListData.getInstance().getBuyList(423), activeChar.getAdena(), 0));
 			activeChar.sendPacket(new ExBuySellList(activeChar, false));
 		}
@@ -221,7 +221,7 @@ public final class HomeBoard implements IParseBoardHandler
 				}
 			}
 			
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 		}
 		else if (command.startsWith("_bbsheal"))
 		{
@@ -245,7 +245,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.sendMessage("You used heal!");
 			}
 			
-			returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/" + page + ".html");
+			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
 		}
 		else if (command.startsWith("_bbspremium"))
 		{
@@ -261,7 +261,7 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.destroyItemByItemId("CB_Premium", Config.COMMUNITY_PREMIUM_COIN_ID, Config.COMMUNITY_PREMIUM_PRICE_PER_DAY * premiumDays, activeChar, true);
 				PremiumManager.getInstance().addPremiumTime(activeChar.getAccountName(), premiumDays, TimeUnit.DAYS);
 				activeChar.sendMessage("Your account will now have premium status until " + new SimpleDateFormat("dd.MM.yyyy HH:mm").format(PremiumManager.getInstance().getPremiumExpiration(activeChar.getAccountName())) + ".");
-				returnHtml = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/CommunityBoard/Custom/premium/thankyou.html");
+				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/premium/thankyou.html");
 			}
 		}
 		

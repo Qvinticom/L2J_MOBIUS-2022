@@ -105,7 +105,7 @@ public class AdminPremium implements IAdminCommandHandler
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 0);
-		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/premium_menu.htm"));
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/premium_menu.htm"));
 		activeChar.sendPacket(html);
 		return true;
 	}

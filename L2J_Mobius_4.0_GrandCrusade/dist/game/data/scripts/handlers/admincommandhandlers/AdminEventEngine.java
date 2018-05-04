@@ -119,7 +119,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 					
 					final DataInputStream in = new DataInputStream(new BufferedInputStream(new FileInputStream(Config.DATAPACK_ROOT + "/data/events/" + eventName)));
 					final BufferedReader inbr = new BufferedReader(new InputStreamReader(in));
-					adminReply.setFile("en", "data/html/mods/EventEngine/Participation.htm");
+					adminReply.setFile(null, "data/html/mods/EventEngine/Participation.htm");
 					adminReply.replace("%eventName%", eventName);
 					adminReply.replace("%eventCreator%", inbr.readLine());
 					adminReply.replace("%eventInfo%", inbr.readLine());

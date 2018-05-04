@@ -41,7 +41,7 @@ public class AdminHwid implements IAdminCommandHandler
 		}
 		final L2PcInstance target = activeChar.getTarget().getActingPlayer();
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/charhwinfo.htm"));
+		html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/charhwinfo.htm"));
 		html.replace("%name%", target.getName());
 		html.replace("%macAddress%", target.getClient().getHardwareInfo().getMacAddress());
 		html.replace("%windowsPlatformId%", target.getClient().getHardwareInfo().getWindowsPlatformId());

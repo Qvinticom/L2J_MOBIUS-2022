@@ -157,7 +157,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 	private void sendClanHallList(L2PcInstance player, int page, BypassParser parser)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		html.setFile(player.getHtmlPrefix(), "data/html/admin/clanhall_list.htm");
+		html.setFile(player, "data/html/admin/clanhall_list.htm");
 		final List<ClanHall> clanHallList = ClanHallData.getInstance().getClanHalls().stream().sorted(Comparator.comparingLong(ClanHall::getResidenceId)).collect(Collectors.toList());
 		
 		//@formatter:off
@@ -209,7 +209,7 @@ public final class AdminClanHall implements IAdminCommandHandler
 		{
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			final StringBuilder sb = new StringBuilder();
-			html.setFile(player.getHtmlPrefix(), "data/html/admin/clanhall_detail.htm");
+			html.setFile(player, "data/html/admin/clanhall_detail.htm");
 			html.replace("%clanHallId%", clanHall.getResidenceId());
 			html.replace("%clanHallOwner%", (clanHall.getOwner() == null ? "<font color=\"00FF00\">Free</font>" : "<font color=\"FF9900\">" + clanHall.getOwner().getName() + "</font>"));
 			final String grade = clanHall.getGrade().toString().replace("GRADE_", "") + " Grade";

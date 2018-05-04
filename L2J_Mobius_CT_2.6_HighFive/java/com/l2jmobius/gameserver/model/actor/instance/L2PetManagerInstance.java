@@ -61,7 +61,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		if (Config.ALLOW_RENTPET && Config.LIST_PET_RENT_NPC.contains(getId()))
 		{
 			html.replace("_Quest", "_RentPet\">Rent Pet</a><br><a action=\"bypass -h npc_%objectId%_Quest");
@@ -136,7 +136,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			if (!ok)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/petmanager/evolve_no.htm");
+				html.setFile(player, "data/html/petmanager/evolve_no.htm");
 				player.sendPacket(html);
 			}
 			return;
@@ -178,7 +178,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 			if (!ok)
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/html/petmanager/restore_no.htm");
+				html.setFile(player, "data/html/petmanager/restore_no.htm");
 				player.sendPacket(html);
 			}
 			return;
@@ -195,12 +195,12 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		if (player.destroyItemByItemId("Consume", itemIdtake, 1, this, true))
 		{
 			player.addItem("", itemIdgive, 1, this, true);
-			html.setFile(player.getHtmlPrefix(), "data/html/petmanager/" + getId() + ".htm");
+			html.setFile(player, "data/html/petmanager/" + getId() + ".htm");
 			player.sendPacket(html);
 		}
 		else
 		{
-			html.setFile(player.getHtmlPrefix(), "data/html/petmanager/exchange_no.htm");
+			html.setFile(player, "data/html/petmanager/exchange_no.htm");
 			player.sendPacket(html);
 		}
 	}

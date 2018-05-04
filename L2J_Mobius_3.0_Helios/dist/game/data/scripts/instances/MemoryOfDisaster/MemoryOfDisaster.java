@@ -658,7 +658,7 @@ public final class MemoryOfDisaster extends AbstractInstance
 			{
 				// myself->SetOneTimeQuestFlag(myself->c_ai0, 10491, 1);
 				finishInstance(player, 0);
-				player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "calltochange_end.htm")));
+				player.sendPacket(new TutorialShowHtml(getHtm(player, "calltochange_end.htm")));
 				break;
 			}
 			case "TIMER_ID_DIE":

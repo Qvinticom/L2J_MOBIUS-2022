@@ -116,7 +116,7 @@ public final class Hardin extends AbstractNpcAI
 			}
 			classes.append("<br><br><br><br><br>"); // prettify
 			final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-			html.setHtml(getHtm(player.getHtmlPrefix(), "33870-reawake_list.html"));
+			html.setHtml(getHtm(player, "33870-reawake_list.html"));
 			html.replace("%CLASS_LIST%", classes.toString());
 			player.sendPacket(html);
 		}

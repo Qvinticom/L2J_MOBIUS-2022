@@ -95,20 +95,20 @@ public class OlympiadManagerLink implements IBypassHandler
 				final NpcHtmlMessage html = new NpcHtmlMessage(target.getObjectId());
 				if (activeChar.isCursedWeaponEquipped())
 				{
-					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_cursed_weapon.htm");
+					html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_cursed_weapon.htm");
 					activeChar.sendPacket(html);
 					return false;
 				}
 				if (activeChar.getClassIndex() != 0)
 				{
-					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_sub.htm");
+					html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_sub.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 					return false;
 				}
 				if (!activeChar.isNoble() || (activeChar.getClassId().level() < 3))
 				{
-					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_thirdclass.htm");
+					html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_thirdclass.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 					return false;
@@ -122,7 +122,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					{
 						if (!OlympiadManager.getInstance().isRegistered(activeChar))
 						{
-							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_desc2a.htm");
+							html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_desc2a.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
 							html.replace("%olympiad_period%", String.valueOf(Olympiad.getInstance().getPeriod()));
 							html.replace("%olympiad_cycle%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
@@ -131,7 +131,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						}
 						else
 						{
-							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_unregister.htm");
+							html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_unregister.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
 							activeChar.sendPacket(html);
 						}
@@ -158,7 +158,7 @@ public class OlympiadManagerLink implements IBypassHandler
 								}
 							}
 						}
-						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_registered.htm");
+						html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_registered.htm");
 						if (Config.ALT_OLY_REG_DISPLAY > 0)
 						{
 							html.replace("%listClassed%", classed < Config.ALT_OLY_REG_DISPLAY ? FEWER_THAN : MORE_THAN);
@@ -178,7 +178,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					case 3: // There are %points% Grand Olympiad points granted for this event. | TODO: cleanup (not used anymore)
 					{
 						final int points = Olympiad.getInstance().getNoblePoints(activeChar.getObjectId());
-						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points1.htm");
+						html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_points1.htm");
 						html.replace("%points%", String.valueOf(points));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
 						activeChar.sendPacket(html);
@@ -199,13 +199,13 @@ public class OlympiadManagerLink implements IBypassHandler
 						passes = Olympiad.getInstance().getNoblessePasses(activeChar, false);
 						if (passes > 0)
 						{
-							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_settle.htm");
+							html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_settle.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
 							activeChar.sendPacket(html);
 						}
 						else
 						{
-							html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_nopoints2.htm");
+							html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_nopoints2.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
 							activeChar.sendPacket(html);
 						}
@@ -224,7 +224,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					case 9: // Your Grand Olympiad Score from the previous period is %points% point(s) | TODO: cleanup (not used anymore)
 					{
 						final int point = Olympiad.getInstance().getLastNobleOlympiadPoints(activeChar.getObjectId());
-						html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "noble_points2.htm");
+						html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_points2.htm");
 						html.replace("%points%", String.valueOf(point));
 						html.replace("%objectId%", String.valueOf(target.getObjectId()));
 						activeChar.sendPacket(html);
@@ -305,13 +305,13 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				if (buffCount > 0)
 				{
-					html.setFile(activeChar.getHtmlPrefix(), buffCount == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
+					html.setFile(activeChar, buffCount == Config.ALT_OLY_MAX_BUFFS ? Olympiad.OLYMPIAD_HTML_PATH + "olympiad_buffs.htm" : Olympiad.OLYMPIAD_HTML_PATH + "olympiad_5buffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 				}
 				else
 				{
-					html.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm");
+					html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_nobuffs.htm");
 					html.replace("%objectId%", String.valueOf(target.getObjectId()));
 					activeChar.sendPacket(html);
 					target.decayMe();
@@ -332,7 +332,7 @@ public class OlympiadManagerLink implements IBypassHandler
 						if (((classId >= 88) && (classId <= 118)) || ((classId >= 131) && (classId <= 134)) || (classId == 136))
 						{
 							final List<String> names = Olympiad.getInstance().getClassLeaderBoard(classId);
-							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
+							reply.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "olympiad_ranking.htm");
 							int index = 1;
 							for (String name : names)
 							{
@@ -364,11 +364,11 @@ public class OlympiadManagerLink implements IBypassHandler
 						if (Hero.getInstance().isUnclaimedHero(activeChar.getObjectId()))
 						{
 							Hero.getInstance().claimHero(activeChar);
-							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "hero_receive.htm");
+							reply.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "hero_receive.htm");
 						}
 						else
 						{
-							reply.setFile(activeChar.getHtmlPrefix(), Olympiad.OLYMPIAD_HTML_PATH + "hero_notreceive.htm");
+							reply.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "hero_notreceive.htm");
 						}
 						activeChar.sendPacket(reply);
 						break;

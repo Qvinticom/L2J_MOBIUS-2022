@@ -193,7 +193,7 @@ public class QuestLink implements IBypassHandler
 					if (player.getAllActiveQuests().size() > 40)
 					{
 						final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-						html.setFile(player.getHtmlPrefix(), "data/html/fullquest.html");
+						html.setFile(player, "data/html/fullquest.html");
 						player.sendPacket(html);
 						return;
 					}

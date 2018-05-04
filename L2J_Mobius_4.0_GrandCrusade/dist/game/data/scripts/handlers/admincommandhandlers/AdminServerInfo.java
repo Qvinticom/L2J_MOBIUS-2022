@@ -53,7 +53,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			final NpcHtmlMessage html = new NpcHtmlMessage();
 			final Runtime RunTime = Runtime.getRuntime();
 			final int mb = 1024 * 1024;
-			html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/serverinfo.htm"));
+			html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/serverinfo.htm"));
 			
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));

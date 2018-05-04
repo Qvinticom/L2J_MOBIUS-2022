@@ -519,7 +519,7 @@ public final class Q10331_StartOfFate extends Quest
 		{
 			final L2PcInstance player = event.getActiveChar();
 			final String filename = "popup-" + player.getRace().toString().toLowerCase() + ".htm";
-			player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), filename)));
+			player.sendPacket(new TutorialShowHtml(getHtm(player, filename)));
 		}
 	}
 	

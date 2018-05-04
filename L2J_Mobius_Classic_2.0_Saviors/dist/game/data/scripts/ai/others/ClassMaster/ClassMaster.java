@@ -335,7 +335,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					{
 						if (classDataIndex == -1)
 						{
-							htmltext = getHtm(player.getHtmlPrefix(), "cc_options.html");
+							htmltext = getHtm(player, "cc_options.html");
 							htmltext = htmltext.replace("%name%", ClassListData.getInstance().getClass(classId).getClassName()); // getEscapedClientCode());
 							htmltext = htmltext.replace("%options%", getClassChangeOptions(player, classId));
 							return htmltext;
@@ -765,7 +765,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		}
 		else if (checkIfClassChangeHasOptions(player))
 		{
-			String html = getHtm(player.getHtmlPrefix(), "cc_options.html");
+			String html = getHtm(player, "cc_options.html");
 			html = html.replace("%name%", ClassListData.getInstance().getClass(newClass.getId()).getClassName()); // getEscapedClientCode());
 			html = html.replace("%options%", getClassChangeOptions(player, newClass.getId()));
 			showResult(player, html);
@@ -872,19 +872,19 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 		String html = null;
 		if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 		{
-			html = getHtm(player.getHtmlPrefix(), getSecondOccupationChangeHtml(player));
+			html = getHtm(player, getSecondOccupationChangeHtml(player));
 		}
 		else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20))
 		{
-			html = getHtm(player.getHtmlPrefix(), getFirstOccupationChangeHtml(player));
+			html = getHtm(player, getFirstOccupationChangeHtml(player));
 		}
 		else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76))
 		{
-			html = getHtm(player.getHtmlPrefix(), "qm_thirdclass.html");
+			html = getHtm(player, "qm_thirdclass.html");
 		}
 		// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
 		// {
-		// html = getHtm(player.getHtmlPrefix(), "qm_awaken.html");
+		// html = getHtm(player, "qm_awaken.html");
 		// }
 		
 		if (html != null)

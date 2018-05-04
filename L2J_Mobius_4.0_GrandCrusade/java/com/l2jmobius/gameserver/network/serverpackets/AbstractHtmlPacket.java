@@ -87,9 +87,9 @@ public abstract class AbstractHtmlPacket implements IClientOutgoingPacket
 		_html = html;
 	}
 	
-	public final boolean setFile(String prefix, String path)
+	public final boolean setFile(L2PcInstance player, String path)
 	{
-		final String content = HtmCache.getInstance().getHtm(prefix, path);
+		final String content = HtmCache.getInstance().getHtm(player, path);
 		if (content == null)
 		{
 			setHtml("<html><body>My Text is missing:<br>" + path + "</body></html>");

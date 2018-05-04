@@ -329,7 +329,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}).build();
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/getbuffs.htm");
+		html.setFile(activeChar, "data/html/admin/getbuffs.htm");
 		
 		if (result.getPages() > 0)
 		{

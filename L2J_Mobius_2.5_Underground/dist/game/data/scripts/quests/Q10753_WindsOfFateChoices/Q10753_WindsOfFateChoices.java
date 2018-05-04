@@ -734,12 +734,12 @@ public final class Q10753_WindsOfFateChoices extends Quest
 				if (player.isMageClass())
 				{
 					player.sendPacket(new PlaySound(3, "Npcdialog1.aris_quest_2", 0, 0, 0, 0, 0));
-					player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popup1.html")));
+					player.sendPacket(new TutorialShowHtml(getHtm(player, "popup1.html")));
 				}
 				else
 				{
 					player.sendPacket(new PlaySound(3, "Npcdialog1.katrina_quest_2", 0, 0, 0, 0, 0));
-					player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popup2.html")));
+					player.sendPacket(new TutorialShowHtml(getHtm(player, "popup2.html")));
 				}
 			}
 		}

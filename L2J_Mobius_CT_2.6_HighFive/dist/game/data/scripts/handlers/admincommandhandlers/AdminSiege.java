@@ -373,7 +373,7 @@ public class AdminSiege implements IAdminCommandHandler
 	{
 		int i = 0;
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castles.htm");
+		adminReply.setFile(activeChar, "data/html/admin/castles.htm");
 		final StringBuilder cList = new StringBuilder(500);
 		for (Castle castle : CastleManager.getInstance().getCastles())
 		{
@@ -449,7 +449,7 @@ public class AdminSiege implements IAdminCommandHandler
 	private void showSiegePage(L2PcInstance activeChar, String castleName)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castle.htm");
+		adminReply.setFile(activeChar, "data/html/admin/castle.htm");
 		adminReply.replace("%castleName%", castleName);
 		activeChar.sendPacket(adminReply);
 	}
@@ -462,7 +462,7 @@ public class AdminSiege implements IAdminCommandHandler
 	private void showSiegeTimePage(L2PcInstance activeChar, Castle castle)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/castlesiegetime.htm");
+		adminReply.setFile(activeChar, "data/html/admin/castlesiegetime.htm");
 		adminReply.replace("%castleName%", castle.getName());
 		adminReply.replace("%time%", castle.getSiegeDate().getTime().toString());
 		final Calendar newDay = Calendar.getInstance();
@@ -508,7 +508,7 @@ public class AdminSiege implements IAdminCommandHandler
 	private void showClanHallPage(L2PcInstance activeChar, ClanHall clanhall)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
-		adminReply.setFile(activeChar.getHtmlPrefix(), "data/html/admin/clanhall.htm");
+		adminReply.setFile(activeChar, "data/html/admin/clanhall.htm");
 		adminReply.replace("%clanhallName%", clanhall.getName());
 		adminReply.replace("%clanhallId%", String.valueOf(clanhall.getId()));
 		final L2Clan owner = ClanTable.getInstance().getClan(clanhall.getOwnerId());

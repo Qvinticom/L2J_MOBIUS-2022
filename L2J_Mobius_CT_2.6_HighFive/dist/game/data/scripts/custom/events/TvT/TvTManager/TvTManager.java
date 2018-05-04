@@ -72,40 +72,40 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 				final int team2Count = TvTEvent.getTeamsPlayerCounts()[1];
 				if (player.isCursedWeaponEquipped())
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "CursedWeaponEquipped.html");
+					htmltext = getHtm(player, "CursedWeaponEquipped.html");
 				}
 				else if (OlympiadManager.getInstance().isRegistered(player))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "Olympiad.html");
+					htmltext = getHtm(player, "Olympiad.html");
 				}
 				else if (player.getKarma() > 0)
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "Karma.html");
+					htmltext = getHtm(player, "Karma.html");
 				}
 				else if ((playerLevel < Config.TVT_EVENT_MIN_LVL) || (playerLevel > Config.TVT_EVENT_MAX_LVL))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "Level.html");
+					htmltext = getHtm(player, "Level.html");
 					htmltext = htmltext.replaceAll("%min%", String.valueOf(Config.TVT_EVENT_MIN_LVL));
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_LVL));
 				}
 				else if ((team1Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS) && (team2Count == Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "TeamsFull.html");
+					htmltext = getHtm(player, "TeamsFull.html");
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(Config.TVT_EVENT_MAX_PLAYERS_IN_TEAMS));
 				}
 				else if ((Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP > 0) && !AntiFeedManager.getInstance().tryAddPlayer(AntiFeedManager.TVT_ID, player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "IPRestriction.html");
+					htmltext = getHtm(player, "IPRestriction.html");
 					htmltext = htmltext.replaceAll("%max%", String.valueOf(AntiFeedManager.getInstance().getLimit(player, Config.TVT_EVENT_MAX_PARTICIPANTS_PER_IP)));
 				}
 				else if (TvTEvent.needParticipationFee() && !TvTEvent.hasParticipationFee(player))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "ParticipationFee.html");
+					htmltext = getHtm(player, "ParticipationFee.html");
 					htmltext = htmltext.replaceAll("%fee%", TvTEvent.getParticipationFee());
 				}
 				else if (TvTEvent.addParticipant(player))
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "Registered.html");
+					htmltext = getHtm(player, "Registered.html");
 				}
 				break;
 			}
@@ -117,7 +117,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 					{
 						AntiFeedManager.getInstance().removePlayer(AntiFeedManager.TVT_ID, player);
 					}
-					htmltext = getHtm(player.getHtmlPrefix(), "Unregistered.html");
+					htmltext = getHtm(player, "Unregistered.html");
 				}
 				else
 				{
@@ -137,7 +137,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 		{
 			final boolean isParticipant = TvTEvent.isPlayerParticipant(player.getObjectId());
 			final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
-			htmltext = getHtm(player.getHtmlPrefix(), (!isParticipant ? "Participation.html" : "RemoveParticipation.html"));
+			htmltext = getHtm(player, (!isParticipant ? "Participation.html" : "RemoveParticipation.html"));
 			htmltext = htmltext.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
 			htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
@@ -198,7 +198,7 @@ public final class TvTManager extends AbstractNpcAI implements IVoicedCommandHan
 	{
 		final int[] teamsPlayerCounts = TvTEvent.getTeamsPlayerCounts();
 		final int[] teamsPointsCounts = TvTEvent.getTeamsPoints();
-		String htmltext = getHtm(player.getHtmlPrefix(), "Status.html");
+		String htmltext = getHtm(player, "Status.html");
 		htmltext = htmltext.replaceAll("%team1name%", Config.TVT_EVENT_TEAM_1_NAME);
 		htmltext = htmltext.replaceAll("%team1playercount%", String.valueOf(teamsPlayerCounts[0]));
 		htmltext = htmltext.replaceAll("%team1points%", String.valueOf(teamsPointsCounts[0]));

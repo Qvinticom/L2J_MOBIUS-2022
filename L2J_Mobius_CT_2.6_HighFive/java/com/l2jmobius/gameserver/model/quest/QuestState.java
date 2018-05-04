@@ -758,7 +758,7 @@ public final class QuestState
 	 */
 	public void showTutorialHTML(String html)
 	{
-		String text = HtmCache.getInstance().getHtm(_player.getHtmlPrefix(), "data/scripts/quests/Q00255_Tutorial/" + html);
+		String text = HtmCache.getInstance().getHtm(_player, "data/scripts/quests/Q00255_Tutorial/" + html);
 		if (text == null)
 		{
 			LOGGER.warning("missing html page data/scripts/quests/Q00255_Tutorial/" + html);

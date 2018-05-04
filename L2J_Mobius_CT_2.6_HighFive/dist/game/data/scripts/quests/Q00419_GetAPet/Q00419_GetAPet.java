@@ -347,7 +347,7 @@ public final class Q00419_GetAPet extends Quest
 						}
 					}
 					
-					htmltext = getHtm(player.getHtmlPrefix(), htmltext);
+					htmltext = getHtm(player, htmltext);
 					htmltext = htmltext.replace("<?reply1?>", LINKS.get(linkId + replyOffset1));
 					htmltext = htmltext.replace("<?reply2?>", LINKS.get(linkId + replyOffset2));
 					htmltext = htmltext.replace("<?reply3?>", LINKS.get(linkId + replyOffset3));

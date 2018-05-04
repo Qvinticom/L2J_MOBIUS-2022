@@ -172,7 +172,7 @@ public class JailHandler implements IPunishmentHandler
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_in.htm");
+		String content = HtmCache.getInstance().getHtm(player, "html/jail_in.htm");
 		if (content != null)
 		{
 			content = content.replaceAll("%reason%", task != null ? task.getReason() : "");
@@ -208,7 +208,7 @@ public class JailHandler implements IPunishmentHandler
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
-		final String content = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "html/jail_out.htm");
+		final String content = HtmCache.getInstance().getHtm(player, "html/jail_out.htm");
 		if (content != null)
 		{
 			msg.setHtml(content);

@@ -80,12 +80,12 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 		{
 			if (isMyLord(player))
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-rewards.htm");
+				html.setFile(player, "data/html/fortress/logistics-rewards.htm");
 				html.replace("%bloodoath%", String.valueOf(player.getClan().getBloodOathCount()));
 			}
 			else
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-noprivs.htm");
+				html.setFile(player, "data/html/fortress/logistics-noprivs.htm");
 			}
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
@@ -99,16 +99,16 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 				{
 					player.addItem("Quest", 9910, blood, this, true);
 					player.getClan().resetBloodOathCount();
-					html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-blood.htm");
+					html.setFile(player, "data/html/fortress/logistics-blood.htm");
 				}
 				else
 				{
-					html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-noblood.htm");
+					html.setFile(player, "data/html/fortress/logistics-noblood.htm");
 				}
 			}
 			else
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-noprivs.htm");
+				html.setFile(player, "data/html/fortress/logistics-noprivs.htm");
 			}
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
@@ -119,17 +119,17 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 			{
 				if (player.isClanLeader())
 				{
-					html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-supplylvl.htm");
+					html.setFile(player, "data/html/fortress/logistics-supplylvl.htm");
 					html.replace("%supplylvl%", String.valueOf(getFort().getSupplyLvL()));
 				}
 				else
 				{
-					html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-noprivs.htm");
+					html.setFile(player, "data/html/fortress/logistics-noprivs.htm");
 				}
 			}
 			else
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-1.htm"); // TODO: Missing HTML?
+				html.setFile(player, "data/html/fortress/logistics-1.htm"); // TODO: Missing HTML?
 			}
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
@@ -140,7 +140,7 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 			{
 				if (getFort().getSiege().isInProgress())
 				{
-					html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-siege.htm");
+					html.setFile(player, "data/html/fortress/logistics-siege.htm");
 				}
 				else
 				{
@@ -158,17 +158,17 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 						getFort().setSupplyLvL(0);
 						getFort().saveFortVariables();
 						
-						html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-supply.htm");
+						html.setFile(player, "data/html/fortress/logistics-supply.htm");
 					}
 					else
 					{
-						html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-nosupply.htm");
+						html.setFile(player, "data/html/fortress/logistics-nosupply.htm");
 					}
 				}
 			}
 			else
 			{
-				html.setFile(player.getHtmlPrefix(), "data/html/fortress/logistics-noprivs.htm");
+				html.setFile(player, "data/html/fortress/logistics-noprivs.htm");
 			}
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			player.sendPacket(html);
@@ -201,7 +201,7 @@ public class L2FortLogisticsInstance extends L2MerchantInstance
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcId%", String.valueOf(getId()));
 		if (getFort().getOwnerClan() != null)

@@ -84,7 +84,7 @@ public final class Wedding extends AbstractNpcAI
 			{
 				player.setMarryRequest(false);
 				partner.setMarryRequest(false);
-				htmltext = getHtm(player.getHtmlPrefix(), "Ask.html");
+				htmltext = getHtm(player, "Ask.html");
 				htmltext = htmltext.replaceAll("%player%", partner.getName());
 			}
 			return htmltext;
@@ -105,7 +105,7 @@ public final class Wedding extends AbstractNpcAI
 					
 					sendHtml(partner, "Ask.html", "%player%", player.getName());
 					
-					htmltext = getHtm(player.getHtmlPrefix(), "Requested.html");
+					htmltext = getHtm(player, "Requested.html");
 					htmltext = htmltext.replaceAll("%player%", partner.getName());
 				}
 				break;
@@ -176,13 +176,13 @@ public final class Wedding extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		final String htmltext = getHtm(player.getHtmlPrefix(), "Start.html");
+		final String htmltext = getHtm(player, "Start.html");
 		return htmltext.replaceAll("%fee%", String.valueOf(Config.WEDDING_PRICE));
 	}
 	
 	private String sendHtml(L2PcInstance player, String fileName, String regex, String replacement)
 	{
-		String html = getHtm(player.getHtmlPrefix(), fileName);
+		String html = getHtm(player, fileName);
 		if ((regex != null) && (replacement != null))
 		{
 			html = html.replaceAll(regex, replacement);

@@ -53,7 +53,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			final L2Npc npc = (L2Npc) target;
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
 			final ClanHall clanHall = ClanHallData.getInstance().getClanHallByNpcId(npc.getId());
-			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/npcinfo.htm");
+			html.setFile(activeChar, "data/html/admin/npcinfo.htm");
 			
 			html.replace("%objid%", String.valueOf(target.getObjectId()));
 			html.replace("%class%", target.getClass().getSimpleName());

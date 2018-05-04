@@ -547,7 +547,7 @@ public class AdminEffects implements IAdminCommandHandler
 				}).build();
 				
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/ave_abnormal.htm");
+				html.setFile(activeChar, "data/html/admin/ave_abnormal.htm");
 				
 				if (result.getPages() > 0)
 				{

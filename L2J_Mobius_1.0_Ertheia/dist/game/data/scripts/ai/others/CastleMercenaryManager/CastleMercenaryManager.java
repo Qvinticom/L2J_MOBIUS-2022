@@ -68,15 +68,15 @@ public final class CastleMercenaryManager extends AbstractNpcAI
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
 				if (castle.getName().equalsIgnoreCase("Aden"))
 				{
-					html.setHtml(getHtm(player.getHtmlPrefix(), "mercmanager-aden-limit.html"));
+					html.setHtml(getHtm(player, "mercmanager-aden-limit.html"));
 				}
 				else if (castle.getName().equalsIgnoreCase("Rune"))
 				{
-					html.setHtml(getHtm(player.getHtmlPrefix(), "mercmanager-rune-limit.html"));
+					html.setHtml(getHtm(player, "mercmanager-rune-limit.html"));
 				}
 				else
 				{
-					html.setHtml(getHtm(player.getHtmlPrefix(), "mercmanager-limit.html"));
+					html.setHtml(getHtm(player, "mercmanager-limit.html"));
 				}
 				html.replace("%feud_name%", String.valueOf(1001000 + castle.getResidenceId()));
 				player.sendPacket(html);

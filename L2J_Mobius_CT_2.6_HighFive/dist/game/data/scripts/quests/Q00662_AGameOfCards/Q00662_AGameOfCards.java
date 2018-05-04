@@ -324,7 +324,7 @@ public final class Q00662_AGameOfCards extends Quest
 				
 				if ((i9 % 32) < 31)
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "30845-12.html");
+					htmltext = getHtm(player, "30845-12.html");
 				}
 				else if ((i9 % 32) == 31)
 				{
@@ -442,7 +442,7 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 729, 1);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-13.html");
+						htmltext = getHtm(player, "30845-13.html");
 					}
 					else if (i6 == 30)
 					{
@@ -450,7 +450,7 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 951, 2);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-14.html");
+						htmltext = getHtm(player, "30845-14.html");
 					}
 					else if ((i6 == 21) || (i6 == 12))
 					{
@@ -459,34 +459,34 @@ public final class Q00662_AGameOfCards extends Quest
 						rewardItems(player, 955, 1);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-15.html");
+						htmltext = getHtm(player, "30845-15.html");
 					}
 					else if (i6 == 20)
 					{
 						rewardItems(player, 951, 2);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-16.html");
+						htmltext = getHtm(player, "30845-16.html");
 					}
 					else if (i6 == 11)
 					{
 						rewardItems(player, 951, 1);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-17.html");
+						htmltext = getHtm(player, "30845-17.html");
 					}
 					else if (i6 == 10)
 					{
 						rewardItems(player, 956, 2);
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-18.html");
+						htmltext = getHtm(player, "30845-18.html");
 					}
 					else if (i6 == 0)
 					{
 						qs.set("ExMemoState", 0);
 						qs.set("v1", 0);
-						htmltext = getHtm(player.getHtmlPrefix(), "30845-19.html");
+						htmltext = getHtm(player, "30845-19.html");
 					}
 				}
 				
@@ -583,7 +583,7 @@ public final class Q00662_AGameOfCards extends Quest
 					final int i2 = (i0 % 10000) / 100;
 					final int i3 = (i0 % 1000000) / 10000;
 					final int i4 = (i0 % 100000000) / 1000000;
-					htmltext = getHtm(player.getHtmlPrefix(), "30845-11a.html");
+					htmltext = getHtm(player, "30845-11a.html");
 					
 					if ((i9 % 2) < 1)
 					{

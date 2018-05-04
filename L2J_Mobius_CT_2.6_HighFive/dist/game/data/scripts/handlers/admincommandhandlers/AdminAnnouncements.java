@@ -90,7 +90,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					{
 						if (!st.hasMoreTokens())
 						{
-							final String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-add.htm");
+							final String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-add.htm");
 							Util.sendCBHtml(activeChar, content);
 							break;
 						}
@@ -191,7 +191,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						}
 						if (!st.hasMoreTokens())
 						{
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-edit.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-edit.htm");
 							final String announcementId = "" + announce.getId();
 							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
@@ -417,7 +417,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 						final IAnnouncement announce = AnnouncementsTable.getInstance().getAnnounce(id);
 						if (announce != null)
 						{
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-show.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-show.htm");
 							final String announcementId = "" + announce.getId();
 							final String announcementType = announce.getType().name();
 							String announcementInital = "0";
@@ -457,7 +457,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							}
 						}
 						
-						String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/announces-list.htm");
+						String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/announces-list.htm");
 						final PageResult result = HtmlUtil.createPage(AnnouncementsTable.getInstance().getAllAnnouncements(), page, 8, currentPage ->
 						{
 							return "<td align=center><button action=\"bypass admin_announces list " + currentPage + "\" value=\"" + (currentPage + 1) + "\" width=35 height=20 back=\"L2UI_CT1.Button_DF_Down\" fore=\"L2UI_CT1.Button_DF\"></td>";

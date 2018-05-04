@@ -22,6 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.clientpackets.RequestBypassToServer;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * The HTML parser in the client knowns these standard and non-standard tags and attributes<br>
@@ -135,6 +136,9 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	/** The _html. */
 	private String _html;
 	
+	/** The _html file. */
+	private String _file = null;
+	
 	/** The _validate. */
 	private final boolean _validate = true;
 	
@@ -211,6 +215,7 @@ public class NpcHtmlMessage extends L2GameServerPacket
 			return false;
 		}
 		
+		_file = path;
 		setHtml(content);
 		return true;
 	}
@@ -318,8 +323,13 @@ public class NpcHtmlMessage extends L2GameServerPacket
 	@Override
 	protected final void writeImpl()
 	{
-		writeC(0x0f);
+		final L2PcInstance player = getClient().getActiveChar();
+		if ((_file != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
+		{
+			BuilderUtil.sendHtmlMessage(player, _file.substring(10));
+		}
 		
+		writeC(0x0f);
 		writeD(_npcObjId);
 		writeS(_html);
 		writeD(0x00);

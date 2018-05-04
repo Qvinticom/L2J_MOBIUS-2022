@@ -1579,7 +1579,7 @@ public class Q00335_TheSongOfTheHunter extends Quest
 	
 	private String getHtml(L2PcInstance player, String htmlName, int i0, int i1, int i2, int i3, int i4)
 	{
-		String html = getHtm(player.getHtmlPrefix(), htmlName);
+		String html = getHtm(player, htmlName);
 		html = html.replace("<?reply1?>", LINKS.get(i0));
 		html = html.replace("<?reply2?>", LINKS.get(i1));
 		html = html.replace("<?reply3?>", LINKS.get(i2));

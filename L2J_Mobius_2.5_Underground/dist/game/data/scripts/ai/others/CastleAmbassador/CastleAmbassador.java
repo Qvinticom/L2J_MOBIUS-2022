@@ -138,7 +138,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 			htmltext = "ambassador-03.html";
 		}
 		
-		htmltext = getHtm(player.getHtmlPrefix(), htmltext);
+		htmltext = getHtm(player, htmltext);
 		htmltext = htmltext.replace("%castleName%", fortresss.getCastleByAmbassador(npc.getId()).getName());
 		return htmltext;
 	}

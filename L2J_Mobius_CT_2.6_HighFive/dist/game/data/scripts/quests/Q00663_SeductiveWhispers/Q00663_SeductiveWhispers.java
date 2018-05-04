@@ -775,7 +775,7 @@ public class Q00663_SeductiveWhispers extends Quest
 	
 	private String getHtml(L2PcInstance player, String htmlName, int card1pic, int card2pic, int winCount, int card1)
 	{
-		String html = getHtm(player.getHtmlPrefix(), htmlName);
+		String html = getHtm(player, htmlName);
 		html = html.replace("<?card1pic?>", Integer.toString(card1pic));
 		html = html.replace("<?card2pic?>", Integer.toString(card2pic));
 		html = html.replace("<?name?>", player.getName());

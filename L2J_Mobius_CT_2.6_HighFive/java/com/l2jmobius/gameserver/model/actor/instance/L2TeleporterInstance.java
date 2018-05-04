@@ -70,7 +70,7 @@ public final class L2TeleporterInstance extends L2Npc
 			
 			final String filename = "data/html/teleporter/epictransformed.htm";
 			
-			html.setFile(player.getHtmlPrefix(), filename);
+			html.setFile(player, filename);
 			html.replace("%objectId%", String.valueOf(getObjectId()));
 			html.replace("%npcname%", getName());
 			player.sendPacket(html);
@@ -188,7 +188,7 @@ public final class L2TeleporterInstance extends L2Npc
 			filename = "data/html/teleporter/" + getTemplate().getId() + "-1.htm";
 		}
 		
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
@@ -209,7 +209,7 @@ public final class L2TeleporterInstance extends L2Npc
 			filename = "data/html/teleporter/" + getId() + "-1.htm";
 		}
 		
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
@@ -239,7 +239,7 @@ public final class L2TeleporterInstance extends L2Npc
 		}
 		
 		final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-		html.setFile(player.getHtmlPrefix(), filename);
+		html.setFile(player, filename);
 		html.replace("%objectId%", String.valueOf(getObjectId()));
 		html.replace("%npcname%", getName());
 		player.sendPacket(html);
@@ -275,7 +275,7 @@ public final class L2TeleporterInstance extends L2Npc
 			{
 				final String filename = "data/html/teleporter/nobleteleporter-no.htm";
 				final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
-				html.setFile(player.getHtmlPrefix(), filename);
+				html.setFile(player, filename);
 				html.replace("%objectId%", String.valueOf(getObjectId()));
 				html.replace("%npcname%", getName());
 				player.sendPacket(html);

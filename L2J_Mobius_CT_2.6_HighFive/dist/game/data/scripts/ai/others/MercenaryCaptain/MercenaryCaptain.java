@@ -103,7 +103,7 @@ public final class MercenaryCaptain extends AbstractNpcAI
 				case "36481-03.html":
 				{
 					final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-					html.setHtml(getHtm(player.getHtmlPrefix(), "36481-03.html"));
+					html.setHtml(getHtm(player, "36481-03.html"));
 					html.replace("%strider%", String.valueOf(TerritoryWarManager.MINTWBADGEFORSTRIDERS));
 					html.replace("%gstrider%", String.valueOf(TerritoryWarManager.MINTWBADGEFORBIGSTRIDER));
 					player.sendPacket(html);

@@ -442,7 +442,7 @@ public class Hero
 		if (mainList != null)
 		{
 			final NpcHtmlMessage diaryReply = new NpcHtmlMessage();
-			final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/olympiad/herodiary.htm");
+			final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/olympiad/herodiary.htm");
 			final String heroMessage = HERO_MESSAGE.get(charid);
 			if ((htmContent != null) && (heroMessage != null))
 			{
@@ -528,7 +528,7 @@ public class Hero
 		if (heroFights != null)
 		{
 			final NpcHtmlMessage FightReply = new NpcHtmlMessage();
-			final String htmContent = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/olympiad/herohistory.htm");
+			final String htmContent = HtmCache.getInstance().getHtm(activeChar, "data/html/olympiad/herohistory.htm");
 			if (htmContent != null)
 			{
 				FightReply.setHtml(htmContent);

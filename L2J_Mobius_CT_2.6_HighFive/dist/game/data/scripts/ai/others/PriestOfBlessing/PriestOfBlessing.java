@@ -171,7 +171,7 @@ public final class PriestOfBlessing extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		String content = getHtm(player.getHtmlPrefix(), "32783.htm");
+		String content = getHtm(player, "32783.htm");
 		content = content.replace("%donate%", Util.formatAdena(PRICE_HOURGLASS[getHGIndex(player.getLevel())]));
 		return content;
 	}

@@ -492,7 +492,7 @@ public class Anakim extends AbstractNpcAI
 			if (!player.isInParty())
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-02.html"));
+				packet.setHtml(getHtm(player, "31101-02.html"));
 				packet.replace("%min%", Integer.toString(Config.ANAKIM_MIN_PLAYERS));
 				player.sendPacket(packet);
 				return null;
@@ -509,7 +509,7 @@ public class Anakim extends AbstractNpcAI
 			if ((members.size() < Config.ANAKIM_MIN_PLAYERS) || (members.size() > Config.ANAKIM_MAX_PLAYERS))
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-02.html"));
+				packet.setHtml(getHtm(player, "31101-02.html"));
 				packet.replace("%min%", Integer.toString(Config.ANAKIM_MIN_PLAYERS));
 				player.sendPacket(packet);
 				return null;
@@ -520,7 +520,7 @@ public class Anakim extends AbstractNpcAI
 				if ((member.getLevel() < Config.ANAKIM_MIN_PLAYER_LVL) || (member.getLevel() > Config.ANAKIM_MAX_PLAYER_LVL))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "31101-04.html"));
+					packet.setHtml(getHtm(player, "31101-04.html"));
 					packet.replace("%minlvl%", Integer.toString(Config.ANAKIM_MIN_PLAYER_LVL));
 					packet.replace("%maxlvl%", Integer.toString(Config.ANAKIM_MAX_PLAYER_LVL));
 					player.sendPacket(packet);

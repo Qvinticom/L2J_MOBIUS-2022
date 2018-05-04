@@ -407,7 +407,7 @@ public class TvTEvent
 			final NpcHtmlMessage npcHtmlMessage = new NpcHtmlMessage();
 			
 			statusUpdate.addAttribute(StatusUpdate.CUR_LOAD, playerInstance.getCurrentLoad());
-			npcHtmlMessage.setHtml(HtmCache.getInstance().getHtm(playerInstance.getHtmlPrefix(), htmlPath + "Reward.html"));
+			npcHtmlMessage.setHtml(HtmCache.getInstance().getHtm(playerInstance, htmlPath + "Reward.html"));
 			playerInstance.sendPacket(statusUpdate);
 			playerInstance.sendPacket(npcHtmlMessage);
 		}

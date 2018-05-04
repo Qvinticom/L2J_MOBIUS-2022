@@ -283,7 +283,7 @@ public final class Q10301_ShadowOfTerrorBlackishRedFog extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		if ((event.getMarkId() == getId()) && canStartQuest(player))
 		{
-			final String html = getHtm(player.getHtmlPrefix(), "popup.html");
+			final String html = getHtm(player, "popup.html");
 			player.sendPacket(new TutorialShowHtml(html));
 			if (!hasQuestItems(player, LADA_LETTER))
 			{

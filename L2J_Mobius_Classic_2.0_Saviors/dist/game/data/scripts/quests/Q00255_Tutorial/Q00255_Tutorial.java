@@ -420,7 +420,7 @@ public class Q00255_Tutorial extends Quest
 	
 	private void showTutorialHtml(L2PcInstance player, String html)
 	{
-		player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), html)));
+		player.sendPacket(new TutorialShowHtml(getHtm(player, html)));
 	}
 	
 	public void playTutorialVoice(L2PcInstance player, String voice)

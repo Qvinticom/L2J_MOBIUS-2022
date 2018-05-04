@@ -208,7 +208,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 						case 18:
 						{
 							selectBingoNumber(qs, (ask - 10) + 1);
-							return fillBoard(player, qs, getHtm(player.getHtmlPrefix(), "30182-13.html"));
+							return fillBoard(player, qs, getHtm(player, "30182-13.html"));
 						}
 						case 19:
 						case 20:
@@ -276,7 +276,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 						case 18:
 						{
 							selectBingoNumber(qs, (ask - 9));
-							return fillBoard(player, qs, getHtm(player.getHtmlPrefix(), "30685-13.html"));
+							return fillBoard(player, qs, getHtm(player, "30685-13.html"));
 						}
 						case 19:
 						case 20:
@@ -319,38 +319,38 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 			
 			if (i3 == 2)
 			{
-				html = getHtm(player.getHtmlPrefix(), npcId + "-14.html");
+				html = getHtm(player, npcId + "-14.html");
 			}
 			else if (i3 == 3)
 			{
-				html = getHtm(player.getHtmlPrefix(), npcId + "-16.html");
+				html = getHtm(player, npcId + "-16.html");
 			}
 			else if (i3 == 4)
 			{
-				html = getHtm(player.getHtmlPrefix(), npcId + "-18.html");
+				html = getHtm(player, npcId + "-18.html");
 			}
 			else if (i3 == 5)
 			{
-				html = getHtm(player.getHtmlPrefix(), npcId + "-20.html");
+				html = getHtm(player, npcId + "-20.html");
 			}
 			return fillBoard(player, qs, html);
 		}
 		i3 = getBingoSelectCount(qs);
 		if (i3 == 1)
 		{
-			html = getHtm(player.getHtmlPrefix(), npcId + "-15.html");
+			html = getHtm(player, npcId + "-15.html");
 		}
 		else if (i3 == 2)
 		{
-			html = getHtm(player.getHtmlPrefix(), npcId + "-17.html");
+			html = getHtm(player, npcId + "-17.html");
 		}
 		else if (i3 == 3)
 		{
-			html = getHtm(player.getHtmlPrefix(), npcId + "-19.html");
+			html = getHtm(player, npcId + "-19.html");
 		}
 		else if (i3 == 4)
 		{
-			html = getHtm(player.getHtmlPrefix(), npcId + "-21.html");
+			html = getHtm(player, npcId + "-21.html");
 		}
 		return fillBoard(player, qs, html);
 	}
@@ -393,20 +393,20 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 			if ((i3 == 3) && ((getBingoSelectCount(qs)) == 6))
 			{
 				reward(player, qs, i3);
-				html = getHtm(player.getHtmlPrefix(), npcId + "-22.html");
+				html = getHtm(player, npcId + "-22.html");
 			}
 			else if ((i3 == 0) && (getBingoSelectCount(qs) == 6))
 			{
 				reward(player, qs, i3);
-				html = getHtm(player.getHtmlPrefix(), npcId + "-24.html");
+				html = getHtm(player, npcId + "-24.html");
 			}
 			else
 			{
-				html = getHtm(player.getHtmlPrefix(), npcId + "-23.html");
+				html = getHtm(player, npcId + "-23.html");
 			}
 			return colorBoard(player, qs, html);
 		}
-		return fillBoard(player, qs, getHtm(player.getHtmlPrefix(), npcId + "-25.html"));
+		return fillBoard(player, qs, getHtm(player, npcId + "-25.html"));
 	}
 	
 	private void reward(L2PcInstance player, QuestState qs, int i3)

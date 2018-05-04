@@ -171,7 +171,7 @@ public class AdminScan implements IAdminCommandHandler
 	{
 		final BypassBuilder bypassParser = createBypassBuilder(parser, "bypass -h admin_scan");
 		final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-		html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/scan.htm");
+		html.setFile(activeChar, "data/html/admin/scan.htm");
 		
 		//@formatter:off
 		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())

@@ -77,7 +77,7 @@ public class AdminPunishment implements IAdminCommandHandler
 			{
 				if (!st.hasMoreTokens())
 				{
-					String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment.htm");
+					String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/punishment.htm");
 					if (content != null)
 					{
 						content = content.replaceAll("%punishments%", CommonUtil.implode(PunishmentType.values(), ";"));
@@ -118,7 +118,7 @@ public class AdminPunishment implements IAdminCommandHandler
 								key = findCharId(key);
 							}
 							
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment-info.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/punishment-info.htm");
 							if (content != null)
 							{
 								final StringBuilder sb = new StringBuilder();
@@ -174,7 +174,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							{
 								target = activeChar.getTarget().getActingPlayer();
 							}
-							String content = HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/punishment-player.htm");
+							String content = HtmCache.getInstance().getHtm(activeChar, "data/html/admin/punishment-player.htm");
 							if (content != null)
 							{
 								content = content.replaceAll("%player_name%", target.getName());

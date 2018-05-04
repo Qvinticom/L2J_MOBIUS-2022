@@ -101,7 +101,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					}
 					else
 					{
-						htmltext = getHtm(player.getHtmlPrefix(), "32245-10.html").replace("%itemcount%", st.get("submitted_gems"));
+						htmltext = getHtm(player, "32245-10.html").replace("%itemcount%", st.get("submitted_gems"));
 					}
 				}
 				break;
@@ -115,7 +115,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 					final int finalCount = submittedCount + broughtCount;
 					takeItems(player, RED_GEM, broughtCount);
 					st.set("submitted_gems", Integer.toString(finalCount));
-					htmltext = getHtm(player.getHtmlPrefix(), "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
+					htmltext = getHtm(player, "32245-08.html").replace("%itemcount%", Integer.toString(finalCount));
 				}
 				break;
 			}
@@ -174,7 +174,7 @@ public final class Q00691_MatrasSuspiciousRequest extends Quest
 				}
 				else if (st.getInt("submitted_gems") > 0)
 				{
-					htmltext = getHtm(player.getHtmlPrefix(), "32245-07.html").replace("%itemcount%", st.get("submitted_gems"));
+					htmltext = getHtm(player, "32245-07.html").replace("%itemcount%", st.get("submitted_gems"));
 				}
 				else
 				{

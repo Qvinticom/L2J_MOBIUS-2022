@@ -65,8 +65,8 @@ import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.network.serverpackets.NpcQuestHtmlMessage;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
 
 /**
@@ -1664,7 +1664,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static String getNoQuestMsg(L2PcInstance player)
 	{
-		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/noquest.htm");
+		final String result = HtmCache.getInstance().getHtm(player, "data/html/noquest.htm");
 		return (result != null) && (result.length() > 0) ? result : DEFAULT_NO_QUEST_MSG;
 	}
 	
@@ -1674,7 +1674,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static String getAlreadyCompletedMsg(L2PcInstance player)
 	{
-		final String result = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/alreadycompleted.htm");
+		final String result = HtmCache.getInstance().getHtm(player, "data/html/alreadycompleted.htm");
 		return (result != null) && (result.length() > 0) ? result : DEFAULT_ALREADY_COMPLETED_MSG;
 	}
 	
@@ -2448,7 +2448,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 		final int questId = getId();
 		
 		// Create handler to file linked to the quest
-		String content = getHtm(player.getHtmlPrefix(), filename);
+		String content = getHtm(player, filename);
 		
 		// Send message to client if message not empty
 		if (content != null)
@@ -2478,20 +2478,20 @@ public class Quest extends AbstractScript implements IIdentifiable
 	}
 	
 	/**
-	 * @param prefix player's language prefix.
+	 * @param player for language prefix.
 	 * @param fileName the html file to be get.
 	 * @return the HTML file contents
 	 */
-	public String getHtm(String prefix, String fileName)
+	public String getHtm(L2PcInstance player, String fileName)
 	{
 		final HtmCache hc = HtmCache.getInstance();
-		String content = hc.getHtm(prefix, fileName.startsWith("data/") ? fileName : "data/scripts/" + getPath().toLowerCase() + "/" + fileName);
+		String content = hc.getHtm(player, fileName.startsWith("data/") ? fileName : "data/scripts/" + getPath() + "/" + fileName);
 		if (content == null)
 		{
-			content = hc.getHtm(prefix, "data/scripts/" + getPath() + "/" + fileName);
+			content = hc.getHtm(player, "data/scripts/" + getPath() + "/" + fileName);
 			if (content == null)
 			{
-				content = hc.getHtmForce(prefix, "data/scripts/quests/" + getName() + "/" + fileName);
+				content = hc.getHtmForce(player, "data/scripts/quests/" + getName() + "/" + fileName);
 			}
 		}
 		return content;

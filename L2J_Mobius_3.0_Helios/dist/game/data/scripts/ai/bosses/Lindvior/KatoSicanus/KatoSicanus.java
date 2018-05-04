@@ -85,7 +85,7 @@ public class KatoSicanus extends AbstractNpcAI
 				if ((members.size() < Config.LINDVIOR_MIN_PLAYERS) || (members.size() > Config.LINDVIOR_MAX_PLAYERS))
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-					packet.setHtml(getHtm(player.getHtmlPrefix(), "33881-4.html"));
+					packet.setHtml(getHtm(player, "33881-4.html"));
 					packet.replace("%min%", Integer.toString(Config.LINDVIOR_MIN_PLAYERS));
 					packet.replace("%max%", Integer.toString(Config.LINDVIOR_MAX_PLAYERS));
 					player.sendPacket(packet);
@@ -96,7 +96,7 @@ public class KatoSicanus extends AbstractNpcAI
 					if (member.getLevel() < Config.LINDVIOR_MIN_PLAYER_LVL)
 					{
 						final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-						packet.setHtml(getHtm(player.getHtmlPrefix(), "33881-5.html"));
+						packet.setHtml(getHtm(player, "33881-5.html"));
 						packet.replace("%minlvl%", Integer.toString(Config.LINDVIOR_MIN_PLAYER_LVL));
 						player.sendPacket(packet);
 						return null;

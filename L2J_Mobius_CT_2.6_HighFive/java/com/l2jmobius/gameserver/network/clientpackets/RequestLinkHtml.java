@@ -75,7 +75,7 @@ public final class RequestLinkHtml implements IClientIncomingPacket
 		
 		final String filename = "data/html/" + _link;
 		final NpcHtmlMessage msg = new NpcHtmlMessage(htmlObjectId);
-		msg.setFile(actor.getHtmlPrefix(), filename);
+		msg.setFile(actor, filename);
 		client.sendPacket(msg);
 	}
 }

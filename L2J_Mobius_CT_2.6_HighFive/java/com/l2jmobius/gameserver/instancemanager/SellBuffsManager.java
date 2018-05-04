@@ -86,20 +86,20 @@ public final class SellBuffsManager implements IGameXmlReader
 	
 	public void sendSellMenu(L2PcInstance player)
 	{
-		final String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmlFolder + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
+		final String html = HtmCache.getInstance().getHtm(player, htmlFolder + (player.isSellingBuffs() ? "BuffMenu_already.html" : "BuffMenu.html"));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
 	public void sendBuffChoiceMenu(L2PcInstance player, int index)
 	{
-		String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmlFolder + "BuffChoice.html");
+		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
 		html = html.replace("%list%", buildSkillMenu(player, index));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
 	
 	public void sendBuffEditMenu(L2PcInstance player)
 	{
-		String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmlFolder + "BuffChoice.html");
+		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffChoice.html");
 		html = html.replace("%list%", buildEditMenu(player));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}
@@ -111,7 +111,7 @@ public final class SellBuffsManager implements IGameXmlReader
 			return;
 		}
 		
-		String html = HtmCache.getInstance().getHtm(player.getHtmlPrefix(), htmlFolder + "BuffBuyMenu.html");
+		String html = HtmCache.getInstance().getHtm(player, htmlFolder + "BuffBuyMenu.html");
 		html = html.replace("%list%", buildBuffMenu(player, seller, index));
 		CommunityBoardHandler.separateAndSend(html, player);
 	}

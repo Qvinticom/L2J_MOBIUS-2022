@@ -157,7 +157,7 @@ public final class Q10544_SeekerSupplies extends Quest
 			}
 			case "32153-02.html":
 			{
-				htmltext = getHtm(player.getHtmlPrefix(), "32153-02.html").replace("%name%", npc.getName());
+				htmltext = getHtm(player, "32153-02.html").replace("%name%", npc.getName());
 				break;
 			}
 			case "32153-03.html":
@@ -176,7 +176,7 @@ public final class Q10544_SeekerSupplies extends Quest
 				giveItems(player, NECKLACE_OF_KNOWNLEDGE, 1);
 				addExpAndSp(player, 2630, 10);
 				qs.exitQuest(false, true);
-				htmltext = getHtm(player.getHtmlPrefix(), "32153-03.html").replace("%name%", npc.getName());
+				htmltext = getHtm(player, "32153-03.html").replace("%name%", npc.getName());
 				break;
 			}
 		}
@@ -263,7 +263,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(5))
 						{
-							htmltext = (player.getRace() == Race.HUMAN) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32153-00.html";
+							htmltext = (player.getRace() == Race.HUMAN) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32153-00.html";
 						}
 						break;
 					}
@@ -271,7 +271,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(6))
 						{
-							htmltext = (player.getRace() == Race.ELF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32147-00.html";
+							htmltext = (player.getRace() == Race.ELF) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32147-00.html";
 						}
 						break;
 					}
@@ -279,7 +279,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(8))
 						{
-							htmltext = (player.getRace() == Race.ORC) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32150-00.html";
+							htmltext = (player.getRace() == Race.ORC) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32150-00.html";
 						}
 						break;
 					}
@@ -287,7 +287,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(7))
 						{
-							htmltext = (player.getRace() == Race.DARK_ELF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32160-00.html";
+							htmltext = (player.getRace() == Race.DARK_ELF) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32160-00.html";
 						}
 						break;
 					}
@@ -295,7 +295,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(9))
 						{
-							htmltext = (player.getRace() == Race.DWARF) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32157-00.html";
+							htmltext = (player.getRace() == Race.DWARF) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32157-00.html";
 						}
 						break;
 					}
@@ -303,7 +303,7 @@ public final class Q10544_SeekerSupplies extends Quest
 					{
 						if (qs.isCond(10))
 						{
-							htmltext = (player.getRace() == Race.KAMAEL) ? getHtm(player.getHtmlPrefix(), "32153-01.html").replace("%name%", npc.getName()) : "32146-00.html";
+							htmltext = (player.getRace() == Race.KAMAEL) ? getHtm(player, "32153-01.html").replace("%name%", npc.getName()) : "32146-00.html";
 						}
 						break;
 					}

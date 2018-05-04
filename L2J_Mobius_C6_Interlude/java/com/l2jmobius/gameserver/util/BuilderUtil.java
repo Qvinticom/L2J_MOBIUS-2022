@@ -37,7 +37,17 @@ public final class BuilderUtil
 	 */
 	public static void sendSysMessage(L2PcInstance player, String message)
 	{
-		player.sendPacket(new CreatureSay(-1, Say2.ALL, "SYS", message));
+		player.sendPacket(new CreatureSay(0, Say2.ALL, "SYS", message));
+	}
+	
+	/**
+	 * Sends builder html message to the player.
+	 * @param player
+	 * @param message
+	 */
+	public static void sendHtmlMessage(L2PcInstance player, String message)
+	{
+		player.sendPacket(new CreatureSay(0, Say2.ALL, "HTML", message));
 	}
 	
 	/**

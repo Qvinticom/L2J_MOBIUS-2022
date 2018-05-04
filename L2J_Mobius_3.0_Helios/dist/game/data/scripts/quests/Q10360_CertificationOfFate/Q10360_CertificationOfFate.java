@@ -518,7 +518,7 @@ public final class Q10360_CertificationOfFate extends Quest
 					break;
 				}
 			}
-			player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), fileName)));
+			player.sendPacket(new TutorialShowHtml(getHtm(player, fileName)));
 		}
 	}
 	

@@ -142,7 +142,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			player.registerOnEvent(this);
 			
 			// Load the html
-			msg.setFile(player.getHtmlPrefix(), "data/html/CeremonyOfChaos/started.htm");
+			msg.setFile(player, "data/html/CeremonyOfChaos/started.htm");
 			
 			// Remove buffs
 			player.stopAllEffectsExceptThoseThatLastThroughDeath();

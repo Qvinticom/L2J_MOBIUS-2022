@@ -146,7 +146,7 @@ public abstract class LetterQuest extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		if ((event.getMarkId() == getId()) && canStartQuest(player))
 		{
-			final String html = getHtm(player.getHtmlPrefix(), "popup.html").replace("%teleport%", getTeleportCommand());
+			final String html = getHtm(player, "popup.html").replace("%teleport%", getTeleportCommand());
 			final QuestState st = getQuestState(player, true);
 			st.startQuest();
 			

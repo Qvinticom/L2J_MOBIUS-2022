@@ -27,6 +27,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.file.filter.HTMLFilter;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -142,9 +144,9 @@ public class HtmCache
 		return content;
 	}
 	
-	public String getHtmForce(String prefix, String path)
+	public String getHtmForce(L2PcInstance player, String path)
 	{
-		String content = getHtm(prefix, path);
+		String content = getHtm(player, path);
 		if (content == null)
 		{
 			content = "<html><body>My text is missing:<br>" + path + "</body></html>";
@@ -153,8 +155,9 @@ public class HtmCache
 		return content;
 	}
 	
-	public String getHtm(String prefix, String path)
+	public String getHtm(L2PcInstance player, String path)
 	{
+		final String prefix = player != null ? player.getHtmlPrefix() : "en";
 		String newPath = null;
 		String content;
 		if ((prefix != null) && !prefix.isEmpty())
@@ -163,6 +166,10 @@ public class HtmCache
 			content = getHtm(newPath);
 			if (content != null)
 			{
+				if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS)
+				{
+					BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
+				}
 				return content;
 			}
 		}
@@ -173,6 +180,10 @@ public class HtmCache
 			_cache.put(newPath, content);
 		}
 		
+		if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS)
+		{
+			BuilderUtil.sendHtmlMessage(player, path.substring(5));
+		}
 		return content;
 	}
 	

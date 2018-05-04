@@ -374,7 +374,7 @@ public final class Q00128_PailakaSongOfIceAndFire extends Quest
 		if (event.getMarkId() == getId())
 		{
 			final L2PcInstance player = event.getActiveChar();
-			player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popup.html")));
+			player.sendPacket(new TutorialShowHtml(getHtm(player, "popup.html")));
 		}
 	}
 }

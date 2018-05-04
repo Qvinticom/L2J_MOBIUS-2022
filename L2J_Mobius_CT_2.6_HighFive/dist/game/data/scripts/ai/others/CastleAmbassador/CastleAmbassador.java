@@ -112,7 +112,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 			if (htmltext != null)
 			{
 				final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-				packet.setHtml(getHtm(player.getHtmlPrefix(), htmltext));
+				packet.setHtml(getHtm(player, htmltext));
 				packet.replace("%castleName%", fortresss.getCastleByAmbassador(npc.getId()).getName());
 				player.sendPacket(packet);
 			}
@@ -147,7 +147,7 @@ public final class CastleAmbassador extends AbstractNpcAI
 		}
 		
 		final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
-		packet.setHtml(getHtm(player.getHtmlPrefix(), htmltext));
+		packet.setHtml(getHtm(player, htmltext));
 		packet.replace("%castleName%", fortresss.getCastleByAmbassador(npc.getId()).getName());
 		player.sendPacket(packet);
 		return null;

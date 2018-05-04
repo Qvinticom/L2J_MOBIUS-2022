@@ -414,6 +414,7 @@ public final class Config
 	public static boolean GM_CRITANNOUNCER_NAME;
 	public static boolean GM_GIVE_SPECIAL_SKILLS;
 	public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
+	public static boolean GM_DEBUG_HTML_PATHS;
 	public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 	public static boolean GAMEGUARD_ENFORCE;
 	public static boolean GAMEGUARD_PROHIBITACTION;
@@ -1838,6 +1839,7 @@ public final class Config
 			GM_CRITANNOUNCER_NAME = General.getBoolean("GMShowCritAnnouncerName", false);
 			GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
 			GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
+			GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
 			USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
 			GAMEGUARD_ENFORCE = General.getBoolean("GameGuardEnforce", false);
 			GAMEGUARD_PROHIBITACTION = General.getBoolean("GameGuardProhibitAction", false);

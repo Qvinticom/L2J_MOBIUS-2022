@@ -68,7 +68,7 @@ public class NewbieGuide extends AbstractNpcAI
 			else
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-				html.setFile(player.getHtmlPrefix(), "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+				html.setFile(player, "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
 				html.replace(SUPPORT_MAGIC_STRING, "");
 				player.sendPacket(html);
 				return htmltext;
@@ -108,7 +108,7 @@ public class NewbieGuide extends AbstractNpcAI
 			return npc.getId() + ".htm";
 		}
 		final NpcHtmlMessage html = new NpcHtmlMessage(npc.getObjectId());
-		html.setFile(player.getHtmlPrefix(), "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
+		html.setFile(player, "data/scripts/ai/others/NewbieGuide/" + npc.getId() + ".htm");
 		html.replace(SUPPORT_MAGIC_STRING, "");
 		player.sendPacket(html);
 		return null;

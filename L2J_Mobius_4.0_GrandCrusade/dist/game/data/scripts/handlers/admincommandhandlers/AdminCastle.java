@@ -224,7 +224,7 @@ public final class AdminCastle implements IAdminCommandHandler
 			else
 			{
 				final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-				html.setHtml(HtmCache.getInstance().getHtm(activeChar.getHtmlPrefix(), "data/html/admin/castlemanage.htm"));
+				html.setHtml(HtmCache.getInstance().getHtm(activeChar, "data/html/admin/castlemanage.htm"));
 				activeChar.sendPacket(html);
 			}
 		}
@@ -239,7 +239,7 @@ public final class AdminCastle implements IAdminCommandHandler
 		{
 			final L2Clan ownerClan = castle.getOwner();
 			final NpcHtmlMessage html = new NpcHtmlMessage(0, 1);
-			html.setHtml(HtmCache.getInstance().getHtm(player.getHtmlPrefix(), "data/html/admin/castlemanage_selected.htm"));
+			html.setHtml(HtmCache.getInstance().getHtm(player, "data/html/admin/castlemanage_selected.htm"));
 			html.replace("%castleId%", castle.getResidenceId());
 			html.replace("%castleName%", castle.getName());
 			html.replace("%ownerName%", ownerClan != null ? ownerClan.getLeaderName() : "NPC");

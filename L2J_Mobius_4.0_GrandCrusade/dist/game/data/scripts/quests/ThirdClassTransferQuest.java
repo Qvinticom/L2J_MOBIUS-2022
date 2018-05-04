@@ -344,7 +344,7 @@ public abstract class ThirdClassTransferQuest extends Quest
 		if (event.getMarkId() == QUESTION_MARK_ID)
 		{
 			final L2PcInstance player = event.getActiveChar();
-			player.sendPacket(new TutorialShowHtml(getHtm(player.getHtmlPrefix(), "popupInvite.html")));
+			player.sendPacket(new TutorialShowHtml(getHtm(player, "popupInvite.html")));
 		}
 	}
 	

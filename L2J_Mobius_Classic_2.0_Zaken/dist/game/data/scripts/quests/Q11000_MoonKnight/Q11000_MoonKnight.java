@@ -495,7 +495,7 @@ public class Q11000_MoonKnight extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		if ((event.getMarkId() == QUESTION_MARK_ID) && canStartQuest(player))
 		{
-			final String html = getHtm(player.getHtmlPrefix(), "popup.html");
+			final String html = getHtm(player, "popup.html");
 			player.sendPacket(new TutorialShowHtml(html));
 		}
 	}

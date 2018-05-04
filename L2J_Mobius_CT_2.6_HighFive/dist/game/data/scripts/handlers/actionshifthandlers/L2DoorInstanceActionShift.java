@@ -36,7 +36,7 @@ public class L2DoorInstanceActionShift implements IActionShiftHandler
 			activeChar.sendPacket(new StaticObject(door, activeChar.isGM()));
 			
 			final NpcHtmlMessage html = new NpcHtmlMessage();
-			html.setFile(activeChar.getHtmlPrefix(), "data/html/admin/doorinfo.htm");
+			html.setFile(activeChar, "data/html/admin/doorinfo.htm");
 			html.replace("%class%", target.getClass().getSimpleName());
 			html.replace("%hp%", String.valueOf((int) door.getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(door.getMaxHp()));

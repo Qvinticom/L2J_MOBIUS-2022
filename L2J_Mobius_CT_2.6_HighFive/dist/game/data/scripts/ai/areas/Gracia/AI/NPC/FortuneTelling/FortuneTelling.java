@@ -51,7 +51,7 @@ public class FortuneTelling extends AbstractNpcAI
 		else
 		{
 			takeItems(player, Inventory.ADENA_ID, COST);
-			htmltext = getHtm(player.getHtmlPrefix(), "fortune.htm").replace("%fortune%", String.valueOf(getRandom(1800309, 1800695)));
+			htmltext = getHtm(player, "fortune.htm").replace("%fortune%", String.valueOf(getRandom(1800309, 1800695)));
 		}
 		return htmltext;
 	}

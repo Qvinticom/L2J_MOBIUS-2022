@@ -132,6 +132,7 @@ public final class Config
 	public static boolean GM_STARTUP_BUILDER_HIDE;
 	public static boolean GM_STARTUP_INVULNERABLE;
 	public static boolean GM_ANNOUNCER_NAME;
+	public static boolean GM_DEBUG_HTML_PATHS;
 	public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 	
 	public static boolean CHECK_KNOWN;
@@ -1232,6 +1233,7 @@ public final class Config
 			GM_STARTUP_INVISIBLE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupInvisible", "true"));
 			GM_SPECIAL_EFFECT = Boolean.parseBoolean(AccessSettings.getProperty("GmLoginSpecialEffect", "false"));
 			GM_STARTUP_SILENCE = Boolean.parseBoolean(AccessSettings.getProperty("GMStartupSilence", "true"));
+			GM_DEBUG_HTML_PATHS = Boolean.parseBoolean(AccessSettings.getProperty("GMDebugHtmlPaths", "true"));
 			USE_SUPER_HASTE_AS_GM_SPEED = Boolean.parseBoolean(AccessSettings.getProperty("UseSuperHasteAsGMSpeed", "false"));
 		}
 		catch (Exception e)
