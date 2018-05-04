@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - invul = turns invulnerability on/off
@@ -46,7 +47,7 @@ public class AdminInvul implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_undying"))
 		{
-			handleUndying(activeChar);
+			handleUndying(activeChar, activeChar);
 			AdminHtml.showAdminHtml(activeChar, "gm_menu.htm");
 		}
 		
@@ -63,7 +64,7 @@ public class AdminInvul implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if (target instanceof L2Character)
 			{
-				handleUndying((L2Character) target);
+				handleUndying(activeChar, (L2Character) target);
 			}
 		}
 		return true;
@@ -88,22 +89,22 @@ public class AdminInvul implements IAdminCommandHandler
 			activeChar.setIsInvul(true);
 			text = activeChar.getName() + " is now invulnerable.";
 		}
-		activeChar.sendMessage(text);
+		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 	
-	private void handleUndying(L2Character activeChar)
+	private void handleUndying(L2PcInstance activeChar, L2Character target)
 	{
 		String text;
-		if (activeChar.isUndying())
+		if (target.isUndying())
 		{
-			activeChar.setUndying(false);
-			text = activeChar.getName() + " is now mortal.";
+			target.setUndying(false);
+			text = target.getName() + " is now mortal.";
 		}
 		else
 		{
-			activeChar.setUndying(true);
-			text = activeChar.getName() + " is now undying.";
+			target.setUndying(true);
+			text = target.getName() + " is now undying.";
 		}
-		activeChar.sendMessage(text);
+		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 }

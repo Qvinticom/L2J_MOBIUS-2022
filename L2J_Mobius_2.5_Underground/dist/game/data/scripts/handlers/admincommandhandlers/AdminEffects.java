@@ -46,6 +46,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SunRise;
 import com.l2jmobius.gameserver.network.serverpackets.SunSet;
 import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -124,7 +125,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
 				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-				activeChar.sendMessage("You are now invisible.");
+				BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 			}
 			else
 			{
@@ -132,7 +133,7 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 				activeChar.broadcastUserInfo();
 				activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-				activeChar.sendMessage("You are now visible.");
+				BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 			}
 			
 			command = "";
@@ -143,7 +144,7 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
 			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-			activeChar.sendMessage("You are now invisible.");
+			BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 		}
 		else if (command.startsWith("admin_vis"))
 		{
@@ -151,7 +152,7 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.STEALTH);
 			activeChar.broadcastUserInfo();
 			activeChar.sendPacket(new ExUserInfoAbnormalVisualEffect(activeChar));
-			activeChar.sendMessage("You are now visible.");
+			BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 		}
 		else if (command.startsWith("admin_setinvis"))
 		{
@@ -162,7 +163,7 @@ public class AdminEffects implements IAdminCommandHandler
 			}
 			final L2Character target = (L2Character) activeChar.getTarget();
 			target.setInvisible(!target.isInvisible());
-			activeChar.sendMessage("You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
+			BuilderUtil.sendSysMessage(activeChar, "You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
 			
 			if (target.isPlayer())
 			{

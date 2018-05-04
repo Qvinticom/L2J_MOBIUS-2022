@@ -16,12 +16,10 @@
  */
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - invul = turns invulnerability on/off
@@ -29,8 +27,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class AdminInvul implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminInvul.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_invul",
@@ -41,11 +37,6 @@ public class AdminInvul implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (command.equals("admin_invul"))
 		{
 			handleInvul(activeChar);
@@ -79,26 +70,16 @@ public class AdminInvul implements IAdminCommandHandler
 	private void handleInvul(L2PcInstance activeChar)
 	{
 		String text;
-		
 		if (activeChar.isInvul())
 		{
 			activeChar.setIsInvul(false);
 			text = activeChar.getName() + " is now mortal.";
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: Gm removed invul mode from character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
-			}
 		}
 		else
 		{
 			activeChar.setIsInvul(true);
 			text = activeChar.getName() + " is now invulnerable.";
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: Gm activated invul mode for character " + activeChar.getName() + "(" + activeChar.getObjectId() + ")");
-			}
 		}
-		
-		activeChar.sendMessage(text);
+		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 }

@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - invul = turns invulnerability on/off
@@ -64,13 +65,13 @@ public class AdminInvul implements IAdminCommandHandler
 		if (activeChar.isInvul())
 		{
 			activeChar.setIsInvul(false);
-			text = activeChar.getName() + " is now mortal";
+			text = activeChar.getName() + " is now mortal.";
 		}
 		else
 		{
 			activeChar.setIsInvul(true);
-			text = activeChar.getName() + " is now invulnerable";
+			text = activeChar.getName() + " is now invulnerable.";
 		}
-		activeChar.sendMessage(text);
+		BuilderUtil.sendSysMessage(activeChar, text);
 	}
 }

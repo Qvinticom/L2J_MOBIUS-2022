@@ -40,6 +40,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SunRise;
 import com.l2jmobius.gameserver.network.serverpackets.SunSet;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:
@@ -115,11 +116,13 @@ public class AdminEffects implements IAdminCommandHandler
 				activeChar.decayMe();
 				activeChar.broadcastUserInfo();
 				activeChar.spawnMe();
+				BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 			}
 			else
 			{
 				activeChar.getAppearance().setVisible();
 				activeChar.broadcastUserInfo();
+				BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 			}
 		}
 		
@@ -129,11 +132,13 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.decayMe();
 			activeChar.broadcastUserInfo();
 			activeChar.spawnMe();
+			BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 		}
 		else if (command.startsWith("admin_vis"))
 		{
 			activeChar.getAppearance().setVisible();
 			activeChar.broadcastUserInfo();
+			BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 		}
 		
 		else if (command.startsWith("admin_earthquake"))
