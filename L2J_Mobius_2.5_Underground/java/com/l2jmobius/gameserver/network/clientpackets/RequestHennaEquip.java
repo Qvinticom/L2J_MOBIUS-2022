@@ -58,7 +58,7 @@ public final class RequestHennaEquip implements IClientIncomingPacket
 		}
 		
 		int totalHennaSlots = activeChar.getHennaEmptySlots();
-		if (activeChar.hasPremiumStatus() && Config.PREMIUM_HENNA_SLOT_ENABLED && (activeChar.getClassId().level() > 1) && (activeChar.getHenna(4) == null))
+		if ((Config.PREMIUM_HENNA_SLOT_ENABLED_FOR_ALL || activeChar.hasPremiumStatus()) && Config.PREMIUM_HENNA_SLOT_ENABLED && (activeChar.getClassId().level() > 1) && (activeChar.getHenna(4) == null))
 		{
 			totalHennaSlots++;
 		}
