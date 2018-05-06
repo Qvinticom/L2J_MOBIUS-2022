@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Mobius
@@ -56,7 +57,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please enter a valid account name.");
+				BuilderUtil.sendSysMessage(activeChar, "Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_add2"))
@@ -67,7 +68,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please enter a valid account name.");
+				BuilderUtil.sendSysMessage(activeChar, "Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_add3"))
@@ -78,7 +79,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please enter a valid account name.");
+				BuilderUtil.sendSysMessage(activeChar, "Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_info"))
@@ -89,7 +90,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please enter a valid account name.");
+				BuilderUtil.sendSysMessage(activeChar, "Please enter a valid account name.");
 			}
 		}
 		else if (command.startsWith("admin_premium_remove"))
@@ -100,7 +101,7 @@ public class AdminPremium implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please enter a valid account name.");
+				BuilderUtil.sendSysMessage(activeChar, "Please enter a valid account name.");
 			}
 		}
 		

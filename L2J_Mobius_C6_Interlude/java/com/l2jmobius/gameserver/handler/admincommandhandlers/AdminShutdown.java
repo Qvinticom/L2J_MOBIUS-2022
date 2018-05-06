@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - server_shutdown [sec] = shows menu or shuts down server in sec seconds
@@ -76,7 +77,7 @@ public class AdminShutdown implements IAdminCommandHandler
 							serverShutdown(activeChar, val, false);
 							return true;
 						}
-						activeChar.sendMessage("Negative Value is not allowed");
+						BuilderUtil.sendSysMessage(activeChar, "Negative Value is not allowed");
 						return false;
 					}
 					catch (StringIndexOutOfBoundsException e)
@@ -101,7 +102,7 @@ public class AdminShutdown implements IAdminCommandHandler
 							serverShutdown(activeChar, val, true);
 							return true;
 						}
-						activeChar.sendMessage("Negative Value is not allowed");
+						BuilderUtil.sendSysMessage(activeChar, "Negative Value is not allowed");
 						return false;
 					}
 					catch (StringIndexOutOfBoundsException e)

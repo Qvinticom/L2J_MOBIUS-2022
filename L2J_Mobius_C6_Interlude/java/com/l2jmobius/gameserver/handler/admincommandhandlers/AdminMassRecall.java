@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - recallparty - recallclan - recallally
@@ -55,7 +56,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (clan == null)
 				{
-					activeChar.sendMessage("This clan doesn't exists.");
+					BuilderUtil.sendSysMessage(activeChar, "This clan doesn't exists.");
 					return true;
 				}
 				
@@ -68,7 +69,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Error in recallclan command.");
+				BuilderUtil.sendSysMessage(activeChar, "Error in recallclan command.");
 			}
 		}
 		else if (command.startsWith("admin_recallally"))
@@ -80,7 +81,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (clan == null)
 				{
-					activeChar.sendMessage("This clan doesn't exists.");
+					BuilderUtil.sendSysMessage(activeChar, "This clan doesn't exists.");
 					return true;
 				}
 				
@@ -113,7 +114,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Error in recallally command.");
+				BuilderUtil.sendSysMessage(activeChar, "Error in recallally command.");
 			}
 		}
 		else if (command.startsWith("admin_recallparty"))
@@ -125,13 +126,13 @@ public class AdminMassRecall implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					activeChar.sendMessage("Target error.");
+					BuilderUtil.sendSysMessage(activeChar, "Target error.");
 					return true;
 				}
 				
 				if (!player.isInParty())
 				{
-					activeChar.sendMessage("Player is not in party.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not in party.");
 					return true;
 				}
 				
@@ -144,7 +145,7 @@ public class AdminMassRecall implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Error in recallparty command.");
+				BuilderUtil.sendSysMessage(activeChar, "Error in recallparty command.");
 			}
 		}
 		return true;

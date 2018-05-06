@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - admin|admin1/admin2/admin3/admin4/admin5 = slots for the 5 starting admin menus - gmliston/gmlistoff = includes/excludes active character from /gmlist results - silence = toggles private messages acceptance mode - diet = toggles weight penalty mode -
@@ -105,13 +106,13 @@ public class AdminAdmin implements IAdminCommandHandler
 			case admin_gmliston:
 			{
 				GmListTable.getInstance().showGm(activeChar);
-				activeChar.sendMessage("Registerd into gm list");
+				BuilderUtil.sendSysMessage(activeChar, "Registerd into gm list");
 				return true;
 			}
 			case admin_gmlistoff:
 			{
 				GmListTable.getInstance().hideGm(activeChar);
-				activeChar.sendMessage("Removed from gm list");
+				BuilderUtil.sendSysMessage(activeChar, "Removed from gm list");
 				return true;
 			}
 			case admin_silence:
@@ -131,7 +132,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			case admin_saveolymp:
 			{
 				Olympiad.getInstance().saveOlympiadStatus();
-				activeChar.sendMessage("Olympiad stuff saved!");
+				BuilderUtil.sendSysMessage(activeChar, "Olympiad stuff saved!");
 				return true;
 			}
 			case admin_manualhero:
@@ -144,7 +145,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				{
 					e.printStackTrace();
 				}
-				activeChar.sendMessage("Heroes formed!");
+				BuilderUtil.sendSysMessage(activeChar, "Heroes formed!");
 				return true;
 			}
 			case admin_diet:
@@ -155,12 +156,12 @@ public class AdminAdmin implements IAdminCommandHandler
 					if (st.nextToken().equalsIgnoreCase("on"))
 					{
 						activeChar.setDietMode(true);
-						activeChar.sendMessage("Diet mode on");
+						BuilderUtil.sendSysMessage(activeChar, "Diet mode on");
 					}
 					else if (st.nextToken().equalsIgnoreCase("off"))
 					{
 						activeChar.setDietMode(false);
-						activeChar.sendMessage("Diet mode off");
+						BuilderUtil.sendSysMessage(activeChar, "Diet mode off");
 					}
 				}
 				else
@@ -172,12 +173,12 @@ public class AdminAdmin implements IAdminCommandHandler
 					if (activeChar.getDietMode())
 					{
 						activeChar.setDietMode(false);
-						activeChar.sendMessage("Diet mode off");
+						BuilderUtil.sendSysMessage(activeChar, "Diet mode off");
 					}
 					else
 					{
 						activeChar.setDietMode(true);
-						activeChar.sendMessage("Diet mode on");
+						BuilderUtil.sendSysMessage(activeChar, "Diet mode on");
 					}
 				}
 				activeChar.refreshOverloaded();
@@ -198,7 +199,7 @@ public class AdminAdmin implements IAdminCommandHandler
 							String pValue = parameter[1].trim();
 							if (Float.valueOf(pValue) == null)
 							{
-								activeChar.sendMessage("Invalid parameter!");
+								BuilderUtil.sendSysMessage(activeChar, "Invalid parameter!");
 								return false;
 							}
 							switch (pName)
@@ -219,7 +220,7 @@ public class AdminAdmin implements IAdminCommandHandler
 									break;
 								}
 							}
-							activeChar.sendMessage("Config parameter " + pName + " set to " + pValue);
+							BuilderUtil.sendSysMessage(activeChar, "Config parameter " + pName + " set to " + pValue);
 						}
 						else
 						{
@@ -246,7 +247,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				
 				if (no_token)
 				{
-					activeChar.sendMessage("Usage: //set parameter=vaue");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //set parameter=vaue");
 					return false;
 				}
 				

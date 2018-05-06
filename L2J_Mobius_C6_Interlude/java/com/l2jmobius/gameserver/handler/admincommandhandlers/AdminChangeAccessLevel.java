@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * <b>This class handles Access Level Management commands:</b><br>
@@ -64,7 +65,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 			if (activeChar.getTarget() instanceof L2PcInstance)
 			{
 				((L2PcInstance) activeChar.getTarget()).setAccessLevel(lvl);
-				activeChar.sendMessage("You have changed the access level of player " + activeChar.getTarget().getName() + " to " + lvl + " .");
+				BuilderUtil.sendSysMessage(activeChar, "You have changed the access level of player " + activeChar.getTarget().getName() + " to " + lvl + " .");
 			}
 		}
 		else if (parts.length == 3)
@@ -76,7 +77,7 @@ public class AdminChangeAccessLevel implements IAdminCommandHandler
 			if (player != null)
 			{
 				player.setAccessLevel(lvl);
-				activeChar.sendMessage("You have changed the access level of player " + activeChar.getTarget().getName() + " to " + lvl + " .");
+				BuilderUtil.sendSysMessage(activeChar, "You have changed the access level of player " + activeChar.getTarget().getName() + " to " + lvl + " .");
 			}
 		}
 	}

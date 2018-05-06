@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.multisell.L2Multisell;
 import com.l2jmobius.gameserver.scripting.L2ScriptEngineManager;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author KidZor
@@ -56,7 +57,7 @@ public class AdminReload implements IAdminCommandHandler
 			
 			if (!st.hasMoreTokens())
 			{
-				activeChar.sendMessage("Usage:  //reload <type>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage:  //reload <type>");
 				return false;
 			}
 			
@@ -68,87 +69,87 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					L2Multisell.getInstance().reload();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Multisell reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Multisell reloaded.");
 				}
 				else if (type.startsWith("teleport"))
 				{
 					TeleportLocationTable.getInstance().reloadAll();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Teleport location table reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Teleport location table reloaded.");
 				}
 				else if (type.startsWith("skill"))
 				{
 					SkillTable.getInstance().reload();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Skills reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Skills reloaded.");
 				}
 				else if (type.equals("npc"))
 				{
 					NpcTable.getInstance().reloadAllNpc();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Npcs reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Npcs reloaded.");
 				}
 				else if (type.startsWith("htm"))
 				{
 					HtmCache.getInstance().reload();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
+					BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
 				}
 				else if (type.startsWith("item"))
 				{
 					ItemTable.getInstance().reload();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Item templates reloaded");
+					BuilderUtil.sendSysMessage(activeChar, "Item templates reloaded");
 				}
 				else if (type.startsWith("instancemanager"))
 				{
 					Manager.reloadAll();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("All instance manager has been reloaded");
+					BuilderUtil.sendSysMessage(activeChar, "All instance manager has been reloaded");
 				}
 				else if (type.startsWith("npcwalkers"))
 				{
 					NpcWalkerRoutesTable.getInstance().load();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("All NPC walker routes have been reloaded");
+					BuilderUtil.sendSysMessage(activeChar, "All NPC walker routes have been reloaded");
 				}
 				else if (type.startsWith("quests"))
 				{
 					final String folder = "quests";
 					QuestManager.getInstance().reload(folder);
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Quests Reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Quests Reloaded.");
 				}
 				else if (type.startsWith("npcbuffers"))
 				{
 					DatatablesManager.reloadAll();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("All Buffer skills tables have been reloaded");
+					BuilderUtil.sendSysMessage(activeChar, "All Buffer skills tables have been reloaded");
 				}
 				else if (type.equals("configs"))
 				{
 					Config.load();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("Server Config Reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Server Config Reloaded.");
 				}
 				else if (type.equals("tradelist"))
 				{
 					TradeController.reload();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("TradeList Table reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "TradeList Table reloaded.");
 				}
 				else if (type.equals("dbs"))
 				{
 					DatatablesManager.reloadAll();
 					sendReloadPage(activeChar);
-					activeChar.sendMessage("BufferSkillsTable reloaded.");
-					activeChar.sendMessage("NpcBufferSkillIdsTable reloaded.");
-					activeChar.sendMessage("AccessLevels reloaded.");
-					activeChar.sendMessage("AdminCommandAccessRights reloaded.");
-					activeChar.sendMessage("GmListTable reloaded.");
-					activeChar.sendMessage("ClanTable reloaded.");
-					activeChar.sendMessage("AugmentationData reloaded.");
-					activeChar.sendMessage("HelperBuffTable reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "BufferSkillsTable reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "NpcBufferSkillIdsTable reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "AccessLevels reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "AdminCommandAccessRights reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "GmListTable reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "ClanTable reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "AugmentationData reloaded.");
+					BuilderUtil.sendSysMessage(activeChar, "HelperBuffTable reloaded.");
 				}
 				else if (type.startsWith("scripts_custom"))
 				{
@@ -159,15 +160,15 @@ public class AdminReload implements IAdminCommandHandler
 					}
 					catch (Exception ioe)
 					{
-						activeChar.sendMessage("Failed loading " + Config.DATAPACK_ROOT + "/data/scripts/custom scripts, no script going to be loaded");
+						BuilderUtil.sendSysMessage(activeChar, "Failed loading " + Config.DATAPACK_ROOT + "/data/scripts/custom scripts, no script going to be loaded");
 						ioe.printStackTrace();
 					}
 				}
-				activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
+				BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage:  //reload <type>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage:  //reload <type>");
 			}
 		}
 		return true;

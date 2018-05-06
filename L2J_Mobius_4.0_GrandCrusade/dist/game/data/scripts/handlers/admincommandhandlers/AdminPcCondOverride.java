@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -75,12 +76,12 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 								if (activeChar.canOverrideCond(ex))
 								{
 									activeChar.removeOverridedCond(ex);
-									activeChar.sendMessage("You've disabled " + ex.getDescription());
+									BuilderUtil.sendSysMessage(activeChar, "You've disabled " + ex.getDescription());
 								}
 								else
 								{
 									activeChar.addOverrideCond(ex);
-									activeChar.sendMessage("You've enabled " + ex.getDescription());
+									BuilderUtil.sendSysMessage(activeChar, "You've enabled " + ex.getDescription());
 								}
 							}
 						}
@@ -97,7 +98,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 											activeChar.addOverrideCond(ex);
 										}
 									}
-									activeChar.sendMessage("All condition exceptions have been enabled.");
+									BuilderUtil.sendSysMessage(activeChar, "All condition exceptions have been enabled.");
 									break;
 								}
 								case "disable_all":
@@ -109,7 +110,7 @@ public class AdminPcCondOverride implements IAdminCommandHandler
 											activeChar.removeOverridedCond(ex);
 										}
 									}
-									activeChar.sendMessage("All condition exceptions have been disabled.");
+									BuilderUtil.sendSysMessage(activeChar, "All condition exceptions have been disabled.");
 									break;
 								}
 							}

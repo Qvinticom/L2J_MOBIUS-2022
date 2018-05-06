@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author ProGramMoS
@@ -78,7 +79,7 @@ public class AdminBuffs implements IAdminCommandHandler
 						showBuffs(player, activeChar);
 						return true;
 					}
-					activeChar.sendMessage("The player " + playername + " is not online");
+					BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online");
 					return false;
 				}
 				else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
@@ -105,7 +106,7 @@ public class AdminBuffs implements IAdminCommandHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Usage: //stopbuff <playername> [skillId] (skillId must be a number)");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId] (skillId must be a number)");
 							return false;
 						}
 						if (SkillId > 0)
@@ -114,15 +115,15 @@ public class AdminBuffs implements IAdminCommandHandler
 						}
 						else
 						{
-							activeChar.sendMessage("Usage: //stopbuff <playername> [skillId] (skillId must be a number > 0)");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId] (skillId must be a number > 0)");
 							return false;
 						}
 						return true;
 					}
-					activeChar.sendMessage("Usage: //stopbuff <playername> [skillId]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId]");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //stopbuff <playername> [skillId]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <playername> [skillId]");
 				return false;
 			}
 			case admin_stopallbuffs:
@@ -135,10 +136,10 @@ public class AdminBuffs implements IAdminCommandHandler
 						removeAllBuffs(activeChar, playername);
 						return true;
 					}
-					activeChar.sendMessage("Usage: //stopallbuffs <playername>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //stopallbuffs <playername>");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //stopallbuffs <playername>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopallbuffs <playername>");
 				return false;
 			}
 			case admin_areacancel:
@@ -153,7 +154,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //areacancel <radius> (integer value > 0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //areacancel <radius> (integer value > 0)");
 						return false;
 					}
 					if (radius > 0)
@@ -165,13 +166,13 @@ public class AdminBuffs implements IAdminCommandHandler
 								knownChar.stopAllEffects();
 							}
 						}
-						activeChar.sendMessage("All effects canceled within raidus " + radius);
+						BuilderUtil.sendSysMessage(activeChar, "All effects canceled within raidus " + radius);
 						return true;
 					}
-					activeChar.sendMessage("Usage: //areacancel <radius> (integer value > 0)");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //areacancel <radius> (integer value > 0)");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //areacancel <radius>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //areacancel <radius>");
 				return false;
 			}
 		}

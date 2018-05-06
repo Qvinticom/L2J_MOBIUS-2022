@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.TerritoryWard;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Admin comand handler for Territory War System This class handles following admin commands:
@@ -65,7 +66,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 					final int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
 					if ((cal.getActualMinimum(Calendar.MONTH) > month) || (cal.getActualMaximum(Calendar.MONTH) < month))
 					{
-						activeChar.sendMessage("Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
+						BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
 						return false;
 					}
 					cal.set(Calendar.MONTH, month);
@@ -75,7 +76,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 					final int day = Integer.parseInt(st.nextToken());
 					if ((cal.getActualMinimum(Calendar.DAY_OF_MONTH) > day) || (cal.getActualMaximum(Calendar.DAY_OF_MONTH) < day))
 					{
-						activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
+						BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
 						return false;
 					}
 					cal.set(Calendar.DAY_OF_MONTH, day);
@@ -85,7 +86,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 					final int hour = Integer.parseInt(st.nextToken());
 					if ((cal.getActualMinimum(Calendar.HOUR_OF_DAY) > hour) || (cal.getActualMaximum(Calendar.HOUR_OF_DAY) < hour))
 					{
-						activeChar.sendMessage("Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
+						BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
 						return false;
 					}
 					cal.set(Calendar.HOUR_OF_DAY, hour);
@@ -95,7 +96,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 					final int min = Integer.parseInt(st.nextToken());
 					if ((cal.getActualMinimum(Calendar.MINUTE) > min) || (cal.getActualMaximum(Calendar.MINUTE) < min))
 					{
-						activeChar.sendMessage("Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
+						BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
 						return false;
 					}
 					cal.set(Calendar.MINUTE, min);
@@ -103,7 +104,7 @@ public class AdminTerritoryWar implements IAdminCommandHandler
 				
 				if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 				{
-					activeChar.sendMessage("Unable to change TW Date!");
+					BuilderUtil.sendSysMessage(activeChar, "Unable to change TW Date!");
 				}
 				else if (cal.getTimeInMillis() != TerritoryWarManager.getInstance().getTWStartTimeInMillis())
 				{

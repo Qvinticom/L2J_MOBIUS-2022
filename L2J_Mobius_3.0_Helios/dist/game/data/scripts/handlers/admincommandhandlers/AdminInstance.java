@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.BypassParser;
 
 /**
@@ -138,7 +139,7 @@ public final class AdminInstance implements IAdminCommandHandler
 						}
 						default:
 						{
-							activeChar.sendMessage("Wrong enter group usage! Please use those values: Alone, Party or CommandChannel.");
+							BuilderUtil.sendSysMessage(activeChar, "Wrong enter group usage! Please use those values: Alone, Party or CommandChannel.");
 							return true;
 						}
 					}
@@ -157,7 +158,7 @@ public final class AdminInstance implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Wrong parameters! Please try again.");
+					BuilderUtil.sendSysMessage(activeChar, "Wrong parameters! Please try again.");
 					return true;
 				}
 				break;
@@ -187,7 +188,7 @@ public final class AdminInstance implements IAdminCommandHandler
 				if (instance != null)
 				{
 					instance.getPlayers().forEach(player -> player.sendPacket(new ExShowScreenMessage("Your instance has been destroyed by Game Master!", 10000)));
-					activeChar.sendMessage("You destroyed Instance " + instance.getId() + " with " + instance.getPlayersCount() + " players inside.");
+					BuilderUtil.sendSysMessage(activeChar, "You destroyed Instance " + instance.getId() + " with " + instance.getPlayersCount() + " players inside.");
 					instance.destroy();
 					sendTemplateDetails(activeChar, instance.getTemplateId());
 				}

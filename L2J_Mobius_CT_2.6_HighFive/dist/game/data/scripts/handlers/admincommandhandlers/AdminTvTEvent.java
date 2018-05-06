@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.TvTEvent;
 import com.l2jmobius.gameserver.model.entity.TvTEventTeleporter;
 import com.l2jmobius.gameserver.model.entity.TvTManager;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author HorridoJoho
@@ -45,7 +46,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 			
 			if (!(target instanceof L2PcInstance))
 			{
-				activeChar.sendMessage("You should select a player!");
+				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");
 				return true;
 			}
 			
@@ -57,7 +58,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 			
 			if (!(target instanceof L2PcInstance))
 			{
-				activeChar.sendMessage("You should select a player!");
+				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");
 				return true;
 			}
 			
@@ -81,13 +82,13 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	{
 		if (playerInstance.isOnEvent())
 		{
-			activeChar.sendMessage("Player already participated in the event!");
+			BuilderUtil.sendSysMessage(activeChar, "Player already participated in the event!");
 			return;
 		}
 		
 		if (!TvTEvent.addParticipant(playerInstance))
 		{
-			activeChar.sendMessage("Player instance could not be added, it seems to be null!");
+			BuilderUtil.sendSysMessage(activeChar, "Player instance could not be added, it seems to be null!");
 			return;
 		}
 		
@@ -101,7 +102,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 	{
 		if (!TvTEvent.removeParticipant(playerInstance.getObjectId()))
 		{
-			activeChar.sendMessage("Player is not part of the event!");
+			BuilderUtil.sendSysMessage(activeChar, "Player is not part of the event!");
 			return;
 		}
 		

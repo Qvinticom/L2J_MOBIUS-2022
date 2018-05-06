@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.thread.LoginServerThread;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - handles every admin menu command
@@ -114,7 +115,7 @@ public class AdminMenu implements IAdminCommandHandler
 				
 				if (!player.isInParty())
 				{
-					activeChar.sendMessage("Player is not in party.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not in party.");
 					teleportCharacter(player, x, y, z, activeChar, "Admin is teleporting you.");
 					return true;
 				}
@@ -145,7 +146,7 @@ public class AdminMenu implements IAdminCommandHandler
 				L2Clan clan = player.getClan();
 				if (clan == null)
 				{
-					activeChar.sendMessage("Player is not in a clan.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not in a clan.");
 					teleportCharacter(player, x, y, z, activeChar, "Admin is teleporting you.");
 					
 					return true;
@@ -263,7 +264,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (plyr != null)
 			{
 				target = plyr;
-				activeChar.sendMessage("You killed " + player);
+				BuilderUtil.sendSysMessage(activeChar, "You killed " + player);
 			}
 		}
 		
@@ -323,7 +324,7 @@ public class AdminMenu implements IAdminCommandHandler
 		else
 		{
 			activeChar.teleToLocation(player.getX(), player.getY(), player.getZ(), true);
-			activeChar.sendMessage("You're teleporting yourself to character " + player.getName());
+			BuilderUtil.sendSysMessage(activeChar, "You're teleporting yourself to character " + player.getName());
 		}
 		
 		showMainPage(activeChar);
@@ -365,7 +366,7 @@ public class AdminMenu implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Specified player name didn't lead to a valid account.");
+				BuilderUtil.sendSysMessage(activeChar, "Specified player name didn't lead to a valid account.");
 			}
 			
 			statement.close();

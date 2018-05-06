@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:
@@ -57,7 +58,7 @@ public class AdminShop implements IAdminCommandHandler
 			}
 			catch (IndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please specify buylist.");
+				BuilderUtil.sendSysMessage(activeChar, "Please specify buylist.");
 			}
 		}
 		else if (command.equals("admin_gmshop"))
@@ -73,7 +74,7 @@ public class AdminShop implements IAdminCommandHandler
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please specify multisell list ID.");
+				BuilderUtil.sendSysMessage(activeChar, "Please specify multisell list ID.");
 			}
 		}
 		else if (command.toLowerCase().startsWith("admin_exc_multisell"))
@@ -85,7 +86,7 @@ public class AdminShop implements IAdminCommandHandler
 			}
 			catch (NumberFormatException | IndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please specify multisell list ID.");
+				BuilderUtil.sendSysMessage(activeChar, "Please specify multisell list ID.");
 			}
 		}
 		return true;

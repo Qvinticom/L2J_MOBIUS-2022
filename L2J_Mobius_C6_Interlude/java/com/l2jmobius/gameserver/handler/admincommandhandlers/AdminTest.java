@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class ...
@@ -64,25 +65,25 @@ public class AdminTest implements IAdminCommandHandler
 		{
 			final L2Character target = (L2Character) activeChar.getTarget();
 			
-			activeChar.sendMessage("Activechar Mcrit " + activeChar.getMCriticalHit(null, null));
-			activeChar.sendMessage("Activechar baseMCritRate " + activeChar.getTemplate().baseMCritRate);
+			BuilderUtil.sendSysMessage(activeChar, "Activechar Mcrit " + activeChar.getMCriticalHit(null, null));
+			BuilderUtil.sendSysMessage(activeChar, "Activechar baseMCritRate " + activeChar.getTemplate().baseMCritRate);
 			
 			if (target != null)
 			{
-				activeChar.sendMessage("Target Mcrit " + target.getMCriticalHit(null, null));
-				activeChar.sendMessage("Target baseMCritRate " + target.getTemplate().baseMCritRate);
+				BuilderUtil.sendSysMessage(activeChar, "Target Mcrit " + target.getMCriticalHit(null, null));
+				BuilderUtil.sendSysMessage(activeChar, "Target baseMCritRate " + target.getTemplate().baseMCritRate);
 			}
 		}
 		if (command.equals("admin_addbufftest"))
 		{
 			final L2Character target = (L2Character) activeChar.getTarget();
-			activeChar.sendMessage("cast");
+			BuilderUtil.sendSysMessage(activeChar, "cast");
 			
 			final L2Skill skill = SkillTable.getInstance().getInfo(1085, 3);
 			
 			if (target != null)
 			{
-				activeChar.sendMessage("target locked");
+				BuilderUtil.sendSysMessage(activeChar, "target locked");
 				
 				for (int i = 0; i < 100;)
 				{
@@ -91,7 +92,7 @@ public class AdminTest implements IAdminCommandHandler
 						continue;
 					}
 					
-					activeChar.sendMessage("Casting " + i);
+					BuilderUtil.sendSysMessage(activeChar, "Casting " + i);
 					activeChar.useMagic(skill, false, false);
 					i++;
 				}
@@ -110,23 +111,23 @@ public class AdminTest implements IAdminCommandHandler
 			}
 			catch (NumberFormatException | NoSuchElementException e)
 			{
-				activeChar.sendMessage("Command format is //skill_test <ID>");
+				BuilderUtil.sendSysMessage(activeChar, "Command format is //skill_test <ID>");
 			}
 		}
 		else if (command.equals("admin_mp on"))
 		{
 			// .startPacketMonitor();
-			activeChar.sendMessage("command not working");
+			BuilderUtil.sendSysMessage(activeChar, "command not working");
 		}
 		else if (command.equals("admin_mp off"))
 		{
 			// .stopPacketMonitor();
-			activeChar.sendMessage("command not working");
+			BuilderUtil.sendSysMessage(activeChar, "command not working");
 		}
 		else if (command.equals("admin_mp dump"))
 		{
 			// .dumpPacketHistory();
-			activeChar.sendMessage("command not working");
+			BuilderUtil.sendSysMessage(activeChar, "command not working");
 		}
 		else if (command.equals("admin_known on"))
 		{
@@ -138,13 +139,13 @@ public class AdminTest implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_test"))
 		{
-			activeChar.sendMessage("Now the server will send a packet that client cannot read correctly");
-			activeChar.sendMessage("generating a critical error..");
+			BuilderUtil.sendSysMessage(activeChar, "Now the server will send a packet that client cannot read correctly");
+			BuilderUtil.sendSysMessage(activeChar, "generating a critical error..");
 			
 			int i = 5;
 			while (i > 0)
 			{
-				activeChar.sendMessage("Client will crash in " + i + " seconds");
+				BuilderUtil.sendSysMessage(activeChar, "Client will crash in " + i + " seconds");
 				
 				try
 				{

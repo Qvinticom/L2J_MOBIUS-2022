@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - cw_info = displays cursed weapon status - cw_remove = removes a cursed weapon from the world, item id or name must be provided - cw_add = adds a cursed weapon into the world, item id or name must be provided. Target will be the weilder - cw_goto =
@@ -60,27 +61,27 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		{
 			if (!command.contains("menu"))
 			{
-				activeChar.sendMessage("====== Cursed Weapons: ======");
+				BuilderUtil.sendSysMessage(activeChar, "====== Cursed Weapons: ======");
 				for (CursedWeapon cw : cwm.getCursedWeapons())
 				{
-					activeChar.sendMessage("> " + cw.getName() + " (" + cw.getItemId() + ")");
+					BuilderUtil.sendSysMessage(activeChar, "> " + cw.getName() + " (" + cw.getItemId() + ")");
 					if (cw.isActivated())
 					{
 						final L2PcInstance pl = cw.getPlayer();
-						activeChar.sendMessage("  Player holding: " + (pl == null ? "null" : pl.getName()));
-						activeChar.sendMessage("    Player Reputation: " + cw.getPlayerReputation());
-						activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
-						activeChar.sendMessage("    Kills : " + cw.getNbKills());
+						BuilderUtil.sendSysMessage(activeChar, "  Player holding: " + (pl == null ? "null" : pl.getName()));
+						BuilderUtil.sendSysMessage(activeChar, "    Player Reputation: " + cw.getPlayerReputation());
+						BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
+						BuilderUtil.sendSysMessage(activeChar, "    Kills : " + cw.getNbKills());
 					}
 					else if (cw.isDropped())
 					{
-						activeChar.sendMessage("  Lying on the ground.");
-						activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
-						activeChar.sendMessage("    Kills : " + cw.getNbKills());
+						BuilderUtil.sendSysMessage(activeChar, "  Lying on the ground.");
+						BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
+						BuilderUtil.sendSysMessage(activeChar, "    Kills : " + cw.getNbKills());
 					}
 					else
 					{
-						activeChar.sendMessage("  Don't exist in the world.");
+						BuilderUtil.sendSysMessage(activeChar, "  Don't exist in the world.");
 					}
 					activeChar.sendPacket(SystemMessageId.EMPTY_3);
 				}
@@ -178,12 +179,12 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //cw_remove|//cw_goto|//cw_add <itemid|name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //cw_remove|//cw_goto|//cw_add <itemid|name>");
 			}
 			
 			if (cw == null)
 			{
-				activeChar.sendMessage("Unknown cursed weapon ID.");
+				BuilderUtil.sendSysMessage(activeChar, "Unknown cursed weapon ID.");
 				return false;
 			}
 			
@@ -199,7 +200,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			{
 				if (cw.isActive())
 				{
-					activeChar.sendMessage("This cursed weapon is already active.");
+					BuilderUtil.sendSysMessage(activeChar, "This cursed weapon is already active.");
 				}
 				else
 				{
@@ -218,7 +219,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Unknown command.");
+				BuilderUtil.sendSysMessage(activeChar, "Unknown command.");
 			}
 		}
 		return true;

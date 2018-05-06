@@ -22,6 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.PcStat;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Psychokiller1888
@@ -46,7 +47,7 @@ public class AdminVitality implements IAdminCommandHandler
 		
 		if (!Config.ENABLE_VITALITY)
 		{
-			activeChar.sendMessage("Vitality is not enabled on the server!");
+			BuilderUtil.sendSysMessage(activeChar, "Vitality is not enabled on the server!");
 			return false;
 		}
 		
@@ -67,7 +68,7 @@ public class AdminVitality implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Incorrect vitality");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect vitality");
 				}
 				
 				target.setVitalityPoints(vitality, true);
@@ -86,11 +87,11 @@ public class AdminVitality implements IAdminCommandHandler
 			else if (cmd.equals("admin_get_vitality"))
 			{
 				vitality = target.getVitalityPoints();
-				activeChar.sendMessage("Player vitality points: " + vitality);
+				BuilderUtil.sendSysMessage(activeChar, "Player vitality points: " + vitality);
 			}
 			return true;
 		}
-		activeChar.sendMessage("Target not found or not a player");
+		BuilderUtil.sendSysMessage(activeChar, "Target not found or not a player");
 		return false;
 	}
 	

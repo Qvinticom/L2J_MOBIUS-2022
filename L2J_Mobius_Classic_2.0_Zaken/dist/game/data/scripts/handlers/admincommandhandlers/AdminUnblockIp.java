@@ -20,6 +20,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:
@@ -47,12 +48,12 @@ public class AdminUnblockIp implements IAdminCommandHandler
 				final String ipAddress = command.substring(16);
 				if (unblockIp(ipAddress, activeChar))
 				{
-					activeChar.sendMessage("Removed IP " + ipAddress + " from blocklist!");
+					BuilderUtil.sendSysMessage(activeChar, "Removed IP " + ipAddress + " from blocklist!");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //unblockip <ip>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //unblockip <ip>");
 			}
 		}
 		

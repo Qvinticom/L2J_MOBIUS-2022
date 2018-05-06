@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.olympiad.OlympiadGameTask;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.olympiad.Participant;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -56,7 +57,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 			{
 				if (!st.hasMoreTokens())
 				{
-					activeChar.sendMessage("Syntax: //olympiad_game <player name>");
+					BuilderUtil.sendSysMessage(activeChar, "Syntax: //olympiad_game <player name>");
 					return false;
 				}
 				
@@ -107,7 +108,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					final int val = parseInt(st, Integer.MIN_VALUE);
 					if (val == Integer.MIN_VALUE)
 					{
-						activeChar.sendMessage("Syntax: //addolypoints <points>");
+						BuilderUtil.sendSysMessage(activeChar, "Syntax: //addolypoints <points>");
 						return false;
 					}
 					
@@ -118,24 +119,24 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final int points = Math.max(oldpoints + val, 0);
 						if (points > 1000)
 						{
-							activeChar.sendMessage("You can't set more than 1000 or less than 0 Olympiad points!");
+							BuilderUtil.sendSysMessage(activeChar, "You can't set more than 1000 or less than 0 Olympiad points!");
 							return false;
 						}
 						
 						statDat.set(Olympiad.POINTS, points);
-						activeChar.sendMessage("Player " + player.getName() + " now has " + points + " Olympiad points.");
+						BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " now has " + points + " Olympiad points.");
 					}
 					else
 					{
-						activeChar.sendMessage("This player is not noblesse!");
+						BuilderUtil.sendSysMessage(activeChar, "This player is not noblesse!");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: target a player and write the amount of points you would like to add.");
-					activeChar.sendMessage("Example: //addolypoints 10");
-					activeChar.sendMessage("However, keep in mind that you can't have less than 0 or more than 1000 points.");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: target a player and write the amount of points you would like to add.");
+					BuilderUtil.sendSysMessage(activeChar, "Example: //addolypoints 10");
+					BuilderUtil.sendSysMessage(activeChar, "However, keep in mind that you can't have less than 0 or more than 1000 points.");
 				}
 				break;
 			}
@@ -148,7 +149,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					final int val = parseInt(st, Integer.MIN_VALUE);
 					if (val == Integer.MIN_VALUE)
 					{
-						activeChar.sendMessage("Syntax: //removeolypoints <points>");
+						BuilderUtil.sendSysMessage(activeChar, "Syntax: //removeolypoints <points>");
 						return false;
 					}
 					
@@ -157,7 +158,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final StatsSet playerStat = Olympiad.getNobleStats(player.getObjectId());
 						if (playerStat == null)
 						{
-							activeChar.sendMessage("This player hasn't played on Olympiad yet!");
+							BuilderUtil.sendSysMessage(activeChar, "This player hasn't played on Olympiad yet!");
 							return false;
 						}
 						
@@ -165,19 +166,19 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final int points = Math.max(oldpoints - val, 0);
 						playerStat.set(Olympiad.POINTS, points);
 						
-						activeChar.sendMessage("Player " + player.getName() + " now has " + points + " Olympiad points.");
+						BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " now has " + points + " Olympiad points.");
 					}
 					else
 					{
-						activeChar.sendMessage("This player is not noblesse!");
+						BuilderUtil.sendSysMessage(activeChar, "This player is not noblesse!");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: target a player and write the amount of points you would like to remove.");
-					activeChar.sendMessage("Example: //removeolypoints 10");
-					activeChar.sendMessage("However, keep in mind that you can't have less than 0 or more than 1000 points.");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: target a player and write the amount of points you would like to remove.");
+					BuilderUtil.sendSysMessage(activeChar, "Example: //removeolypoints 10");
+					BuilderUtil.sendSysMessage(activeChar, "However, keep in mind that you can't have less than 0 or more than 1000 points.");
 				}
 				break;
 			}
@@ -190,7 +191,7 @@ public class AdminOlympiad implements IAdminCommandHandler
 					final int val = parseInt(st, Integer.MIN_VALUE);
 					if (val == Integer.MIN_VALUE)
 					{
-						activeChar.sendMessage("Syntax: //setolypoints <points>");
+						BuilderUtil.sendSysMessage(activeChar, "Syntax: //setolypoints <points>");
 						return false;
 					}
 					
@@ -201,24 +202,24 @@ public class AdminOlympiad implements IAdminCommandHandler
 						final int points = oldpoints - val;
 						if ((points < 1) && (points > 1000))
 						{
-							activeChar.sendMessage("You can't set more than 1000 or less than 0 Olympiad points! or lower then 0");
+							BuilderUtil.sendSysMessage(activeChar, "You can't set more than 1000 or less than 0 Olympiad points! or lower then 0");
 							return false;
 						}
 						
 						statDat.set(Olympiad.POINTS, points);
-						activeChar.sendMessage("Player " + player.getName() + " now has " + points + " Olympiad points.");
+						BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " now has " + points + " Olympiad points.");
 					}
 					else
 					{
-						activeChar.sendMessage("This player is not noblesse!");
+						BuilderUtil.sendSysMessage(activeChar, "This player is not noblesse!");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: target a player and write the amount of points you would like to set.");
-					activeChar.sendMessage("Example: //setolypoints 10");
-					activeChar.sendMessage("However, keep in mind that you can't have less than 0 or more than 1000 points.");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: target a player and write the amount of points you would like to set.");
+					BuilderUtil.sendSysMessage(activeChar, "Example: //setolypoints 10");
+					BuilderUtil.sendSysMessage(activeChar, "However, keep in mind that you can't have less than 0 or more than 1000 points.");
 				}
 				break;
 			}
@@ -263,22 +264,22 @@ public class AdminOlympiad implements IAdminCommandHandler
 	{
 		if (player.isSubClassActive())
 		{
-			activeChar.sendMessage("Player " + player + " subclass active.");
+			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " subclass active.");
 			return false;
 		}
 		else if (player.getClassId().level() < 3)
 		{
-			activeChar.sendMessage("Player " + player + " has not 3rd class.");
+			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " has not 3rd class.");
 			return false;
 		}
 		else if (Olympiad.getInstance().getNoblePoints(player) <= 0)
 		{
-			activeChar.sendMessage("Player " + player + " has 0 oly points (add them with (//addolypoints).");
+			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " has 0 oly points (add them with (//addolypoints).");
 			return false;
 		}
 		else if (OlympiadManager.getInstance().isRegistered(player))
 		{
-			activeChar.sendMessage("Player " + player + " registered to oly.");
+			BuilderUtil.sendSysMessage(activeChar, "Player " + player + " registered to oly.");
 			return false;
 		}
 		return true;

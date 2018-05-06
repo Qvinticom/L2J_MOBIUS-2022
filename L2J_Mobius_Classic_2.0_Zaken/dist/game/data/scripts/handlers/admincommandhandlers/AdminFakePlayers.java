@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.FakePlayerChatManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Mobius
@@ -40,19 +41,19 @@ public class AdminFakePlayers implements IAdminCommandHandler
 			final String[] words = command.substring(15).split(" ");
 			if (words.length < 3)
 			{
-				activeChar.sendMessage("Usage: //fakechat playername fpcname message");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //fakechat playername fpcname message");
 				return false;
 			}
 			final L2PcInstance player = L2World.getInstance().getPlayer(words[0]);
 			if (player == null)
 			{
-				activeChar.sendMessage("Player not found.");
+				BuilderUtil.sendSysMessage(activeChar, "Player not found.");
 				return false;
 			}
 			final String fpcName = FakePlayerData.getInstance().getProperName(words[1]);
 			if (fpcName == null)
 			{
-				activeChar.sendMessage("Fake player not found.");
+				BuilderUtil.sendSysMessage(activeChar, "Fake player not found.");
 				return false;
 			}
 			String message = "";
@@ -65,7 +66,7 @@ public class AdminFakePlayers implements IAdminCommandHandler
 				message += (words[i] + " ");
 			}
 			FakePlayerChatManager.getInstance().sendChat(player, fpcName, message);
-			activeChar.sendMessage("Your message has been sent.");
+			BuilderUtil.sendSysMessage(activeChar, "Your message has been sent.");
 		}
 		return true;
 	}

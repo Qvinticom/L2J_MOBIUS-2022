@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles commands for gm to forge packets
@@ -61,7 +62,7 @@ public class AdminPForge implements IAdminCommandHandler
 			catch (Exception ex)
 			{
 				ex.printStackTrace();
-				activeChar.sendMessage("Usage: //forge2 format");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //forge2 format");
 			}
 		}
 		else if (command.startsWith("admin_forge3"))

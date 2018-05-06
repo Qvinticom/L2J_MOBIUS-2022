@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Admin game point commands.
@@ -47,12 +48,12 @@ public class AdminGamePoints implements IAdminCommandHandler
 				String val = command.substring(22);
 				if (!addGamePoints(activeChar, val))
 				{
-					activeChar.sendMessage("Usage: //add_game_points count");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_game_points count");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //add_game_points count");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //add_game_points count");
 			}
 		}
 		else if (command.equals("admin_count_game_points"))
@@ -64,7 +65,7 @@ public class AdminGamePoints implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("You must select a player first.");
+				BuilderUtil.sendSysMessage(activeChar, "You must select a player first.");
 			}
 		}
 		else if (command.equals("admin_gamepoints"))
@@ -78,12 +79,12 @@ public class AdminGamePoints implements IAdminCommandHandler
 				String val = command.substring(22);
 				if (!setGamePoints(activeChar, val))
 				{
-					activeChar.sendMessage("Usage: //set_game_points count");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //set_game_points count");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //set_game_points count");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //set_game_points count");
 			}
 		}
 		else if (command.startsWith("admin_subtract_game_points"))
@@ -93,12 +94,12 @@ public class AdminGamePoints implements IAdminCommandHandler
 				String val = command.substring(27);
 				if (!subtractGamePoints(activeChar, val))
 				{
-					activeChar.sendMessage("Usage: //subtract_game_points count");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //subtract_game_points count");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //subtract_game_points count");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //subtract_game_points count");
 			}
 		}
 		return true;

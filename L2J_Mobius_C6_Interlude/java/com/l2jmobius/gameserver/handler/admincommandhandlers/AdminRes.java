@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - res = resurrects target L2Character
@@ -105,12 +106,12 @@ public class AdminRes implements IAdminCommandHandler
 						doResurrect(knownPlayer);
 					}
 					
-					activeChar.sendMessage("Resurrected all players within a " + radius + " unit radius.");
+					BuilderUtil.sendSysMessage(activeChar, "Resurrected all players within a " + radius + " unit radius.");
 					return;
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("Enter a valid player name or radius.");
+					BuilderUtil.sendSysMessage(activeChar, "Enter a valid player name or radius.");
 					return;
 				}
 			}
@@ -160,12 +161,12 @@ public class AdminRes implements IAdminCommandHandler
 					}
 				}
 				
-				activeChar.sendMessage("Resurrected all non-players within a " + radius + " unit radius.");
+				BuilderUtil.sendSysMessage(activeChar, "Resurrected all non-players within a " + radius + " unit radius.");
 			}
 		}
 		catch (NumberFormatException e)
 		{
-			activeChar.sendMessage("Enter a valid radius.");
+			BuilderUtil.sendSysMessage(activeChar, "Enter a valid radius.");
 			return;
 		}
 		

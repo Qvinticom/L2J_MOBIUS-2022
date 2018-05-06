@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:
@@ -51,12 +52,12 @@ public class AdminExpSp implements IAdminCommandHandler
 				final String val = command.substring(16);
 				if (!adminAddExpSp(activeChar, val))
 				{
-					activeChar.sendMessage("Usage: //add_exp_sp exp sp");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_exp_sp exp sp");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //add_exp_sp exp sp");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //add_exp_sp exp sp");
 			}
 		}
 		else if (command.startsWith("admin_remove_exp_sp"))
@@ -66,12 +67,12 @@ public class AdminExpSp implements IAdminCommandHandler
 				final String val = command.substring(19);
 				if (!adminRemoveExpSP(activeChar, val))
 				{
-					activeChar.sendMessage("Usage: //remove_exp_sp exp sp");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //remove_exp_sp exp sp");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{ // Case of missing parameter
-				activeChar.sendMessage("Usage: //remove_exp_sp exp sp");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //remove_exp_sp exp sp");
 			}
 		}
 		addExpSp(activeChar);
@@ -145,7 +146,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			player.sendMessage("Admin is adding you " + expval + " xp and " + spval + " sp.");
 			player.addExpAndSp(expval, spval);
 			// Admin information
-			activeChar.sendMessage("Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
+			BuilderUtil.sendSysMessage(activeChar, "Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
 		}
 		return true;
 	}
@@ -188,7 +189,7 @@ public class AdminExpSp implements IAdminCommandHandler
 			player.sendMessage("Admin is removing you " + expval + " xp and " + spval + " sp.");
 			player.removeExpAndSp(expval, spval);
 			// Admin information
-			activeChar.sendMessage("Removed " + expval + " xp and " + spval + " sp from " + player.getName() + ".");
+			BuilderUtil.sendSysMessage(activeChar, "Removed " + expval + " xp and " + spval + " sp from " + player.getName() + ".");
 		}
 		return true;
 	}

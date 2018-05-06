@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.model.spawn.L2Spawn;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
@@ -236,7 +237,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		
 		if (template1 == null)
 		{
-			activeChar.sendMessage("Attention, wrong NPC ID/Name");
+			BuilderUtil.sendSysMessage(activeChar, "Attention, wrong NPC ID/Name");
 			return;
 		}
 		
@@ -256,9 +257,9 @@ public class AdminSpawn implements IAdminCommandHandler
 			
 			if (RaidBossSpawnManager.getInstance().isDefined(spawn.getNpcId()) || GrandBossManager.getInstance().isDefined(spawn.getNpcId()))
 			{
-				activeChar.sendMessage("Another instance of " + template1.name + " already present into database:");
-				activeChar.sendMessage("It will be spawned but not saved on Database");
-				activeChar.sendMessage("After server restart or raid dead, the spawned npc will desappear");
+				BuilderUtil.sendSysMessage(activeChar, "Another instance of " + template1.name + " already present into database:");
+				BuilderUtil.sendSysMessage(activeChar, "It will be spawned but not saved on Database");
+				BuilderUtil.sendSysMessage(activeChar, "After server restart or raid dead, the spawned npc will desappear");
 				permanent = false;
 				spawn.set_customBossInstance(true); // for raids, this value is used in order to segnalate to not save respawn time - status for custom instance
 			}
@@ -280,7 +281,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				spawn.stopRespawn();
 			}
 			
-			activeChar.sendMessage("Created " + template1.name + " on " + target.getObjectId());
+			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.name + " on " + target.getObjectId());
 			// }
 		}
 		catch (Exception e)

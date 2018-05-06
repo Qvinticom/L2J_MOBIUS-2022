@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:<br>
@@ -57,29 +58,29 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		
 		if (command.equalsIgnoreCase("admin_cw_info"))
 		{
-			activeChar.sendMessage("====== Cursed Weapons: ======");
+			BuilderUtil.sendSysMessage(activeChar, "====== Cursed Weapons: ======");
 			
 			for (CursedWeapon cw : cursedWeaponsManager.getCursedWeapons())
 			{
-				activeChar.sendMessage("> " + cw.getName() + " (" + cw.getItemId() + ")");
+				BuilderUtil.sendSysMessage(activeChar, "> " + cw.getName() + " (" + cw.getItemId() + ")");
 				
 				if (cw.isActivated())
 				{
 					L2PcInstance pl = cw.getPlayer();
-					activeChar.sendMessage("  Player holding: " + (pl == null ? "null" : pl.getName()));
-					activeChar.sendMessage("    Player karma: " + cw.getPlayerKarma());
-					activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
-					activeChar.sendMessage("    Kills : " + cw.getNbKills());
+					BuilderUtil.sendSysMessage(activeChar, "  Player holding: " + (pl == null ? "null" : pl.getName()));
+					BuilderUtil.sendSysMessage(activeChar, "    Player karma: " + cw.getPlayerKarma());
+					BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
+					BuilderUtil.sendSysMessage(activeChar, "    Kills : " + cw.getNbKills());
 				}
 				else if (cw.isDropped())
 				{
-					activeChar.sendMessage("  Lying on the ground.");
-					activeChar.sendMessage("    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
-					activeChar.sendMessage("    Kills : " + cw.getNbKills());
+					BuilderUtil.sendSysMessage(activeChar, "  Lying on the ground.");
+					BuilderUtil.sendSysMessage(activeChar, "    Time Remaining: " + (cw.getTimeLeft() / 60000) + " min.");
+					BuilderUtil.sendSysMessage(activeChar, "    Kills : " + cw.getNbKills());
 				}
 				else
 				{
-					activeChar.sendMessage("  Don't exist in the world.");
+					BuilderUtil.sendSysMessage(activeChar, "  Don't exist in the world.");
 				}
 				
 				activeChar.sendPacket(SystemMessageId.FRIEND_LIST_FOOT);
@@ -135,7 +136,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 		{
 			if (!st.hasMoreElements())
 			{
-				activeChar.sendMessage("Not enough parameters!");
+				BuilderUtil.sendSysMessage(activeChar, "Not enough parameters!");
 				return false;
 			}
 			
@@ -164,14 +165,14 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Wrong Cursed Weapon Id!");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong Cursed Weapon Id!");
 			}
 		}
 		else if (command.startsWith("admin_cw_goto"))
 		{
 			if (!st.hasMoreElements())
 			{
-				activeChar.sendMessage("Not enough parameters!");
+				BuilderUtil.sendSysMessage(activeChar, "Not enough parameters!");
 				return false;
 			}
 			
@@ -200,14 +201,14 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Wrong Cursed Weapon Id!");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong Cursed Weapon Id!");
 			}
 		}
 		else if (command.startsWith("admin_cw_add"))
 		{
 			if (!st.hasMoreElements())
 			{
-				activeChar.sendMessage("Not enough parameters!");
+				BuilderUtil.sendSysMessage(activeChar, "Not enough parameters!");
 				return false;
 			}
 			
@@ -236,7 +237,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				final CursedWeapon cursedWeapon = cursedWeaponsManager.getCursedWeapon(id);
 				if (cursedWeapon.isActive())
 				{
-					activeChar.sendMessage("This Cursed Weapon is already active!");
+					BuilderUtil.sendSysMessage(activeChar, "This Cursed Weapon is already active!");
 				}
 				else
 				{
@@ -257,7 +258,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Wrong Cursed Weapon Id!");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong Cursed Weapon Id!");
 			}
 		}
 		return true;

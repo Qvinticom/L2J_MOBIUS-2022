@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Fort;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles all siege commands: Todo: change the class name, and neaten it up
@@ -126,7 +127,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			// }
 			// catch (Exception e)
 			// {
-			// activeChar.sendMessage("Usage: //add_guard npcId");
+			// BuilderUtil.sendSysMessage(activeChar, "Usage: //add_guard npcId");
 			// }
 			// }
 			else if (command.equalsIgnoreCase("admin_clear_fortsiege_list"))
@@ -145,7 +146,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 			}
 			else if (command.equalsIgnoreCase("admin_move_fortdefenders"))
 			{
-				activeChar.sendMessage("Not implemented yet.");
+				BuilderUtil.sendSysMessage(activeChar, "Not implemented yet.");
 			}
 			else if (command.equalsIgnoreCase("admin_setfort"))
 			{
@@ -168,7 +169,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Unable to remove fort");
+					BuilderUtil.sendSysMessage(activeChar, "Unable to remove fort");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_spawn_fortdoors"))

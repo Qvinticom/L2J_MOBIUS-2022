@@ -50,6 +50,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SetSummonRemainTime;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 public class AdminEditChar implements IAdminCommandHandler
@@ -154,7 +155,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //changename|setname <new_name_for_target>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //changename|setname <new_name_for_target>");
 					return false;
 				}
 				final L2Object target = activeChar.getTarget();
@@ -202,7 +203,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 					return false;
 				}
-				activeChar.sendMessage("Name changed from " + oldName + " to " + val);
+				BuilderUtil.sendSysMessage(activeChar, "Name changed from " + oldName + " to " + val);
 				return true;
 			} // changes char name
 			case admin_edit_character:
@@ -232,13 +233,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //setkarma new_karma_for_target(number)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setkarma new_karma_for_target(number)");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setkarma new_karma_for_target");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setkarma new_karma_for_target");
 					return false;
 				}
 				setTargetKarma(activeChar, karma);
@@ -264,7 +265,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //character_info <player_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //character_info <player_name>");
 					return false;
 				}
 				final L2PcInstance target = L2World.getInstance().getPlayer(val);
@@ -290,12 +291,12 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //show_characters <page_number>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //show_characters <page_number>");
 						listCharacters(activeChar, 0);
 						return false;
 					}
 				}
-				activeChar.sendMessage("Usage: //show_characters <page_number>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //show_characters <page_number>");
 				listCharacters(activeChar, 0);
 				return false;
 			}
@@ -318,7 +319,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //find_character <player_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //find_character <player_name>");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -338,7 +339,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //find_dualbox <boxes_number>(default 2)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //find_dualbox <boxes_number>(default 2)");
 						listCharacters(activeChar, 0);
 						return false;
 					}
@@ -355,7 +356,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //find_ip <ip>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //find_ip <ip>");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -365,7 +366,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				catch (IllegalArgumentException e)
 				{
-					activeChar.sendMessage("Usage: //find_ip <ip>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //find_ip <ip>");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -380,7 +381,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //find_account <account_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //find_account <account_name>");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -406,7 +407,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //save_modifications <mods>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //save_modifications <mods>");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -426,13 +427,13 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //rec <value>(default 1)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //rec <value>(default 1)");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //rec <value>(default 1)");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //rec <value>(default 1)");
 					return false;
 				}
 				L2Object target = activeChar.getTarget();
@@ -443,7 +444,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Select player before. Usage: //rec <value>(default 1)");
+					BuilderUtil.sendSysMessage(activeChar, "Select player before. Usage: //rec <value>(default 1)");
 					listCharacters(activeChar, 0);
 					return false;
 				}
@@ -467,7 +468,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //setclass <value>(default 1)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <value>(default 1)");
 						return false;
 					}
 				}
@@ -515,7 +516,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					activeChar.sendMessage(player.getName() + " changed to " + newclass);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //setclass <valid_new_classid>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //setclass <valid_new_classid>");
 				return false;
 			}
 			case admin_settitle:
@@ -537,7 +538,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //settitle <new_title>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //settitle <new_title>");
 					return false;
 				}
 				L2Object target = activeChar.getTarget();
@@ -557,7 +558,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Select your target before the command");
+					BuilderUtil.sendSysMessage(activeChar, "Select your target before the command");
 					return false;
 				}
 				if (player != null)
@@ -586,7 +587,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Select player before command");
+					BuilderUtil.sendSysMessage(activeChar, "Select player before command");
 					return false;
 				}
 				player.getAppearance().setSex(player.getAppearance().getSex() ? false : true);
@@ -606,18 +607,18 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setcolor <new_color>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setcolor <new_color>");
 					return false;
 				}
 				L2Object target = activeChar.getTarget();
 				if (target == null)
 				{
-					activeChar.sendMessage("You have to select a player!");
+					BuilderUtil.sendSysMessage(activeChar, "You have to select a player!");
 					return false;
 				}
 				if (!(target instanceof L2PcInstance))
 				{
-					activeChar.sendMessage("Your target is not a player!");
+					BuilderUtil.sendSysMessage(activeChar, "Your target is not a player!");
 					return false;
 				}
 				L2PcInstance player = (L2PcInstance) target;
@@ -652,18 +653,18 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("You have to select a player!");
+					BuilderUtil.sendSysMessage(activeChar, "You have to select a player!");
 					return false;
 				}
 				if (player.getClan() == null)
 				{
 					player.setClanJoinExpiryTime(0);
 					player.sendMessage("A GM Has reset your clan wait time, You may now join another clan.");
-					activeChar.sendMessage("You have reset " + player.getName() + "'s wait time to join another clan.");
+					BuilderUtil.sendSysMessage(activeChar, "You have reset " + player.getName() + "'s wait time to join another clan.");
 				}
 				else
 				{
-					activeChar.sendMessage("Sorry, but " + player.getName() + " must not be in a clan. Player must leave clan before the wait limit can be reset.");
+					BuilderUtil.sendSysMessage(activeChar, "Sorry, but " + player.getName() + " must not be in a clan. Player must leave clan before the wait limit can be reset.");
 					return false;
 				}
 				return true;
@@ -681,14 +682,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //setcp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setcp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setcp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setcp <new_value>");
 					return false;
 				}
 				activeChar.getStatus().setCurrentCp(value);
@@ -707,14 +708,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //sethp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //sethp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //sethp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //sethp <new_value>");
 					return false;
 				}
 				activeChar.getStatus().setCurrentHp(value);
@@ -733,14 +734,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //setmp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setmp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setmp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setmp <new_value>");
 					return false;
 				}
 				activeChar.getStatus().setCurrentMp(value);
@@ -759,14 +760,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //setchar_cp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_cp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setchar_cp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_cp <new_value>");
 					return false;
 				}
 				if (activeChar.getTarget() instanceof L2PcInstance)
@@ -798,14 +799,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //setchar_hp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_hp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setchar_hp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_hp <new_value>");
 					return false;
 				}
 				if (activeChar.getTarget() instanceof L2PcInstance)
@@ -837,14 +838,14 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Value must be an integer");
-						activeChar.sendMessage("Usage: //setchar_mp <new_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Value must be an integer");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_mp <new_value>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //setchar_mp <new_value>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setchar_mp <new_value>");
 					return false;
 				}
 				if (activeChar.getTarget() instanceof L2PcInstance)
@@ -923,7 +924,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Example: //sethero <trigger> <save>");
+					BuilderUtil.sendSysMessage(activeChar, "Example: //sethero <trigger> <save>");
 				}
 			}
 		}
@@ -1112,13 +1113,13 @@ public class AdminEditChar implements IAdminCommandHandler
 			// Admin information
 			if (player != activeChar)
 			{
-				activeChar.sendMessage("Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
+				BuilderUtil.sendSysMessage(activeChar, "Successfully Changed karma for " + player.getName() + " from (" + oldKarma + ") to (" + newKarma + ").");
 			}
 		}
 		else
 		{
 			// tell admin of mistake
-			activeChar.sendMessage("You must enter a value for karma greater than or equal to 0.");
+			BuilderUtil.sendSysMessage(activeChar, "You must enter a value for karma greater than or equal to 0.");
 		}
 	}
 	

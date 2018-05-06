@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminWho implements IAdminCommandHandler
 {
@@ -32,7 +33,7 @@ public class AdminWho implements IAdminCommandHandler
 	{
 		if (command.equalsIgnoreCase("admin_who"))
 		{
-			activeChar.sendMessage("SYS: current(" + L2World.getInstance().getAllPlayers().size() + "), playing(" + L2World.getInstance().getAllPlayers().size() + ")");
+			BuilderUtil.sendSysMessage(activeChar, "SYS: current(" + L2World.getInstance().getAllPlayers().size() + "), playing(" + L2World.getInstance().getAllPlayers().size() + ")");
 		}
 		return true;
 	}

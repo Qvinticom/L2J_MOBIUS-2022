@@ -35,6 +35,7 @@ import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.GMAudit;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -102,13 +103,13 @@ public class AdminPunishment implements IAdminCommandHandler
 							
 							if ((key == null) || (af == null))
 							{
-								activeChar.sendMessage("Not enough data specified!");
+								BuilderUtil.sendSysMessage(activeChar, "Not enough data specified!");
 								break;
 							}
 							final PunishmentAffect affect = PunishmentAffect.getByName(af);
 							if (affect == null)
 							{
-								activeChar.sendMessage("Incorrect value specified for affect type!");
+								BuilderUtil.sendSysMessage(activeChar, "Incorrect value specified for affect type!");
 								break;
 							}
 							
@@ -167,7 +168,7 @@ public class AdminPunishment implements IAdminCommandHandler
 							}
 							if ((target == null) && ((activeChar.getTarget() == null) || !activeChar.getTarget().isPlayer()))
 							{
-								activeChar.sendMessage("You must target player!");
+								BuilderUtil.sendSysMessage(activeChar, "You must target player!");
 								break;
 							}
 							if (target == null)
@@ -223,12 +224,12 @@ public class AdminPunishment implements IAdminCommandHandler
 				
 				if ((key == null) || (af == null) || (t == null) || (exp == null) || (reason == null))
 				{
-					activeChar.sendMessage("Please fill all the fields!");
+					BuilderUtil.sendSysMessage(activeChar, "Please fill all the fields!");
 					break;
 				}
 				if (!Util.isDigit(exp) && !exp.equals("-1"))
 				{
-					activeChar.sendMessage("Incorrect value specified for expiration time!");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect value specified for expiration time!");
 					break;
 				}
 				
@@ -242,7 +243,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				final PunishmentType type = PunishmentType.getByName(t);
 				if ((affect == null) || (type == null))
 				{
-					activeChar.sendMessage("Incorrect value specified for affect/punishment type!");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect value specified for affect/punishment type!");
 					break;
 				}
 				
@@ -267,7 +268,7 @@ public class AdminPunishment implements IAdminCommandHandler
 					}
 					catch (UnknownHostException e)
 					{
-						activeChar.sendMessage("You've entered an incorrect IP address!");
+						BuilderUtil.sendSysMessage(activeChar, "You've entered an incorrect IP address!");
 						activeChar.sendMessage(e.getMessage());
 						break;
 					}
@@ -276,13 +277,13 @@ public class AdminPunishment implements IAdminCommandHandler
 				// Check if we already put the same punishment on that guy ^^
 				if (PunishmentManager.getInstance().hasPunishment(key, affect, type))
 				{
-					activeChar.sendMessage("Target is already affected by that punishment.");
+					BuilderUtil.sendSysMessage(activeChar, "Target is already affected by that punishment.");
 					break;
 				}
 				
 				// Punish him!
 				PunishmentManager.getInstance().startPunishment(new PunishmentTask(key, affect, type, expirationTime, reason, activeChar.getName()));
-				activeChar.sendMessage("Punishment " + type.name() + " have been applied to: " + affect + " " + name + "!");
+				BuilderUtil.sendSysMessage(activeChar, "Punishment " + type.name() + " have been applied to: " + affect + " " + name + "!");
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, affect.name(), name);
 				return useAdminCommand("admin_punishment info " + name + " " + affect.name(), activeChar);
 			}
@@ -296,7 +297,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				
 				if ((key == null) || (af == null) || (t == null))
 				{
-					activeChar.sendMessage("Not enough data specified!");
+					BuilderUtil.sendSysMessage(activeChar, "Not enough data specified!");
 					break;
 				}
 				
@@ -304,7 +305,7 @@ public class AdminPunishment implements IAdminCommandHandler
 				final PunishmentType type = PunishmentType.getByName(t);
 				if ((affect == null) || (type == null))
 				{
-					activeChar.sendMessage("Incorrect value specified for affect/punishment type!");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect value specified for affect/punishment type!");
 					break;
 				}
 				
@@ -316,12 +317,12 @@ public class AdminPunishment implements IAdminCommandHandler
 				
 				if (!PunishmentManager.getInstance().hasPunishment(key, affect, type))
 				{
-					activeChar.sendMessage("Target is not affected by that punishment!");
+					BuilderUtil.sendSysMessage(activeChar, "Target is not affected by that punishment!");
 					break;
 				}
 				
 				PunishmentManager.getInstance().stopPunishment(key, affect, type);
-				activeChar.sendMessage("Punishment " + type.name() + " have been stopped to: " + affect + " " + name + "!");
+				BuilderUtil.sendSysMessage(activeChar, "Punishment " + type.name() + " have been stopped to: " + affect + " " + name + "!");
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", cmd, affect.name(), name);
 				return useAdminCommand("admin_punishment info " + name + " " + affect.name(), activeChar);
 			}

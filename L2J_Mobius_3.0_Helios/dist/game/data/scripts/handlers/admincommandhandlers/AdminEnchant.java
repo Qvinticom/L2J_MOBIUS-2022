@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - enchant_armor
@@ -135,7 +136,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					// check value
 					if ((ench < 0) || (ench > 127))
 					{
-						activeChar.sendMessage("You must set the enchant level to be between 0-127.");
+						BuilderUtil.sendSysMessage(activeChar, "You must set the enchant level to be between 0-127.");
 					}
 					else
 					{
@@ -148,7 +149,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					{
 						LOGGER.warning("Set enchant error: " + e);
 					}
-					activeChar.sendMessage("Please specify a new enchant value.");
+					BuilderUtil.sendSysMessage(activeChar, "Please specify a new enchant value.");
 				}
 				catch (NumberFormatException e)
 				{
@@ -156,7 +157,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					{
 						LOGGER.warning("Set enchant error: " + e);
 					}
-					activeChar.sendMessage("Please specify a valid new enchant value.");
+					BuilderUtil.sendSysMessage(activeChar, "Please specify a valid new enchant value.");
 				}
 			}
 			
@@ -204,7 +205,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			player.broadcastUserInfo();
 			
 			// informations
-			activeChar.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+			BuilderUtil.sendSysMessage(activeChar, "Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 			player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 		}
 	}

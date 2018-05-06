@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminEvents implements IAdminCommandHandler
 {
@@ -80,18 +81,18 @@ public class AdminEvents implements IAdminCommandHandler
 					{
 						if (event.eventStart(activeChar))
 						{
-							activeChar.sendMessage("Event " + event_name + " started.");
+							BuilderUtil.sendSysMessage(activeChar, "Event " + event_name + " started.");
 							return true;
 						}
 						
-						activeChar.sendMessage("There is problem starting " + event_name + " event.");
+						BuilderUtil.sendSysMessage(activeChar, "There is problem starting " + event_name + " event.");
 						return true;
 					}
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //event_start <eventname>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_start <eventname>");
 				e.printStackTrace();
 				return false;
 			}
@@ -107,18 +108,18 @@ public class AdminEvents implements IAdminCommandHandler
 					{
 						if (event.eventStop())
 						{
-							activeChar.sendMessage("Event " + event_name + " stopped.");
+							BuilderUtil.sendSysMessage(activeChar, "Event " + event_name + " stopped.");
 							return true;
 						}
 						
-						activeChar.sendMessage("There is problem with stoping " + event_name + " event.");
+						BuilderUtil.sendSysMessage(activeChar, "There is problem with stoping " + event_name + " event.");
 						return true;
 					}
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //event_start <eventname>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_start <eventname>");
 				e.printStackTrace();
 				return false;
 			}
@@ -138,7 +139,7 @@ public class AdminEvents implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //event_bypass <eventname> <bypass>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //event_bypass <eventname> <bypass>");
 				e.printStackTrace();
 				return false;
 			}

@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - delete = deletes target
@@ -75,11 +76,11 @@ public class AdminDelete implements IAdminCommandHandler
 				}
 			}
 			
-			activeChar.sendMessage("Deleted " + target.getName() + " from " + target.getObjectId() + ".");
+			BuilderUtil.sendSysMessage(activeChar, "Deleted " + target.getName() + " from " + target.getObjectId() + ".");
 		}
 		else
 		{
-			activeChar.sendMessage("Incorrect target.");
+			BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 		}
 	}
 }

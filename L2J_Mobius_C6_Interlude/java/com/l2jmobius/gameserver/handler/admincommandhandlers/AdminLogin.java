@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.gameserverpackets.ServerStatus;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.thread.LoginServerThread;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles the admin commands that acts on the login
@@ -57,13 +58,13 @@ public class AdminLogin implements IAdminCommandHandler
 		if (command.equals("admin_server_gm_only"))
 		{
 			gmOnly();
-			activeChar.sendMessage("Server is now GM only");
+			BuilderUtil.sendSysMessage(activeChar, "Server is now GM only");
 			showMainPage(activeChar);
 		}
 		else if (command.equals("admin_server_all"))
 		{
 			allowToAll();
-			activeChar.sendMessage("Server is not GM only anymore");
+			BuilderUtil.sendSysMessage(activeChar, "Server is not GM only anymore");
 			showMainPage(activeChar);
 		}
 		else if (command.startsWith("admin_server_max_player"))
@@ -76,17 +77,17 @@ public class AdminLogin implements IAdminCommandHandler
 				try
 				{
 					LoginServerThread.getInstance().setMaxPlayer(Integer.parseInt(number));
-					activeChar.sendMessage("maxPlayer set to " + Integer.parseInt(number));
+					BuilderUtil.sendSysMessage(activeChar, "maxPlayer set to " + Integer.parseInt(number));
 					showMainPage(activeChar);
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("Max players must be a number.");
+					BuilderUtil.sendSysMessage(activeChar, "Max players must be a number.");
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("Format is server_max_player <max>");
+				BuilderUtil.sendSysMessage(activeChar, "Format is server_max_player <max>");
 			}
 		}
 		else if (command.startsWith("admin_server_list_clock"))
@@ -103,7 +104,7 @@ public class AdminLogin implements IAdminCommandHandler
 					case "on":
 					{
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_LIST_CLOCK, ServerStatus.ON);
-						activeChar.sendMessage("A clock will now be displayed next to the server name");
+						BuilderUtil.sendSysMessage(activeChar, "A clock will now be displayed next to the server name");
 						Config.SERVER_LIST_CLOCK = true;
 						showMainPage(activeChar);
 						break;
@@ -112,20 +113,20 @@ public class AdminLogin implements IAdminCommandHandler
 					{
 						LoginServerThread.getInstance().sendServerStatus(ServerStatus.SERVER_LIST_CLOCK, ServerStatus.OFF);
 						Config.SERVER_LIST_CLOCK = false;
-						activeChar.sendMessage("The clock will not be displayed");
+						BuilderUtil.sendSysMessage(activeChar, "The clock will not be displayed");
 						showMainPage(activeChar);
 						break;
 					}
 					default:
 					{
-						activeChar.sendMessage("Format is server_list_clock <on/off>");
+						BuilderUtil.sendSysMessage(activeChar, "Format is server_list_clock <on/off>");
 						break;
 					}
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("Format is server_list_clock <on/off>");
+				BuilderUtil.sendSysMessage(activeChar, "Format is server_list_clock <on/off>");
 			}
 		}
 		else if (command.equals("admin_server_login"))

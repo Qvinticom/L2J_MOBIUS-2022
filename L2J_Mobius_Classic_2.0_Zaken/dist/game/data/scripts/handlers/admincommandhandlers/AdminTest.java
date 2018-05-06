@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
@@ -69,11 +70,11 @@ public class AdminTest implements IAdminCommandHandler
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("Command format is //skill_test <ID>");
+				BuilderUtil.sendSysMessage(activeChar, "Command format is //skill_test <ID>");
 			}
 			catch (NoSuchElementException nsee)
 			{
-				activeChar.sendMessage("Command format is //skill_test <ID>");
+				BuilderUtil.sendSysMessage(activeChar, "Command format is //skill_test <ID>");
 			}
 		}
 		else if (command.equals("admin_known on"))

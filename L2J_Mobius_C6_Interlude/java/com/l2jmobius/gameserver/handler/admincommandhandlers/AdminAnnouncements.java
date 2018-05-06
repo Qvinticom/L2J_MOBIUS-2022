@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.network.clientpackets.Say2;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - announce text = announces text to all players - list_announcements = show menu - reload_announcements = reloads announcements from txt file - announce_announcements = announce all stored announcements to all players - add_announcement text = adds
@@ -139,7 +140,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					Announcements.getInstance().listAnnouncements(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("You cannot announce Empty message");
+				BuilderUtil.sendSysMessage(activeChar, "You cannot announce Empty message");
 				return false;
 			}
 			case admin_del_announcement:
@@ -153,7 +154,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //del_announcement <index> (number >=0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //del_announcement <index> (number >=0)");
 					}
 				}
 				if (index >= 0)
@@ -162,7 +163,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					Announcements.getInstance().listAnnouncements(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //del_announcement <index> (number >=0)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //del_announcement <index> (number >=0)");
 				return false;
 			}
 			case admin_announce:
@@ -202,7 +203,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
 						return false;
 					}
 					if (st.hasMoreTokens())
@@ -218,13 +219,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 							AutoAnnouncementHandler.getInstance().listAutoAnnouncements(activeChar);
 							return true;
 						}
-						activeChar.sendMessage("Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
 						return false;
 					}
-					activeChar.sendMessage("Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //add_autoannouncement <delay> (Seconds > 30) <Announcements>");
 				return false;
 			}
 			case admin_del_autoannouncement:
@@ -237,7 +238,7 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //del_autoannouncement <index> (number >= 0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //del_autoannouncement <index> (number >= 0)");
 						return false;
 					}
 					if (index >= 0)
@@ -247,13 +248,13 @@ public class AdminAnnouncements implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendMessage("Usage: //del_autoannouncement <index> (number >= 0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //del_autoannouncement <index> (number >= 0)");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //del_autoannouncement <index> (number >= 0)");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //del_autoannouncement <index> (number >= 0)");
 					return false;
 				}
 			}

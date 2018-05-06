@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author NosBit
@@ -60,7 +61,7 @@ public class AdminScan implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //scan [radius]");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //scan [radius]");
 						return false;
 					}
 				}
@@ -72,7 +73,7 @@ public class AdminScan implements IAdminCommandHandler
 			{
 				if (!st.hasMoreElements())
 				{
-					activeChar.sendMessage("Usage: //deletenpcbyobjectid <object_id>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //deletenpcbyobjectid <object_id>");
 					return false;
 				}
 				
@@ -84,7 +85,7 @@ public class AdminScan implements IAdminCommandHandler
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
 					if (npc == null)
 					{
-						activeChar.sendMessage("NPC does not exist or object_id does not belong to an NPC");
+						BuilderUtil.sendSysMessage(activeChar, "NPC does not exist or object_id does not belong to an NPC");
 						return false;
 					}
 					
@@ -109,7 +110,7 @@ public class AdminScan implements IAdminCommandHandler
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("object_id must be a number.");
+					BuilderUtil.sendSysMessage(activeChar, "object_id must be a number.");
 					return false;
 				}
 				

@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author
@@ -56,7 +57,7 @@ public class AdminRide implements IAdminCommandHandler
 		{
 			if (player.isMounted() || player.hasSummon())
 			{
-				activeChar.sendMessage("Target already have a summon.");
+				BuilderUtil.sendSysMessage(activeChar, "Target already have a summon.");
 				return false;
 			}
 			if (command.startsWith("admin_ride_wyvern"))
@@ -99,7 +100,7 @@ public class AdminRide implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Command '" + command + "' not recognized");
+				BuilderUtil.sendSysMessage(activeChar, "Command '" + command + "' not recognized");
 				return false;
 			}
 			

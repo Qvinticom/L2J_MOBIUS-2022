@@ -48,6 +48,7 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.templates.StatsSet;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author terry Window - Preferences - Java - Code Style - Code Templates
@@ -119,7 +120,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Wrong usage: //edit_npc <npcId>");
+					BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //edit_npc <npcId>");
 				}
 			}
 			else if (activeChar.getTarget() instanceof L2NpcInstance)
@@ -141,7 +142,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //load_npc <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //load_npc <id>");
 			}
 			if (id > 0)
 			{
@@ -166,7 +167,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Usage: //show_droplist <npc_id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //show_droplist <npc_id>");
 			}
 		}
 		else if (command.startsWith("admin_addShopItem "))
@@ -205,7 +206,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Usage: //save_npc <npc_id> <npc_stat> <npc_stat_value>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //save_npc <npc_id> <npc_stat> <npc_stat_value>");
 			}
 		}
 		else if (command.startsWith("admin_show_skilllist_npc "))
@@ -233,12 +234,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //show_skilllist_npc <npc_id> <page>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //show_skilllist_npc <npc_id> <page>");
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //show_skilllist_npc <npc_id> <page>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //show_skilllist_npc <npc_id> <page>");
 			}
 		}
 		else if (command.startsWith("admin_edit_skill_npc "))
@@ -276,12 +277,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //edit_skill_npc <npc_id> <item_id> [<level>]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //edit_skill_npc <npc_id> <item_id> [<level>]");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //edit_skill_npc <npc_id> <item_id> [<level>]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //edit_skill_npc <npc_id> <item_id> [<level>]");
 			}
 		}
 		else if (command.startsWith("admin_add_skill_npc "))
@@ -328,12 +329,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //add_skill_npc <npc_id> [<level>]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_skill_npc <npc_id> [<level>]");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //add_skill_npc <npc_id> [<level>]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //add_skill_npc <npc_id> [<level>]");
 			}
 		}
 		else if (command.startsWith("admin_del_skill_npc "))
@@ -358,7 +359,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Usage: //del_skill_npc <npc_id> <skill_id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //del_skill_npc <npc_id> <skill_id>");
 			}
 		}
 		else if (command.startsWith("admin_edit_drop "))
@@ -400,12 +401,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //edit_drop <npc_id> <item_id> <category> [<min> <max> <chance>]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //edit_drop <npc_id> <item_id> <category> [<min> <max> <chance>]");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //edit_drop <npc_id> <item_id> <category> [<min> <max> <chance>]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //edit_drop <npc_id> <item_id> <category> [<min> <max> <chance>]");
 			}
 		}
 		else if (command.startsWith("admin_add_drop "))
@@ -457,12 +458,12 @@ public class AdminEditNpc implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //add_drop <npc_id> [<item_id> <category> <min> <max> <chance>]");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_drop <npc_id> [<item_id> <category> <min> <max> <chance>]");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //add_drop <npc_id> [<item_id> <category> <min> <max> <chance>]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //add_drop <npc_id> [<item_id> <category> <min> <max> <chance>]");
 			}
 		}
 		else if (command.startsWith("admin_del_drop "))
@@ -489,7 +490,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Usage: //del_drop <npc_id> <item_id> <category>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //del_drop <npc_id> <item_id> <category>");
 			}
 		}
 		else if (command.startsWith("admin_box_access"))
@@ -559,7 +560,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			tradeList.replaceItem(itemID, Integer.parseInt(args[3]));
 			updateTradeList(itemID, price, tradeListID, order);
 			
-			activeChar.sendMessage("Updated price for " + item.getName() + " in Trade List " + tradeListID);
+			BuilderUtil.sendSysMessage(activeChar, "Updated price for " + item.getName() + " in Trade List " + tradeListID);
 			showShopList(activeChar, tradeListID, 1);
 			return;
 		}
@@ -605,7 +606,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			tradeList.removeItem(itemID);
 			deleteTradeList(tradeListID, order);
 			
-			activeChar.sendMessage("Deleted " + ItemTable.getInstance().getTemplate(itemID).getName() + " from Trade List " + tradeListID);
+			BuilderUtil.sendSysMessage(activeChar, "Deleted " + ItemTable.getInstance().getTemplate(itemID).getName() + " from Trade List " + tradeListID);
 			showShopList(activeChar, tradeListID, 1);
 			return;
 		}
@@ -640,7 +641,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		if (tradeList == null)
 		{
-			activeChar.sendMessage("TradeList not found!");
+			BuilderUtil.sendSysMessage(activeChar, "TradeList not found!");
 			return;
 		}
 		
@@ -662,7 +663,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			tradeList.addItem(newItem);
 			storeTradeList(itemID, price, tradeListID, order);
 			
-			activeChar.sendMessage("Added " + newItem.getItem().getName() + " to Trade List " + tradeList.getListId());
+			BuilderUtil.sendSysMessage(activeChar, "Added " + newItem.getItem().getName() + " to Trade List " + tradeList.getListId());
 			showShopList(activeChar, tradeListID, 1);
 			
 			return;
@@ -763,7 +764,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		if (tradeLists == null)
 		{
-			activeChar.sendMessage("Unknown npc template ID" + merchantID);
+			BuilderUtil.sendSysMessage(activeChar, "Unknown npc template ID" + merchantID);
 			return;
 		}
 		
@@ -901,7 +902,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	{
 		if (npc.isCustom())
 		{
-			activeChar.sendMessage("You are going to modify Custom NPC");
+			BuilderUtil.sendSysMessage(activeChar, "You are going to modify Custom NPC");
 		}
 		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -1188,7 +1189,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		if (old.isCustom())
 		{
-			activeChar.sendMessage("You are going to save Custom NPC");
+			BuilderUtil.sendSysMessage(activeChar, "You are going to save Custom NPC");
 		}
 		
 		NpcTable.getInstance().saveNpc(newNpcData);
@@ -1204,7 +1205,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		
 		if (npcData == null)
 		{
-			activeChar.sendMessage("unknown npc template id" + npcId);
+			BuilderUtil.sendSysMessage(activeChar, "unknown npc template id" + npcId);
 			return;
 		}
 		
@@ -1349,7 +1350,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("unknown error!");
+				BuilderUtil.sendSysMessage(activeChar, "unknown error!");
 			}
 		}
 		catch (Exception e)
@@ -1468,7 +1469,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		final L2NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 		if (npcData == null)
 		{
-			activeChar.sendMessage("Template id unknown: " + npcId);
+			BuilderUtil.sendSysMessage(activeChar, "Template id unknown: " + npcId);
 			return;
 		}
 		
@@ -1635,7 +1636,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Unknown error");
+				BuilderUtil.sendSysMessage(activeChar, "Unknown error");
 			}
 		}
 		catch (Exception e)

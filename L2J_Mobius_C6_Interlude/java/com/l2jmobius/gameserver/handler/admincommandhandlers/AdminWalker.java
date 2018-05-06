@@ -24,6 +24,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Blaze
@@ -75,7 +76,7 @@ public class AdminWalker implements IAdminCommandHandler
 						
 						if (rset.next())
 						{
-							activeChar.sendMessage("Such NPC already was, we add routes");
+							BuilderUtil.sendSysMessage(activeChar, "Such NPC already was, we add routes");
 							_routeid = rset.getInt("route_id");
 						}
 						else
@@ -101,7 +102,7 @@ public class AdminWalker implements IAdminCommandHandler
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("The incorrect identifier");
+					BuilderUtil.sendSysMessage(activeChar, "The incorrect identifier");
 				}
 				
 				mainMenu(activeChar);

@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.buylist.L2BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:
@@ -54,7 +55,7 @@ public class AdminShop implements IAdminCommandHandler
 			}
 			catch (IndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Please specify buylist.");
+				BuilderUtil.sendSysMessage(activeChar, "Please specify buylist.");
 			}
 		}
 		else if (command.equals("admin_gmshop"))

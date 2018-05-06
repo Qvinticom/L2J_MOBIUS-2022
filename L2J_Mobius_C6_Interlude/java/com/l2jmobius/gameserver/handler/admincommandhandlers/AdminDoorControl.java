@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands:<br>
@@ -90,7 +91,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Wrong ID door.");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong ID door.");
 				e.printStackTrace();
 				return false;
 			}
@@ -105,7 +106,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Incorrect target.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 			}
 		}
 		else if (command.startsWith("admin_open ")) // id
@@ -131,7 +132,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Wrong ID door.");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong ID door.");
 				e.printStackTrace();
 				return false;
 			}
@@ -146,7 +147,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Incorrect target.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 			}
 		}
 		

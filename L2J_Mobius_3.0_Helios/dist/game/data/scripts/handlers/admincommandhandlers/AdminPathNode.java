@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminPathNode implements IAdminCommandHandler
 {
@@ -41,13 +42,13 @@ public class AdminPathNode implements IAdminCommandHandler
 				final List<Location> path = GeoEngine.getInstance().findPath(activeChar.getX(), activeChar.getY(), (short) activeChar.getZ(), activeChar.getTarget().getX(), activeChar.getTarget().getY(), (short) activeChar.getTarget().getZ(), activeChar.getInstanceWorld());
 				if (path == null)
 				{
-					activeChar.sendMessage("No route found or pathfinding disabled.");
+					BuilderUtil.sendSysMessage(activeChar, "No route found or pathfinding disabled.");
 				}
 				else
 				{
 					for (Location point : path)
 					{
-						activeChar.sendMessage("x:" + point.getX() + " y:" + point.getY() + " z:" + point.getZ());
+						BuilderUtil.sendSysMessage(activeChar, "x:" + point.getX() + " y:" + point.getY() + " z:" + point.getZ());
 					}
 				}
 			}

@@ -47,6 +47,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -118,7 +119,7 @@ public class AdminReload implements IAdminCommandHandler
 					else
 					{
 						QuestManager.getInstance().reloadAllScripts();
-						activeChar.sendMessage("All scripts have been reloaded.");
+						BuilderUtil.sendSysMessage(activeChar, "All scripts have been reloaded.");
 						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Quests.");
 					}
 					break;
@@ -126,7 +127,7 @@ public class AdminReload implements IAdminCommandHandler
 				case "walker":
 				{
 					WalkingManager.getInstance().load();
-					activeChar.sendMessage("All walkers have been reloaded");
+					BuilderUtil.sendSysMessage(activeChar, "All walkers have been reloaded");
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Walkers.");
 					break;
 				}
@@ -144,13 +145,13 @@ public class AdminReload implements IAdminCommandHandler
 						}
 						else
 						{
-							activeChar.sendMessage("File or Directory does not exist.");
+							BuilderUtil.sendSysMessage(activeChar, "File or Directory does not exist.");
 						}
 					}
 					else
 					{
 						HtmCache.getInstance().reload();
-						activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
+						BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " megabytes on " + HtmCache.getInstance().getLoadedFiles() + " files loaded");
 						AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Htms.");
 					}
 					break;
@@ -219,7 +220,7 @@ public class AdminReload implements IAdminCommandHandler
 					catch (Exception e)
 					{
 						LOGGER.log(Level.WARNING, "Failed executing effect master handler!", e);
-						activeChar.sendMessage("Error reloading effect master handler!");
+						BuilderUtil.sendSysMessage(activeChar, "Error reloading effect master handler!");
 					}
 					break;
 				}
@@ -233,7 +234,7 @@ public class AdminReload implements IAdminCommandHandler
 					catch (Exception e)
 					{
 						LOGGER.log(Level.WARNING, "Failed executing master handler!", e);
-						activeChar.sendMessage("Error reloading master handler!");
+						BuilderUtil.sendSysMessage(activeChar, "Error reloading master handler!");
 					}
 					break;
 				}
@@ -282,7 +283,7 @@ public class AdminReload implements IAdminCommandHandler
 					return true;
 				}
 			}
-			activeChar.sendMessage("WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
+			BuilderUtil.sendSysMessage(activeChar, "WARNING: There are several known issues regarding this feature. Reloading server data during runtime is STRONGLY NOT RECOMMENDED for live servers, just for developing environments.");
 		}
 		return true;
 	}

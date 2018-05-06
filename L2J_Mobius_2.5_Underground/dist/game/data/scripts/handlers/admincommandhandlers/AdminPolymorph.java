@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -102,7 +103,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			final String[] parts = command.split(" ");
 			if ((parts.length != 2) || !Util.isDigit(parts[1]))
 			{
-				activeChar.sendMessage("Usage: //transform <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //transform <id>");
 				return false;
 			}
 			
@@ -118,7 +119,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			final String[] parts = command.split(" ");
 			if ((parts.length < 2) || !Util.isDigit(parts[1]))
 			{
-				activeChar.sendMessage("Usage: //polymorph [type] <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //polymorph [type] <id>");
 				return false;
 			}
 			
@@ -168,7 +169,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 			}
 			// end of animation
 			obj.broadcastInfo();
-			activeChar.sendMessage("Polymorph succeed");
+			BuilderUtil.sendSysMessage(activeChar, "Polymorph succeed");
 		}
 		else
 		{
@@ -187,7 +188,7 @@ public class AdminPolymorph implements IAdminCommandHandler
 		{
 			target.getPoly().setPolyInfo(null, "1");
 			target.broadcastInfo();
-			activeChar.sendMessage("Unpolymorph succeed");
+			BuilderUtil.sendSysMessage(activeChar, "Unpolymorph succeed");
 		}
 		else
 		{

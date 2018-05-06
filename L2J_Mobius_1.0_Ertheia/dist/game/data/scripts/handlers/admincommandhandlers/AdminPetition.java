@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles commands for GMs to respond to petitions.
@@ -115,7 +116,7 @@ public class AdminPetition implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //force_peti text");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //force_peti text");
 				return false;
 			}
 		}

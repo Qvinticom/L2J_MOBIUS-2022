@@ -42,6 +42,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
@@ -195,17 +196,17 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendMessage("Cannot find instance " + instance);
+						BuilderUtil.sendSysMessage(activeChar, "Cannot find instance " + instance);
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Invalid instance number.");
+					BuilderUtil.sendSysMessage(activeChar, "Invalid instance number.");
 				}
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage //instance_spawns <instance_number>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage //instance_spawns <instance_number>");
 			}
 		}
 		else if (command.startsWith("admin_unspawnall"))
@@ -301,7 +302,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Command format is //list_spawns <npcId|npc_name> [tele_index]");
+				BuilderUtil.sendSysMessage(activeChar, "Command format is //list_spawns <npcId|npc_name> [tele_index]");
 			}
 			if (command.startsWith("admin_list_positions"))
 			{
@@ -445,7 +446,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			spawn.getLastSpawn().broadcastInfo();
-			activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId());
+			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId());
 		}
 		catch (Exception e)
 		{
@@ -491,7 +492,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				spawn.stopRespawn();
 			}
 			spawn.getLastSpawn().broadcastInfo();
-			activeChar.sendMessage("Created " + template1.getName() + " on " + target.getObjectId());
+			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.getName() + " on " + target.getObjectId());
 		}
 		catch (Exception e)
 		{

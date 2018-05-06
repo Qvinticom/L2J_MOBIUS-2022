@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.cache.CrestCache;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Layanere
@@ -75,7 +76,7 @@ public class AdminCache implements IAdminCommandHandler
 			case admin_cache_htm_rebuild:
 			{
 				HtmCache.getInstance().reload(Config.DATAPACK_ROOT);
-				activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " MB on " + HtmCache.getInstance().getLoadedFiles() + " file(s) loaded.");
+				BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " MB on " + HtmCache.getInstance().getLoadedFiles() + " file(s) loaded.");
 				return true;
 			}
 			case admin_cache_reload_path:
@@ -84,10 +85,10 @@ public class AdminCache implements IAdminCommandHandler
 				{
 					final String path = st.nextToken();
 					HtmCache.getInstance().reloadPath(new File(Config.DATAPACK_ROOT, path));
-					activeChar.sendMessage("Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " MB in " + HtmCache.getInstance().getLoadedFiles() + " file(s) loaded.");
+					BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: " + HtmCache.getInstance().getMemoryUsage() + " MB in " + HtmCache.getInstance().getLoadedFiles() + " file(s) loaded.");
 					return true;
 				}
-				activeChar.sendMessage("Usage: //cache_reload_path <path>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //cache_reload_path <path>");
 				return false;
 			}
 			case admin_cache_reload_file:
@@ -97,28 +98,28 @@ public class AdminCache implements IAdminCommandHandler
 					String path = st.nextToken();
 					if (HtmCache.getInstance().loadFile(new File(Config.DATAPACK_ROOT, path)) != null)
 					{
-						activeChar.sendMessage("Cache[HTML]: file was loaded");
+						BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: file was loaded");
 					}
 					else
 					{
-						activeChar.sendMessage("Cache[HTML]: file can't be loaded");
+						BuilderUtil.sendSysMessage(activeChar, "Cache[HTML]: file can't be loaded");
 					}
 					return true;
 				}
-				activeChar.sendMessage("Usage: //cache_reload_file <relative_path/file>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //cache_reload_file <relative_path/file>");
 				return false;
 			}
 			case admin_cache_crest_rebuild:
 			case admin_cache_crest_reload:
 			{
 				CrestCache.getInstance().reload();
-				activeChar.sendMessage("Cache[Crest]: " + String.format("%.3f", CrestCache.getInstance().getMemoryUsage()) + " megabytes on " + CrestCache.getInstance().getLoadedFiles() + " files loaded");
+				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: " + String.format("%.3f", CrestCache.getInstance().getMemoryUsage()) + " megabytes on " + CrestCache.getInstance().getLoadedFiles() + " files loaded");
 				return true;
 			}
 			case admin_cache_crest_fix:
 			{
 				CrestCache.getInstance().convertOldPedgeFiles();
-				activeChar.sendMessage("Cache[Crest]: crests fixed");
+				BuilderUtil.sendSysMessage(activeChar, "Cache[Crest]: crests fixed");
 				return true;
 			}
 			default:

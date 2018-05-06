@@ -31,6 +31,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -157,7 +158,7 @@ public class AdminClan implements IAdminCommandHandler
 					}
 					
 					clan.setNewLeader(member);
-					activeChar.sendMessage("Task have been forcely executed.");
+					BuilderUtil.sendSysMessage(activeChar, "Task have been forcely executed.");
 					break;
 				}
 			}

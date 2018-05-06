@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - heal = restores HP/MP/CP on target, name or radius
@@ -58,7 +59,7 @@ public class AdminHeal implements IAdminCommandHandler
 				{
 					LOGGER.warning("Heal error: " + e);
 				}
-				activeChar.sendMessage("Incorrect target/radius specified.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect target/radius specified.");
 			}
 		}
 		return true;
@@ -101,7 +102,7 @@ public class AdminHeal implements IAdminCommandHandler
 						}
 					});
 					
-					activeChar.sendMessage("Healed within " + radius + " unit radius.");
+					BuilderUtil.sendSysMessage(activeChar, "Healed within " + radius + " unit radius.");
 					return;
 				}
 				catch (NumberFormatException nbe)

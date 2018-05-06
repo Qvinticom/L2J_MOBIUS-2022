@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles all siege commands: TODO: change the class name, and neaten it up
@@ -118,7 +119,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				else if (SiegeManager.getInstance().checkIsRegistered(player.getClan(), castle.getCastleId()))
 				{
-					activeChar.sendMessage("Clan is already registered!");
+					BuilderUtil.sendSysMessage(activeChar, "Clan is already registered!");
 				}
 				else
 				{
@@ -145,7 +146,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Usage: //add_guard npcId");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //add_guard npcId");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clear_siege_list"))
@@ -187,7 +188,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Unable to remove castle");
+					BuilderUtil.sendSysMessage(activeChar, "Unable to remove castle");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clanhallset"))
@@ -198,7 +199,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				else if (!ClanHallManager.getInstance().isFree(clanhall.getId()))
 				{
-					activeChar.sendMessage("This ClanHall isn't free!");
+					BuilderUtil.sendSysMessage(activeChar, "This ClanHall isn't free!");
 				}
 				else if (player.getClan().getHasHideout() == 0)
 				{
@@ -211,7 +212,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("You have already a ClanHall!");
+					BuilderUtil.sendSysMessage(activeChar, "You have already a ClanHall!");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clanhalldel"))
@@ -223,7 +224,7 @@ public class AdminSiege implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("This ClanHall is already Free!");
+					BuilderUtil.sendSysMessage(activeChar, "This ClanHall is already Free!");
 				}
 			}
 			else if (command.equalsIgnoreCase("admin_clanhallopendoors"))

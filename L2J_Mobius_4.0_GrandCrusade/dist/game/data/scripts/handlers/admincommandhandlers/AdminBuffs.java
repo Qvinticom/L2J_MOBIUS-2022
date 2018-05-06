@@ -39,6 +39,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SkillCoolTime;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 public class AdminBuffs implements IAdminCommandHandler
@@ -74,8 +75,8 @@ public class AdminBuffs implements IAdminCommandHandler
 			command = st.nextToken();
 			if (!st.hasMoreTokens())
 			{
-				activeChar.sendMessage("Skill Id and level are not specified.");
-				activeChar.sendMessage("Usage: //buff <skillId> <skillLevel>");
+				BuilderUtil.sendSysMessage(activeChar, "Skill Id and level are not specified.");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //buff <skillId> <skillLevel>");
 				return false;
 			}
 			
@@ -87,18 +88,18 @@ public class AdminBuffs implements IAdminCommandHandler
 				final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 				if (skill == null)
 				{
-					activeChar.sendMessage("Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
+					BuilderUtil.sendSysMessage(activeChar, "Skill with id: " + skillId + ", lvl: " + skillLevel + " not found.");
 					return false;
 				}
 				
-				activeChar.sendMessage("Admin buffing " + skill.getName() + " (" + skillId + "," + skillLevel + ")");
+				BuilderUtil.sendSysMessage(activeChar, "Admin buffing " + skill.getName() + " (" + skillId + "," + skillLevel + ")");
 				skill.applyEffects(activeChar, target);
 				return true;
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed buffing: " + e.getMessage());
-				activeChar.sendMessage("Usage: //buff <skillId> <skillLevel>");
+				BuilderUtil.sendSysMessage(activeChar, "Failed buffing: " + e.getMessage());
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //buff <skillId> <skillLevel>");
 				return false;
 			}
 		}
@@ -120,7 +121,7 @@ public class AdminBuffs implements IAdminCommandHandler
 					showBuffs(activeChar, player, page, command.endsWith("_ps"));
 					return true;
 				}
-				activeChar.sendMessage("The player " + playername + " is not online.");
+				BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online.");
 				return false;
 			}
 			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
@@ -149,8 +150,8 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed removing effect: " + e.getMessage());
-				activeChar.sendMessage("Usage: //stopbuff <objectId> <skillId>");
+				BuilderUtil.sendSysMessage(activeChar, "Failed removing effect: " + e.getMessage());
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopbuff <objectId> <skillId>");
 				return false;
 			}
 		}
@@ -166,8 +167,8 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed removing all effects: " + e.getMessage());
-				activeChar.sendMessage("Usage: //stopallbuffs <objectId>");
+				BuilderUtil.sendSysMessage(activeChar, "Failed removing all effects: " + e.getMessage());
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //stopallbuffs <objectId>");
 				return false;
 			}
 		}
@@ -183,8 +184,8 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed viewing blocked effects: " + e.getMessage());
-				activeChar.sendMessage("Usage: //viewblockedeffects <objectId>");
+				BuilderUtil.sendSysMessage(activeChar, "Failed viewing blocked effects: " + e.getMessage());
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //viewblockedeffects <objectId>");
 				return false;
 			}
 		}
@@ -199,12 +200,12 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2PcInstance.class, radius, L2Character::stopAllEffects);
 				
-				activeChar.sendMessage("All effects canceled within radius " + radius);
+				BuilderUtil.sendSysMessage(activeChar, "All effects canceled within radius " + radius);
 				return true;
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("Usage: //areacancel <radius>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //areacancel <radius>");
 				return false;
 			}
 		}
@@ -228,7 +229,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					activeChar.sendMessage("The player " + playername + " is not online.");
+					BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online.");
 					return false;
 				}
 			}
@@ -247,7 +248,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				player.resetTimeStamps();
 				player.resetDisabledSkills();
 				player.sendPacket(new SkillCoolTime(player));
-				activeChar.sendMessage("Skill reuse was removed from " + player.getName() + ".");
+				BuilderUtil.sendSysMessage(activeChar, "Skill reuse was removed from " + player.getName() + ".");
 				return true;
 			}
 			catch (NullPointerException e)
@@ -262,10 +263,10 @@ public class AdminBuffs implements IAdminCommandHandler
 				final boolean toAuraSkills = activeChar.getKnownSkill(7041) != null;
 				switchSkills(activeChar, toAuraSkills);
 				activeChar.sendSkillList();
-				activeChar.sendMessage("You have succefully changed to target " + (toAuraSkills ? "aura" : "one") + " special skills.");
+				BuilderUtil.sendSysMessage(activeChar, "You have succefully changed to target " + (toAuraSkills ? "aura" : "one") + " special skills.");
 				return true;
 			}
-			activeChar.sendMessage("There is nothing to switch.");
+			BuilderUtil.sendSysMessage(activeChar, "There is nothing to switch.");
 			return false;
 		}
 		return true;
@@ -368,7 +369,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			if (target.isAffectedBySkill(skillId))
 			{
 				target.stopSkillEffects(true, skillId);
-				activeChar.sendMessage("Removed skill ID: " + skillId + " effects from " + target.getName() + " (" + objId + ").");
+				BuilderUtil.sendSysMessage(activeChar, "Removed skill ID: " + skillId + " effects from " + target.getName() + " (" + objId + ").");
 			}
 			
 			showBuffs(activeChar, target, 0, false);
@@ -393,7 +394,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		if (target != null)
 		{
 			target.stopAllEffects();
-			activeChar.sendMessage("Removed all effects from " + target.getName() + " (" + objId + ")");
+			BuilderUtil.sendSysMessage(activeChar, "Removed all effects from " + target.getName() + " (" + objId + ")");
 			showBuffs(activeChar, target, 0, false);
 			if (Config.GMAUDIT)
 			{
@@ -411,7 +412,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			activeChar.sendMessage("Target with object id " + objId + " not found.");
+			BuilderUtil.sendSysMessage(activeChar, "Target with object id " + objId + " not found.");
 			return;
 		}
 		

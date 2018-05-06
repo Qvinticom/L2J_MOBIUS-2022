@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -65,7 +66,7 @@ public final class AdminCastle implements IAdminCommandHandler
 				
 				if (castle == null)
 				{
-					activeChar.sendMessage("Invalid parameters! Usage: //castlemanage <castleId[1-9] / castleName>");
+					BuilderUtil.sendSysMessage(activeChar, "Invalid parameters! Usage: //castlemanage <castleId[1-9] / castleName>");
 					return false;
 				}
 				
@@ -140,7 +141,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							}
 							else
 							{
-								activeChar.sendMessage("There is currently not registered any clan for castle siege!");
+								BuilderUtil.sendSysMessage(activeChar, "There is currently not registered any clan for castle siege!");
 							}
 							break;
 						}
@@ -152,7 +153,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							}
 							else
 							{
-								activeChar.sendMessage("Castle siege is not currently in progress!");
+								BuilderUtil.sendSysMessage(activeChar, "Castle siege is not currently in progress!");
 							}
 							showCastleMenu(activeChar, castle.getResidenceId());
 							break;
@@ -165,15 +166,15 @@ public final class AdminCastle implements IAdminCommandHandler
 							}
 							else if (target.getClan().getCastleId() > 0)
 							{
-								activeChar.sendMessage("This clan already have castle!");
+								BuilderUtil.sendSysMessage(activeChar, "This clan already have castle!");
 							}
 							else if (castle.getOwner() != null)
 							{
-								activeChar.sendMessage("This castle is already taken by another clan!");
+								BuilderUtil.sendSysMessage(activeChar, "This castle is already taken by another clan!");
 							}
 							else if (!st.hasMoreTokens())
 							{
-								activeChar.sendMessage("Invalid parameters!!");
+								BuilderUtil.sendSysMessage(activeChar, "Invalid parameters!!");
 							}
 							else
 							{
@@ -196,7 +197,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							}
 							else
 							{
-								activeChar.sendMessage("Error during removing castle!");
+								BuilderUtil.sendSysMessage(activeChar, "Error during removing castle!");
 							}
 							showCastleMenu(activeChar, castle.getResidenceId());
 							break;
@@ -213,7 +214,7 @@ public final class AdminCastle implements IAdminCommandHandler
 							}
 							else
 							{
-								activeChar.sendMessage("You can't switch sides when is castle neutral!");
+								BuilderUtil.sendSysMessage(activeChar, "You can't switch sides when is castle neutral!");
 							}
 							showCastleMenu(activeChar, castle.getResidenceId());
 							break;

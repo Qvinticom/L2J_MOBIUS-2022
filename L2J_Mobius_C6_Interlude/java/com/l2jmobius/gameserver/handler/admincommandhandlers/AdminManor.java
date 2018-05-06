@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.instancemanager.CastleManorManager.SeedProductio
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Admin comand handler for Manor System This class handles following admin commands: - manor_info = shows info about current manor state - manor_approve = approves settings for the next manor period - manor_setnext = changes manor settings to the next day's - manor_reset castle = resets all manor
@@ -79,7 +80,7 @@ public class AdminManor implements IAdminCommandHandler
 						castle.saveCropData();
 						castle.saveSeedData();
 					}
-					activeChar.sendMessage("Manor data for " + castle.getName() + " was nulled");
+					BuilderUtil.sendSysMessage(activeChar, "Manor data for " + castle.getName() + " was nulled");
 				}
 				else
 				{
@@ -95,7 +96,7 @@ public class AdminManor implements IAdminCommandHandler
 							castle.saveSeedData();
 						}
 					}
-					activeChar.sendMessage("Manor data was nulled");
+					BuilderUtil.sendSysMessage(activeChar, "Manor data was nulled");
 				}
 				showMainPage(activeChar);
 				break;
@@ -103,7 +104,7 @@ public class AdminManor implements IAdminCommandHandler
 			case "admin_manor_save":
 			{
 				CastleManorManager.getInstance().save();
-				activeChar.sendMessage("Manor System: all data saved");
+				BuilderUtil.sendSysMessage(activeChar, "Manor System: all data saved");
 				showMainPage(activeChar);
 				break;
 			}
@@ -113,11 +114,11 @@ public class AdminManor implements IAdminCommandHandler
 				CastleManorManager.getInstance().setDisabled(!mode);
 				if (mode)
 				{
-					activeChar.sendMessage("Manor System: enabled");
+					BuilderUtil.sendSysMessage(activeChar, "Manor System: enabled");
 				}
 				else
 				{
-					activeChar.sendMessage("Manor System: disabled");
+					BuilderUtil.sendSysMessage(activeChar, "Manor System: disabled");
 				}
 				showMainPage(activeChar);
 				break;

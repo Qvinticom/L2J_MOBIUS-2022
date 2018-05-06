@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExAdenaInvenCount;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewItemList;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
@@ -76,11 +77,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //create_item <itemId> [amount]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //create_item <itemId> [amount]");
 			}
 			catch (NumberFormatException nfe)
 			{
-				activeChar.sendMessage("Specify a valid number.");
+				BuilderUtil.sendSysMessage(activeChar, "Specify a valid number.");
 			}
 			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
@@ -110,11 +111,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //create_coin <name> [amount]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //create_coin <name> [amount]");
 			}
 			catch (NumberFormatException nfe)
 			{
-				activeChar.sendMessage("Specify a valid number.");
+				BuilderUtil.sendSysMessage(activeChar, "Specify a valid number.");
 			}
 			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
@@ -129,7 +130,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Invalid target.");
+					BuilderUtil.sendSysMessage(activeChar, "Invalid target.");
 					return false;
 				}
 				
@@ -152,11 +153,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //give_item_target <itemId> [amount]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //give_item_target <itemId> [amount]");
 			}
 			catch (NumberFormatException nfe)
 			{
-				activeChar.sendMessage("Specify a valid number.");
+				BuilderUtil.sendSysMessage(activeChar, "Specify a valid number.");
 			}
 			AdminHtml.showAdminHtml(activeChar, "itemcreation.htm");
 		}
@@ -183,12 +184,12 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final L2Item template = ItemTable.getInstance().getTemplate(idval);
 			if (template == null)
 			{
-				activeChar.sendMessage("This item doesn't exist.");
+				BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
 				return false;
 			}
 			if ((numval > 10) && !template.isStackable())
 			{
-				activeChar.sendMessage("This item does not stack - Creation aborted.");
+				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return false;
 			}
 			for (L2PcInstance onlinePlayer : L2World.getInstance().getPlayers())
@@ -228,7 +229,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
-					activeChar.sendMessage("Player is not online.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
 					return false;
 				}
 				
@@ -239,11 +240,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 				
 				player.getInventory().destroyItem("AdminDelete", idval, numval, activeChar, null);
 				activeChar.sendPacket(new GMViewItemList(player));
-				activeChar.sendMessage("Item deleted.");
+				BuilderUtil.sendSysMessage(activeChar, "Item deleted.");
 			}
 			else
 			{
-				activeChar.sendMessage("Item doesn't have owner.");
+				BuilderUtil.sendSysMessage(activeChar, "Item doesn't have owner.");
 				return false;
 			}
 		}
@@ -258,7 +259,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
 				if (player == null)
 				{
-					activeChar.sendMessage("Player is not online.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not online.");
 					return false;
 				}
 				
@@ -279,7 +280,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Item doesn't have owner.");
+				BuilderUtil.sendSysMessage(activeChar, "Item doesn't have owner.");
 				return false;
 			}
 		}
@@ -297,12 +298,12 @@ public class AdminCreateItem implements IAdminCommandHandler
 		final L2Item template = ItemTable.getInstance().getTemplate(id);
 		if (template == null)
 		{
-			activeChar.sendMessage("This item doesn't exist.");
+			BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
 			return;
 		}
 		if ((num > 10) && !template.isStackable())
 		{
-			activeChar.sendMessage("This item does not stack - Creation aborted.");
+			BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 			return;
 		}
 		
@@ -312,7 +313,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			target.sendMessage("Admin spawned " + num + " " + template.getName() + " in your inventory.");
 		}
-		activeChar.sendMessage("You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
+		BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " " + template.getName() + "(" + id + ") in " + target.getName() + " inventory.");
 		target.sendPacket(new ExAdenaInvenCount(target));
 	}
 	

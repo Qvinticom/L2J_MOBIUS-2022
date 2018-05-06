@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExPCCafePointInfo;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -64,7 +65,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 				catch (Exception e)
 				{
 					showMenuHtml(activeChar);
-					activeChar.sendMessage("Invalid Value!");
+					BuilderUtil.sendSysMessage(activeChar, "Invalid Value!");
 					return false;
 				}
 				
@@ -75,7 +76,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						if (value > Config.PC_CAFE_MAX_POINTS)
 						{
 							showMenuHtml(activeChar);
-							activeChar.sendMessage("You cannot set more than " + Config.PC_CAFE_MAX_POINTS + " PC points!");
+							BuilderUtil.sendSysMessage(activeChar, "You cannot set more than " + Config.PC_CAFE_MAX_POINTS + " PC points!");
 							return false;
 						}
 						if (value < 0)
@@ -85,7 +86,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						
 						target.setPcCafePoints(value);
 						target.sendMessage("Admin set your PC Cafe point(s) to " + value + "!");
-						activeChar.sendMessage("You set " + value + " PC Cafe point(s) to player " + target.getName());
+						BuilderUtil.sendSysMessage(activeChar, "You set " + value + " PC Cafe point(s) to player " + target.getName());
 						target.sendPacket(new ExPCCafePointInfo(value, value, 1));
 						break;
 					}
@@ -105,7 +106,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						}
 						target.setPcCafePoints(pcCafeCount);
 						target.sendMessage("Admin increased your PC Cafe point(s) by " + value + "!");
-						activeChar.sendMessage("You increased PC Cafe point(s) of " + target.getName() + " by " + value);
+						BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of " + target.getName() + " by " + value);
 						target.sendPacket(new ExPCCafePointInfo(pcCafeCount, value, 1));
 						break;
 					}
@@ -121,7 +122,7 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						final int pcCafeCount = Math.max(target.getPcCafePoints() - value, 0);
 						target.setPcCafePoints(pcCafeCount);
 						target.sendMessage("Admin decreased your PC Cafe point(s) by " + value + "!");
-						activeChar.sendMessage("You decreased PC Cafe point(s) of " + target.getName() + " by " + value);
+						BuilderUtil.sendSysMessage(activeChar, "You decreased PC Cafe point(s) of " + target.getName() + " by " + value);
 						target.sendPacket(new ExPCCafePointInfo(pcCafeCount, value, 1));
 						break;
 					}
@@ -139,12 +140,12 @@ public final class AdminPcCafePoints implements IAdminCommandHandler
 						if (range <= 0)
 						{
 							final int count = increaseForAll(L2World.getInstance().getPlayers(), value);
-							activeChar.sendMessage("You increased PC Cafe point(s) of all online players (" + count + ") by " + value + ".");
+							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all online players (" + count + ") by " + value + ".");
 						}
 						else if (range > 0)
 						{
 							final int count = increaseForAll(L2World.getInstance().getVisibleObjects(activeChar, L2PcInstance.class, range), value);
-							activeChar.sendMessage("You increased PC Cafe point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
+							BuilderUtil.sendSysMessage(activeChar, "You increased PC Cafe point(s) of all players (" + count + ") in range " + range + " by " + value + ".");
 						}
 						break;
 					}

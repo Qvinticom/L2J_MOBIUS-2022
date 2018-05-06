@@ -21,6 +21,7 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * <b>This class handles Admin mass commands:</b><br>
@@ -61,7 +62,7 @@ public class AdminMassControl implements IAdminCommandHandler
 							counter++;
 							player.getStatus().setCurrentHp(0);
 							player.doDie(player);
-							activeChar.sendMessage("You've Killed " + counter + " players.");
+							BuilderUtil.sendSysMessage(activeChar, "You've Killed " + counter + " players.");
 						}
 					}
 				}
@@ -75,7 +76,7 @@ public class AdminMassControl implements IAdminCommandHandler
 						{
 							counter++;
 							player.doRevive();
-							activeChar.sendMessage("You've Ressurected " + counter + " players.");
+							BuilderUtil.sendSysMessage(activeChar, "You've Ressurected " + counter + " players.");
 						}
 					}
 				}

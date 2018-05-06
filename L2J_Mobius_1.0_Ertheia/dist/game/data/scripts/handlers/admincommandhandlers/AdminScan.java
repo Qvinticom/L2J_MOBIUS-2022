@@ -33,6 +33,7 @@ import com.l2jmobius.gameserver.model.html.formatters.BypassParserFormatter;
 import com.l2jmobius.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import com.l2jmobius.gameserver.model.html.styles.ButtonsStyle;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.BypassBuilder;
 import com.l2jmobius.gameserver.util.BypassParser;
 import com.l2jmobius.gameserver.util.Util;
@@ -67,7 +68,7 @@ public class AdminScan implements IAdminCommandHandler
 			{
 				if (!st.hasMoreElements())
 				{
-					activeChar.sendMessage("Usage: //deletenpcbyobjectid objectId=<object_id>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //deletenpcbyobjectid objectId=<object_id>");
 					return false;
 				}
 				
@@ -77,14 +78,14 @@ public class AdminScan implements IAdminCommandHandler
 					final int objectId = parser.getInt("objectId", 0);
 					if (objectId == 0)
 					{
-						activeChar.sendMessage("objectId is not set!");
+						BuilderUtil.sendSysMessage(activeChar, "objectId is not set!");
 					}
 					
 					final L2Object target = L2World.getInstance().findObject(objectId);
 					final L2Npc npc = target instanceof L2Npc ? (L2Npc) target : null;
 					if (npc == null)
 					{
-						activeChar.sendMessage("NPC does not exist or object_id does not belong to an NPC");
+						BuilderUtil.sendSysMessage(activeChar, "NPC does not exist or object_id does not belong to an NPC");
 						return false;
 					}
 					
@@ -109,7 +110,7 @@ public class AdminScan implements IAdminCommandHandler
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("object_id must be a number.");
+					BuilderUtil.sendSysMessage(activeChar, "object_id must be a number.");
 					return false;
 				}
 				

@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.templates.item.L2Item;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - itemcreate = show menu - create_item <id> [num] = creates num items with respective id, if num is not specified, assumes 1.
@@ -84,7 +85,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				// Command usable only by Administrator
 				if ((activeChar.getAccessLevel().getLevel() != 1) || !activeChar.isGM())
 				{
-					activeChar.sendMessage("Only Administrators can use this command!");
+					BuilderUtil.sendSysMessage(activeChar, "Only Administrators can use this command!");
 					return false;
 				}
 				L2PcInstance Player = null;
@@ -121,7 +122,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				Player.getInventory().addItem("Admin", 8874, 10, Player, activeChar); // Einhasad's Holy Water
 				final ItemList il = new ItemList(Player, true);
 				Player.sendPacket(il);
-				activeChar.sendMessage("Items added successfully!");
+				BuilderUtil.sendSysMessage(activeChar, "Items added successfully!");
 				activeChar.addSkill(SkillTable.getInstance().getInfo(7029, 4), true);
 				activeChar.addSkill(SkillTable.getInstance().getInfo(7041, 1), true);
 				activeChar.addSkill(SkillTable.getInstance().getInfo(7042, 1), true);
@@ -150,7 +151,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				activeChar.addSkill(SkillTable.getInstance().getInfo(7063, 1), true);
 				activeChar.addSkill(SkillTable.getInstance().getInfo(7064, 1), true);
 				activeChar.sendSkillList();
-				activeChar.sendMessage("Gm skills added successfully!");
+				BuilderUtil.sendSysMessage(activeChar, "Gm skills added successfully!");
 				return true;
 			}
 			case admin_itemcreate:
@@ -175,7 +176,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
 							return false;
 						}
 						if ((idval > 0) && (numval > 0))
@@ -183,7 +184,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 							createItem(activeChar, idval, numval);
 							return true;
 						}
-						activeChar.sendMessage("Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
 						return false;
 					}
 					else if (st.countTokens() == 1)
@@ -196,7 +197,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
 							return false;
 						}
 						if (idval > 0)
@@ -204,14 +205,14 @@ public class AdminCreateItem implements IAdminCommandHandler
 							createItem(activeChar, idval, 1);
 							return true;
 						}
-						activeChar.sendMessage("Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //itemcreate <itemId> (number value > 0) [amount] (number value > 0)");
 						return false;
 					}
 				}
 				else
 				{
 					AdminHelpPage.showHelpPage(activeChar, "itemcreation.htm");
-					// activeChar.sendMessage("Usage: //itemcreate <itemId> [amount]");
+					// BuilderUtil.sendSysMessage(activeChar, "Usage: //itemcreate <itemId> [amount]");
 					return true;
 				}
 				return false;
@@ -233,7 +234,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Usage: //mass_create <itemId> <amount>");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //mass_create <itemId> <amount>");
 							return false;
 						}
 						if ((idval > 0) && (numval > 0))
@@ -241,7 +242,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 							massCreateItem(activeChar, idval, numval);
 							return true;
 						}
-						activeChar.sendMessage("Usage: //mass_create <itemId> <amount>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //mass_create <itemId> <amount>");
 						return false;
 					}
 					else if (st.countTokens() == 1)
@@ -254,7 +255,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						}
 						catch (NumberFormatException e)
 						{
-							activeChar.sendMessage("Usage: //mass_create <itemId> <amount>");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //mass_create <itemId> <amount>");
 							return false;
 						}
 						if (idval > 0)
@@ -262,7 +263,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 							massCreateItem(activeChar, idval, 1);
 							return true;
 						}
-						activeChar.sendMessage("Usage: //mass_create <itemId> <amount>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //mass_create <itemId> <amount>");
 						return false;
 					}
 				}
@@ -294,7 +295,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			
 			if ((template != null) && !template.isStackable())
 			{
-				activeChar.sendMessage("This item does not stack - Creation aborted.");
+				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return;
 			}
 		}
@@ -311,13 +312,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("You have not right to create item on another player");
+					BuilderUtil.sendSysMessage(activeChar, "You have not right to create item on another player");
 					return;
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("You can add an item only to a character.");
+				BuilderUtil.sendSysMessage(activeChar, "You can add an item only to a character.");
 				return;
 			}
 		}
@@ -333,11 +334,11 @@ public class AdminCreateItem implements IAdminCommandHandler
 		Player.sendPacket(il);
 		if (activeChar.getName().equalsIgnoreCase(Player.getName()))
 		{
-			activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in your inventory.");
+			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in your inventory.");
 		}
 		else
 		{
-			activeChar.sendMessage("You have spawned " + num + " item(s) number " + id + " in " + Player.getName() + "'s inventory.");
+			BuilderUtil.sendSysMessage(activeChar, "You have spawned " + num + " item(s) number " + id + " in " + Player.getName() + "'s inventory.");
 			Player.sendMessage("Admin has spawned " + num + " item(s) number " + id + " in your inventory.");
 		}
 	}
@@ -349,7 +350,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			final L2Item template = ItemTable.getInstance().getTemplate(id);
 			if ((template != null) && !template.isStackable())
 			{
-				activeChar.sendMessage("This item does not stack - Creation aborted.");
+				BuilderUtil.sendSysMessage(activeChar, "This item does not stack - Creation aborted.");
 				return;
 			}
 		}
@@ -369,7 +370,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 			player.sendPacket(sm);
 			i++;
 		}
-		activeChar.sendMessage("Mass-created items in the inventory of " + i + " player(s).");
+		BuilderUtil.sendSysMessage(activeChar, "Mass-created items in the inventory of " + i + " player(s).");
 		LOGGER.info("GM " + activeChar.getName() + " mass_created item Id: " + id + " (" + num + ")");
 	}
 	
@@ -383,6 +384,6 @@ public class AdminCreateItem implements IAdminCommandHandler
 			}
 		}
 		activeChar.sendPacket(new ItemList(activeChar, false));
-		activeChar.sendMessage("Your inventory has been cleared.");
+		BuilderUtil.sendSysMessage(activeChar, "Your inventory has been cleared.");
 	}
 }

@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2StaticObjectInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - targetsay <message> = makes talk a L2Character
@@ -56,7 +57,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				activeChar.sendMessage("Usage: //targetsay <text>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //targetsay <text>");
 				return false;
 			}
 		}

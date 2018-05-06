@@ -20,6 +20,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.event.VIP;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminVIPEngine implements IAdminCommandHandler
 {
@@ -60,7 +61,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -69,7 +70,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_setteam <team>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setteam <team>");
 				return false;
 			}
 			
@@ -81,7 +82,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 		{
 			if (VIP._started || VIP._joining)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -94,7 +95,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -103,7 +104,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_settime <time>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_settime <time>");
 				return false;
 			}
 			
@@ -116,7 +117,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -125,7 +126,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_endnpc <npc>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_endnpc <npc>");
 				return false;
 			}
 			
@@ -138,7 +139,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -147,7 +148,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_joinnpc <npc>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinnpc <npc>");
 				return false;
 			}
 			
@@ -160,7 +161,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -169,7 +170,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_setdelay <time>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setdelay <time>");
 				return false;
 			}
 			
@@ -187,7 +188,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -196,7 +197,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 4)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_joinlocxyz <x> <y> <z>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinlocxyz <x> <y> <z>");
 				return false;
 			}
 			
@@ -209,7 +210,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -218,7 +219,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_joinnpc <npc>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_joinnpc <npc>");
 				return false;
 			}
 			
@@ -231,7 +232,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -240,7 +241,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_setarea <Area>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_setarea <Area>");
 				return false;
 			}
 			VIP._joinArea = params[1];
@@ -252,7 +253,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -261,7 +262,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_vipreward <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_vipreward <id>");
 				return false;
 			}
 			
@@ -274,7 +275,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -283,7 +284,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_viprewardamount <amount>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_viprewardamount <amount>");
 				return false;
 			}
 			
@@ -296,7 +297,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -305,7 +306,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_notvipreward <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_notvipreward <id>");
 				return false;
 			}
 			
@@ -318,7 +319,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -327,7 +328,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_notviprewardamount <amount>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_notviprewardamount <amount>");
 				return false;
 			}
 			
@@ -340,7 +341,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -349,7 +350,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_thevipreward <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_thevipreward <id>");
 				return false;
 			}
 			
@@ -362,7 +363,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			// if(VIP._started == true || VIP._joining == true)
 			if (VIP._inProgress)
 			{
-				activeChar.sendMessage("Cannot change variables when event has already started");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot change variables when event has already started");
 				return false;
 			}
 			
@@ -371,7 +372,7 @@ public class AdminVIPEngine implements IAdminCommandHandler
 			
 			if (params.length != 2)
 			{
-				activeChar.sendMessage("Wrong usage: //vip_theviprewardamount <amount>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usage: //vip_theviprewardamount <amount>");
 				return false;
 			}
 			

@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.PetitionManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles commands for GMs to respond to petitions.
@@ -77,7 +78,7 @@ public class AdminPetition implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
-						activeChar.sendMessage("Usage: //admin_view_petition petition_id");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //admin_view_petition petition_id");
 						return false;
 					}
 				}
@@ -100,7 +101,7 @@ public class AdminPetition implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
-						activeChar.sendMessage("Usage: //admin_accept_petition petition_id");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //admin_accept_petition petition_id");
 						return false;
 					}
 				}
@@ -127,7 +128,7 @@ public class AdminPetition implements IAdminCommandHandler
 					}
 					catch (Exception e)
 					{
-						activeChar.sendMessage("Usage: //admin_reject_petition petition_id");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //admin_reject_petition petition_id");
 						return false;
 					}
 				}

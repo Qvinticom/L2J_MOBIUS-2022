@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.spawn.AutoSpawn;
 import com.l2jmobius.gameserver.model.spawn.AutoSpawn.AutoSpawnInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Admin Command Handler for Mammon NPCs
@@ -71,12 +72,12 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			catch (Exception NumberFormatException)
 			{
-				activeChar.sendMessage("Usage: //mammon_find [teleportIndex] (where 1 = Blacksmith, 2 = Merchant)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //mammon_find [teleportIndex] (where 1 = Blacksmith, 2 = Merchant)");
 			}
 			
 			if (!_isSealValidation)
 			{
-				activeChar.sendMessage("The competition period is currently in effect.");
+				BuilderUtil.sendSysMessage(activeChar, "The competition period is currently in effect.");
 				return true;
 			}
 			
@@ -86,7 +87,7 @@ public class AdminMammon implements IAdminCommandHandler
 				if (blackInst.length > 0)
 				{
 					final int x1 = blackInst[0].getX(), y1 = blackInst[0].getY(), z1 = blackInst[0].getZ();
-					activeChar.sendMessage("Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
+					BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
 					
 					if (teleportIndex == 1)
 					{
@@ -96,7 +97,7 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
+				BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon isn't registered for spawn.");
 			}
 			
 			if (merchSpawnInst != null)
@@ -107,7 +108,7 @@ public class AdminMammon implements IAdminCommandHandler
 				{
 					final int x2 = merchInst[0].getX(), y2 = merchInst[0].getY(), z2 = merchInst[0].getZ();
 					
-					activeChar.sendMessage("Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
+					BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
 					
 					if (teleportIndex == 2)
 					{
@@ -117,7 +118,7 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Merchant of Mammon isn't registered for spawn.");
+				BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon isn't registered for spawn.");
 			}
 		}
 		
@@ -125,28 +126,28 @@ public class AdminMammon implements IAdminCommandHandler
 		{
 			if (!_isSealValidation)
 			{
-				activeChar.sendMessage("The competition period is currently in effect.");
+				BuilderUtil.sendSysMessage(activeChar, "The competition period is currently in effect.");
 				return true;
 			}
 			
 			if (merchSpawnInst != null)
 			{
 				final long merchRespawn = AutoSpawn.getInstance().getTimeToNextSpawn(merchSpawnInst);
-				activeChar.sendMessage("The Merchant of Mammon will respawn in " + (merchRespawn / 60000) + " minute(s).");
+				BuilderUtil.sendSysMessage(activeChar, "The Merchant of Mammon will respawn in " + (merchRespawn / 60000) + " minute(s).");
 			}
 			else
 			{
-				activeChar.sendMessage("Merchant of Mammon isn't registered for spawn.");
+				BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon isn't registered for spawn.");
 			}
 			
 			if (blackSpawnInst != null)
 			{
 				final long blackRespawn = AutoSpawn.getInstance().getTimeToNextSpawn(blackSpawnInst);
-				activeChar.sendMessage("The Blacksmith of Mammon will respawn in " + (blackRespawn / 60000) + " minute(s).");
+				BuilderUtil.sendSysMessage(activeChar, "The Blacksmith of Mammon will respawn in " + (blackRespawn / 60000) + " minute(s).");
 			}
 			else
 			{
-				activeChar.sendMessage("Blacksmith of Mammon isn't registered for spawn.");
+				BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon isn't registered for spawn.");
 			}
 		}
 		
@@ -193,7 +194,7 @@ public class AdminMammon implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Command format: //msg <SYSTEM_MSG_ID>");
+				BuilderUtil.sendSysMessage(activeChar, "Command format: //msg <SYSTEM_MSG_ID>");
 				return true;
 			}
 			activeChar.sendPacket(new SystemMessage(msgId));

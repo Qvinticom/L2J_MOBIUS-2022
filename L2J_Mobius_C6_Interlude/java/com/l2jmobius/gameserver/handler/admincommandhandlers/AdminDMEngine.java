@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.event.DM;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminDMEngine implements IAdminCommandHandler
 {
@@ -70,7 +71,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -83,7 +84,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -101,7 +102,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -119,7 +120,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -132,7 +133,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -145,7 +146,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -164,7 +165,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -177,7 +178,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -196,7 +197,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 			
 		}
@@ -209,7 +210,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot startJoin, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startJoin, check LOGGER for info..");
 			}
 		}
 		
@@ -227,7 +228,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot startEvent, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startEvent, check LOGGER for info..");
 			}
 			
 		}
@@ -241,7 +242,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 		
 		else if (command.equals("admin_dmevent_abort"))
 		{
-			activeChar.sendMessage("Aborting event");
+			BuilderUtil.sendSysMessage(activeChar, "Aborting event");
 			DM.abortEvent();
 			showMainPage(activeChar);
 		}

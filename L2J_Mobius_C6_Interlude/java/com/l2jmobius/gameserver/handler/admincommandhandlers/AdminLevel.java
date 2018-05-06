@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminLevel implements IAdminCommandHandler
 {
@@ -63,7 +64,7 @@ public class AdminLevel implements IAdminCommandHandler
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("Wrong Number Format");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong Number Format");
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
@@ -102,13 +103,13 @@ public class AdminLevel implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
+					BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
 					return false;
 				}
 			}
 			catch (NumberFormatException e)
 			{
-				activeChar.sendMessage("You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
+				BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
 				return false;
 			}
 		}

@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author luisantonioa
@@ -53,48 +54,48 @@ public class AdminZone implements IAdminCommandHandler
 		{
 			if (activeChar.isInsideZone(ZoneId.PVP))
 			{
-				activeChar.sendMessage("This is a PvP zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is a PvP zone.");
 			}
 			else
 			{
-				activeChar.sendMessage("This is NOT a PvP zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is NOT a PvP zone.");
 			}
 			
 			if (activeChar.isInsideZone(ZoneId.NOLANDING))
 			{
-				activeChar.sendMessage("This is a no landing zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is a no landing zone.");
 			}
 			else
 			{
-				activeChar.sendMessage("This is NOT a no landing zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is NOT a no landing zone.");
 			}
 			
 			if (activeChar.isInsideZone(ZoneId.NOSTORE))
 			{
-				activeChar.sendMessage("This is a no-store zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is a no-store zone.");
 			}
 			else
 			{
-				activeChar.sendMessage("This is NOT a no-store zone.");
+				BuilderUtil.sendSysMessage(activeChar, "This is NOT a no-store zone.");
 			}
 			
-			activeChar.sendMessage("MapRegion: x:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getY()));
+			BuilderUtil.sendSysMessage(activeChar, "MapRegion: x:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionTable.getInstance().getMapRegionX(activeChar.getY()));
 			
-			activeChar.sendMessage("Closest Town: " + MapRegionTable.getInstance().getClosestTownName(activeChar));
+			BuilderUtil.sendSysMessage(activeChar, "Closest Town: " + MapRegionTable.getInstance().getClosestTownName(activeChar));
 			
 			Location loc;
 			
 			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Castle);
-			activeChar.sendMessage("TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
 			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.ClanHall);
-			activeChar.sendMessage("TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
 			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.SiegeFlag);
-			activeChar.sendMessage("TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			
 			loc = MapRegionTable.getInstance().getTeleToLocation(activeChar, MapRegionTable.TeleportWhereType.Town);
-			activeChar.sendMessage("TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+			BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_reload"))
 		{

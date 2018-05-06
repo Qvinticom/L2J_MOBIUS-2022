@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.GeoUtils;
 
 /**
@@ -61,11 +62,11 @@ public class AdminGeodata implements IAdminCommandHandler
 			
 			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
 			{
-				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getNearestZ(geoX, geoY, worldZ));
+				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getNearestZ(geoX, geoY, worldZ));
 			}
 			else
 			{
-				activeChar.sendMessage("There is no geodata at this position.");
+				BuilderUtil.sendSysMessage(activeChar, "There is no geodata at this position.");
 			}
 		}
 		else if (command.equals("admin_geo_spawn_pos"))
@@ -78,11 +79,11 @@ public class AdminGeodata implements IAdminCommandHandler
 			
 			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
 			{
-				activeChar.sendMessage("WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ));
+				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ));
 			}
 			else
 			{
-				activeChar.sendMessage("There is no geodata at this position.");
+				BuilderUtil.sendSysMessage(activeChar, "There is no geodata at this position.");
 			}
 		}
 		else if (command.equals("admin_geo_can_move"))
@@ -92,16 +93,16 @@ public class AdminGeodata implements IAdminCommandHandler
 			{
 				if (GeoData.getInstance().canSeeTarget(activeChar, target))
 				{
-					activeChar.sendMessage("Can move beeline.");
+					BuilderUtil.sendSysMessage(activeChar, "Can move beeline.");
 				}
 				else
 				{
-					activeChar.sendMessage("Can not move beeline!");
+					BuilderUtil.sendSysMessage(activeChar, "Can not move beeline!");
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("Incorrect Target.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect Target.");
 			}
 		}
 		else if (command.equals("admin_geo_can_see"))
@@ -111,16 +112,16 @@ public class AdminGeodata implements IAdminCommandHandler
 			{
 				if (GeoData.getInstance().canSeeTarget(activeChar, target))
 				{
-					activeChar.sendMessage("Can see target.");
+					BuilderUtil.sendSysMessage(activeChar, "Can see target.");
 				}
 				else
 				{
-					activeChar.sendMessage("Cannot see Target.");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot see Target.");
 				}
 			}
 			else
 			{
-				activeChar.sendMessage("Incorrect Target.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect Target.");
 			}
 		}
 		else if (command.equals("admin_geogrid"))
@@ -131,7 +132,7 @@ public class AdminGeodata implements IAdminCommandHandler
 		{
 			final int x = ((activeChar.getX() - L2World.MAP_MIN_X) >> 15) + L2World.TILE_X_MIN;
 			final int y = ((activeChar.getY() - L2World.MAP_MIN_Y) >> 15) + L2World.TILE_Y_MIN;
-			activeChar.sendMessage("GeoMap: " + x + "_" + y);
+			BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y);
 		}
 		else
 		{

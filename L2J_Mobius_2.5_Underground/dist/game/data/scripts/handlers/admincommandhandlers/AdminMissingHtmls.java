@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author Mobius
@@ -55,7 +56,7 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				final int topLeftY = (y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE;
 				final int bottomRightX = (((x - L2World.TILE_ZERO_COORD_X) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
 				final int bottomRightY = (((y - L2World.TILE_ZERO_COORD_Y) * L2World.TILE_SIZE) + L2World.TILE_SIZE) - 1;
-				activeChar.sendMessage("GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
+				BuilderUtil.sendSysMessage(activeChar, "GeoMap: " + x + "_" + y + " (" + topLeftX + "," + topLeftY + " to " + bottomRightX + "," + bottomRightY + ")");
 				final List<Integer> results = new ArrayList<>();
 				for (L2Object obj : L2World.getInstance().getVisibleObjects())
 				{
@@ -75,14 +76,14 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				Collections.sort(results);
 				for (int id : results)
 				{
-					activeChar.sendMessage("NPC " + id + " does not have a default html.");
+					BuilderUtil.sendSysMessage(activeChar, "NPC " + id + " does not have a default html.");
 				}
-				activeChar.sendMessage("Found " + results.size() + " results.");
+				BuilderUtil.sendSysMessage(activeChar, "Found " + results.size() + " results.");
 				break;
 			}
 			case "admin_world_missing_htmls":
 			{
-				activeChar.sendMessage("Missing htmls for the whole world.");
+				BuilderUtil.sendSysMessage(activeChar, "Missing htmls for the whole world.");
 				final List<Integer> results = new ArrayList<>();
 				for (L2Object obj : L2World.getInstance().getVisibleObjects())
 				{
@@ -102,9 +103,9 @@ public class AdminMissingHtmls implements IAdminCommandHandler
 				Collections.sort(results);
 				for (int id : results)
 				{
-					activeChar.sendMessage("NPC " + id + " does not have a default html.");
+					BuilderUtil.sendSysMessage(activeChar, "NPC " + id + " does not have a default html.");
 				}
-				activeChar.sendMessage("Found " + results.size() + " results.");
+				BuilderUtil.sendSysMessage(activeChar, "Found " + results.size() + " results.");
 				break;
 			}
 		}

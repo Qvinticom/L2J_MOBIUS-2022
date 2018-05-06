@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.LeaveWorld;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminKick implements IAdminCommandHandler
 {
@@ -45,7 +46,7 @@ public class AdminKick implements IAdminCommandHandler
 			
 			if (activeChar.getTarget() != null)
 			{
-				activeChar.sendMessage("Type //kick name");
+				BuilderUtil.sendSysMessage(activeChar, "Type //kick name");
 			}
 			
 			if (st.countTokens() > 1)
@@ -58,13 +59,13 @@ public class AdminKick implements IAdminCommandHandler
 				if (plyr != null)
 				{
 					plyr.logout(true);
-					activeChar.sendMessage("You kicked " + plyr.getName() + " from the game.");
+					BuilderUtil.sendSysMessage(activeChar, "You kicked " + plyr.getName() + " from the game.");
 				}
 				
 				if ((plyr != null) && plyr.isInOfflineMode())
 				{
 					plyr.deleteMe();
-					activeChar.sendMessage("You kicked Offline Player " + plyr.getName() + " from the game.");
+					BuilderUtil.sendSysMessage(activeChar, "You kicked Offline Player " + plyr.getName() + " from the game.");
 				}
 			}
 		}
@@ -82,7 +83,7 @@ public class AdminKick implements IAdminCommandHandler
 					player.logout(true);
 				}
 			}
-			activeChar.sendMessage("Kicked " + counter + " players");
+			BuilderUtil.sendSysMessage(activeChar, "Kicked " + counter + " players");
 		}
 		return true;
 	}

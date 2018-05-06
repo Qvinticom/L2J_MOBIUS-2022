@@ -19,6 +19,7 @@ package handlers.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -47,7 +48,7 @@ public class AdminMessages implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Command format: //msg <SYSTEM_MSG_ID>");
+				BuilderUtil.sendSysMessage(activeChar, "Command format: //msg <SYSTEM_MSG_ID>");
 			}
 		}
 		else if (command.startsWith("admin_msgx "))
@@ -55,7 +56,7 @@ public class AdminMessages implements IAdminCommandHandler
 			final String[] tokens = command.split(" ");
 			if ((tokens.length <= 2) || !Util.isDigit(tokens[1]))
 			{
-				activeChar.sendMessage("Command format: //msgx <SYSTEM_MSG_ID> [item:Id] [skill:Id] [npc:Id] [zone:x,y,x] [castle:Id] [str:'text']");
+				BuilderUtil.sendSysMessage(activeChar, "Command format: //msgx <SYSTEM_MSG_ID> [item:Id] [skill:Id] [npc:Id] [zone:x,y,x] [castle:Id] [str:'text']");
 				return false;
 			}
 			
@@ -99,7 +100,7 @@ public class AdminMessages implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Exception: " + e.getMessage());
+					BuilderUtil.sendSysMessage(activeChar, "Exception: " + e.getMessage());
 					continue;
 				}
 			}

@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.IllegalPlayerAction;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -137,7 +138,7 @@ public class AdminEnchant implements IAdminCommandHandler
 					// check value
 					if ((ench < 0) || (ench > 65535))
 					{
-						activeChar.sendMessage("You must set the enchant level to be between 0-65535.");
+						BuilderUtil.sendSysMessage(activeChar, "You must set the enchant level to be between 0-65535.");
 					}
 					else
 					{
@@ -146,11 +147,11 @@ public class AdminEnchant implements IAdminCommandHandler
 				}
 				catch (StringIndexOutOfBoundsException e)
 				{
-					activeChar.sendMessage("Please specify a new enchant value.");
+					BuilderUtil.sendSysMessage(activeChar, "Please specify a new enchant value.");
 				}
 				catch (NumberFormatException e)
 				{
-					activeChar.sendMessage("Please specify a valid new enchant value.");
+					BuilderUtil.sendSysMessage(activeChar, "Please specify a valid new enchant value.");
 				}
 			}
 			
@@ -216,7 +217,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			{
 				player.sendMessage("A GM tried to overenchant you. You will both be banned.");
 				Util.handleIllegalPlayerAction(player, "The player " + player.getName() + " has been edited. BAN!", IllegalPlayerAction.PUNISH_KICKBAN);
-				activeChar.sendMessage("You tried to overenchant somebody. You will both be banned.");
+				BuilderUtil.sendSysMessage(activeChar, "You tried to overenchant somebody. You will both be banned.");
 				Util.handleIllegalPlayerAction(activeChar, "The GM " + activeChar.getName() + " has overenchanted the player " + player.getName() + ". BAN!", IllegalPlayerAction.PUNISH_KICKBAN);
 			}
 			else
@@ -234,7 +235,7 @@ public class AdminEnchant implements IAdminCommandHandler
 				player.sendPacket(new UserInfo(player));
 				
 				// informations
-				activeChar.sendMessage("Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
+				BuilderUtil.sendSysMessage(activeChar, "Changed enchantment of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 				player.sendMessage("Admin has changed the enchantment of your " + itemInstance.getItem().getName() + " from " + curEnchant + " to " + ench + ".");
 			}
 		}

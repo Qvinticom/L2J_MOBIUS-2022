@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminQuest implements IAdminCommandHandler
 {
@@ -54,7 +55,7 @@ public class AdminQuest implements IAdminCommandHandler
 			
 			if (parts.length < 2)
 			{
-				activeChar.sendMessage("Syntax: //quest_reload <questFolder>.<questSubFolders...>.questName> or //quest_reload <id>");
+				BuilderUtil.sendSysMessage(activeChar, "Syntax: //quest_reload <questFolder>.<questSubFolders...>.questName> or //quest_reload <id>");
 			}
 			else
 			{
@@ -65,22 +66,22 @@ public class AdminQuest implements IAdminCommandHandler
 					
 					if (QuestManager.getInstance().reload(questId))
 					{
-						activeChar.sendMessage("Quest Reloaded Successfully.");
+						BuilderUtil.sendSysMessage(activeChar, "Quest Reloaded Successfully.");
 					}
 					else
 					{
-						activeChar.sendMessage("Quest Reloaded Failed");
+						BuilderUtil.sendSysMessage(activeChar, "Quest Reloaded Failed");
 					}
 				}
 				catch (NumberFormatException e)
 				{
 					if (QuestManager.getInstance().reload(parts[1]))
 					{
-						activeChar.sendMessage("Quest Reloaded Successfully.");
+						BuilderUtil.sendSysMessage(activeChar, "Quest Reloaded Successfully.");
 					}
 					else
 					{
-						activeChar.sendMessage("Quest Reloaded Failed");
+						BuilderUtil.sendSysMessage(activeChar, "Quest Reloaded Failed");
 					}
 				}
 			}

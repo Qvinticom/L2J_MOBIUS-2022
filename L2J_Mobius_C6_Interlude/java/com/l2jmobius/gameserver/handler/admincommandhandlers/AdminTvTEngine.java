@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.event.TvT;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminTvTEngine implements IAdminCommandHandler
 {
@@ -83,7 +84,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_desc "))
@@ -94,7 +95,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_minlvl "))
@@ -110,7 +111,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_maxlvl "))
@@ -126,7 +127,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_minplayers "))
@@ -137,7 +138,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_maxplayers "))
@@ -148,7 +149,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_join_loc "))
@@ -159,7 +160,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_npc "))
@@ -170,7 +171,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.equals("admin_tvt_npc_pos"))
@@ -186,7 +187,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_reward_amount "))
@@ -197,7 +198,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_jointime "))
@@ -208,7 +209,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_eventtime "))
@@ -219,7 +220,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_interval "))
@@ -230,7 +231,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot perform requested operation, event in progress");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
 		}
 		else if (command.startsWith("admin_tvt_team_add "))
@@ -262,7 +263,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			
 			if (params.length != 3)
 			{
-				activeChar.sendMessage("Wrong usege: //tvt_team_color <colorHex> <teamName>");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usege: //tvt_team_color <colorHex> <teamName>");
 				return false;
 			}
 			
@@ -277,7 +278,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot startJoin, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startJoin, check LOGGER for info..");
 			}
 		}
 		else if (command.equals("admin_tvt_teleport"))
@@ -293,7 +294,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Cannot startEvent, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startEvent, check LOGGER for info..");
 			}
 		}
 		else if (command.equals("admin_tvt_startevent"))
@@ -303,7 +304,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 		}
 		else if (command.equals("admin_tvt_abort"))
 		{
-			activeChar.sendMessage("Aborting event");
+			BuilderUtil.sendSysMessage(activeChar, "Aborting event");
 			TvT.abortEvent();
 			showMainPage(activeChar);
 		}
@@ -330,7 +331,7 @@ public class AdminTvTEngine implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Wrong usege: join time or event time invalid.");
+				BuilderUtil.sendSysMessage(activeChar, "Wrong usege: join time or event time invalid.");
 			}
 			
 			showMainPage(activeChar);
@@ -355,11 +356,11 @@ public class AdminTvTEngine implements IAdminCommandHandler
 				if (playerToKick != null)
 				{
 					TvT.kickPlayerFromTvt(playerToKick);
-					activeChar.sendMessage("You kicked " + playerToKick.getName() + " from the TvT.");
+					BuilderUtil.sendSysMessage(activeChar, "You kicked " + playerToKick.getName() + " from the TvT.");
 				}
 				else
 				{
-					activeChar.sendMessage("Wrong usege: //tvtkick <player>");
+					BuilderUtil.sendSysMessage(activeChar, "Wrong usege: //tvtkick <player>");
 				}
 			}
 		}

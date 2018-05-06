@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminNoble implements IAdminCommandHandler
 {
@@ -77,7 +78,7 @@ public class AdminNoble implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Impossible to set a non Player Target as noble.");
+				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as noble.");
 				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as noble.");
 				
 				return false;

@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminDonator implements IAdminCommandHandler
 {
@@ -79,7 +80,7 @@ public class AdminDonator implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("Impossible to set a non Player Target as Donator.");
+				BuilderUtil.sendSysMessage(activeChar, "Impossible to set a non Player Target as Donator.");
 				LOGGER.info("GM: " + activeChar.getName() + " is trying to set a non Player Target as Donator.");
 				
 				return false;

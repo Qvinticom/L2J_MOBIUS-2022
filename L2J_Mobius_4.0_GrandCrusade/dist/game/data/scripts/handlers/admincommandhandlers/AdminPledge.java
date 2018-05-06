@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.GMViewPledgeInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * <B>Pledge Manipulation:</B><BR>
@@ -65,13 +66,13 @@ public class AdminPledge implements IAdminCommandHandler
 			{
 				if (!st.hasMoreTokens())
 				{
-					activeChar.sendMessage("Missing parameters!");
+					BuilderUtil.sendSysMessage(activeChar, "Missing parameters!");
 					break;
 				}
 				final String action = st.nextToken();
 				if (!st.hasMoreTokens())
 				{
-					activeChar.sendMessage("Missing parameters!");
+					BuilderUtil.sendSysMessage(activeChar, "Missing parameters!");
 					break;
 				}
 				final String param = st.nextToken();
@@ -82,7 +83,7 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						if (clan != null)
 						{
-							activeChar.sendMessage("Target player has clan!");
+							BuilderUtil.sendSysMessage(activeChar, "Target player has clan!");
 							break;
 						}
 						
@@ -91,12 +92,12 @@ public class AdminPledge implements IAdminCommandHandler
 						clan = ClanTable.getInstance().createClan(targetPlayer, param);
 						if (clan != null)
 						{
-							activeChar.sendMessage("Clan " + param + " created. Leader: " + targetPlayer.getName());
+							BuilderUtil.sendSysMessage(activeChar, "Clan " + param + " created. Leader: " + targetPlayer.getName());
 						}
 						else
 						{
 							targetPlayer.setClanCreateExpiryTime(penalty);
-							activeChar.sendMessage("There was a problem while creating the clan.");
+							BuilderUtil.sendSysMessage(activeChar, "There was a problem while creating the clan.");
 						}
 						break;
 					}
@@ -104,7 +105,7 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						if (clan == null)
 						{
-							activeChar.sendMessage("Target player has no clan!");
+							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
 							break;
 						}
 						
@@ -121,11 +122,11 @@ public class AdminPledge implements IAdminCommandHandler
 						clan = targetPlayer.getClan();
 						if (clan == null)
 						{
-							activeChar.sendMessage("Clan disbanded.");
+							BuilderUtil.sendSysMessage(activeChar, "Clan disbanded.");
 						}
 						else
 						{
-							activeChar.sendMessage("There was a problem while destroying the clan.");
+							BuilderUtil.sendSysMessage(activeChar, "There was a problem while destroying the clan.");
 						}
 						break;
 					}
@@ -133,7 +134,7 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						if (clan == null)
 						{
-							activeChar.sendMessage("Target player has no clan!");
+							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
 							break;
 						}
 						
@@ -144,12 +145,12 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						if (clan == null)
 						{
-							activeChar.sendMessage("Target player has no clan!");
+							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
 							break;
 						}
 						else if (param == null)
 						{
-							activeChar.sendMessage("Usage: //pledge <setlevel|rep> <number>");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <setlevel|rep> <number>");
 							break;
 						}
 						
@@ -161,11 +162,11 @@ public class AdminPledge implements IAdminCommandHandler
 							{
 								member.broadcastUserInfo(UserInfoType.RELATION, UserInfoType.CLAN);
 							}
-							activeChar.sendMessage("You set level " + level + " for clan " + clan.getName());
+							BuilderUtil.sendSysMessage(activeChar, "You set level " + level + " for clan " + clan.getName());
 						}
 						else
 						{
-							activeChar.sendMessage("Level incorrect.");
+							BuilderUtil.sendSysMessage(activeChar, "Level incorrect.");
 						}
 						break;
 					}
@@ -173,12 +174,12 @@ public class AdminPledge implements IAdminCommandHandler
 					{
 						if (clan == null)
 						{
-							activeChar.sendMessage("Target player has no clan!");
+							BuilderUtil.sendSysMessage(activeChar, "Target player has no clan!");
 							break;
 						}
 						else if (clan.getLevel() < 5)
 						{
-							activeChar.sendMessage("Only clans of level 5 or above may receive reputation points.");
+							BuilderUtil.sendSysMessage(activeChar, "Only clans of level 5 or above may receive reputation points.");
 							showMainPage(activeChar);
 							return false;
 						}
@@ -187,11 +188,11 @@ public class AdminPledge implements IAdminCommandHandler
 						{
 							final int points = Integer.parseInt(param);
 							clan.addReputationScore(points, true);
-							activeChar.sendMessage("You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
+							BuilderUtil.sendSysMessage(activeChar, "You " + (points > 0 ? "add " : "remove ") + Math.abs(points) + " points " + (points > 0 ? "to " : "from ") + clan.getName() + "'s reputation. Their current score is " + clan.getReputationScore());
 						}
 						catch (Exception e)
 						{
-							activeChar.sendMessage("Usage: //pledge <rep> <number>");
+							BuilderUtil.sendSysMessage(activeChar, "Usage: //pledge <rep> <number>");
 						}
 						break;
 					}

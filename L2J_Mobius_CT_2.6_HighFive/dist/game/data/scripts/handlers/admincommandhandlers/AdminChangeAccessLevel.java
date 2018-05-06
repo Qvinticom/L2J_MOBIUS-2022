@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Change access level command handler.
@@ -59,7 +60,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Usage: //changelvl <target_new_level> | <player_name> <new_level>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //changelvl <target_new_level> | <player_name> <new_level>");
 			}
 		}
 		else if (parts.length == 3)
@@ -83,16 +84,16 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 					statement.close();
 					if (count == 0)
 					{
-						activeChar.sendMessage("Character not found or access level unaltered.");
+						BuilderUtil.sendSysMessage(activeChar, "Character not found or access level unaltered.");
 					}
 					else
 					{
-						activeChar.sendMessage("Character's access level is now set to " + lvl);
+						BuilderUtil.sendSysMessage(activeChar, "Character's access level is now set to " + lvl);
 					}
 				}
 				catch (SQLException se)
 				{
-					activeChar.sendMessage("SQLException while changing character's access level");
+					BuilderUtil.sendSysMessage(activeChar, "SQLException while changing character's access level");
 				}
 			}
 		}
@@ -123,7 +124,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			}
 			else
 			{
-				activeChar.sendMessage("You are trying to set unexisting access level: " + lvl + " please try again with a valid one!");
+				BuilderUtil.sendSysMessage(activeChar, "You are trying to set unexisting access level: " + lvl + " please try again with a valid one!");
 			}
 		}
 		else

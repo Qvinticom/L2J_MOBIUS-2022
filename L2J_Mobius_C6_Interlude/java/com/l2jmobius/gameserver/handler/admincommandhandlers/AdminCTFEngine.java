@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.event.CTF;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 public class AdminCTFEngine implements IAdminCommandHandler
 {
@@ -141,10 +142,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_name <event_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_name <event_name>");
 				return false;
 			}
 			case admin_ctf_desc:
@@ -156,10 +157,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_desc <event_descr>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_desc <event_descr>");
 				return false;
 			}
 			case admin_ctf_join_loc:
@@ -171,10 +172,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_join_loc <event_loc_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_join_loc <event_loc_name>");
 				return false;
 			}
 			case admin_ctf_edit:
@@ -199,12 +200,12 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_minlvl <min_lvl_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minlvl <min_lvl_value>");
 						return false;
 					}
 					if (!CTF.checkMinLevel(lvl))
 					{
-						activeChar.sendMessage("Cannot perform requested operation, Min lvl must be lower then Max");
+						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Min lvl must be lower then Max");
 						return false;
 					}
 					if (CTF.set_minlvl(lvl))
@@ -212,10 +213,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_minlvl <min_lvl_value>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minlvl <min_lvl_value>");
 				return false;
 			}
 			case admin_ctf_maxlvl:
@@ -230,12 +231,12 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_maxlvl <max_lvl_value>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxlvl <max_lvl_value>");
 						return false;
 					}
 					if (!CTF.checkMaxLevel(lvl))
 					{
-						activeChar.sendMessage("Cannot perform requested operation, Max lvl must be higher then Min");
+						BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, Max lvl must be higher then Min");
 						return false;
 					}
 					if (CTF.set_maxlvl(lvl))
@@ -243,10 +244,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_maxlvl <min_lvl_value>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxlvl <min_lvl_value>");
 				return false;
 			}
 			case admin_ctf_tele_npc:
@@ -267,11 +268,11 @@ public class AdminCTFEngine implements IAdminCommandHandler
 							return true;
 						}
 					}
-					activeChar.sendMessage("Usage: //ctf_tele_team <team_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_team <team_name>");
 					showMainPage(activeChar);
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_tele_team <team_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_team <team_name>");
 				return false;
 			}
 			case admin_ctf_tele_flag:
@@ -287,11 +288,11 @@ public class AdminCTFEngine implements IAdminCommandHandler
 							return true;
 						}
 					}
-					activeChar.sendMessage("Usage: //ctf_tele_flag <team_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_flag <team_name>");
 					showMainPage(activeChar);
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_tele_flag <team_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_tele_flag <team_name>");
 				return false;
 			}
 			case admin_ctf_npc:
@@ -305,7 +306,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_npc <npc_id>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_npc <npc_id>");
 						return false;
 					}
 					if (CTF.set_npcId(id))
@@ -313,10 +314,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_npc <npc_id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_npc <npc_id>");
 				return false;
 			}
 			case admin_ctf_npc_pos:
@@ -336,7 +337,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_reward <reward_id>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward <reward_id>");
 						return false;
 					}
 					if (CTF.set_rewardId(id))
@@ -344,10 +345,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_reward <reward_id>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward <reward_id>");
 				return false;
 			}
 			case admin_ctf_reward_amount:
@@ -361,7 +362,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_reward_amount <reward_amount>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward_amount <reward_amount>");
 						return false;
 					}
 					if (CTF.set_rewardAmount(amount))
@@ -369,10 +370,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_reward_amount <reward_amount>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_reward_amount <reward_amount>");
 				return false;
 			}
 			case admin_ctf_team_add:
@@ -383,7 +384,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //ctf_team_add <team_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_add <team_name>");
 				return false;
 			}
 			case admin_ctf_team_remove:
@@ -394,7 +395,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //ctf_team_remove <team_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_remove <team_name>");
 				return false;
 			}
 			case admin_ctf_team_pos:
@@ -405,7 +406,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //ctf_team_pos <team_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_pos <team_name>");
 				return false;
 			}
 			case admin_ctf_team_color:
@@ -420,7 +421,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_team_color <colorHex> <teamName>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_color <colorHex> <teamName>");
 						return false;
 					}
 					final String team = st.nextToken();
@@ -428,7 +429,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //ctf_team_color <colorHex> <teamName>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_color <colorHex> <teamName>");
 				return false;
 			}
 			case admin_ctf_team_flag:
@@ -439,7 +440,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Usage: //ctf_team_flag <teamName>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_team_flag <teamName>");
 				return false;
 			}
 			case admin_ctf_join:
@@ -449,7 +450,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Cannot startJoin, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startJoin, check LOGGER for info..");
 				return false;
 			}
 			case admin_ctf_teleport:
@@ -465,7 +466,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Cannot startEvent, check LOGGER for info..");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot startEvent, check LOGGER for info..");
 				return false;
 			}
 			case admin_ctf_startevent:
@@ -476,7 +477,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			}
 			case admin_ctf_abort:
 			{
-				activeChar.sendMessage("Aborting event");
+				BuilderUtil.sendSysMessage(activeChar, "Aborting event");
 				CTF.abortEvent();
 				showMainPage(activeChar);
 				return true;
@@ -522,7 +523,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_jointime <minutes>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_jointime <minutes>");
 						return false;
 					}
 					if (CTF.set_joinTime(time))
@@ -530,10 +531,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_jointime <minutes>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_jointime <minutes>");
 				return false;
 			}
 			case admin_ctf_eventtime:
@@ -548,7 +549,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_eventtime <minutes>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_eventtime <minutes>");
 						return false;
 					}
 					if (CTF.set_eventTime(time))
@@ -556,10 +557,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_eventtime <minutes>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_eventtime <minutes>");
 				return false;
 			}
 			case admin_ctf_autoevent:
@@ -570,7 +571,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					showMainPage(activeChar);
 					return true;
 				}
-				activeChar.sendMessage("Cannot perform requested operation, times not defined");
+				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, times not defined");
 				return false;
 			}
 			case admin_ctf_interval:
@@ -585,7 +586,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_interval <minutes>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_interval <minutes>");
 						return false;
 					}
 					if (CTF.set_intervalBetweenMatches(time))
@@ -593,10 +594,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_interval <minutes>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_interval <minutes>");
 				return false;
 			}
 			case admin_ctf_minplayers:
@@ -611,7 +612,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_minplayers <number>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minplayers <number>");
 						return false;
 					}
 					if (CTF.set_minPlayers(min))
@@ -619,10 +620,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_minplayers <number>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_minplayers <number>");
 				return false;
 			}
 			case admin_ctf_maxplayers:
@@ -637,7 +638,7 @@ public class AdminCTFEngine implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //ctf_maxplayers <number>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxplayers <number>");
 						return false;
 					}
 					if (CTF.set_maxPlayers(max))
@@ -645,10 +646,10 @@ public class AdminCTFEngine implements IAdminCommandHandler
 						showMainPage(activeChar);
 						return true;
 					}
-					activeChar.sendMessage("Cannot perform requested operation, event in progress");
+					BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 					return false;
 				}
-				activeChar.sendMessage("Usage: //ctf_maxplayers <number>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ctf_maxplayers <number>");
 				return false;
 			}
 			default:

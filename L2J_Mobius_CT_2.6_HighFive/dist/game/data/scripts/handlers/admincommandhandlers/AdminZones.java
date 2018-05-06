@@ -52,6 +52,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ConfirmDlg;
 import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowTerritory;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.HtmlUtil;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -157,13 +158,13 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 					{
 						if (!st.hasMoreTokens())
 						{
-							activeChar.sendMessage("Missing node index!");
+							BuilderUtil.sendSysMessage(activeChar, "Missing node index!");
 							break;
 						}
 						final String indexToken = st.nextToken();
 						if (!Util.isDigit(indexToken))
 						{
-							activeChar.sendMessage("Node index should be int!");
+							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;
 						}
 						final int index = Integer.parseInt(indexToken);
@@ -174,13 +175,13 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 					{
 						if (!st.hasMoreTokens())
 						{
-							activeChar.sendMessage("Missing node index!");
+							BuilderUtil.sendSysMessage(activeChar, "Missing node index!");
 							break;
 						}
 						final String indexToken = st.nextToken();
 						if (!Util.isDigit(indexToken))
 						{
-							activeChar.sendMessage("Node index should be int!");
+							BuilderUtil.sendSysMessage(activeChar, "Node index should be int!");
 							break;
 						}
 						final int index = Integer.parseInt(indexToken);
@@ -238,7 +239,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	 */
 	private void loadZone(L2PcInstance activeChar, String zoneName)
 	{
-		activeChar.sendMessage("Searching for zone: " + zoneName);
+		BuilderUtil.sendSysMessage(activeChar, "Searching for zone: " + zoneName);
 		final List<L2ZoneType> zones = ZoneManager.getInstance().getZones(activeChar);
 		L2ZoneType zoneType = null;
 		for (L2ZoneType zone : zones)
@@ -246,7 +247,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			if (zone.getName().equalsIgnoreCase(zoneName))
 			{
 				zoneType = zone;
-				activeChar.sendMessage("Zone found: " + zone.getId());
+				BuilderUtil.sendSysMessage(activeChar, "Zone found: " + zone.getId());
 				break;
 			}
 		}
@@ -275,7 +276,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	{
 		if (name.contains("<") || name.contains(">") || name.contains("&") || name.contains("\\") || name.contains("\"") || name.contains("$"))
 		{
-			activeChar.sendMessage("You cannot use symbols like: < > & \" $ \\");
+			BuilderUtil.sendSysMessage(activeChar, "You cannot use symbols like: < > & \" $ \\");
 			return;
 		}
 		_zones.computeIfAbsent(activeChar.getObjectId(), key -> new ZoneNodeHolder()).setName(name);
@@ -289,11 +290,11 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		if (!activeChar.hasAction(PlayerAction.ADMIN_POINT_PICKING))
 		{
 			activeChar.addAction(PlayerAction.ADMIN_POINT_PICKING);
-			activeChar.sendMessage("Point picking mode activated!");
+			BuilderUtil.sendSysMessage(activeChar, "Point picking mode activated!");
 		}
 		else
 		{
-			activeChar.sendMessage("Point picking mode is already activated!");
+			BuilderUtil.sendSysMessage(activeChar, "Point picking mode is already activated!");
 		}
 	}
 	
@@ -304,11 +305,11 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 	{
 		if (activeChar.removeAction(PlayerAction.ADMIN_POINT_PICKING))
 		{
-			activeChar.sendMessage("Point picking mode deactivated!");
+			BuilderUtil.sendSysMessage(activeChar, "Point picking mode deactivated!");
 		}
 		else
 		{
-			activeChar.sendMessage("Point picking mode was not activated!");
+			BuilderUtil.sendSysMessage(activeChar, "Point picking mode was not activated!");
 		}
 	}
 	
@@ -322,7 +323,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		{
 			if (holder.getNodes().size() < 3)
 			{
-				activeChar.sendMessage("In order to visualize this zone you must have at least 3 points.");
+				BuilderUtil.sendSysMessage(activeChar, "In order to visualize this zone you must have at least 3 points.");
 				return;
 			}
 			final ExServerPrimitive exsp = new ExServerPrimitive("DebugPoint_" + activeChar.getObjectId(), activeChar.getX(), activeChar.getY(), activeChar.getZ());
@@ -375,10 +376,10 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			if (loc != null)
 			{
 				holder.getNodes().remove(loc);
-				activeChar.sendMessage("Node " + index + " has been removed!");
+				BuilderUtil.sendSysMessage(activeChar, "Node " + index + " has been removed!");
 				if (holder.getNodes().isEmpty())
 				{
-					activeChar.sendMessage("Since node list is empty destroying session!");
+					BuilderUtil.sendSysMessage(activeChar, "Since node list is empty destroying session!");
 					_zones.remove(activeChar.getObjectId());
 				}
 			}
@@ -395,7 +396,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		{
 			if (holder.getName().isEmpty())
 			{
-				activeChar.sendMessage("Set name first!");
+				BuilderUtil.sendSysMessage(activeChar, "Set name first!");
 				return;
 			}
 			
@@ -426,11 +427,11 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 					file.getParentFile().mkdirs();
 				}
 				Files.write(file.toPath(), sb.toString().getBytes(StandardCharsets.UTF_8));
-				activeChar.sendMessage("Successfully written on: " + file.getAbsolutePath().replace(Config.DATAPACK_ROOT.getAbsolutePath(), ""));
+				BuilderUtil.sendSysMessage(activeChar, "Successfully written on: " + file.getAbsolutePath().replace(Config.DATAPACK_ROOT.getAbsolutePath(), ""));
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Failed writing the dump: " + e.getMessage());
+				BuilderUtil.sendSysMessage(activeChar, "Failed writing the dump: " + e.getMessage());
 				LOGGER.log(Level.WARNING, "Failed writing point picking dump for " + activeChar.getName() + ":" + e.getMessage(), e);
 			}
 		}
@@ -451,13 +452,13 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			{
 				changeLog.setXYZ(newLocation);
 				holder.setChangingLoc(null);
-				activeChar.sendMessage("Location " + (holder.indexOf(changeLog) + 1) + " has been updated!");
+				BuilderUtil.sendSysMessage(activeChar, "Location " + (holder.indexOf(changeLog) + 1) + " has been updated!");
 				disablePicking(activeChar);
 			}
 			else
 			{
 				holder.addNode(newLocation);
-				activeChar.sendMessage("Location " + (holder.indexOf(changeLog) + 1) + " has been added!");
+				BuilderUtil.sendSysMessage(activeChar, "Location " + (holder.indexOf(changeLog) + 1) + " has been added!");
 			}
 			// Auto visualization when nodes >= 3
 			if (holder.getNodes().size() >= 3)
@@ -484,7 +485,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 				final List<Location> list = holder.getNodes();
 				if (list.size() < 3)
 				{
-					activeChar.sendMessage("You must have at least 3 nodes to use this option!");
+					BuilderUtil.sendSysMessage(activeChar, "You must have at least 3 nodes to use this option!");
 					return;
 				}
 				
@@ -492,7 +493,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 				final ExShowTerritory exst = new ExShowTerritory(firstLoc.getZ() - 100, firstLoc.getZ() + 100);
 				list.forEach(exst::addVertice);
 				activeChar.sendPacket(exst);
-				activeChar.sendMessage("In order to remove the debug you must restart your game client!");
+				BuilderUtil.sendSysMessage(activeChar, "In order to remove the debug you must restart your game client!");
 			}
 		}
 	}

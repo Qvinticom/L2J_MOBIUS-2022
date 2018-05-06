@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.zone.type.L2NoRestartZone;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * @author St3eT
@@ -89,12 +90,12 @@ public class AdminGrandBoss implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendMessage("Wrong ID!");
+						BuilderUtil.sendSysMessage(activeChar, "Wrong ID!");
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //grandboss_skip Id");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //grandboss_skip Id");
 				}
 				break;
 			}
@@ -120,13 +121,13 @@ public class AdminGrandBoss implements IAdminCommandHandler
 						}
 						default:
 						{
-							activeChar.sendMessage("Wrong ID!");
+							BuilderUtil.sendSysMessage(activeChar, "Wrong ID!");
 						}
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //grandboss_respawn Id");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //grandboss_respawn Id");
 				}
 				break;
 			}
@@ -150,13 +151,13 @@ public class AdminGrandBoss implements IAdminCommandHandler
 						}
 						default:
 						{
-							activeChar.sendMessage("Wrong ID!");
+							BuilderUtil.sendSysMessage(activeChar, "Wrong ID!");
 						}
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //grandboss_minions Id");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //grandboss_minions Id");
 				}
 				break;
 			}
@@ -182,13 +183,13 @@ public class AdminGrandBoss implements IAdminCommandHandler
 						}
 						default:
 						{
-							activeChar.sendMessage("Wrong ID!");
+							BuilderUtil.sendSysMessage(activeChar, "Wrong ID!");
 						}
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //grandboss_abort Id");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //grandboss_abort Id");
 				}
 			}
 				break;
@@ -317,7 +318,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 		}
 		else
 		{
-			activeChar.sendMessage("Wrong ID!");
+			BuilderUtil.sendSysMessage(activeChar, "Wrong ID!");
 		}
 	}
 	

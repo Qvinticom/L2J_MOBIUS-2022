@@ -22,6 +22,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - gm = turns gm mode on/off
@@ -64,7 +65,7 @@ public class AdminGm implements IAdminCommandHandler
 			GmListTable.getInstance().deleteGm(activeChar);
 			// activeChar.setIsGM(false);
 			
-			activeChar.sendMessage("You no longer have GM status.");
+			BuilderUtil.sendSysMessage(activeChar, "You no longer have GM status.");
 			
 			if (Config.DEBUG)
 			{
@@ -76,7 +77,7 @@ public class AdminGm implements IAdminCommandHandler
 			GmListTable.getInstance().addGm(activeChar, false);
 			// activeChar.setIsGM(true);
 			
-			activeChar.sendMessage("You now have GM status.");
+			BuilderUtil.sendSysMessage(activeChar, "You now have GM status.");
 			
 			if (Config.DEBUG)
 			{

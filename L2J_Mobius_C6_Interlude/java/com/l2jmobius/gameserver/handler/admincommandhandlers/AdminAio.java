@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * Give / Take Status Aio to Player Changes name color and title color if enabled Uses: setaio [<player_name>] [<time_duration in days>] removeaio [<player_name>] If <player_name> is not specified, the current target player is used.
@@ -93,13 +94,13 @@ public class AdminAio implements IAdminCommandHandler
 								}
 								else
 								{
-									activeChar.sendMessage("Time must be bigger then 0!");
+									BuilderUtil.sendSysMessage(activeChar, "Time must be bigger then 0!");
 									return false;
 								}
 							}
 							catch (NumberFormatException e)
 							{
-								activeChar.sendMessage("Time must be a number!");
+								BuilderUtil.sendSysMessage(activeChar, "Time must be a number!");
 								return false;
 							}
 						}
@@ -110,7 +111,7 @@ public class AdminAio implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendMessage("Player must be online to set AIO status");
+						BuilderUtil.sendSysMessage(activeChar, "Player must be online to set AIO status");
 						no_token = true;
 					}
 				}
@@ -120,7 +121,7 @@ public class AdminAio implements IAdminCommandHandler
 				}
 				if (no_token)
 				{
-					activeChar.sendMessage("Usage: //setaio <char_name> [time](in days)");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //setaio <char_name> [time](in days)");
 					return false;
 				}
 			}
@@ -141,7 +142,7 @@ public class AdminAio implements IAdminCommandHandler
 					}
 					else
 					{
-						activeChar.sendMessage("Player must be online to remove AIO status");
+						BuilderUtil.sendSysMessage(activeChar, "Player must be online to remove AIO status");
 						no_token = true;
 					}
 				}
@@ -151,7 +152,7 @@ public class AdminAio implements IAdminCommandHandler
 				}
 				if (no_token)
 				{
-					activeChar.sendMessage("Usage: //removeaio <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //removeaio <char_name>");
 					return false;
 				}
 			}
@@ -165,7 +166,7 @@ public class AdminAio implements IAdminCommandHandler
 		final int days = Integer.parseInt(_time);
 		if (_player == null)
 		{
-			activeChar.sendMessage("not found char" + _playername);
+			BuilderUtil.sendSysMessage(activeChar, "not found char" + _playername);
 			return;
 		}
 		

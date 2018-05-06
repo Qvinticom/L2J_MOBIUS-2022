@@ -114,7 +114,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				final String[] param = command.split(" ");
 				if (param.length != 2)
 				{
-					activeChar.sendMessage("Usage: //sendhome <playername>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //sendhome <playername>");
 					return false;
 				}
 				final String targetName = param[1];
@@ -127,7 +127,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("User is not online.");
+					BuilderUtil.sendSysMessage(activeChar, "User is not online.");
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)
@@ -170,14 +170,14 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //teleportto <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleportto <char_name>");
 					return false;
 				}
 				L2PcInstance player = L2World.getInstance().getPlayer(val);
 				if (player == null)
 				{
-					activeChar.sendMessage("ATTENTION: char_name must be valid character");
-					activeChar.sendMessage("Usage: //teleportto <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "ATTENTION: char_name must be valid character");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleportto <char_name>");
 					return false;
 				}
 				teleportToCharacter(activeChar, player);
@@ -196,31 +196,31 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //recall_party <party_leader_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //recall_party <party_leader_name>");
 					return false;
 				}
 				if (val.equals(""))
 				{
-					activeChar.sendMessage("Usage: //recall_party <party_leader_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //recall_party <party_leader_name>");
 					return false;
 				}
 				final L2PcInstance player = L2World.getInstance().getPlayer(val);
 				if (player == null)
 				{
-					activeChar.sendMessage("ATTENTION: party_leader_name must be valid character");
-					activeChar.sendMessage("//recall_party <party_leader_name>");
+					BuilderUtil.sendSysMessage(activeChar, "ATTENTION: party_leader_name must be valid character");
+					BuilderUtil.sendSysMessage(activeChar, "//recall_party <party_leader_name>");
 					return false;
 				}
 				if (player.getParty() == null)
 				{
-					activeChar.sendMessage("The player must have a party");
-					activeChar.sendMessage("//recall_party <party_leader_name>");
+					BuilderUtil.sendSysMessage(activeChar, "The player must have a party");
+					BuilderUtil.sendSysMessage(activeChar, "//recall_party <party_leader_name>");
 					return false;
 				}
 				if (!player.getParty().isLeader(player))
 				{
-					activeChar.sendMessage("The player must be the party_leader");
-					activeChar.sendMessage("//recall_party <party_leader_name>");
+					BuilderUtil.sendSysMessage(activeChar, "The player must be the party_leader");
+					BuilderUtil.sendSysMessage(activeChar, "//recall_party <party_leader_name>");
 					return false;
 				}
 				for (L2PcInstance partyMember : player.getParty().getPartyMembers())
@@ -248,20 +248,20 @@ public class AdminTeleport implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //move_to <coordinates>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //move_to <coordinates>");
 						AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //move_to <coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //move_to <coordinates>");
 					AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 					return false;
 				}
 				if ((x == 0) && (y == 0))
 				{
-					activeChar.sendMessage("Usage: //move_to <valid_coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //move_to <valid_coordinates>");
 					AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 					return false;
 				}
@@ -286,20 +286,20 @@ public class AdminTeleport implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //teleport_character <coordinates>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //teleport_character <coordinates>");
 						showTeleportCharWindow(activeChar);
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //teleport_character <coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleport_character <coordinates>");
 					showTeleportCharWindow(activeChar);
 					return false;
 				}
 				if ((x == 0) && (y == 0))
 				{
-					activeChar.sendMessage("Usage: //teleport_character <valid_coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleport_character <valid_coordinates>");
 					showTeleportCharWindow(activeChar);
 					return false;
 				}
@@ -312,8 +312,8 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				if (player == null)
 				{
-					activeChar.sendMessage("Select valid player");
-					activeChar.sendMessage("Usage: //teleport_character <valid_coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Select valid player");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //teleport_character <valid_coordinates>");
 					showTeleportCharWindow(activeChar);
 					return false;
 				}
@@ -329,19 +329,19 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //recall <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //recall <char_name>");
 					return false;
 				}
 				if (val.equals(""))
 				{
-					activeChar.sendMessage("Usage: //recall <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //recall <char_name>");
 					return false;
 				}
 				final L2PcInstance player = L2World.getInstance().getPlayer(val);
 				if (player == null)
 				{
-					activeChar.sendMessage("ATTENTION: char_name must be valid character");
-					activeChar.sendMessage("Usage: //recall <char_name>");
+					BuilderUtil.sendSysMessage(activeChar, "ATTENTION: char_name must be valid character");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //recall <char_name>");
 					return false;
 				}
 				teleportTo(player, activeChar.getX(), activeChar.getY(), activeChar.getZ());
@@ -365,18 +365,18 @@ public class AdminTeleport implements IAdminCommandHandler
 					}
 					catch (NumberFormatException e)
 					{
-						activeChar.sendMessage("Usage: //walk <coordinates>");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //walk <coordinates>");
 						return false;
 					}
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //walk <coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //walk <coordinates>");
 					return false;
 				}
 				if ((x == 0) && (y == 0))
 				{
-					activeChar.sendMessage("Usage: //walk <valid_coordinates>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //walk <valid_coordinates>");
 					return false;
 				}
 				final Location pos = new Location(x, y, z, 0);
@@ -447,7 +447,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				catch (Exception e)
 				{
-					activeChar.sendMessage("Usage: //go<north|south|east|west|up|down> [offset] (default 150)");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //go<north|south|east|west|up|down> [offset] (default 150)");
 					return false;
 				}
 			}
@@ -483,7 +483,7 @@ public class AdminTeleport implements IAdminCommandHandler
 					}
 					default:
 					{
-						activeChar.sendMessage("Defined mode not allowed..");
+						BuilderUtil.sendSysMessage(activeChar, "Defined mode not allowed..");
 						return false;
 					}
 				}
@@ -582,9 +582,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 			activeChar.teleToLocation(x, y, z, true);
 			
-			activeChar.sendMessage("You have teleported to character " + player.getName() + ".");
+			BuilderUtil.sendSysMessage(activeChar, "You have teleported to character " + player.getName() + ".");
 		} /*
-			 * else if(npc!=null) { int x = npc.getX(); int y = npc.getY(); int z = npc.getZ(); activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); activeChar.teleToLocation(x, y, z, true); activeChar.sendMessage("You have teleported to npc " + npc.getName() + "."); }
+			 * else if(npc!=null) { int x = npc.getX(); int y = npc.getY(); int z = npc.getZ(); activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); activeChar.teleToLocation(x, y, z, true); BuilderUtil.sendSysMessage(activeChar, "You have teleported to npc " + npc.getName() + "."); }
 			 */
 	}
 	
@@ -602,7 +602,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			if (template1 == null)
 			{
-				activeChar.sendMessage("Incorrect monster template.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster template.");
 				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' template.");
 				return;
 			}
@@ -611,7 +611,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			if (spawn == null)
 			{
-				activeChar.sendMessage("Incorrect monster spawn.");
+				BuilderUtil.sendSysMessage(activeChar, "Incorrect monster spawn.");
 				LOGGER.warning("ERROR: NPC " + target.getObjectId() + " has a 'null' spawn.");
 				return;
 			}
@@ -651,7 +651,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				activeChar.sendMessage("Target is not in game.");
+				BuilderUtil.sendSysMessage(activeChar, "Target is not in game.");
 			}
 		}
 		else

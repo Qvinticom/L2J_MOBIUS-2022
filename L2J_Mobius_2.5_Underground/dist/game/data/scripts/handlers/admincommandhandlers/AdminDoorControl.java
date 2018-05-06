@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.network.serverpackets.ExServerPrimitive;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - open1 = open coloseum door 24190001 - open2 = open coloseum door 24190002 - open3 = open coloseum door 24190003 - open4 = open coloseum door 24190004 - openall = open all coloseum door - close1 = close coloseum door 24190001 - close2 = close coloseum
@@ -123,7 +124,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Incorrect target.");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 				}
 			}
 			else if (command.equals("admin_close"))
@@ -135,7 +136,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Incorrect target.");
+					BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 				}
 			}
 			else if (command.equals("admin_showdoors"))
@@ -161,7 +162,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 					packet.addLine(color, door.getX(2), door.getY(2), door.getZMax(), door.getX(3), door.getY(3), door.getZMin());
 					activeChar.sendPacket(packet);
 					// send message
-					activeChar.sendMessage("Found door " + door.getId());
+					BuilderUtil.sendSysMessage(activeChar, "Found door " + door.getId());
 				});
 			}
 		}

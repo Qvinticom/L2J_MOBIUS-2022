@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -53,7 +54,7 @@ public class AdminShutdown implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //server_shutdown <seconds>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //server_shutdown <seconds>");
 					sendHtmlForm(activeChar);
 				}
 			}
@@ -73,7 +74,7 @@ public class AdminShutdown implements IAdminCommandHandler
 				}
 				else
 				{
-					activeChar.sendMessage("Usage: //server_restart <seconds>");
+					BuilderUtil.sendSysMessage(activeChar, "Usage: //server_restart <seconds>");
 					sendHtmlForm(activeChar);
 				}
 			}

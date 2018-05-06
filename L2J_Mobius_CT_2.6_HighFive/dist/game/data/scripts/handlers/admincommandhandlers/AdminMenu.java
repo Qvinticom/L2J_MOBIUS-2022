@@ -31,6 +31,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 
 /**
  * This class handles following admin commands: - handles every admin menu command
@@ -100,7 +101,7 @@ public class AdminMenu implements IAdminCommandHandler
 				}
 				if (!player.isInParty())
 				{
-					activeChar.sendMessage("Player is not in party.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not in party.");
 					teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
 					return true;
 				}
@@ -128,7 +129,7 @@ public class AdminMenu implements IAdminCommandHandler
 				final L2Clan clan = player.getClan();
 				if (clan == null)
 				{
-					activeChar.sendMessage("Player is not in a clan.");
+					BuilderUtil.sendSysMessage(activeChar, "Player is not in a clan.");
 					teleportCharacter(player, activeChar.getLocation(), activeChar, "Admin is teleporting you.");
 					return true;
 				}
@@ -227,7 +228,7 @@ public class AdminMenu implements IAdminCommandHandler
 			if (plyr != null)
 			{
 				target = plyr;
-				activeChar.sendMessage("You killed " + plyr.getName());
+				BuilderUtil.sendSysMessage(activeChar, "You killed " + plyr.getName());
 			}
 		}
 		if (target != null)
@@ -283,7 +284,7 @@ public class AdminMenu implements IAdminCommandHandler
 		{
 			activeChar.setInstanceId(player.getInstanceId());
 			activeChar.teleToLocation(player.getLocation(), true);
-			activeChar.sendMessage("You're teleporting yourself to character " + player.getName());
+			BuilderUtil.sendSysMessage(activeChar, "You're teleporting yourself to character " + player.getName());
 		}
 		showMainPage(activeChar);
 	}

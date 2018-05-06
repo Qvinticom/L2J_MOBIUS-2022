@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ServerClose;
 import com.l2jmobius.gameserver.thread.LoginServerThread;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.GMAudit;
 
 /**
@@ -76,7 +77,7 @@ public class AdminBan implements IAdminCommandHandler
 				}
 				catch (NumberFormatException nfe)
 				{
-					activeChar.sendMessage("Invalid number format used: " + nfe);
+					BuilderUtil.sendSysMessage(activeChar, "Invalid number format used: " + nfe);
 					return false;
 				}
 			}
@@ -94,7 +95,7 @@ public class AdminBan implements IAdminCommandHandler
 		
 		if (command.startsWith("admin_ban ") || command.equalsIgnoreCase("admin_ban"))
 		{
-			activeChar.sendMessage("Available ban commands: //ban_acc, //ban_char, //ban_chat");
+			BuilderUtil.sendSysMessage(activeChar, "Available ban commands: //ban_acc, //ban_char, //ban_chat");
 			return false;
 		}
 		else if (command.startsWith("admin_ban_acc"))
@@ -103,19 +104,19 @@ public class AdminBan implements IAdminCommandHandler
 			
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //ban_acc <account_name> (if none, target char's account gets banned)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ban_acc <account_name> (if none, target char's account gets banned)");
 				return false;
 			}
 			else if (targetPlayer == null)
 			{
 				LoginServerThread.getInstance().sendAccessLevel(player, -100);
-				activeChar.sendMessage("Ban request sent for account " + player);
+				BuilderUtil.sendSysMessage(activeChar, "Ban request sent for account " + player);
 				auditAction(command, activeChar, player);
 			}
 			else
 			{
 				targetPlayer.setPunishLevel(L2PcInstance.PunishLevel.ACC, 0);
-				activeChar.sendMessage("Account " + targetPlayer.getAccountName() + " banned.");
+				BuilderUtil.sendSysMessage(activeChar, "Account " + targetPlayer.getAccountName() + " banned.");
 				auditAction(command, activeChar, targetPlayer.getAccountName());
 			}
 		}
@@ -123,7 +124,7 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //ban_char <char_name> (if none, target char is banned)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //ban_char <char_name> (if none, target char is banned)");
 				return false;
 			}
 			auditAction(command, activeChar, (targetPlayer == null ? player : targetPlayer.getName()));
@@ -133,7 +134,7 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //banchat <char_name> [penalty_minutes]");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //banchat <char_name> [penalty_minutes]");
 				return false;
 			}
 			if (targetPlayer != null)
@@ -163,7 +164,7 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //unbanchat <char_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //unbanchat <char_name>");
 				return false;
 			}
 			if (targetPlayer != null)
@@ -187,7 +188,7 @@ public class AdminBan implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_unban ") || command.equalsIgnoreCase("admin_unban"))
 		{
-			activeChar.sendMessage("Available unban commands: //unban_acc, //unban_char, //unban_chat");
+			BuilderUtil.sendSysMessage(activeChar, "Available unban commands: //unban_acc, //unban_char, //unban_chat");
 			return false;
 		}
 		else if (command.startsWith("admin_unban_acc"))
@@ -202,12 +203,12 @@ public class AdminBan implements IAdminCommandHandler
 			else if (!player.equals(""))
 			{
 				LoginServerThread.getInstance().sendAccessLevel(player, 0);
-				activeChar.sendMessage("Unban request sent for account " + player);
+				BuilderUtil.sendSysMessage(activeChar, "Unban request sent for account " + player);
 				auditAction(command, activeChar, player);
 			}
 			else
 			{
-				activeChar.sendMessage("Usage: //unban_acc <account_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //unban_acc <account_name>");
 				return false;
 			}
 		}
@@ -215,7 +216,7 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //unban_char <char_name>");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //unban_char <char_name>");
 				return false;
 			}
 			else if (targetPlayer != null)
@@ -233,13 +234,13 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //jail <charname> [penalty_minutes] (if no name is given, selected target is jailed indefinitely)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //jail <charname> [penalty_minutes] (if no name is given, selected target is jailed indefinitely)");
 				return false;
 			}
 			if (targetPlayer != null)
 			{
 				targetPlayer.setPunishLevel(L2PcInstance.PunishLevel.JAIL, duration);
-				activeChar.sendMessage("Character " + targetPlayer.getName() + " jailed for " + (duration > 0 ? duration + " minutes." : "ever!"));
+				BuilderUtil.sendSysMessage(activeChar, "Character " + targetPlayer.getName() + " jailed for " + (duration > 0 ? duration + " minutes." : "ever!"));
 				auditAction(command, activeChar, targetPlayer.getName());
 				
 				if (targetPlayer.getParty() != null)
@@ -257,13 +258,13 @@ public class AdminBan implements IAdminCommandHandler
 		{
 			if ((targetPlayer == null) && player.equals(""))
 			{
-				activeChar.sendMessage("Usage: //unjail <charname> (If no name is given target is used)");
+				BuilderUtil.sendSysMessage(activeChar, "Usage: //unjail <charname> (If no name is given target is used)");
 				return false;
 			}
 			else if (targetPlayer != null)
 			{
 				targetPlayer.setPunishLevel(L2PcInstance.PunishLevel.NONE, 0);
-				activeChar.sendMessage("Character " + targetPlayer.getName() + " removed from jail");
+				BuilderUtil.sendSysMessage(activeChar, "Character " + targetPlayer.getName() + " removed from jail");
 				auditAction(command, activeChar, targetPlayer.getName());
 			}
 			else
@@ -315,20 +316,20 @@ public class AdminBan implements IAdminCommandHandler
 			
 			if (count == 0)
 			{
-				activeChar.sendMessage("Character not found!");
+				BuilderUtil.sendSysMessage(activeChar, "Character not found!");
 			}
 			else if (ban)
 			{
-				activeChar.sendMessage("Character " + name + " chat-banned for " + (delay > 0 ? delay + " minutes." : "ever!"));
+				BuilderUtil.sendSysMessage(activeChar, "Character " + name + " chat-banned for " + (delay > 0 ? delay + " minutes." : "ever!"));
 			}
 			else
 			{
-				activeChar.sendMessage("Character " + name + "'s chat-banned lifted");
+				BuilderUtil.sendSysMessage(activeChar, "Character " + name + "'s chat-banned lifted");
 			}
 		}
 		catch (SQLException se)
 		{
-			activeChar.sendMessage("SQLException while chat-banning player");
+			BuilderUtil.sendSysMessage(activeChar, "SQLException while chat-banning player");
 			if (Config.DEBUG)
 			{
 				se.printStackTrace();
@@ -354,16 +355,16 @@ public class AdminBan implements IAdminCommandHandler
 			
 			if (count == 0)
 			{
-				activeChar.sendMessage("Character not found!");
+				BuilderUtil.sendSysMessage(activeChar, "Character not found!");
 			}
 			else
 			{
-				activeChar.sendMessage("Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
+				BuilderUtil.sendSysMessage(activeChar, "Character " + name + " jailed for " + (delay > 0 ? delay + " minutes." : "ever!"));
 			}
 		}
 		catch (SQLException se)
 		{
-			activeChar.sendMessage("SQLException while jailing player");
+			BuilderUtil.sendSysMessage(activeChar, "SQLException while jailing player");
 			if (Config.DEBUG)
 			{
 				se.printStackTrace();
@@ -387,16 +388,16 @@ public class AdminBan implements IAdminCommandHandler
 			statement.close();
 			if (count == 0)
 			{
-				activeChar.sendMessage("Character not found!");
+				BuilderUtil.sendSysMessage(activeChar, "Character not found!");
 			}
 			else
 			{
-				activeChar.sendMessage("Character " + name + " removed from jail");
+				BuilderUtil.sendSysMessage(activeChar, "Character " + name + " removed from jail");
 			}
 		}
 		catch (SQLException se)
 		{
-			activeChar.sendMessage("SQLException while jailing player");
+			BuilderUtil.sendSysMessage(activeChar, "SQLException while jailing player");
 			if (Config.DEBUG)
 			{
 				se.printStackTrace();
@@ -432,7 +433,7 @@ public class AdminBan implements IAdminCommandHandler
 			
 			targetPlayer.deleteMe();
 			
-			activeChar.sendMessage("The character " + targetPlayer.getName() + " has now been banned.");
+			BuilderUtil.sendSysMessage(activeChar, "The character " + targetPlayer.getName() + " has now been banned.");
 			
 			output = true;
 		}
@@ -448,7 +449,7 @@ public class AdminBan implements IAdminCommandHandler
 				statement.close();
 				if (count == 0)
 				{
-					activeChar.sendMessage("Character not found or access level unaltered.");
+					BuilderUtil.sendSysMessage(activeChar, "Character not found or access level unaltered.");
 				}
 				else
 				{
@@ -458,7 +459,7 @@ public class AdminBan implements IAdminCommandHandler
 			}
 			catch (SQLException se)
 			{
-				activeChar.sendMessage("SQLException while changing character's access level");
+				BuilderUtil.sendSysMessage(activeChar, "SQLException while changing character's access level");
 				if (Config.DEBUG)
 				{
 					se.printStackTrace();

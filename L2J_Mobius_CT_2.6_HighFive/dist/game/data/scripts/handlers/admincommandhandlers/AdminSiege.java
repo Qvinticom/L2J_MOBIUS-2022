@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
 import com.l2jmobius.gameserver.model.zone.type.L2ClanHallZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -102,13 +103,13 @@ public class AdminSiege implements IAdminCommandHandler
 							}
 							if (clanhall.getOwnerId() > 0)
 							{
-								activeChar.sendMessage("This Clan Hall is not free!");
+								BuilderUtil.sendSysMessage(activeChar, "This Clan Hall is not free!");
 								return false;
 							}
 							clan = player.getClan();
 							if (clan.getHideoutId() > 0)
 							{
-								activeChar.sendMessage("You have already a Clan Hall!");
+								BuilderUtil.sendSysMessage(activeChar, "You have already a Clan Hall!");
 								return false;
 							}
 							if (!clanhall.isSiegableHall())
@@ -137,7 +138,7 @@ public class AdminSiege implements IAdminCommandHandler
 								}
 								else
 								{
-									activeChar.sendMessage("This Clan Hall is already free!");
+									BuilderUtil.sendSysMessage(activeChar, "This Clan Hall is already free!");
 								}
 							}
 							else
@@ -231,7 +232,7 @@ public class AdminSiege implements IAdminCommandHandler
 							}
 						}
 						// If doesn't have more tokens or token is not a number.
-						activeChar.sendMessage("Usage: //add_guard castle npcId");
+						BuilderUtil.sendSysMessage(activeChar, "Usage: //add_guard castle npcId");
 						break;
 					}
 					case "admin_clear_siege_list":
@@ -251,7 +252,7 @@ public class AdminSiege implements IAdminCommandHandler
 					}
 					case "admin_move_defenders":
 					{
-						activeChar.sendMessage("Not implemented yet.");
+						BuilderUtil.sendSysMessage(activeChar, "Not implemented yet.");
 						break;
 					}
 					case "admin_setcastle":
@@ -275,7 +276,7 @@ public class AdminSiege implements IAdminCommandHandler
 						}
 						else
 						{
-							activeChar.sendMessage("Unable to remove castle.");
+							BuilderUtil.sendSysMessage(activeChar, "Unable to remove castle.");
 						}
 						break;
 					}
@@ -291,7 +292,7 @@ public class AdminSiege implements IAdminCommandHandler
 								final int month = cal.get(Calendar.MONTH) + Integer.parseInt(st.nextToken());
 								if ((cal.getActualMinimum(Calendar.MONTH) > month) || (cal.getActualMaximum(Calendar.MONTH) < month))
 								{
-									activeChar.sendMessage("Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
+									BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect month value only " + cal.getActualMinimum(Calendar.MONTH) + "-" + cal.getActualMaximum(Calendar.MONTH) + " is accepted!");
 									return false;
 								}
 								cal.set(Calendar.MONTH, month);
@@ -301,7 +302,7 @@ public class AdminSiege implements IAdminCommandHandler
 								final int day = Integer.parseInt(st.nextToken());
 								if ((cal.getActualMinimum(Calendar.DAY_OF_MONTH) > day) || (cal.getActualMaximum(Calendar.DAY_OF_MONTH) < day))
 								{
-									activeChar.sendMessage("Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
+									BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect day value only " + cal.getActualMinimum(Calendar.DAY_OF_MONTH) + "-" + cal.getActualMaximum(Calendar.DAY_OF_MONTH) + " is accepted!");
 									return false;
 								}
 								cal.set(Calendar.DAY_OF_MONTH, day);
@@ -311,7 +312,7 @@ public class AdminSiege implements IAdminCommandHandler
 								final int hour = Integer.parseInt(st.nextToken());
 								if ((cal.getActualMinimum(Calendar.HOUR_OF_DAY) > hour) || (cal.getActualMaximum(Calendar.HOUR_OF_DAY) < hour))
 								{
-									activeChar.sendMessage("Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
+									BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect hour value only " + cal.getActualMinimum(Calendar.HOUR_OF_DAY) + "-" + cal.getActualMaximum(Calendar.HOUR_OF_DAY) + " is accepted!");
 									return false;
 								}
 								cal.set(Calendar.HOUR_OF_DAY, hour);
@@ -321,20 +322,20 @@ public class AdminSiege implements IAdminCommandHandler
 								final int min = Integer.parseInt(st.nextToken());
 								if ((cal.getActualMinimum(Calendar.MINUTE) > min) || (cal.getActualMaximum(Calendar.MINUTE) < min))
 								{
-									activeChar.sendMessage("Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
+									BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date - Incorrect minute value only " + cal.getActualMinimum(Calendar.MINUTE) + "-" + cal.getActualMaximum(Calendar.MINUTE) + " is accepted!");
 									return false;
 								}
 								cal.set(Calendar.MINUTE, min);
 							}
 							if (cal.getTimeInMillis() < Calendar.getInstance().getTimeInMillis())
 							{
-								activeChar.sendMessage("Unable to change Siege Date");
+								BuilderUtil.sendSysMessage(activeChar, "Unable to change Siege Date");
 							}
 							else if (cal.getTimeInMillis() != castle.getSiegeDate().getTimeInMillis())
 							{
 								castle.getSiegeDate().setTimeInMillis(cal.getTimeInMillis());
 								castle.getSiege().saveSiegeDate();
-								activeChar.sendMessage("Castle siege time for castle " + castle.getName() + " has been changed.");
+								BuilderUtil.sendSysMessage(activeChar, "Castle siege time for castle " + castle.getName() + " has been changed.");
 							}
 						}
 						showSiegeTimePage(activeChar, castle);
