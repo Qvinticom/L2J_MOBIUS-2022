@@ -24,6 +24,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
@@ -44,7 +45,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 import quests.Q00692_HowtoOpposeEvil.Q00692_HowtoOpposeEvil;
@@ -311,7 +311,7 @@ public class EnergySeeds extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (!Util.contains(targets, npc) || (skill.getId() != 5780))
+		if (!CommonUtil.contains(targets, npc) || (skill.getId() != 5780))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}

@@ -16,13 +16,13 @@
  */
 package quests.Q00289_NoMoreSoupForYou;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q00252_ItSmellsDelicious.Q00252_ItSmellsDelicious;
 
@@ -223,7 +223,7 @@ public class Q00289_NoMoreSoupForYou extends Quest
 		{
 			return null;
 		}
-		if (Util.contains(MOBS, npcId))
+		if (CommonUtil.contains(MOBS, npcId))
 		{
 			giveItems(player, SOUP, 1 * RATE);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

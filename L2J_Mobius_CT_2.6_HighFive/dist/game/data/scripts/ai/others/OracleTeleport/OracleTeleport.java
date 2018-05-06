@@ -16,6 +16,7 @@
  */
 package ai.others.OracleTeleport;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -24,7 +25,6 @@ import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -160,13 +160,13 @@ public final class OracleTeleport extends AbstractNpcAI
 		final int npcId = npc.getId();
 		if (event.equalsIgnoreCase("Return"))
 		{
-			if (Util.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
+			if (CommonUtil.contains(TEMPLE_PRIEST, npcId) && (st.getState() == State.STARTED))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				player.setIsIn7sDungeon(false);
 				st.exitQuest(true);
 			}
-			else if (Util.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
+			else if (CommonUtil.contains(RIFT_POSTERS, npcId) && (st.getState() == State.STARTED))
 			{
 				player.teleToLocation(RETURN_LOCS[st.getInt("id")]);
 				htmltext = "rift_back.htm";
@@ -183,12 +183,12 @@ public final class OracleTeleport extends AbstractNpcAI
 		else if (event.equalsIgnoreCase("Festival"))
 		{
 			final int id = st.getInt("id");
-			if (Util.contains(TOWN_DAWN, id))
+			if (CommonUtil.contains(TOWN_DAWN, id))
 			{
 				player.teleToLocation(new Location(-80157, 111344, -4901));
 				player.setIsIn7sDungeon(true);
 			}
-			else if (Util.contains(TOWN_DUSK, id))
+			else if (CommonUtil.contains(TOWN_DUSK, id))
 			{
 				player.teleToLocation(new Location(-81261, 86531, -5157));
 				player.setIsIn7sDungeon(true);
@@ -280,7 +280,7 @@ public final class OracleTeleport extends AbstractNpcAI
 		final QuestState st = getQuestState(player, true);
 		
 		final int npcId = npc.getId();
-		if (Util.contains(TOWN_DAWN, npcId))
+		if (CommonUtil.contains(TOWN_DAWN, npcId))
 		{
 			st.setState(State.STARTED);
 			int i = 0;
@@ -297,7 +297,7 @@ public final class OracleTeleport extends AbstractNpcAI
 			player.teleToLocation(new Location(-80157, 111344, -4901));
 			player.setIsIn7sDungeon(true);
 		}
-		if (Util.contains(TOWN_DUSK, npcId))
+		if (CommonUtil.contains(TOWN_DUSK, npcId))
 		{
 			st.setState(State.STARTED);
 			int i = 0;

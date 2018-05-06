@@ -16,6 +16,7 @@
  */
 package ai.others;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -149,12 +150,12 @@ public class VarkaKetra extends AbstractNpcAI
 	{
 		if (Util.checkIfInRange(1500, player, npc, false))
 		{
-			if (Util.contains(KETRA, npc.getId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS))
+			if (CommonUtil.contains(KETRA, npc.getId()) && hasAtLeastOneQuestItem(player, KETRA_MARKS))
 			{
 				decreaseAlliance(player, KETRA_MARKS);
 				exitQuests(player, KETRA_QUESTS);
 			}
-			else if (Util.contains(VARKA, npc.getId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS))
+			else if (CommonUtil.contains(VARKA, npc.getId()) && hasAtLeastOneQuestItem(player, VARKA_MARKS))
 			{
 				decreaseAlliance(player, VARKA_MARKS);
 				exitQuests(player, VARKA_QUESTS);
@@ -200,7 +201,7 @@ public class VarkaKetra extends AbstractNpcAI
 	@Override
 	public boolean onNpcHate(L2Attackable mob, L2PcInstance player, boolean isSummon)
 	{
-		if (Util.contains(KETRA, mob.getId()))
+		if (CommonUtil.contains(KETRA, mob.getId()))
 		{
 			return !hasAtLeastOneQuestItem(player, KETRA_MARKS);
 		}

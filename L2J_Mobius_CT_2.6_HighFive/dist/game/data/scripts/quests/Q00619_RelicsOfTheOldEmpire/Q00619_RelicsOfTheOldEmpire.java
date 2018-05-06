@@ -19,11 +19,11 @@ package quests.Q00619_RelicsOfTheOldEmpire;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Relics of the Old Empire (619)
@@ -271,7 +271,7 @@ public final class Q00619_RelicsOfTheOldEmpire extends Quest
 		if (st != null)
 		{
 			final int npcId = npc.getId();
-			if (Util.contains(ARCHON_OF_HALISHA, npcId))
+			if (CommonUtil.contains(ARCHON_OF_HALISHA, npcId))
 			{
 				final int itemCount = ((getRandom(100) < 79) ? 4 : 3);
 				giveItemRandomly(player, npc, BROKEN_RELIC_PART, itemCount, 0, 1.0, true);

@@ -16,13 +16,13 @@
  */
 package quests.Q00246_PossessorOfAPreciousSoul3;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q00242_PossessorOfAPreciousSoul2.Q00242_PossessorOfAPreciousSoul2;
 
@@ -228,7 +228,7 @@ public class Q00246_PossessorOfAPreciousSoul3 extends Quest
 					return super.onKill(npc, player, isSummon);
 				}
 				
-				if (Util.contains(MOBS, npc.getId()) && (getQuestItemsCount(player, FRAGMENTS) < 100) && (st.isCond(4)))
+				if (CommonUtil.contains(MOBS, npc.getId()) && (getQuestItemsCount(player, FRAGMENTS) < 100) && (st.isCond(4)))
 				{
 					if (getRandom(100) < CHANCE_FOR_DROP_FRAGMENTS)
 					{

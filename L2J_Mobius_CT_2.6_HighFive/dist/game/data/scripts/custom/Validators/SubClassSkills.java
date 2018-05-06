@@ -21,6 +21,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.PcCondOverride;
@@ -180,7 +181,7 @@ public final class SubClassSkills extends AbstractNpcAI
 							}
 							if (skill != null)
 							{
-								if (!Util.contains(_certSkillsByLevel[i], id))
+								if (!CommonUtil.contains(_certSkillsByLevel[i], id))
 								{
 									// should remove this skill ?
 									Util.handleIllegalPlayerAction(player, "Invalid cert variable WITH skill:" + qName + "=" + qValue + " - skill does not match certificate level", IllegalActionPunishmentType.NONE);
@@ -230,7 +231,7 @@ public final class SubClassSkills extends AbstractNpcAI
 							}
 							if (item != null)
 							{
-								if (!Util.contains(_certItemsByLevel[i], item.getId()))
+								if (!CommonUtil.contains(_certItemsByLevel[i], item.getId()))
 								{
 									Util.handleIllegalPlayerAction(player, "Invalid cert variable:" + qName + "=" + qValue + " - item found but does not match certificate level", IllegalActionPunishmentType.NONE);
 								}

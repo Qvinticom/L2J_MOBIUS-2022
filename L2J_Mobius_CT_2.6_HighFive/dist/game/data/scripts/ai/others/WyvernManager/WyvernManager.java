@@ -20,12 +20,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.SevenSigns;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.entity.clanhall.SiegableHall;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -106,7 +106,7 @@ public final class WyvernManager extends AbstractNpcAI
 	
 	private String mountWyvern(L2Npc npc, L2PcInstance player)
 	{
-		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && Util.contains(STRIDERS, player.getMountNpcId()))
+		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
 		{
 			if (isOwnerClan(npc, player) && (getQuestItemsCount(player, CRYSTAL_B_GRADE) >= WYVERN_FEE))
 			{

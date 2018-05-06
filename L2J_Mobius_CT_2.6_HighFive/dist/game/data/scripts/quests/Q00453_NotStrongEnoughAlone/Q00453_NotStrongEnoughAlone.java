@@ -16,6 +16,7 @@
  */
 package quests.Q00453_NotStrongEnoughAlone;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -121,7 +122,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 		{
 			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
 			
-			if (Util.contains(MONSTER1, npcId) && qs.isCond(2))
+			if (CommonUtil.contains(MONSTER1, npcId) && qs.isCond(2))
 			{
 				if (npcId == MONSTER1[4])
 				{
@@ -154,7 +155,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				log.addNpc(MONSTER1[2], qs.getInt(String.valueOf(MONSTER1[2])));
 				log.addNpc(MONSTER1[3], qs.getInt(String.valueOf(MONSTER1[3])));
 			}
-			else if (Util.contains(MONSTER2, npcId) && qs.isCond(3))
+			else if (CommonUtil.contains(MONSTER2, npcId) && qs.isCond(3))
 			{
 				if (npcId == MONSTER2[3])
 				{
@@ -182,7 +183,7 @@ public class Q00453_NotStrongEnoughAlone extends Quest
 				log.addNpc(MONSTER2[1], qs.getInt(String.valueOf(MONSTER2[1])));
 				log.addNpc(MONSTER2[2], qs.getInt(String.valueOf(MONSTER2[2])));
 			}
-			else if (Util.contains(MONSTER3, npcId) && qs.isCond(4))
+			else if (CommonUtil.contains(MONSTER3, npcId) && qs.isCond(4))
 			{
 				if (npcId == MONSTER3[3])
 				{

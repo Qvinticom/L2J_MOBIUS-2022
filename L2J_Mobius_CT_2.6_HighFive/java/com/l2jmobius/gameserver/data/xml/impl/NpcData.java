@@ -34,6 +34,7 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AISkillScope;
@@ -740,7 +741,7 @@ public class NpcData implements IGameXmlReader
 	 */
 	public List<L2NpcTemplate> getAllOfLevel(int... lvls)
 	{
-		return getTemplates(template -> Util.contains(lvls, template.getLevel()));
+		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()));
 	}
 	
 	/**
@@ -750,7 +751,7 @@ public class NpcData implements IGameXmlReader
 	 */
 	public List<L2NpcTemplate> getAllMonstersOfLevel(int... lvls)
 	{
-		return getTemplates(template -> Util.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
+		return getTemplates(template -> CommonUtil.contains(lvls, template.getLevel()) && template.isType("L2Monster"));
 	}
 	
 	/**

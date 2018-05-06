@@ -18,6 +18,7 @@ package ai.areas.DragonValley;
 
 import java.util.EnumMap;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -25,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -203,7 +203,7 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			startQuestTimer("SELF_DESTRUCTION", 3000, npc, null);
 		}
-		else if (Util.contains(SPAWN_ANIMATION, npc.getId()))
+		else if (CommonUtil.contains(SPAWN_ANIMATION, npc.getId()))
 		{
 			npc.setShowSummonAnimation(true);
 		}

@@ -16,13 +16,13 @@
  */
 package quests.Q00251_NoSecrets;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * No Secrets (251)
@@ -84,7 +84,7 @@ public class Q00251_NoSecrets extends Quest
 		{
 			final int npcId = npc.getId();
 			
-			if (Util.contains(MOBS, npcId) && (getRandom(100) < 10) && (getQuestItemsCount(player, DIARY) < 10))
+			if (CommonUtil.contains(MOBS, npcId) && (getRandom(100) < 10) && (getQuestItemsCount(player, DIARY) < 10))
 			{
 				giveItems(player, DIARY, 1);
 				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))
@@ -96,7 +96,7 @@ public class Q00251_NoSecrets extends Quest
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
-			else if (Util.contains(MOBS2, npcId) && (getRandom(100) < 5) && (getQuestItemsCount(player, TABLE) < 5))
+			else if (CommonUtil.contains(MOBS2, npcId) && (getRandom(100) < 5) && (getQuestItemsCount(player, TABLE) < 5))
 			{
 				giveItems(player, TABLE, 1);
 				if ((getQuestItemsCount(player, DIARY) >= 10) && (getQuestItemsCount(player, TABLE) >= 5))

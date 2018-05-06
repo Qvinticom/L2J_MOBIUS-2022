@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.events;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.events.impl.IBaseEvent;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttack;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureAttackAvoid;
@@ -103,7 +104,6 @@ import com.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeFinish;
 import com.l2jmobius.gameserver.model.events.impl.sieges.fort.OnFortSiegeStart;
 import com.l2jmobius.gameserver.model.events.returns.ChatFilterReturn;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -251,6 +251,6 @@ public enum EventType
 	
 	public boolean isReturnClass(Class<?> clazz)
 	{
-		return Util.contains(_returnClass, clazz);
+		return CommonUtil.contains(_returnClass, clazz);
 	}
 }

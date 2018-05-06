@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ItemLocation;
 import com.l2jmobius.gameserver.model.TradeItem;
@@ -42,7 +43,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
-import com.l2jmobius.gameserver.util.Util;
 
 public class PcInventory extends Inventory
 {
@@ -933,7 +933,7 @@ public class PcInventory extends Inventory
 	 */
 	public boolean canManipulateWithItemId(int itemId)
 	{
-		return ((_blockMode != 0) || !Util.contains(_blockItems, itemId)) && ((_blockMode != 1) || Util.contains(_blockItems, itemId));
+		return ((_blockMode != 0) || !CommonUtil.contains(_blockItems, itemId)) && ((_blockMode != 1) || CommonUtil.contains(_blockItems, itemId));
 	}
 	
 	@Override

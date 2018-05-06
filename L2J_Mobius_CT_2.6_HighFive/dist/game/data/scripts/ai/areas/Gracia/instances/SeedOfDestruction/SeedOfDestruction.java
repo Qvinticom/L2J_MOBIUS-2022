@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -934,7 +935,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			final int instanceId = world.getInstanceId();
 			for (L2DoorInstance door : InstanceManager.getInstance().getInstance(instanceId).getDoors())
 			{
-				if (contains(ATTACKABLE_DOORS, door.getId()))
+				if (CommonUtil.contains(ATTACKABLE_DOORS, door.getId()))
 				{
 					door.setIsAttackableDoor(true);
 				}
@@ -984,18 +985,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 		{
 			ch.getSummon().stopAllEffectsExceptThoseThatLastThroughDeath();
 		}
-	}
-	
-	public static boolean contains(int[] array, int obj)
-	{
-		for (int element : array)
-		{
-			if (element == obj)
-			{
-				return true;
-			}
-		}
-		return false;
 	}
 	
 	private void teleportplayerEnergy(L2PcInstance player, teleCoord teleto)

@@ -458,7 +458,7 @@ public final class CommonUtil
 	{
 		for (T element : array)
 		{
-			if (element == obj)
+			if (element.equals(obj))
 			{
 				return true;
 			}

@@ -18,6 +18,7 @@ package ai.areas.StakatoNest;
 
 import java.util.List;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -188,7 +189,7 @@ public final class StakatoNest extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (Util.contains(COCOONS, npc.getId()) && Util.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
+		if (CommonUtil.contains(COCOONS, npc.getId()) && CommonUtil.contains(targets, npc) && (skill.getId() == GROWTH_ACCELERATOR))
 		{
 			npc.doDie(caster);
 			final L2Npc spawned = addSpawn(STAKATO_CHIEF, npc.getX(), npc.getY(), npc.getZ(), Util.calculateHeadingFrom(npc, caster), false, 0, true);

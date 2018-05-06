@@ -22,6 +22,7 @@ import java.util.concurrent.ScheduledFuture;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -554,7 +555,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(NOTMOVE, npc.getId()))
+		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
 			npc.setIsNoRndWalk(true);
 			npc.setIsImmobilized(true);

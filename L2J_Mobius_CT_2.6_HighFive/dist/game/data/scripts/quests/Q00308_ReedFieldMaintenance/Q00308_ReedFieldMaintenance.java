@@ -20,13 +20,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
-import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00309_ForAGoodCause.Q00309_ForAGoodCause;
@@ -211,7 +211,7 @@ public class Q00308_ReedFieldMaintenance extends Quest
 		String htmltext;
 		if (canGiveItem(player, quanty))
 		{
-			if (Util.contains(MOIRAI_PIECES, item))
+			if (CommonUtil.contains(MOIRAI_PIECES, item))
 			{
 				giveItems(player, item, getRandom(1, 4));
 			}

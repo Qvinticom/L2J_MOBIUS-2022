@@ -16,12 +16,12 @@
  */
 package quests.Q10292_SevenSignsGirlOfDoubt;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
-import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q00198_SevenSignsEmbryo.Q00198_SevenSignsEmbryo;
 
@@ -199,7 +199,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
 		if (st != null)
 		{
-			if (Util.contains(MOBS, npc.getId()))
+			if (CommonUtil.contains(MOBS, npc.getId()))
 			{
 				if (giveItemRandomly(st.getPlayer(), npc, ELCADIAS_MARK.getId(), 1, ELCADIAS_MARK.getCount(), 0.7, true) && st.isMemoState(3))
 				{

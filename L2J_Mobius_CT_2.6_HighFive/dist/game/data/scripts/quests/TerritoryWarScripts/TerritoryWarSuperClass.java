@@ -18,6 +18,7 @@ package quests.TerritoryWarScripts;
 
 import java.util.Calendar;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.GlobalVariablesManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
@@ -177,7 +178,7 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onAttack(L2Npc npc, L2PcInstance player, int damage, boolean isSummon)
 	{
-		if ((npc.getCurrentHp() == npc.getMaxHp()) && Util.contains(NPC_IDS, npc.getId()))
+		if ((npc.getCurrentHp() == npc.getMaxHp()) && CommonUtil.contains(NPC_IDS, npc.getId()))
 		{
 			final int territoryId = getTerritoryIdForThisNPCId(npc.getId());
 			if ((territoryId >= 81) && (territoryId <= 89))
@@ -289,7 +290,7 @@ public class TerritoryWarSuperClass extends Quest
 			manager.announceToParticipants(new ExShowScreenMessage(npcString[0], 2, 10000), 135000, 13500);
 			handleBecomeMercenaryQuest(killer, true);
 		}
-		else if (Util.contains(LEADER_IDS, npc.getId()))
+		else if (CommonUtil.contains(LEADER_IDS, npc.getId()))
 		{
 			manager.giveTWPoint(killer, TERRITORY_ID, 3);
 		}
@@ -304,7 +305,7 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isSummon)
 	{
-		if (Util.contains(targets, npc))
+		if (CommonUtil.contains(targets, npc))
 		{
 			if (skill.getId() == 845)
 			{

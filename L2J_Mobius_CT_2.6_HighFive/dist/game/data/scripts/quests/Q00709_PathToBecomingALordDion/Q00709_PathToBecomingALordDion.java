@@ -16,6 +16,7 @@
  */
 package quests.Q00709_PathToBecomingALordDion;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -30,7 +31,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Util;
 
 public class Q00709_PathToBecomingALordDion extends Quest
 {
@@ -277,7 +277,7 @@ public class Q00709_PathToBecomingALordDion extends Quest
 	{
 		final QuestState qs = killer.getQuestState(getName());
 		
-		if ((qs != null) && qs.isCond(6) && Util.contains(OlMahums, npc.getId()))
+		if ((qs != null) && qs.isCond(6) && CommonUtil.contains(OlMahums, npc.getId()))
 		{
 			if ((npc.getId() != BloodyAxeAide) && (Rnd.get(9) == 0))
 			{
@@ -289,7 +289,7 @@ public class Q00709_PathToBecomingALordDion extends Quest
 				qs.setCond(7);
 			}
 		}
-		if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(0) && isLordAvailable(8, qs) && Util.contains(Manragoras, npc.getId()))
+		if ((qs != null) && (qs.getState() == State.STARTED) && qs.isCond(0) && isLordAvailable(8, qs) && CommonUtil.contains(Manragoras, npc.getId()))
 		{
 			if (getQuestItemsCount(killer, MandragoraRoot) < 100)
 			{

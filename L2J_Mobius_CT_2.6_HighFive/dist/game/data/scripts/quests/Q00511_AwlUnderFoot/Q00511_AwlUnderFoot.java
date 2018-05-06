@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -375,7 +376,7 @@ public final class Q00511_AwlUnderFoot extends Quest
 		if (tmpworld instanceof FAUWorld)
 		{
 			final FAUWorld world = (FAUWorld) tmpworld;
-			if (Util.contains(RAIDS3, npc.getId()))
+			if (CommonUtil.contains(RAIDS3, npc.getId()))
 			{
 				if (player.getParty() != null)
 				{

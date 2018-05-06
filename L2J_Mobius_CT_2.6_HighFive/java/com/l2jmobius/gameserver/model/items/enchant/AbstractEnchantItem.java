@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.items.enchant;
 
 import java.util.logging.Logger;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -25,7 +26,6 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.items.type.ItemType;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * @author UnAfraid
@@ -58,7 +58,7 @@ public abstract class AbstractEnchantItem
 		{
 			throw new NullPointerException();
 		}
-		else if (!Util.contains(ENCHANT_TYPES, getItem().getItemType()))
+		else if (!CommonUtil.contains(ENCHANT_TYPES, getItem().getItemType()))
 		{
 			throw new IllegalAccessError();
 		}

@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -30,7 +31,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
-import com.l2jmobius.gameserver.util.Util;
 
 import instances.AbstractInstance;
 
@@ -145,7 +145,7 @@ public final class CastleDungeon extends AbstractInstance
 		InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 		if (world != null)
 		{
-			if (Util.contains(RAIDS3, npc.getId()))
+			if (CommonUtil.contains(RAIDS3, npc.getId()))
 			{
 				finishInstance(world);
 			}

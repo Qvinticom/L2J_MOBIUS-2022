@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -185,7 +186,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 		final QuestState qs = getQuestState(player, true);
 		String htmltext = getNoQuestMsg(player);
 		
-		if (Util.contains(SEPARATED_SOUL, npc.getId()))
+		if (CommonUtil.contains(SEPARATED_SOUL, npc.getId()))
 		{
 			switch (qs.getState())
 			{

@@ -17,6 +17,7 @@
 package ai.areas.DenOfEvil;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.Location;
@@ -27,7 +28,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.type.L2EffectZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -213,7 +213,7 @@ public final class DenOfEvil extends AbstractNpcAI
 						{
 							// respawn eye
 							final L2Npc npc = (L2Npc) character;
-							if (Util.contains(EYE_IDS, npc.getId()))
+							if (CommonUtil.contains(EYE_IDS, npc.getId()))
 							{
 								ThreadPool.schedule(new RespawnNewEye(npc.getLocation()), 15000);
 							}

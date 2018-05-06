@@ -16,6 +16,7 @@
  */
 package instances.NornilsGarden;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -516,7 +517,7 @@ public final class NornilsGarden extends AbstractInstance
 			{
 			}
 		}
-		else if (Util.contains(_final_gates, npc.getId()))
+		else if (CommonUtil.contains(_final_gates, npc.getId()))
 		{
 			if (event.equalsIgnoreCase("32260-02.html") || event.equalsIgnoreCase("32261-02.html") || event.equalsIgnoreCase("32262-02.html"))
 			{
@@ -556,7 +557,7 @@ public final class NornilsGarden extends AbstractInstance
 	@Override
 	public final String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (Util.contains(_final_gates, npc.getId()))
+		if (CommonUtil.contains(_final_gates, npc.getId()))
 		{
 			final QuestState cst = player.getQuestState(Q00179_IntoTheLargeCavern.class.getSimpleName());
 			if ((cst != null) && (cst.getState() == State.STARTED))

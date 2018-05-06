@@ -16,6 +16,7 @@
  */
 package ai.areas.PrimevalIsle;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -244,7 +245,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 	@Override
 	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
 	{
-		if (Util.contains(MONSTERS, npc.getId()))
+		if (CommonUtil.contains(MONSTERS, npc.getId()))
 		{
 			if (creature.isPlayer())
 			{
@@ -293,7 +294,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				}
 			}
 		}
-		else if (Util.contains(VEGETABLE, creature.getId()))
+		else if (CommonUtil.contains(VEGETABLE, creature.getId()))
 		{
 			npc.setTarget(creature);
 			npc.doCast(CREW_SKILL.getSkill());
@@ -334,7 +335,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				});
 			}
 		}
-		else if (Util.contains(TREX, npc.getId()))
+		else if (CommonUtil.contains(TREX, npc.getId()))
 		{
 			final L2Attackable mob = (L2Attackable) npc;
 			final L2Character target = mob.getMostHated();
@@ -483,11 +484,11 @@ public final class PrimevalIsle extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(SPRIGNANT, npc.getId()))
+		if (CommonUtil.contains(SPRIGNANT, npc.getId()))
 		{
 			startQuestTimer("USE_SKILL", 15000, npc, null);
 		}
-		else if (Util.contains(TREX, npc.getId()))
+		else if (CommonUtil.contains(TREX, npc.getId()))
 		{
 			final int collectGhost = npc.getTemplate().getParameters().getInt("CollectGhost", 0);
 			final int collectDespawn = npc.getTemplate().getParameters().getInt("CollectGhostDespawnTime", 30);

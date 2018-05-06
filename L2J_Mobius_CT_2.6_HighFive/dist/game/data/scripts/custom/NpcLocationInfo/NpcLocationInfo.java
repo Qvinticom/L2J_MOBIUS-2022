@@ -16,6 +16,7 @@
  */
 package custom.NpcLocationInfo;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -276,7 +277,7 @@ public final class NpcLocationInfo extends AbstractNpcAI
 			htmltext = null;
 			final int npcId = Integer.parseInt(event);
 			
-			if (Util.contains(NPCRADAR, npcId))
+			if (CommonUtil.contains(NPCRADAR, npcId))
 			{
 				int x = 0, y = 0, z = 0;
 				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
@@ -300,7 +301,7 @@ public final class NpcLocationInfo extends AbstractNpcAI
 		final int npcId = npc.getId();
 		getQuestState(player, true);
 		
-		if (Util.contains(NPC, npcId))
+		if (CommonUtil.contains(NPC, npcId))
 		{
 			htmltext = npcId + ".htm";
 		}

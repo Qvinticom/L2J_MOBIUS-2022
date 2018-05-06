@@ -686,7 +686,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);
 		}
-		if (Util.contains(AI_DISABLED_MOBS, npcId))
+		if (CommonUtil.contains(AI_DISABLED_MOBS, npcId))
 		{
 			npc.disableCoreAI(true);
 		}
@@ -1454,7 +1454,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			if (skill != null)
 			{
 				// When Dewdrop of Destruction is used on Portraits they suicide.
-				if (Util.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
+				if (CommonUtil.contains(PORTRAITS, npc.getId()) && (skill.getId() == DEWDROP_OF_DESTRUCTION_SKILL_ID))
 				{
 					npc.doDie(caster);
 				}

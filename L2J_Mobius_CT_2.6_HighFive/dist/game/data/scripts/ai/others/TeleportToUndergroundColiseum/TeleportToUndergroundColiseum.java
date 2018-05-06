@@ -16,6 +16,7 @@
  */
 package ai.others.TeleportToUndergroundColiseum;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -114,7 +115,7 @@ public final class TeleportToUndergroundColiseum extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		if (Util.contains(MANAGERS, npc.getId()))
+		if (CommonUtil.contains(MANAGERS, npc.getId()))
 		{
 			player.teleToLocation(RETURN_LOCS[getRandom(RETURN_LOCS.length)], false);
 		}

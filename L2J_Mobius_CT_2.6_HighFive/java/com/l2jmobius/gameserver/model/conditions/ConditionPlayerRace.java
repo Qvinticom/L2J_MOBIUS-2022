@@ -16,11 +16,11 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * The Class ConditionPlayerRace.
@@ -42,6 +42,6 @@ public class ConditionPlayerRace extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effector != null) && effector.isPlayer() && Util.contains(_races, effector.getActingPlayer().getRace());
+		return (effector != null) && effector.isPlayer() && CommonUtil.contains(_races, effector.getActingPlayer().getRace());
 	}
 }

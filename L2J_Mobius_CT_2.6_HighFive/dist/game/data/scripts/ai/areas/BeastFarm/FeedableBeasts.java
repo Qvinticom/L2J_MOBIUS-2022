@@ -20,6 +20,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -30,7 +31,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2TamedBeastInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
@@ -419,7 +419,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 		
 		// if this is finally a trained mob, then despawn any other trained mobs that the
 		// player might have and initialize the Tamed Beast.
-		if (Util.contains(TAMED_BEASTS, nextNpcId))
+		if (CommonUtil.contains(TAMED_BEASTS, nextNpcId))
 		{
 			if ((player.getTrainedBeasts() != null) && !player.getTrainedBeasts().isEmpty())
 			{
@@ -513,7 +513,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 	{
 		// this behavior is only run when the target of skill is the passed npc (chest)
 		// i.e. when the player is attempting to open the chest using a skill
-		if (!Util.contains(targets, npc))
+		if (!CommonUtil.contains(targets, npc))
 		{
 			return super.onSkillSee(npc, caster, skill, targets, isSummon);
 		}
@@ -590,7 +590,7 @@ public final class FeedableBeasts extends AbstractNpcAI
 				spawnNext(npc, growthLevel, caster, food);
 			}
 		}
-		else if (Util.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance))
+		else if (CommonUtil.contains(TAMED_BEASTS, npcId) && (npc instanceof L2TamedBeastInstance))
 		{
 			final L2TamedBeastInstance beast = ((L2TamedBeastInstance) npc);
 			if (skillId == beast.getFoodType())

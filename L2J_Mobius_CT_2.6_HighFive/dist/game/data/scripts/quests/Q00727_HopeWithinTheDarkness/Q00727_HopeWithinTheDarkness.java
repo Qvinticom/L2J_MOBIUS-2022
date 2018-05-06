@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
@@ -447,12 +448,12 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		if (tmpworld instanceof CAUWorld)
 		{
 			final CAUWorld world = (CAUWorld) tmpworld;
-			if (Util.contains(BOSSES, npc.getId()))
+			if (CommonUtil.contains(BOSSES, npc.getId()))
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), STRINGID_BOSS_DEATH));
 			}
 			
-			if ((tmpworld.getStatus() == 3) && (Util.contains(BOSSES, npc.getId()) || Util.contains(MONSTERS, npc.getId())))
+			if ((tmpworld.getStatus() == 3) && (CommonUtil.contains(BOSSES, npc.getId()) || CommonUtil.contains(MONSTERS, npc.getId())))
 			{
 				world.allMonstersDead = true;
 				final Instance inst = InstanceManager.getInstance().getInstance(tmpworld.getInstanceId());
@@ -461,7 +462,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 				{
 					for (L2Npc _npc : inst.getNpcs())
 					{
-						if ((_npc != null) && !_npc.isDead() && (Util.contains(BOSSES, _npc.getId()) || Util.contains(MONSTERS, _npc.getId())))
+						if ((_npc != null) && !_npc.isDead() && (CommonUtil.contains(BOSSES, _npc.getId()) || CommonUtil.contains(MONSTERS, _npc.getId())))
 						{
 							world.allMonstersDead = false;
 							break;

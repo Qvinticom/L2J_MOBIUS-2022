@@ -16,6 +16,7 @@
  */
 package ai.areas.SelMahumTrainingGrounds;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -29,7 +30,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.NpcStringId;
-import com.l2jmobius.gameserver.util.Util;
 
 import ai.AbstractNpcAI;
 
@@ -149,7 +149,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 			{
 				if ((npc != null) && !npc.isDead())
 				{
-					if (Util.contains(MAHUM_CHIEFS, npc.getId()))
+					if (CommonUtil.contains(MAHUM_CHIEFS, npc.getId()))
 					{
 						if ((npc.getVariables().getInt("BUSY_STATE") == 0) && (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE) && npc.staysInSpawnLoc())
 						{
@@ -164,7 +164,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 						
 						startQuestTimer("do_social_action", 15000, npc, null);
 					}
-					else if (Util.contains(MAHUM_SOLDIERS, npc.getId()))
+					else if (CommonUtil.contains(MAHUM_SOLDIERS, npc.getId()))
 					{
 						handleSocialAction(npc, SOLDIER_SOCIAL_ACTIONS[npc.getVariables().getInt("SOCIAL_ACTION_NEXT_INDEX")], false);
 					}
@@ -211,7 +211,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				((L2MonsterInstance) ch).addDamageHate(attacker, 0, 1000);
 			}
 		}
-		if ((getRandom(10) < 1) && (Util.contains(MAHUM_SOLDIERS, npc.getId())))
+		if ((getRandom(10) < 1) && (CommonUtil.contains(MAHUM_SOLDIERS, npc.getId())))
 		{
 			npc.broadcastEvent("ATTACKED", 1000, null);
 		}
@@ -227,7 +227,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 			{
 				case "do_social_action":
 				{
-					if (Util.contains(MAHUM_SOLDIERS, receiver.getId()))
+					if (CommonUtil.contains(MAHUM_SOLDIERS, receiver.getId()))
 					{
 						final int actionIndex = sender.getVariables().getInt("SOCIAL_ACTION_NEXT_INDEX");
 						receiver.getVariables().set("SOCIAL_ACTION_NEXT_INDEX", actionIndex);
@@ -237,7 +237,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				}
 				case "CHIEF_DIED":
 				{
-					if (Util.contains(MAHUM_SOLDIERS, receiver.getId()))
+					if (CommonUtil.contains(MAHUM_SOLDIERS, receiver.getId()))
 					{
 						if (getRandom(4) < 1)
 						{
@@ -257,7 +257,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 				}
 				case "ATTACKED":
 				{
-					if (Util.contains(MAHUM_CHIEFS, receiver.getId()))
+					if (CommonUtil.contains(MAHUM_CHIEFS, receiver.getId()))
 					{
 						receiver.broadcastSay(ChatType.NPC_GENERAL, CHIEF_FSTRINGS[getRandom(2)]);
 					}
@@ -278,12 +278,12 @@ public final class SelMahumDrill extends AbstractNpcAI
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (Util.contains(MAHUM_CHIEFS, npc.getId()))
+		if (CommonUtil.contains(MAHUM_CHIEFS, npc.getId()))
 		{
 			startQuestTimer("do_social_action", 15000, npc, null);
 		}
 		
-		else if ((getRandom(18) < 1) && Util.contains(MAHUM_SOLDIERS, npc.getId()))
+		else if ((getRandom(18) < 1) && CommonUtil.contains(MAHUM_SOLDIERS, npc.getId()))
 		{
 			npc.getVariables().set("SOCIAL_ACTION_ALT_BEHAVIOR", 1);
 		}

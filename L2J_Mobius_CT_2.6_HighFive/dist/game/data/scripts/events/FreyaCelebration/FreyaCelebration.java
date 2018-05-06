@@ -16,6 +16,7 @@
  */
 package events.FreyaCelebration;
 
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -27,7 +28,6 @@ import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Freya Celebration event AI.
@@ -119,7 +119,7 @@ public final class FreyaCelebration extends LongTimeEvent
 			return null;
 		}
 		
-		if ((npc.getId() == FREYA) && Util.contains(targets, npc) && Util.contains(SKILLS, skill.getId()))
+		if ((npc.getId() == FREYA) && CommonUtil.contains(targets, npc) && CommonUtil.contains(SKILLS, skill.getId()))
 		{
 			if (getRandom(100) < 5)
 			{

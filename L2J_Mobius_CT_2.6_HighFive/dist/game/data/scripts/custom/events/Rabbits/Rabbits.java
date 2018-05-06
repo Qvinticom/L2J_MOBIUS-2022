@@ -22,6 +22,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,7 +30,6 @@ import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.quest.Event;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Broadcast;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Rabbits event.<br>
@@ -202,7 +202,7 @@ public final class Rabbits extends Event
 	{
 		if (skill.getId() == RABBIT_TORNADO.getSkillId())
 		{
-			if (!npc.isInvisible() && Util.contains(targets, npc))
+			if (!npc.isInvisible() && CommonUtil.contains(targets, npc))
 			{
 				dropItem(npc, caster, DROPLIST);
 				npc.deleteMe();

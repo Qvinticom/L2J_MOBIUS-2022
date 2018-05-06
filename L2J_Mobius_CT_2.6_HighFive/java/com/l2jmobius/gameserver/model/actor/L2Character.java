@@ -37,6 +37,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.EmptyQueue;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
@@ -5781,7 +5782,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						
 						if (player.hasSummon())
 						{
-							if ((targets.length == 1) && Util.contains(targets, player.getSummon()))
+							if ((targets.length == 1) && CommonUtil.contains(targets, player.getSummon()))
 							{
 								skillEffectPoint = 0;
 							}
