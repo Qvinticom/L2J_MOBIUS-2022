@@ -9574,7 +9574,7 @@ public final class L2PcInstance extends L2Playable
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerProfessionCancel(this, classId), this);
 			}
 			
-			final SubClass subClass = getSubClasses().remove(classIndex);
+			final SubClass subClass = getSubClasses().get(classIndex);
 			if (subClass == null)
 			{
 				return false;
@@ -9595,6 +9595,9 @@ public final class L2PcInstance extends L2Playable
 					removeSkill(revelationSkill);
 				}
 			}
+			
+			// Remove after stats are recalculated.
+			getSubClasses().remove(classIndex);
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement deleteHennas = con.prepareStatement(DELETE_CHAR_HENNAS);
