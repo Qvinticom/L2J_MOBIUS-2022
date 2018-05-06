@@ -1418,6 +1418,9 @@ public final class Config
 					LOGGER.log(Level.WARNING, "Wrong config protocol version: " + protocol + ". Skipped.");
 				}
 			}
+			SERVER_LIST_TYPE = getServerTypeId(serverSettings.getString("ServerListType", "free").split(","));
+			SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
+			SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
 			
 			SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
 			THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
