@@ -615,8 +615,9 @@
 
 	<!-- VOICE COMMANDS -->
 	<admin command="banchat" accessLevel="30" />
-	<admin command="debug" accessLevel="100" />
+	<admin command="chatban" accessLevel="30" />
 	<admin command="unbanchat" accessLevel="30" />
+	<admin command="chatunban" accessLevel="30" />
 
 	<!-- HIDE -->
 	<admin command="admin_hide" accessLevel="30" />
