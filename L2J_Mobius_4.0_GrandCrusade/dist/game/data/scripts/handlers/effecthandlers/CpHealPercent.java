@@ -65,8 +65,18 @@ public final class CpHealPercent extends AbstractEffect
 			effected.broadcastStatusUpdate(effector);
 		}
 		
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
-		sm.addInt((int) amount);
-		effected.sendPacket(sm);
+		if ((effector != null) && (effector != effected))
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_CP_HAS_BEEN_RESTORED_BY_C1);
+			sm.addString(effector.getName());
+			sm.addInt((int) amount);
+			effected.sendPacket(sm);
+		}
+		else
+		{
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CP_HAS_BEEN_RESTORED);
+			sm.addInt((int) amount);
+			effected.sendPacket(sm);
+		}
 	}
 }
