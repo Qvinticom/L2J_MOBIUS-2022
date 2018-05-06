@@ -27,6 +27,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.punishment.PunishmentAffect;
 import com.l2jmobius.gameserver.model.punishment.PunishmentTask;
 import com.l2jmobius.gameserver.model.punishment.PunishmentType;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
+import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 public class ChatAdmin implements IVoicedCommandHandler
@@ -34,7 +36,9 @@ public class ChatAdmin implements IVoicedCommandHandler
 	private static final String[] VOICED_COMMANDS =
 	{
 		"banchat",
-		"unbanchat"
+		"chatban",
+		"unbanchat",
+		"chatunban"
 	};
 	
 	@Override
@@ -45,113 +49,120 @@ public class ChatAdmin implements IVoicedCommandHandler
 			return false;
 		}
 		
-		if (command.equals(VOICED_COMMANDS[0])) // banchat
+		switch (command)
 		{
-			if (params == null)
+			case "banchat":
+			case "chatban":
 			{
-				activeChar.sendMessage("Usage: .banchat name [minutes]");
-				return true;
-			}
-			final StringTokenizer st = new StringTokenizer(params);
-			if (st.hasMoreTokens())
-			{
-				final String name = st.nextToken();
-				long expirationTime = 0;
+				if (params == null)
+				{
+					BuilderUtil.sendSysMessage(activeChar, "Usage: .banchat name [minutes]");
+					return true;
+				}
+				final StringTokenizer st = new StringTokenizer(params);
 				if (st.hasMoreTokens())
 				{
-					final String token = st.nextToken();
-					if (Util.isDigit(token))
+					final String name = st.nextToken();
+					long expirationTime = 0;
+					if (st.hasMoreTokens())
 					{
-						expirationTime = System.currentTimeMillis() + (Integer.parseInt(st.nextToken()) * 60 * 1000);
-					}
-				}
-				
-				final int objId = CharNameTable.getInstance().getIdByName(name);
-				if (objId > 0)
-				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-					if ((player == null) || !player.isOnline())
-					{
-						activeChar.sendMessage("Player not online !");
-						return false;
-					}
-					if (player.isChatBanned())
-					{
-						activeChar.sendMessage("Player is already punished !");
-						return false;
-					}
-					if (player == activeChar)
-					{
-						activeChar.sendMessage("You can't ban yourself !");
-						return false;
-					}
-					if (player.isGM())
-					{
-						activeChar.sendMessage("You can't ban GM !");
-						return false;
-					}
-					if (AdminData.getInstance().hasAccess(command, player.getAccessLevel()))
-					{
-						activeChar.sendMessage("You can't ban moderator !");
-						return false;
+						final String token = st.nextToken();
+						if (Util.isDigit(token))
+						{
+							expirationTime = Integer.parseInt(token);
+						}
 					}
 					
-					PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, expirationTime, "Chat banned by moderator", activeChar.getName()));
-					player.sendMessage("Chat banned by moderator " + activeChar.getName());
-					
-					if (expirationTime > 0)
+					final int objId = CharNameTable.getInstance().getIdByName(name);
+					if (objId > 0)
 					{
-						activeChar.sendMessage("Player " + player.getName() + " chat banned for " + expirationTime + " minutes.");
+						final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+						if ((player == null) || !player.isOnline())
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player not online!");
+							return false;
+						}
+						if (player.isChatBanned())
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player is already punished!");
+							return false;
+						}
+						if (player == activeChar)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "You can't ban yourself!");
+							return false;
+						}
+						if (player.isGM())
+						{
+							BuilderUtil.sendSysMessage(activeChar, "You can't ban a GM!");
+							return false;
+						}
+						if (AdminData.getInstance().hasAccess(command, player.getAccessLevel()))
+						{
+							BuilderUtil.sendSysMessage(activeChar, "You can't ban moderator!");
+							return false;
+						}
+						
+						PunishmentManager.getInstance().startPunishment(new PunishmentTask(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN, System.currentTimeMillis() + (expirationTime * 1000 * 60), "Chat banned by moderator", activeChar.getName()));
+						if (expirationTime > 0)
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " chat banned for " + expirationTime + " minutes.");
+						}
+						else
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " chat banned forever.");
+						}
+						player.sendMessage("Chat banned by moderator " + activeChar.getName());
+						player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
 					}
 					else
 					{
-						activeChar.sendMessage("Player " + player.getName() + " chat banned forever.");
-					}
-				}
-				else
-				{
-					activeChar.sendMessage("Player not found !");
-					return false;
-				}
-			}
-		}
-		else if (command.equals(VOICED_COMMANDS[1])) // unbanchat
-		{
-			if (params == null)
-			{
-				activeChar.sendMessage("Usage: .unbanchat name");
-				return true;
-			}
-			final StringTokenizer st = new StringTokenizer(params);
-			if (st.hasMoreTokens())
-			{
-				final String name = st.nextToken();
-				
-				final int objId = CharNameTable.getInstance().getIdByName(name);
-				if (objId > 0)
-				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-					if ((player == null) || !player.isOnline())
-					{
-						activeChar.sendMessage("Player not online !");
+						BuilderUtil.sendSysMessage(activeChar, "Player not found!");
 						return false;
 					}
-					if (!player.isChatBanned())
+				}
+				break;
+			}
+			case "unbanchat":
+			case "chatunban":
+			{
+				if (params == null)
+				{
+					BuilderUtil.sendSysMessage(activeChar, "Usage: .unbanchat name");
+					return true;
+				}
+				final StringTokenizer st = new StringTokenizer(params);
+				if (st.hasMoreTokens())
+				{
+					final String name = st.nextToken();
+					
+					final int objId = CharNameTable.getInstance().getIdByName(name);
+					if (objId > 0)
 					{
-						activeChar.sendMessage("Player is not chat banned !");
+						final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+						if ((player == null) || !player.isOnline())
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player not online!");
+							return false;
+						}
+						if (!player.isChatBanned())
+						{
+							BuilderUtil.sendSysMessage(activeChar, "Player is not chat banned!");
+							return false;
+						}
+						
+						PunishmentManager.getInstance().stopPunishment(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
+						BuilderUtil.sendSysMessage(activeChar, "Player " + player.getName() + " chat unbanned.");
+						player.sendMessage("Chat unbanned by moderator " + activeChar.getName());
+						player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
+					}
+					else
+					{
+						BuilderUtil.sendSysMessage(activeChar, "Player not found!");
 						return false;
 					}
-					
-					PunishmentManager.getInstance().stopPunishment(objId, PunishmentAffect.CHARACTER, PunishmentType.CHAT_BAN);
-					
-					activeChar.sendMessage("Player " + player.getName() + " chat unbanned.");
-					player.sendMessage("Chat unbanned by moderator " + activeChar.getName());
 				}
-				else
-				{
-					activeChar.sendMessage("Player not found !");
-					return false;
-				}
+				break;
 			}
 		}
 		return true;

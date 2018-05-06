@@ -30,6 +30,9 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.handler.IPunishmentHandler;
 import com.l2jmobius.gameserver.handler.PunishmentHandler;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 
 /**
  * @author UnAfraid
@@ -231,6 +234,15 @@ public class PunishmentTask implements Runnable
 			catch (SQLException e)
 			{
 				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Couldn't update punishment task for: " + _affect + " " + _key + " id: " + _id, e);
+			}
+		}
+		
+		if (_type.equals(PunishmentType.CHAT_BAN) && _affect.equals(PunishmentAffect.CHARACTER))
+		{
+			final L2PcInstance player = L2World.getInstance().getPlayer(Integer.valueOf(_key));
+			if (player != null)
+			{
+				player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
 			}
 		}
 		

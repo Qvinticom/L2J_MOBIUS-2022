@@ -2543,7 +2543,7 @@ public final class Config
 			// Load ChatModeration config file (if exists)
 			final PropertiesParser ChatModeration = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
 			
-			CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", false);
+			CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", true);
 			
 			// Load CommunityBoard config file (if exists)
 			final PropertiesParser CommunityBoard = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);

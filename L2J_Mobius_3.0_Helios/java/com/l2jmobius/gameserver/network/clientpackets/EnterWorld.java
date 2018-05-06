@@ -268,6 +268,12 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
+		// Chat banned icon.
+		if (activeChar.isChatBanned())
+		{
+			activeChar.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.NO_CHAT);
+		}
+		
 		// Set dead status if applies
 		if (activeChar.getCurrentHp() < 0.5)
 		{
