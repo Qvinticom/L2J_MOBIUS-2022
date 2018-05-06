@@ -121,6 +121,7 @@ import com.l2jmobius.gameserver.model.PartyMatchWaitingList;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.entity.MonsterRace;
+import com.l2jmobius.gameserver.model.entity.event.Lottery;
 import com.l2jmobius.gameserver.model.entity.event.manager.EventManager;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
@@ -349,6 +350,7 @@ public class GameServer
 		EventDroplist.getInstance();
 		AugmentationData.getInstance();
 		MonsterRace.getInstance();
+		Lottery.getInstance();
 		MercTicketManager.getInstance();
 		PetitionManager.getInstance();
 		CursedWeaponsManager.getInstance();

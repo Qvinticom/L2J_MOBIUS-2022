@@ -129,6 +129,7 @@ import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.instancemanager.WalkingManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.instancemanager.games.Lottery;
 import com.l2jmobius.gameserver.model.AutoSpawnHandler;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.PartyMatchRoomList;
@@ -380,6 +381,7 @@ public class GameServer
 		}
 		
 		MonsterRace.getInstance();
+		Lottery.getInstance();
 		
 		SevenSigns.getInstance().spawnSevenSignsNPC();
 		SevenSignsFestival.getInstance();
