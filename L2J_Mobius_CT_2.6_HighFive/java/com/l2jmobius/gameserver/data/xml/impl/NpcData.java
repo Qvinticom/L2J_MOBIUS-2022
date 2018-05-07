@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * NPC data parser.
@@ -771,7 +770,7 @@ public class NpcData implements IGameXmlReader
 	 */
 	public List<L2NpcTemplate> getAllNpcOfClassType(String... classTypes)
 	{
-		return getTemplates(template -> Util.contains(classTypes, template.getType(), true));
+		return getTemplates(template -> CommonUtil.contains(classTypes, template.getType(), true));
 	}
 	
 	public void loadNpcsSkillLearn()

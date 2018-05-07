@@ -991,24 +991,6 @@ public final class Util
 		return false;
 	}
 	
-	/**
-	 * @param array - the array to look into
-	 * @param obj - the object to search for
-	 * @param ignoreCase
-	 * @return {@code true} if the {@code array} contains the {@code obj}, {@code false} otherwise.
-	 */
-	public static boolean contains(String[] array, String obj, boolean ignoreCase)
-	{
-		for (String element : array)
-		{
-			if (element.equals(obj) || (ignoreCase && element.equalsIgnoreCase(obj)))
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
 	public static int parseNextInt(StringTokenizer st, int defaultVal)
 	{
 		try
