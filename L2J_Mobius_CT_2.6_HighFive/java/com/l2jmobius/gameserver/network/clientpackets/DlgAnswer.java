@@ -62,7 +62,7 @@ public final class DlgAnswer implements IClientIncomingPacket
 			return;
 		}
 		
-		if (_messageId == SystemMessageId.S1.getId())
+		if (_messageId == SystemMessageId.S1_3.getId())
 		{
 			if (activeChar.removeAction(PlayerAction.USER_ENGAGE))
 			{
