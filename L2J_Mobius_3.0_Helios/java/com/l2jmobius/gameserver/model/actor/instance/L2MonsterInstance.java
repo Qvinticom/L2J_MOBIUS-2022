@@ -247,6 +247,7 @@ public class L2MonsterInstance extends L2Attackable
 		// Might need some exceptions here, but it will prevent the monster buffing player bug.
 		if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer())
 		{
+			abortCast();
 			return;
 		}
 		super.doCast(skill, item, ctrlPressed, shiftPressed);
