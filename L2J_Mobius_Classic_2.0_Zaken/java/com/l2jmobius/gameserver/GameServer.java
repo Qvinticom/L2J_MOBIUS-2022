@@ -97,6 +97,7 @@ import com.l2jmobius.gameserver.data.xml.impl.VariationData;
 import com.l2jmobius.gameserver.datatables.BotReportTable;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.datatables.SchemeBufferTable;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ConditionHandler;
 import com.l2jmobius.gameserver.handler.DailyMissionHandler;
@@ -317,6 +318,7 @@ public class GameServer
 		StaticObjectData.getInstance();
 		ItemAuctionManager.getInstance();
 		CastleManager.getInstance().loadInstances();
+		SchemeBufferTable.getInstance();
 		GrandBossManager.getInstance();
 		EventDroplist.getInstance();
 		CommissionManager.getInstance();

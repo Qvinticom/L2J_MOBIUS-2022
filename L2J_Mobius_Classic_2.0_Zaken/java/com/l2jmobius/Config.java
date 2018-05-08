@@ -133,6 +133,7 @@ public final class Config
 	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
 	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
 	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
+	public static final String CUSTOM_SCHEME_BUFFER_CONFIG_FILE = "./config/Custom/ShemeBuffer.ini";
 	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
 	public static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
 	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
@@ -1012,6 +1013,8 @@ public final class Config
 	public static boolean OFFLINE_FAME;
 	public static boolean STORE_OFFLINE_TRADE_IN_REALTIME;
 	public static boolean DISPLAY_SERVER_TIME;
+	public static int BUFFER_MAX_SCHEMES;
+	public static int BUFFER_STATIC_BUFF_COST;
 	public static boolean WELCOME_MESSAGE_ENABLED;
 	public static String WELCOME_MESSAGE_TEXT;
 	public static int WELCOME_MESSAGE_TIME;
@@ -2775,6 +2778,12 @@ public final class Config
 			final PropertiesParser ServerTime = new PropertiesParser(CUSTOM_SERVER_TIME_CONFIG_FILE);
 			
 			DISPLAY_SERVER_TIME = ServerTime.getBoolean("DisplayServerTime", false);
+			
+			// Load SchemeBuffer config file (if exists)
+			final PropertiesParser SchemeBuffer = new PropertiesParser(CUSTOM_SCHEME_BUFFER_CONFIG_FILE);
+			
+			BUFFER_MAX_SCHEMES = SchemeBuffer.getInt("BufferMaxSchemesPerChar", 4);
+			BUFFER_STATIC_BUFF_COST = SchemeBuffer.getInt("BufferStaticCostPerBuff", -1);
 			
 			// Load StartingLocation config file (if exists)
 			final PropertiesParser StartingLocation = new PropertiesParser(CUSTOM_STARTING_LOCATION_CONFIG_FILE);
