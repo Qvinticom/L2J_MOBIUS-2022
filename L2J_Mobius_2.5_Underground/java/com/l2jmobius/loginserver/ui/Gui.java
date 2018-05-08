@@ -16,8 +16,12 @@
  */
 package com.l2jmobius.loginserver.ui;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Image;
+import java.awt.event.ComponentAdapter;
+import java.awt.event.ComponentEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.OutputStream;
@@ -36,7 +40,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
 
 import com.l2jmobius.commons.util.LimitLinesDocumentListener;
 import com.l2jmobius.commons.util.SplashScreen;
@@ -51,7 +54,6 @@ import com.l2jmobius.loginserver.network.gameserverpackets.ServerStatus;
  */
 public class Gui
 {
-	JFrame frmLoginServer;
 	JTextArea txtrConsole;
 	
 	JCheckBoxMenuItem chckbxmntmEnabled;
@@ -71,41 +73,18 @@ public class Gui
 	
 	public Gui()
 	{
-		frmLoginServer = new JFrame();
-		frmLoginServer.setVisible(false);
-		frmLoginServer.setTitle("Mobius - LoginServer");
-		frmLoginServer.setResizable(false);
-		frmLoginServer.setBounds(100, 100, 825, 618);
-		frmLoginServer.getContentPane().setLayout(null);
-		frmLoginServer.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
-		frmLoginServer.addWindowListener(new WindowAdapter()
-		{
-			@Override
-			public void windowClosing(WindowEvent ev)
-			{
-				if (JOptionPane.showOptionDialog(null, "Shutdown LoginServer?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, shutdownOptions, shutdownOptions[1]) == 0)
-				{
-					LoginServer.getInstance().shutdown(false);
-				}
-			}
-		});
-		
-		JScrollPane scrollPanel = new JScrollPane();
-		scrollPanel.setBounds(10, 11, 799, 544);
-		frmLoginServer.getContentPane().add(scrollPanel);
-		
+		// Initialize console.
 		txtrConsole = new JTextArea();
-		txtrConsole.setWrapStyleWord(true);
 		txtrConsole.setEditable(false);
-		txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, 16));
-		scrollPanel.setViewportView(txtrConsole);
-		txtrConsole.setDropMode(DropMode.INSERT);
 		txtrConsole.setLineWrap(true);
-		txtrConsole.setEditable(false);
+		txtrConsole.setWrapStyleWord(true);
+		txtrConsole.setDropMode(DropMode.INSERT);
+		txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, 16));
+		txtrConsole.getDocument().addDocumentListener(new LimitLinesDocumentListener(500));
 		
+		// Initialize menu items.
 		JMenuBar menuBar = new JMenuBar();
 		menuBar.setFont(new Font("Segoe UI", Font.PLAIN, 14));
-		frmLoginServer.setJMenuBar(menuBar);
 		
 		JMenu mnActions = new JMenu("Actions");
 		mnActions.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -199,8 +178,27 @@ public class Gui
 		});
 		mnStatus.add(chckbxmntmGmOnly);
 		
-		// Align menu items bar to right after this.
-		// menuBar.add(Box.createHorizontalGlue());
+		JMenu mnFont = new JMenu("Font");
+		mnFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+		menuBar.add(mnFont);
+		
+		String[] fonts =
+		{
+			"16",
+			"21",
+			"27",
+			"33"
+		};
+		for (String font : fonts)
+		{
+			JMenuItem mntmFont = new JMenuItem(font);
+			mntmFont.setFont(new Font("Segoe UI", Font.PLAIN, 13));
+			mntmFont.addActionListener(arg0 ->
+			{
+				txtrConsole.setFont(new Font("Monospaced", Font.PLAIN, Integer.parseInt(font)));
+			});
+			mnFont.add(mntmFont);
+		}
 		
 		JMenu mnHelp = new JMenu("Help");
 		mnHelp.setFont(new Font("Segoe UI", Font.PLAIN, 13));
@@ -220,19 +218,43 @@ public class Gui
 		icons.add(new ImageIcon("..\\images\\l2jmobius_32x32.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_64x64.png").getImage());
 		icons.add(new ImageIcon("..\\images\\l2jmobius_128x128.png").getImage());
-		frmLoginServer.setIconImages(icons);
 		
-		// Center frame to screen.
-		frmLoginServer.setLocationRelativeTo(null);
+		JScrollPane scrollPanel = new JScrollPane(txtrConsole);
+		scrollPanel.setBounds(0, 0, 800, 550);
 		
-		// Limit console lines to 500.
-		txtrConsole.getDocument().addDocumentListener(new LimitLinesDocumentListener(500));
+		// Set frame.
+		JFrame frame = new JFrame("Mobius - LoginServer");
+		frame.addWindowListener(new WindowAdapter()
+		{
+			@Override
+			public void windowClosing(WindowEvent ev)
+			{
+				if (JOptionPane.showOptionDialog(null, "Shutdown server immediately?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE, null, shutdownOptions, shutdownOptions[1]) == 0)
+				{
+					LoginServer.getInstance().shutdown(false);
+				}
+			}
+		});
+		frame.addComponentListener(new ComponentAdapter()
+		{
+			@Override
+			public void componentResized(ComponentEvent ev)
+			{
+				scrollPanel.setSize(frame.getContentPane().getSize());
+			}
+		});
+		frame.setJMenuBar(menuBar);
+		frame.setIconImages(icons);
+		frame.add(scrollPanel, BorderLayout.CENTER);
+		frame.getContentPane().setPreferredSize(new Dimension(800, 550));
+		frame.pack();
+		frame.setLocationRelativeTo(null);
 		
 		// Redirect output to text area.
 		redirectSystemStreams();
 		
 		// Show SplashScreen.
-		new SplashScreen("..\\images\\splash.png", 5000, frmLoginServer);
+		new SplashScreen("..\\images\\splash.png", 5000, frame);
 	}
 	
 	// Set where the text is redirected. In this case, txtrConsole.
