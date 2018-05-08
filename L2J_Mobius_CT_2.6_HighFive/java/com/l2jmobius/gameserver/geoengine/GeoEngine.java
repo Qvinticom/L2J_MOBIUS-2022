@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplexDynamic;
@@ -597,6 +598,10 @@ public class GeoEngine
 		{
 			return false;
 		}
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId()))
+		{
+			return false;
+		}
 		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
@@ -659,6 +664,10 @@ public class GeoEngine
 		final int tz = position.getZ();
 		
 		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), false))
+		{
+			return false;
+		}
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId()))
 		{
 			return false;
 		}
@@ -1126,6 +1135,10 @@ public class GeoEngine
 		{
 			return new Location(ox, oy, oz);
 		}
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instanceId))
+		{
+			return new Location(ox, oy, oz);
+		}
 		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
@@ -1183,6 +1196,10 @@ public class GeoEngine
 	protected final GeoLocation checkMove(int gox, int goy, int goz, int gtx, int gty, int gtz, int instanceId)
 	{
 		if (DoorData.getInstance().checkIfDoorsBetween(gox, goy, goz, gtx, gty, gtz, instanceId, false))
+		{
+			return new GeoLocation(gox, goy, goz);
+		}
+		if (FenceData.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instanceId))
 		{
 			return new GeoLocation(gox, goy, goz);
 		}

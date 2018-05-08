@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2FenceInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -134,6 +135,10 @@ public class PcKnownList extends PlayableKnownList
 			{
 				active_char.sendPacket(new DoorInfo((L2DoorInstance) object, false));
 				active_char.sendPacket(new DoorStatusUpdate((L2DoorInstance) object));
+			}
+			else if (object instanceof L2FenceInstance)
+			{
+				((L2FenceInstance) object).sendInfo(active_char);
 			}
 			else if (object instanceof L2BoatInstance)
 			{

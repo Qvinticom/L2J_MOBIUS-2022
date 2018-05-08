@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
+import com.l2jmobius.gameserver.datatables.xml.FenceData;
 import com.l2jmobius.gameserver.geodata.geodriver.Cell;
 import com.l2jmobius.gameserver.geodata.geodriver.GeoDriver;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -413,6 +414,10 @@ public class GeoData
 		{
 			return new Location(x, y, getHeight(x, y, z));
 		}
+		if (FenceData.getInstance().checkIfFenceBetween(x, y, z, tx, ty, tz))
+		{
+			return new Location(x, y, getHeight(x, y, z));
+		}
 		
 		final LinePointIterator pointIter = new LinePointIterator(geoX, geoY, tGeoX, tGeoY);
 		// first point is guaranteed to be available
@@ -471,6 +476,10 @@ public class GeoData
 		toZ = getNearestZ(tGeoX, tGeoY, toZ);
 		
 		if (DoorTable.getInstance().checkIfDoorsBetween(fromX, fromY, fromZ, toX, toY, toZ))
+		{
+			return false;
+		}
+		if (FenceData.getInstance().checkIfFenceBetween(fromX, fromY, fromZ, toX, toY, toZ))
 		{
 			return false;
 		}

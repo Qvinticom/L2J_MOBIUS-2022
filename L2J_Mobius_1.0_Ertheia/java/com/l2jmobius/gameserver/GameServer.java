@@ -64,6 +64,7 @@ import com.l2jmobius.gameserver.data.xml.impl.EventEngineData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.ExtendDropData;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.data.xml.impl.FishingData;
 import com.l2jmobius.gameserver.data.xml.impl.HennaData;
 import com.l2jmobius.gameserver.data.xml.impl.HitConditionBonusData;
@@ -218,6 +219,7 @@ public class GameServer
 		MapRegionManager.getInstance();
 		ZoneManager.getInstance();
 		DoorData.getInstance();
+		FenceData.getInstance();
 		AnnouncementsTable.getInstance();
 		GlobalVariablesManager.getInstance();
 		

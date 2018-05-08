@@ -74,6 +74,7 @@ import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
 import com.l2jmobius.gameserver.datatables.sql.TeleportLocationTable;
 import com.l2jmobius.gameserver.datatables.xml.AugmentationData;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
+import com.l2jmobius.gameserver.datatables.xml.FenceData;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.datatables.xml.ZoneData;
 import com.l2jmobius.gameserver.geodata.GeoData;
@@ -385,6 +386,7 @@ public class GameServer
 		
 		Util.printSection("Doors");
 		DoorTable.getInstance().parseData();
+		FenceData.getInstance();
 		
 		Util.printSection("Four Sepulchers");
 		FourSepulchersManager.getInstance();

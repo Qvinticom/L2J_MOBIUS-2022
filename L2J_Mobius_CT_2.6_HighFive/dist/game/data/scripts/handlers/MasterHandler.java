@@ -75,6 +75,7 @@ import handlers.admincommandhandlers.AdminEventEngine;
 import handlers.admincommandhandlers.AdminEvents;
 import handlers.admincommandhandlers.AdminExpSp;
 import handlers.admincommandhandlers.AdminFakePlayers;
+import handlers.admincommandhandlers.AdminFence;
 import handlers.admincommandhandlers.AdminFightCalculator;
 import handlers.admincommandhandlers.AdminFortSiege;
 import handlers.admincommandhandlers.AdminGamePoints;
@@ -374,6 +375,7 @@ public class MasterHandler
 			AdminEvents.class,
 			AdminExpSp.class,
 			AdminFakePlayers.class,
+			AdminFence.class,
 			AdminFightCalculator.class,
 			AdminFortSiege.class,
 			AdminGamePoints.class,

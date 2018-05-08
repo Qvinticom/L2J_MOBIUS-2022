@@ -628,6 +628,13 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_zone_check','2'),
 ('admin_zone_reload','2'),
 
+-- Section: Fences
+('admin_addfence','1'),
+('admin_setfencestate','1'),
+('admin_removefence','1'),
+('admin_listfence','1'),
+('admin_gofence','1'),
+
 -- Section: AIO
 ('admin_setaio','2'),
 ('admin_removeaio','2');

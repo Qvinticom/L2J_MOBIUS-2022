@@ -26,6 +26,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
+import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplexDynamic;
@@ -599,7 +600,10 @@ public class GeoEngine
 		{
 			return false;
 		}
-		
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
+		{
+			return false;
+		}
 		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld()))
 		{
 			return false;
@@ -669,7 +673,10 @@ public class GeoEngine
 		{
 			return false;
 		}
-		
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld()))
+		{
+			return false;
+		}
 		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(ox, oy, oz), new Location(tx, ty, tz), origin.getInstanceWorld()))
 		{
 			return false;
@@ -1138,6 +1145,10 @@ public class GeoEngine
 		{
 			return new GeoLocation(ox, oy, oz);
 		}
+		if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instance))
+		{
+			return new Location(ox, oy, oz);
+		}
 		
 		// get origin and check existing geo coordinates
 		final int gox = getGeoX(ox);
@@ -1198,7 +1209,10 @@ public class GeoEngine
 		{
 			return new GeoLocation(gox, goy, goz);
 		}
-		
+		if (FenceData.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instance))
+		{
+			return new GeoLocation(gox, goy, goz);
+		}
 		if (WarpedSpaceManager.getInstance().checkForWarpedSpace(new Location(gox, goy, goz), new Location(gtx, gty, gtz), instance))
 		{
 			return new GeoLocation(gox, goy, goz);

@@ -44,6 +44,7 @@ import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEffects;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEnchant;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEventEngine;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminExpSp;
+import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminFence;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminFightCalculator;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminFortSiege;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminGeodata;
@@ -135,6 +136,7 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminScript());
 		registerAdminCommandHandler(new AdminExpSp());
 		registerAdminCommandHandler(new AdminEventEngine());
+		registerAdminCommandHandler(new AdminFence());
 		registerAdminCommandHandler(new AdminGmChat());
 		registerAdminCommandHandler(new AdminGmSpeed());
 		registerAdminCommandHandler(new AdminHide());

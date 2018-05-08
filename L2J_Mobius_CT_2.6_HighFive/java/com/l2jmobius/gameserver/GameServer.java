@@ -54,6 +54,7 @@ import com.l2jmobius.gameserver.data.xml.impl.EnchantItemOptionsData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
+import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.data.xml.impl.FishData;
 import com.l2jmobius.gameserver.data.xml.impl.FishingMonstersData;
 import com.l2jmobius.gameserver.data.xml.impl.FishingRodsData;
@@ -292,6 +293,7 @@ public class GameServer
 		
 		printSection("NPCs");
 		DoorData.getInstance();
+		FenceData.getInstance();
 		SkillLearnData.getInstance();
 		NpcData.getInstance();
 		FakePlayerData.getInstance();

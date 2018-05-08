@@ -624,4 +624,11 @@
 
 	<!-- HIDE -->
 	<admin command="admin_hide" accessLevel="100" />
+
+	<!-- FENCES -->
+	<admin command="admin_addfence" accessLevel="100" />
+	<admin command="admin_setfencestate" accessLevel="100" />
+	<admin command="admin_removefence" accessLevel="100" />
+	<admin command="admin_listfence" accessLevel="100" />
+	<admin command="admin_gofence" accessLevel="100" />
 </list>
