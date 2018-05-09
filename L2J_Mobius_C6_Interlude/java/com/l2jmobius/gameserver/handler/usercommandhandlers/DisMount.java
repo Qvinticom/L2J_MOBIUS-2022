@@ -16,11 +16,8 @@
  */
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.network.serverpackets.Ride;
-import com.l2jmobius.gameserver.util.Broadcast;
 
 /**
  * Support for /dismount command.
@@ -51,17 +48,7 @@ public class DisMount implements IUserCommandHandler
 		}
 		else if (activeChar.isMounted())
 		{
-			if (activeChar.setMountType(0))
-			{
-				if (activeChar.isFlying())
-				{
-					activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-				}
-				
-				Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-				Broadcast.toSelfAndKnownPlayersInRadius(activeChar, dismount, 810000/* 900 */);
-				activeChar.setMountObjectID(0);
-			}
+			activeChar.dismount();
 		}
 		
 		return true;

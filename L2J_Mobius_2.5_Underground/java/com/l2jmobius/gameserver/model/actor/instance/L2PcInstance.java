@@ -504,6 +504,8 @@ public final class L2PcInstance extends L2Playable
 	private int _mountLevel;
 	/** Store object used to summon the strider you are mounting **/
 	private int _mountObjectID = 0;
+	/** Remember if dismounted from Wyvern **/
+	private boolean _hasDismountedWyvern = false;
 	
 	private AdminTeleportType _teleportType = AdminTeleportType.NORMAL;
 	
@@ -764,9 +766,11 @@ public final class L2PcInstance extends L2Playable
 	private int _clientZ;
 	private int _clientHeading;
 	
-	// during fall validations will be disabled for 10 ms.
-	private static final int FALLING_VALIDATION_DELAY = 10000;
+	// during fall validations will be disabled for 1000 ms.
+	private static final int FALLING_VALIDATION_DELAY = 1000;
 	private volatile long _fallingTimestamp = 0;
+	private volatile int _fallingDamageSum = 0;
+	private Future<?> _fallingDamageTask = null;
 	
 	private int _multiSocialTarget = 0;
 	private int _multiSociaAction = 0;
@@ -6151,6 +6155,7 @@ public final class L2PcInstance extends L2Playable
 		clearPetData();
 		if (wasFlying)
 		{
+			_hasDismountedWyvern = true;
 			removeSkill(CommonSkill.WYVERN_BREATH.getSkill());
 		}
 		broadcastPacket(new Ride(this));
@@ -6159,6 +6164,11 @@ public final class L2PcInstance extends L2Playable
 		// Notify self and others about speed change
 		broadcastUserInfo();
 		return true;
+	}
+	
+	public boolean hasDismountedWyvern()
+	{
+		return _hasDismountedWyvern;
 	}
 	
 	public void setUptime(long time)
@@ -12675,13 +12685,28 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		final int damage = (int) Formulas.calcFallDam(this, deltaZ);
-		if (damage > 0)
+		// TODO: Test on retail. Add or set damage?
+		_fallingDamageSum += (int) Formulas.calcFallDam(this, deltaZ);
+		if (_fallingDamageTask != null)
 		{
-			reduceCurrentHp(Math.min(damage, getCurrentHp() - 1), this, null, false, true, false, false);
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
-			sm.addInt(damage);
-			sendPacket(sm);
+			_fallingDamageTask.cancel(true);
+		}
+		_fallingDamageTask = ThreadPool.schedule(() ->
+		{
+			if ((_fallingDamageSum > 0) && !isInvul())
+			{
+				reduceCurrentHp(Math.min(_fallingDamageSum, getCurrentHp() - 1), this, null, false, true, false, false);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_RECEIVED_S1_FALLING_DAMAGE);
+				sm.addInt(_fallingDamageSum);
+				sendPacket(sm);
+			}
+			_hasDismountedWyvern = false;
+			_fallingDamageSum = 0;
+			_fallingDamageTask = null;
+		}, 1500);
+		if (!_hasDismountedWyvern)
+		{
+			sendPacket(new ValidateLocation(this));
 		}
 		
 		setFalling();

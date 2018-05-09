@@ -365,21 +365,7 @@ public final class RequestActionUse extends L2GameClientPacket
 				}
 				else if (activeChar.isMounted())
 				{
-					if (activeChar.isFlying())
-					{
-						// Remove skill Wyvern Breath
-						activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-						activeChar.sendSkillList();
-					}
-					if (activeChar.setMountType(0))
-					{
-						final Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-						activeChar.broadcastPacket(dismount);
-						activeChar.setMountObjectID(0);
-						// Update status after unmount to avoid visual bug
-						activeChar.broadcastStatusUpdate();
-						activeChar.broadcastUserInfo();
-					}
+					activeChar.dismount();
 				}
 				break;
 			}

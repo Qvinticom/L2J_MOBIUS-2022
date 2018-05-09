@@ -541,6 +541,9 @@ public final class L2PcInstance extends L2Playable
 	/** Store object used to summon the strider you are mounting *. */
 	private int _mountObjectID = 0;
 	
+	/** Remember if dismounted from Wyvern **/
+	private boolean _hasDismountedWyvern = false;
+	
 	/** The _telemode. */
 	public int _telemode = 0;
 	
@@ -1050,12 +1053,11 @@ public final class L2PcInstance extends L2Playable
 	/** The isintwtown. */
 	private boolean isintwtown = false;
 	
-	// during fall validations will be disabled for 10 ms.
-	/** The Constant FALLING_VALIDATION_DELAY. */
-	private static final int FALLING_VALIDATION_DELAY = 10000;
-	
-	/** The _falling timestamp. */
+	// during fall validations will be disabled for 1000 ms.
+	private static final int FALLING_VALIDATION_DELAY = 1000;
 	private long _fallingTimestamp = 0;
+	private volatile int _fallingDamageSum = 0;
+	private Future<?> _fallingDamageTask = null;
 	
 	/** Previous coordinate sent to party in ValidatePosition *. */
 	private final Point3D _lastPartyPosition = new Point3D(0, 0, 0);
@@ -17729,22 +17731,23 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean dismount()
 	{
-		if (setMountType(0))
+		final boolean wasFlying = isFlying();
+		setMountType(0);
+		if (wasFlying)
 		{
-			if (isFlying())
-			{
-				removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-			}
-			
-			Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
-			broadcastPacket(dismount);
-			setMountObjectID(0);
-			
-			// Notify self and others about speed change
-			broadcastUserInfo();
-			return true;
+			_hasDismountedWyvern = true;
+			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 		}
-		return false;
+		Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
+		broadcastPacket(dismount);
+		setMountObjectID(0);
+		broadcastUserInfo();
+		return true;
+	}
+	
+	public boolean hasDismountedWyvern()
+	{
+		return _hasDismountedWyvern;
 	}
 	
 	/**
@@ -18454,15 +18457,27 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		final int damage = (int) Formulas.calcFallDam(this, deltaZ);
-		if ((damage > 0) && !isInvul())
+		// TODO: Test on retail. Add or set damage?
+		_fallingDamageSum += (int) Formulas.calcFallDam(this, deltaZ);
+		if (_fallingDamageTask != null)
 		{
-			reduceCurrentHp(Math.min(damage, getCurrentHp() - 1), null, false);
-			sendPacket(new SystemMessage(SystemMessageId.FALL_DAMAGE_S1).addNumber(damage));
+			_fallingDamageTask.cancel(true);
 		}
-		
-		// Mobius: Prevent falling in game graphics.
-		sendPacket(new ValidateLocation(this));
+		_fallingDamageTask = ThreadPool.schedule(() ->
+		{
+			if ((_fallingDamageSum > 0) && !isInvul())
+			{
+				reduceCurrentHp(Math.min(_fallingDamageSum, getCurrentHp() - 1), null, false);
+				sendPacket(new SystemMessage(SystemMessageId.FALL_DAMAGE_S1).addNumber(_fallingDamageSum));
+			}
+			_hasDismountedWyvern = false;
+			_fallingDamageSum = 0;
+			_fallingDamageTask = null;
+		}, 1500);
+		if (!_hasDismountedWyvern)
+		{
+			sendPacket(new ValidateLocation(this));
+		}
 		
 		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
 		

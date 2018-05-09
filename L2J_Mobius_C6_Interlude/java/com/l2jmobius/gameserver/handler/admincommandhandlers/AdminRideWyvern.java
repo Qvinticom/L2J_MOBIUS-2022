@@ -87,18 +87,7 @@ public class AdminRideWyvern implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_unride"))
 		{
-			if (activeChar.isFlying())
-			{
-				// Remove skill Wyvern Breath
-				activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-				activeChar.sendSkillList();
-			}
-			
-			if (activeChar.setMountType(0))
-			{
-				Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-				activeChar.broadcastPacket(dismount);
-			}
+			activeChar.dismount();
 		}
 		return true;
 	}

@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.model.Inventory;
@@ -110,17 +109,7 @@ public class Mount implements IUserCommandHandler
 				
 				if ((activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) || (activeChar.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LRHAND) != null))
 				{
-					if (activeChar.setMountType(0))
-					{
-						if (activeChar.isFlying())
-						{
-							activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-						}
-						
-						Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-						Broadcast.toSelfAndKnownPlayers(activeChar, dismount);
-						activeChar.setMountObjectID(0);
-					}
+					activeChar.dismount();
 				}
 			}
 		}
@@ -130,18 +119,7 @@ public class Mount implements IUserCommandHandler
 		}
 		else if (activeChar.isMounted())
 		{
-			// Dismount
-			if (activeChar.setMountType(0))
-			{
-				if (activeChar.isFlying())
-				{
-					activeChar.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-				}
-				
-				Ride dismount = new Ride(activeChar.getObjectId(), Ride.ACTION_DISMOUNT, 0);
-				Broadcast.toSelfAndKnownPlayers(activeChar, dismount);
-				activeChar.setMountObjectID(0);
-			}
+			activeChar.dismount();
 		}
 		
 		return true;

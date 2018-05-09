@@ -5999,28 +5999,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			dy = m._yDestination - m._yAccurate;
 		}
 		
-		final boolean isFloating = isFlying() || isInsideZone(ZoneId.WATER);
-		
-		// Z coordinate will follow geodata or client values
-		if ((Config.PATHFINDING > 0) && (Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && !(this instanceof L2BoatInstance) && ((GameTimeController.getGameTicks() % 10) == 0 // once a second to reduce possible cpu load
-		) && GeoData.getInstance().hasGeo(xPrev, yPrev))
-		{
-			final int geoHeight = GeoData.getInstance().getSpawnHeight(xPrev, yPrev, zPrev - 30);
-			dz = m._zDestination - geoHeight;
-			// quite a big difference, compare to validatePosition packet
-			if ((this instanceof L2PcInstance) && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) > 200) && (Math.abs(((L2PcInstance) this).getClientZ() - geoHeight) < 1500))
-			{
-				dz = m._zDestination - zPrev; // allow diff
-			}
-			else if (isInCombat() && (Math.abs(dz) > 200) && (((dx * dx) + (dy * dy)) < 40000))
-			{
-				dz = m._zDestination - zPrev; // climbing
-			}
-		}
-		else
-		{
-			dz = m._zDestination - zPrev;
-		}
+		// Z coordinate will follow client values
+		dz = m._zDestination - zPrev;
 		
 		float speed;
 		if (this instanceof L2BoatInstance)
@@ -6682,8 +6662,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		// to destination by GameTimeController
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
-		final CharMoveToLocation msg = new CharMoveToLocation(this);
-		broadcastPacket(msg);
+		broadcastPacket(new CharMoveToLocation(this));
 		
 		return true;
 	}

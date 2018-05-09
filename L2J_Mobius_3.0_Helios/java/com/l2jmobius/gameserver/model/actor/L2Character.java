@@ -2921,27 +2921,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			dy = m._yDestination - m._yAccurate;
 		}
 		
+		// Z coordinate will follow client values
+		dz = m._zDestination - zPrev;
+		
 		final boolean isFloating = isFlying() || isInsideZone(ZoneId.WATER);
-		// Z coordinate will follow geodata or client values
-		if ((Config.COORD_SYNCHRONIZE == 2) && !isFloating && !m.disregardingGeodata && ((GameTimeController.getInstance().getGameTicks() % 10) == 0) // once a second to reduce possible cpu load
-			&& GeoEngine.getInstance().hasGeo(xPrev, yPrev))
-		{
-			final int geoHeight = GeoEngine.getInstance().getHeight(xPrev, yPrev, zPrev);
-			dz = m._zDestination - geoHeight;
-			// quite a big difference, compare to validatePosition packet
-			if (isPlayer() && (Math.abs(getActingPlayer().getClientZ() - geoHeight) > 200) && (Math.abs(getActingPlayer().getClientZ() - geoHeight) < 1500))
-			{
-				dz = m._zDestination - zPrev; // allow diff
-			}
-			else if (isInCombat() && (Math.abs(dz) > 200) && (((dx * dx) + (dy * dy)) < 40000)) // allow mob to climb up to pcinstance
-			{
-				dz = m._zDestination - zPrev; // climbing
-			}
-		}
-		else
-		{
-			dz = m._zDestination - zPrev;
-		}
 		
 		double delta = (dx * dx) + (dy * dy);
 		if ((delta < 10000) && ((dz * dz) > 2500) // close enough, allows error between client and server geodata if it cannot be avoided
@@ -3515,8 +3498,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// to destination by GameTimeController
 		
 		// Send a Server->Client packet CharMoveToLocation to the actor and all L2PcInstance in its _knownPlayers
-		final MoveToLocation msg = new MoveToLocation(this);
-		broadcastPacket(msg);
+		broadcastPacket(new MoveToLocation(this));
 		
 		return true;
 	}
