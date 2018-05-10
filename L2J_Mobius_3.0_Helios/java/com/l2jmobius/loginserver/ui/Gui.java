@@ -40,6 +40,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
 import com.l2jmobius.commons.util.LimitLinesDocumentListener;
 import com.l2jmobius.commons.util.SplashScreen;
@@ -224,12 +225,13 @@ public class Gui
 		
 		// Set frame.
 		JFrame frame = new JFrame("Mobius - LoginServer");
+		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.addWindowListener(new WindowAdapter()
 		{
 			@Override
 			public void windowClosing(WindowEvent ev)
 			{
-				if (JOptionPane.showOptionDialog(null, "Shutdown server immediately?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE, null, shutdownOptions, shutdownOptions[1]) == 0)
+				if (JOptionPane.showOptionDialog(null, "Shutdown LoginServer?", "Select an option", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, shutdownOptions, shutdownOptions[1]) == 0)
 				{
 					LoginServer.getInstance().shutdown(false);
 				}

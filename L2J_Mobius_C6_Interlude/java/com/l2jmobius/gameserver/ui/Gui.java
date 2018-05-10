@@ -41,6 +41,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.LimitLinesDocumentListener;
@@ -283,6 +284,7 @@ public class Gui
 		
 		// Set frame.
 		JFrame frame = new JFrame("Mobius - GameServer");
+		frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		frame.addWindowListener(new WindowAdapter()
 		{
 			@Override
