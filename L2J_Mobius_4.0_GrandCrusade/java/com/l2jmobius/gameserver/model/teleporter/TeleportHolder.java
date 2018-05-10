@@ -270,7 +270,7 @@ public final class TeleportHolder
 	 */
 	private boolean shouldPayFee(L2PcInstance player, TeleportLocation loc)
 	{
-		return (_type != TeleportType.NORMAL) || (!Config.ALT_GAME_FREE_TELEPORT && ((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+		return (_type != TeleportType.NORMAL) || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
 	}
 	
 	/**
