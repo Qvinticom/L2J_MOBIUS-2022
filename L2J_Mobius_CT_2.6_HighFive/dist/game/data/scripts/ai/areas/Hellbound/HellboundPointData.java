@@ -43,7 +43,7 @@ public final class HellboundPointData implements IGameXmlReader
 	public void load()
 	{
 		_pointsInfo.clear();
-		parseDatapackFile("scripts/ai/areas/Hellbound/hellboundTrustPoints.xml");
+		parseDatapackFile("data/scripts/ai/areas/Hellbound/hellboundTrustPoints.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _pointsInfo.size() + " trust point reward data.");
 	}
 	
