@@ -181,6 +181,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="220" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>

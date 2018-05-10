@@ -1768,6 +1768,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -1796,6 +1799,9 @@
 				<!-- Baron -->
 				<player cloakStatus="true" />
 			</and>
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
@@ -1829,6 +1835,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 			<stat type="darkRes">30</stat>
@@ -1861,6 +1870,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+<player level="80" />
+</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 			<stat type="darkRes">30</stat>
@@ -1891,6 +1903,9 @@
 				<player races="KAMAEL" />
 				<player cloakStatus="true" />
 			</and>
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">20</stat>

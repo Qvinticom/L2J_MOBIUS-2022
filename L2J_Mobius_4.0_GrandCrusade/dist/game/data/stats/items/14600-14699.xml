@@ -48,6 +48,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -73,6 +76,9 @@
 				<player races="HUMAN,ELF,DARK_ELF,ORC,DWARF" />
 				<player cloakStatus="true" />
 			</and>
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
@@ -202,6 +208,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -225,6 +234,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>
@@ -252,6 +264,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>

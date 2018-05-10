@@ -505,6 +505,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -516,6 +522,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -527,6 +539,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -538,6 +556,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>
@@ -549,6 +573,12 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="is_sellable" val="false" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">7</stat>
 		</stats>

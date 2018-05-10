@@ -308,6 +308,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="21242" level="1" /> <!-- Zaken's Call -->
 		</skills>
@@ -335,6 +338,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="21243" level="1" /> <!-- Freya's Call -->
 		</skills>
@@ -361,6 +367,9 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="21244" level="1" /> <!-- Frintezza's Call -->
@@ -394,6 +403,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="21242" level="1" /> <!-- Zaken's Call -->
 		</skills>
@@ -426,6 +438,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="21243" level="1" /> <!-- Freya's Call -->
 		</skills>
@@ -457,6 +472,9 @@
 		<set name="is_dropable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="21244" level="1" /> <!-- Frintezza's Call -->

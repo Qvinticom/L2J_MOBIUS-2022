@@ -48,6 +48,12 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="fireRes">7</stat>
 			<stat type="waterRes">7</stat>
@@ -639,6 +645,12 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="220" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">25</stat>
 			<stat type="fireRes">7</stat>

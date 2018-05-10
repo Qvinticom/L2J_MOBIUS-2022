@@ -1648,6 +1648,9 @@
 		<set name="weight" val="220" />
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="price" val="28671000" />
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">2</stat>
 		</stats>
@@ -1669,6 +1672,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 			<stat type="darkRes">30</stat>
@@ -1687,6 +1693,9 @@
 		<set name="commissionItemType" val="CLOAK" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
@@ -1711,6 +1720,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 			<stat type="darkRes">30</stat>
@@ -1734,6 +1746,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 			<stat type="darkRes">30</stat>
@@ -1748,6 +1763,9 @@
 		<set name="crystal_type" val="S80" />
 		<set name="commissionItemType" val="CLOAK" />
 		<set name="price" val="28671000" />
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">20</stat>
 		</stats>

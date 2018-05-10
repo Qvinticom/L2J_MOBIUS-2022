@@ -1578,6 +1578,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+				<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">25</stat>
 			<stat type="fireRes">7</stat>
@@ -1625,6 +1628,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+				<player level="80" />
+		</cond>		
 		<stats>
 			<stat type="pDef">25</stat>
 			<stat type="fireRes">7</stat>
@@ -1672,6 +1678,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">25</stat>
 			<stat type="fireRes">7</stat>
@@ -1699,6 +1708,9 @@
 		<set name="is_mailable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+				<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">25</stat>
@@ -1746,6 +1758,9 @@
 		<set name="is_mailable" val="false" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<stats>
 			<stat type="pDef">25</stat>

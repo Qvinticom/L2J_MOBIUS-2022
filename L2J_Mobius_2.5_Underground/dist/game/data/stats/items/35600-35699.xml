@@ -2037,6 +2037,12 @@
 		<set name="duration" val="180" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="1440" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="9498" level="1" /> <!-- Santa Girl's Cloak -->
 		</skills>
@@ -2064,6 +2070,12 @@
 		<set name="duration" val="540" />
 		<set name="immediate_effect" val="true" />
 		<set name="time" val="4320" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="9498" level="1" /> <!-- Santa Girl's Cloak -->
 		</skills>

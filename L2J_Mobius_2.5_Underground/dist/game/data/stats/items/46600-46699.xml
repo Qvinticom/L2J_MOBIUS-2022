@@ -26,6 +26,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="220" />
 		<set name="bodypart" val="back" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<stats>
 			<stat type="pDef">50.0</stat>
 			<stat type="mDef">40.0</stat>

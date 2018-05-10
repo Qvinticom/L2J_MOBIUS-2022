@@ -349,6 +349,12 @@
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="price" val="10000000" />
+		<cond msgId="2453">
+			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="13404" level="1" /> <!-- Clan Cloak (Clan Hall - Contestable) -->
 		</skills>

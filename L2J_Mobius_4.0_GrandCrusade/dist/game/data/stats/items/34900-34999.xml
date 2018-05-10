@@ -521,6 +521,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->
 			<skill id="19039" level="1" /> <!-- Cloak of Light -->
@@ -559,6 +562,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<skills>
 			<skill id="19041" level="1" /> <!-- King's Call -->
 			<skill id="19040" level="1" /> <!-- Cloak of Darkness -->
@@ -1787,6 +1793,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19037" level="1" /> <!-- Cloak of Radiant Light -->
@@ -1826,6 +1835,9 @@
 				<player cloakStatus="true" />
 			</and>
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>		
 		<skills>
 			<skill id="19042" level="1" /> <!-- King's Summon -->
 			<skill id="19038" level="1" /> <!-- Cold Cloak of Darkness -->

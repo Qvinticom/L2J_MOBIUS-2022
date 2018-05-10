@@ -961,6 +961,9 @@
 		<cond msgId="2453">
 			<player cloakStatus="true" />
 		</cond>
+		<cond>
+			<player level="80" />
+		</cond>
 		<skills>
 			<skill id="21476" level="1" /> <!-- Cloak of the Chosen -->
 			<skill id="21410" level="1" /> <!-- Cloak of the Chosen: Blessed Escape -->
@@ -986,6 +989,9 @@
 		<set name="default_action" val="EQUIP" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
+		</cond>
+		<cond>
+			<player level="80" />
 		</cond>
 		<skills>
 			<skill id="21476" level="1" /> <!-- Cloak of the Chosen -->
