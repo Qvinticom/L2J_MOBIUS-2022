@@ -71,9 +71,53 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55715" toLevel="1" name="Chef's Fish Stew Box">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill55715</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90793</itemConsumeId> <!-- Chef's Fish Stew Box -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90407" count="1" />
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90408" count="1" />
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90409" count="1" />
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="90410" count="1" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55716" toLevel="1" name="Letter Collector Spell">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

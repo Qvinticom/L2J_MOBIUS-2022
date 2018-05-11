@@ -216,9 +216,21 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55543" toLevel="1" name="Summon Agathion - Minion Eye">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<hitTime>3000</hitTime>
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="SummonAgathion">
+				<npcId>9018</npcId>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55544" toLevel="1" name="Summon Agathion - Matryoshka">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -261,14 +273,81 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55552" toLevel="1" name="Minion Eye's Courage">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill55552</icon>
+		<magicLvl>
+			<value level="1">1</value>
+		</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>1</magicCriticalRate>
+		<effects>
+			<effect name="MaxCp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>100</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>
+					<value level="1">5000</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-3</amount>
+				<mode>PER</mode>
+				<magicType>3</magicType>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55553" toLevel="1" name="Minion Eye's Blessed Resurrection">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill55553</icon>
+		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
+		<itemConsumeCount>2</itemConsumeCount>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<castRange>400</castRange>
+		<effectPoint>1</effectPoint>
+		<effectRange>400</effectRange>
+		<hitTime>3500</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<reuseDelay>7200000</reuseDelay>
+		<targetType>PC_BODY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpResurrection" />
+		</conditions>
+		<effects>
+			<effect name="Resurrection">
+				<power>100</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55554" toLevel="1" name="Matryoshka's Gift">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

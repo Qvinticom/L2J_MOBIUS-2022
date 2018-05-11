@@ -31,7 +31,7 @@
 					<value level="3">50</value>
 					<value level="4">100</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>
@@ -40,7 +40,7 @@
 					<value level="3">50</value>
 					<value level="4">100</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>

@@ -1174,6 +1174,463 @@
 			<item id="49509" count="1" />
 		</items>
 	</reward>
+	<reward id="73" reward_id="149" name="Reach Level (Lv. 51)" requiredCompletion="51">
+		<handler name="level">
+			<param name="level">51</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="70101" count="1" />
+		</items>
+	</reward>
+	<reward id="74" reward_id="150" name="Reach Level (Lv. 52 Warrior only)" requiredCompletion="52">
+		<classId>0</classId>
+		<classId>18</classId>
+		<classId>31</classId>
+		<classId>44</classId>
+		<classId>53</classId>
+		<classId>1</classId>
+		<classId>4</classId>
+		<classId>19</classId>
+		<classId>32</classId>
+		<classId>45</classId>
+		<classId>56</classId>
+		<classId>2</classId>
+		<classId>3</classId>
+		<classId>5</classId>
+		<classId>6</classId>
+		<classId>20</classId>
+		<classId>21</classId>
+		<classId>33</classId>
+		<classId>34</classId>
+		<classId>46</classId>
+		<classId>57</classId>
+		<classId>88</classId>
+		<classId>89</classId>
+		<classId>90</classId>
+		<classId>91</classId>
+		<classId>99</classId>
+		<classId>100</classId>
+		<classId>106</classId>
+		<classId>107</classId>
+		<classId>113</classId>
+		<classId>117</classId>
+		<classId>118</classId>
+		<handler name="level">
+			<param name="level">52</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="70114" count="1" />
+		</items>
+	</reward>
+	<reward id="74" reward_id="151" name="Reach Level (Lv. 52 Warrior only)" requiredCompletion="52">
+		<classId>10</classId>
+		<classId>25</classId>
+		<classId>38</classId>
+		<classId>11</classId>
+		<classId>15</classId>
+		<classId>26</classId>
+		<classId>29</classId>
+		<classId>39</classId>
+		<classId>42</classId>
+		<classId>12</classId>
+		<classId>13</classId>
+		<classId>14</classId>
+		<classId>16</classId>
+		<classId>17</classId>
+		<classId>27</classId>
+		<classId>28</classId>
+		<classId>30</classId>
+		<classId>40</classId>
+		<classId>41</classId>
+		<classId>43</classId>
+		<classId>49</classId>
+		<classId>50</classId>
+		<classId>51</classId>
+		<classId>52</classId>
+		<classId>94</classId>
+		<classId>95</classId>
+		<classId>96</classId>
+		<classId>97</classId>
+		<classId>98</classId>
+		<classId>103</classId>
+		<classId>104</classId>
+		<classId>105</classId>
+		<classId>110</classId>
+		<classId>111</classId>
+		<classId>112</classId>
+		<handler name="level">
+			<param name="level">52</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="70114" count="1" />
+		</items>
+	</reward>
+	<reward id="74" reward_id="152" name="Reach Level (Lv. 52 Wizard only)" requiredCompletion="52">
+		<classId>10</classId>
+		<classId>25</classId>
+		<classId>38</classId>
+		<classId>11</classId>
+		<classId>15</classId>
+		<classId>26</classId>
+		<classId>29</classId>
+		<classId>39</classId>
+		<classId>42</classId>
+		<classId>12</classId>
+		<classId>13</classId>
+		<classId>14</classId>
+		<classId>16</classId>
+		<classId>17</classId>
+		<classId>27</classId>
+		<classId>28</classId>
+		<classId>30</classId>
+		<classId>40</classId>
+		<classId>41</classId>
+		<classId>43</classId>
+		<classId>49</classId>
+		<classId>50</classId>
+		<classId>51</classId>
+		<classId>52</classId>
+		<classId>94</classId>
+		<classId>95</classId>
+		<classId>96</classId>
+		<classId>97</classId>
+		<classId>98</classId>
+		<classId>103</classId>
+		<classId>104</classId>
+		<classId>105</classId>
+		<classId>110</classId>
+		<classId>111</classId>
+		<classId>112</classId>
+		<handler name="level">
+			<param name="level">52</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="70114" count="1" />
+		</items>
+	</reward>
+	<reward id="75" reward_id="153" name="Reach Level (Lv. 53)" requiredCompletion="53">
+		<handler name="level">
+			<param name="level">53</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="76" reward_id="154" name="Reach Level (Lv. 54)" requiredCompletion="54">
+		<handler name="level">
+			<param name="level">54</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="77" reward_id="155" name="Reach Level (Lv. 55)" requiredCompletion="55">
+		<handler name="level">
+			<param name="level">55</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="90793" count="1" />
+		</items>
+	</reward>
+	<reward id="78" reward_id="156" name="Reach Level (Lv. 56)" requiredCompletion="56">
+		<handler name="level">
+			<param name="level">56</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="79" reward_id="157" name="Reach Level (Lv. 57)" requiredCompletion="57">
+		<handler name="level">
+			<param name="level">57</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="80" reward_id="158" name="Reach Level (Lv. 58)" requiredCompletion="58">
+		<handler name="level">
+			<param name="level">58</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="81" reward_id="159" name="Reach Level (Lv. 59)" requiredCompletion="59">
+		<handler name="level">
+			<param name="level">59</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="82" reward_id="160" name="Reach Level (Lv. 60)" requiredCompletion="60">
+		<handler name="level">
+			<param name="level">60</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="90793" count="1" />
+			<item id="70101" count="1" />
+		</items>
+	</reward>
+	<reward id="83" reward_id="161" name="Reach Level (Lv. 61)" requiredCompletion="61">
+		<handler name="level">
+			<param name="level">61</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="70114" count="1" />
+		</items>
+	</reward>
+	<reward id="84" reward_id="162" name="Reach Level (Lv. 62)" requiredCompletion="62">
+		<handler name="level">
+			<param name="level">62</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="85" reward_id="163" name="Reach Level (Lv. 63)" requiredCompletion="63">
+		<handler name="level">
+			<param name="level">63</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="86" reward_id="164" name="Reach Level (Lv. 64)" requiredCompletion="64">
+		<handler name="level">
+			<param name="level">64</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="87" reward_id="165" name="Reach Level (Lv. 65)" requiredCompletion="65">
+		<handler name="level">
+			<param name="level">65</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="90793" count="2" />
+		</items>
+	</reward>
+	<reward id="88" reward_id="166" name="Reach Level (Lv. 66)" requiredCompletion="66">
+		<handler name="level">
+			<param name="level">66</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="89" reward_id="167" name="Reach Level (Lv. 67)" requiredCompletion="67">
+		<handler name="level">
+			<param name="level">67</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="90" reward_id="168" name="Reach Level (Lv. 68)" requiredCompletion="68">
+		<handler name="level">
+			<param name="level">68</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="91" reward_id="169" name="Reach Level (Lv. 69)" requiredCompletion="69">
+		<handler name="level">
+			<param name="level">69</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="92" reward_id="170" name="Reach Level (Lv. 70)" requiredCompletion="70">
+		<handler name="level">
+			<param name="level">70</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="90793" count="2" />
+			<item id="70112" count="1" />
+		</items>
+	</reward>
+	<reward id="93" reward_id="171" name="Reach Level (Lv. 71)" requiredCompletion="71">
+		<handler name="level">
+			<param name="level">71</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="94" reward_id="172" name="Reach Level (Lv. 72)" requiredCompletion="72">
+		<handler name="level">
+			<param name="level">72</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="95" reward_id="173" name="Reach Level (Lv. 73)" requiredCompletion="73">
+		<handler name="level">
+			<param name="level">73</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="96" reward_id="174" name="Reach Level (Lv. 74)" requiredCompletion="74">
+		<handler name="level">
+			<param name="level">74</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+		</items>
+	</reward>
+	<reward id="97" reward_id="175" name="Reach Level (Lv. 75)" requiredCompletion="75">
+		<handler name="level">
+			<param name="level">75</param>
+		</handler>
+		<items>
+			<item id="49488" count="20" />
+			<item id="90415" count="20" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="90793" count="3" />
+			<item id="70101" count="1" />
+		</items>
+	</reward>
+	<reward id="98" reward_id="176" name="Reach Level (Lv. 76)" requiredCompletion="76">
+		<handler name="level">
+			<param name="level">76</param>
+		</handler>
+		<items>
+			<item id="49488" count="30" />
+			<item id="90415" count="30" />
+			<item id="29817" count="5" />
+			<item id="90157" count="1" />
+			<item id="70560" count="1" />
+			<item id="90836" count="1" />
+		</items>
+	</reward>
+	<reward id="99" reward_id="177" name="Reach Level (Lv. 77)" requiredCompletion="77">
+		<handler name="level">
+			<param name="level">77</param>
+		</handler>
+		<items>
+			<item id="49488" count="30" />
+			<item id="90415" count="30" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="70220" count="1" />
+			<item id="70221" count="1" />
+			<item id="90818" count="1" />
+		</items>
+	</reward>
+	<reward id="100" reward_id="178" name="Reach Level (Lv. 78)" requiredCompletion="78">
+		<handler name="level">
+			<param name="level">78</param>
+		</handler>
+		<items>
+			<item id="49488" count="30" />
+			<item id="90415" count="30" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="70220" count="1" />
+			<item id="70221" count="1" />
+			<item id="90818" count="1" />
+		</items>
+	</reward>
+	<reward id="101" reward_id="179" name="Reach Level (Lv. 79)" requiredCompletion="79">
+		<handler name="level">
+			<param name="level">79</param>
+		</handler>
+		<items>
+			<item id="49488" count="30" />
+			<item id="90415" count="30" />
+			<item id="29817" count="5" />
+			<item id="29650" count="3" />
+			<item id="70220" count="1" />
+			<item id="70221" count="1" />
+			<item id="90818" count="1" />
+		</items>
+	</reward>
+	<reward id="102" reward_id="180" name="Reach Level (Lv. 80)" requiredCompletion="80">
+		<handler name="level">
+			<param name="level">80</param>
+		</handler>
+		<items>
+			<item id="70773" count="1" />
+            <item id="70774" count="1" />
+			<item id="70775" count="1" />
+			<item id="70776" count="1" />
+			<item id="70777" count="1" />
+		</items>
+	</reward>
 	<!--
 	<reward id="224" reward_id="604" name="Login All Weekend" isMainClassOnly="false" isOneTime="false">
 		<items>

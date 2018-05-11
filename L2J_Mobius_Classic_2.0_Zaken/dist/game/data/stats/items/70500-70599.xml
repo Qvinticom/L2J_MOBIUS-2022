@@ -623,6 +623,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
+			<skill id="55543" level="1" /> 
+			<skill id="55552" level="1" />
+			<skill id="55553" level="1" />
+		</skills>
 	</item>
 	<item id="70561" name="Agathion - Minion Eye" additionalName="30 days" type="Armor">
 		<!-- Summons Agathion - Minion Eye. CON / MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%. Cannot be exchanged, dropped or sold in a store, shared within account. Can be stored in a private warehouse. <Active Skill>. 1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->

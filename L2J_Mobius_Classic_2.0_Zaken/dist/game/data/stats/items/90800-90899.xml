@@ -241,6 +241,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="45017" level="3" />
+		</skills>
 		<stats>
 			<stat type="mDef">80</stat>
 			<stat type="maxMp">34</stat>
@@ -404,12 +407,26 @@
 	</item>
 	<item id="90836" name="Warrior Experience Amulet" additionalName="7-day" type="EtcItem">
 		<!-- 7-day item. Increases XP and SP gain by +20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-		<set name="icon" val="icon.skill19226" />
+		<set name="icon" val="icon.skill90836" />
+		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_premium" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="39057" level="1" /> <!-- Warrior Experience Amulet -->
+		</skills>
 	</item>
 	<item id="90837" name="White Uniform Hat (STR+1 INT+1)" type="Armor">
 		<!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->

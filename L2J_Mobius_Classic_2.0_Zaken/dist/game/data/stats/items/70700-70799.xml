@@ -1011,6 +1011,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="45017" level="3" />
+		</skills>
 		<stats>
 			<stat type="mDef">80</stat>
 			<stat type="maxMp">34</stat>
@@ -1029,6 +1032,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="3561" level="3" /> <!-- Baium's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -1047,6 +1053,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -1065,6 +1074,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="3563" level="3" /> <!-- Ring of Core -->
+			<skill id="35016" level="1" /> <!-- Ring of Core Ability Skill -->
+		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
 			<stat type="maxMp">21</stat>
@@ -1083,6 +1096,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">71</stat>
 			<stat type="maxMp">31</stat>

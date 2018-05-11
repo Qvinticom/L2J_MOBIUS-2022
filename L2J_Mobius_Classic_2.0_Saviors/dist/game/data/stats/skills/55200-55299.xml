@@ -472,17 +472,17 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>
- 				    <value level="1">100</value>
+ 				    <value level="1">100</value> 
  				    <value level="2">100</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 			<effect name="SpModify">
 				<amount>
  				    <value level="1">100</value>
  				    <value level="2">100</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode> <!-- FIX -->
 			</effect>
 		</effects>
 	</skill>
