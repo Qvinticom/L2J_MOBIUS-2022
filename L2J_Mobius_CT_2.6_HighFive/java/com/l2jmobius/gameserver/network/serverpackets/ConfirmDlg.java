@@ -41,7 +41,7 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg>
 	
 	public ConfirmDlg(String text)
 	{
-		this(SystemMessageId.S1);
+		this(SystemMessageId.S1_3);
 		addString(text);
 	}
 	
