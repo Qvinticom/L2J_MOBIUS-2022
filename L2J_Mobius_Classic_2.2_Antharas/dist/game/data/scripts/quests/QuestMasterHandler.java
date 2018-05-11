@@ -169,6 +169,7 @@ import quests.Q11015_PrepareForTrade1.Q11015_PrepareForTrade1;
 import quests.Q11016_PrepareForTrade2.Q11016_PrepareForTrade2;
 import quests.Q11017_PrepareForTrade3.Q11017_PrepareForTrade3;
 import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
+import quests.Q11020_BlacksmithsRequest.Q11020_BlacksmithsRequest;
 
 /**
  * @author NosBit
@@ -329,6 +330,7 @@ public class QuestMasterHandler
 		Q11016_PrepareForTrade2.class,
 		Q11017_PrepareForTrade3.class,
 		Q11019_TribalBenefit.class,
+		Q11020_BlacksmithsRequest.class,
 	};
 	
 	public static void main(String[] args)
