@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -70,15 +68,7 @@ public final class RequestSendFriendMsg implements IClientIncomingPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, _message);
-			record.setLoggerName("chat");
-			record.setParameters(new Object[]
-			{
-				"PRIV_MSG",
-				"[" + activeChar.getName() + " to " + _reciever + "]"
-			});
-			
-			LOGGER_CHAT.log(record);
+			LOGGER_CHAT.info("PRIV_MSG [" + activeChar + " to " + targetPlayer + "] " + _message);
 		}
 		
 		targetPlayer.sendPacket(new L2FriendSay(activeChar.getName(), _reciever, _message));

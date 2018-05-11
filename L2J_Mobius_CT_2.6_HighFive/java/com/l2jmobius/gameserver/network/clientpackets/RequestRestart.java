@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -128,12 +126,7 @@ public final class RequestRestart implements IClientIncomingPacket
 		// Remove player from Boss Zone
 		player.removeFromBossZone();
 		
-		final LogRecord record = new LogRecord(Level.INFO, "Logged out");
-		record.setParameters(new Object[]
-		{
-			client
-		});
-		LOGGER_ACCOUNTING.log(record);
+		LOGGER_ACCOUNTING.info("Logged out, " + client);
 		
 		if (!OfflineTradeUtil.enteredOfflineMode(player))
 		{

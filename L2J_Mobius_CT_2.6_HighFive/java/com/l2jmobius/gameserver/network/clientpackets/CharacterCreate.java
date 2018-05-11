@@ -17,8 +17,6 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -244,13 +242,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		initNewChar(client, newChar);
 		
-		final LogRecord record = new LogRecord(Level.INFO, "Created new character.");
-		record.setParameters(new Object[]
-		{
-			newChar,
-			client
-		});
-		LOGGER_ACCOUNTING.log(record);
+		LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
 	}
 	
 	private boolean isValidName(String text)

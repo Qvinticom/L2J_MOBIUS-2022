@@ -28,7 +28,6 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -307,17 +306,30 @@ public final class L2ItemInstance extends L2Object
 	{
 		setOwnerId(owner_id);
 		
-		if (Config.LOG_ITEMS && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID)))))
+		if (Config.LOG_ITEMS)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, "SETOWNER:" + process);
-			record.setLoggerName("item");
-			record.setParameters(new Object[]
+			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID))))
 			{
-				this,
-				creator,
-				reference
-			});
-			LOG_ITEMS.log(record);
+				if (getEnchantLevel() > 0)
+				{
+					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":+" + getEnchantLevel() //
+						+ " " + getItem().getName() //
+						+ "(" + _count + "), " //
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+				else
+				{
+					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":" + getItem().getName() //
+						+ "(" + _count + "), " //
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+			}
 		}
 		
 		if ((creator != null) && creator.isGM())
@@ -468,18 +480,32 @@ public final class L2ItemInstance extends L2Object
 		
 		_storedInDb = false;
 		
-		if (Config.LOG_ITEMS && (process != null) && (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID)))))
+		if (Config.LOG_ITEMS && (process != null))
 		{
-			final LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process);
-			record.setLoggerName("item");
-			record.setParameters(new Object[]
+			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				this,
-				"PrevCount(" + old + ")",
-				creator,
-				reference
-			});
-			LOG_ITEMS.log(record);
+				if (getEnchantLevel() > 0)
+				{
+					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":+" + getEnchantLevel() //
+						+ " " + getItem().getName() //
+						+ "(" + _count + "), PrevCount(" //
+						+ String.valueOf(old) + "), " // in case of null
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+				else
+				{
+					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
+						+ ", item " + getObjectId() //
+						+ ":" + getItem().getName() //
+						+ "(" + _count + "), PrevCount(" //
+						+ String.valueOf(old) + "), " // in case of null
+						+ String.valueOf(creator) + ", " // in case of null
+						+ String.valueOf(reference)); // in case of null
+				}
+			}
 		}
 		
 		if ((creator != null) && creator.isGM())

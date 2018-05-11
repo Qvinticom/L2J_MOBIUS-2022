@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -172,27 +170,14 @@ public final class Say2 implements IClientIncomingPacket
 		
 		if (Config.LOG_CHAT)
 		{
-			final LogRecord record = new LogRecord(Level.INFO, _text);
-			record.setLoggerName("chat");
-			
 			if (chatType == ChatType.WHISPER)
 			{
-				record.setParameters(new Object[]
-				{
-					chatType.name(),
-					"[" + activeChar.getName() + " to " + _target + "]"
-				});
+				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + " to " + _target + "] " + _text);
 			}
 			else
 			{
-				record.setParameters(new Object[]
-				{
-					chatType.name(),
-					"[" + activeChar.getName() + "]"
-				});
+				LOGGER_CHAT.info(chatType.name() + " [" + activeChar + "] " + _text);
 			}
-			
-			LOGGER_CHAT.log(record);
 		}
 		
 		if ((_text.indexOf(8) >= 0) && !parseAndPublishItem(activeChar))

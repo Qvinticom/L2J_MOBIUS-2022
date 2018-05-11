@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -148,16 +147,7 @@ public final class RequestExEnchantSkillSafe implements IClientIncomingPacket
 			{
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
-					final LogRecord record = new LogRecord(Level.INFO, "Safe Success");
-					record.setParameters(new Object[]
-					{
-						player,
-						skill,
-						spb,
-						rate
-					});
-					record.setLoggerName("skill");
-					LOGGER_ENCHANT.log(record);
+					LOGGER_ENCHANT.log(Level.INFO, "Safe Success, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", Skill:" + skill + ", SPB:" + spb + ", Rate:" + rate);
 				}
 				
 				player.addSkill(skill, true);
@@ -172,16 +162,7 @@ public final class RequestExEnchantSkillSafe implements IClientIncomingPacket
 			{
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
-					final LogRecord record = new LogRecord(Level.INFO, "Safe Fail");
-					record.setParameters(new Object[]
-					{
-						player,
-						skill,
-						spb,
-						rate
-					});
-					record.setLoggerName("skill");
-					LOGGER_ENCHANT.log(record);
+					LOGGER_ENCHANT.log(Level.INFO, "Safe Failed, Character:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", Skill:" + skill + ", SPB:" + spb + ", Rate:" + rate);
 				}
 				
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.SKILL_ENCHANT_FAILED_CURRENT_LEVEL_OF_ENCHANT_SKILL_S1_WILL_REMAIN_UNCHANGED);

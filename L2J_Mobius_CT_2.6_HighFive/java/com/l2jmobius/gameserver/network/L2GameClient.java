@@ -23,7 +23,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -327,13 +326,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 						}
 					}
 					
-					final LogRecord record = new LogRecord(Level.WARNING, "Delete");
-					record.setParameters(new Object[]
-					{
-						objectId,
-						this
-					});
-					LOGGER_ACCOUNTING.log(record);
+					LOGGER_ACCOUNTING.info("Delete, " + objectId + ", " + this);
 				}
 			}
 			return answer;
@@ -364,13 +357,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			LOGGER.log(Level.SEVERE, "Error restoring character.", e);
 		}
 		
-		final LogRecord record = new LogRecord(Level.WARNING, "Restore");
-		record.setParameters(new Object[]
-		{
-			objectId,
-			this
-		});
-		LOGGER_ACCOUNTING.log(record);
+		LOGGER_ACCOUNTING.info("Restore, " + objectId + ", " + this);
 	}
 	
 	public static void deleteCharByObjId(int objid)

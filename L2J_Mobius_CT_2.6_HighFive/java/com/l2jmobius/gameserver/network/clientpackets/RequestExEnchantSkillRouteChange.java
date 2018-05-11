@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -170,15 +169,7 @@ public final class RequestExEnchantSkillRouteChange implements IClientIncomingPa
 			{
 				if (Config.LOG_SKILL_ENCHANTS)
 				{
-					final LogRecord record = new LogRecord(Level.INFO, "Route Change");
-					record.setParameters(new Object[]
-					{
-						player,
-						skill,
-						spb
-					});
-					record.setLoggerName("skill");
-					LOGGER_ENCHANT.log(record);
+					LOGGER_ENCHANT.log(Level.INFO, "Route Change:" + player.getName() + " [" + player.getObjectId() + "] Account:" + player.getAccountName() + " IP:" + player.getIPAddress() + ", Skill:" + skill + ", SPB:" + spb);
 				}
 				
 				player.addSkill(skill, true);

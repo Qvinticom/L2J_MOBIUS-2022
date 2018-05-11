@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.tasks.player;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -76,12 +74,7 @@ public final class IllegalPlayerActionTask implements Runnable
 	@Override
 	public void run()
 	{
-		final LogRecord record = new LogRecord(Level.INFO, "AUDIT:" + _message);
-		record.setLoggerName("audit");
-		//@formatter:off
-		record.setParameters(new Object[] { _actor, _punishment	});
-		//@formatter:on
-		LOGGER.log(record);
+		LOGGER.info("AUDIT, " + _message + ", " + _actor + ", " + _punishment);
 		
 		AdminData.getInstance().broadcastMessageToGMs(_message);
 		if (!_actor.isGM())

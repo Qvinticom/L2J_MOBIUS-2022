@@ -16,23 +16,27 @@
  */
 package com.l2jmobius.log.formatter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
-public class DamageFormatter extends AbstractFormatter
+public class DamageFormatter extends Formatter
 {
+	private final SimpleDateFormat dateFmt = new SimpleDateFormat("yy.MM.dd H:mm:ss");
+	
 	@Override
 	public String format(LogRecord record)
 	{
 		final Object[] params = record.getParameters();
-		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
-		output.append(super.format(record));
+		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params == null ? 0 : params.length * 10), "[", dateFmt.format(new Date(record.getMillis())), "] '---': ", record.getMessage());
 		
 		if (params != null)
 		{
@@ -45,40 +49,30 @@ public class DamageFormatter extends AbstractFormatter
 				
 				if (p instanceof L2Character)
 				{
-					final L2Character creature = (L2Character) p;
-					if ((p instanceof L2Attackable) && ((L2Attackable) p).isRaid())
+					if ((p instanceof L2Character) && ((L2Character) p).isRaid())
 					{
-						output.append("RaidBoss ");
+						StringUtil.append(output, "RaidBoss ");
 					}
 					
-					output.append(creature.getName());
-					output.append("(");
-					output.append(creature.getObjectId());
-					output.append(") ");
-					output.append(creature.getLevel());
-					output.append(" lvl");
+					StringUtil.append(output, ((L2Character) p).getName(), "(", String.valueOf(((L2Character) p).getObjectId()), ") ");
+					StringUtil.append(output, String.valueOf(((L2Character) p).getLevel()), " lvl");
 					
 					if (p instanceof L2Summon)
 					{
-						L2PcInstance owner = ((L2Summon) p).getOwner();
+						final L2PcInstance owner = ((L2Summon) p).getOwner();
 						if (owner != null)
 						{
-							output.append(" Owner:");
-							output.append(owner.getName());
-							output.append("(");
-							output.append(owner.getObjectId());
-							output.append(")");
+							StringUtil.append(output, " Owner:", owner.getName(), "(", String.valueOf(owner.getObjectId()), ")");
 						}
 					}
 				}
 				else if (p instanceof Skill)
 				{
-					output.append(" with skill ");
-					output.append(p);
+					StringUtil.append(output, " with skill ", ((Skill) p).getName(), "(", String.valueOf(((Skill) p).getId()), ")");
 				}
 				else
 				{
-					output.append(p);
+					StringUtil.append(output, p.toString());
 				}
 			}
 		}

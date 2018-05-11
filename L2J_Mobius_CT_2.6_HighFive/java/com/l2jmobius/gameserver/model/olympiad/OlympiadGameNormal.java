@@ -22,7 +22,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -354,19 +353,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							final LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " default");
-							record.setParameters(new Object[]
-							{
-								_playerOne.getName(),
-								_playerTwo.getName(),
-								0,
-								0,
-								0,
-								0,
-								points,
-								getType().toString()
-							});
-							LOGGER_OLYMPIAD.log(record);
+							LOGGER_OLYMPIAD.info(_playerOne.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
 					}
 					catch (Exception e)
@@ -393,19 +380,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 						
 						if (Config.ALT_OLY_LOG_FIGHTS)
 						{
-							final LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " default");
-							record.setParameters(new Object[]
-							{
-								_playerOne.getName(),
-								_playerTwo.getName(),
-								0,
-								0,
-								0,
-								0,
-								points,
-								getType().toString()
-							});
-							LOGGER_OLYMPIAD.log(record);
+							LOGGER_OLYMPIAD.info(_playerTwo.getName() + " default," + _playerOne + "," + _playerTwo + ",0,0,0,0," + points + "," + getType());
 						}
 					}
 					catch (Exception e)
@@ -456,19 +431,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						final LogRecord record = new LogRecord(Level.INFO, _playerTwo.getName() + " crash");
-						record.setParameters(new Object[]
-						{
-							_playerOne.getName(),
-							_playerTwo.getName(),
-							0,
-							0,
-							0,
-							0,
-							pointDiff,
-							getType().toString()
-						});
-						LOGGER_OLYMPIAD.log(record);
+						LOGGER_OLYMPIAD.info(_playerTwo.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
 					
 					// Notify to scripts
@@ -494,19 +457,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						final LogRecord record = new LogRecord(Level.INFO, _playerOne.getName() + " crash");
-						record.setParameters(new Object[]
-						{
-							_playerOne.getName(),
-							_playerTwo.getName(),
-							0,
-							0,
-							0,
-							0,
-							pointDiff,
-							getType().toString()
-						});
-						LOGGER_OLYMPIAD.log(record);
+						LOGGER_OLYMPIAD.info(_playerOne.getName() + " crash," + _playerOne + "," + _playerTwo + ",0,0,0,0," + pointDiff + "," + getType());
 					}
 					// Notify to scripts
 					EventDispatcher.getInstance().notifyEventAsync(new OnOlympiadMatchResult(_playerTwo, _playerOne, getType()), Olympiad.getInstance());
@@ -527,19 +478,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 					
 					if (Config.ALT_OLY_LOG_FIGHTS)
 					{
-						final LogRecord record = new LogRecord(Level.INFO, "both crash");
-						record.setParameters(new Object[]
-						{
-							_playerOne.getName(),
-							_playerTwo.getName(),
-							0,
-							0,
-							0,
-							0,
-							pointDiff,
-							getType().toString()
-						});
-						LOGGER_OLYMPIAD.log(record);
+						LOGGER_OLYMPIAD.info("both crash," + _playerOne.getName() + "," + _playerOne + ",0,0,0,0," + _playerTwo + "," + pointDiff + "," + getType());
 					}
 				}
 				
@@ -699,19 +638,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 			
 			if (Config.ALT_OLY_LOG_FIGHTS)
 			{
-				final LogRecord record = new LogRecord(Level.INFO, winner);
-				record.setParameters(new Object[]
-				{
-					_playerOne.getName(),
-					_playerTwo.getName(),
-					playerOneHp,
-					playerTwoHp,
-					_damageP1,
-					_damageP2,
-					pointDiff,
-					getType().toString()
-				});
-				LOGGER_OLYMPIAD.log(record);
+				LOGGER_OLYMPIAD.info(winner + "," + _playerOne.getName() + "," + _playerOne + "," + _playerTwo + "," + playerOneHp + "," + playerTwoHp + "," + _damageP1 + "," + _damageP2 + "," + pointDiff + "," + getType());
 			}
 		}
 		catch (Exception e)

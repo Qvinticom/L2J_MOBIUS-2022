@@ -33,7 +33,6 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -973,31 +972,26 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		LogRecord record;
-		LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
-		for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
+		if (NOBLES != null)
 		{
-			final StatsSet nobleInfo = entry.getValue();
-			if (nobleInfo == null)
+			LOGGER_OLYMPIAD.info("Noble,charid,classid,compDone,points");
+			StatsSet nobleInfo;
+			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 			{
-				continue;
+				nobleInfo = entry.getValue();
+				if (nobleInfo == null)
+				{
+					continue;
+				}
+				
+				final int charId = entry.getKey();
+				final int classId = nobleInfo.getInt(CLASS_ID);
+				final String charName = nobleInfo.getString(CHAR_NAME);
+				final int points = nobleInfo.getInt(POINTS);
+				final int compDone = nobleInfo.getInt(COMP_DONE);
+				
+				LOGGER_OLYMPIAD.info(charName + "," + charId + "," + classId + "," + compDone + "," + points);
 			}
-			
-			final int charId = entry.getKey();
-			final int classId = nobleInfo.getInt(CLASS_ID);
-			final String charName = nobleInfo.getString(CHAR_NAME);
-			final int points = nobleInfo.getInt(POINTS);
-			final int compDone = nobleInfo.getInt(COMP_DONE);
-			
-			record = new LogRecord(Level.INFO, charName);
-			record.setParameters(new Object[]
-			{
-				charId,
-				classId,
-				compDone,
-				points
-			});
-			LOGGER_OLYMPIAD.log(record);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
@@ -1018,6 +1012,7 @@ public class Olympiad extends ListenersContainer
 						hero.set(CHAR_ID, rset.getInt(CHAR_ID));
 						hero.set(CHAR_NAME, rset.getString(CHAR_NAME));
 						
+						LOGGER_OLYMPIAD.info("Hero " + hero.getString(CHAR_NAME) + "," + hero.getInt(CHAR_ID) + "," + hero.getInt(CLASS_ID));
 						if ((element == 132) || (element == 133)) // Male & Female Soulhounds rank as one hero class
 						{
 							hero = NOBLES.get(hero.getInt(CHAR_ID));
@@ -1026,13 +1021,6 @@ public class Olympiad extends ListenersContainer
 						}
 						else
 						{
-							record = new LogRecord(Level.INFO, "Hero " + hero.getString(CHAR_NAME));
-							record.setParameters(new Object[]
-							{
-								hero.getInt(CHAR_ID),
-								hero.getInt(CLASS_ID)
-							});
-							LOGGER_OLYMPIAD.log(record);
 							HEROS_TO_BE.add(hero);
 						}
 					}
@@ -1053,13 +1041,6 @@ public class Olympiad extends ListenersContainer
 					hero.set(CHAR_ID, winner.getInt(CHAR_ID));
 					hero.set(CHAR_NAME, winner.getString(CHAR_NAME));
 					
-					record = new LogRecord(Level.INFO, "Hero " + hero.getString(CHAR_NAME));
-					record.setParameters(new Object[]
-					{
-						hero.getInt(CHAR_ID),
-						hero.getInt(CLASS_ID)
-					});
-					LOGGER_OLYMPIAD.log(record);
 					HEROS_TO_BE.add(hero);
 					break;
 				}
@@ -1105,13 +1086,6 @@ public class Olympiad extends ListenersContainer
 					hero.set(CHAR_ID, winner.getInt(CHAR_ID));
 					hero.set(CHAR_NAME, winner.getString(CHAR_NAME));
 					
-					record = new LogRecord(Level.INFO, "Hero " + hero.getString(CHAR_NAME));
-					record.setParameters(new Object[]
-					{
-						hero.getInt(CHAR_ID),
-						hero.getInt(CLASS_ID)
-					});
-					LOGGER_OLYMPIAD.log(record);
 					HEROS_TO_BE.add(hero);
 					break;
 				}

@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -53,21 +51,13 @@ public final class ProtocolVersion implements IClientIncomingPacket
 		}
 		else if (!Config.PROTOCOL_LIST.contains(_version))
 		{
-			final LogRecord record = new LogRecord(Level.WARNING, "Wrong protocol");
-			record.setParameters(new Object[]
-			{
-				_version,
-				client
-			});
-			LOGGER_ACCOUNTING.log(record);
-			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 0);
+			LOGGER_ACCOUNTING.warning("Wrong protocol version " + _version + ", " + client);
 			client.setProtocolOk(false);
-			client.close(pk);
+			client.close(new KeyPacket(client.enableCrypt(), 0));
 		}
 		else
 		{
-			final KeyPacket pk = new KeyPacket(client.enableCrypt(), 1);
-			client.sendPacket(pk);
+			client.sendPacket(new KeyPacket(client.enableCrypt(), 1));
 			client.setProtocolOk(true);
 		}
 	}

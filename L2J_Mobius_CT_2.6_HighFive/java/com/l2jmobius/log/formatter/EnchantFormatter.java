@@ -16,21 +16,26 @@
  */
 package com.l2jmobius.log.formatter;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
-public class EnchantFormatter extends AbstractFormatter
+public class EnchantFormatter extends Formatter
 {
+	private final SimpleDateFormat dateFmt = new SimpleDateFormat("dd MMM H:mm:ss");
+	
 	@Override
 	public String format(LogRecord record)
 	{
 		final Object[] params = record.getParameters();
-		final StringBuilder output = new StringBuilder(32 + record.getMessage().length() + (params != null ? 10 * params.length : 0));
-		output.append(super.format(record));
+		final StringBuilder output = StringUtil.startAppend(30 + record.getMessage().length() + (params == null ? 0 : params.length * 10), "[", dateFmt.format(new Date(record.getMillis())), "] ", record.getMessage());
 		
 		if (params != null)
 		{
@@ -41,59 +46,39 @@ public class EnchantFormatter extends AbstractFormatter
 					continue;
 				}
 				
-				output.append(", ");
+				StringUtil.append(output, ", ");
 				
 				if (p instanceof L2PcInstance)
 				{
-					L2PcInstance player = (L2PcInstance) p;
-					output.append("Character:");
-					output.append(player.getName());
-					output.append(" [");
-					output.append(player.getObjectId());
-					output.append("] Account:");
-					output.append(player.getAccountName());
+					final L2PcInstance player = (L2PcInstance) p;
+					StringUtil.append(output, "Character:", player.getName(), " [" + player.getObjectId() + "] Account:", player.getAccountName());
 					if ((player.getClient() != null) && !player.getClient().isDetached())
 					{
-						output.append(" IP:");
-						output.append(player.getClient().getConnectionAddress().getHostAddress());
+						StringUtil.append(output, " IP:", player.getClient().getConnectionAddress().getHostAddress());
 					}
 				}
 				else if (p instanceof L2ItemInstance)
 				{
-					L2ItemInstance item = (L2ItemInstance) p;
+					final L2ItemInstance item = (L2ItemInstance) p;
 					if (item.getEnchantLevel() > 0)
 					{
-						output.append("+");
-						output.append(item.getEnchantLevel());
-						output.append(" ");
+						StringUtil.append(output, "+", String.valueOf(item.getEnchantLevel()), " ");
 					}
-					output.append(item.getItem().getName());
-					output.append("(");
-					output.append(item.getCount());
-					output.append(")");
-					output.append(" [");
-					output.append(item.getObjectId());
-					output.append("]");
+					StringUtil.append(output, item.getItem().getName(), "(", String.valueOf(item.getCount()), ")");
+					StringUtil.append(output, " [", String.valueOf(item.getObjectId()), "]");
 				}
 				else if (p instanceof Skill)
 				{
-					Skill skill = (Skill) p;
+					final Skill skill = (Skill) p;
 					if (skill.getLevel() > 100)
 					{
-						output.append("+");
-						output.append(skill.getLevel() % 100);
-						output.append(" ");
+						StringUtil.append(output, "+", String.valueOf(skill.getLevel() % 100), " ");
 					}
-					output.append(skill.getName());
-					output.append("(");
-					output.append(skill.getId());
-					output.append(" ");
-					output.append(skill.getLevel());
-					output.append(")");
+					StringUtil.append(output, skill.getName(), "(", String.valueOf(skill.getId()), " ", String.valueOf(skill.getLevel()), ")");
 				}
 				else
 				{
-					output.append(p);
+					StringUtil.append(output, p.toString());
 				}
 			}
 		}
