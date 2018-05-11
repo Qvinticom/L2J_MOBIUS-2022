@@ -2,25 +2,25 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
 	<spawn name="Giran">
 		<group>
-			<npc id="30878" x="47984" y="186832" z="-3445" heading="42000" respawnTime="60sec" />
-			<npc id="31031" x="82272" y="147072" z="-3514" heading="16384" respawnTime="5sec" />
-			<npc id="35184" x="117095" y="144997" z="-2539" heading="32768" respawnTime="60sec" />
-			<npc id="35188" x="107386" y="145807" z="-3300" heading="32768" respawnTime="60sec" />
-			<npc id="35180" x="112661" y="144757" z="-2817" heading="32768" respawnTime="10800sec" />
-			<npc id="35180" x="113009" y="144703" z="-2817" heading="49152" respawnTime="10800sec" />
-			<npc id="35181" x="115220" y="144930" z="-2527" heading="32768" respawnTime="10800sec" />
-			<npc id="35181" x="115575" y="144864" z="-2567" heading="49152" respawnTime="10800sec" />
-			<npc id="35179" x="116535" y="146677" z="-1851" heading="49152" respawnTime="60sec" />
-			<npc id="35186" x="116984" y="145278" z="-2555" heading="32768" respawnTime="60sec" />
-			<npc id="30640" x="106345" y="135523" z="-3415" heading="0" respawnTime="60sec" />
-			<npc id="35185" x="117780" y="145257" z="-2099" heading="49000" respawnTime="60sec" />
-			<npc id="35182" x="116494" y="145516" z="-2723" heading="58824" respawnTime="60sec" />
-			<npc id="35183" x="115910" y="145101" z="-2723" heading="1353" respawnTime="60sec" />
-			<npc id="30755" x="131176" y="114676" z="-3718" heading="40960" respawnTime="60sec" />
-			<npc id="13001" x="154695" y="121097" z="-3757" heading="0" respawnTime="60sec" />
+			<npc id="30878" x="47984" y="186832" z="-3445" heading="42000" respawnTime="60sec"/>
+			<npc id="31031" x="82272" y="147072" z="-3514" heading="16384" respawnTime="5sec"/>
+			<npc id="35184" x="117095" y="144997" z="-2539" heading="32768" respawnTime="60sec"/>
+			<npc id="35188" x="107386" y="145807" z="-3300" heading="32768" respawnTime="60sec"/>
+			<npc id="35180" x="112661" y="144757" z="-2817" heading="32768" respawnTime="10800sec"/>
+			<npc id="35180" x="113009" y="144703" z="-2817" heading="49152" respawnTime="10800sec"/>
+			<npc id="35181" x="115220" y="144930" z="-2527" heading="32768" respawnTime="10800sec"/>
+			<npc id="35181" x="115575" y="144864" z="-2567" heading="49152" respawnTime="10800sec"/>
+			<npc id="35179" x="116535" y="146677" z="-1851" heading="49152" respawnTime="60sec"/>
+			<npc id="35186" x="116984" y="145278" z="-2555" heading="32768" respawnTime="60sec"/>
+			<npc id="30640" x="106345" y="135523" z="-3415" heading="0" respawnTime="60sec"/>
+			<npc id="35185" x="117780" y="145257" z="-2099" heading="49000" respawnTime="60sec"/>
+			<npc id="35182" x="116494" y="145516" z="-2723" heading="58824" respawnTime="60sec"/>
+			<npc id="35183" x="115910" y="145101" z="-2723" heading="1353" respawnTime="60sec"/>
+			<npc id="30755" x="131176" y="114676" z="-3718" heading="40960" respawnTime="60sec"/>
+			<npc id="13001" x="154695" y="121097" z="-3757" heading="0" respawnTime="60sec"/>
 			<npc id="35147" x="117950" y="145096" z="-2544" heading="32768" respawnTime="60sec" />
-			<npc id="30015" x="105285" y="162607" z="-3600" heading="40961" respawnTime="60sec" /> 
-			<npc id="30016" x="102247" y="155354" z="-3688" heading="7774" respawnTime="60sec" />
+			<npc id="30015" x="105285" y="162607" z="-3600" heading="40961" respawnTime="60sec"/> 
+			<npc id="30016" x="102247" y="155354" z="-3688" heading="7774" respawnTime="60sec"/>
 			<npc id="32478" x="82652" y="146755" z="-3464" heading="33000" respawnTime="60sec" />
 		    <npc id="30097" x="79599" y="145522" z="-3496" heading="0" respawnTime="60sec" />
 		    <npc id="30098" x="79599" y="145457" z="-3496" heading="0" respawnTime="60sec" />
@@ -92,14 +92,18 @@
 		    <npc id="34275" x="77503" y="148013" z="-3592" heading="14903" respawnTime="60sec" />
 		    <npc id="30613" x="78977" y="149036" z="-3592" heading="0" respawnTime="60sec" />
 		    <npc id="30021" x="80289" y="145273" z="-3528" heading="998" respawnTime="60sec" />
+		    <npc id="33977" x="80289" y="145968" z="-3528" heading="2058" respawnTime="60sec" />
 		    <npc id="30767" x="81424" y="149728" z="-3464" heading="49000" respawnTime="60sec" >
 				<parameters>
-					<param name="fnAgitMap" value="giran" />
+					<param name="fnAgitMap" value="giran"/>
 				</parameters>
 		    </npc>
 		    <npc id="30513" x="80420" y="144499" z="-3536" heading="1443" respawnTime="60sec" />
 		    <npc id="30514" x="80511" y="144377" z="-3528" heading="1014" respawnTime="60sec" />
 		    <npc id="30515" x="80511" y="144593" z="-3528" heading="1014" respawnTime="60sec" />
+		    <npc id="34017" x="85704" y="146254" z="-3400" heading="22314" respawnTime="60sec" />
+		    <npc id="34018" x="85715" y="146207" z="-3400" heading="22314" respawnTime="60sec" />
+		    <npc id="34018" x="85751" y="146255" z="-3400" heading="22314" respawnTime="60sec" />
 		    <npc id="35452" x="78448" y="148400" z="-3592" heading="16000" respawnTime="60sec" />
 		    <npc id="35453" x="81876" y="145392" z="-3512" heading="0" respawnTime="60sec" />
 		    <npc id="35454" x="81776" y="145200" z="-3512" heading="32000" respawnTime="60sec" />
