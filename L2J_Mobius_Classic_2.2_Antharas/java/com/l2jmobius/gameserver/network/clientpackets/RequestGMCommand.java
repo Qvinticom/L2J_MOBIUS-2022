@@ -44,7 +44,6 @@ public final class RequestGMCommand implements IClientIncomingPacket
 	{
 		_targetName = packet.readS();
 		_command = packet.readD();
-		// _unknown = packet.readD();
 		return true;
 	}
 	
@@ -95,7 +94,8 @@ public final class RequestGMCommand implements IClientIncomingPacket
 			}
 			case 5: // player inventory
 			{
-				client.sendPacket(new GMViewItemList(player));
+				client.sendPacket(new GMViewItemList(1, player));
+				client.sendPacket(new GMViewItemList(2, player));
 				client.sendPacket(new GMHennaInfo(player));
 				break;
 			}
@@ -113,7 +113,6 @@ public final class RequestGMCommand implements IClientIncomingPacket
 				}
 				break;
 			}
-			
 		}
 	}
 }

@@ -96,7 +96,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeC(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00); // if 1 can't create new char
 		packet.writeC(0x01); // play mode, if 1 can create only 2 char in regular lobby
 		packet.writeD(0x02); // if 1, korean client
-		packet.writeC(0x00); // if 1 suggest premium account
+		packet.writeH(0x00); // if 1 suggest premium account
 		
 		long lastAccess = 0L;
 		if (_activeId == -1)
@@ -183,6 +183,12 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
+			
+			packet.writeD(0x00); // Salvation
+			packet.writeD(0x00); // Salvation
+			packet.writeD(0x00); // Salvation
+			packet.writeD(0x00); // Salvation
+			packet.writeD(0x00); // Salvation
 			
 			packet.writeF(charInfoPackage.getMaxHp()); // hp max
 			packet.writeF(charInfoPackage.getMaxMp()); // mp max

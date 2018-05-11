@@ -807,7 +807,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			
 			if (target instanceof L2PetInstance)
 			{
-				activeChar.sendPacket(new GMViewItemList((L2PetInstance) target));
+				activeChar.sendPacket(new GMViewItemList(1, (L2PetInstance) target));
 			}
 			else
 			{

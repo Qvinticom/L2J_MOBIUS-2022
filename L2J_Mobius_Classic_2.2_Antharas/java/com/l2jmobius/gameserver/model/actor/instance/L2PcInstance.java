@@ -4607,7 +4607,8 @@ public final class L2PcInstance extends L2Playable
 					standUp();
 				}
 				setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
-				sendPacket(new PrivateStoreManageListBuy(this));
+				sendPacket(new PrivateStoreManageListBuy(1, this));
+				sendPacket(new PrivateStoreManageListBuy(2, this));
 			}
 		}
 		else
@@ -5615,7 +5616,8 @@ public final class L2PcInstance extends L2Playable
 		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1);
 		msg.addPcName(partner);
 		sendPacket(msg);
-		sendPacket(new TradeStart(this));
+		sendPacket(new TradeStart(1, this));
+		sendPacket(new TradeStart(2, this));
 	}
 	
 	public void onTradeConfirm(L2PcInstance partner)
@@ -13697,8 +13699,10 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void sendItemList(boolean open)
 	{
-		sendPacket(new ItemList(this, open));
-		sendPacket(new ExQuestItemList(this));
+		sendPacket(new ItemList(1, this, open));
+		sendPacket(new ItemList(2, this, open));
+		sendPacket(new ExQuestItemList(1, this));
+		sendPacket(new ExQuestItemList(2, this));
 		sendPacket(new ExAdenaInvenCount(this));
 		sendPacket(new ExUserInfoInvenWeight(this));
 	}

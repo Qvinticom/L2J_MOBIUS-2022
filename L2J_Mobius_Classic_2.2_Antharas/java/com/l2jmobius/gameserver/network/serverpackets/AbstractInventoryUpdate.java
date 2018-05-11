@@ -84,7 +84,9 @@ public abstract class AbstractInventoryUpdate extends AbstractItemPacket
 	
 	protected final void writeItems(PacketWriter packet)
 	{
-		packet.writeH(_items.size());
+		packet.writeC(0); // 140
+		packet.writeD(0); // 140
+		packet.writeD(_items.size()); // 140
 		for (ItemInfo item : _items.values())
 		{
 			packet.writeH(item.getChange()); // Update type : 01-add, 02-modify, 03-remove

@@ -59,7 +59,8 @@ public class PrivateWarehouse implements IBypassHandler
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				activeChar.setActiveWarehouse(activeChar.getWarehouse());
 				activeChar.setInventoryBlockingStatus(true);
-				activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.PRIVATE));
+				activeChar.sendPacket(new WareHouseDepositList(1, activeChar, WareHouseDepositList.PRIVATE));
+				activeChar.sendPacket(new WareHouseDepositList(2, activeChar, WareHouseDepositList.PRIVATE));
 				return true;
 			}
 			
@@ -83,7 +84,8 @@ public class PrivateWarehouse implements IBypassHandler
 			return;
 		}
 		
-		player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.PRIVATE));
+		player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.PRIVATE));
+		player.sendPacket(new WareHouseWithdrawalList(2, player, WareHouseWithdrawalList.PRIVATE));
 	}
 	
 	@Override

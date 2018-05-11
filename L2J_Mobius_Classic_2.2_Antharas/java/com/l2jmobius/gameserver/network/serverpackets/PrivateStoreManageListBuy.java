@@ -26,13 +26,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class PrivateStoreManageListBuy extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final int _objId;
 	private final long _playerAdena;
 	private final Collection<L2ItemInstance> _itemList;
 	private final TradeItem[] _buyList;
 	
-	public PrivateStoreManageListBuy(L2PcInstance player)
+	public PrivateStoreManageListBuy(int sendType, L2PcInstance player)
 	{
+		_sendType = sendType;
 		_objId = player.getObjectId();
 		_playerAdena = player.getAdena();
 		_itemList = player.getInventory().getUniqueItems(false, true);
@@ -43,24 +45,35 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.PRIVATE_STORE_BUY_MANAGE_LIST.writeId(packet);
-		
-		packet.writeD(_objId);
-		packet.writeQ(_playerAdena);
-		
-		packet.writeD(_itemList.size()); // inventory items for potential buy
-		for (L2ItemInstance item : _itemList)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
+			packet.writeD(_itemList.size());
+			packet.writeD(_itemList.size());
+			for (L2ItemInstance item : _itemList)
+			{
+				writeItem(packet, item);
+				packet.writeQ(item.getItem().getReferencePrice() * 2);
+			}
 		}
-		
-		packet.writeD(_buyList.length); // count for all items already added for buy
-		for (TradeItem item : _buyList)
+		else
 		{
-			writeItem(packet, item);
-			packet.writeQ(item.getPrice());
-			packet.writeQ(item.getItem().getReferencePrice() * 2);
-			packet.writeQ(item.getCount());
+			packet.writeD(_objId);
+			packet.writeQ(_playerAdena);
+			packet.writeD(0x00);
+			for (L2ItemInstance item : _itemList)
+			{
+				writeItem(packet, item);
+				packet.writeQ(item.getItem().getReferencePrice() * 2);
+			}
+			packet.writeD(0x00);
+			for (TradeItem item2 : _buyList)
+			{
+				writeItem(packet, item2);
+				packet.writeQ(item2.getPrice());
+				packet.writeQ(item2.getItem().getReferencePrice() * 2);
+				packet.writeQ(item2.getCount());
+			}
 		}
 		return true;
 	}

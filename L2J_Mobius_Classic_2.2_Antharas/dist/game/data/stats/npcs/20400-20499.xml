@@ -399,121 +399,133 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20406" level="65" type="L2Monster" name="Young Red Fox">
+	<npc id="20406" level="65" type="L2Monster" name="Banshee" title="">
+		<!-- Source: https://l2central.info/classic/%D0%91%D0%B0%D0%BD%D1%8C%D1%88%D0%B8 -->
 		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
+			<skill name="HealMagic_a" id="4209" level="6" />
+			<skill name="SelfRangeBuff_a" id="4213" level="6" />
 		</parameters>
 		<race>DEMONIC</race>
-		<sex>MALE</sex>
+		<sex>FEMALE</sex>
 		<acquire exp="38968" sp="1169" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2313" hpRegen="2" mp="1188" mpRegen="0.9" />
-			<attack physical="9.322038" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="40.40403636" magical="32.52252" />
+			<vitals hp="18278" hpRegen="115.186274265113" mp="1188" mpRegen="2.7" />
+			<attack physical="4044.43744641044" magical="2658.00371930373" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="429.54225" magical="419.1" evasion="-18" />
 			<speed>
 				<walk ground="80" />
-				<run ground="174" />
+				<run ground="170" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hit_time>560</hit_time>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4209" level="6" /> <!-- BOSS Heal -->
+			<skill id="4213" level="6" /> <!-- BOSS Haste -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="503" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2415" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Circlet -->
-				<item id="57" min="2289" max="5346" chance="70" /> <!-- Adena -->
-				<item id="4180" min="1" max="1" chance="8.875" /> <!-- Recipe: Silver Arrow -->
-				<item id="4072" min="1" max="3" chance="7.933" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="3" chance="5.309" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4952" min="1" max="1" chance="1.019" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="0.963" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
+				<item id="503" min="1" max="1" chance="0.1" />
+				<item id="2415" min="1" max="1" chance="0.1" />
+				<item id="57" min="2289" max="5346" chance="70" />
+				<item id="4180" min="1" max="1" chance="9.767" />
+				<item id="4072" min="1" max="3" chance="8.722" />
+				<item id="4102" min="1" max="3" chance="5.835" />
+				<item id="4952" min="1" max="1" chance="1.122" />
+				<item id="4962" min="1" max="1" chance="1.066" />
+				<item id="4990" min="1" max="1" chance="1" />
+				<item id="4991" min="1" max="1" chance="1" />
 			</drop>
 			<spoil>
-				<item id="4952" min="1" max="1" chance="10.9" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="10.2" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="6.755" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="6.731" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+				<item id="4952" min="1" max="1" chance="11.95" />
+				<item id="4962" min="1" max="1" chance="11.25" />
+				<item id="4991" min="1" max="1" chance="7.429" />
+				<item id="4990" min="1" max="1" chance="7.405" />
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20407" level="70" type="L2Monster" name="Young Crimson Fox">
+	<npc id="20407" level="70" type="L2Monster" name="Maluk Banshee" title="">
+		<!-- Source: https://l2central.info/classic/%D0%91%D0%B0%D0%BD%D1%8C%D1%88%D0%B8_%D0%9C%D0%B0%D0%BB%D1%80%D1%83%D0%BA%D0%B0 -->
 		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
+			<skill name="HealMagic_a" id="4209" level="6" />
+			<skill name="SelfRangeBuff_a" id="4213" level="6" />
 		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
+		<race>DEMONIC</race>
+		<sex>FEMALE</sex>
 		<acquire exp="45946" sp="1378" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="2" mp="1345" mpRegen="0.9" />
-			<attack physical="9.322038" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="40.40403636" magical="32.52252" />
+			<vitals hp="20372" hpRegen="115.186274265113" mp="1345" mpRegen="2.7" />
+			<attack physical="4044.43744641044" magical="2658.00371930373" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="429.54225" magical="419.1" evasion="-18" />
 			<speed>
-				<walk ground="45" />
-				<run ground="174" />
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
-			<hit_time>370</hit_time>
+			<hit_time>560</hit_time>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status undying="false" canBeSown="true" />
+		<status undying="false" />
 		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4209" level="6" /> <!-- BOSS Heal -->
+			<skill id="4213" level="6" /> <!-- BOSS Haste -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="2" /> <!-- Standard Type -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
-		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="500" clanHelpRange="300" isAggressive="false" />
+		<ex_crt_effect>true</ex_crt_effect>
+		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="15" />
-			<height normal="45" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="2416" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Helmet -->
-				<item id="2417" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Helmet -->
-				<item id="287" min="1" max="1" chance="0.003" /> <!-- Bow of Peril -->
-				<item id="57" min="2757" max="6432" chance="70" /> <!-- Adena -->
-				<item id="4089" min="1" max="1" chance="10.9" /> <!-- Sealed Doom Helmet Design -->
-				<item id="4088" min="1" max="3" chance="5.269" /> <!-- Sealed Blue Wolf Helmet Design -->
-				<item id="4121" min="1" max="1" chance="1.251" /> <!-- Bow of Peril Shaft -->
-				<item id="4952" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.3" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.3" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4965" min="1" max="1" chance="0.075" /> <!-- Recipe: Spirit's Staff (60%) -->
-				<item id="90012" min="1" max="1" chance="0.075" /> <!-- Common Life Stone -->
-				<item id="5000" min="1" max="1" chance="0.03" /> <!-- Recipe: Damascus Sword (60%) -->
-				<item id="5004" min="1" max="1" chance="0.03" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
+				<item id="2416" min="1" max="1" chance="0.05" />
+				<item id="2417" min="1" max="1" chance="0.05" />
+				<item id="287" min="1" max="1" chance="0.005" />
+				<item id="57" min="2757" max="6432" chance="70" />
+				<item id="4089" min="1" max="1" chance="11.96" />
+				<item id="4088" min="1" max="3" chance="5.801" />
+				<item id="4121" min="1" max="1" chance="1.374" />
+				<item id="4952" min="1" max="1" chance="1" />
+				<item id="4962" min="1" max="1" chance="1" />
+				<item id="4991" min="1" max="1" chance="0.5" />
+				<item id="4990" min="1" max="1" chance="0.5" />
+				<item id="4965" min="1" max="1" chance="0.1" />
+				<item id="90012" min="1" max="1" chance="0.1" />
+				<item id="5000" min="1" max="1" chance="0.05" />
+				<item id="5004" min="1" max="1" chance="0.05" />
 			</drop>
 			<spoil>
-				<item id="4180" min="1" max="9" chance="90.365" /> <!-- Recipe: Silver Arrow -->
+				<item id="4180" min="1" max="9" chance="99.00" />
 			</spoil>
 		</drop_lists>
 	</npc>

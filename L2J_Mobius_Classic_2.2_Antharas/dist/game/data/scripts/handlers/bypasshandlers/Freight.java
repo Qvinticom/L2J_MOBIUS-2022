@@ -59,7 +59,7 @@ public class Freight implements IBypassHandler
 							activeChar.getActiveWarehouse().destroyItem("L2ItemInstance", i, activeChar, null);
 						}
 					}
-					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.FREIGHT));
+					activeChar.sendPacket(new WareHouseWithdrawalList(1, activeChar, WareHouseWithdrawalList.FREIGHT));
 				}
 				else
 				{

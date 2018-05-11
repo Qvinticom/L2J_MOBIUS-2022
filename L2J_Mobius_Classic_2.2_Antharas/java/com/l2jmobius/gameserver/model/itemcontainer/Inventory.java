@@ -113,7 +113,12 @@ public abstract class Inventory extends ItemContainer
 	public static final int PAPERDOLL_BROOCH_JEWEL4 = 29;
 	public static final int PAPERDOLL_BROOCH_JEWEL5 = 30;
 	public static final int PAPERDOLL_BROOCH_JEWEL6 = 31;
-	public static final int PAPERDOLL_TOTALSLOTS = 32;
+	public static final int PAPERDOLL_AGATION1 = 32; // new 140
+	public static final int PAPERDOLL_AGATION2 = 33; // new 140
+	public static final int PAPERDOLL_AGATION3 = 34; // new 140
+	public static final int PAPERDOLL_AGATION4 = 35; // new 140
+	public static final int PAPERDOLL_AGATION5 = 36; // new 140
+	public static final int PAPERDOLL_TOTALSLOTS = 37;
 	
 	// Speed percentage mods
 	public static final double MAX_ARMOR_WEIGHT = 12000;

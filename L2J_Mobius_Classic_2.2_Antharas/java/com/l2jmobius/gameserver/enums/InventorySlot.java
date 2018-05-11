@@ -56,7 +56,12 @@ public enum InventorySlot implements IUpdateTypeComponent
 	BROOCH_JEWEL3(Inventory.PAPERDOLL_BROOCH_JEWEL3),
 	BROOCH_JEWEL4(Inventory.PAPERDOLL_BROOCH_JEWEL4),
 	BROOCH_JEWEL5(Inventory.PAPERDOLL_BROOCH_JEWEL5),
-	BROOCH_JEWEL6(Inventory.PAPERDOLL_BROOCH_JEWEL6);
+	BROOCH_JEWEL6(Inventory.PAPERDOLL_BROOCH_JEWEL6),
+	AGATION1(32), // new 140
+	AGATION2(33), // new 140
+	AGATION3(34), // new 140
+	AGATION4(35), // new 140
+	AGATION5(36); // new 140
 	
 	private final int _paperdollSlot;
 	

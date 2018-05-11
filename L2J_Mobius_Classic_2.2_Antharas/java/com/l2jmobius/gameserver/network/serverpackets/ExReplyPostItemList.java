@@ -28,11 +28,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExReplyPostItemList extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final L2PcInstance _activeChar;
 	private final Collection<L2ItemInstance> _itemList;
 	
-	public ExReplyPostItemList(L2PcInstance activeChar)
+	public ExReplyPostItemList(int sendType, L2PcInstance activeChar)
 	{
+		_sendType = sendType;
 		_activeChar = activeChar;
 		_itemList = _activeChar.getInventory().getAvailableItems(true, false, false);
 	}
@@ -41,11 +43,15 @@ public class ExReplyPostItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_REPLY_POST_ITEM_LIST.writeId(packet);
-		
+		packet.writeC(_sendType);
 		packet.writeD(_itemList.size());
-		for (L2ItemInstance item : _itemList)
+		if (_sendType == 2)
 		{
-			writeItem(packet, item);
+			packet.writeD(_itemList.size());
+			for (L2ItemInstance item : _itemList)
+			{
+				writeItem(packet, item);
+			}
 		}
 		return true;
 	}

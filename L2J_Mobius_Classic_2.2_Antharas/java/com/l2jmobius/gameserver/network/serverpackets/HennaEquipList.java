@@ -63,7 +63,6 @@ public class HennaEquipList implements IClientOutgoingPacket
 				packet.writeQ(henna.getWearCount()); // amount of dyes required
 				packet.writeQ(henna.getWearFee()); // amount of Adena required
 				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00); // meet the requirement or not
-				packet.writeD(0x00); // TODO: Find me!
 			}
 		}
 		return true;

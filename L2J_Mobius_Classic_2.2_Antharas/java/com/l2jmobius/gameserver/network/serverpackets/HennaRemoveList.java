@@ -51,7 +51,6 @@ public class HennaRemoveList implements IClientOutgoingPacket
 				packet.writeQ(henna.getCancelCount());
 				packet.writeQ(henna.getCancelFee());
 				packet.writeD(0x00);
-				packet.writeD(0x00);
 			}
 		}
 		return true;

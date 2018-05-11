@@ -1,7 +1,7 @@
 L2J-Mobius Classic 2.0
 
-Client: https://drive.google.com/uc?id=1i8udOtNak2ANythwdPYY3sVdawOxuyBo&export=download
-Geodata: http://www.mediafire.com/file/2rzuybowd9zfax4/mobius_geodata_zaken_l2d.zip
+Client: 
+Geodata: 
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
@@ -61,6 +61,9 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Added raidbosses according to map
 -Zaken boss AI
 -TODO: Newbie quest changes
+
+Antharas: https://eu.4game.com/lineage2classic/play/antharas/
+
 
 Customs:
 -Newbie Helper NPC location info
