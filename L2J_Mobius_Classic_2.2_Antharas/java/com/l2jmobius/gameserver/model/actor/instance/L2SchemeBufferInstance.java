@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 
 public class L2SchemeBufferInstance extends L2Npc
@@ -136,13 +137,28 @@ public class L2SchemeBufferInstance extends L2Npc
 			
 			if (currentCommand.startsWith("skillselect") && !schemeName.equalsIgnoreCase("none"))
 			{
-				if (skills.size() < player.getStat().getMaxBuffCount())
+				final Skill skill = SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId));
+				if (skill.isDance())
 				{
-					skills.add(skillId);
+					if (getCountOf(skills, true) < Config.DANCES_MAX_AMOUNT)
+					{
+						skills.add(skillId);
+					}
+					else
+					{
+						player.sendMessage("This scheme has reached the maximum amount of dances/songs.");
+					}
 				}
 				else
 				{
-					player.sendMessage("This scheme has reached the maximum amount of buffs.");
+					if (getCountOf(skills, false) < player.getStat().getMaxBuffCount())
+					{
+						skills.add(skillId);
+					}
+					else
+					{
+						player.sendMessage("This scheme has reached the maximum amount of buffs.");
+					}
 				}
 			}
 			else if (currentCommand.startsWith("skillunselect"))
@@ -241,7 +257,7 @@ public class L2SchemeBufferInstance extends L2Npc
 			for (Map.Entry<String, ArrayList<Integer>> scheme : schemes.entrySet())
 			{
 				final int cost = getFee(scheme.getValue());
-				sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " / " + player.getStat().getMaxBuffCount() + "]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
+				sb.append("<font color=\"LEVEL\">" + scheme.getKey() + " [" + scheme.getValue().size() + " skill(s)]" + ((cost > 0) ? " - cost: " + NumberFormat.getInstance(Locale.ENGLISH).format(cost) : "") + "</font><br1>");
 				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs " + scheme.getKey() + " " + cost + "\">Use on Me</a>&nbsp;|&nbsp;");
 				sb.append("<a action=\"bypass -h npc_%objectId%_givebuffs " + scheme.getKey() + " " + cost + " pet\">Use on Pet</a>&nbsp;|&nbsp;");
 				sb.append("<a action=\"bypass -h npc_%objectId%_editschemes Buffs " + scheme.getKey() + " 1\">Edit</a>&nbsp;|&nbsp;");
@@ -271,7 +287,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		
 		html.setFile(player, getHtmlPath(getId(), 2));
 		html.replace("%schemename%", schemeName);
-		html.replace("%count%", schemeSkills.size() + " / " + player.getStat().getMaxBuffCount());
+		html.replace("%count%", getCountOf(schemeSkills, false) + " / " + player.getStat().getMaxBuffCount() + " buffs, " + getCountOf(schemeSkills, true) + " / " + Config.DANCES_MAX_AMOUNT + " dances/songs");
 		html.replace("%typesframe%", getTypesFrame(groupType, schemeName));
 		html.replace("%skilllistframe%", getGroupSkillList(player, groupType, schemeName, page));
 		html.replace("%objectId%", getObjectId());
@@ -446,5 +462,10 @@ public class L2SchemeBufferInstance extends L2Npc
 	private static int countPagesNumber(int objectsSize, int pageSize)
 	{
 		return (objectsSize / pageSize) + ((objectsSize % pageSize) == 0 ? 0 : 1);
+	}
+	
+	private static long getCountOf(List<Integer> skills, boolean dances)
+	{
+		return skills.stream().filter(sId -> SkillData.getInstance().getSkill(sId, 1).isDance() == dances).count();
 	}
 }
