@@ -160,6 +160,9 @@ import quests.Q11004_PerfectLeatherArmor2.Q11004_PerfectLeatherArmor2;
 import quests.Q11005_PerfectLeatherArmor3.Q11005_PerfectLeatherArmor3;
 import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
 import quests.Q11008_PreparationForDungeon.Q11008_PreparationForDungeon;
+import quests.Q11009_NewPotionDevelopment1.Q11009_NewPotionDevelopment1;
+import quests.Q11010_NewPotionDevelopment2.Q11010_NewPotionDevelopment2;
+import quests.Q11011_NewPotionDevelopment3.Q11011_NewPotionDevelopment3;
 import quests.Q11013_ShilensHunt.Q11013_ShilensHunt;
 import quests.Q11014_SurpriseGift.Q11014_SurpriseGift;
 import quests.Q11015_PrepareForTrade1.Q11015_PrepareForTrade1;
@@ -317,6 +320,9 @@ public class QuestMasterHandler
 		Q11005_PerfectLeatherArmor3.class,
 		Q11007_NoiseInWoods.class,
 		Q11008_PreparationForDungeon.class,
+		Q11009_NewPotionDevelopment1.class,
+		Q11010_NewPotionDevelopment2.class,
+		Q11011_NewPotionDevelopment3.class,
 		Q11013_ShilensHunt.class,
 		Q11014_SurpriseGift.class,
 		Q11015_PrepareForTrade1.class,

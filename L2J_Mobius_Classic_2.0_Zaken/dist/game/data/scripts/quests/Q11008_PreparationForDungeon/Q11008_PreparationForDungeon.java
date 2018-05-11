@@ -49,6 +49,7 @@ public class Q11008_PreparationForDungeon extends Quest
 	// Monsters
 	private static final int KABOO_ORC_WARRIOR_CAPTAIN = 20472;
 	private static final int KABOO_ORC_WARRIOR_LIEUTENANT = 20473;
+	private static final int KABOO_ORC_WARRIOR = 20471;
 	private static final int DRYAD = 20013;
 	private static final int DRYAD_ELDER = 20019;
 	private static final int HOOK_SPIDER = 20308;
@@ -63,7 +64,7 @@ public class Q11008_PreparationForDungeon extends Quest
 		super(11008);
 		addStartNpc(KENDELL);
 		addTalkId(KENDELL, STARDEN);
-		addKillId(KABOO_ORC_WARRIOR_CAPTAIN, KABOO_ORC_WARRIOR_LIEUTENANT, DRYAD, DRYAD_ELDER, HOOK_SPIDER, CRIMSON_SPIDER, PINCER_SPIDER);
+		addKillId(KABOO_ORC_WARRIOR, KABOO_ORC_WARRIOR_CAPTAIN, KABOO_ORC_WARRIOR_LIEUTENANT, DRYAD, DRYAD_ELDER, HOOK_SPIDER, CRIMSON_SPIDER, PINCER_SPIDER);
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
 		addCondRace(Race.ELF, "no-race.html"); // Custom
 		registerQuestItems(NOTE_ABOUT_REQUIRED_INGREDIENTS, ORCS_BANDAGE, DRYADS_CRIMSON_HERB, SPIDER_VENOM);
@@ -194,6 +195,7 @@ public class Q11008_PreparationForDungeon extends Quest
 		{
 			switch (npc.getId())
 			{
+				case KABOO_ORC_WARRIOR:
 				case KABOO_ORC_WARRIOR_CAPTAIN:
 				case KABOO_ORC_WARRIOR_LIEUTENANT:
 				{
