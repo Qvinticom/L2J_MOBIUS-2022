@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/ensoulFees.xsd">
+	<fee crystalType="D">
+		<first itemId="2130" count="107" /> <!-- Gemstone (D-grade-grade) -->
+		<reNormal itemId="2130" count="89" /> <!-- Gemstone (D-grade) -->
+	</fee>
+	<fee crystalType="C">
+		<first itemId="2131" count="177" /> <!-- Gemstone (C-grade) -->
+		<reNormal itemId="2131" count="89" />	<!-- Gemstone (C-grade) -->
+	</fee>
+	<fee crystalType="B">
+		<first itemId="2132" count="112" /> <!-- Gemstone (B-grade) -->
+		<reNormal itemId="2132" count="56" />	<!-- Gemstone (B-grade) -->
+	</fee>
+	<fee crystalType="A">
+		<first itemId="2133" count="24" /> <!-- Gemstone (A-grade) -->
+		<reNormal itemId="2133" count="12" />	<!-- Gemstone (A-grade) -->
+	</fee>
+</list>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="24000" level="99" type="L2Npc" name="Leona Blackbird" title="u,Dragon’s Advocate">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="9.5" />
+			<height normal="22.4" />
+		</collision>
+	</npc>
+	<npc id="24001" level="99" type="L2Npc" name="Kain Van Halter" title="Prince of the Second Dimension">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<speed>
+				<walk ground="64" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="9" />
+			<height normal="20" />
+		</collision>
+	</npc>
+	<npc id="24002" level="99" type="L2Npc" name="Queen Ant" title="Successor in the Ant Nest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="151492" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="45" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="24003" level="99" type="L2Npc" name="Escort Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24004" level="99" type="L2Npc" name="Royal Guard Ant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
+	</npc>
+	<npc id="24005" level="99" type="L2Npc" name="Urfen" title="Orfen Kin">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="167822" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="30" />
+			<height normal="53" />
+		</collision>
+	</npc>
+	<npc id="24006" level="99" type="L2Npc" name="Laikel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="18.5" />
+			<height normal="30.5" />
+		</collision>
+	</npc>
+	<npc id="24007" level="99" type="L2Npc" name="Riba">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="12.5" />
+			<height normal="34.5" />
+		</collision>
+	</npc>
+	<npc id="24008" level="99" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="24009" level="99" type="L2Npc" name="Zaken" title="Unworldly Pirate King">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="42" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" />
+			<height normal="32" />
+		</collision>
+	</npc>
+	<npc id="24010" level="99" type="L2Npc" name="Pirate Zombie Captain">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="14" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="17" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="24011" level="99" type="L2Npc" name="Pirate Zombie">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
+			<speed>
+				<walk ground="11" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="24012" level="99" type="L2Npc" name="Saium" title="Relative of the Emperor">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="212878" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="26" />
+			<height normal="67.8" />
+		</collision>
+	</npc>
+	<npc id="24013" level="99" type="L2Npc" name="Traitor Angel">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="13" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="24014" level="66" type="L2Monster" name="Vanor" title="Mercenary of Glory">
+		<race>HUMANOID</race>
+		<sex>FEMALE</sex>
+		<acquire exp="13094" sp="392" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<speed>
+				<walk ground="36" />
+				<run ground="174" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="15.6" />
+			<height normal="37.8" />
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="503" min="1" max="1" chance="0.03" /> <!-- Sealed Zubei's Helmet -->
+				<item id="2415" min="1" max="1" chance="0.03" /> <!-- Sealed Avadon Circlet -->
+				<item id="2416" min="1" max="1" chance="0.0075" /> <!-- Sealed Blue Wolf Helmet -->
+				<item id="2417" min="1" max="1" chance="0.0075" /> <!-- Sealed Doom Helmet -->
+				<item id="57" min="672" max="1570" chance="70" /> <!-- Adena -->
+				<item id="1870" min="1" max="1" chance="29.96" /> <!-- Coal -->
+				<item id="4072" min="1" max="1" chance="2.308" /> <!-- Sealed Avadon Circlet Pattern -->
+				<item id="4102" min="1" max="1" chance="2.269" /> <!-- Sealed Zubei's Helmet Design -->
+				<item id="1875" min="1" max="1" chance="2.027" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="2.003" /> <!-- Oriharukon Ore -->
+				<item id="4088" min="1" max="1" chance="1.999" /> <!-- Sealed Blue Wolf Helmet Design -->
+				<item id="4089" min="1" max="1" chance="1.888" /> <!-- Sealed Doom Helmet Design -->
+				<item id="90012" min="1" max="1" chance="0.03" /> <!-- Common Life Stone -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="7" chance="80.21" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="21.22" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="20.91" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
+	</npc>
+</list>
