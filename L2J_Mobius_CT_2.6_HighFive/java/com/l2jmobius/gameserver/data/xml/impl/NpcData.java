@@ -311,7 +311,7 @@ public class NpcData implements IGameXmlReader
 													break;
 												}
 											}
-											case "hitTime":
+											case "hittime":
 											{
 												set.set("hitTime", npcNode.getTextContent()); // TODO: Implement me default 600 (value in ms)
 												break;
@@ -408,7 +408,7 @@ public class NpcData implements IGameXmlReader
 												set.set("longRangeSkillChance", parseInteger(attrs, "longRangeChance"));
 												break;
 											}
-											case "clanList":
+											case "clanlist":
 											{
 												for (Node clanListNode = aiNode.getFirstChild(); clanListNode != null; clanListNode = clanListNode.getNextSibling())
 												{
@@ -424,7 +424,7 @@ public class NpcData implements IGameXmlReader
 															clans.add(getOrCreateClanId(clanListNode.getTextContent()));
 															break;
 														}
-														case "ignoreNpcId":
+														case "ignorenpcid":
 														{
 															if (ignoreClanNpcIds == null)
 															{
