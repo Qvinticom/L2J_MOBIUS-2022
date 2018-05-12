@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27300" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
 		<parameters>
@@ -16,7 +16,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
@@ -67,7 +67,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
@@ -553,7 +553,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -599,7 +599,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -645,7 +645,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -685,8 +685,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="161" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="6.5" mp="1507" mpRegen="2.4" />
+			<vitals hp="2823" hpRegen="6.5" mp="889" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="190.09077" magical="163.64727" evasion="10" />
 			<speed>
@@ -723,12 +724,13 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
+		<equipment rhand="161" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="251.5285745" magical="216.53847" evasion="10" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="180" />
 			</speed>
 			<hit_time>560</hit_time>
@@ -749,8 +751,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="27" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 	</npc>
 	<npc id="27318" level="70" type="L2Monster" name="Soul of Cold" title="Quest Monster">
@@ -762,12 +764,12 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="5.5" mp="1507" mpRegen="2.1" />
+			<vitals hp="2823" hpRegen="5.5" mp="637" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
-				<walk ground="30" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="130" />
 			</speed>
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -788,7 +790,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="16" />
-			<height normal="35.6" />
+			<height normal="37.2" />
 		</collision>
 	</npc>
 	<npc id="27319" level="70" type="L2Monster" name="Ghost of Solitude" title="Quest Monster">
@@ -800,12 +802,12 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="2.5" mp="1507" mpRegen="1.2" />
+			<vitals hp="2823" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="81.34791" magical="59.52687" />
 			<speed>
-				<walk ground="36" />
-				<run ground="180" />
+				<walk ground="30" />
+				<run ground="130" />
 			</speed>
 			<hit_time>240</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -825,8 +827,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="12" />
-			<height normal="25" />
+			<radius normal="14" />
+			<height normal="14.5" />
 		</collision>
 	</npc>
 	<npc id="27320" level="70" type="L2Monster" name="Fiend of Cold" title="Quest Monster">
@@ -837,13 +839,14 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
+			<vitals hp="2823" hpRegen="13.43" mp="192" mpRegen="3.09" />
 			<attack physical="6300" magical="4200" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
 			<defence physical="3500" magical="4200" />
 			<speed>
-				<walk ground="60" />
-				<run ground="180" />
+				<walk ground="80" />
+				<run ground="130" />
 			</speed>
 			<hit_time>460</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -863,20 +866,21 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="34" />
-			<height normal="28" />
+			<radius normal="9" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="27321" level="70" type="L2Monster" name="Spirit of Cold" title="Quest Monster">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="291" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
+			<vitals hp="2823" hpRegen="13.43" mp="192" mpRegen="3.09" />
 			<attack physical="36.4" magical="57.4" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
 			<defence physical="70" magical="50.4" />
 			<speed>
-				<walk ground="30" />
-				<run ground="180" />
+				<walk ground="43" />
+				<run ground="130" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -896,8 +900,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="20" />
-			<height normal="50" />
+			<radius normal="10" />
+			<height normal="23" />
 		</collision>
 	</npc>
 </list>

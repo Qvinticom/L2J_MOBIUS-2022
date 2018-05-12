@@ -60,23 +60,23 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6327" min="1" max="1" chance="0.01" />
-				<item id="6328" min="1" max="1" chance="0.01" />
-				<item id="6326" min="1" max="1" chance="0.005" />
-				<item id="57" min="1699" max="3966" chance="70" />
-				<item id="1865" min="1" max="3" chance="26.08" />
-				<item id="1869" min="4" max="12" chance="10.293" />
-				<item id="1880" min="1" max="1" chance="8.176" />
-				<item id="1873" min="2" max="6" chance="6.576" />
-				<item id="6346" min="1" max="1" chance="2.035" />
-				<item id="6342" min="1" max="1" chance="1.469" />
-				<item id="6344" min="1" max="1" chance="1" />
+				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
+				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.6" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.363" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.432" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.981" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.847" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.338" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="92.16" />
-				<item id="6339" min="1" max="1" chance="2.617" />
-				<item id="6337" min="1" max="1" chance="1.651" />
-				<item id="6335" min="1" max="1" chance="1.278" />
+				<item id="1873" min="1" max="5" chance="84.1" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.384" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.496" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="1.162" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -140,26 +140,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5290" min="1" max="1" chance="0.01" />
-				<item id="5291" min="1" max="1" chance="0.01" />
-				<item id="5295" min="1" max="1" chance="0.01" />
-				<item id="5296" min="1" max="1" chance="0.01" />
-				<item id="57" min="1607" max="3749" chance="70" />
-				<item id="1865" min="1" max="3" chance="25.48" />
-				<item id="1869" min="4" max="12" chance="9.693" />
-				<item id="1880" min="1" max="1" chance="7.723" />
-				<item id="1873" min="2" max="6" chance="6.232" />
-				<item id="5496" min="1" max="1" chance="1" />
-				<item id="5497" min="1" max="1" chance="1" />
-				<item id="5508" min="1" max="1" chance="1" />
-				<item id="5509" min="1" max="1" chance="1" />
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.14" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.814" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.02" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.67" /> <!-- Silver Nugget -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1865" min="1" max="9" chance="96.50" />
-				<item id="5368" min="1" max="1" chance="2.218" />
-				<item id="5392" min="1" max="1" chance="2.197" />
-				<item id="5370" min="1" max="1" chance="2.175" />
-				<item id="5394" min="1" max="1" chance="2.149" />
+				<item id="1865" min="1" max="9" chance="87.36" /> <!-- Varnish -->
+				<item id="5368" min="1" max="1" chance="2.021" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="2" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="1.952" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -231,19 +231,19 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5292" min="1" max="1" chance="0.05" />
-				<item id="5315" min="1" max="1" chance="0.05" />
-				<item id="57" min="1959" max="4571" chance="70" />
-				<item id="1869" min="4" max="12" chance="11.58" />
-				<item id="1880" min="1" max="1" chance="9.391" />
-				<item id="1873" min="2" max="6" chance="7.483" />
-				<item id="1865" min="9" max="27" chance="5.237" />
-				<item id="5494" min="1" max="1" chance="2.316" />
-				<item id="5495" min="1" max="1" chance="1.617" />
+				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.51" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.534" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.797" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.761" /> <!-- Varnish -->
+				<item id="5494" min="1" max="1" chance="2.106" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.465" /> <!-- Sealed Shield of Nightmare Fragment -->
 			</drop>
 			<spoil>
-				<item id="5364" min="1" max="1" chance="6.215" />
-				<item id="5366" min="1" max="1" chance="4.085" />
+				<item id="5364" min="1" max="1" chance="5.644" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.709" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -311,26 +311,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.01" />
-				<item id="5314" min="1" max="1" chance="0.01" />
-				<item id="5318" min="1" max="1" chance="0.01" />
-				<item id="5319" min="1" max="1" chance="0.01" />
-				<item id="57" min="1901" max="4435" chance="70" />
-				<item id="1869" min="4" max="12" chance="11.27" />
-				<item id="1880" min="1" max="1" chance="9.199" />
-				<item id="1873" min="2" max="6" chance="7.262" />
-				<item id="1865" min="9" max="27" chance="5.094" />
-				<item id="5502" min="1" max="1" chance="1" />
-				<item id="5503" min="1" max="1" chance="1" />
-				<item id="5514" min="1" max="1" chance="1" />
-				<item id="5515" min="1" max="1" chance="1" />
+				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="76.57" />
-				<item id="5382" min="1" max="1" chance="1.710" />
-				<item id="5404" min="1" max="1" chance="1.665" />
-				<item id="5380" min="1" max="1" chance="1.623" />
-				<item id="5406" min="1" max="1" chance="1.620" />
+				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
+				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -396,23 +396,23 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="6327" min="1" max="1" chance="0.01" />
-				<item id="6328" min="1" max="1" chance="0.01" />
-				<item id="6326" min="1" max="1" chance="0.005" />
-				<item id="57" min="1699" max="3966" chance="70" />
-				<item id="1865" min="1" max="3" chance="27.16" />
-				<item id="1869" min="4" max="12" chance="10.291" />
-				<item id="1880" min="1" max="1" chance="8.165" />
-				<item id="1873" min="2" max="6" chance="6.554" />
-				<item id="6346" min="1" max="1" chance="2.114" />
-				<item id="6342" min="1" max="1" chance="1.414" />
-				<item id="6344" min="1" max="1" chance="1" />
+				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
+				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="24.68" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.361" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.421" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.959" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.926" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.283" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="89.99" />
-				<item id="6339" min="1" max="1" chance="2.615" />
-				<item id="6337" min="1" max="1" chance="1.740" />
-				<item id="6335" min="1" max="1" chance="1.333" />
+				<item id="1873" min="1" max="5" chance="81.93" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.382" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.585" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="1.217" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -483,19 +483,19 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5292" min="1" max="1" chance="0.05" />
-				<item id="5315" min="1" max="1" chance="0.05" />
-				<item id="57" min="1959" max="4571" chance="70" />
-				<item id="1869" min="4" max="12" chance="12.11" />
-				<item id="1880" min="1" max="1" chance="9.411" />
-				<item id="1873" min="2" max="6" chance="7.502" />
-				<item id="1865" min="9" max="27" chance="5.264" />
-				<item id="5494" min="1" max="1" chance="2.248" />
-				<item id="5495" min="1" max="1" chance="1.735" />
+				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="11.04" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.554" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.816" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.788" /> <!-- Varnish -->
+				<item id="5494" min="1" max="1" chance="2.038" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.583" /> <!-- Sealed Shield of Nightmare Fragment -->
 			</drop>
 			<spoil>
-				<item id="5364" min="1" max="1" chance="6.339" />
-				<item id="5366" min="1" max="1" chance="4.108" />
+				<item id="5364" min="1" max="1" chance="5.768" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.732" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -568,26 +568,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.01" />
-				<item id="5314" min="1" max="1" chance="0.01" />
-				<item id="5318" min="1" max="1" chance="0.01" />
-				<item id="5319" min="1" max="1" chance="0.01" />
-				<item id="57" min="1901" max="4435" chance="70" />
-				<item id="1869" min="4" max="12" chance="11.33" />
-				<item id="1880" min="1" max="1" chance="9.136" />
-				<item id="1873" min="2" max="6" chance="7.335" />
-				<item id="1865" min="9" max="27" chance="5.084" />
-				<item id="5502" min="1" max="1" chance="1" />
-				<item id="5503" min="1" max="1" chance="1" />
-				<item id="5514" min="1" max="1" chance="1" />
-				<item id="5515" min="1" max="1" chance="1" />
+				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="76.81" />
-				<item id="5406" min="1" max="1" chance="1.731" />
-				<item id="5382" min="1" max="1" chance="1.730" />
-				<item id="5380" min="1" max="1" chance="1.702" />
-				<item id="5404" min="1" max="1" chance="1.624" />
+				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
+				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -649,26 +649,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5290" min="1" max="1" chance="0.01" />
-				<item id="5291" min="1" max="1" chance="0.01" />
-				<item id="5295" min="1" max="1" chance="0.01" />
-				<item id="5296" min="1" max="1" chance="0.01" />
-				<item id="57" min="1607" max="3749" chance="70" />
-				<item id="1865" min="1" max="3" chance="25.93" />
-				<item id="1869" min="4" max="12" chance="9.695" />
-				<item id="1880" min="1" max="1" chance="7.707" />
-				<item id="1873" min="2" max="6" chance="6.163" />
-				<item id="5496" min="1" max="1" chance="1" />
-				<item id="5497" min="1" max="1" chance="1" />
-				<item id="5508" min="1" max="1" chance="1" />
-				<item id="5509" min="1" max="1" chance="1" />
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.59" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.816" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.004" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.601" /> <!-- Silver Nugget -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1865" min="1" max="9" chance="99.00" />
-				<item id="5370" min="1" max="1" chance="2.225" />
-				<item id="5394" min="1" max="1" chance="2.203" />
-				<item id="5368" min="1" max="1" chance="2.108" />
-				<item id="5392" min="1" max="1" chance="2.098" />
+				<item id="1865" min="1" max="9" chance="92.645" /> <!-- Varnish -->
+				<item id="5370" min="1" max="1" chance="2.028" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="2.006" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5368" min="1" max="1" chance="1.911" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="1.901" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -903,26 +903,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5298" min="1" max="1" chance="0.05" />
-				<item id="5297" min="1" max="1" chance="0.01" />
-				<item id="5301" min="1" max="1" chance="0.01" />
-				<item id="57" min="6827" max="15941" chance="70" />
-				<item id="1873" min="2" max="6" chance="25.81" />
-				<item id="1865" min="9" max="27" chance="19.03" />
-				<item id="1869" min="28" max="84" chance="5.838" />
-				<item id="1880" min="4" max="12" chance="4.123" />
-				<item id="5482" min="1" max="1" chance="2.482" />
-				<item id="5478" min="1" max="1" chance="1.660" />
-				<item id="5479" min="1" max="1" chance="1.132" />
-				<item id="5480" min="1" max="1" chance="1" />
-				<item id="5481" min="1" max="1" chance="1" />
+				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.42" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="17.37" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.304" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.749" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.252" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.513" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="1.029" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</drop>
 			<spoil>
-				<item id="5340" min="1" max="1" chance="4.941" />
-				<item id="5332" min="1" max="1" chance="3.147" />
-				<item id="5334" min="1" max="1" chance="2.075" />
-				<item id="5338" min="1" max="1" chance="1.443" />
-				<item id="5336" min="1" max="1" chance="1.433" />
+				<item id="5340" min="1" max="1" chance="4.493" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.867" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.884" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5338" min="1" max="1" chance="1.317" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.307" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -993,26 +993,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5298" min="1" max="1" chance="0.05" />
-				<item id="5297" min="1" max="1" chance="0.01" />
-				<item id="5301" min="1" max="1" chance="0.01" />
-				<item id="57" min="6827" max="15941" chance="70" />
-				<item id="1873" min="2" max="6" chance="27.03" />
-				<item id="1865" min="9" max="27" chance="18.15" />
-				<item id="1869" min="28" max="84" chance="5.885" />
-				<item id="1880" min="4" max="12" chance="4.153" />
-				<item id="5482" min="1" max="1" chance="2.573" />
-				<item id="5478" min="1" max="1" chance="1.553" />
-				<item id="5479" min="1" max="1" chance="1.157" />
-				<item id="5480" min="1" max="1" chance="1" />
-				<item id="5481" min="1" max="1" chance="1" />
+				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="24.64" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="16.49" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.351" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.779" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.343" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.406" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="1.054" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</drop>
 			<spoil>
-				<item id="5340" min="1" max="1" chance="4.975" />
-				<item id="5332" min="1" max="1" chance="3.017" />
-				<item id="5334" min="1" max="1" chance="2.169" />
-				<item id="5336" min="1" max="1" chance="1.421" />
-				<item id="5338" min="1" max="1" chance="1.363" />
+				<item id="5340" min="1" max="1" chance="4.527" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.737" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.295" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5338" min="1" max="1" chance="1.237" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1085,29 +1085,29 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5288" min="1" max="1" chance="0.05" />
-				<item id="5287" min="1" max="1" chance="0.01" />
-				<item id="5293" min="1" max="1" chance="0.005" />
-				<item id="5311" min="1" max="1" chance="0.005" />
-				<item id="5316" min="1" max="1" chance="0.005" />
-				<item id="57" min="7599" max="17731" chance="70" />
-				<item id="1865" min="9" max="27" chance="21.02" />
-				<item id="1869" min="28" max="84" chance="6.470" />
-				<item id="1880" min="4" max="12" chance="4.570" />
-				<item id="1873" min="22" max="66" chance="3.272" />
-				<item id="5524" min="1" max="1" chance="1.679" />
-				<item id="5520" min="1" max="1" chance="1.046" />
-				<item id="5521" min="1" max="1" chance="1" />
-				<item id="5522" min="1" max="1" chance="1" />
-				<item id="5523" min="1" max="1" chance="1" />
+				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="19.17" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.876" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.154" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.976" /> <!-- Silver Nugget -->
+				<item id="5524" min="1" max="1" chance="1.526" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="5520" min="1" max="1" chance="0.946" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="96.83" />
-				<item id="5424" min="1" max="1" chance="3.474" />
-				<item id="5416" min="1" max="1" chance="2.101" />
-				<item id="5418" min="1" max="1" chance="1.530" />
-				<item id="5420" min="1" max="1" chance="1" />
-				<item id="5422" min="1" max="1" chance="1" />
+				<item id="1873" min="1" max="15" chance="87.83" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="3.162" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.907" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.397" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1171,27 +1171,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5304" min="1" max="1" chance="0.05" />
-				<item id="5305" min="1" max="1" chance="0.05" />
-				<item id="5308" min="1" max="1" chance="0.01" />
-				<item id="57" min="7421" max="17315" chance="70" />
-				<item id="1865" min="9" max="27" chance="19.92" />
-				<item id="1869" min="28" max="84" chance="6.447" />
-				<item id="1880" min="4" max="12" chance="4.489" />
-				<item id="1873" min="22" max="66" chance="3.235" />
-				<item id="5489" min="1" max="1" chance="2.743" />
-				<item id="5485" min="1" max="1" chance="1.813" />
-				<item id="5486" min="1" max="1" chance="1.208" />
-				<item id="5487" min="1" max="1" chance="1" />
-				<item id="5488" min="1" max="1" chance="1" />
+				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.12" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.867" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.083" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.946" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.493" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.654" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.096" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="97.26" />
-				<item id="5354" min="1" max="1" chance="4.479" />
-				<item id="5346" min="1" max="1" chance="2.785" />
-				<item id="5348" min="1" max="1" chance="1.871" />
-				<item id="5350" min="1" max="1" chance="1.310" />
-				<item id="5352" min="1" max="1" chance="1.184" />
+				<item id="1873" min="1" max="15" chance="88.47" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="4.074" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.532" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.698" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.196" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5352" min="1" max="1" chance="1.07" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1263,14 +1263,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7845" max="18306" chance="70" />
-				<item id="730" min="1" max="1" chance="1.066" />
-				<item id="729" min="1" max="1" chance="0.5" />
-				<item id="90013" min="1" max="1" chance="0.5" />
-				<item id="90014" min="1" max="1" chance="0.1" />
+				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.966" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
+				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="15" chance="99.00" />
+				<item id="1875" min="1" max="15" chance="90.445" /> <!-- Stone of Purity -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1334,31 +1334,31 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7561" max="17642" chance="70" />
-				<item id="1877" min="1" max="1" chance="18.85" />
-				<item id="1876" min="3" max="9" chance="16.45" />
-				<item id="1875" min="2" max="6" chance="8.101" />
-				<item id="8341" min="1" max="1" chance="2.329" />
-				<item id="5533" min="1" max="1" chance="0.5" />
-				<item id="5548" min="1" max="1" chance="0.5" />
-				<item id="5547" min="1" max="1" chance="0.5" />
-				<item id="5546" min="1" max="1" chance="0.5" />
-				<item id="5545" min="1" max="1" chance="0.5" />
-				<item id="5543" min="1" max="1" chance="0.5" />
-				<item id="5542" min="1" max="1" chance="0.5" />
-				<item id="5529" min="1" max="1" chance="0.5" />
-				<item id="5535" min="1" max="1" chance="0.5" />
-				<item id="5534" min="1" max="1" chance="0.5" />
-				<item id="5537" min="1" max="1" chance="0.5" />
+				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="17.09" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="14.98" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.366" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.112" /> <!-- Spiritual Eye Piece -->
+				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
+				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
+				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
+				<item id="5546" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5543" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff Head -->
+				<item id="5542" min="1" max="1" chance="0.3" /> <!-- Halberd Edge -->
+				<item id="5529" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer Edge -->
+				<item id="5535" min="1" max="1" chance="0.3" /> <!-- Carnage Bow Shaft -->
+				<item id="5534" min="1" max="1" chance="0.3" /> <!-- Soul Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="54.48" />
-				<item id="5434" min="1" max="1" chance="0.5" />
-				<item id="5440" min="1" max="1" chance="0.5" />
-				<item id="5444" min="1" max="1" chance="0.5" />
-				<item id="5460" min="1" max="1" chance="0.5" />
-				<item id="5468" min="1" max="1" chance="0.5" />
-				<item id="5470" min="1" max="1" chance="0.5" />
+				<item id="1875" min="1" max="3" chance="51.92" /> <!-- Stone of Purity -->
+				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
+				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
+				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
+				<item id="5460" min="1" max="1" chance="0.3" /> <!-- Recipe: Dasparion's Staff (60%) -->
+				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
+				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1430,23 +1430,23 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5289" min="1" max="1" chance="0.05" />
-				<item id="5294" min="1" max="1" chance="0.05" />
-				<item id="57" min="7766" max="18120" chance="70" />
-				<item id="1877" min="1" max="1" chance="19.34" />
-				<item id="1876" min="3" max="9" chance="17.25" />
-				<item id="1875" min="2" max="6" chance="8.329" />
-				<item id="5525" min="1" max="1" chance="4.549" />
-				<item id="5526" min="1" max="1" chance="4.468" />
-				<item id="5527" min="1" max="1" chance="3.439" />
-				<item id="5528" min="1" max="1" chance="3.436" />
+				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
+				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="17.53" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.74" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.574" /> <!-- Stone of Purity -->
+				<item id="5525" min="1" max="1" chance="4.141" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5526" min="1" max="1" chance="4.06" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5527" min="1" max="1" chance="3.123" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="3.12" /> <!-- Sealed Majestic Circlet Design -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="76.58" />
-				<item id="5426" min="1" max="1" chance="6.997" />
-				<item id="5428" min="1" max="1" chance="6.931" />
-				<item id="5432" min="1" max="1" chance="4.578" />
-				<item id="5430" min="1" max="1" chance="4.539" />
+				<item id="1875" min="1" max="3" chance="72.9" /> <!-- Stone of Purity -->
+				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5428" min="1" max="1" chance="6.296" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5432" min="1" max="1" chance="4.16" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
+				<item id="5430" min="1" max="1" chance="4.121" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1519,29 +1519,29 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5288" min="1" max="1" chance="0.05" />
-				<item id="5287" min="1" max="1" chance="0.01" />
-				<item id="5293" min="1" max="1" chance="0.005" />
-				<item id="5311" min="1" max="1" chance="0.005" />
-				<item id="5316" min="1" max="1" chance="0.005" />
-				<item id="57" min="7599" max="17731" chance="70" />
-				<item id="1865" min="9" max="27" chance="20.57" />
-				<item id="1869" min="28" max="84" chance="6.585" />
-				<item id="1880" min="4" max="12" chance="4.530" />
-				<item id="1873" min="22" max="66" chance="3.265" />
-				<item id="5524" min="1" max="1" chance="1.726" />
-				<item id="5520" min="1" max="1" chance="1.138" />
-				<item id="5521" min="1" max="1" chance="1" />
-				<item id="5522" min="1" max="1" chance="1" />
-				<item id="5523" min="1" max="1" chance="1" />
+				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.72" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.991" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.114" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.969" /> <!-- Silver Nugget -->
+				<item id="5524" min="1" max="1" chance="1.573" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="5520" min="1" max="1" chance="1.038" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="99.00" />
-				<item id="5424" min="1" max="1" chance="3.462" />
-				<item id="5416" min="1" max="1" chance="2.173" />
-				<item id="5418" min="1" max="1" chance="1.509" />
-				<item id="5420" min="1" max="1" chance="1" />
-				<item id="5422" min="1" max="1" chance="1" />
+				<item id="1873" min="1" max="15" chance="91.81" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="3.15" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.979" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.376" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1603,27 +1603,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5304" min="1" max="1" chance="0.05" />
-				<item id="5305" min="1" max="1" chance="0.05" />
-				<item id="5308" min="1" max="1" chance="0.01" />
-				<item id="57" min="7421" max="17315" chance="70" />
-				<item id="1865" min="9" max="27" chance="20.03" />
-				<item id="1869" min="28" max="84" chance="6.391" />
-				<item id="1880" min="4" max="12" chance="4.438" />
-				<item id="1873" min="22" max="66" chance="3.122" />
-				<item id="5489" min="1" max="1" chance="2.704" />
-				<item id="5485" min="1" max="1" chance="1.719" />
-				<item id="5486" min="1" max="1" chance="1.241" />
-				<item id="5487" min="1" max="1" chance="1" />
-				<item id="5488" min="1" max="1" chance="1" />
+				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.23" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.811" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.032" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.833" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.454" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.56" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.129" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="94.63" />
-				<item id="5354" min="1" max="1" chance="4.391" />
-				<item id="5346" min="1" max="1" chance="2.783" />
-				<item id="5348" min="1" max="1" chance="1.949" />
-				<item id="5350" min="1" max="1" chance="1.305" />
-				<item id="5352" min="1" max="1" chance="1.234" />
+				<item id="1873" min="1" max="15" chance="85.84" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="3.986" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.53" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.776" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.191" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5352" min="1" max="1" chance="1.12" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1694,14 +1694,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7845" max="18306" chance="70" />
-				<item id="730" min="1" max="1" chance="1.159" />
-				<item id="729" min="1" max="1" chance="0.5" />
-				<item id="90013" min="1" max="1" chance="0.5" />
-				<item id="90014" min="1" max="1" chance="0.1" />
+				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="1.059" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
+				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="15" chance="99.00" />
+				<item id="1875" min="1" max="15" chance="90.935" /> <!-- Stone of Purity -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1763,31 +1763,31 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7561" max="17642" chance="70" />
-				<item id="1877" min="1" max="1" chance="20.21" />
-				<item id="1876" min="3" max="9" chance="16.82" />
-				<item id="1875" min="2" max="6" chance="8.054" />
-				<item id="8341" min="1" max="1" chance="2.395" />
-				<item id="5533" min="1" max="1" chance="0.5" />
-				<item id="5548" min="1" max="1" chance="0.5" />
-				<item id="5547" min="1" max="1" chance="0.5" />
-				<item id="5546" min="1" max="1" chance="0.5" />
-				<item id="5545" min="1" max="1" chance="0.5" />
-				<item id="5543" min="1" max="1" chance="0.5" />
-				<item id="5542" min="1" max="1" chance="0.5" />
-				<item id="5529" min="1" max="1" chance="0.5" />
-				<item id="5535" min="1" max="1" chance="0.5" />
-				<item id="5534" min="1" max="1" chance="0.5" />
-				<item id="5537" min="1" max="1" chance="0.5" />
+				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="18.45" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.35" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.319" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.178" /> <!-- Spiritual Eye Piece -->
+				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
+				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
+				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
+				<item id="5546" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5543" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff Head -->
+				<item id="5542" min="1" max="1" chance="0.3" /> <!-- Halberd Edge -->
+				<item id="5529" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer Edge -->
+				<item id="5535" min="1" max="1" chance="0.3" /> <!-- Carnage Bow Shaft -->
+				<item id="5534" min="1" max="1" chance="0.3" /> <!-- Soul Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="54.75" />
-				<item id="5434" min="1" max="1" chance="0.5" />
-				<item id="5440" min="1" max="1" chance="0.5" />
-				<item id="5444" min="1" max="1" chance="0.5" />
-				<item id="5460" min="1" max="1" chance="0.5" />
-				<item id="5468" min="1" max="1" chance="0.5" />
-				<item id="5470" min="1" max="1" chance="0.5" />
+				<item id="1875" min="1" max="3" chance="52.19" /> <!-- Stone of Purity -->
+				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
+				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
+				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
+				<item id="5460" min="1" max="1" chance="0.3" /> <!-- Recipe: Dasparion's Staff (60%) -->
+				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
+				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1892,23 +1892,23 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5289" min="1" max="1" chance="0.05" />
-				<item id="5294" min="1" max="1" chance="0.05" />
-				<item id="57" min="7766" max="18120" chance="70" />
-				<item id="1877" min="1" max="1" chance="20.78" />
-				<item id="1876" min="3" max="9" chance="17.15" />
-				<item id="1875" min="2" max="6" chance="8.267" />
-				<item id="5526" min="1" max="1" chance="4.487" />
-				<item id="5525" min="1" max="1" chance="4.464" />
-				<item id="5528" min="1" max="1" chance="3.541" />
-				<item id="5527" min="1" max="1" chance="3.410" />
+				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
+				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="18.97" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.64" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.512" /> <!-- Stone of Purity -->
+				<item id="5526" min="1" max="1" chance="4.079" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5525" min="1" max="1" chance="4.056" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5528" min="1" max="1" chance="3.225" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5527" min="1" max="1" chance="3.094" /> <!-- Sealed Helm of Nightmare Design -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="78.49" />
-				<item id="5428" min="1" max="1" chance="7.010" />
-				<item id="5426" min="1" max="1" chance="6.997" />
-				<item id="5432" min="1" max="1" chance="4.632" />
-				<item id="5430" min="1" max="1" chance="4.631" />
+				<item id="1875" min="1" max="3" chance="74.81" /> <!-- Stone of Purity -->
+				<item id="5428" min="1" max="1" chance="6.375" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5432" min="1" max="1" chance="4.214" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
+				<item id="5430" min="1" max="1" chance="4.213" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>

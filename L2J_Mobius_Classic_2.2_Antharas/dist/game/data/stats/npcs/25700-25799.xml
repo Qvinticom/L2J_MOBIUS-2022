@@ -5,10 +5,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20946193" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="20946193" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="270" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -17,8 +17,8 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>		<collision>
-			<radius normal="77" />
-			<height normal="120" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="25736" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
@@ -26,10 +26,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20946193" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="20946193" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="270" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -38,8 +38,8 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>		<collision>
-			<radius normal="77" />
-			<height normal="120" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="25737" level="90" type="L2RaidBoss" name="Giant Golden Pig" title="Raid Boss">
@@ -47,10 +47,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20946193" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="20946193" hpRegen="10.5" mp="2023" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="270" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -59,8 +59,8 @@
 		<skill_list>
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>		<collision>
-			<radius normal="77" />
-			<height normal="120" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="25738" level="75" type="L2RaidBoss" name="Queen Ant Drone Priest">
@@ -68,10 +68,10 @@
 		<race>BUG</race>
 		<acquire exp="87480000" sp="2624400" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3035" mpRegen="3" />
 			<speed>
-				<walk ground="45" />
-				<run ground="170" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
@@ -84,8 +84,8 @@
 			<skill id="4416" level="12" /> <!-- Bug -->
 		</skill_list>
 		<collision>
-			<radius normal="35" />
-			<height normal="77.5" />
+			<radius normal="15" />
+			<height normal="28" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -130,10 +130,10 @@
 		<equipment rhand="98" />
 		<acquire exp="87480000" sp="2624400" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3035" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="170" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
@@ -146,8 +146,8 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skill_list>
 		<collision>
-			<radius normal="22" />
-			<height normal="120" />
+			<radius normal="15" />
+			<height normal="28" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -190,11 +190,12 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<acquire exp="87480000" sp="2624400" raidPoints="5" />
+		<equipment rhand="15302" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="2023" mpRegen="3" />
 			<speed>
-				<walk ground="30" />
-				<run ground="140" />
+				<walk ground="20" />
+				<run ground="190" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
@@ -207,8 +208,8 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skill_list>
 		<collision>
-			<radius normal="90" />
-			<height normal="81.6" />
+			<radius normal="14" />
+			<height normal="24" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -252,10 +253,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="87480000" sp="2624400" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="3015.6" mpRegen="3" />
+			<vitals hp="1589749.00576036" hpRegen="1059.832666666667" mp="2023" mpRegen="3" />
 			<speed>
-				<walk ground="90" />
-				<run ground="140" />
+				<walk ground="18" />
+				<run ground="190" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="537.3333333333333" />
@@ -268,8 +269,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="56" />
-			<height normal="76.1" />
+			<radius normal="32" />
+			<height normal="26.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -313,10 +314,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="23522400" sp="705672" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="524759.695853166" hpRegen="349.8393333333333" mp="889.8" mpRegen="2.4" />
+			<vitals hp="524759.695853166" hpRegen="349.8393333333333" mp="1881" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="13" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
 			<defence physical="679" magical="337.7142857142857" />
@@ -329,8 +330,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="21.25" />
+			<radius normal="10" />
+			<height normal="20" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -357,10 +358,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="23522400" sp="705672" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="524759.695853166" hpRegen="349.8393333333333" mp="889.8" mpRegen="2.4" />
+			<vitals hp="524759.695853166" hpRegen="349.8393333333333" mp="1917" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 			<attack physical="2619" magical="1320.285714285714" critical="4" attackSpeed="253" range="40" />
 			<defence physical="679" magical="337.7142857142857" />
@@ -373,8 +374,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="17" />
-			<height normal="46.2" />
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -401,10 +402,10 @@
 		<race>BEAST</race>
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1881" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -417,8 +418,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skill_list>
 		<collision>
-			<radius normal="36" />
-			<height normal="55.5" />
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -466,10 +467,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="2023" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -482,8 +483,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="72.75" />
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -531,10 +532,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="2132" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -547,8 +548,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="50.25" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -596,10 +597,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="2169" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -612,8 +613,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="18" />
-			<height normal="55.8" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -662,10 +663,10 @@
 		<equipment rhand="38564" lhand="38432" />
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="2132" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -678,8 +679,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="55.5" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -728,10 +729,10 @@
 		<equipment rhand="38429" lhand="38435" />
 		<acquire exp="27993600" sp="839808" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="1036.8" mpRegen="2.4" />
+			<vitals hp="614249.151468482" hpRegen="409.4993333333333" mp="3198" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="2857.1" magical="1440.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="740.6666666666667" magical="368.5714285714286" />
@@ -744,8 +745,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="54.0" />
+			<radius normal="15" />
+			<height normal="28" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -793,10 +794,10 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="2169" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -809,8 +810,8 @@
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="38" />
-			<height normal="45.0" />
+			<radius normal="36" />
+			<height normal="50" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -835,11 +836,12 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
+		<equipment rhand="15302" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="2132" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="20" />
+				<run ground="190" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -852,8 +854,8 @@
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="39.0" />
+			<radius normal="14" />
+			<height normal="24" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -879,10 +881,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="2169" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="18" />
+				<run ground="190" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -895,8 +897,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="26" />
-			<height normal="43.15" />
+			<radius normal="32" />
+			<height normal="26.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -922,10 +924,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="2023" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="13" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -938,8 +940,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="33.6" />
-			<height normal="58.8" />
+			<radius normal="10" />
+			<height normal="20" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -965,10 +967,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="2059" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -981,8 +983,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="31.5" />
-			<height normal="61.5" />
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1008,10 +1010,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1988" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -1024,8 +1026,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="25.2" />
-			<height normal="52.8" />
+			<radius normal="22" />
+			<height normal="52" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1051,10 +1053,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="270" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -1067,8 +1069,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="54" />
-			<height normal="59.1" />
+			<radius normal="65" />
+			<height normal="84" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1094,10 +1096,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="270" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -1110,8 +1112,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="25" />
-			<height normal="68.0" />
+			<radius normal="80" />
+			<height normal="91" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1138,10 +1140,10 @@
 		<equipment rhand="8203" lhand="8203" />
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -1154,8 +1156,8 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="56.0" />
+			<radius normal="40" />
+			<height normal="78" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1181,10 +1183,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="32853600" sp="985608" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="1188.8" mpRegen="2.7" />
+			<vitals hp="688201.003654661" hpRegen="458.8006666666667" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3095.2" magical="1560.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="802.3333333333333" magical="399.1428571428571" />
@@ -1197,8 +1199,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="24" />
-			<height normal="80.0" />
+			<radius normal="40" />
+			<height normal="78" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1225,10 +1227,10 @@
 		<equipment rhand="38448" />
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="270" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1241,8 +1243,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="60" />
-			<height normal="75.75" />
+			<radius normal="40" />
+			<height normal="77" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1300,10 +1302,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="270" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1316,8 +1318,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="48.0" />
+			<radius normal="45" />
+			<height normal="86" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1375,10 +1377,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1391,8 +1393,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="60.75" />
+			<radius normal="45" />
+			<height normal="59" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1450,10 +1452,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1466,8 +1468,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="18" />
-			<height normal="57.0" />
+			<radius normal="45" />
+			<height normal="59" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1526,10 +1528,10 @@
 		<equipment rhand="38427" />
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1542,8 +1544,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="46.5" />
+			<radius normal="45" />
+			<height normal="59" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1601,10 +1603,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="150" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1617,8 +1619,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="40.8" />
+			<radius normal="50" />
+			<height normal="100" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1826,10 +1828,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="22800" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="100" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1842,8 +1844,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="47.4" />
+			<radius normal="35" />
+			<height normal="93" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1901,10 +1903,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="20960" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1917,8 +1919,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="56.25" />
+			<radius normal="12" />
+			<height normal="25.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1977,10 +1979,10 @@
 		<equipment rhand="38425" />
 		<acquire exp="38102400" sp="1143072" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="746772.142484831" hpRegen="497.848" mp="1345.8" mpRegen="2.7" />
+			<vitals hp="746772.142484831" hpRegen="497.848" mp="20960" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3333.3" magical="1680.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="864" magical="430" />
@@ -1993,8 +1995,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="22.5" />
-			<height normal="51.0" />
+			<radius normal="12" />
+			<height normal="25.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2052,10 +2054,10 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="22800" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="200" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2068,8 +2070,8 @@
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="63" />
-			<height normal="69.0" />
+			<radius normal="40" />
+			<height normal="81" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2111,11 +2113,12 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
+		<equipment rhand="5800" lhand="5799" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="2169" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="56" />
+				<run ground="180" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2128,8 +2131,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="45" />
-			<height normal="68.25" />
+			<radius normal="13" />
+			<height normal="55" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2172,10 +2175,10 @@
 		<race>HUMANOID</race>
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="2169" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="190" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2188,8 +2191,8 @@
 			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="60.0" />
+			<radius normal="25" />
+			<height normal="60" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2232,10 +2235,10 @@
 		<race>GIANT</race>
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="2169" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2248,8 +2251,8 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skill_list>
 		<collision>
-			<radius normal="48" />
-			<height normal="77.25" />
+			<radius normal="10" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2292,10 +2295,10 @@
 		<race>GIANT</race>
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="192" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2308,8 +2311,8 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skill_list>
 		<collision>
-			<radius normal="36" />
-			<height normal="70.5" />
+			<radius normal="24" />
+			<height normal="29" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2352,10 +2355,10 @@
 		<race>GIANT</race>
 		<acquire exp="43740000" sp="1312200" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="794874.502880181" hpRegen="529.916" mp="1507.8" mpRegen="3" />
+			<vitals hp="794874.502880181" hpRegen="529.916" mp="108" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="120" />
 			</speed>
 			<attack physical="3571.4" magical="1800.571428571429" critical="4" attackSpeed="253" range="40" />
 			<defence physical="925.6666666666667" magical="460.5714285714286" />
@@ -2368,8 +2371,8 @@
 			<skill id="4416" level="11" /> <!-- Giant -->
 		</skill_list>
 		<collision>
-			<radius normal="36" />
-			<height normal="72.75" />
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 		<drop_lists>
 			<drop>

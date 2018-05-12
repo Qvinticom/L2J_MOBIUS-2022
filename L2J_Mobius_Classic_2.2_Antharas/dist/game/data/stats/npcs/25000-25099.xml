@@ -145,7 +145,7 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="124" /> <!-- Two-handed Sword -->
+		<equipment rhand="80" /> <!-- Two-handed Sword -->
 		<acquire exp="6998400" sp="209952" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="141484" hpRegen="3.5" mp="329" mpRegen="1.5" />
@@ -3757,7 +3757,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="25081" level="29" type="L2Monster" name="Cat's Eye Bandit" title="Raid Fighter">
+	<npc id="25081" level="15" type="L2Monster" name="Cat's Eye Bandit" title="Raid Fighter">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="218" /> <!-- Throwing Knife -->

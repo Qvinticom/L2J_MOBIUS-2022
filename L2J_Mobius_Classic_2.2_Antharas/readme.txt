@@ -63,7 +63,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -TODO: Newbie quest changes
 
 Antharas: https://eu.4game.com/lineage2classic/play/antharas/
-
+-Parsed new NPCs from L2Wiki and client
 
 Customs:
 -Newbie Helper NPC location info

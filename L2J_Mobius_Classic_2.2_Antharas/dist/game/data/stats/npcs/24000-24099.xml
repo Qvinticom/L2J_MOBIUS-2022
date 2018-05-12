@@ -4,6 +4,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="1893" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
@@ -128,8 +129,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="30" />
-			<height normal="53" />
+			<radius normal="31.5" />
+			<height normal="128.4" />
 		</collision>
 	</npc>
 	<npc id="24006" level="99" type="L2Npc" name="Laikel">
@@ -290,6 +291,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="97" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6" />
 			<speed>
@@ -312,11 +314,12 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="13094" sp="392" />
+		<equipment rhand="17421" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
 			<speed>
-				<walk ground="36" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -326,8 +329,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="15.6" />
-			<height normal="37.8" />
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 		<drop_lists>
 			<drop>

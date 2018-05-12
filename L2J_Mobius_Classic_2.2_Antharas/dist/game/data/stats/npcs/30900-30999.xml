@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="30900" level="70" type="L2VillageMasterFighter" name="Marcus" title="Grand Master">
 		<parameters>
@@ -1381,7 +1381,7 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="37" />
 				<run ground="120" />
 			</speed>
 			<hit_time>350</hit_time>
@@ -1403,8 +1403,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="15" />
-			<height normal="15" />
+			<radius normal="20" />
+			<height normal="10" />
 		</collision>
 	</npc>
 	<npc id="30937" level="70" type="L2Monster" name="Morita">
@@ -1419,7 +1419,7 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="20" />
+				<walk ground="35" />
 				<run ground="120" />
 			</speed>
 			<hit_time>540</hit_time>
@@ -1441,8 +1441,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
+			<radius normal="35" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="30938" level="70" type="L2Npc" name="Vanutu" title="Priest">
@@ -1453,7 +1453,7 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="45" />
 				<run ground="120" />
 			</speed>
 			<hit_time>460</hit_time>
@@ -1475,7 +1475,7 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
+			<radius normal="12" />
 			<height normal="29" />
 		</collision>
 	</npc>
@@ -1492,7 +1492,7 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="80" />
 				<run ground="120" />
 			</speed>
 			<hit_time>520</hit_time>
@@ -1514,8 +1514,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
 	<npc id="30940" level="70" type="L2Npc" name="Amora">
@@ -1530,8 +1530,8 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="36" />
-				<run ground="190" />
+				<walk ground="20" />
+				<run ground="120" />
 			</speed>
 			<hit_time>370</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1552,8 +1552,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="30941" level="70" type="L2Npc" name="Gudz" title="Ol Mahum Hierarch">
@@ -1568,8 +1568,8 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="50" />
-				<run ground="133" />
+				<walk ground="60" />
+				<run ground="120" />
 			</speed>
 			<hit_time>450</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1590,8 +1590,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23" />
+			<radius normal="34" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="30942" level="70" type="L2Npc" name="Ruvard" title="Priest">
@@ -1606,8 +1606,8 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="50" />
-				<run ground="100" />
+				<walk ground="90" />
+				<run ground="120" />
 			</speed>
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1629,8 +1629,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23" />
+			<radius normal="21" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="30943" level="70" type="L2Monster" name="Malcom8" title="Rabbit Prince">

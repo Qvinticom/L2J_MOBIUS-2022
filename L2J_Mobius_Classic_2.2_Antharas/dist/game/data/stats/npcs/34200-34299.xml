@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="34210" level="85" type="L2Npc" name="Red" title="Wealthy Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -139,7 +139,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -161,7 +161,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -183,7 +183,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -205,7 +205,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -227,7 +227,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -249,7 +249,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -270,11 +270,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17300" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
-				<run ground="160" />
+				<walk ground="64" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -284,8 +285,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="29" />
+			<radius normal="9" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="34266" level="99" type="L2Npc" name="Nazeph">
@@ -293,9 +294,9 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="54" />
 				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -306,19 +307,20 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="8" />
-			<height normal="23" />
+			<radius normal="20" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="34267" level="99" type="L2Npc" name="Dazling" title="Collector">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17418" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="10.5" mp="1507" mpRegen="3.6" />
+			<vitals hp="2823" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
-				<run ground="160" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -329,7 +331,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="8" />
-			<height normal="17.5" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="34268" level="99" type="L2Npc" name="Rifken" title="Gourmet">
@@ -820,11 +822,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17328" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -834,8 +837,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="20.4" />
 		</collision>
 	</npc>
 	<npc id="34291" level="99" type="L2Npc" name="Nana" title="Healer of the Arena">

@@ -16,7 +16,7 @@
 		<equipment rhand="3" /> <!-- Broadsword -->
 		<acquire exp="2308" sp="69" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="648" hpRegen="7" mp="259" mpRegen="1.5" />
+			<vitals hp="648" hpRegen="7" mp="372" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="101.83533" magical="74.51868" />
 			<speed>
@@ -86,7 +86,7 @@
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
 		<acquire exp="2906" sp="87" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="806" hpRegen="7" mp="315" mpRegen="1.5" />
+			<vitals hp="806" hpRegen="7" mp="447" mpRegen="1.5" />
 			<attack physical="78.56365455" magical="59.01367" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="126.506578" magical="84.15638" />
 			<speed>
@@ -363,7 +363,7 @@
 		<sex>MALE</sex>
 		<acquire exp="752" sp="22" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="397" hpRegen="2.5" mp="166" mpRegen="1.2" />
+			<vitals hp="397" hpRegen="2.5" mp="329" mpRegen="1.2" />
 			<attack physical="38.38769" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="71.53153636" magical="57.57804" />
 			<speed>
@@ -443,7 +443,7 @@
 		<sex>MALE</sex>
 		<acquire exp="949" sp="28" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="512" hpRegen="3.5" mp="205" mpRegen="1.5" />
+			<vitals hp="512" hpRegen="3.5" mp="358" mpRegen="1.5" />
 			<attack physical="52.711164" magical="32.72263" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="81.57326364" magical="65.66095" />
 			<speed>
@@ -2559,7 +2559,7 @@
 		<equipment rhand="7" /> <!-- Apprentice's Rod -->
 		<acquire exp="3929" sp="117" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1036" hpRegen="4.5" mp="387" mpRegen="1.8" />
+			<vitals hp="1036" hpRegen="4.5" mp="478" mpRegen="1.8" />
 			<attack physical="110.1891091" magical="82.76936" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="146.24346" magical="97.28601" />
 			<speed>
@@ -3184,7 +3184,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2880" sp="86" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1359" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="1359" hpRegen="4.5" mp="832" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -3394,7 +3394,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3312" sp="99" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1539" hpRegen="5.5" mp="557" mpRegen="2.1" />
+			<vitals hp="1539" hpRegen="5.5" mp="861" mpRegen="2.1" />
 			<attack physical="190.9530182" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="186.047587" magical="123.76505" />
 			<speed>
@@ -4487,7 +4487,7 @@
 			<defence physical="220.262284" magical="146.5258" />
 			<speed>
 				<walk ground="35" />
-				<run ground="174" />
+				<run ground="100" />
 			</speed>
 			<hit_time>390</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4554,7 +4554,7 @@
 			<defence physical="186.2290364" magical="149.90176" />
 			<speed>
 				<walk ground="35" />
-				<run ground="174" />
+				<run ground="100" />
 			</speed>
 			<hit_time>390</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4628,7 +4628,7 @@
 			<defence physical="198.9962636" magical="160.17851" />
 			<speed>
 				<walk ground="70" />
-				<run ground="174" />
+				<run ground="160" />
 			</speed>
 			<hit_time>650</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4698,7 +4698,7 @@
 			<defence physical="245.99982" magical="163.64727" />
 			<speed>
 				<walk ground="70" />
-				<run ground="174" />
+				<run ground="130" />
 			</speed>
 			<hit_time>260</hit_time>
 			<abnormalResist physical="10" magical="10" />
