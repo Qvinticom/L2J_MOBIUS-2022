@@ -21,4 +21,38 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="13520" name="Event - Jindo Dog Hat" type="Armor">
+		<!-- Hat of a Jindo Dog. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rfinger;lfinger" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="maxMp">21</stat>
+		</stats>
+	</item>
+	<item id="13521" name="Event - Shaggy Dog Hat" type="Armor">
+		<!-- Hat of a Shaggy Dog. Uses 2 hair accessory slots. -->
+		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="maxMp">42</stat>
+		</stats>
+	</item>
 </list>
