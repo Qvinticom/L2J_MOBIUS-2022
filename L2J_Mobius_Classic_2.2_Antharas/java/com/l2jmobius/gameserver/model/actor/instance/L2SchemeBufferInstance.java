@@ -328,38 +328,14 @@ public class L2SchemeBufferInstance extends L2Npc
 		{
 			sb.append(((row % 2) == 0 ? "<table width=\"280\" bgcolor=\"000000\"><tr>" : "<table width=\"280\"><tr>"));
 			
-			if (skillId < 100)
+			final Skill skill = SkillData.getInstance().getSkill(skillId, 1);
+			if (schemeSkills.contains(skillId))
 			{
-				if (schemeSkills.contains(skillId))
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill00" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
-				}
-				else
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill00" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
-				}
-			}
-			else if (skillId < 1000)
-			{
-				if (schemeSkills.contains(skillId))
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill0" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
-				}
-				else
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill0" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
-				}
+				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
 			}
 			else
 			{
-				if (schemeSkills.contains(skillId))
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td height=40 width=40><button value=\" \" action=\"bypass -h npc_%objectId%_skillunselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomout2\" fore=\"L2UI_CH3.mapbutton_zoomout1\"></td>");
-				}
-				else
-				{
-					sb.append("<td height=40 width=40><img src=\"icon.skill" + skillId + "\" width=32 height=32></td><td width=190>" + SkillData.getInstance().getSkill(skillId, 1).getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td height=40 width=40><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
-				}
+				sb.append("<td height=40 width=40><img src=\"" + skill.getIcon() + "\" width=32 height=32></td><td width=190>" + skill.getName() + "<br1><font color=\"B09878\">" + SchemeBufferTable.getInstance().getAvailableBuff(skillId).getDescription() + "</font></td><td><button value=\" \" action=\"bypass -h npc_%objectId%_skillselect " + groupType + " " + schemeName + " " + skillId + " " + page + "\" width=32 height=32 back=\"L2UI_CH3.mapbutton_zoomin2\" fore=\"L2UI_CH3.mapbutton_zoomin1\"></td>");
 			}
 			
 			sb.append("</tr></table><img src=\"L2UI.SquareGray\" width=277 height=1>");
