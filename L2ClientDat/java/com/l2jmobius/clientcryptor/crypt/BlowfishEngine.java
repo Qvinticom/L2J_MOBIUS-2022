@@ -1088,14 +1088,14 @@ public final class BlowfishEngine
 	
 	public void init(boolean encryption, byte[] key)
 	{
-		this.encrypting = encryption;
-		this.workingKey = key;
-		this.setKey(this.workingKey);
+		encrypting = encryption;
+		workingKey = key;
+		setKey(workingKey);
 	}
 	
 	public final int processBlock(byte[] in, int inOff, byte[] out, int outOff) throws IllegalBlockSizeException, ShortBufferException
 	{
-		if (this.workingKey == null)
+		if (workingKey == null)
 		{
 			throw new IllegalStateException("Blowfish not initialised");
 		}
@@ -1107,20 +1107,20 @@ public final class BlowfishEngine
 		{
 			throw new ShortBufferException("output buffer too short");
 		}
-		if (this.encrypting)
+		if (encrypting)
 		{
-			this.encryptBlock(in, inOff, out, outOff);
+			encryptBlock(in, inOff, out, outOff);
 		}
 		else
 		{
-			this.decryptBlock(in, inOff, out, outOff);
+			decryptBlock(in, inOff, out, outOff);
 		}
 		return 8;
 	}
 	
 	private int F(int x)
 	{
-		return ((this.S0[x >>> 24] + this.S1[(x >>> 16) & 255]) ^ this.S2[(x >>> 8) & 255]) + this.S3[x & 255];
+		return ((S0[x >>> 24] + S1[(x >>> 16) & 255]) ^ S2[(x >>> 8) & 255]) + S3[x & 255];
 	}
 	
 	private void processTable(int xl, int xr, int[] table)
@@ -1128,12 +1128,12 @@ public final class BlowfishEngine
 		int size = table.length;
 		for (int s = 0; s < size; s += 2)
 		{
-			xl ^= this.P[0];
+			xl ^= P[0];
 			for (int i = 1; i < 16; i += 2)
 			{
-				xl ^= this.F(xr ^= this.F(xl) ^ this.P[i]) ^ this.P[i + 1];
+				xl ^= F(xr ^= F(xl) ^ P[i]) ^ P[i + 1];
 			}
-			table[s] = xr ^= this.P[17];
+			table[s] = xr ^= P[17];
 			table[s + 1] = xl;
 			xr = xl;
 			xl = table[s];
@@ -1142,11 +1142,11 @@ public final class BlowfishEngine
 	
 	private void setKey(byte[] key)
 	{
-		System.arraycopy(KS0, 0, this.S0, 0, 256);
-		System.arraycopy(KS1, 0, this.S1, 0, 256);
-		System.arraycopy(KS2, 0, this.S2, 0, 256);
-		System.arraycopy(KS3, 0, this.S3, 0, 256);
-		System.arraycopy(KP, 0, this.P, 0, 18);
+		System.arraycopy(KS0, 0, S0, 0, 256);
+		System.arraycopy(KS1, 0, S1, 0, 256);
+		System.arraycopy(KS2, 0, S2, 0, 256);
+		System.arraycopy(KS3, 0, S3, 0, 256);
+		System.arraycopy(KP, 0, P, 0, 18);
 		int keyLength = key.length;
 		int keyIndex = 0;
 		int i = 0;
@@ -1162,41 +1162,41 @@ public final class BlowfishEngine
 				}
 				keyIndex = 0;
 			}
-			int[] arrn = this.P;
+			int[] arrn = P;
 			int n = i++;
 			arrn[n] = arrn[n] ^ data;
 		}
-		this.processTable(0, 0, this.P);
-		this.processTable(this.P[16], this.P[17], this.S0);
-		this.processTable(this.S0[254], this.S0[255], this.S1);
-		this.processTable(this.S1[254], this.S1[255], this.S2);
-		this.processTable(this.S2[254], this.S2[255], this.S3);
+		processTable(0, 0, P);
+		processTable(P[16], P[17], S0);
+		processTable(S0[254], S0[255], S1);
+		processTable(S1[254], S1[255], S2);
+		processTable(S2[254], S2[255], S3);
 	}
 	
 	private void encryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 	{
-		int xl = this.BytesTo32bits(src, srcIndex);
-		int xr = this.BytesTo32bits(src, srcIndex + 4);
-		xl ^= this.P[0];
+		int xl = BytesTo32bits(src, srcIndex);
+		int xr = BytesTo32bits(src, srcIndex + 4);
+		xl ^= P[0];
 		for (int i = 1; i < 16; i += 2)
 		{
-			xl ^= this.F(xr ^= this.F(xl) ^ this.P[i]) ^ this.P[i + 1];
+			xl ^= F(xr ^= F(xl) ^ P[i]) ^ P[i + 1];
 		}
-		this.Bits32ToBytes(xr ^= this.P[17], dst, dstIndex);
-		this.Bits32ToBytes(xl, dst, dstIndex + 4);
+		Bits32ToBytes(xr ^= P[17], dst, dstIndex);
+		Bits32ToBytes(xl, dst, dstIndex + 4);
 	}
 	
 	private void decryptBlock(byte[] src, int srcIndex, byte[] dst, int dstIndex)
 	{
-		int xl = this.BytesTo32bits(src, srcIndex);
-		int xr = this.BytesTo32bits(src, srcIndex + 4);
-		xl ^= this.P[17];
+		int xl = BytesTo32bits(src, srcIndex);
+		int xr = BytesTo32bits(src, srcIndex + 4);
+		xl ^= P[17];
 		for (int i = 16; i > 0; i -= 2)
 		{
-			xl ^= this.F(xr ^= this.F(xl) ^ this.P[i]) ^ this.P[i - 1];
+			xl ^= F(xr ^= F(xl) ^ P[i]) ^ P[i - 1];
 		}
-		this.Bits32ToBytes(xr ^= this.P[0], dst, dstIndex);
-		this.Bits32ToBytes(xl, dst, dstIndex + 4);
+		Bits32ToBytes(xr ^= P[0], dst, dstIndex);
+		Bits32ToBytes(xl, dst, dstIndex + 4);
 	}
 	
 	private int BytesTo32bits(byte[] b, int i)

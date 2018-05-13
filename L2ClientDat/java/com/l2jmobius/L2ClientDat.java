@@ -78,7 +78,6 @@ public class L2ClientDat extends JFrame
 		setLocationRelativeTo(null);
 		addWindowListener(new WindowAdapter()
 		{
-			
 			@Override
 			public void windowClosing(WindowEvent evt)
 			{
