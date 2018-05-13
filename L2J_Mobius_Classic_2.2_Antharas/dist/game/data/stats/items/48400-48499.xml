@@ -3,6 +3,7 @@
 	<item id="48400" name="Items Seal Scroll" type="EtcItem">
 		<!-- Scroll used for sealing an item. The sealed item cannot be used for any enchantment related systems and is restricted from functions such as exchange/drop/destroy/clan warehouse. The item can be unsealed by using a �Item Unseal Scroll'. -->
 		<set name="icon" val="icon.scrl_item_lock" />
+		<set name="price" val="1000" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />

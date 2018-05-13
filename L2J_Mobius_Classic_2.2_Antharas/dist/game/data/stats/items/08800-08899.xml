@@ -715,7 +715,7 @@
 		<set name="weight" val="20" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="price" val="45000" />
+		<set name="price" val="10000" />
 		<cond msgId="113">
 			<player level="20" />
 		</cond>
@@ -737,7 +737,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="7700" />
+		<set name="price" val="200000" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
@@ -748,7 +748,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
-		<set name="price" val="6750" />
+		<set name="price" val="100000" />
 		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
