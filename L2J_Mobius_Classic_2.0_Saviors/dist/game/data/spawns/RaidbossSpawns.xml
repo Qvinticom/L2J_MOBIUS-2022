@@ -887,17 +887,6 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="aden02_mb2318_10" minZ="-4420" maxZ="-3820">
-				<node x="112660" y="17484" />
-				<node x="113172" y="17056" />
-				<node x="113648" y="17528" />
-				<node x="113244" y="18068" />
-			</territory>
-		</territories>
-		<npc id="25444" dbSave="true" dbName="enmity_ghost_ramdal" respawnTime="24hour" respawnRandom="12hour" /> <!-- Enmity Ghost Ramdal -->
-	</spawn>
-	<spawn>
-		<territories>
 			<territory name="aden02_mb2318_12" minZ="-1448" maxZ="-848">
 				<node x="112688" y="17480" />
 				<node x="113216" y="17052" />
@@ -906,44 +895,6 @@
 			</territory>
 		</territories>
 		<npc id="25447" dbSave="true" dbName="hope_immortality_mardil" respawnTime="24hour" respawnRandom="12hour" /> <!-- Immortal Savior Mardil -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="aden02_mb2318_02" minZ="1904" maxZ="2104">
-				<node x="115480" y="15568" />
-				<node x="116432" y="15564" />
-				<node x="116419" y="16615" />
-				<node x="115464" y="16608" />
-			</territory>
-		</territories>
-		<npc id="25092" dbSave="true" dbName="korim" respawnTime="24hour" respawnRandom="12hour" /> <!-- Korim -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="aden02_mb2318_04" minZ="6964" maxZ="7164">
-				<node x="112716" y="15764" />
-				<node x="113376" y="16456" />
-				<node x="112620" y="17232" />
-				<node x="112388" y="16676" />
-				<node x="112344" y="16100" />
-			</territory>
-		</territories>
-		<npc id="25143" dbSave="true" dbName="shuriel_fire_of_wrath" respawnTime="24hour" respawnRandom="12hour" /> <!-- Fire of Wrath Shuriel -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="aden02_mb2318_13" minZ="9528" maxZ="9828">
-				<node x="113400" y="14544" />
-				<node x="113812" y="14556" />
-				<node x="114072" y="14812" />
-				<node x="114052" y="15224" />
-				<node x="113752" y="15504" />
-				<node x="113356" y="15504" />
-				<node x="113116" y="15244" />
-				<node x="113116" y="14832" />
-			</territory>
-		</territories>
-		<npc id="25450" dbSave="true" dbName="cherub_garacsia" respawnTime="24hour" respawnRandom="12hour" /> <!-- Cherub Galaxia -->
 	</spawn>
 	<spawn>
 		<territories>
