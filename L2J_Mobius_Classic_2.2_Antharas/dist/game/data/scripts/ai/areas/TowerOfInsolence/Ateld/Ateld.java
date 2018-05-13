@@ -43,7 +43,7 @@ public class Ateld extends AbstractNpcAI
 	{
 		if (event.equals("teleToBaium"))
 		{
-			if ((player.getCommandChannel() == null) || (player.getCommandChannel().getMemberCount() < 27) || (player.getCommandChannel().getMemberCount() > 300))
+			if ((player.getCommandChannel() == null) || (player.getCommandChannel().getLeader() != player) || (player.getCommandChannel().getMemberCount() < 27) || (player.getCommandChannel().getMemberCount() > 300))
 			{
 				return "31714-01.html";
 			}
