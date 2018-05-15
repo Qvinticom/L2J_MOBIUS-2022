@@ -4664,7 +4664,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public void untransform()
 	{
-		if ((_transformation == null) || (isFlyingMounted() && !canDismount()))
+		if (_transformation == null)
 		{
 			return;
 		}
@@ -6373,30 +6373,6 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean dismount()
 	{
-		if (!canDismount())
-		{
-			return false;
-		}
-		
-		final boolean wasFlying = isFlying();
-		sendPacket(new SetupGauge(3, 0, 0));
-		final int petId = _mountNpcId;
-		setMount(0, 0);
-		stopFeed();
-		if (wasFlying)
-		{
-			removeSkill(CommonSkill.WYVERN_BREATH.getSkill());
-		}
-		broadcastPacket(new Ride(this));
-		setMountObjectID(0);
-		storePetFood(petId);
-		// Notify self and others about speed change
-		broadcastUserInfo();
-		return true;
-	}
-	
-	private boolean canDismount()
-	{
 		L2WaterZone water = null;
 		for (L2ZoneType zone : ZoneManager.getInstance().getZones(getX(), getY(), getZ() - 300))
 		{
@@ -6430,6 +6406,21 @@ public final class L2PcInstance extends L2Playable
 				}
 			}, 1500);
 		}
+		
+		final boolean wasFlying = isFlying();
+		sendPacket(new SetupGauge(3, 0, 0));
+		final int petId = _mountNpcId;
+		setMount(0, 0);
+		stopFeed();
+		if (wasFlying)
+		{
+			removeSkill(CommonSkill.WYVERN_BREATH.getSkill());
+		}
+		broadcastPacket(new Ride(this));
+		setMountObjectID(0);
+		storePetFood(petId);
+		// Notify self and others about speed change
+		broadcastUserInfo();
 		return true;
 	}
 	

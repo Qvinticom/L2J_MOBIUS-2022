@@ -467,11 +467,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void untransform()
 	{
-		if (isPlayer() && getActingPlayer().isFlyingMounted() && !getActingPlayer().canDismount())
-		{
-			return;
-		}
-		
 		_transform.ifPresent(t -> t.onUntransform(this));
 		_transform = Optional.empty();
 		

@@ -17729,26 +17729,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean dismount()
 	{
-		if (!canDismount())
-		{
-			return false;
-		}
-		
-		final boolean wasFlying = isFlying();
-		setMountType(0);
-		if (wasFlying)
-		{
-			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
-		}
-		Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
-		broadcastPacket(dismount);
-		setMountObjectID(0);
-		broadcastUserInfo();
-		return true;
-	}
-	
-	private boolean canDismount()
-	{
 		if (FishingZoneManager.getInstance().isInsideWaterZone(getX(), getY(), getZ() - 300) == null)
 		{
 			if (!isInWater() && (getZ() > 10000))
@@ -17774,6 +17754,17 @@ public final class L2PcInstance extends L2Playable
 				}
 			}, 1500);
 		}
+		
+		final boolean wasFlying = isFlying();
+		setMountType(0);
+		if (wasFlying)
+		{
+			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
+		}
+		Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
+		broadcastPacket(dismount);
+		setMountObjectID(0);
+		broadcastUserInfo();
 		return true;
 	}
 	
