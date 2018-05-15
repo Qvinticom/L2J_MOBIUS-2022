@@ -1,7 +1,7 @@
-L2J-Mobius Classic 2.0
+L2J-Mobius Classic Zaken
 
 Client: https://drive.google.com/uc?id=1i8udOtNak2ANythwdPYY3sVdawOxuyBo&export=download
-Geodata: http://www.mediafire.com/file/2rzuybowd9zfax4/mobius_geodata_zaken_l2d.zip
+Geodata: http://www.mediafire.com/file/49749no48ycq1cr/mobius_geodata_zaken_l2d.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
@@ -60,7 +60,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed recipes from client
 -Added raidbosses according to map
 -Zaken boss AI
--TODO: Newbie quest changes
+-Newbie quest changes
 
 Customs:
 -Newbie Helper NPC location info
@@ -69,5 +69,4 @@ Customs:
 -Fake players engine
 
 TODO:
--Parse retail monster spawns by zone
 -Provisional Clan Halls

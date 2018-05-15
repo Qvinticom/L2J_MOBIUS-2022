@@ -1,9 +1,7 @@
-L2J-Mobius Classic 2.0
+L2J-Mobius Classic Saviors
 
-Client: https://drive.google.com/file/d/0B0Pl9EOrFIjuSVNPXzRpRFRZWlk
-Mirror: https://mega.nz/#!0lcGQaaI!tuZUFcQS0gVPjzAIPquznOehLqJq0BR-5rm3BXxn6pg
-
-Geodata: http://www.mediafire.com/file/r8ryrhw7d5p858g/mobius_geodata_saviors_l2d.zip
+Client: https://drive.google.com/uc?id=0B0Pl9EOrFIjuSVNPXzRpRFRZWlk&export=download
+Geodata: http://www.mediafire.com/file/4z99x6nibu0b6qo/mobius_geodata_saviors_l2d.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
@@ -61,5 +59,4 @@ Customs:
 -Fake players engine
 
 TODO:
--Parse retail monster spawns by zone
 -Provisional Clan Halls

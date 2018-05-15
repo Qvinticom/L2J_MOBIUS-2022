@@ -1,7 +1,7 @@
-L2J-Mobius Classic 2.0
+L2J-Mobius Classic Antharas
 
-Client: 
-Geodata: 
+Client: https://eu.4game.com/lineage2classic/install/
+Geodata: http://www.mediafire.com/file/letjitjjiulaq2f/mobius_geodata_antharas_l2d.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility
@@ -60,7 +60,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed recipes from client
 -Added raidbosses according to map
 -Zaken boss AI
--TODO: Newbie quest changes
+-Newbie quest changes
 
 Antharas: https://eu.4game.com/lineage2classic/play/antharas/
 -Parsed new skills from client
@@ -74,5 +74,4 @@ Customs:
 -Fake players engine
 
 TODO:
--Parse retail monster spawns by zone
 -Provisional Clan Halls
