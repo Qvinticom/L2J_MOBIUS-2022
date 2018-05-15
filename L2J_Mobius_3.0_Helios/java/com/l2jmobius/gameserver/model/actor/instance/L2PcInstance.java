@@ -6157,6 +6157,7 @@ public final class L2PcInstance extends L2Playable
 		final int petId = _mountNpcId;
 		setMount(0, 0);
 		stopFeed();
+		clearPetData();
 		if (wasFlying)
 		{
 			removeSkill(CommonSkill.WYVERN_BREATH.getSkill());
