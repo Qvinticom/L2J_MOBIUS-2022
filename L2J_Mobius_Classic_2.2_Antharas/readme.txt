@@ -59,6 +59,7 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Parsed new NPCs from L2Wiki
 -Parsed recipes from client
 -Added raidbosses according to map
+-Giants Cave
 -Zaken boss AI
 -Newbie quest changes
 
