@@ -3750,44 +3750,20 @@
 		<magicLvl>85</magicLvl>
 		<isMagic>2</isMagic>
 		<reuseDelay>3000</reuseDelay>
+		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
+		<removedOnDamage>true</removedOnDamage>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="SilentMove" />
-			<effect name="TriggerSkillByMagicType">
-				<!-- Cancel Shadow Move -->
-				<magicTypes>0;1;2;3;4;22</magicTypes>
-				<skillId>7097</skillId>
-				<skillLevel>1</skillLevel>
-				<chance>100</chance>
-				<targetType>MY_PARTY</targetType>
+			<effect name="DispelBySlot">
+				<dispel>ROOT_PHYSICALLY,3</dispel>
 			</effect>
-			<effect name="TriggerSkillByAttack">
-				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>MY_PARTY</targetType>
-				<isCritical>true</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
-				<skillId>7097</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="TriggerSkillByAttack">
-				<!-- Cancel Shadow Move -->
-				<attackerType>L2Character</attackerType>
-				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>127</maxAttackerLevel>
-				<minDamage>1</minDamage>
-				<chance>100</chance>
-				<targetType>MY_PARTY</targetType>
-				<skillId>7097</skillId>
-				<skillLevel>1</skillLevel>
-				<isCritical>false</isCritical>
-				<allowWeapons>SWORD,BLUNT</allowWeapons>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
