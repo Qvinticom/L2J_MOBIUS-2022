@@ -2934,6 +2934,12 @@ public enum SystemMessageId
 	WOULD_YOU_LIKE_TO_CLOSE_THE_GATE(1141),
 	
 	/**
+	 * ID: 1158<br>
+	 * Message: You cannot dismount from this elevation.
+	 */
+	YOU_CANNOT_DISMOUNT_FROM_THIS_ELEVATION(1158),
+	
+	/**
 	 * ID: 1176<br>
 	 * Message: This is a quest event period.
 	 */
@@ -3364,6 +3370,12 @@ public enum SystemMessageId
 	 * Message: $s1 has become the party leader.
 	 */
 	S1_HAS_BECOME_A_PARTY_LEADER(1384),
+	
+	/**
+	 * ID: 1385<br>
+	 * Message: You are not allowed to dismount at this location.
+	 */
+	YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION(1385),
 	
 	/**
 	 * ID: 1388<br>

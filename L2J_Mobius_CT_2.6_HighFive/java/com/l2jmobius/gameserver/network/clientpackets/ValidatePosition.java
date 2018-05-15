@@ -182,11 +182,7 @@ public class ValidatePosition implements IClientIncomingPacket
 			{
 				// if ((_z - activeChar.getClientZ()) < 200 && Math.abs(activeChar.getLastServerPosition().getZ()-realZ) > 70)
 				
-				if (activeChar.hasDismountedWyvern())
-				{
-					activeChar.setXYZ(_x, _y, _z);
-				}
-				else if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - activeChar.getClientZ()) < 800))
+				if ((Math.abs(dz) > 200) && (Math.abs(dz) < 1500) && (Math.abs(_z - activeChar.getClientZ()) < 800))
 				{
 					activeChar.setXYZ(realX, realY, _z);
 					realZ = _z;

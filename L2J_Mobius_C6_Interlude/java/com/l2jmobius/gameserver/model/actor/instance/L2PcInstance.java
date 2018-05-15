@@ -82,6 +82,7 @@ import com.l2jmobius.gameserver.instancemanager.CoupleManager;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.instancemanager.DuelManager;
+import com.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
@@ -540,9 +541,6 @@ public final class L2PcInstance extends L2Playable
 	
 	/** Store object used to summon the strider you are mounting *. */
 	private int _mountObjectID = 0;
-	
-	/** Remember if dismounted from Wyvern **/
-	private boolean _hasDismountedWyvern = false;
 	
 	/** The _telemode. */
 	public int _telemode = 0;
@@ -1056,7 +1054,7 @@ public final class L2PcInstance extends L2Playable
 	// during fall validations will be disabled for 1000 ms.
 	private static final int FALLING_VALIDATION_DELAY = 1000;
 	private long _fallingTimestamp = 0;
-	private volatile int _fallingDamageSum = 0;
+	private volatile int _fallingDamage = 0;
 	private Future<?> _fallingDamageTask = null;
 	
 	/** Previous coordinate sent to party in ValidatePosition *. */
@@ -17731,11 +17729,15 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean dismount()
 	{
+		if (!canDismount())
+		{
+			return false;
+		}
+		
 		final boolean wasFlying = isFlying();
 		setMountType(0);
 		if (wasFlying)
 		{
-			_hasDismountedWyvern = true;
 			removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 		}
 		Ride dismount = new Ride(getObjectId(), Ride.ACTION_DISMOUNT, 0);
@@ -17745,9 +17747,34 @@ public final class L2PcInstance extends L2Playable
 		return true;
 	}
 	
-	public boolean hasDismountedWyvern()
+	private boolean canDismount()
 	{
-		return _hasDismountedWyvern;
+		if (FishingZoneManager.getInstance().isInsideWaterZone(getX(), getY(), getZ() - 300) == null)
+		{
+			if (!isInWater() && (getZ() > 10000))
+			{
+				sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
+			}
+			if ((GeoData.getInstance().getHeight(getX(), getY(), getZ()) + 300) < getZ())
+			{
+				sendPacket(SystemMessageId.YOU_CANNOT_DISMOUNT_FROM_THIS_ELEVATION);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return false;
+			}
+		}
+		else
+		{
+			ThreadPool.schedule(() ->
+			{
+				if (isInWater())
+				{
+					broadcastUserInfo();
+				}
+			}, 1500);
+		}
+		return true;
 	}
 	
 	/**
@@ -18457,27 +18484,27 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		// TODO: Test on retail. Add or set damage?
-		_fallingDamageSum += (int) Formulas.calcFallDam(this, deltaZ);
+		if (_fallingDamage == 0)
+		{
+			_fallingDamage = (int) Formulas.calcFallDam(this, deltaZ);
+		}
 		if (_fallingDamageTask != null)
 		{
 			_fallingDamageTask.cancel(true);
 		}
 		_fallingDamageTask = ThreadPool.schedule(() ->
 		{
-			if ((_fallingDamageSum > 0) && !isInvul())
+			if ((_fallingDamage > 0) && !isInvul())
 			{
-				reduceCurrentHp(Math.min(_fallingDamageSum, getCurrentHp() - 1), null, false);
-				sendPacket(new SystemMessage(SystemMessageId.FALL_DAMAGE_S1).addNumber(_fallingDamageSum));
+				reduceCurrentHp(Math.min(_fallingDamage, getCurrentHp() - 1), null, false);
+				sendPacket(new SystemMessage(SystemMessageId.FALL_DAMAGE_S1).addNumber(_fallingDamage));
 			}
-			_hasDismountedWyvern = false;
-			_fallingDamageSum = 0;
+			_fallingDamage = 0;
 			_fallingDamageTask = null;
 		}, 1500);
-		if (!_hasDismountedWyvern)
-		{
-			sendPacket(new ValidateLocation(this));
-		}
+		
+		// Prevent falling under ground.
+		sendPacket(new ValidateLocation(this));
 		
 		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
 		
