@@ -90,7 +90,6 @@ public class Q11016_PrepareForTrade2 extends Quest
 			case "30137-02.htm":
 			{
 				qs.startQuest();
-				qs.setCond(1);
 				qs.setCond(2);
 				showOnScreenMsg(player, NpcStringId.GO_HUNTING_AND_KILL_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
 				giveItems(player, SUPPLIES_CERTIFICATE, 1);

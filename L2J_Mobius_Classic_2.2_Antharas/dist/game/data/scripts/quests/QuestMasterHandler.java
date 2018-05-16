@@ -170,6 +170,9 @@ import quests.Q11016_PrepareForTrade2.Q11016_PrepareForTrade2;
 import quests.Q11017_PrepareForTrade3.Q11017_PrepareForTrade3;
 import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
 import quests.Q11020_BlacksmithsRequest.Q11020_BlacksmithsRequest;
+import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
+import quests.Q11022_RedGemNecklace2.Q11022_RedGemNecklace2;
+import quests.Q11023_RedGemNecklace3.Q11023_RedGemNecklace3;
 
 /**
  * @author NosBit
@@ -331,6 +334,9 @@ public class QuestMasterHandler
 		Q11017_PrepareForTrade3.class,
 		Q11019_TribalBenefit.class,
 		Q11020_BlacksmithsRequest.class,
+		Q11021_RedGemNecklace1.class,
+		Q11022_RedGemNecklace2.class,
+		Q11023_RedGemNecklace3.class,
 	};
 	
 	public static void main(String[] args)

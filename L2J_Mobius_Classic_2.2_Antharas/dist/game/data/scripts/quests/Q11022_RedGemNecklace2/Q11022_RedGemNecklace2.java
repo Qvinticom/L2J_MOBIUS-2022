@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package quests.Q11016_PrepareForTrade2;
+package quests.Q11022_RedGemNecklace2;
 
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
@@ -26,21 +26,20 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 
-import quests.Q11015_PrepareForTrade1.Q11015_PrepareForTrade1;
+import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
 
 /**
- * Prepare for Trade (2/3) (11016)
+ * Red Gem Necklace (2/3) (11022)
  * @author Stayway
  */
-public class Q11016_PrepareForTrade2 extends Quest
+public class Q11022_RedGemNecklace2 extends Quest
 {
 	// NPCs
-	private static final int VOLLODOS = 30137;
+	private static final int USKA = 30560;
 	// Items
-	private static final int STONE_GIANTS_GUARDIANS_CORE = 90254;
-	private static final int CRYSTALLINE_BEASTS_SHINEDUST = 90255;
-	private static final int GIANT_SPIDER_SKIN_FRAGMENT = 90256;
-	private static final int SUPPLIES_CERTIFICATE = 90253;
+	private static final int BEARS_SHIN_BONE = 90278;
+	private static final int SHARP_SPIDER_LEG = 90279;
+	private static final int LIST_OF_MATERIALS = 90277;
 	// Rewards
 	private static final int SCROLL_OF_ESCAPE = 10650;
 	private static final int HEALING_POTION = 1073;
@@ -48,26 +47,25 @@ public class Q11016_PrepareForTrade2 extends Quest
 	private static final int SOULSHOTS_NO_GRADE = 5789;
 	private static final int SPIRITSHOT_NO_GRADE = 5790;
 	// Monsters
-	private static final int STONE_GIANT_GUARDIANS = 20380;
-	private static final int CRYSTALLINE_BEAST = 20418;
-	private static final int PROWLER = 20034;
-	private static final int GIANT_VENOMOUS_SPIDER = 20038;
-	private static final int ARACHNID_TRACKER = 20043;
+	private static final int KASHA_BEAR = 20479;
+	private static final int KASHA_SPIDER = 20474;
+	private static final int KASHA_FANG_SPIDER = 20476;
+	private static final int KASHA_BLADE_SPIDER = 20478;
 	// Misc
 	private static final int MIN_LVL = 15;
 	private static final int MAX_LVL = 20;
 	
-	public Q11016_PrepareForTrade2()
+	public Q11022_RedGemNecklace2()
 	{
-		super(11016);
-		addStartNpc(VOLLODOS);
-		addTalkId(VOLLODOS);
-		addKillId(STONE_GIANT_GUARDIANS, CRYSTALLINE_BEAST, PROWLER, GIANT_VENOMOUS_SPIDER, ARACHNID_TRACKER);
+		super(11022);
+		addStartNpc(USKA);
+		addTalkId(USKA);
+		addKillId(KASHA_BEAR, KASHA_SPIDER, KASHA_FANG_SPIDER, KASHA_BLADE_SPIDER);
 		addCondLevel(MIN_LVL, MAX_LVL, "no-level.html"); // Custom
-		addCondRace(Race.DARK_ELF, "no-race.html"); // Custom
-		addCondCompletedQuest(Q11015_PrepareForTrade1.class.getSimpleName(), "30137-06.html");
-		registerQuestItems(SUPPLIES_CERTIFICATE, STONE_GIANTS_GUARDIANS_CORE, CRYSTALLINE_BEASTS_SHINEDUST, GIANT_SPIDER_SKIN_FRAGMENT);
-		setQuestNameNpcStringId(NpcStringId.LV_15_PREPARE_FOR_TRADE_2_3);
+		addCondRace(Race.ORC, "no-race.html"); // Custom
+		addCondCompletedQuest(Q11021_RedGemNecklace1.class.getSimpleName(), "30560-06.html");
+		registerQuestItems(LIST_OF_MATERIALS, BEARS_SHIN_BONE, SHARP_SPIDER_LEG);
+		setQuestNameNpcStringId(NpcStringId.LV_15_RED_GEM_NECKLACE_2_3);
 	}
 	
 	@Override
@@ -87,48 +85,46 @@ public class Q11016_PrepareForTrade2 extends Quest
 				htmltext = event;
 				break;
 			}
-			case "30137-02.htm":
+			case "30560-02.htm":
 			{
 				qs.startQuest();
 				qs.setCond(2);
-				showOnScreenMsg(player, NpcStringId.GO_HUNTING_AND_KILL_STONE_GIANT_GUARDIANS, ExShowScreenMessage.TOP_CENTER, 10000);
-				giveItems(player, SUPPLIES_CERTIFICATE, 1);
+				showOnScreenMsg(player, NpcStringId.GO_HUNTING_AND_KILL_KASHA_BEAR_2, ExShowScreenMessage.TOP_CENTER, 10000);
+				giveItems(player, LIST_OF_MATERIALS, 1);
 				htmltext = event;
 				break;
 			}
 			case "reward1":
 			{
-				if (qs.isCond(5))
+				if (qs.isCond(4))
 				{
-					takeItems(player, SUPPLIES_CERTIFICATE, 1);
-					takeItems(player, STONE_GIANTS_GUARDIANS_CORE, 20);
-					takeItems(player, CRYSTALLINE_BEASTS_SHINEDUST, 10);
-					takeItems(player, GIANT_SPIDER_SKIN_FRAGMENT, 20);
+					takeItems(player, LIST_OF_MATERIALS, 1);
+					takeItems(player, BEARS_SHIN_BONE, 20);
+					takeItems(player, SHARP_SPIDER_LEG, 30);
 					giveItems(player, SCROLL_OF_ESCAPE, 5);
 					giveItems(player, HEALING_POTION, 40);
 					giveItems(player, MP_RECOVERY_POTION, 40);
 					giveItems(player, SOULSHOTS_NO_GRADE, 1000);
 					addExpAndSp(player, 70000, 3600);
 					qs.exitQuest(false, true);
-					htmltext = "30137-04.html";
+					htmltext = "30560-04.html";
 				}
 				break;
 			}
 			case "reward2":
 			{
-				if (qs.isCond(5))
+				if (qs.isCond(4))
 				{
-					takeItems(player, SUPPLIES_CERTIFICATE, 1);
-					takeItems(player, STONE_GIANTS_GUARDIANS_CORE, 20);
-					takeItems(player, CRYSTALLINE_BEASTS_SHINEDUST, 10);
-					takeItems(player, GIANT_SPIDER_SKIN_FRAGMENT, 20);
+					takeItems(player, LIST_OF_MATERIALS, 1);
+					takeItems(player, BEARS_SHIN_BONE, 20);
+					takeItems(player, SHARP_SPIDER_LEG, 30);
 					giveItems(player, SCROLL_OF_ESCAPE, 5);
 					giveItems(player, HEALING_POTION, 40);
 					giveItems(player, MP_RECOVERY_POTION, 40);
 					giveItems(player, SPIRITSHOT_NO_GRADE, 1000);
 					addExpAndSp(player, 70000, 3600);
 					qs.exitQuest(false, true);
-					htmltext = "30137-05.html";
+					htmltext = "30560-05.html";
 				}
 				break;
 			}
@@ -146,18 +142,18 @@ public class Q11016_PrepareForTrade2 extends Quest
 		{
 			case State.CREATED:
 			{
-				htmltext = "30137-01.html";
+				htmltext = "30560-01.html";
 				break;
 			}
 			case State.STARTED:
 			{
 				if (qs.isCond(2))
 				{
-					htmltext = "30137-02a.html";
+					htmltext = "30560-02a.html";
 				}
-				else if (qs.isCond(5))
+				else if (qs.isCond(4))
 				{
-					htmltext = "30137-03.html";
+					htmltext = "30560-03.html";
 				}
 				break;
 			}
@@ -178,54 +174,37 @@ public class Q11016_PrepareForTrade2 extends Quest
 		{
 			switch (npc.getId())
 			{
-				case STONE_GIANT_GUARDIANS:
+				case KASHA_BEAR:
 				{
-					if (qs.isCond(2) && (getQuestItemsCount(killer, STONE_GIANTS_GUARDIANS_CORE) < 20))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, BEARS_SHIN_BONE) < 20))
 					{
-						if (getRandom(100) < 90)
+						if (getRandom(100) < 92)
 						{
-							giveItems(killer, STONE_GIANTS_GUARDIANS_CORE, 1);
+							giveItems(killer, BEARS_SHIN_BONE, 1);
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, STONE_GIANTS_GUARDIANS_CORE) >= 20)
+							if (getQuestItemsCount(killer, BEARS_SHIN_BONE) >= 20)
 							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_STONE_GIANT_GUARDIANS_N_GO_HUNTING_AND_KILL_CRYSTALLINE_BEASTS, ExShowScreenMessage.TOP_CENTER, 10000);
+								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_BEARS_N_GO_HUNTING_AND_KILL_KASHA_SPIDERS, ExShowScreenMessage.TOP_CENTER, 10000);
 								qs.setCond(3);
 							}
 						}
 					}
 					break;
 				}
-				case CRYSTALLINE_BEAST:
+				case KASHA_SPIDER:
+				case KASHA_FANG_SPIDER:
+				case KASHA_BLADE_SPIDER:
 				{
-					if (qs.isCond(3) && (getQuestItemsCount(killer, CRYSTALLINE_BEASTS_SHINEDUST) < 10))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, SHARP_SPIDER_LEG) < 30))
 					{
-						if (getRandom(100) < 87)
+						if (getRandom(100) < 89)
 						{
-							giveItems(killer, CRYSTALLINE_BEASTS_SHINEDUST, 1);
+							giveItems(killer, SHARP_SPIDER_LEG, 1);
 							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, CRYSTALLINE_BEASTS_SHINEDUST) >= 10)
+							if (getQuestItemsCount(killer, SHARP_SPIDER_LEG) >= 30)
 							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_CRYSTALLINE_BEASTS_N_GO_HUNTING_AND_KILL_PROWLERS_GIANT_VENOMOUS_SPIDERS_AND_ARACHNID_TRACKERS, ExShowScreenMessage.TOP_CENTER, 10000);
+								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_KASHA_SPIDERS_NRETURN_TO_ACCESSORY_MERCHANT_USKA, ExShowScreenMessage.TOP_CENTER, 10000);
 								qs.setCond(4);
-							}
-						}
-					}
-					break;
-				}
-				case PROWLER:
-				case GIANT_VENOMOUS_SPIDER:
-				case ARACHNID_TRACKER:
-				{
-					if (qs.isCond(4) && (getQuestItemsCount(killer, GIANT_SPIDER_SKIN_FRAGMENT) < 20))
-					{
-						if (getRandom(100) < 90)
-						{
-							giveItems(killer, GIANT_SPIDER_SKIN_FRAGMENT, 1);
-							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-							if (getQuestItemsCount(killer, GIANT_SPIDER_SKIN_FRAGMENT) >= 20)
-							{
-								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_PROWLERS_GIANT_VENOMOUS_SPIDERS_AND_ARACHNID_TRACKERS_NRETURN_TO_GROCER_VOLLODOS, ExShowScreenMessage.TOP_CENTER, 10000);
-								qs.setCond(5);
 							}
 						}
 					}
