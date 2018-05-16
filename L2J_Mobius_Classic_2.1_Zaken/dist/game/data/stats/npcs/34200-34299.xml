@@ -820,11 +820,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="17328" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<vitals hp="2578" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="64" />
-				<run ground="120" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -834,8 +835,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
+			<radius normal="9" />
+			<height normal="20.4" />
 		</collision>
 	</npc>
 	<npc id="34291" level="99" type="L2Npc" name="Nana" title="Healer of the Arena">
@@ -880,6 +881,22 @@
 		<collision>
 			<radius normal="20" />
 			<height normal="35" />
+		</collision>
+	</npc>
+	<npc id="34293" level="78" type="L2Teleporter" name="Maris" title="Researcher">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
 	</npc>
 </list>

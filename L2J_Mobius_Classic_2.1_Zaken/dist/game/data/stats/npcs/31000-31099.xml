@@ -1827,4 +1827,38 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
+	<npc id="31075" level="70" type="L2Teleporter" name="Gatekeeper Ziggurat" title="">
+		<!-- CLASSIC NPC -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
+	<npc id="31076" level="70" type="L2Teleporter" name="Gatekeeper Ziggurat" title="">
+		<!-- CLASSIC NPC -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="20" />
+			<height normal="40" />
+		</collision>
+	</npc>
 </list>
