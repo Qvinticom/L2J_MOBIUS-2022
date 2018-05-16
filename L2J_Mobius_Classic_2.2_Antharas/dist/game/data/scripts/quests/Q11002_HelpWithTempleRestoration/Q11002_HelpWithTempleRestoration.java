@@ -208,8 +208,8 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 								qs.setCond(3);
 							}
 						}
-						break;
 					}
+					break;
 				}
 				case WEREWOLF_HUMTER:
 				case WEREWOLF_CHIEFTAIN:
@@ -226,8 +226,8 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 								qs.setCond(4);
 							}
 						}
-						break;
 					}
+					break;
 				}
 				case CRASHER:
 				case STONE_GOLEM:
@@ -244,8 +244,8 @@ public class Q11002_HelpWithTempleRestoration extends Quest
 								qs.setCond(5);
 							}
 						}
-						break;
 					}
+					break;
 				}
 			}
 		}

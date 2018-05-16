@@ -52,8 +52,8 @@ public class Q11001_TombsOfAncestors extends Quest
 	private static final int ORC = 20130;
 	private static final int ORC_SOLDIER = 20131;
 	private static final int ORC_ARCHER = 20006;
-	private static final int ORC_WARRIOR = 20386;
-	private static final int WEREWOLVES = 20387;
+	private static final int ORC_WARRIOR = 20093;
+	private static final int WEREWOLVES = 20132;
 	// Misc
 	private static final int MIN_LVL = 2;
 	private static final int MAX_LVL = 20;
@@ -197,14 +197,17 @@ public class Q11001_TombsOfAncestors extends Quest
 				case WOLF:
 				case ELDER_WOLF:
 				{
-					if (qs.isCond(2))
+					if (qs.isCond(2) && (getQuestItemsCount(killer, WOLF_PELT) < 10))
 					{
-						giveItems(killer, WOLF_PELT, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						if (getQuestItemsCount(killer, WOLF_PELT) >= 10)
+						if (getRandom(100) < 93)
 						{
-							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WOLVES_N_GO_HUNTING_AND_KILL_ORCS, ExShowScreenMessage.TOP_CENTER, 10000);
-							qs.setCond(3);
+							giveItems(killer, WOLF_PELT, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							if (getQuestItemsCount(killer, WOLF_PELT) >= 10)
+							{
+								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_WOLVES_N_GO_HUNTING_AND_KILL_ORCS, ExShowScreenMessage.TOP_CENTER, 10000);
+								qs.setCond(3);
+							}
 						}
 					}
 					break;
@@ -213,42 +216,51 @@ public class Q11001_TombsOfAncestors extends Quest
 				case ORC_SOLDIER:
 				case ORC_ARCHER:
 				{
-					if (qs.isCond(3))
+					if (qs.isCond(3) && (getQuestItemsCount(killer, ORC_AMULET) < 10))
 					{
-						giveItems(killer, ORC_AMULET, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						if (getQuestItemsCount(killer, ORC_AMULET) >= 10)
+						if (getRandom(100) < 93)
 						{
-							showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORCS_NGO_HUNTING_AND_KILL_ORC_WARRIORS_AND_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
-							qs.setCond(4);
+							giveItems(killer, ORC_AMULET, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							if (getQuestItemsCount(killer, ORC_AMULET) >= 10)
+							{
+								showOnScreenMsg(killer, NpcStringId.YOU_HAVE_KILLED_ENOUGH_ORCS_NGO_HUNTING_AND_KILL_ORC_WARRIORS_AND_WEREWOLVES, ExShowScreenMessage.TOP_CENTER, 10000);
+								qs.setCond(4);
+							}
 						}
 					}
 					break;
 				}
 				case ORC_WARRIOR:
 				{
-					if (qs.isCond(4))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, BROKEN_SWORD) < 10))
 					{
-						giveItems(killer, BROKEN_SWORD, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						if ((getQuestItemsCount(killer, BROKEN_SWORD) >= 10) && (getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10))
+						if (getRandom(100) < 89)
 						{
-							showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
-							qs.setCond(5);
+							giveItems(killer, BROKEN_SWORD, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							if ((getQuestItemsCount(killer, BROKEN_SWORD) >= 10) && (getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10))
+							{
+								showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
+								qs.setCond(5);
+							}
 						}
 					}
 					break;
 				}
 				case WEREWOLVES:
 				{
-					if (qs.isCond(4))
+					if (qs.isCond(4) && (getQuestItemsCount(killer, WEREWOLFS_FANG) < 10))
 					{
-						giveItems(killer, WEREWOLFS_FANG, 1);
-						playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
-						if ((getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10) && (getQuestItemsCount(killer, BROKEN_SWORD) >= 10))
+						if (getRandom(100) < 100)
 						{
-							showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
-							qs.setCond(5);
+							giveItems(killer, WEREWOLFS_FANG, 1);
+							playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+							if ((getQuestItemsCount(killer, WEREWOLFS_FANG) >= 10) && (getQuestItemsCount(killer, BROKEN_SWORD) >= 10))
+							{
+								showOnScreenMsg(killer, NpcStringId.YOU_FULFILLED_ALL_ALTRAN_S_REQUESTS_N_RETURN_TO_ALTRAN, ExShowScreenMessage.TOP_CENTER, 10000);
+								qs.setCond(5);
+							}
 						}
 					}
 					break;
