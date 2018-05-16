@@ -3758,7 +3758,7 @@
 		<effects>
 			<effect name="SilentMove" />
 			<effect name="DispelBySlot">
-				<dispel>ROOT_PHYSICALLY,3</dispel>
+				<dispel>DANCE_OF_SHADOW,-1;STEALTH,-1</dispel>
 			</effect>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>
