@@ -408,7 +408,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 				instance.openCloseDoor(instance.getTemplateParameters().getInt("thirdDoorId"), true);
 				instance.setStatus(3); // Used for notify helper's AI
 			}
-			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MONSTERS).isEmpty())
+			else if (param.getBoolean("CONTINUE_AFTER_KILL", false) && instance.getAliveNpcs(MINI_BOSSES).isEmpty())
 			{
 				param.set("CONTINUE_AFTER_KILL", false);
 				getTimers().addTimer("CALL_PROGRESS", 5000, n -> manageProgressInInstance(instance));
@@ -635,7 +635,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE1_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 2);
-							param.set("CONTINUE_AFTER_KILL", true);
+							getTimers().addTimer("CALL_PROGRESS", 8000, n -> manageProgressInInstance(instance));
 							break;
 						}
 					}
@@ -667,7 +667,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE2_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 3);
-							param.set("CONTINUE_AFTER_KILL", true);
+							getTimers().addTimer("CALL_PROGRESS", 8000, n -> manageProgressInInstance(instance));
 							break;
 						}
 					}
@@ -719,7 +719,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 								param.set("STAGE", 4);
 								param.set("WAVE", 1);
 							}
-							param.set("CONTINUE_AFTER_KILL", true);
+							getTimers().addTimer("CALL_PROGRESS", 8000, n -> manageProgressInInstance(instance));
 							break;
 						}
 						case 4:
@@ -762,7 +762,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 							moveMonsters(instance.spawnGroup("ROOM1_STAGE4_WAVE3"));
 							param.set("WAVE", 1);
 							param.set("STAGE", 5);
-							param.set("CONTINUE_AFTER_KILL", true);
+							getTimers().addTimer("CALL_PROGRESS", 8000, n -> manageProgressInInstance(instance));
 							break;
 						}
 					}
@@ -829,7 +829,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE1_WAVE1"));
 					param.set("STAGE", 2);
-					param.set("CONTINUE_AFTER_KILL", true);
+					getTimers().addTimer("CALL_PROGRESS", 36000, n -> manageProgressInInstance(instance));
 					
 					final Location survivorLoc = instance.getTemplateParameters().getLocation("middlePointRoom3");
 					final int survivorCount = param.getInt("SURVIVOR_COUNT");
@@ -845,7 +845,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE2_WAVE1"));
 					param.set("STAGE", 3);
-					param.set("CONTINUE_AFTER_KILL", true);
+					getTimers().addTimer("CALL_PROGRESS", 36000, n -> manageProgressInInstance(instance));
 					break;
 				}
 				case 3:
@@ -868,7 +868,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					else
 					{
 						param.set("STAGE", 4);
-						param.set("CONTINUE_AFTER_KILL", true);
+						getTimers().addTimer("CALL_PROGRESS", 36000, n -> manageProgressInInstance(instance));
 					}
 					break;
 				}
@@ -877,7 +877,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 					showOnScreenMsg(instance, NpcStringId.STAGE_S1, ExShowScreenMessage.TOP_CENTER, 5000, true, Integer.toString(stage));
 					moveMonsters(instance.spawnGroup("ROOM3_STAGE4_WAVE1"));
 					param.set("STAGE", 5);
-					param.set("CONTINUE_AFTER_KILL", true);
+					getTimers().addTimer("CALL_PROGRESS", 36000, n -> manageProgressInInstance(instance));
 					break;
 				}
 				case 5:
@@ -930,7 +930,7 @@ public final class KartiasLabyrinth extends AbstractInstance
 		final L2Npc npc = (L2Npc) event.getSeer();
 		final Instance world = npc.getInstanceWorld();
 		
-		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(0))
+		if ((world != null) && (creature.isPlayer() || creature.getInstanceType().isType(InstanceType.FriendlyNpcInstance)) && npc.isScriptValue(1))
 		{
 			final double distance = npc.calculateDistance(creature, false, false);
 			if ((distance < 450) && !CommonUtil.contains(PRISONERS, creature.getId()))
