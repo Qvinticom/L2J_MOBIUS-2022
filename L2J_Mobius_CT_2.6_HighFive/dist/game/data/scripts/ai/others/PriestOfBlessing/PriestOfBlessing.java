@@ -139,8 +139,8 @@ public final class PriestOfBlessing extends AbstractNpcAI
 			
 			if (player.getAdena() >= _price_hourglass)
 			{
-				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + _index);
-				final long _reuse_time = value == "" ? 0 : Long.parseLong(value);
+				final String value = player.getVariables().getString("PriestOfBlessing_hg_" + _index, "");
+				final long _reuse_time = value.isEmpty() ? 0 : Long.parseLong(value);
 				
 				if (System.currentTimeMillis() > _reuse_time)
 				{
