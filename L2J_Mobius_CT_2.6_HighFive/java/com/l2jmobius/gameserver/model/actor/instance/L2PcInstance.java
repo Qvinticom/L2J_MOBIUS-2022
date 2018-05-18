@@ -6440,7 +6440,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean isInvul()
 	{
-		return super.isInvul() || (_teleportProtectEndTime > GameTimeController.getInstance().getGameTicks());
+		return super.isInvul() || isTeleportProtected();
 	}
 	
 	/**
