@@ -1168,7 +1168,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Check if the L2Character is a L2PcInstance
 		if (isPlayer())
 		{
-			sendPacket(new SetupGauge(SetupGauge.RED, sAtk + reuse));
+			sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse));
 		}
 		
 		// Create a new hit task with Medium priority
@@ -1237,7 +1237,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
 			
 			// Send a Server->Client packet SetupGauge
-			final SetupGauge sg = new SetupGauge(SetupGauge.RED, sAtk + reuse);
+			final SetupGauge sg = new SetupGauge(getObjectId(), SetupGauge.RED, sAtk + reuse);
 			sendPacket(sg);
 		}
 		
@@ -1909,7 +1909,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// Send a Server->Client packet SetupGauge with the color of the gauge and the casting time
 			if (isPlayer() && !simultaneously)
 			{
-				sendPacket(new SetupGauge(SetupGauge.BLUE, skillTime));
+				sendPacket(new SetupGauge(getObjectId(), SetupGauge.BLUE, skillTime));
 			}
 			
 			if (skill.isChanneling() && (skill.getChannelingSkillId() > 0))

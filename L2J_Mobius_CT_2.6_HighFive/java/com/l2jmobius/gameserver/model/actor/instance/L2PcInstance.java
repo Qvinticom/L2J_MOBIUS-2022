@@ -6408,7 +6408,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		final boolean wasFlying = isFlying();
-		sendPacket(new SetupGauge(3, 0, 0));
+		sendPacket(new SetupGauge(getObjectId(), 3, 0, 0));
 		final int petId = _mountNpcId;
 		setMount(0, 0);
 		stopFeed();
@@ -10501,7 +10501,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		_taskWater.cancel(false);
 		_taskWater = null;
-		sendPacket(new SetupGauge(2, 0));
+		sendPacket(new SetupGauge(getObjectId(), 2, 0));
 	}
 	
 	public void startWaterTask()
@@ -10511,7 +10511,7 @@ public final class L2PcInstance extends L2Playable
 			return;
 		}
 		final int timeinwater = (int) calcStat(Stats.BREATH, 60000, this, null);
-		sendPacket(new SetupGauge(2, timeinwater));
+		sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
 		_taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
 	}
 	
@@ -12638,7 +12638,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			setCurrentFeed(((L2PetInstance) getSummon()).getCurrentFed());
 			_controlItemId = getSummon().getControlObjectId();
-			sendPacket(new SetupGauge(3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
+			sendPacket(new SetupGauge(getObjectId(), 3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
 			if (!isDead())
 			{
 				_mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
@@ -12647,7 +12647,7 @@ public final class L2PcInstance extends L2Playable
 		else if (_canFeed)
 		{
 			setCurrentFeed(getMaxFeed());
-			final SetupGauge sg = new SetupGauge(3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
+			final SetupGauge sg = new SetupGauge(getObjectId(), 3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
 			sendPacket(sg);
 			if (!isDead())
 			{
@@ -12694,7 +12694,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		final boolean lastHungryState = isHungry();
 		_curFeed = num > getMaxFeed() ? getMaxFeed() : num;
-		final SetupGauge sg = new SetupGauge(3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
+		final SetupGauge sg = new SetupGauge(getObjectId(), 3, (getCurrentFeed() * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
 		sendPacket(sg);
 		// broadcast move speed change when strider becomes hungry / full
 		if (lastHungryState != isHungry())

@@ -353,13 +353,13 @@ public class RecipeController
 					final MagicSkillUse msk = new MagicSkillUse(_player, _skillId, _skillLevel, _delay, 0);
 					_player.broadcastPacket(msk);
 					
-					_player.sendPacket(new SetupGauge(0, _delay));
+					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 					ThreadPool.schedule(this, 100 + _delay);
 				}
 				else
 				{
 					// for alt mode, sleep delay msec before finishing
-					_player.sendPacket(new SetupGauge(0, _delay));
+					_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 					
 					try
 					{
@@ -536,7 +536,7 @@ public class RecipeController
 						// rest (wait for HP)
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
-							_player.sendPacket(new SetupGauge(0, _delay));
+							_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 							ThreadPool.schedule(this, 100 + _delay);
 						}
 						else
@@ -558,7 +558,7 @@ public class RecipeController
 						// rest (wait for MP)
 						if (Config.ALT_GAME_CREATION && isWait)
 						{
-							_player.sendPacket(new SetupGauge(0, _delay));
+							_player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
 							ThreadPool.schedule(this, 100 + _delay);
 						}
 						else

@@ -131,7 +131,7 @@ public class RentPet implements IBypassHandler
 		}
 		
 		player.mount(petId, 0, false);
-		final SetupGauge sg = new SetupGauge(3, time * 1000);
+		final SetupGauge sg = new SetupGauge(player.getObjectId(), 3, time * 1000);
 		player.sendPacket(sg);
 		player.startRentPet(time);
 	}
