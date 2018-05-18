@@ -1697,8 +1697,6 @@ public abstract class Inventory extends ItemContainer
 				setPaperdollItem(PAPERDOLL_LEGS, null);
 				setPaperdollItem(PAPERDOLL_LHAND, null);
 				setPaperdollItem(PAPERDOLL_RHAND, null);
-				setPaperdollItem(PAPERDOLL_RHAND, null);
-				setPaperdollItem(PAPERDOLL_LHAND, null);
 				setPaperdollItem(PAPERDOLL_HEAD, null);
 				setPaperdollItem(PAPERDOLL_FEET, null);
 				setPaperdollItem(PAPERDOLL_GLOVES, null);
