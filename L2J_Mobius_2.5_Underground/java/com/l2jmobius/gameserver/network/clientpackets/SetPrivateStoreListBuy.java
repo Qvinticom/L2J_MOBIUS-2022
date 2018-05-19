@@ -18,11 +18,19 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
+import java.util.Arrays;
+
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
+import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -32,47 +40,78 @@ import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreMsgBuy;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class ...
- * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $ CPU Disasm Packets: ddhhQQ cddb
- */
 public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 {
-	private static final int BATCH_LENGTH = 44; // length of the one item
-	
-	private Item[] _items = null;
+	private TradeItem[] _items = null;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		final int count = packet.readD();
-		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET) || ((count * BATCH_LENGTH) != packet.getReadableBytes()))
+		if ((count < 1) || (count > Config.MAX_ITEM_IN_PACKET))
 		{
 			return false;
 		}
 		
-		_items = new Item[count];
+		_items = new TradeItem[count];
 		for (int i = 0; i < count; i++)
 		{
-			final int itemId = packet.readD();
+			int itemId = packet.readD();
 			
-			packet.readH(); // TODO analyse this
+			final L2Item template = ItemTable.getInstance().getTemplate(itemId);
+			if (template == null)
+			{
+				_items = null;
+				return false;
+			}
+			
+			final int enchantLevel = packet.readH();
 			packet.readH(); // TODO analyse this
 			
-			final long cnt = packet.readQ();
-			final long price = packet.readQ();
+			long cnt = packet.readQ();
+			long price = packet.readQ();
 			
 			if ((itemId < 1) || (cnt < 1) || (price < 0))
 			{
 				_items = null;
 				return false;
 			}
-			packet.readD(); // Unk
-			packet.readD(); // Unk
-			packet.readD(); // Unk
-			packet.readD(); // Unk
 			
-			_items[i] = new Item(itemId, cnt, price);
+			final short attackAttributeId = (short) packet.readH();
+			final int attackAttributeValue = packet.readH();
+			final int defenceFire = packet.readH();
+			final int defenceWater = packet.readH();
+			final int defenceWind = packet.readH();
+			final int defenceEarth = packet.readH();
+			final int defenceHoly = packet.readH();
+			final int defenceDark = packet.readH();
+			final int visualId = packet.readD();
+			
+			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.readC()];
+			for (int k = 0; k < soulCrystalOptions.length; k++)
+			{
+				soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+			}
+			final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.readC()];
+			for (int k = 0; k < soulCrystalSpecialOptions.length; k++)
+			{
+				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+			}
+			
+			final TradeItem item = new TradeItem(template, cnt, price);
+			item.setEnchant(enchantLevel);
+			item.setAttackElementType(AttributeType.findByClientId(attackAttributeId));
+			item.setAttackElementPower(attackAttributeValue);
+			item.setElementDefAttr(AttributeType.FIRE, defenceFire);
+			item.setElementDefAttr(AttributeType.WATER, defenceWater);
+			item.setElementDefAttr(AttributeType.WIND, defenceWind);
+			item.setElementDefAttr(AttributeType.EARTH, defenceEarth);
+			item.setElementDefAttr(AttributeType.HOLY, defenceHoly);
+			item.setElementDefAttr(AttributeType.DARK, defenceDark);
+			item.setVisualId(visualId);
+			item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
+			item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
+			_items[i] = item;
 		}
 		return true;
 	}
@@ -115,7 +154,7 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 			return;
 		}
 		
-		final TradeList tradeList = player.getBuyList();
+		TradeList tradeList = player.getBuyList();
 		tradeList.clear();
 		
 		// Check maximum number of allowed slots for pvt shops
@@ -127,15 +166,17 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 		}
 		
 		long totalCost = 0;
-		for (Item i : _items)
+		for (TradeItem i : _items)
 		{
-			if (!i.addToTradeList(tradeList))
+			if ((MAX_ADENA / i.getCount()) < i.getPrice())
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set price more than " + MAX_ADENA + " adena in Private Store - Buy.", Config.DEFAULT_PUNISH);
 				return;
 			}
 			
-			totalCost += i.getCost();
+			tradeList.addItemByItemId(i.getItem().getId(), i.getCount(), i.getPrice());
+			
+			totalCost += (i.getCount() * i.getPrice());
 			if (totalCost > MAX_ADENA)
 			{
 				Util.handleIllegalPlayerAction(player, "Warning!! Character " + player.getName() + " of account " + player.getAccountName() + " tried to set total price more than " + MAX_ADENA + " adena in Private Store - Buy.", Config.DEFAULT_PUNISH);
@@ -155,35 +196,5 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 		player.setPrivateStoreType(PrivateStoreType.BUY);
 		player.broadcastUserInfo();
 		player.broadcastPacket(new PrivateStoreMsgBuy(player));
-	}
-	
-	private static class Item
-	{
-		private final int _itemId;
-		private final long _count;
-		private final long _price;
-		
-		public Item(int id, long num, long pri)
-		{
-			_itemId = id;
-			_count = num;
-			_price = pri;
-		}
-		
-		public boolean addToTradeList(TradeList list)
-		{
-			if ((MAX_ADENA / _count) < _price)
-			{
-				return false;
-			}
-			
-			list.addItemByItemId(_itemId, _count, _price);
-			return true;
-		}
-		
-		public long getCost()
-		{
-			return _count * _price;
-		}
 	}
 }

@@ -18,14 +18,18 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import static com.l2jmobius.gameserver.model.itemcontainer.Inventory.MAX_ADENA;
 
+import java.util.Arrays;
+
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -83,6 +87,18 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 			final int defenceEarth = packet.readH();
 			final int defenceHoly = packet.readH();
 			final int defenceDark = packet.readH();
+			final int visualId = packet.readD();
+			
+			final EnsoulOption[] soulCrystalOptions = new EnsoulOption[packet.readC()];
+			for (int k = 0; k < soulCrystalOptions.length; k++)
+			{
+				soulCrystalOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+			}
+			final EnsoulOption[] soulCrystalSpecialOptions = new EnsoulOption[packet.readC()];
+			for (int k = 0; k < soulCrystalSpecialOptions.length; k++)
+			{
+				soulCrystalSpecialOptions[k] = EnsoulData.getInstance().getOption(packet.readD());
+			}
 			
 			final TradeItem item = new TradeItem(template, cnt, price);
 			item.setEnchant(enchantLevel);
@@ -95,6 +111,9 @@ public final class SetPrivateStoreListBuy implements IClientIncomingPacket
 			item.setElementDefAttr(AttributeType.EARTH, defenceEarth);
 			item.setElementDefAttr(AttributeType.HOLY, defenceHoly);
 			item.setElementDefAttr(AttributeType.DARK, defenceDark);
+			item.setVisualId(visualId);
+			item.setSoulCrystalOptions(Arrays.asList(soulCrystalOptions));
+			item.setSoulCrystalSpecialOptions(Arrays.asList(soulCrystalSpecialOptions));
 			_items[i] = item;
 		}
 		return true;

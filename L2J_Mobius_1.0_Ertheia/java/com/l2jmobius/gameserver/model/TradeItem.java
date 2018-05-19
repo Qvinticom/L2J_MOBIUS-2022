@@ -33,8 +33,8 @@ public class TradeItem
 	private long _count;
 	private long _storeCount;
 	private long _price;
-	private final byte _elemAtkType;
-	private final int _elemAtkPower;
+	private byte _elemAtkType;
+	private int _elemAtkPower;
 	private final int[] _elemDefAttr =
 	{
 		0,
@@ -88,7 +88,7 @@ public class TradeItem
 		_count = count;
 		_storeCount = count;
 		_price = price;
-		_elemAtkType = Elementals.NONE;
+		_elemAtkType = AttributeType.NONE.getClientId();
 		_elemAtkPower = 0;
 		_enchantOptions = L2ItemInstance.DEFAULT_ENCHANT_OPTIONS;
 	}
@@ -180,14 +180,29 @@ public class TradeItem
 		return _price;
 	}
 	
+	public void setAttackElementType(AttributeType attackElement)
+	{
+		_elemAtkType = attackElement.getClientId();
+	}
+	
 	public byte getAttackElementType()
 	{
 		return _elemAtkType;
 	}
 	
+	public void setAttackElementPower(int attackElementPower)
+	{
+		_elemAtkPower = attackElementPower;
+	}
+	
 	public int getAttackElementPower()
 	{
 		return _elemAtkPower;
+	}
+	
+	public void setElementDefAttr(AttributeType element, int value)
+	{
+		_elemDefAttr[element.getClientId()] = value;
 	}
 	
 	public int getElementDefAttr(byte i)
@@ -214,6 +229,11 @@ public class TradeItem
 	public int getAugmentationOption2()
 	{
 		return _augmentationOption2;
+	}
+	
+	public void setVisualId(int visualItemId)
+	{
+		_visualId = visualItemId;
 	}
 	
 	public int getVisualId()
