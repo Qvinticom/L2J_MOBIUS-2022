@@ -94,12 +94,12 @@ public class AreaFriendly implements ITargetTypeHandler
 	
 	private boolean checkTarget(L2PcInstance activeChar, L2Character target)
 	{
-		if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
+		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
 		{
 			return false;
 		}
 		
-		if ((target == null) || target.isAlikeDead() || target.isDoor() || (target instanceof L2SiegeFlagInstance) || target.isMonster())
+		if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 		{
 			return false;
 		}
