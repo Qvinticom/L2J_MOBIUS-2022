@@ -213,7 +213,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 		
 		public TrapInfo(L2TrapInstance cha, L2Character attacker)
 		{
-			super(cha, attacker.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS));
+			super(cha, attacker == null ? false : attacker.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS));
 			
 			_trap = cha;
 			_idTemplate = cha.getTemplate().getDisplayId();
