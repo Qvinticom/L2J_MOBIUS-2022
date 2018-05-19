@@ -2447,6 +2447,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	@Override
+	public boolean decayMe()
+	{
+		if (hasAI())
+		{
+			getAI().stopAITask();
+		}
+		return super.decayMe();
+	}
+	
+	@Override
 	public boolean deleteMe()
 	{
 		if (hasAI())
