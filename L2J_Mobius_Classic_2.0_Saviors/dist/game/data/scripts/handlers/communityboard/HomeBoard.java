@@ -178,6 +178,7 @@ public final class HomeBoard implements IParseBoardHandler
 			{
 				activeChar.sendPacket(new ShowBoard());
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
+				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
 			}
 		}
