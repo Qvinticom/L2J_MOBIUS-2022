@@ -17,7 +17,7 @@
 package quests.Q00790_ObtainingFerinsTrust;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.enums.QuestSound;
+import com.l2jmobius.gameserver.enums.Faction;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 
 /**
- * Obtaining Ferin's Trust (00790)
+ * Obtaining Ferin's Trust (790)
  * @URL https://l2wiki.com/Obtaining_Ferin%27s_Trust
  * @author Gigi
  */
@@ -37,28 +37,30 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 	// Monsters
 	private static final int[] MONSTERS =
 	{
-		23550, // Kerberos Lager
-		23551, // Kerberos Fort
-		23552, // Kerberos Nero
-		23553, // Fury Sylph Barrena
-		23555, // Fury Sylph Temptress
-		23556, // Fury Sylph Purka
-		23557, // Fury Kerberos Leger
-		23558 // Fury Kerberos Nero
+		23541, // Kerberos Lager
+		23550, // Kerberos Lager (night)
+		23542, // Kerberos Fort
+		23551, // Kerberos Fort (night)
+		23543, // Kerberos Nero
+		23552, // Kerberos Nero (night)
+		23544, // Fury Sylph Barrena
+		23553, // Fury Sylph Barrena (night)
+		23546, // Fury Sylph Temptress
+		23555, // Fury Sylph Temptress (night)
+		23547, // Fury Sylph Purka
+		23556, // Fury Sylph Purka (night)
+		23545, // Fury Kerberos Leger
+		23557, // Fury Kerberos Leger (night)
+		23549, // Fury Kerberos Nero
+		23558 // Fury Kerberos Nero (night)
 	};
 	// Misc
-	private static final int MIN_LEVEL = 100;
+	private static final int MIN_LEVEL = 102;
 	// Item's
-	private static final int MARK_OF_TRUST_LOW_GRADE = 45840;
-	private static final int MARK_OF_TRUST_MID_GRADE = 45843;
-	private static final int MARK_OF_TRUST_HIGH_GRADE = 45848;
-	private static final int MUTATAED_SPIRITS_SOUL = 45849;
-	private static final int BSOE = 1538;
-	private static final int ELEXIR_OF_LIFE_R = 30357;
-	private static final int ELEXIR_OF_MIND_R = 30358;
-	private static final int ELEXIR_OF_CP_R = 30359;
-	private static final int FERINS_REWARD_BOX = 46165;
-	private static final int SUPERIOR_GIANTS_CODEX = 46150;
+	private static final int MUTATED_SPIRITS_SOUL = 45849;
+	private static final int UNWORLDLY_VISITORS_BASIC_SUPPLY_BOX = 47181;
+	private static final int UNWORLDLY_VISITORS_INTERMEDIATE_SUPPLY_BOX = 47182;
+	private static final int UNWORLDLY_VISITORS_ADVANCED_SUPPLY_BOX = 47183;
 	
 	public Q00790_ObtainingFerinsTrust()
 	{
@@ -66,7 +68,7 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 		addStartNpc(CYPHONA);
 		addTalkId(CYPHONA);
 		addKillId(MONSTERS);
-		registerQuestItems(MUTATAED_SPIRITS_SOUL);
+		registerQuestItems(MUTATED_SPIRITS_SOUL);
 		addCondMinLevel(MIN_LEVEL, "34055-00.htm");
 	}
 	
@@ -82,186 +84,154 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 		
 		switch (event)
 		{
-			case "34055-01.htm":
 			case "34055-02.htm":
 			case "34055-03.htm":
-			case "34055-04.html":
-			case "34055-08.html":
-			case "34055-09a.html":
-			case "34055-09b.html":
-			case "34055-09c.html":
+			case "34055-04.htm":
+			case "34055-04a.htm":
+			case "34055-04b.htm":
+			case "34055-06.html":
+			case "34055-06a.html":
+			case "34055-06b.html":
 			{
 				htmltext = event;
 				break;
 			}
-			case "34055-05.htm":
+			case "select_mission":
 			{
 				qs.startQuest();
+				if ((player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 1) && (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 2))
+				{
+					htmltext = "34055-04a.htm";
+					break;
+				}
+				else if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 2)
+				{
+					htmltext = "34055-04b.htm";
+					break;
+				}
+				htmltext = "34055-04.htm";
+				break;
+			}
+			case "return":
+			{
+				if ((player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 1) && (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 2))
+				{
+					htmltext = "34055-04a.htm";
+					break;
+				}
+				else if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 2)
+				{
+					htmltext = "34055-04b.htm";
+					break;
+				}
+				htmltext = "34055-04.htm";
+				break;
+			}
+			case "34055-07.html":
+			{
+				qs.setCond(2, true);
 				htmltext = event;
 				break;
 			}
-			case "34055-09.html":
+			case "34055-07a.html":
 			{
-				giveItems(player, MARK_OF_TRUST_LOW_GRADE, 1);
-				qs.exitQuest(QuestType.REPEATABLE, true);
+				qs.setCond(3, true);
 				htmltext = event;
 				break;
 			}
-			case "34055-10a.html":
+			case "34055-07b.html":
 			{
-				if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 200) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 400))
-				{
-					giveAdena(player, 119773, true);
-					addExpAndSp(player, 5932440000L, 14237820);
-					if (getRandom(100) < 20)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 400) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 600))
-				{
-					giveAdena(player, 239546, true);
-					addExpAndSp(player, 11864880000L, 28475640);
-					if (getRandom(100) < 40)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 600) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 800))
-				{
-					giveAdena(player, 359319, true);
-					addExpAndSp(player, 17797320000L, 42713460);
-					if (getRandom(100) < 60)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 800) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 1000))
-				{
-					giveAdena(player, 479091, true);
-					addExpAndSp(player, 23729760000L, 56951280);
-					if (getRandom(100) < 80)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 1000)
-				{
-					giveAdena(player, 598864, true);
-					addExpAndSp(player, 29662200000L, 71189100);
-					giveItems(player, FERINS_REWARD_BOX, 1);
-				}
-				giveItems(player, MARK_OF_TRUST_MID_GRADE, 1);
-				giveItems(player, BSOE, 1);
-				giveItems(player, ELEXIR_OF_LIFE_R, 5);
-				giveItems(player, ELEXIR_OF_MIND_R, 5);
-				giveItems(player, ELEXIR_OF_CP_R, 5);
-				qs.exitQuest(QuestType.REPEATABLE, true);
+				qs.setCond(4, true);
 				htmltext = event;
 				break;
 			}
-			case "34055-10b.html":
+			case "34055-10.html":
 			{
-				if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 200) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 400))
+				final int chance = getRandom(100);
+				switch (qs.getCond())
 				{
-					giveAdena(player, 119773, true);
-					addExpAndSp(player, 5932440000L, 14237820);
-					if (getRandom(100) < 20)
+					case 5:
 					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
+						if ((getQuestItemsCount(player, MUTATED_SPIRITS_SOUL) == 200) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_BASIC_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 22_221_427_950L, 22_221_360);
+							addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 100);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
+					}
+					case 6:
+					{
+						if ((getQuestItemsCount(player, MUTATED_SPIRITS_SOUL) == 400) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_ADVANCED_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_BASIC_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 44_442_855_900L, 44_442_720);
+							addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 200);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
+					}
+					case 7:
+					{
+						if ((getQuestItemsCount(player, MUTATED_SPIRITS_SOUL) == 600) && (player.getLevel() >= MIN_LEVEL))
+						{
+							if (chance < 2)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_BASIC_SUPPLY_BOX, 1);
+							}
+							else if (chance < 20)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_INTERMEDIATE_SUPPLY_BOX, 1);
+							}
+							else if (chance < 100)
+							{
+								giveItems(player, UNWORLDLY_VISITORS_ADVANCED_SUPPLY_BOX, 1);
+							}
+							addExpAndSp(player, 66_664_283_850L, 66_664_080);
+							addFactionPoints(player, Faction.UNWORLDLY_VISITORS, 300);
+							qs.exitQuest(QuestType.DAILY, true);
+							htmltext = event;
+						}
+						else
+						{
+							htmltext = getNoQuestLevelRewardMsg(player);
+						}
+						break;
 					}
 				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 400) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 600))
-				{
-					giveAdena(player, 239546, true);
-					addExpAndSp(player, 11864880000L, 28475640);
-					if (getRandom(100) < 40)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 600) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 800))
-				{
-					giveAdena(player, 359319, true);
-					addExpAndSp(player, 17797320000L, 42713460);
-					if (getRandom(100) < 60)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 800) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 1000))
-				{
-					giveAdena(player, 479091, true);
-					addExpAndSp(player, 23729760000L, 56951280);
-					if (getRandom(100) < 80)
-					{
-						giveItems(player, FERINS_REWARD_BOX, 1);
-					}
-				}
-				else if (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 1000)
-				{
-					giveAdena(player, 598864, true);
-					addExpAndSp(player, 29662200000L, 71189100);
-					giveItems(player, FERINS_REWARD_BOX, 1);
-				}
-				giveItems(player, MARK_OF_TRUST_HIGH_GRADE, 1);
-				giveItems(player, BSOE, 1);
-				giveItems(player, ELEXIR_OF_LIFE_R, 5);
-				giveItems(player, ELEXIR_OF_MIND_R, 5);
-				giveItems(player, ELEXIR_OF_CP_R, 5);
-				qs.exitQuest(QuestType.REPEATABLE, true);
-				htmltext = event;
-				break;
-			}
-			case "34055-10c.html":
-			{
-				if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 200) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 400))
-				{
-					addExpAndSp(player, 5932440000L, 14237820);
-					giveItems(player, FERINS_REWARD_BOX, 1);
-					if (getRandom(100) < 1)
-					{
-						giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 400) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 600))
-				{
-					addExpAndSp(player, 11864880000L, 28475640);
-					giveItems(player, FERINS_REWARD_BOX, getRandom(1, 2));
-					if (getRandom(100) < 9)
-					{
-						giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 600) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 800))
-				{
-					addExpAndSp(player, 17797320000L, 42713460);
-					giveItems(player, FERINS_REWARD_BOX, 2);
-					if (getRandom(100) < 20)
-					{
-						giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
-					}
-				}
-				else if ((getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 800) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 1000))
-				{
-					addExpAndSp(player, 23729760000L, 56951280);
-					giveItems(player, FERINS_REWARD_BOX, getRandom(2, 3));
-					if (getRandom(100) < 25)
-					{
-						giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
-					}
-				}
-				else if (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) >= 1000)
-				{
-					addExpAndSp(player, 29662200000L, 71189100);
-					giveItems(player, FERINS_REWARD_BOX, 3);
-					if (getRandom(100) < 33)
-					{
-						giveItems(player, SUPERIOR_GIANTS_CODEX, 1);
-					}
-				}
-				qs.exitQuest(QuestType.REPEATABLE, true);
-				htmltext = event;
 				break;
 			}
 		}
@@ -278,55 +248,62 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 		{
 			case State.CREATED:
 			{
-				if (!hasQuestItems(player, MARK_OF_TRUST_LOW_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
-					htmltext = "34055-01.htm";
-					break;
-				}
-				else if (hasQuestItems(player, MARK_OF_TRUST_LOW_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
-					htmltext = "34055-01a.htm";
-					break;
-				}
-				else if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
-					htmltext = "34055-01b.htm";
-					break;
-				}
-				else if (hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE) && hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-				{
-					htmltext = "34055-01c.htm";
-					break;
-				}
+				htmltext = "34055-01.htm";
 			}
 			case State.STARTED:
 			{
-				if (qs.isCond(1))
+				switch (qs.getCond())
 				{
-					htmltext = "34055-06.html";
+					case 1:
+					{
+						if ((player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 1) && (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) < 2))
+						{
+							htmltext = "34055-04a.htm";
+							break;
+						}
+						else if (player.getFactionLevel(Faction.UNWORLDLY_VISITORS) >= 2)
+						{
+							htmltext = "34055-04b.htm";
+							break;
+						}
+						htmltext = "34055-04.htm";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "34055-08.html";
+						break;
+					}
+					case 3:
+					{
+						htmltext = "34055-08a.html";
+						break;
+					}
+					case 4:
+					{
+						htmltext = "34055-08b.html";
+						break;
+					}
+					case 5:
+					case 6:
+					case 7:
+					{
+						htmltext = "34055-09.html";
+						break;
+					}
 				}
-				else if (qs.isCond(2))
+				break;
+			}
+			case State.COMPLETED:
+			{
+				if (!qs.isNowAvailable())
 				{
-					if (!hasQuestItems(player, MARK_OF_TRUST_LOW_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-					{
-						htmltext = "34055-07.html";
-						break;
-					}
-					else if (hasQuestItems(player, MARK_OF_TRUST_LOW_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-					{
-						htmltext = "34055-07a.html";
-						break;
-					}
-					else if (hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && !hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-					{
-						htmltext = "34055-07b.html";
-						break;
-					}
-					else if (hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE) && hasQuestItems(player, MARK_OF_TRUST_MID_GRADE) && hasQuestItems(player, MARK_OF_TRUST_HIGH_GRADE))
-					{
-						htmltext = "34055-07c.html";
-						break;
-					}
+					htmltext = getAlreadyCompletedMsg(player, QuestType.DAILY);
+				}
+				else
+				{
+					qs.setState(State.CREATED);
+					htmltext = "34055-01.htm";
 				}
 				break;
 			}
@@ -345,16 +322,34 @@ public class Q00790_ObtainingFerinsTrust extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true) && (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) < 1000))
+		if ((qs != null) && (qs.getCond() > 1) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
 		{
-			giveItems(player, MUTATAED_SPIRITS_SOUL, 1);
-			if (getQuestItemsCount(player, MUTATAED_SPIRITS_SOUL) == 200)
+			switch (qs.getCond())
 			{
-				qs.setCond(2, true);
-			}
-			else
-			{
-				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				case 2:
+				{
+					if (giveItemRandomly(player, npc, MUTATED_SPIRITS_SOUL, 1, 200, 1, true))
+					{
+						qs.setCond(5, true);
+					}
+					break;
+				}
+				case 3:
+				{
+					if (giveItemRandomly(player, npc, MUTATED_SPIRITS_SOUL, 1, 400, 1, true))
+					{
+						qs.setCond(6, true);
+					}
+					break;
+				}
+				case 4:
+				{
+					if (giveItemRandomly(player, npc, MUTATED_SPIRITS_SOUL, 1, 600, 1, true))
+					{
+						qs.setCond(7, true);
+					}
+					break;
+				}
 			}
 		}
 	}
