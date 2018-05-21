@@ -1879,7 +1879,7 @@ public abstract class AbstractScript extends ManagedScript
 			spawn.setZ(z);
 			spawn.stopRespawn();
 			
-			final L2Npc npc = spawn.spawnOne(isSummonSpawn);
+			final L2Npc npc = spawn.doSpawn(isSummonSpawn);
 			if (despawnDelay > 0)
 			{
 				npc.scheduleDespawn(despawnDelay);

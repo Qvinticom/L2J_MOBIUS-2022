@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
@@ -73,7 +72,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private Constructor<? extends L2Npc> _constructor;
 	/** If True a L2NpcInstance is respawned each time that another is killed */
 	private boolean _doRespawn = true;
-	/** If true then spawn is custom */
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
 	private boolean _randomWalk = false; // Is no random walk
 	private NpcSpawnTemplate _spawnTemplate;
@@ -182,7 +180,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * @return the Identifier of the location area where L2NpcInstance can be spwaned.
+	 * @return the Identifier of the location area where L2NpcInstance can be spawned.
 	 */
 	public int getLocationId()
 	{
@@ -274,7 +272,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public void setXYZ(ILocational loc)
 	{
 		setXYZ(loc.getX(), loc.getY(), loc.getZ());
-		
 	}
 	
 	/**
@@ -414,16 +411,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_doRespawn = _respawnMinDelay != 0;
 		
 		return _currentCount;
-	}
-	
-	/**
-	 * Create a {@link L2NpcInstance} in this L2Spawn.
-	 * @param val
-	 * @return
-	 */
-	public L2Npc spawnOne(boolean val)
-	{
-		return doSpawn(val);
 	}
 	
 	/**
@@ -589,6 +576,8 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		
 		_spawnedNpcs.add(npc);
+		
+		// Increase the current number of L2NpcInstance managed by this L2Spawn
 		_currentCount++;
 		
 		// Minions

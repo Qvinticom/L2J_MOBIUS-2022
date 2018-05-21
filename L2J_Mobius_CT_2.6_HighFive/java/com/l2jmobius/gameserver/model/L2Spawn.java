@@ -65,7 +65,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The identifier of the location area where L2NpcInstance can be spawned */
 	private int _locationId;
 	/** The Location of this NPC spawn. */
-	private Location _location = new Location(0, 0, 0, 0, 0);
+	private static Location _location = new Location(0, 0, 0, 0, 0);
 	/** Link to NPC spawn territory */
 	private NpcSpawnTerritory _spawnTerritory = null;
 	/** Minimum respawn delay */
@@ -411,16 +411,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * Create a L2NpcInstance in this L2Spawn.
-	 * @param val
-	 * @return
-	 */
-	public L2Npc spawnOne(boolean val)
-	{
-		return doSpawn(val);
-	}
-	
-	/**
 	 * @return true if respawn enabled
 	 */
 	public boolean isRespawnEnabled()
@@ -478,7 +468,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			if (_template.isType("L2Pet") || _template.isType("L2Decoy") || _template.isType("L2Trap"))
 			{
 				_currentCount++;
-				
 				return null;
 			}
 			
@@ -519,10 +508,11 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		// New method
 		if (_spawnTerritory != null)
 		{
-			final Location p = _spawnTerritory.getRandomPoint();
-			newlocx = p.getX();
-			newlocy = p.getY();
-			newlocz = p.getZ();
+			final Location loc = _spawnTerritory.getRandomPoint();
+			newlocx = loc.getX();
+			newlocy = loc.getY();
+			newlocz = loc.getZ();
+			setLocation(loc);
 		}
 		else if ((getX() == 0) && (getY() == 0))
 		{

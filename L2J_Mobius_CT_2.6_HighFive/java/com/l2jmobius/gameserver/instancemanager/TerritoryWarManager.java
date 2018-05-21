@@ -739,7 +739,7 @@ public final class TerritoryWarManager implements Siegable
 			spawnDat.setZ(loc.getZ());
 			spawnDat.setHeading(loc.getHeading());
 			spawnDat.stopRespawn();
-			return spawnDat.spawnOne(false);
+			return spawnDat.doSpawn(false);
 		}
 		catch (Exception e)
 		{

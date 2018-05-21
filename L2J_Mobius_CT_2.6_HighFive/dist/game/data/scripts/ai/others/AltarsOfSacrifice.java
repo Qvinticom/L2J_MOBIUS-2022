@@ -64,7 +64,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 			
 			spawn.setXYZ(spawnX, spawnY, GeoEngine.getInstance().getHeight(spawnX, spawnY, _middlePoint.getZ()));
 			spawn.stopRespawn();
-			_spawnedBoss = spawn.spawnOne(false);
+			_spawnedBoss = spawn.doSpawn(false);
 		}
 		
 		protected void despawnBoss()
