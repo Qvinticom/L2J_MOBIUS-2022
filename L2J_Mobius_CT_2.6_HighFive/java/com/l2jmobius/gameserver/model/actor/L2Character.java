@@ -3618,6 +3618,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	protected void broadcastModifiedStats(List<Stats> stats)
 	{
+		if (!isSpawned())
+		{
+			return;
+		}
+		
 		if ((stats == null) || stats.isEmpty())
 		{
 			return;

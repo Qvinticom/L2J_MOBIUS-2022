@@ -36,6 +36,13 @@ public final class SpawnItem implements IClientOutgoingPacket
 		_y = obj.getY();
 		_z = obj.getZ();
 		
+		// Future test.
+		if ((_x == 0) && (_y == 0))
+		{
+			LOGGER.warning("SpawnItem with x=0 and y=0.");
+			Thread.dumpStack(); // Why? Also check DropItem, just in case.
+		}
+		
 		if (obj instanceof L2ItemInstance)
 		{
 			final L2ItemInstance item = (L2ItemInstance) obj;

@@ -34,6 +34,13 @@ public class DropItem implements IClientOutgoingPacket
 	{
 		_item = item;
 		_charObjId = playerObjId;
+		
+		// Future test.
+		if ((_item.getX() == 0) && (_item.getY() == 0))
+		{
+			LOGGER.warning("DropItem with x=0 and y=0.");
+			Thread.dumpStack(); // Why? Also check SpawnItem, just in case.
+		}
 	}
 	
 	@Override

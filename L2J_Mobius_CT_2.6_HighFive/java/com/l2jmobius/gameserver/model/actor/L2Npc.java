@@ -418,7 +418,7 @@ public class L2Npc extends L2Character
 			{
 				player.sendPacket(new ServerObjectInfo(this, player));
 			}
-			else
+			else if (isSpawned())
 			{
 				player.sendPacket(new AbstractNpcInfo.NpcInfo(this, player));
 			}
