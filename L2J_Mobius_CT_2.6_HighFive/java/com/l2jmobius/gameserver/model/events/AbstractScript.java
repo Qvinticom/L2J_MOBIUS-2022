@@ -72,7 +72,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcCreatureSee
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcEventReceived;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
@@ -662,30 +661,6 @@ public abstract class AbstractScript extends ManagedScript
 	protected final List<AbstractEventListener> setNpcMoveFinishedId(Consumer<OnNpcMoveFinished> callback, Collection<Integer> npcIds)
 	{
 		return registerConsumer(callback, EventType.ON_NPC_MOVE_FINISHED, ListenerRegisterType.NPC, npcIds);
-	}
-	
-	// ---------------------------------------------------------------------------------------------------------------------------
-	
-	/**
-	 * Provides instant callback operation when {@link L2Npc} arrive to node of its route
-	 * @param callback
-	 * @param npcIds
-	 * @return
-	 */
-	protected final List<AbstractEventListener> setNpcMoveNodeArrivedId(Consumer<OnNpcMoveNodeArrived> callback, int... npcIds)
-	{
-		return registerConsumer(callback, EventType.ON_NPC_MOVE_NODE_ARRIVED, ListenerRegisterType.NPC, npcIds);
-	}
-	
-	/**
-	 * Provides instant callback operation when {@link L2Npc} arrive to node of its route
-	 * @param callback
-	 * @param npcIds
-	 * @return
-	 */
-	protected final List<AbstractEventListener> setNpcMoveNodeArrivedId(Consumer<OnNpcMoveNodeArrived> callback, Collection<Integer> npcIds)
-	{
-		return registerConsumer(callback, EventType.ON_NPC_MOVE_NODE_ARRIVED, ListenerRegisterType.NPC, npcIds);
 	}
 	
 	// ---------------------------------------------------------------------------------------------------------------------------

@@ -529,7 +529,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<collision>
 			<radius normal="35" />
 			<height normal="32.5" />

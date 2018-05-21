@@ -558,7 +558,11 @@
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clanList>
+				<clan>XEL_PRIVATE</clan>
+			</clanList>
+		</ai>
 		<dropLists>
 			<drop>
 				<item id="15492" min="1" max="2" chance="25" /> <!-- Sel Mahum Salmon Porridge -->

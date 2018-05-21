@@ -38,8 +38,6 @@ import com.l2jmobius.gameserver.model.WalkInfo;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.npc.walker.ArrivedTask;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.holders.NpcRoutesHolder;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
@@ -383,9 +381,6 @@ public final class WalkingManager implements IGameXmlReader
 		{
 			return;
 		}
-		
-		// Notify quest
-		EventDispatcher.getInstance().notifyEventAsync(new OnNpcMoveNodeArrived(npc), npc);
 		
 		final WalkInfo walk = _activeRoutes.get(npc.getObjectId());
 		// Opposite should not happen... but happens sometime

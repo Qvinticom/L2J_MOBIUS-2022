@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcEventReceiv
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcManorBypass;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveFinished;
-import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveNodeArrived;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcMoveRouteFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillFinished;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
@@ -146,14 +145,13 @@ public enum EventType
 	ON_ITEM_CREATE(OnItemCreate.class, void.class),
 	ON_ITEM_TALK(OnItemTalk.class, void.class),
 	
-	// Npcs events
+	// NPC events
 	ON_NPC_CAN_BE_SEEN(OnNpcCanBeSeen.class, void.class, TerminateReturn.class),
 	ON_NPC_CREATURE_SEE(OnNpcCreatureSee.class, void.class),
 	ON_NPC_EVENT_RECEIVED(OnNpcEventReceived.class, void.class),
 	ON_NPC_FIRST_TALK(OnNpcFirstTalk.class, void.class),
 	ON_NPC_HATE(OnAttackableHate.class, void.class, TerminateReturn.class),
 	ON_NPC_MOVE_FINISHED(OnNpcMoveFinished.class, void.class),
-	ON_NPC_MOVE_NODE_ARRIVED(OnNpcMoveNodeArrived.class, void.class),
 	ON_NPC_MOVE_ROUTE_FINISHED(OnNpcMoveRouteFinished.class, void.class),
 	ON_NPC_QUEST_START(null, void.class),
 	ON_NPC_SKILL_FINISHED(OnNpcSkillFinished.class, void.class),

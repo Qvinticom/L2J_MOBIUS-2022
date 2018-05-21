@@ -65,7 +65,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	/** The identifier of the location area where L2NpcInstance can be spawned */
 	private int _locationId;
 	/** The Location of this NPC spawn. */
-	private static Location _location = new Location(0, 0, 0, 0, 0);
+	private Location _location = new Location(0, 0, 0, 0, 0);
 	/** Link to NPC spawn territory */
 	private NpcSpawnTerritory _spawnTerritory = null;
 	/** Minimum respawn delay */
@@ -512,7 +512,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			newlocx = loc.getX();
 			newlocy = loc.getY();
 			newlocz = loc.getZ();
-			setLocation(loc);
 		}
 		else if ((getX() == 0) && (getY() == 0))
 		{
@@ -647,7 +646,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			_respawnMinDelay = Math.max(10, minDelay) * 1000;
 			_respawnMaxDelay = Math.max(10, maxDelay) * 1000;
 		}
-		
 		else
 		{
 			_respawnMinDelay = 0;

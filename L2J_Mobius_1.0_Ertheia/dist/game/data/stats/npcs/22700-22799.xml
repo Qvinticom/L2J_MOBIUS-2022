@@ -5425,7 +5425,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="353" max="824" chance="70" /> <!-- Adena -->
@@ -5513,7 +5517,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>3</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="548" max="1280" chance="70" /> <!-- Adena -->
@@ -5605,7 +5613,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="64" max="149" chance="70" /> <!-- Adena -->
@@ -5683,7 +5695,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="353" max="824" chance="70" /> <!-- Adena -->
@@ -5774,7 +5790,11 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="349" max="814" chance="70" /> <!-- Adena -->
@@ -5875,7 +5895,11 @@
 			<skill id="6337" level="1" /> <!-- Red Slash 1 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="400" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
@@ -5972,7 +5996,11 @@
 			<skill id="6338" level="1" /> <!-- Red Slash 2 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="26" max="62" chance="70" /> <!-- Adena -->
@@ -6051,7 +6079,11 @@
 			<skill id="6340" level="1" /> <!-- Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="400" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
@@ -6136,7 +6168,11 @@
 			<skill id="6340" level="1" /> <!-- Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="70" max="163" chance="70" /> <!-- Adena -->
@@ -6218,7 +6254,11 @@
 			<skill id="6333" level="1" /> <!-- Electric Bolt 1 -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="400" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="48" max="111" chance="70" /> <!-- Adena -->
@@ -6299,7 +6339,11 @@
 			<skill id="6334" level="1" /> <!-- Shock -->
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai aggroRange="300" clanHelpRange="800" isAggressive="false">
+			<clan_list>
+				<clan>XEL_PRIVATE</clan>
+			</clan_list>
+		</ai>
 		<drop_lists>
 			<drop>
 				<item id="57" min="37" max="86" chance="70" /> <!-- Adena -->
@@ -6379,7 +6423,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="400" aggroRange="300">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>
@@ -6465,7 +6509,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="400" aggroRange="300">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>
@@ -6566,7 +6610,7 @@
 		</skill_list>
 		<ex_crt_effect>false</ex_crt_effect>
 		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
-		<ai clanHelpRange="400" aggroRange="300">
+		<ai aggroRange="300" clanHelpRange="400" isAggressive="false">
 			<clan_list>
 				<clan>XEL_PRIVATE</clan>
 			</clan_list>
