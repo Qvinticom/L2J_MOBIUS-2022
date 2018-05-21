@@ -1742,7 +1742,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean staysInSpawnLoc()
 	{
-		return ((getSpawn() != null) && (getSpawn().getX(this) == getX()) && (getSpawn().getY(this) == getY()));
+		return ((getSpawn() != null) && (getSpawn().getX() == getX()) && (getSpawn().getY() == getY()));
 	}
 	
 	/**

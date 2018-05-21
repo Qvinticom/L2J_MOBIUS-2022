@@ -351,7 +351,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
-				else if ((npc.getSpawn() != null) && !npc.isInsideRadius(npc.getSpawn().getLocation(npc), Config.MAX_DRIFT_RANGE + Config.MAX_DRIFT_RANGE, true, false))
+				else if ((npc.getSpawn() != null) && !npc.isInsideRadius(npc.getSpawn().getLocation(), Config.MAX_DRIFT_RANGE + Config.MAX_DRIFT_RANGE, true, false))
 				{
 					intention = AI_INTENTION_ACTIVE;
 				}
@@ -721,9 +721,9 @@ public class L2AttackableAI extends L2CharacterAI
 				}
 			}
 			
-			x1 = npc.getSpawn().getX(npc);
-			y1 = npc.getSpawn().getY(npc);
-			z1 = npc.getSpawn().getZ(npc);
+			x1 = npc.getSpawn().getX();
+			y1 = npc.getSpawn().getY();
+			z1 = npc.getSpawn().getZ();
 			
 			if (!npc.isInsideRadius(x1, y1, 0, range, false, false))
 			{

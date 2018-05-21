@@ -119,7 +119,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 				if (((L2Npc) target).getSpawn().isTerritoryBased())
 				{
 					html.replace("%spawntype%", "Random");
-					final Location spawnLoc = ((L2Npc) target).getSpawn().getLocation(target);
+					final Location spawnLoc = ((L2Npc) target).getSpawn().getLocation();
 					html.replace("%spawn%", spawnLoc.getX() + " " + spawnLoc.getY() + " " + spawnLoc.getZ());
 				}
 				else
@@ -127,8 +127,8 @@ public class L2NpcActionShift implements IActionShiftHandler
 					html.replace("%spawntype%", "Fixed");
 					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX() + " " + ((L2Npc) target).getSpawn().getY() + " " + ((L2Npc) target).getSpawn().getZ());
 				}
-				html.replace("%loc2d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), false, false)));
-				html.replace("%loc3d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(target), true, false)));
+				html.replace("%loc2d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(), false, false)));
+				html.replace("%loc3d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(), true, false)));
 				if (((L2Npc) target).getSpawn().getRespawnMinDelay() == 0)
 				{
 					html.replace("%resp%", "None");

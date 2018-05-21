@@ -19,8 +19,6 @@ package com.l2jmobius.gameserver.model;
 import java.lang.reflect.Constructor;
 import java.util.Deque;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.logging.Level;
@@ -80,7 +78,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private boolean _doRespawn = true;
 	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
-	private Map<Integer, Location> _lastSpawnPoints;
 	private boolean _isNoRndWalk = false; // Is no random walk
 	private int _spawnTemplateId = 0;
 	
@@ -193,24 +190,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		return _location;
 	}
 	
-	public Location getLocation(L2Object obj)
-	{
-		return ((_lastSpawnPoints == null) || (obj == null) || !_lastSpawnPoints.containsKey(obj.getObjectId())) ? _location : _lastSpawnPoints.get(obj.getObjectId());
-	}
-	
+	/**
+	 * @return the X position of the spawn point.
+	 */
 	@Override
 	public int getX()
 	{
 		return _location.getX();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the X position of the last spawn point of given NPC.
-	 */
-	public int getX(L2Object obj)
-	{
-		return getLocation(obj).getX();
 	}
 	
 	/**
@@ -223,19 +209,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_location.setX(x);
 	}
 	
+	/**
+	 * @return the Y position of the spawn point.
+	 */
 	@Override
 	public int getY()
 	{
 		return _location.getY();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the Y position of the last spawn point of given NPC.
-	 */
-	public int getY(L2Object obj)
-	{
-		return getLocation(obj).getY();
 	}
 	
 	/**
@@ -248,19 +228,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_location.setY(y);
 	}
 	
+	/**
+	 * @return the Z position of the spawn point.
+	 */
 	@Override
 	public int getZ()
 	{
 		return _location.getZ();
-	}
-	
-	/**
-	 * @param obj object to check
-	 * @return the Z position of the last spawn point of given NPC.
-	 */
-	public int getZ(L2Object obj)
-	{
-		return getLocation(obj).getZ();
 	}
 	
 	/**
@@ -409,12 +383,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		// Remove this NPC from list of spawned
 		_spawnedNpcs.remove(oldNpc);
-		
-		// Remove spawn point for old NPC
-		if (_lastSpawnPoints != null)
-		{
-			_lastSpawnPoints.remove(oldNpc.getObjectId());
-		}
 		
 		// Check if respawn is possible to prevent multiple respawning caused by lag
 		if (_doRespawn && ((_scheduledCount + _currentCount) < _maximumCount))
@@ -638,10 +606,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		notifyNpcSpawned(npc);
 		
 		_spawnedNpcs.add(npc);
-		if (_lastSpawnPoints != null)
-		{
-			_lastSpawnPoints.put(npc.getObjectId(), new Location(newlocx, newlocy, newlocz));
-		}
 		
 		// Increase the current number of L2NpcInstance managed by this L2Spawn
 		_currentCount++;
@@ -719,7 +683,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public void setSpawnTerritory(NpcSpawnTerritory territory)
 	{
 		_spawnTerritory = territory;
-		_lastSpawnPoints = new ConcurrentHashMap<>();
 	}
 	
 	public NpcSpawnTerritory getSpawnTerritory()

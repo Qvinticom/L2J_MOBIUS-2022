@@ -1665,7 +1665,7 @@ public class L2Attackable extends L2Npc
 		
 		if (hasAI() && (getSpawn() != null))
 		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation(this));
+			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, getSpawn().getLocation());
 		}
 	}
 	
