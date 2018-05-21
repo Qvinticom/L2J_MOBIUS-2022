@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model;
 import java.util.logging.Level;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
@@ -59,20 +58,12 @@ public class L2GroupSpawn extends L2Spawn
 					return null;
 				}
 				
-				final Location location = TerritoryTable.getInstance().getRandomPoint(getLocationId());
-				if (location != null)
-				{
-					newlocx = location.getX();
-					newlocy = location.getY();
-					newlocz = location.getZ();
-				}
+				return null;
 			}
-			else
-			{
-				newlocx = getX();
-				newlocy = getY();
-				newlocz = getZ();
-			}
+			
+			newlocx = getX();
+			newlocy = getY();
+			newlocz = getZ();
 			
 			final L2Npc mob = new L2ControllableMobInstance(_template);
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());

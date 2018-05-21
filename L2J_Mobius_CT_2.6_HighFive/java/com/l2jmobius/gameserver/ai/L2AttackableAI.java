@@ -28,7 +28,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.AISkillScope;
 import com.l2jmobius.gameserver.enums.AIType;
@@ -722,55 +721,24 @@ public class L2AttackableAI extends L2CharacterAI
 				}
 			}
 			
-			// If NPC with random coord in territory - old method (for backward compatibility)
-			if ((npc.getSpawn().getX() == 0) && (npc.getSpawn().getY() == 0) && (npc.getSpawn().getSpawnTerritory() == null))
+			x1 = npc.getSpawn().getX(npc);
+			y1 = npc.getSpawn().getY(npc);
+			z1 = npc.getSpawn().getZ(npc);
+			
+			if (!npc.isInsideRadius(x1, y1, 0, range, false, false))
 			{
-				// Calculate a destination point in the spawn area
-				final Location location = TerritoryTable.getInstance().getRandomPoint(npc.getSpawn().getLocationId());
-				if (location != null)
-				{
-					x1 = location.getX();
-					y1 = location.getY();
-					z1 = location.getZ();
-				}
-				
-				// Calculate the distance between the current position of the L2Character and the target (x,y)
-				final double distance2 = npc.calculateDistance(x1, y1, 0, false, true);
-				
-				if (distance2 > ((range + range) * (range + range)))
-				{
-					npc.setisReturningToSpawnPoint(true);
-					final float delay = (float) Math.sqrt(distance2) / range;
-					x1 = npc.getX() + (int) ((x1 - npc.getX()) / delay);
-					y1 = npc.getY() + (int) ((y1 - npc.getY()) / delay);
-				}
-				
-				// If NPC with random fixed coord, don't move (unless needs to return to spawnpoint)
-				if (!npc.isReturningToSpawnPoint() && (TerritoryTable.getInstance().getProcMax(npc.getSpawn().getLocationId()) > 0))
-				{
-					return;
-				}
+				npc.setisReturningToSpawnPoint(true);
 			}
 			else
 			{
-				x1 = npc.getSpawn().getX(npc);
-				y1 = npc.getSpawn().getY(npc);
-				z1 = npc.getSpawn().getZ(npc);
-				
-				if (!npc.isInsideRadius(x1, y1, 0, range, false, false))
-				{
-					npc.setisReturningToSpawnPoint(true);
-				}
-				else
-				{
-					final int deltaX = Rnd.nextInt(range * 2); // x
-					int deltaY = Rnd.get(deltaX, range * 2); // distance
-					deltaY = (int) Math.sqrt((deltaY * deltaY) - (deltaX * deltaX)); // y
-					x1 = (deltaX + x1) - range;
-					y1 = (deltaY + y1) - range;
-					z1 = npc.getZ();
-				}
+				final int deltaX = Rnd.nextInt(range * 2); // x
+				int deltaY = Rnd.get(deltaX, range * 2); // distance
+				deltaY = (int) Math.sqrt((deltaY * deltaY) - (deltaX * deltaX)); // y
+				x1 = (deltaX + x1) - range;
+				y1 = (deltaY + y1) - range;
+				z1 = npc.getZ();
 			}
+			
 			// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 			final Location moveLoc = GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), x1, y1, z1, npc.getInstanceId());
 			

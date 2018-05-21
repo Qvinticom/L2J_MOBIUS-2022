@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.data.sql.impl.TerritoryTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.NpcPersonalAIData;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -65,7 +64,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private int _currentCount;
 	/** The current number of SpawnTask in progress or stand by of this L2Spawn */
 	protected int _scheduledCount;
-	/** The identifier of the location area where L2NpcInstance can be spwaned */
+	/** The identifier of the location area where L2NpcInstance can be spawned */
 	private int _locationId;
 	/** The Location of this NPC spawn. */
 	private Location _location = new Location(0, 0, 0, 0, 0);
@@ -181,7 +180,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	}
 	
 	/**
-	 * @return the Identifier of the location area where L2NpcInstance can be spwaned.
+	 * @return the Identifier of the location area where L2NpcInstance can be spawned.
 	 */
 	public int getLocationId()
 	{
@@ -550,31 +549,17 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		
 		// If Locx and Locy are not defined, the L2NpcInstance must be spawned in an area defined by location or spawn territory
 		// New method
-		if (isTerritoryBased())
+		if (_spawnTerritory != null)
 		{
 			final Location p = _spawnTerritory.getRandomPoint();
 			newlocx = p.getX();
 			newlocy = p.getY();
 			newlocz = p.getZ();
 		}
-		// Old method (for backward compatibility)
 		else if ((getX() == 0) && (getY() == 0))
 		{
-			if (getLocationId() == 0)
-			{
-				return npc;
-			}
-			
-			// Calculate the random position in the location area
-			final Location location = TerritoryTable.getInstance().getRandomPoint(getLocationId());
-			
-			// Set the calculated position of the L2NpcInstance
-			if (location != null)
-			{
-				newlocx = location.getX();
-				newlocy = location.getY();
-				newlocz = location.getZ();
-			}
+			LOGGER.warning("NPC " + npc + " doesn't have spawn location!");
+			return null;
 		}
 		else
 		{
