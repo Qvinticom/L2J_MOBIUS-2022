@@ -957,6 +957,21 @@ public class Quest extends AbstractScript implements IIdentifiable
 	/**
 	 * @param npc
 	 */
+	public final void notifyNodeArrived(L2Npc npc)
+	{
+		try
+		{
+			onNodeArrived(npc);
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.WARNING, "Exception on onNodeArrived() in notifyNodeArrived(): " + e.getMessage(), e);
+		}
+	}
+	
+	/**
+	 * @param npc
+	 */
 	public final void notifyRouteFinished(L2Npc npc)
 	{
 		try
@@ -1390,6 +1405,14 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param npc registered NPC
 	 */
 	public void onMoveFinished(L2Npc npc)
+	{
+	}
+	
+	/**
+	 * This function is called whenever a walker NPC (controlled by WalkingManager) arrive a walking node
+	 * @param npc registered NPC
+	 */
+	public void onNodeArrived(L2Npc npc)
 	{
 	}
 	
@@ -2201,6 +2224,24 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addMoveFinishedId(Collection<Integer> npcIds)
 	{
 		setNpcMoveFinishedId(event -> notifyMoveFinished(event.getNpc()), npcIds);
+	}
+	
+	/**
+	 * Register onNodeArrived trigger for NPC
+	 * @param npcIds the IDs of the NPCs to register
+	 */
+	public void addNodeArrivedId(int... npcIds)
+	{
+		setNpcMoveNodeArrivedId(event -> notifyNodeArrived(event.getNpc()), npcIds);
+	}
+	
+	/**
+	 * Register onNodeArrived trigger for NPC
+	 * @param npcIds the IDs of the NPCs to register
+	 */
+	public void addNodeArrivedId(Collection<Integer> npcIds)
+	{
+		setNpcMoveNodeArrivedId(event -> notifyNodeArrived(event.getNpc()), npcIds);
 	}
 	
 	/**
