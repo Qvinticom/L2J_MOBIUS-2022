@@ -17,6 +17,9 @@
 package com.l2jmobius.gameserver.model.quest;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -28,13 +31,16 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
+import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.data.sql.impl.AnnouncementsTable;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.EventDroplist;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.instancemanager.EventShrineManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.announce.EventAnnouncement;
 import com.l2jmobius.gameserver.model.holders.DropHolder;
 import com.l2jmobius.gameserver.script.DateRange;
@@ -63,6 +69,9 @@ public class LongTimeEvent extends Quest
 	
 	// Drop data for event
 	protected final List<DropHolder> _dropList = new ArrayList<>();
+	
+	// Items to destroy when event ends.
+	protected final List<Integer> _destoyItemsOnEnd = new ArrayList<>();
 	
 	protected class NpcSpawn
 	{
@@ -96,6 +105,8 @@ public class LongTimeEvent extends Quest
 			}
 			else
 			{
+				// Destroy items that must exist only on event period.
+				destoyItemsOnEnd();
 				LOGGER.info("Event " + _eventName + " has passed... Ignored ");
 			}
 		}
@@ -259,6 +270,35 @@ public class LongTimeEvent extends Quest
 						}
 					}
 				}
+				
+				// Load destroy item list at all times.
+				final Node first = doc.getDocumentElement().getFirstChild();
+				for (Node n = first; n != null; n = n.getNextSibling())
+				{
+					if (n.getNodeName().equalsIgnoreCase("destoyItemsOnEnd"))
+					{
+						for (Node d = n.getFirstChild(); d != null; d = d.getNextSibling())
+						{
+							if (d.getNodeName().equalsIgnoreCase("item"))
+							{
+								try
+								{
+									final int itemId = Integer.parseInt(d.getAttributes().getNamedItem("id").getNodeValue());
+									if (ItemTable.getInstance().getTemplate(itemId) == null)
+									{
+										LOGGER.warning(getScriptName() + " event: Item " + itemId + " does not exist.");
+										continue;
+									}
+									_destoyItemsOnEnd.add(itemId);
+								}
+								catch (NumberFormatException nfe)
+								{
+									LOGGER.warning("Wrong number format in config.xml destoyItemsOnEnd block for " + getScriptName() + " event");
+								}
+							}
+						}
+					}
+				}
 			}
 		}.load();
 		
@@ -347,8 +387,39 @@ public class LongTimeEvent extends Quest
 			{
 				EventShrineManager.getInstance().setEnabled(false);
 			}
+			// Destroy items that must exist only on event period.
+			destoyItemsOnEnd();
 			// Send message on end
 			Broadcast.toAllOnlinePlayers(_endMsg);
+		}
+	}
+	
+	void destoyItemsOnEnd()
+	{
+		if (!_destoyItemsOnEnd.isEmpty())
+		{
+			for (int itemId : _destoyItemsOnEnd)
+			{
+				// Remove item from online players.
+				for (L2PcInstance player : L2World.getInstance().getPlayers())
+				{
+					if (player != null)
+					{
+						player.destroyItemByItemId(_eventName, itemId, -1, player, true);
+					}
+				}
+				// Update database
+				try (Connection con = DatabaseFactory.getInstance().getConnection();
+					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE item_id=?"))
+				{
+					statement.setInt(1, itemId);
+					statement.execute();
+				}
+				catch (SQLException e)
+				{
+					e.printStackTrace();
+				}
+			}
 		}
 	}
 }
