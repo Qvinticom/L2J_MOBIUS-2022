@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -78,14 +79,16 @@ public class HappyHours extends LongTimeEvent
 					if ((System.currentTimeMillis() - (_lastRewardTime + REWARD_INTERVAL)) > 0) // Exploit check - Just in case.
 					{
 						_lastRewardTime = System.currentTimeMillis();
-						final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBI_S_COINS);
-						msg.addInt(20);
+						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
+						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBI_S_COINS);
+						systemMsg.addInt(20);
 						for (L2PcInstance plr : L2World.getInstance().getPlayers())
 						{
 							if ((plr != null) && (plr.isOnlineInt() == 1) && plr.isAffectedBySkill(TRANSFORMATION_SKILL))
 							{
 								plr.addItem("HappyHours", SIBIS_COIN, 20, player, false);
-								plr.sendPacket(msg);
+								plr.sendPacket(screenMsg);
+								plr.sendPacket(systemMsg);
 								// TODO: Random reward.
 							}
 						}
