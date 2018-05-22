@@ -353,7 +353,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
 						ps2.setInt(7, ++buff_index);
-						ps2.execute();
+						ps2.addBatch();
 						
 						// XXX: Rework me!
 						if (!SummonEffectsTable.getInstance().getServitorEffectsOwner().containsKey(getOwner().getObjectId()))
@@ -371,6 +371,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						
 						SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(new SummonEffect(skill, info.getTime()));
 					}
+					ps2.executeBatch();
 				}
 			}
 		}

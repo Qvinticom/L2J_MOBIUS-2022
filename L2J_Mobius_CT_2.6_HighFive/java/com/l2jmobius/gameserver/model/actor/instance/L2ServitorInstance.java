@@ -274,10 +274,11 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
 						ps2.setInt(7, ++buff_index);
-						ps2.execute();
+						ps2.addBatch();
 						
 						SummonEffectsTable.getInstance().addServitorEffect(getOwner(), getReferenceSkill(), skill, info.getTime());
 					}
+					ps2.executeBatch();
 				}
 			}
 		}

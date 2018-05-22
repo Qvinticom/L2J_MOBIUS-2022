@@ -1028,10 +1028,11 @@ public class L2PetInstance extends L2Summon
 					ps2.setInt(3, skill.getLevel());
 					ps2.setInt(4, info.getTime());
 					ps2.setInt(5, ++buff_index);
-					ps2.execute();
+					ps2.addBatch();
 					
 					SummonEffectsTable.getInstance().addPetEffect(getControlObjectId(), skill, info.getTime());
 				}
+				ps2.executeBatch();
 			}
 		}
 		catch (Exception e)

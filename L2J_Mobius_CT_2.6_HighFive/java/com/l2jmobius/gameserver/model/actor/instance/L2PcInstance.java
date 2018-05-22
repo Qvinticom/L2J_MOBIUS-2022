@@ -7389,10 +7389,9 @@ public final class L2PcInstance extends L2Playable
 				ps.setInt(4, subClass.getClassId());
 				ps.setInt(5, getObjectId());
 				ps.setInt(6, subClass.getClassIndex());
-				
-				ps.execute();
-				ps.clearParameters();
+				ps.addBatch();
 			}
+			ps.executeBatch();
 		}
 		catch (Exception e)
 		{
@@ -7468,8 +7467,9 @@ public final class L2PcInstance extends L2Playable
 					statement.setInt(7, 0); // Store type 0, active buffs/debuffs.
 					statement.setInt(8, getClassIndex());
 					statement.setInt(9, ++buff_index);
-					statement.execute();
+					statement.addBatch();
 				}
+				statement.executeBatch();
 			}
 			
 			// Skills under reuse.
@@ -7498,9 +7498,10 @@ public final class L2PcInstance extends L2Playable
 						statement.setInt(7, 1); // Restore type 1, skill reuse.
 						statement.setInt(8, getClassIndex());
 						statement.setInt(9, ++buff_index);
-						statement.execute();
+						statement.addBatch();
 					}
 				}
+				statement.executeBatch();
 			}
 		}
 		catch (Exception e)
@@ -7530,9 +7531,10 @@ public final class L2PcInstance extends L2Playable
 						ps2.setInt(3, ts.getItemObjectId());
 						ps2.setLong(4, ts.getReuse());
 						ps2.setLong(5, ts.getStamp());
-						ps2.execute();
+						ps2.addBatch();
 					}
 				}
+				ps2.executeBatch();
 			}
 		}
 		catch (Exception e)
