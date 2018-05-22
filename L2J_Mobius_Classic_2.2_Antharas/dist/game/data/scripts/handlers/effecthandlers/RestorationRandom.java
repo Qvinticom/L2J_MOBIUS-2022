@@ -17,7 +17,10 @@
 package handlers.effecthandlers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
@@ -27,16 +30,17 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.RestorationItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Restoration Random effect implementation.<br>
  * This effect is present in item skills that "extract" new items upon usage.<br>
  * This effect has been unhardcoded in order to work on targets as well.
- * @author Zoey76
+ * @author Zoey76, Mobius
  */
 public final class RestorationRandom extends AbstractEffect
 {
@@ -46,10 +50,10 @@ public final class RestorationRandom extends AbstractEffect
 	{
 		for (StatsSet group : params.getList("items", StatsSet.class))
 		{
-			final List<ItemHolder> items = new ArrayList<>();
+			final List<RestorationItemHolder> items = new ArrayList<>();
 			for (StatsSet item : group.getList(".", StatsSet.class))
 			{
-				items.add(new ItemHolder(item.getInt(".id"), item.getInt(".count")));
+				items.add(new RestorationItemHolder(item.getInt(".id"), item.getInt(".count"), item.getInt(".minEnchant", 0), item.getInt(".maxEnchant", 0)));
 			}
 			_products.add(new L2ExtractableProductItem(items, group.getFloat(".chance")));
 		}
@@ -67,7 +71,7 @@ public final class RestorationRandom extends AbstractEffect
 		final double rndNum = 100 * Rnd.nextDouble();
 		double chance = 0;
 		double chanceFrom = 0;
-		final List<ItemHolder> creationList = new ArrayList<>();
+		final List<RestorationItemHolder> creationList = new ArrayList<>();
 		
 		// Explanation for future changes:
 		// You get one chance for the current skill, then you can fall into
@@ -96,13 +100,35 @@ public final class RestorationRandom extends AbstractEffect
 			return;
 		}
 		
-		for (ItemHolder createdItem : creationList)
+		final Map<L2ItemInstance, Long> extractedItems = new HashMap<>();
+		for (RestorationItemHolder createdItem : creationList)
 		{
 			if ((createdItem.getId() <= 0) || (createdItem.getCount() <= 0))
 			{
 				continue;
 			}
-			player.addItem("Extract", createdItem.getId(), (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE), effector, true);
+			
+			long itemCount = (long) (createdItem.getCount() * Config.RATE_EXTRACTABLE);
+			final L2ItemInstance newItem = player.addItem("Extract", createdItem.getId(), itemCount, effector, false);
+			
+			if (createdItem.getMaxEnchant() > 0)
+			{
+				newItem.setEnchantLevel(Rnd.get(createdItem.getMinEnchant(), createdItem.getMaxEnchant()));
+			}
+			
+			if (extractedItems.get(newItem) != null)
+			{
+				extractedItems.put(newItem, extractedItems.get(newItem) + itemCount);
+			}
+			else
+			{
+				extractedItems.put(newItem, itemCount);
+			}
+		}
+		
+		for (Entry<L2ItemInstance, Long> entry : extractedItems.entrySet())
+		{
+			sendMessage(player, entry.getKey(), entry.getValue());
 		}
 	}
 	
@@ -110,5 +136,28 @@ public final class RestorationRandom extends AbstractEffect
 	public L2EffectType getEffectType()
 	{
 		return L2EffectType.EXTRACT_ITEM;
+	}
+	
+	private void sendMessage(L2PcInstance player, L2ItemInstance item, Long count)
+	{
+		final SystemMessage sm;
+		if (count > 1)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S2_S1);
+			sm.addItemName(item);
+			sm.addLong(count);
+		}
+		else if (item.getEnchantLevel() > 0)
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_A_S1_S2);
+			sm.addInt(item.getEnchantLevel());
+			sm.addItemName(item);
+		}
+		else
+		{
+			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_OBTAINED_S1);
+			sm.addItemName(item);
+		}
+		player.sendPacket(sm);
 	}
 }

@@ -18,17 +18,17 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.List;
 
-import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.RestorationItemHolder;
 
 /**
  * @author Zoey76
  */
 public class L2ExtractableProductItem
 {
-	private final List<ItemHolder> _items;
+	private final List<RestorationItemHolder> _items;
 	private final double _chance;
 	
-	public L2ExtractableProductItem(List<ItemHolder> items, double chance)
+	public L2ExtractableProductItem(List<RestorationItemHolder> items, double chance)
 	{
 		_items = items;
 		_chance = chance;
@@ -37,7 +37,7 @@ public class L2ExtractableProductItem
 	/**
 	 * @return the the production list.
 	 */
-	public List<ItemHolder> getItems()
+	public List<RestorationItemHolder> getItems()
 	{
 		return _items;
 	}
