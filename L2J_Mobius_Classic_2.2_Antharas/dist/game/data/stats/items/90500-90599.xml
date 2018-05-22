@@ -61,6 +61,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39272" level="1"/> <!--Officer of Balthus Knights -->
+		</skills>
 	</item>
 	<item id="90507" name="Dragon's Balthus Chest" type="EtcItem">
 		<!-- Double-click to receive Dragon's Treasure Chest that can have random rare accessories or one of many Enchanted Scrolls. Cannot be dropped or sold in the grocery store. -->
