@@ -37,12 +37,11 @@ public final class OutpostCaptain extends AbstractNpcAI
 		22357, // Enceinte Defender
 		22358, // Enceinte Defender
 	};
-	private static final int DOORKEEPER = 32351;
 	
 	public OutpostCaptain()
 	{
 		addKillId(CAPTAIN);
-		addSpawnId(CAPTAIN, DOORKEEPER);
+		addSpawnId(CAPTAIN);
 		addSpawnId(DEFENDERS);
 	}
 	
@@ -60,9 +59,10 @@ public final class OutpostCaptain extends AbstractNpcAI
 	@Override
 	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (HellboundEngine.getInstance().getLevel() == 8)
+		final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
+		if (door != null)
 		{
-			addSpawn(DOORKEEPER, npc.getSpawn().getLocation(), false, 0, false);
+			door.openMe();
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -74,15 +74,20 @@ public final class OutpostCaptain extends AbstractNpcAI
 		
 		if (npc.getId() == CAPTAIN)
 		{
-			final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
-			if (door != null)
+			final int hellboundLevel = HellboundEngine.getInstance().getLevel();
+			if ((hellboundLevel < 7) || (hellboundLevel > 8))
 			{
-				door.closeMe();
+				npc.deleteMe();
+				npc.getSpawn().stopRespawn();
 			}
-		}
-		else if (npc.getId() == DOORKEEPER)
-		{
-			startQuestTimer("LEVEL_UP", 3000, npc, null);
+			else
+			{
+				final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
+				if (door != null)
+				{
+					door.closeMe();
+				}
+			}
 		}
 		return super.onSpawn(npc);
 	}
