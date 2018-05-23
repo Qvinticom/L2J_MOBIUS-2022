@@ -46,23 +46,16 @@ public final class OutpostCaptain extends AbstractNpcAI
 	}
 	
 	@Override
-	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
-	{
-		if (event.equalsIgnoreCase("LEVEL_UP"))
-		{
-			npc.deleteMe();
-			HellboundEngine.getInstance().setLevel(9);
-		}
-		return super.onAdvEvent(event, npc, player);
-	}
-	
-	@Override
 	public final String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2DoorInstance door = DoorData.getInstance().getDoor(20250001);
 		if (door != null)
 		{
 			door.openMe();
+		}
+		if (HellboundEngine.getInstance().getLevel() == 8)
+		{
+			HellboundEngine.getInstance().setLevel(9);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
