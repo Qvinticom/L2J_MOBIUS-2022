@@ -2207,7 +2207,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="18855" level="101" type="L2Monster" name="Ice Knight">
+	<npc id="18855" level="85" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2261,20 +2261,8 @@
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
-		<drop_lists>
-			<drop>
-				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
-				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
-				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
-				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
-			</drop>
-		</drop_lists>
 	</npc>
-	<npc id="18856" level="101" type="L2Monster" name="Ice Knight">
+	<npc id="18856" level="85" type="L2Monster" name="Ice Knight">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6290" level="1" />
@@ -2332,18 +2320,6 @@
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
-		<drop_lists>
-			<drop>
-				<item id="30297" min="1" max="2" chance="86.48" /> <!-- Superior Giant's Codex -->
-				<item id="17527" min="2" max="3" chance="81.35" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="2" chance="19.4" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.932" /> <!-- Superior Giant's Codex - Chapter 1 -->
-				<item id="30298" min="1" max="1" chance="2.554" /> <!-- Superior Giant's Codex - Mastery -->
-				<item id="46151" min="1" max="1" chance="2.544" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
-				<item id="39738" min="1" max="1" chance="2.494" /> <!-- Rune Stone -->
-				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
-			</drop>
-		</drop_lists>
 	</npc>
 	<npc id="18857" level="1" type="L2Npc">
 		<!-- Confirmed CT2.5 -->
