@@ -129,7 +129,7 @@ public class EnchantItemHPBonusData implements IGameXmlReader
 	 */
 	public final int getHPBonus(L2ItemInstance item)
 	{
-		final List<Integer> values = _armorHPBonuses.get(item.getItem().getItemGradeSPlus());
+		final List<Integer> values = _armorHPBonuses.get(item.getItem().getCrystalTypePlus());
 		if ((values == null) || values.isEmpty() || (item.getOlyEnchantLevel() <= 0))
 		{
 			return 0;

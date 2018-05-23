@@ -988,7 +988,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int timeAtk = calculateTimeBetweenAttacks();
 			final int timeToHit = timeAtk / 2;
 			
-			final Attack attack = new Attack(this, target, isChargedShot(ShotType.SOULSHOTS), (weaponItem != null) ? weaponItem.getItemGradeSPlus().getId() : 0);
+			final Attack attack = new Attack(this, target, isChargedShot(ShotType.SOULSHOTS), (weaponItem != null) ? weaponItem.getCrystalTypePlus().getLevel() : 0);
 			setHeading(Util.calculateHeadingFrom(this, target));
 			final int reuse = calculateReuseTime(weaponItem);
 			

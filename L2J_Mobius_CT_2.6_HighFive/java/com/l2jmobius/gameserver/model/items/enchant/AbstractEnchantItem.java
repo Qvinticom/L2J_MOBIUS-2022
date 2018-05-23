@@ -135,7 +135,7 @@ public abstract class AbstractEnchantItem
 		{
 			return false;
 		}
-		else if (_grade != itemToEnchant.getItem().getItemGradeSPlus())
+		else if (_grade != itemToEnchant.getItem().getCrystalTypePlus())
 		{
 			return false;
 		}

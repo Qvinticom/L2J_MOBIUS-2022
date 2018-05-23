@@ -61,7 +61,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		int newlength = 0;
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if ((product.getItem().getCrystalType().getLevel() <= _expertise) && product.getItem().isEquipable())
 			{
 				newlength++;
 			}
@@ -70,7 +70,7 @@ public class ShopPreviewList implements IClientOutgoingPacket
 		
 		for (Product product : _list)
 		{
-			if ((product.getItem().getCrystalType().getId() <= _expertise) && product.getItem().isEquipable())
+			if ((product.getItem().getCrystalType().getLevel() <= _expertise) && product.getItem().isEquipable())
 			{
 				packet.writeD(product.getItemId());
 				packet.writeH(product.getItem().getType2()); // item type2

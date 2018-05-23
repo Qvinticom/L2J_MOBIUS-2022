@@ -225,7 +225,7 @@ public abstract class AbstractRefinePacket implements IClientIncomingPacket
 			return false;
 		}
 		
-		final CrystalType grade = item.getItem().getItemGrade();
+		final CrystalType grade = item.getItem().getCrystalType();
 		final LifeStone ls = _lifeStones.get(refinerItem.getId());
 		
 		// Check for item id
