@@ -16,6 +16,7 @@
  */
 package ai.areas.Gracia.vehicles.SoDController;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
 
@@ -77,7 +78,7 @@ public final class SoDController extends AirShipController
 		_teleportsTable = TELEPORTS;
 		_fuelTable = FUEL;
 		
-		_movieId = 1003;
+		_movie = Movie.LAND_DISTRUCTION_A;
 		
 		validityCheck();
 	}

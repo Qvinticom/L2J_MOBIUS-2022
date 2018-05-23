@@ -18,6 +18,7 @@ package instances.SSQMonasteryOfSilence;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -220,7 +221,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case "START_MOVIE":
 				{
-					player.showQuestMovie(24);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_OPENING);
 					break;
 				}
 				case "BACK":
@@ -294,7 +295,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case "START_MOVIE_Q10295":
 				{
-					player.showQuestMovie(26);
+					playMovie(player, Movie.SSQ2_SOLINA_TOMB_OPENING);
 					break;
 				}
 				case "CASKET_ROOM":
@@ -427,7 +428,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case "START_MOVIE_Q10296":
 				{
-					player.showQuestMovie(29);
+					playMovie(player, Movie.SSQ2_BOSS_OPENING);
 					startQuestTimer("TELEPORT_SPACE", 60000, npc, player);
 					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
 					break;
@@ -484,7 +485,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 					world.setParameter("deadSolinaGuardianCount", deadSolinaGuardianCount);
 					if (deadSolinaGuardianCount == 4)
 					{
-						player.showQuestMovie(27);
+						playMovie(player, Movie.SSQ2_SOLINA_TOMB_CLOSING);
 						final QuestState st = player.getQuestState(Q10295_SevenSignsSolinasTomb.class.getSimpleName());
 						if ((st != null) && st.isMemoState(1))
 						{
@@ -495,7 +496,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 				}
 				case ETIS_VAN_ETINA:
 				{
-					player.showQuestMovie(30);
+					playMovie(player, Movie.SSQ2_BOSS_CLOSING);
 					world.getParameters().getObject("elcadia", L2Npc.class).teleToLocation(ELCADIA_LOC, world.getInstanceId(), 0);
 					startQuestTimer("TELEPORT_TO_PLAYER", 63000, npc, player);
 					final QuestState st = player.getQuestState(Q10296_SevenSignsOneWhoSeeksThePowerOfTheSeal.class.getSimpleName());

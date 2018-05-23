@@ -38,11 +38,13 @@ import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -106,7 +108,9 @@ import com.l2jmobius.gameserver.model.events.listeners.RunnableEventListener;
 import com.l2jmobius.gameserver.model.events.returns.AbstractEventReturn;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
 import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
@@ -2883,5 +2887,48 @@ public abstract class AbstractScript extends ManagedScript
 	public void clearRadar(L2PcInstance player)
 	{
 		player.getRadar().removeAllMarkers();
+	}
+	
+	/**
+	 * Play scene for PlayerInstance.
+	 * @param player the player
+	 * @param movie the movie
+	 */
+	public void playMovie(L2PcInstance player, Movie movie)
+	{
+		new MovieHolder(Arrays.asList(player), movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside list.
+	 * @param players list with PlayerInstance
+	 * @param movie the movie
+	 */
+	public void playMovie(List<L2PcInstance> players, Movie movie)
+	{
+		new MovieHolder(players, movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside set.
+	 * @param players set with PlayerInstance
+	 * @param movie the movie
+	 */
+	public void playMovie(Set<L2PcInstance> players, Movie movie)
+	{
+		new MovieHolder(new ArrayList<>(players), movie);
+	}
+	
+	/**
+	 * Play scene for all PlayerInstance inside instance.
+	 * @param world InstanceWorld object
+	 * @param movie the movie
+	 */
+	public void playMovie(InstanceWorld world, Movie movie)
+	{
+		for (int objId : world.getAllowed())
+		{
+			playMovie(L2World.getInstance().getPlayer(objId), movie);
+		}
 	}
 }

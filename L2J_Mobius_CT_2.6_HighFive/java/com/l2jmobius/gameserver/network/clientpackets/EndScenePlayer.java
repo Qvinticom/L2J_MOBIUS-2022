@@ -17,7 +17,9 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -38,20 +40,21 @@ public final class EndScenePlayer implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
-		if (activeChar == null)
+		if ((activeChar == null) || (_movieId == 0))
 		{
 			return;
 		}
-		if (_movieId == 0)
+		final MovieHolder movieHolder = activeChar.getMovieHolder();
+		if (movieHolder == null)
 		{
 			return;
 		}
-		if (activeChar.getMovieId() != _movieId)
+		final Movie movie = movieHolder.getMovie();
+		if ((movie.getClientId() != _movieId) || !movie.isEscapable())
 		{
-			LOGGER.warning("Player " + client + " sent EndScenePlayer with wrong movie id: " + _movieId);
 			return;
 		}
-		activeChar.setMovieId(0);
+		activeChar.stopMovie();
 		activeChar.setIsTeleporting(true, false); // avoid to get player removed from L2World
 		activeChar.decayMe();
 		activeChar.spawnMe(activeChar.getX(), activeChar.getY(), activeChar.getZ());

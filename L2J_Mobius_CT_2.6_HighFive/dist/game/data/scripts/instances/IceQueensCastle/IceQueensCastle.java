@@ -18,6 +18,7 @@ package instances.IceQueensCastle;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -107,7 +108,7 @@ public final class IceQueensCastle extends AbstractInstance
 			{
 				if (npc != null)
 				{
-					player.showQuestMovie(21);
+					playMovie(player, Movie.SC_BOSS_FREYA_FORCED_DEFEAT);
 					npc.deleteMe();
 					startQuestTimer("TIMER_PC_LEAVE", 24000, npc, player);
 				}

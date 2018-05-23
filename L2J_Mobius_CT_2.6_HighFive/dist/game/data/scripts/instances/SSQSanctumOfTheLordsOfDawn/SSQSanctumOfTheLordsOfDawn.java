@@ -17,6 +17,7 @@
 package instances.SSQSanctumOfTheLordsOfDawn;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -220,7 +221,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 								final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
 								if (pl != null)
 								{
-									pl.showQuestMovie(11);
+									playMovie(pl, Movie.SSQ_RITUAL_OF_PRIEST);
 									startQuestTimer("spawn", 35000, null, talker);
 								}
 							}

@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -205,7 +206,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 				{
 					if (getQuestItemsCount(player, SEAL_OF_BINDING) >= 4)
 					{
-						player.showQuestMovie(13);
+						playMovie(player, Movie.SSQ_SEALING_EMPEROR_2ND);
 						startQuestTimer("TELEPORT", 27000, null, player);
 					}
 					break;
@@ -458,7 +459,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 					if (world != null)
 					{
 						world.openDoor(DISCIPLES_NECROPOLIS_DOOR);
-						talker.showQuestMovie(12);
+						playMovie(talker, Movie.SSQ_SEALING_EMPEROR_1ST);
 						startQuestTimer("FIGHT", 1000, null, talker);
 					}
 				}

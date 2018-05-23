@@ -16,6 +16,7 @@
  */
 package ai.areas.Gracia.vehicles.KeucereusSouthController;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
 
@@ -87,7 +88,7 @@ public final class KeucereusSouthController extends AirShipController
 		
 		_oustLoc = new Location(-186148, 246296, 1360);
 		
-		_movieId = 1000;
+		_movie = Movie.LAND_KSERTH_A;
 		
 		validityCheck();
 	}

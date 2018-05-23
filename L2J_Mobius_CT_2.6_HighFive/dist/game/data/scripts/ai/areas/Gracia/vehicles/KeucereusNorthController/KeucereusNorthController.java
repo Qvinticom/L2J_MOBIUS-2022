@@ -16,6 +16,7 @@
  */
 package ai.areas.Gracia.vehicles.KeucereusNorthController;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.VehiclePathPoint;
 
@@ -87,7 +88,7 @@ public final class KeucereusNorthController extends AirShipController
 		_teleportsTable = TELEPORTS;
 		_fuelTable = FUEL;
 		
-		_movieId = 1001;
+		_movie = Movie.LAND_KSERTH_B;
 		
 		validityCheck();
 	}

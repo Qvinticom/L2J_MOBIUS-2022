@@ -21,6 +21,7 @@ import java.util.GregorianCalendar;
 
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -37,8 +38,6 @@ public class Lindvior extends AbstractNpcAI
 	private static final int LINDVIOR_CAMERA = 18669;
 	private static final int TOMARIS = 32552;
 	private static final int ARTIUS = 32559;
-	
-	private static int LINDVIOR_SCENE_ID = 1;
 	
 	private static final int RESET_HOUR = 18;
 	private static final int RESET_MIN = 58;
@@ -85,7 +84,7 @@ public class Lindvior extends AbstractNpcAI
 					{
 						if ((pl.getZ() >= 1100) && (pl.getZ() <= 3100))
 						{
-							pl.showQuestMovie(LINDVIOR_SCENE_ID);
+							playMovie(pl, Movie.SC_LINDVIOR);
 						}
 					});
 				}

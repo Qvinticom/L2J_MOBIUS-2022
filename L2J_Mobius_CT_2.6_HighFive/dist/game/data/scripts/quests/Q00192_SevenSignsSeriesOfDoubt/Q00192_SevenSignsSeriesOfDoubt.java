@@ -16,6 +16,7 @@
  */
 package quests.Q00192_SevenSignsSeriesOfDoubt;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -77,7 +78,7 @@ public final class Q00192_SevenSignsSeriesOfDoubt extends Quest
 				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
-					player.showQuestMovie(8);
+					playMovie(player, Movie.SSQ_SUSPICIOUS_DEATHS);
 					startQuestTimer("back", 32000, npc, player);
 					return "";
 				}

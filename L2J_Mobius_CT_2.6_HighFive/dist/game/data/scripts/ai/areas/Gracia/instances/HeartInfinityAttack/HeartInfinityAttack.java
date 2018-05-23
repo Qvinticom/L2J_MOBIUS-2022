@@ -27,6 +27,7 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -352,12 +353,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		conquestBegun = true;
 		ThreadPool.schedule(() ->
 		{
-			for (int objId : world.getAllowed())
-			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-				player.showQuestMovie(2); // ExStartScenePlayer.SCENE_ECHMUS_OPENING
-			}
-			
+			playMovie(world, Movie.SC_ECHMUS_OPENING);
 			ThreadPool.schedule(() -> conquestBegins(world), 62500);
 		}, 20000);
 	}

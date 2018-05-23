@@ -16,6 +16,7 @@
  */
 package quests.Q00194_SevenSignsMammonsContract;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -99,7 +100,7 @@ public final class Q00194_SevenSignsMammonsContract extends Quest
 				if (qs.isCond(1))
 				{
 					qs.setCond(2, true);
-					player.showQuestMovie(10);
+					playMovie(player, Movie.SSQ_CONTRACT_OF_MAMMON);
 					return "";
 				}
 				break;

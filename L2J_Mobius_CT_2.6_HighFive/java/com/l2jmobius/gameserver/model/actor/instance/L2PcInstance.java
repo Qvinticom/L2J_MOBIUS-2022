@@ -207,6 +207,7 @@ import com.l2jmobius.gameserver.model.fishing.L2Fish;
 import com.l2jmobius.gameserver.model.fishing.L2Fishing;
 import com.l2jmobius.gameserver.model.holders.AdditionalSkillHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.holders.MovieHolder;
 import com.l2jmobius.gameserver.model.holders.PlayerEventHolder;
 import com.l2jmobius.gameserver.model.holders.SellBuffHolder;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -801,7 +802,7 @@ public final class L2PcInstance extends L2Playable
 	private int _multiSocialTarget = 0;
 	private int _multiSociaAction = 0;
 	
-	private int _movieId = 0;
+	private MovieHolder _movieHolder = null;
 	
 	private String _adminConfirmCmd = null;
 	
@@ -10862,6 +10863,12 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		TvTEvent.onTeleported(this);
+		
+		// show movie if available
+		if (_movieHolder != null)
+		{
+			sendPacket(new ExStartScenePlayer(_movieHolder.getMovie()));
+		}
 	}
 	
 	@Override
@@ -13211,17 +13218,25 @@ public final class L2PcInstance extends L2Playable
 		}
 	}
 	
-	public void showQuestMovie(int id)
+	public void playMovie(MovieHolder holder)
 	{
-		if (_movieId > 0)
+		if (getMovieHolder() != null)
 		{
 			return;
 		}
 		abortAttack();
-		abortCast();
+		// abortCast(); Confirmed in retail, playing a movie does not abort cast.
 		stopMove(null);
-		_movieId = id;
-		sendPacket(new ExStartScenePlayer(id));
+		setMovieHolder(holder);
+		if (!isTeleporting())
+		{
+			sendPacket(new ExStartScenePlayer(holder.getMovie()));
+		}
+	}
+	
+	public void stopMovie()
+	{
+		setMovieHolder(null);
 	}
 	
 	public boolean isAllowedToEnchantSkills()
@@ -13586,17 +13601,14 @@ public final class L2PcInstance extends L2Playable
 		_fallingTimestamp = System.currentTimeMillis() + FALLING_VALIDATION_DELAY;
 	}
 	
-	/**
-	 * @return the _movieId
-	 */
-	public int getMovieId()
+	public MovieHolder getMovieHolder()
 	{
-		return _movieId;
+		return _movieHolder;
 	}
 	
-	public void setMovieId(int id)
+	public void setMovieHolder(MovieHolder movie)
 	{
-		_movieId = id;
+		_movieHolder = movie;
 	}
 	
 	/**
@@ -13619,7 +13631,7 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return super.isMovementDisabled() || (_movieId > 0);
+		return super.isMovementDisabled() || (getMovieHolder() != null);
 	}
 	
 	private void restoreUISettings()

@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
@@ -24,18 +25,19 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExStartScenePlayer implements IClientOutgoingPacket
 {
-	private final int _movieId;
+	private final Movie _movie;
 	
-	public ExStartScenePlayer(int id)
+	public ExStartScenePlayer(Movie movie)
 	{
-		_movieId = id;
+		_movie = movie;
 	}
 	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_START_SCENE_PLAYER.writeId(packet);
-		packet.writeD(_movieId);
+		
+		packet.writeD(_movie.getClientId());
 		return true;
 	}
 }

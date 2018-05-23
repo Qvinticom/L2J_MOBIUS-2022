@@ -18,6 +18,7 @@ package quests.Q00198_SevenSignsEmbryo;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -182,7 +183,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 		cancelQuestTimers("heal");
 		npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.NPC_GENERAL, npc.getId(), NpcStringId.S1_YOU_MAY_HAVE_WON_THIS_TIME_BUT_NEXT_TIME_I_WILL_SURELY_CAPTURE_YOU).addStringParameter(partyMember.getName()));
 		npc.deleteMe();
-		partyMember.showQuestMovie(14);
+		playMovie(partyMember, Movie.SSQ_EMBRYO);
 		return super.onKill(npc, player, isSummon);
 	}
 	

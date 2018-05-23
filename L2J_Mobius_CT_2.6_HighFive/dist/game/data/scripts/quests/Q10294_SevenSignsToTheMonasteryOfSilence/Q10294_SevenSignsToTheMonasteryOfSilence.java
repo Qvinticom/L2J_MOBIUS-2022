@@ -16,6 +16,7 @@
  */
 package quests.Q10294_SevenSignsToTheMonasteryOfSilence;
 
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -213,7 +214,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -226,7 +227,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -240,7 +241,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}
@@ -254,7 +255,7 @@ public final class Q10294_SevenSignsToTheMonasteryOfSilence extends Quest
 				htmltext = "32821-02.html";
 				if (hasCheckedAllRightBooks(qs))
 				{
-					player.showQuestMovie(25);
+					playMovie(player, Movie.SSQ2_HOLY_BURIAL_GROUND_CLOSING);
 				}
 				break;
 			}

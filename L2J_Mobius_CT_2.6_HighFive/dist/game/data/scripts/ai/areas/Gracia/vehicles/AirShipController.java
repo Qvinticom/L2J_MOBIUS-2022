@@ -22,6 +22,7 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
@@ -92,7 +93,7 @@ public abstract class AirShipController extends AbstractNpcAI
 	
 	protected int[] _fuelTable = null;
 	
-	protected int _movieId = 0;
+	protected Movie _movie = null;
 	
 	protected boolean _isBusy = false;
 	protected L2ControllableAirShipInstance _dockedShip = null;
@@ -296,15 +297,9 @@ public abstract class AirShipController extends AbstractNpcAI
 				// Ship is not empty - display movie to passengers and dock
 				if (!_dockedShip.isEmpty())
 				{
-					if (_movieId != 0)
+					if (_movie != null)
 					{
-						for (L2PcInstance passenger : _dockedShip.getPassengers())
-						{
-							if (passenger != null)
-							{
-								passenger.showQuestMovie(_movieId);
-							}
-						}
+						playMovie(_dockedShip.getPassengers(), _movie);
 					}
 					
 					ThreadPool.schedule(_decayTask, 1000);

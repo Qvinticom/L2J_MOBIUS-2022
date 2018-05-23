@@ -27,6 +27,7 @@ import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoDManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
@@ -1486,7 +1487,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 						continue;
 					}
 					SetMovieMode(plr, true);
-					plr.showQuestMovie(6);
+					playMovie(plr, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
 				}
 				Delete(npc);
 				for (L2Npc mob : InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
@@ -1708,7 +1709,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 							continue;
 						}
 						SetMovieMode(player, true);
-						player.showQuestMovie(5);
+						playMovie(player, Movie.SC_BOSS_TIAT_OPENING);
 						world.ZoneWaitForTP = false;
 					}
 				}
