@@ -316,6 +316,11 @@ public class MultiSellChoose implements IClientIncomingPacket
 			// Take all ingredients
 			for (ItemChanceHolder ingredient : entry.getIngredients())
 			{
+				if (ingredient.isMaintainIngredient())
+				{
+					continue;
+				}
+				
 				final long totalCount = Math.multiplyExact(list.getIngredientCount(ingredient), _amount);
 				final SpecialItemType specialItem = SpecialItemType.getByClientId(ingredient.getId());
 				if (specialItem != null)

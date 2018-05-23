@@ -29,6 +29,7 @@ public class ItemChanceHolder extends ItemHolder
 {
 	private final double _chance;
 	private final byte _enchantmentLevel;
+	private final boolean _maintainIngredient;
 	
 	public ItemChanceHolder(int id, double chance)
 	{
@@ -40,6 +41,7 @@ public class ItemChanceHolder extends ItemHolder
 		super(id, count);
 		_chance = chance;
 		_enchantmentLevel = 0;
+		_maintainIngredient = false;
 	}
 	
 	public ItemChanceHolder(int id, double chance, long count, byte enchantmentLevel)
@@ -47,6 +49,15 @@ public class ItemChanceHolder extends ItemHolder
 		super(id, count);
 		_chance = chance;
 		_enchantmentLevel = enchantmentLevel;
+		_maintainIngredient = false;
+	}
+	
+	public ItemChanceHolder(int id, double chance, long count, byte enchantmentLevel, boolean maintainIngredient)
+	{
+		super(id, count);
+		_chance = chance;
+		_enchantmentLevel = enchantmentLevel;
+		_maintainIngredient = maintainIngredient;
 	}
 	
 	/**
@@ -65,6 +76,11 @@ public class ItemChanceHolder extends ItemHolder
 	public byte getEnchantmentLevel()
 	{
 		return _enchantmentLevel;
+	}
+	
+	public boolean isMaintainIngredient()
+	{
+		return _maintainIngredient;
 	}
 	
 	/**

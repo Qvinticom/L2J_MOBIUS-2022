@@ -99,7 +99,8 @@ public final class MultisellData implements IGameXmlReader
 								final int id = parseInteger(d.getAttributes(), "id");
 								final long count = parseLong(d.getAttributes(), "count");
 								final byte enchantmentLevel = parseByte(d.getAttributes(), "enchantmentLevel", (byte) 0);
-								final ItemChanceHolder ingredient = new ItemChanceHolder(id, 0, count, enchantmentLevel);
+								final Boolean maintainIngredient = parseBoolean(d.getAttributes(), "maintainIngredient", false);
+								final ItemChanceHolder ingredient = new ItemChanceHolder(id, 0, count, enchantmentLevel, maintainIngredient);
 								
 								if (itemExists(ingredient))
 								{
