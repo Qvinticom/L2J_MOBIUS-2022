@@ -45,6 +45,8 @@ import java.util.Set;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -867,7 +869,7 @@ public final class Config
 	public static String BACKUP_PATH;
 	public static int BACKUP_DAYS;
 	public static int MAXIMUM_ONLINE_USERS;
-	public static String CNAME_TEMPLATE;
+	public static Pattern CHARNAME_TEMPLATE_PATTERN;
 	public static String PET_NAME_TEMPLATE;
 	public static String CLAN_NAME_TEMPLATE;
 	public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
@@ -1398,7 +1400,20 @@ public final class Config
 				DATAPACK_ROOT = new File(".");
 			}
 			
-			CNAME_TEMPLATE = serverSettings.getString("CnameTemplate", ".*");
+			Pattern charNamePattern;
+			
+			try
+			{
+				charNamePattern = Pattern.compile(serverSettings.getString("CnameTemplate", ".*"));
+			}
+			catch (PatternSyntaxException e)
+			{
+				LOGGER.log(Level.WARNING, "Character name pattern is invalid!", e);
+				charNamePattern = Pattern.compile(".*");
+			}
+			
+			CHARNAME_TEMPLATE_PATTERN = charNamePattern;
+			
 			PET_NAME_TEMPLATE = serverSettings.getString("PetNameTemplate", ".*");
 			CLAN_NAME_TEMPLATE = serverSettings.getString("ClanNameTemplate", ".*");
 			
