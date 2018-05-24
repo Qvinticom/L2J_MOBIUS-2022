@@ -836,7 +836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55253" toLevel="11" name="Sigel's Protection">
+	<skill id="55253" toLevel="20" name="Sigel's Protection">
 		<icon>icon.skill55253</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -853,12 +853,21 @@
 					<value level="9">75.3</value>
 					<value level="10">83.5</value>
 					<value level="11">92.2</value>
+					<value level="12">101.6</value>
+					<value level="13">112.7</value>
+					<value level="14">2</value>
+					<value level="15">2</value>
+					<value level="16">2</value>
+					<value level="17">2</value>
+					<value level="18">2</value>
+					<value level="19">2</value>
+					<value level="20">2</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55254" toLevel="11" name="Sigel Protection">
+	<skill id="55254" toLevel="20" name="Sigel Protection">
 		<icon>icon.skill55254</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -875,12 +884,21 @@
 					<value level="9">303</value>
 					<value level="10">331</value>
 					<value level="11">359</value>
+					<value level="12">388</value>
+					<value level="13">418</value>
+					<value level="14">50</value>
+					<value level="15">50</value>
+					<value level="16">50</value>
+					<value level="17">50</value>
+					<value level="18">50</value>
+					<value level="19">50</value>
+					<value level="20">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55255" toLevel="11" name="Tyrr Might">
+	<skill id="55255" toLevel="20" name="Tyrr Might">
 		<icon>icon.skill55255</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -897,12 +915,21 @@
 					<value level="9">21.2</value>
 					<value level="10">24.3</value>
 					<value level="11">28</value>
+					<value level="12">31.9</value>
+					<value level="13">36.5</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">20</value>
+					<value level="17">20</value>
+					<value level="18">20</value>
+					<value level="19">20</value>
+					<value level="20">20</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55256" toLevel="11" name="Tyrr Haste">
+	<skill id="55256" toLevel="20" name="Tyrr Haste">
 		<icon>icon.skill55256</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -919,12 +946,21 @@
 					<value level="9">4</value>
 					<value level="10">4.25</value>
 					<value level="11">4.5</value>
+					<value level="12">4.75</value>
+					<value level="13">5</value>
+					<value level="14">1</value>
+					<value level="15">1</value>
+					<value level="16">1</value>
+					<value level="17">1</value>
+					<value level="18">1</value>
+					<value level="19">1</value>
+					<value level="20">1</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55257" toLevel="11" name="Othell's Focus">
+	<skill id="55257" toLevel="20" name="Othell's Focus">
 		<icon>icon.skill55257</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -941,18 +977,27 @@
 					<value level="9">275</value>
 					<value level="10">300</value>
 					<value level="11">325</value>
+					<value level="12">350</value>
+					<value level="13">375</value>
+					<value level="14">1.8</value>
+					<value level="15">1.8</value>
+					<value level="16">1.8</value>
+					<value level="17">1.8</value>
+					<value level="18">1.8</value>
+					<value level="19">1.8</value>
+					<value level="20">1.8</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55258" toLevel="11" name="Othell's Critical Damage">
+	<skill id="55258" toLevel="20" name="Othell's Critical Damage">
 		<icon>icon.skill55258</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
-					<value level="1">20</value>
+					<value level="1">80</value>
 					<value level="2">97</value>
 					<value level="3">114</value>
 					<value level="4">131</value>
@@ -963,12 +1008,21 @@
 					<value level="9">216</value>
 					<value level="10">233</value>
 					<value level="11">251</value>
+					<value level="12">268</value>
+					<value level="13">285</value>
+					<value level="14">20</value>
+					<value level="15">20</value>
+					<value level="16">20</value>
+					<value level="17">20</value>
+					<value level="18">20</value>
+					<value level="19">20</value>
+					<value level="20">20</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55259" toLevel="11" name="Yul Wind Walk">
+	<skill id="55259" toLevel="20" name="Yul Wind Walk">
 		<icon>icon.skill55259</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -985,12 +1039,21 @@
 					<value level="9">8</value>
 					<value level="10">8.5</value>
 					<value level="11">9</value>
+					<value level="12">9.5</value>
+					<value level="13">10</value>
+					<value level="14">10</value>
+					<value level="15">10</value>
+					<value level="16">10</value>
+					<value level="17">10</value>
+					<value level="18">10</value>
+					<value level="19">10</value>
+					<value level="20">10</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55260" toLevel="11" name="Yul Guidance">
+	<skill id="55260" toLevel="20" name="Yul Guidance">
 		<icon>icon.skill55260</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1007,12 +1070,21 @@
 					<value level="9">3.92</value>
 					<value level="10">4.07</value>
 					<value level="11">4.22</value>
+					<value level="12">4.37</value>
+					<value level="13">4.52</value>
+					<value level="14">1</value>
+					<value level="15">1</value>
+					<value level="16">1</value>
+					<value level="17">1</value>
+					<value level="18">1</value>
+					<value level="19">1</value>
+					<value level="20">1</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55261" toLevel="11" name="Feoh's Magical Power">
+	<skill id="55261" toLevel="20" name="Feoh's Magical Power">
 		<icon>icon.skill55261</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1029,6 +1101,15 @@
 					<value level="9">87.22</value>
 					<value level="10">99.39</value>
 					<value level="11">112.2</value>
+					<value level="12">125.66</value>
+					<value level="13">139.41</value>
+					<value level="14">10.1</value>
+					<value level="15">10.1</value>
+					<value level="16">10.1</value>
+					<value level="17">10.1</value>
+					<value level="18">10.1</value>
+					<value level="19">10.1</value>
+					<value level="20">10.1</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1045,12 +1126,21 @@
 					<value level="9">15</value>
 					<value level="10">15</value>
 					<value level="11">15</value>
+					<value level="12">15</value>
+					<value level="13">15</value>
+					<value level="14">15</value>
+					<value level="15">15</value>
+					<value level="16">15</value>
+					<value level="17">15</value>
+					<value level="18">15</value>
+					<value level="19">15</value>
+					<value level="20">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55262" toLevel="11" name="Feoh's Empower">
+	<skill id="55262" toLevel="20" name="Feoh's Empower">
 		<icon>icon.skill55262</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1067,38 +1157,56 @@
 					<value level="9">76</value>
 					<value level="10">83</value>
 					<value level="11">90</value>
+					<value level="12">97</value>
+					<value level="13">104</value>
+					<value level="14">20.36</value>
+					<value level="15">20.36</value>
+					<value level="16">20.36</value>
+					<value level="17">20.36</value>
+					<value level="18">20.36</value>
+					<value level="19">20.36</value>
+					<value level="20">20.36</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55263" toLevel="11" name="Iss' Magic Regeneration">
+	<skill id="55263" toLevel="20" name="Iss' Magic Regeneration">
 		<icon>icon.skill55263</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MpRegen">
 				<amount>
-					<value level="1">0.3</value>
-					<value level="2">0.39</value>
-					<value level="3">0.41</value>
-					<value level="4">0.51</value>
-					<value level="5">1.03</value>
-					<value level="6">1.05</value>
-					<value level="7">1.22</value>
-					<value level="8">1.24</value>
-					<value level="9">1.32</value>
-					<value level="10">1.43</value>
-					<value level="11">1.51</value>
+					<value level="1">12</value>
+					<value level="2">12.72</value>
+					<value level="3">13.44</value>
+					<value level="4">14.16</value>
+					<value level="5">15.6</value>
+					<value level="6">16.32</value>
+					<value level="7">17.04</value>
+					<value level="8">17.76</value>
+					<value level="9">18.48</value>
+					<value level="10">19.2</value>
+					<value level="11">19.92</value>
+					<value level="12">20.64</value>
+					<value level="13">1</value>
+					<value level="14">1</value>
+					<value level="15">1</value>
+					<value level="16">1</value>
+					<value level="17">1</value>
+					<value level="18">1</value>
+					<value level="19">1</value>
+					<value level="20">1</value>
 				</amount>
-				<mode>DIFF</mode>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55264" toLevel="11" name="Iss' Boost Mana">
+	<skill id="55264" toLevel="20" name="Iss' Boost Mana">
 		<icon>icon.skill55264</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="MaxHp">
+			<effect name="MaxMp">
 				<amount>
 					<value level="1">3.89</value>
 					<value level="2">5</value>
@@ -1111,12 +1219,21 @@
 					<value level="9">12.7</value>
 					<value level="10">13.8</value>
 					<value level="11">14.9</value>
+					<value level="12">16</value>
+					<value level="13">17.1</value>
+					<value level="14">3</value>
+					<value level="15">3</value>
+					<value level="16">3</value>
+					<value level="17">3</value>
+					<value level="18">3</value>
+					<value level="19">3</value>
+					<value level="20">3</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55265" toLevel="11" name="Wynn's Acumen">
+	<skill id="55265" toLevel="20" name="Wynn's Acumen">
 		<icon>icon.skill55265</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1133,12 +1250,21 @@
 					<value level="9">5.31</value>
 					<value level="10">5.64</value>
 					<value level="11">5.97</value>
+					<value level="12">6.3</value>
+					<value level="13">6.63</value>
+					<value level="14">1</value>
+					<value level="15">1</value>
+					<value level="16">1</value>
+					<value level="17">1</value>
+					<value level="18">1</value>
+					<value level="19">1</value>
+					<value level="20">1</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55266" toLevel="11" name="Wynn's Lightness">
+	<skill id="55266" toLevel="20" name="Wynn's Lightness">
 		<icon>icon.skill55266</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1155,12 +1281,21 @@
 					<value level="9">4200</value>
 					<value level="10">4600</value>
 					<value level="11">5000</value>
+					<value level="12">5600</value>
+					<value level="13">5900</value>
+					<value level="14">3000</value>
+					<value level="15">3000</value>
+					<value level="16">3000</value>
+					<value level="17">3000</value>
+					<value level="18">3000</value>
+					<value level="19">3000</value>
+					<value level="20">3000</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55267" toLevel="11" name="Aeore's Regeneration">
+	<skill id="55267" toLevel="20" name="Aeore's Regeneration">
 		<icon>icon.skill55267</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1177,12 +1312,21 @@
 					<value level="9">1.44</value>
 					<value level="10">1.47</value>
 					<value level="11">1.5</value>
+					<value level="12">1.53</value>
+					<value level="13">1.96</value>
+					<value level="14">1.1</value>
+					<value level="15">1.1</value>
+					<value level="16">1.1</value>
+					<value level="17">1.1</value>
+					<value level="18">1.1</value>
+					<value level="19">1.1</value>
+					<value level="20">1.1</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="55268" toLevel="11" name="Aeore's Heal">
+	<skill id="55268" toLevel="20" name="Aeore's Heal">
 		<icon>icon.skill55268</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1199,6 +1343,15 @@
 					<value level="9">45.3</value>
 					<value level="10">50.6</value>
 					<value level="11">54.4</value>
+					<value level="12">58.2</value>
+					<value level="13">62.1</value>
+					<value level="14">10</value>
+					<value level="15">10</value>
+					<value level="16">10</value>
+					<value level="17">10</value>
+					<value level="18">10</value>
+					<value level="19">10</value>
+					<value level="20">10</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
