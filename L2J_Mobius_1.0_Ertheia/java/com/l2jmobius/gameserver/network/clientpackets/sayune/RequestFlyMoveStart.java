@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.sayune;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.SayuneData;
 import com.l2jmobius.gameserver.enums.CategoryType;
@@ -44,7 +45,7 @@ public class RequestFlyMoveStart implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2PcInstance activeChar = client.getActiveChar();
-		if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || !activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
+		if ((activeChar == null) || !activeChar.isInsideZone(ZoneId.SAYUNE) || activeChar.hasRequest(SayuneRequest.class) || (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && !Config.FREE_JUMPS_FOR_ALL))
 		{
 			return;
 		}
