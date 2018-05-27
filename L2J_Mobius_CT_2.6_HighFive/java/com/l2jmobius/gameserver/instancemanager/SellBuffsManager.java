@@ -139,7 +139,7 @@ public final class SellBuffsManager implements IGameXmlReader
 	
 	private String buildBuffMenu(L2PcInstance player, L2PcInstance seller, int index)
 	{
-		final int ceiling = index + 10;
+		final int ceiling = 10;
 		int nextIndex = -1;
 		int previousIndex = -1;
 		int emptyFields = 0;
@@ -150,7 +150,7 @@ public final class SellBuffsManager implements IGameXmlReader
 		for (SellBuffHolder holder : seller.getSellingBuffs())
 		{
 			count++;
-			if ((count > index) && (count <= ceiling))
+			if ((count > index) && (count <= (ceiling + index)))
 			{
 				sellList.add(holder);
 			}
@@ -214,7 +214,7 @@ public final class SellBuffsManager implements IGameXmlReader
 		for (int i = 0; i < emptyFields; i++)
 		{
 			sb.append("<tr>");
-			sb.append("<td fixwidth=\"20\"></td>");
+			sb.append("<td fixwidth=\"20\" height=\"32\"></td>");
 			sb.append("<td align=center></td>");
 			sb.append("<td align=left></td>");
 			sb.append("<td align=center></td>");
