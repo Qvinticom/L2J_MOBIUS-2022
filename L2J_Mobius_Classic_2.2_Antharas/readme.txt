@@ -1,6 +1,6 @@
 L2J-Mobius Classic Antharas
 
-Client: https://eu.4game.com/lineage2classic/install/
+Client: https://drive.google.com/uc?id=155e5Wn5IcXAYg-oGS2GCcc06FWyZ41tW&export=download
 Geodata: http://www.mediafire.com/file/letjitjjiulaq2f/mobius_geodata_antharas_l2d.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
