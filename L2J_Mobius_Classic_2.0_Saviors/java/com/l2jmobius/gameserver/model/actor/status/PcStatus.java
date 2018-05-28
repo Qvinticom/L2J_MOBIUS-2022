@@ -88,7 +88,7 @@ public class PcStatus extends PlayableStatus
 			return;
 		}
 		
-		if (getActiveChar().isAffected(EffectFlag.FACEOFF) && (getActiveChar().getAttackerObjId() != attacker.getObjectId()))
+		if (getActiveChar().isAffected(EffectFlag.DUELIST_FURY) && !attacker.isAffected(EffectFlag.FACEOFF))
 		{
 			return;
 		}

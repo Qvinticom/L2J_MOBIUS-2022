@@ -796,7 +796,7 @@ public final class CharEffectList
 					return;
 				}
 				
-				if (info.getEffector().isPlayer() && info.getEffected().isPlayer() && info.getEffected().isAffected(EffectFlag.FACEOFF) && (info.getEffected().getActingPlayer().getAttackerObjId() != info.getEffector().getObjectId()))
+				if (info.getEffector().isPlayer() && info.getEffected().isPlayer() && info.getEffected().isAffected(EffectFlag.DUELIST_FURY) && !info.getEffector().isAffected(EffectFlag.DUELIST_FURY))
 				{
 					return;
 				}

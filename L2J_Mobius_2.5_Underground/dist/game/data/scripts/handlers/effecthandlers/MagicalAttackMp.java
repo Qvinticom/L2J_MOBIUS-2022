@@ -53,7 +53,7 @@ public final class MagicalAttackMp extends AbstractEffect
 			return false;
 		}
 		
-		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.FACEOFF) && (effected.getActingPlayer().getAttackerObjId() != effector.getObjectId()))
+		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
 		{
 			return false;
 		}

@@ -42,18 +42,4 @@ public class Faceoff extends AbstractEffect
 	{
 		return effected.isPlayer();
 	}
-	
-	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
-	{
-		effector.getActingPlayer().setAttackerObjId(effected.getObjectId());
-		effected.getActingPlayer().setAttackerObjId(effector.getObjectId());
-	}
-	
-	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
-	{
-		effector.getActingPlayer().setAttackerObjId(0);
-		effected.getActingPlayer().setAttackerObjId(0);
-	}
 }

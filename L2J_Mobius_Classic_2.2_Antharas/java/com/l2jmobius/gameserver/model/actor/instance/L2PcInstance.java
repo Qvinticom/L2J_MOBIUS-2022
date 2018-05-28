@@ -490,9 +490,6 @@ public final class L2PcInstance extends L2Playable
 	private int _duelId = 0;
 	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
 	
-	/** Faceoff */
-	private int _attackerObjId = 0;
-	
 	/** Boat and AirShip */
 	private L2Vehicle _vehicle = null;
 	private Location _inVehiclePosition;
@@ -11471,7 +11468,7 @@ public final class L2PcInstance extends L2Playable
 		
 		final SystemMessage sm;
 		
-		if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.FACEOFF) && (target.getActingPlayer().getAttackerObjId() != getObjectId())))
+		if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF)))
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 		}
@@ -13808,16 +13805,6 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		return _events.containsKey(clazz);
-	}
-	
-	public void setAttackerObjId(int attackerObjId)
-	{
-		_attackerObjId = attackerObjId;
-	}
-	
-	public int getAttackerObjId()
-	{
-		return _attackerObjId;
 	}
 	
 	public Fishing getFishing()
