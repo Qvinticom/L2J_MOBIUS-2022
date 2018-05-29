@@ -29,6 +29,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
@@ -88,7 +89,7 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 		}
 		
-		return commandCheck && (activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
+		return commandCheck && (activeChar.isCastingNow() || activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
 	};
 	
 	public static final Predicate<L2PcInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
@@ -176,10 +177,15 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			else if (Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass) != null)
 			{
+				activeChar.disableAllSkills();
 				activeChar.sendPacket(new ShowBoard());
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
+				ThreadPool.schedule(() ->
+				{
+					activeChar.enableAllSkills();
+				}, 3000);
 			}
 		}
 		else if (command.startsWith("_bbsbuff"))
