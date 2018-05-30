@@ -59,10 +59,6 @@ public class HennaItemDrawInfo implements IClientOutgoingPacket
 		packet.writeH(_activeChar.getDEX() + _activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
 		packet.writeD(_activeChar.getWIT()); // current WIT
 		packet.writeH(_activeChar.getWIT() + _activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-		packet.writeD(_activeChar.getLUC()); // current LUC
-		packet.writeH(_activeChar.getLUC() + _activeChar.getHennaValue(BaseStats.LUC)); // equip LUC
-		packet.writeD(_activeChar.getCHA()); // current CHA
-		packet.writeH(_activeChar.getCHA() + _activeChar.getHennaValue(BaseStats.CHA)); // equip CHA
 		packet.writeD(0x00); // TODO: Find me!
 		return true;
 	}
