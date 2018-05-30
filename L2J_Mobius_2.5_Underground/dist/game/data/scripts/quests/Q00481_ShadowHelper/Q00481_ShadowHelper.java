@@ -159,10 +159,6 @@ public final class Q00481_ShadowHelper extends Quest
 			{
 				qs.setCond(2, true);
 			}
-			else
-			{
-				sendNpcLogList(killer);
-			}
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

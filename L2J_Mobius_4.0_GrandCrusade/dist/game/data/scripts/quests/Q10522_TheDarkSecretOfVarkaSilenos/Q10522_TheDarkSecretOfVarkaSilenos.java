@@ -207,7 +207,6 @@ public class Q10522_TheDarkSecretOfVarkaSilenos extends Quest
 			{
 				qs.setCond(2, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

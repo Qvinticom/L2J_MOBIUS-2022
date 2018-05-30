@@ -152,7 +152,6 @@ public class Q10790_AMercenaryHelper extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

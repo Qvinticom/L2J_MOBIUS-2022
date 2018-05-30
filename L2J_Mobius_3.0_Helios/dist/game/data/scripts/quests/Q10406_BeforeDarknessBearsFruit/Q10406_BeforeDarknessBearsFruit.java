@@ -140,7 +140,6 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 				killCount++;
 				st.set("KILLED_COUNT", killCount);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
 			}
 			
 			if (killCount == 10)

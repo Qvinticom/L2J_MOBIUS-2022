@@ -502,7 +502,6 @@ public class Q00095_SagaOfTheHellKnight extends Quest
 						if (count < 20)
 						{
 							qs.set(KILL_COUNT_VAR, count + 1);
-							sendNpcLogList(killer);
 						}
 						if (count >= 20)
 						{

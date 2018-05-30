@@ -151,7 +151,6 @@ public class Q10797_CrossingFate extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

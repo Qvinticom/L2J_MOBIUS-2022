@@ -271,7 +271,6 @@ public final class Q10337_SakumsImpact extends Quest
 			{
 				qs.setCond(3, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

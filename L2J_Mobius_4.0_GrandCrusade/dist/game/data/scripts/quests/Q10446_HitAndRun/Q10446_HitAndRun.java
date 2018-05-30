@@ -143,7 +143,6 @@ public final class Q10446_HitAndRun extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

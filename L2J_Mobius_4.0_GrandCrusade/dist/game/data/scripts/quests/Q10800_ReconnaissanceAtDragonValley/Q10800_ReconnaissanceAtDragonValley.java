@@ -154,7 +154,6 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

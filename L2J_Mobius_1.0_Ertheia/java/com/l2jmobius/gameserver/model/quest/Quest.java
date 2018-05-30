@@ -1119,6 +1119,10 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
+		if (!getNpcLogList(killer).isEmpty())
+		{
+			sendNpcLogList(killer);
+		}
 		return null;
 	}
 	
@@ -2934,9 +2938,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	public void sendNpcLogList(L2PcInstance activeChar)
 	{
-		final QuestState qs = activeChar.getQuestState(getName());
-		
-		if (qs != null)
+		if (activeChar.getQuestState(getName()) != null)
 		{
 			final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
 			getNpcLogList(activeChar).forEach(packet::add);

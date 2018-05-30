@@ -156,7 +156,6 @@ public final class Q10793_SaveTheSouls extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

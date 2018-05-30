@@ -217,7 +217,6 @@ public class Q10526_TheDarkSecretOfTheKetraOrcs extends Quest
 			{
 				qs.setCond(2, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
@@ -226,7 +225,7 @@ public class Q10526_TheDarkSecretOfTheKetraOrcs extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs.isCond(1))
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> holder = new HashSet<>(2);
 			holder.add(new NpcLogListHolder(KETRA_BACKUP_SHOOTER, false, qs.getInt("killed_" + KETRA_BACKUP_SHOOTER)));

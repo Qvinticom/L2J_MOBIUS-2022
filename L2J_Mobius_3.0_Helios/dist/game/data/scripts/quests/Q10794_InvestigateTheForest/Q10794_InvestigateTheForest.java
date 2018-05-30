@@ -203,7 +203,6 @@ public final class Q10794_InvestigateTheForest extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

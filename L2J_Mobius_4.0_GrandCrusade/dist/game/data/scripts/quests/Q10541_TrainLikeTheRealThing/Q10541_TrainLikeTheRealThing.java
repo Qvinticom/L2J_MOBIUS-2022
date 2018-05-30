@@ -209,36 +209,38 @@ public final class Q10541_TrainLikeTheRealThing extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1))
+		if (qs != null)
 		{
-			int killCount = qs.getInt(KILL_COUNT_VAR);
-			qs.set(KILL_COUNT_VAR, ++killCount);
-			if (killCount >= 4)
+			if (qs.isCond(1))
 			{
-				qs.setCond(2, true);
+				int killCount = qs.getInt(KILL_COUNT_VAR);
+				qs.set(KILL_COUNT_VAR, ++killCount);
+				if (killCount >= 4)
+				{
+					qs.setCond(2, true);
+				}
+				else
+				{
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
 			}
-			else
+			else if (qs.isCond(4))
 			{
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
-			}
-		}
-		else if ((qs != null) && qs.isCond(4))
-		{
-			int kills = qs.getInt(Integer.toString(DUMMY));
-			if (kills < 4)
-			{
-				kills++;
-				qs.set(Integer.toString(DUMMY), kills);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-			}
-			final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
-			log.addNpc(DUMMY, qs.getInt(Integer.toString(DUMMY)));
-			qs.getPlayer().sendPacket(log);
-			
-			if (qs.getInt(Integer.toString(DUMMY)) >= 4)
-			{
-				qs.setCond(5, true);
+				int kills = qs.getInt(Integer.toString(DUMMY));
+				if (kills < 4)
+				{
+					kills++;
+					qs.set(Integer.toString(DUMMY), kills);
+					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				}
+				final ExQuestNpcLogList log = new ExQuestNpcLogList(getId());
+				log.addNpc(DUMMY, qs.getInt(Integer.toString(DUMMY)));
+				qs.getPlayer().sendPacket(log);
+				
+				if (qs.getInt(Integer.toString(DUMMY)) >= 4)
+				{
+					qs.setCond(5, true);
+				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

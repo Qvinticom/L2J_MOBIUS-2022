@@ -141,13 +141,11 @@ public final class Q10757_QuietingTheStorm extends Quest
 				if (vortexCount < 5)
 				{
 					qs.set(VORTEX_COUNT_VAR, ++vortexCount);
-					sendNpcLogList(killer);
 				}
 			}
 			else if (windimaCount != 1)
 			{
 				qs.set(WINDIMA_COUNT_VAR, ++windimaCount);
-				sendNpcLogList(killer);
 			}
 			
 			if ((vortexCount >= 5) && (windimaCount >= 1))

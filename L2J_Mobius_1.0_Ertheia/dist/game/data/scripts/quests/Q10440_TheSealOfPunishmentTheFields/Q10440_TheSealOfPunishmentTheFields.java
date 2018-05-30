@@ -231,18 +231,15 @@ public class Q10440_TheSealOfPunishmentTheFields extends Quest
 			if ((count >= 50) && (qs.isMemoState(1)))
 			{
 				qs.setCond(2, true);
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else if ((count >= 50) && (qs.isMemoState(2)))
 			{
 				qs.setCond(3, true);
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

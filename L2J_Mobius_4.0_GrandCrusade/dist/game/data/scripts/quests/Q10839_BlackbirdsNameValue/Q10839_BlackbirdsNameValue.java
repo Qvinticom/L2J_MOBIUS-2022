@@ -150,7 +150,6 @@ public final class Q10839_BlackbirdsNameValue extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

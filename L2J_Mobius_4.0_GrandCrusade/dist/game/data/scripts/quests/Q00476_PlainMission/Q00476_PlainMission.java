@@ -215,7 +215,6 @@ public final class Q00476_PlainMission extends Quest
 			{
 				st.setCond(2, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

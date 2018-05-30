@@ -185,7 +185,6 @@ public final class Q10368_RebellionOfMonsters extends Quest
 			{
 				qs.setCond(2, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

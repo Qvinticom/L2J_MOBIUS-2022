@@ -181,7 +181,6 @@ public final class Q10394_MutualBenefit extends Quest
 			{
 				st.setCond(2, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

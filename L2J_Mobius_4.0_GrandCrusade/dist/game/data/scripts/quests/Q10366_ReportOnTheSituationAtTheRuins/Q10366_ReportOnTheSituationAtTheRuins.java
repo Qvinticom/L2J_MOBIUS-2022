@@ -148,7 +148,6 @@ public final class Q10366_ReportOnTheSituationAtTheRuins extends Quest
 			else
 			{
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-				sendNpcLogList(killer);
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

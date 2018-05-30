@@ -146,10 +146,6 @@ public class Q10761_AnOrcInLove extends Quest
 				{
 					qs.setCond(2, true);
 				}
-				else
-				{
-					sendNpcLogList(killer);
-				}
 			}
 		}
 		return super.onKill(npc, killer, isSummon);

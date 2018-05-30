@@ -210,7 +210,6 @@ public final class Q10353_CertificationOfValue extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		
 		if ((qs != null) && qs.isStarted() && qs.isCond(2))
 		{
 			final int killCount = qs.getInt(KILL_COUNT_VAR) + 1;
@@ -222,7 +221,6 @@ public final class Q10353_CertificationOfValue extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

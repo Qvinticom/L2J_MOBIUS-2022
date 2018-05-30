@@ -85,7 +85,6 @@ public final class Q10305_UnstoppableFutileEfforts extends Quest
 				if (killedCocoon < 5)
 				{
 					qs.setMemoStateEx(LARGE_COCOON, killedCocoon);
-					sendNpcLogList(player);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				else
@@ -152,7 +151,6 @@ public final class Q10305_UnstoppableFutileEfforts extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
 		final QuestState qs = getQuestState(activeChar, false);
-		
 		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);

@@ -242,7 +242,6 @@ public final class Q10333_DisappearedSakum extends Quest
 			{
 				qs.setCond(3, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

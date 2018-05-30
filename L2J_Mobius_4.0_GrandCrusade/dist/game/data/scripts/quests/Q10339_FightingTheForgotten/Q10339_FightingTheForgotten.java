@@ -181,7 +181,6 @@ public final class Q10339_FightingTheForgotten extends Quest
 			else
 			{
 				st.setMemoState(monsterCount);
-				sendNpcLogList(player);
 			}
 		}
 		return super.onKill(npc, player, isSummon);

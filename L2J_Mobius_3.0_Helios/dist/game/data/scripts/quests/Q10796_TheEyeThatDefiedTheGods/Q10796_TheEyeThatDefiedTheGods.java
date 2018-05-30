@@ -166,7 +166,6 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

@@ -161,7 +161,6 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 				}
 				else
 				{
-					sendNpcLogList(killer);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -179,7 +178,6 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
 		final QuestState st = getQuestState(activeChar, false);
-		
 		if ((st != null) && st.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);

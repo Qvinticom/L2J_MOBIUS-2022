@@ -187,7 +187,6 @@ public final class Q10358_DividedSakumPoslof extends Quest
 				{
 					st.setCond(2, true);
 				}
-				sendNpcLogList(killer);
 			}
 			else if (st.isCond(3))
 			{

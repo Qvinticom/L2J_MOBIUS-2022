@@ -156,7 +156,6 @@ public final class Q10838_TheReasonForNotBeingAbleToGetOut extends Quest
 				{
 					giveItems(killer, DARK_ATELIA_NATURALIZER, 1);
 				}
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

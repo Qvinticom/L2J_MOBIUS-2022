@@ -20,8 +20,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
-
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
@@ -33,6 +31,8 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
+
+import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 
 /**
  * Daimon the White-eyed (10417)
@@ -226,7 +226,6 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 						qs.set("KillCount_MOBS", mobCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
-					sendNpcLogList(killer);
 				}
 				
 				if (mobCount == 100)
@@ -242,7 +241,6 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					qs.setCond(3, true);
 				}
-				sendNpcLogList(killer);
 			}
 		}
 		

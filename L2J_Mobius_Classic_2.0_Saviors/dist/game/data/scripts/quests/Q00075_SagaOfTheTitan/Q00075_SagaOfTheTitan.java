@@ -503,7 +503,6 @@ public class Q00075_SagaOfTheTitan extends Quest
 						if (count < 20)
 						{
 							qs.set(KILL_COUNT_VAR, count + 1);
-							sendNpcLogList(killer);
 						}
 						if (count >= 20)
 						{

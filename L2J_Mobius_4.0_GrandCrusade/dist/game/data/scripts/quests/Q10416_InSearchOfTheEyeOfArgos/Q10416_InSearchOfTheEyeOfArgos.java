@@ -166,7 +166,6 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

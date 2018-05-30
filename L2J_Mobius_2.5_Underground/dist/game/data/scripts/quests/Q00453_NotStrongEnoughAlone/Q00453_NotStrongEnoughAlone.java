@@ -171,7 +171,6 @@ public final class Q00453_NotStrongEnoughAlone extends Quest
 				checkProgress(st, 20, MONSTER3[0], MONSTER3[1], MONSTER3[2]);
 			}
 		}
-		sendNpcLogList(player);
 	}
 	
 	@Override
@@ -380,7 +379,6 @@ public final class Q00453_NotStrongEnoughAlone extends Quest
 	{
 		final QuestState qs = getQuestState(activeChar, false);
 		final Set<NpcLogListHolder> npcLogList = new HashSet<>(3);
-		
 		if (qs != null)
 		{
 			switch (qs.getCond())

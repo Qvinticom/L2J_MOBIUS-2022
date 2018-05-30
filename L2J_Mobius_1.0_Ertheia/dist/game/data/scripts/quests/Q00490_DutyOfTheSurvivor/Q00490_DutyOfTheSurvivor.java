@@ -175,11 +175,6 @@ public final class Q00490_DutyOfTheSurvivor extends Quest
 				{
 					st.setCond(2);
 				}
-				else
-				{
-					sendNpcLogList(player);
-				}
-				
 			}
 		}
 		return super.onKill(npc, player, isSummon);
@@ -189,7 +184,7 @@ public final class Q00490_DutyOfTheSurvivor extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
 			npcLogList.add(new NpcLogListHolder(EXTRACT, false, (int) getQuestItemsCount(player, EXTRACT)));

@@ -153,7 +153,6 @@ public class Q10799_StrangeThingsAfootInTheValley extends Quest
 			}
 			else
 			{
-				sendNpcLogList(killer);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

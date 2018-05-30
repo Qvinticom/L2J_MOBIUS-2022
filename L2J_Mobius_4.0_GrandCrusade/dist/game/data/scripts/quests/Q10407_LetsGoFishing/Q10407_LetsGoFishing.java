@@ -213,7 +213,6 @@ public class Q10407_LetsGoFishing extends Quest
 				}
 				else
 				{
-					sendNpcLogList(player);
 					playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}

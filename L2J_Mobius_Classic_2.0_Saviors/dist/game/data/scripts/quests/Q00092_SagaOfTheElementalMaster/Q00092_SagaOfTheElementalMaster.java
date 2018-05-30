@@ -500,7 +500,6 @@ public class Q00092_SagaOfTheElementalMaster extends Quest
 						if (count < 20)
 						{
 							qs.set(KILL_COUNT_VAR, count + 1);
-							sendNpcLogList(killer);
 						}
 						if (count >= 20)
 						{

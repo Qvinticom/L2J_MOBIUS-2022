@@ -260,7 +260,6 @@ public final class Q10335_RequestToFindSakum extends Quest
 			{
 				st.setCond(3, true);
 			}
-			sendNpcLogList(killer);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

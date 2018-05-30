@@ -634,7 +634,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 						giveItems(killer, CRYSTAL_EYE, 1);
 						qs.set(CRYSTAL_EYE_VAR, ++EyeCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						sendNpcLogList(killer);
 					}
 					break;
 				}
@@ -645,7 +644,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 						giveItems(killer, BROKEN_STONE_OF_PURITY, 1);
 						qs.set(BROKEN_STONE_OF_PURITY_VAR, ++PurityCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						sendNpcLogList(killer);
 					}
 					break;
 				}
@@ -656,7 +654,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 						giveItems(killer, MIRACLE_DRUG_OF_ENCHANTMENT, 1);
 						qs.set(EMPTY_REGEANT_FLASK_VAR, ++FlaskCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
-						sendNpcLogList(killer);
 					}
 					break;
 				}

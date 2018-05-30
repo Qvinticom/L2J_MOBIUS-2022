@@ -186,7 +186,6 @@ public final class Q10815_StepUp extends Quest
 				else
 				{
 					qs.set("chat", chatCount);
-					sendNpcLogList(player);
 					if (Config.WORLD_CHAT_INTERVAL.getSeconds() > 0)
 					{
 						REUSE.put(player.getObjectId(), now.plus(Config.WORLD_CHAT_INTERVAL));
@@ -200,13 +199,10 @@ public final class Q10815_StepUp extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
 		final QuestState qs = getQuestState(activeChar, false);
-		if (qs != null)
+		if ((qs != null) && qs.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(1);
-			if (qs.isCond(1))
-			{
-				npcLogList.add(new NpcLogListHolder(NpcStringId.WORLD_CHAT, qs.getInt("chat")));
-			}
+			npcLogList.add(new NpcLogListHolder(NpcStringId.WORLD_CHAT, qs.getInt("chat")));
 			return npcLogList;
 		}
 		return super.getNpcLogList(activeChar);

@@ -172,7 +172,6 @@ public class Q00937_ToReviveTheFishingGuild extends Quest
 			}
 			else
 			{
-				sendNpcLogList(player);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 		}

@@ -171,7 +171,6 @@ public final class Q10743_StrangeFungus extends Quest
 						qs.set(EVOLVED_SPAWN_VAR, killCount);
 					}
 					qs.set(KILL_COUNT_VAR, qs.getInt(KILL_COUNT_VAR) + 1);
-					sendNpcLogList(killer);
 					break;
 				}
 				case EVOLVED_GROWLER:

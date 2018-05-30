@@ -500,7 +500,6 @@ public class Q00094_SagaOfTheSoultaker extends Quest
 						if (count < 20)
 						{
 							qs.set(KILL_COUNT_VAR, count + 1);
-							sendNpcLogList(killer);
 						}
 						if (count >= 20)
 						{

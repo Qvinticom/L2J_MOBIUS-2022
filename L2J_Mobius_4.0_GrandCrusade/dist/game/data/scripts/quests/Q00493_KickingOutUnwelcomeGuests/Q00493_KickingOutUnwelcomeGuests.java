@@ -158,10 +158,6 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 			{
 				st.setCond(2, true);
 			}
-			else
-			{
-				sendNpcLogList(player);
-			}
 		}
 	}
 	
@@ -176,7 +172,7 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
 	{
 		final QuestState st = getQuestState(player, false);
-		if (st != null)
+		if ((st != null) && st.isCond(1))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(5);
 			npcLogList.add(new NpcLogListHolder(LUNATIC_CREATURE, false, st.getInt(Integer.toString(LUNATIC_CREATURE))));

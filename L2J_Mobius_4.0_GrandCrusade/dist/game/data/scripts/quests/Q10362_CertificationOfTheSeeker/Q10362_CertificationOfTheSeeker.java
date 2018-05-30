@@ -122,7 +122,6 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				if (killedStalker <= 10)
 				{
 					qs.setMemoStateEx(STALKER, killedStalker);
-					sendNpcLogList(killer);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -132,7 +131,6 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 				if (killedCrawler <= 10)
 				{
 					qs.setMemoStateEx(CRAWLER, killedCrawler);
-					sendNpcLogList(killer);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 			}
@@ -210,7 +208,6 @@ public final class Q10362_CertificationOfTheSeeker extends Quest
 	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance activeChar)
 	{
 		final QuestState qs = getQuestState(activeChar, false);
-		
 		if ((qs != null) && qs.isCond(2))
 		{
 			final Set<NpcLogListHolder> npcLogList = new HashSet<>(2);
