@@ -30,6 +30,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.model.zone.type.L2TownZone;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public abstract class AbstractNpcInfo implements IClientOutgoingPacket
@@ -127,14 +128,18 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 			// npc crest of owning clan/ally of castle
 			if ((cha instanceof L2NpcInstance) && cha.isInsideZone(ZoneId.TOWN) && (Config.SHOW_CREST_WITHOUT_QUEST || cha.getCastle().getShowNpcCrest()) && (cha.getCastle().getOwnerId() != 0))
 			{
-				final int townId = TownManager.getTown(_x, _y, _z).getTownId();
-				if ((townId != 33) && (townId != 22))
+				final L2TownZone town = TownManager.getTown(_x, _y, _z);
+				if (town != null)
 				{
-					final L2Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
-					_clanCrest = clan.getCrestId();
-					_clanId = clan.getId();
-					_allyCrest = clan.getAllyCrestId();
-					_allyId = clan.getAllyId();
+					final int townId = town.getTownId();
+					if ((townId != 33) && (townId != 22))
+					{
+						final L2Clan clan = ClanTable.getInstance().getClan(cha.getCastle().getOwnerId());
+						_clanCrest = clan.getCrestId();
+						_clanId = clan.getId();
+						_allyCrest = clan.getAllyCrestId();
+						_allyId = clan.getAllyId();
+					}
 				}
 			}
 			
