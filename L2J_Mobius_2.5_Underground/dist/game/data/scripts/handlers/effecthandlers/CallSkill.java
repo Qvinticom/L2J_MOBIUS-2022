@@ -50,10 +50,26 @@ public final class CallSkill extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final Skill triggerSkill;
+		Skill triggerSkill = null;
 		if (_skillLevelScaleTo <= 0)
 		{
-			triggerSkill = _skill.getSkill();
+			// Mobius: Use 0 to trigger max learned skill level.
+			if (_skill.getSkillLevel() == 0)
+			{
+				final int knownLevel = effected.getSkillLevel(_skill.getSkillId());
+				if (knownLevel > 0)
+				{
+					triggerSkill = new SkillHolder(_skill.getSkillId(), knownLevel, _skill.getSkillSubLevel()).getSkill();
+				}
+				else
+				{
+					LOGGER.warning("Player " + effected + " called unknown skill " + _skill + " triggered by " + skill + " CallSkill.");
+				}
+			}
+			else
+			{
+				triggerSkill = _skill.getSkill();
+			}
 		}
 		else
 		{
