@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.taskmanager.tasks;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ExNevitAdventTimeChange;
@@ -40,6 +41,11 @@ public class TaskNevit extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
+		if (!Config.NEVIT_ENABLED)
+		{
+			return;
+		}
+		
 		for (L2PcInstance player : L2World.getInstance().getPlayers())
 		{
 			if ((player == null) || !player.isOnline())

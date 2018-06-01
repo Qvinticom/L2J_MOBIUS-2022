@@ -393,7 +393,10 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 		}
 		
-		activeChar.checkRecoBonusTask();
+		if (Config.NEVIT_ENABLED)
+		{
+			activeChar.checkRecoBonusTask();
+		}
 		
 		activeChar.broadcastUserInfo();
 		
@@ -540,7 +543,10 @@ public class EnterWorld implements IClientIncomingPacket
 		activeChar.onPlayerEnter();
 		
 		client.sendPacket(new SkillCoolTime(activeChar));
-		client.sendPacket(new ExVoteSystemInfo(activeChar));
+		if (Config.NEVIT_ENABLED)
+		{
+			client.sendPacket(new ExVoteSystemInfo(activeChar));
+		}
 		client.sendPacket(new ExShowContactList(activeChar));
 		
 		for (L2ItemInstance i : activeChar.getInventory().getItems())

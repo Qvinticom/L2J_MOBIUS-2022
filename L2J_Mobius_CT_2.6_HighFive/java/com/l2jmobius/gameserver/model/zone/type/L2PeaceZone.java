@@ -53,11 +53,14 @@ public class L2PeaceZone extends L2ZoneType
 			}
 			
 			/* Nevit Turn Off on Peace Zone */
-			player.getNevitSystem().stopAdventTask(true);
-			
-			// Stop Nevit's Hourglass
-			player.storeRecommendations(true);
-			player.getStat().setPausedNevitHourglassStatus(true);
+			if (Config.NEVIT_ENABLED)
+			{
+				player.getNevitSystem().stopAdventTask(true);
+				
+				// Stop Nevit's Hourglass
+				player.storeRecommendations(true);
+				player.getStat().setPausedNevitHourglassStatus(true);
+			}
 		}
 		
 		if (Config.PEACE_ZONE_MODE != 2)

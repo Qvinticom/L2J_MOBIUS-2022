@@ -50,8 +50,11 @@ public class NevitSystem implements IUniqueId
 	{
 		_player = player;
 		
-		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
-		player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
+		if (Config.NEVIT_ENABLED)
+		{
+			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
+			player.addListener(new ConsumerEventListener(player, EventType.ON_PLAYER_LOGOUT, (OnPlayerLogout event) -> OnPlayerLogout(event), this));
+		}
 	}
 	
 	@RegisterEvent(EventType.ON_PLAYER_LOGIN)

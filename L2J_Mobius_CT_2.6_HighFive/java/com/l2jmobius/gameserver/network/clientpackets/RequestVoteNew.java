@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -101,7 +102,10 @@ public final class RequestVoteNew implements IClientIncomingPacket
 		client.sendPacket(new ExBrExtraUserInfo(activeChar));
 		target.broadcastUserInfo();
 		
-		activeChar.sendPacket(new ExVoteSystemInfo(activeChar));
-		target.sendPacket(new ExVoteSystemInfo(target));
+		if (Config.NEVIT_ENABLED)
+		{
+			activeChar.sendPacket(new ExVoteSystemInfo(activeChar));
+			target.sendPacket(new ExVoteSystemInfo(target));
+		}
 	}
 }

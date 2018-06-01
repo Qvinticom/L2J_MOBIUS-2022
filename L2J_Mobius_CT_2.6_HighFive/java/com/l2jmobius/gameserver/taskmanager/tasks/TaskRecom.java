@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.taskmanager.tasks;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -65,12 +66,15 @@ public class TaskRecom extends Task
 		}
 		
 		// Refresh reco bonus for online players
-		for (L2PcInstance player : L2World.getInstance().getPlayers())
+		if (Config.NEVIT_ENABLED)
 		{
-			if (player != null)
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
 			{
-				player.stopNevitHourglassTask();
-				player.startNevitHourglassTask();
+				if (player != null)
+				{
+					player.stopNevitHourglassTask();
+					player.startNevitHourglassTask();
+				}
 			}
 		}
 		LOGGER.info("Recommendations System reseted");

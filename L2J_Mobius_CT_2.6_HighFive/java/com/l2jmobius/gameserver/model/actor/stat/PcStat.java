@@ -137,7 +137,7 @@ public class PcStat extends PlayableStat
 		double bonusSp = 1.;
 		
 		// Start Nevit's Hourglass
-		if ((addToExp > 0) && !activeChar.isInsideZone(ZoneId.PEACE))
+		if (Config.NEVIT_ENABLED && (addToExp > 0) && !activeChar.isInsideZone(ZoneId.PEACE))
 		{
 			activeChar.startNevitHourglassTask();
 			
@@ -153,7 +153,7 @@ public class PcStat extends PlayableStat
 			bonusSp = getSpBonusMultiplier();
 		}
 		
-		if ((addToExp > 0) && !activeChar.isInsideZone(ZoneId.PEACE))
+		if (Config.NEVIT_ENABLED && (addToExp > 0) && !activeChar.isInsideZone(ZoneId.PEACE))
 		{
 			activeChar.getNevitSystem().startAdventTask();
 		}
@@ -331,9 +331,12 @@ public class PcStat extends PlayableStat
 		// Send a Server->Client packet UserInfo to the L2PcInstance
 		getActiveChar().sendPacket(new UserInfo(getActiveChar()));
 		getActiveChar().sendPacket(new ExBrExtraUserInfo(getActiveChar()));
-		getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
-		// Nevit Points For Level
-		getActiveChar().getNevitSystem().addPoints(2000);
+		// Nevit System
+		if (Config.NEVIT_ENABLED)
+		{
+			getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
+			getActiveChar().getNevitSystem().addPoints(2000);
+		}
 		
 		return levelIncreased;
 	}
