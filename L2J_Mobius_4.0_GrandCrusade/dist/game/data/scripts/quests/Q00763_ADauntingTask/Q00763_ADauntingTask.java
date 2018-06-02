@@ -115,12 +115,13 @@ public final class Q00763_ADauntingTask extends Quest
 			case "33851-04.htm":
 			{
 				st.startQuest();
+				st.setCond(2, true);
 				htmltext = event;
 				break;
 			}
 			case "33851-09.html":
 			{
-				if (st.isCond(2))
+				if (st.isCond(3))
 				{
 					final long itemCount = getQuestItemsCount(player, MALICE);
 					
@@ -160,7 +161,7 @@ public final class Q00763_ADauntingTask extends Quest
 			}
 			case State.STARTED:
 			{
-				htmltext = st.isCond(1) ? "33851-05.html" : "33851-06.html";
+				htmltext = st.isCond(2) ? "33851-05.html" : "33851-06.html";
 				break;
 			}
 			case State.COMPLETED:
@@ -185,7 +186,7 @@ public final class Q00763_ADauntingTask extends Quest
 	{
 		final QuestState st = getQuestState(killer, false);
 		
-		if ((st != null) && (st.isCond(1) || st.isCond(2)) && (getRandom(100) < 15))
+		if ((st != null) && st.isCond(2) && (getRandom(100) < 25))
 		{
 			if (getQuestItemsCount(killer, EYE) < 50)
 			{
@@ -194,7 +195,7 @@ public final class Q00763_ADauntingTask extends Quest
 				
 				if (getQuestItemsCount(killer, EYE) >= 50)
 				{
-					st.setCond(2, true);
+					st.setCond(3, true);
 					showOnScreenMsg(killer, NpcStringId.YOU_CAN_GATHER_MORE_POWERFUL_DARK_MALICE, ExShowScreenMessage.TOP_CENTER, 6000);
 				}
 			}
