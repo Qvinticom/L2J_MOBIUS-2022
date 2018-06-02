@@ -83,7 +83,7 @@ public class NevitSystem implements IUniqueId
 		
 		if ((percent >= 45) && (percent < 50))
 		{
-			_player.sendPacket(SystemMessageId.HAPPY_BIRTHDAY_ALEGRIA_HAS_SENT_YOU_A_BIRTHDAY_GIFT);
+			_player.sendPacket(SystemMessageId.YOU_ARE_STARTING_TO_FEEL_THE_EFFECTS_OF_NEVIT_S_ADVENT_BLESSING);
 		}
 		else if ((percent >= 50) && (percent < 75))
 		{
