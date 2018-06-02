@@ -104,7 +104,7 @@ public class L2MonsterInstance extends L2Attackable
 		{
 			if (getLeader() != null)
 			{
-				setIsNoRndWalk(true);
+				setRandomWalking(false);
 				setIsRaidMinion(getLeader().isRaid());
 				getLeader().getMinionList().onMinionSpawn(this);
 			}

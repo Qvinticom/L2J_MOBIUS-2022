@@ -681,7 +681,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 			npcList.add(npc);
 			world.setParameter("npcList", npcList);
 		}
-		npc.setIsNoRndWalk(true);
+		npc.setRandomWalking(false);
 		if (npc.isInstanceTypes(InstanceType.L2Attackable))
 		{
 			((L2Attackable) npc).setSeeThroughSilentMove(true);

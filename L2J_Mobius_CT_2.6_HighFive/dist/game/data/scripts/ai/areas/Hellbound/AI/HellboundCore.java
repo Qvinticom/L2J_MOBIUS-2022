@@ -65,7 +65,7 @@ public final class HellboundCore extends AbstractNpcAI
 	{
 		if (npc.getId() == NAIA)
 		{
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 		}
 		else
 		{

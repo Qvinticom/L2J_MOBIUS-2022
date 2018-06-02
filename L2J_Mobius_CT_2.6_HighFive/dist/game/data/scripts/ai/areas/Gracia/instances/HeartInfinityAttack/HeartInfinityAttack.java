@@ -552,13 +552,13 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	{
 		if (CommonUtil.contains(NOTMOVE, npc.getId()))
 		{
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 			npc.setIsImmobilized(true);
 		}
 		
 		if (npc.getId() == HOUND)
 		{
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 			npc.setIsImmobilized(true);
 		}
 		

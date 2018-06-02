@@ -304,7 +304,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		StartRoom.npcList.add(thisnpc);
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		
 		thisnpc = new DMCNpc();
@@ -312,7 +312,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		StartRoom.npcList.add(thisnpc);
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		world.setParameter("StartRoom", StartRoom);
 	}
@@ -327,7 +327,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 147217, 180112, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -335,7 +335,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[2], 147217, 180209, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -343,7 +343,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 148521, 180112, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -351,7 +351,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[0], 148521, 180209, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -359,7 +359,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 148525, 180910, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -367,7 +367,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[2], 148435, 180910, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -375,7 +375,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 147242, 180910, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -383,7 +383,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[2], 147242, 180819, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		Hall.npcList.add(thisnpc);
 		
@@ -406,7 +406,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(HG[1], 147842, 179837, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		FirstRoom.npcList.add(thisnpc);
 		
@@ -414,7 +414,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(HG[0], 147711, 179708, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		FirstRoom.npcList.add(thisnpc);
 		
@@ -422,7 +422,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(HG[1], 147842, 179552, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		FirstRoom.npcList.add(thisnpc);
 		
@@ -430,7 +430,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(HG[0], 147964, 179708, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		FirstRoom.npcList.add(thisnpc);
 		
@@ -511,37 +511,37 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 148765, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[2], 148865, 180190, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[1], 148995, 180190, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[0], 149090, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[1], 148995, 180705, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[2], 148865, 180705, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		world.setParameter("ThirdRoom", ThirdRoom);
@@ -558,37 +558,37 @@ public final class DarkCloudMansion extends AbstractInstance
 		thisnpc.npc = addSpawn(BM[1], 148765, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[2], 148865, 180190, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[1], 148995, 180190, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[0], 149090, 180450, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[1], 148995, 180705, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		thisnpc.npc = addSpawn(BM[2], 148865, 180705, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 		}
 		ThirdRoom.npcList.add(thisnpc);
 		world.setParameter("ThirdRoom2", ThirdRoom);
@@ -665,7 +665,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		{
 			thisnpc = new DMCNpc();
 			thisnpc.npc = addSpawn(BS[idx], x, 182145, -6117, 48810, false, 0, false, world.getInstanceId());
-			thisnpc.npc.setIsNoRndWalk(true);
+			thisnpc.npc.setRandomWalking(false);
 			thisnpc.order = idx;
 			thisnpc.status = temp[idx];
 			thisnpc.count = 0;
@@ -717,7 +717,7 @@ public final class DarkCloudMansion extends AbstractInstance
 		npc.golem = addSpawn(mobId, x, y, -6117, 0, false, 0, false, world.getInstanceId());
 		if (noRndWalk)
 		{
-			npc.golem.setIsNoRndWalk(true);
+			npc.golem.setRandomWalking(false);
 		}
 	}
 	

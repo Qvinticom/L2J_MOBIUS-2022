@@ -81,7 +81,7 @@ public final class ZealotOfShilen extends AbstractNpcAI
 	{
 		if (npc.getId() == ZEALOT)
 		{
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 		}
 		else
 		{

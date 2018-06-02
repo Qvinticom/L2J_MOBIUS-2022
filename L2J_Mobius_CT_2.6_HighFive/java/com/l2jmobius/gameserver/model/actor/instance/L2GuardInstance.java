@@ -73,7 +73,7 @@ public class L2GuardInstance extends L2Attackable
 	@Override
 	public void onSpawn()
 	{
-		setIsNoRndWalk(true);
+		setRandomWalking(false);
 		super.onSpawn();
 		
 		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);

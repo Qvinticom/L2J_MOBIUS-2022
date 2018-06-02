@@ -63,7 +63,7 @@ public final class OutpostCaptain extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		npc.setIsNoRndWalk(true);
+		npc.setRandomWalking(false);
 		
 		if (npc.getId() == CAPTAIN)
 		{

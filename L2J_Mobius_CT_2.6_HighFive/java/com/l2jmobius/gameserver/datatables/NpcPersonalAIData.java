@@ -105,8 +105,8 @@ public class NpcPersonalAIData
 						}
 						case "disableRandomWalk":
 						{
-							npc.setIsNoRndWalk((map.get(key) == 1));
-							spawn.setIsNoRndWalk((map.get(key) == 1));
+							npc.setRandomWalking((map.get(key) == 0));
+							spawn.setRandomWalking((map.get(key) == 0));
 							break;
 						}
 					}

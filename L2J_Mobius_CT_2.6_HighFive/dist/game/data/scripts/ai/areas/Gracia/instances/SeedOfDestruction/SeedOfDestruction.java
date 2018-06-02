@@ -1141,7 +1141,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				world.npcList.put(npc, false);
 			}
 			npc.setIsImmobilized(TIAT == mob[0] ? true : isImmobilized);
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 			if (npc.isAttackable())
 			{
 				((L2Attackable) npc).setSeeThroughSilentMove(true);
@@ -1200,27 +1200,27 @@ public class SeedOfDestruction extends AbstractNpcAI
 	protected void runThrone(SODWorld world)
 	{
 		world._portalForCamera = addSpawn(SPAWN_DEVICE, -248781, 206325, -11966, 0, false, 0, false, world.getInstanceId());
-		world._portalForCamera.setIsNoRndWalk(true);
+		world._portalForCamera.setRandomWalking(false);
 		
 		for (int i = 0; i < 12; i++)
 		{
 			final L2Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc1.setIsNoRndWalk(true);
+			npc1.setRandomWalking(false);
 			world._mags.add(npc1);
 			
 			final L2Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc2.setIsNoRndWalk(true);
+			npc2.setRandomWalking(false);
 		}
 		for (int i = 0; i < 6; i++)
 		{
 			final L2Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
-			npc3.setIsNoRndWalk(true);
+			npc3.setRandomWalking(false);
 			
 			final L2Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc4.setIsNoRndWalk(true);
+			npc4.setRandomWalking(false);
 			
 			final L2Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc5.setIsNoRndWalk(true);
+			npc5.setRandomWalking(false);
 		}
 		
 		if (world.naezds.size() < 1)
@@ -1228,15 +1228,15 @@ public class SeedOfDestruction extends AbstractNpcAI
 			for (int i = 0; i < 4; i++)
 			{
 				final L2Npc npc = addSpawn(NAEZD, NAEZDSPAWNS[i][0], NAEZDSPAWNS[i][1], NAEZDSPAWNS[i][2], NAEZDSPAWNS[i][3], false, 0, false, world.getInstanceId());
-				npc.setIsNoRndWalk(true);
+				npc.setRandomWalking(false);
 				world.naezds.add(npc);
 			}
 		}
 		world._MovePeltast = addSpawn(PELTAST, -250403, 207556, -11957, 16383, false, 0, false, world.getInstanceId());
-		world._MovePeltast.setIsNoRndWalk(true);
+		world._MovePeltast.setRandomWalking(false);
 		
 		world._priest = addSpawn(PRIEST, -250408, 205862, -11727, 16383, false, 0, false, world.getInstanceId());
-		world._priest.setIsNoRndWalk(true);
+		world._priest.setRandomWalking(false);
 	}
 	
 	@Override
@@ -1362,7 +1362,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			else if (event.equals("Part10"))
 			{
 				world._ChangePortal = addSpawn(ChangePortal, -250402, 206519, -11905, 0, false, 0, false, world.getInstanceId());
-				world._ChangePortal.setIsNoRndWalk(true);
+				world._ChangePortal.setRandomWalking(false);
 				world._priest.doCast(SkillData.getInstance().getSkill(5816, 1));
 				startQuestTimer("Part11", 300, world._priest, null);
 				startQuestTimer("PartUnnamed", 50, world._priest, null);
@@ -1380,16 +1380,16 @@ public class SeedOfDestruction extends AbstractNpcAI
 			{
 				cancelQuestTimers("PartUnnamed");
 				world._tiat = addSpawn(TIAT, -250400, 207271, -11961, 16285, false, 0, false, world.getInstanceId());
-				world._tiat.setIsNoRndWalk(true);
+				world._tiat.setRandomWalking(false);
 				world._tiat.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				world._naezdTR1 = addSpawn(NAEZD, -250154, 207203, -11970, 33818, false, 0, false, world.getInstanceId());
-				world._naezdTR1.setIsNoRndWalk(true);
+				world._naezdTR1.setRandomWalking(false);
 				world._naezdTR2 = addSpawn(NAEZD, -250209, 206941, -11966, 27379, false, 0, false, world.getInstanceId());
-				world._naezdTR2.setIsNoRndWalk(true);
+				world._naezdTR2.setRandomWalking(false);
 				world._naezdTL1 = addSpawn(NAEZD, -250652, 207203, -11970, 0, false, 0, false, world.getInstanceId());
-				world._naezdTL1.setIsNoRndWalk(true);
+				world._naezdTL1.setRandomWalking(false);
 				world._naezdTL2 = addSpawn(NAEZD, -250597, 206941, -11966, 6867, false, 0, false, world.getInstanceId());
-				world._naezdTL2.setIsNoRndWalk(true);
+				world._naezdTL2.setRandomWalking(false);
 				broadcastPacket((new SpecialCamera(world._tiat, 400, 90, 5, 1500, 10000, 13000, 0, 0, 1, 0, 0)), world);
 				startQuestTimer("Part12", 100, world._tiat, null);
 			}
@@ -1591,7 +1591,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				{
 					world.naezds.remove(npc);
 					final L2Attackable mob = (L2Attackable) addSpawn(npc.getId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
-					mob.setIsNoRndWalk(true);
+					mob.setRandomWalking(false);
 					mob.setSeeThroughSilentMove(true);
 					mob.setIsRaidMinion(true);
 					world.naezds.add(mob);

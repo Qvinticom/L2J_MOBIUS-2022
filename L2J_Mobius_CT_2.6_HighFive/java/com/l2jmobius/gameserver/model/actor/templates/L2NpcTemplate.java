@@ -73,6 +73,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	private boolean _talkable;
 	private boolean _undying;
 	private boolean _showName;
+	private boolean _randomWalk;
+	private boolean _randomAnimation;
 	private boolean _flying;
 	private boolean _fakePlayer;
 	private boolean _fakePlayerTalkable;
@@ -144,6 +146,8 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 		_talkable = set.getBoolean("talkable", true);
 		_undying = set.getBoolean("undying", true);
 		_showName = set.getBoolean("showName", true);
+		_randomWalk = set.getBoolean("randomWalk", !_type.equals("L2Guard"));
+		_randomAnimation = set.getBoolean("randomAnimation", true);
 		_flying = set.getBoolean("flying", false);
 		_fakePlayer = set.getBoolean("fakePlayer", false);
 		_fakePlayerTalkable = set.getBoolean("fakePlayerTalkable", true);
@@ -365,6 +369,16 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	public boolean isShowName()
 	{
 		return _showName;
+	}
+	
+	public boolean isRandomWalkEnabled()
+	{
+		return _randomWalk;
+	}
+	
+	public boolean isRandomAnimationEnabled()
+	{
+		return _randomAnimation;
 	}
 	
 	public boolean isFlying()

@@ -834,7 +834,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			time = (int) ((distance / npc.getWalkSpeed()) * 1000);
 			npc.setWalking();
 			npc.disableCoreAI(true);
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coords[0], coords[1], coords[2], heading));
 			npc.getSpawn().setX(coords[0]);
 			npc.getSpawn().setY(coords[1]);

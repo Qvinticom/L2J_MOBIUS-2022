@@ -56,7 +56,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	@Override
 	public void onSpawn()
 	{
-		setIsNoRndWalk(true);
+		setRandomWalking(false);
 		super.onSpawn();
 	}
 	

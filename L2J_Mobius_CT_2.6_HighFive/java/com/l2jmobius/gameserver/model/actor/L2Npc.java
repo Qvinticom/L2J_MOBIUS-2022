@@ -134,6 +134,7 @@ public class L2Npc extends L2Character
 	private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
 	/** Support for random animation switching */
 	private boolean _isRandomAnimationEnabled = true;
+	private boolean _isRandomWalkingEnabled = true;
 	private boolean _isTalkable = getTemplate().isTalkable();
 	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
@@ -309,6 +310,16 @@ public class L2Npc extends L2Character
 	public boolean isRandomAnimationEnabled()
 	{
 		return !isFakePlayer() && _isRandomAnimationEnabled;
+	}
+	
+	public void setRandomWalking(boolean enabled)
+	{
+		_isRandomWalkingEnabled = enabled;
+	}
+	
+	public boolean isRandomWalkingEnabled()
+	{
+		return _isRandomWalkingEnabled;
 	}
 	
 	@Override
@@ -1303,6 +1314,8 @@ public class L2Npc extends L2Character
 		_soulshotamount = getTemplate().getSoulShot();
 		_spiritshotamount = getTemplate().getSpiritShot();
 		_killingBlowWeaponId = 0;
+		_isRandomAnimationEnabled = getTemplate().isRandomAnimationEnabled();
+		_isRandomWalkingEnabled = getTemplate().isRandomWalkEnabled();
 		
 		if (isTeleporting())
 		{

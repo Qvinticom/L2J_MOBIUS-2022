@@ -78,7 +78,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	private boolean _doRespawn = true;
 	private static List<SpawnListener> _spawnListeners = new CopyOnWriteArrayList<>();
 	private final Deque<L2Npc> _spawnedNpcs = new ConcurrentLinkedDeque<>();
-	private boolean _isNoRndWalk = false; // Is no random walk
+	private boolean _randomWalk = false; // Is random walk
 	private int _spawnTemplateId = 0;
 	
 	/** The task launching the function doSpawn() */
@@ -479,12 +479,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 				npc.setShowSummonAnimation(isSummonSpawn);
 			}
 			
-			// Check for certain AI data, overriden in spawnlist
-			if (_name != null)
-			{
-				NpcPersonalAIData.getInstance().initializeNpcParameters(npc, this, _name);
-			}
-			
 			return initializeNpcInstance(npc);
 		}
 		catch (Exception e)
@@ -553,7 +547,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			npc.getVariables().getSet().clear();
 		}
 		// Set is not random walk default value
-		npc.setIsNoRndWalk(isNoRndWalk());
+		npc.setRandomWalking(getRandomWalking());
 		
 		// Set the heading of the L2NpcInstance (random heading if not defined)
 		if (getHeading() == -1)
@@ -593,6 +587,12 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		npc.spawnMe(newlocx, newlocy, newlocz);
 		
 		notifyNpcSpawned(npc);
+		
+		// Check for overriden by spawnlist AIData
+		if (_name != null)
+		{
+			NpcPersonalAIData.getInstance().initializeNpcParameters(npc, this, _name);
+		}
 		
 		_spawnedNpcs.add(npc);
 		
@@ -710,14 +710,14 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		_location.setInstanceId(instanceId);
 	}
 	
-	public final boolean isNoRndWalk()
+	public final boolean getRandomWalking()
 	{
-		return _isNoRndWalk;
+		return _randomWalk;
 	}
 	
-	public final void setIsNoRndWalk(boolean value)
+	public final void setRandomWalking(boolean value)
 	{
-		_isNoRndWalk = value;
+		_randomWalk = value;
 	}
 	
 	public void setSpawnTemplateId(int npcSpawnTemplateId)

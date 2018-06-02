@@ -128,7 +128,7 @@ public final class LairOfAntharas extends AbstractNpcAI
 		mob.setOnKillDelay(0);
 		if ((npc.getId() == DRAGON_GUARD) || (npc.getId() == DRAGON_MAGE))
 		{
-			mob.setIsNoRndWalk(true);
+			mob.setRandomWalking(false);
 			startQuestTimer("CHECK_HOME", 10000, npc, null, true);
 		}
 		return super.onSpawn(npc);

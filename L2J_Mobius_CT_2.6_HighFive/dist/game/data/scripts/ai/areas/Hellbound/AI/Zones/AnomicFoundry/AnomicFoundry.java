@@ -206,7 +206,7 @@ public final class AnomicFoundry extends AbstractNpcAI
 		
 		if (npc.getId() == LABORER)
 		{
-			npc.setIsNoRndWalk(true);
+			npc.setRandomWalking(false);
 		}
 		return super.onSpawn(npc);
 	}

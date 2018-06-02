@@ -436,7 +436,7 @@ public final class Instance
 					spawnDat.setHeading(set.getInt("heading"));
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
 					spawnDat.setInstanceId(getId());
-					spawnDat.setIsNoRndWalk(set.getBoolean("allowRandomWalk"));
+					spawnDat.setRandomWalking(set.getBoolean("allowRandomWalk"));
 					final L2Npc spawned = spawnDat.doSpawn();
 					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
 					{

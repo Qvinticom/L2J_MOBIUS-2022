@@ -279,6 +279,8 @@
 		<xs:attribute name="targetable" type="xs:boolean" />
 		<xs:attribute name="undying" type="xs:boolean" />
 		<xs:attribute name="showName" type="xs:boolean" />
+		<xs:attribute name="randomWalk" type="xs:boolean" />
+		<xs:attribute name="randomAnimation" type="xs:boolean" />
 		<xs:attribute name="flying" type="xs:boolean" />
 		<xs:attribute name="canMove" type="xs:boolean" />
 		<xs:attribute name="noSleepMode" type="xs:boolean" />

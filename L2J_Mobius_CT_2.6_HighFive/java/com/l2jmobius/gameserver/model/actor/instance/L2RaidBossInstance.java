@@ -55,7 +55,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	@Override
 	public void onSpawn()
 	{
-		setIsNoRndWalk(true);
+		setRandomWalking(false);
 		super.onSpawn();
 	}
 	
