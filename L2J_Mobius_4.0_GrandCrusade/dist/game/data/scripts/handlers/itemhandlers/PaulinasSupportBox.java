@@ -324,10 +324,15 @@ public class PaulinasSupportBox implements IItemHandler
 						break;
 					}
 					case KAMAEL:
-					{
-						player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
-						break;
-					}
+						if (player.isMageClass())
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_ROBE, 1, player, true);
+						}
+						else
+						{
+							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
+							break;
+						}
 					case ERTHEIA:
 					{
 						if (player.isMageClass())
