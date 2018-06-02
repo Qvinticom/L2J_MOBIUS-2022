@@ -270,8 +270,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						manageScreenMsg(world, NpcStringId.BEGIN_STAGE_1);
 						startQuestTimer("CAST_BLIZZARD", 50000, controller, null);
 						world.setParameter("freya", frey);
-						startQuestTimer("STAGE_1_SPAWN", 2000, freya, null);
-						world.setParameter("freya", frey);
+						startQuestTimer("STAGE_1_SPAWN", 2000, frey, null);
 						break;
 					}
 					case "STAGE_1_SPAWN":
