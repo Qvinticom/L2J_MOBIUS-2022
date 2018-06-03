@@ -81,7 +81,8 @@ public final class Q00493_KickingOutUnwelcomeGuests extends Quest
 			{
 				if (st.isCond(2))
 				{
-					addExpAndSp(player, 560_000_000, 134_400);
+					addExpAndSp(player, 2926255980L, 2926200);
+					giveAdena(player, 1187940, true);
 					st.exitQuest(QuestType.DAILY, true);
 					htmltext = event;
 				}
