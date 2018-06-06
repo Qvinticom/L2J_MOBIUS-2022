@@ -110,8 +110,7 @@ public class Q10455_ElikiasLetter extends Quest
 			{
 				if (qs.isCreated())
 				{
-					htmltext = htmltext.replaceAll("%name%", player.getName());
-					htmltext = "31620-01.htm";
+					htmltext = getHtm(player, "31620-01.htm").replace("%name%", player.getName());
 				}
 				else if (qs.isCond(1))
 				{
