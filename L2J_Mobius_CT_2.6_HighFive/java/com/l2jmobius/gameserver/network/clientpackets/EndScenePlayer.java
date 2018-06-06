@@ -50,7 +50,7 @@ public final class EndScenePlayer implements IClientIncomingPacket
 			return;
 		}
 		final Movie movie = movieHolder.getMovie();
-		if ((movie.getClientId() != _movieId) || !movie.isEscapable())
+		if (movie.getClientId() != _movieId)
 		{
 			return;
 		}
