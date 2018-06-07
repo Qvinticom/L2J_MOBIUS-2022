@@ -137,12 +137,16 @@ public final class EnergyAttack extends AbstractEffect
 			attack *= energyChargesBoost;
 			attack *= weaponTypeBoost;
 			
+			if (target instanceof L2PcInstance)
+			{
+				defence *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
+			}
+			
 			damage = attack / defence;
 			damage *= damageMultiplier;
 			if (target instanceof L2PcInstance)
 			{
 				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
-				damage *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
 				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);
 			}
 			
