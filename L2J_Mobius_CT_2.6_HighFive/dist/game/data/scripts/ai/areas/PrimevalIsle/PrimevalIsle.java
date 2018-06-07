@@ -277,7 +277,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				{
 					if (getRandom(100) <= (probPhysicalSpecial1 * npc.getVariables().getInt("SKILL_MULTIPLER")))
 					{
-						if (!npc.isSkillDisabled(physicalSpecial1.getSkillId()))
+						if (!npc.isSkillDisabled(physicalSpecial1.getSkill()))
 						{
 							npc.setTarget(creature);
 							npc.doCast(physicalSpecial1.getSkill());
@@ -420,7 +420,7 @@ public final class PrimevalIsle extends AbstractNpcAI
 				final L2Attackable mob = (L2Attackable) npc;
 				target = mob.getMostHated();
 				mob.clearAggroList();
-				if (!npc.isSkillDisabled(selfRangeBuff1.getSkillId()))
+				if (!npc.isSkillDisabled(selfRangeBuff1.getSkill()))
 				{
 					npc.getVariables().set("SELFBUFF_USED", 1);
 					npc.doCast(selfRangeBuff1.getSkill());
