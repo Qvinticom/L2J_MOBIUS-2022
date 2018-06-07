@@ -2327,7 +2327,22 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isSkillDisabled(Skill skill)
 	{
-		return (skill != null) && isSkillDisabled(skill.getReuseHashCode());
+		if (skill == null)
+		{
+			return false;
+		}
+		
+		if (_allSkillsDisabled)
+		{
+			return true;
+		}
+		
+		if (hasSkillReuse(skill.getReuseHashCode()))
+		{
+			return true;
+		}
+		
+		return isSkillDisabled(skill.getReuseHashCode());
 	}
 	
 	/**
