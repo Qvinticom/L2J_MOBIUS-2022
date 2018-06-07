@@ -902,11 +902,8 @@ public class L2AttackableAI extends L2CharacterAI
 					{
 						final int newZ = npc.getZ() + 30;
 						
-						// fixes monsters not avoiding obstacles
-						// if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()))
-						// {
-						moveTo(newX, newY, newZ);
-						// }
+						// Mobius: Verify destination. Prevents wall collision issues and fixes monsters not avoiding obstacles.
+						moveTo(GeoEngine.getInstance().canMoveToTargetLoc(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceId()));
 					}
 					return;
 				}
