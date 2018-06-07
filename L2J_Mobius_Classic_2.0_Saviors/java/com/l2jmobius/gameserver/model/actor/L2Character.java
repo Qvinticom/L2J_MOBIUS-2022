@@ -1558,32 +1558,23 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		return isSkillDisabledByReuse(skill.getReuseHashCode());
-	}
-	
-	/**
-	 * Verifies if the skill is under reuse.
-	 * @param hashCode the skill hash code
-	 * @return {@code true} if the skill is disabled, {@code false} otherwise
-	 */
-	public boolean isSkillDisabledByReuse(long hashCode)
-	{
 		if (_disabledSkills == null)
 		{
 			return false;
 		}
 		
+		final long hashCode = skill.getReuseHashCode();
 		final Long stamp = _disabledSkills.get(hashCode);
 		if (stamp == null)
 		{
 			return false;
 		}
-		
 		if (stamp < System.currentTimeMillis())
 		{
 			_disabledSkills.remove(hashCode);
 			return false;
 		}
+		
 		return true;
 	}
 	

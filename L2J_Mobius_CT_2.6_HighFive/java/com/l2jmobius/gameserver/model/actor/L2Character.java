@@ -2342,21 +2342,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		return isSkillDisabledByReuse(skill.getReuseHashCode());
-	}
-	
-	/**
-	 * Verifies if the skill is disabled.
-	 * @param hashCode the skill hash code
-	 * @return {@code true} if the skill is disabled, {@code false} otherwise
-	 */
-	public boolean isSkillDisabledByReuse(int hashCode)
-	{
 		if (_disabledSkills == null)
 		{
 			return false;
 		}
 		
+		final int hashCode = skill.getReuseHashCode();
 		final Long stamp = _disabledSkills.get(hashCode);
 		if (stamp == null)
 		{
@@ -2368,6 +2359,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			_disabledSkills.remove(hashCode);
 			return false;
 		}
+		
 		return true;
 	}
 	
