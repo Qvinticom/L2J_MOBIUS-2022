@@ -3447,6 +3447,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return false;
 		}
 		
+		// Get current position of the L2Character
+		final int curX = getX();
+		final int curY = getY();
+		
 		// Create and Init a MoveData object
 		final MoveData m = new MoveData();
 		
@@ -3471,11 +3475,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			m._zDestination = md.geoPath.get(m.onGeodataPathIndex).getZ();
 		}
 		
-		double distance = Math.hypot(m._xDestination - super.getX(), m._yDestination - super.getY());
+		final double distance = Math.hypot(m._xDestination - curX, m._yDestination - curY);
 		// Calculate and set the heading of the L2Character
 		if (distance != 0)
 		{
-			setHeading(Util.calculateHeadingFrom(getX(), getY(), m._xDestination, m._yDestination));
+			setHeading(Util.calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
 		}
 		
 		// Caclulate the Nb of ticks between the current position and the destination
