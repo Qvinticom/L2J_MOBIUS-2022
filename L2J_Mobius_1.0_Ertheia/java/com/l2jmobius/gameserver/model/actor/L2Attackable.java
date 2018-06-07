@@ -352,7 +352,7 @@ public class L2Attackable extends L2Npc
 			final Map<L2PcInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
 			
 			L2PcInstance maxDealer = null;
-			int maxDamage = 0;
+			long maxDamage = 0;
 			long totalDamage = 0;
 			// While Iterating over This Map Removing Object is Not Allowed
 			// Go through the _aggroList of the L2Attackable
@@ -363,7 +363,7 @@ public class L2Attackable extends L2Npc
 				if (attacker != null)
 				{
 					// Get damages done by this attacker
-					final int damage = info.getDamage();
+					final long damage = info.getDamage();
 					
 					// Prevent unwanted behavior
 					if (damage > 1)
@@ -454,7 +454,7 @@ public class L2Attackable extends L2Npc
 					final L2PcInstance attacker = reward.getAttacker();
 					
 					// Total amount of damage done
-					final int damage = reward.getDamage();
+					final long damage = reward.getDamage();
 					
 					// Get party
 					final L2Party attackerParty = attacker.getParty();
@@ -528,7 +528,7 @@ public class L2Attackable extends L2Npc
 					else
 					{
 						// share with party members
-						int partyDmg = 0;
+						long partyDmg = 0;
 						double partyMul = 1;
 						int partyLvl = 0;
 						
@@ -1361,7 +1361,7 @@ public class L2Attackable extends L2Npc
 	 * @param totalDamage The total damage done
 	 * @return
 	 */
-	private double[] calculateExpAndSp(int charLevel, int damage, long totalDamage)
+	private double[] calculateExpAndSp(int charLevel, long damage, long totalDamage)
 	{
 		final int levelDiff = charLevel - getLevel();
 		double xp = 0;

@@ -157,15 +157,15 @@ public class L2Attackable extends L2NpcInstance
 	protected final class RewardInfo
 	{
 		protected L2Character _attacker;
-		protected int _dmg = 0;
+		protected long _dmg = 0;
 		
-		public RewardInfo(L2Character pAttacker, int pDmg)
+		public RewardInfo(L2Character pAttacker, long pDmg)
 		{
 			_attacker = pAttacker;
 			_dmg = pDmg;
 		}
 		
-		public void addDamage(int pDmg)
+		public void addDamage(long pDmg)
 		{
 			_dmg += pDmg;
 		}
@@ -656,9 +656,9 @@ public class L2Attackable extends L2NpcInstance
 			}
 			
 			L2PcInstance maxDealer = null;
-			int maxDamage = 0;
+			long maxDamage = 0;
 			
-			int damage;
+			long damage;
 			
 			L2Character attacker, ddealer;
 			
@@ -715,7 +715,6 @@ public class L2Attackable extends L2NpcInstance
 							maxDealer = ((L2Playable) ddealer).getActingPlayer();
 							maxDamage = reward._dmg;
 						}
-						
 					}
 				}
 			}
@@ -734,8 +733,8 @@ public class L2Attackable extends L2NpcInstance
 			if (!rewards.isEmpty())
 			{
 				L2Party attackerParty;
-				long exp;
-				int levelDiff, partyDmg, partyLvl, sp;
+				long exp, partyDmg;
+				int levelDiff, partyLvl, sp;
 				float partyMul, penalty;
 				RewardInfo reward2;
 				int[] tmp;
@@ -3092,7 +3091,7 @@ public class L2Attackable extends L2NpcInstance
 	 * @param damage The damages given by the attacker (L2PcInstance, L2SummonInstance or L2Party)
 	 * @return
 	 */
-	private int[] calculateExpAndSp(int diff, int damage)
+	private int[] calculateExpAndSp(int diff, long damage)
 	{
 		double xp;
 		double sp;

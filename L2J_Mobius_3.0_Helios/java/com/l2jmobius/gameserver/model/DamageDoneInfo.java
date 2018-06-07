@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public final class DamageDoneInfo
 {
 	private final L2PcInstance _attacker;
-	private int _damage = 0;
+	private long _damage = 0;
 	
 	public DamageDoneInfo(L2PcInstance attacker)
 	{
@@ -36,12 +36,12 @@ public final class DamageDoneInfo
 		return _attacker;
 	}
 	
-	public void addDamage(int damage)
+	public void addDamage(long damage)
 	{
 		_damage += damage;
 	}
 	
-	public int getDamage()
+	public long getDamage()
 	{
 		return _damage;
 	}

@@ -657,7 +657,7 @@ public final class IstinaCavern extends AbstractInstance
 		final Map<L2PcInstance, DamageDoneInfo> rewards = new ConcurrentHashMap<>();
 		final StatsSet npcVars = npc.getVariables();
 		L2PcInstance maxDealer = null;
-		int maxDamage = 0;
+		long maxDamage = 0;
 		int totalDamage = 0;
 		
 		for (AggroInfo info : ((L2Attackable) npc).getAggroList().values())
@@ -670,7 +670,7 @@ public final class IstinaCavern extends AbstractInstance
 			final L2PcInstance attacker = info.getAttacker().getActingPlayer();
 			if (attacker != null)
 			{
-				final int damage = info.getDamage();
+				final long damage = info.getDamage();
 				if (damage > 1)
 				{
 					if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, attacker, true))

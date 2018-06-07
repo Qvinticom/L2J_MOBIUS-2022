@@ -746,7 +746,7 @@ public class L2Party extends AbstractPlayerGroup
 	 * @param partyDmg
 	 * @param target
 	 */
-	public void distributeXpAndSp(double xpReward, double spReward, List<L2PcInstance> rewardedMembers, int topLvl, int partyDmg, L2Attackable target)
+	public void distributeXpAndSp(double xpReward, double spReward, List<L2PcInstance> rewardedMembers, int topLvl, long partyDmg, L2Attackable target)
 	{
 		final List<L2PcInstance> validMembers = getValidMembers(rewardedMembers, topLvl);
 		
