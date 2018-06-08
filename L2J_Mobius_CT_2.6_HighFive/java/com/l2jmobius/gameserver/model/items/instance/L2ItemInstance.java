@@ -244,21 +244,20 @@ public final class L2ItemInstance extends L2Object
 	 * <BR>
 	 * <li>Do Pickup Item : PCInstance and Pet</li><BR>
 	 * <BR>
-	 * @param player Player that pick up the item
+	 * @param character Character that pick up the item
 	 */
-	public final void pickupMe(L2Character player)
+	public final void pickupMe(L2Character character)
 	{
 		assert getWorldRegion() != null;
 		
 		final L2WorldRegion oldregion = getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the L2ItemInstance
-		player.broadcastPacket(new GetItem(this, player.getObjectId()));
+		character.broadcastPacket(new GetItem(this, character.getObjectId()));
 		
 		synchronized (this)
 		{
 			setSpawned(false);
-			setWorldRegion(null);
 		}
 		
 		// if this item is a mercenary ticket, remove the spawns!
@@ -274,7 +273,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			// Note from UnAfraid:
 			// Unhardcode this?
-			final L2PcInstance actor = player.getActingPlayer();
+			final L2PcInstance actor = character.getActingPlayer();
 			if (actor != null)
 			{
 				final QuestState qs = actor.getQuestState("Q00255_Tutorial");
@@ -288,10 +287,10 @@ public final class L2ItemInstance extends L2Object
 		// Remove the L2ItemInstance from the world
 		L2World.getInstance().removeVisibleObject(this, oldregion);
 		
-		if (player.isPlayer())
+		if (character.isPlayer())
 		{
 			// Notify to scripts
-			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(player.getActingPlayer(), this), getItem());
+			EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(character.getActingPlayer(), this), getItem());
 		}
 	}
 	
@@ -429,7 +428,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public void setCount(long count)
 	{
-		if (getCount() == count)
+		if (_count == count)
 		{
 			return;
 		}
@@ -461,19 +460,19 @@ public final class L2ItemInstance extends L2Object
 		{
 			return;
 		}
-		final long old = getCount();
+		final long old = _count;
 		final long max = getId() == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
 		
-		if ((count > 0) && (getCount() > (max - count)))
+		if ((count > 0) && (_count > (max - count)))
 		{
 			setCount(max);
 		}
 		else
 		{
-			setCount(getCount() + count);
+			setCount(_count + count);
 		}
 		
-		if (getCount() < 0)
+		if (_count < 0)
 		{
 			setCount(0);
 		}
@@ -1434,7 +1433,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (_existsInDb)
 			{
-				if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((getCount() == 0) && (_loc != ItemLocation.LEASE)))
+				if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((_count == 0) && (_loc != ItemLocation.LEASE)))
 				{
 					removeFromDb();
 				}
@@ -1445,7 +1444,7 @@ public final class L2ItemInstance extends L2Object
 			}
 			else
 			{
-				if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((getCount() == 0) && (_loc != ItemLocation.LEASE)))
+				if ((_ownerId == 0) || (_loc == ItemLocation.VOID) || (_loc == ItemLocation.REFUND) || ((_count == 0) && (_loc != ItemLocation.LEASE)))
 				{
 					return;
 				}
@@ -1580,17 +1579,11 @@ public final class L2ItemInstance extends L2Object
 				// Set the x,y,z position of the L2ItemInstance dropped and update its _worldregion
 				_itm.setSpawned(true);
 				_itm.setXYZ(_x, _y, _z);
-				_itm.setWorldRegion(L2World.getInstance().getRegion(getLocation()));
-				
-				// Add the L2ItemInstance dropped to _visibleObjects of its L2WorldRegion
 			}
 			
-			_itm.getWorldRegion().addVisibleObject(_itm);
 			_itm.setDropTime(System.currentTimeMillis());
 			_itm.setDropperObjectId(_dropper != null ? _dropper.getObjectId() : 0); // Set the dropper Id for the knownlist packets in sendInfo
 			
-			// this can synchronize on others instances, so it's out of
-			// synchronized, to avoid deadlocks
 			// Add the L2ItemInstance dropped in the world as a visible object
 			L2World.getInstance().addVisibleObject(_itm, _itm.getWorldRegion());
 			if (Config.SAVE_DROPPED_ITEM)
@@ -1627,7 +1620,7 @@ public final class L2ItemInstance extends L2Object
 			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
-			ps.setLong(2, getCount());
+			ps.setLong(2, _count);
 			ps.setString(3, _loc.name());
 			ps.setInt(4, _locData);
 			ps.setInt(5, getEnchantLevel());
@@ -1663,7 +1656,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			ps.setInt(1, _ownerId);
 			ps.setInt(2, _itemId);
-			ps.setLong(3, getCount());
+			ps.setLong(3, _count);
 			ps.setString(4, _loc.name());
 			ps.setInt(5, _locData);
 			ps.setInt(6, getEnchantLevel());
@@ -1747,8 +1740,8 @@ public final class L2ItemInstance extends L2Object
 		if (itemLootShedule != null)
 		{
 			itemLootShedule.cancel(true);
+			itemLootShedule = null;
 		}
-		itemLootShedule = null;
 	}
 	
 	public void setItemLootShedule(ScheduledFuture<?> sf)
@@ -1882,7 +1875,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (_lifeTimeTask != null)
 			{
-				_lifeTimeTask.cancel(false);
+				_lifeTimeTask.cancel(true);
 			}
 			_lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
 		}
@@ -1979,6 +1972,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			ItemsOnGroundManager.getInstance().removeObject(this);
 		}
+		
 		return super.decayMe();
 	}
 	
