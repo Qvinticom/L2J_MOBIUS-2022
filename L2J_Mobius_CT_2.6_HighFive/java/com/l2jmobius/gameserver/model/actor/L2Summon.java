@@ -37,6 +37,7 @@ import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
@@ -103,7 +104,12 @@ public abstract class L2Summon extends L2Playable
 		_owner = owner;
 		getAI();
 		
-		setXYZInvisible(owner.getX() + Rnd.get(-100, 100), owner.getY() + Rnd.get(-100, 100), owner.getZ());
+		// Make sure summon does not spawn in a wall.
+		final int x = owner.getX();
+		final int y = owner.getY();
+		final int z = owner.getZ();
+		final Location location = GeoEngine.getInstance().canMoveToTargetLoc(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, owner.getInstanceId());
+		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	
 	@Override

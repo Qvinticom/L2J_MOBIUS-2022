@@ -17,6 +17,7 @@
 package com.l2jmobius.gameserver.model.actor;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2SummonAI;
@@ -35,6 +36,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2SiegeSummonInstance;
 import com.l2jmobius.gameserver.model.actor.knownlist.SummonKnownList;
+import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import com.l2jmobius.gameserver.model.actor.status.SummonStatus;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -104,7 +106,12 @@ public abstract class L2Summon extends L2Playable
 		_owner = owner;
 		_ai = new L2SummonAI(new L2Summon.AIAccessor());
 		
-		setXYZInvisible(owner.getX() + 50, owner.getY() + 100, owner.getZ() + 100);
+		// Make sure summon does not spawn in a wall.
+		final int x = owner.getX();
+		final int y = owner.getY();
+		final int z = owner.getZ();
+		final Location location = GeoData.getInstance().moveCheck(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z);
+		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	
 	@Override

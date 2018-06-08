@@ -27,6 +27,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Team;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
@@ -34,6 +35,7 @@ import com.l2jmobius.gameserver.model.AggroInfo;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import com.l2jmobius.gameserver.model.actor.status.SummonStatus;
@@ -96,7 +98,12 @@ public abstract class L2Summon extends L2Playable
 		_owner = owner;
 		getAI();
 		
-		setXYZInvisible(owner.getX() + Rnd.get(-100, 100), owner.getY() + Rnd.get(-100, 100), owner.getZ());
+		// Make sure summon does not spawn in a wall.
+		final int x = owner.getX();
+		final int y = owner.getY();
+		final int z = owner.getZ();
+		final Location location = GeoEngine.getInstance().canMoveToTargetLoc(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, owner.getInstanceWorld());
+		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	
 	@Override
