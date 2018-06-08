@@ -32,9 +32,6 @@ public class PcAppearance
 	
 	private boolean _sex; // Female true(1)
 	
-	/** true if the player is invisible */
-	private boolean _ghostmode = false;
-	
 	/** The current visible name of this player, not necessarily the real one */
 	private String _visibleName;
 	
@@ -140,16 +137,6 @@ public class PcAppearance
 	public final void setSex(boolean isfemale)
 	{
 		_sex = isfemale;
-	}
-	
-	public void setGhostMode(boolean b)
-	{
-		_ghostmode = b;
-	}
-	
-	public boolean isGhost()
-	{
-		return _ghostmode;
 	}
 	
 	public int getNameColor()

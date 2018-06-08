@@ -326,8 +326,6 @@
 
 	<!-- ADMIN INSTANCE -->
 	<admin command="admin_setinstance" accessLevel="100" />
-	<admin command="admin_ghoston" accessLevel="100" />
-	<admin command="admin_ghostoff" accessLevel="100" />
 	<admin command="admin_createinstance" accessLevel="100" />
 	<admin command="admin_destroyinstance" accessLevel="100" />
 	<admin command="admin_listinstances" accessLevel="100" />
