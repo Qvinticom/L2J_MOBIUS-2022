@@ -524,10 +524,13 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				
 				for (L2PcInstance player : tmpworld.getAllowed())
 				{
-					if ((player != null) && player.isOnline())
+					if (player != null)
 					{
 						InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
-						player.sendPacket(sm);
+						if (player.isOnline())
+						{
+							player.sendPacket(sm);
+						}
 					}
 				}
 			}

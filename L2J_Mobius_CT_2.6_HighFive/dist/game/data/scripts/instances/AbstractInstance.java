@@ -188,10 +188,13 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	{
 		for (L2PcInstance player : world.getAllowed())
 		{
-			if ((player != null) && player.isOnline())
+			if (player != null)
 			{
 				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), world.getTemplateId(), time);
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId())));
+				if (player.isOnline())
+				{
+					player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId())));
+				}
 			}
 		}
 	}

@@ -449,10 +449,13 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 				// set instance reenter time for all allowed players
 				for (L2PcInstance player : tmpworld.getAllowed())
 				{
-					if ((player != null) && player.isOnline())
+					if (player != null)
 					{
 						InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
-						player.sendPacket(sm);
+						if (player.isOnline())
+						{
+							player.sendPacket(sm);
+						}
 					}
 				}
 				startQuestTimer("spawnBossGuards", BOSS_MINION_SPAWN_TIME, npc, null);

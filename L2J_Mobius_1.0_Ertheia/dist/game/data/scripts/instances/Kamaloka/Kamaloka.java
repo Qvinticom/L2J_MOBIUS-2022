@@ -842,10 +842,13 @@ public final class Kamaloka extends AbstractInstance
 				// set instance reenter time for all allowed players
 				for (L2PcInstance plr : world.getAllowed())
 				{
-					if ((plr != null) && plr.isOnline())
+					if (plr != null)
 					{
 						InstanceManager.getInstance().setReenterPenalty(plr.getObjectId(), world.getTemplateId(), reenter.getTimeInMillis());
-						plr.sendPacket(sm);
+						if (plr.isOnline())
+						{
+							plr.sendPacket(sm);
+						}
 					}
 				}
 				world.finishInstance();

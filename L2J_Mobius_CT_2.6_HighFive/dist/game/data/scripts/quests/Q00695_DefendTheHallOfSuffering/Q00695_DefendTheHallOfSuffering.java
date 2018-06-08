@@ -263,10 +263,13 @@ public final class Q00695_DefendTheHallOfSuffering extends Quest
 		
 		for (L2PcInstance plr : world.getAllowed())
 		{
-			if ((plr != null) && plr.isOnline())
+			if (plr != null)
 			{
 				InstanceManager.getInstance().setInstanceTime(plr.getObjectId(), TEMPLATE_ID, reenter.getTimeInMillis());
-				plr.sendPacket(sm);
+				if (plr.isOnline())
+				{
+					plr.sendPacket(sm);
+				}
 			}
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
