@@ -70,18 +70,18 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		String htmltext = null;
 		switch (event)
 		{
-			case "32461-02.htm":
+			case "32641-02.htm":
 			{
 				htmltext = event;
 				break;
 			}
-			case "32461-03.html":
+			case "32641-03.html":
 			{
 				qs.startQuest();
 				htmltext = event;
 				break;
 			}
-			case "32461-06.html":
+			case "32641-06.html":
 			{
 				if (qs.isCond(2))
 				{
@@ -150,7 +150,7 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 		{
 			case State.COMPLETED:
 			{
-				htmltext = "32461-09.html";
+				htmltext = "32641-09.html";
 				break;
 			}
 			case State.CREATED:
@@ -159,15 +159,15 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 				final QuestState q239 = qs.getPlayer().getQuestState(Q00239_WontYouJoinUs.class.getSimpleName());
 				if ((q239 != null) && q239.isCompleted())
 				{
-					htmltext = "32461-10.html";
+					htmltext = "32641-10.html";
 				}
 				else if ((q237 != null) && q237.isCompleted() && (player.getLevel() >= MIN_LEVEL) && hasQuestItems(player, VICINITY_OF_FOS))
 				{
-					htmltext = "32461-01.htm";
+					htmltext = "32641-01.htm";
 				}
 				else
 				{
-					htmltext = "32461-00.html";
+					htmltext = "32641-00.html";
 				}
 				break;
 			}
@@ -177,28 +177,28 @@ public class Q00238_SuccessFailureOfBusiness extends Quest
 				{
 					case 1:
 					{
-						htmltext = "32461-04.html";
+						htmltext = "32641-04.html";
 						break;
 					}
 					case 2:
 					{
 						if (getQuestItemsCount(player, BROKEN_PIECE_OF_MAGIC_FORCE) == BROKEN_PIECE_OF_MAGIC_FORCE_NEEDED)
 						{
-							htmltext = "32461-05.html";
+							htmltext = "32641-05.html";
 							takeItems(player, BROKEN_PIECE_OF_MAGIC_FORCE, -1);
 						}
 						break;
 					}
 					case 3:
 					{
-						htmltext = "32461-07.html";
+						htmltext = "32641-07.html";
 						break;
 					}
 					case 4:
 					{
 						if (getQuestItemsCount(player, GUARDIAN_SPIRIT_FRAGMENT) == GUARDIAN_SPIRIT_FRAGMENT_NEEDED)
 						{
-							htmltext = "32461-08.html";
+							htmltext = "32641-08.html";
 							giveAdena(player, 283346, true);
 							takeItems(player, VICINITY_OF_FOS, 1);
 							addExpAndSp(player, 1319736, 103553);
