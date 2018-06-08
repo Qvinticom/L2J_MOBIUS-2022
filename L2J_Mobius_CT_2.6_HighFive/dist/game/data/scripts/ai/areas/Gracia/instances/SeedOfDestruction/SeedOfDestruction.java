@@ -21,7 +21,6 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
@@ -63,7 +62,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 		public int killedDevice = 0;
 		public int deviceSpawnedMobCount = 0;
 		public boolean ZoneWaitForTP = true;
-		public List<L2PcInstance> PlayersInInstance = new ArrayList<>();
 		public List<L2Npc> _mags = new ArrayList<>();
 		L2Npc _tiat;
 		L2Npc _naezdTR1;
@@ -988,7 +986,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 			pet.setInstanceId(teleto.instanceId);
 			pet.teleToLocation(teleto.x, teleto.y, teleto.z);
 		}
-		world.PlayersInInstance.add(player);
 	}
 	
 	protected boolean checkKillProgress(L2Npc mob, SODWorld world)
@@ -1271,7 +1268,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			else if (event.equals("KillTiatPart1"))
 			{
-				playMovie(world.PlayersInInstance.stream().filter(plr -> (plr != null) && (checkworld(plr) == 1)).collect(Collectors.toList()), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+				playMovie(world, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
 				InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(L2Npc::deleteMe);
 			}
 			else if (event.equals("Spawn"))
@@ -1470,7 +1467,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 				if ((zone.getId() == 25253) && world.ZoneWaitForTP)
 				{
 					startQuestTimer("ThroneSpawn", 55000, null, (L2PcInstance) character);
-					playMovie(world.PlayersInInstance.stream().filter(player -> (player != null) && (checkworld(player) == 1)).collect(Collectors.toList()), Movie.SC_BOSS_TIAT_OPENING);
+					playMovie(world, Movie.SC_BOSS_TIAT_OPENING);
 					world.ZoneWaitForTP = false;
 				}
 			}
