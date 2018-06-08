@@ -23,7 +23,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.InstanceReenterTimeHolder;
@@ -164,10 +163,8 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	protected void handleRemoveBuffs(InstanceWorld world)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-			
 			if (player != null)
 			{
 				handleRemoveBuffs(player, world);
@@ -189,12 +186,11 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	 */
 	protected void setReenterTime(InstanceWorld world, long time)
 	{
-		for (int objectId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), time);
-			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 			if ((player != null) && player.isOnline())
 			{
+				InstanceManager.getInstance().setInstanceTime(player.getObjectId(), world.getTemplateId(), time);
 				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE).addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId())));
 			}
 		}

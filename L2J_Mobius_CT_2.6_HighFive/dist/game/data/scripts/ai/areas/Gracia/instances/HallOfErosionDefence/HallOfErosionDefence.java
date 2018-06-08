@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -340,13 +339,13 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				for (L2PcInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 			else
 			{
 				teleportPlayer(player, coords, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			
 			((HEDWorld) world).finishTask = ThreadPool.schedule(new FinishTask((HEDWorld) world), 20 * 60000);
@@ -625,13 +624,15 @@ public class HallOfErosionDefence extends AbstractNpcAI
 				final Instance inst = InstanceManager.getInstance().getInstance(_world.getInstanceId());
 				if (inst != null)
 				{
-					for (int objId : _world.getAllowed())
+					for (L2PcInstance player : _world.getAllowed())
 					{
-						final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-						final QuestState st = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
-						if ((st != null) && (st.getInt("cond") == 1))
+						if (player != null)
 						{
-							st.set("defenceDone", 1);
+							final QuestState st = player.getQuestState(Q00697_DefendTheHallOfErosion.class.getSimpleName());
+							if ((st != null) && (st.getInt("cond") == 1))
+							{
+								st.set("defenceDone", 1);
+							}
 						}
 					}
 					broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.CONGRATULATIONS_YOU_HAVE_SUCCEEDED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE, 2, 8000));
@@ -678,9 +679,8 @@ public class HallOfErosionDefence extends AbstractNpcAI
 	
 	protected void broadCastPacket(HEDWorld world, IClientOutgoingPacket packet)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);

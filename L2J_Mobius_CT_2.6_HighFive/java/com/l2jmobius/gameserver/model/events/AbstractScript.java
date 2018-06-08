@@ -44,7 +44,6 @@ import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -2928,12 +2927,11 @@ public abstract class AbstractScript extends ManagedScript
 	{
 		if (world != null)
 		{
-			for (int objId : world.getAllowed())
+			for (L2PcInstance player : world.getAllowed())
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && (player.getInstanceId() == world.getInstanceId()))
 				{
-					playMovie(L2World.getInstance().getPlayer(objId), movie);
+					playMovie(player, movie);
 				}
 			}
 		}

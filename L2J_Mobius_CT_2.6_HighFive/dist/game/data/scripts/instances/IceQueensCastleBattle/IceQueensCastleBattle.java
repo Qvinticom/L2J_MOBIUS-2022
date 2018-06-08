@@ -1243,7 +1243,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 	
 	private void managePlayerEnter(L2PcInstance player, InstanceWorld world)
 	{
-		world.addAllowed(player.getObjectId());
+		world.addAllowed(player);
 		teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId(), false);
 	}
 	

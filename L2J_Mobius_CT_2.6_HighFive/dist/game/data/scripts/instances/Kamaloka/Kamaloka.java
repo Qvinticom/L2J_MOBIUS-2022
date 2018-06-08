@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Spawn;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -602,7 +601,7 @@ public final class Kamaloka extends AbstractInstance
 		final L2Party party = player.getParty();
 		for (L2PcInstance partyMember : party.getMembers())
 		{
-			world.addAllowed(partyMember.getObjectId());
+			world.addAllowed(partyMember);
 			removeBuffs(partyMember);
 			teleportPlayer(partyMember, TELEPORTS[index], world.getInstanceId());
 		}
@@ -631,13 +630,12 @@ public final class Kamaloka extends AbstractInstance
 			sm.addInstanceName(world.getTemplateId());
 			
 			// set instance reenter time for all allowed players
-			for (int objectId : world.getAllowed())
+			for (L2PcInstance plr : world.getAllowed())
 			{
-				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
-				if ((obj != null) && obj.isOnline())
+				if ((plr != null) && plr.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
-					obj.sendPacket(sm);
+					InstanceManager.getInstance().setInstanceTime(plr.getObjectId(), world.getTemplateId(), reenter.getTimeInMillis());
+					plr.sendPacket(sm);
 				}
 			}
 			
@@ -761,7 +759,7 @@ public final class Kamaloka extends AbstractInstance
 				if (world instanceof KamaWorld)
 				{
 					// party members must be in the instance
-					if (world.isAllowed(player.getObjectId()))
+					if (world.isAllowed(player))
 					{
 						final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 						

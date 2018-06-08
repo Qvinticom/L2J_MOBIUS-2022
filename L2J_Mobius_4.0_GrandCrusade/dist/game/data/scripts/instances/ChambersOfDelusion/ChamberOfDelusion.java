@@ -29,7 +29,6 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -120,10 +119,9 @@ public final class ChamberOfDelusion extends AbstractInstance
 			}
 			else
 			{
-				for (int objId : instance.getAllowed())
+				for (L2PcInstance plr : instance.getAllowed())
 				{
-					final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-					if ((pl != null) && pl.isOnline() && !pl.isInParty())
+					if ((plr != null) && plr.isOnline() && !plr.isInParty())
 					{
 						instance.finishInstance(0);
 						break;

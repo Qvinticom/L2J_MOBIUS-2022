@@ -3449,6 +3449,15 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	public void playMovie(Instance instance, Movie movie)
 	{
-		playMovie(instance.getPlayers(), movie);
+		if (instance != null)
+		{
+			for (L2PcInstance player : instance.getPlayers())
+			{
+				if ((player != null) && (player.getInstanceWorld() == instance))
+				{
+					playMovie(player, movie);
+				}
+			}
+		}
 	}
 }

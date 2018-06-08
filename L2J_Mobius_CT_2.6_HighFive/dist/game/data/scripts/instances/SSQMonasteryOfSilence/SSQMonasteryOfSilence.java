@@ -190,7 +190,7 @@ public final class SSQMonasteryOfSilence extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 		spawnElcadia(player, world);

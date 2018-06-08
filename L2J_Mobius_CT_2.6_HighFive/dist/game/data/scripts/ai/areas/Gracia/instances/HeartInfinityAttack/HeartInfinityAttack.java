@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
@@ -323,14 +322,14 @@ public class HeartInfinityAttack extends AbstractNpcAI
 			if ((player.getParty() == null) || (player.getParty().getCommandChannel() == null))
 			{
 				teleportPlayer(player, coords, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
 				for (L2PcInstance partyMember : player.getParty().getCommandChannel().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 					if (partyMember.getQuestState(qn) == null)
 					{
 						newQuestState(partyMember);
@@ -523,12 +522,11 @@ public class HeartInfinityAttack extends AbstractNpcAI
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
-				for (int objectId : tmpworld.getAllowed())
+				for (L2PcInstance player : tmpworld.getAllowed())
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -859,9 +857,8 @@ public class HeartInfinityAttack extends AbstractNpcAI
 	
 	protected void broadCastPacket(HIAWorld world, IClientOutgoingPacket packet)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);

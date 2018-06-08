@@ -701,7 +701,7 @@ public final class CrystalCaverns extends AbstractInstance
 				// this can happen only if debug is true
 				player.sendMessage("Welcome to Crystal Caverns.");
 				teleportPlayer(player, START_LOC, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
@@ -709,7 +709,7 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					partyMember.sendMessage("Welcome to Crystal Caverns.");
 					teleportPlayer(partyMember, START_LOC, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 			runOracle((CCWorld) world);
@@ -1042,7 +1042,7 @@ public final class CrystalCaverns extends AbstractInstance
 				{
 					// Lucky cheater, the code only kicks his/her ass out of the dungeon
 					teleportPlayer(attacker, new Location(149361, 172327, -945), 0);
-					world.removeAllowed(attacker.getObjectId());
+					world.removeAllowed(attacker);
 				}
 				else if (world.tears != npc)
 				{

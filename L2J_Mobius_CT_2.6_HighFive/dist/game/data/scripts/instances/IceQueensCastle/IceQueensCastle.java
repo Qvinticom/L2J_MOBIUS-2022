@@ -122,7 +122,7 @@ public final class IceQueensCastle extends AbstractInstance
 					qs.setMemoState(3);
 					qs.setCond(10, true);
 					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
+					world.removeAllowed(player);
 					player.setInstanceId(0);
 					player.teleToLocation(EXIT_LOC, 0);
 				}
@@ -188,7 +188,7 @@ public final class IceQueensCastle extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 			world.setParameter("player", player);
 			world.openDoor(ICE_QUEEN_DOOR);
 		}

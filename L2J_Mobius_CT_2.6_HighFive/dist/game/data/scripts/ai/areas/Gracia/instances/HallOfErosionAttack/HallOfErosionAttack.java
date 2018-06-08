@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.SoIManager;
 import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -339,13 +338,13 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				for (L2PcInstance partyMember : player.getParty().isInCommandChannel() ? player.getParty().getCommandChannel().getMembers() : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 			else
 			{
 				teleportPlayer(player, coords, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			runTumors((HEAWorld) world);
 		}
@@ -489,12 +488,11 @@ public class HallOfErosionAttack extends AbstractNpcAI
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 				sm.addInstanceName(INSTANCEID);
 				
-				for (int objectId : tmpworld.getAllowed())
+				for (L2PcInstance player : tmpworld.getAllowed())
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -572,12 +570,11 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			if (npc.getId() == COHEMENES)
 			{
 				npc.broadcastPacket(new NpcSay(npc.getObjectId(), ChatType.SHOUT, npc.getId(), NpcStringId.KEU_I_WILL_LEAVE_FOR_NOW_BUT_DON_T_THINK_THIS_IS_OVER_THE_SEED_OF_INFINITY_CAN_NEVER_DIE));
-				for (int objId : world.getAllowed())
+				for (L2PcInstance plr : world.getAllowed())
 				{
-					final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-					if (pl != null)
+					if (plr != null)
 					{
-						final QuestState st = pl.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
+						final QuestState st = plr.getQuestState(Q00696_ConquerTheHallOfErosion.class.getSimpleName());
 						if ((st != null) && (st.getInt("cond") == 1))
 						{
 							st.set("cohemenes", "1");
@@ -616,13 +613,12 @@ public class HallOfErosionAttack extends AbstractNpcAI
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addInstanceName(INSTANCEID);
 			
-			for (int objectId : world.getAllowed())
+			for (L2PcInstance plr : world.getAllowed())
 			{
-				final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
-				if ((obj != null) && obj.isOnline())
+				if ((plr != null) && plr.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
-					obj.sendPacket(sm);
+					InstanceManager.getInstance().setInstanceTime(plr.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
+					plr.sendPacket(sm);
 				}
 			}
 			final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
@@ -686,9 +682,8 @@ public class HallOfErosionAttack extends AbstractNpcAI
 	
 	protected void broadCastPacket(HEAWorld world, IClientOutgoingPacket packet)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);

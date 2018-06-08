@@ -180,12 +180,11 @@ public abstract class Chamber extends AbstractInstance
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			sm.addString(InstanceManager.getInstance().getInstanceIdName(world.getTemplateId()));
 			// set instance reenter time for all allowed players
-			for (int objectId : world.getAllowed())
+			for (L2PcInstance player : world.getAllowed())
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 				if ((player != null) && player.isOnline())
 				{
-					InstanceManager.getInstance().setInstanceTime(objectId, world.getTemplateId(), reenter.getTimeInMillis());
+					InstanceManager.getInstance().setInstanceTime(player.getObjectId(), world.getTemplateId(), reenter.getTimeInMillis());
 					player.sendPacket(sm);
 				}
 			}
@@ -285,7 +284,7 @@ public abstract class Chamber extends AbstractInstance
 			partyMember.getVariables().set(RETURN, partyMember.getX() + ";" + partyMember.getY() + ";" + partyMember.getZ());
 			
 			partyMember.setInstanceId(world.getInstanceId());
-			world.addAllowed(partyMember.getObjectId());
+			world.addAllowed(partyMember);
 		}
 		
 		changeRoom(world);
@@ -355,7 +354,7 @@ public abstract class Chamber extends AbstractInstance
 		final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
 		if (world != null)
 		{
-			world.removeAllowed((player.getObjectId()));
+			world.removeAllowed((player));
 		}
 	}
 	

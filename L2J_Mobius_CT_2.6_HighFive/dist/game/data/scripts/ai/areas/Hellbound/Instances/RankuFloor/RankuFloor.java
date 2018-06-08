@@ -167,7 +167,7 @@ public final class RankuFloor extends AbstractInstance
 			{
 				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
 				player.destroyItemByItemId("Quest", SEAL_BREAKER_10, 1, null, true);
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
@@ -175,7 +175,7 @@ public final class RankuFloor extends AbstractInstance
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 					partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_10, 1, null, true);
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 		}

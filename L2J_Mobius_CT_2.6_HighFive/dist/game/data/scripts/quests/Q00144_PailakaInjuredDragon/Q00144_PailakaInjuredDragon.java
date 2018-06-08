@@ -960,7 +960,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 			// Check max summon levels.
 			checkMaxSummonLevel(player);
 			
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 			teleportPlayer(player, TELEPORT, world.getInstanceId());
 		}
 	}

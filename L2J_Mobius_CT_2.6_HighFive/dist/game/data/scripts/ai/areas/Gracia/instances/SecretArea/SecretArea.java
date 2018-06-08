@@ -55,7 +55,7 @@ public final class SecretArea extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, TELEPORTS[ENTER], world.getInstanceId());
 	}

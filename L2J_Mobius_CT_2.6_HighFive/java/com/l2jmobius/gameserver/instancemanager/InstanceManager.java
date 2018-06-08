@@ -270,7 +270,7 @@ public final class InstanceManager implements IGameXmlReader
 	{
 		for (InstanceWorld temp : _instanceWorlds.values())
 		{
-			if ((temp != null) && (temp.isAllowed(player.getObjectId())))
+			if ((temp != null) && (temp.isAllowed(player)))
 			{
 				return temp;
 			}

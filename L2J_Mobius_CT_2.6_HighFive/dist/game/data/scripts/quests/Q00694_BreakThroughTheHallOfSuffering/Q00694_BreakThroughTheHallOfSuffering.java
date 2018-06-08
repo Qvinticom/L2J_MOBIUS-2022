@@ -19,7 +19,6 @@ package quests.Q00694_BreakThroughTheHallOfSuffering;
 import java.util.Calendar;
 
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
@@ -293,13 +292,12 @@ public final class Q00694_BreakThroughTheHallOfSuffering extends Quest
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 		sm.addInstanceName(TEMPLATE_ID);
 		
-		for (int objectId : world.getAllowed())
+		for (L2PcInstance plr : world.getAllowed())
 		{
-			final L2PcInstance obj = L2World.getInstance().getPlayer(objectId);
-			if ((obj != null) && obj.isOnline())
+			if ((plr != null) && plr.isOnline())
 			{
-				InstanceManager.getInstance().setInstanceTime(objectId, TEMPLATE_ID, reenter.getTimeInMillis());
-				obj.sendPacket(sm);
+				InstanceManager.getInstance().setInstanceTime(plr.getObjectId(), TEMPLATE_ID, reenter.getTimeInMillis());
+				plr.sendPacket(sm);
 			}
 		}
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());

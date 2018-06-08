@@ -67,7 +67,7 @@ public final class PailakaSongOfIceAndFire extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, TELEPORT, world.getInstanceId());
 	}

@@ -234,7 +234,7 @@ public final class NornilsGarden extends AbstractInstance
 		if (inst instanceof NornilsWorld)
 		{
 			final NornilsWorld world = ((NornilsWorld) inst);
-			world.removeAllowed(player.getObjectId());
+			world.removeAllowed(player);
 			teleportPlayer(player, EXIT_PPL, 0);
 		}
 	}
@@ -297,7 +297,7 @@ public final class NornilsGarden extends AbstractInstance
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
-				newWorld.addAllowed(partyMember.getObjectId());
+				newWorld.addAllowed(partyMember);
 				teleportPlayer(partyMember, SPAWN_PPL, instanceId);
 			}
 		}

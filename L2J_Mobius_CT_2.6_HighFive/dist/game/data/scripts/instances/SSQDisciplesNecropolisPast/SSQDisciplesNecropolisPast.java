@@ -180,7 +180,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 		if (firstEntrance)
 		{
 			spawnNPC(world);
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, ENTER, world.getInstanceId());
 	}
@@ -445,7 +445,7 @@ public final class SSQDisciplesNecropolisPast extends AbstractInstance
 				{
 					takeItems(talker, SACRED_SWORD_OF_EINHASAD, -1);
 					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
-					world.removeAllowed(talker.getObjectId());
+					world.removeAllowed(talker);
 					talker.teleToLocation(EXIT, 0);
 					htmltext = "32587-01.html";
 				}

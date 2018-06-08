@@ -333,7 +333,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			{
 				final CAUWorld world = (CAUWorld) tmpworld;
 				
-				world.removeAllowed(player.getObjectId());
+				world.removeAllowed(player);
 				final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
 				
 				final Location loc = inst.getExitLoc();
@@ -646,7 +646,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		for (L2PcInstance partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, instanceId);
-			world.addAllowed(partyMember.getObjectId());
+			world.addAllowed(partyMember);
 			if (partyMember.getQuestState(getName()) == null)
 			{
 				newQuestState(partyMember);

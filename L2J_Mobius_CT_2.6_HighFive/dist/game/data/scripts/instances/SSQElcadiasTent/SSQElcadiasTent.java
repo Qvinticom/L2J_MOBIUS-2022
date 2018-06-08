@@ -76,7 +76,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 		else
 		{
 			final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
-			world.removeAllowed(talker.getObjectId());
+			world.removeAllowed(talker);
 			talker.setInstanceId(0);
 			talker.teleToLocation(EXIT_LOC);
 		}
@@ -88,7 +88,7 @@ public final class SSQElcadiasTent extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}

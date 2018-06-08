@@ -82,7 +82,7 @@ public final class NornilsGardenQuest extends AbstractInstance
 				if ((q236 != null) && q236.isCompleted())
 				{
 					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
+					world.removeAllowed(player);
 					finishInstance(world, 5000);
 					player.setInstanceId(0);
 					player.teleToLocation(world.getParameters().getLocation("ORIGIN_LOC"));
@@ -99,7 +99,7 @@ public final class NornilsGardenQuest extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, ENTER_LOC, world.getInstanceId(), false);
 	}

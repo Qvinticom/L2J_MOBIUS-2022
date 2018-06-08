@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -235,14 +234,14 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 			if (player.getParty() == null)
 			{
 				teleportPlayer(player, coords, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
 				for (L2PcInstance partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, coords, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 		}
@@ -448,12 +447,11 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 				sm.addInstanceName(INSTANCEID);
 				
 				// set instance reenter time for all allowed players
-				for (int objectId : tmpworld.getAllowed())
+				for (L2PcInstance player : tmpworld.getAllowed())
 				{
-					final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
 					if ((player != null) && player.isOnline())
 					{
-						InstanceManager.getInstance().setInstanceTime(objectId, INSTANCEID, reenter.getTimeInMillis());
+						InstanceManager.getInstance().setInstanceTime(player.getObjectId(), INSTANCEID, reenter.getTimeInMillis());
 						player.sendPacket(sm);
 					}
 				}
@@ -567,9 +565,8 @@ public class HallOfSufferingDefence extends AbstractNpcAI
 					cancelQuestTimers("isTwinSeparated");
 					addSpawn(TEPIOS, TEPIOS_SPAWN[0], TEPIOS_SPAWN[1], TEPIOS_SPAWN[2], 0, false, 0, false, world.getInstanceId());
 					
-					for (Integer pc : world.getAllowed())
+					for (L2PcInstance killer : world.getAllowed())
 					{
-						final L2PcInstance killer = L2World.getInstance().getPlayer(pc);
 						if (killer != null)
 						{
 							killer.sendPacket(new ExSendUIEvent(killer, true, true, 0, 0, ""));

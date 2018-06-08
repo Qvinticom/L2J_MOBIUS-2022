@@ -84,7 +84,7 @@ public final class DemonPrinceFloor extends AbstractInstance
 			final InstanceWorld world = InstanceManager.getInstance().getWorld(npc);
 			if (world != null)
 			{
-				world.removeAllowed(player.getObjectId());
+				world.removeAllowed(player);
 				teleportPlayer(player, EXIT_POINT, 0);
 			}
 		}
@@ -168,7 +168,7 @@ public final class DemonPrinceFloor extends AbstractInstance
 			{
 				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
 				player.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
@@ -176,7 +176,7 @@ public final class DemonPrinceFloor extends AbstractInstance
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
 					partyMember.destroyItemByItemId("Quest", SEAL_BREAKER_5, 1, null, true);
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 		}

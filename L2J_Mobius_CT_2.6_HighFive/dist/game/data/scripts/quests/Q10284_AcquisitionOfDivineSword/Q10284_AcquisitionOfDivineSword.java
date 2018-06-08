@@ -166,7 +166,7 @@ public final class Q10284_AcquisitionOfDivineSword extends Quest
 					qs.setCond(3, true);
 					qs.setMemoState(2);
 					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
+					world.removeAllowed(player);
 					player.setInstanceId(0);
 					htmltext = event;
 				}

@@ -136,7 +136,7 @@ public final class MithrilMine extends AbstractInstance
 			else if (qs.isMemoState(3))
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-				world.removeAllowed(player.getObjectId());
+				world.removeAllowed(player);
 				player.setInstanceId(0);
 				player.teleToLocation(EXIT_LOC, 0);
 				giveAdena(player, 296425, true);
@@ -224,7 +224,7 @@ public final class MithrilMine extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}

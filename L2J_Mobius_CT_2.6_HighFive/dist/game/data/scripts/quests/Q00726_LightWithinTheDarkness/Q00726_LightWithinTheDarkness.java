@@ -22,7 +22,6 @@ import java.util.Map;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -283,7 +282,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		for (L2PcInstance partyMember : party.getMembers())
 		{
 			teleportPlayer(partyMember, coords, world.getInstanceId());
-			world.addAllowed(partyMember.getObjectId());
+			world.addAllowed(partyMember);
 			if (partyMember.getQuestState(getName()) == null)
 			{
 				newQuestState(partyMember);
@@ -429,9 +428,8 @@ public class Q00726_LightWithinTheDarkness extends Quest
 	
 	protected void broadCastPacket(PAWORLD world, IClientOutgoingPacket packet)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);

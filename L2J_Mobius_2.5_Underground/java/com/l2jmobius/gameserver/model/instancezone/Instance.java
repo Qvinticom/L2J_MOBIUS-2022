@@ -45,7 +45,6 @@ import com.l2jmobius.gameserver.enums.InstanceReenterType;
 import com.l2jmobius.gameserver.enums.InstanceTeleportType;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
@@ -84,7 +83,7 @@ public final class Instance implements IIdentifiable, INamable
 	private final long _startTime;
 	private long _endTime;
 	// Advanced instance parameters
-	private final Set<Integer> _allowed = ConcurrentHashMap.newKeySet(); // ObjectId of players which can enter to instance
+	private final Set<L2PcInstance> _allowed = ConcurrentHashMap.newKeySet(); // Players which can enter to instance
 	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet(); // Players inside instance
 	private final Set<L2Npc> _npcs = ConcurrentHashMap.newKeySet(); // Spawned NPCs inside instance
 	private final Map<Integer, L2DoorInstance> _doors = new HashMap<>(); // Spawned doors inside instance
@@ -223,7 +222,10 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public void addAllowed(L2PcInstance player)
 	{
-		_allowed.add(player.getObjectId());
+		if (!_allowed.contains(player))
+		{
+			_allowed.add(player);
+		}
 	}
 	
 	/**
@@ -233,25 +235,25 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public boolean isAllowed(L2PcInstance player)
 	{
-		return _allowed.contains(player.getObjectId());
+		return _allowed.contains(player);
 	}
 	
 	/**
 	 * Returns all players who can enter to instance.
 	 * @return allowed players list
 	 */
-	public Set<Integer> getAllowed()
+	public Set<L2PcInstance> getAllowed()
 	{
 		return _allowed;
 	}
 	
 	/**
 	 * Remove player from allowed so he can't enter anymore.
-	 * @param objectId object id of player
+	 * @param player to remove
 	 */
-	public void removeAllowed(int objectId)
+	public void removeAllowed(L2PcInstance player)
 	{
-		_allowed.remove(objectId);
+		_allowed.remove(player);
 	}
 	
 	/**
@@ -817,12 +819,15 @@ public final class Instance implements IIdentifiable, INamable
 			PreparedStatement ps = con.prepareStatement("INSERT IGNORE INTO character_instance_time (charId,instanceId,time) VALUES (?,?,?)"))
 		{
 			// Save to database
-			for (Integer objId : _allowed)
+			for (L2PcInstance player : _allowed)
 			{
-				ps.setInt(1, objId);
-				ps.setInt(2, getTemplateId());
-				ps.setLong(3, time);
-				ps.addBatch();
+				if (player != null)
+				{
+					ps.setInt(1, player.getObjectId());
+					ps.setInt(2, getTemplateId());
+					ps.setLong(3, time);
+					ps.addBatch();
+				}
 			}
 			ps.executeBatch();
 			
@@ -836,13 +841,15 @@ public final class Instance implements IIdentifiable, INamable
 			{
 				msg.addString(getName());
 			}
-			_allowed.forEach(objId ->
+			_allowed.forEach(player ->
 			{
-				InstanceManager.getInstance().setReenterPenalty(objId, getTemplateId(), time);
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
-				if ((player != null) && player.isOnline())
+				if ((player != null))
 				{
-					player.sendPacket(msg);
+					InstanceManager.getInstance().setReenterPenalty(player.getObjectId(), getTemplateId(), time);
+					if (player.isOnline())
+					{
+						player.sendPacket(msg);
+					}
 				}
 			});
 		}

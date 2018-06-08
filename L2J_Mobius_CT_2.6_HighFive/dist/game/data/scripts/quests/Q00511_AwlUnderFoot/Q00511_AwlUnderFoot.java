@@ -301,14 +301,14 @@ public final class Q00511_AwlUnderFoot extends Quest
 		if (player.getParty() == null)
 		{
 			teleportPlayer(player, coords, instanceId);
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		else
 		{
 			for (L2PcInstance partyMember : party.getMembers())
 			{
 				teleportPlayer(partyMember, coords, instanceId);
-				world.addAllowed(partyMember.getObjectId());
+				world.addAllowed(partyMember);
 				getQuestState(partyMember, true);
 			}
 		}

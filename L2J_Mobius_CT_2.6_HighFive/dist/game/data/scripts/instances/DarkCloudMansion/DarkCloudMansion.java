@@ -282,7 +282,7 @@ public final class DarkCloudMansion extends AbstractInstance
 					{
 						newQuestState(partyMember);
 					}
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 					teleportPlayer(partyMember, new Location(146534, 180464, -6117), world.getInstanceId());
 				}
 			}
@@ -1113,9 +1113,9 @@ public final class DarkCloudMansion extends AbstractInstance
 			
 			if (npcId == SOTruth)
 			{
-				if (world.isAllowed(player.getObjectId()))
+				if (world.isAllowed(player))
 				{
-					world.removeAllowed(player.getObjectId());
+					world.removeAllowed(player);
 				}
 				teleportPlayer(player, new Location(139968, 150367, -3111), 0);
 				final int instanceId = npc.getInstanceId();

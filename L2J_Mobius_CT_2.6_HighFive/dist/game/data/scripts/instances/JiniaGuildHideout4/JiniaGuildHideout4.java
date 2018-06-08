@@ -61,7 +61,7 @@ public final class JiniaGuildHideout4 extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, START_LOC, world.getInstanceId(), false);
 	}

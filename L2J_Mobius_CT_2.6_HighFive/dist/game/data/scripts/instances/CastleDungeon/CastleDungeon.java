@@ -114,14 +114,14 @@ public final class CastleDungeon extends AbstractInstance
 			if (player.getParty() == null)
 			{
 				teleportPlayer(player, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
 				for (L2PcInstance partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, ENTER_LOC[getRandom(ENTER_LOC.length)], world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 			

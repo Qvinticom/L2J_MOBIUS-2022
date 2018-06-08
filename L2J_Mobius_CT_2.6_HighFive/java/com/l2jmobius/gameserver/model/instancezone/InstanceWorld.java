@@ -17,7 +17,8 @@
 package com.l2jmobius.gameserver.model.instancezone;
 
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 import com.l2jmobius.commons.util.CommonUtil;
@@ -25,6 +26,7 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * Basic instance zone data transfer object.
@@ -33,7 +35,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 public class InstanceWorld
 {
 	private Instance _instance;
-	private final List<Integer> _allowed = new CopyOnWriteArrayList<>();
+	private final Set<L2PcInstance> _players = ConcurrentHashMap.newKeySet();
 	private final StatsSet _parameters = new StatsSet();
 	
 	/**
@@ -63,24 +65,27 @@ public class InstanceWorld
 		return _instance.getTemplateId();
 	}
 	
-	public List<Integer> getAllowed()
+	public Set<L2PcInstance> getAllowed()
 	{
-		return _allowed;
+		return _players;
 	}
 	
-	public void removeAllowed(int id)
+	public void removeAllowed(L2PcInstance player)
 	{
-		_allowed.remove(_allowed.indexOf(Integer.valueOf(id)));
+		_players.remove(player);
 	}
 	
-	public void addAllowed(int id)
+	public void addAllowed(L2PcInstance player)
 	{
-		_allowed.add(id);
+		if (!_players.contains(player))
+		{
+			_players.add(player);
+		}
 	}
 	
-	public boolean isAllowed(int id)
+	public boolean isAllowed(L2PcInstance player)
 	{
-		return _allowed.contains(id);
+		return _players.contains(player);
 	}
 	
 	/**

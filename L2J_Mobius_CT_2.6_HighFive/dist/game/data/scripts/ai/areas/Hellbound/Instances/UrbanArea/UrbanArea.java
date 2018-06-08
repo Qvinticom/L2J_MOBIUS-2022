@@ -372,14 +372,14 @@ public final class UrbanArea extends AbstractInstance
 			if (player.getParty() == null)
 			{
 				teleportPlayer(player, ENTRY_POINT, world.getInstanceId());
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 			}
 			else
 			{
 				for (L2PcInstance partyMember : player.getParty().getMembers())
 				{
 					teleportPlayer(partyMember, ENTRY_POINT, world.getInstanceId());
-					world.addAllowed(partyMember.getObjectId());
+					world.addAllowed(partyMember);
 				}
 			}
 			world.setParameter("spawnedAmaskari", addSpawn(AMASKARI, AMASKARI_SPAWN_POINT, false, 0, false, world.getInstanceId()));
@@ -438,7 +438,7 @@ public final class UrbanArea extends AbstractInstance
 				{
 					if ((partyMember != null) && !partyMember.isDead())
 					{
-						_world.removeAllowed(partyMember.getObjectId());
+						_world.removeAllowed(partyMember);
 						teleportPlayer(partyMember, EXIT_POINT, 0);
 					}
 				}

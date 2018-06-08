@@ -40,7 +40,6 @@ import com.l2jmobius.gameserver.model.L2CommandChannel;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Territory;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -502,7 +501,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 				{
 					player.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, player.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
 				}
-				world.addAllowed(player.getObjectId());
+				world.addAllowed(player);
 				teleportPlayer(player, ENTER_TELEPORT, world.getInstanceId(), false);
 			}
 			else
@@ -513,7 +512,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 					{
 						channelMember.destroyItemByItemId(getName(), DEWDROP_OF_DESTRUCTION_ITEM_ID, channelMember.getInventory().getInventoryItemCount(DEWDROP_OF_DESTRUCTION_ITEM_ID, -1), null, true);
 					}
-					world.addAllowed(channelMember.getObjectId());
+					world.addAllowed(channelMember);
 					teleportPlayer(channelMember, ENTER_TELEPORT, world.getInstanceId(), false);
 				}
 			}
@@ -820,9 +819,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 						final List<L2Character> targetList = new ArrayList<>();
 						if (skill.hasEffectType(L2EffectType.STUN) || skill.isDebuff())
 						{
-							for (int objId : _world.getAllowed())
+							for (L2PcInstance player : _world.getAllowed())
 							{
-								final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 								if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 								{
 									if (!player.isDead())
@@ -1279,9 +1277,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		
 		private void stopPc()
 		{
-			for (int objId : _world.getAllowed())
+			for (L2PcInstance player : _world.getAllowed())
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.abortAttack();
@@ -1297,9 +1294,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		
 		private void startPc()
 		{
-			for (int objId : _world.getAllowed())
+			for (L2PcInstance player : _world.getAllowed())
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					player.enableAllSkills();
@@ -1310,9 +1306,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		
 		private void sendPacketX(IClientOutgoingPacket packet1, IClientOutgoingPacket packet2, int x)
 		{
-			for (int objId : _world.getAllowed())
+			for (L2PcInstance player : _world.getAllowed())
 			{
-				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 				if ((player != null) && player.isOnline() && (player.getInstanceId() == _world.getInstanceId()))
 				{
 					if (player.getX() < x)
@@ -1386,14 +1381,14 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 		
 		private void addAggroToMobs()
 		{
-			L2PcInstance target = L2World.getInstance().getPlayer(_world.getAllowed().get(getRandom(_world.getAllowed().size())));
+			L2PcInstance target = _world.getAllowed().stream().findAny().get();
 			if ((target == null) || (target.getInstanceId() != _world.getInstanceId()) || target.isDead() || target.isFakeDeath())
 			{
-				for (int objId : _world.getAllowed())
+				for (L2PcInstance plr : _world.getAllowed())
 				{
-					target = L2World.getInstance().getPlayer(objId);
-					if ((target != null) && (target.getInstanceId() == _world.getInstanceId()) && !target.isDead() && !target.isFakeDeath())
+					if ((plr != null) && (plr.getInstanceId() == _world.getInstanceId()) && !plr.isDead() && !plr.isFakeDeath())
 					{
+						target = plr;
 						break;
 					}
 					target = null;
@@ -1417,9 +1412,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 	
 	protected void broadCastPacket(InstanceWorld world, IClientOutgoingPacket packet)
 	{
-		for (int objId : world.getAllowed())
+		for (L2PcInstance player : world.getAllowed())
 		{
-			final L2PcInstance player = L2World.getInstance().getPlayer(objId);
 			if ((player != null) && player.isOnline() && (player.getInstanceId() == world.getInstanceId()))
 			{
 				player.sendPacket(packet);

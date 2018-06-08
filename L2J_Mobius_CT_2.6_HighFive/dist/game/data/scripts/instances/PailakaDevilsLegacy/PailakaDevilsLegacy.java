@@ -319,7 +319,7 @@ public final class PailakaDevilsLegacy extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 			world.setParameter("lematanNpc", addSpawn(LEMATAN, LEMATAN_SPAWN, false, 0, false, world.getInstanceId()));
 		}
 		teleportPlayer(player, TELEPORT, world.getInstanceId());

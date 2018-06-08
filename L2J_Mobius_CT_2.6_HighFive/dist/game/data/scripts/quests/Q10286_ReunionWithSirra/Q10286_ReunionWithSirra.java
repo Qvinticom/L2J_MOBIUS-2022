@@ -105,7 +105,7 @@ public final class Q10286_ReunionWithSirra extends Quest
 					qs.unset("ex");
 					qs.setMemoState(2);
 					final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(player);
-					world.removeAllowed(player.getObjectId());
+					world.removeAllowed(player);
 					player.setInstanceId(0);
 					htmltext = event;
 				}

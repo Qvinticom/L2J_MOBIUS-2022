@@ -19,7 +19,6 @@ package instances.SSQSanctumOfTheLordsOfDawn;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -170,7 +169,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 			world.setParameter("save_point1", world.spawnGroup("save_point1"));
 			world.setParameter("save_point2", world.spawnGroup("save_point2"));
 			world.setParameter("save_point3", world.spawnGroup("save_point3"));
@@ -216,12 +215,11 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 							world.openDoor(DOOR_TWO);
 							world.setParameter("doorst", doorst + 1);
 							npc.decayMe();
-							for (int objId : world.getAllowed())
+							for (L2PcInstance plr : world.getAllowed())
 							{
-								final L2PcInstance pl = L2World.getInstance().getPlayer(objId);
-								if (pl != null)
+								if (plr != null)
 								{
-									playMovie(pl, Movie.SSQ_RITUAL_OF_PRIEST);
+									playMovie(plr, Movie.SSQ_RITUAL_OF_PRIEST);
 									startQuestTimer("spawn", 35000, null, talker);
 								}
 							}
@@ -245,7 +243,7 @@ public final class SSQSanctumOfTheLordsOfDawn extends AbstractInstance
 			case DARKNESS_OF_DAWN:
 			{
 				final InstanceWorld world = InstanceManager.getInstance().getPlayerWorld(talker);
-				world.removeAllowed(talker.getObjectId());
+				world.removeAllowed(talker);
 				talker.teleToLocation(EXIT, 0);
 				return "32579-01.html";
 			}

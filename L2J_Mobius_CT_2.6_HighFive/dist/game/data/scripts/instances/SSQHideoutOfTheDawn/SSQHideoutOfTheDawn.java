@@ -78,7 +78,7 @@ public final class SSQHideoutOfTheDawn extends AbstractInstance
 	{
 		if (firstEntrance)
 		{
-			world.addAllowed(player.getObjectId());
+			world.addAllowed(player);
 		}
 		teleportPlayer(player, WOOD_LOC, world.getInstanceId(), false);
 	}
