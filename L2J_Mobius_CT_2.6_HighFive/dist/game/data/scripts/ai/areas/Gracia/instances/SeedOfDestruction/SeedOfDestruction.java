@@ -21,6 +21,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
@@ -48,12 +49,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.CameraMode;
 import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
-import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.NormalCamera;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.network.serverpackets.SpecialCamera;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -67,18 +63,13 @@ public class SeedOfDestruction extends AbstractNpcAI
 		public int killedDevice = 0;
 		public int deviceSpawnedMobCount = 0;
 		public boolean ZoneWaitForTP = true;
-		public List<L2Npc> naezds = new ArrayList<>();
 		public List<L2PcInstance> PlayersInInstance = new ArrayList<>();
 		public List<L2Npc> _mags = new ArrayList<>();
 		L2Npc _tiat;
-		L2Npc _priest;
-		L2Npc _ChangePortal;
-		L2Npc _MovePeltast;
 		L2Npc _naezdTR1;
 		L2Npc _naezdTR2;
 		L2Npc _naezdTL1;
 		L2Npc _naezdTL2;
-		L2Npc _portalForCamera;
 		
 		public SODWorld(Long time)
 		{
@@ -103,10 +94,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	private static final int THRONE_POWERFUL_DEVICE = 18778;
 	private static final int SPAWN_DEVICE = 18696;
 	private static final int TIAT = 29163;
-	private static final int ChangePortal = 29172;
-	private static final int PRIEST = 29173;
 	private static final int NAEZD = 29162;
-	private static final int PELTAST = 22581;
 	private static final int[] SPAWN_MOB_IDS = {22536, 22537, 22538, 22539, 22540, 22541, 22542, 22543, 22544, 22547, 22550, 22551, 22552, 22596};
 	private static final int[] MOB_IDS = {22536, 22537, 22538, 22539, 22540, 22541, 22542, 22543, 22544, 22547, 22550, 22551, 22552, 22596, 29162};
 	private static final Location MOVE_TO_TIAT = new Location(-250403, 207273, -11952, 16384);
@@ -787,13 +775,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 		{-249423, 208088, -11894},
 		{-249248, 208088, -11889}
 	};
-	private static int[][] NAEZDSPAWNS =
-	{
-		{-250304, 206624, -11908, 26492},
-		{-250304, 206529, -11908, 26492},
-		{-250506, 206624, -11907, 8191},
-		{-250506, 206529, -11909, 8191}
-	};
 	// @formatter:on
 	
 	// Initialization at 6:30 am on Wednesday and Saturday
@@ -1087,9 +1068,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 			}
 			case 6:
 			{
-				runThrone(world);
 				world.openDoor(THRONE_DOOR);
-				spawn(world, FORT_PORTALS, false, true);
 				break;
 			}
 			case 7:
@@ -1197,48 +1176,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 		}
 	}
 	
-	protected void runThrone(SODWorld world)
-	{
-		world._portalForCamera = addSpawn(SPAWN_DEVICE, -248781, 206325, -11966, 0, false, 0, false, world.getInstanceId());
-		world._portalForCamera.setRandomWalking(false);
-		
-		for (int i = 0; i < 12; i++)
-		{
-			final L2Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc1.setRandomWalking(false);
-			world._mags.add(npc1);
-			
-			final L2Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc2.setRandomWalking(false);
-		}
-		for (int i = 0; i < 6; i++)
-		{
-			final L2Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
-			npc3.setRandomWalking(false);
-			
-			final L2Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc4.setRandomWalking(false);
-			
-			final L2Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
-			npc5.setRandomWalking(false);
-		}
-		
-		if (world.naezds.size() < 1)
-		{
-			for (int i = 0; i < 4; i++)
-			{
-				final L2Npc npc = addSpawn(NAEZD, NAEZDSPAWNS[i][0], NAEZDSPAWNS[i][1], NAEZDSPAWNS[i][2], NAEZDSPAWNS[i][3], false, 0, false, world.getInstanceId());
-				npc.setRandomWalking(false);
-				world.naezds.add(npc);
-			}
-		}
-		world._MovePeltast = addSpawn(PELTAST, -250403, 207556, -11957, 16383, false, 0, false, world.getInstanceId());
-		world._MovePeltast.setRandomWalking(false);
-		
-		world._priest = addSpawn(PRIEST, -250408, 205862, -11727, 16383, false, 0, false, world.getInstanceId());
-		world._priest.setRandomWalking(false);
-	}
-	
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
 	{
@@ -1292,96 +1229,14 @@ public class SeedOfDestruction extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		InstanceWorld tmpworld = null;
-		
-		if (npc != null)
-		{
-			tmpworld = InstanceManager.getInstance().getWorld(npc);
-		}
-		else
-		{
-			tmpworld = InstanceManager.getInstance().getWorld(player);
-		}
-		
+		final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc != null ? npc : player);
 		if (tmpworld instanceof SODWorld)
 		{
 			final SODWorld world = (SODWorld) tmpworld;
-			final teleCoord teleto = new teleCoord();
-			teleto.instanceId = world.getInstanceId();
-			if (event.equals("Part1"))
+			if (event.equals("ThroneSpawn"))
 			{
-				world.ZoneWaitForTP = false;
-				broadcastPacket((new SpecialCamera(player, 3500, 90, 15, 100, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part2", 100, world._MovePeltast, player);
-			}
-			else if (event.equals("Part2"))
-			{
-				MoveTo(world._MovePeltast, -250401, 207130, -11957);
-				broadcastPacket((new SpecialCamera(player, 300, 90, 5, 6000, 10000, 7000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part3", 100, world._MovePeltast, null);
-			}
-			else if (event.equals("Part3"))
-			{
-				broadcastPacket((new SocialAction(world._priest.getObjectId(), 1)), world);
-				broadcastPacket((new SpecialCamera(world._priest, 200, 90, 10, 0, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part4", 100, npc, null);
-			}
-			else if (event.equals("Part4"))
-			{
-				broadcastPacket((new SpecialCamera(world._priest, 200, 90, 5, 2500, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part5", 100, world._MovePeltast, null);
-			}
-			else if (event.equals("Part5"))
-			{
-				broadcastPacket((new SpecialCamera(world._MovePeltast, 150, 90, 5, 0, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part6", 100, world._MovePeltast, null);
-			}
-			else if (event.equals("Part6"))
-			{
-				broadcastPacket((new SpecialCamera(world._MovePeltast, 150, 15, 10, 3000, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				MoveTo(world._priest, -250402, 206519, -11905);
-				broadcastPacket((new SocialAction(world._MovePeltast.getObjectId(), 1)), world);
-				startQuestTimer("Part7", 100, world._MovePeltast, null);
-			}
-			else if (event.equals("Part7"))
-			{
-				broadcastPacket((new SpecialCamera(world._priest, 1400, 40, 20, 0, 10000, 5000, 0, 0, 1, 0, 0)), world);
-				Delete(world._MovePeltast);
-				startQuestTimer("Part8", 100, world._priest, null);
-			}
-			else if (event.equals("Part8"))
-			{
-				broadcastPacket((new SpecialCamera(world._priest, 350, 90, 5, 7000, 10000, 8000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part9", 100, world._priest, null);
-			}
-			else if (event.equals("Part9"))
-			{
-				broadcastPacket((new SpecialCamera(world._priest, 350, 90, 0, 2500, 10000, 15000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part10", 100, world._priest, null);
-			}
-			else if (event.equals("Part10"))
-			{
-				world._ChangePortal = addSpawn(ChangePortal, -250402, 206519, -11905, 0, false, 0, false, world.getInstanceId());
-				world._ChangePortal.setRandomWalking(false);
-				world._priest.doCast(SkillData.getInstance().getSkill(5816, 1));
-				startQuestTimer("Part11", 300, world._priest, null);
-				startQuestTimer("PartUnnamed", 50, world._priest, null);
-			}
-			else if (event.equals("PartUnnamed"))
-			{
-				final Skill _skill = SkillData.getInstance().getSkill(5815, 1);
-				for (L2Npc naezd : world.naezds)
-				{
-					naezd.doCast(_skill);
-				}
-				startQuestTimer("PartUnnamed", 100, world._priest, null);
-			}
-			else if (event.equals("Part11"))
-			{
-				cancelQuestTimers("PartUnnamed");
 				world._tiat = addSpawn(TIAT, -250400, 207271, -11961, 16285, false, 0, false, world.getInstanceId());
 				world._tiat.setRandomWalking(false);
-				world._tiat.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 				world._naezdTR1 = addSpawn(NAEZD, -250154, 207203, -11970, 33818, false, 0, false, world.getInstanceId());
 				world._naezdTR1.setRandomWalking(false);
 				world._naezdTR2 = addSpawn(NAEZD, -250209, 206941, -11966, 27379, false, 0, false, world.getInstanceId());
@@ -1390,118 +1245,34 @@ public class SeedOfDestruction extends AbstractNpcAI
 				world._naezdTL1.setRandomWalking(false);
 				world._naezdTL2 = addSpawn(NAEZD, -250597, 206941, -11966, 6867, false, 0, false, world.getInstanceId());
 				world._naezdTL2.setRandomWalking(false);
-				broadcastPacket((new SpecialCamera(world._tiat, 400, 90, 5, 1500, 10000, 13000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part12", 100, world._tiat, null);
-			}
-			else if (event.equals("Part12"))
-			{
-				broadcastPacket((new SocialAction(world._tiat.getObjectId(), 1)), world);
-				Delete(world._priest);
-				Delete(world._ChangePortal);
-				startQuestTimer("Part13", 100, world._tiat, null);
-			}
-			else if (event.equals("Part13"))
-			{
-				world._naezdTR2.doCast(SkillData.getInstance().getSkill(5815, 1));
-				world._naezdTL2.doCast(SkillData.getInstance().getSkill(5815, 1));
-				startQuestTimer("Part14", 100, world._tiat, null);
-			}
-			else if (event.equals("Part14"))
-			{
-				world._naezdTR1.doCast(SkillData.getInstance().getSkill(5815, 1));
-				world._naezdTL1.doCast(SkillData.getInstance().getSkill(5815, 1));
-				broadcastPacket((new SpecialCamera(world._tiat, 600, 90, 5, 4000, 10000, 8000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part15", 100, world._tiat, null);
-			}
-			else if (event.equals("Part15"))
-			{
-				MoveTo(world._naezdTR1, -249576, 207155, -11969);
-				MoveTo(world._naezdTR2, -249576, 207155, -11969);
-				MoveTo(world._naezdTL1, -251465, 206601, -11970);
-				MoveTo(world._naezdTL2, -251465, 206601, -11970);
-				startQuestTimer("Part16", 100, world._tiat, null);
-			}
-			else if (event.equals("Part16"))
-			{
-				broadcastPacket((new SpecialCamera(world._tiat, 1400, 90, 40, 3000, 10000, 3000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part17", 100, world._tiat, null);
-			}
-			else if (event.equals("Part17"))
-			{
-				broadcastPacket((new SpecialCamera(world._portalForCamera, 3500, 37, 1, 0, 10000, 2000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part18", 100, world._tiat, null);
-			}
-			else if (event.equals("Part18"))
-			{
-				final Skill _skill = SkillData.getInstance().getSkill(5833, 1);
-				for (L2Npc mag : world._mags)
+				
+				for (int i = 0; i < 12; i++)
 				{
-					mag.setTarget(mag);
-					mag.doCast(_skill);
+					final L2Npc npc1 = addSpawn(22543, ONETR[i][0], ONETR[i][1], ONETR[i][2], 16285, false, 0, false, world.getInstanceId());
+					npc1.setRandomWalking(false);
+					world._mags.add(npc1);
+					
+					final L2Npc npc2 = addSpawn(22541, TWOTR[i][0], TWOTR[i][1], TWOTR[i][2], 16285, false, 0, false, world.getInstanceId());
+					npc2.setRandomWalking(false);
 				}
-				broadcastPacket((new SpecialCamera(world._portalForCamera, 2400, 60, 1, 5000, 10000, 6000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part19", 100, world._tiat, null);
-			}
-			else if (event.equals("Part19"))
-			{
-				broadcastPacket((new SpecialCamera(world._portalForCamera, 2000, 75, 4, 2000, 10000, 3000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part20", 100, world._tiat, null);
-			}
-			else if (event.equals("Part20"))
-			{
-				broadcastPacket((new SpecialCamera(world._tiat, 250, 90, 0, 100, 10000, 3000, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part21", 100, world._tiat, null);
-			}
-			else if (event.equals("Part21"))
-			{
-				broadcastPacket((new SpecialCamera(world._tiat, 1500, 90, 5, 5000, 10000, 6500, 0, 0, 1, 0, 0)), world);
-				startQuestTimer("Part22", 100, world._tiat, null);
-			}
-			else if (event.equals("Part22"))
-			{
-				world._tiat.doCast(SkillData.getInstance().getSkill(5818, 1));
-				startQuestTimer("End!", 100, world._tiat, null);
-			}
-			else if (event.equals("End!"))
-			{
-				for (L2PcInstance plr : world.PlayersInInstance)
+				for (int i = 0; i < 6; i++)
 				{
-					if ((plr == null) || (checkworld(plr) != 1))
-					{
-						continue;
-					}
-					SetMovieMode(plr, false);
-					Delete(world._portalForCamera);
+					final L2Npc npc3 = addSpawn(FRETR[i][0], FRETR[i][1], FRETR[i][2], FRETR[i][3], 16285, false, 0, false, world.getInstanceId());
+					npc3.setRandomWalking(false);
+					
+					final L2Npc npc4 = addSpawn(22536, FORTR[i][0], FORTR[i][1], FORTR[i][2], 16285, false, 0, false, world.getInstanceId());
+					npc4.setRandomWalking(false);
+					
+					final L2Npc npc5 = addSpawn(22537, FIVETR[i][0], FIVETR[i][1], FIVETR[i][2], 16285, false, 0, false, world.getInstanceId());
+					npc5.setRandomWalking(false);
 				}
-				for (L2Npc naezd : world.naezds)
-				{
-					Delete(naezd);
-				}
+				
+				spawn(world, FORT_PORTALS, false, true);
 			}
 			else if (event.equals("KillTiatPart1"))
 			{
-				for (L2PcInstance plr : world.PlayersInInstance)
-				{
-					if ((plr == null) || (checkworld(plr) != 1))
-					{
-						continue;
-					}
-					SetMovieMode(plr, true);
-					playMovie(plr, Movie.SC_BOSS_TIAT_ENDING_SUCCES);
-				}
-				Delete(npc);
-				for (L2Npc mob : InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
-				{
-					mob.deleteMe();
-				}
-				for (L2PcInstance plr : world.PlayersInInstance)
-				{
-					if ((plr == null) || (checkworld(plr) != 1))
-					{
-						continue;
-					}
-					SetMovieMode(plr, false);
-				}
+				playMovie(world.PlayersInInstance.stream().filter(plr -> (plr != null) && (checkworld(plr) == 1)).collect(Collectors.toList()), Movie.SC_BOSS_TIAT_ENDING_SUCCES);
+				InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs().forEach(L2Npc::deleteMe);
 			}
 			else if (event.equals("Spawn"))
 			{
@@ -1574,7 +1345,6 @@ public class SeedOfDestruction extends AbstractNpcAI
 				{
 					world.incStatus();
 					SoDManager.getInstance().increaseSoDTiatKilled();
-					Delete(npc);
 					for (L2Npc mob : InstanceManager.getInstance().getInstance(world.getInstanceId()).getNpcs())
 					{
 						mob.deleteMe();
@@ -1589,12 +1359,10 @@ public class SeedOfDestruction extends AbstractNpcAI
 				}
 				else if (npc.getId() == NAEZD)
 				{
-					world.naezds.remove(npc);
 					final L2Attackable mob = (L2Attackable) addSpawn(npc.getId(), npc.getSpawn().getX(), npc.getSpawn().getY(), npc.getSpawn().getZ(), npc.getSpawn().getHeading(), false, 0, false, world.getInstanceId());
 					mob.setRandomWalking(false);
 					mob.setSeeThroughSilentMove(true);
 					mob.setIsRaidMinion(true);
-					world.naezds.add(mob);
 				}
 				else if (npc.getId() == SPAWN_DEVICE)
 				{
@@ -1701,71 +1469,12 @@ public class SeedOfDestruction extends AbstractNpcAI
 				final SODWorld world = (SODWorld) tmpworld;
 				if ((zone.getId() == 25253) && world.ZoneWaitForTP)
 				{
-					startQuestTimer("Part1", 58000, world._priest, (L2PcInstance) character);
-					for (L2PcInstance player : world.PlayersInInstance)
-					{
-						if ((player == null) || (checkworld(player) != 1))
-						{
-							continue;
-						}
-						SetMovieMode(player, true);
-						playMovie(player, Movie.SC_BOSS_TIAT_OPENING);
-						world.ZoneWaitForTP = false;
-					}
+					startQuestTimer("ThroneSpawn", 55000, null, (L2PcInstance) character);
+					playMovie(world.PlayersInInstance.stream().filter(player -> (player != null) && (checkworld(player) == 1)).collect(Collectors.toList()), Movie.SC_BOSS_TIAT_OPENING);
+					world.ZoneWaitForTP = false;
 				}
 			}
 		}
 		return super.onEnterZone(character, zone);
-	}
-	
-	private void broadcastPacket(IClientOutgoingPacket mov, SODWorld world)
-	{
-		for (L2PcInstance player : world.PlayersInInstance)
-		{
-			if ((player == null) || (checkworld(player) != 1))
-			{
-				continue;
-			}
-			player.sendPacket(mov);
-		}
-	}
-	
-	private void Delete(L2Npc npc)
-	{
-		npc.decayMe();
-		npc.deleteMe();
-	}
-	
-	private void SetMovieMode(L2PcInstance player, boolean mode)
-	{
-		if (mode)
-		{
-			player.abortAttack();
-			player.abortCast();
-			player.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-			player.setTarget(null);
-			player.setIsImmobilized(true);
-			player.sendPacket(new CameraMode(1));
-			player.getAppearance().setGhostMode(true);
-		}
-		else
-		{
-			player.setIsImmobilized(false);
-			player.sendPacket(new CameraMode(0));
-			player.sendPacket(new NormalCamera());
-			player.getAppearance().setGhostMode(false);
-		}
-	}
-	
-	private void MoveTo(L2Npc npc, int x, int y, int z)
-	{
-		if (npc == null)
-		{
-			return;
-		}
-		npc.abortCast();
-		npc.abortAttack();
-		npc.setRunning();
-		npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, (new Location(x, y, z, 0)));
 	}
 }
