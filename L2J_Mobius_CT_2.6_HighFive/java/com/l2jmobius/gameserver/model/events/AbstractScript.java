@@ -2926,9 +2926,16 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	public void playMovie(InstanceWorld world, Movie movie)
 	{
-		for (int objId : world.getAllowed())
+		if (world != null)
 		{
-			playMovie(L2World.getInstance().getPlayer(objId), movie);
+			for (int objId : world.getAllowed())
+			{
+				final L2PcInstance player = L2World.getInstance().getPlayer(objId);
+				if ((player != null) && (player.getInstanceId() == world.getInstanceId()))
+				{
+					playMovie(L2World.getInstance().getPlayer(objId), movie);
+				}
+			}
 		}
 	}
 }
