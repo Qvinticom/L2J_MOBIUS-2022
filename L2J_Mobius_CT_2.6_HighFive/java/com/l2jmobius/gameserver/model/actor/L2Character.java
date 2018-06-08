@@ -2337,7 +2337,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return true;
 		}
 		
-		if (hasSkillReuse(skill.getReuseHashCode()))
+		final int hashCode = skill.getReuseHashCode();
+		if (hasSkillReuse(hashCode))
 		{
 			return true;
 		}
@@ -2346,14 +2347,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			return false;
 		}
-		
-		final int hashCode = skill.getReuseHashCode();
 		final Long stamp = _disabledSkills.get(hashCode);
 		if (stamp == null)
 		{
 			return false;
 		}
-		
 		if (stamp < System.currentTimeMillis())
 		{
 			_disabledSkills.remove(hashCode);
