@@ -34,6 +34,7 @@ import com.l2jmobius.gameserver.model.holders.RestorationItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
@@ -126,9 +127,15 @@ public final class RestorationRandom extends AbstractEffect
 			}
 		}
 		
-		for (Entry<L2ItemInstance, Long> entry : extractedItems.entrySet())
+		if (!extractedItems.isEmpty())
 		{
-			sendMessage(player, entry.getKey(), entry.getValue());
+			final InventoryUpdate playerIU = new InventoryUpdate();
+			for (Entry<L2ItemInstance, Long> entry : extractedItems.entrySet())
+			{
+				playerIU.addModifiedItem(entry.getKey());
+				sendMessage(player, entry.getKey(), entry.getValue());
+			}
+			player.sendPacket(playerIU);
 		}
 	}
 	
