@@ -155,54 +155,284 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27426" toLevel="1" name="Shadow Shaper Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27426</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26437</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46317" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27427" toLevel="1" name="Shadow Cutter Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27427</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26438</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46318" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27428" toLevel="1" name="Shadow Slasher Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27428</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26439</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46319" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27429" toLevel="1" name="Shadow Fighter Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27429</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26440</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46320" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27430" toLevel="1" name="Shadow Stormer Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27430</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26441</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46321" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27431" toLevel="1" name="Shadow Thrower Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27431</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26442</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46322" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27432" toLevel="1" name="Shadow Shooter Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27432</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26443</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46323" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27433" toLevel="1" name="Shadow Buster Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27433</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26444</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46324" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27434" toLevel="1" name="Shadow Retributer Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27434</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26445</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46325" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27435" toLevel="1" name="Shadow Dualsword Box">
-		<!-- AUTO GENERATED SKILL -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill27435</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>26446</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="46326" count="1" minEnchant="1" maxEnchant="9" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="27436" toLevel="1" name="Abundance Box">
 		<!-- AUTO GENERATED SKILL -->

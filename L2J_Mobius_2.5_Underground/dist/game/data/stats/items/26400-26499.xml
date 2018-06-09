@@ -389,62 +389,182 @@
 	<item id="26437" name="Shadow Shaper Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Shaper. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27426" level="1" /> <!-- Shadow Shaper +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26438" name="Shadow Cutter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Cutter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27427" level="1" /> <!-- Shadow Cutter +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26439" name="Shadow Slasher Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Slasher. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27428" level="1" /> <!-- Shadow Slasher +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26440" name="Shadow Fighter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Fighter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27429" level="1" /> <!-- Shadow Fighter +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26441" name="Shadow Stormer Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Stormer. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27430" level="1" /> <!-- Shadow Stormer +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26442" name="Shadow Thrower Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Thrower. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27431" level="1" /> <!-- Shadow Thrower +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26443" name="Shadow Shooter Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Shooter. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27432" level="1" /> <!-- Shadow Shooter +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26444" name="Shadow Buster Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Buster. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27433" level="1" /> <!-- Shadow Buster +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26445" name="Shadow Retributer Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Retributer. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27434" level="1" /> <!-- Shadow Retributer +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26446" name="Shadow Dualsword Box" type="EtcItem">
 		<!-- Double-click to get a + 1 ~ + 9 Shadow Dualsword. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
-		<set name="is_sellable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="27435" level="1" /> <!-- Shadow Dualsword +1 ~+9 -->
+		</skills>
 	</item>
 	<item id="26447" name="Talisman - Abundance" additionalName="War" type="Armor">
 		<!-- P. Atk. + 154, M. Atk. + 181, and P. Evasion/M. Evasion + 4. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
