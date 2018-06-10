@@ -432,18 +432,6 @@
 		</parameters>
 		</npc>
 	</spawn>
-	<spawn name="rune15_mb2216_01m1" ai="EXCLUSIVE_SPAWN_USE_DB">
-		<territories>
-			<territory name="rune15_mb2216_01" minZ="-6180" maxZ="-5980">
-				<node x="79444" y="-56776" />
-				<node x="80744" y="-56596" />
-				<node x="80996" y="-54912" />
-				<node x="78596" y="-54004" />
-				<node x="78396" y="-55772" />
-			</territory>
-		</territories>
-		<npc id="25671" x="79634" y="-55428" z="-6104" dbSave="true" dbName="n_spike_stakato_qn_shyid" respawnTime="24hour" respawnRandom="12hour" /> <!-- Queen Shyeed -->
-	</spawn>
 	<spawn name="giran04_mb2421_01m1" ai="DEFAULT_USE_DB_MAKER">
 		<territories>
 			<territory name="giran04_mb2421_01" minZ="-3954" maxZ="-3754">
