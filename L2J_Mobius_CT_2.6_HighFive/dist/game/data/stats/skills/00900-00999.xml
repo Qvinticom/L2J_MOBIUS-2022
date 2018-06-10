@@ -2116,6 +2116,7 @@
 		<set name="power" val="16667" />
 		<set name="reuseDelay" val="12000" />
 		<set name="rideState" val="NONE" />
+		<set name="staticReuse" val="true" />
 		<set name="targetType" val="FRONT_AREA" />
 		<set name="isPvPOnly" val="true" />
 		<cond msgId="113" addName="1">
@@ -2197,6 +2198,7 @@
 		<set name="power" val="24306" />
 		<set name="reuseDelay" val="12000" />
 		<set name="rideState" val="NONE" />
+		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="113" addName="1">
 			<using kind="BOW,CROSSBOW" />
