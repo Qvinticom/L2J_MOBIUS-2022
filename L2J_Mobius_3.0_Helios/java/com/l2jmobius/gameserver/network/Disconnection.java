@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network;
 
-import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
@@ -33,8 +32,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 public final class Disconnection
 {
 	private static final Logger LOGGER = Logger.getLogger(Disconnection.class.getName());
-	
-	private ScheduledFuture<?> _disconnectionTask;
 	
 	public static L2GameClient getClient(L2GameClient client, L2PcInstance activeChar)
 	{
@@ -170,24 +167,12 @@ public final class Disconnection
 	
 	public void defaultSequence(boolean toLoginScreen)
 	{
-		if (_disconnectionTask != null)
-		{
-			_disconnectionTask.cancel(false);
-			_disconnectionTask = null;
-		}
-		
 		defaultSequence();
 		close(toLoginScreen);
 	}
 	
 	public void defaultSequence(IClientOutgoingPacket packet)
 	{
-		if (_disconnectionTask != null)
-		{
-			_disconnectionTask.cancel(false);
-			_disconnectionTask = null;
-		}
-		
 		defaultSequence();
 		close(packet);
 	}
@@ -200,9 +185,9 @@ public final class Disconnection
 	
 	public void onDisconnection()
 	{
-		if ((_activeChar != null) && (_disconnectionTask == null))
+		if (_activeChar != null)
 		{
-			_disconnectionTask = ThreadPool.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+			ThreadPool.schedule(() -> defaultSequence(), _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
 		}
 	}
 }
