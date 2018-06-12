@@ -1149,9 +1149,30 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18646" toLevel="1" name="Freya's Scroll of Storm">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.freya_scroll</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<itemConsumeId>27673</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<reuseDelay>600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
 	</skill>
 	<skill id="18647" toLevel="1" name="Freya's Bloody Rune">
 		<!-- Damage dealt to NPCs is increased by 15% when having it in your inventory. -->

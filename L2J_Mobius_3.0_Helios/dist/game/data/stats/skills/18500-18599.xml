@@ -494,10 +494,16 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18558" toLevel="1" name="White Assassin Suit Appearance Stone">
-		<!-- AUTO GENERATED SKILL -->
 		<!-- Changes the appearance of your entire armor into that of the White Assassin Suit. Tops and one-pieces only. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18558</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18559" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
 		<!-- AUTO GENERATED SKILL -->

@@ -458,8 +458,15 @@
 	<skill id="18144" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Changes the appearance of your armor into that of a Dark Assassin Suit. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18144</icon>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18145" toLevel="1" name="Orc's Normal Old Box">
 		<!-- AUTO GENERATED SKILL -->

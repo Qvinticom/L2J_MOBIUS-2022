@@ -1102,11 +1102,21 @@
 	<item id="40270" name="Appearance Stone: Dark Assassin Suit" type="EtcItem">
 		<!-- Changes the appearance of your entire armor into that of a Dark Assassin Suit. Tops and one-pieces only. Modified armor can be restored to their original appearance with a Restoration Stone. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
-		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="false" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="SHAPE_SHIFTING_AM_FIXED" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="18558" level="1" /> <!-- Dark Assassin Appearance Stone -->
+		</skills>
 	</item>
 	<item id="40271" name="Orc's Normal Old Box" type="EtcItem">
 		<!-- A box of relics gathered by the Aspiricing Orc Ruler of Aden. -->

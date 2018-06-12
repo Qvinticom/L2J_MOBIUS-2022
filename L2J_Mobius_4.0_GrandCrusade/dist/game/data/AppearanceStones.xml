@@ -3480,6 +3480,10 @@
 	<!-- Monster Weapon Appearance Stone: Shield of Corruption -->
 	<appearance_stone id="37086" targetType="ARMOR" type="FIXED" visualId="37066" armorType="SHIELD" />
 
+	<appearance_stone id="40270" targetType="ARMOR" type="FIXED" visualId="40240"> <!-- Dark Assassin Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
 	<appearance_stone id="46573" targetType="ARMOR" type="FIXED" visualId="46538"> <!-- Tauti's Breastplate Appearance Stone -->
 		<bodyPart>chest</bodyPart>
 		<bodyPart>fullarmor</bodyPart>
@@ -3793,7 +3797,10 @@
 	<appearance_stone id="46280" targetType="ACCESSORY" type="FIXED" visualId="46262"> <!-- Metal Suit Hair Accessory Appearance Stone -->
 		<bodyPart>hairall</bodyPart>
 	</appearance_stone>
-
+	<appearance_stone id="46605" targetType="ARMOR" type="FIXED" visualId="46601"> <!-- White Assassin Appearance Stone -->
+		<bodyPart>chest</bodyPart>
+		<bodyPart>fullarmor</bodyPart>
+	</appearance_stone>
 	<appearance_stone id="47591" targetType="ALL" type="FIXED" race="ERTHEIA"> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
 		<visual id="39717" weaponType="DUALFIST"/>
 	</appearance_stone>

@@ -754,9 +754,71 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18738" toLevel="1" name="+10 Blessed Amaranthine Weapon Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18738</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47746</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="6.66">
+						<item id="18069" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18070" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18071" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18072" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18073" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18074" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18075" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18076" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18077" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18078" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18079" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18080" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18081" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18082" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18739" toLevel="3" name="+8 Blessed Eternal Armor Heavy Capsule">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -764,9 +826,80 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18740" toLevel="1" name="+8 Blessed Eternal Armor Supply Items">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18740</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47747</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<!-- Heavy Armor -->
+					<item chance="5.6">
+						<item id="18083" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18084" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18085" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18086" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18087" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<!-- Leather Armor -->
+					<item chance="5.6">
+						<item id="18089" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18090" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18091" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18092" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18093" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<!-- Robe Armor -->
+					<item chance="5.6">
+						<item id="18094" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18095" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18096" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18097" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18098" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18099" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18741" toLevel="1" name="Freya's Art of Seduction - Barrier">
 		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, Damage Reduction + 10%, All Attributes Defense + 100.\n\nBuff remains in place after death. -->

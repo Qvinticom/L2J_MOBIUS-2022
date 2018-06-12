@@ -1265,14 +1265,20 @@
 	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
 		<!-- Double click to receive 3 Marks of the Balthus Knights. (Can be used once per day.) Cannot be exchanged/dropped/sold in a personal store, but can be kept in personal storage. Will be deleted on June 15th, 2016, when the Balthus Knight event ends after regular maintenance. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="reuse_delay" val="86400000" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47385" min="3" max="3" chance="100" /> <!-- Balthus Knights Marks -->
+		</capsuled_items>
 	</item>
 	<item id="47388" name="12th Anniversary Souvenir" type="EtcItem">
 		<!-- A special item created to commemorate the 12th Anniversary of Lineage II. Sell to a store to obtain a massive amount of Adena. -->
@@ -1299,24 +1305,39 @@
 	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Forever Talisman/Longing Talisman/Energy of Longing can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="34987" min="1" max="1" chance="25" /> <!-- Helfire Talisman (Replaced Forever Talisman) -->
+			<item id="34989" min="1" max="1" chance="25" /> <!-- Longing Talisman -->
+			<item id="47420" min="1" max="1" chance="25" /> <!-- Energy of Longing -->
+		</capsuled_items>
 	</item>
 	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain a Venir Talisman Stage 11/12/13. Will be deleted when the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="39644" min="1" max="1" chance="25" /> <!-- Venir Stage 11 -->
+			<item id="39645" min="1" max="1" chance="25" /> <!-- Venir Stage 12 -->
+			<item id="39646" min="1" max="1" chance="25" /> <!-- Venir Stage 13 -->
+		</capsuled_items>
 	</item>
 	<item id="47392" name="Shining Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Shirt Enchantment-only Scroll. The enchant level is maintained when enchantment fails. Cannot be used on Shirts of +9 or higher. -->
@@ -1328,13 +1349,20 @@
 	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Dark Assassin/White Assassin Suit Appearance Stone can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="47464" min="1" max="1" chance="34" /> <!-- White Assassin Suit Appearance Stone -->
+			<item id="40270" min="1" max="1" chance="34" /> <!-- Dark Assassin Suit Appearance Stone -->
+		</capsuled_items>
 	</item>
 	<item id="47394" name="Scroll of Blessing R99/R95/R(2) Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain an R99/R95/R(2) Grade Scroll of Blessing. Will be deleted when the event ends. -->
@@ -1350,13 +1378,21 @@
 	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, an Antharas/Valakas/Baium Soul Bottle can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="19465" min="1" max="1" chance="25" /> <!-- Antharas Bottle -->
+			<item id="19466" min="1" max="1" chance="25" /> <!-- Valakas Bottle -->
+			<item id="37520" min="1" max="1" chance="25" /> <!-- Baium Soul Bottle -->
+		</capsuled_items>
 	</item>
 	<item id="47396" name="Nurka/Rydel/Gustav's Belt Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Nurka/Lydia/Gustav's Belt can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1372,25 +1408,36 @@
 	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a Seven Signs/Anakim/Lilith's Talisman can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
-	</item>
-	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
-		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="37717" min="1" max="1" chance="25" /> <!-- Seven Signs Talisman -->
+			<item id="37714" min="1" max="1" chance="25" /> <!-- Lilith Talisman -->
+			<item id="37715" min="1" max="1" chance="25" /> <!-- Anakim Talisman -->
+		</capsuled_items>
+	</item>
+	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Eternal Enhancement Stone -->
+		</capsuled_items>
 	</item>
 	<item id="47399" name="Sibis Coin Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibis Coins can be obtained. Will be deleted on June 15th, 2016, after regular maintenance. -->
@@ -1402,6 +1449,11 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="49783" min="1500" max="1500" chance="75" /> 	<!-- Sibis Coins -->
+		</capsuled_items>
 	</item>
 </list>

@@ -442,11 +442,19 @@
 	<item id="39345" name="Amaranthine Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Amaranthine weapon. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17872" level="1" /> <!-- Amaranthine Weapon -->
+		</skills>
 	</item>
 	<item id="39346" name="+4 Amaranthine Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 4. -->
@@ -699,9 +707,13 @@
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17880" level="1" /> <!-- Scroll: 1,000,000 SP -->
+		</skills>
 	</item>
 	<item id="39374" name="Scroll: 5,000,000 SP" additionalName="Event" type="EtcItem">
 		<!-- Scroll that replenishes 5,000,000 SP. -->
@@ -709,9 +721,14 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17881" level="1" /> <!-- Scroll: 5,000,000 SP -->
+		</skills>
 	</item>
 	<item id="39375" name="Scroll: 10,000,000 SP" additionalName="Event" type="EtcItem">
 		<!-- Scroll that replenishes 10,000,000 SP. -->
@@ -719,9 +736,14 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17882" level="1" /> <!-- Scroll: 10,000,000 SP -->
+		</skills>
 	</item>
 	<item id="39376" name="Defeat's Gift Box" type="EtcItem">
 		<!-- Gift box prepared for the warriors who were unfortunately defeated by the Aspiring Orc Ruler of Aden. -->

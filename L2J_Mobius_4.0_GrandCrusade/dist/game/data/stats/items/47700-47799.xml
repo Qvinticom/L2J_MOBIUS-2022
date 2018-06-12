@@ -667,36 +667,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18738" level="1" /> <!-- +10 Blessed Amaranthine Weapon -->
+		</skills>
 	</item>
 	<item id="47747" name="+8 Blessed Eternal Armor Supply Items" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, a +8 Blessed Eternal Armor item can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
-	</item>
-	<item id="47748" name="Rare Weapon Fragment Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, a Shadow Ingot/Tauti's Fragment/Kelbim's Atelia Fragment can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
-		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
-	</item>
-	<item id="47749" name="Dark Eternal Enhancement Stone - 2" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Dark Eternal Enhancement Stones can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
-		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -704,19 +684,121 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18740" level="1" /> <!-- +8 Blessed Eternal Armor -->
+		</skills>
 	</item>
-	<item id="47750" name="Zodiac Agathion Stage 5 Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights Supply Items. When used, a Zodiac Agathion Stage 5 Bracelet can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
-		<set name="icon" val="icon.etc_treasure_box_i04" />
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+	<item id="47748" name="Rare Weapon Fragment Supply Items" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Shadow Ingot/Tauti's Fragment/Kelbim's Atelia Fragment can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="default_action" val="PEEL" />
 		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="is_commissionable" val="false" />
+		<capsuled_items>
+			<item id="46395" min="1" max="1" chance="25" />
+			<item id="35667" min="1" max="1" chance="25" />
+			<item id="46079" min="1" max="1" chance="25" />
+		</capsuled_items>
+	</item>
+	<item id="47749" name="Dark Eternal Enhancement Stone - 2" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, 2 Dark Eternal Enhancement Stones can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35567" min="2" max="2" chance="75" /> <!-- Dark Eternal Enhancement Stone -->
+		</capsuled_items>
+	</item>
+	<item id="47750" name="Zodiac Agathion Stage 5 Supply Items" type="EtcItem">
+		<!-- Top-grade Balthus Knights Supply Items. When used, a Zodiac Agathion Stage 5 Bracelet can be obtained. Will be deleted on June 15, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="material" val="PAPER" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="is_commissionable" val="false" />
+		<!-- Dimmensional Bracelet (Couldn't find Zodiac Stage 5) -->
+		<capsuled_items>
+			<item id="39943" min="1" max="1" chance="2" />
+			<item id="39944" min="1" max="1" chance="2" />
+			<item id="39945" min="1" max="1" chance="2" />
+			<item id="39946" min="1" max="1" chance="2" />
+			<item id="39947" min="1" max="1" chance="2" />
+			<item id="39948" min="1" max="1" chance="2" />
+			<item id="39949" min="1" max="1" chance="2" />
+			<item id="39950" min="1" max="1" chance="2" />
+			<item id="39951" min="1" max="1" chance="2" />
+			<item id="39952" min="1" max="1" chance="2" />
+			<item id="39953" min="1" max="1" chance="2" />
+			<item id="39954" min="1" max="1" chance="2" />
+			<item id="39955" min="1" max="1" chance="2" />
+			<item id="39956" min="1" max="1" chance="2" />
+			<item id="39957" min="1" max="1" chance="2" />
+			<item id="39958" min="1" max="1" chance="2" />
+			<item id="39959" min="1" max="1" chance="2" />
+			<item id="39960" min="1" max="1" chance="2" />
+			<item id="39961" min="1" max="1" chance="2" />
+			<item id="39962" min="1" max="1" chance="2" />
+			<item id="39963" min="1" max="1" chance="2" />
+			<item id="39964" min="1" max="1" chance="2" />
+			<item id="39965" min="1" max="1" chance="2" />
+			<item id="39966" min="1" max="1" chance="2" />
+			<item id="39967" min="1" max="1" chance="2" />
+			<item id="39968" min="1" max="1" chance="2" />
+			<item id="39969" min="1" max="1" chance="2" />
+			<item id="39970" min="1" max="1" chance="2" />
+			<item id="39971" min="1" max="1" chance="2" />
+			<item id="39972" min="1" max="1" chance="2" />
+			<item id="39973" min="1" max="1" chance="2" />
+			<item id="39974" min="1" max="1" chance="2" />
+			<item id="39975" min="1" max="1" chance="2" />
+			<item id="39976" min="1" max="1" chance="2" />
+			<item id="39977" min="1" max="1" chance="2" />
+			<item id="39978" min="1" max="1" chance="2" />
+			<item id="39979" min="1" max="1" chance="2" />
+			<item id="39980" min="1" max="1" chance="2" />
+			<item id="39981" min="1" max="1" chance="2" />
+			<item id="39982" min="1" max="1" chance="2" />
+			<item id="39983" min="1" max="1" chance="2" />
+			<item id="39984" min="1" max="1" chance="2" />
+			<item id="39985" min="1" max="1" chance="2" />
+			<item id="39986" min="1" max="1" chance="2" />
+			<item id="39987" min="1" max="1" chance="2" />
+			<item id="39988" min="1" max="1" chance="2" />
+			<item id="39989" min="1" max="1" chance="2" />
+			<item id="39990" min="1" max="1" chance="2" />
+			<item id="39991" min="1" max="1" chance="2" />
+	</capsuled_items>
 	</item>
 	<item id="47751" name="+8 Blessed Eternal Armor Heavy Capsule" additionalName="Event" type="EtcItem">
 		<!-- Double click to obtain a +8 Blessed Eternal Armor Heavy Set. Will be deleted on June 15, 2016, after regular maintenance. -->

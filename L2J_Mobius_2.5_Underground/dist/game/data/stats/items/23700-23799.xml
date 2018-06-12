@@ -1032,10 +1032,21 @@
 		<!-- Double-click to obtain 5 each of High-grade Elixir of Life/Mind/CP. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="weight" val="10" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="PEEL" />
+		<set name="is_private_storeable" val="true" />
+		<set name="extractableCountMin" val="1" />
+		<set name="extractableCountMax" val="1" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="35675" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Life (R-Grade) -->
+			<item id="35676" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of Mind (R-Grade) -->
+			<item id="35677" min="5" max="5" chance="100" /> <!-- High-Grade Elixir of CP (R-Grade) -->
+	</capsuled_items>
 	</item>
 	<item id="23763" name="Vitality Recovery Potion" additionalName="1-day" type="EtcItem">
 		<!-- Premium User Only. For 60 min., Vitality is restored upon XP gain. Cannot apply another buff with the same effect, and when applying a similar effect, the Vitaily Maintaining Potion's buff effect will disappear. -->

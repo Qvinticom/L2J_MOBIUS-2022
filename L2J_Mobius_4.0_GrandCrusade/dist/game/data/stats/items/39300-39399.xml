@@ -397,10 +397,19 @@
 	<item id="39345" name="Amaranthine Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Amaranthine weapon. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_private_storeable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17872" level="1" /> <!-- Amaranthine Weapon -->
+		</skills>
 	</item>
 	<item id="39346" name="+4 Amaranthine Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 4. -->
