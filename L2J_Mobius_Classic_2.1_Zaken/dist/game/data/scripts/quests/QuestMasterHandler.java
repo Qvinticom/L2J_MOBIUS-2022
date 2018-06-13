@@ -158,6 +158,7 @@ import quests.Q11002_HelpWithTempleRestoration.Q11002_HelpWithTempleRestoration;
 import quests.Q11003_PerfectLeatherArmor1.Q11003_PerfectLeatherArmor1;
 import quests.Q11004_PerfectLeatherArmor2.Q11004_PerfectLeatherArmor2;
 import quests.Q11005_PerfectLeatherArmor3.Q11005_PerfectLeatherArmor3;
+import quests.Q11006_FuturePeople.Q11006_FuturePeople;
 import quests.Q11007_NoiseInWoods.Q11007_NoiseInWoods;
 import quests.Q11008_PreparationForDungeon.Q11008_PreparationForDungeon;
 import quests.Q11009_NewPotionDevelopment1.Q11009_NewPotionDevelopment1;
@@ -168,6 +169,7 @@ import quests.Q11014_SurpriseGift.Q11014_SurpriseGift;
 import quests.Q11015_PrepareForTrade1.Q11015_PrepareForTrade1;
 import quests.Q11016_PrepareForTrade2.Q11016_PrepareForTrade2;
 import quests.Q11017_PrepareForTrade3.Q11017_PrepareForTrade3;
+import quests.Q11018_FutureDarkElves.Q11018_FutureDarkElves;
 import quests.Q11019_TribalBenefit.Q11019_TribalBenefit;
 import quests.Q11020_BlacksmithsRequest.Q11020_BlacksmithsRequest;
 import quests.Q11021_RedGemNecklace1.Q11021_RedGemNecklace1;
@@ -322,6 +324,7 @@ public class QuestMasterHandler
 		Q11003_PerfectLeatherArmor1.class,
 		Q11004_PerfectLeatherArmor2.class,
 		Q11005_PerfectLeatherArmor3.class,
+		Q11006_FuturePeople.class,
 		Q11007_NoiseInWoods.class,
 		Q11008_PreparationForDungeon.class,
 		Q11009_NewPotionDevelopment1.class,
@@ -332,6 +335,7 @@ public class QuestMasterHandler
 		Q11015_PrepareForTrade1.class,
 		Q11016_PrepareForTrade2.class,
 		Q11017_PrepareForTrade3.class,
+		Q11018_FutureDarkElves.class,
 		Q11019_TribalBenefit.class,
 		Q11020_BlacksmithsRequest.class,
 		Q11021_RedGemNecklace1.class,
