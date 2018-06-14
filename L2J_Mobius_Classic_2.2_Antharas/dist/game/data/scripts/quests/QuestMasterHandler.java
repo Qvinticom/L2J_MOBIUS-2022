@@ -148,6 +148,7 @@ import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
 import quests.Q10993_FutureDwarves.Q10993_FutureDwarves;
+import quests.Q10994_FutureOrcs.Q10994_FutureOrcs;
 import quests.Q10995_MutualBenefit.Q10995_MutualBenefit;
 import quests.Q10996_TemplesDecorations.Q10996_TemplesDecorations;
 import quests.Q10997_LoserPriest1.Q10997_LoserPriest1;
@@ -315,6 +316,7 @@ public class QuestMasterHandler
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
 		Q10993_FutureDwarves.class,
+		Q10994_FutureOrcs.class,
 		Q10995_MutualBenefit.class,
 		Q10996_TemplesDecorations.class,
 		Q10997_LoserPriest1.class,
