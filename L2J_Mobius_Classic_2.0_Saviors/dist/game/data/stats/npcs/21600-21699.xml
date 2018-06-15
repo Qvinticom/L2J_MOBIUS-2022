@@ -2878,7 +2878,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai clanHelpRange="300" aggroRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
@@ -2948,7 +2948,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="300" aggroRange="300" />
+		<ai clanHelpRange="300" aggroRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="10" grown="12" />
 			<height normal="28" grown="33" />
@@ -3002,6 +3002,7 @@
 			<skill id="4085" level="1" /> <!-- Critical damage -->
 			<skill id="4086" level="1" /> <!-- Critical rate -->
 		</skill_list>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="42" />
@@ -3055,6 +3056,7 @@
 			<skill id="4085" level="1" /> <!-- Critical damage -->
 			<skill id="4086" level="1" /> <!-- Critical rate -->
 		</skill_list>
+		<ai aggroRange="450" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="28" />
 			<height normal="75" />

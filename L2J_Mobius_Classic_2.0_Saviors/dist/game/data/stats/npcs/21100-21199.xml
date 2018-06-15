@@ -573,7 +573,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai aggroRange="350" clanHelpRange="300" isAggressive="false">
+		<ai aggroRange="350" clanHelpRange="300" isAggressive="true">
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -695,7 +695,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai clanHelpRange="200" aggroRange="450">
+		<ai clanHelpRange="200" aggroRange="450" isAggressive="true" >
 			<clan_list>
 				<clan>ALL</clan>
 			</clan_list>
@@ -788,7 +788,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="21112" level="71" type="L2Monster" name="Hames Orc Foot Soldier">
+	<npc id="21112" level="70" type="L2Monster" name="Hames Orc Foot Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -862,7 +862,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="21113" level="71" type="L2Monster" name="Hames Orc Sniper">
+	<npc id="21113" level="70" type="L2Monster" name="Hames Orc Sniper">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
@@ -904,7 +904,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450">
+		<ai type="ARCHER" clanHelpRange="300" dodge="15" aggroRange="450" isAggressive="true" >
 			<clan_list>
 				<clan>ORC</clan>
 			</clan_list>
@@ -1004,7 +1004,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="21115" level="73" type="L2Monster" name="Hames Orc Shaman">
+	<npc id="21115" level="70" type="L2Monster" name="Hames Orc Shaman">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -1050,7 +1050,7 @@
 		</skill_list>
 		<shots shotChance="30" spiritChance="30" />
 		<ex_crt_effect>false</ex_crt_effect>
-		<ai type="BALANCED" clanHelpRange="400" aggroRange="450">
+		<ai type="BALANCED" clanHelpRange="400" aggroRange="450" isAggressive="true" >
 			<clan_list>
 				<clan>ORC</clan>
 			</clan_list>
@@ -1060,7 +1060,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="21116" level="72" type="L2Monster" name="Hames Orc Prefect">
+	<npc id="21116" level="70" type="L2Monster" name="Hames Orc Prefect">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="65" />
