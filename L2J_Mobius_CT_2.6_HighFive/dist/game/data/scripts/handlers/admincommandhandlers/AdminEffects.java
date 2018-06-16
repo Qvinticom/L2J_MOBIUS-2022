@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -114,8 +115,16 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				activeChar.setInvisible(true);
 				activeChar.broadcastUserInfo();
-				activeChar.decayMe();
-				activeChar.spawnMe();
+				L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, target ->
+				{
+					if ((target != null) && (target.getTarget() == activeChar))
+					{
+						target.setTarget(null);
+						target.abortAttack();
+						target.abortCast();
+						target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					}
+				});
 				BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 			}
 			else
@@ -132,8 +141,16 @@ public class AdminEffects implements IAdminCommandHandler
 		{
 			activeChar.setInvisible(true);
 			activeChar.broadcastUserInfo();
-			activeChar.decayMe();
-			activeChar.spawnMe();
+			L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, target ->
+			{
+				if ((target != null) && (target.getTarget() == activeChar))
+				{
+					target.setTarget(null);
+					target.abortAttack();
+					target.abortCast();
+					target.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				}
+			});
 			BuilderUtil.sendSysMessage(activeChar, "Now, you cannot be seen.");
 		}
 		else if (command.startsWith("admin_vis"))
