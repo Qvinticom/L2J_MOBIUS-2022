@@ -913,6 +913,7 @@ public final class Config
 	public static float RATE_VITALITY_GAIN;
 	public static float RATE_RECOVERY_ON_RECONNECT;
 	public static int STARTING_VITALITY_POINTS;
+	public static boolean RAIDBOSS_USE_VITALITY;
 	
 	// --------------------------------------------------
 	// No classification assigned to the following yet
@@ -1756,6 +1757,7 @@ public final class Config
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
 			RECOVER_VITALITY_ON_RECONNECT = Character.getBoolean("RecoverVitalityOnReconnect", true);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 20000);
+			RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 3.5);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 3.5);
 			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 250);

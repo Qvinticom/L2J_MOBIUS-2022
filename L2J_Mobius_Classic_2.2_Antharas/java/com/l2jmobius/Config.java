@@ -795,7 +795,7 @@ public final class Config
 	// --------------------------------------------------
 	public static boolean ENABLE_VITALITY;
 	public static int STARTING_VITALITY_POINTS;
-	
+	public static boolean RAIDBOSS_USE_VITALITY;
 	public static float RATE_VITALITY_EXP_MULTIPLIER;
 	public static int VITALITY_MAX_ITEMS_ALLOWED;
 	public static float RATE_DROP_VITALITY_HERBS;
@@ -1512,6 +1512,7 @@ public final class Config
 			FEE_DELETE_DUALCLASS_SKILLS = Character.getInt("FeeDeleteDualClassSkills", 20000000);
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
+			RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
 			MAX_BONUS_EXP = Character.getDouble("MaxExpBonus", 0);
 			MAX_BONUS_SP = Character.getDouble("MaxSpBonus", 0);
 			MAX_RUN_SPEED = Character.getInt("MaxRunSpeed", 300);

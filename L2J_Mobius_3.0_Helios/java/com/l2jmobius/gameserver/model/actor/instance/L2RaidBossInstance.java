@@ -110,7 +110,7 @@ public class L2RaidBossInstance extends L2MonsterInstance
 	@Override
 	public boolean useVitalityRate()
 	{
-		return false;
+		return Config.RAIDBOSS_USE_VITALITY;
 	}
 	
 	public void setUseRaidCurse(boolean val)
