@@ -180,6 +180,7 @@ import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragmen
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
 import quests.Q00778_OperationRoaringFlame.Q00778_OperationRoaringFlame;
+import quests.Q00779_UtilizeTheDarknessSeedOfDestruction.Q00779_UtilizeTheDarknessSeedOfDestruction;
 import quests.Q00783_VestigeOfTheMagicPower.Q00783_VestigeOfTheMagicPower;
 import quests.Q00787_TheRoleOfAWatcher.Q00787_TheRoleOfAWatcher;
 import quests.Q00790_ObtainingFerinsTrust.Q00790_ObtainingFerinsTrust;
@@ -617,6 +618,7 @@ public class QuestMasterHandler
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
 		Q00778_OperationRoaringFlame.class,
+		Q00779_UtilizeTheDarknessSeedOfDestruction.class,
 		Q00783_VestigeOfTheMagicPower.class,
 		Q00787_TheRoleOfAWatcher.class,
 		Q00790_ObtainingFerinsTrust.class,

@@ -212,6 +212,7 @@ import quests.Q00775_RetrievingTheChaosFragment.Q00775_RetrievingTheChaosFragmen
 import quests.Q00776_SlayDarkLordEkimus.Q00776_SlayDarkLordEkimus;
 import quests.Q00777_SlayDarkLordTiat.Q00777_SlayDarkLordTiat;
 import quests.Q00778_OperationRoaringFlame.Q00778_OperationRoaringFlame;
+import quests.Q00779_UtilizeTheDarknessSeedOfDestruction.Q00779_UtilizeTheDarknessSeedOfDestruction;
 import quests.Q00784_TheQuietKiller.Q00784_TheQuietKiller;
 import quests.Q00785_ASuspiciousIngredient.Q00785_ASuspiciousIngredient;
 import quests.Q00786_AwaitingTheVoiceOfTheGods.Q00786_AwaitingTheVoiceOfTheGods;
@@ -651,6 +652,7 @@ public class QuestMasterHandler
 		Q00776_SlayDarkLordEkimus.class,
 		Q00777_SlayDarkLordTiat.class,
 		Q00778_OperationRoaringFlame.class,
+		Q00779_UtilizeTheDarknessSeedOfDestruction.class,
 		Q00784_TheQuietKiller.class,
 		Q00785_ASuspiciousIngredient.class,
 		Q00786_AwaitingTheVoiceOfTheGods.class,
