@@ -335,15 +335,6 @@ public class SkillCaster implements Runnable
 			caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));
 		}
 		
-		// Consume the required items. Should happen after use message is displayed and SetupGauge
-		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && !((_item != null) && ((_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE) || (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))))
-		{
-			if (!caster.destroyItemByItemId(_skill.toString(), _skill.getItemConsumeId(), _skill.getItemConsumeCount(), null, true))
-			{
-				return false;
-			}
-		}
-		
 		if (caster.isPlayer())
 		{
 			final L2PcInstance player = caster.getActingPlayer();
@@ -489,7 +480,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Consume skill reduced item on success.
-		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))
+		if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0))
 		{
 			if (!caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true))
 			{
