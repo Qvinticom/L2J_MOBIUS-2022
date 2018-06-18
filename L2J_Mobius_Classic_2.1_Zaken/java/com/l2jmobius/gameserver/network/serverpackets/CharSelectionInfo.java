@@ -29,11 +29,15 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
+import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.VariationInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
+import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
@@ -234,6 +238,13 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 					if (charInfopackage != null)
 					{
 						characterList.add(charInfopackage);
+						
+						final L2PcInstance player = L2World.getInstance().getPlayer(charInfopackage.getObjectId());
+						if (player != null)
+						{
+							IdFactory.getInstance().releaseId(player.getObjectId());
+							Disconnection.of(player).storeMe().deleteMe();
+						}
 					}
 				}
 			}

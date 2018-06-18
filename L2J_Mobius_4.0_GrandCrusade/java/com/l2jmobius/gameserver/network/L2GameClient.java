@@ -120,9 +120,12 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		LOGGER_ACCOUNTING.finer("Client Disconnected: " + ctx.channel());
 		
 		LoginServerThread.getInstance().sendLogout(getAccountName());
-		IdFactory.getInstance().releaseId(getObjectId());
 		
-		Disconnection.of(this).onDisconnection();
+		if ((_activeChar == null) || !_activeChar.isInStoreMode())
+		{
+			IdFactory.getInstance().releaseId(getObjectId());
+			Disconnection.of(this).onDisconnection();
+		}
 	}
 	
 	@Override

@@ -5784,7 +5784,8 @@ public final class L2PcInstance extends L2Playable
 		
 		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((getClient() == null) || getClient().isDetached()))
 		{
-			deleteMe();
+			IdFactory.getInstance().releaseId(getObjectId());
+			Disconnection.of(this).storeMe().deleteMe();
 		}
 	}
 	

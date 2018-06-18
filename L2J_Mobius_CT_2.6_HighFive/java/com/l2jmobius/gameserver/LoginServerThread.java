@@ -40,6 +40,7 @@ import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
@@ -283,13 +284,9 @@ public class LoginServerThread extends Thread
 								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_ALL);
 							}
 							sendPacket(st);
-							if (L2World.getInstance().getPlayers().size() > 0)
+							final List<String> playerList = L2World.getInstance().getPlayers().stream().filter(player -> !player.isInOfflineMode()).map(L2PcInstance::getAccountName).collect(Collectors.toList());
+							if (!playerList.isEmpty())
 							{
-								final List<String> playerList = new ArrayList<>();
-								for (L2PcInstance player : L2World.getInstance().getPlayers())
-								{
-									playerList.add(player.getAccountName());
-								}
 								sendPacket(new PlayerInGame(playerList));
 							}
 							break;

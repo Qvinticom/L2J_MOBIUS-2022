@@ -29,7 +29,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
-import com.l2jmobius.gameserver.LoginServerThread;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.L2World;
@@ -234,7 +233,6 @@ public class OfflineTradersTable
 					}
 					
 					player.spawnMe(player.getX(), player.getY(), player.getZ());
-					LoginServerThread.getInstance().addGameServerLogin(player.getAccountName(), client);
 					try (PreparedStatement stm_items = con.prepareStatement(LOAD_OFFLINE_ITEMS))
 					{
 						stm_items.setInt(1, player.getObjectId());

@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
 /**
@@ -104,6 +103,7 @@ public final class OfflineTradeUtil
 		PlayerCountManager.getInstance().incOfflineTradeCount();
 		
 		final L2GameClient client = player.getClient();
+		client.close(true);
 		client.setDetached(true);
 		
 		player.leaveParty();
@@ -141,7 +141,7 @@ public final class OfflineTradeUtil
 			OfflineTradersTable.onTransaction(player, false, true);
 		}
 		
-		Disconnection.of(player).storeMe().close(false);
+		player.storeMe();
 		LOGGER_ACCOUNTING.info("Entering offline mode, " + client);
 		return true;
 	}
