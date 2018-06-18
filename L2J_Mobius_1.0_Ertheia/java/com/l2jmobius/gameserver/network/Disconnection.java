@@ -114,7 +114,7 @@ public final class Disconnection
 	{
 		try
 		{
-			if (_activeChar != null)
+			if ((_activeChar != null) && _activeChar.isOnline())
 			{
 				_activeChar.storeMe();
 			}
@@ -131,7 +131,7 @@ public final class Disconnection
 	{
 		try
 		{
-			if (_activeChar != null)
+			if ((_activeChar != null) && _activeChar.isOnline())
 			{
 				EventDispatcher.getInstance().notifyEventAsync(new OnPlayerLogout(_activeChar), _activeChar);
 				_activeChar.deleteMe();
