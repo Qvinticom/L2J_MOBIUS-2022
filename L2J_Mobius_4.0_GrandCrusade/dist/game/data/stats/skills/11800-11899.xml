@@ -1970,12 +1970,13 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<mpConsume>82</mpConsume>
-		<castRange>900</castRange>
+		<affectRange>900</affectRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
-		<isMagic>1</isMagic>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<effects>
