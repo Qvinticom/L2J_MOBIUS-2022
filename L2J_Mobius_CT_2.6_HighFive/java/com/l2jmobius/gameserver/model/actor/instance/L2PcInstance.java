@@ -7565,8 +7565,8 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * Verifies if the player is in offline mode.<br>
 	 * The offline mode may happen for different reasons:<br>
-	 * Abnormally: Player gets abrouptaly disconnected from server.<br>
-	 * Normally: The player gets into offline shop mode, only avaiable by enabling the offline shop mod.
+	 * Abnormally: Player gets abruptly disconnected from server.<br>
+	 * Normally: The player gets into offline shop mode, only available by enabling the offline shop mod.
 	 * @return {@code true} if the player is in offline mode, {@code false} otherwise
 	 */
 	public boolean isInOfflineMode()

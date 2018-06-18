@@ -286,7 +286,7 @@ public class LoginServerThread extends Thread
 								st.addAttribute(ServerStatus.SERVER_AGE, ServerStatus.SERVER_AGE_ALL);
 							}
 							sendPacket(st);
-							final List<String> playerList = L2World.getInstance().getPlayers().stream().filter(player -> !player.isInStoreMode()).map(L2PcInstance::getAccountName).collect(Collectors.toList());
+							final List<String> playerList = L2World.getInstance().getPlayers().stream().filter(player -> !player.isInOfflineMode()).map(L2PcInstance::getAccountName).collect(Collectors.toList());
 							if (!playerList.isEmpty())
 							{
 								sendPacket(new PlayerInGame(playerList));

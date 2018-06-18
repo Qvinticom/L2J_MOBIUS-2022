@@ -121,7 +121,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		
 		LoginServerThread.getInstance().sendLogout(getAccountName());
 		
-		if ((_activeChar == null) || !_activeChar.isInStoreMode())
+		if ((_activeChar == null) || !_activeChar.isInOfflineMode())
 		{
 			IdFactory.getInstance().releaseId(getObjectId());
 			Disconnection.of(this).onDisconnection();
