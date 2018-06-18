@@ -1190,7 +1190,6 @@
 	<item id="39574" name="Scroll of Escape: Town of Oren" type="EtcItem">
 		<!-- Teleports you to Town of Oren. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1202,6 +1201,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1212,7 +1212,6 @@
 	<item id="39575" name="Scroll of Escape: Sea of Spores" type="EtcItem">
 		<!-- Teleports you to Sea of Spores. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1224,6 +1223,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1234,7 +1234,6 @@
 	<item id="39576" name="Scroll of Escape: Town of Aden" type="EtcItem">
 		<!-- Teleports you to Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1246,6 +1245,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1256,7 +1256,6 @@
 	<item id="39577" name="Scroll of Escape: Forsaken Plains" type="EtcItem">
 		<!-- Teleports you to Forsaken Plains. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1268,6 +1267,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1278,7 +1278,6 @@
 	<item id="39578" name="Scroll of Escape: Town of Aden" type="EtcItem">
 		<!-- Teleports you to Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1290,6 +1289,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1300,7 +1300,6 @@
 	<item id="39579" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
 		<!-- Teleports you to Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1312,6 +1311,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1322,7 +1322,6 @@
 	<item id="39580" name="Scroll of Escape: Town of Rune" type="EtcItem">
 		<!-- Teleports you to Town of Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1334,6 +1333,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1344,7 +1344,6 @@
 	<item id="39581" name="Scroll of Escape: Swamp of Screams" type="EtcItem">
 		<!-- Teleports you to Swamp of Screams. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1356,6 +1355,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1366,7 +1366,6 @@
 	<item id="39582" name="Scroll of Escape: Town of Rune" type="EtcItem">
 		<!-- Teleports you to Town of Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1378,6 +1377,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1388,7 +1388,6 @@
 	<item id="39583" name="Scroll of Escape: Forest of the Dead" type="EtcItem">
 		<!-- Teleports you to Forest of the Dead. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -1400,6 +1399,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1410,7 +1410,6 @@
 	<item id="39584" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports you to Town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
@@ -1422,6 +1421,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1432,7 +1432,6 @@
 	<item id="39585" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
@@ -1444,6 +1443,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1454,7 +1454,6 @@
 	<item id="39586" name="Scroll of Escape: Town of Giran" type="EtcItem">
 		<!-- Teleports you to Town of Giran. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
@@ -1466,6 +1465,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -1476,7 +1476,6 @@
 	<item id="39587" name="Scroll of Escape: Dragon Valley" type="EtcItem">
 		<!-- Teleports you to Dragon Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
@@ -1488,6 +1487,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>

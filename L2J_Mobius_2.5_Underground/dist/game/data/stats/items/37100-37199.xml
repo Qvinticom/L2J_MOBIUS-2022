@@ -143,6 +143,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9928" level="1" /> <!-- Scroll of Escape: Heine -->
@@ -160,6 +161,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9930" level="1" /> <!-- Scroll of Escape: Town of Oren -->
@@ -177,6 +179,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9931" level="1" /> <!-- Scroll of Escape: Town of Oren -->
@@ -194,6 +197,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9993" level="1" /> <!-- Scroll of Escape: Town of Aden -->
@@ -202,7 +206,6 @@
 	<item id="37116" name="Scroll of Escape: Town of Aden" type="EtcItem">
 		<!-- Teleports you close to Paterson in the town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -214,6 +217,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ItemSkills" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -224,7 +228,6 @@
 	<item id="37117" name="Scroll of Escape: Town of Rune" type="EtcItem">
 		<!-- Teleports you close to Captain Mathias in the town of Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -237,6 +240,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -247,7 +251,6 @@
 	<item id="37118" name="Scroll of Escape: Town of Rune" type="EtcItem">
 		<!-- Teleports you close to Captain Mathias in the town of Rune. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -260,6 +263,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -270,7 +274,6 @@
 	<item id="37119" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_depositable" val="false" />
@@ -282,6 +285,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
 		</cond>
@@ -301,6 +305,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9934" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
@@ -309,7 +314,6 @@
 	<item id="37121" name="Scroll of Escape: Town of Goddard" type="EtcItem">
 		<!-- Teleports you close to Captain Andrei in the town of Goddard. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -320,6 +324,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9935" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
@@ -337,6 +342,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9936" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
@@ -345,7 +351,6 @@
 	<item id="37123" name="Scroll of Escape: Town of Schuttgart" type="EtcItem">
 		<!-- Teleports you close to Captain Vishotsky in the town of Schuttgart. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -356,6 +361,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9937" level="1" /> <!-- Scroll of Escape: Town of Goddard -->
@@ -373,6 +379,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9932" level="1" /> <!-- Scroll of Escape: Town of Oren -->
@@ -390,6 +397,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9995" level="1" /> <!-- Scroll of Escape: Town of Oren -->
@@ -407,6 +415,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="30" />
+		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9929" level="1" /> <!-- Scroll of Escape: Heine -->

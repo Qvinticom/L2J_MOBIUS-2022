@@ -366,7 +366,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -384,7 +383,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -402,7 +400,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -420,7 +417,6 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -435,7 +431,6 @@
 	<item id="37029" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
 		<!-- Teleports you to the Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -457,7 +452,6 @@
 	<item id="37030" name="Scroll of Escape: Swamp of Screams" type="EtcItem">
 		<!-- Teleports you to the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -479,7 +473,6 @@
 	<item id="37031" name="Scroll of Escape: Forest of the Dead" type="EtcItem">
 		<!-- Teleports you to the Forest of the Dead. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -501,7 +494,6 @@
 	<item id="37032" name="Scroll of Escape: Wall of Argos" type="EtcItem">
 		<!-- Teleports you to the Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -526,13 +518,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9983" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
@@ -541,7 +531,6 @@
 	<item id="37034" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports you to Varka Silenos Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="30" />
 		<set name="handler" val="ItemSkills" />
@@ -552,7 +541,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9975" level="1" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
@@ -564,13 +552,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9976" level="1" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
@@ -582,13 +568,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9977" level="1" /> <!-- Scroll of Escape: Den of Evil -->
@@ -600,13 +584,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9978" level="1" /> <!-- Scroll of Escape: Sel Mahum Training Grounds -->
@@ -618,13 +600,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9979" level="1" /> <!-- Scroll of Escape: Plains of the Lizardmen -->
@@ -636,13 +616,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9980" level="1" /> <!-- Scroll of Escape: Field of Silence -->
@@ -654,13 +632,11 @@
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
 			<skill id="9981" level="1" /> <!-- Scroll of Escape: Field of Whispers -->
@@ -669,7 +645,6 @@
 	<item id="37041" name="Divine Protection Elixir" type="EtcItem">
 		<!-- Double-click to increase Max HP/MP/CP, Defense and M. Def. by 30% for 30 min. If you receive the 'Cannibalistic Stakato Captain' from Improved Rose Spirit while this is in effect, the effect will disappear. Can be used by characters of level 85 or higher. Cannot be used in the Olympiad. Can be used in the Ceremony of Chaos. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_evil_soul_core_i00" />
-		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
 		<set name="reuse_delay" val="300000" />
 		<set name="weight" val="1" />
