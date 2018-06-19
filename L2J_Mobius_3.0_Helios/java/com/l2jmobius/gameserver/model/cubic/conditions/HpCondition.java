@@ -62,7 +62,7 @@ public class HpCondition implements ICubicCondition
 		return getClass().getSimpleName() + " chance: " + _hpPer;
 	}
 	
-	public static enum HpConditionType
+	public enum HpConditionType
 	{
 		GREATER,
 		LESSER;

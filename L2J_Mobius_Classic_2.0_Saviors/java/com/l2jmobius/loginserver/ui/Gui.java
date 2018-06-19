@@ -61,12 +61,12 @@ public class Gui
 	JCheckBoxMenuItem chckbxmntmDisabled;
 	JCheckBoxMenuItem chckbxmntmGmOnly;
 	
-	final static String[] shutdownOptions =
+	static final String[] shutdownOptions =
 	{
 		"Shutdown",
 		"Cancel"
 	};
-	final static String[] restartOptions =
+	static final String[] restartOptions =
 	{
 		"Restart",
 		"Cancel"

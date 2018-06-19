@@ -173,7 +173,7 @@ public final class Elpies extends Event
 		return super.onSpawn(npc);
 	}
 	
-	private static enum EventLocation
+	private enum EventLocation
 	{
 		ADEN("Aden", 146558, 148341, 26622, 28560, -2200),
 		DION("Dion", 18564, 19200, 144377, 145782, -3081),

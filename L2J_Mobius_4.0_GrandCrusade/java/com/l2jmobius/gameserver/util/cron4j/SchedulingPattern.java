@@ -511,7 +511,7 @@ public class SchedulingPattern
 	/**
 	 * Definition for a value parser.
 	 */
-	private static interface ValueParser
+	private interface ValueParser
 	{
 		/**
 		 * Attempts to parse a value.

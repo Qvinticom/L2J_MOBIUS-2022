@@ -914,7 +914,7 @@ public final class L2PcInstance extends L2Playable
 	private boolean _marryaccepted = false;
 	
 	// Item Mall
-	private final static String GAME_POINTS_VAR = "PRIME_POINTS"; // Keep compatibility with later clients.
+	private static final String GAME_POINTS_VAR = "PRIME_POINTS"; // Keep compatibility with later clients.
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;

@@ -833,12 +833,12 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	// Training Camp
-	private final static String TRAINING_CAMP_VAR = "TRAINING_CAMP";
-	private final static String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
+	private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
+	private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
 	
 	// Attendance Reward system
-	private final static String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
-	private final static String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
+	private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
+	private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;

@@ -695,8 +695,8 @@ public final class Util
 	{
 		final StringBuilder sb = new StringBuilder();
 		try (InputStream in = new FileInputStream(file);
-			final InputStreamReader reader = new InputStreamReader(in, cs);
-			final BufferedReader buffer = new BufferedReader(reader))
+			InputStreamReader reader = new InputStreamReader(in, cs);
+			BufferedReader buffer = new BufferedReader(reader))
 		{
 			String line;
 			while ((line = buffer.readLine()) != null)

@@ -55,7 +55,7 @@ public class DBSpawnManager
 	protected final Map<Integer, StatsSet> _storedInfo = new ConcurrentHashMap<>();
 	protected final Map<Integer, ScheduledFuture<?>> _schedules = new ConcurrentHashMap<>();
 	
-	public static enum DBStatusType
+	public enum DBStatusType
 	{
 		ALIVE,
 		DEAD,

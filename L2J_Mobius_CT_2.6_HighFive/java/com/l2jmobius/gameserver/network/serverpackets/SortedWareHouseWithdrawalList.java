@@ -44,7 +44,7 @@ public class SortedWareHouseWithdrawalList implements IClientOutgoingPacket
 	private List<L2WarehouseItem> _objects = new ArrayList<>();
 	private int _whType;
 	
-	public static enum WarehouseListType
+	public enum WarehouseListType
 	{
 		WEAPON,
 		ARMOR,

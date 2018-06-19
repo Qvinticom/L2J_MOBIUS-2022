@@ -61,22 +61,22 @@ public class Gui
 {
 	JTextArea txtrConsole;
 	
-	final static String[] shutdownOptions =
+	static final String[] shutdownOptions =
 	{
 		"Shutdown",
 		"Cancel"
 	};
-	final static String[] restartOptions =
+	static final String[] restartOptions =
 	{
 		"Restart",
 		"Cancel"
 	};
-	final static String[] abortOptions =
+	static final String[] abortOptions =
 	{
 		"Abort",
 		"Cancel"
 	};
-	final static String[] confirmOptions =
+	static final String[] confirmOptions =
 	{
 		"Confirm",
 		"Cancel"

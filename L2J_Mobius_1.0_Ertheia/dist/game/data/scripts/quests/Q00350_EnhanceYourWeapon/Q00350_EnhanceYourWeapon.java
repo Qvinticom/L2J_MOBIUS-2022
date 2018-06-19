@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Q00350_EnhanceYourWeapon extends Quest
 {
-	private static enum AbsorbCrystalType
+	private enum AbsorbCrystalType
 	{
 		LAST_HIT,
 		FULL_PARTY,

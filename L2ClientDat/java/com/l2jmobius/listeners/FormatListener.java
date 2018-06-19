@@ -18,7 +18,7 @@ package com.l2jmobius.listeners;
 
 public interface FormatListener
 {
-	public String decode(String var1);
+	String decode(String var1);
 	
-	public String encode(String var1);
+	String encode(String var1);
 }

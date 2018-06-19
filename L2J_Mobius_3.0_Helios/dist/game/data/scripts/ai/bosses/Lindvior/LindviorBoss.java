@@ -48,15 +48,15 @@ public class LindviorBoss extends AbstractNpcAI
 	private static final SkillHolder TORNADO = new SkillHolder(15275, 1);
 	private static final SkillHolder LINDVIORS_ATTACK = new SkillHolder(15600, 1);
 	// Chances
-	private final static int CHANCE_MIGHTY_WIND_STRIKE = 9;
-	private final static int CHANCE_WIND_PULL = 4;
-	private final static int CHANCE_LINDVIORS_JUMP = 7;
-	private final static int CHANCE_BODY_SLAM = 2;
-	private final static int CHANCE_SOAR = 8;
-	private final static int CHANCE_WIND_BREAT = 3;
-	private final static int CHANCE_TAIL_SWIPE = 5;
-	private final static int CHANCE_TORNADO = 6;
-	private final static int CHANCE_LINDVIORS_ATTACK = 1;
+	private static final int CHANCE_MIGHTY_WIND_STRIKE = 9;
+	private static final int CHANCE_WIND_PULL = 4;
+	private static final int CHANCE_LINDVIORS_JUMP = 7;
+	private static final int CHANCE_BODY_SLAM = 2;
+	private static final int CHANCE_SOAR = 8;
+	private static final int CHANCE_WIND_BREAT = 3;
+	private static final int CHANCE_TAIL_SWIPE = 5;
+	private static final int CHANCE_TORNADO = 6;
+	private static final int CHANCE_LINDVIORS_ATTACK = 1;
 	
 	public LindviorBoss()
 	{

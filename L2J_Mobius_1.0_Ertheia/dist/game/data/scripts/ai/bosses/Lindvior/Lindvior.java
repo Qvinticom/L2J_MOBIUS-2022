@@ -85,7 +85,7 @@ public class Lindvior extends AbstractNpcAI
 	private static final int LIONEL_HUNTER = 33886;
 	private static final int LINDVIOR_CAMERA = 19428;
 	// Zone
-	private final static int ZONE_ID = 12107;
+	private static final int ZONE_ID = 12107;
 	static final Location CENTER_LOCATION = new Location(46424, -26200, -1400);
 	// Skills
 	private static final SkillHolder SKILL_RECHARGE_POSIBLE = new SkillHolder(15605, 1);

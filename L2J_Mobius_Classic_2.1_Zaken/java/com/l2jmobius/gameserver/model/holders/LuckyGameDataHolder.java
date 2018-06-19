@@ -26,11 +26,11 @@ import com.l2jmobius.gameserver.model.StatsSet;
  */
 public class LuckyGameDataHolder
 {
-	final private int _index;
-	final private int _turningPoints;
-	final private List<ItemChanceHolder> _commonRewards = new ArrayList<>();
-	final private List<ItemPointHolder> _uniqueRewards = new ArrayList<>();
-	final private List<ItemChanceHolder> _modifyRewards = new ArrayList<>();
+	private final int _index;
+	private final int _turningPoints;
+	private final List<ItemChanceHolder> _commonRewards = new ArrayList<>();
+	private final List<ItemPointHolder> _uniqueRewards = new ArrayList<>();
+	private final List<ItemChanceHolder> _modifyRewards = new ArrayList<>();
 	private int _minModifyRewardGame;
 	private int _maxModifyRewardGame;
 	

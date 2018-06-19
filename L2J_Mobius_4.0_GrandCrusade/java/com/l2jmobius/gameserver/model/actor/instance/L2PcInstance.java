@@ -842,16 +842,16 @@ public final class L2PcInstance extends L2Playable
 	}
 	
 	// Monster Book variables
-	private final static String MONSTER_BOOK_KILLS_VAR = "MONSTER_BOOK_KILLS_";
-	private final static String MONSTER_BOOK_LEVEL_VAR = "MONSTER_BOOK_LEVEL_";
+	private static final String MONSTER_BOOK_KILLS_VAR = "MONSTER_BOOK_KILLS_";
+	private static final String MONSTER_BOOK_LEVEL_VAR = "MONSTER_BOOK_LEVEL_";
 	
 	// Training Camp
-	private final static String TRAINING_CAMP_VAR = "TRAINING_CAMP";
-	private final static String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
+	private static final String TRAINING_CAMP_VAR = "TRAINING_CAMP";
+	private static final String TRAINING_CAMP_DURATION = "TRAINING_CAMP_DURATION";
 	
 	// Attendance Reward system
-	private final static String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
-	private final static String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
+	private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
+	private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 	
 	// Save responder name for log it
 	private String _lastPetitionGmName = null;

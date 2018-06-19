@@ -77,7 +77,7 @@ public final class SelMahumDrill extends AbstractNpcAI
 	// Chiefs event broadcast range
 	private static final int TRAINING_RANGE = 1000;
 	
-	private static enum Actions
+	private enum Actions
 	{
 		SCE_TRAINING_ACTION_A(4, -1, 2, 2333),
 		SCE_TRAINING_ACTION_B(1, -1, 2, 4333),

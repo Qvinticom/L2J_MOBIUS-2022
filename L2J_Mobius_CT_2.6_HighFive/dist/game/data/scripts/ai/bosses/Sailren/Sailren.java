@@ -56,7 +56,7 @@ public final class Sailren extends AbstractNpcAI
 	private static int _killCount = 0;
 	private static long _lastAttack = 0;
 	
-	private static enum Status
+	private enum Status
 	{
 		ALIVE,
 		IN_FIGHT,

@@ -39,7 +39,7 @@ import com.l2jmobius.Config;
 public class frmAbout
 {
 	private JFrame frmAbout;
-	final static String URL = "www.l2jmobius.com";
+	static final String URL = "www.l2jmobius.com";
 	URI uri;
 	
 	public frmAbout()

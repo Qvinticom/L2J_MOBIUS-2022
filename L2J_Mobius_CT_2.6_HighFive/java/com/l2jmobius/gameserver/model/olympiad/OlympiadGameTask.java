@@ -87,7 +87,7 @@ public final class OlympiadGameTask implements Runnable
 	private boolean _needAnnounce = false;
 	private int _countDown = 0;
 	
-	private static enum GameState
+	private enum GameState
 	{
 		BEGIN,
 		TELEPORT_TO_ARENA,

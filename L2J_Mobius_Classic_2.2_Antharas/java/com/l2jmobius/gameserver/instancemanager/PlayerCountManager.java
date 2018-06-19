@@ -21,9 +21,9 @@ package com.l2jmobius.gameserver.instancemanager;
  */
 public class PlayerCountManager
 {
-	private volatile static int connectedCount = 0;
-	private volatile static int maxConnectedCount = 0;
-	private volatile static int offlineTradeCount = 0;
+	private static volatile int connectedCount = 0;
+	private static volatile int maxConnectedCount = 0;
+	private static volatile int offlineTradeCount = 0;
 	
 	protected PlayerCountManager()
 	{

@@ -84,7 +84,7 @@ public final class Elementals
 		// TODO: Higher stones
 	};
 	
-	public static enum ElementalItemType
+	public enum ElementalItemType
 	{
 		Stone(3),
 		Roughore(3),
@@ -100,7 +100,7 @@ public final class Elementals
 		}
 	}
 	
-	public static enum ElementalItems
+	public enum ElementalItems
 	{
 		fireStone(FIRE, 9546, ElementalItemType.Stone),
 		waterStone(WATER, 9547, ElementalItemType.Stone),

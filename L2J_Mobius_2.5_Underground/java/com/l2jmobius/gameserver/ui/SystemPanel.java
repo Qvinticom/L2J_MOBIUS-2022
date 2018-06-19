@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.util.Locator;
  */
 public class SystemPanel extends JPanel
 {
-	final static long startTime = System.currentTimeMillis();
+	static final long startTime = System.currentTimeMillis();
 	
 	public SystemPanel()
 	{

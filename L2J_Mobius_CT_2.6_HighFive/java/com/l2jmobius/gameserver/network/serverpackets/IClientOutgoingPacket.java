@@ -30,7 +30,7 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 {
 	Logger LOGGER = Logger.getLogger(IClientOutgoingPacket.class.getName());
 	
-	static final int[] PAPERDOLL_ORDER = new int[]
+	int[] PAPERDOLL_ORDER = new int[]
 	{
 		Inventory.PAPERDOLL_UNDER,
 		Inventory.PAPERDOLL_REAR,

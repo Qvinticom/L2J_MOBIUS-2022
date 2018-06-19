@@ -41,7 +41,7 @@ public class Helios extends AbstractNpcAI
 	// Location
 	private static final Location HELIOS_SPAWN_LOC = new Location(92771, 161909, 3494, 38329);
 	// Zone
-	private final static int ZONE_ID = 210109;
+	private static final int ZONE_ID = 210109;
 	// Status
 	private static final int ALIVE = 0;
 	private static final int WAITING = 1;

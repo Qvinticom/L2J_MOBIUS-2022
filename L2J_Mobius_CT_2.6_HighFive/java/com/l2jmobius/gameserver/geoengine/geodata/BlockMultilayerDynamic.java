@@ -196,7 +196,7 @@ public final class BlockMultilayerDynamic extends BlockMultilayer implements IBl
 	}
 	
 	@Override
-	final synchronized public void addGeoObject(IGeoObject object)
+	public final synchronized void addGeoObject(IGeoObject object)
 	{
 		// add geo object, update block geodata when added
 		if (_objects.add(object))
@@ -206,7 +206,7 @@ public final class BlockMultilayerDynamic extends BlockMultilayer implements IBl
 	}
 	
 	@Override
-	final synchronized public void removeGeoObject(IGeoObject object)
+	public final synchronized void removeGeoObject(IGeoObject object)
 	{
 		// remove geo object, update block geodata when removed
 		if (_objects.remove(object))

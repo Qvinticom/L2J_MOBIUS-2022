@@ -191,7 +191,7 @@ public final class Rnd
 	/**
 	 * @author Forsaiken
 	 */
-	public static enum RandomType
+	public enum RandomType
 	{
 		/**
 		 * For best random quality.
