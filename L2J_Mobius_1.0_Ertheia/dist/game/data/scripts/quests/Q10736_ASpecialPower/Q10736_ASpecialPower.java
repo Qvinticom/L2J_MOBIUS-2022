@@ -52,7 +52,7 @@ public final class Q10736_ASpecialPower extends Quest
 	
 	public Q10736_ASpecialPower()
 	{
-		super(10735);
+		super(10736);
 		addStartNpc(KATALIN);
 		addTalkId(KATALIN);
 		
