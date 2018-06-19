@@ -669,7 +669,6 @@ public final class Config
 	public static boolean GMAUDIT;
 	public static boolean LOG_CHAT;
 	public static boolean LOG_ITEMS;
-	public static boolean GAMEGUARD_L2NET_CHECK;
 	
 	public static int SCHEDULED_THREAD_POOL_COUNT;
 	public static int THREADS_PER_SCHEDULED_THREAD_POOL;
@@ -2348,8 +2347,6 @@ public final class Config
 			GMAUDIT = Boolean.valueOf(devSettings.getProperty("GMAudit", "false"));
 			LOG_CHAT = Boolean.valueOf(devSettings.getProperty("LogChat", "false"));
 			LOG_ITEMS = Boolean.valueOf(devSettings.getProperty("LogItems", "false"));
-			
-			GAMEGUARD_L2NET_CHECK = Boolean.valueOf(devSettings.getProperty("GameGuardL2NetCheck", "false"));
 			
 			SCHEDULED_THREAD_POOL_COUNT = Integer.parseInt(devSettings.getProperty("ScheduledThreadPoolCount", "-1"));
 			THREADS_PER_SCHEDULED_THREAD_POOL = Integer.parseInt(devSettings.getProperty("ThreadsPerScheduledThreadPool", "4"));

@@ -914,7 +914,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public String getAccountName()
 	{
-		return getClient() == null ? getAccountNamePlayer() : getClient().getAccountName();
+		return _client == null ? getAccountNamePlayer() : _client.getAccountName();
 	}
 	
 	public String getAccountNamePlayer()
@@ -5765,7 +5765,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		_privateStoreType = privateStoreType;
 		
-		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((getClient() == null) || getClient().isDetached()))
+		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
 			IdFactory.getInstance().releaseId(getObjectId());
 			Disconnection.of(this).storeMe().deleteMe();
@@ -11990,7 +11990,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public FloodProtectors getFloodProtectors()
 	{
-		return getClient().getFloodProtectors();
+		return _client.getFloodProtectors();
 	}
 	
 	public boolean isFlyingMounted()

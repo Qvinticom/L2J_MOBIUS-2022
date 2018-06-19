@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.nProtect;
 
 /**
@@ -27,7 +24,6 @@ import com.l2jmobius.commons.crypt.nProtect;
 public class GameGuardReply extends L2GameClientPacket
 {
 	private final int[] _reply = new int[4];
-	private static final Logger LOGGER = Logger.getLogger(GameGuardReply.class.getName());
 	
 	@Override
 	protected void readImpl()
@@ -44,14 +40,6 @@ public class GameGuardReply extends L2GameClientPacket
 		// TODO: clean nProtect System
 		if (!nProtect.getInstance().checkGameGuardRepy(getClient(), _reply))
 		{
-			return;
-		}
-		
-		// Cannot be reached with GameGuard: L2Net notification --> Close Client connection
-		if (Config.GAMEGUARD_L2NET_CHECK)
-		{
-			getClient().closeNow();
-			LOGGER.warning("Player with account name " + getClient().accountName + " kicked to use L2Net ");
 			return;
 		}
 		

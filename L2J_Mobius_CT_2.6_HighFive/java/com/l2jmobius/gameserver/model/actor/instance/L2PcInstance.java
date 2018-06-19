@@ -158,7 +158,6 @@ import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.actor.status.PcStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.player.DismountTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.FameTask;
-import com.l2jmobius.gameserver.model.actor.tasks.player.GameGuardCheckTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.InventoryEnableTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.LookingForFishTask;
 import com.l2jmobius.gameserver.model.actor.tasks.player.PetFeedTask;
@@ -278,7 +277,6 @@ import com.l2jmobius.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import com.l2jmobius.gameserver.network.serverpackets.ExVoteSystemInfo;
 import com.l2jmobius.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import com.l2jmobius.gameserver.network.serverpackets.FriendStatusPacket;
-import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
 import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 import com.l2jmobius.gameserver.network.serverpackets.HennaInfo;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
@@ -980,7 +978,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public String getAccountName()
 	{
-		return getClient() == null ? getAccountNamePlayer() : getClient().getAccountName();
+		return _client == null ? getAccountNamePlayer() : _client.getAccountName();
 	}
 	
 	public String getAccountNamePlayer()
@@ -4197,19 +4195,6 @@ public final class L2PcInstance extends L2Playable
 		return (getClanId() == 0) || (getClan().getAllyId() == 0) ? 0 : getClan().getAllyCrestId();
 	}
 	
-	public void queryGameGuard()
-	{
-		if (getClient() != null)
-		{
-			getClient().setGameGuardOk(false);
-			sendPacket(GameGuardQuery.STATIC_PACKET);
-		}
-		if (Config.GAMEGUARD_ENFORCE)
-		{
-			ThreadPool.schedule(new GameGuardCheckTask(this), 30 * 1000);
-		}
-	}
-	
 	/**
 	 * Send a Server->Client packet StatusUpdate to the L2PcInstance.
 	 */
@@ -5927,7 +5912,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		_privateStoreType = privateStoreType;
 		
-		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((getClient() == null) || getClient().isDetached()))
+		if (Config.OFFLINE_DISCONNECT_FINISHED && (privateStoreType == PrivateStoreType.NONE) && ((_client == null) || _client.isDetached()))
 		{
 			IdFactory.getInstance().releaseId(getObjectId());
 			Disconnection.of(this).storeMe().deleteMe();
@@ -12787,7 +12772,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public FloodProtectors getFloodProtectors()
 	{
-		return getClient().getFloodProtectors();
+		return _client.getFloodProtectors();
 	}
 	
 	public boolean isFlyingMounted()

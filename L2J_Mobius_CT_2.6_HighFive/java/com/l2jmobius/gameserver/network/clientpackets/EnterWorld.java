@@ -406,9 +406,6 @@ public class EnterWorld implements IClientIncomingPacket
 		// Send Item List
 		client.sendPacket(new ItemList(activeChar, false));
 		
-		// Send GG check
-		activeChar.queryGameGuard();
-		
 		// Send Teleport Bookmark List
 		client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
 		

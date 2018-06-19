@@ -1606,9 +1606,9 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public String getAccountName()
 	{
-		if (getClient() != null)
+		if (_client != null)
 		{
-			return getClient().getAccountName();
+			return _client.getAccountName();
 		}
 		return _accountName;
 	}
@@ -7965,9 +7965,9 @@ public final class L2PcInstance extends L2Playable
 			if (Config.ANTI_FARM_IP_ENABLED)
 			{
 				
-				if ((getClient() != null) && (targetPlayer.getClient() != null))
+				if ((_client != null) && (targetPlayer.getClient() != null))
 				{
-					final String ip1 = getClient().getConnection().getInetAddress().getHostAddress();
+					final String ip1 = _client.getConnection().getInetAddress().getHostAddress();
 					final String ip2 = targetPlayer.getClient().getConnection().getInetAddress().getHostAddress();
 					
 					if (ip1.equals(ip2))
@@ -7992,7 +7992,7 @@ public final class L2PcInstance extends L2Playable
 		// IP check
 		if ((targetPlayer.getClient() != null) && (targetPlayer.getClient().getConnection() != null))
 		{
-			if (targetPlayer.getClient().getConnection().getInetAddress() != getClient().getConnection().getInetAddress())
+			if (targetPlayer.getClient().getConnection().getInetAddress() != _client.getConnection().getInetAddress())
 			{
 				
 				if ((targetPlayer.getKarma() > 0) || (targetPlayer.getPvpFlag() > 0)) // killing target pk or in pvp
@@ -9049,7 +9049,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		_privatestore = type;
 		
-		if ((_privatestore == STORE_PRIVATE_NONE) && ((getClient() == null) || isInOfflineMode()))
+		if ((_privatestore == STORE_PRIVATE_NONE) && ((_client == null) || isInOfflineMode()))
 		{
 			store();
 			if (Config.OFFLINE_DISCONNECT_FINISHED)
@@ -9057,9 +9057,9 @@ public final class L2PcInstance extends L2Playable
 				PlayerCountManager.getInstance().decOfflineTradeCount();
 				deleteMe();
 				
-				if (getClient() != null)
+				if (_client != null)
 				{
-					getClient().setActiveChar(null); // prevent deleteMe from being called a second time on disconnection
+					_client.setActiveChar(null); // prevent deleteMe from being called a second time on disconnection
 				}
 			}
 		}
@@ -15878,7 +15878,7 @@ public final class L2PcInstance extends L2Playable
 			return true;
 		}
 		
-		final L2PcInstance player = getClient().getActiveChar();
+		final L2PcInstance player = _client.getActiveChar();
 		// We decided to put a kick because when a player is doing quest with a BOT he sends invalid bypass.
 		Util.handleIllegalPlayerAction(player, "[L2PcInstance] player [" + player.getName() + "] sent invalid bypass '" + cmd + "'", Config.DEFAULT_PUNISH);
 		return false;
@@ -18196,10 +18196,10 @@ public final class L2PcInstance extends L2Playable
 		int boxes_number = 0; // this one
 		final List<String> active_boxes = new ArrayList<>();
 		
-		if ((getClient() != null) && (getClient().getConnection() != null) && !getClient().getConnection().isClosed() && (getClient().getConnection().getInetAddress() != null))
+		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
 			
-			final String thisip = getClient().getConnection().getInetAddress().getHostAddress();
+			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
 			final Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers();
 			for (L2PcInstance player : allPlayers)
 			{
@@ -18255,10 +18255,10 @@ public final class L2PcInstance extends L2Playable
 	public void refreshOtherBoxes()
 	{
 		
-		if ((getClient() != null) && (getClient().getConnection() != null) && !getClient().getConnection().isClosed() && (getClient().getConnection().getInetAddress() != null))
+		if ((_client != null) && (_client.getConnection() != null) && !_client.getConnection().isClosed() && (_client.getConnection().getInetAddress() != null))
 		{
 			
-			final String thisip = getClient().getConnection().getInetAddress().getHostAddress();
+			final String thisip = _client.getConnection().getInetAddress().getHostAddress();
 			final Collection<L2PcInstance> allPlayers = L2World.getInstance().getAllPlayers();
 			final L2PcInstance[] players = allPlayers.toArray(new L2PcInstance[allPlayers.size()]);
 			
@@ -18274,9 +18274,6 @@ public final class L2PcInstance extends L2Playable
 						{
 							player._active_boxes = _active_boxes;
 							player.active_boxes_characters = active_boxes_characters;
-							/*
-							 * LOGGER.info("Player "+player.getName()+" has this boxes"); for(String name:player.active_boxes_characters){ LOGGER.info("*** "+name+" ***"); }
-							 */
 						}
 					}
 				}
@@ -19025,7 +19022,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public FloodProtectors getFloodProtectors()
 	{
-		return getClient().getFloodProtectors();
+		return _client.getFloodProtectors();
 	}
 	
 	/**
