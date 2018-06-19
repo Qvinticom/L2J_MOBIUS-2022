@@ -490,7 +490,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 					
 					// Set the AI Intention to AI_INTENTION_ATTACK
-					setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
+					setIntention(AI_INTENTION_ATTACK, hated);
 				}
 				
 				return;
@@ -1254,11 +1254,11 @@ public class L2AttackableAI extends L2CharacterAI
 			// Set the Intention to AI_INTENTION_ATTACK
 			if (getIntention() != AI_INTENTION_ATTACK)
 			{
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
 			else if (me.getMostHated() != target)
 			{
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
 		}
 		
@@ -1305,7 +1305,7 @@ public class L2AttackableAI extends L2CharacterAI
 			me.addDamageHate(target, 0, aggro);
 			
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
-			if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+			if (getIntention() != AI_INTENTION_ATTACK)
 			{
 				// Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
 				if (!me.isRunning())
@@ -1313,7 +1313,7 @@ public class L2AttackableAI extends L2CharacterAI
 					me.setRunning();
 				}
 				
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				setIntention(AI_INTENTION_ATTACK, target);
 			}
 			
 			if (me.isMonster())

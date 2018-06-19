@@ -873,7 +873,7 @@ public class GameStatusThread extends Thread
 									if (player.getPrivateStoreType() == 1) // sell
 									{
 										list = player.getSellList();
-										for (com.l2jmobius.gameserver.model.TradeList.TradeItem item : list.getItems())
+										for (TradeList.TradeItem item : list.getItems())
 										{
 											content += item.getItem().getItemId() + ":" + item.getEnchant() + ":" + item.getPrice() + ":";
 										}
@@ -884,7 +884,7 @@ public class GameStatusThread extends Thread
 									else if (player.getPrivateStoreType() == 3) // buy
 									{
 										list = player.getBuyList();
-										for (com.l2jmobius.gameserver.model.TradeList.TradeItem item : list.getItems())
+										for (TradeList.TradeItem item : list.getItems())
 										{
 											content += item.getItem().getItemId() + ":" + item.getEnchant() + ":" + item.getPrice() + ":";
 										}

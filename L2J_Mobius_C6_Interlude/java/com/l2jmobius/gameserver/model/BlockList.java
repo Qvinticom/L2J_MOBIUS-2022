@@ -264,7 +264,7 @@ public class BlockList
 		
 		if (player != null)
 		{
-			return BlockList.isBlocked(player, targetId);
+			return isBlocked(player, targetId);
 		}
 		
 		if (!_offlineList.containsKey(ownerId))

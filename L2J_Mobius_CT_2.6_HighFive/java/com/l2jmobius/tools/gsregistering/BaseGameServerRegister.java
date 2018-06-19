@@ -155,7 +155,7 @@ public abstract class BaseGameServerRegister
 		{
 			if (!GameServerTable.getInstance().hasRegisteredGameServerOnId(e.getKey()))
 			{
-				BaseGameServerRegister.registerGameServer(e.getKey(), outDir);
+				registerGameServer(e.getKey(), outDir);
 				return e.getKey();
 			}
 		}
@@ -219,7 +219,7 @@ public abstract class BaseGameServerRegister
 		{
 			try
 			{
-				BaseGameServerRegister.unregisterAllGameServers();
+				unregisterAllGameServers();
 			}
 			catch (SQLException e)
 			{

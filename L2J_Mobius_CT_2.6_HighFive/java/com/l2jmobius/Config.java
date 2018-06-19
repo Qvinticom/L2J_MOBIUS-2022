@@ -3399,7 +3399,7 @@ public final class Config
 	 */
 	public static void saveHexid(int serverId, String hexId)
 	{
-		Config.saveHexid(serverId, hexId, HEXID_FILE);
+		saveHexid(serverId, hexId, HEXID_FILE);
 	}
 	
 	/**

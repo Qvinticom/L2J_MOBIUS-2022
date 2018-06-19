@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.TradeList.TradeItem;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -34,8 +33,8 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 	private final L2PcInstance _activeChar;
 	private int _playerAdena;
 	private final boolean _packageSale;
-	private final TradeList.TradeItem[] _itemList;
-	private final TradeList.TradeItem[] _sellList;
+	private final TradeItem[] _itemList;
+	private final TradeItem[] _sellList;
 	
 	public PrivateStoreManageListSell(L2PcInstance player)
 	{
@@ -70,7 +69,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		
 		// section2
 		writeD(_itemList.length - _sellList.length); // for potential sells
-		for (TradeList.TradeItem item : _itemList)
+		for (TradeItem item : _itemList)
 		{
 			if (isItemInSelling(item) == false)
 			{
@@ -87,7 +86,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 		}
 		// section 3
 		writeD(_sellList.length); // count for any items already added for sell
-		for (TradeList.TradeItem item : _sellList)
+		for (TradeItem item : _sellList)
 		{
 			writeD(item.getItem().getType2());
 			writeD(item.getObjectId());
@@ -104,7 +103,7 @@ public class PrivateStoreManageListSell extends L2GameServerPacket
 	
 	private boolean isItemInSelling(TradeItem item_)
 	{
-		for (TradeList.TradeItem itemSell : _sellList)
+		for (TradeItem itemSell : _sellList)
 		{
 			if (itemSell.getObjectId() == item_.getObjectId())
 			{

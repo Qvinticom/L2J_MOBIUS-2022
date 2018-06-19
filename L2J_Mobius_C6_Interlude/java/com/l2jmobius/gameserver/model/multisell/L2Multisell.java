@@ -101,7 +101,7 @@ public class L2Multisell
 	 */
 	private MultiSellListContainer generateMultiSell(int listId, boolean inventoryOnly, L2PcInstance player, double taxRate)
 	{
-		MultiSellListContainer listTemplate = L2Multisell.getInstance().getList(listId);
+		MultiSellListContainer listTemplate = getInstance().getList(listId);
 		MultiSellListContainer list = new MultiSellListContainer();
 		
 		if (listTemplate == null)

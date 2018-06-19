@@ -219,17 +219,17 @@ public class TradeList
 	 * @param inventory
 	 * @return L2ItemInstance : items in inventory
 	 */
-	public TradeList.TradeItem[] getAvailableItems(PcInventory inventory)
+	public TradeItem[] getAvailableItems(PcInventory inventory)
 	{
-		final List<TradeList.TradeItem> list = new ArrayList<>();
+		final List<TradeItem> list = new ArrayList<>();
 		
-		for (TradeList.TradeItem item : _items)
+		for (TradeItem item : _items)
 		{
 			item = new TradeItem(item, item.getCount(), item.getPrice());
 			list.add(inventory.adjustAvailableItem(item, list));
 		}
 		
-		return list.toArray(new TradeList.TradeItem[list.size()]);
+		return list.toArray(new TradeItem[list.size()]);
 	}
 	
 	/**

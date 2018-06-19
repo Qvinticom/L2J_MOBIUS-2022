@@ -28,7 +28,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -234,7 +233,7 @@ public class TradeList
 			return null;
 		}
 		
-		if ((Inventory.MAX_ADENA / count) < price)
+		if ((MAX_ADENA / count) < price)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to overflow adena !");
 			return null;
@@ -290,7 +289,7 @@ public class TradeList
 			return null;
 		}
 		
-		if ((Inventory.MAX_ADENA / count) < price)
+		if ((MAX_ADENA / count) < price)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to overflow adena !");
 			return null;

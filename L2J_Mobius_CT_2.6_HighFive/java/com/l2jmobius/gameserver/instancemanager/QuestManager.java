@@ -104,7 +104,7 @@ public final class QuestManager
 			LOGGER.log(Level.SEVERE, "Failed loading scripts.cfg, no script going to be loaded!", e);
 		}
 		
-		QuestManager.getInstance().report();
+		getInstance().report();
 	}
 	
 	/**

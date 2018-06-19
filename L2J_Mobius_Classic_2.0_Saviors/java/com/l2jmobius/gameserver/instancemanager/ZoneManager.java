@@ -665,7 +665,7 @@ public final class ZoneManager implements IGameXmlReader
 			return null;
 		}
 		
-		for (L2ZoneType temp : ZoneManager.getInstance().getZones(character.getX(), character.getY(), character.getZ()))
+		for (L2ZoneType temp : getInstance().getZones(character.getX(), character.getY(), character.getZ()))
 		{
 			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
 			{
@@ -688,7 +688,7 @@ public final class ZoneManager implements IGameXmlReader
 			return null;
 		}
 		
-		for (L2ZoneType temp : ZoneManager.getInstance().getZones(character.getX(), character.getY(), character.getZ()))
+		for (L2ZoneType temp : getInstance().getZones(character.getX(), character.getY(), character.getZ()))
 		{
 			if ((temp instanceof L2OlympiadStadiumZone) && temp.isCharacterInZone(character))
 			{

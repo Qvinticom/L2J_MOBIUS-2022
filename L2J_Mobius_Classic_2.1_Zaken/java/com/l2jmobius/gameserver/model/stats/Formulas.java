@@ -82,12 +82,12 @@ public final class Formulas
 		
 		switch (shld)
 		{
-			case Formulas.SHIELD_DEFENSE_SUCCEED:
+			case SHIELD_DEFENSE_SUCCEED:
 			{
 				defence += target.getShldDef();
 				break;
 			}
-			case Formulas.SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
+			case SHIELD_DEFENSE_PERFECT_BLOCK: // perfect block
 			{
 				return 1;
 			}
@@ -1114,7 +1114,7 @@ public final class Formulas
 		int time = (skill == null) || skill.isPassive() || skill.isToggle() ? -1 : skill.getAbnormalTime();
 		
 		// If the skill is a mastery skill, the effect will last twice the default time.
-		if ((skill != null) && Formulas.calcSkillMastery(caster, skill))
+		if ((skill != null) && calcSkillMastery(caster, skill))
 		{
 			time *= 2;
 		}

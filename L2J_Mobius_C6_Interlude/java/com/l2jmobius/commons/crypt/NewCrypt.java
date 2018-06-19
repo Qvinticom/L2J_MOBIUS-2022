@@ -47,7 +47,7 @@ public class NewCrypt
 	
 	public static boolean verifyChecksum(byte[] raw)
 	{
-		return NewCrypt.verifyChecksum(raw, 0, raw.length);
+		return verifyChecksum(raw, 0, raw.length);
 	}
 	
 	public static boolean verifyChecksum(byte[] raw, int offset, int size)
@@ -83,7 +83,7 @@ public class NewCrypt
 	
 	public static void appendChecksum(byte[] raw)
 	{
-		NewCrypt.appendChecksum(raw, 0, raw.length);
+		appendChecksum(raw, 0, raw.length);
 	}
 	
 	public static void appendChecksum(byte[] raw, int offset, int size)
@@ -121,7 +121,7 @@ public class NewCrypt
 	 */
 	public static void encXORPass(byte[] raw, int key)
 	{
-		NewCrypt.encXORPass(raw, 0, raw.length, key);
+		encXORPass(raw, 0, raw.length, key);
 	}
 	
 	/**

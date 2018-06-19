@@ -844,25 +844,25 @@ public class FortSiege implements Siegable
 				if (delay > 3600000) // more than hour, how this can happens ? spawn suspicious merchant
 				{
 					ThreadPool.execute(new ScheduleSuspiciousMerchantSpawn());
-					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(3600), delay - 3600000);
+					_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(3600), delay - 3600000);
 				}
 				if (delay > 600000) // more than 10 min, spawn suspicious merchant
 				{
 					ThreadPool.execute(new ScheduleSuspiciousMerchantSpawn());
-					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(600), delay - 600000);
+					_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(600), delay - 600000);
 				}
 				else if (delay > 300000)
 				{
-					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(300), delay - 300000);
+					_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(300), delay - 300000);
 				}
 				else if (delay > 60000)
 				{
-					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(60), delay - 60000);
+					_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(60), delay - 60000);
 				}
 				else
 				{
 					// lower than 1 min, set to 1 min
-					_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(60), 0);
+					_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(60), 0);
 				}
 				
 				LOGGER.info("Siege of " + getFort().getName() + " fort: " + getFort().getSiegeDate().getTime());
@@ -892,7 +892,7 @@ public class FortSiege implements Siegable
 		}
 		
 		// Execute siege auto start
-		_siegeStartTask = ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(3600), 0);
+		_siegeStartTask = ThreadPool.schedule(new ScheduleStartSiegeTask(3600), 0);
 	}
 	
 	/**

@@ -40,7 +40,7 @@ public class RaidBossPointsManager
 	private static final Logger LOGGER = Logger.getLogger(RaidBossPointsManager.class.getName());
 	protected static Map<Integer, Map<Integer, Integer>> _list;
 	
-	private static final Comparator<Map.Entry<Integer, Integer>> _comparator = (entry, entry1) -> entry.getValue().equals(entry1.getValue()) ? 0 : entry.getValue() < entry1.getValue() ? 1 : -1;
+	private static final Comparator<Entry<Integer, Integer>> _comparator = (entry, entry1) -> entry.getValue().equals(entry1.getValue()) ? 0 : entry.getValue() < entry1.getValue() ? 1 : -1;
 	
 	public static final void init()
 	{
@@ -188,7 +188,7 @@ public class RaidBossPointsManager
 		Collections.sort(list, _comparator);
 		
 		int ranking = 1;
-		for (Map.Entry<Integer, Integer> entry : list)
+		for (Entry<Integer, Integer> entry : list)
 		{
 			tmpRanking.put(entry.getKey(), ranking++);
 		}
@@ -219,7 +219,7 @@ public class RaidBossPointsManager
 		Collections.sort(list, _comparator);
 		
 		int ranking = 1;
-		for (Map.Entry<Integer, Integer> entry : list)
+		for (Entry<Integer, Integer> entry : list)
 		{
 			tmpRanking.put(entry.getKey(), ranking++);
 		}

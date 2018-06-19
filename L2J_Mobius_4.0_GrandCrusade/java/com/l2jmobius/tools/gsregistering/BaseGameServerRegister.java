@@ -108,7 +108,7 @@ public abstract class BaseGameServerRegister
 			{
 				interactive = false;
 				
-				BaseGameServerRegister.printHelp();
+				printHelp();
 			}
 		}
 		
@@ -116,7 +116,7 @@ public abstract class BaseGameServerRegister
 		{
 			if (interactive)
 			{
-				BaseGameServerRegister.startCMD();
+				startCMD();
 			}
 			else
 			{
@@ -129,7 +129,7 @@ public abstract class BaseGameServerRegister
 		}
 		catch (HeadlessException e)
 		{
-			BaseGameServerRegister.startCMD();
+			startCMD();
 		}
 	}
 	
@@ -274,7 +274,7 @@ public abstract class BaseGameServerRegister
 		{
 			if (!GameServerTable.getInstance().hasRegisteredGameServerOnId(e.getKey()))
 			{
-				BaseGameServerRegister.registerGameServer(e.getKey(), outDir);
+				registerGameServer(e.getKey(), outDir);
 				return e.getKey();
 			}
 		}
@@ -372,7 +372,7 @@ public abstract class BaseGameServerRegister
 			{
 				if (_id < 0)
 				{
-					final int registeredId = BaseGameServerRegister.registerFirstAvailable(_outDir);
+					final int registeredId = registerFirstAvailable(_outDir);
 					
 					if (registeredId < 0)
 					{
@@ -392,14 +392,14 @@ public abstract class BaseGameServerRegister
 						if (_force)
 						{
 							System.out.printf(getBundle().getString("forcingRegistration") + Config.EOL, _id);
-							BaseGameServerRegister.unregisterGameServer(_id);
-							BaseGameServerRegister.registerGameServer(_id, _outDir);
+							unregisterGameServer(_id);
+							registerGameServer(_id, _outDir);
 							System.out.printf(getBundle().getString("registrationOk") + Config.EOL, _id);
 						}
 						else if (_fallback)
 						{
 							System.out.println(getBundle().getString("fallingBack"));
-							final int registeredId = BaseGameServerRegister.registerFirstAvailable(_outDir);
+							final int registeredId = registerFirstAvailable(_outDir);
 							
 							if (registeredId < 0)
 							{
@@ -418,7 +418,7 @@ public abstract class BaseGameServerRegister
 					else
 					{
 						System.out.println(getBundle().getString("no"));
-						BaseGameServerRegister.registerGameServer(_id, _outDir);
+						registerGameServer(_id, _outDir);
 					}
 				}
 			}
@@ -456,7 +456,7 @@ public abstract class BaseGameServerRegister
 			System.out.printf(getBundle().getString("removingGsId") + Config.EOL, _id);
 			try
 			{
-				BaseGameServerRegister.unregisterGameServer(_id);
+				unregisterGameServer(_id);
 			}
 			catch (SQLException e)
 			{
@@ -475,7 +475,7 @@ public abstract class BaseGameServerRegister
 		{
 			try
 			{
-				BaseGameServerRegister.unregisterAllGameServers();
+				unregisterAllGameServers();
 			}
 			catch (SQLException e)
 			{

@@ -364,7 +364,7 @@ public final class GameServerTable implements IGameXmlReader
 		public String getName()
 		{
 			// this value can't be stored in a private variable because the ID can be changed by setId()
-			return GameServerTable.getInstance().getServerNameById(_id);
+			return getInstance().getServerNameById(_id);
 		}
 		
 		/**

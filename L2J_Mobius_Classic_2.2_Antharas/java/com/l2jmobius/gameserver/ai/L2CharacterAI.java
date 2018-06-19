@@ -972,16 +972,16 @@ public class L2CharacterAI extends AbstractAI
 			{
 				// If player is trying attack target but he cannot move to attack target
 				// change his intention to idle
-				if (_actor.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+				if (_actor.getAI().getIntention() == AI_INTENTION_ATTACK)
 				{
-					_actor.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					_actor.getAI().setIntention(AI_INTENTION_IDLE);
 				}
 				
 				return true;
 			}
 			
 			// while flying there is no move to cast
-			if (_actor.getAI().getIntention() == CtrlIntention.AI_INTENTION_CAST)
+			if (_actor.getAI().getIntention() == AI_INTENTION_CAST)
 			{
 				if (_actor.checkTransformed(transform -> !transform.isCombat()))
 				{

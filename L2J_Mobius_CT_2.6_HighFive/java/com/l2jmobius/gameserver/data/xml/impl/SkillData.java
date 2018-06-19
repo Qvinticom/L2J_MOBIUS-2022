@@ -146,17 +146,17 @@ public final class SkillData
 	{
 		final Skill[] temp = new Skill[2 + (addNoble ? 1 : 0) + (hasCastle ? 2 : 0)];
 		int i = 0;
-		temp[i++] = _skills.get(SkillData.getSkillHashCode(246, 1));
-		temp[i++] = _skills.get(SkillData.getSkillHashCode(247, 1));
+		temp[i++] = _skills.get(getSkillHashCode(246, 1));
+		temp[i++] = _skills.get(getSkillHashCode(247, 1));
 		
 		if (addNoble)
 		{
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(326, 1));
+			temp[i++] = _skills.get(getSkillHashCode(326, 1));
 		}
 		if (hasCastle)
 		{
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(844, 1));
-			temp[i++] = _skills.get(SkillData.getSkillHashCode(845, 1));
+			temp[i++] = _skills.get(getSkillHashCode(844, 1));
+			temp[i++] = _skills.get(getSkillHashCode(845, 1));
 		}
 		return temp;
 	}

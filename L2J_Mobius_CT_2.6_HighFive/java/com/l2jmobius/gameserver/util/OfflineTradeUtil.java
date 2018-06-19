@@ -95,7 +95,7 @@ public final class OfflineTradeUtil
 	 */
 	public static boolean enteredOfflineMode(L2PcInstance player)
 	{
-		if (!OfflineTradeUtil.offlineMode(player))
+		if (!offlineMode(player))
 		{
 			return false;
 		}

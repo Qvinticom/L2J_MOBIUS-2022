@@ -690,7 +690,7 @@ public class VIP
 	
 	public static void teleportPlayers()
 	{
-		VIP.sit();
+		sit();
 		
 		for (L2PcInstance player : _playersVIP)
 		{

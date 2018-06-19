@@ -3326,22 +3326,22 @@ public class SevenSignsFestival implements SpawnListener
 		
 		switch (festivalId)
 		{
-			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_FOR_31:
+			case FESTIVAL_LEVEL_MAX_FOR_31:
 			{
 				maxLevel = 31;
 				break;
 			}
-			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_FOR_42:
+			case FESTIVAL_LEVEL_MAX_FOR_42:
 			{
 				maxLevel = 42;
 				break;
 			}
-			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_FOR_53:
+			case FESTIVAL_LEVEL_MAX_FOR_53:
 			{
 				maxLevel = 53;
 				break;
 			}
-			case SevenSignsFestival.FESTIVAL_LEVEL_MAX_FOR_64:
+			case FESTIVAL_LEVEL_MAX_FOR_64:
 			{
 				maxLevel = 64;
 				break;

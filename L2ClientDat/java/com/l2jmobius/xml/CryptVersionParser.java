@@ -45,7 +45,7 @@ public class CryptVersionParser
 	
 	private CryptVersionParser()
 	{
-		CryptVersionParser.parseCryptVersion();
+		parseCryptVersion();
 	}
 	
 	private static void parseCryptVersion()

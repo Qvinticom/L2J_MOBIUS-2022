@@ -323,13 +323,13 @@ public class FortSiege
 			unSpawnFlags();
 			
 			// Teleport to the second closest town
-			teleportPlayer(FortSiege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
 			
 			// Teleport to the second closest town
-			teleportPlayer(FortSiege.TeleportWhoType.DefenderNotOwner, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.DefenderNotOwner, MapRegionTable.TeleportWhereType.Town);
 			
 			// Teleport to the second closest town
-			teleportPlayer(FortSiege.TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
@@ -479,7 +479,7 @@ public class FortSiege
 			updatePlayerSiegeStateFlags(false);
 			
 			// Teleport to the closest town
-			teleportPlayer(FortSiege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
 			
 			// Spawn commander
 			spawnCommander(getFort().getFortId());
@@ -1089,7 +1089,7 @@ public class FortSiege
 		_siegeRegistrationEndDate.add(Calendar.MINUTE, -10);
 		
 		// Schedule siege auto start
-		ThreadPool.schedule(new FortSiege.ScheduleStartSiegeTask(getFort()), 1000);
+		ThreadPool.schedule(new ScheduleStartSiegeTask(getFort()), 1000);
 	}
 	
 	/**

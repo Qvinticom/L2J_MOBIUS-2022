@@ -382,8 +382,8 @@ public class ClanTable
 	
 	public void deleteclanswars(int clanId1, int clanId2)
 	{
-		final L2Clan clan1 = ClanTable.getInstance().getClan(clanId1);
-		final L2Clan clan2 = ClanTable.getInstance().getClan(clanId2);
+		final L2Clan clan1 = getInstance().getClan(clanId1);
+		final L2Clan clan2 = getInstance().getClan(clanId2);
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnClanWarFinish(clan1, clan2));
 		

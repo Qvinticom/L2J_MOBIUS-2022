@@ -1901,7 +1901,7 @@ public final class Config
 			CUSTOM_BUYLIST_LOAD = General.getBoolean("CustomBuyListLoad", false);
 			ALT_BIRTHDAY_GIFT = General.getInt("AltBirthdayGift", 22187);
 			ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
-			ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + Config.EOL + Config.EOL + "Sincerely, Alegria");
+			ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
 			ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
 			MIN_BLOCK_CHECKER_TEAM_MEMBERS = General.getInt("BlockCheckerMinTeamMembers", 2);
 			if (MIN_BLOCK_CHECKER_TEAM_MEMBERS < 1)
@@ -2901,7 +2901,7 @@ public final class Config
 	 */
 	public static void saveHexid(int serverId, String hexId)
 	{
-		Config.saveHexid(serverId, hexId, HEXID_FILE);
+		saveHexid(serverId, hexId, HEXID_FILE);
 	}
 	
 	/**

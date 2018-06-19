@@ -1561,7 +1561,7 @@ public final class Config
 			STARTING_AA = Integer.parseInt(otherSettings.getProperty("StartingAncientAdena", "0"));
 			
 			CUSTOM_STARTER_ITEMS_ENABLED = Boolean.parseBoolean(otherSettings.getProperty("CustomStarterItemsEnabled", "false"));
-			if (Config.CUSTOM_STARTER_ITEMS_ENABLED)
+			if (CUSTOM_STARTER_ITEMS_ENABLED)
 			{
 				String[] propertySplit = otherSettings.getProperty("StartingCustomItemsMage", "57,0").split(";");
 				STARTING_CUSTOM_ITEMS_M.clear();
@@ -3984,7 +3984,7 @@ public final class Config
 	
 	public static void saveHexid(int serverId, String string)
 	{
-		Config.saveHexid(serverId, string, HEXID_FILE);
+		saveHexid(serverId, string, HEXID_FILE);
 	}
 	
 	public static void saveHexid(int serverId, String hexId, String fileName)
@@ -4123,7 +4123,7 @@ public final class Config
 			loadExtendersConfig();
 			loadDaemonsConf();
 			
-			if (Config.USE_SAY_FILTER)
+			if (USE_SAY_FILTER)
 			{
 				loadFilter();
 			}

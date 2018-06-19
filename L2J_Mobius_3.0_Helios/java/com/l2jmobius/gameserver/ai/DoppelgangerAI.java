@@ -164,7 +164,7 @@ public class DoppelgangerAI extends L2CharacterAI
 		}
 		else
 		{
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, _lastAttack);
+			setIntention(AI_INTENTION_ATTACK, _lastAttack);
 			_lastAttack = null;
 		}
 	}

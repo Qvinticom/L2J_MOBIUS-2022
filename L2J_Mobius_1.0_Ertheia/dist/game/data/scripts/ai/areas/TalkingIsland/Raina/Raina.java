@@ -826,7 +826,7 @@ public final class Raina extends AbstractNpcAI
 		Set<PlayerClass> subclasses = null;
 		final PlayerClass pClass = PlayerClass.values()[classId];
 		
-		if ((pClass.getLevel() == ClassLevel.THIRD) || (pClass.getLevel() == ClassLevel.FOURTH))
+		if ((pClass.getLevel() == THIRD) || (pClass.getLevel() == ClassLevel.FOURTH))
 		{
 			subclasses = EnumSet.copyOf(mainSubclassSet);
 			subclasses.remove(pClass);

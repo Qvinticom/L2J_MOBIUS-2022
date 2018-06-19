@@ -75,9 +75,9 @@ public class Util
 		{
 			if ((counter % 16) == 0)
 			{
-				result.append(Util.fillHex(i, 4) + ": ");
+				result.append(fillHex(i, 4) + ": ");
 			}
-			result.append(Util.fillHex(data[i] & 255, 2) + " ");
+			result.append(fillHex(data[i] & 255, 2) + " ");
 			if (++counter != 16)
 			{
 				continue;
@@ -130,7 +130,7 @@ public class Util
 	
 	public static String printData(byte[] blop)
 	{
-		return Util.printData(blop, blop.length);
+		return printData(blop, blop.length);
 	}
 	
 	public static List<File> loadFiles(String dir, String prefix)
@@ -225,7 +225,7 @@ public class Util
 	{
 		byte[] data = new byte[buf.remaining()];
 		buf.get(data);
-		String hex = Util.printData(data, data.length);
+		String hex = printData(data, data.length);
 		buf.position(buf.position() - data.length);
 		return hex;
 	}
@@ -300,7 +300,7 @@ public class Util
 			DiagnosticCollector diagnostics = new DiagnosticCollector();
 			JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
 			StandardJavaFileManager fileManager = compiler.getStandardFileManager(diagnostics, null, null);
-			Iterable<? extends JavaFileObject> compilationUnit = fileManager.getJavaFileObjectsFromFiles(Util.loadFiles(sourceFile, ".java"));
+			Iterable<? extends JavaFileObject> compilationUnit = fileManager.getJavaFileObjectsFromFiles(loadFiles(sourceFile, ".java"));
 			JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, diagnostics, null, null, compilationUnit);
 			if (!task.call().booleanValue())
 			{

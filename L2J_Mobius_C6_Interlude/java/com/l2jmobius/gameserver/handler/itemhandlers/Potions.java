@@ -264,7 +264,7 @@ public class Potions implements IItemHandler
 				// MANA POTIONS
 				case 726: // mana drug, xml: 2003
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.MANA_HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.MANA_HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -284,7 +284,7 @@ public class Potions implements IItemHandler
 				}
 				case 725: // healing_drug, xml: 2002
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -293,7 +293,7 @@ public class Potions implements IItemHandler
 				}
 				case 727: // _healing_potion, xml: 2032
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -318,7 +318,7 @@ public class Potions implements IItemHandler
 				case 1060: // lesser_healing_potion,
 				case 1073: // beginner's potion, xml: 2031
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -327,7 +327,7 @@ public class Potions implements IItemHandler
 				}
 				case 1061: // healing_potion, xml: 2032
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -351,7 +351,7 @@ public class Potions implements IItemHandler
 				}
 				case 1539: // greater_healing_potion, xml: 2037
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -380,7 +380,7 @@ public class Potions implements IItemHandler
 				}
 				case 5283: // Rice Cake, xml: 2136
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -416,7 +416,7 @@ public class Potions implements IItemHandler
 				case 8627:
 				{
 					// elixir of Life
-					if (!isEffectReplaceable(activeChar, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(activeChar, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -441,7 +441,7 @@ public class Potions implements IItemHandler
 				case 8633:
 				{
 					// elixir of Strength
-					if (!isEffectReplaceable(activeChar, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(activeChar, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -466,7 +466,7 @@ public class Potions implements IItemHandler
 				case 8639:
 				{
 					// elixir of cp
-					if (!isEffectReplaceable(activeChar, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(activeChar, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -715,7 +715,7 @@ public class Potions implements IItemHandler
 				case 1060: // lesser_healing_potion,
 				case 1073: // beginner's potion, xml: 2031
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -724,7 +724,7 @@ public class Potions implements IItemHandler
 				}
 				case 1061: // healing_potion, xml: 2032
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -738,7 +738,7 @@ public class Potions implements IItemHandler
 				}
 				case 1539:
 				{
-					if (!isEffectReplaceable(playable, L2Effect.EffectType.HEAL_OVER_TIME, itemId))
+					if (!isEffectReplaceable(playable, EffectType.HEAL_OVER_TIME, itemId))
 					{
 						return;
 					}
@@ -902,7 +902,7 @@ public class Potions implements IItemHandler
 			return;
 		}
 		
-		final List<Integer> possible_potions = Potions.get_potions_for_skill(skill_id, skill_level);
+		final List<Integer> possible_potions = get_potions_for_skill(skill_id, skill_level);
 		
 		if (!possible_potions.isEmpty())
 		{

@@ -773,7 +773,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		setIsTeleporting(true);
 		
-		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+		getAI().setIntention(AI_INTENTION_ACTIVE);
 		
 		// Adjust position a bit
 		z += 5;
@@ -922,7 +922,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -930,7 +930,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					if (target.isDead())
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+						getAI().setIntention(AI_INTENTION_ACTIVE);
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
@@ -966,14 +966,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				// Checking if target has moved to peace zone
 				else if (target.isInsidePeaceZone(getActingPlayer()))
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 			else if (isInsidePeaceZone(this, target))
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				getAI().setIntention(AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -986,7 +986,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
 				{
 					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -1030,7 +1030,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
 						{
 							// Cancel the action because the L2PcInstance have no arrow
-							getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+							getAI().setIntention(AI_INTENTION_ACTIVE);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
 							return;
@@ -1040,7 +1040,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						// Other melee is checked in movement code and for offensive spells a check is done every time
 						if (target.isInsidePeaceZone(getActingPlayer()))
 						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+							getAI().setIntention(AI_INTENTION_ACTIVE);
 							sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
 							sendPacket(ActionFailed.STATIC_PACKET);
 							return;

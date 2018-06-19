@@ -1028,7 +1028,7 @@ public class Siege implements Siegable
 		{
 			_scheduledStartSiegeTask.cancel(false);
 		}
-		_scheduledStartSiegeTask = ThreadPool.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
+		_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(getCastle()), 1000);
 	}
 	
 	/**
@@ -1346,7 +1346,7 @@ public class Siege implements Siegable
 		if (_scheduledStartSiegeTask != null)
 		{
 			_scheduledStartSiegeTask.cancel(true);
-			_scheduledStartSiegeTask = ThreadPool.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
+			_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(getCastle()), 1000);
 		}
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection();

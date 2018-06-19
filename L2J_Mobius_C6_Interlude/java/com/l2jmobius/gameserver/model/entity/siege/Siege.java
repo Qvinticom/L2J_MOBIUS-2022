@@ -386,13 +386,13 @@ public class Siege
 			removeFlags();
 			
 			// Teleport to the second closest town
-			teleportPlayer(Siege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
 			
 			// Teleport to the second closest town
-			teleportPlayer(Siege.TeleportWhoType.DefenderNotOwner, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.DefenderNotOwner, MapRegionTable.TeleportWhereType.Town);
 			
 			// Teleport to the second closest town
-			teleportPlayer(Siege.TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
 			
 			// Flag so that siege instance can be started
 			_isInProgress = false;
@@ -573,10 +573,10 @@ public class Siege
 				}
 				
 				// Teleport to the second closest town
-				teleportPlayer(Siege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.SiegeFlag);
+				teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.SiegeFlag);
 				
 				// Teleport to the second closest town
-				teleportPlayer(Siege.TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
+				teleportPlayer(TeleportWhoType.Spectator, MapRegionTable.TeleportWhereType.Town);
 				
 				// Removes defenders' flags
 				removeDefenderFlags();
@@ -639,7 +639,7 @@ public class Siege
 			updatePlayerSiegeStateFlags(false);
 			
 			// Teleport to the closest town
-			teleportPlayer(Siege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
+			teleportPlayer(TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town);
 			
 			_controlTowerCount = 0;
 			_controlTowerMaxCount = 0;
@@ -1206,7 +1206,7 @@ public class Siege
 		_siegeRegistrationEndDate.add(Calendar.DAY_OF_MONTH, -1);
 		
 		// Schedule siege auto start
-		ThreadPool.schedule(new Siege.ScheduleStartSiegeTask(getCastle()), 1000);
+		ThreadPool.schedule(new ScheduleStartSiegeTask(getCastle()), 1000);
 	}
 	
 	/**

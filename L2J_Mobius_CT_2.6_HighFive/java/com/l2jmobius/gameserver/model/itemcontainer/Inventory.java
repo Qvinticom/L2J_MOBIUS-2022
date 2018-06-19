@@ -1272,7 +1272,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInBodySlotAndRecord(int slot)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1303,7 +1303,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInSlotAndRecord(int slot)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1469,7 +1469,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] equipItemAndRecord(L2ItemInstance item)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{

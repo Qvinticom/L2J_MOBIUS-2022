@@ -1578,7 +1578,7 @@ public class CTF implements EventTask
 			}
 		}
 		
-		if (CTF._savePlayers.contains(eventPlayer.getName()))
+		if (_savePlayers.contains(eventPlayer.getName()))
 		{
 			eventPlayer.sendMessage("You already participated in another event!");
 			return false;
@@ -2276,7 +2276,7 @@ public class CTF implements EventTask
 		}
 		else
 		{
-			player.getInventory().destroyItemByItemId("", CTF._FLAG_IN_HAND_ITEM_ID, 1, player, null);
+			player.getInventory().destroyItemByItemId("", _FLAG_IN_HAND_ITEM_ID, 1, player, null);
 		}
 		player._haveFlagCTF = false;
 	}
@@ -3038,7 +3038,7 @@ public class CTF implements EventTask
 			}
 		}
 		// Add the flag in his hands
-		_player.getInventory().equipItem(ItemTable.getInstance().createItem("", CTF._FLAG_IN_HAND_ITEM_ID, 1, _player, null));
+		_player.getInventory().equipItem(ItemTable.getInstance().createItem("", _FLAG_IN_HAND_ITEM_ID, 1, _player, null));
 		_player.broadcastPacket(new SocialAction(_player.getObjectId(), 16)); // Amazing glow
 		_player._haveFlagCTF = true;
 		_player.broadcastUserInfo();
@@ -3057,7 +3057,7 @@ public class CTF implements EventTask
 		if (wpn != null)
 		{
 			final L2ItemInstance[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
-			player.getInventory().destroyItemByItemId("", CTF._FLAG_IN_HAND_ITEM_ID, 1, player, null);
+			player.getInventory().destroyItemByItemId("", _FLAG_IN_HAND_ITEM_ID, 1, player, null);
 			final InventoryUpdate iu = new InventoryUpdate();
 			for (L2ItemInstance element : unequiped)
 			{
@@ -3070,7 +3070,7 @@ public class CTF implements EventTask
 		}
 		else
 		{
-			player.getInventory().destroyItemByItemId("", CTF._FLAG_IN_HAND_ITEM_ID, 1, player, null);
+			player.getInventory().destroyItemByItemId("", _FLAG_IN_HAND_ITEM_ID, 1, player, null);
 			player.sendPacket(new ItemList(player, true)); // Get your weapon back now ...
 			player.abortAttack();
 			player.broadcastUserInfo();
@@ -3250,7 +3250,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean InRangeOfFlag(L2PcInstance _player, int flagIndex, int offset)
 	{
-		if ((_player.getX() > (CTF._flagsX.get(flagIndex) - offset)) && (_player.getX() < (CTF._flagsX.get(flagIndex) + offset)) && (_player.getY() > (CTF._flagsY.get(flagIndex) - offset)) && (_player.getY() < (CTF._flagsY.get(flagIndex) + offset)) && (_player.getZ() > (CTF._flagsZ.get(flagIndex) - offset)) && (_player.getZ() < (CTF._flagsZ.get(flagIndex) + offset)))
+		if ((_player.getX() > (_flagsX.get(flagIndex) - offset)) && (_player.getX() < (_flagsX.get(flagIndex) + offset)) && (_player.getY() > (_flagsY.get(flagIndex) - offset)) && (_player.getY() < (_flagsY.get(flagIndex) + offset)) && (_player.getZ() > (_flagsZ.get(flagIndex) - offset)) && (_player.getZ() < (_flagsZ.get(flagIndex) + offset)))
 		{
 			return true;
 		}

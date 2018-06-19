@@ -559,7 +559,7 @@ public class LoginServerThread extends Thread
 		if (_accountsInGameServer.get(account) != null)
 		{
 			_accountsInGameServer.get(account).closeNow();
-			LoginServerThread.getInstance().sendLogout(account);
+			getInstance().sendLogout(account);
 			
 			if (Config.DEBUG)
 			{

@@ -68,7 +68,7 @@ public class ConfigWindow extends ConfigParser
 			FileOutputStream output = new FileOutputStream(PATH);
 			props.store(output, "Saved settings");
 			output.close();
-			ConfigWindow.load();
+			load();
 		}
 		catch (Exception props)
 		{

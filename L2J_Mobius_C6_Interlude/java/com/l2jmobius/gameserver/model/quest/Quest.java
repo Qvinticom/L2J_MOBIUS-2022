@@ -264,7 +264,7 @@ public class Quest extends ManagedScript
 	public QuestState newQuestState(L2PcInstance player)
 	{
 		QuestState qs = new QuestState(this, player, getInitialState());
-		Quest.createQuestInDb(qs);
+		createQuestInDb(qs);
 		return qs;
 	}
 	
@@ -933,14 +933,14 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addStartNpc(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.QUEST_START);
+		return addEventId(npcId, QuestEventType.QUEST_START);
 	}
 	
 	public void addStartNpc(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, Quest.QuestEventType.QUEST_START);
+			addEventId(npcId, QuestEventType.QUEST_START);
 		}
 	}
 	
@@ -951,14 +951,14 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addFirstTalkId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.NPC_FIRST_TALK);
+		return addEventId(npcId, QuestEventType.NPC_FIRST_TALK);
 	}
 	
 	public void addFirstTalkId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, Quest.QuestEventType.NPC_FIRST_TALK);
+			addEventId(npcId, QuestEventType.NPC_FIRST_TALK);
 		}
 	}
 	
@@ -970,14 +970,14 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addAttackId(int attackId)
 	{
-		return addEventId(attackId, Quest.QuestEventType.ON_ATTACK);
+		return addEventId(attackId, QuestEventType.ON_ATTACK);
 	}
 	
 	public void addAttackId(int... attackIds)
 	{
 		for (int attackId : attackIds)
 		{
-			addEventId(attackId, Quest.QuestEventType.ON_ATTACK);
+			addEventId(attackId, QuestEventType.ON_ATTACK);
 		}
 	}
 	
@@ -989,7 +989,7 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addKillId(int killId)
 	{
-		return addEventId(killId, Quest.QuestEventType.ON_KILL);
+		return addEventId(killId, QuestEventType.ON_KILL);
 	}
 	
 	/**
@@ -1000,7 +1000,7 @@ public class Quest extends ManagedScript
 	{
 		for (int killId : killIds)
 		{
-			addEventId(killId, Quest.QuestEventType.ON_KILL);
+			addEventId(killId, QuestEventType.ON_KILL);
 		}
 	}
 	
@@ -1012,7 +1012,7 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addTalkId(int talkId)
 	{
-		return addEventId(talkId, Quest.QuestEventType.QUEST_TALK);
+		return addEventId(talkId, QuestEventType.QUEST_TALK);
 	}
 	
 	/**
@@ -1023,13 +1023,13 @@ public class Quest extends ManagedScript
 	{
 		for (int talkId : talkIds)
 		{
-			addEventId(talkId, Quest.QuestEventType.QUEST_TALK);
+			addEventId(talkId, QuestEventType.QUEST_TALK);
 		}
 	}
 	
 	public L2NpcTemplate addFactionCallId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.ON_FACTION_CALL);
+		return addEventId(npcId, QuestEventType.ON_FACTION_CALL);
 	}
 	
 	/**
@@ -1040,20 +1040,20 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addSkillUseId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.ON_SKILL_USE);
+		return addEventId(npcId, QuestEventType.ON_SKILL_USE);
 	}
 	
 	public void addSkillUseId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, Quest.QuestEventType.ON_SKILL_USE);
+			addEventId(npcId, QuestEventType.ON_SKILL_USE);
 		}
 	}
 	
 	public L2NpcTemplate addSpellFinishedId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.ON_SPELL_FINISHED);
+		return addEventId(npcId, QuestEventType.ON_SPELL_FINISHED);
 	}
 	
 	/**
@@ -1064,27 +1064,27 @@ public class Quest extends ManagedScript
 	 */
 	public L2NpcTemplate addAggroRangeEnterId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
+		return addEventId(npcId, QuestEventType.ON_AGGRO_RANGE_ENTER);
 	}
 	
 	public void addAggroRangeEnterId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, Quest.QuestEventType.ON_AGGRO_RANGE_ENTER);
+			addEventId(npcId, QuestEventType.ON_AGGRO_RANGE_ENTER);
 		}
 	}
 	
 	public L2NpcTemplate addSpawnId(int npcId)
 	{
-		return addEventId(npcId, Quest.QuestEventType.ON_SPAWN);
+		return addEventId(npcId, QuestEventType.ON_SPAWN);
 	}
 	
 	public void addSpawnId(int... npcIds)
 	{
 		for (int npcId : npcIds)
 		{
-			addEventId(npcId, Quest.QuestEventType.ON_SPAWN);
+			addEventId(npcId, QuestEventType.ON_SPAWN);
 		}
 	}
 	

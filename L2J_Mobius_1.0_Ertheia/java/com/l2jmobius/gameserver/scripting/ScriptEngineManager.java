@@ -55,8 +55,8 @@ public final class ScriptEngineManager implements IGameXmlReader
 	public static final Path SCRIPT_FOLDER = Paths.get(Config.DATAPACK_ROOT.getAbsolutePath(), "data", "scripts");
 	public static final Path MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "MasterHandler.java");
 	public static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "EffectMasterHandler.java");
-	public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(ScriptEngineManager.SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");
-	public static final Path CONDITION_HANDLER_FILE = Paths.get(ScriptEngineManager.SCRIPT_FOLDER.toString(), "handlers", "ConditionMasterHandler.java");
+	public static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "SkillConditionMasterHandler.java");
+	public static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "handlers", "ConditionMasterHandler.java");
 	
 	private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
 	private IExecutionContext _currentExecutionContext = null;

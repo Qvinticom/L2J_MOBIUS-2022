@@ -127,7 +127,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	
 	public void startSecondStep(L2Clan winner)
 	{
-		final List<String> winPlayers = BanditStrongholdSiege.getInstance().getRegisteredPlayers(winner);
+		final List<String> winPlayers = getInstance().getRegisteredPlayers(winner);
 		unSpawnAll();
 		_clansInfo.clear();
 		final clanPlayersInfo regPlayers = new clanPlayersInfo();

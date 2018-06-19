@@ -8228,7 +8228,7 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		if ((getActiveEnchantItemId() != L2PcInstance.ID_NONE) || (getActiveEnchantAttrItemId() != L2PcInstance.ID_NONE))
+		if ((getActiveEnchantItemId() != ID_NONE) || (getActiveEnchantAttrItemId() != ID_NONE))
 		{
 			return false;
 		}

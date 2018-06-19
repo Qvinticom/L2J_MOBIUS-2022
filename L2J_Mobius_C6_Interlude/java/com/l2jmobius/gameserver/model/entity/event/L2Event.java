@@ -169,7 +169,7 @@ public class L2Event
 			
 			replyMSG.append("<br>" + inbr.readLine());
 			
-			if (L2Event.participatingPlayers.contains(player.getName()))
+			if (participatingPlayers.contains(player.getName()))
 			{
 				replyMSG.append("<br><center>You are already in the event players list !!</center></body></html>");
 			}
@@ -271,7 +271,7 @@ public class L2Event
 			spawn.init();
 			spawn.getLastSpawn().getStatus().setCurrentHp(999999999);
 			spawn.getLastSpawn().setName("event inscriptor");
-			spawn.getLastSpawn().setTitle(L2Event.eventName);
+			spawn.getLastSpawn().setTitle(eventName);
 			spawn.getLastSpawn().isEventMob = true;
 			spawn.getLastSpawn().isAggressive();
 			spawn.getLastSpawn().decayMe();
@@ -299,9 +299,9 @@ public class L2Event
 	
 	public static boolean isOnEvent(L2PcInstance player)
 	{
-		for (int k = 0; k < L2Event.teamsNumber; k++)
+		for (int k = 0; k < teamsNumber; k++)
 		{
-			Iterator<String> it = L2Event.players.get(k + 1).iterator();
+			Iterator<String> it = players.get(k + 1).iterator();
 			
 			boolean temp = false;
 			
@@ -322,7 +322,7 @@ public class L2Event
 	{
 		try
 		{
-			L2Event.participatingPlayers.add(player.getName());
+			participatingPlayers.add(player.getName());
 			player.eventKarma = player.getKarma();
 			player.eventX = player.getX();
 			player.eventY = player.getY();

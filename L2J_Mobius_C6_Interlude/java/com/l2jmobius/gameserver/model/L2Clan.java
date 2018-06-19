@@ -256,7 +256,7 @@ public class L2Clan
 			final L2PcInstance exLeader = old_leader.getPlayerInstance();
 			exLeader.setClan(this);
 			exLeader.setPledgeClass(exLeader.getClan().getClanMember(exLeader.getObjectId()).calculatePledgeClass(exLeader));
-			exLeader.setClanPrivileges(L2Clan.CP_NOTHING);
+			exLeader.setClanPrivileges(CP_NOTHING);
 			
 			exLeader.broadcastUserInfo();
 			
@@ -270,7 +270,7 @@ public class L2Clan
 			final L2PcInstance newLeader = member.getPlayerInstance();
 			newLeader.setClan(this);
 			newLeader.setPledgeClass(member.calculatePledgeClass(newLeader));
-			newLeader.setClanPrivileges(L2Clan.CP_ALL);
+			newLeader.setClanPrivileges(CP_ALL);
 			
 			newLeader.broadcastUserInfo();
 		}
@@ -1602,7 +1602,7 @@ public class L2Clan
 		
 		if (pledgeType == 0)
 		{
-			if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
+			if (pledgeType == SUBUNIT_ACADEMY)
 			{
 				player.sendPacket(SystemMessageId.CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
 			}
@@ -1621,7 +1621,7 @@ public class L2Clan
 		
 		// Royal Guard 5000 points per each
 		// Order of Knights 10000 points per each
-		if ((pledgeType != -1) && (((getReputationScore() < 5000) && (pledgeType < L2Clan.SUBUNIT_KNIGHT1)) || ((getReputationScore() < 10000) && (pledgeType > L2Clan.SUBUNIT_ROYAL2))))
+		if ((pledgeType != -1) && (((getReputationScore() < 5000) && (pledgeType < SUBUNIT_KNIGHT1)) || ((getReputationScore() < 10000) && (pledgeType > SUBUNIT_ROYAL2))))
 		{
 			SystemMessage sp = new SystemMessage(SystemMessageId.THE_CLAN_REPUTATION_SCORE_IS_TOO_LOW);
 			player.sendPacket(sp);
@@ -1995,7 +1995,7 @@ public class L2Clan
 			return false;
 		}
 		
-		if ((activeChar.getClanPrivileges() & L2Clan.CP_CL_JOIN_CLAN) != L2Clan.CP_CL_JOIN_CLAN)
+		if ((activeChar.getClanPrivileges() & CP_CL_JOIN_CLAN) != CP_CL_JOIN_CLAN)
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
 			return false;
@@ -2252,7 +2252,7 @@ public class L2Clan
 		
 		if (getAllyPenaltyExpiryTime() > System.currentTimeMillis())
 		{
-			if (getAllyPenaltyType() == L2Clan.PENALTY_TYPE_DISSOLVE_ALLY)
+			if (getAllyPenaltyType() == PENALTY_TYPE_DISSOLVE_ALLY)
 			{
 				player.sendPacket(SystemMessageId.CANT_CREATE_ALLIANCE_10_DAYS_DISOLUTION);
 				return;
@@ -2345,7 +2345,7 @@ public class L2Clan
 		setAllyId(0);
 		setAllyName(null);
 		// 24*60*60*1000 = 86400000
-		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), L2Clan.PENALTY_TYPE_DISSOLVE_ALLY);
+		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), PENALTY_TYPE_DISSOLVE_ALLY);
 		updateClanInDB();
 		
 		// The clan leader should take the XP penalty of a full death.

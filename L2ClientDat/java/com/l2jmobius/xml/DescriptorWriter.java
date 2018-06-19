@@ -77,7 +77,7 @@ public class DescriptorWriter
 		}
 		if (desc.isRawData())
 		{
-			Buffer result = DescriptorWriter.parseNodeValue(currentFile, crypter, data, desc.getNodes().get(0), true);
+			Buffer result = parseNodeValue(currentFile, crypter, data, desc.getNodes().get(0), true);
 			if (result != null)
 			{
 				stream.write((byte[]) result.array());
@@ -92,7 +92,7 @@ public class DescriptorWriter
 			ByteBuffer buffer = ByteBuffer.allocateDirect(data.length() * 2);
 			String lines = data.replace("\r\n", "\t");
 			HashMap<ParamNode, Integer> counters = new HashMap<>();
-			DescriptorWriter.packData(currentFile, crypter, buffer, lines, counters, new HashMap<String, String>(), new HashMap<ParamNode, String>(), desc.getNodes());
+			packData(currentFile, crypter, buffer, lines, counters, new HashMap<String, String>(), new HashMap<ParamNode, String>(), desc.getNodes());
 			try
 			{
 				buffer.flip();
@@ -133,22 +133,22 @@ public class DescriptorWriter
 						{
 							list.add(m.group(1));
 						}
-						DescriptorWriter.writeSize(currentFile, crypter, buffer, counters, node, list.size());
+						writeSize(currentFile, crypter, buffer, counters, node, list.size());
 						for (String str : list)
 						{
 							paramMap.putAll(Util.stringToMap(str));
-							DescriptorWriter.packData(currentFile, crypter, buffer, str, counters, paramMap, mapData, node.getSubNodes());
+							packData(currentFile, crypter, buffer, str, counters, paramMap, mapData, node.getSubNodes());
 						}
 						continue;
 					}
-					param = DescriptorWriter.getDataString(node, node.getName(), paramMap, mapData);
+					param = getDataString(node, node.getName(), paramMap, mapData);
 					if (param == null)
 					{
 						throw new Exception("Error getDataString == null node: " + node.getName());
 					}
 					if (param.isEmpty() || param.equals("{}"))
 					{
-						DescriptorWriter.writeSize(currentFile, crypter, buffer, counters, node, 0);
+						writeSize(currentFile, crypter, buffer, counters, node, 0);
 						continue;
 					}
 					List<String> subParams = Util.splitList(param);
@@ -157,7 +157,7 @@ public class DescriptorWriter
 					{
 						throw new Exception("Wrong static cycle count for cycle: " + node.getName() + " size: " + subParams.size() + " params: " + Arrays.toString(subParams.toArray()));
 					}
-					DescriptorWriter.writeSize(currentFile, crypter, buffer, counters, node, cycleSize);
+					writeSize(currentFile, crypter, buffer, counters, node, cycleSize);
 					int nPramNode = 0;
 					int nCycleNode = 0;
 					for (ParamNode n : node.getSubNodes())
@@ -189,13 +189,13 @@ public class DescriptorWriter
 							}
 							mapData.put(n, sub2Params.get(paramIndex++));
 						}
-						DescriptorWriter.packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
+						packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
 					}
 					continue;
 				}
 				if (node.getEntityType().isWrapper())
 				{
-					List<String> subParams = Util.splitList(DescriptorWriter.getDataString(node, node.getName(), paramMap, mapData));
+					List<String> subParams = Util.splitList(getDataString(node, node.getName(), paramMap, mapData));
 					int paramIndex = 0;
 					for (ParamNode n : node.getSubNodes())
 					{
@@ -205,19 +205,19 @@ public class DescriptorWriter
 						}
 						mapData.put(n, subParams.get(paramIndex++));
 					}
-					DescriptorWriter.packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
+					packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
 					continue;
 				}
 				if (node.getEntityType().isVariable())
 				{
-					buffer.put((byte[]) DescriptorWriter.parseNodeValue(currentFile, crypter, DescriptorWriter.getDataString(node, node.getName(), paramMap, mapData), node, false).array());
+					buffer.put((byte[]) parseNodeValue(currentFile, crypter, getDataString(node, node.getName(), paramMap, mapData), node, false).array());
 					continue;
 				}
-				if (!node.getEntityType().isIf() || ((param = DescriptorWriter.getDataString(node, node.getParamIf(), paramMap, mapData)) == null) || !node.getValIf().equalsIgnoreCase(param))
+				if (!node.getEntityType().isIf() || ((param = getDataString(node, node.getParamIf(), paramMap, mapData)) == null) || !node.getValIf().equalsIgnoreCase(param))
 				{
 					continue;
 				}
-				DescriptorWriter.packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
+				packData(currentFile, crypter, buffer, lines, counters, paramMap, mapData, node.getSubNodes());
 			}
 			catch (Exception e)
 			{
@@ -336,7 +336,7 @@ public class DescriptorWriter
 					throw new CycleArgumentException("Invalid argument [" + node.getName() + "] for cycle");
 				}
 			}
-			Buffer buff = DescriptorWriter.parseNodeValue(currentFile, crypter, String.valueOf(cycleSize), iterator, false);
+			Buffer buff = parseNodeValue(currentFile, crypter, String.valueOf(cycleSize), iterator, false);
 			int pos = counters.get(iterator);
 			if (pos >= 0)
 			{

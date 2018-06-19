@@ -151,7 +151,7 @@ public class L2Npc extends L2Character
 	private NpcStringId _nameString;
 	
 	private StatsSet _params;
-	private DBSpawnManager.DBStatusType _raidStatus;
+	private DBStatusType _raidStatus;
 	
 	/** Contains information about local tax payments. */
 	private L2TaxZone _taxZone = null;

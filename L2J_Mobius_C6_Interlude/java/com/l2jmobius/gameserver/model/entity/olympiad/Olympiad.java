@@ -524,7 +524,7 @@ public class Olympiad
 				{
 					final L2PcInstance player = L2World.getInstance().getPlayer(character_name);
 					
-					if ((player != null) && ((player.getOlympiadGameId() > 0) || player.isInOlympiadMode() || Olympiad.getInstance().isRegistered(player)))
+					if ((player != null) && ((player.getOlympiadGameId() > 0) || player.isInOlympiadMode() || getInstance().isRegistered(player)))
 					{
 						noble.sendMessage("You are already participating in Olympiad with another char!");
 						return false;
@@ -632,7 +632,7 @@ public class Olympiad
 	{
 		_oldnobles.remove(playerId);
 		_oldnobles.put(playerId, stats);
-		Olympiad.getInstance().saveOldNobleData(playerId);
+		getInstance().saveOldNobleData(playerId);
 	}
 	
 	protected static List<L2PcInstance> getRegisteredNonClassBased()
@@ -666,7 +666,7 @@ public class Olympiad
 	
 	protected static boolean hasEnoughRegisteredNonClassed()
 	{
-		return Olympiad.getRegisteredNonClassBased().size() >= Config.ALT_OLY_NONCLASSED;
+		return getRegisteredNonClassBased().size() >= Config.ALT_OLY_NONCLASSED;
 	}
 	
 	protected static void clearRegistered()
@@ -1654,7 +1654,7 @@ public class Olympiad
 		replyMSG.append("<tr><td fixwidth=30>NO.</td><td fixwidth=60>Status</td><td>Player1 / Player2</td></tr>");
 		
 		final Map<Integer, String> matches = getInstance().getMatchList();
-		for (int i = 0; i < Olympiad.getStadiumCount(); i++)
+		for (int i = 0; i < getStadiumCount(); i++)
 		{
 			final int arenaID = i + 1;
 			String players = "&nbsp;";
@@ -1679,9 +1679,9 @@ public class Olympiad
 		final int arena = getSpectatorArena(player);
 		if (arena >= 0)
 		{
-			Olympiad.removeSpectator(arena, player);
+			removeSpectator(arena, player);
 		}
-		Olympiad.addSpectator(id, player, false);
+		addSpectator(id, player, false);
 	}
 	
 	protected void setNewOlympiadEndCustom()

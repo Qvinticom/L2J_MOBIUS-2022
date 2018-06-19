@@ -880,7 +880,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	 */
 	public static boolean isAssignableTo(Object obj, Class<?> clazz)
 	{
-		return L2NpcTemplate.isAssignableTo(obj.getClass(), clazz);
+		return isAssignableTo(obj.getClass(), clazz);
 	}
 	
 	public boolean canTeach(ClassId classId)

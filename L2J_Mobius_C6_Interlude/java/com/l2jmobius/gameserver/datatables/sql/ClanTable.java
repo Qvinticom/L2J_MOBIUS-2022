@@ -454,8 +454,8 @@ public class ClanTable
 	
 	public void storeclanswars(int clanId1, int clanId2)
 	{
-		final L2Clan clan1 = ClanTable.getInstance().getClan(clanId1);
-		final L2Clan clan2 = ClanTable.getInstance().getClan(clanId2);
+		final L2Clan clan1 = getInstance().getClan(clanId1);
+		final L2Clan clan2 = getInstance().getClan(clanId2);
 		
 		clan1.setEnemyClan(clan2);
 		clan2.setAttackerClan(clan1);
@@ -495,8 +495,8 @@ public class ClanTable
 	
 	public void deleteclanswars(int clanId1, int clanId2)
 	{
-		final L2Clan clan1 = ClanTable.getInstance().getClan(clanId1);
-		final L2Clan clan2 = ClanTable.getInstance().getClan(clanId2);
+		final L2Clan clan1 = getInstance().getClan(clanId1);
+		final L2Clan clan2 = getInstance().getClan(clanId2);
 		
 		clan1.deleteEnemyClan(clan2);
 		clan2.deleteAttackerClan(clan1);

@@ -403,7 +403,7 @@ public class CursedWeaponsManager
 				sm = new SystemMessage(SystemMessageId.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION);
 				sm.addZoneName(player.getX(), player.getY(), player.getZ()); // Region Name
 				sm.addItemName(cw.getItemId());
-				CursedWeaponsManager.announce(sm);
+				announce(sm);
 				
 			}
 		}

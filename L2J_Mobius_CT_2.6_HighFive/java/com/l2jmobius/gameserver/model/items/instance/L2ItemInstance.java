@@ -59,7 +59,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.inventory.OnP
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Armor;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -269,7 +268,7 @@ public final class L2ItemInstance extends L2Object
 			ItemsOnGroundManager.getInstance().removeObject(this);
 		}
 		
-		if (!Config.DISABLE_TUTORIAL && ((itemId == Inventory.ADENA_ID) || (itemId == 6353)))
+		if (!Config.DISABLE_TUTORIAL && ((itemId == ADENA_ID) || (itemId == 6353)))
 		{
 			// Note from UnAfraid:
 			// Unhardcode this?
@@ -847,7 +846,7 @@ public final class L2ItemInstance extends L2Object
 			&& (player.getActiveEnchantItemId() != getObjectId()) // Not momentarily used enchant scroll
 			&& (player.getActiveEnchantSupportItemId() != getObjectId()) // Not momentarily used enchant support item
 			&& (player.getActiveEnchantAttrItemId() != getObjectId()) // Not momentarily used enchant attribute item
-			&& (allowAdena || (getId() != Inventory.ADENA_ID)) // Not Adena
+			&& (allowAdena || (getId() != ADENA_ID)) // Not Adena
 			&& ((player.getCurrentSkill() == null) || (player.getCurrentSkill().getSkill().getItemConsumeId() != getId())) && (!player.isCastingSimultaneouslyNow() || (player.getLastSimultaneousSkillCast() == null) || (player.getLastSimultaneousSkillCast().getItemConsumeId() != getId())) && (allowNonTradeable || (isTradeable() && (!((getItem().getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
 	}
 	

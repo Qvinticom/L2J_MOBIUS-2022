@@ -683,7 +683,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		setIsTeleporting(true);
 		setTarget(null);
 		
-		getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+		getAI().setIntention(AI_INTENTION_ACTIVE);
 		
 		if (Config.OFFSET_ON_TELEPORT_ENABLED && (randomOffset > 0))
 		{
@@ -872,7 +872,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final TerminateReturn attackReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttack(this, target), this, TerminateReturn.class);
 			if ((attackReturn != null) && attackReturn.terminate())
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				getAI().setIntention(AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -881,7 +881,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final TerminateReturn attackedReturn = EventDispatcher.getInstance().notifyEvent(new OnCreatureAttacked(this, target), target, TerminateReturn.class);
 			if ((attackedReturn != null) && attackedReturn.terminate())
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				getAI().setIntention(AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -890,7 +890,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -898,7 +898,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					if (target.isDead())
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+						getAI().setIntention(AI_INTENTION_ACTIVE);
 						sendPacket(ActionFailed.STATIC_PACKET);
 						return;
 					}
@@ -957,14 +957,14 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				// Checking if target has moved to peace zone
 				else if (target.isInsidePeaceZone(getActingPlayer()))
 				{
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 			else if (isInsidePeaceZone(this, target))
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+				getAI().setIntention(AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
@@ -977,7 +977,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
 				{
 					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
-					getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
@@ -4962,7 +4962,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return;
 		}
 		// Notify AI with AI_INTENTION_ATTACK
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
+		player.getAI().setIntention(AI_INTENTION_ATTACK, this);
 	}
 	
 	/**
@@ -5539,7 +5539,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
-				getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				getAI().setIntention(AI_INTENTION_ATTACK, target);
 			}
 		}
 		

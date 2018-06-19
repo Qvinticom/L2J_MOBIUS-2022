@@ -208,117 +208,117 @@ public abstract class L2Item
 		{
 			case "chest":
 			{
-				_bodyPart = L2Item.SLOT_CHEST;
+				_bodyPart = SLOT_CHEST;
 				break;
 			}
 			case "fullarmor":
 			{
-				_bodyPart = L2Item.SLOT_FULL_ARMOR;
+				_bodyPart = SLOT_FULL_ARMOR;
 				break;
 			}
 			case "head":
 			{
-				_bodyPart = L2Item.SLOT_HEAD;
+				_bodyPart = SLOT_HEAD;
 				break;
 			}
 			case "hair":
 			{
-				_bodyPart = L2Item.SLOT_HAIR;
+				_bodyPart = SLOT_HAIR;
 				break;
 			}
 			case "face":
 			{
-				_bodyPart = L2Item.SLOT_FACE;
+				_bodyPart = SLOT_FACE;
 				break;
 			}
 			case "dhair":
 			{
-				_bodyPart = L2Item.SLOT_DHAIR;
+				_bodyPart = SLOT_DHAIR;
 				break;
 			}
 			case "underwear":
 			{
-				_bodyPart = L2Item.SLOT_UNDERWEAR;
+				_bodyPart = SLOT_UNDERWEAR;
 				break;
 			}
 			case "back":
 			{
-				_bodyPart = L2Item.SLOT_BACK;
+				_bodyPart = SLOT_BACK;
 				break;
 			}
 			case "neck":
 			{
-				_bodyPart = L2Item.SLOT_NECK;
+				_bodyPart = SLOT_NECK;
 				break;
 			}
 			case "legs":
 			{
-				_bodyPart = L2Item.SLOT_LEGS;
+				_bodyPart = SLOT_LEGS;
 				break;
 			}
 			case "feet":
 			{
-				_bodyPart = L2Item.SLOT_FEET;
+				_bodyPart = SLOT_FEET;
 				break;
 			}
 			case "gloves":
 			{
-				_bodyPart = L2Item.SLOT_GLOVES;
+				_bodyPart = SLOT_GLOVES;
 				break;
 			}
 			case "chest,legs":
 			{
-				_bodyPart = L2Item.SLOT_CHEST | L2Item.SLOT_LEGS;
+				_bodyPart = SLOT_CHEST | SLOT_LEGS;
 				break;
 			}
 			case "rhand":
 			{
-				_bodyPart = L2Item.SLOT_R_HAND;
+				_bodyPart = SLOT_R_HAND;
 				break;
 			}
 			case "lhand":
 			{
-				_bodyPart = L2Item.SLOT_L_HAND;
+				_bodyPart = SLOT_L_HAND;
 				break;
 			}
 			case "lrhand":
 			{
-				_bodyPart = L2Item.SLOT_LR_HAND;
+				_bodyPart = SLOT_LR_HAND;
 				break;
 			}
 			case "rear,lear":
 			{
-				_bodyPart = L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR;
+				_bodyPart = SLOT_R_EAR | SLOT_L_EAR;
 				break;
 			}
 			case "rfinger,lfinger":
 			{
-				_bodyPart = L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER;
+				_bodyPart = SLOT_R_FINGER | SLOT_L_FINGER;
 				break;
 			}
 			case "wolf":
 			{
-				_bodyPart = L2Item.SLOT_WOLF;
+				_bodyPart = SLOT_WOLF;
 				break;
 			}
 			case "hatchling":
 			{
-				_bodyPart = L2Item.SLOT_HATCHLING;
+				_bodyPart = SLOT_HATCHLING;
 				break;
 			}
 			case "strider":
 			{
-				_bodyPart = L2Item.SLOT_STRIDER;
+				_bodyPart = SLOT_STRIDER;
 				break;
 			}
 			case "babypet":
 			{
-				_bodyPart = L2Item.SLOT_BABYPET;
+				_bodyPart = SLOT_BABYPET;
 				break;
 			}
 			default: // "none"
 			{
-				_bodyPart = L2Item.SLOT_NONE;
+				_bodyPart = SLOT_NONE;
 				break;
 			}
 		}

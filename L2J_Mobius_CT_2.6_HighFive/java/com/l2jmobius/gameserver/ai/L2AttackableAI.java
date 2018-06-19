@@ -426,7 +426,7 @@ public class L2AttackableAI extends L2CharacterAI
 				_fearTask.cancel(true);
 				_fearTask = null;
 				_actor.stopAbnormalVisualEffect(true, AbnormalVisualEffect.TURN_FLEE);
-				setIntention(CtrlIntention.AI_INTENTION_IDLE);
+				setIntention(AI_INTENTION_IDLE);
 			}
 		}
 	}
@@ -614,7 +614,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 					
 					// Set the AI Intention to AI_INTENTION_ATTACK
-					setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
+					setIntention(AI_INTENTION_ATTACK, hated);
 				}
 				
 				return;
@@ -834,7 +834,7 @@ public class L2AttackableAI extends L2CharacterAI
 					// Check if the L2Object is inside the Faction Range of the actor
 					if (called.hasAI())
 					{
-						if ((Math.abs(originalAttackTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().contains(originalAttackTarget) && ((called.getAI()._intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE)) && (called.getInstanceId() == npc.getInstanceId()))
+						if ((Math.abs(originalAttackTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().contains(originalAttackTarget) && ((called.getAI()._intention == AI_INTENTION_IDLE) || (called.getAI()._intention == AI_INTENTION_ACTIVE)) && (called.getInstanceId() == npc.getInstanceId()))
 						{
 							if (originalAttackTarget.isPlayable())
 							{
@@ -854,10 +854,10 @@ public class L2AttackableAI extends L2CharacterAI
 								called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
 								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), originalAttackTarget.getActingPlayer(), originalAttackTarget.isSummon()), called);
 							}
-							else if ((called instanceof L2Attackable) && (getAttackTarget() != null) && (called.getAI()._intention != CtrlIntention.AI_INTENTION_ATTACK))
+							else if ((called instanceof L2Attackable) && (getAttackTarget() != null) && (called.getAI()._intention != AI_INTENTION_ATTACK))
 							{
 								((L2Attackable) called).addDamageHate(getAttackTarget(), 0, npc.getHating(getAttackTarget()));
-								called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getAttackTarget());
+								called.getAI().setIntention(AI_INTENTION_ATTACK, getAttackTarget());
 							}
 						}
 					}
@@ -2329,11 +2329,11 @@ public class L2AttackableAI extends L2CharacterAI
 		// Set the Intention to AI_INTENTION_ATTACK
 		if (getIntention() != AI_INTENTION_ATTACK)
 		{
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+			setIntention(AI_INTENTION_ATTACK, attacker);
 		}
 		else if (me.getMostHated() != getAttackTarget())
 		{
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+			setIntention(AI_INTENTION_ATTACK, attacker);
 		}
 		
 		if (me instanceof L2MonsterInstance)
@@ -2377,7 +2377,7 @@ public class L2AttackableAI extends L2CharacterAI
 		me.addDamageHate(target, 0, aggro);
 		
 		// Set the actor AI Intention to AI_INTENTION_ATTACK
-		if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+		if (getIntention() != AI_INTENTION_ATTACK)
 		{
 			// Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
 			if (!me.isRunning())
@@ -2385,7 +2385,7 @@ public class L2AttackableAI extends L2CharacterAI
 				me.setRunning();
 			}
 			
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+			setIntention(AI_INTENTION_ATTACK, target);
 		}
 		
 		if (me instanceof L2MonsterInstance)

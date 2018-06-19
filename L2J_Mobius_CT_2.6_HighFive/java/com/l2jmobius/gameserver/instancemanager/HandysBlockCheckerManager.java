@@ -312,7 +312,7 @@ public final class HandysBlockCheckerManager
 	{
 		final int arena = player.getBlockCheckerArena();
 		final int team = getHolder(arena).getPlayerTeam(player);
-		HandysBlockCheckerManager.getInstance().removePlayer(player, arena, team);
+		getInstance().removePlayer(player, arena, team);
 		if (player.getTeam() == Team.NONE)
 		{
 			return;

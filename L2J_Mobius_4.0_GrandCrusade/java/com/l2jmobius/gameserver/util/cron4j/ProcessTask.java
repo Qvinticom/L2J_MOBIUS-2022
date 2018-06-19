@@ -408,9 +408,9 @@ public class ProcessTask extends Task
 		StringBuffer b = new StringBuffer();
 		b.append("Task[");
 		b.append("cmd=");
-		b.append(ProcessTask.listStrings(command));
+		b.append(listStrings(command));
 		b.append(", env=");
-		b.append(ProcessTask.listStrings(envs));
+		b.append(listStrings(envs));
 		b.append(", ");
 		b.append("dir=");
 		b.append(directory);

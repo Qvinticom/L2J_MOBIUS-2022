@@ -492,7 +492,7 @@ public class SkillCaster implements Runnable
 		EventDispatcher.getInstance().notifyEvent(new OnCreatureSkillFinishCast(caster, target, _skill, _skill.isWithoutAction()), caster);
 		
 		// Call the skill's effects and AI interraction and stuff.
-		SkillCaster.callSkill(caster, target, _targets, _skill, _item);
+		callSkill(caster, target, _targets, _skill, _item);
 		
 		// Start attack stance.
 		if (!_skill.isWithoutAction())
@@ -726,7 +726,7 @@ public class SkillCaster implements Runnable
 		{
 			if ((_skill.getNextAction() == NextActionType.ATTACK) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
 			{
-				caster.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				caster.getAI().setIntention(AI_INTENTION_ATTACK, target);
 			}
 			else if ((_skill.getNextAction() == NextActionType.CAST) && (target != null) && (target != caster) && target.isAutoAttackable(caster))
 			{

@@ -261,15 +261,15 @@ public class PcInventory extends Inventory
 	 * @param tradeList
 	 * @return L2ItemInstance : items in inventory
 	 */
-	public TradeList.TradeItem[] getAvailableItems(TradeList tradeList)
+	public TradeItem[] getAvailableItems(TradeList tradeList)
 	{
-		final List<TradeList.TradeItem> list = new ArrayList<>();
+		final List<TradeItem> list = new ArrayList<>();
 		
 		for (L2ItemInstance item : _items)
 		{
 			if (item.isAvailable(getOwner(), false, false))
 			{
-				final TradeList.TradeItem adjItem = tradeList.adjustAvailableItem(item);
+				final TradeItem adjItem = tradeList.adjustAvailableItem(item);
 				if (adjItem != null)
 				{
 					list.add(adjItem);
@@ -277,7 +277,7 @@ public class PcInventory extends Inventory
 			}
 		}
 		
-		return list.toArray(new TradeList.TradeItem[list.size()]);
+		return list.toArray(new TradeItem[list.size()]);
 	}
 	
 	/**
@@ -286,7 +286,7 @@ public class PcInventory extends Inventory
 	 * @param list
 	 * @return
 	 */
-	public TradeItem adjustAvailableItem(TradeItem item, List<TradeList.TradeItem> list)
+	public TradeItem adjustAvailableItem(TradeItem item, List<TradeItem> list)
 	{
 		for (L2ItemInstance adjItem : _items)
 		{
@@ -313,7 +313,7 @@ public class PcInventory extends Inventory
 			else if ((adjItem.getItemId() == item.getItem().getItemId()) && (adjItem.getEnchantLevel() == item.getEnchant()))
 			{
 				boolean found = false;
-				for (TradeList.TradeItem actual : list)
+				for (TradeItem actual : list)
 				{
 					
 					if (actual.getObjectId() == adjItem.getObjectId())

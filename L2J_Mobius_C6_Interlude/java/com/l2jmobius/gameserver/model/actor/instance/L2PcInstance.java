@@ -1736,7 +1736,7 @@ public final class L2PcInstance extends L2Playable
 		_appearance = app;
 		
 		// Create an AI
-		_ai = new L2PlayerAI(new L2PcInstance.AIAccessor());
+		_ai = new L2PlayerAI(new AIAccessor());
 		
 		// Create a L2Radar object
 		_radar = new L2Radar(this);
@@ -1873,7 +1873,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				if (_ai == null)
 				{
-					_ai = new L2PlayerAI(new L2PcInstance.AIAccessor());
+					_ai = new L2PlayerAI(new AIAccessor());
 				}
 			}
 		}
@@ -12187,7 +12187,7 @@ public final class L2PcInstance extends L2Playable
 			if ((requiredItems == null) || (requiredItems.getCount() < skill.getItemConsume()))
 			{
 				// Checked: when a summon skill failed, server show required consume item count
-				if (sklType == L2Skill.SkillType.SUMMON)
+				if (sklType == SkillType.SUMMON)
 				{
 					final SystemMessage sm = new SystemMessage(SystemMessageId.SUMMONING_SERVITOR_COSTS_S2_S1);
 					sm.addItemName(skill.getItemConsumeId());
@@ -12214,7 +12214,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// Like L2OFF if you have a summon you can't summon another one (ignore cubics)
-		if ((sklType == L2Skill.SkillType.SUMMON) && (skill instanceof L2SkillSummon) && !((L2SkillSummon) skill).isCubic())
+		if ((sklType == SkillType.SUMMON) && (skill instanceof L2SkillSummon) && !((L2SkillSummon) skill).isCubic())
 		{
 			if ((getPet() != null) || isMounted())
 			{
@@ -12262,7 +12262,7 @@ public final class L2PcInstance extends L2Playable
 		// Abnormal effects(ex : Stun, Sleep...) are checked in L2Character useMagic()
 		
 		// Check if the player use "Fake Death" skill
-		if (isAlikeDead() && !skill.isPotion() && (skill.getSkillType() != L2Skill.SkillType.FAKE_DEATH))
+		if (isAlikeDead() && !skill.isPotion() && (skill.getSkillType() != SkillType.FAKE_DEATH))
 		{
 			
 			// Send a Server->Client packet ActionFailed to the L2PcInstance

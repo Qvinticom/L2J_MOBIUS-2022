@@ -51,26 +51,26 @@ public class Disablers implements ISkillHandler
 {
 	private static final SkillType[] SKILL_IDS =
 	{
-		L2Skill.SkillType.STUN,
-		L2Skill.SkillType.ROOT,
-		L2Skill.SkillType.SLEEP,
-		L2Skill.SkillType.CONFUSION,
-		L2Skill.SkillType.AGGDAMAGE,
-		L2Skill.SkillType.AGGREDUCE,
-		L2Skill.SkillType.AGGREDUCE_CHAR,
-		L2Skill.SkillType.AGGREMOVE,
-		L2Skill.SkillType.UNBLEED,
-		L2Skill.SkillType.UNPOISON,
-		L2Skill.SkillType.MUTE,
-		L2Skill.SkillType.FAKE_DEATH,
-		L2Skill.SkillType.CONFUSE_MOB_ONLY,
-		L2Skill.SkillType.NEGATE,
-		L2Skill.SkillType.CANCEL,
-		L2Skill.SkillType.PARALYZE,
-		L2Skill.SkillType.ERASE,
-		L2Skill.SkillType.MAGE_BANE,
-		L2Skill.SkillType.WARRIOR_BANE,
-		L2Skill.SkillType.BETRAY
+		SkillType.STUN,
+		SkillType.ROOT,
+		SkillType.SLEEP,
+		SkillType.CONFUSION,
+		SkillType.AGGDAMAGE,
+		SkillType.AGGREDUCE,
+		SkillType.AGGREDUCE_CHAR,
+		SkillType.AGGREMOVE,
+		SkillType.UNBLEED,
+		SkillType.UNPOISON,
+		SkillType.MUTE,
+		SkillType.FAKE_DEATH,
+		SkillType.CONFUSE_MOB_ONLY,
+		SkillType.NEGATE,
+		SkillType.CANCEL,
+		SkillType.PARALYZE,
+		SkillType.ERASE,
+		SkillType.MAGE_BANE,
+		SkillType.WARRIOR_BANE,
+		SkillType.BETRAY
 	};
 	
 	protected static final Logger LOGGER = Logger.getLogger(L2Skill.class.getName());

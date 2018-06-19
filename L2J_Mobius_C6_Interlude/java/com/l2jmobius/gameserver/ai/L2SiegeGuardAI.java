@@ -313,7 +313,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 					}
 					
 					// Set the AI Intention to AI_INTENTION_ATTACK
-					setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated, null);
+					setIntention(AI_INTENTION_ATTACK, hated, null);
 				}
 				
 				return;
@@ -652,7 +652,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Check if the L2Object is inside the Faction Range of the actor
-			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE)) && actor.isInsideRadius(npc, npc.getFactionRange(), false, true) && target.isInsideRadius(npc, npc.getFactionRange(), false, true))
+			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && actor.isInsideRadius(npc, npc.getFactionRange(), false, true) && target.isInsideRadius(npc, npc.getFactionRange(), false, true))
 			{
 				if (Config.PATHFINDING > 0)
 				{
@@ -749,7 +749,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		// Set the Intention to AI_INTENTION_ATTACK
 		if (getIntention() != AI_INTENTION_ATTACK)
 		{
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker, null);
+			setIntention(AI_INTENTION_ATTACK, attacker, null);
 		}
 		
 		super.onEvtAttacked(attacker);
@@ -796,7 +796,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 			
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
-			if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+			if (getIntention() != AI_INTENTION_ATTACK)
 			{
 				// Set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance
 				if (!_actor.isRunning())
@@ -812,7 +812,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 				// Check if the L2SiegeGuardInstance is not too far from its home location
 				if (((homeX * homeX) + (homeY * homeY)) < 3240000)
 				{
-					setIntention(CtrlIntention.AI_INTENTION_ATTACK, target, null);
+					setIntention(AI_INTENTION_ATTACK, target, null);
 				}
 			}
 		}

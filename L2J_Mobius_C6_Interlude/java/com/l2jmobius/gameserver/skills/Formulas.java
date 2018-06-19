@@ -1042,11 +1042,11 @@ public final class Formulas
 			// SevenSigns Festival modifier
 			if (SevenSignsFestival.getInstance().isFestivalInProgress() && player.isFestivalParticipant())
 			{
-				hpRegenMultiplier *= Formulas.calcFestivalRegenModifier(player);
+				hpRegenMultiplier *= calcFestivalRegenModifier(player);
 			}
 			else
 			{
-				final double siegeModifier = Formulas.calcSiegeRegenModifer(player);
+				final double siegeModifier = calcSiegeRegenModifer(player);
 				if (siegeModifier > 0)
 				{
 					hpRegenMultiplier *= siegeModifier;
@@ -1374,7 +1374,7 @@ public final class Formulas
 		/*
 		 * skill critical effects (skill damage x2) have been added
 		 */
-		if (Formulas.calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(attacker)))
+		if (calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(attacker)))
 		{
 			damage *= 2;
 		}

@@ -500,7 +500,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 					
 					// Set the AI Intention to AI_INTENTION_ATTACK
-					setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
+					setIntention(AI_INTENTION_ATTACK, hated);
 				}
 				
 				return;
@@ -700,7 +700,7 @@ public class L2AttackableAI extends L2CharacterAI
 					// Check if the L2Object is inside the Faction Range of the actor
 					if ((_actor.getAttackByList() != null) && _actor.isInsideRadius(npc, npc.getFactionRange(), true, false) && (npc.getAI() != null) && _actor.getAttackByList().contains(originalAttackTarget))
 					{
-						if ((npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE) || (npc.getAI().getIntention() == CtrlIntention.AI_INTENTION_ACTIVE))
+						if ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
 						{
 							if (GeoData.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600))
 							{
@@ -1080,11 +1080,11 @@ public class L2AttackableAI extends L2CharacterAI
 			// Set the Intention to AI_INTENTION_ATTACK
 			if (getIntention() != AI_INTENTION_ATTACK)
 			{
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
 			else if (((L2Attackable) _actor).getMostHated() != getAttackTarget())
 			{
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
+				setIntention(AI_INTENTION_ATTACK, attacker);
 			}
 		}
 		
@@ -1120,7 +1120,7 @@ public class L2AttackableAI extends L2CharacterAI
 			me.addDamageHate(target, 0, aggro);
 			
 			// Set the actor AI Intention to AI_INTENTION_ATTACK
-			if (getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
+			if (getIntention() != AI_INTENTION_ATTACK)
 			{
 				// Set the L2Character movement type to run and send
 				// Server->Client packet ChangeMoveType to all others
@@ -1130,7 +1130,7 @@ public class L2AttackableAI extends L2CharacterAI
 					_actor.setRunning();
 				}
 				
-				setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+				setIntention(AI_INTENTION_ATTACK, target);
 			}
 		}
 	}

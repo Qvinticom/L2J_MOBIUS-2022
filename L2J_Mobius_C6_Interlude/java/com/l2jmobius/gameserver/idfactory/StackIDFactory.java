@@ -71,7 +71,7 @@ public class StackIDFactory extends IdFactory
 		}
 	}
 	
-	private int insertUntil(int[] tmp_obj_ids, int idx, int N, java.sql.Connection con) throws SQLException
+	private int insertUntil(int[] tmp_obj_ids, int idx, int N, Connection con) throws SQLException
 	{
 		final int id = tmp_obj_ids[idx];
 		if (id == _tempOID)

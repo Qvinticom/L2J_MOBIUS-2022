@@ -64,7 +64,7 @@ public class SkillTable
 	 */
 	public static int getSkillHashCode(L2Skill skill)
 	{
-		return SkillTable.getSkillHashCode(skill.getId(), skill.getLevel());
+		return getSkillHashCode(skill.getId(), skill.getLevel());
 	}
 	
 	/**
@@ -80,7 +80,7 @@ public class SkillTable
 	
 	public L2Skill getInfo(int skillId, int level)
 	{
-		return _skills.get(SkillTable.getSkillHashCode(skillId, level));
+		return _skills.get(getSkillHashCode(skillId, level));
 	}
 	
 	public int getMaxLevel(int magicId, int level)
@@ -90,7 +90,7 @@ public class SkillTable
 		while (level < 100)
 		{
 			level++;
-			temp = _skills.get(SkillTable.getSkillHashCode(magicId, level));
+			temp = _skills.get(getSkillHashCode(magicId, level));
 			
 			if (temp == null)
 			{

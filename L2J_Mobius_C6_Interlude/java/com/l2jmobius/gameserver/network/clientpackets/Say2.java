@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.util.Util;
 public final class Say2 extends L2GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(Say2.class.getName());
-	private static java.util.logging.Logger _logChat = java.util.logging.Logger.getLogger("chat");
+	private static Logger _logChat = Logger.getLogger("chat");
 	
 	public static final int ALL = 0;
 	public static final int SHOUT = 1; // !

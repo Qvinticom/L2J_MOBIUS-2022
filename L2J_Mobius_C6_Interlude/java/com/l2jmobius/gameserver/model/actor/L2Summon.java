@@ -104,7 +104,7 @@ public abstract class L2Summon extends L2Playable
 		
 		_showSummonAnimation = true;
 		_owner = owner;
-		_ai = new L2SummonAI(new L2Summon.AIAccessor());
+		_ai = new L2SummonAI(new AIAccessor());
 		
 		// Make sure summon does not spawn in a wall.
 		final int x = owner.getX();
@@ -156,7 +156,7 @@ public abstract class L2Summon extends L2Playable
 			{
 				if (_ai == null)
 				{
-					_ai = new L2SummonAI(new L2Summon.AIAccessor());
+					_ai = new L2SummonAI(new AIAccessor());
 				}
 			}
 		}

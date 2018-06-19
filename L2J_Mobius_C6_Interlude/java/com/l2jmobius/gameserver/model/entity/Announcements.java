@@ -280,7 +280,7 @@ public class Announcements
 		{
 			// Announce string to everyone on server
 			String text = command.substring(lengthToTrim);
-			Announcements.getInstance().announceToAll(text);
+			getInstance().announceToAll(text);
 		}
 		// No body cares!
 		catch (StringIndexOutOfBoundsException e)

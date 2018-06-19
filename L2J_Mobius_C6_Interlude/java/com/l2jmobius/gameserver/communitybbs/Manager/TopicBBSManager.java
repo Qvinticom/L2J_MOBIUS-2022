@@ -62,9 +62,9 @@ public class TopicBBSManager extends BaseBBSManager
 			}
 			
 			f.vload();
-			Topic t = new Topic(Topic.ConstructorType.CREATE, TopicBBSManager.getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), activeChar.getName(), activeChar.getObjectId(), Topic.MEMO, 0);
+			Topic t = new Topic(Topic.ConstructorType.CREATE, getInstance().getMaxID(f) + 1, Integer.parseInt(ar2), ar5, Calendar.getInstance().getTimeInMillis(), activeChar.getName(), activeChar.getObjectId(), Topic.MEMO, 0);
 			f.addTopic(t);
-			TopicBBSManager.getInstance().setMaxID(t.getID(), f);
+			getInstance().setMaxID(t.getID(), f);
 			
 			Post p = new Post(activeChar.getName(), activeChar.getObjectId(), Calendar.getInstance().getTimeInMillis(), t.getID(), f.getID(), ar4);
 			PostBBSManager.getInstance().addPostByTopic(p, t);

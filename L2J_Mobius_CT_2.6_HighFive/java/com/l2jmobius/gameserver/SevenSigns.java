@@ -1696,7 +1696,7 @@ public class SevenSigns
 		{
 			// Gives "Victor of War" passive skill to all online characters with Cabal, which controls Seal of Strife
 			final int cabal = getPlayerCabal(player.getObjectId());
-			if (cabal != SevenSigns.CABAL_NULL)
+			if (cabal != CABAL_NULL)
 			{
 				if (cabal == strifeOwner)
 				{

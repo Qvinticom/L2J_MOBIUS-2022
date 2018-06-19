@@ -174,8 +174,8 @@ public class L2ClientDat extends JFrame
 		{
 			currentFileWindow = fileopen.getSelectedFile();
 			ConfigWindow.save("FILE_OPEN_CURRENT_DIRECTORY_PACK", currentFileWindow.getPath());
-			L2ClientDat.addLogConsole("---------------------------------------", true);
-			L2ClientDat.addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
+			addLogConsole("---------------------------------------", true);
+			addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
 			try
 			{
 				MassTxtPacker.getInstance().pack(String.valueOf(jComboBoxChronicle.getSelectedItem()), currentFileWindow.getPath(), CryptVersionParser.getInstance().getEncryptKey(String.valueOf(jComboBoxEncrypt.getSelectedItem())));
@@ -199,8 +199,8 @@ public class L2ClientDat extends JFrame
 		{
 			currentFileWindow = fileopen.getSelectedFile();
 			ConfigWindow.save("FILE_OPEN_CURRENT_DIRECTORY_UNPACK", currentFileWindow.getPath());
-			L2ClientDat.addLogConsole("---------------------------------------", true);
-			L2ClientDat.addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
+			addLogConsole("---------------------------------------", true);
+			addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
 			try
 			{
 				MassTxtUnpacker.getInstance().unpack(String.valueOf(jComboBoxChronicle.getSelectedItem()), currentFileWindow.getPath(), CryptVersionParser.getInstance().getDecryptKey(String.valueOf(jComboBoxDecrypt.getSelectedItem())));
@@ -224,8 +224,8 @@ public class L2ClientDat extends JFrame
 		{
 			currentFileWindow = fileopen.getSelectedFile();
 			ConfigWindow.save("FILE_OPEN_CURRENT_DIRECTORY", currentFileWindow.getPath());
-			L2ClientDat.addLogConsole("---------------------------------------", true);
-			L2ClientDat.addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
+			addLogConsole("---------------------------------------", true);
+			addLogConsole("selected folder: " + currentFileWindow.getPath(), true);
 			try
 			{
 				MassRecryptor.getInstance().recrypt(String.valueOf(jComboBoxChronicle.getSelectedItem()), currentFileWindow.getPath(), CryptVersionParser.getInstance().getDecryptKey(String.valueOf(jComboBoxDecrypt.getSelectedItem())), CryptVersionParser.getInstance().getEncryptKey(String.valueOf(jComboBoxEncrypt.getSelectedItem())));
@@ -251,8 +251,8 @@ public class L2ClientDat extends JFrame
 		{
 			currentFileWindow = fileopen.getSelectedFile();
 			ConfigWindow.save("LAST_FILE_SELECTED", currentFileWindow.getAbsolutePath());
-			L2ClientDat.addLogConsole("---------------------------------------", true);
-			L2ClientDat.addLogConsole("Open file: " + currentFileWindow.getName(), true);
+			addLogConsole("---------------------------------------", true);
+			addLogConsole("Open file: " + currentFileWindow.getName(), true);
 			try
 			{
 				OpenDat.start(String.valueOf(jComboBoxChronicle.getSelectedItem()), currentFileWindow, currentFileWindow.getName(), CryptVersionParser.getInstance().getDecryptKey(String.valueOf(jComboBoxDecrypt.getSelectedItem())));
@@ -289,13 +289,13 @@ public class L2ClientDat extends JFrame
 				{
 					// empty catch block
 				}
-				L2ClientDat.addLogConsole("---------------------------------------", true);
-				L2ClientDat.addLogConsole("Saved: " + f.getPath(), true);
+				addLogConsole("---------------------------------------", true);
+				addLogConsole("Saved: " + f.getPath(), true);
 			}
 		}
 		else
 		{
-			L2ClientDat.addLogConsole("No open file!", true);
+			addLogConsole("No open file!", true);
 		}
 	}
 	
@@ -306,7 +306,7 @@ public class L2ClientDat extends JFrame
 	{
 		if (currentFileWindow == null)
 		{
-			L2ClientDat.addLogConsole("Error saving dat. No file name.", true);
+			addLogConsole("Error saving dat. No file name.", true);
 			return;
 		}
 		byte[] buff = null;
@@ -322,7 +322,7 @@ public class L2ClientDat extends JFrame
 					buff = DescriptorWriter.parseData(currentFileWindow, crypter, desc, textPaneMain.getText());
 					GameDataName.getInstance().checkAndUpdate(currentFileWindow.getParent(), crypter);
 				}
-				L2ClientDat.addLogConsole("Not found the structure of the file: " + currentFileWindow.getName(), true);
+				addLogConsole("Not found the structure of the file: " + currentFileWindow.getName(), true);
 			}
 			catch (Exception e)
 			{
@@ -337,7 +337,7 @@ public class L2ClientDat extends JFrame
 		}
 		if (buff == null)
 		{
-			L2ClientDat.addLogConsole("buff == null.", true);
+			addLogConsole("buff == null.", true);
 			return;
 		}
 		try
@@ -352,7 +352,7 @@ public class L2ClientDat extends JFrame
 			DebugUtil.getLogger().error(e.getMessage(), e);
 			return;
 		}
-		L2ClientDat.addLogConsole("Packed successfully.", true);
+		addLogConsole("Packed successfully.", true);
 	}
 	
 	private void saveComboBox(JComboBox<?> jComboBox, String param)

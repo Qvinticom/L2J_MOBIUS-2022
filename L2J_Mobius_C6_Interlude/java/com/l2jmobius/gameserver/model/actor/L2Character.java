@@ -1829,7 +1829,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			getAI().notifyEvent(CtrlEvent.EVT_CANCEL);
 			return;
 		}
-		else if (((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.SEED) || (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_SELF) || (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_PET) || (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_PARTY) || (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_CLAN) || (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_ALLY)) && !skill.isPotion())
+		else if (((skill.getSkillType() == SkillType.BUFF) || (skill.getSkillType() == SkillType.HEAL) || (skill.getSkillType() == SkillType.COMBATPOINTHEAL) || (skill.getSkillType() == SkillType.COMBATPOINTPERCENTHEAL) || (skill.getSkillType() == SkillType.MANAHEAL) || (skill.getSkillType() == SkillType.REFLECT) || (skill.getSkillType() == SkillType.SEED) || (skill.getTargetType() == SkillTargetType.TARGET_SELF) || (skill.getTargetType() == SkillTargetType.TARGET_PET) || (skill.getTargetType() == SkillTargetType.TARGET_PARTY) || (skill.getTargetType() == SkillTargetType.TARGET_CLAN) || (skill.getTargetType() == SkillTargetType.TARGET_ALLY)) && !skill.isPotion())
 		{
 			target = (L2Character) targets[0];
 			
@@ -3720,7 +3720,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		final L2Skill tempskill = newEffect.getSkill();
 		
 		// Remove first Buff if number of buffs > BUFFS_MAX_AMOUNT
-		if ((getBuffCount() >= getMaxBuffCount()) && !doesStack(tempskill) && ((tempskill.getSkillType() == L2Skill.SkillType.BUFF) || (tempskill.getSkillType() == L2Skill.SkillType.REFLECT) || (tempskill.getSkillType() == L2Skill.SkillType.HEAL_PERCENT) || (tempskill.getSkillType() == L2Skill.SkillType.MANAHEAL_PERCENT)) && ((tempskill.getId() <= 4360) || (tempskill.getId() >= 4367)) && ((tempskill.getId() <= 4550) || (tempskill.getId() >= 4555)))
+		if ((getBuffCount() >= getMaxBuffCount()) && !doesStack(tempskill) && ((tempskill.getSkillType() == SkillType.BUFF) || (tempskill.getSkillType() == SkillType.REFLECT) || (tempskill.getSkillType() == SkillType.HEAL_PERCENT) || (tempskill.getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((tempskill.getId() <= 4360) || (tempskill.getId() >= 4367)) && ((tempskill.getId() <= 4550) || (tempskill.getId() >= 4555)))
 		{
 			if (newEffect.isHerbEffect())
 			{
@@ -7508,7 +7508,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return;
 		}
 		// Notify AI with AI_INTENTION_ATTACK
-		player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
+		player.getAI().setIntention(AI_INTENTION_ATTACK, this);
 	}
 	
 	/**
@@ -8120,7 +8120,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				continue;
 			}
 			
-			if (((e.getSkill().getSkillType() == L2Skill.SkillType.BUFF) || (e.getSkill().getId() == 1416) || (e.getSkill().getSkillType() == L2Skill.SkillType.REFLECT) || (e.getSkill().getSkillType() == L2Skill.SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == L2Skill.SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367))) // 7s
+			if (((e.getSkill().getSkillType() == SkillType.BUFF) || (e.getSkill().getId() == 1416) || (e.getSkill().getSkillType() == SkillType.REFLECT) || (e.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367))) // 7s
 			// buffs
 			{
 				numBuffs++;
@@ -8192,7 +8192,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				continue;
 			}
 			
-			if (((e.getSkill().getSkillType() == L2Skill.SkillType.BUFF) || (e.getSkill().getSkillType() == L2Skill.SkillType.REFLECT) || (e.getSkill().getSkillType() == L2Skill.SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == L2Skill.SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367)))
+			if (((e.getSkill().getSkillType() == SkillType.BUFF) || (e.getSkill().getSkillType() == SkillType.REFLECT) || (e.getSkill().getSkillType() == SkillType.HEAL_PERCENT) || (e.getSkill().getSkillType() == SkillType.MANAHEAL_PERCENT)) && ((e.getSkill().getId() <= 4360) || (e.getSkill().getId() >= 4367)))
 			{
 				if (preferSkill == 0)
 				{
@@ -8410,7 +8410,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 								continue;
 							}
 						}
-						else if (L2Character.isInsidePeaceZone(this, targets[i]))
+						else if (isInsidePeaceZone(this, targets[i]))
 						{
 							continue;
 						}
@@ -8714,16 +8714,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						// If CTRL is pressed the autoattack is aborted (like L2OFF)
 						if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.nextActionIsAttack() && (getTarget() != null) && (getTarget() instanceof L2Character))
 						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getTarget());
+							getAI().setIntention(AI_INTENTION_ATTACK, getTarget());
 						}
 					}
 					else if (skill.nextActionIsAttack() && (getTarget() != null) && (getTarget() instanceof L2Character))
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getTarget());
+						getAI().setIntention(AI_INTENTION_ATTACK, getTarget());
 					}
 					else if ((skill.isOffensive()) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.BLOW) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK) && (skill.getId() != 345) && (skill.getId() != 346))
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getTarget());
+						getAI().setIntention(AI_INTENTION_ATTACK, getTarget());
 						getAI().clientStartAutoAttack();
 					}
 				}
@@ -8735,7 +8735,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					{
 						if (!skill.isMagic() && skill.nextActionIsAttack())
 						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getTarget());
+							getAI().setIntention(AI_INTENTION_ATTACK, getTarget());
 						}
 						
 						getAI().clientStartAutoAttack();
@@ -8745,7 +8745,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				{
 					if (!skill.isMagic())
 					{
-						getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getTarget());
+						getAI().setIntention(AI_INTENTION_ATTACK, getTarget());
 					}
 					
 					getAI().clientStartAutoAttack();
@@ -9053,7 +9053,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					// Set some values inside target's instance for later use
 					L2Character player = (L2Character) target;
 					
-					if (skill.getEffectType() == L2Skill.SkillType.BUFF)
+					if (skill.getEffectType() == SkillType.BUFF)
 					{
 						if (player.isBlockBuff())
 						{
@@ -9269,7 +9269,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 							if ((player instanceof L2PcInstance) || (player instanceof L2Summon))
 							{
 								// Signets are a special case, casted on target_self but don't harm self
-								if ((skill.getSkillType() != L2Skill.SkillType.SIGNET) && (skill.getSkillType() != L2Skill.SkillType.SIGNET_CASTTIME))
+								if ((skill.getSkillType() != SkillType.SIGNET) && (skill.getSkillType() != SkillType.SIGNET_CASTTIME))
 								{
 									player.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, activeChar);
 									activeChar.updatePvPStatus(player);
@@ -9311,7 +9311,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 								activeChar.updatePvPStatus();
 							}
 						}
-						else if ((player instanceof L2Attackable) && (skill.getSkillType() != L2Skill.SkillType.SUMMON) && (skill.getSkillType() != L2Skill.SkillType.BEAST_FEED) && (skill.getSkillType() != L2Skill.SkillType.UNLOCK) && (skill.getSkillType() != L2Skill.SkillType.DELUXE_KEY_UNLOCK))
+						else if ((player instanceof L2Attackable) && (skill.getSkillType() != SkillType.SUMMON) && (skill.getSkillType() != SkillType.BEAST_FEED) && (skill.getSkillType() != SkillType.UNLOCK) && (skill.getSkillType() != SkillType.DELUXE_KEY_UNLOCK))
 						{
 							activeChar.updatePvPStatus(this);
 						}

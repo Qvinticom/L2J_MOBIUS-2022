@@ -278,7 +278,7 @@ public final class FloodProtectorAction
 	{
 		if (client.getActiveChar() != null)
 		{
-			client.getActiveChar().setPunishLevel(L2PcInstance.PunishLevel.ACC, config.PUNISHMENT_TIME);
+			client.getActiveChar().setPunishLevel(PunishLevel.ACC, config.PUNISHMENT_TIME);
 			
 			LOGGER(client.getActiveChar().getName() + " banned for flooding");
 			
@@ -297,7 +297,7 @@ public final class FloodProtectorAction
 	{
 		if (client.getActiveChar() != null)
 		{
-			client.getActiveChar().setPunishLevel(L2PcInstance.PunishLevel.JAIL, config.PUNISHMENT_TIME);
+			client.getActiveChar().setPunishLevel(PunishLevel.JAIL, config.PUNISHMENT_TIME);
 			
 			LOGGER.warning(client.getActiveChar().getName() + " jailed for flooding");
 		}

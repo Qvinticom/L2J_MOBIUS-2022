@@ -214,7 +214,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		}
 		else
 		{
-			setIntention(CtrlIntention.AI_INTENTION_ATTACK, _lastAttack);
+			setIntention(AI_INTENTION_ATTACK, _lastAttack);
 			_lastAttack = null;
 		}
 	}

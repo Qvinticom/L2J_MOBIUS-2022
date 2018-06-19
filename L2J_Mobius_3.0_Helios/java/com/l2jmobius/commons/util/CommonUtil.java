@@ -88,7 +88,7 @@ public final class CommonUtil
 	{
 		final byte[] data = new byte[buf.remaining()];
 		buf.get(data);
-		final String hex = CommonUtil.printData(data, data.length);
+		final String hex = printData(data, data.length);
 		buf.position(buf.position() - data.length);
 		return hex;
 	}

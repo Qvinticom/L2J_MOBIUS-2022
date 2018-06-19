@@ -55,7 +55,6 @@ import com.l2jmobius.gameserver.handler.skillhandlers.TakeCastle;
 import com.l2jmobius.gameserver.handler.skillhandlers.Unlock;
 import com.l2jmobius.gameserver.handler.skillhandlers.ZakenPlayer;
 import com.l2jmobius.gameserver.handler.skillhandlers.ZakenSelf;
-import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 
 /**
@@ -68,7 +67,7 @@ public class SkillHandler
 	
 	private static SkillHandler _instance;
 	
-	private final Map<L2Skill.SkillType, ISkillHandler> _datatable;
+	private final Map<SkillType, ISkillHandler> _datatable;
 	
 	public static SkillHandler getInstance()
 	{

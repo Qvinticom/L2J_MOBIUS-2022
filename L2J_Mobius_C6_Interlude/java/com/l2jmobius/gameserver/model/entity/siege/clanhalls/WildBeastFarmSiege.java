@@ -119,7 +119,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 	
 	public void startSecondStep(L2Clan winner)
 	{
-		final List<String> winPlayers = WildBeastFarmSiege.getInstance().getRegisteredPlayers(winner);
+		final List<String> winPlayers = getInstance().getRegisteredPlayers(winner);
 		unSpawnAll();
 		_clansInfo.clear();
 		final clanPlayersInfo regPlayers = new clanPlayersInfo();

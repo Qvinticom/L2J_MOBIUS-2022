@@ -911,7 +911,7 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		// If pathfinding enabled the creature will go to the destination or it will go to the nearest obstacle.
-		setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, Config.PATHFINDING ? GeoEngine.getInstance().canMoveToTargetLoc(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
+		setIntention(AI_INTENTION_MOVE_TO, Config.PATHFINDING ? GeoEngine.getInstance().canMoveToTargetLoc(_actor.getX(), _actor.getY(), _actor.getZ(), posX, posY, posZ, _actor.getInstanceId()) : new Location(posX, posY, posZ));
 	}
 	
 	protected boolean maybeMoveToPosition(ILocational worldPosition, int offset)
@@ -1046,16 +1046,16 @@ public class L2CharacterAI extends AbstractAI
 			{
 				// If player is trying attack target but he cannot move to attack target
 				// change his intention to idle
-				if (_actor.getAI().getIntention() == CtrlIntention.AI_INTENTION_ATTACK)
+				if (_actor.getAI().getIntention() == AI_INTENTION_ATTACK)
 				{
-					_actor.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
+					_actor.getAI().setIntention(AI_INTENTION_IDLE);
 				}
 				
 				return true;
 			}
 			
 			// while flying there is no move to cast
-			if ((_actor.getAI().getIntention() == CtrlIntention.AI_INTENTION_CAST) && (_actor instanceof L2PcInstance) && _actor.isTransformed() && !_actor.getTransformation().isCombat())
+			if ((_actor.getAI().getIntention() == AI_INTENTION_CAST) && (_actor instanceof L2PcInstance) && _actor.isTransformed() && !_actor.getTransformation().isCombat())
 			{
 				_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 				_actor.sendPacket(ActionFailed.STATIC_PACKET);

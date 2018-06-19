@@ -50,17 +50,17 @@ public class hitConditionBonus
 		// Get high or low bonus
 		if ((attacker.getZ() - target.getZ()) > 50)
 		{
-			mod += hitConditionBonus.highBonus;
+			mod += highBonus;
 		}
 		else if ((attacker.getZ() - target.getZ()) < -50)
 		{
-			mod += hitConditionBonus.lowBonus;
+			mod += lowBonus;
 		}
 		
 		// Get weather bonus
 		if (GameTimeController.getInstance().isNowNight())
 		{
-			mod += hitConditionBonus.darkBonus;
+			mod += darkBonus;
 			// else if () No rain support yet.
 			// chance += hitConditionBonus.rainBonus;
 		}
@@ -68,15 +68,15 @@ public class hitConditionBonus
 		// Get side bonus
 		if (attacker.isBehindTarget())
 		{
-			mod += hitConditionBonus.backBonus;
+			mod += backBonus;
 		}
 		else if (attacker.isFrontTarget())
 		{
-			mod += hitConditionBonus.frontBonus;
+			mod += frontBonus;
 		}
 		else
 		{
-			mod += hitConditionBonus.sideBonus;
+			mod += sideBonus;
 		}
 		
 		// If (mod / 10) is less than 0, return 0, because we cant lower more than 100%.

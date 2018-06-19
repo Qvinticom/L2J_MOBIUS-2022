@@ -187,19 +187,19 @@ public class SkillData implements IGameXmlReader
 	{
 		final List<Skill> temp = new LinkedList<>();
 		
-		temp.add(_skills.get(SkillData.getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
-		temp.add(_skills.get(SkillData.getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
+		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_LIGHT.getId(), 1)));
+		temp.add(_skills.get(getSkillHashCode(CommonSkill.IMPRIT_OF_DARKNESS.getId(), 1)));
 		
-		temp.add(_skills.get(SkillData.getSkillHashCode(247, 1))); // Build Headquarters
+		temp.add(_skills.get(getSkillHashCode(247, 1))); // Build Headquarters
 		
 		if (addNoble)
 		{
-			temp.add(_skills.get(SkillData.getSkillHashCode(326, 1))); // Build Advanced Headquarters
+			temp.add(_skills.get(getSkillHashCode(326, 1))); // Build Advanced Headquarters
 		}
 		if (hasCastle)
 		{
-			temp.add(_skills.get(SkillData.getSkillHashCode(844, 1))); // Outpost Construction
-			temp.add(_skills.get(SkillData.getSkillHashCode(845, 1))); // Outpost Demolition
+			temp.add(_skills.get(getSkillHashCode(844, 1))); // Outpost Construction
+			temp.add(_skills.get(getSkillHashCode(845, 1))); // Outpost Demolition
 		}
 		return temp;
 	}

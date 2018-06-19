@@ -1836,7 +1836,7 @@ public class L2Clan implements IIdentifiable, INamable
 		pledgeType = getAvailablePledgeTypes(pledgeType);
 		if (pledgeType == 0)
 		{
-			if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
+			if (pledgeType == SUBUNIT_ACADEMY)
 			{
 				player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
 			}
@@ -1854,7 +1854,7 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		// Royal Guard 5000 points per each
 		// Order of Knights 10000 points per each
-		if ((pledgeType != -1) && (((getReputationScore() < Config.ROYAL_GUARD_COST) && (pledgeType < L2Clan.SUBUNIT_KNIGHT1)) || ((getReputationScore() < Config.KNIGHT_UNIT_COST) && (pledgeType > L2Clan.SUBUNIT_ROYAL2))))
+		if ((pledgeType != -1) && (((getReputationScore() < Config.ROYAL_GUARD_COST) && (pledgeType < SUBUNIT_KNIGHT1)) || ((getReputationScore() < Config.KNIGHT_UNIT_COST) && (pledgeType > SUBUNIT_ROYAL2))))
 		{
 			player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
 			return null;
@@ -1876,7 +1876,7 @@ public class L2Clan implements IIdentifiable, INamable
 			{
 				// Royal Guard 5000 points per each
 				// Order of Knights 10000 points per each
-				if (pledgeType < L2Clan.SUBUNIT_KNIGHT1)
+				if (pledgeType < SUBUNIT_KNIGHT1)
 				{
 					setReputationScore(getReputationScore() - Config.ROYAL_GUARD_COST, true);
 				}
@@ -2399,7 +2399,7 @@ public class L2Clan implements IIdentifiable, INamable
 			player.sendPacket(SystemMessageId.TO_CREATE_AN_ALLIANCE_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER);
 			return;
 		}
-		if ((getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (getAllyPenaltyType() == L2Clan.PENALTY_TYPE_DISSOLVE_ALLY))
+		if ((getAllyPenaltyExpiryTime() > System.currentTimeMillis()) && (getAllyPenaltyType() == PENALTY_TYPE_DISSOLVE_ALLY))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_CREATE_A_NEW_ALLIANCE_WITHIN_1_DAY_OF_DISSOLUTION);
 			return;
@@ -2471,7 +2471,7 @@ public class L2Clan implements IIdentifiable, INamable
 		setAllyId(0);
 		setAllyName(null);
 		changeAllyCrest(0, false);
-		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), L2Clan.PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
+		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000L), PENALTY_TYPE_DISSOLVE_ALLY); // 24*60*60*1000 = 86400000
 		updateClanInDB();
 	}
 	

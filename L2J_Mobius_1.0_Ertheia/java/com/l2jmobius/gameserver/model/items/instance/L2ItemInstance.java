@@ -67,7 +67,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerItemP
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemBypassEvent;
 import com.l2jmobius.gameserver.model.events.impl.item.OnItemTalk;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
-import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Armor;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -892,7 +891,7 @@ public final class L2ItemInstance extends L2Object
 			&& ((getItem().getType2() != L2Item.TYPE2_MONEY) || (getItem().getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
 			&& ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
 			&& !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
-			&& (allowAdena || (getId() != Inventory.ADENA_ID)) // Not Adena
+			&& (allowAdena || (getId() != ADENA_ID)) // Not Adena
 			&& (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != getId())) && (allowNonTradeable || (isTradeable() && (!((getItem().getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
 	}
 	

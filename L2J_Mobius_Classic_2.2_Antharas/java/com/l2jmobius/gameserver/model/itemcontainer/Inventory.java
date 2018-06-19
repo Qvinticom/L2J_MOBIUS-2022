@@ -1277,7 +1277,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInBodySlotAndRecord(int slot)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1308,7 +1308,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] unEquipItemInSlotAndRecord(int slot)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1484,7 +1484,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public L2ItemInstance[] equipItemAndRecord(L2ItemInstance item)
 	{
-		final Inventory.ChangeRecorder recorder = newRecorder();
+		final ChangeRecorder recorder = newRecorder();
 		
 		try
 		{
@@ -1998,7 +1998,7 @@ public abstract class Inventory extends ItemContainer
 	
 	public int getWeaponEnchant()
 	{
-		final L2ItemInstance item = getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+		final L2ItemInstance item = getPaperdollItem(PAPERDOLL_RHAND);
 		return item != null ? item.getEnchantLevel() : 0;
 	}
 	

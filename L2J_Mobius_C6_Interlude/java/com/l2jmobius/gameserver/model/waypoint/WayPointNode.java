@@ -203,7 +203,7 @@ public class WayPointNode extends L2Object
 			y1 = y1 + ((modY * diffY) / steps);
 			z1 = z1 + ((modZ * diffZ) / steps);
 			
-			lineNodes.add(WayPointNode.spawn(LINE_TYPE, _lineId, x1, y1, z1));
+			lineNodes.add(spawn(LINE_TYPE, _lineId, x1, y1, z1));
 		}
 		
 		nodeA.addLineInfo(nodeB, lineNodes);

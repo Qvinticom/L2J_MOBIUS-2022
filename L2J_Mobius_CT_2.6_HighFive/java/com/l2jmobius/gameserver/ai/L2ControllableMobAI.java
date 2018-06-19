@@ -88,9 +88,9 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			{
 				case AI_IDLE:
 				{
-					if (getIntention() != CtrlIntention.AI_INTENTION_ACTIVE)
+					if (getIntention() != AI_INTENTION_ACTIVE)
 					{
-						setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
+						setIntention(AI_INTENTION_ACTIVE);
 					}
 					break;
 				}
@@ -367,7 +367,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		}
 		
 		_actor.setRunning();
-		setIntention(CtrlIntention.AI_INTENTION_ATTACK, hated);
+		setIntention(AI_INTENTION_ATTACK, hated);
 	}
 	
 	private boolean checkAutoAttackCondition(L2Character target)

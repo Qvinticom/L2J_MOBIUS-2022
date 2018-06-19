@@ -1088,17 +1088,17 @@ public class Olympiad extends ListenersContainer
 		if (!_nobles.containsKey(player.getObjectId()))
 		{
 			final StatsSet statDat = new StatsSet();
-			statDat.set(Olympiad.CLASS_ID, player.getBaseClass());
-			statDat.set(Olympiad.CHAR_NAME, player.getName());
-			statDat.set(Olympiad.POINTS, Olympiad.DEFAULT_POINTS);
-			statDat.set(Olympiad.COMP_DONE, 0);
-			statDat.set(Olympiad.COMP_WON, 0);
-			statDat.set(Olympiad.COMP_LOST, 0);
-			statDat.set(Olympiad.COMP_DRAWN, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_NON_CLASSED, 0);
-			statDat.set(Olympiad.COMP_DONE_WEEK_TEAM, 0);
+			statDat.set(CLASS_ID, player.getBaseClass());
+			statDat.set(CHAR_NAME, player.getName());
+			statDat.set(POINTS, DEFAULT_POINTS);
+			statDat.set(COMP_DONE, 0);
+			statDat.set(COMP_WON, 0);
+			statDat.set(COMP_LOST, 0);
+			statDat.set(COMP_DRAWN, 0);
+			statDat.set(COMP_DONE_WEEK, 0);
+			statDat.set(COMP_DONE_WEEK_CLASSED, 0);
+			statDat.set(COMP_DONE_WEEK_NON_CLASSED, 0);
+			statDat.set(COMP_DONE_WEEK_TEAM, 0);
 			statDat.set("to_save", true);
 			addNobleStats(player.getObjectId(), statDat);
 		}

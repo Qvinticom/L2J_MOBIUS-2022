@@ -106,7 +106,7 @@ public class AutoAnnouncementHandler
 		replyMSG.append("</td></tr></table></center>");
 		replyMSG.append("<br>");
 		
-		for (AutoAnnouncementInstance announcementInst : AutoAnnouncementHandler.getInstance().values())
+		for (AutoAnnouncementInstance announcementInst : getInstance().values())
 		{
 			replyMSG.append("<table width=260><tr><td width=220>[" + announcementInst.getDefaultDelay() + "s] " + announcementInst.getDefaultTexts() + "</td><td width=40>");
 			replyMSG.append("<button value=\"Delete\" action=\"bypass -h admin_del_autoannouncement " + announcementInst.getDefaultId() + "\" width=60 height=15 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table>");

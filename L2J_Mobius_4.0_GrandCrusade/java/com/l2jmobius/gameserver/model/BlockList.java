@@ -255,7 +255,7 @@ public class BlockList
 		final L2PcInstance player = L2World.getInstance().getPlayer(ownerId);
 		if (player != null)
 		{
-			return BlockList.isBlocked(player, targetId);
+			return isBlocked(player, targetId);
 		}
 		if (!OFFLINE_LIST.containsKey(ownerId))
 		{

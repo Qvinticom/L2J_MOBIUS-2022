@@ -43,7 +43,7 @@ public class ByteReader
 	
 	public static int readUInt(ByteBuffer buffer)
 	{
-		return ByteReader.readInt(buffer);
+		return readInt(buffer);
 	}
 	
 	public static short readShort(ByteBuffer buffer)
@@ -135,12 +135,12 @@ public class ByteReader
 		{
 			a = "0" + a;
 		}
-		return a + ByteReader.readRGB(buffer);
+		return a + readRGB(buffer);
 	}
 	
 	public static String readUtfString(ByteBuffer buffer, boolean isRaw) throws Exception
 	{
-		int size = ByteReader.readInt(buffer);
+		int size = readInt(buffer);
 		if (size <= 0)
 		{
 			return "";
@@ -162,19 +162,19 @@ public class ByteReader
 		{
 			e.printStackTrace();
 		}
-		return ByteReader.checkAndReplaceNewLine(isRaw, new String(new String(bytes, "Unicode").getBytes("UTF-8"), "UTF-8"));
+		return checkAndReplaceNewLine(isRaw, new String(new String(bytes, "Unicode").getBytes("UTF-8"), "UTF-8"));
 	}
 	
 	public static String readString(ByteBuffer input, boolean isRaw) throws IOException
 	{
-		int len = ByteReader.readCompactInt(input);
+		int len = readCompactInt(input);
 		if (len == 0)
 		{
 			return "";
 		}
 		byte[] bytes = new byte[len > 0 ? len : -2 * len];
 		input.get(bytes);
-		return ByteReader.checkAndReplaceNewLine(isRaw, new String(bytes, 0, bytes.length - (len > 0 ? 1 : 2), len > 0 ? defaultCharset : utf16leCharset).intern());
+		return checkAndReplaceNewLine(isRaw, new String(bytes, 0, bytes.length - (len > 0 ? 1 : 2), len > 0 ? defaultCharset : utf16leCharset).intern());
 	}
 	
 	private static String checkAndReplaceNewLine(boolean isRaw, String str)

@@ -36,7 +36,7 @@ public class ByteWriter
 	
 	public static Buffer writeCompactInt(int count)
 	{
-		byte[] b = ByteWriter.compactIntToByteArray(count);
+		byte[] b = compactIntToByteArray(count);
 		ByteBuffer buffer = ByteBuffer.allocate(b.length).order(BYTE_ORDER);
 		buffer.put(b);
 		return buffer;
@@ -97,7 +97,7 @@ public class ByteWriter
 	public static Buffer writeRGBA(String rgba)
 	{
 		ByteBuffer buffer = ByteBuffer.allocate(4).order(BYTE_ORDER);
-		buffer.put((byte[]) ByteWriter.writeRGB(rgba.substring(0, 6)).array());
+		buffer.put((byte[]) writeRGB(rgba.substring(0, 6)).array());
 		buffer.put((byte) Integer.parseInt(rgba.substring(6, 8), 16));
 		return buffer;
 	}
@@ -111,7 +111,7 @@ public class ByteWriter
 		}
 		if (!isRaw)
 		{
-			str = ByteWriter.checkAndReplaceNewLine(str);
+			str = checkAndReplaceNewLine(str);
 			size = str.length();
 		}
 		ByteBuffer buffer = ByteBuffer.allocate((size * 2) + 4).order(BYTE_ORDER);
@@ -127,16 +127,16 @@ public class ByteWriter
 	{
 		if ((s == null) || s.isEmpty())
 		{
-			return ByteWriter.writeCompactInt(0);
+			return writeCompactInt(0);
 		}
 		if (!isRaw)
 		{
-			s = ByteWriter.checkAndReplaceNewLine(s);
+			s = checkAndReplaceNewLine(s);
 		}
 		s = s + '\u0000';
 		boolean def = defaultCharset.newEncoder().canEncode(s);
 		byte[] bytes = s.getBytes(def ? defaultCharset : utf16leCharset);
-		byte[] bSize = ByteWriter.compactIntToByteArray(def ? bytes.length : (-bytes.length) / 2);
+		byte[] bSize = compactIntToByteArray(def ? bytes.length : (-bytes.length) / 2);
 		ByteBuffer buffer = ByteBuffer.allocate(bytes.length + bSize.length).order(BYTE_ORDER);
 		buffer.put(bSize);
 		buffer.put(bytes);
