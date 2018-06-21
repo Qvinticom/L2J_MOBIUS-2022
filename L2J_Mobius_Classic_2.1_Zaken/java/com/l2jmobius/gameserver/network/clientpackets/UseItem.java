@@ -291,8 +291,8 @@ public final class UseItem implements IClientIncomingPacket
 	
 	private void reuseData(L2PcInstance activeChar, L2ItemInstance item, long remainingTime)
 	{
-		final int hours = (int) (remainingTime / 3600000L);
-		final int minutes = (int) (remainingTime % 3600000L) / 60000;
+		final int hours = (int) (remainingTime / 3600000);
+		final int minutes = (int) (remainingTime % 3600000) / 60000;
 		final int seconds = (int) ((remainingTime / 1000) % 60);
 		final SystemMessage sm;
 		if (hours > 0)

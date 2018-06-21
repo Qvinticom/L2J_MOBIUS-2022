@@ -265,7 +265,7 @@ public final class TaskManager
 			}
 			case TYPE_GLOBAL_TASK:
 			{
-				interval = Long.valueOf(task.getParams()[0]) * 86400000L;
+				interval = Long.valueOf(task.getParams()[0]) * 86400000;
 				final String[] hour = task.getParams()[1].split(":");
 				
 				if (hour.length != 3)

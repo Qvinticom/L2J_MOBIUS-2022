@@ -242,7 +242,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				else
 				{
 					// end time is equal to dropped one
-					final long endTime = System.currentTimeMillis() + (cursedWeapon.getDuration() * 60000L);
+					final long endTime = System.currentTimeMillis() + (cursedWeapon.getDuration() * 60000);
 					cursedWeapon.setEndTime(endTime);
 					
 					final L2Object target = activeChar.getTarget();

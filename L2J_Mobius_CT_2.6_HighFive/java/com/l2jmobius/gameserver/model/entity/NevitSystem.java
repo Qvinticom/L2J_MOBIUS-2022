@@ -67,7 +67,7 @@ public class NevitSystem implements IUniqueId
 		cal.set(Calendar.MILLISECOND, 0);
 		
 		// Reset Nevit's Blessing
-		if ((_player.getLastAccess() < (cal.getTimeInMillis() / 1000L)) && (System.currentTimeMillis() > cal.getTimeInMillis()))
+		if ((_player.getLastAccess() < (cal.getTimeInMillis() / 1000)) && (System.currentTimeMillis() > cal.getTimeInMillis()))
 		{
 			_player.getVariables().set("hunting_time", 0);
 		}
@@ -206,7 +206,7 @@ public class NevitSystem implements IUniqueId
 			getPlayer().sendPacket(new ExNevitAdventEffect(time));
 			getPlayer().sendPacket(SystemMessageId.THE_ANGEL_NEVIT_HAS_BLESSED_YOU_FROM_ABOVE_YOU_ARE_IMBUED_WITH_FULL_VITALITY_AS_WELL_AS_A_VITALITY_REPLENISHING_EFFECT_AND_SHOULD_YOU_DIE_YOU_WILL_NOT_LOSE_EXP);
 			getPlayer().startAbnormalVisualEffect(true, AbnormalVisualEffect.NAVIT_ADVENT);
-			_nevitEffectTask = ThreadPool.schedule(new NevitEffectEnd(), time * 1000L);
+			_nevitEffectTask = ThreadPool.schedule(new NevitEffectEnd(), time * 1000);
 		}
 	}
 	

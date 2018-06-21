@@ -441,7 +441,7 @@ public final class WalkingManager implements IGameXmlReader
 						npc.broadcastSay(ChatType.NPC_GENERAL, node.getChatText());
 					}
 					
-					ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000L));
+					ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000));
 				}
 			}
 		}

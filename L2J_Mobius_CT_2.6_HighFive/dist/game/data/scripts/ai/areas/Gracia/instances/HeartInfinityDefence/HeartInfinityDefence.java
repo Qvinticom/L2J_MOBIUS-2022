@@ -637,7 +637,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			final long time = ((_world.startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000;
+			final long time = ((_world.startTime + (25 * 60 * 1000)) - System.currentTimeMillis()) / 60000;
 			if (time == 0)
 			{
 				conquestConclusion(_world);

@@ -669,7 +669,7 @@ public class HeartInfinityAttack extends AbstractNpcAI
 		@Override
 		public void run()
 		{
-			final long time = ((_world.startTime + (25 * 60 * 1000L)) - System.currentTimeMillis()) / 60000;
+			final long time = ((_world.startTime + (25 * 60 * 1000)) - System.currentTimeMillis()) / 60000;
 			if (time == 0)
 			{
 				broadCastPacket(_world, new ExShowScreenMessage(NpcStringId.YOU_HAVE_FAILED_AT_S1_S2_THE_INSTANCE_WILL_SHORTLY_EXPIRE, 2, 8000));

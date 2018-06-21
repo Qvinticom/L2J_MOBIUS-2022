@@ -545,7 +545,7 @@ public class Olympiad extends ListenersContainer
 	{
 		// if (_olympiadEnd > Calendar.getInstance().getTimeInMillis())
 		return (_olympiadEnd - Calendar.getInstance().getTimeInMillis());
-		// return 10L;
+		// return 10;
 	}
 	
 	public void manualSelectHeroes()
@@ -564,7 +564,7 @@ public class Olympiad extends ListenersContainer
 		{
 			return (_validationEnd - Calendar.getInstance().getTimeInMillis());
 		}
-		return 10L;
+		return 10;
 	}
 	
 	public boolean isOlympiadEnd()
@@ -662,7 +662,7 @@ public class Olympiad extends ListenersContainer
 	{
 		if ((_compStart.getTimeInMillis() < Calendar.getInstance().getTimeInMillis()) && (_compEnd > Calendar.getInstance().getTimeInMillis()))
 		{
-			return 10L;
+			return 10;
 		}
 		
 		if (_compStart.getTimeInMillis() > Calendar.getInstance().getTimeInMillis())
@@ -720,7 +720,7 @@ public class Olympiad extends ListenersContainer
 	{
 		// if (_compEnd > Calendar.getInstance().getTimeInMillis())
 		return (_compEnd - Calendar.getInstance().getTimeInMillis());
-		// return 10L;
+		// return 10;
 	}
 	
 	private long getMillisToWeekChange()
@@ -729,7 +729,7 @@ public class Olympiad extends ListenersContainer
 		{
 			return (_nextWeeklyChange - Calendar.getInstance().getTimeInMillis());
 		}
-		return 10L;
+		return 10;
 	}
 	
 	private void scheduleWeeklyChange()

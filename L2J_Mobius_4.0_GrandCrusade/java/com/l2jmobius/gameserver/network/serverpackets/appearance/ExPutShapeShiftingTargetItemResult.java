@@ -28,7 +28,7 @@ public class ExPutShapeShiftingTargetItemResult implements IClientOutgoingPacket
 	public static int RESULT_FAILED = 0x00;
 	public static int RESULT_SUCCESS = 0x01;
 	
-	public static ExPutShapeShiftingTargetItemResult FAILED = new ExPutShapeShiftingTargetItemResult(RESULT_FAILED, 0L);
+	public static ExPutShapeShiftingTargetItemResult FAILED = new ExPutShapeShiftingTargetItemResult(RESULT_FAILED, 0);
 	
 	private final int _resultId;
 	private final long _price;

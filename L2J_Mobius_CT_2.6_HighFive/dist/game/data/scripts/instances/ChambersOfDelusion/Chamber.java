@@ -545,7 +545,7 @@ public abstract class Chamber extends AbstractInstance
 	protected void scheduleRoomChange(InstanceWorld world, boolean bossRoom)
 	{
 		final Instance inst = InstanceManager.getInstance().getInstance(world.getInstanceId());
-		final long nextInterval = bossRoom ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
+		final long nextInterval = bossRoom ? 60000 : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000;
 		
 		// Schedule next room change only if remaining time is enough
 		if ((inst.getInstanceEndTime() - System.currentTimeMillis()) > nextInterval)

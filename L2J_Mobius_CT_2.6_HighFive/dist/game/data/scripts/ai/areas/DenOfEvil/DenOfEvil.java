@@ -127,7 +127,7 @@ public final class DenOfEvil extends AbstractNpcAI
 		zone.addSkill(skillId, skillLevel + 1);
 		if (skillLevel == 3) // 3+1=4
 		{
-			ThreadPool.schedule(new KashaDestruction(zone), 2 * 60 * 1000l);
+			ThreadPool.schedule(new KashaDestruction(zone), 2 * 60 * 1000);
 			zone.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.KASHA_S_EYE_PITCHES_AND_TOSSES_LIKE_IT_S_ABOUT_TO_EXPLODE));
 		}
 		else if (skillLevel == 2)

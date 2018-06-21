@@ -9966,7 +9966,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskRentPet == null)
 		{
-			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000L, seconds * 1000L);
+			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000, seconds * 1000);
 		}
 	}
 	
@@ -13827,7 +13827,7 @@ public final class L2PcInstance extends L2Playable
 			stopOnlineTimeUpdateTask();
 		}
 		
-		_onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000L, 60 * 1000L);
+		_onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
 	}
 	
 	private void updateOnlineTime()
@@ -13894,7 +13894,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public long getTraingCampDuration()
 	{
-		return getAccountVariables().getLong(TRAINING_CAMP_DURATION, 0L);
+		return getAccountVariables().getLong(TRAINING_CAMP_DURATION, 0);
 	}
 	
 	public void setTraingCampDuration(long duration)

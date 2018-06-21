@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class WarehouseCacheManager
 {
 	protected final Map<L2PcInstance, Long> _cachedWh = new ConcurrentHashMap<>();
-	protected final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000L;
+	protected final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
 	
 	protected WarehouseCacheManager()
 	{

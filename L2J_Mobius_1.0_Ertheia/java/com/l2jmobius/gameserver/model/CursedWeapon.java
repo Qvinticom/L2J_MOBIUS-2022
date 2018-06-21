@@ -374,7 +374,7 @@ public class CursedWeapon implements INamable
 		}
 		else
 		{
-			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 		}
 		
 	}
@@ -387,8 +387,8 @@ public class CursedWeapon implements INamable
 			dropIt(attackable, player);
 			
 			// Start the Life Task
-			_endTime = System.currentTimeMillis() + (_duration * 60000L);
-			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000L, _durationLost * 12000L);
+			_endTime = System.currentTimeMillis() + (_duration * 60000);
+			_removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 			
 			return true;
 		}
@@ -534,7 +534,7 @@ public class CursedWeapon implements INamable
 			}
 		}
 		// Reduce time-to-live
-		_endTime -= _durationLost * 60000L;
+		_endTime -= _durationLost * 60000;
 		saveData();
 	}
 	

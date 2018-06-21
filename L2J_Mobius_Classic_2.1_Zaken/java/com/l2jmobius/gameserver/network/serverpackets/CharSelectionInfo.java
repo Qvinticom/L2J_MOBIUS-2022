@@ -102,7 +102,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeD(0x02); // if 1, korean client
 		packet.writeC(0x00); // if 1 suggest premium account
 		
-		long lastAccess = 0L;
+		long lastAccess = 0;
 		if (_activeId == -1)
 		{
 			for (int i = 0; i < size; i++)

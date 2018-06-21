@@ -237,9 +237,9 @@ public final class FourSepulchersManager
 		}
 		tmp.set(Calendar.MINUTE, _newCycleMin);
 		_coolDownTimeEnd = tmp.getTimeInMillis();
-		_entryTimeEnd = _coolDownTimeEnd + (Config.FS_TIME_ENTRY * 60000L);
-		_warmUpTimeEnd = _entryTimeEnd + (Config.FS_TIME_WARMUP * 60000L);
-		_attackTimeEnd = _warmUpTimeEnd + (Config.FS_TIME_ATTACK * 60000L);
+		_entryTimeEnd = _coolDownTimeEnd + (Config.FS_TIME_ENTRY * 60000);
+		_warmUpTimeEnd = _entryTimeEnd + (Config.FS_TIME_WARMUP * 60000);
+		_attackTimeEnd = _warmUpTimeEnd + (Config.FS_TIME_ATTACK * 60000);
 	}
 	
 	public void clean()

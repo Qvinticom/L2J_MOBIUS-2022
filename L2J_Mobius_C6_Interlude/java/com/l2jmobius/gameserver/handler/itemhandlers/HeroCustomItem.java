@@ -64,7 +64,7 @@ public class HeroCustomItem implements IItemHandler
 			{
 				activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 16));
 				activeChar.setHero(true);
-				updateDatabase(activeChar, Config.HERO_CUSTOM_DAY * 24L * 60L * 60L * 1000L);
+				updateDatabase(activeChar, Config.HERO_CUSTOM_DAY * 24 * 60 * 60 * 1000);
 				activeChar.sendMessage("You Are Now a Hero,You Are Granted With Hero Status , Skills ,Aura.");
 				activeChar.broadcastUserInfo();
 				playable.destroyItem("Consume", item.getObjectId(), 1, null, false);

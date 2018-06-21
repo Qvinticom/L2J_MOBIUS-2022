@@ -82,8 +82,8 @@ public final class RequestOustPledgeMember extends L2GameClientPacket
 		}
 		
 		// this also updates the database
-		clan.removeClanMember(_target, System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)); // Like L2OFF also player takes the penality
-		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
+		clan.removeClanMember(_target, System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // Like L2OFF also player takes the penality
+		clan.setCharPenaltyExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_JOIN_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 		clan.updateClanInDB();
 		
 		SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_MEMBER_S1_EXPELLED);

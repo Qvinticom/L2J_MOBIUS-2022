@@ -182,12 +182,12 @@ public final class ItemAuction
 	
 	public final long getStartingTimeRemaining()
 	{
-		return Math.max(getEndingTime() - System.currentTimeMillis(), 0L);
+		return Math.max(getEndingTime() - System.currentTimeMillis(), 0);
 	}
 	
 	public final long getFinishingTimeRemaining()
 	{
-		return Math.max(getEndingTime() - System.currentTimeMillis(), 0L);
+		return Math.max(getEndingTime() - System.currentTimeMillis(), 0);
 	}
 	
 	public final void storeMe()

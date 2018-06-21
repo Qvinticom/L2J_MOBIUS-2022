@@ -114,7 +114,7 @@ public final class TrainingCamp extends AbstractNpcAI
 						// @Sdw: Here we are supposed to send ExUserInfoEquipSlot with a fake equip of a SLS, feels ugly to me, not doing it.
 						player.setTraingCampInfo(new TrainingHolder(player.getObjectId(), player.getClassIndex(), player.getLevel(), System.currentTimeMillis(), -1));
 						final long timeRemaining = Config.TRAINING_CAMP_MAX_DURATION - trainingCampDuration;
-						player.sendPacket(new ExTrainingZone_Admission(player.getLevel(), 0L, timeRemaining));
+						player.sendPacket(new ExTrainingZone_Admission(player.getLevel(), 0, timeRemaining));
 						startQuestTimer("finish", TimeUnit.SECONDS.toMillis(timeRemaining), npc, player);
 					}
 					else

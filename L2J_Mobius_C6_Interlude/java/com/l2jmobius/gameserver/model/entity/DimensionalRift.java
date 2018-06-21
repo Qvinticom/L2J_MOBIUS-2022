@@ -37,7 +37,7 @@ public class DimensionalRift
 	protected byte _type;
 	protected L2Party _party;
 	protected List<Byte> _completedRooms = new ArrayList<>();
-	private static final long seconds_5 = 5000L;
+	private static final long seconds_5 = 5000;
 	protected byte jumps_current = 0;
 	
 	private Timer teleporterTimer;

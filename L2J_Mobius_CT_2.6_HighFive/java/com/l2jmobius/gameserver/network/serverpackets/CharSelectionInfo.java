@@ -85,7 +85,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
 		packet.writeC(0x00);
 		
-		long lastAccess = 0L;
+		long lastAccess = 0;
 		if (_activeId == -1)
 		{
 			for (int i = 0; i < size; i++)

@@ -36,7 +36,7 @@ public class ExOneDayReceiveRewardList implements IClientOutgoingPacket
 {
 	final L2PcInstance _player;
 	private final Collection<DailyMissionDataHolder> _rewards;
-	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000L;
+	private static final Function<String, Long> _remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
 	
 	private final long _dayRemainTime;
 	private final long _weekRemainTime;

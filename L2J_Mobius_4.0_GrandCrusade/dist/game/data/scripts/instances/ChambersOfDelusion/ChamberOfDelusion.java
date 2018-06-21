@@ -409,7 +409,7 @@ public final class ChamberOfDelusion extends AbstractInstance
 	protected void scheduleRoomChange(Instance world, boolean bossRoom)
 	{
 		// Schedule next room change only if remaining time is enough
-		final long nextInterval = (bossRoom) ? 60000L : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000L;
+		final long nextInterval = (bossRoom) ? 60000 : (ROOM_CHANGE_INTERVAL + getRandom(ROOM_CHANGE_RANDOM_TIME)) * 1000;
 		if (world.getRemainingTime() > nextInterval)
 		{
 			final ScheduledFuture<?> roomChangeTask = ThreadPool.schedule(() ->

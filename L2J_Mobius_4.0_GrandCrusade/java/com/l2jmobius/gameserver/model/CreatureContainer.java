@@ -63,7 +63,7 @@ public class CreatureContainer
 	{
 		if ((_task == null) || _task.isDone())
 		{
-			_task = ThreadPool.scheduleAtFixedRate(this::update, 1000L, 1000L);
+			_task = ThreadPool.scheduleAtFixedRate(this::update, 1000, 1000);
 		}
 	}
 	

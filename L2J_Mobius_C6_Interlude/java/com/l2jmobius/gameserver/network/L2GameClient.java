@@ -317,7 +317,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				else
 				{
 					statement = con.prepareStatement("UPDATE characters SET deletetime=? WHERE obj_Id=?");
-					statement.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
+					statement.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 					statement.setInt(2, objid);
 					statement.execute();
 					statement.close();

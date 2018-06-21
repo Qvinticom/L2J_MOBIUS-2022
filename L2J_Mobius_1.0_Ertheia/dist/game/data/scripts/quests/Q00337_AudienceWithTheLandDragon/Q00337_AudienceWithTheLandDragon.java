@@ -521,7 +521,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 					{
 						for (int i = 0; i < npcInfo[4]; i++)
 						{
-							final L2Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000L, false);
+							final L2Npc mob = addSpawn(npcInfo[5], npc.getX() + getRandom(-150, 150), npc.getY() + getRandom(-150, 150), npc.getZ(), npc.getHeading(), true, 60000, false);
 							mob.setRunning();
 							((L2Attackable) mob).addDamageHate(attacker, 0, 500);
 							mob.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, attacker);
@@ -607,7 +607,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					for (int i = 0; i < 10; i++)
 					{
-						addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000L, false);
+						addSpawn(SACRIFICE_OF_THE_SACRIFICED, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000, false);
 					}
 				}
 				break;
@@ -618,7 +618,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 				{
 					for (int i = 0; i < 3; i++)
 					{
-						addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000L, false);
+						addSpawn(HARIT_LIZARDMAN_ZEALOT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), npc.getHeading(), true, 60000, false);
 					}
 				}
 				break;
@@ -628,7 +628,7 @@ public class Q00337_AudienceWithTheLandDragon extends Quest
 			{
 				if (qs.isCond(4) && (getRandom(100) < 50) && !hasQuestItems(player, THIRD_FRAGMENT_OF_ABYSS_JEWEL))
 				{
-					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000L, false);
+					addSpawn(ABYSSAL_JEWEL_3, npc.getX() + getRandom(-50, 50), npc.getY() + getRandom(-50, 50), npc.getZ(), npc.getHeading(), true, 60000, false);
 				}
 				break;
 			}

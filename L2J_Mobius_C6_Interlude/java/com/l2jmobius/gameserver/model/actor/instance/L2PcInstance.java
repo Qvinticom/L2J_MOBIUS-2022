@@ -14907,7 +14907,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (_taskRentPet == null)
 		{
-			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(), seconds * 1000L, seconds * 1000L);
+			_taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(), seconds * 1000, seconds * 1000);
 		}
 	}
 	
@@ -17506,7 +17506,7 @@ public final class L2PcInstance extends L2Playable
 		
 		public long getRemaining()
 		{
-			return Math.max(stamp - System.currentTimeMillis(), 0L);
+			return Math.max(stamp - System.currentTimeMillis(), 0);
 		}
 		
 		protected boolean hasNotPassed()
@@ -18750,7 +18750,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void setPunishLevel(PunishLevel state, int delayInMinutes)
 	{
-		final long delayInMilliseconds = delayInMinutes * 60000L;
+		final long delayInMilliseconds = delayInMinutes * 60000;
 		setPunishLevel(state, delayInMilliseconds);
 		
 	}

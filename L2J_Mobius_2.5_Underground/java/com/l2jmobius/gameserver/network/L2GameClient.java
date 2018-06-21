@@ -332,7 +332,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps2 = con.prepareStatement("UPDATE characters SET deletetime=? WHERE charId=?"))
 			{
-				ps2.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000L)); // 24*60*60*1000 = 86400000
+				ps2.setLong(1, System.currentTimeMillis() + (Config.DELETE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 				ps2.setInt(2, objectId);
 				ps2.execute();
 			}

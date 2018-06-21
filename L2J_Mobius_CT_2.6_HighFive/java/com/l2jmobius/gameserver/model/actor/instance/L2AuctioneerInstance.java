@@ -100,7 +100,7 @@ public final class L2AuctioneerInstance extends L2Npc
 							bid = Math.min(Long.parseLong(st.nextToken()), MAX_ADENA);
 						}
 						
-						final Auction a = new Auction(player.getClan().getHideoutId(), player.getClan(), days * 86400000L, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
+						final Auction a = new Auction(player.getClan().getHideoutId(), player.getClan(), days * 86400000, bid, ClanHallManager.getInstance().getClanHallByOwner(player.getClan()).getName());
 						if (_pendingAuctions.get(a.getId()) != null)
 						{
 							_pendingAuctions.remove(a.getId());

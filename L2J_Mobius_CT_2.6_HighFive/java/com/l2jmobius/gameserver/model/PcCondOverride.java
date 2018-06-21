@@ -71,7 +71,7 @@ public enum PcCondOverride
 	
 	public static long getAllExceptionsMask()
 	{
-		long result = 0L;
+		long result = 0;
 		for (PcCondOverride ex : values())
 		{
 			result |= ex.getMask();

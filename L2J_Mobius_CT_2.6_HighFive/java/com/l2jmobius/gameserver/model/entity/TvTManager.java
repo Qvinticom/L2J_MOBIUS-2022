@@ -122,7 +122,7 @@ public class TvTManager
 			Broadcast.toAllOnlinePlayers("TvT Event: Registration opened for " + Config.TVT_EVENT_PARTICIPATION_TIME + " minute(s).");
 			
 			// schedule registration end
-			_task.setStartTime(System.currentTimeMillis() + (60000L * Config.TVT_EVENT_PARTICIPATION_TIME));
+			_task.setStartTime(System.currentTimeMillis() + (60000 * Config.TVT_EVENT_PARTICIPATION_TIME));
 			ThreadPool.execute(_task);
 		}
 	}
@@ -142,7 +142,7 @@ public class TvTManager
 		else
 		{
 			TvTEvent.sysMsgToAllParticipants("TvT Event: Teleporting participants to an arena in " + Config.TVT_EVENT_START_LEAVE_TELEPORT_DELAY + " second(s).");
-			_task.setStartTime(System.currentTimeMillis() + (60000L * Config.TVT_EVENT_RUNNING_TIME));
+			_task.setStartTime(System.currentTimeMillis() + (60000 * Config.TVT_EVENT_RUNNING_TIME));
 			ThreadPool.execute(_task);
 		}
 	}

@@ -80,7 +80,7 @@ public final class FourSepulchersChangeAttackTimeTask implements Runnable
 		}
 		else
 		{
-			interval = Config.FS_TIME_ATTACK * 60000L;
+			interval = Config.FS_TIME_ATTACK * 60000;
 		}
 		
 		manager.setChangeCoolDownTimeTask(ThreadPool.schedule(new FourSepulchersChangeCoolDownTimeTask(), interval));

@@ -228,7 +228,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private Team _team = Team.NONE;
 	
-	protected long _exceptions = 0L;
+	protected long _exceptions = 0;
 	
 	private boolean _lethalable = true;
 	

@@ -182,8 +182,8 @@ public class ItemSkillsTemplate implements IItemHandler
 		{
 			if (!isAvailable)
 			{
-				final int hours = (int) (remainingTime / 3600000L);
-				final int minutes = (int) (remainingTime % 3600000L) / 60000;
+				final int hours = (int) (remainingTime / 3600000);
+				final int minutes = (int) (remainingTime % 3600000) / 60000;
 				final int seconds = (int) ((remainingTime / 1000) % 60);
 				SystemMessage sm = null;
 				if (hours > 0)

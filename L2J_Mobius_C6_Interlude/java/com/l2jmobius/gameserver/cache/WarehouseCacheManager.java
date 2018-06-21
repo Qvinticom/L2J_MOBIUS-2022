@@ -44,7 +44,7 @@ public class WarehouseCacheManager
 	
 	private WarehouseCacheManager()
 	{
-		_cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000L; // 60*1000 = 60000
+		_cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000; // 60*1000 = 60000
 		_cachedWh = new ConcurrentHashMap<>();
 		ThreadPool.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
 	}

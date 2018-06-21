@@ -30,7 +30,7 @@ public class SoIManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(SoIManager.class.getName());
 	
-	private static final long SOI_OPEN_TIME = 24 * 60 * 60 * 1000L;
+	private static final long SOI_OPEN_TIME = 24 * 60 * 60 * 1000;
 	
 	private static final Location[] openSeedTeleportLocs =
 	{
@@ -75,7 +75,7 @@ public class SoIManager
 		{
 			return 0;
 		}
-		return (GlobalVariablesManager.getInstance().getLong("SoI_opened", 0) * 1000L) - System.currentTimeMillis();
+		return (GlobalVariablesManager.getInstance().getLong("SoI_opened", 0) * 1000) - System.currentTimeMillis();
 	}
 	
 	public static void setCurrentStage(int stage)
@@ -111,7 +111,7 @@ public class SoIManager
 		{
 			return;
 		}
-		GlobalVariablesManager.getInstance().set("SoI_opened", (System.currentTimeMillis() + time) / 1000L);
+		GlobalVariablesManager.getInstance().set("SoI_opened", (System.currentTimeMillis() + time) / 1000);
 		LOGGER.info("Seed of Infinity Manager: Opening the seed for " + Util.formatTime((int) time / 1000));
 		spawnOpenedSeed();
 		DoorData.getInstance().getDoor(14240102).openMe();

@@ -35,8 +35,8 @@ public class CharSelectInfoPackage
 	private int _race = 0;
 	private int _classId = 0;
 	private int _baseClassId = 0;
-	private long _deleteTimer = 0L;
-	private long _lastAccess = 0L;
+	private long _deleteTimer = 0;
+	private long _lastAccess = 0;
 	private int _face = 0;
 	private int _hairStyle = 0;
 	private int _hairColor = 0;

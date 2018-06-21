@@ -288,7 +288,7 @@ public final class OlympiadGameTask implements Runnable
 				case BATTLE_IN_PROGRESS:
 				{
 					_countDown += 1000;
-					final int remaining = (int) ((Config.ALT_OLY_BATTLE - _countDown) / 1000l);
+					final int remaining = (int) ((Config.ALT_OLY_BATTLE - _countDown) / 1000);
 					for (int announceTime : BATTLE_END_TIME_SECOND)
 					{
 						if (announceTime == remaining)

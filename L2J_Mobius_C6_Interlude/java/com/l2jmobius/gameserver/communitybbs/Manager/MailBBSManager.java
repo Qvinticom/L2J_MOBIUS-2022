@@ -544,7 +544,7 @@ public class MailBBSManager extends BaseBBSManager
 		final long currentDate = Calendar.getInstance().getTimeInMillis();
 		
 		// Get the current time - 1 day under timestamp format.
-		final Timestamp ts = new Timestamp(currentDate - 86400000L);
+		final Timestamp ts = new Timestamp(currentDate - 86400000);
 		
 		// Check sender mails based on previous timestamp. If more than 10 mails have been found for today, then cancel the use.
 		if (getPlayerMails(activeChar.getObjectId()).stream().filter(l -> l.sentDate.after(ts) && (l.location == MailType.SENTBOX)).count() >= 10)

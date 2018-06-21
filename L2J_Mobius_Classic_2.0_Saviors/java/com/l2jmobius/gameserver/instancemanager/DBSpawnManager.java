@@ -169,7 +169,7 @@ public class DBSpawnManager
 			final StatsSet info = new StatsSet();
 			info.set("currentHP", npc.getCurrentHp());
 			info.set("currentMP", npc.getCurrentMp());
-			info.set("respawnTime", 0L);
+			info.set("respawnTime", 0);
 			
 			_storedInfo.put(npcId, info);
 			_npcs.put(npcId, npc);
@@ -219,7 +219,7 @@ public class DBSpawnManager
 			
 			info.set("currentHP", npc.getCurrentHp());
 			info.set("currentMP", npc.getCurrentMp());
-			info.set("respawnTime", 0L);
+			info.set("respawnTime", 0);
 		}
 		_storedInfo.put(npc.getId(), info);
 	}
@@ -248,7 +248,7 @@ public class DBSpawnManager
 		
 		SpawnTable.getInstance().addNewSpawn(spawn, false);
 		
-		if ((respawnTime == 0L) || (time > respawnTime))
+		if ((respawnTime == 0) || (time > respawnTime))
 		{
 			final L2Npc npc = spawn.doSpawn();
 			if (npc != null)
@@ -262,7 +262,7 @@ public class DBSpawnManager
 				final StatsSet info = new StatsSet();
 				info.set("currentHP", currentHP);
 				info.set("currentMP", currentMP);
-				info.set("respawnTime", 0L);
+				info.set("respawnTime", 0);
 				
 				_storedInfo.put(npcId, info);
 			}
@@ -324,7 +324,7 @@ public class DBSpawnManager
 		final StatsSet info = new StatsSet();
 		info.set("currentHP", npc.getMaxHp());
 		info.set("currentMP", npc.getMaxMp());
-		info.set("respawnTime", 0L);
+		info.set("respawnTime", 0);
 		
 		_npcs.put(npcId, npc);
 		_storedInfo.put(npcId, info);
@@ -541,7 +541,7 @@ public class DBSpawnManager
 		final StatsSet info = new StatsSet();
 		info.set("currentHP", npc.getCurrentHp());
 		info.set("currentMP", npc.getCurrentMp());
-		info.set("respawnTime", 0L);
+		info.set("respawnTime", 0);
 		
 		npc.setDBStatus(DBStatusType.ALIVE);
 		

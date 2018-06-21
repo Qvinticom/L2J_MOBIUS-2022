@@ -79,7 +79,7 @@ public class CharSelectInfo extends L2GameServerPacket
 		writeC(0x13);
 		writeD(size);
 		
-		long lastAccess = 0L;
+		long lastAccess = 0;
 		
 		if (_activeId == -1)
 		{
