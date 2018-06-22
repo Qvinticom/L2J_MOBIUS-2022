@@ -337,6 +337,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_NEW_ENCHANT_CLOSE(0xF8, RequestNewEnchantClose::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_TRY(0xF9, RequestNewEnchantTry::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_RETRY_TO_PUT_ITEMS(0xFA, RequestNewEnchantRetryToPutItems::new, ConnectionState.IN_GAME),
+	REQUEST_TARGET_ACTION_MENU(0xFE, RequestTargetActionMenu::new, ConnectionState.IN_GAME),
 	EX_SEND_SELECTED_QUEST_ZONE_ID(0xFF, ExSendSelectedQuestZoneID::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_SKILL_LIST(0x100, RequestAlchemySkillList::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, null, ConnectionState.IN_GAME),
