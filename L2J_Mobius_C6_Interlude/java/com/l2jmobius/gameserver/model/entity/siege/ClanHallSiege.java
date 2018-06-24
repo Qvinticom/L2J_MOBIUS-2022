@@ -75,7 +75,7 @@ public abstract class ClanHallSiege
 			try (Connection con = DatabaseFactory.getInstance().getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE clanhall_siege SET siege_data=? WHERE id = ?");
-				statement.setLong(1, getSiegeDate().getTimeInMillis());
+				statement.setLong(1, _siegeDate.getTimeInMillis());
 				statement.setInt(2, ClanHallId);
 				statement.execute();
 				statement.close();

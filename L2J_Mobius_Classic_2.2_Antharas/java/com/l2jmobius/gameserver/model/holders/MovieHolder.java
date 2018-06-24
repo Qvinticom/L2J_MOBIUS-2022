@@ -36,7 +36,7 @@ public final class MovieHolder
 		_players = players;
 		_movie = movie;
 		
-		getPlayers().forEach(p -> p.playMovie(this));
+		_players.forEach(p -> p.playMovie(this));
 	}
 	
 	public Movie getMovie()
@@ -46,16 +46,16 @@ public final class MovieHolder
 	
 	public void playerEscapeVote(L2PcInstance player)
 	{
-		if (getVotedPlayers().contains(player) || !getPlayers().contains(player) || !getMovie().isEscapable())
+		if (_votedPlayers.contains(player) || !_players.contains(player) || !_movie.isEscapable())
 		{
 			return;
 		}
 		
-		getVotedPlayers().add(player);
+		_votedPlayers.add(player);
 		
-		if (((getVotedPlayers().size() * 100) / getPlayers().size()) >= 50)
+		if (((_votedPlayers.size() * 100) / _players.size()) >= 50)
 		{
-			getPlayers().forEach(L2PcInstance::stopMovie);
+			_players.forEach(L2PcInstance::stopMovie);
 		}
 	}
 	

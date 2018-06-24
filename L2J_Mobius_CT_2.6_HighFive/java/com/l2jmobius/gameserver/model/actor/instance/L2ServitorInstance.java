@@ -223,7 +223,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			// Delete all current stored effects for summon to avoid dupe
 			ps.setInt(1, getOwner().getObjectId());
 			ps.setInt(2, getOwner().getClassIndex());
-			ps.setInt(3, getReferenceSkill());
+			ps.setInt(3, _referenceSkill);
 			ps.execute();
 			
 			int buff_index = 0;
@@ -269,7 +269,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						
 						ps2.setInt(1, getOwner().getObjectId());
 						ps2.setInt(2, getOwner().getClassIndex());
-						ps2.setInt(3, getReferenceSkill());
+						ps2.setInt(3, _referenceSkill);
 						ps2.setInt(4, skill.getId());
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
@@ -304,7 +304,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 				{
 					ps.setInt(1, getOwner().getObjectId());
 					ps.setInt(2, getOwner().getClassIndex());
-					ps.setInt(3, getReferenceSkill());
+					ps.setInt(3, _referenceSkill);
 					try (ResultSet rs = ps.executeQuery())
 					{
 						while (rs.next())
@@ -330,7 +330,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			{
 				statement.setInt(1, getOwner().getObjectId());
 				statement.setInt(2, getOwner().getClassIndex());
-				statement.setInt(3, getReferenceSkill());
+				statement.setInt(3, _referenceSkill);
 				statement.executeUpdate();
 			}
 		}
@@ -424,12 +424,12 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			_consumeItemIntervalRemaining -= usedtime;
 			
 			// check if it is time to consume another item
-			if ((_consumeItemIntervalRemaining <= 0) && (getItemConsume().getCount() > 0) && (getItemConsume().getId() > 0) && !isDead())
+			if ((_consumeItemIntervalRemaining <= 0) && (_itemConsume.getCount() > 0) && (_itemConsume.getId() > 0) && !isDead())
 			{
-				if (destroyItemByItemId("Consume", getItemConsume().getId(), getItemConsume().getCount(), this, false))
+				if (destroyItemByItemId("Consume", _itemConsume.getId(), _itemConsume.getCount(), this, false))
 				{
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.A_SUMMONED_MONSTER_USES_S1);
-					msg.addItemName(getItemConsume().getId());
+					msg.addItemName(_itemConsume.getId());
 					sendPacket(msg);
 					
 					// Reset
@@ -443,7 +443,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			}
 		}
 		
-		sendPacket(new SetSummonRemainTime(getLifeTime(), _lifeTimeRemaining));
+		sendPacket(new SetSummonRemainTime(_lifeTime, _lifeTimeRemaining));
 		updateEffectIcons();
 	}
 }

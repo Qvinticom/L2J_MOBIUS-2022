@@ -29,7 +29,6 @@ import com.l2jmobius.commons.util.PrimeFinder;
  * @author Olympic
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-
 public class BitSetIDFactory extends IdFactory
 {
 	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
@@ -148,7 +147,7 @@ public class BitSetIDFactory extends IdFactory
 	
 	protected synchronized int usedIdCount()
 	{
-		return (size() - FIRST_OID);
+		return (_freeIdCount.get() - FIRST_OID);
 	}
 	
 	protected synchronized boolean reachingBitSetCapacity()

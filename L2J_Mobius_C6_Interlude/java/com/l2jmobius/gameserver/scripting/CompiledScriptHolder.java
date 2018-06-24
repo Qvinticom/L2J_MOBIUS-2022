@@ -97,6 +97,6 @@ public class CompiledScriptHolder implements Serializable
 	
 	public boolean matches(File f)
 	{
-		return (f.lastModified() == getLastModified()) && (f.length() == getSize());
+		return (f.lastModified() == _lastModified) && (f.length() == _size);
 	}
 }

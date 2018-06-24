@@ -129,7 +129,7 @@ public final class Logout extends L2GameClientPacket
 		
 		if (Config.OFFLINE_LOGOUT && player.isSitting())
 		{
-			if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) || (player.isInCraftMode() && Config.OFFLINE_CRAFT_ENABLE))
+			if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) || (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE))
 			{
 				// Sleep effect, not official feature but however L2OFF features (like offline trade)
 				if (Config.OFFLINE_SLEEP_EFFECT)

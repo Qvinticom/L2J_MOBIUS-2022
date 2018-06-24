@@ -62,7 +62,7 @@ public class RequestShapeShiftingItem implements IClientIncomingPacket
 		
 		final ShapeShiftingItemRequest request = player.getRequest(ShapeShiftingItemRequest.class);
 		
-		if (player.isInStoreMode() || player.isInCraftMode() || player.isProcessingRequest() || player.isProcessingTransaction() || (request == null))
+		if (player.isInStoreMode() || player.isCrafting() || player.isProcessingRequest() || player.isProcessingTransaction() || (request == null))
 		{
 			client.sendPacket(ExShapeShiftingResult.CLOSE);
 			client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);

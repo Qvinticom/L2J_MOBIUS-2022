@@ -608,7 +608,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			return;
 		}
-		if (!isAutoAttacking())
+		if (!_clientAutoAttacking)
 		{
 			if (_actor.isPlayer() && _actor.hasSummon())
 			{
@@ -648,7 +648,7 @@ public abstract class AbstractAI implements Ctrl
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
 			}
 		}
-		else if (isAutoAttacking())
+		else if (_clientAutoAttacking)
 		{
 			_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
 			setAutoAttacking(false);
@@ -680,7 +680,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void describeStateToPlayer(L2PcInstance player)
 	{
-		if (getActor().isVisibleFor(player))
+		if (_actor.isVisibleFor(player))
 		{
 			if (_clientMoving)
 			{
@@ -700,7 +700,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	public boolean isFollowing()
 	{
-		return (getTarget() instanceof L2Character) && (getIntention() == AI_INTENTION_FOLLOW);
+		return (_target instanceof L2Character) && (_intention == AI_INTENTION_FOLLOW);
 	}
 	
 	/**
@@ -737,7 +737,7 @@ public abstract class AbstractAI implements Ctrl
 					return;
 				}
 				
-				final L2Object followTarget = getTarget(); // copy to prevent NPE
+				final L2Object followTarget = _target; // copy to prevent NPE
 				if (followTarget == null)
 				{
 					if (_actor.isSummon())

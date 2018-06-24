@@ -279,7 +279,7 @@ public final class L2NpcTemplate extends L2CharTemplate implements IIdentifiable
 	
 	public boolean isType(String type)
 	{
-		return getType().equalsIgnoreCase(type);
+		return _type.equalsIgnoreCase(type);
 	}
 	
 	public String getName()

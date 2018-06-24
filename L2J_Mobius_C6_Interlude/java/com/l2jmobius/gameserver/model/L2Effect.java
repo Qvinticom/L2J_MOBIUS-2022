@@ -131,7 +131,7 @@ public abstract class L2Effect
 	// period, seconds
 	private final int _period;
 	private int _periodStartTicks;
-	private int _periodfirsttime;
+	int _periodfirsttime;
 	
 	// function templates
 	private final FuncTemplate[] _funcTemplates;
@@ -164,7 +164,7 @@ public abstract class L2Effect
 		{
 			try
 			{
-				if (getPeriodfirsttime() == 0)
+				if (_periodfirsttime == 0)
 				{
 					setPeriodStartTicks(GameTimeController.getGameTicks());
 				}
@@ -317,7 +317,7 @@ public abstract class L2Effect
 	
 	public boolean isHerbEffect()
 	{
-		if (getSkill().getName().contains("Herb"))
+		if (_skill.getName().contains("Herb"))
 		{
 			return true;
 		}
@@ -437,7 +437,7 @@ public abstract class L2Effect
 	{
 		if (_abnormalEffect != 0)
 		{
-			getEffected().startAbnormalEffect(_abnormalEffect);
+			_effected.startAbnormalEffect(_abnormalEffect);
 		}
 	}
 	
@@ -449,7 +449,7 @@ public abstract class L2Effect
 	{
 		if (_abnormalEffect != 0)
 		{
-			getEffected().stopAbnormalEffect(_abnormalEffect);
+			_effected.stopAbnormalEffect(_abnormalEffect);
 		}
 	}
 	
@@ -488,11 +488,11 @@ public abstract class L2Effect
 			
 			onStart();
 			
-			if (_skill.isPvpSkill() && (getEffected() != null) && (getEffected() instanceof L2PcInstance) && getShowIcon())
+			if (_skill.isPvpSkill() && (_effected != null) && (_effected instanceof L2PcInstance) && _template.showIcon)
 			{
 				SystemMessage smsg = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 				smsg.addString(_skill.getName());
-				getEffected().sendPacket(smsg);
+				_effected.sendPacket(smsg);
 			}
 			
 			if (_count > 1)
@@ -511,7 +511,7 @@ public abstract class L2Effect
 		{
 			if (_count-- > 0)
 			{
-				if (getInUse())
+				if (_inUse)
 				{ // effect has to be in use
 					if (onActionTime())
 					{
@@ -532,26 +532,26 @@ public abstract class L2Effect
 			onExit();
 			
 			// If the time left is equal to zero, send the message
-			if ((getEffected() != null) && (getEffected() instanceof L2PcInstance) && getShowIcon() && !getEffected().isDead())
+			if ((_effected != null) && (_effected instanceof L2PcInstance) && _template.showIcon && !_effected.isDead())
 			{
 				// Like L2OFF message S1_HAS_BEEN_ABORTED for toogle skills
-				if (getSkill().isToggle())
+				if (_skill.isToggle())
 				{
 					final SystemMessage smsg3 = new SystemMessage(SystemMessageId.S1_HAS_BEEN_ABORTED);
-					smsg3.addString(getSkill().getName());
-					getEffected().sendPacket(smsg3);
+					smsg3.addString(_skill.getName());
+					_effected.sendPacket(smsg3);
 				}
 				else if (_cancelEffect)
 				{
 					SystemMessage smsg3 = new SystemMessage(SystemMessageId.EFFECT_S1_DISAPPEARED);
-					smsg3.addString(getSkill().getName());
-					getEffected().sendPacket(smsg3);
+					smsg3.addString(_skill.getName());
+					_effected.sendPacket(smsg3);
 				}
 				else if (_count == 0)
 				{
 					SystemMessage smsg3 = new SystemMessage(SystemMessageId.S1_HAS_WORN_OFF);
 					smsg3.addString(_skill.getName());
-					getEffected().sendPacket(smsg3);
+					_effected.sendPacket(smsg3);
 				}
 			}
 			
@@ -570,9 +570,9 @@ public abstract class L2Effect
 		for (FuncTemplate t : _funcTemplates)
 		{
 			final Env env = new Env();
-			env.player = getEffector();
-			env.target = getEffected();
-			env.skill = getSkill();
+			env.player = _effector;
+			env.target = _effected;
+			env.skill = _skill;
 			final Func f = t.getFunc(env, this); // effect is owner
 			if (f != null)
 			{
@@ -601,42 +601,40 @@ public abstract class L2Effect
 			return;
 		}
 		
-		if (!getShowIcon())
+		if (!_template.showIcon)
 		{
 			return;
 		}
 		
-		final L2Skill sk = getSkill();
-		
 		if (task._rate > 0)
 		{
-			if (sk.isPotion())
+			if (_skill.isPotion())
 			{
-				mi.addEffect(sk.getId(), getLevel(), sk.getBuffDuration() - (getTaskTime() * 1000), false);
+				mi.addEffect(_skill.getId(), _skill.getLevel(), _skill.getBuffDuration() - (getTaskTime() * 1000), false);
 			}
-			else if (!sk.isToggle())
+			else if (!_skill.isToggle())
 			{
-				if (sk.is_Debuff())
+				if (_skill.is_Debuff())
 				{
-					mi.addEffect(sk.getId(), getLevel(), (_count * _period) * 1000, true);
+					mi.addEffect(_skill.getId(), _skill.getLevel(), (_count * _period) * 1000, true);
 				}
 				else
 				{
-					mi.addEffect(sk.getId(), getLevel(), (_count * _period) * 1000, false);
+					mi.addEffect(_skill.getId(), _skill.getLevel(), (_count * _period) * 1000, false);
 				}
 			}
 			else
 			{
-				mi.addEffect(sk.getId(), getLevel(), -1, true);
+				mi.addEffect(_skill.getId(), _skill.getLevel(), -1, true);
 			}
 		}
-		else if (sk.getSkillType() == SkillType.DEBUFF)
+		else if (_skill.getSkillType() == SkillType.DEBUFF)
 		{
-			mi.addEffect(sk.getId(), getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, true);
+			mi.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, true);
 		}
 		else
 		{
-			mi.addEffect(sk.getId(), getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, false);
+			mi.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS) + 1000, false);
 		}
 	}
 	
@@ -655,8 +653,7 @@ public abstract class L2Effect
 			return;
 		}
 		
-		L2Skill sk = getSkill();
-		ps.addPartySpelledEffect(sk.getId(), getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS));
+		ps.addPartySpelledEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS));
 	}
 	
 	public final void addOlympiadSpelledIcon(ExOlympiadSpelledInfo os)
@@ -674,13 +671,12 @@ public abstract class L2Effect
 			return;
 		}
 		
-		L2Skill sk = getSkill();
-		os.addEffect(sk.getId(), getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS));
+		os.addEffect(_skill.getId(), _skill.getLevel(), (int) future.getDelay(TimeUnit.MILLISECONDS));
 	}
 	
 	public int getLevel()
 	{
-		return getSkill().getLevel();
+		return _skill.getLevel();
 	}
 	
 	public int getPeriodfirsttime()

@@ -1115,7 +1115,7 @@ public class FourSepulchersManager extends GrandBossManager
 			}
 		}
 		
-		if (!isEntryTime())
+		if (!_inEntryTime)
 		{
 			showHtmlFile(player, npcId + "-NE.htm", npc, null);
 			return;
@@ -1232,7 +1232,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnMysteriousBox(int npcId)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1247,7 +1247,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnMonster(int npcId)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1423,7 +1423,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnKeyBox(L2NpcInstance activeChar)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1445,7 +1445,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnExecutionerOfHalisha(L2NpcInstance activeChar)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1467,7 +1467,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnArchonOfHalisha(int npcId)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1498,7 +1498,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnEmperorsGraveNpc(int npcId)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}
@@ -1544,7 +1544,7 @@ public class FourSepulchersManager extends GrandBossManager
 	
 	public void spawnShadow(int npcId)
 	{
-		if (!isAttackTime())
+		if (!_inAttackTime)
 		{
 			return;
 		}

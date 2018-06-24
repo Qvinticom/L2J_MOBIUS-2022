@@ -63,7 +63,7 @@ public class PartyMatchRoom
 	
 	public void deleteMember(L2PcInstance player)
 	{
-		if (player != getOwner())
+		if (player != _members.get(0)) // owner
 		{
 			_members.remove(player);
 			notifyMembersAboutExit(player);
@@ -81,7 +81,7 @@ public class PartyMatchRoom
 	
 	public void notifyMembersAboutExit(L2PcInstance player)
 	{
-		for (L2PcInstance _member : getPartyMembers())
+		for (L2PcInstance _member : _members)
 		{
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_LEFT_PARTY_ROOM);
 			sm.addString(player.getName());
@@ -117,7 +117,7 @@ public class PartyMatchRoom
 		}
 		
 		// Broadcast change
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			member.sendPacket(new ExManagePartyRoomMember(newLeader, this, 1));
 			member.sendPacket(new ExManagePartyRoomMember(oldLeader, this, 1));

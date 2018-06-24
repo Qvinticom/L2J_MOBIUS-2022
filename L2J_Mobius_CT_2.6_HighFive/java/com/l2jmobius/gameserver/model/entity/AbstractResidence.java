@@ -119,6 +119,6 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	@Override
 	public String toString()
 	{
-		return getName() + "(" + getResidenceId() + ")";
+		return _name + "(" + _residenceId + ")";
 	}
 }

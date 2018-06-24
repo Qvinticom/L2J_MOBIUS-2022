@@ -67,34 +67,34 @@ public final class Petition
 	{
 		setState(endState);
 		
-		if ((getResponder() != null) && getResponder().isOnline())
+		if ((_responder != null) && _responder.isOnline())
 		{
 			if (endState == PetitionState.RESPONDER_REJECT)
 			{
-				getPetitioner().sendMessage("Your petition was rejected. Please try again later.");
+				_petitioner.sendMessage("Your petition was rejected. Please try again later.");
 			}
 			else
 			{
 				// Ending petition consultation with <Player>.
 				SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PETITION_CONSULTATION_WITH_C1_HAS_ENDED);
-				sm.addString(getPetitioner().getName());
-				getResponder().sendPacket(sm);
+				sm.addString(_petitioner.getName());
+				_responder.sendPacket(sm);
 				
 				if (endState == PetitionState.PETITIONER_CANCEL)
 				{
 					// Receipt No. <ID> petition cancelled.
 					sm = SystemMessage.getSystemMessage(SystemMessageId.RECEIPT_NO_S1_PETITION_CANCELLED);
-					sm.addInt(getId());
-					getResponder().sendPacket(sm);
+					sm.addInt(_id);
+					_responder.sendPacket(sm);
 				}
 			}
 		}
 		
 		// End petition consultation and inform them, if they are still online. And if petitioner is online, enable Evaluation button
-		if ((getPetitioner() != null) && getPetitioner().isOnline())
+		if ((_petitioner != null) && _petitioner.isOnline())
 		{
-			getPetitioner().sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
-			getPetitioner().sendPacket(PetitionVotePacket.STATIC_PACKET);
+			_petitioner.sendPacket(SystemMessageId.THIS_ENDS_THE_GM_PETITION_CONSULTATION_NPLEASE_GIVE_US_FEEDBACK_ON_THE_PETITION_SERVICE);
+			_petitioner.sendPacket(PetitionVotePacket.STATIC_PACKET);
 		}
 		
 		PetitionManager.getInstance().getCompletedPetitions().put(getId(), this);
@@ -138,7 +138,7 @@ public final class Petition
 	
 	public void sendPetitionerPacket(IClientOutgoingPacket responsePacket)
 	{
-		if ((getPetitioner() == null) || !getPetitioner().isOnline())
+		if ((_petitioner == null) || !_petitioner.isOnline())
 		{
 			// Allows petitioners to see the results of their petition when
 			// they log back into the game.
@@ -147,18 +147,18 @@ public final class Petition
 			return;
 		}
 		
-		getPetitioner().sendPacket(responsePacket);
+		_petitioner.sendPacket(responsePacket);
 	}
 	
 	public void sendResponderPacket(IClientOutgoingPacket responsePacket)
 	{
-		if ((getResponder() == null) || !getResponder().isOnline())
+		if ((_responder == null) || !_responder.isOnline())
 		{
 			endPetitionConsultation(PetitionState.RESPONDER_MISSING);
 			return;
 		}
 		
-		getResponder().sendPacket(responsePacket);
+		_responder.sendPacket(responsePacket);
 	}
 	
 	public void setState(PetitionState state)
@@ -168,7 +168,7 @@ public final class Petition
 	
 	public void setResponder(L2PcInstance respondingAdmin)
 	{
-		if (getResponder() != null)
+		if (_responder != null)
 		{
 			return;
 		}

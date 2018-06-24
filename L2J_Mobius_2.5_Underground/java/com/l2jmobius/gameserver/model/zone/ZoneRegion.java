@@ -63,7 +63,7 @@ public class ZoneRegion
 			return;
 		}
 		
-		for (L2ZoneType z : getZones().values())
+		for (L2ZoneType z : _zones.values())
 		{
 			z.revalidateInZone(character);
 		}
@@ -71,7 +71,7 @@ public class ZoneRegion
 	
 	public void removeFromZones(L2Character character)
 	{
-		for (L2ZoneType z : getZones().values())
+		for (L2ZoneType z : _zones.values())
 		{
 			z.removeCharacter(character);
 		}
@@ -85,7 +85,7 @@ public class ZoneRegion
 		final int left = x + range;
 		final int right = x - range;
 		
-		for (L2ZoneType e : getZones().values())
+		for (L2ZoneType e : _zones.values())
 		{
 			if (e instanceof L2PeaceZone)
 			{
@@ -120,7 +120,7 @@ public class ZoneRegion
 	
 	public void onDeath(L2Character character)
 	{
-		for (L2ZoneType z : getZones().values())
+		for (L2ZoneType z : _zones.values())
 		{
 			if (z.isInsideZone(character))
 			{
@@ -131,7 +131,7 @@ public class ZoneRegion
 	
 	public void onRevive(L2Character character)
 	{
-		for (L2ZoneType z : getZones().values())
+		for (L2ZoneType z : _zones.values())
 		{
 			if (z.isInsideZone(character))
 			{

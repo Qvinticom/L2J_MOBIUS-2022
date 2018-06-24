@@ -429,7 +429,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	{
 		out.println(0x62);
 		
-		out.println(getId());
+		out.println(_smId.getId());
 		out.println(_params.length);
 		
 		for (SMParam param : _params)

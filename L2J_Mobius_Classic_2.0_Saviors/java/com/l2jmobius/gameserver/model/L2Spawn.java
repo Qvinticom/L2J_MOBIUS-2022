@@ -511,7 +511,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			newlocz = loc.getZ();
 			setLocation(loc);
 		}
-		else if ((getX() == 0) && (getY() == 0))
+		else if ((_location.getX() == 0) && (_location.getY() == 0))
 		{
 			LOGGER.warning("NPC " + npc + " doesn't have spawn location!");
 			return null;
@@ -519,9 +519,9 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		else
 		{
 			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
-			newlocx = getX();
-			newlocy = getY();
-			newlocz = getZ();
+			newlocx = _location.getX();
+			newlocy = _location.getY();
+			newlocz = _location.getZ();
 		}
 		
 		// If random spawn system is enabled
@@ -539,16 +539,16 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		}
 		
 		// Set is not random walk default value
-		npc.setRandomWalking(getRandomWalking());
+		npc.setRandomWalking(_randomWalk);
 		
 		// Set the heading of the L2NpcInstance (random heading if not defined)
-		if (getHeading() == -1)
+		if (_location.getHeading() == -1)
 		{
 			npc.setHeading(Rnd.nextInt(61794));
 		}
 		else
 		{
-			npc.setHeading(getHeading());
+			npc.setHeading(_location.getHeading());
 		}
 		
 		// Set custom Npc server side name and title
@@ -670,7 +670,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	@Override
 	public String toString()
 	{
-		return "L2Spawn ID: " + getId() + " " + getLocation();
+		return "L2Spawn ID: " + _template.getId() + " " + _location;
 	}
 	
 	public final boolean getRandomWalking()

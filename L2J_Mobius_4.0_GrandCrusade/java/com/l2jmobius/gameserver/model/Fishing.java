@@ -110,7 +110,7 @@ public class Fishing
 	
 	public synchronized void startFishing()
 	{
-		if (isFishing())
+		if (_isFishing)
 		{
 			return;
 		}
@@ -132,7 +132,7 @@ public class Fishing
 		
 		if (!canFish())
 		{
-			if (isFishing())
+			if (_isFishing)
 			{
 				_player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 			}
@@ -201,7 +201,7 @@ public class Fishing
 		_baitLocation = calculateBaitLocation();
 		if (!_player.isInsideZone(ZoneId.FISHING) || (_baitLocation == null))
 		{
-			if (isFishing())
+			if (_isFishing)
 			{
 				// _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
 				_player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -262,7 +262,7 @@ public class Fishing
 	
 	private void reelIn(FishingEndReason reason, boolean consumeBait)
 	{
-		if (!isFishing())
+		if (!_isFishing)
 		{
 			return;
 		}
@@ -326,7 +326,7 @@ public class Fishing
 	
 	public synchronized void stopFishing(FishingEndType endType)
 	{
-		if (isFishing())
+		if (_isFishing)
 		{
 			reelIn(FishingEndReason.STOP, false);
 			_isFishing = false;

@@ -61,7 +61,7 @@ class OlympiadStadium
 	
 	protected void addSpectator(int id, L2PcInstance spec, boolean storeCoords)
 	{
-		spec.enterOlympiadObserverMode(getCoordinates()[0], getCoordinates()[1], getCoordinates()[2], id, storeCoords);
+		spec.enterOlympiadObserverMode(_coords[0], _coords[1], _coords[2], id, storeCoords);
 		_spectators.add(spec);
 	}
 	

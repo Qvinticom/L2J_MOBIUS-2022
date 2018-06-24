@@ -51,7 +51,7 @@ public class ObjectKnownList
 	
 	public boolean addKnownObject(L2Object object, L2Character dropper)
 	{
-		if ((object == null) || (object == getActiveObject()))
+		if ((object == null) || (object == _activeObject))
 		{
 			return false;
 		}
@@ -67,7 +67,7 @@ public class ObjectKnownList
 		}
 		
 		// Check if object is not inside distance to watch object
-		if (!Util.checkIfInRange(getDistanceToWatchObject(object), getActiveObject(), object, true))
+		if (!Util.checkIfInRange(getDistanceToWatchObject(object), _activeObject, object, true))
 		{
 			return false;
 		}
@@ -82,7 +82,7 @@ public class ObjectKnownList
 			return false;
 		}
 		
-		return (getActiveObject() == object) || getKnownObjects().containsKey(object.getObjectId());
+		return (_activeObject == object) || getKnownObjects().containsKey(object.getObjectId());
 	}
 	
 	/** Remove all L2Object from _knownObjects */
@@ -114,7 +114,7 @@ public class ObjectKnownList
 	public final synchronized void updateKnownObjects()
 	{
 		// Only bother updating knownobjects for L2Character; don't for L2Object
-		if (getActiveObject() instanceof L2Character)
+		if (_activeObject instanceof L2Character)
 		{
 			findCloseObjects();
 			forgetObjects();
@@ -125,7 +125,7 @@ public class ObjectKnownList
 	// Method - Private
 	private final void findCloseObjects()
 	{
-		final boolean isActiveObjectPlayable = getActiveObject() instanceof L2Playable;
+		final boolean isActiveObjectPlayable = _activeObject instanceof L2Playable;
 		
 		if (isActiveObjectPlayable)
 		{
@@ -152,7 +152,7 @@ public class ObjectKnownList
 				// Only if object is a L2Character and active object is a L2PlayableInstance
 				if (object instanceof L2Character)
 				{
-					object.getKnownList().addKnownObject(getActiveObject());
+					object.getKnownList().addKnownObject(_activeObject);
 				}
 			}
 		}
@@ -201,17 +201,17 @@ public class ObjectKnownList
 			
 			// Remove all invisible object
 			// Remove all too far object
-			if (!object.isVisible() || !Util.checkIfInRange(getDistanceToForgetObject(object), getActiveObject(), object, true))
+			if (!object.isVisible() || !Util.checkIfInRange(getDistanceToForgetObject(object), _activeObject, object, true))
 			{
-				if ((object instanceof L2BoatInstance) && (getActiveObject() instanceof L2PcInstance))
+				if ((object instanceof L2BoatInstance) && (_activeObject instanceof L2PcInstance))
 				{
 					if (((L2BoatInstance) object).getVehicleDeparture() == null)
 					{
 						//
 					}
-					else if (((L2PcInstance) getActiveObject()).isInBoat())
+					else if (((L2PcInstance) _activeObject).isInBoat())
 					{
-						if (((L2PcInstance) getActiveObject()).getBoat() == object)
+						if (((L2PcInstance) _activeObject).getBoat() == object)
 						{
 							//
 						}

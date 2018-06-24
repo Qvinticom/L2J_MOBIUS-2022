@@ -108,7 +108,7 @@ public final class CastleData implements IGameXmlReader
 										guards.add(new SiegeGuardHolder(castleId, itemId, type, stationary, npcId, npcMaxAmount));
 									}
 								}
-								getSiegeGuards().put(castleId, guards);
+								_siegeGuards.put(castleId, guards);
 							}
 						}
 					}

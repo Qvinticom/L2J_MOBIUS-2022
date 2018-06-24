@@ -64,7 +64,7 @@ public class CursedWeapon
 	private ScheduledFuture<?> _removeTask;
 	
 	private int _nbKills = 0;
-	private long _endTime = 0;
+	long _endTime = 0;
 	
 	private int _playerId = 0;
 	private L2PcInstance _player = null;
@@ -208,7 +208,7 @@ public class CursedWeapon
 		@Override
 		public void run()
 		{
-			if (System.currentTimeMillis() >= getEndTime())
+			if (System.currentTimeMillis() >= _endTime)
 			{
 				endOfLife();
 			}

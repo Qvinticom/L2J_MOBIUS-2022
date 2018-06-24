@@ -142,13 +142,13 @@ public class SiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1");
-			statement.setInt(1, getCastle().getCastleId());
+			statement.setInt(1, _castle.getCastleId());
 			statement.execute();
 			statement.close();
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error deleting hired siege guard for castle " + getCastle().getName() + ":" + e1);
+			LOGGER.warning("Error deleting hired siege guard for castle " + _castle.getName() + ":" + e1);
 		}
 	}
 	
@@ -159,7 +159,7 @@ public class SiegeGuardManager
 	public void spawnSiegeGuard()
 	{
 		loadSiegeGuard();
-		for (L2Spawn spawn : getSiegeGuardSpawn())
+		for (L2Spawn spawn : _siegeGuardSpawn)
 		{
 			if (spawn != null)
 			{
@@ -174,7 +174,7 @@ public class SiegeGuardManager
 	 */
 	public void unspawnSiegeGuard()
 	{
-		for (L2Spawn spawn : getSiegeGuardSpawn())
+		for (L2Spawn spawn : _siegeGuardSpawn)
 		{
 			if (spawn == null)
 			{
@@ -185,7 +185,7 @@ public class SiegeGuardManager
 			spawn.getLastSpawn().doDie(spawn.getLastSpawn());
 		}
 		
-		getSiegeGuardSpawn().clear();
+		_siegeGuardSpawn.clear();
 	}
 	
 	// =========================================================
@@ -199,8 +199,8 @@ public class SiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?");
-			statement.setInt(1, getCastle().getCastleId());
-			if (getCastle().getOwnerId() > 0)
+			statement.setInt(1, _castle.getCastleId());
+			if (_castle.getOwnerId() > 0)
 			{
 				statement.setInt(2, 1);
 			}
@@ -239,7 +239,7 @@ public class SiegeGuardManager
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error loading siege guard for castle " + getCastle().getName() + ":" + e1);
+			LOGGER.warning("Error loading siege guard for castle " + _castle.getName() + ":" + e1);
 		}
 	}
 	
@@ -258,7 +258,7 @@ public class SiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)");
-			statement.setInt(1, getCastle().getCastleId());
+			statement.setInt(1, _castle.getCastleId());
 			statement.setInt(2, npcId);
 			statement.setInt(3, x);
 			statement.setInt(4, y);
@@ -278,7 +278,7 @@ public class SiegeGuardManager
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error adding siege guard for castle " + getCastle().getName() + ":" + e1);
+			LOGGER.warning("Error adding siege guard for castle " + _castle.getName() + ":" + e1);
 		}
 	}
 	

@@ -91,7 +91,7 @@ public final class CHSiegeManager
 	
 	public SiegableHall getSiegableHall(int clanHall)
 	{
-		return getConquerableHalls().get(clanHall);
+		return _siegableHalls.get(clanHall);
 	}
 	
 	public final SiegableHall getNearbyClanHall(L2Character activeChar)
@@ -173,7 +173,7 @@ public final class CHSiegeManager
 	
 	public final boolean isClanParticipating(L2Clan clan)
 	{
-		for (SiegableHall hall : getConquerableHalls().values())
+		for (SiegableHall hall : _siegableHalls.values())
 		{
 			if ((hall.getSiege() != null) && hall.getSiege().checkIsAttacker(clan))
 			{
@@ -185,7 +185,7 @@ public final class CHSiegeManager
 	
 	public final void onServerShutDown()
 	{
-		for (SiegableHall hall : getConquerableHalls().values())
+		for (SiegableHall hall : _siegableHalls.values())
 		{
 			// Rainbow springs has his own attackers table
 			if ((hall.getId() == 62) || (hall.getSiege() == null))

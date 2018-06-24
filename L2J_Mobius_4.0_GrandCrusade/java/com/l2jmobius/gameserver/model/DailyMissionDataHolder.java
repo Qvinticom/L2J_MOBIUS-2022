@@ -113,13 +113,13 @@ public class DailyMissionDataHolder
 	public boolean isDisplayable(L2PcInstance player)
 	{
 		// Check if its main class only
-		if (isMainClassOnly() && (player.isSubClassActive() || player.isDualClassActive()))
+		if (_isMainClassOnly && (player.isSubClassActive() || player.isDualClassActive()))
 		{
 			return false;
 		}
 		
 		// Check if its dual class only.
-		if (isDualClassOnly() && !player.isDualClassActive())
+		if (_isDualClassOnly && !player.isDualClassActive())
 		{
 			return false;
 		}
@@ -131,13 +131,13 @@ public class DailyMissionDataHolder
 		}
 		
 		final int status = getStatus(player);
-		if (!isDisplayedWhenNotAvailable() && (status == DailyMissionStatus.NOT_AVAILABLE.getClientId()))
+		if (!_isDisplayedWhenNotAvailable && (status == DailyMissionStatus.NOT_AVAILABLE.getClientId()))
 		{
 			return false;
 		}
 		
 		// Show only if its repeatable, recently completed or incompleted that has met the checks above.
-		return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
+		return (!_isOneTime || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
 	}
 	
 	public void requestReward(L2PcInstance player)

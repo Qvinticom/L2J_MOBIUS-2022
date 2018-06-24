@@ -260,7 +260,7 @@ public final class QuestState
 			}
 			catch (Exception e)
 			{
-				LOGGER.log(Level.WARNING, _player.getName() + ", " + getQuestName() + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
+				LOGGER.log(Level.WARNING, _player.getName() + ", " + _questName + " cond [" + val + "] is not an integer.  Value stored, but no packet was sent: " + e.getMessage(), e);
 			}
 		}
 		
@@ -683,7 +683,7 @@ public final class QuestState
 		Quest.deleteQuestInDb(this, repeatable);
 		if (repeatable)
 		{
-			_player.delQuestState(getQuestName());
+			_player.delQuestState(_questName);
 			_player.sendPacket(new QuestList(_player));
 		}
 		else

@@ -156,7 +156,7 @@ public class Castle
 	 */
 	public void addToTreasury(int amount)
 	{
-		if (getOwnerId() <= 0)
+		if (_ownerId <= 0)
 		{
 			return;
 		}
@@ -203,7 +203,7 @@ public class Castle
 	 */
 	public boolean addToTreasuryNoTax(int amount)
 	{
-		if (getOwnerId() <= 0)
+		if (_ownerId <= 0)
 		{
 			return false;
 		}
@@ -231,8 +231,8 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set treasury = ? where id = ?");
-			statement.setInt(1, getTreasury());
-			statement.setInt(2, getCastleId());
+			statement.setInt(1, _treasury);
+			statement.setInt(2, _castleId);
 			statement.execute();
 			statement.close();
 		}
@@ -249,7 +249,7 @@ public class Castle
 	 */
 	public void banishForeigners()
 	{
-		_zone.banishForeigners(getOwnerId());
+		_zone.banishForeigners(_ownerId);
 	}
 	
 	/**
@@ -309,7 +309,7 @@ public class Castle
 	
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != getOwnerId())
+		if (activeChar.getClanId() != _ownerId)
 		{
 			return;
 		}
@@ -338,7 +338,7 @@ public class Castle
 	public void setOwner(L2Clan clan)
 	{
 		// Remove old owner
-		if ((getOwnerId() > 0) && ((clan == null) || (clan.getClanId() != getOwnerId())))
+		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
 			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 			
@@ -427,7 +427,7 @@ public class Castle
 		}
 		
 		setTaxPercent(taxPercent);
-		activeChar.sendMessage(getName() + " castle tax changed to " + taxPercent + "%.");
+		activeChar.sendMessage(_name + " castle tax changed to " + taxPercent + "%.");
 	}
 	
 	public void setTaxPercent(int taxPercent)
@@ -439,7 +439,7 @@ public class Castle
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set taxPercent = ? where id = ?");
 			statement.setInt(1, taxPercent);
-			statement.setInt(2, getCastleId());
+			statement.setInt(2, _castleId);
 			statement.execute();
 			statement.close();
 		}
@@ -464,9 +464,9 @@ public class Castle
 	 */
 	public void spawnDoor(boolean isDoorWeak)
 	{
-		for (int i = 0; i < getDoors().size(); i++)
+		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			L2DoorInstance door = _doors.get(i);
 			if (door.getCurrentHp() <= 0)
 			{
 				door.decayMe(); // Kill current if not killed already
@@ -482,7 +482,7 @@ public class Castle
 				}
 				
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
-				getDoors().set(i, door);
+				_doors.set(i, door);
 			}
 			else if (door.getOpen())
 			{
@@ -521,7 +521,7 @@ public class Castle
 			ResultSet rs;
 			
 			statement = con.prepareStatement("Select * from castle where id = ?");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -556,7 +556,7 @@ public class Castle
 			_taxRate = _taxPercent / 100.0;
 			
 			statement = con.prepareStatement("Select clan_id from clan_data where hasCastle = ?");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -564,7 +564,7 @@ public class Castle
 				_ownerId = rs.getInt("clan_id");
 			}
 			
-			if (getOwnerId() > 0)
+			if (_ownerId > 0)
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 				ThreadPool.schedule(new CastleUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
@@ -585,7 +585,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -614,7 +614,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_doorupgrade where doorId in (Select Id from castle_door where castleId = ?)");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -636,7 +636,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("delete from castle_doorupgrade where doorId in (select id from castle_door where castleId=?)");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			statement.execute();
 			statement.close();
 		}
@@ -683,13 +683,13 @@ public class Castle
 			// NEED TO REMOVE HAS CASTLE FLAG FROM CLAN_DATA
 			// SHOULD BE CHECKED FROM CASTLE TABLE
 			statement = con.prepareStatement("UPDATE clan_data SET hasCastle=0 WHERE hasCastle=?");
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			statement.execute();
 			statement.close();
 			
 			statement = con.prepareStatement("UPDATE clan_data SET hasCastle=? WHERE clan_id=?");
-			statement.setInt(1, getCastleId());
-			statement.setInt(2, getOwnerId());
+			statement.setInt(1, _castleId);
+			statement.setInt(2, _ownerId);
 			statement.execute();
 			statement.close();
 			// ============================================================================
@@ -697,7 +697,7 @@ public class Castle
 			// Announce to clan memebers
 			if (clan != null)
 			{
-				clan.setHasCastle(getCastleId()); // Set has castle flag for new owner
+				clan.setHasCastle(_castleId); // Set has castle flag for new owner
 				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " castle!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
@@ -727,9 +727,9 @@ public class Castle
 			return null;
 		}
 		
-		for (int i = 0; i < getDoors().size(); i++)
+		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			L2DoorInstance door = _doors.get(i);
 			
 			if (door.getDoorId() == doorId)
 			{
@@ -899,7 +899,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION);
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			
 			statement.execute();
 			statement.close();
@@ -913,7 +913,7 @@ public class Castle
 				
 				for (SeedProduction s : _production)
 				{
-					values[count] = "(" + getCastleId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_CURRENT + ")";
+					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_CURRENT + ")";
 					count++;
 				}
 				
@@ -939,7 +939,7 @@ public class Castle
 				
 				for (SeedProduction s : _productionNext)
 				{
-					values[count] = "(" + getCastleId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_NEXT + ")";
+					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + CastleManorManager.PERIOD_NEXT + ")";
 					count++;
 				}
 				
@@ -960,7 +960,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding seed production data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding seed production data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -971,7 +971,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION_PERIOD);
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			statement.setInt(2, period);
 			statement.execute();
 			statement.close();
@@ -988,7 +988,7 @@ public class Castle
 				
 				for (SeedProduction s : prod)
 				{
-					values[count] = "(" + getCastleId() + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + period + ")";
+					values[count] = "(" + _castleId + "," + s.getId() + "," + s.getCanProduce() + "," + s.getStartProduce() + "," + s.getPrice() + "," + period + ")";
 					count++;
 				}
 				if (values.length > 0)
@@ -1006,7 +1006,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding seed production data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding seed production data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -1017,7 +1017,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PROCURE);
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			statement.execute();
 			statement.close();
 			
@@ -1030,7 +1030,7 @@ public class Castle
 				
 				for (CropProcure cp : _procure)
 				{
-					values[count] = "(" + getCastleId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_CURRENT + ")";
+					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_CURRENT + ")";
 					count++;
 				}
 				
@@ -1058,7 +1058,7 @@ public class Castle
 				
 				for (CropProcure cp : _procureNext)
 				{
-					values[count] = "(" + getCastleId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_NEXT + ")";
+					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + CastleManorManager.PERIOD_NEXT + ")";
 					count++;
 				}
 				
@@ -1077,7 +1077,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding crop data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding crop data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -1088,7 +1088,7 @@ public class Castle
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PROCURE_PERIOD);
-			statement.setInt(1, getCastleId());
+			statement.setInt(1, _castleId);
 			statement.setInt(2, period);
 			statement.execute();
 			statement.close();
@@ -1105,7 +1105,7 @@ public class Castle
 				
 				for (CropProcure cp : proc)
 				{
-					values[count] = "(" + getCastleId() + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + period + ")";
+					values[count] = "(" + _castleId + "," + cp.getId() + "," + cp.getAmount() + "," + cp.getStartAmount() + "," + cp.getPrice() + "," + cp.getReward() + "," + period + ")";
 					count++;
 				}
 				
@@ -1126,7 +1126,7 @@ public class Castle
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding crop data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding crop data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -1138,14 +1138,14 @@ public class Castle
 			statement = con.prepareStatement(CASTLE_UPDATE_CROP);
 			statement.setInt(1, amount);
 			statement.setInt(2, cropId);
-			statement.setInt(3, getCastleId());
+			statement.setInt(3, _castleId);
 			statement.setInt(4, period);
 			statement.execute();
 			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding crop data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding crop data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -1157,14 +1157,14 @@ public class Castle
 			statement = con.prepareStatement(CASTLE_UPDATE_SEED);
 			statement.setInt(1, amount);
 			statement.setInt(2, seedId);
-			statement.setInt(3, getCastleId());
+			statement.setInt(3, _castleId);
 			statement.setInt(4, period);
 			statement.execute();
 			statement.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.info("Error adding seed production data for castle " + getName() + ": " + e.getMessage());
+			LOGGER.info("Error adding seed production data for castle " + _name + ": " + e.getMessage());
 		}
 	}
 	
@@ -1263,7 +1263,7 @@ public class Castle
 				LOGGER.info("	Player Name: " + actual.getName());
 			}
 		}
-		getTeleZone().oustAllPlayers();
+		_teleZone.oustAllPlayers();
 	}
 	
 	/**

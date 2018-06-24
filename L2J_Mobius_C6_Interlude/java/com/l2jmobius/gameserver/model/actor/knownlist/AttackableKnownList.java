@@ -82,9 +82,9 @@ public class AttackableKnownList extends NpcKnownList
 	@Override
 	public int getDistanceToForgetObject(L2Object object)
 	{
-		if (getActiveChar().getAggroListRP() != null)
+		if (getActiveChar().getAggroList() != null)
 		{
-			if (getActiveChar().getAggroListRP().get(object) != null)
+			if (getActiveChar().getAggroList().get(object) != null)
 			{
 				return 3000;
 			}

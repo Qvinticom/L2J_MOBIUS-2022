@@ -155,7 +155,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_eventName(String _eventName)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._eventName = _eventName;
 			return true;
@@ -179,7 +179,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_eventDesc(String _eventDesc)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._eventDesc = _eventDesc;
 			return true;
@@ -203,7 +203,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_joiningLocationName(String _joiningLocationName)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._joiningLocationName = _joiningLocationName;
 			return true;
@@ -227,7 +227,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_npcId(int _npcId)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._npcId = _npcId;
 			return true;
@@ -262,7 +262,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_rewardId(int _rewardId)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._rewardId = _rewardId;
 			return true;
@@ -286,7 +286,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_rewardAmount(int _rewardAmount)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._rewardAmount = _rewardAmount;
 			return true;
@@ -310,7 +310,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_minlvl(int _minlvl)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._minlvl = _minlvl;
 			return true;
@@ -334,7 +334,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_maxlvl(int _maxlvl)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._maxlvl = _maxlvl;
 			return true;
@@ -358,7 +358,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_joinTime(int _joinTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._joinTime = _joinTime;
 			return true;
@@ -382,7 +382,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_eventTime(int _eventTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._eventTime = _eventTime;
 			return true;
@@ -406,7 +406,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_minPlayers(int _minPlayers)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._minPlayers = _minPlayers;
 			return true;
@@ -430,7 +430,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_maxPlayers(int _maxPlayers)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._maxPlayers = _maxPlayers;
 			return true;
@@ -454,7 +454,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_intervalBetweenMatches(long _intervalBetweenMatches)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._intervalBetweenMatches = _intervalBetweenMatches;
 			return true;
@@ -478,7 +478,7 @@ public class CTF implements EventTask
 	 */
 	public boolean setStartEventTime(String startEventTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			this.startEventTime = startEventTime;
 			return true;
@@ -2518,7 +2518,7 @@ public class CTF implements EventTask
 	 */
 	public static void addTeam(String teamName)
 	{
-		if (is_inProgress())
+		if (_inProgress)
 		{
 			if (Config.DEBUG)
 			{
@@ -2558,7 +2558,7 @@ public class CTF implements EventTask
 	 */
 	public static void removeTeam(String teamName)
 	{
-		if (is_inProgress() || _teams.isEmpty())
+		if (_inProgress || _teams.isEmpty())
 		{
 			if (Config.DEBUG)
 			{
@@ -2657,7 +2657,7 @@ public class CTF implements EventTask
 	 */
 	public static void setTeamColor(String teamName, int color)
 	{
-		if (is_inProgress())
+		if (_inProgress)
 		{
 			return;
 		}
@@ -2863,7 +2863,7 @@ public class CTF implements EventTask
 	 */
 	public static boolean set_eventOffset(int _eventOffset)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			CTF._eventOffset = _eventOffset;
 			return true;

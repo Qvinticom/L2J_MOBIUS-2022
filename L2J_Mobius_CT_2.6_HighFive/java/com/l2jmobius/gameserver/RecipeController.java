@@ -198,7 +198,7 @@ public class RecipeController
 			_skillLevel = _player.getSkillLevel(_skillId);
 			_skill = _player.getKnownSkill(_skillId);
 			
-			_player.isInCraftMode(true);
+			_player.setIsCrafting(true);
 			
 			if (_player.isAlikeDead())
 			{
@@ -290,7 +290,7 @@ public class RecipeController
 			updateCurMp();
 			updateCurLoad();
 			
-			_player.isInCraftMode(false);
+			_player.setIsCrafting(false);
 			_isValid = true;
 		}
 		
@@ -429,7 +429,7 @@ public class RecipeController
 			updateCurMp();
 			updateCurLoad();
 			_activeMakers.remove(_player.getObjectId());
-			_player.isInCraftMode(false);
+			_player.setIsCrafting(false);
 			_target.sendPacket(new ItemList(_target, false));
 		}
 		
@@ -641,7 +641,7 @@ public class RecipeController
 		private void abort()
 		{
 			updateMakeInfo(false);
-			_player.isInCraftMode(false);
+			_player.setIsCrafting(false);
 			_activeMakers.remove(_player.getObjectId());
 		}
 		

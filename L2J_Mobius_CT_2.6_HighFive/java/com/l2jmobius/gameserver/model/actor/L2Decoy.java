@@ -162,18 +162,18 @@ public abstract class L2Decoy extends L2Character
 	@Override
 	public void sendPacket(IClientOutgoingPacket... packets)
 	{
-		if (getOwner() != null)
+		if (_owner != null)
 		{
-			getOwner().sendPacket(packets);
+			_owner.sendPacket(packets);
 		}
 	}
 	
 	@Override
 	public void sendPacket(SystemMessageId id)
 	{
-		if (getOwner() != null)
+		if (_owner != null)
 		{
-			getOwner().sendPacket(id);
+			_owner.sendPacket(id);
 		}
 	}
 }

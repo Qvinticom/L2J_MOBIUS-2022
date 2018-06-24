@@ -238,7 +238,7 @@ public final class L2WorldRegion
 		if (object.isPlayable())
 		{
 			// if this is the first player to enter the region, activate self & neighbors
-			if (!isActive() && (!Config.GRIDS_ALWAYS_ON))
+			if (!_active && (!Config.GRIDS_ALWAYS_ON))
 			{
 				startActivation();
 			}

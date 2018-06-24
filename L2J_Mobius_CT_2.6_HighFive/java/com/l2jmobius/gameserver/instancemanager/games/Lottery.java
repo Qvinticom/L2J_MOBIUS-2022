@@ -94,9 +94,9 @@ public class Lottery
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PRICE))
 		{
-			ps.setLong(1, getPrize());
-			ps.setLong(2, getPrize());
-			ps.setInt(3, getId());
+			ps.setLong(1, _prize);
+			ps.setLong(2, _prize);
+			ps.setInt(3, _number);
 			ps.execute();
 		}
 		catch (SQLException e)
@@ -172,7 +172,7 @@ public class Lottery
 			_isSellingTickets = true;
 			_isStarted = true;
 			
-			Broadcast.toAllOnlinePlayers("Lottery tickets are now available for Lucky Lottery #" + getId() + ".");
+			Broadcast.toAllOnlinePlayers("Lottery tickets are now available for Lucky Lottery #" + _number + ".");
 			final Calendar finishtime = Calendar.getInstance();
 			finishtime.setTimeInMillis(_enddate);
 			finishtime.set(Calendar.MINUTE, 0);
@@ -198,10 +198,10 @@ public class Lottery
 				PreparedStatement ps = con.prepareStatement(INSERT_LOTTERY))
 			{
 				ps.setInt(1, 1);
-				ps.setInt(2, getId());
-				ps.setLong(3, getEndDate());
-				ps.setLong(4, getPrize());
-				ps.setLong(5, getPrize());
+				ps.setInt(2, _number);
+				ps.setLong(3, _enddate);
+				ps.setLong(4, _prize);
+				ps.setLong(5, _prize);
 				ps.execute();
 			}
 			catch (SQLException e)
@@ -284,7 +284,7 @@ public class Lottery
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_LOTTERY_ITEM))
 			{
-				ps.setInt(1, getId());
+				ps.setInt(1, _number);
 				try (ResultSet rset = ps.executeQuery())
 				{
 					while (rset.next())
@@ -350,49 +350,49 @@ public class Lottery
 			
 			if (count1 > 0)
 			{
-				prize1 = (long) (((getPrize() - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
+				prize1 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
 			}
 			
 			if (count2 > 0)
 			{
-				prize2 = (long) (((getPrize() - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
+				prize2 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
 			}
 			
 			if (count3 > 0)
 			{
-				prize3 = (long) (((getPrize() - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
+				prize3 = (long) (((_prize - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
 			}
 			
-			final long newprize = getPrize() - (prize1 + prize2 + prize3 + prize4);
+			final long newprize = _prize - (prize1 + prize2 + prize3 + prize4);
 			SystemMessage sm;
 			if (count1 > 0)
 			{
 				// There are winners.
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_THE_WINNER_OF_LOTTERY_S1_IS_S2_ADENA_WE_HAVE_S3_FIRST_PRIZE_WINNERS);
-				sm.addInt(getId());
-				sm.addLong(getPrize());
+				sm.addInt(_number);
+				sm.addLong(_prize);
 				sm.addLong(count1);
 			}
 			else
 			{
 				// There are no winners.
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_PRIZE_AMOUNT_FOR_LUCKY_LOTTERY_S1_IS_S2_ADENA_THERE_WAS_NO_FIRST_PRIZE_WINNER_IN_THIS_DRAWING_THEREFORE_THE_JACKPOT_WILL_BE_ADDED_TO_THE_NEXT_DRAWING);
-				sm.addInt(getId());
-				sm.addLong(getPrize());
+				sm.addInt(_number);
+				sm.addLong(_prize);
 			}
 			Broadcast.toAllOnlinePlayers(sm);
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_LOTTERY))
 			{
-				ps.setLong(1, getPrize());
+				ps.setLong(1, _prize);
 				ps.setLong(2, newprize);
 				ps.setInt(3, enchant);
 				ps.setInt(4, type2);
 				ps.setLong(5, prize1);
 				ps.setLong(6, prize2);
 				ps.setLong(7, prize3);
-				ps.setInt(8, getId());
+				ps.setInt(8, _number);
 				ps.execute();
 			}
 			catch (SQLException e)

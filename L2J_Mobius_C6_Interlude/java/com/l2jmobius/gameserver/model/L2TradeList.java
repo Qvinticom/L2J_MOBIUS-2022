@@ -80,7 +80,7 @@ public class L2TradeList
 			{
 				if (price < (item.getReferencePrice() / 2))
 				{
-					LOGGER.warning("L2TradeList " + getListId() + " itemId  " + itemID + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
+					LOGGER.warning("L2TradeList " + _listId + " itemId  " + itemID + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
 					price = item.getReferencePrice();
 				}
 				item.setPriceToSell(price);

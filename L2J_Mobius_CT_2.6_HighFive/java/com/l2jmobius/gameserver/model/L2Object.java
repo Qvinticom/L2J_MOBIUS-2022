@@ -150,15 +150,10 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public boolean decayMe()
 	{
-		final L2WorldRegion reg = getWorldRegion();
-		synchronized (this)
-		{
-			_isSpawned = false;
-			setWorldRegion(null);
-		}
-		
-		L2World.getInstance().removeVisibleObject(this, reg);
+		_isSpawned = false;
+		L2World.getInstance().removeVisibleObject(this, _worldRegion);
 		L2World.getInstance().removeObject(this);
+		setWorldRegion(null);
 		return true;
 	}
 	
@@ -182,7 +177,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			L2World.getInstance().addObject(this);
 			
 			// Add the L2Object spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
-			getWorldRegion().addVisibleObject(this);
+			_worldRegion.addVisibleObject(this);
 		}
 		
 		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
@@ -244,7 +239,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public final boolean isSpawned()
 	{
-		return getWorldRegion() != null;
+		return _worldRegion != null;
 	}
 	
 	public final void setSpawned(boolean value)
@@ -627,7 +622,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public Location getLocation()
 	{
-		return new Location(getX(), getY(), getZ(), getHeading(), getInstanceId());
+		return new Location(_x.get(), _y.get(), _z.get(), _heading.get(), _instanceId.get());
 	}
 	
 	/**
@@ -675,13 +670,12 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		
 		if (_isSpawned)
 		{
-			final L2WorldRegion oldRegion = getWorldRegion();
 			final L2WorldRegion newRegion = L2World.getInstance().getRegion(this);
-			if ((newRegion != null) && (newRegion != oldRegion))
+			if ((newRegion != null) && (newRegion != _worldRegion))
 			{
-				if (oldRegion != null)
+				if (_worldRegion != null)
 				{
-					oldRegion.removeVisibleObject(this);
+					_worldRegion.removeVisibleObject(this);
 				}
 				newRegion.addVisibleObject(this);
 				L2World.getInstance().switchRegion(this, newRegion);
@@ -719,7 +713,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public void setInstanceId(int instanceId)
 	{
-		if ((instanceId < 0) || (getInstanceId() == instanceId))
+		if ((instanceId < 0) || (_instanceId.get() == instanceId))
 		{
 			return;
 		}
@@ -734,9 +728,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		if (isPlayer())
 		{
 			final L2PcInstance player = getActingPlayer();
-			if ((getInstanceId() > 0) && (oldI != null))
+			if ((_instanceId.get() > 0) && (oldI != null))
 			{
-				oldI.removePlayer(getObjectId());
+				oldI.removePlayer(_objectId);
 				if (oldI.isShowTimer())
 				{
 					sendInstanceUpdate(oldI, true);
@@ -744,7 +738,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			}
 			if (instanceId > 0)
 			{
-				newI.addPlayer(getObjectId());
+				newI.addPlayer(_objectId);
 				if (newI.isShowTimer())
 				{
 					sendInstanceUpdate(newI, false);
@@ -758,7 +752,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		else if (isNpc())
 		{
 			final L2Npc npc = (L2Npc) this;
-			if ((getInstanceId() > 0) && (oldI != null))
+			if ((_instanceId.get() > 0) && (oldI != null))
 			{
 				oldI.removeNpc(npc);
 			}
@@ -826,7 +820,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public final double calculateDistance(int x, int y, int z, boolean includeZAxis, boolean squared)
 	{
-		final double distance = Math.pow(x - getX(), 2) + Math.pow(y - getY(), 2) + (includeZAxis ? Math.pow(z - getZ(), 2) : 0);
+		final double distance = Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + (includeZAxis ? Math.pow(z - _z.get(), 2) : 0);
 		return squared ? distance : Math.sqrt(distance);
 	}
 	
@@ -851,7 +845,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public final double calculateDirectionTo(ILocational target)
 	{
-		int heading = Util.calculateHeadingFrom(this, target) - getHeading();
+		int heading = Util.calculateHeadingFrom(this, target) - _heading.get();
 		if (heading < 0)
 		{
 			heading = 65535 + heading;
@@ -896,7 +890,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public boolean isVisibleFor(L2PcInstance player)
 	{
-		return !isInvisible() || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS);
+		return !_isInvisible || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS);
 	}
 	
 	/**
@@ -920,19 +914,18 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			return false;
 		}
 		
-		final L2WorldRegion worldRegion1 = worldObject.getWorldRegion();
-		if (worldRegion1 == null)
+		final L2WorldRegion worldRegion = worldObject.getWorldRegion();
+		if (worldRegion == null)
 		{
 			return false;
 		}
 		
-		final L2WorldRegion worldRegion2 = getWorldRegion();
-		if (worldRegion2 == null)
+		if (_worldRegion == null)
 		{
 			return false;
 		}
 		
-		return worldRegion1.isSurroundingRegion(worldRegion2);
+		return worldRegion.isSurroundingRegion(_worldRegion);
 	}
 	
 	@Override
@@ -944,6 +937,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public String toString()
 	{
-		return getClass().getSimpleName() + ":" + getName() + "[" + getObjectId() + "]";
+		return getClass().getSimpleName() + ":" + _name + "[" + _objectId + "]";
 	}
 }

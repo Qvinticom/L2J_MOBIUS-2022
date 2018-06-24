@@ -77,7 +77,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public boolean isLeader(L2PcInstance player)
 	{
-		return getLeaderObjectId() == player.getObjectId();
+		return getLeader().getObjectId() == player.getObjectId();
 	}
 	
 	/**
@@ -154,7 +154,7 @@ public abstract class AbstractPlayerGroup
 	 */
 	public L2PcInstance getRandomPlayer()
 	{
-		return getMembers().get(Rnd.get(getMemberCount()));
+		return getMembers().get(Rnd.get(getMembers().size()));
 	}
 	
 	/**

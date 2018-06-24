@@ -79,7 +79,7 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.isInCraftMode() || manufacturer.isInCraftMode())
+		if (activeChar.isCrafting() || manufacturer.isCrafting())
 		{
 			activeChar.sendMessage("You are currently in Craft Mode.");
 			return;

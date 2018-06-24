@@ -326,7 +326,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	
 	protected final void writeMe(PacketWriter packet)
 	{
-		packet.writeD(getId());
+		packet.writeD(_smId.getId());
 		packet.writeD(_params.length);
 		SMParam param;
 		for (int i = 0; i < _paramIndex; i++)
@@ -386,7 +386,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	{
 		out.println(0x62);
 		
-		out.println(getId());
+		out.println(_smId.getId());
 		out.println(_params.length);
 		
 		for (SMParam param : _params)
@@ -441,12 +441,12 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
 	
 	public final T getLocalizedMessage(String lang)
 	{
-		if (!Config.MULTILANG_SM_ENABLE || (getSystemMessageId() == SystemMessageId.S1))
+		if (!Config.MULTILANG_SM_ENABLE || (_smId == SystemMessageId.S1))
 		{
 			return (T) this;
 		}
 		
-		final SMLocalisation sml = getSystemMessageId().getLocalisation(lang);
+		final SMLocalisation sml = _smId.getLocalisation(lang);
 		if (sml == null)
 		{
 			return (T) this;

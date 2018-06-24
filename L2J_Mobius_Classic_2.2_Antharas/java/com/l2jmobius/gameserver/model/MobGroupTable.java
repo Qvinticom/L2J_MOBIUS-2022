@@ -70,7 +70,7 @@ public class MobGroupTable
 	
 	public MobGroup[] getGroups()
 	{
-		return _groupMap.values().toArray(new MobGroup[getGroupCount()]);
+		return _groupMap.values().toArray(new MobGroup[_groupMap.size()]);
 	}
 	
 	public boolean removeGroup(int groupKey)

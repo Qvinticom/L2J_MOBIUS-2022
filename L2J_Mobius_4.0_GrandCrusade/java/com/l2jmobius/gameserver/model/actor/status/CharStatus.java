@@ -72,7 +72,7 @@ public class CharStatus
 	 */
 	public final void addStatusListener(L2Character object)
 	{
-		if (object == getActiveChar())
+		if (object == _activeChar)
 		{
 			return;
 		}
@@ -136,7 +136,7 @@ public class CharStatus
 	
 	public void reduceHp(double value, L2Character attacker, boolean awake, boolean isDOT, boolean isHPConsumption)
 	{
-		final L2Character activeChar = getActiveChar();
+		final L2Character activeChar = _activeChar;
 		if (activeChar.isDead())
 		{
 			return;
@@ -169,14 +169,14 @@ public class CharStatus
 			}
 			if (Formulas.calcRealTargetBreak())
 			{
-				getActiveChar().getEffectList().stopEffects(AbnormalType.REAL_TARGET);
+				_activeChar.getEffectList().stopEffects(AbnormalType.REAL_TARGET);
 			}
 		}
 		
 		if (value > 0)
 		{
-			final double oldHp = getCurrentHp();
-			final double newHp = Math.max(getCurrentHp() - value, activeChar.isUndying() ? 1 : 0);
+			final double oldHp = _currentHp;
+			final double newHp = Math.max(_currentHp - value, activeChar.isUndying() ? 1 : 0);
 			setCurrentHp(newHp);
 			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(activeChar, oldHp, newHp), activeChar);
 		}
@@ -189,7 +189,7 @@ public class CharStatus
 	
 	public void reduceMp(double value)
 	{
-		setCurrentMp(Math.max(getCurrentMp() - value, 0));
+		setCurrentMp(Math.max(_currentMp - value, 0));
 	}
 	
 	/**
@@ -202,10 +202,10 @@ public class CharStatus
 	 */
 	public final synchronized void startHpMpRegeneration()
 	{
-		if ((_regTask == null) && !getActiveChar().isDead())
+		if ((_regTask == null) && !_activeChar.isDead())
 		{
 			// Get the Regeneration period
-			final int period = Formulas.getRegeneratePeriod(getActiveChar());
+			final int period = Formulas.getRegeneratePeriod(_activeChar);
 			
 			// Create the HP/MP/CP Regeneration task
 			_regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
@@ -269,12 +269,12 @@ public class CharStatus
 	public boolean setCurrentHp(double newHp, boolean broadcastPacket)
 	{
 		// Get the Max HP of the L2Character
-		final int currentHp = (int) getCurrentHp();
-		final double maxHp = getActiveChar().getStat().getMaxHp();
+		final int currentHp = (int) _currentHp;
+		final double maxHp = _activeChar.getStat().getMaxHp();
 		
 		synchronized (this)
 		{
-			if (getActiveChar().isDead())
+			if (_activeChar.isDead())
 			{
 				return false;
 			}
@@ -324,7 +324,7 @@ public class CharStatus
 			
 			if (broadcastPacket)
 			{
-				getActiveChar().broadcastStatusUpdate();
+				_activeChar.broadcastStatusUpdate();
 			}
 		}
 		
@@ -337,7 +337,7 @@ public class CharStatus
 		hpOrMpWasChanged |= setCurrentMp(newMp, false);
 		if (hpOrMpWasChanged)
 		{
-			getActiveChar().broadcastStatusUpdate();
+			_activeChar.broadcastStatusUpdate();
 		}
 	}
 	
@@ -360,12 +360,12 @@ public class CharStatus
 	public final boolean setCurrentMp(double newMp, boolean broadcastPacket)
 	{
 		// Get the Max MP of the L2Character
-		final int currentMp = (int) getCurrentMp();
-		final int maxMp = getActiveChar().getStat().getMaxMp();
+		final int currentMp = (int) _currentMp;
+		final int maxMp = _activeChar.getStat().getMaxMp();
 		
 		synchronized (this)
 		{
-			if (getActiveChar().isDead())
+			if (_activeChar.isDead())
 			{
 				return false;
 			}
@@ -398,7 +398,7 @@ public class CharStatus
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		if (mpWasChanged && broadcastPacket)
 		{
-			getActiveChar().broadcastStatusUpdate();
+			_activeChar.broadcastStatusUpdate();
 		}
 		
 		return mpWasChanged;
@@ -407,10 +407,10 @@ public class CharStatus
 	protected void doRegeneration()
 	{
 		// Modify the current HP/MP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (!getActiveChar().isDead() && ((getCurrentHp() < getActiveChar().getMaxRecoverableHp()) || (getCurrentMp() < getActiveChar().getMaxRecoverableMp())))
+		if (!_activeChar.isDead() && ((_currentHp < _activeChar.getMaxRecoverableHp()) || (_currentMp < _activeChar.getMaxRecoverableMp())))
 		{
-			final double newHp = getCurrentHp() + getActiveChar().getStat().getValue(Stats.REGENERATE_HP_RATE);
-			final double newMp = getCurrentMp() + getActiveChar().getStat().getValue(Stats.REGENERATE_MP_RATE);
+			final double newHp = _currentHp + _activeChar.getStat().getValue(Stats.REGENERATE_HP_RATE);
+			final double newMp = _currentMp + _activeChar.getStat().getValue(Stats.REGENERATE_MP_RATE);
 			setCurrentHpMp(newHp, newMp);
 		}
 		else

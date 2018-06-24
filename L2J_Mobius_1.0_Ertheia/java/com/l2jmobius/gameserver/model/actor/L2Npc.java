@@ -372,7 +372,7 @@ public class L2Npc extends L2Character
 				return;
 			}
 			
-			if (isFakePlayer())
+			if (_isFakePlayer)
 			{
 				player.sendPacket(new FakePlayerInfo(this));
 			}
@@ -514,7 +514,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if (isBusy())
+		else if (_isBusy)
 		{
 			return false;
 		}
@@ -745,7 +745,7 @@ public class L2Npc extends L2Character
 	 */
 	public void showChatWindow(L2PcInstance player, int val)
 	{
-		if (!isTalkable())
+		if (!_isTalkable)
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -925,7 +925,7 @@ public class L2Npc extends L2Character
 		final L2Weapon weapon = (killer != null) ? killer.getActiveWeaponItem() : null;
 		_killingBlowWeaponId = (weapon != null) ? weapon.getId() : 0;
 		
-		if (isFakePlayer() && (killer != null) && killer.isPlayable())
+		if (_isFakePlayer && (killer != null) && killer.isPlayable())
 		{
 			final L2PcInstance player = killer.getActingPlayer();
 			if (isScriptValue(0) && (getReputation() >= 0))
@@ -999,10 +999,9 @@ public class L2Npc extends L2Character
 		
 		DecayTaskManager.getInstance().add(this);
 		
-		final L2Spawn spawn = getSpawn();
-		if (spawn != null)
+		if (_spawn != null)
 		{
-			final NpcSpawnTemplate npcTemplate = spawn.getNpcSpawnTemplate();
+			final NpcSpawnTemplate npcTemplate = _spawn.getNpcSpawnTemplate();
 			if (npcTemplate != null)
 			{
 				npcTemplate.notifyNpcDeath(this, killer);
@@ -1140,7 +1139,7 @@ public class L2Npc extends L2Character
 	@Override
 	public void onDecay()
 	{
-		if (isDecayed())
+		if (_isDecayed)
 		{
 			return;
 		}
@@ -1228,7 +1227,7 @@ public class L2Npc extends L2Character
 	
 	public void endDecayTask()
 	{
-		if (!isDecayed())
+		if (!_isDecayed)
 		{
 			DecayTaskManager.getInstance().cancel(this);
 			onDecay();
@@ -1299,7 +1298,7 @@ public class L2Npc extends L2Character
 				activeChar.sendMessage("Added NPC: " + getName());
 			}
 			
-			if (isFakePlayer())
+			if (_isFakePlayer)
 			{
 				activeChar.sendPacket(new FakePlayerInfo(this));
 			}
@@ -1318,7 +1317,7 @@ public class L2Npc extends L2Character
 	{
 		ThreadPool.schedule(() ->
 		{
-			if (!isDecayed())
+			if (!_isDecayed)
 			{
 				deleteMe();
 			}
@@ -1394,7 +1393,7 @@ public class L2Npc extends L2Character
 	@Override
 	public void rechargeShots(boolean physical, boolean magic, boolean fish)
 	{
-		if (isFakePlayer() && Config.FAKE_PLAYER_USE_SHOTS)
+		if (_isFakePlayer && Config.FAKE_PLAYER_USE_SHOTS)
 		{
 			if (physical)
 			{
@@ -1474,7 +1473,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean staysInSpawnLoc()
 	{
-		return ((getSpawn() != null) && (getSpawn().getX() == getX()) && (getSpawn().getY() == getY()));
+		return ((_spawn != null) && (_spawn.getX() == getX()) && (_spawn.getY() == getY()));
 	}
 	
 	/**
@@ -1784,10 +1783,9 @@ public class L2Npc extends L2Character
 			return _params;
 		}
 		
-		final L2Spawn spawn = getSpawn();
-		if (spawn != null) // Minions doesn't have L2Spawn object bound
+		if (_spawn != null) // Minions doesn't have L2Spawn object bound
 		{
-			final NpcSpawnTemplate npcSpawnTemplate = spawn.getNpcSpawnTemplate();
+			final NpcSpawnTemplate npcSpawnTemplate = _spawn.getNpcSpawnTemplate();
 			if ((npcSpawnTemplate != null) && (npcSpawnTemplate.getParameters() != null) && !npcSpawnTemplate.getParameters().isEmpty())
 			{
 				final StatsSet params = getTemplate().getParameters();

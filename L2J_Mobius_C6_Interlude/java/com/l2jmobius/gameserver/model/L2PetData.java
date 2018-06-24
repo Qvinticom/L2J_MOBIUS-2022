@@ -440,17 +440,17 @@ public class L2PetData
 	@Override
 	public String toString()
 	{
-		return "PetID: " + getPetID() + " \tPetLevel: " + getPetLevel() + " \t" +
+		return "PetID: " + _petId + " \tPetLevel: " + _petLevel + " \t" +
 		// PET_EXP + ": " + getPetExp() + " \t" +
-			PET_MAX_EXP + ": " + getPetMaxExp() + " \t" +
+			PET_MAX_EXP + ": " + _petMaxExp + " \t" +
 			// PET_HP + ": " + getPetHP() + " \t" +
-			PET_MAX_HP + ": " + getPetMaxHP() + " \t" +
+			PET_MAX_HP + ": " + _petMaxHP + " \t" +
 			// PET_MP + ": " + getPetMP() + " \t" +
-			PET_MAX_MP + ": " + getPetMaxMP() + " \t" + PET_PATK + ": " + getPetPAtk() + " \t" + PET_PDEF + ": " + getPetPDef() + " \t" + PET_MATK + ": " + getPetMAtk() + " \t" + PET_MDEF + ": " + getPetMDef() + " \t" + PET_ACCURACY + ": " + getPetAccuracy() + " \t" + PET_EVASION + ": " + getPetEvasion() + " \t" + PET_CRITICAL + ": " + getPetCritical() + " \t" + PET_SPEED + ": " + getPetSpeed() + " \t" + PET_ATK_SPEED + ": " + getPetAtkSpeed() + " \t" + PET_CAST_SPEED + ": " + getPetCastSpeed() + " \t" +
+			PET_MAX_MP + ": " + _petMaxMP + " \t" + PET_PATK + ": " + _petPAtk + " \t" + PET_PDEF + ": " + _petPDef + " \t" + PET_MATK + ": " + _petMAtk + " \t" + PET_MDEF + ": " + _petMDef + " \t" + PET_ACCURACY + ": " + _petAccuracy + " \t" + PET_EVASION + ": " + _petEvasion + " \t" + PET_CRITICAL + ": " + _petCritical + " \t" + PET_SPEED + ": " + _petSpeed + " \t" + PET_ATK_SPEED + ": " + _petAtkSpeed + " \t" + PET_CAST_SPEED + ": " + _petCastSpeed + " \t" +
 			// PET_FEED + ": " + getPetFeed() + " \t" +
-			PET_MAX_FEED + ": " + getPetMaxFeed() + " \t" + PET_FEED_BATTLE + ": " + getPetFeedBattle() + " \t" + PET_FEED_NORMAL + ": " + getPetFeedNormal() + " \t" +
+			PET_MAX_FEED + ": " + _petMaxFeed + " \t" + PET_FEED_BATTLE + ": " + _petFeedBattle + " \t" + PET_FEED_NORMAL + ": " + _petFeedNormal + " \t" +
 			// PET_LOAD + ": " + getPetLoad() + " \t" +
-			PET_MAX_LOAD + ": " + getPetMaxLoad() + " \t" + PET_REGEN_HP + ": " + getPetRegenHP() + " \t" + PET_REGEN_MP + ": " + getPetRegenMP();
+			PET_MAX_LOAD + ": " + _petMaxLoad + " \t" + PET_REGEN_HP + ": " + _petRegenHP + " \t" + PET_REGEN_MP + ": " + _petRegenMP;
 	}
 	
 }

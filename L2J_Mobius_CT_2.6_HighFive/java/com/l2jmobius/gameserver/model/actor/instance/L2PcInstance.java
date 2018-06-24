@@ -511,7 +511,7 @@ public final class L2PcInstance extends L2Playable
 	public int _telemode = 0;
 	
 	private boolean _inCrystallize;
-	private boolean _inCraftMode;
+	private boolean _isCrafting;
 	
 	private long _offlineShopStart = 0;
 	
@@ -1261,14 +1261,14 @@ public final class L2PcInstance extends L2Playable
 		return getPrivateStoreType() != PrivateStoreType.NONE;
 	}
 	
-	public boolean isInCraftMode()
+	public boolean isCrafting()
 	{
-		return _inCraftMode;
+		return _isCrafting;
 	}
 	
-	public void isInCraftMode(boolean b)
+	public void setIsCrafting(boolean isCrafting)
 	{
-		_inCraftMode = b;
+		_isCrafting = isCrafting;
 	}
 	
 	/**

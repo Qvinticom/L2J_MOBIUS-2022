@@ -544,9 +544,9 @@ public class L2Spawn
 		int newlocx, newlocy, newlocz;
 		
 		// If Locx=0 and Locy=0, the L2NpcInstance must be spawned in an area defined by location
-		if ((getX() == 0) && (getY() == 0))
+		if ((_locX == 0) && (_locY == 0))
 		{
-			if (getLocation() == 0)
+			if (_location == 0)
 			{
 				return mob;
 			}
@@ -562,9 +562,9 @@ public class L2Spawn
 		else
 		{
 			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
-			newlocx = getX();
-			newlocy = getY();
-			newlocz = getZ();
+			newlocx = _locX;
+			newlocy = _locY;
+			newlocz = _locZ;
 		}
 		
 		if (mob != null)
@@ -575,13 +575,13 @@ public class L2Spawn
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
 			
 			// Set the heading of the L2NpcInstance (random heading if not defined)
-			if (getHeading() == -1)
+			if (_heading == -1)
 			{
 				mob.setHeading(Rnd.nextInt(61794));
 			}
 			else
 			{
-				mob.setHeading(getHeading());
+				mob.setHeading(_heading);
 			}
 			
 			// Reset decay info

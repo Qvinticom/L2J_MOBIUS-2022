@@ -146,13 +146,13 @@ public class FortSiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Delete From fort_siege_guards Where fortId = ? And isHired = 1");
-			statement.setInt(1, getFort().getFortId());
+			statement.setInt(1, _fort.getFortId());
 			statement.execute();
 			statement.close();
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error deleting hired siege guard for fort " + getFort().getName() + ":" + e1);
+			LOGGER.warning("Error deleting hired siege guard for fort " + _fort.getName() + ":" + e1);
 		}
 	}
 	
@@ -165,7 +165,7 @@ public class FortSiegeGuardManager
 		try
 		{
 			loadSiegeGuard();
-			for (L2Spawn spawn : getSiegeGuardSpawn())
+			for (L2Spawn spawn : _siegeGuardSpawn)
 			{
 				if (spawn != null)
 				{
@@ -175,7 +175,7 @@ public class FortSiegeGuardManager
 		}
 		catch (Throwable t)
 		{
-			LOGGER.warning("Error spawning siege guards for fort " + getFort().getName() + ":" + t);
+			LOGGER.warning("Error spawning siege guards for fort " + _fort.getName() + ":" + t);
 		}
 	}
 	
@@ -185,7 +185,7 @@ public class FortSiegeGuardManager
 	 */
 	public void unspawnSiegeGuard()
 	{
-		for (L2Spawn spawn : getSiegeGuardSpawn())
+		for (L2Spawn spawn : _siegeGuardSpawn)
 		{
 			if (spawn == null)
 			{
@@ -196,7 +196,7 @@ public class FortSiegeGuardManager
 			spawn.getLastSpawn().doDie(spawn.getLastSpawn());
 		}
 		
-		getSiegeGuardSpawn().clear();
+		_siegeGuardSpawn.clear();
 	}
 	
 	// =========================================================
@@ -210,7 +210,7 @@ public class FortSiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM fort_siege_guards Where fortId = ? ");
-			statement.setInt(1, getFort().getFortId());
+			statement.setInt(1, _fort.getFortId());
 			ResultSet rs = statement.executeQuery();
 			
 			L2Spawn spawn1;
@@ -242,7 +242,7 @@ public class FortSiegeGuardManager
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error loading siege guard for fort " + getFort().getName() + ":" + e1);
+			LOGGER.warning("Error loading siege guard for fort " + _fort.getName() + ":" + e1);
 		}
 	}
 	
@@ -261,7 +261,7 @@ public class FortSiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Insert Into fort_siege_guards (fortId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)");
-			statement.setInt(1, getFort().getFortId());
+			statement.setInt(1, _fort.getFortId());
 			statement.setInt(2, npcId);
 			statement.setInt(3, x);
 			statement.setInt(4, y);
@@ -281,7 +281,7 @@ public class FortSiegeGuardManager
 		}
 		catch (Exception e1)
 		{
-			LOGGER.warning("Error adding siege guard for fort " + getFort().getName() + ":" + e1);
+			LOGGER.warning("Error adding siege guard for fort " + _fort.getName() + ":" + e1);
 		}
 	}
 	

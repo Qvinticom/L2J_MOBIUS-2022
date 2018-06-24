@@ -48,7 +48,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 {
 	protected static Logger LOGGER = Logger.getLogger(WildBeastFarmSiege.class.getName());
 	private static WildBeastFarmSiege _instance;
-	private boolean _registrationPeriod = false;
+	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
 	protected Map<Integer, clanPlayersInfo> _clansInfo = new HashMap<>();
 	public ClanHall clanhall = ClanHallManager.getInstance().getClanHallById(63);
@@ -556,7 +556,7 @@ public class WildBeastFarmSiege extends ClanHallSiege
 			long remaining = registerTimeRemaining;
 			if (registerTimeRemaining <= 0)
 			{
-				if (!isRegistrationPeriod())
+				if (!_registrationPeriod)
 				{
 					if (clanhall.getOwnerClan() != null)
 					{

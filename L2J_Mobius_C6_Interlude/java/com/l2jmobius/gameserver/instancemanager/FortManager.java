@@ -65,9 +65,9 @@ public class FortManager
 			double closestDistance = 99999999;
 			double distance;
 			Fort fort;
-			for (int i = 0; i < getForts().size(); i++)
+			for (int i = 0; i < _forts.size(); i++)
 			{
-				fort = getForts().get(i);
+				fort = _forts.get(i);
 				if (fort == null)
 				{
 					continue;
@@ -97,13 +97,13 @@ public class FortManager
 			
 			while (rs.next())
 			{
-				getForts().add(new Fort(rs.getInt("id")));
+				_forts.add(new Fort(rs.getInt("id")));
 			}
 			
 			rs.close();
 			statement.close();
 			
-			LOGGER.info("Loaded: " + getForts().size() + " fortress");
+			LOGGER.info("Loaded: " + _forts.size() + " fortress");
 		}
 		catch (Exception e)
 		{
@@ -116,7 +116,7 @@ public class FortManager
 	// Property - Public
 	public final Fort getFortById(int fortId)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts)
 		{
 			if (f.getFortId() == fortId)
 			{
@@ -128,7 +128,7 @@ public class FortManager
 	
 	public final Fort getFortByOwner(L2Clan clan)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts)
 		{
 			if (f.getOwnerId() == clan.getClanId())
 			{
@@ -140,7 +140,7 @@ public class FortManager
 	
 	public final Fort getFort(String name)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts)
 		{
 			if (f.getName().equalsIgnoreCase(name.trim()))
 			{
@@ -152,7 +152,7 @@ public class FortManager
 	
 	public final Fort getFort(int x, int y, int z)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts)
 		{
 			if (f.checkIfInZone(x, y, z))
 			{
@@ -170,9 +170,9 @@ public class FortManager
 	public final int getFortIndex(int fortId)
 	{
 		Fort fort;
-		for (int i = 0; i < getForts().size(); i++)
+		for (int i = 0; i < _forts.size(); i++)
 		{
-			fort = getForts().get(i);
+			fort = _forts.get(i);
 			if ((fort != null) && (fort.getFortId() == fortId))
 			{
 				return i;
@@ -189,9 +189,9 @@ public class FortManager
 	public final int getFortIndex(int x, int y, int z)
 	{
 		Fort fort;
-		for (int i = 0; i < getForts().size(); i++)
+		for (int i = 0; i < _forts.size(); i++)
 		{
-			fort = getForts().get(i);
+			fort = _forts.get(i);
 			if ((fort != null) && fort.checkIfInZone(x, y, z))
 			{
 				return i;

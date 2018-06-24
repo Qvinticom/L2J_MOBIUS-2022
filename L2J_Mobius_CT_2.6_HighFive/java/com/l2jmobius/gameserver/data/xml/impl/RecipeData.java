@@ -255,7 +255,7 @@ public class RecipeData implements IGameXmlReader
 		if ((recipeList == null) || (recipeList.getRecipes().length == 0))
 		{
 			player.sendMessage(getClass().getSimpleName() + ": No recipe for: " + id);
-			player.isInCraftMode(false);
+			player.setIsCrafting(false);
 			return null;
 		}
 		return recipeList;

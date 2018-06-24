@@ -99,8 +99,8 @@ public final class ClanHallManager
 					ClanHallAuctionManager.getInstance().initNPC(id);
 				}
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getClanHalls().size() + " clan halls");
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getFreeClanHalls().size() + " free clan halls");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _clanHall.size() + " clan halls");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _freeClanHall.size() + " free clan halls");
 			_loaded = true;
 		}
 		catch (Exception e)

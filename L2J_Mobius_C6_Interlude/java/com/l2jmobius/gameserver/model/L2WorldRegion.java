@@ -285,7 +285,7 @@ public final class L2WorldRegion
 	public Boolean areNeighborsEmpty()
 	{
 		// if this region is occupied, return false.
-		if (isActive() && (_allPlayable.size() > 0))
+		if (_active && (_allPlayable.size() > 0))
 		{
 			return false;
 		}

@@ -71,7 +71,7 @@ public class NodeLoc extends AbstractNodeLoc
 	
 	public boolean canGoAll()
 	{
-		return canGoNorth() && canGoEast() && canGoSouth() && canGoWest();
+		return _goNorth && _goEast && _goSouth && _goWest;
 	}
 	
 	@Override
@@ -113,19 +113,19 @@ public class NodeLoc extends AbstractNodeLoc
 		result = (prime * result) + _y;
 		
 		int nswe = 0;
-		if (canGoNorth())
+		if (_goNorth)
 		{
 			nswe |= Cell.NSWE_NORTH;
 		}
-		if (canGoEast())
+		if (_goEast)
 		{
 			nswe |= Cell.NSWE_EAST;
 		}
-		if (canGoSouth())
+		if (_goSouth)
 		{
 			nswe |= Cell.NSWE_SOUTH;
 		}
-		if (canGoWest())
+		if (_goWest)
 		{
 			nswe |= Cell.NSWE_WEST;
 		}

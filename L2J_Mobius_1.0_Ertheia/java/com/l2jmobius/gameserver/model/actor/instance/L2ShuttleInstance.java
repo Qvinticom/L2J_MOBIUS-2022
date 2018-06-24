@@ -51,7 +51,7 @@ public class L2ShuttleInstance extends L2Vehicle
 	
 	public void closeDoor(int id)
 	{
-		for (L2ShuttleStop stop : getStops())
+		for (L2ShuttleStop stop : _shuttleData.getStops())
 		{
 			if (stop.getId() == id)
 			{
@@ -63,7 +63,7 @@ public class L2ShuttleInstance extends L2Vehicle
 	
 	public void openDoor(int id)
 	{
-		for (L2ShuttleStop stop : getStops())
+		for (L2ShuttleStop stop : _shuttleData.getStops())
 		{
 			if (stop.getId() == id)
 			{

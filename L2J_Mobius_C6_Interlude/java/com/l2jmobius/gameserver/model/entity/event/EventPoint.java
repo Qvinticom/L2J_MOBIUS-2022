@@ -49,7 +49,7 @@ public class EventPoint
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			final PreparedStatement st = con.prepareStatement("Select * From char_points where charId = ?");
-			st.setInt(1, getActiveChar().getObjectId());
+			st.setInt(1, _activeChar.getObjectId());
 			final ResultSet rst = st.executeQuery();
 			
 			while (rst.next())
@@ -71,7 +71,7 @@ public class EventPoint
 		{
 			final PreparedStatement st = con.prepareStatement("Update char_points Set points = ? Where charId = ?");
 			st.setInt(1, _points);
-			st.setInt(2, getActiveChar().getObjectId());
+			st.setInt(2, _activeChar.getObjectId());
 			st.execute();
 			st.close();
 		}

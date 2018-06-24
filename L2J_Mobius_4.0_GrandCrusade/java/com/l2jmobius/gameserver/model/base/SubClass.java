@@ -140,7 +140,7 @@ public final class SubClass
 	
 	public void incLevel()
 	{
-		if (!_dualClass && (getLevel() == _maxLevel))
+		if (!_dualClass && (_level == _maxLevel))
 		{
 			return;
 		}
@@ -151,7 +151,7 @@ public final class SubClass
 	
 	public void decLevel()
 	{
-		if (getLevel() == Config.BASE_SUBCLASS_LEVEL)
+		if (_level == Config.BASE_SUBCLASS_LEVEL)
 		{
 			return;
 		}

@@ -740,7 +740,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			return;
 		}
-		if (!isAutoAttacking())
+		if (!_clientAutoAttacking)
 		{
 			if (_actor.isPlayer() && _actor.hasSummon())
 			{
@@ -775,7 +775,7 @@ public abstract class AbstractAI implements Ctrl
 				AttackStanceTaskManager.getInstance().addAttackStanceTask(_actor);
 			}
 		}
-		else if (isAutoAttacking())
+		else if (_clientAutoAttacking)
 		{
 			_actor.broadcastPacket(new AutoAttackStop(_actor.getObjectId()));
 			setAutoAttacking(false);
@@ -809,7 +809,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void describeStateToPlayer(L2PcInstance player)
 	{
-		if (getActor().isVisibleFor(player) && _clientMoving)
+		if (_actor.isVisibleFor(player) && _clientMoving)
 		{
 			if ((_clientMovingToPawnOffset != 0) && (_followTarget != null))
 			{

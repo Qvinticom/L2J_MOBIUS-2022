@@ -90,7 +90,7 @@ public class Siege implements Siegable
 		@Override
 		public void run()
 		{
-			if (!isInProgress())
+			if (!_isInProgress)
 			{
 				return;
 			}
@@ -158,7 +158,7 @@ public class Siege implements Siegable
 		public void run()
 		{
 			_scheduledStartSiegeTask.cancel(false);
-			if (isInProgress())
+			if (_isInProgress)
 			{
 				return;
 			}
@@ -227,7 +227,7 @@ public class Siege implements Siegable
 	private final List<L2ControlTowerInstance> _controlTowers = new ArrayList<>();
 	private final List<L2FlameTowerInstance> _flameTowers = new ArrayList<>();
 	private final Castle _castle;
-	private boolean _isInProgress = false;
+	boolean _isInProgress = false;
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
 	protected boolean _isRegistrationOver = false;
 	protected Calendar _siegeEndDate;
@@ -246,7 +246,7 @@ public class Siege implements Siegable
 	@Override
 	public void endSiege()
 	{
-		if (isInProgress())
+		if (_isInProgress)
 		{
 			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_S1_SIEGE_HAS_FINISHED);
 			sm.addCastleId(getCastle().getResidenceId());
@@ -377,7 +377,7 @@ public class Siege implements Siegable
 	 */
 	public void midVictory()
 	{
-		if (isInProgress()) // Siege still in progress
+		if (_isInProgress) // Siege still in progress
 		{
 			if (getCastle().getOwnerId() > 0)
 			{
@@ -473,7 +473,7 @@ public class Siege implements Siegable
 	@Override
 	public void startSiege()
 	{
-		if (!isInProgress())
+		if (!_isInProgress)
 		{
 			_firstOwnerClanId = getCastle().getOwnerId();
 			
@@ -687,7 +687,7 @@ public class Siege implements Siegable
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return isInProgress() && getCastle().checkIfInZone(x, y, z); // Castle zone during siege
+		return _isInProgress && getCastle().checkIfInZone(x, y, z); // Castle zone during siege
 	}
 	
 	/**
@@ -741,7 +741,7 @@ public class Siege implements Siegable
 			
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -758,7 +758,7 @@ public class Siege implements Siegable
 			ps.setInt(1, getCastle().getResidenceId());
 			ps.execute();
 			
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -1125,7 +1125,7 @@ public class Siege implements Siegable
 	 */
 	private void addDefenderWaiting(int clanId)
 	{
-		getDefenderWaitingClans().add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
+		_defenderWaitingClans.add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
 	}
 	
 	/**
@@ -1135,13 +1135,13 @@ public class Siege implements Siegable
 	 */
 	private boolean checkIfCanRegister(L2PcInstance player, byte typeId)
 	{
-		if (getIsRegistrationOver())
+		if (_isRegistrationOver)
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_DEADLINE_TO_REGISTER_FOR_THE_SIEGE_OF_S1_HAS_PASSED);
 			sm.addCastleId(getCastle().getResidenceId());
 			player.sendPacket(sm);
 		}
-		else if (isInProgress())
+		else if (_isInProgress)
 		{
 			player.sendPacket(SystemMessageId.THIS_IS_NOT_THE_TIME_FOR_SIEGE_REGISTRATION_AND_SO_REGISTRATION_AND_CANCELLATION_CANNOT_BE_DONE);
 		}
@@ -1242,7 +1242,7 @@ public class Siege implements Siegable
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 			
 			// Add castle owner as defender (add owner first so that they are on the top of the defender list)
 			if (getCastle().getOwnerId() > 0)
@@ -1618,7 +1618,7 @@ public class Siege implements Siegable
 	
 	public final L2SiegeClan getDefenderWaitingClan(int clanId)
 	{
-		for (L2SiegeClan sc : getDefenderWaitingClans())
+		for (L2SiegeClan sc : _defenderWaitingClans)
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{

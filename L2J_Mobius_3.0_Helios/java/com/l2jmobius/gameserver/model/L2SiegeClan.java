@@ -53,12 +53,12 @@ public class L2SiegeClan
 		
 		flag.deleteMe();
 		
-		return getFlag().remove(flag);
+		return _flags.remove(flag);
 	}
 	
 	public void removeFlags()
 	{
-		for (L2Npc flag : getFlag())
+		for (L2Npc flag : _flags)
 		{
 			removeFlag(flag);
 		}

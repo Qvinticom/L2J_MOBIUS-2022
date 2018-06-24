@@ -58,7 +58,7 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		if (actualCommand.equalsIgnoreCase("tele"))
 		{
 			int delay;
-			if (!getTask())
+			if (!_currentTask)
 			{
 				if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
 				{
@@ -90,7 +90,7 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 	public void showChatWindow(L2PcInstance player)
 	{
 		String filename;
-		if (!getTask())
+		if (!_currentTask)
 		{
 			if (getCastle().getSiege().getIsInProgress() && (getCastle().getSiege().getControlTowerCount() == 0))
 			{

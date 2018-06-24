@@ -2017,7 +2017,7 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		public final L2DarknessFestival getFestivalInstance(int oracle, int festivalId)
 		{
-			if (!isFestivalInitialized())
+			if (!_festivalInitialized)
 			{
 				return null;
 			}

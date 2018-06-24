@@ -415,11 +415,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				case TYPE2_SHIELD_ARMOR:
 				case TYPE2_ACCESSORY:
 				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
+					return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
 				}
 				case TYPE2_WEAPON:
 				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
+					return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
 				}
 				default:
 				{
@@ -434,11 +434,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 				case TYPE2_SHIELD_ARMOR:
 				case TYPE2_ACCESSORY:
 				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusArmor() * enchantLevel);
+					return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * enchantLevel);
 				}
 				case TYPE2_WEAPON:
 				{
-					return _crystalCount + (getCrystalType().getCrystalEnchantBonusWeapon() * enchantLevel);
+					return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * enchantLevel);
 				}
 				default:
 				{
@@ -532,7 +532,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	 */
 	public boolean isEquipable()
 	{
-		return (getBodyPart() != 0) && !(getItemType() instanceof EtcItemType);
+		return (_bodyPart != 0) && !(getItemType() instanceof EtcItemType);
 	}
 	
 	/**
@@ -589,7 +589,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	 */
 	public final int isEnchantable()
 	{
-		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, getId()) < 0 ? _enchantable : 0;
+		return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
 	}
 	
 	/**
@@ -780,7 +780,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		}
 		
 		// Don't allow hero equipment and restricted items during Olympiad
-		if ((isOlyRestrictedItem() || isHeroItem()) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode()))
+		if ((isOlyRestrictedItem() || _heroItem) && (activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode()))
 		{
 			if (isEquipable())
 			{
@@ -793,7 +793,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			return false;
 		}
 		
-		if (isCocRestrictedItem() && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
+		if (_is_coc_restricted && (activeChar.isPlayer() && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class))))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
 			return false;

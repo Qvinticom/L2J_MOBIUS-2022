@@ -125,7 +125,7 @@ public final class SubClass
 	
 	public void incLevel()
 	{
-		if (getLevel() == (Config.MAX_SUBCLASS_LEVEL - 1))
+		if (_level == (Config.MAX_SUBCLASS_LEVEL - 1))
 		{
 			return;
 		}
@@ -135,7 +135,7 @@ public final class SubClass
 	
 	public void decLevel()
 	{
-		if (getLevel() == Config.BASE_SUBCLASS_LEVEL)
+		if (_level == Config.BASE_SUBCLASS_LEVEL)
 		{
 			return;
 		}

@@ -53,7 +53,7 @@ public class ObjectPoly
 	
 	public final boolean isMorphed()
 	{
-		return getPolyType() != null;
+		return _polyType != null;
 	}
 	
 	public final int getPolyId()

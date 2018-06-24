@@ -40,7 +40,7 @@ public abstract class ClanHall
 {
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
-	private final int _clanHallId;
+	final int _clanHallId;
 	private ArrayList<L2DoorInstance> _doors;
 	private final String _name;
 	private int _ownerId;
@@ -62,12 +62,12 @@ public abstract class ClanHall
 	
 	public class ClanHallFunction
 	{
-		private final int _type;
+		final int _type;
 		private int _lvl;
 		protected int _fee;
 		protected int _tempFee;
-		private final long _rate;
-		private long _endDate;
+		final long _rate;
+		long _endDate;
 		protected boolean _inDebt;
 		public boolean _cwh; // first activating clanhall function is payed from player inventory, any others from clan warehouse
 		
@@ -157,18 +157,18 @@ public abstract class ClanHall
 					}
 					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						final int fee = getEndTime() == -1 ? _tempFee : _fee;
-						setEndTime(System.currentTimeMillis() + getRate());
+						final int fee = _endDate == -1 ? _tempFee : _fee;
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{
 							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPool.schedule(new FunctionTask(true), getRate());
+						ThreadPool.schedule(new FunctionTask(true), _rate);
 					}
 					else
 					{
-						removeFunction(getType());
+						removeFunction(_type);
 					}
 				}
 				catch (Exception e)
@@ -183,12 +183,12 @@ public abstract class ClanHall
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO clanhall_functions (hall_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)"))
 			{
-				ps.setInt(1, getId());
-				ps.setInt(2, getType());
-				ps.setInt(3, getLvl());
-				ps.setInt(4, getLease());
-				ps.setLong(5, getRate());
-				ps.setLong(6, getEndTime());
+				ps.setInt(1, _clanHallId);
+				ps.setInt(2, _type);
+				ps.setInt(3, _lvl);
+				ps.setInt(4, _fee);
+				ps.setLong(5, _rate);
+				ps.setLong(6, _endDate);
 				ps.execute();
 			}
 			catch (Exception e)
@@ -215,7 +215,7 @@ public abstract class ClanHall
 		final L2Clan clan = ClanTable.getInstance().getClan(_ownerId);
 		if (clan != null)
 		{
-			clan.setHideoutId(getId());
+			clan.setHideoutId(_clanHallId);
 		}
 		else
 		{
@@ -321,7 +321,7 @@ public abstract class ClanHall
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return getZone().isInsideZone(x, y, z);
+		return _zone.isInsideZone(x, y, z);
 	}
 	
 	/**
@@ -358,7 +358,7 @@ public abstract class ClanHall
 		}
 		_ownerId = clan.getId();
 		_isFree = false;
-		clan.setHideoutId(getId());
+		clan.setHideoutId(_clanHallId);
 		// Announce to Online member new ClanHall
 		clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 		updateDb();
@@ -372,7 +372,7 @@ public abstract class ClanHall
 	 */
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == getOwnerId()))
+		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
 		{
 			openCloseDoor(doorId, open);
 		}
@@ -400,7 +400,7 @@ public abstract class ClanHall
 	
 	public void openCloseDoors(L2PcInstance activeChar, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == getOwnerId()))
+		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
 		{
 			openCloseDoors(open);
 		}
@@ -429,11 +429,11 @@ public abstract class ClanHall
 	{
 		if (_zone != null)
 		{
-			_zone.banishForeigners(getOwnerId());
+			_zone.banishForeigners(_ownerId);
 		}
 		else
 		{
-			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Zone is null for clan hall: " + getId() + " " + getName());
+			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Zone is null for clan hall: " + _clanHallId + " " + _name);
 		}
 	}
 	
@@ -443,7 +443,7 @@ public abstract class ClanHall
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM clanhall_functions WHERE hall_id = ?"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _clanHallId);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -468,7 +468,7 @@ public abstract class ClanHall
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_functions WHERE hall_id=? AND type=?"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _clanHallId);
 			ps.setInt(2, functionType);
 			ps.execute();
 		}

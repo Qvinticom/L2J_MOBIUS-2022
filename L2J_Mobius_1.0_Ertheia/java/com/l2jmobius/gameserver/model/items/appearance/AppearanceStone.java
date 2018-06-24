@@ -274,7 +274,7 @@ public class AppearanceStone
 			return false;
 		}
 		
-		switch (getType())
+		switch (_type)
 		{
 			case RESTORE:
 			{
@@ -383,15 +383,15 @@ public class AppearanceStone
 			return false;
 		}
 		
-		if (getWeaponType() != WeaponType.NONE)
+		if (_weaponType != WeaponType.NONE)
 		{
-			if (!targetItem.isWeapon() || (targetItem.getItemType() != getWeaponType()))
+			if (!targetItem.isWeapon() || (targetItem.getItemType() != _weaponType))
 			{
 				player.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_USED_AS_AN_APPEARANCE_WEAPON);
 				return false;
 			}
 			
-			switch (getHandType())
+			switch (_handType)
 			{
 				case ONE_HANDED:
 				{
@@ -413,7 +413,7 @@ public class AppearanceStone
 				}
 			}
 			
-			switch (getMagicType())
+			switch (_magicType)
 			{
 				case MAGICAL:
 				{
@@ -435,9 +435,9 @@ public class AppearanceStone
 			}
 		}
 		
-		if (getArmorType() != ArmorType.NONE)
+		if (_armorType != ArmorType.NONE)
 		{
-			switch (getArmorType())
+			switch (_armorType)
 			{
 				case SHIELD:
 				{

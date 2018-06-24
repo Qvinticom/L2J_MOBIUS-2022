@@ -135,16 +135,16 @@ public final class MobGroup
 	
 	public void spawnGroup(int x, int y, int z)
 	{
-		if (getActiveMobCount() > 0)
+		if (getMobs().size() > 0)
 		{
 			return;
 		}
 		
 		try
 		{
-			for (int i = 0; i < getMaxMobCount(); i++)
+			for (int i = 0; i < _maxMobCount; i++)
 			{
-				final L2GroupSpawn spawn = new L2GroupSpawn(getTemplate());
+				final L2GroupSpawn spawn = new L2GroupSpawn(_npcTemplate);
 				
 				final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
 				final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
@@ -198,14 +198,14 @@ public final class MobGroup
 	public L2ControllableMobInstance getRandomMob()
 	{
 		removeDead();
-		return getActiveMobCount() == 0 ? null : getMobs().get(Rnd.nextInt(getActiveMobCount()));
+		return getMobs().size() == 0 ? null : getMobs().get(Rnd.nextInt(getMobs().size()));
 	}
 	
 	public void unspawnGroup()
 	{
 		removeDead();
 		
-		if (getActiveMobCount() == 0)
+		if (getMobs().size() == 0)
 		{
 			return;
 		}

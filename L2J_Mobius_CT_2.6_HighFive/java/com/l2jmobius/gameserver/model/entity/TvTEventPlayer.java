@@ -32,7 +32,7 @@ public class TvTEventPlayer
 	
 	public boolean isOnEvent()
 	{
-		return TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(getPlayer().getObjectId());
+		return TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(_player.getObjectId());
 	}
 	
 	public boolean isBlockingExit()

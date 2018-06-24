@@ -34,7 +34,7 @@ public final class TvTEventListener implements IEventListener
 	@Override
 	public boolean isOnEvent()
 	{
-		return TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(getPlayer().getObjectId());
+		return TvTEvent.isStarted() && TvTEvent.isPlayerParticipant(_player.getObjectId());
 	}
 	
 	@Override

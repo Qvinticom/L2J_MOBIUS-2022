@@ -191,7 +191,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		}
 		else
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + getId());
+			LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + _id);
 		}
 	}
 	
@@ -205,7 +205,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		final Instance world = character.getInstanceWorld();
 		if (world != null)
 		{
-			if (world.getTemplateId() != getInstanceTemplateId())
+			if (world.getTemplateId() != _instanceTemplateId)
 			{
 				return false;
 			}
@@ -214,7 +214,7 @@ public abstract class L2ZoneType extends ListenersContainer
 				return false;
 			}
 		}
-		else if (getInstanceTemplateId() > 0)
+		else if (_instanceTemplateId > 0)
 		{
 			return false;
 		}
@@ -402,12 +402,12 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public double getDistanceToZone(int x, int y)
 	{
-		return getZone().getDistanceToZone(x, y);
+		return _zone.getDistanceToZone(x, y);
 	}
 	
 	public double getDistanceToZone(L2Object object)
 	{
-		return getZone().getDistanceToZone(object.getX(), object.getY());
+		return _zone.getDistanceToZone(object.getX(), object.getY());
 	}
 	
 	public void revalidateInZone(L2Character character)
@@ -572,7 +572,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public void visualizeZone(int z)
 	{
-		getZone().visualizeZone(z);
+		_zone.visualizeZone(z);
 	}
 	
 	public void setEnabled(boolean state)
@@ -605,10 +605,10 @@ public abstract class L2ZoneType extends ListenersContainer
 	{
 		if (_enabledInInstance != null)
 		{
-			return _enabledInInstance.getOrDefault(instanceId, isEnabled());
+			return _enabledInInstance.getOrDefault(instanceId, _enabled);
 		}
 		
-		return isEnabled();
+		return _enabled;
 	}
 	
 	public void oustAllPlayers()
@@ -633,7 +633,7 @@ public abstract class L2ZoneType extends ListenersContainer
 			return;
 		}
 		
-		for (L2Character character : getCharactersInside())
+		for (L2Character character : _characterList.values())
 		{
 			if ((character != null) && character.isPlayer())
 			{

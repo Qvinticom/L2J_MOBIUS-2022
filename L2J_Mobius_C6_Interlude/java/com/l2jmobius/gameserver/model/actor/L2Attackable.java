@@ -284,15 +284,6 @@ public class L2Attackable extends L2NpcInstance
 	private final Map<L2Character, AggroInfo> _aggroList = new ConcurrentHashMap<>();
 	
 	/**
-	 * Use this to Read or Put Object to this Map
-	 * @return
-	 */
-	public final Map<L2Character, AggroInfo> getAggroListRP()
-	{
-		return _aggroList;
-	}
-	
-	/**
 	 * Use this to Remove Object from this Map This Should be Synchronized While Interacting over This Map - ie u cant Interacting and removing object at once
 	 * @return
 	 */
@@ -650,7 +641,7 @@ public class L2Attackable extends L2NpcInstance
 		
 		try
 		{
-			if (getAggroListRP().isEmpty())
+			if (_aggroList.isEmpty())
 			{
 				return;
 			}
@@ -663,10 +654,10 @@ public class L2Attackable extends L2NpcInstance
 			L2Character attacker, ddealer;
 			
 			// While Interacting over This Map Removing Object is Not Allowed
-			synchronized (getAggroList())
+			synchronized (_aggroList)
 			{
 				// Go through the _aggroList of the L2Attackable
-				for (AggroInfo info : getAggroListRP().values())
+				for (AggroInfo info : _aggroList.values())
 				{
 					if (info == null)
 					{
@@ -725,7 +716,7 @@ public class L2Attackable extends L2NpcInstance
 			// Manage drop of Special Events created by GM for a defined period
 			doEventDrop((maxDealer != null) && (maxDealer.isOnline() == 1) ? maxDealer : lastAttacker);
 			
-			if (!getMustRewardExpSP())
+			if (!_mustGiveExpSp)
 			{
 				return;
 			}
@@ -808,7 +799,7 @@ public class L2Attackable extends L2NpcInstance
 							if (attacker instanceof L2PcInstance)
 							{
 								final L2PcInstance player = (L2PcInstance) attacker;
-								if (isOverhit() && (attacker == getOverhitAttacker()))
+								if (_overhit && (attacker == _overhitAttacker))
 								{
 									player.sendPacket(SystemMessageId.OVER_HIT);
 									exp += calculateOverhitExp(exp);
@@ -959,7 +950,7 @@ public class L2Attackable extends L2NpcInstance
 						{
 							final L2PcInstance player = (L2PcInstance) attacker;
 							
-							if (isOverhit() && (attacker == getOverhitAttacker()))
+							if (_overhit && (attacker == _overhitAttacker))
 							{
 								player.sendPacket(SystemMessageId.OVER_HIT);
 								exp += calculateOverhitExp(exp);
@@ -1007,14 +998,14 @@ public class L2Attackable extends L2NpcInstance
 		}
 		
 		// Get the AggroInfo of the attacker L2Character from the _aggroList of the L2Attackable
-		AggroInfo ai = getAggroListRP().get(attacker);
+		AggroInfo ai = _aggroList.get(attacker);
 		
 		if (ai == null)
 		{
 			ai = new AggroInfo(attacker);
 			ai._damage = 0;
 			ai._hate = 0;
-			getAggroListRP().put(attacker, ai);
+			_aggroList.put(attacker, ai);
 		}
 		
 		// If aggro is negative, its comming from SEE_SPELL, buffs use constant 150
@@ -1090,9 +1081,9 @@ public class L2Attackable extends L2NpcInstance
 				((L2AttackableAI) getAI()).setGlobalAggro(-25);
 				return;
 			}
-			for (L2Character aggroed : getAggroListRP().keySet())
+			for (L2Character aggroed : _aggroList.keySet())
 			{
-				AggroInfo ai = getAggroListRP().get(aggroed);
+				AggroInfo ai = _aggroList.get(aggroed);
 				if (ai == null)
 				{
 					return;
@@ -1113,7 +1104,7 @@ public class L2Attackable extends L2NpcInstance
 			return;
 		}
 		
-		AggroInfo ai = getAggroListRP().get(target);
+		AggroInfo ai = _aggroList.get(target);
 		
 		if (ai == null)
 		{
@@ -1146,7 +1137,7 @@ public class L2Attackable extends L2NpcInstance
 			return;
 		}
 		
-		AggroInfo ai = getAggroListRP().get(target);
+		AggroInfo ai = _aggroList.get(target);
 		
 		if (ai == null)
 		{
@@ -1163,7 +1154,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public L2Character getMostHated()
 	{
-		if (getAggroListRP().isEmpty() || isAlikeDead())
+		if (_aggroList.isEmpty() || isAlikeDead())
 		{
 			return null;
 		}
@@ -1173,10 +1164,10 @@ public class L2Attackable extends L2NpcInstance
 		int maxHate = 0;
 		
 		// While Interating over This Map Removing Object is Not Allowed
-		synchronized (getAggroList())
+		synchronized (_aggroList)
 		{
 			// Go through the aggroList of the L2Attackable
-			for (AggroInfo ai : getAggroListRP().values())
+			for (AggroInfo ai : _aggroList.values())
 			{
 				if (ai == null)
 				{
@@ -1212,8 +1203,8 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	/*
 	 * public L2Character getMostDamager(){ if(getAggroListRP().isEmpty() || isAlikeDead()) return null; //L2Character mostDamager = null; int maxDamage = 0; // While Interating over This Map Removing Object is Not Allowed synchronized (getAggroList()) { // Go through the aggroList of the
-	 * L2Attackable for(AggroInfo ai : getAggroListRP().values()) { if(ai == null) { continue; } if(ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ai._attacker instanceof L2PcInstance && ((L2PcInstance)ai._attacker).isOffline() ) { ai._damage
-	 * = 0; } if(ai._damage > maxDamage) { _mostDamager = ai._attacker; maxDamage = ai._damage; } } } return _mostDamager; }
+	 * L2Attackable for(AggroInfo ai : _aggroList.values()) { if(ai == null) { continue; } if(ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ai._attacker instanceof L2PcInstance && ((L2PcInstance)ai._attacker).isOffline() ) { ai._damage = 0; }
+	 * if(ai._damage > maxDamage) { _mostDamager = ai._attacker; maxDamage = ai._damage; } } } return _mostDamager; }
 	 */
 	/**
 	 * Return the hate level of the L2Attackable against this L2Character contained in _aggroList.<BR>
@@ -1223,7 +1214,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public int getHating(L2Character target)
 	{
-		if (getAggroListRP().isEmpty())
+		if (_aggroList.isEmpty())
 		{
 			return 0;
 		}
@@ -1233,7 +1224,7 @@ public class L2Attackable extends L2NpcInstance
 			return 0;
 		}
 		
-		final AggroInfo ai = getAggroListRP().get(target);
+		final AggroInfo ai = _aggroList.get(target);
 		
 		if (ai == null)
 		{
@@ -1243,14 +1234,14 @@ public class L2Attackable extends L2NpcInstance
 		if ((ai._attacker instanceof L2PcInstance) && (((L2PcInstance) ai._attacker).getAppearance().getInvisible() || ((L2PcInstance) ai._attacker).isSpawnProtected() || ((L2PcInstance) ai._attacker).isTeleportProtected() || ai._attacker.isInvul()))
 		{
 			// Remove Object Should Use This Method and Can be Blocked While Interating
-			getAggroList().remove(target);
+			_aggroList.remove(target);
 			
 			return 0;
 		}
 		
 		if (!ai._attacker.isVisible())
 		{
-			getAggroList().remove(target);
+			_aggroList.remove(target);
 			
 			return 0;
 		}
@@ -1940,7 +1931,7 @@ public class L2Attackable extends L2NpcInstance
 			if (cat.isSweep())
 			{
 				// according to sh1ny, seeded mobs CAN be spoiled and swept.
-				if (isSpoil()/* && !isSeeded() */)
+				if (isSpoil()/* && !_seeded */)
 				{
 					List<RewardItem> sweepList = new ArrayList<>();
 					
@@ -1970,7 +1961,7 @@ public class L2Attackable extends L2NpcInstance
 			}
 			else
 			{
-				if (isSeeded())
+				if (_seeded)
 				{
 					L2DropData drop = cat.dropSeedAllowedDropsOnly();
 					
@@ -2580,7 +2571,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public boolean noTarget()
 	{
-		return getAggroListRP().isEmpty();
+		return _aggroList.isEmpty();
 	}
 	
 	/**
@@ -2591,7 +2582,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public boolean containsTarget(L2Character player)
 	{
-		return getAggroListRP().containsKey(player);
+		return _aggroList.containsKey(player);
 	}
 	
 	/**
@@ -2600,7 +2591,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public void clearAggroList()
 	{
-		getAggroList().clear();
+		_aggroList.clear();
 	}
 	
 	/**
@@ -2817,7 +2808,7 @@ public class L2Attackable extends L2NpcInstance
 		if (!isBossMob)
 		{
 			// Fail if this L2Attackable isn't absorbed or there's no one in its _absorbersList
-			if (!isAbsorbed() /* || _absorbersList == null */)
+			if (!_absorbed /* || _absorbersList == null */)
 			{
 				resetAbsorbList();
 				return;
@@ -3147,7 +3138,7 @@ public class L2Attackable extends L2NpcInstance
 	public long calculateOverhitExp(long normalExp)
 	{
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
-		double overhitPercentage = (getOverhitDamage() * 100) / getMaxHp();
+		double overhitPercentage = (_overhitDamage * 100) / getMaxHp();
 		
 		// Over-hit damage percentages are limited to 25% max
 		if (overhitPercentage > 25)

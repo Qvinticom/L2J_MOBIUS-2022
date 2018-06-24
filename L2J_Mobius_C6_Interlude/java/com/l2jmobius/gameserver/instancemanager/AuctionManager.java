@@ -144,7 +144,7 @@ public class AuctionManager
 			}
 			statement.close();
 			rs.close();
-			LOGGER.info("Loaded: " + getAuctions().size() + " auction(s)");
+			LOGGER.info("Loaded: " + _auctions.size() + " auction(s)");
 		}
 		
 		catch (Exception e)
@@ -159,7 +159,7 @@ public class AuctionManager
 		final int index = getAuctionIndex(auctionId);
 		if (index >= 0)
 		{
-			return getAuctions().get(index);
+			return _auctions.get(index);
 		}
 		
 		return null;
@@ -169,9 +169,9 @@ public class AuctionManager
 	{
 		Auction auction;
 		
-		for (int i = 0; i < getAuctions().size(); i++)
+		for (int i = 0; i < _auctions.size(); i++)
 		{
-			auction = getAuctions().get(i);
+			auction = _auctions.get(i);
 			if ((auction != null) && (auction.getId() == auctionId))
 			{
 				return i;

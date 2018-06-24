@@ -65,7 +65,7 @@ public class MinionList
 		int count = 0;
 		synchronized (minionReferences)
 		{
-			for (L2MinionInstance minion : getSpawnedMinions())
+			for (L2MinionInstance minion : minionReferences)
 			{
 				if (minion.getNpcId() == minionId)
 				{
@@ -78,7 +78,7 @@ public class MinionList
 	
 	public boolean hasMinions()
 	{
-		return getSpawnedMinions().size() > 0;
+		return minionReferences.size() > 0;
 	}
 	
 	public List<L2MinionInstance> getSpawnedMinions()
@@ -97,7 +97,7 @@ public class MinionList
 	public int lazyCountSpawnedMinionsGroups()
 	{
 		final Set<Integer> seenGroups = new HashSet<>();
-		for (L2MinionInstance minion : getSpawnedMinions())
+		for (L2MinionInstance minion : minionReferences)
 		{
 			seenGroups.add(minion.getNpcId());
 		}

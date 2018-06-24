@@ -63,7 +63,7 @@ public enum AttributeType
 	 */
 	public AttributeType getOpposite()
 	{
-		return ATTRIBUTE_TYPES[((getClientId() % 2) == 0) ? (getClientId() + 1) : (getClientId() - 1)];
+		return ATTRIBUTE_TYPES[((_clientId % 2) == 0) ? (_clientId + 1) : (_clientId - 1)];
 	}
 	
 	/**

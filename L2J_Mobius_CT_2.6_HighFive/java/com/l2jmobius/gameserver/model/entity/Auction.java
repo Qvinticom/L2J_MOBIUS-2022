@@ -165,7 +165,7 @@ public class Auction
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("Select * from auction where id = ?"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _id);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -200,7 +200,7 @@ public class Auction
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _id);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -266,14 +266,14 @@ public class Auction
 	 */
 	public synchronized void setBid(L2PcInstance bidder, long bid)
 	{
-		final long requiredAdena = getHighestBidderName().equals(bidder.getClan().getLeaderName()) ? bid - getHighestBidderMaxBid() : bid;
-		if ((((getHighestBidderId() > 0) && (bid > getHighestBidderMaxBid())) || ((getHighestBidderId() == 0) && (bid >= getStartingBid()))) && takeItem(bidder, requiredAdena))
+		final long requiredAdena = _highestBidderName.equals(bidder.getClan().getLeaderName()) ? bid - _highestBidderMaxBid : bid;
+		if ((((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid))) && takeItem(bidder, requiredAdena))
 		{
 			updateInDB(bidder, bid);
 			bidder.getClan().setAuctionBiddedAt(_id, true);
 			return;
 		}
-		if ((bid < getStartingBid()) || (bid <= getHighestBidderMaxBid()))
+		if ((bid < _startingBid) || (bid <= _highestBidderMaxBid))
 		{
 			bidder.sendPacket(SystemMessageId.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID);
 		}
@@ -347,7 +347,7 @@ public class Auction
 					ps.setString(2, bidder.getClan().getLeaderName());
 					ps.setLong(3, bid);
 					ps.setLong(4, System.currentTimeMillis());
-					ps.setInt(5, getId());
+					ps.setInt(5, _id);
 					ps.setInt(6, bidder.getClanId());
 					ps.execute();
 				}
@@ -357,7 +357,7 @@ public class Auction
 				try (PreparedStatement ps = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)"))
 				{
 					ps.setInt(1, IdFactory.getInstance().getNextId());
-					ps.setInt(2, getId());
+					ps.setInt(2, _id);
 					ps.setInt(3, bidder.getClanId());
 					ps.setString(4, bidder.getName());
 					ps.setLong(5, bid);
@@ -397,7 +397,7 @@ public class Auction
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _id);
 			ps.execute();
 		}
 		catch (Exception e)
@@ -483,7 +483,7 @@ public class Auction
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _id);
 			ps.setInt(2, bidder);
 			ps.execute();
 		}
@@ -512,7 +512,7 @@ public class Auction
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
 		{
-			ps.setInt(1, getId());
+			ps.setInt(1, _id);
 			ps.setInt(2, _sellerId);
 			ps.setString(3, _sellerName);
 			ps.setString(4, _sellerClanName);

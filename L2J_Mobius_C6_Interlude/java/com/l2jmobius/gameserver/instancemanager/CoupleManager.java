@@ -73,13 +73,13 @@ public class CoupleManager
 			
 			while (rs.next())
 			{
-				getCouples().add(new Wedding(rs.getInt("id")));
+				_couples.add(new Wedding(rs.getInt("id")));
 			}
 			
 			statement.close();
 			rs.close();
 			
-			LOGGER.info("Loaded: " + getCouples().size() + " couples(s)");
+			LOGGER.info("Loaded: " + _couples.size() + " couples(s)");
 		}
 		catch (Exception e)
 		{
@@ -94,7 +94,7 @@ public class CoupleManager
 		final int index = getCoupleIndex(coupleId);
 		if (index >= 0)
 		{
-			return getCouples().get(index);
+			return _couples.get(index);
 		}
 		return null;
 	}
@@ -109,7 +109,7 @@ public class CoupleManager
 				final int _player2id = player2.getObjectId();
 				
 				Wedding _new = new Wedding(player1, player2);
-				getCouples().add(_new);
+				_couples.add(_new);
 				player1.setPartnerId(_player2id);
 				player2.setPartnerId(_player1id);
 				player1.setCoupleId(_new.getId());
@@ -121,7 +121,7 @@ public class CoupleManager
 	public void deleteCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
-		Wedding wedding = getCouples().get(index);
+		Wedding wedding = _couples.get(index);
 		
 		if (wedding != null)
 		{
@@ -140,14 +140,14 @@ public class CoupleManager
 				player2.setCoupleId(0);
 			}
 			wedding.divorce();
-			getCouples().remove(index);
+			_couples.remove(index);
 		}
 	}
 	
 	public final int getCoupleIndex(int coupleId)
 	{
 		int i = 0;
-		for (Wedding temp : getCouples())
+		for (Wedding temp : _couples)
 		{
 			if ((temp != null) && (temp.getId() == coupleId))
 			{

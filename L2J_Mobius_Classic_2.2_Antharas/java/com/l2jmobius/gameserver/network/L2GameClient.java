@@ -252,7 +252,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		_channel.writeAndFlush(packet);
 		
 		// Run packet implementation.
-		packet.runImpl(getActiveChar());
+		packet.runImpl(_activeChar);
 	}
 	
 	/**
@@ -533,7 +533,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			// exploit prevention, should not happens in normal way
 			if (player.isOnlineInt() == 1)
 			{
-				LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + getAccountName());
+				LOGGER.severe("Attempt of double login: " + player.getName() + "(" + objectId + ") " + _accountName);
 			}
 			Disconnection.of(player).defaultSequence(false);
 			return null;
@@ -603,11 +603,11 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 				}
 				case AUTHENTICATED:
 				{
-					return "[Account: " + getAccountName() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+					return "[Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
 				case IN_GAME:
 				{
-					return "[Character: " + (getActiveChar() == null ? "disconnected" : getActiveChar().getName() + "[" + getActiveChar().getObjectId() + "]") + " - Account: " + getAccountName() + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
+					return "[Character: " + (_activeChar == null ? "disconnected" : _activeChar.getName() + "[" + _activeChar.getObjectId() + "]") + " - Account: " + _accountName + " - IP: " + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 				}
 				default:
 				{

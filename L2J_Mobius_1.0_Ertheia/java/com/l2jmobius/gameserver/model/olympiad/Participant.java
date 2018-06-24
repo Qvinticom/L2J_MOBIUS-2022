@@ -43,7 +43,7 @@ public final class Participant
 		name = plr.getName();
 		side = olympiadSide;
 		baseClass = plr.getBaseClass();
-		stats = Olympiad.getNobleStats(getObjectId());
+		stats = Olympiad.getNobleStats(objectId);
 		clanName = plr.getClan() != null ? plr.getClan().getName() : "";
 		clanId = plr.getClanId();
 	}

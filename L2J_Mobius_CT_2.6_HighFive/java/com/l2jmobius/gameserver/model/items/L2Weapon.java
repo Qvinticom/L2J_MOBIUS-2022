@@ -202,7 +202,7 @@ public final class L2Weapon extends L2Item
 	@Override
 	public int getItemMask()
 	{
-		return getItemType().mask();
+		return _type.mask();
 	}
 	
 	/**

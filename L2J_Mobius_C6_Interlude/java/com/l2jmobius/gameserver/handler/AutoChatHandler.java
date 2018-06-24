@@ -544,7 +544,7 @@ public class AutoChatHandler implements SpawnListener
 			
 			_isActive = activeValue;
 			
-			if (!isGlobal())
+			if (!_globalChat)
 			{
 				for (AutoChatDefinition chatDefinition : _chatDefinitions.values())
 				{

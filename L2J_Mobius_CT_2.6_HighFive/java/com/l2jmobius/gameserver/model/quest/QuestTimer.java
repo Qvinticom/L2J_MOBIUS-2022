@@ -33,18 +33,18 @@ public class QuestTimer
 		@Override
 		public void run()
 		{
-			if (!getIsActive())
+			if (!_isActive)
 			{
 				return;
 			}
 			
 			try
 			{
-				if (!getIsRepeating())
+				if (!_isRepeating)
 				{
 					cancelAndRemove();
 				}
-				getQuest().notifyEvent(getName(), getNpc(), getPlayer());
+				_quest.notifyEvent(_name, _npc, _player);
 			}
 			catch (Exception e)
 			{
@@ -53,12 +53,12 @@ public class QuestTimer
 		}
 	}
 	
-	private boolean _isActive = true;
-	private final String _name;
-	private final Quest _quest;
-	private final L2Npc _npc;
-	private final L2PcInstance _player;
-	private final boolean _isRepeating;
+	boolean _isActive = true;
+	final String _name;
+	final Quest _quest;
+	final L2Npc _npc;
+	final L2PcInstance _player;
+	final boolean _isRepeating;
 	private final ScheduledFuture<?> _schedular;
 	
 	public QuestTimer(Quest quest, String name, long time, L2Npc npc, L2PcInstance player, boolean repeating)
@@ -116,7 +116,7 @@ public class QuestTimer
 		{
 			return false;
 		}
-		if ((quest != _quest) || !name.equalsIgnoreCase(getName()))
+		if ((quest != _quest) || !name.equalsIgnoreCase(_name))
 		{
 			return false;
 		}

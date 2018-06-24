@@ -61,8 +61,8 @@ public class CastleManorManager
 	protected static final int MANOR_REFRESH_MIN = Config.ALT_MANOR_REFRESH_MIN; //
 	protected static final long MAINTENANCE_PERIOD = Config.ALT_MANOR_MAINTENANCE_PERIOD / 60000; // 6 mins
 	
-	private boolean _underMaintenance;
-	private boolean _disabled;
+	boolean _underMaintenance;
+	boolean _disabled;
 	
 	public static CastleManorManager getInstance()
 	{
@@ -522,13 +522,13 @@ public class CastleManorManager
 					LOGGER.info("Manor System: Under maintenance mode started");
 				}
 			}
-			else if (isUnderMaintenance()) // 20:00 - 20:06
+			else if (_underMaintenance) // 20:00 - 20:06
 			{
 				if ((H != MANOR_REFRESH) || (M >= (MANOR_REFRESH_MIN + MAINTENANCE_PERIOD)))
 				{
 					setUnderMaintenance(false);
 					LOGGER.info("Manor System: Next period started");
-					if (isDisabled())
+					if (_disabled)
 					{
 						return;
 					}
@@ -547,7 +547,7 @@ public class CastleManorManager
 			{
 				APPROVE = 1;
 				LOGGER.info("Manor System: Next period approved");
-				if (isDisabled())
+				if (_disabled)
 				{
 					return;
 				}

@@ -57,9 +57,9 @@ public final class CoupleManager
 		{
 			while (rs.next())
 			{
-				getCouples().add(new Couple(rs.getInt("id")));
+				_couples.add(new Couple(rs.getInt("id")));
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getCouples().size() + " couples(s)");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _couples.size() + " couples(s)");
 		}
 		catch (Exception e)
 		{
@@ -70,7 +70,7 @@ public final class CoupleManager
 	public final Couple getCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
-		return index >= 0 ? getCouples().get(index) : null;
+		return index >= 0 ? _couples.get(index) : null;
 	}
 	
 	public void createCouple(L2PcInstance player1, L2PcInstance player2)
@@ -84,7 +84,7 @@ public final class CoupleManager
 		final int player2id = player2.getObjectId();
 		
 		final Couple couple = new Couple(player1, player2);
-		getCouples().add(couple);
+		_couples.add(couple);
 		player1.setPartnerId(player2id);
 		player2.setPartnerId(player1id);
 		player1.setCoupleId(couple.getId());
@@ -94,7 +94,7 @@ public final class CoupleManager
 	public void deleteCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);
-		final Couple couple = getCouples().get(index);
+		final Couple couple = _couples.get(index);
 		if (couple == null)
 		{
 			return;
@@ -114,13 +114,13 @@ public final class CoupleManager
 			player2.setCoupleId(0);
 		}
 		couple.divorce();
-		getCouples().remove(index);
+		_couples.remove(index);
 	}
 	
 	public final int getCoupleIndex(int coupleId)
 	{
 		int i = 0;
-		for (Couple temp : getCouples())
+		for (Couple temp : _couples)
 		{
 			if ((temp != null) && (temp.getId() == coupleId))
 			{

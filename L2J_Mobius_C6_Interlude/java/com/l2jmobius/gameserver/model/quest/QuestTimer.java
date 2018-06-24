@@ -31,18 +31,18 @@ public class QuestTimer
 		@Override
 		public void run()
 		{
-			if (!getIsActive())
+			if (!_isActive)
 			{
 				return;
 			}
 			
 			try
 			{
-				if (!getIsRepeating())
+				if (!_isRepeating)
 				{
 					cancel();
 				}
-				getQuest().notifyEvent(getName(), getNpc(), getPlayer());
+				_quest.notifyEvent(_name, _npc, _player);
 			}
 			catch (Throwable t)
 			{
@@ -52,12 +52,12 @@ public class QuestTimer
 	
 	// =========================================================
 	// Data Field
-	private boolean _isActive = true;
-	private final String _name;
-	private final Quest _quest;
-	private final L2NpcInstance _npc;
-	private final L2PcInstance _player;
-	private final boolean _isRepeating;
+	boolean _isActive = true;
+	final String _name;
+	final Quest _quest;
+	final L2NpcInstance _npc;
+	final L2PcInstance _player;
+	final boolean _isRepeating;
 	private ScheduledFuture<?> _schedular;
 	
 	// =========================================================
@@ -107,7 +107,7 @@ public class QuestTimer
 		
 		if (removeTimer)
 		{
-			getQuest().removeQuestTimer(this);
+			_quest.removeQuestTimer(this);
 		}
 	}
 	
@@ -116,24 +116,17 @@ public class QuestTimer
 	// null npc or player act as wildcards for the match
 	public boolean isMatch(Quest quest, String name, L2NpcInstance npc, L2PcInstance player)
 	{
-		/*
-		 * if (quest instanceof Frintezza_l2j) { LOGGER.info("#### INPUT Parameters ####"); LOGGER.info("Quest Name: " + quest.getName()); LOGGER.info("Quest Timer Name: " + name); LOGGER.info("Quest NPC: " + npc); if (npc != null) { LOGGER.info(" NPC Name: " + npc.getName());
-		 * LOGGER.info(" NPC Id: " + npc.getNpcId()); LOGGER.info(" NPC Instance: " + npc.getInstanceId()); } LOGGER.info("Quest Player: " + player); if (player != null) { LOGGER.info(" Player Name: " + player.getName()); LOGGER.info(" Player Instance: " + player.getInstanceId()); }
-		 * LOGGER.info("\n#### LOCAL Parameters ####"); LOGGER.info("Quest Name: " + getQuest().getName()); LOGGER.info("Quest Timer Name: " + getName()); LOGGER.info("Quest NPC: " + getNpc()); if (getNpc() != null) { LOGGER.info(" NPC Name: " + getNpc().getName()); LOGGER.info(" NPC Id: " +
-		 * getNpc().getNpcId()); LOGGER.info(" NPC Instance: " + getNpc().getInstanceId()); } LOGGER.info("Quest Player: " + getPlayer()); if (getPlayer() != null) { LOGGER.info(" Player Name: " + getPlayer().getName()); LOGGER.info(" Player Instance: " + getPlayer().getInstanceId()); } }
-		 */
-		
 		if ((quest == null) || (name == null))
 		{
 			return false;
 		}
 		
-		if ((quest != getQuest()) || (name.compareToIgnoreCase(getName()) != 0))
+		if ((quest != _quest) || (name.compareToIgnoreCase(_name) != 0))
 		{
 			return false;
 		}
 		
-		return (npc == getNpc()) && (player == getPlayer());
+		return (npc == _npc) && (player == _player);
 	}
 	
 	// =========================================================

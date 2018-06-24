@@ -75,7 +75,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	@Override
 	protected void onEvtThink()
 	{
-		if (isThinking())
+		if (_isThinking)
 		{
 			return;
 		}
@@ -84,7 +84,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		
 		try
 		{
-			switch (getAlternateAI())
+			switch (_alternateAI)
 			{
 				case AI_IDLE:
 				{
@@ -166,7 +166,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 				max_range = Math.max(max_range, sk.getCastRange());
 			}
 			
-			if (!isNotMoving())
+			if (!_isNotMoving)
 			{
 				moveToPawn(target, max_range);
 			}
@@ -216,7 +216,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 				max_range = Math.max(max_range, castRange);
 			}
 			
-			if (!isNotMoving())
+			if (!_isNotMoving)
 			{
 				moveToPawn(target, range);
 			}
@@ -256,7 +256,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 				max_range = Math.max(max_range, castRange);
 			}
 			
-			if (!isNotMoving())
+			if (!_isNotMoving)
 			{
 				moveToPawn(getForcedTarget(), _actor.getPhysicalAttackRange()/* range */);
 			}

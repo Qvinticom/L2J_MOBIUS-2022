@@ -286,7 +286,7 @@ public abstract class BaseGameServerRegister
 	 */
 	protected static abstract class BaseTask implements Runnable
 	{
-		private ResourceBundle _bundle;
+		protected ResourceBundle _bundle;
 		
 		/**
 		 * Sets the bundle.
@@ -314,10 +314,10 @@ public abstract class BaseGameServerRegister
 		public void showError(String msg, Throwable t)
 		{
 			String title;
-			if (getBundle() != null)
+			if (_bundle != null)
 			{
-				title = getBundle().getString("error");
-				msg += Config.EOL + getBundle().getString("reason") + ' ' + t.getLocalizedMessage();
+				title = _bundle.getString("error");
+				msg += Config.EOL + _bundle.getString("reason") + ' ' + t.getLocalizedMessage();
 			}
 			else
 			{
@@ -376,59 +376,59 @@ public abstract class BaseGameServerRegister
 					
 					if (registeredId < 0)
 					{
-						System.out.println(getBundle().getString("noFreeId"));
+						System.out.println(_bundle.getString("noFreeId"));
 					}
 					else
 					{
-						System.out.printf(getBundle().getString("registrationOk") + Config.EOL, registeredId);
+						System.out.printf(_bundle.getString("registrationOk") + Config.EOL, registeredId);
 					}
 				}
 				else
 				{
-					System.out.printf(getBundle().getString("checkingIdInUse") + Config.EOL, _id);
+					System.out.printf(_bundle.getString("checkingIdInUse") + Config.EOL, _id);
 					if (GameServerTable.getInstance().hasRegisteredGameServerOnId(_id))
 					{
-						System.out.println(getBundle().getString("yes"));
+						System.out.println(_bundle.getString("yes"));
 						if (_force)
 						{
-							System.out.printf(getBundle().getString("forcingRegistration") + Config.EOL, _id);
+							System.out.printf(_bundle.getString("forcingRegistration") + Config.EOL, _id);
 							unregisterGameServer(_id);
 							registerGameServer(_id, _outDir);
-							System.out.printf(getBundle().getString("registrationOk") + Config.EOL, _id);
+							System.out.printf(_bundle.getString("registrationOk") + Config.EOL, _id);
 						}
 						else if (_fallback)
 						{
-							System.out.println(getBundle().getString("fallingBack"));
+							System.out.println(_bundle.getString("fallingBack"));
 							final int registeredId = registerFirstAvailable(_outDir);
 							
 							if (registeredId < 0)
 							{
-								System.out.println(getBundle().getString("noFreeId"));
+								System.out.println(_bundle.getString("noFreeId"));
 							}
 							else
 							{
-								System.out.printf(getBundle().getString("registrationOk") + Config.EOL, registeredId);
+								System.out.printf(_bundle.getString("registrationOk") + Config.EOL, registeredId);
 							}
 						}
 						else
 						{
-							System.out.println(getBundle().getString("noAction"));
+							System.out.println(_bundle.getString("noAction"));
 						}
 					}
 					else
 					{
-						System.out.println(getBundle().getString("no"));
+						System.out.println(_bundle.getString("no"));
 						registerGameServer(_id, _outDir);
 					}
 				}
 			}
 			catch (SQLException e)
 			{
-				showError(getBundle().getString("sqlErrorRegister"), e);
+				showError(_bundle.getString("sqlErrorRegister"), e);
 			}
 			catch (IOException e)
 			{
-				showError(getBundle().getString("ioErrorRegister"), e);
+				showError(_bundle.getString("ioErrorRegister"), e);
 			}
 		}
 	}
@@ -453,14 +453,14 @@ public abstract class BaseGameServerRegister
 		@Override
 		public void run()
 		{
-			System.out.printf(getBundle().getString("removingGsId") + Config.EOL, _id);
+			System.out.printf(_bundle.getString("removingGsId") + Config.EOL, _id);
 			try
 			{
 				unregisterGameServer(_id);
 			}
 			catch (SQLException e)
 			{
-				showError(getBundle().getString("sqlErrorRegister"), e);
+				showError(_bundle.getString("sqlErrorRegister"), e);
 			}
 		}
 	}
@@ -479,7 +479,7 @@ public abstract class BaseGameServerRegister
 			}
 			catch (SQLException e)
 			{
-				showError(getBundle().getString("sqlErrorUnregisterAll"), e);
+				showError(_bundle.getString("sqlErrorUnregisterAll"), e);
 			}
 		}
 	}

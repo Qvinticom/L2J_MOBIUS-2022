@@ -1031,7 +1031,7 @@ public class L2NpcInstance extends L2Character
 			String className = getClass().getName().substring(43);
 			html1.append("<br>");
 			
-			html1.append("Instance Type: " + className + "<br1>Faction: " + getFactionId() + "<br1>Location ID: " + (getSpawn() != null ? getSpawn().getLocation() : 0) + "<br1>");
+			html1.append("Instance Type: " + className + "<br1>Faction: " + getTemplate().factionId + "<br1>Location ID: " + (_spawn != null ? _spawn.getLocation() : 0) + "<br1>");
 			
 			if (this instanceof L2ControllableMobInstance)
 			{
@@ -1039,13 +1039,13 @@ public class L2NpcInstance extends L2Character
 			}
 			else
 			{
-				html1.append("Respawn Time: " + (getSpawn() != null ? (getSpawn().getRespawnDelay() / 1000) + "  Seconds<br>" : "?  Seconds<br>"));
+				html1.append("Respawn Time: " + (_spawn != null ? (_spawn.getRespawnDelay() / 1000) + "  Seconds<br>" : "?  Seconds<br>"));
 			}
 			
 			html1.append("<table border=\"0\" width=\"100%\">");
 			html1.append("<tr><td>Object ID</td><td>" + getObjectId() + "</td><td>NPC ID</td><td>" + getTemplate().npcId + "</td></tr>");
 			html1.append("<tr><td>Castle</td><td>" + getCastle().getCastleId() + "</td><td>Coords</td><td>" + getX() + "," + getY() + "," + getZ() + "</td></tr>");
-			html1.append("<tr><td>Level</td><td>" + getLevel() + "</td><td>Aggro</td><td>" + (this instanceof L2Attackable ? ((L2Attackable) this).getAggroRange() : 0) + "</td></tr>");
+			html1.append("<tr><td>Level</td><td>" + getTemplate().level + "</td><td>Aggro</td><td>" + (this instanceof L2Attackable ? ((L2Attackable) this).getAggroRange() : 0) + "</td></tr>");
 			html1.append("</table><br>");
 			
 			html1.append("<font color=\"LEVEL\">Combat</font>");
@@ -1400,13 +1400,13 @@ public class L2NpcInstance extends L2Character
 	{
 		// if (canInteract(player))
 		// {
-		if (isBusy() && (getBusyMessage().length() > 0))
+		if (_isBusy && (_busyMessage.length() > 0))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			
 			NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 			html.setFile("/data/html/npcbusy.htm");
-			html.replace("%busymessage%", getBusyMessage());
+			html.replace("%busymessage%", _busyMessage);
 			html.replace("%npcname%", getName());
 			html.replace("%playername%", player.getName());
 			player.sendPacket(html);
@@ -2464,7 +2464,7 @@ public class L2NpcInstance extends L2Character
 	 */
 	public void makeCPRecovery(L2PcInstance player)
 	{
-		if ((getNpcId() != 31225) && (getNpcId() != 31226))
+		if ((getTemplate().npcId != 31225) && (getTemplate().npcId != 31226))
 		{
 			return;
 		}
@@ -3277,7 +3277,7 @@ public class L2NpcInstance extends L2Character
 	@Override
 	public void onDecay()
 	{
-		if (isDecayed())
+		if (_isDecayed)
 		{
 			return;
 		}
@@ -3385,7 +3385,7 @@ public class L2NpcInstance extends L2Character
 	 */
 	public void endDecayTask()
 	{
-		if (!isDecayed())
+		if (!_isDecayed)
 		{
 			DecayTaskManager.getInstance().cancelDecayTask(this);
 			onDecay();

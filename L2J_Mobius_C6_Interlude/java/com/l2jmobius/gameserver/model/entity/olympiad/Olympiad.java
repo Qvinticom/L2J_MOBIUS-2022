@@ -1109,7 +1109,7 @@ public class Olympiad
 	{
 		final int[] array = new int[2];
 		
-		if (!inCompPeriod())
+		if (!_inCompPeriod)
 		{
 			return null;
 		}

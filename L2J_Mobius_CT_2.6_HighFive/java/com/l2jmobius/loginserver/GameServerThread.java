@@ -291,11 +291,11 @@ public class GameServerThread extends Thread
 	 */
 	public boolean isAuthed()
 	{
-		if (getGameServerInfo() == null)
+		if (_gsi == null)
 		{
 			return false;
 		}
-		return getGameServerInfo().isAuthed();
+		return _gsi.isAuthed();
 	}
 	
 	public void setGameServerInfo(GameServerInfo gsi)
@@ -318,9 +318,9 @@ public class GameServerThread extends Thread
 	
 	public int getServerId()
 	{
-		if (getGameServerInfo() != null)
+		if (_gsi != null)
 		{
-			return getGameServerInfo().getId();
+			return _gsi.getId();
 		}
 		return -1;
 	}

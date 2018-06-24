@@ -277,7 +277,7 @@ public final class CharEffectList
 	 */
 	public int getBuffCount()
 	{
-		return _actives != null ? (_buffCount.intValue() - _hiddenBuffs.get()) : 0;
+		return _actives != null ? (_buffCount.get() - _hiddenBuffs.get()) : 0;
 	}
 	
 	/**
@@ -287,7 +287,7 @@ public final class CharEffectList
 	 */
 	public int getDanceCount()
 	{
-		return _danceCount.intValue();
+		return _danceCount.get();
 	}
 	
 	/**
@@ -297,7 +297,7 @@ public final class CharEffectList
 	 */
 	public int getTriggeredBuffCount()
 	{
-		return _triggerBuffCount.intValue();
+		return _triggerBuffCount.get();
 	}
 	
 	/**
@@ -307,7 +307,7 @@ public final class CharEffectList
 	 */
 	public int getToggleCount()
 	{
-		return _toggleCount.intValue();
+		return _toggleCount.get();
 	}
 	
 	/**
@@ -317,7 +317,7 @@ public final class CharEffectList
 	 */
 	public int getDebuffCount()
 	{
-		return _debuffCount.intValue();
+		return _debuffCount.get();
 	}
 	
 	/**
@@ -352,7 +352,7 @@ public final class CharEffectList
 	 */
 	public void stopAllToggles()
 	{
-		if (getToggleCount() > 0)
+		if (_toggleCount.get() > 0)
 		{
 			// Ignore necessary toggles.
 			stopEffects(b -> b.getSkill().isToggle() && !b.getSkill().isNecessaryToggle() && !b.getSkill().isIrreplacableBuff(), true, true);
@@ -361,7 +361,7 @@ public final class CharEffectList
 	
 	public void stopAllTogglesOfGroup(int toggleGroup)
 	{
-		if (getToggleCount() > 0)
+		if (_toggleCount.get() > 0)
 		{
 			stopEffects(b -> b.getSkill().isToggle() && (b.getSkill().getToggleGroupId() == toggleGroup), true, true);
 		}
@@ -508,7 +508,7 @@ public final class CharEffectList
 	 */
 	public void stopEffectsOnAction()
 	{
-		if (_hasBuffsRemovedOnAnyAction.intValue() > 0)
+		if (_hasBuffsRemovedOnAnyAction.get() > 0)
 		{
 			stopEffects(info -> info.getSkill().isRemovedOnAnyActionExceptMove(), true, true);
 		}
@@ -516,7 +516,7 @@ public final class CharEffectList
 	
 	public void stopEffectsOnDamage()
 	{
-		if (_hasBuffsRemovedOnDamage.intValue() > 0)
+		if (_hasBuffsRemovedOnDamage.get() > 0)
 		{
 			stopEffects(info -> info.getSkill().isRemovedOnDamage(), true, true);
 		}
@@ -535,16 +535,16 @@ public final class CharEffectList
 			{
 				case TRIGGER:
 				{
-					return (getTriggeredBuffCount() > Config.TRIGGERED_BUFFS_MAX_AMOUNT);
+					return (_triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT);
 				}
 				case DANCE:
 				{
-					return (getDanceCount() > Config.DANCES_MAX_AMOUNT);
+					return (_danceCount.get() > Config.DANCES_MAX_AMOUNT);
 				}
 				// case TOGGLE: Do toggles have limit?
 				case DEBUFF:
 				{
-					return (getDebuffCount() > 24);
+					return (_debuffCount.get() > 24);
 				}
 				case BUFF:
 				{
@@ -1106,7 +1106,7 @@ public final class CharEffectList
 					final Skill skill = info.getSkill();
 					
 					// Handle hidden buffs. Check if there was such abnormal before so we can continue.
-					if ((getHiddenBuffsCount() > 0) && _stackedEffects.contains(skill.getAbnormalType()))
+					if ((_hiddenBuffs.get() > 0) && _stackedEffects.contains(skill.getAbnormalType()))
 					{
 						// If incoming buff isnt hidden, remove any hidden buffs with its abnormal type.
 						if (info.isInUse())

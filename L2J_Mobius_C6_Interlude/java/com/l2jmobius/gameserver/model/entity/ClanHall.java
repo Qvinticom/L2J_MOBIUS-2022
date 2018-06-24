@@ -49,7 +49,7 @@ public class ClanHall
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
 	/** The _clan hall id. */
-	private final int _clanHallId;
+	final int _clanHallId;
 	
 	/** The _doors. */
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
@@ -58,7 +58,7 @@ public class ClanHall
 	private final List<String> _doorDefault = new ArrayList<>();
 	
 	/** The _name. */
-	private final String _name;
+	final String _name;
 	
 	/** The _owner id. */
 	private int _ownerId;
@@ -126,7 +126,7 @@ public class ClanHall
 	public class ClanHallFunction
 	{
 		/** The _type. */
-		private final int _type;
+		final int _type;
 		
 		/** The _lvl. */
 		private int _lvl;
@@ -138,10 +138,10 @@ public class ClanHall
 		protected int _tempFee;
 		
 		/** The _rate. */
-		private final long _rate;
+		final long _rate;
 		
 		/** The _end date. */
-		private long _endDate;
+		long _endDate;
 		
 		/** The _in debt. */
 		protected boolean _inDebt;
@@ -291,9 +291,9 @@ public class ClanHall
 						int fee = _fee;
 						boolean newfc = true;
 						
-						if ((getEndTime() == 0) || (getEndTime() == -1))
+						if ((_endDate == 0) || (_endDate == -1))
 						{
-							if (getEndTime() == -1)
+							if (_endDate == -1)
 							{
 								newfc = false;
 								fee = _tempFee;
@@ -304,20 +304,20 @@ public class ClanHall
 							newfc = false;
 						}
 						
-						setEndTime(System.currentTimeMillis() + getRate());
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave(newfc);
 						getOwnerClan().getWarehouse().destroyItemByItemId("CH_function_fee", 57, fee, null, null);
 						
 						if (Config.DEBUG)
 						{
-							LOGGER.warning("deducted " + fee + " adena from " + getName() + " owner's cwh for function id : " + getType());
+							LOGGER.warning("deducted " + fee + " adena from " + _name + " owner's cwh for function id : " + _type);
 						}
 						
-						ThreadPool.schedule(new FunctionTask(), getRate());
+						ThreadPool.schedule(new FunctionTask(), _rate);
 					}
 					else
 					{
-						removeFunction(getType());
+						removeFunction(_type);
 					}
 				}
 				catch (Throwable t)
@@ -339,21 +339,21 @@ public class ClanHall
 				if (newFunction)
 				{
 					statement = con.prepareStatement("INSERT INTO clanhall_functions (hall_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)");
-					statement.setInt(1, getId());
-					statement.setInt(2, getType());
-					statement.setInt(3, getLvl());
-					statement.setInt(4, getLease());
-					statement.setLong(5, getRate());
-					statement.setLong(6, getEndTime());
+					statement.setInt(1, _clanHallId);
+					statement.setInt(2, _type);
+					statement.setInt(3, _lvl);
+					statement.setInt(4, _fee);
+					statement.setLong(5, _rate);
+					statement.setLong(6, _endDate);
 				}
 				else
 				{
 					statement = con.prepareStatement("UPDATE clanhall_functions SET lvl=?, lease=?, endTime=? WHERE hall_id=? AND type=?");
-					statement.setInt(1, getLvl());
-					statement.setInt(2, getLease());
-					statement.setLong(3, getEndTime());
-					statement.setInt(4, getId());
-					statement.setInt(5, getType());
+					statement.setInt(1, _lvl);
+					statement.setInt(2, _fee);
+					statement.setLong(3, _endDate);
+					statement.setInt(4, _clanHallId);
+					statement.setInt(5, _type);
 				}
 				statement.execute();
 				statement.close();
@@ -644,7 +644,7 @@ public class ClanHall
 	 */
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == getOwnerId()))
+		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
 		{
 			openCloseDoor(doorId, open);
 		}
@@ -687,7 +687,7 @@ public class ClanHall
 	 */
 	public void openCloseDoors(L2PcInstance activeChar, boolean open)
 	{
-		if ((activeChar != null) && (activeChar.getClanId() == getOwnerId()))
+		if ((activeChar != null) && (activeChar.getClanId() == _ownerId))
 		{
 			openCloseDoors(open);
 		}
@@ -720,7 +720,7 @@ public class ClanHall
 	 */
 	public void banishForeigners()
 	{
-		_zone.banishForeigners(getOwnerId());
+		_zone.banishForeigners(_ownerId);
 	}
 	
 	/**
@@ -733,7 +733,7 @@ public class ClanHall
 			PreparedStatement statement;
 			ResultSet rs;
 			statement = con.prepareStatement("Select * from clanhall_functions where hall_id = ?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _clanHallId);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -761,7 +761,7 @@ public class ClanHall
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM clanhall_functions WHERE hall_id=? AND type=?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _clanHallId);
 			statement.setInt(2, functionType);
 			statement.execute();
 			statement.close();
@@ -785,7 +785,7 @@ public class ClanHall
 	{
 		if (Config.DEBUG)
 		{
-			LOGGER.warning("Called ClanHall.updateFunctions(int type, int lvl, int lease, long rate, boolean addNew) Owner : " + getOwnerId());
+			LOGGER.warning("Called ClanHall.updateFunctions(int type, int lvl, int lease, long rate, boolean addNew) Owner : " + _ownerId);
 		}
 		
 		if (addNew)
@@ -916,7 +916,7 @@ public class ClanHall
 					
 					if (Config.DEBUG)
 					{
-						LOGGER.warning("deducted " + getLease() + " adena from " + getName() + " owner's cwh for ClanHall _paidUntil" + _paidUntil);
+						LOGGER.warning("deducted " + getLease() + " adena from " + _name + " owner's cwh for ClanHall _paidUntil" + _paidUntil);
 					}
 					
 					ThreadPool.schedule(new FeeTask(), _paidUntil - System.currentTimeMillis());
@@ -972,7 +972,7 @@ public class ClanHall
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _clanHallId);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())

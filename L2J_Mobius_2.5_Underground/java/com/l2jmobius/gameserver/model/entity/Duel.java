@@ -75,7 +75,7 @@ public class Duel
 	private boolean _finished = false;
 	
 	private final Map<Integer, PlayerCondition> _playerConditions = new ConcurrentHashMap<>();
-	private Instance _duelInstance;
+	Instance _duelInstance;
 	
 	public Duel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel, int duelId)
 	{
@@ -213,9 +213,9 @@ public class Duel
 						setFinished(true);
 						playKneelAnimation();
 						ThreadPool.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
-						if (getDueldInstance() != null)
+						if (_duelInstance != null)
 						{
-							getDueldInstance().destroy();
+							_duelInstance.destroy();
 						}
 						break;
 					}
@@ -674,7 +674,7 @@ public class Duel
 	 */
 	public L2PcInstance getWinner()
 	{
-		if (!getFinished() || (_playerA == null) || (_playerB == null))
+		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
 			return null;
 		}
@@ -695,7 +695,7 @@ public class Duel
 	 */
 	public L2PcInstance getLooser()
 	{
-		if (!getFinished() || (_playerA == null) || (_playerB == null))
+		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
 			return null;
 		}

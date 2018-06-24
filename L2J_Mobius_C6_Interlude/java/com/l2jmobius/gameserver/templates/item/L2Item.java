@@ -413,7 +413,7 @@ public abstract class L2Item
 	 */
 	public final int getItemGrade()
 	{
-		return getCrystalType();
+		return _crystalType;
 	}
 	
 	/**
@@ -439,11 +439,11 @@ public abstract class L2Item
 				case TYPE2_SHIELD_ARMOR:
 				case TYPE2_ACCESSORY:
 				{
-					return _crystalCount + (crystalEnchantBonusArmor[getCrystalType()] * ((3 * enchantLevel) - 6));
+					return _crystalCount + (crystalEnchantBonusArmor[_crystalType] * ((3 * enchantLevel) - 6));
 				}
 				case TYPE2_WEAPON:
 				{
-					return _crystalCount + (crystalEnchantBonusWeapon[getCrystalType()] * ((2 * enchantLevel) - 3));
+					return _crystalCount + (crystalEnchantBonusWeapon[_crystalType] * ((2 * enchantLevel) - 3));
 				}
 				default:
 				{
@@ -458,11 +458,11 @@ public abstract class L2Item
 				case TYPE2_SHIELD_ARMOR:
 				case TYPE2_ACCESSORY:
 				{
-					return _crystalCount + (crystalEnchantBonusArmor[getCrystalType()] * enchantLevel);
+					return _crystalCount + (crystalEnchantBonusArmor[_crystalType] * enchantLevel);
 				}
 				case TYPE2_WEAPON:
 				{
-					return _crystalCount + (crystalEnchantBonusWeapon[getCrystalType()] * enchantLevel);
+					return _crystalCount + (crystalEnchantBonusWeapon[_crystalType] * enchantLevel);
 				}
 				default:
 				{
@@ -568,7 +568,7 @@ public abstract class L2Item
 	
 	public boolean isPotion()
 	{
-		return (getItemType() == L2EtcItemType.POTION);
+		return (_type == L2EtcItemType.POTION);
 	}
 	
 	/**

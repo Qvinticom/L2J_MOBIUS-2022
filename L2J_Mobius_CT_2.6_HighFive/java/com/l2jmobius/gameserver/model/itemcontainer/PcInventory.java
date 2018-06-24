@@ -141,7 +141,7 @@ public class PcInventory extends Inventory
 					break;
 				}
 			}
-			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(getOwner(), false, false))))
+			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(_owner, false, false))))
 			{
 				list.add(item);
 			}
@@ -180,7 +180,7 @@ public class PcInventory extends Inventory
 				}
 			}
 			
-			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(getOwner(), false, false))))
+			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(_owner, false, false))))
 			{
 				list.add(item);
 			}
@@ -267,7 +267,7 @@ public class PcInventory extends Inventory
 		final List<L2ItemInstance> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if ((item == null) || !item.isAvailable(getOwner(), allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
+			if ((item == null) || !item.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(item.getId()))
 			{
 				continue;
 			}
@@ -330,7 +330,7 @@ public class PcInventory extends Inventory
 		final List<TradeItem> list = new LinkedList<>();
 		for (L2ItemInstance item : _items)
 		{
-			if ((item != null) && item.isAvailable(getOwner(), false, false))
+			if ((item != null) && item.isAvailable(_owner, false, false))
 			{
 				final TradeItem adjItem = tradeList.adjustAvailableItem(item);
 				if (adjItem != null)
@@ -697,12 +697,12 @@ public class PcInventory extends Inventory
 	protected boolean removeItem(L2ItemInstance item)
 	{
 		// Removes any reference to the item from Shortcut bar
-		getOwner().removeItemFromShortCut(item.getObjectId());
+		_owner.removeItemFromShortCut(item.getObjectId());
 		
 		// Removes active Enchant Scroll
-		if (item.getObjectId() == getOwner().getActiveEnchantItemId())
+		if (item.getObjectId() == _owner.getActiveEnchantItemId())
 		{
-			getOwner().setActiveEnchantItemId(L2PcInstance.ID_NONE);
+			_owner.setActiveEnchantItemId(L2PcInstance.ID_NONE);
 		}
 		
 		if (item.getId() == ADENA_ID)
@@ -736,7 +736,7 @@ public class PcInventory extends Inventory
 	public void refreshWeight()
 	{
 		super.refreshWeight();
-		getOwner().refreshOverloaded();
+		_owner.refreshOverloaded();
 	}
 	
 	/**

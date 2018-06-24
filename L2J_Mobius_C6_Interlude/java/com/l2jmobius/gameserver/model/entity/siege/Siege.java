@@ -164,7 +164,7 @@ public class Siege
 		@Override
 		public void run()
 		{
-			if (!getIsInProgress())
+			if (!_isInProgress)
 			{
 				return;
 			}
@@ -241,7 +241,7 @@ public class Siege
 		@Override
 		public void run()
 		{
-			if (getIsInProgress())
+			if (_isInProgress)
 			{
 				return;
 			}
@@ -329,7 +329,7 @@ public class Siege
 	private final Castle[] _castle;
 	
 	/** The _is in progress. */
-	private boolean _isInProgress = false;
+	boolean _isInProgress = false;
 	
 	/** The _is normal side. */
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
@@ -369,7 +369,7 @@ public class Siege
 	 */
 	public void endSiege()
 	{
-		if (getIsInProgress())
+		if (_isInProgress)
 		{
 			announceToPlayer("The siege of " + getCastle().getName() + " has finished!", false);
 			
@@ -487,7 +487,7 @@ public class Siege
 	 */
 	public void midVictory()
 	{
-		if (getIsInProgress()) // Siege still in progress
+		if (_isInProgress) // Siege still in progress
 		{
 			if (getCastle().getOwnerId() > 0)
 			{
@@ -607,7 +607,7 @@ public class Siege
 	 */
 	public void startSiege()
 	{
-		if (!getIsInProgress())
+		if (!_isInProgress)
 		{
 			if (getAttackerClans().size() <= 0)
 			{
@@ -796,7 +796,7 @@ public class Siege
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return getIsInProgress() && getCastle().checkIfInZone(x, y, z); // Castle zone during siege
+		return _isInProgress && getCastle().checkIfInZone(x, y, z); // Castle zone during siege
 	}
 	
 	/**
@@ -857,7 +857,7 @@ public class Siege
 			
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -877,7 +877,7 @@ public class Siege
 			statement.execute();
 			statement.close();
 			
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -1241,7 +1241,7 @@ public class Siege
 			}
 			default:
 			{
-				players = getPlayersInZone();
+				players = getCastle().getZone().getAllPlayers();
 			}
 		}
 		
@@ -1304,7 +1304,7 @@ public class Siege
 	private void addDefenderWaiting(int clanId)
 	{
 		// Add registered defender to defender list
-		getDefenderWaitingClans().add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING));
+		_defenderWaitingClans.add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING));
 	}
 	
 	/**
@@ -1315,11 +1315,11 @@ public class Siege
 	 */
 	private boolean checkIfCanRegister(L2PcInstance player)
 	{
-		if (getIsRegistrationOver())
+		if (_isRegistrationOver)
 		{
 			player.sendMessage("The deadline to register for the siege of " + getCastle().getName() + " has passed.");
 		}
-		else if (getIsInProgress())
+		else if (_isInProgress)
 		{
 			player.sendMessage("This is not the time for siege registration and so registration and cancellation cannot be done.");
 		}
@@ -1431,7 +1431,7 @@ public class Siege
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 			
 			// Add castle owner as defender (add owner first so that they are on the top of the defender list)
 			if (getCastle().getOwnerId() > 0)
@@ -1555,7 +1555,7 @@ public class Siege
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set siegeDate = ? where id = ?");
-			statement.setLong(1, getSiegeDate().getTimeInMillis());
+			statement.setLong(1, getCastle().getSiegeDate().getTimeInMillis());
 			statement.setInt(2, getCastle().getCastleId());
 			statement.execute();
 			
@@ -1907,7 +1907,7 @@ public class Siege
 	 */
 	public final L2SiegeClan getDefenderWaitingClan(int clanId)
 	{
-		for (L2SiegeClan sc : getDefenderWaitingClans())
+		for (L2SiegeClan sc : _defenderWaitingClans)
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{

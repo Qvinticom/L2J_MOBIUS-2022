@@ -94,42 +94,41 @@ public final class L2Crest implements IIdentifiable
 	public String getClientPath(L2PcInstance activeChar)
 	{
 		String path = null;
-		switch (getType())
+		switch (_type)
 		{
 			case PLEDGE:
 			{
-				activeChar.sendPacket(new PledgeCrest(getId(), getData()));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
+				activeChar.sendPacket(new PledgeCrest(_id, _data));
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
 				break;
 			}
 			case PLEDGE_LARGE:
 			{
-				final byte[] data = getData();
-				if (data != null)
+				if (_data != null)
 				{
 					for (int i = 0; i <= 4; i++)
 					{
 						if (i < 4)
 						{
 							final byte[] fullChunk = new byte[14336];
-							System.arraycopy(data, (14336 * i), fullChunk, 0, 14336);
-							activeChar.sendPacket(new ExPledgeEmblem(getId(), fullChunk, 0, i));
+							System.arraycopy(_data, (14336 * i), fullChunk, 0, 14336);
+							activeChar.sendPacket(new ExPledgeEmblem(_id, fullChunk, 0, i));
 						}
 						else
 						{
 							final byte[] lastChunk = new byte[8320];
-							System.arraycopy(data, (14336 * i), lastChunk, 0, 8320);
-							activeChar.sendPacket(new ExPledgeEmblem(getId(), lastChunk, 0, i));
+							System.arraycopy(_data, (14336 * i), lastChunk, 0, 8320);
+							activeChar.sendPacket(new ExPledgeEmblem(_id, lastChunk, 0, i));
 						}
 					}
 				}
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId() + "_l";
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id + "_l";
 				break;
 			}
 			case ALLY:
 			{
-				activeChar.sendPacket(new AllyCrest(getId(), getData()));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
+				activeChar.sendPacket(new AllyCrest(_id, _data));
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
 				break;
 			}
 		}

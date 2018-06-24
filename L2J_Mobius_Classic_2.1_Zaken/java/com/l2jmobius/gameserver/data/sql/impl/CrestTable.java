@@ -157,7 +157,7 @@ public final class CrestTable
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `crests`(`crest_id`, `data`, `type`) VALUES(?, ?, ?)"))
 		{
-			final L2Crest crest = new L2Crest(getNextId(), data, crestType);
+			final L2Crest crest = new L2Crest(_nextId.getAndIncrement(), data, crestType);
 			statement.setInt(1, crest.getId());
 			statement.setBytes(2, crest.getData());
 			statement.setInt(3, crest.getType().getId());

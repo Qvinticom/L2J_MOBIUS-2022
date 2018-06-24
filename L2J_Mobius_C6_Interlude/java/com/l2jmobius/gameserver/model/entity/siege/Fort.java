@@ -110,7 +110,7 @@ public class Fort
 	 */
 	public void banishForeigners()
 	{
-		_zone.banishForeigners(getOwnerId());
+		_zone.banishForeigners(_ownerId);
 	}
 	
 	/**
@@ -160,7 +160,7 @@ public class Fort
 	
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != getOwnerId())
+		if (activeChar.getClanId() != _ownerId)
 		{
 			return;
 		}
@@ -190,7 +190,7 @@ public class Fort
 	public void setOwner(L2Clan clan)
 	{
 		// Remove old owner
-		if ((getOwnerId() > 0) && ((clan == null) || (clan.getClanId() != getOwnerId())))
+		if ((_ownerId > 0) && ((clan == null) || (clan.getClanId() != _ownerId)))
 		{
 			// Try to find clan instance
 			L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId());
@@ -270,7 +270,7 @@ public class Fort
 			return;
 		}
 		
-		activeChar.sendMessage(getName() + " fort tax changed to " + taxPercent + "%.");
+		activeChar.sendMessage(_name + " fort tax changed to " + taxPercent + "%.");
 	}
 	
 	/**
@@ -288,9 +288,9 @@ public class Fort
 	 */
 	public void spawnDoor(boolean isDoorWeak)
 	{
-		for (int i = 0; i < getDoors().size(); i++)
+		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			L2DoorInstance door = _doors.get(i);
 			
 			if (door.getCurrentHp() >= 0)
 			{
@@ -307,7 +307,7 @@ public class Fort
 				}
 				
 				door.spawnMe(door.getX(), door.getY(), door.getZ());
-				getDoors().set(i, door);
+				_doors.set(i, door);
 			}
 			else if (!door.getOpen())
 			{
@@ -348,7 +348,7 @@ public class Fort
 			ResultSet rs;
 			
 			statement = con.prepareStatement("Select * from fort where id = ?");
-			statement.setInt(1, getFortId());
+			statement.setInt(1, _fortId);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -377,13 +377,13 @@ public class Fort
 			rs.close();
 			statement.close();
 			
-			if (getOwnerId() > 0)
+			if (_ownerId > 0)
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 				// ThreadPoolManager.scheduleGeneral(new FortUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 				if (clan != null)
 				{
-					clan.setHasFort(getFortId());
+					clan.setHasFort(_fortId);
 					_fortOwner = clan;
 				}
 			}
@@ -405,7 +405,7 @@ public class Fort
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from fort_door where fortId = ?");
-			statement.setInt(1, getFortId());
+			statement.setInt(1, _fortId);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -437,7 +437,7 @@ public class Fort
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from fort_doorupgrade where doorId in (Select Id from fort_door where fortId = ?)");
-			statement.setInt(1, getFortId());
+			statement.setInt(1, _fortId);
 			ResultSet rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -459,7 +459,7 @@ public class Fort
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("delete from fort_doorupgrade where doorId in (select id from fort_door where fortId=?)");
-			statement.setInt(1, getFortId());
+			statement.setInt(1, _fortId);
 			statement.execute();
 			statement.close();
 		}
@@ -505,8 +505,8 @@ public class Fort
 			PreparedStatement statement;
 			
 			statement = con.prepareStatement("UPDATE fort SET owner=? where id = ?");
-			statement.setInt(1, getOwnerId());
-			statement.setInt(2, getFortId());
+			statement.setInt(1, _ownerId);
+			statement.setInt(2, _fortId);
 			statement.execute();
 			statement.close();
 			
@@ -515,7 +515,7 @@ public class Fort
 			// Announce to clan memebers
 			if (clan != null)
 			{
-				clan.setHasFort(getFortId()); // Set has fort flag for new owner
+				clan.setHasFort(_fortId); // Set has fort flag for new owner
 				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " fort!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
@@ -552,9 +552,9 @@ public class Fort
 			return null;
 		}
 		
-		for (int i = 0; i < getDoors().size(); i++)
+		for (int i = 0; i < _doors.size(); i++)
 		{
-			L2DoorInstance door = getDoors().get(i);
+			L2DoorInstance door = _doors.get(i);
 			
 			if (door.getDoorId() == doorId)
 			{

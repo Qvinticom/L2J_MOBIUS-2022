@@ -262,13 +262,13 @@ public final class Transform implements IIdentifiable
 			
 			if (creature.isPlayer())
 			{
-				if (getName() != null)
+				if (_name != null)
 				{
-					player.getAppearance().setVisibleName(getName());
+					player.getAppearance().setVisibleName(_name);
 				}
-				if (getTitle() != null)
+				if (_title != null)
 				{
-					player.getAppearance().setVisibleTitle(getTitle());
+					player.getAppearance().setVisibleTitle(_title);
 				}
 				
 				if (addSkills)
@@ -374,11 +374,11 @@ public final class Transform implements IIdentifiable
 				final L2PcInstance player = creature.getActingPlayer();
 				final boolean hasTransformSkills = player.hasTransformSkills();
 				
-				if (getName() != null)
+				if (_name != null)
 				{
 					player.getAppearance().setVisibleName(null);
 				}
-				if (getTitle() != null)
+				if (_title != null)
 				{
 					player.getAppearance().setVisibleTitle(null);
 				}

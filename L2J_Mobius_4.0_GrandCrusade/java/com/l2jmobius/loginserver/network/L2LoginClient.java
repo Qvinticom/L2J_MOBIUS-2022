@@ -90,7 +90,7 @@ public final class L2LoginClient extends ChannelInboundHandler<L2LoginClient>
 	@Override
 	public void channelInactive(ChannelHandlerContext ctx)
 	{
-		if (!hasJoinedGS() || ((getConnectionStartTime() + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
+		if (!_joinedGS || ((_connectionStartTime + LoginController.LOGIN_TIMEOUT) < System.currentTimeMillis()))
 		{
 			LoginController.getInstance().removeAuthedLoginClient(getAccount());
 		}

@@ -132,7 +132,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM residence_functions WHERE residenceId = ?"))
 		{
-			ps.setInt(1, getResidenceId());
+			ps.setInt(1, _residenceId);
 			try (ResultSet rs = ps.executeQuery())
 			{
 				while (rs.next())
@@ -152,7 +152,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to initialize functions for residence: " + getResidenceId(), e);
+			LOGGER.log(Level.WARNING, "Failed to initialize functions for residence: " + _residenceId, e);
 		}
 	}
 	
@@ -173,7 +173,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 			ps.setInt(1, func.getId());
 			ps.setInt(2, func.getLevel());
 			ps.setLong(3, func.getExpiration());
-			ps.setInt(4, getResidenceId());
+			ps.setInt(4, _residenceId);
 			
 			ps.setInt(5, func.getLevel());
 			ps.setLong(6, func.getExpiration());
@@ -181,7 +181,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to add function: " + func.getId() + " for residence: " + getResidenceId(), e);
+			LOGGER.log(Level.WARNING, "Failed to add function: " + func.getId() + " for residence: " + _residenceId, e);
 		}
 		finally
 		{
@@ -202,13 +202,13 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM residence_functions WHERE residenceId = ? and id = ?"))
 		{
-			ps.setInt(1, getResidenceId());
+			ps.setInt(1, _residenceId);
 			ps.setInt(2, func.getId());
 			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to remove function: " + func.getId() + " residence: " + getResidenceId(), e);
+			LOGGER.log(Level.WARNING, "Failed to remove function: " + func.getId() + " residence: " + _residenceId, e);
 		}
 		finally
 		{
@@ -225,12 +225,12 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM residence_functions WHERE residenceId = ?"))
 		{
-			ps.setInt(1, getResidenceId());
+			ps.setInt(1, _residenceId);
 			ps.execute();
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to remove functions for residence: " + getResidenceId(), e);
+			LOGGER.log(Level.WARNING, "Failed to remove functions for residence: " + _residenceId, e);
 		}
 		finally
 		{
@@ -313,6 +313,6 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	@Override
 	public String toString()
 	{
-		return getName() + " (" + getResidenceId() + ")";
+		return _name + " (" + _residenceId + ")";
 	}
 }

@@ -855,7 +855,6 @@ public class L2ClanMember
 	
 	private PlayerVariables getVariables()
 	{
-		final L2PcInstance player = getPlayerInstance();
-		return player != null ? player.getVariables() : new PlayerVariables(_objectId);
+		return _player != null ? _player.getVariables() : new PlayerVariables(_objectId);
 	}
 }

@@ -68,7 +68,7 @@ public final class CastleManager implements InstanceListManager
 		if (nearestCastle == null)
 		{
 			double distance;
-			for (Castle castle : getCastles())
+			for (Castle castle : _castles.values())
 			{
 				distance = castle.getDistance(obj);
 				if (maxDistance > distance)
@@ -88,7 +88,7 @@ public final class CastleManager implements InstanceListManager
 	
 	public final Castle getCastleByOwner(L2Clan clan)
 	{
-		for (Castle temp : getCastles())
+		for (Castle temp : _castles.values())
 		{
 			if (temp.getOwnerId() == clan.getId())
 			{
@@ -100,7 +100,7 @@ public final class CastleManager implements InstanceListManager
 	
 	public final Castle getCastle(String name)
 	{
-		for (Castle temp : getCastles())
+		for (Castle temp : _castles.values())
 		{
 			if (temp.getName().equalsIgnoreCase(name.trim()))
 			{
@@ -112,7 +112,7 @@ public final class CastleManager implements InstanceListManager
 	
 	public final Castle getCastle(int x, int y, int z)
 	{
-		for (Castle temp : getCastles())
+		for (Castle temp : _castles.values())
 		{
 			if (temp.checkIfInZone(x, y, z))
 			{
@@ -135,7 +135,7 @@ public final class CastleManager implements InstanceListManager
 	public boolean hasOwnedCastle()
 	{
 		boolean hasOwnedCastle = false;
-		for (Castle castle : getCastles())
+		for (Castle castle : _castles.values())
 		{
 			if (castle.getOwnerId() > 0)
 			{
@@ -224,7 +224,7 @@ public final class CastleManager implements InstanceListManager
 				final int castleId = rs.getInt("id");
 				_castles.put(castleId, new Castle(castleId));
 			}
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getCastles().size() + " castles.");
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _castles.values().size() + " castles.");
 		}
 		catch (Exception e)
 		{
@@ -240,7 +240,7 @@ public final class CastleManager implements InstanceListManager
 	@Override
 	public void activateInstances()
 	{
-		for (Castle castle : getCastles())
+		for (Castle castle : _castles.values())
 		{
 			castle.activateInstance();
 		}

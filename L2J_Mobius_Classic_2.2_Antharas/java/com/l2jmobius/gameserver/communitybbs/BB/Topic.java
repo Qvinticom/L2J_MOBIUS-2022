@@ -128,11 +128,11 @@ public class Topic
 	public void deleteme(Forum f)
 	{
 		TopicBBSManager.getInstance().delTopic(this);
-		f.rmTopicByID(getID());
+		f.rmTopicByID(_id);
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM topic WHERE topic_id=? AND topic_forum_id=?"))
 		{
-			ps.setInt(1, getID());
+			ps.setInt(1, _id);
 			ps.setInt(2, f.getID());
 			ps.execute();
 		}

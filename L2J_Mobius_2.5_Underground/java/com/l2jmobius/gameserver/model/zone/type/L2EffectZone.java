@@ -39,7 +39,7 @@ import com.l2jmobius.gameserver.network.serverpackets.EtcStatusUpdate;
  */
 public final class L2EffectZone extends L2ZoneType
 {
-	private int _chance;
+	int _chance;
 	private int _initialDelay;
 	private int _reuse;
 	protected boolean _bypassConditions;
@@ -257,7 +257,7 @@ public final class L2EffectZone extends L2ZoneType
 			{
 				getCharactersInside().forEach(character ->
 				{
-					if ((character != null) && !character.isDead() && (Rnd.get(100) < getChance()))
+					if ((character != null) && !character.isDead() && (Rnd.get(100) < _chance))
 					{
 						for (Entry<Integer, Integer> e : _skills.entrySet())
 						{

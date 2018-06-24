@@ -119,15 +119,15 @@ public class Mail extends ItemContainer
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT object_id, item_id, count, enchant_level, loc, loc_data, custom_type1, custom_type2, mana_left, time FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
-			ps.setInt(1, getOwnerId());
+			ps.setInt(1, _ownerId);
 			ps.setString(2, getBaseLocation().name());
-			ps.setInt(3, getMessageId());
+			ps.setInt(3, _messageId);
 			try (ResultSet inv = ps.executeQuery())
 			{
 				L2ItemInstance item;
 				while (inv.next())
 				{
-					item = L2ItemInstance.restoreFromDb(getOwnerId(), inv);
+					item = L2ItemInstance.restoreFromDb(_ownerId, inv);
 					if (item == null)
 					{
 						continue;

@@ -43,10 +43,10 @@ public class L2EffectZone extends L2ZoneType
 {
 	public static final Logger LOGGER = Logger.getLogger(L2EffectZone.class.getName());
 	
-	private int _chance;
+	int _chance;
 	private int _initialDelay;
 	private int _reuse;
-	private boolean _enabled;
+	boolean _enabled;
 	private boolean _isShowDangerIcon;
 	private volatile Future<?> _task;
 	protected volatile Map<Integer, Integer> _skills;
@@ -254,7 +254,7 @@ public class L2EffectZone extends L2ZoneType
 		@Override
 		public void run()
 		{
-			if (isEnabled())
+			if (_enabled)
 			{
 				for (L2Character temp : getCharacterList())
 				{
@@ -265,7 +265,7 @@ public class L2EffectZone extends L2ZoneType
 							continue;
 						}
 						
-						if (Rnd.get(100) < getChance())
+						if (Rnd.get(100) < _chance)
 						{
 							for (Entry<Integer, Integer> e : _skills.entrySet())
 							{

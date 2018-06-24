@@ -48,9 +48,9 @@ public class PcStatus extends PlayableStatus
 	@Override
 	public final void reduceCp(int value)
 	{
-		if (getCurrentCp() > value)
+		if (_currentCp > value)
 		{
-			setCurrentCp(getCurrentCp() - value);
+			setCurrentCp(_currentCp - value);
 		}
 		else
 		{
@@ -78,7 +78,7 @@ public class PcStatus extends PlayableStatus
 		}
 		
 		// If OFFLINE_MODE_NO_DAMAGE is enabled and player is offline and he is in store/craft mode, no damage is taken.
-		if (Config.OFFLINE_MODE_NO_DAMAGE && (getActiveChar().getClient() != null) && getActiveChar().getClient().isDetached() && ((Config.OFFLINE_TRADE_ENABLE && ((getActiveChar().getPrivateStoreType() == PrivateStoreType.SELL) || (getActiveChar().getPrivateStoreType() == PrivateStoreType.BUY))) || (Config.OFFLINE_CRAFT_ENABLE && (getActiveChar().isInCraftMode() || (getActiveChar().getPrivateStoreType() == PrivateStoreType.MANUFACTURE)))))
+		if (Config.OFFLINE_MODE_NO_DAMAGE && (getActiveChar().getClient() != null) && getActiveChar().getClient().isDetached() && ((Config.OFFLINE_TRADE_ENABLE && ((getActiveChar().getPrivateStoreType() == PrivateStoreType.SELL) || (getActiveChar().getPrivateStoreType() == PrivateStoreType.BUY))) || (Config.OFFLINE_CRAFT_ENABLE && (getActiveChar().isCrafting() || (getActiveChar().getPrivateStoreType() == PrivateStoreType.MANUFACTURE)))))
 		{
 			return;
 		}
@@ -100,7 +100,7 @@ public class PcStatus extends PlayableStatus
 				getActiveChar().stopEffectsOnDamage();
 			}
 			// Attacked players in craft/shops stand up.
-			if (getActiveChar().isInCraftMode() || getActiveChar().isInStoreMode())
+			if (getActiveChar().isCrafting() || getActiveChar().isInStoreMode())
 			{
 				getActiveChar().setPrivateStoreType(PrivateStoreType.NONE);
 				getActiveChar().standUp();
@@ -238,14 +238,14 @@ public class PcStatus extends PlayableStatus
 			
 			if (!ignoreCP && (attacker.isPlayable() || attacker.isFakePlayer()))
 			{
-				if (getCurrentCp() >= value)
+				if (_currentCp >= value)
 				{
-					setCurrentCp(getCurrentCp() - value); // Set Cp to diff of Cp vs value
+					setCurrentCp(_currentCp - value); // Set Cp to diff of Cp vs value
 					value = 0; // No need to subtract anything from Hp
 				}
 				else
 				{
-					value -= getCurrentCp(); // Get diff from value vs Cp; will apply diff to Hp
+					value -= _currentCp; // Get diff from value vs Cp; will apply diff to Hp
 					setCurrentCp(0, false); // Set Cp to 0
 				}
 			}
@@ -337,7 +337,7 @@ public class PcStatus extends PlayableStatus
 	public final void setCurrentCp(double newCp, boolean broadcastPacket)
 	{
 		// Get the Max CP of the L2Character
-		final int currentCp = (int) getCurrentCp();
+		final int currentCp = (int) _currentCp;
 		final int maxCp = getActiveChar().getStat().getMaxCp();
 		
 		synchronized (this)
@@ -388,9 +388,9 @@ public class PcStatus extends PlayableStatus
 		final PcStat charstat = getActiveChar().getStat();
 		
 		// Modify the current CP of the L2Character and broadcast Server->Client packet StatusUpdate
-		if (getCurrentCp() < charstat.getMaxRecoverableCp())
+		if (_currentCp < charstat.getMaxRecoverableCp())
 		{
-			setCurrentCp(getCurrentCp() + getActiveChar().getStat().getValue(Stats.REGENERATE_CP_RATE), false);
+			setCurrentCp(_currentCp + getActiveChar().getStat().getValue(Stats.REGENERATE_CP_RATE), false);
 		}
 		
 		// Modify the current HP of the L2Character and broadcast Server->Client packet StatusUpdate

@@ -69,7 +69,7 @@ public class L2DropCategory
 	
 	public boolean isSweep()
 	{
-		return getCategoryType() == -1;
+		return _categoryType == -1;
 	}
 	
 	// this returns the chance for the category to be visited in order to check if
@@ -77,7 +77,7 @@ public class L2DropCategory
 	// (but may return 0 or many drops)
 	public int getCategoryChance()
 	{
-		if (getCategoryType() >= 0)
+		if (_categoryType >= 0)
 		{
 			return _categoryChance;
 		}
@@ -86,7 +86,7 @@ public class L2DropCategory
 	
 	public int getCategoryBalancedChance()
 	{
-		if (getCategoryType() >= 0)
+		if (_categoryType >= 0)
 		{
 			return _categoryBalancedChance;
 		}
@@ -107,7 +107,7 @@ public class L2DropCategory
 	{
 		List<L2DropData> drops = new ArrayList<>();
 		int subCatChance = 0;
-		for (L2DropData drop : getAllDrops())
+		for (L2DropData drop : _drops)
 		{
 			if ((drop.getItemId() == 57) || (drop.getItemId() == 6360) || (drop.getItemId() == 6361) || (drop.getItemId() == 6362))
 			{
@@ -148,7 +148,7 @@ public class L2DropCategory
 	{
 		final int randomIndex = Rnd.get(getCategoryBalancedChance());
 		int sum = 0;
-		for (L2DropData drop : getAllDrops())
+		for (L2DropData drop : _drops)
 		{
 			sum += Math.min((drop.getChance() * (raid ? 1 : Config.RATE_DROP_ITEMS)), L2DropData.MAX_CHANCE);
 			

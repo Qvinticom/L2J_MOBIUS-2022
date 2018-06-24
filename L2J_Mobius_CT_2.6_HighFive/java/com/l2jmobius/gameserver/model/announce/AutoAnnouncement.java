@@ -100,9 +100,9 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 			ps.setInt(1, getType().ordinal());
 			ps.setString(2, getContent());
 			ps.setString(3, getAuthor());
-			ps.setLong(4, getInitial());
-			ps.setLong(5, getDelay());
-			ps.setInt(6, getRepeat());
+			ps.setLong(4, _initial);
+			ps.setLong(5, _delay);
+			ps.setInt(6, _repeat);
 			ps.execute();
 			try (ResultSet rset = ps.getGeneratedKeys())
 			{
@@ -129,9 +129,9 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 			ps.setInt(1, getType().ordinal());
 			ps.setString(2, getContent());
 			ps.setString(3, getAuthor());
-			ps.setLong(4, getInitial());
-			ps.setLong(5, getDelay());
-			ps.setLong(6, getRepeat());
+			ps.setLong(4, _initial);
+			ps.setLong(5, _delay);
+			ps.setLong(6, _repeat);
 			ps.setLong(7, getId());
 			ps.execute();
 		}

@@ -99,7 +99,7 @@ public class SkillChannelizer implements Runnable
 		{
 			for (L2Character chars : _channelized)
 			{
-				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), getChannelizer());
+				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
 			}
 			_channelized = null;
 		}
@@ -160,7 +160,7 @@ public class SkillChannelizer implements Runnable
 						if (o.isCharacter())
 						{
 							targetList.add((L2Character) o);
-							((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), getChannelizer());
+							((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
 						}
 					});
 				}
@@ -198,13 +198,13 @@ public class SkillChannelizer implements Runnable
 							}
 							
 							// Update PvP status
-							if (character.isPlayable() && getChannelizer().isPlayer())
+							if (character.isPlayable() && _channelizer.isPlayer())
 							{
-								((L2PcInstance) getChannelizer()).updatePvPStatus(character);
+								((L2PcInstance) _channelizer).updatePvPStatus(character);
 							}
 							
 							// Be warned, this method has the possibility to call doDie->abortCast->stopChanneling method. Variable cache above try"+ +" is used in this case to avoid NPEs.
-							channeledSkill.applyEffects(getChannelizer(), character);
+							channeledSkill.applyEffects(_channelizer, character);
 							
 							// Reduce shots.
 							if (skill.useSpiritShot())

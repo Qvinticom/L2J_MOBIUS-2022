@@ -182,12 +182,12 @@ public final class ItemAuction
 	
 	public final long getStartingTimeRemaining()
 	{
-		return Math.max(getEndingTime() - System.currentTimeMillis(), 0);
+		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
 	public final long getFinishingTimeRemaining()
 	{
-		return Math.max(getEndingTime() - System.currentTimeMillis(), 0);
+		return Math.max(_endingTime - System.currentTimeMillis(), 0);
 	}
 	
 	public final void storeMe()
@@ -251,7 +251,7 @@ public final class ItemAuction
 			throw new NullPointerException();
 		}
 		
-		if (newBid < getAuctionInitBid())
+		if (newBid < _auctionItem.getAuctionInitBid())
 		{
 			player.sendPacket(SystemMessageId.YOUR_BID_PRICE_MUST_BE_HIGHER_THAN_THE_MINIMUM_PRICE_CURRENTLY_BEING_BID);
 			return;
@@ -342,7 +342,7 @@ public final class ItemAuction
 			_highestBid = bid;
 		}
 		
-		if ((getEndingTime() - System.currentTimeMillis()) <= (1000 * 60 * 10)) // 10 minutes
+		if ((_endingTime - System.currentTimeMillis()) <= (1000 * 60 * 10)) // 10 minutes
 		{
 			switch (_auctionEndingExtendState)
 			{

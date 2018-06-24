@@ -150,11 +150,7 @@ public class TradeList
 			{
 				if (exclItem.getItem().getId() == item.getId())
 				{
-					if (item.getCount() <= exclItem.getCount())
-					{
-						return null;
-					}
-					return new TradeItem(item, item.getCount() - exclItem.getCount(), item.getReferencePrice());
+					return item.getCount() <= exclItem.getCount() ? null : new TradeItem(item, item.getCount() - exclItem.getCount(), item.getReferencePrice());
 				}
 			}
 		}
@@ -201,7 +197,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem addItem(int objectId, long count, long price)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
 			return null;
@@ -215,13 +211,13 @@ public class TradeList
 		}
 		
 		final L2ItemInstance item = (L2ItemInstance) o;
-		if (!(item.isTradeable() || (getOwner().isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
+		if (!(item.isTradeable() || (_owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS)) || item.isQuestItem())
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to add a restricted item!");
 			return null;
 		}
 		
-		if (!getOwner().getInventory().canManipulateWithItemId(item.getId()))
+		if (!_owner.getInventory().canManipulateWithItemId(item.getId()))
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to add an item that can't manipualte!");
 			return null;
@@ -271,7 +267,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem addItemByItemId(int itemId, long count, long price)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
 			return null;
@@ -318,7 +314,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem removeItem(int objectId, int itemId, long count)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
 			return null;
@@ -441,11 +437,7 @@ public class TradeList
 					{
 						partnerList.lock();
 						lock();
-						if (!partnerList.validate())
-						{
-							return false;
-						}
-						if (!validate())
+						if (!partnerList.validate() || !validate())
 						{
 							return false;
 						}
@@ -617,15 +609,15 @@ public class TradeList
 		boolean success = false;
 		
 		// check weight and slots
-		if ((!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight())) || !(partnerList.getOwner().getInventory().validateWeight(calcItemsWeight())))
+		if ((!_owner.getInventory().validateWeight(partnerList.calcItemsWeight())) || !(partnerList.getOwner().getInventory().validateWeight(calcItemsWeight())))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
-			getOwner().sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
+			_owner.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_WEIGHT_LIMIT);
 		}
-		else if ((!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner()))) || (!partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner()))))
+		else if ((!_owner.getInventory().validateCapacity(partnerList.countItemsSlots(getOwner()))) || (!partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner()))))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
-			getOwner().sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
+			_owner.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
 		}
 		else
 		{
@@ -634,7 +626,7 @@ public class TradeList
 			final InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 			
 			// Transfer items
-			partnerList.TransferItems(getOwner(), partnerIU, ownerIU);
+			partnerList.TransferItems(_owner, partnerIU, ownerIU);
 			TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 			
 			// Send inventory update packet
@@ -659,7 +651,7 @@ public class TradeList
 		}
 		// Finish the trade
 		partnerList.getOwner().onTradeFinish(success);
-		getOwner().onTradeFinish(success);
+		_owner.onTradeFinish(success);
 	}
 	
 	/**
@@ -715,7 +707,7 @@ public class TradeList
 			// item with this objectId and price not found in tradelist
 			if (!found)
 			{
-				if (isPackaged())
+				if (_packaged)
 				{
 					Util.handleIllegalPlayerAction(player, "[TradeList.privateStoreBuy()] Player " + player.getName() + " tried to cheat the package sell and buy only a part of the package! Ban this player for bot usage!", Config.DEFAULT_PUNISH);
 					return 2;
@@ -880,11 +872,7 @@ public class TradeList
 		// Send inventory update packet
 		_owner.sendInventoryUpdate(ownerIU);
 		player.sendInventoryUpdate(playerIU);
-		if (ok)
-		{
-			return 0;
-		}
-		return 2;
+		return ok ? 0 : 2;
 	}
 	
 	/**
@@ -895,12 +883,7 @@ public class TradeList
 	 */
 	public synchronized boolean privateStoreSell(L2PcInstance player, ItemRequest[] requestedItems)
 	{
-		if (_locked)
-		{
-			return false;
-		}
-		
-		if (!_owner.isOnline() || !player.isOnline())
+		if (_locked || !_owner.isOnline() || !player.isOnline())
 		{
 			return false;
 		}

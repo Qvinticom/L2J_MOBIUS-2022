@@ -224,7 +224,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		super.onEvtAttacked(attacker);
 		
-		if (isDefending())
+		if (_isDefending)
 		{
 			defendAttack(attacker);
 		}
@@ -239,7 +239,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	{
 		super.onEvtEvaded(attacker);
 		
-		if (isDefending())
+		if (_isDefending)
 		{
 			defendAttack(attacker);
 		}

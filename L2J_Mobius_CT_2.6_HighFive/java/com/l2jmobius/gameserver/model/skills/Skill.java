@@ -243,15 +243,15 @@ public final class Skill implements IIdentifiable
 		_abnormalType = set.getEnum("abnormalType", AbnormalType.class, AbnormalType.NONE);
 		
 		int abnormalTime = set.getInt("abnormalTime", 0);
-		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(getId()))
+		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
 		{
-			if ((getLevel() < 100) || (getLevel() > 140))
+			if ((_level < 100) || (_level > 140))
 			{
-				abnormalTime = Config.SKILL_DURATION_LIST.get(getId());
+				abnormalTime = Config.SKILL_DURATION_LIST.get(_id);
 			}
-			else if ((getLevel() >= 100) && (getLevel() < 140))
+			else if ((_level >= 100) && (_level < 140))
 			{
-				abnormalTime += Config.SKILL_DURATION_LIST.get(getId());
+				abnormalTime += Config.SKILL_DURATION_LIST.get(_id);
 			}
 		}
 		
@@ -319,8 +319,8 @@ public final class Skill implements IIdentifiable
 		
 		_targetType = set.getEnum("targetType", L2TargetType.class, L2TargetType.SELF);
 		_power = set.getFloat("power", 0.f);
-		_pvpPower = set.getFloat("pvpPower", (float) getPower());
-		_pvePower = set.getFloat("pvePower", (float) getPower());
+		_pvpPower = set.getFloat("pvpPower", (float) _power);
+		_pvePower = set.getFloat("pvePower", (float) _power);
 		_magicLevel = set.getInt("magicLvl", 0);
 		_lvlBonusRate = set.getInt("lvlBonusRate", 0);
 		_activateRate = set.getInt("activateRate", -1);
@@ -946,7 +946,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean isHealingPotionSkill()
 	{
-		return getAbnormalType() == AbnormalType.HP_RECOVER;
+		return _abnormalType == AbnormalType.HP_RECOVER;
 	}
 	
 	public int getChargeConsume()
@@ -1373,7 +1373,7 @@ public final class Skill implements IIdentifiable
 			return;
 		}
 		
-		if (effected.isInvulAgainst(getId(), getLevel()))
+		if (effected.isInvulAgainst(_id, _level))
 		{
 			return;
 		}
@@ -1402,9 +1402,9 @@ public final class Skill implements IIdentifiable
 			// Support for buff sharing feature including healing herbs.
 			if (effected.isPlayer() && effected.hasServitor() && (_abnormalType != AbnormalType.TRANSFORM))
 			{
-				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
+				if ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb)
 				{
-					applyEffects(effector, effected.getSummon(), isRecoveryHerb(), 0);
+					applyEffects(effector, effected.getSummon(), _isRecoveryHerb, 0);
 				}
 			}
 		}
@@ -1429,7 +1429,7 @@ public final class Skill implements IIdentifiable
 			
 			// Support for buff sharing feature.
 			// Avoiding Servitor Share since it's implementation already "shares" the effect.
-			if (addContinuousEffects && info.getEffected().isPlayer() && info.getEffected().hasServitor() && isContinuous() && !isDebuff() && (getId() != CommonSkill.SERVITOR_SHARE.getId()))
+			if (addContinuousEffects && info.getEffected().isPlayer() && info.getEffected().hasServitor() && isContinuous() && !_isDebuff && (getId() != CommonSkill.SERVITOR_SHARE.getId()))
 			{
 				applyEffects(effector, info.getEffected().getSummon(), false, 0);
 			}
@@ -1471,7 +1471,7 @@ public final class Skill implements IIdentifiable
 	 */
 	private void activateSkill(L2Character caster, L2CubicInstance cubic, L2Object... targets)
 	{
-		switch (getId())
+		switch (_id)
 		{
 			// TODO: replace with AI
 			case 5852:
@@ -1537,9 +1537,9 @@ public final class Skill implements IIdentifiable
 		// Self Effect
 		if (hasEffects(EffectScope.SELF))
 		{
-			if (caster.isAffectedBySkill(getId()))
+			if (caster.isAffectedBySkill(_id))
 			{
-				caster.stopSkillEffects(true, getId());
+				caster.stopSkillEffects(true, _id);
 			}
 			applyEffects(caster, caster, true, false, true, 0);
 		}
@@ -1556,7 +1556,7 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		
-		if (isSuicideAttack())
+		if (_isSuicideAttack)
 		{
 			caster.doDie(caster);
 		}
@@ -1664,7 +1664,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean canBeStolen()
 	{
-		return !isPassive() && !isToggle() && !isDebuff() && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispeled() && (getId() != CommonSkill.SERVITOR_SHARE.getId());
+		return !isPassive() && !isToggle() && !_isDebuff && !_isHeroSkill && !_isGMSkill && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && _canBeDispeled && (getId() != CommonSkill.SERVITOR_SHARE.getId());
 	}
 	
 	public boolean isClanSkill()

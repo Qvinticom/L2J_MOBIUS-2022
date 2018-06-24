@@ -195,23 +195,23 @@ public final class SiegableHall extends ClanHall
 	
 	public final void addAttacker(L2Clan clan)
 	{
-		if (getSiege() != null)
+		if (_siege != null)
 		{
-			getSiege().getAttackers().put(clan.getId(), new L2SiegeClan(clan.getId(), SiegeClanType.ATTACKER));
+			_siege.getAttackers().put(clan.getId(), new L2SiegeClan(clan.getId(), SiegeClanType.ATTACKER));
 		}
 	}
 	
 	public final void removeAttacker(L2Clan clan)
 	{
-		if (getSiege() != null)
+		if (_siege != null)
 		{
-			getSiege().getAttackers().remove(clan.getId());
+			_siege.getAttackers().remove(clan.getId());
 		}
 	}
 	
 	public final boolean isRegistered(L2Clan clan)
 	{
-		return (getSiege() != null) && getSiege().checkIsAttacker(clan);
+		return (_siege != null) && _siege.checkIsAttacker(clan);
 	}
 	
 	public SiegeStatus getSiegeStatus()

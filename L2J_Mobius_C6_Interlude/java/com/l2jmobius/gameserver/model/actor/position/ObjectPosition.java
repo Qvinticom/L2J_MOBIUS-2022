@@ -98,18 +98,18 @@ public class ObjectPosition
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Object Id at bad coords: (x: " + getX() + ", y: " + getY() + ", z: " + getZ() + ").");
+			LOGGER.warning("Object Id at bad coords: (x: " + getWorldPosition().getX() + ", y: " + getWorldPosition().getY() + ", z: " + getWorldPosition().getZ() + ").");
 			
-			if (getActiveObject() instanceof L2PcInstance)
+			if (_activeObject instanceof L2PcInstance)
 			{
 				// ((L2PcInstance)obj).deleteMe();
-				((L2PcInstance) getActiveObject()).teleToLocation(0, 0, 0, false);
-				((L2PcInstance) getActiveObject()).sendMessage("Error with your coords, Please ask a GM for help!");
+				((L2PcInstance) _activeObject).teleToLocation(0, 0, 0, false);
+				((L2PcInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
 				
 			}
-			else if (getActiveObject() instanceof L2Character)
+			else if (_activeObject instanceof L2Character)
 			{
-				getActiveObject().decayMe();
+				_activeObject.decayMe();
 			}
 		}
 	}
@@ -160,7 +160,7 @@ public class ObjectPosition
 		}
 		
 		setWorldPosition(x, y, z);
-		getActiveObject().setIsVisible(false);
+		_activeObject.setIsVisible(false);
 	}
 	
 	/**
@@ -168,7 +168,7 @@ public class ObjectPosition
 	 */
 	public void updateWorldRegion()
 	{
-		if (!getActiveObject().isVisible())
+		if (!_activeObject.isVisible())
 		{
 			return;
 		}
@@ -176,12 +176,12 @@ public class ObjectPosition
 		L2WorldRegion newRegion = L2World.getInstance().getRegion(getWorldPosition());
 		if (newRegion != getWorldRegion())
 		{
-			getWorldRegion().removeVisibleObject(getActiveObject());
+			getWorldRegion().removeVisibleObject(_activeObject);
 			
 			setWorldRegion(newRegion);
 			
 			// Add the L2Oject spawn to _visibleObjects and if necessary to _allplayers of its L2WorldRegion
-			getWorldRegion().addVisibleObject(getActiveObject());
+			getWorldRegion().addVisibleObject(_activeObject);
 		}
 	}
 	

@@ -124,7 +124,7 @@ public final class PacketReader
 	{
 		final StringBuilder sb = new StringBuilder();
 		final int stringLength = _buf.readShortLE();
-		if ((stringLength * 2) > getReadableBytes())
+		if ((stringLength * 2) > _buf.readableBytes())
 		{
 			throw new IndexOutOfBoundsException("readerIndex(" + _buf.readerIndex() + ") + length(" + (stringLength * 2) + ") exceeds writerIndex(" + _buf.writerIndex() + "): " + _buf);
 		}

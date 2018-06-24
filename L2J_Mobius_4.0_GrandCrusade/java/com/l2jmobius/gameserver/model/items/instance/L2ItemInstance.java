@@ -328,14 +328,14 @@ public final class L2ItemInstance extends L2Object
 		
 		if (Config.LOG_ITEMS)
 		{
-			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (getItem().isEquipable() || (getItem().getId() == ADENA_ID))))
+			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				if (getEnchantLevel() > 0)
+				if (_enchantLevel > 0)
 				{
 					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
-						+ ":+" + getEnchantLevel() //
-						+ " " + getItem().getName() //
+						+ ":+" + _enchantLevel //
+						+ " " + _item.getName() //
 						+ "(" + _count + "), " //
 						+ String.valueOf(creator) + ", " // in case of null
 						+ String.valueOf(reference)); // in case of null
@@ -344,7 +344,7 @@ public final class L2ItemInstance extends L2Object
 				{
 					LOG_ITEMS.info("SETOWNER:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
-						+ ":" + getItem().getName() //
+						+ ":" + _item.getName() //
 						+ "(" + _count + "), " //
 						+ String.valueOf(creator) + ", " // in case of null
 						+ String.valueOf(reference)); // in case of null
@@ -366,7 +366,7 @@ public final class L2ItemInstance extends L2Object
 			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
 			if (Config.GMAUDIT)
 			{
-				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
+				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " name: " + getName() + ")", targetName, "L2Object referencing this action is: " + referenceName);
 			}
 		}
 	}
@@ -482,7 +482,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		final long old = _count;
-		final long max = getId() == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
+		final long max = _itemId == ADENA_ID ? MAX_ADENA : Integer.MAX_VALUE;
 		
 		if ((count > 0) && (_count > (max - count)))
 		{
@@ -504,12 +504,12 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (!Config.LOG_ITEMS_SMALL_LOG || (Config.LOG_ITEMS_SMALL_LOG && (_item.isEquipable() || (_item.getId() == ADENA_ID))))
 			{
-				if (getEnchantLevel() > 0)
+				if (_enchantLevel > 0)
 				{
 					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
-						+ ":+" + getEnchantLevel() //
-						+ " " + getItem().getName() //
+						+ ":+" + _enchantLevel //
+						+ " " + _item.getName() //
 						+ "(" + _count + "), PrevCount(" //
 						+ String.valueOf(old) + "), " // in case of null
 						+ String.valueOf(creator) + ", " // in case of null
@@ -519,7 +519,7 @@ public final class L2ItemInstance extends L2Object
 				{
 					LOG_ITEMS.info("CHANGE:" + String.valueOf(process) // in case of null
 						+ ", item " + getObjectId() //
-						+ ":" + getItem().getName() //
+						+ ":" + _item.getName() //
 						+ "(" + _count + "), PrevCount(" //
 						+ String.valueOf(old) + "), " // in case of null
 						+ String.valueOf(creator) + ", " // in case of null
@@ -542,7 +542,7 @@ public final class L2ItemInstance extends L2Object
 			final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
 			if (Config.GMAUDIT)
 			{
-				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + getId() + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
+				GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "L2Object referencing this action is: " + referenceName);
 			}
 		}
 	}
@@ -559,9 +559,9 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public int isEnchantable()
 	{
-		if ((getItemLocation() == ItemLocation.INVENTORY) || (getItemLocation() == ItemLocation.PAPERDOLL))
+		if ((_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL))
 		{
-			return getItem().isEnchantable();
+			return _item.isEnchantable();
 		}
 		return 0;
 	}
@@ -656,7 +656,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public int getDisplayId()
 	{
-		return getItem().getDisplayId();
+		return _item.getDisplayId();
 	}
 	
 	/**
@@ -880,7 +880,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean isOlyRestrictedItem()
 	{
-		return getItem().isOlyRestrictedItem();
+		return _item.isOlyRestrictedItem();
 	}
 	
 	/**
@@ -894,12 +894,12 @@ public final class L2ItemInstance extends L2Object
 		final L2Summon pet = player.getPet();
 		
 		return ((!isEquipped()) // Not equipped
-			&& (getItem().getType2() != L2Item.TYPE2_QUEST) // Not Quest Item
-			&& ((getItem().getType2() != L2Item.TYPE2_MONEY) || (getItem().getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
+			&& (_item.getType2() != L2Item.TYPE2_QUEST) // Not Quest Item
+			&& ((_item.getType2() != L2Item.TYPE2_MONEY) || (_item.getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // not money, not shield
 			&& ((pet == null) || (getObjectId() != pet.getControlObjectId())) // Not Control item of currently summoned pet
 			&& !(player.isProcessingItem(getObjectId())) // Not momentarily used enchant scroll
-			&& (allowAdena || (getId() != ADENA_ID)) // Not Adena
-			&& (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != getId())) && (allowNonTradeable || (isTradeable() && (!((getItem().getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
+			&& (allowAdena || (_itemId != ADENA_ID)) // Not Adena
+			&& (!player.isCastingNow(s -> s.getSkill().getItemConsumeId() != _itemId)) && (allowNonTradeable || (isTradeable() && (!((_item.getItemType() == EtcItemType.PET_COLLAR) && player.havePetInvItems())))));
 	}
 	
 	/**
@@ -963,7 +963,7 @@ public final class L2ItemInstance extends L2Object
 		// there shall be no previous augmentation..
 		if (_augmentation != null)
 		{
-			LOGGER.info("Warning: Augment set for (" + getObjectId() + ") " + getName() + " owner: " + getOwnerId());
+			LOGGER.info("Warning: Augment set for (" + getObjectId() + ") " + getName() + " owner: " + _ownerId);
 			return false;
 		}
 		
@@ -1139,9 +1139,9 @@ public final class L2ItemInstance extends L2Object
 	{
 		if (isWeapon())
 		{
-			if (getItem().getAttributes() != null)
+			if (_item.getAttributes() != null)
 			{
-				return getItem().getAttributes().stream().findFirst().orElse(null);
+				return _item.getAttributes().stream().findFirst().orElse(null);
 			}
 			else if (_elementals != null)
 			{
@@ -1167,9 +1167,9 @@ public final class L2ItemInstance extends L2Object
 	{
 		if (isArmor())
 		{
-			if (getItem().getAttributes() != null)
+			if (_item.getAttributes() != null)
 			{
-				final AttributeHolder attribute = getItem().getAttribute(element);
+				final AttributeHolder attribute = _item.getAttribute(element);
 				if (attribute != null)
 				{
 					return attribute.getValue();
@@ -1411,7 +1411,7 @@ public final class L2ItemInstance extends L2Object
 					player.broadcastUserInfo();
 				}
 				
-				if (getItemLocation() != ItemLocation.WAREHOUSE)
+				if (_loc != ItemLocation.WAREHOUSE)
 				{
 					// destroy
 					player.getInventory().destroyItem("L2ItemInstance", this, player, null);
@@ -1433,7 +1433,7 @@ public final class L2ItemInstance extends L2Object
 				{
 					scheduleConsumeManaTask();
 				}
-				if (getItemLocation() != ItemLocation.WAREHOUSE)
+				if (_loc != ItemLocation.WAREHOUSE)
 				{
 					final InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(this);
@@ -1615,11 +1615,11 @@ public final class L2ItemInstance extends L2Object
 			ps.setLong(2, _count);
 			ps.setString(3, _loc.name());
 			ps.setInt(4, _locData);
-			ps.setInt(5, getEnchantLevel());
-			ps.setInt(6, getCustomType1());
-			ps.setInt(7, getCustomType2());
-			ps.setInt(8, getMana());
-			ps.setLong(9, getTime());
+			ps.setInt(5, _enchantLevel);
+			ps.setInt(6, _type1);
+			ps.setInt(7, _type2);
+			ps.setInt(8, _mana);
+			ps.setLong(9, _time);
 			ps.setInt(10, getObjectId());
 			ps.executeUpdate();
 			_existsInDb = true;
@@ -1651,12 +1651,12 @@ public final class L2ItemInstance extends L2Object
 			ps.setLong(3, _count);
 			ps.setString(4, _loc.name());
 			ps.setInt(5, _locData);
-			ps.setInt(6, getEnchantLevel());
+			ps.setInt(6, _enchantLevel);
 			ps.setInt(7, getObjectId());
 			ps.setInt(8, _type1);
 			ps.setInt(9, _type2);
-			ps.setInt(10, getMana());
-			ps.setLong(11, getTime());
+			ps.setInt(10, _mana);
+			ps.setLong(11, _time);
 			
 			ps.executeUpdate();
 			_existsInDb = true;
@@ -1838,7 +1838,7 @@ public final class L2ItemInstance extends L2Object
 				player.sendInventoryUpdate(iu);
 			}
 			
-			if (getItemLocation() != ItemLocation.WAREHOUSE)
+			if (_loc != ItemLocation.WAREHOUSE)
 			{
 				// destroy
 				player.getInventory().destroyItem("L2ItemInstance", this, player, null);
@@ -1852,7 +1852,7 @@ public final class L2ItemInstance extends L2Object
 			{
 				player.getWarehouse().destroyItem("L2ItemInstance", this, player, null);
 			}
-			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(getId()));
+			player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_EXPIRED).addItemName(_itemId));
 		}
 	}
 	
@@ -1949,32 +1949,32 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean isQuestItem()
 	{
-		return getItem().isQuestItem();
+		return _item.isQuestItem();
 	}
 	
 	public boolean isElementable()
 	{
-		if ((getItemLocation() == ItemLocation.INVENTORY) || (getItemLocation() == ItemLocation.PAPERDOLL))
+		if ((_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL))
 		{
-			return getItem().isElementable();
+			return _item.isElementable();
 		}
 		return false;
 	}
 	
 	public boolean isFreightable()
 	{
-		return getItem().isFreightable();
+		return _item.isFreightable();
 	}
 	
 	public int useSkillDisTime()
 	{
-		return getItem().useSkillDisTime();
+		return _item.useSkillDisTime();
 	}
 	
 	public int getOlyEnchantLevel()
 	{
 		final L2PcInstance player = getActingPlayer();
-		int enchant = getEnchantLevel();
+		int enchant = _enchantLevel;
 		
 		if (player == null)
 		{
@@ -1991,7 +1991,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean hasPassiveSkills()
 	{
-		return (getItemType() == EtcItemType.ENCHT_ATTR_RUNE) && (getItemLocation() == ItemLocation.INVENTORY) && (getOwnerId() > 0) && (getItem().getSkills(ItemSkillType.NORMAL) != null);
+		return (_item.getItemType() == EtcItemType.ENCHT_ATTR_RUNE) && (_loc == ItemLocation.INVENTORY) && (_ownerId > 0) && (_item.getSkills(ItemSkillType.NORMAL) != null);
 	}
 	
 	public void giveSkillsToOwner()
@@ -2004,7 +2004,7 @@ public final class L2ItemInstance extends L2Object
 		final L2PcInstance player = getActingPlayer();
 		if (player != null)
 		{
-			getItem().forEachSkill(ItemSkillType.NORMAL, holder ->
+			_item.forEachSkill(ItemSkillType.NORMAL, holder ->
 			{
 				final Skill skill = holder.getSkill();
 				if (skill.isPassive())
@@ -2025,7 +2025,7 @@ public final class L2ItemInstance extends L2Object
 		final L2PcInstance player = getActingPlayer();
 		if (player != null)
 		{
-			getItem().forEachSkill(ItemSkillType.NORMAL, holder ->
+			_item.forEachSkill(ItemSkillType.NORMAL, holder ->
 			{
 				final Skill skill = holder.getSkill();
 				if (skill.isPassive())
@@ -2432,7 +2432,7 @@ public final class L2ItemInstance extends L2Object
 			
 			if (isEnchanted())
 			{
-				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(getEnchantLevel()).addItemName(this));
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED).addInt(_enchantLevel).addItemName(this));
 			}
 			else
 			{

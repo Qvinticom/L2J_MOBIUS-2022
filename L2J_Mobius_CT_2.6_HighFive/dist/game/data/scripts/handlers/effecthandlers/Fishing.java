@@ -121,7 +121,7 @@ public final class Fishing extends AbstractEffect
 			return;
 		}
 		
-		if (player.isInCraftMode() || player.isInStoreMode())
+		if (player.isCrafting() || player.isInStoreMode())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_USING_A_RECIPE_BOOK_PRIVATE_MANUFACTURE_OR_PRIVATE_STORE);
 			return;

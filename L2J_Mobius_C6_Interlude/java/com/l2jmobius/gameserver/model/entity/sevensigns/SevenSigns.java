@@ -666,7 +666,7 @@ public class SevenSigns
 	{
 		// Calculate the number of days until the next period
 		// A period starts at 18:00 pm (local time), like on official servers.
-		switch (getCurrentPeriod())
+		switch (_activePeriod)
 		{
 			case PERIOD_SEAL_VALIDATION:
 			case PERIOD_COMPETITION:
@@ -1424,7 +1424,7 @@ public class SevenSigns
 	{
 		SystemMessage sm = null;
 		
-		switch (getCurrentPeriod())
+		switch (_activePeriod)
 		{
 			case PERIOD_COMP_RECRUITING:
 			{
@@ -1761,7 +1761,7 @@ public class SevenSigns
 			/*
 			 * Remember the period check here refers to the period just ENDED!
 			 */
-			final int periodEnded = getCurrentPeriod();
+			final int periodEnded = _activePeriod;
 			_activePeriod++;
 			
 			switch (periodEnded)

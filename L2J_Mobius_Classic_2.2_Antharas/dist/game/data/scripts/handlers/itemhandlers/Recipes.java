@@ -40,7 +40,7 @@ public class Recipes implements IItemHandler
 		}
 		
 		final L2PcInstance activeChar = playable.getActingPlayer();
-		if (activeChar.isInCraftMode())
+		if (activeChar.isCrafting())
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_MAY_NOT_ALTER_YOUR_RECIPE_BOOK_WHILE_ENGAGED_IN_MANUFACTURING);
 			return false;

@@ -51,7 +51,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 {
 	protected static Logger LOGGER = Logger.getLogger(BanditStrongholdSiege.class.getName());
 	private static BanditStrongholdSiege _instance;
-	private boolean _registrationPeriod = false;
+	boolean _registrationPeriod = false;
 	private int _clanCounter = 0;
 	protected Map<Integer, clanPlayersInfo> _clansInfo = new HashMap<>();
 	private L2ClanHallZone zone;
@@ -571,7 +571,7 @@ public class BanditStrongholdSiege extends ClanHallSiege
 			long remaining = registerTimeRemaining;
 			if (registerTimeRemaining <= 0)
 			{
-				if (!isRegistrationPeriod())
+				if (!_registrationPeriod)
 				{
 					if (clanhall.getOwnerClan() != null)
 					{

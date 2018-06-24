@@ -174,27 +174,27 @@ public final class CharEffectList
 		final List<BuffInfo> buffs = new ArrayList<>();
 		if (hasBuffs())
 		{
-			buffs.addAll(getBuffs());
+			buffs.addAll(_buffs);
 		}
 		
 		if (hasTriggered())
 		{
-			buffs.addAll(getTriggered());
+			buffs.addAll(_triggered);
 		}
 		
 		if (hasDances())
 		{
-			buffs.addAll(getDances());
+			buffs.addAll(_dances);
 		}
 		
 		if (hasToggles())
 		{
-			buffs.addAll(getToggles());
+			buffs.addAll(_toggles);
 		}
 		
 		if (hasDebuffs())
 		{
-			buffs.addAll(getDebuffs());
+			buffs.addAll(_debuffs);
 		}
 		return buffs;
 	}
@@ -214,27 +214,27 @@ public final class CharEffectList
 		final Queue<BuffInfo> effects;
 		if (skill.isPassive())
 		{
-			effects = getPassives();
+			effects = _passives;
 		}
 		else if (skill.isDebuff())
 		{
-			effects = getDebuffs();
+			effects = _debuffs;
 		}
 		else if (skill.isTriggeredSkill())
 		{
-			effects = getTriggered();
+			effects = _triggered;
 		}
 		else if (skill.isDance())
 		{
-			effects = getDances();
+			effects = _dances;
 		}
 		else if (skill.isToggle())
 		{
-			effects = getToggles();
+			effects = _toggles;
 		}
 		else
 		{
-			effects = getBuffs();
+			effects = _buffs;
 		}
 		return effects;
 	}
@@ -250,7 +250,7 @@ public final class CharEffectList
 	{
 		if (hasBuffs())
 		{
-			for (BuffInfo info : getBuffs())
+			for (BuffInfo info : _buffs)
 			{
 				if (info != null)
 				{
@@ -267,7 +267,7 @@ public final class CharEffectList
 		
 		if (hasTriggered())
 		{
-			for (BuffInfo info : getTriggered())
+			for (BuffInfo info : _triggered)
 			{
 				if (info != null)
 				{
@@ -284,7 +284,7 @@ public final class CharEffectList
 		
 		if (hasDances())
 		{
-			for (BuffInfo info : getDances())
+			for (BuffInfo info : _dances)
 			{
 				if (info != null)
 				{
@@ -301,7 +301,7 @@ public final class CharEffectList
 		
 		if (hasToggles())
 		{
-			for (BuffInfo info : getToggles())
+			for (BuffInfo info : _toggles)
 			{
 				if (info != null)
 				{
@@ -318,7 +318,7 @@ public final class CharEffectList
 		
 		if (hasDebuffs())
 		{
-			for (BuffInfo info : getDebuffs())
+			for (BuffInfo info : _debuffs)
 			{
 				if (info != null)
 				{
@@ -357,32 +357,32 @@ public final class CharEffectList
 		BuffInfo info = null;
 		if (hasBuffs())
 		{
-			info = getBuffs().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _buffs.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		
 		if (hasTriggered() && (info == null))
 		{
-			info = getTriggered().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _triggered.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		
 		if (hasDances() && (info == null))
 		{
-			info = getDances().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _dances.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		
 		if (hasToggles() && (info == null))
 		{
-			info = getToggles().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _toggles.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		
 		if (hasDebuffs() && (info == null))
 		{
-			info = getDebuffs().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _debuffs.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		
 		if (hasPassives() && (info == null))
 		{
-			info = getPassives().stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
+			info = _passives.stream().filter(b -> b.getSkill().getId() == skillId).findFirst().orElse(null);
 		}
 		return info;
 	}
@@ -486,7 +486,7 @@ public final class CharEffectList
 	 */
 	public int getBuffCount()
 	{
-		return hasBuffs() ? getBuffs().size() - _hiddenBuffs.get() - (getShortBuff() != null ? 1 : 0) : 0;
+		return hasBuffs() ? _buffs.size() - _hiddenBuffs.get() - (_shortBuff != null ? 1 : 0) : 0;
 	}
 	
 	/**
@@ -496,7 +496,7 @@ public final class CharEffectList
 	 */
 	public int getDanceCount()
 	{
-		return hasDances() ? getDances().size() : 0;
+		return hasDances() ? _dances.size() : 0;
 	}
 	
 	/**
@@ -506,7 +506,7 @@ public final class CharEffectList
 	 */
 	public int getTriggeredBuffCount()
 	{
-		return hasTriggered() ? getTriggered().size() : 0;
+		return hasTriggered() ? _triggered.size() : 0;
 	}
 	
 	/**
@@ -568,7 +568,7 @@ public final class CharEffectList
 		// If it's an herb that ends, check if there are hidden buffs.
 		if (info.getSkill().isAbnormalInstant() && hasBuffs())
 		{
-			for (BuffInfo buff : getBuffs())
+			for (BuffInfo buff : _buffs)
 			{
 				if ((buff != null) && (buff.getSkill().getAbnormalType() == info.getSkill().getAbnormalType()) && !buff.isInUse())
 				{
@@ -626,31 +626,31 @@ public final class CharEffectList
 		boolean update = false;
 		if (hasBuffs())
 		{
-			getBuffs().stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, getBuffs()));
+			_buffs.stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, _buffs));
 			update = true;
 		}
 		
 		if (hasTriggered())
 		{
-			getTriggered().stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, getTriggered()));
+			_triggered.stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, _triggered));
 			update = true;
 		}
 		
 		if (hasDebuffs())
 		{
-			getDebuffs().stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			_debuffs.stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, _debuffs));
 			update = true;
 		}
 		
 		if (hasDances())
 		{
-			getDances().stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, getDances()));
+			_dances.stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, _dances));
 			update = true;
 		}
 		
 		if (hasToggles())
 		{
-			getToggles().stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, getToggles()));
+			_toggles.stream().filter(info -> !info.getSkill().isStayAfterDeath()).forEach(info -> stopAndRemove(info, _toggles));
 			update = true;
 		}
 		
@@ -666,31 +666,31 @@ public final class CharEffectList
 		boolean update = false;
 		if (hasBuffs())
 		{
-			getBuffs().stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, getBuffs()));
+			_buffs.stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, _buffs));
 			update = true;
 		}
 		
 		if (hasTriggered())
 		{
-			getTriggered().stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, getTriggered()));
+			_triggered.stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, _triggered));
 			update = true;
 		}
 		
 		if (hasDebuffs())
 		{
-			getDebuffs().stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			_debuffs.stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, _debuffs));
 			update = true;
 		}
 		
 		if (hasDances())
 		{
-			getDances().stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, getDances()));
+			_dances.stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, _dances));
 			update = true;
 		}
 		
 		if (hasToggles())
 		{
-			getToggles().stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, getToggles()));
+			_toggles.stream().filter(info -> !info.getSkill().isStayOnSubclassChange()).forEach(info -> stopAndRemove(info, _toggles));
 			update = true;
 		}
 		
@@ -707,12 +707,12 @@ public final class CharEffectList
 	{
 		if (hasBuffs())
 		{
-			getBuffs().forEach(b -> stopAndRemove(b, getBuffs()));
+			_buffs.forEach(b -> stopAndRemove(b, _buffs));
 		}
 		
 		if (triggered && hasTriggered())
 		{
-			getTriggered().forEach(b -> stopAndRemove(b, getTriggered()));
+			_triggered.forEach(b -> stopAndRemove(b, _triggered));
 		}
 		
 		// Update effect flags and icons.
@@ -738,7 +738,7 @@ public final class CharEffectList
 		{
 			return;
 		}
-		getToggles().forEach(b -> stopAndRemove(b, getToggles()));
+		_toggles.forEach(b -> stopAndRemove(b, _toggles));
 		// Update effect flags and icons.
 		updateEffectList(update);
 	}
@@ -753,7 +753,7 @@ public final class CharEffectList
 		{
 			return;
 		}
-		getDances().forEach(b -> stopAndRemove(b, getDances()));
+		_dances.forEach(b -> stopAndRemove(b, _dances));
 		// Update effect flags and icons.
 		updateEffectList(update);
 	}
@@ -768,7 +768,7 @@ public final class CharEffectList
 		{
 			return;
 		}
-		getDebuffs().forEach(b -> stopAndRemove(b, getDebuffs()));
+		_debuffs.forEach(b -> stopAndRemove(b, _debuffs));
 		// Update effect flags and icons.
 		updateEffectList(update);
 	}
@@ -791,31 +791,31 @@ public final class CharEffectList
 		
 		if (hasBuffs())
 		{
-			getBuffs().stream().filter(Objects::nonNull).forEach(action);
+			_buffs.stream().filter(Objects::nonNull).forEach(action);
 			update = true;
 		}
 		
 		if (hasTriggered())
 		{
-			getTriggered().stream().filter(Objects::nonNull).forEach(action);
+			_triggered.stream().filter(Objects::nonNull).forEach(action);
 			update = true;
 		}
 		
 		if (hasDances())
 		{
-			getDances().stream().filter(Objects::nonNull).forEach(action);
+			_dances.stream().filter(Objects::nonNull).forEach(action);
 			update = true;
 		}
 		
 		if (hasToggles())
 		{
-			getToggles().stream().filter(Objects::nonNull).forEach(action);
+			_toggles.stream().filter(Objects::nonNull).forEach(action);
 			update = true;
 		}
 		
 		if (hasDebuffs())
 		{
-			getDebuffs().stream().filter(Objects::nonNull).forEach(action);
+			_debuffs.stream().filter(Objects::nonNull).forEach(action);
 			update = true;
 		}
 		
@@ -900,31 +900,31 @@ public final class CharEffectList
 		boolean update = false;
 		if (hasBuffs())
 		{
-			getBuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getBuffs()));
+			_buffs.stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, _buffs));
 			update = true;
 		}
 		
 		if (hasTriggered())
 		{
-			getTriggered().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getTriggered()));
+			_triggered.stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, _triggered));
 			update = true;
 		}
 		
 		if (hasDebuffs())
 		{
-			getDebuffs().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			_debuffs.stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, _debuffs));
 			update = true;
 		}
 		
 		if (hasDances())
 		{
-			getDances().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getDances()));
+			_dances.stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, _dances));
 			update = true;
 		}
 		
 		if (hasToggles())
 		{
-			getToggles().stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, getToggles()));
+			_toggles.stream().filter(info -> info.getSkill().isRemovedOnAnyActionExceptMove()).forEach(info -> stopAndRemove(info, _toggles));
 			update = true;
 		}
 		
@@ -944,32 +944,32 @@ public final class CharEffectList
 		{
 			if (hasBuffs())
 			{
-				getBuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getBuffs()));
+				_buffs.stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, _buffs));
 				update = true;
 			}
 			
 			if (hasTriggered())
 			{
-				getTriggered().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getTriggered()));
+				_triggered.stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, _triggered));
 				update = true;
 			}
 			
 			if (hasDances())
 			{
-				getDances().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDances()));
+				_dances.stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, _dances));
 				update = true;
 			}
 			
 			if (hasToggles())
 			{
-				getToggles().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getToggles()));
+				_toggles.stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, _toggles));
 				update = true;
 			}
 		}
 		
 		if (_hasDebuffsRemovedOnDamage && hasDebuffs())
 		{
-			getDebuffs().stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, getDebuffs()));
+			_debuffs.stream().filter(Objects::nonNull).filter(info -> info.getSkill().isRemovedOnDamage()).forEach(info -> stopAndRemove(info, _debuffs));
 			update = true;
 		}
 		// Update effect flags and icons.
@@ -1070,7 +1070,7 @@ public final class CharEffectList
 		boolean update = false;
 		if (hasBuffs())
 		{
-			for (BuffInfo info : getBuffs())
+			for (BuffInfo info : _buffs)
 			{
 				update |= function.apply(info);
 			}
@@ -1078,7 +1078,7 @@ public final class CharEffectList
 		
 		if (hasTriggered())
 		{
-			for (BuffInfo info : getTriggered())
+			for (BuffInfo info : _triggered)
 			{
 				update |= function.apply(info);
 			}
@@ -1086,7 +1086,7 @@ public final class CharEffectList
 		
 		if (dances && hasDances())
 		{
-			for (BuffInfo info : getDances())
+			for (BuffInfo info : _dances)
 			{
 				update |= function.apply(info);
 			}
@@ -1094,7 +1094,7 @@ public final class CharEffectList
 		
 		if (hasToggles())
 		{
-			for (BuffInfo info : getToggles())
+			for (BuffInfo info : _toggles)
 			{
 				update |= function.apply(info);
 			}
@@ -1102,7 +1102,7 @@ public final class CharEffectList
 		
 		if (hasDebuffs())
 		{
-			for (BuffInfo info : getDebuffs())
+			for (BuffInfo info : _debuffs)
 			{
 				update |= function.apply(info);
 			}
@@ -1163,15 +1163,15 @@ public final class CharEffectList
 			}
 			
 			// Puts the effects in the list.
-			getPassives().stream().filter(b -> b.getSkill().getId() == skill.getId()).forEach(b ->
+			_passives.stream().filter(b -> b.getSkill().getId() == skill.getId()).forEach(b ->
 			{
 				// Removes the old stats from the creature if the skill was present.
 				b.setInUse(false);
 				b.removeStats();
-				getPassives().remove(b);
+				_passives.remove(b);
 			});
 			
-			getPassives().add(info);
+			_passives.add(info);
 			
 			// Initialize effects.
 			info.initializeEffects();
@@ -1347,7 +1347,7 @@ public final class CharEffectList
 			// Buffs.
 			if (hasBuffs())
 			{
-				for (BuffInfo info : getBuffs())
+				for (BuffInfo info : _buffs)
 				{
 					if (info.getSkill().isHealingPotionSkill())
 					{
@@ -1363,7 +1363,7 @@ public final class CharEffectList
 			// Triggered buffs.
 			if (hasTriggered())
 			{
-				for (BuffInfo info : getTriggered())
+				for (BuffInfo info : _triggered)
 				{
 					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
@@ -1372,7 +1372,7 @@ public final class CharEffectList
 			// Songs and dances.
 			if (hasDances())
 			{
-				for (BuffInfo info : getDances())
+				for (BuffInfo info : _dances)
 				{
 					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
@@ -1381,7 +1381,7 @@ public final class CharEffectList
 			// Toggles.
 			if (hasToggles())
 			{
-				for (BuffInfo info : getToggles())
+				for (BuffInfo info : _toggles)
 				{
 					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
@@ -1390,7 +1390,7 @@ public final class CharEffectList
 			// Debuffs.
 			if (hasDebuffs())
 			{
-				for (BuffInfo info : getDebuffs())
+				for (BuffInfo info : _debuffs)
 				{
 					addIcon(info, asu, ps, psSummon, os, isSummon);
 				}
@@ -1489,7 +1489,7 @@ public final class CharEffectList
 	{
 		if (hasBuffs())
 		{
-			for (BuffInfo info : getBuffs())
+			for (BuffInfo info : _buffs)
 			{
 				if (info == null)
 				{
@@ -1510,7 +1510,7 @@ public final class CharEffectList
 		
 		if (hasTriggered())
 		{
-			for (BuffInfo info : getTriggered())
+			for (BuffInfo info : _triggered)
 			{
 				if (info == null)
 				{
@@ -1531,7 +1531,7 @@ public final class CharEffectList
 		
 		if (hasToggles())
 		{
-			for (BuffInfo info : getToggles())
+			for (BuffInfo info : _toggles)
 			{
 				if (info == null)
 				{
@@ -1552,7 +1552,7 @@ public final class CharEffectList
 		
 		if (hasDebuffs())
 		{
-			for (BuffInfo info : getDebuffs())
+			for (BuffInfo info : _debuffs)
 			{
 				if ((info != null) && info.getSkill().isRemovedOnDamage())
 				{
@@ -1571,7 +1571,7 @@ public final class CharEffectList
 		int flags = 0;
 		if (hasBuffs())
 		{
-			for (BuffInfo info : getBuffs())
+			for (BuffInfo info : _buffs)
 			{
 				if (info != null)
 				{
@@ -1585,7 +1585,7 @@ public final class CharEffectList
 		
 		if (hasTriggered())
 		{
-			for (BuffInfo info : getTriggered())
+			for (BuffInfo info : _triggered)
 			{
 				if (info != null)
 				{
@@ -1599,7 +1599,7 @@ public final class CharEffectList
 		
 		if (hasDebuffs())
 		{
-			for (BuffInfo info : getDebuffs())
+			for (BuffInfo info : _debuffs)
 			{
 				if (info != null)
 				{
@@ -1613,7 +1613,7 @@ public final class CharEffectList
 		
 		if (hasDances())
 		{
-			for (BuffInfo info : getDances())
+			for (BuffInfo info : _dances)
 			{
 				if (info != null)
 				{
@@ -1627,7 +1627,7 @@ public final class CharEffectList
 		
 		if (hasToggles())
 		{
-			for (BuffInfo info : getToggles())
+			for (BuffInfo info : _toggles)
 			{
 				if (info != null)
 				{

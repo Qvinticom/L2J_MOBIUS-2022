@@ -60,7 +60,7 @@ public class PetInventory extends Inventory
 	protected void refreshWeight()
 	{
 		super.refreshWeight();
-		getOwner().updateAndBroadcastStatus(1);
+		_owner.updateAndBroadcastStatus(1);
 	}
 	
 	public boolean validateCapacity(L2ItemInstance item)
@@ -120,7 +120,7 @@ public class PetInventory extends Inventory
 		{
 			if (item.isEquipped())
 			{
-				if (!item.getItem().checkCondition(getOwner(), getOwner(), false))
+				if (!item.getItem().checkCondition(_owner, _owner, false))
 				{
 					unEquipItemInSlot(item.getLocationSlot());
 				}

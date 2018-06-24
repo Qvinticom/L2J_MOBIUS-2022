@@ -28,7 +28,7 @@ public final class TempItem
 {
 	private final int _itemId;
 	private int _quantity;
-	private final int _referencePrice;
+	private final long _referencePrice;
 	private final String _itemName;
 	
 	/**
@@ -60,7 +60,7 @@ public final class TempItem
 		_quantity = quantity;
 	}
 	
-	public int getReferencePrice()
+	public long getReferencePrice()
 	{
 		return _referencePrice;
 	}

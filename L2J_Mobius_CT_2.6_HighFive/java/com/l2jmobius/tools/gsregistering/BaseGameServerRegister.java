@@ -167,7 +167,7 @@ public abstract class BaseGameServerRegister
 	 */
 	protected static abstract class BaseTask implements Runnable
 	{
-		private ResourceBundle _bundle;
+		protected ResourceBundle _bundle;
 		
 		/**
 		 * Sets the bundle.
@@ -195,10 +195,10 @@ public abstract class BaseGameServerRegister
 		public void showError(String msg, Throwable t)
 		{
 			String title;
-			if (getBundle() != null)
+			if (_bundle != null)
 			{
-				title = getBundle().getString("error");
-				msg += Config.EOL + getBundle().getString("reason") + ' ' + t.getLocalizedMessage();
+				title = _bundle.getString("error");
+				msg += Config.EOL + _bundle.getString("reason") + ' ' + t.getLocalizedMessage();
 			}
 			else
 			{
@@ -223,7 +223,7 @@ public abstract class BaseGameServerRegister
 			}
 			catch (SQLException e)
 			{
-				showError(getBundle().getString("sqlErrorUnregisterAll"), e);
+				showError(_bundle.getString("sqlErrorUnregisterAll"), e);
 			}
 		}
 	}

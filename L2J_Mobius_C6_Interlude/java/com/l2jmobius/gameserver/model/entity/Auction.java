@@ -272,7 +272,7 @@ public class Auction
 			ResultSet rs;
 			
 			statement = con.prepareStatement("Select * from auction where id = ?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _id);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -314,7 +314,7 @@ public class Auction
 			ResultSet rs;
 			
 			statement = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC");
-			statement.setInt(1, getId());
+			statement.setInt(1, _id);
 			rs = statement.executeQuery();
 			
 			while (rs.next())
@@ -397,12 +397,12 @@ public class Auction
 	{
 		int requiredAdena = bid;
 		
-		if (getHighestBidderName().equals(bidder.getClan().getLeaderName()))
+		if (_highestBidderName.equals(bidder.getClan().getLeaderName()))
 		{
-			requiredAdena = bid - getHighestBidderMaxBid();
+			requiredAdena = bid - _highestBidderMaxBid;
 		}
 		
-		if (((getHighestBidderId() > 0) && (bid > getHighestBidderMaxBid())) || ((getHighestBidderId() == 0) && (bid >= getStartingBid())))
+		if (((_highestBidderId > 0) && (bid > _highestBidderMaxBid)) || ((_highestBidderId == 0) && (bid >= _startingBid)))
 		{
 			if (takeItem(bidder, requiredAdena))
 			{
@@ -411,7 +411,7 @@ public class Auction
 				return;
 			}
 		}
-		if ((bid < getStartingBid()) || (bid <= getHighestBidderMaxBid()))
+		if ((bid < _startingBid) || (bid <= _highestBidderMaxBid))
 		{
 			bidder.sendMessage("Bid Price must be higher");
 		}
@@ -465,14 +465,14 @@ public class Auction
 		{
 			PreparedStatement statement;
 			
-			if (getBidders().get(bidder.getClanId()) != null)
+			if (_bidders.get(bidder.getClanId()) != null)
 			{
 				statement = con.prepareStatement("UPDATE auction_bid SET bidderId=?, bidderName=?, maxBid=?, time_bid=? WHERE auctionId=? AND bidderId=?");
 				statement.setInt(1, bidder.getClanId());
 				statement.setString(2, bidder.getClan().getLeaderName());
 				statement.setInt(3, bid);
 				statement.setLong(4, System.currentTimeMillis());
-				statement.setInt(5, getId());
+				statement.setInt(5, _id);
 				statement.setInt(6, bidder.getClanId());
 				statement.execute();
 				statement.close();
@@ -481,7 +481,7 @@ public class Auction
 			{
 				statement = con.prepareStatement("INSERT INTO auction_bid (id, auctionId, bidderId, bidderName, maxBid, clan_name, time_bid) VALUES (?, ?, ?, ?, ?, ?, ?)");
 				statement.setInt(1, IdFactory.getInstance().getNextId());
-				statement.setInt(2, getId());
+				statement.setInt(2, _id);
 				statement.setInt(3, bidder.getClanId());
 				statement.setString(4, bidder.getName());
 				statement.setInt(5, bid);
@@ -528,7 +528,7 @@ public class Auction
 			PreparedStatement statement;
 			
 			statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _id);
 			statement.execute();
 			
 			statement.close();
@@ -628,7 +628,7 @@ public class Auction
 			PreparedStatement statement;
 			
 			statement = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?");
-			statement.setInt(1, getId());
+			statement.setInt(1, _id);
 			statement.setInt(2, bidder);
 			statement.execute();
 			
@@ -664,7 +664,7 @@ public class Auction
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
-			statement.setInt(1, getId());
+			statement.setInt(1, _id);
 			statement.setInt(2, _sellerId);
 			statement.setString(3, _sellerName);
 			statement.setString(4, _sellerClanName);

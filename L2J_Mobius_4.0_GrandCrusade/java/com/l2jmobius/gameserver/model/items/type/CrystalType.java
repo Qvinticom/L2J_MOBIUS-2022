@@ -88,7 +88,7 @@ public enum CrystalType
 	
 	public CrystalType plusLevel(int level)
 	{
-		level += getLevel();
+		level += _level;
 		
 		if (level >= CrystalType.R99.getLevel())
 		{

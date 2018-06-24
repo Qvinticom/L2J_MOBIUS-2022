@@ -76,7 +76,7 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 			return;
 		}
 		
-		if (isWalkingToNextPoint())
+		if (_walkingToNextPoint)
 		{
 			checkArrived();
 			return;

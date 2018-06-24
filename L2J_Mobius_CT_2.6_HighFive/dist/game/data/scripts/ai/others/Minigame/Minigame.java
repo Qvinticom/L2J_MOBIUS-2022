@@ -542,7 +542,7 @@ public final class Minigame extends AbstractNpcAI
 				_listener = null;
 			}
 			
-			getManager().setTarget(null);
+			_manager.setTarget(null);
 			setParticipant(null);
 			setStarted(false);
 			setAttemptNumber(1);

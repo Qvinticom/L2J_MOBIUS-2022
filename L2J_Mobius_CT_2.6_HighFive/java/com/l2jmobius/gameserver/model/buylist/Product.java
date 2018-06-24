@@ -68,12 +68,12 @@ public final class Product
 	
 	public int getItemId()
 	{
-		return getItem().getId();
+		return _item.getId();
 	}
 	
 	public long getPrice()
 	{
-		return _price < 0 ? getItem().getReferencePrice() : _price;
+		return _price < 0 ? _item.getReferencePrice() : _price;
 	}
 	
 	public long getRestockDelay()
@@ -113,7 +113,7 @@ public final class Product
 		}
 		if ((_restockTask == null) || _restockTask.isDone())
 		{
-			_restockTask = ThreadPool.schedule(new RestockTask(), getRestockDelay());
+			_restockTask = ThreadPool.schedule(new RestockTask(), _restockDelay);
 		}
 		final boolean result = _count.addAndGet(-val) >= 0;
 		save();
@@ -122,7 +122,7 @@ public final class Product
 	
 	public boolean hasLimitedStock()
 	{
-		return getMaxCount() > -1;
+		return _maxCount > -1;
 	}
 	
 	public void restartRestockTask(long nextRestockTime)
@@ -140,7 +140,7 @@ public final class Product
 	
 	public void restock()
 	{
-		setCount(getMaxCount());
+		setCount(_maxCount);
 		save();
 	}
 	
@@ -158,8 +158,8 @@ public final class Product
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
-			ps.setInt(1, getBuyListId());
-			ps.setInt(2, getItemId());
+			ps.setInt(1, _buyListId);
+			ps.setInt(2, _item.getId());
 			ps.setLong(3, getCount());
 			ps.setLong(5, getCount());
 			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
@@ -177,7 +177,7 @@ public final class Product
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + getBuyListId() + " item_id:" + getItemId(), e);
+			LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + _item.getId(), e);
 		}
 	}
 }

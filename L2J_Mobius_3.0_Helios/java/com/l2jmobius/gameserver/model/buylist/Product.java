@@ -69,7 +69,7 @@ public final class Product
 	
 	public int getItemId()
 	{
-		return getItem().getId();
+		return _item.getId();
 	}
 	
 	public long getPrice()
@@ -124,7 +124,7 @@ public final class Product
 		}
 		if ((_restockTask == null) || _restockTask.isDone())
 		{
-			_restockTask = ThreadPool.schedule(this::restock, getRestockDelay());
+			_restockTask = ThreadPool.schedule(this::restock, _restockDelay);
 		}
 		final boolean result = _count.addAndGet(-val) >= 0;
 		save();
@@ -133,7 +133,7 @@ public final class Product
 	
 	public boolean hasLimitedStock()
 	{
-		return getMaxCount() > -1;
+		return _maxCount > -1;
 	}
 	
 	public void restartRestockTask(long nextRestockTime)
@@ -151,7 +151,7 @@ public final class Product
 	
 	public void restock()
 	{
-		setCount(getMaxCount());
+		setCount(_maxCount);
 		save();
 	}
 	
@@ -161,7 +161,7 @@ public final class Product
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `buylists`(`buylist_id`, `item_id`, `count`, `next_restock_time`) VALUES(?, ?, ?, ?) ON DUPLICATE KEY UPDATE `count` = ?, `next_restock_time` = ?"))
 		{
 			statement.setInt(1, _buyListId);
-			statement.setInt(2, getItemId());
+			statement.setInt(2, _item.getId());
 			statement.setLong(3, getCount());
 			statement.setLong(5, getCount());
 			if ((_restockTask != null) && (_restockTask.getDelay(TimeUnit.MILLISECONDS) > 0))
@@ -179,7 +179,7 @@ public final class Product
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + getItemId(), e);
+			LOGGER.log(Level.WARNING, "Failed to save Product buylist_id:" + _buyListId + " item_id:" + _item.getId(), e);
 		}
 	}
 }

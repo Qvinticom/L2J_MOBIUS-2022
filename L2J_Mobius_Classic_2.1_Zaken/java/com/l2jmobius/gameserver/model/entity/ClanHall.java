@@ -58,7 +58,7 @@ public final class ClanHall extends AbstractResidence
 	private final ClanHallGrade _grade;
 	private final ClanHallType _type;
 	private final int _minBid;
-	private final int _lease;
+	final int _lease;
 	private final int _deposit;
 	private final List<Integer> _npcs;
 	private final List<L2DoorInstance> _doors;
@@ -66,8 +66,8 @@ public final class ClanHall extends AbstractResidence
 	private final Location _ownerLocation;
 	private final Location _banishLocation;
 	// Dynamic parameters
-	private L2Clan _owner = null;
-	private long _paidUntil = 0;
+	L2Clan _owner = null;
+	long _paidUntil = 0;
 	protected ScheduledFuture<?> _checkPaymentTask = null;
 	// Other
 	private static final String INSERT_CLANHALL = "INSERT INTO clanhall (id, ownerId, paidUntil) VALUES (?,?,?)";
@@ -137,7 +137,7 @@ public final class ClanHall extends AbstractResidence
 			PreparedStatement statement = con.prepareStatement(UPDATE_CLANHALL))
 		{
 			statement.setInt(1, getOwnerId());
-			statement.setLong(2, getPaidUntil());
+			statement.setLong(2, _paidUntil);
 			statement.setInt(3, getResidenceId());
 			statement.execute();
 		}
@@ -159,7 +159,7 @@ public final class ClanHall extends AbstractResidence
 	
 	public int getCostFailDay()
 	{
-		final Duration failDay = Duration.between(Instant.ofEpochMilli(getPaidUntil()), Instant.now());
+		final Duration failDay = Duration.between(Instant.ofEpochMilli(_paidUntil), Instant.now());
 		return failDay.isNegative() ? 0 : (int) failDay.toDays();
 	}
 	
@@ -256,13 +256,13 @@ public final class ClanHall extends AbstractResidence
 			_owner = clan;
 			clan.setHideoutId(getResidenceId());
 			clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
-			if (getPaidUntil() == 0)
+			if (_paidUntil == 0)
 			{
 				setPaidUntil(Instant.now().plus(Duration.ofDays(7)).toEpochMilli());
 			}
 			
 			final int failDays = getCostFailDay();
-			final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(getPaidUntil()).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : getPaidUntil();
+			final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : _paidUntil;
 			_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
 		}
 		else
@@ -351,29 +351,28 @@ public final class ClanHall extends AbstractResidence
 		@Override
 		public void run()
 		{
-			final L2Clan clan = getOwner();
-			if (clan != null)
+			if (_owner != null)
 			{
-				if (clan.getWarehouse().getAdena() < getLease())
+				if (_owner.getWarehouse().getAdena() < _lease)
 				{
 					if (getCostFailDay() > 8)
 					{
 						setOwner(null);
-						clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
+						_owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
 					}
 					else
 					{
 						_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-						sm.addInt(getLease());
-						clan.broadcastToOnlineMembers(sm);
+						sm.addInt(_lease);
+						_owner.broadcastToOnlineMembers(sm);
 					}
 				}
 				else
 				{
-					clan.getWarehouse().destroyItem("Clan Hall Lease", Inventory.ADENA_ID, getLease(), null, null);
-					setPaidUntil(Instant.ofEpochMilli(getPaidUntil()).plus(Duration.ofDays(7)).toEpochMilli());
-					_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), getPaidUntil() - System.currentTimeMillis());
+					_owner.getWarehouse().destroyItem("Clan Hall Lease", Inventory.ADENA_ID, _lease, null, null);
+					setPaidUntil(Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(7)).toEpochMilli());
+					_checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
 					updateDB();
 				}
 			}

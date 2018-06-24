@@ -333,7 +333,7 @@ public final class BuffInfo
 			}
 			
 			// Call on start.
-			effect.onStart(getEffector(), getEffected(), getSkill());
+			effect.onStart(_effector, _effected, _skill);
 			
 			// If it's a continuous effect, if has ticks schedule a task with period, otherwise schedule a simple task to end it.
 			if (effect.getTicks() > 0)
@@ -360,7 +360,7 @@ public final class BuffInfo
 		if (_isInUse)
 		{
 			// Callback for on action time event.
-			continueForever = effect.onActionTime(getEffector(), getEffected(), getSkill());
+			continueForever = effect.onActionTime(_effector, _effected, _skill);
 		}
 		
 		if (!continueForever && _skill.isToggle())
@@ -369,7 +369,7 @@ public final class BuffInfo
 			if (task != null)
 			{
 				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-				_effected.getEffectList().stopSkillEffects(true, getSkill()); // Remove the buff from the effect list.
+				_effected.getEffectList().stopSkillEffects(true, _skill); // Remove the buff from the effect list.
 			}
 		}
 	}
@@ -391,7 +391,7 @@ public final class BuffInfo
 			// Instant effects shouldn't call onExit(..).
 			if (!effect.isInstant())
 			{
-				effect.onExit(getEffector(), getEffected(), getSkill());
+				effect.onExit(_effector, _effected, _skill);
 			}
 		}
 		
@@ -403,7 +403,7 @@ public final class BuffInfo
 			{
 				smId = SystemMessageId.S1_HAS_BEEN_ABORTED;
 			}
-			else if (isRemoved())
+			else if (_isRemoved)
 			{
 				smId = SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED;
 			}

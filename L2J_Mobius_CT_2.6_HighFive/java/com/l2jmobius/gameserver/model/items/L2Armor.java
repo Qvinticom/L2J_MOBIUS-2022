@@ -108,7 +108,7 @@ public final class L2Armor extends L2Item
 	@Override
 	public final int getItemMask()
 	{
-		return getItemType().mask();
+		return _type.mask();
 	}
 	
 	/**

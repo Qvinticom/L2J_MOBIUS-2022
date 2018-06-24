@@ -64,7 +64,7 @@ public final class Castle extends AbstractResidence
 	protected static final Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
-	private int _ownerId = 0;
+	int _ownerId = 0;
 	private Siege _siege = null;
 	private Calendar _siegeDate;
 	private boolean _isTimeRegistrationOver = true; // true if Castle Lords set the time, or 24h is elapsed after the siege
@@ -89,12 +89,12 @@ public final class Castle extends AbstractResidence
 	
 	public class CastleFunction
 	{
-		private final int _type;
+		final int _type;
 		private int _lvl;
 		protected int _fee;
 		protected int _tempFee;
-		private final long _rate;
-		private long _endDate;
+		final long _rate;
+		long _endDate;
 		protected boolean _inDebt;
 		public boolean _cwh;
 		
@@ -151,7 +151,7 @@ public final class Castle extends AbstractResidence
 		
 		private void initializeTask(boolean cwh)
 		{
-			if (getOwnerId() <= 0)
+			if (_ownerId <= 0)
 			{
 				return;
 			}
@@ -178,29 +178,29 @@ public final class Castle extends AbstractResidence
 			{
 				try
 				{
-					if (getOwnerId() <= 0)
+					if (_ownerId <= 0)
 					{
 						return;
 					}
 					if ((ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
 						int fee = _fee;
-						if (getEndTime() == -1)
+						if (_endDate == -1)
 						{
 							fee = _tempFee;
 						}
 						
-						setEndTime(System.currentTimeMillis() + getRate());
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{
 							ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPool.schedule(new FunctionTask(true), getRate());
+						ThreadPool.schedule(new FunctionTask(true), _rate);
 					}
 					else
 					{
-						removeFunction(getType());
+						removeFunction(_type);
 					}
 				}
 				catch (Exception e)
@@ -216,11 +216,11 @@ public final class Castle extends AbstractResidence
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO castle_functions (castle_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)"))
 			{
 				ps.setInt(1, getResidenceId());
-				ps.setInt(2, getType());
-				ps.setInt(3, getLvl());
-				ps.setInt(4, getLease());
-				ps.setLong(5, getRate());
-				ps.setLong(6, getEndTime());
+				ps.setInt(2, _type);
+				ps.setInt(3, _lvl);
+				ps.setInt(4, _fee);
+				ps.setLong(5, _rate);
+				ps.setLong(6, _endDate);
 				ps.execute();
 			}
 			catch (Exception e)
@@ -239,7 +239,7 @@ public final class Castle extends AbstractResidence
 		 */
 		_function = new ConcurrentHashMap<>();
 		initResidenceZone();
-		if (getOwnerId() != 0)
+		if (_ownerId != 0)
 		{
 			loadFunctions();
 			loadDoorUpgrade();
@@ -276,7 +276,7 @@ public final class Castle extends AbstractResidence
 	public void addToTreasury(long amount)
 	{
 		// check if owned
-		if (getOwnerId() <= 0)
+		if (_ownerId <= 0)
 		{
 			return;
 		}
@@ -319,7 +319,7 @@ public final class Castle extends AbstractResidence
 	 */
 	public boolean addToTreasuryNoTax(long amount)
 	{
-		if (getOwnerId() <= 0)
+		if (_ownerId <= 0)
 		{
 			return false;
 		}
@@ -348,7 +348,7 @@ public final class Castle extends AbstractResidence
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle SET treasury = ? WHERE id = ?"))
 		{
-			ps.setLong(1, getTreasury());
+			ps.setLong(1, _treasury);
 			ps.setInt(2, getResidenceId());
 			ps.execute();
 		}
@@ -364,7 +364,7 @@ public final class Castle extends AbstractResidence
 	 */
 	public void banishForeigners()
 	{
-		getResidenceZone().banishForeigners(getOwnerId());
+		getResidenceZone().banishForeigners(_ownerId);
 	}
 	
 	/**
@@ -444,7 +444,7 @@ public final class Castle extends AbstractResidence
 	
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if (activeChar.getClanId() != getOwnerId())
+		if (activeChar.getClanId() != _ownerId)
 		{
 			return;
 		}
@@ -479,7 +479,7 @@ public final class Castle extends AbstractResidence
 	public void setOwner(L2Clan clan)
 	{
 		// Remove old owner
-		if ((getOwnerId() > 0) && ((clan == null) || (clan.getId() != getOwnerId())))
+		if ((_ownerId > 0) && ((clan == null) || (clan.getId() != _ownerId)))
 		{
 			final L2Clan oldOwner = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
 			if (oldOwner != null)
@@ -858,7 +858,7 @@ public final class Castle extends AbstractResidence
 			try (PreparedStatement ps = con.prepareStatement("UPDATE clan_data SET hasCastle = ? WHERE clan_id = ?"))
 			{
 				ps.setInt(1, getResidenceId());
-				ps.setInt(2, getOwnerId());
+				ps.setInt(2, _ownerId);
 				ps.execute();
 			}
 			
@@ -883,7 +883,7 @@ public final class Castle extends AbstractResidence
 			return null;
 		}
 		
-		for (L2DoorInstance door : getDoors())
+		for (L2DoorInstance door : _doors)
 		{
 			if (door.getId() == doorId)
 			{
@@ -1004,7 +1004,7 @@ public final class Castle extends AbstractResidence
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle SET showNpcCrest = ? WHERE id = ?"))
 		{
-			ps.setString(1, String.valueOf(getShowNpcCrest()));
+			ps.setString(1, String.valueOf(_showNpcCrest));
 			ps.setInt(2, getResidenceId());
 			ps.execute();
 		}

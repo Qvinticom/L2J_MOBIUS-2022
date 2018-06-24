@@ -149,7 +149,7 @@ public final class SocialAction implements IPlayerActionHandler
 		}
 		
 		SystemMessage sm;
-		if (player.isInStoreMode() || player.isInCraftMode())
+		if (player.isInStoreMode() || player.isCrafting())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(player);
@@ -228,7 +228,7 @@ public final class SocialAction implements IPlayerActionHandler
 		
 		// Checks for partner.
 		final L2PcInstance partner = target.getActingPlayer();
-		if (partner.isInStoreMode() || partner.isInCraftMode())
+		if (partner.isInStoreMode() || partner.isCrafting())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_PRIVATE_STORE_MODE_OR_IN_A_BATTLE_AND_CANNOT_BE_REQUESTED_FOR_A_COUPLE_ACTION);
 			sm.addPcName(partner);

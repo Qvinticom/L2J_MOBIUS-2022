@@ -271,19 +271,11 @@ public abstract class L2Object
 			assert getPosition().getWorldRegion() != null;
 		}
 		
-		L2WorldRegion reg = getPosition().getWorldRegion();
-		
-		synchronized (this)
-		{
-			_isVisible = false;
-			getPosition().setWorldRegion(null);
-		}
-		
-		// this can synchronize on others instances, so it's out of
-		// synchronized, to avoid deadlocks
 		// Remove the L2Object from the world
-		L2World.getInstance().removeVisibleObject(this, reg);
+		_isVisible = false;
+		L2World.getInstance().removeVisibleObject(this, getPosition().getWorldRegion());
 		L2World.getInstance().removeObject(this);
+		getPosition().setWorldRegion(null);
 		
 		if (Config.SAVE_DROPPED_ITEM)
 		{
@@ -616,7 +608,7 @@ public abstract class L2Object
 	@Override
 	public String toString()
 	{
-		return "" + getObjectId();
+		return "" + _objectId;
 	}
 	
 	public boolean isCharacter()

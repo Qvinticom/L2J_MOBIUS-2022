@@ -552,7 +552,7 @@ public final class L2PcInstance extends L2Playable
 	private boolean _inCrystallize;
 	
 	/** The _in craft mode. */
-	private boolean _inCraftMode;
+	private boolean _isCrafting;
 	
 	/** The table containing all L2RecipeList of the L2PcInstance. */
 	private final Map<Integer, L2RecipeList> _dwarvenRecipeBook = new HashMap<>();
@@ -1955,24 +1955,22 @@ public final class L2PcInstance extends L2Playable
 		return getPrivateStoreType() > 0;
 	}
 	
-	// public boolean isInCraftMode() { return (getPrivateStoreType() == STORE_PRIVATE_MANUFACTURE); }
-	
 	/**
 	 * Checks if is in craft mode.
 	 * @return true, if is in craft mode
 	 */
-	public boolean isInCraftMode()
+	public boolean isCrafting()
 	{
-		return _inCraftMode;
+		return _isCrafting;
 	}
 	
 	/**
 	 * Checks if is in craft mode.
-	 * @param b the b
+	 * @param isCrafting
 	 */
-	public void isInCraftMode(boolean b)
+	public void setIsCrafting(boolean isCrafting)
 	{
-		_inCraftMode = b;
+		_isCrafting = isCrafting;
 	}
 	
 	/** The _kicked. */
@@ -1995,7 +1993,6 @@ public final class L2PcInstance extends L2Playable
 		_kicked = kicked;
 		
 		closeNetConnection();
-		
 	}
 	
 	/**

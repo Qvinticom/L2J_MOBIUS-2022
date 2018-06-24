@@ -129,7 +129,7 @@ public class EventScheduler
 			run();
 			updateLastRun();
 			
-			if (isRepeating())
+			if (_repeat)
 			{
 				ThreadPool.schedule(this::startScheduler, 1000);
 			}

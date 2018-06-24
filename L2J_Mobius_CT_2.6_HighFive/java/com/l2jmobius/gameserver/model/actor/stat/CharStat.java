@@ -92,9 +92,9 @@ public class CharStat
 		}
 		
 		// Apply transformation stats.
-		if (getActiveChar().isPlayer() && getActiveChar().isTransformed())
+		if (_activeChar.isPlayer() && _activeChar.isTransformed())
 		{
-			final double val = getActiveChar().getTransformation().getStat(getActiveChar().getActingPlayer(), stat);
+			final double val = _activeChar.getTransformation().getStat(_activeChar.getActingPlayer(), stat);
 			if (val > 0)
 			{
 				value = val;

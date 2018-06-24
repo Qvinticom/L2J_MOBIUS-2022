@@ -678,7 +678,7 @@ public class Duel
 	 */
 	public L2PcInstance getWinner()
 	{
-		if (!getFinished() || (_playerA == null) || (_playerB == null))
+		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
 			return null;
 		}
@@ -699,7 +699,7 @@ public class Duel
 	 */
 	public L2PcInstance getLooser()
 	{
-		if (!getFinished() || (_playerA == null) || (_playerB == null))
+		if (!_finished || (_playerA == null) || (_playerB == null))
 		{
 			return null;
 		}

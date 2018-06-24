@@ -240,7 +240,7 @@ public class TaskExecutor
 	 */
 	public void pause() throws UnsupportedOperationException
 	{
-		if (!canBePaused())
+		if (!task.canBePaused())
 		{
 			throw new UnsupportedOperationException("Pause not supported");
 		}
@@ -276,7 +276,7 @@ public class TaskExecutor
 	 */
 	public void stop() throws UnsupportedOperationException
 	{
-		if (!canBeStopped())
+		if (!task.canBeStopped())
 		{
 			throw new UnsupportedOperationException("Stop not supported");
 		}
@@ -346,7 +346,7 @@ public class TaskExecutor
 	 */
 	public String getStatusMessage() throws UnsupportedOperationException
 	{
-		if (!supportsStatusTracking())
+		if (!task.supportsStatusTracking())
 		{
 			throw new UnsupportedOperationException("Status tracking not supported");
 		}
@@ -360,7 +360,7 @@ public class TaskExecutor
 	 */
 	public double getCompleteness() throws UnsupportedOperationException
 	{
-		if (!supportsCompletenessTracking())
+		if (!task.supportsCompletenessTracking())
 		{
 			throw new UnsupportedOperationException("Completeness tracking not supported");
 		}

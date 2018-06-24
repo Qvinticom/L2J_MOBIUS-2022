@@ -310,7 +310,7 @@ public final class BuffInfo
 			if (task != null)
 			{
 				task.getScheduledFuture().cancel(true); // Don't allow to finish current run.
-				_effected.getEffectList().stopSkillEffects(true, getSkill()); // Remove the buff from the effect list.
+				_effected.getEffectList().stopSkillEffects(true, _skill); // Remove the buff from the effect list.
 			}
 		}
 	}
@@ -343,7 +343,7 @@ public final class BuffInfo
 			{
 				smId = SystemMessageId.S1_HAS_BEEN_ABORTED;
 			}
-			else if (isRemoved())
+			else if (_isRemoved)
 			{
 				smId = SystemMessageId.THE_EFFECT_OF_S1_HAS_BEEN_REMOVED;
 			}

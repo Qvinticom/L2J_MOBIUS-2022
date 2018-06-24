@@ -94,26 +94,26 @@ public class ScriptPackage
 	@Override
 	public String toString()
 	{
-		if (getScriptFiles().isEmpty() && getOtherFiles().isEmpty())
+		if (_scriptFiles.isEmpty() && _otherFiles.isEmpty())
 		{
 			return "Empty Package.";
 		}
 		
-		String out = "Package Name: " + getName() + "\n";
+		String out = "Package Name: " + _name + "\n";
 		
-		if (!getScriptFiles().isEmpty())
+		if (!_scriptFiles.isEmpty())
 		{
 			out += "Xml Script Files...\n";
-			for (ScriptDocument script : getScriptFiles())
+			for (ScriptDocument script : _scriptFiles)
 			{
 				out += script.getName() + "\n";
 			}
 		}
 		
-		if (!getOtherFiles().isEmpty())
+		if (!_otherFiles.isEmpty())
 		{
 			out += "Other Files...\n";
-			for (String fileName : getOtherFiles())
+			for (String fileName : _otherFiles)
 			{
 				out += fileName + "\n";
 			}

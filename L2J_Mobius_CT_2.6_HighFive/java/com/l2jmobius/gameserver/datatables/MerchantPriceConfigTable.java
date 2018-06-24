@@ -257,17 +257,17 @@ public class MerchantPriceConfigTable implements InstanceListManager
 		
 		public boolean hasCastle()
 		{
-			return getCastle() != null;
+			return _castle != null;
 		}
 		
 		public double getCastleTaxRate()
 		{
-			return hasCastle() ? getCastle().getTaxRate() : 0.0;
+			return hasCastle() ? _castle.getTaxRate() : 0.0;
 		}
 		
 		public int getTotalTax()
 		{
-			return hasCastle() ? (getCastle().getTaxPercent() + getBaseTax()) : getBaseTax();
+			return hasCastle() ? (_castle.getTaxPercent() + _baseTax) : _baseTax;
 		}
 		
 		public double getTotalTaxRate()

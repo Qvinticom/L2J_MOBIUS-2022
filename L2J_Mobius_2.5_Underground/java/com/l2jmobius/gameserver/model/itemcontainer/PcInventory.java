@@ -150,7 +150,7 @@ public class PcInventory extends Inventory
 					break;
 				}
 			}
-			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(getOwner(), false, false))))
+			if (!isDuplicate && (!onlyAvailable || (item.isSellable() && item.isAvailable(_owner, false, false))))
 			{
 				list.add(item);
 			}
@@ -211,7 +211,7 @@ public class PcInventory extends Inventory
 	{
 		return getItems(i ->
 		{
-			if (!i.isAvailable(getOwner(), allowAdena, allowNonTradeable) || !canManipulateWithItemId(i.getId()))
+			if (!i.isAvailable(_owner, allowAdena, allowNonTradeable) || !canManipulateWithItemId(i.getId()))
 			{
 				return false;
 			}
@@ -232,7 +232,7 @@ public class PcInventory extends Inventory
 	{
 		//@formatter:off
 		return _items.values().stream()
-			.filter(i -> i.isAvailable(getOwner(), false, false))
+			.filter(i -> i.isAvailable(_owner, false, false))
 			.map(tradeList::adjustAvailableItem)
 			.filter(Objects::nonNull)
 			.collect(Collectors.toCollection(LinkedList::new));
@@ -689,12 +689,12 @@ public class PcInventory extends Inventory
 	protected boolean removeItem(L2ItemInstance item)
 	{
 		// Removes any reference to the item from Shortcut bar
-		getOwner().removeItemFromShortCut(item.getObjectId());
+		_owner.removeItemFromShortCut(item.getObjectId());
 		
 		// Removes active Enchant Scroll
-		if (getOwner().isProcessingItem(item.getObjectId()))
+		if (_owner.isProcessingItem(item.getObjectId()))
 		{
-			getOwner().removeRequestsThatProcessesItem(item.getObjectId());
+			_owner.removeRequestsThatProcessesItem(item.getObjectId());
 		}
 		
 		if (item.getId() == ADENA_ID)
@@ -720,7 +720,7 @@ public class PcInventory extends Inventory
 	public void refreshWeight()
 	{
 		super.refreshWeight();
-		getOwner().refreshOverloaded(true);
+		_owner.refreshOverloaded(true);
 	}
 	
 	/**

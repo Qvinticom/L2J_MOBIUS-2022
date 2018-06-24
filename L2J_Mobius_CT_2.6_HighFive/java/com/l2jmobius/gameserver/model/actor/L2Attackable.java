@@ -232,7 +232,7 @@ public class L2Attackable extends L2Npc
 	@Override
 	public void reduceCurrentHp(double damage, L2Character attacker, boolean awake, boolean isDOT, Skill skill)
 	{
-		if (isRaid() && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this))
+		if (_isRaid && !isMinion() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this))
 		{
 			if (_firstCommandChannelAttacked == null) // looting right isn't set
 			{
@@ -452,7 +452,7 @@ public class L2Attackable extends L2Npc
 							double exp = expSp[0];
 							double sp = expSp[1];
 							
-							if (Config.CHAMPION_ENABLE && isChampion())
+							if (Config.CHAMPION_ENABLE && _champion)
 							{
 								exp *= Config.CHAMPION_REWARDS_EXP_SP;
 								sp *= Config.CHAMPION_REWARDS_EXP_SP;
@@ -461,8 +461,8 @@ public class L2Attackable extends L2Npc
 							exp *= penalty;
 							
 							// Check for an over-hit enabled strike
-							final L2Character overhitAttacker = getOverhitAttacker();
-							if (isOverhit() && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
+							final L2Character overhitAttacker = _overhitAttacker;
+							if (_overhit && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
 							{
 								attacker.sendPacket(SystemMessageId.OVER_HIT);
 								exp += calculateOverhitExp(exp);
@@ -558,7 +558,7 @@ public class L2Attackable extends L2Npc
 						double exp = expSp[0];
 						double sp = expSp[1];
 						
-						if (Config.CHAMPION_ENABLE && isChampion())
+						if (Config.CHAMPION_ENABLE && _champion)
 						{
 							exp *= Config.CHAMPION_REWARDS_EXP_SP;
 							sp *= Config.CHAMPION_REWARDS_EXP_SP;
@@ -569,8 +569,8 @@ public class L2Attackable extends L2Npc
 						
 						// Check for an over-hit enabled strike
 						// (When in party, the over-hit exp bonus is given to the whole party and splitted proportionally through the party members)
-						final L2Character overhitAttacker = getOverhitAttacker();
-						if (isOverhit() && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
+						final L2Character overhitAttacker = _overhitAttacker;
+						if (_overhit && (overhitAttacker != null) && (overhitAttacker.getActingPlayer() != null) && (attacker == overhitAttacker.getActingPlayer()))
 						{
 							attacker.sendPacket(SystemMessageId.OVER_HIT);
 							exp += calculateOverhitExp(exp);
@@ -959,7 +959,7 @@ public class L2Attackable extends L2Npc
 					{
 						final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
 						// Check if the autoLoot mode is active
-						if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))))
+						if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))))
 						{
 							// do nothing
 						}
@@ -999,7 +999,7 @@ public class L2Attackable extends L2Npc
 			{
 				final L2Item item = ItemTable.getInstance().getTemplate(drop.getId());
 				// Check if the autoLoot mode is active
-				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!isRaid() && Config.AUTO_LOOT) || (isRaid() && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
+				if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS))
 				{
 					player.doAutoLoot(this, drop); // Give the item(s) to the L2PcInstance that has killed the L2Attackable
 				}
@@ -1009,7 +1009,7 @@ public class L2Attackable extends L2Npc
 				}
 				
 				// Broadcast message if RaidBoss was defeated
-				if (isRaid() && !isRaidMinion() && (drop.getCount() > 0))
+				if (_isRaid && !_isRaidMinion && (drop.getCount() > 0))
 				{
 					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DIED_AND_DROPPED_S3_S2);
 					sm.addString(getName());
@@ -1021,7 +1021,7 @@ public class L2Attackable extends L2Npc
 		}
 		
 		// Apply Special Item drop with random(rnd) quantity(qty) for champions.
-		if (!Config.CHAMPION_ENABLE || !isChampion() || ((Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE <= 0) && (Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE <= 0)))
+		if (!Config.CHAMPION_ENABLE || !_champion || ((Config.CHAMPION_REWARD_LOWER_LVL_ITEM_CHANCE <= 0) && (Config.CHAMPION_REWARD_HIGHER_LVL_ITEM_CHANCE <= 0)))
 		{
 			return;
 		}
@@ -1201,7 +1201,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean checkSpoilOwner(L2PcInstance sweeper, boolean sendMessage)
 	{
-		if ((sweeper.getObjectId() == getSpoilerObjectId()) || sweeper.isInLooterParty(getSpoilerObjectId()))
+		if ((sweeper.getObjectId() == _spoilerObjectId) || sweeper.isInLooterParty(_spoilerObjectId))
 		{
 			return true;
 		}
@@ -1405,7 +1405,7 @@ public class L2Attackable extends L2Npc
 	public double calculateOverhitExp(double exp)
 	{
 		// Get the percentage based on the total of extra (over-hit) damage done relative to the total (maximum) ammount of HP on the L2Attackable
-		double overhitPercentage = ((getOverhitDamage() * 100) / getMaxHp());
+		double overhitPercentage = ((_overhitDamage * 100) / getMaxHp());
 		
 		// Over-hit damage percentages are limited to 25% max
 		if (overhitPercentage > 25)
@@ -1695,7 +1695,7 @@ public class L2Attackable extends L2Npc
 	 */
 	public boolean useVitalityRate()
 	{
-		return !isChampion() || Config.CHAMPION_ENABLE_VITALITY;
+		return !_champion || Config.CHAMPION_ENABLE_VITALITY;
 	}
 	
 	/** Return True if the L2Character is RaidBoss or his minion. */

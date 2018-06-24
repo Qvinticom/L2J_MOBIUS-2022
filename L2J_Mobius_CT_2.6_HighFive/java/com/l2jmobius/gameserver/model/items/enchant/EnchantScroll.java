@@ -107,7 +107,7 @@ public final class EnchantScroll extends AbstractEnchantItem
 		}
 		else if ((supportItem != null))
 		{
-			if (isBlessed())
+			if (_isBlessed)
 			{
 				return false;
 			}

@@ -120,7 +120,7 @@ public class PcInventory extends Inventory
 					break;
 				}
 			}
-			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(getOwner(), false, allowEquipped))))
+			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
 			{
 				list.add(item);
 			}
@@ -167,7 +167,7 @@ public class PcInventory extends Inventory
 				}
 			}
 			
-			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(getOwner(), false, allowEquipped))))
+			if (!isDuplicate && (!onlyAvailable || (item.getItem().isSellable() && item.isAvailable(_owner, false, allowEquipped))))
 			{
 				list.add(item);
 			}
@@ -228,7 +228,7 @@ public class PcInventory extends Inventory
 		
 		for (L2ItemInstance item : _items)
 		{
-			if ((item != null) && item.isAvailable(getOwner(), allowAdena, false))
+			if ((item != null) && item.isAvailable(_owner, allowAdena, false))
 			{
 				list.add(item);
 			}
@@ -267,7 +267,7 @@ public class PcInventory extends Inventory
 		
 		for (L2ItemInstance item : _items)
 		{
-			if (item.isAvailable(getOwner(), false, false))
+			if (item.isAvailable(_owner, false, false))
 			{
 				final TradeItem adjItem = tradeList.adjustAvailableItem(item);
 				if (adjItem != null)
@@ -626,12 +626,12 @@ public class PcInventory extends Inventory
 	protected void removeItem(L2ItemInstance item)
 	{
 		// Removes any reference to the item from Shortcut bar
-		getOwner().removeItemFromShortCut(item.getObjectId());
+		_owner.removeItemFromShortCut(item.getObjectId());
 		
 		// Removes active Enchant Scroll
-		if (item.equals(getOwner().getActiveEnchantItem()))
+		if (item.equals(_owner.getActiveEnchantItem()))
 		{
-			getOwner().setActiveEnchantItem(null);
+			_owner.setActiveEnchantItem(null);
 		}
 		
 		if (item.getItemId() == ADENA_ID)
@@ -653,7 +653,7 @@ public class PcInventory extends Inventory
 	public void refreshWeight()
 	{
 		super.refreshWeight();
-		getOwner().refreshOverloaded();
+		_owner.refreshOverloaded();
 	}
 	
 	/**

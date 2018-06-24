@@ -38,7 +38,7 @@ public final class AuctionableHall extends ClanHall
 	protected long _paidUntil;
 	private final int _grade;
 	protected boolean _paid;
-	private final int _lease;
+	final int _lease;
 	private final int _chRate = 604800000;
 	
 	public AuctionableHall(StatsSet set)
@@ -192,7 +192,7 @@ public final class AuctionableHall extends ClanHall
 					{
 						updateDb();
 						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
-						sm.addInt(getLease());
+						sm.addInt(_lease);
 						Clan.broadcastToOnlineMembers(sm);
 						if ((_time + (3600000 * 24)) <= (_paidUntil + _chRate))
 						{
@@ -219,8 +219,8 @@ public final class AuctionableHall extends ClanHall
 			PreparedStatement ps = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?"))
 		{
 			ps.setInt(1, getOwnerId());
-			ps.setLong(2, getPaidUntil());
-			ps.setInt(3, getPaid() ? 1 : 0);
+			ps.setLong(2, _paidUntil);
+			ps.setInt(3, _paid ? 1 : 0);
 			ps.setInt(4, getId());
 			ps.execute();
 		}

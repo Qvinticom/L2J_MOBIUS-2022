@@ -156,7 +156,7 @@ public class L2Party extends AbstractPlayerGroup
 	private L2PcInstance getCheckedRandomMember(int itemId, L2Character target)
 	{
 		final List<L2PcInstance> availableMembers = new ArrayList<>();
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 			{
@@ -183,7 +183,7 @@ public class L2Party extends AbstractPlayerGroup
 			L2PcInstance member;
 			try
 			{
-				member = getMembers().get(_itemLastLoot);
+				member = _members.get(_itemLastLoot);
 				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 				{
 					return member;
@@ -248,7 +248,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void broadcastToPartyMembersNewLeader()
 	{
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member != null)
 			{
@@ -267,7 +267,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void broadcastToPartyMembers(L2PcInstance player, IClientOutgoingPacket msg)
 	{
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if ((member != null) && (member.getObjectId() != player.getObjectId()))
 			{
@@ -282,7 +282,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void addPartyMember(L2PcInstance player)
 	{
-		if (getMembers().contains(player))
+		if (_members.contains(player))
 		{
 			return;
 		}
@@ -293,14 +293,14 @@ public class L2Party extends AbstractPlayerGroup
 		}
 		
 		// add player to party
-		getMembers().add(player);
+		_members.add(player);
 		
 		// sends new member party window for all members
 		// we do all actions before adding member to a list, this speeds things up a little
 		player.sendPacket(new PartySmallWindowAll(player, this));
 		
 		// sends pets/summons of party members
-		for (L2PcInstance pMember : getMembers())
+		for (L2PcInstance pMember : _members)
 		{
 			if ((pMember != null) && pMember.hasSummon())
 			{
@@ -316,7 +316,7 @@ public class L2Party extends AbstractPlayerGroup
 		msg.addString(player.getName());
 		broadcastPacket(msg);
 		
-		getMembers().stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
+		_members.stream().filter(member -> member != player).forEach(member -> member.sendPacket(new PartySmallWindowAdd(player, this)));
 		
 		// send the position of all party members to the new party member
 		// player.sendPacket(new PartyMemberPosition(this));
@@ -337,7 +337,7 @@ public class L2Party extends AbstractPlayerGroup
 		
 		// update partySpelled
 		L2Summon summon;
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member != null)
 			{
@@ -396,19 +396,19 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	public void removePartyMember(L2PcInstance player, MessageType type)
 	{
-		if (getMembers().contains(player))
+		if (_members.contains(player))
 		{
 			final boolean isLeader = isLeader(player);
 			if (!_disbanding)
 			{
-				if ((getMembers().size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED)))
+				if ((_members.size() == 2) || (isLeader && !Config.ALT_LEAVE_PARTY_LEADER && (type != MessageType.DISCONNECTED)))
 				{
 					disbandParty();
 					return;
 				}
 			}
 			
-			getMembers().remove(player);
+			_members.remove(player);
 			recalculatePartyLevel();
 			
 			if (player.isFestivalParticipant())
@@ -473,25 +473,25 @@ public class L2Party extends AbstractPlayerGroup
 			{
 				player.sendPacket(new ExCloseMPCC());
 			}
-			if (isLeader && (getMembers().size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == MessageType.DISCONNECTED)))
+			if (isLeader && (_members.size() > 1) && (Config.ALT_LEAVE_PARTY_LEADER || (type == MessageType.DISCONNECTED)))
 			{
 				msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 				msg.addString(getLeader().getName());
 				broadcastPacket(msg);
 				broadcastToPartyMembersNewLeader();
 			}
-			else if (getMembers().size() == 1)
+			else if (_members.size() == 1)
 			{
 				if (isInCommandChannel())
 				{
 					// delete the whole command channel when the party who opened the channel is disbanded
-					if (getCommandChannel().getLeader().getObjectId() == getLeader().getObjectId())
+					if (_commandChannel.getLeader().getObjectId() == getLeader().getObjectId())
 					{
-						getCommandChannel().disbandChannel();
+						_commandChannel.disbandChannel();
 					}
 					else
 					{
-						getCommandChannel().removeParty(this);
+						_commandChannel.removeParty(this);
 					}
 				}
 				
@@ -553,7 +553,7 @@ public class L2Party extends AbstractPlayerGroup
 	{
 		if ((player != null) && !player.isInDuel())
 		{
-			if (getMembers().contains(player))
+			if (_members.contains(player))
 			{
 				if (isLeader(player))
 				{
@@ -563,9 +563,9 @@ public class L2Party extends AbstractPlayerGroup
 				{
 					// Swap party members
 					final L2PcInstance temp = getLeader();
-					final int p1 = getMembers().indexOf(player);
-					getMembers().set(0, player);
-					getMembers().set(p1, temp);
+					final int p1 = _members.indexOf(player);
+					_members.set(0, player);
+					_members.set(p1, temp);
 					
 					SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BECOME_THE_PARTY_LEADER);
 					msg.addString(getLeader().getName());
@@ -598,7 +598,7 @@ public class L2Party extends AbstractPlayerGroup
 	 */
 	private L2PcInstance getPlayerByName(String name)
 	{
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member.getName().equalsIgnoreCase(name))
 			{
@@ -712,7 +712,7 @@ public class L2Party extends AbstractPlayerGroup
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
 		final List<L2PcInstance> toReward = new LinkedList<>();
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 			{
@@ -828,11 +828,11 @@ public class L2Party extends AbstractPlayerGroup
 	public void recalculatePartyLevel()
 	{
 		int newLevel = 0;
-		for (L2PcInstance member : getMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member == null)
 			{
-				getMembers().remove(member);
+				_members.remove(member);
 				continue;
 			}
 			

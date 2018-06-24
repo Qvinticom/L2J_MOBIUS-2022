@@ -98,7 +98,7 @@ public class SkillChannelizer implements Runnable
 		{
 			for (L2Character chars : _channelized)
 			{
-				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), getChannelizer());
+				chars.getSkillChannelized().removeChannelizer(_skill.getChannelingSkillId(), _channelizer);
 			}
 			_channelized = null;
 		}
@@ -162,7 +162,7 @@ public class SkillChannelizer implements Runnable
 					if (chars.isCharacter())
 					{
 						targetList.add((L2Character) chars);
-						((L2Character) chars).getSkillChannelized().addChannelizer(_skill.getChannelingSkillId(), getChannelizer());
+						((L2Character) chars).getSkillChannelized().addChannelizer(_skill.getChannelingSkillId(), _channelizer);
 					}
 				}
 				
@@ -199,12 +199,12 @@ public class SkillChannelizer implements Runnable
 							}
 							
 							// Update PvP status
-							if (character.isPlayable() && getChannelizer().isPlayer() && skill.isBad())
+							if (character.isPlayable() && _channelizer.isPlayer() && skill.isBad())
 							{
-								((L2PcInstance) getChannelizer()).updatePvPStatus(character);
+								((L2PcInstance) _channelizer).updatePvPStatus(character);
 							}
 							
-							skill.applyEffects(getChannelizer(), character);
+							skill.applyEffects(_channelizer, character);
 							
 							// Reduce shots.
 							if (_skill.useSpiritShot())

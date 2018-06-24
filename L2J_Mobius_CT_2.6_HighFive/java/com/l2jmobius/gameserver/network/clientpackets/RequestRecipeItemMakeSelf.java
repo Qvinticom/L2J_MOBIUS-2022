@@ -56,7 +56,7 @@ public final class RequestRecipeItemMakeSelf implements IClientIncomingPacket
 			return;
 		}
 		
-		if (activeChar.isInCraftMode())
+		if (activeChar.isCrafting())
 		{
 			activeChar.sendMessage("You are currently in Craft Mode.");
 			return;

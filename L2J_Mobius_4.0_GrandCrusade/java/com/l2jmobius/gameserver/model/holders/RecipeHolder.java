@@ -236,7 +236,7 @@ public class RecipeHolder implements IIdentifiable
 	 */
 	public boolean checkNecessaryIngredients(L2PcInstance player, boolean sendMessage)
 	{
-		for (ItemHolder ingredient : getMaterials())
+		for (ItemHolder ingredient : _materials)
 		{
 			final long count = player.getInventory().getInventoryItemCount(ingredient.getId(), -1);
 			if (count < ingredient.getCount())
@@ -313,7 +313,7 @@ public class RecipeHolder implements IIdentifiable
 		}
 		
 		// Take necessary ingredients. If there was problem destroying item, return null to insicate that process didn't go well.
-		if (getMaterials().stream().anyMatch(i -> !player.destroyItemByItemId("Recipe " + getId(), i.getId(), i.getCount(), manufacturer, sendMessage)))
+		if (_materials.stream().anyMatch(i -> !player.destroyItemByItemId("Recipe " + getId(), i.getId(), i.getCount(), manufacturer, sendMessage)))
 		{
 			return null;
 		}

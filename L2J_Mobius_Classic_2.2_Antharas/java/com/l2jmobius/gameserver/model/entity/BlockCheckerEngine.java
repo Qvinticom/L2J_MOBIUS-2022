@@ -538,9 +538,9 @@ public final class BlockCheckerEngine
 			_redPoints += _numOfBoxes / 2;
 			_bluePoints += _numOfBoxes / 2;
 			
-			final int timeLeft = (int) ((getStarterTime() - System.currentTimeMillis()) / 1000);
+			final int timeLeft = (int) ((_startedTime - System.currentTimeMillis()) / 1000);
 			final ExCubeGameChangePoints changePoints = new ExCubeGameChangePoints(timeLeft, getBluePoints(), getRedPoints());
-			getHolder().broadCastPacketToTeam(changePoints);
+			_holder.broadCastPacketToTeam(changePoints);
 		}
 	}
 	

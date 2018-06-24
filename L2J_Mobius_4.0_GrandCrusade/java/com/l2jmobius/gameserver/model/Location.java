@@ -190,6 +190,6 @@ public class Location implements IPositionable
 	@Override
 	public String toString()
 	{
-		return "[" + getClass().getSimpleName() + "] X: " + getX() + " Y: " + getY() + " Z: " + getZ() + " Heading: " + _heading;
+		return "[" + getClass().getSimpleName() + "] X: " + _x + " Y: " + _y + " Z: " + _z + " Heading: " + _heading;
 	}
 }

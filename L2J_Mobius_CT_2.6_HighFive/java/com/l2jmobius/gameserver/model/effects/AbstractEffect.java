@@ -233,13 +233,13 @@ public abstract class AbstractEffect
 	 */
 	public List<AbstractFunction> getStatFuncs(L2Character caster, L2Character target, Skill skill)
 	{
-		if (getFuncTemplates() == null)
+		if (_funcTemplates == null)
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}
 		
-		final List<AbstractFunction> functions = new ArrayList<>(getFuncTemplates().size());
-		for (FuncTemplate functionTemplate : getFuncTemplates())
+		final List<AbstractFunction> functions = new ArrayList<>(_funcTemplates.size());
+		for (FuncTemplate functionTemplate : _funcTemplates)
 		{
 			final AbstractFunction function = functionTemplate.getFunc(caster, target, skill, this);
 			if (function != null)

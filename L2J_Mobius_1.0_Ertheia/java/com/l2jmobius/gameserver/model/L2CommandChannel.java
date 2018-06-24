@@ -162,7 +162,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	public List<L2PcInstance> getMembers()
 	{
 		final List<L2PcInstance> members = new LinkedList<>();
-		for (L2Party party : getPartys())
+		for (L2Party party : _parties)
 		{
 			members.addAll(party.getMembers());
 		}

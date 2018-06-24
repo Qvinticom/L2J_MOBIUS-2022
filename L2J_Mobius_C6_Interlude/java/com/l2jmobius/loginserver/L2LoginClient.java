@@ -271,7 +271,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		}
 		
 		LoginController.getInstance().removeLoginClient(this);
-		if (!hasJoinedGS() && (getAccount() != null))
+		if (!_joinedGS && (_account != null))
 		{
 			LoginController.getInstance().removeAuthedLoginClient(getAccount());
 		}
@@ -281,9 +281,9 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	public String toString()
 	{
 		final InetAddress address = getConnection().getInetAddress();
-		if (getState() == LoginClientState.AUTHED_LOGIN)
+		if (_state == LoginClientState.AUTHED_LOGIN)
 		{
-			return "[" + getAccount() + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
+			return "[" + _account + " (" + (address == null ? "disconnected" : address.getHostAddress()) + ")]";
 		}
 		return "[" + (address == null ? "disconnected" : address.getHostAddress()) + "]";
 	}

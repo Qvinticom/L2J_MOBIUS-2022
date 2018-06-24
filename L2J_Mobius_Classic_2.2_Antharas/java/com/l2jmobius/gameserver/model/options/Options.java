@@ -189,14 +189,14 @@ public class Options
 		}
 		if (hasActiveSkills())
 		{
-			for (SkillHolder holder : getActiveSkills())
+			for (SkillHolder holder : _activeSkill)
 			{
 				addSkill(player, holder.getSkill());
 			}
 		}
 		if (hasPassiveSkills())
 		{
-			for (SkillHolder holder : getPassiveSkills())
+			for (SkillHolder holder : _passiveSkill)
 			{
 				addSkill(player, holder.getSkill());
 			}
@@ -227,14 +227,14 @@ public class Options
 		}
 		if (hasActiveSkills())
 		{
-			for (SkillHolder holder : getActiveSkills())
+			for (SkillHolder holder : _activeSkill)
 			{
 				player.removeSkill(holder.getSkill(), false, false);
 			}
 		}
 		if (hasPassiveSkills())
 		{
-			for (SkillHolder holder : getPassiveSkills())
+			for (SkillHolder holder : _passiveSkill)
 			{
 				player.removeSkill(holder.getSkill(), false, true);
 			}

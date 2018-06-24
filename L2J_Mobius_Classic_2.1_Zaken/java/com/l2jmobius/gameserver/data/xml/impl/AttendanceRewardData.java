@@ -48,9 +48,9 @@ public class AttendanceRewardData implements IGameXmlReader
 	{
 		if (Config.ENABLE_ATTENDANCE_REWARDS)
 		{
-			getRewards().clear();
+			_rewards.clear();
 			parseDatapackFile("data/AttendanceRewards.xml");
-			_rewardsCount = getRewards().size();
+			_rewardsCount = _rewards.size();
 			LOGGER.info(getClass().getSimpleName() + ": Loaded " + _rewardsCount + " rewards.");
 		}
 		else
@@ -73,7 +73,7 @@ public class AttendanceRewardData implements IGameXmlReader
 			}
 			else
 			{
-				getRewards().add(new ItemHolder(itemId, itemCount));
+				_rewards.add(new ItemHolder(itemId, itemCount));
 			}
 		}));
 	}

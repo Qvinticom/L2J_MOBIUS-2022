@@ -137,7 +137,7 @@ public class BitSetIDFactory extends IdFactory
 	 */
 	protected synchronized int usedIdCount()
 	{
-		return size() - FIRST_OID;
+		return _freeIdCount.get() - FIRST_OID;
 	}
 	
 	/**

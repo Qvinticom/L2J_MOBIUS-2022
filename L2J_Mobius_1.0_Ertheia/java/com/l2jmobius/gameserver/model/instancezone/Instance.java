@@ -487,7 +487,7 @@ public final class Instance implements IIdentifiable, INamable
 		final List<SpawnGroup> spawns = getSpawnGroup(name);
 		if (spawns == null)
 		{
-			LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + getName() + " (" + _id + ")!");
+			LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
 			return Collections.emptyList();
 		}
 		
@@ -502,7 +502,7 @@ public final class Instance implements IIdentifiable, INamable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Unable to spawn group " + name + " inside instance " + getName() + " (" + _id + ")");
+			LOGGER.warning("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
 		}
 		return npcs;
 	}
@@ -516,7 +516,7 @@ public final class Instance implements IIdentifiable, INamable
 		final List<SpawnGroup> spawns = getSpawnGroup(name);
 		if (spawns == null)
 		{
-			LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + getName() + " (" + _id + ")!");
+			LOGGER.warning("Spawn group " + name + " doesn't exist for instance " + _template.getName() + " (" + _id + ")!");
 			return;
 		}
 		
@@ -526,7 +526,7 @@ public final class Instance implements IIdentifiable, INamable
 		}
 		catch (Exception e)
 		{
-			LOGGER.warning("Unable to spawn group " + name + " inside instance " + getName() + " (" + _id + ")");
+			LOGGER.warning("Unable to spawn group " + name + " inside instance " + _template.getName() + " (" + _id + ")");
 		}
 	}
 	
@@ -810,7 +810,7 @@ public final class Instance implements IIdentifiable, INamable
 	public void setReenterTime(long time)
 	{
 		// Cannot store reenter data for instance without template id.
-		if ((getTemplateId() == -1) && (time > 0))
+		if ((_template.getId() == -1) && (time > 0))
 		{
 			return;
 		}
@@ -824,7 +824,7 @@ public final class Instance implements IIdentifiable, INamable
 				if (player != null)
 				{
 					ps.setInt(1, player.getObjectId());
-					ps.setInt(2, getTemplateId());
+					ps.setInt(2, _template.getId());
 					ps.setLong(3, time);
 					ps.addBatch();
 				}
@@ -835,11 +835,11 @@ public final class Instance implements IIdentifiable, INamable
 			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.INSTANT_ZONE_S1_S_ENTRY_HAS_BEEN_RESTRICTED_YOU_CAN_CHECK_THE_NEXT_POSSIBLE_ENTRY_TIME_BY_USING_THE_COMMAND_INSTANCEZONE);
 			if (InstanceManager.getInstance().getInstanceName(getTemplateId()) != null)
 			{
-				msg.addInstanceName(getTemplateId());
+				msg.addInstanceName(_template.getId());
 			}
 			else
 			{
-				msg.addString(getName());
+				msg.addString(_template.getName());
 			}
 			_allowed.forEach(player ->
 			{
@@ -995,7 +995,7 @@ public final class Instance implements IIdentifiable, INamable
 		removePlayer(player);
 		if (Config.RESTORE_PLAYER_INSTANCE)
 		{
-			player.getVariables().set("INSTANCE_RESTORE", getId());
+			player.getVariables().set("INSTANCE_RESTORE", _id);
 		}
 		else
 		{
@@ -1161,6 +1161,6 @@ public final class Instance implements IIdentifiable, INamable
 	@Override
 	public String toString()
 	{
-		return getName() + "(" + getId() + ")";
+		return _template.getName() + "(" + _id + ")";
 	}
 }

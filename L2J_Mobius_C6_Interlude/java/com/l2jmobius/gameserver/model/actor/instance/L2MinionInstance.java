@@ -57,7 +57,7 @@ public final class L2MinionInstance extends L2MonsterInstance
 	@Override
 	public boolean isRaid()
 	{
-		return getLeader() instanceof L2RaidBossInstance;
+		return _master instanceof L2RaidBossInstance;
 	}
 	
 	/**
@@ -79,7 +79,7 @@ public final class L2MinionInstance extends L2MonsterInstance
 	{
 		super.onSpawn();
 		// Notify Leader that Minion has Spawned
-		getLeader().notifyMinionSpawned(this);
+		_master.notifyMinionSpawned(this);
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
 		L2WorldRegion region = L2World.getInstance().getRegion(getX(), getY());

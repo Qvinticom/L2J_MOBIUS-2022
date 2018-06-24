@@ -141,13 +141,13 @@ public class L2MonsterInstance extends L2Attackable
 		{
 			try
 			{
-				for (L2MinionInstance minion : getSpawnedMinions())
+				for (L2MinionInstance minion : _minionList.getSpawnedMinions())
 				{
 					if (minion == null)
 					{
 						continue;
 					}
-					getSpawnedMinions().remove(minion);
+					_minionList.getSpawnedMinions().remove(minion);
 					minion.deleteMe();
 				}
 				_minionList.clearRespawnList();
@@ -354,7 +354,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public void deleteMe()
 	{
-		if (hasMinions())
+		if (_minionList.hasMinions())
 		{
 			if (_minionMaintainTask != null)
 			{
@@ -371,7 +371,7 @@ public class L2MonsterInstance extends L2Attackable
 	 */
 	public void deleteSpawnedMinions()
 	{
-		for (L2MinionInstance minion : getSpawnedMinions())
+		for (L2MinionInstance minion : _minionList.getSpawnedMinions())
 		{
 			if (minion == null)
 			{
@@ -380,7 +380,7 @@ public class L2MonsterInstance extends L2Attackable
 			minion.abortAttack();
 			minion.abortCast();
 			minion.deleteMe();
-			getSpawnedMinions().remove(minion);
+			_minionList.getSpawnedMinions().remove(minion);
 		}
 		_minionList.clearRespawnList();
 	}

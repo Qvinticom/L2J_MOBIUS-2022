@@ -133,7 +133,7 @@ public class ClanTable
 	
 	public L2Clan getClanByName(String clanName)
 	{
-		return getClans().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
+		return _clans.values().stream().filter(c -> c.getName().equalsIgnoreCase(clanName)).findFirst().orElse(null);
 	}
 	
 	/**
@@ -345,7 +345,7 @@ public class ClanTable
 	
 	public boolean isAllyExists(String allyName)
 	{
-		for (L2Clan clan : getClans())
+		for (L2Clan clan : _clans.values())
 		{
 			if ((clan.getAllyName() != null) && clan.getAllyName().equalsIgnoreCase(allyName))
 			{

@@ -343,10 +343,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	public void markRestoredChar(int charslot)
 	{
 		// have to make sure active character must be nulled
-		/*
-		 * if (getActiveChar() != null) { saveCharToDisk (getActiveChar()); if (Config.DEBUG) LOGGER.fine("active Char saved"); this.setActiveChar(null); }
-		 */
-		
 		final int objid = getObjectIdForSlot(charslot);
 		
 		if (objid < 0)
@@ -485,7 +481,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			// exploit prevention, should not happens in normal way
 			
-			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + getAccountName());
+			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + accountName);
 			
 			if (character.getClient() != null)
 			{
@@ -662,7 +658,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				ip = address.getHostAddress();
 			}
 			
-			switch (getState())
+			switch (_state)
 			{
 				case CONNECTED:
 				{
@@ -670,11 +666,11 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				}
 				case AUTHED:
 				{
-					return "[Account: " + getAccountName() + " - IP: " + ip + "]";
+					return "[Account: " + accountName + " - IP: " + ip + "]";
 				}
 				case IN_GAME:
 				{
-					return "[Character: " + (getActiveChar() == null ? "disconnected" : getActiveChar().getName()) + " - Account: " + getAccountName() + " - IP: " + ip + "]";
+					return "[Character: " + (activeChar == null ? "disconnected" : activeChar.getName()) + " - Account: " + accountName + " - IP: " + ip + "]";
 				}
 				default:
 				{
@@ -700,7 +696,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				// _autoSaveInDB.cancel(true);
 				//
 				
-				final L2PcInstance player = getActiveChar();
+				final L2PcInstance player = activeChar;
 				if (player != null) // this should only happen on connection loss
 				{
 					// we store all data from players who are disconnected while in an event in order to restore it in the next login
@@ -787,7 +783,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				// if(_autoSaveInDB != null)
 				// _autoSaveInDB.cancel(true);
 				
-				L2PcInstance player = getActiveChar();
+				L2PcInstance player = activeChar;
 				if (player != null) // this should only happen on connection loss
 				{
 					// we store all data from players who are disconnected while in an event in order to restore it in the next login
@@ -840,7 +836,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 						&& !player.isInOlympiadMode() //
 						&& !player.isInFunEvent() //
 						&& ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) //
-							|| (player.isInCraftMode() && Config.OFFLINE_CRAFT_ENABLE)))
+							|| (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE)))
 					{
 						if (!Config.OFFLINE_MODE_IN_PEACE_ZONE || (Config.OFFLINE_MODE_IN_PEACE_ZONE && player.isInsideZone(ZoneId.PEACE)))
 						{
@@ -851,7 +847,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 							
 							if (Config.OFFLINE_MODE_SET_INVULNERABLE)
 							{
-								getActiveChar().setIsInvul(true);
+								activeChar.setIsInvul(true);
 							}
 							if (Config.OFFLINE_SET_NAME_COLOR)
 							{
@@ -932,7 +928,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	 */
 	public void onBufferUnderflow()
 	{
-		if (getStats().countUnderflowException())
+		if (_stats.countUnderflowException())
 		{
 			LOGGER.warning("Client " + this + " - Disconnected: Too many buffer underflow exceptions.");
 			closeNow();
@@ -951,16 +947,16 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	 */
 	public void execute(ReceivablePacket<L2GameClient> packet)
 	{
-		if (getStats().countFloods())
+		if (_stats.countFloods())
 		{
-			LOGGER.warning("Client " + this + " - Disconnected, too many floods:" + getStats().longFloods + " long and " + getStats().shortFloods + " short.");
+			LOGGER.warning("Client " + this + " - Disconnected, too many floods:" + _stats.longFloods + " long and " + _stats.shortFloods + " short.");
 			closeNow();
 			return;
 		}
 		
 		if (!_packetQueue.offer(packet))
 		{
-			if (getStats().countQueueOverflow())
+			if (_stats.countQueueOverflow())
 			{
 				LOGGER.warning("Client " + this + " - Disconnected, too many queue overflows.");
 				closeNow();
@@ -986,7 +982,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			if (_state == GameClientState.CONNECTED)
 			{
-				if (getStats().processedPackets > 3)
+				if (_stats.processedPackets > 3)
 				{
 					LOGGER.warning("Client " + this + " - Disconnected, too many packets in non-authed state.");
 					closeNow();
@@ -1040,7 +1036,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				}
 				
 				count++;
-				if (getStats().countBurst(count))
+				if (_stats.countBurst(count))
 				{
 					return;
 				}

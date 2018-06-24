@@ -177,7 +177,7 @@ public final class L2ArmorSet
 	public int getLowestSetEnchant(L2PcInstance player)
 	{
 		// Player don't have full set
-		if (getPiecesCount(player, L2ItemInstance::getId) < getMinimumPieces())
+		if (getPiecesCount(player, L2ItemInstance::getId) < _minimumPieces)
 		{
 			return 0;
 		}

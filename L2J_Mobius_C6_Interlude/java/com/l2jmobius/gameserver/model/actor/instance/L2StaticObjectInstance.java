@@ -140,7 +140,7 @@ public class L2StaticObjectInstance extends L2Object
 	{
 		if (_type < 0)
 		{
-			LOGGER.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + getStaticObjectId());
+			LOGGER.info("L2StaticObjectInstance: StaticObject with invalid type! StaticObjectId: " + _staticObjectId);
 		}
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())

@@ -240,15 +240,15 @@ public final class Skill implements IIdentifiable
 		_subordinationAbnormalType = set.getEnum("subordinationAbnormalType", AbnormalType.class, AbnormalType.NONE);
 		
 		int abnormalTime = set.getInt("abnormalTime", 0);
-		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(getId()))
+		if (Config.ENABLE_MODIFY_SKILL_DURATION && Config.SKILL_DURATION_LIST.containsKey(_id))
 		{
-			if ((getLevel() < 100) || (getLevel() > 140))
+			if ((_level < 100) || (_level > 140))
 			{
-				abnormalTime = Config.SKILL_DURATION_LIST.get(getId());
+				abnormalTime = Config.SKILL_DURATION_LIST.get(_id);
 			}
-			else if ((getLevel() >= 100) && (getLevel() < 140))
+			else if ((_level >= 100) && (_level < 140))
 			{
-				abnormalTime += Config.SKILL_DURATION_LIST.get(getId());
+				abnormalTime += Config.SKILL_DURATION_LIST.get(_id);
 			}
 		}
 		
@@ -441,7 +441,7 @@ public final class Skill implements IIdentifiable
 		}
 		
 		_magicCriticalRate = set.getDouble("magicCriticalRate", 0);
-		_buffType = isTriggeredSkill() ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : isDebuff() ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
+		_buffType = _isTriggeredSkill ? SkillBuffType.TRIGGER : isToggle() ? SkillBuffType.TOGGLE : isDance() ? SkillBuffType.DANCE : _isDebuff ? SkillBuffType.DEBUFF : !isHealingPotionSkill() ? SkillBuffType.BUFF : SkillBuffType.NONE;
 		_displayInList = set.getBoolean("displayInList", true);
 	}
 	
@@ -1054,7 +1054,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean isHealingPotionSkill()
 	{
-		return getAbnormalType() == AbnormalType.HP_RECOVER;
+		return _abnormalType == AbnormalType.HP_RECOVER;
 	}
 	
 	public int getMaxSoulConsumeCount()
@@ -1064,7 +1064,7 @@ public final class Skill implements IIdentifiable
 	
 	public boolean isStayAfterDeath()
 	{
-		return _stayAfterDeath || isIrreplacableBuff() || isNecessaryToggle();
+		return _stayAfterDeath || _irreplacableBuff || _isNecessaryToggle;
 	}
 	
 	public boolean isBad()
@@ -1333,7 +1333,7 @@ public final class Skill implements IIdentifiable
 			return;
 		}
 		
-		if (effected.isIgnoringSkillEffects(getId(), getLevel()))
+		if (effected.isIgnoringSkillEffects(_id, _level))
 		{
 			return;
 		}
@@ -1357,7 +1357,7 @@ public final class Skill implements IIdentifiable
 			if (addContinuousEffects)
 			{
 				// Aura skills reset the abnormal time.
-				final BuffInfo existingInfo = _operateType.isAura() ? effected.getEffectList().getBuffInfoBySkillId(getId()) : null;
+				final BuffInfo existingInfo = _operateType.isAura() ? effected.getEffectList().getBuffInfoBySkillId(_id) : null;
 				if (existingInfo != null)
 				{
 					existingInfo.resetAbnormalTime(info.getAbnormalTime());
@@ -1368,19 +1368,19 @@ public final class Skill implements IIdentifiable
 				}
 				
 				// Check for mesmerizing debuffs and increase resist level.
-				if (isDebuff() && (getBasicProperty() != BasicProperty.NONE) && effected.hasBasicPropertyResist())
+				if (_isDebuff && (_basicProperty != BasicProperty.NONE) && effected.hasBasicPropertyResist())
 				{
-					final BasicPropertyResist resist = effected.getBasicPropertyResist(getBasicProperty());
+					final BasicPropertyResist resist = effected.getBasicPropertyResist(_basicProperty);
 					resist.increaseResistLevel();
 				}
 			}
 			
 			// Support for buff sharing feature including healing herbs.
-			if (isSharedWithSummon() && effected.isPlayer() && effected.hasServitors() && !isTransformation())
+			if (_isSharedWithSummon && effected.isPlayer() && effected.hasServitors() && !isTransformation())
 			{
-				if ((addContinuousEffects && isContinuous() && !isDebuff()) || isRecoveryHerb())
+				if ((addContinuousEffects && isContinuous() && !_isDebuff) || _isRecoveryHerb)
 				{
-					effected.getServitors().values().forEach(s -> applyEffects(effector, s, isRecoveryHerb(), 0));
+					effected.getServitors().values().forEach(s -> applyEffects(effector, s, _isRecoveryHerb, 0));
 				}
 			}
 		}
@@ -1400,7 +1400,7 @@ public final class Skill implements IIdentifiable
 			if (addContinuousEffects)
 			{
 				// Aura skills reset the abnormal time.
-				final BuffInfo existingInfo = _operateType.isAura() ? effector.getEffectList().getBuffInfoBySkillId(getId()) : null;
+				final BuffInfo existingInfo = _operateType.isAura() ? effector.getEffectList().getBuffInfoBySkillId(_id) : null;
 				if (existingInfo != null)
 				{
 					existingInfo.resetAbnormalTime(info.getAbnormalTime());
@@ -1413,7 +1413,7 @@ public final class Skill implements IIdentifiable
 			
 			// Support for buff sharing feature.
 			// Avoiding Servitor Share since it's implementation already "shares" the effect.
-			if (addContinuousEffects && isSharedWithSummon() && info.getEffected().isPlayer() && isContinuous() && !isDebuff() && info.getEffected().hasServitors())
+			if (addContinuousEffects && _isSharedWithSummon && info.getEffected().isPlayer() && isContinuous() && !_isDebuff && info.getEffected().hasServitors())
 			{
 				info.getEffected().getServitors().values().forEach(s -> applyEffects(effector, s, false, 0));
 			}
@@ -1498,9 +1498,9 @@ public final class Skill implements IIdentifiable
 		// Self Effect
 		if (hasEffects(EffectScope.SELF))
 		{
-			if (caster.isAffectedBySkill(getId()))
+			if (caster.isAffectedBySkill(_id))
 			{
-				caster.stopSkillEffects(true, getId());
+				caster.stopSkillEffects(true, _id);
 			}
 			applyEffects(caster, caster, true, false, true, 0, item);
 		}
@@ -1517,7 +1517,7 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		
-		if (isSuicideAttack())
+		if (_isSuicideAttack)
 		{
 			caster.doDie(caster);
 		}
@@ -1571,7 +1571,7 @@ public final class Skill implements IIdentifiable
 	 */
 	public boolean canBeStolen()
 	{
-		return !isPassive() && !isToggle() && !isDebuff() && !isIrreplacableBuff() && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && canBeDispelled();
+		return !isPassive() && !isToggle() && !_isDebuff && !_irreplacableBuff && !isHeroSkill() && !isGMSkill() && !(isStatic() && (getId() != CommonSkill.CARAVANS_SECRET_MEDICINE.getId())) && _canBeDispelled;
 	}
 	
 	public boolean isClanSkill()
@@ -1733,20 +1733,20 @@ public final class Skill implements IIdentifiable
 	public Skill getAttachedSkill(L2Character activeChar)
 	{
 		// If character is double casting, return double cast skill.
-		if ((getDoubleCastSkill() > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST))
+		if ((_doubleCastSkill > 0) && activeChar.isAffected(EffectFlag.DOUBLE_CAST))
 		{
 			return SkillData.getInstance().getSkill(getDoubleCastSkill(), getLevel(), getSubLevel());
 		}
 		
 		// Default toggle group ID, assume nothing attached.
-		if ((getAttachToggleGroupId() <= 0) || (getAttachSkills() == null))
+		if ((_attachToggleGroupId <= 0) || (_attachSkills == null))
 		{
 			return null;
 		}
 		
 		//@formatter:off
 		final int toggleSkillId = activeChar.getEffectList().getEffects().stream()
-		.filter(info -> info.getSkill().getToggleGroupId() == getAttachToggleGroupId())
+		.filter(info -> info.getSkill().getToggleGroupId() == _attachToggleGroupId)
 		.mapToInt(info -> info.getSkill().getId())
 		.findAny().orElse(0);
 		//@formatter:on
@@ -1757,7 +1757,7 @@ public final class Skill implements IIdentifiable
 			return null;
 		}
 		
-		final AttachSkillHolder attachedSkill = getAttachSkills().stream().filter(ash -> ash.getRequiredSkillId() == toggleSkillId).findAny().orElse(null);
+		final AttachSkillHolder attachedSkill = _attachSkills.stream().filter(ash -> ash.getRequiredSkillId() == toggleSkillId).findAny().orElse(null);
 		
 		// No attached skills for this toggle found.
 		if (attachedSkill == null)

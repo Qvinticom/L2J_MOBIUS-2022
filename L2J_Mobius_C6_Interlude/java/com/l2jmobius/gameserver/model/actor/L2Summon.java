@@ -59,7 +59,7 @@ public abstract class L2Summon extends L2Playable
 	protected int _pkKills;
 	private L2PcInstance _owner;
 	private int _attackRange = 36; // Melee range
-	private boolean _follow = true;
+	boolean _follow = true;
 	private boolean _previousFollowStatus = true;
 	private int _maxLoad;
 	
@@ -86,7 +86,7 @@ public abstract class L2Summon extends L2Playable
 		
 		public boolean isAutoFollow()
 		{
-			return getFollowStatus();
+			return _follow;
 		}
 		
 		public void doPickupItem(L2Object object)
@@ -278,12 +278,12 @@ public abstract class L2Summon extends L2Playable
 	
 	public final int getKarma()
 	{
-		return getOwner() != null ? getOwner().getKarma() : 0;
+		return _owner != null ? _owner.getKarma() : 0;
 	}
 	
 	public final byte getPvpFlag()
 	{
-		return getOwner() != null ? getOwner().getPvpFlag() : 0;
+		return _owner != null ? _owner.getPvpFlag() : 0;
 	}
 	
 	public final L2PcInstance getOwner()
@@ -299,7 +299,7 @@ public abstract class L2Summon extends L2Playable
 	@Override
 	protected void doAttack(L2Character target)
 	{
-		if ((getOwner() != null) && (getOwner() == target) && !getOwner().isBetrayed())
+		if ((_owner != null) && (_owner == target) && !_owner.isBetrayed())
 		{
 			sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 			return;
@@ -409,9 +409,9 @@ public abstract class L2Summon extends L2Playable
 	{
 		super.broadcastStatusUpdate();
 		
-		if ((getOwner() != null) && isVisible())
+		if ((_owner != null) && isVisible())
 		{
-			getOwner().sendPacket(new PetStatusUpdate(this));
+			_owner.sendPacket(new PetStatusUpdate(this));
 		}
 	}
 	
@@ -480,7 +480,7 @@ public abstract class L2Summon extends L2Playable
 		
 		if (_follow)
 		{
-			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getOwner());
+			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, _owner);
 		}
 		else
 		{
@@ -632,7 +632,7 @@ public abstract class L2Summon extends L2Playable
 		}
 		
 		// Set current pet skill
-		getOwner().setCurrentPetSkill(skill, forceUse, dontMove);
+		_owner.setCurrentPetSkill(skill, forceUse, dontMove);
 		
 		// ************************************* Check Target *******************************************
 		
@@ -644,7 +644,7 @@ public abstract class L2Summon extends L2Playable
 			// OWNER_PET should be cast even if no target has been found
 			case TARGET_OWNER_PET:
 			{
-				target = getOwner();
+				target = _owner;
 				break;
 			}
 			// PARTY, AURA, SELF should be cast even if no target has been found
@@ -666,9 +666,9 @@ public abstract class L2Summon extends L2Playable
 		// Check the validity of the target
 		if (target == null)
 		{
-			if (getOwner() != null)
+			if (_owner != null)
 			{
-				getOwner().sendPacket(SystemMessageId.TARGET_CANT_FOUND);
+				_owner.sendPacket(SystemMessageId.TARGET_CANT_FOUND);
 			}
 			return;
 		}
@@ -676,16 +676,16 @@ public abstract class L2Summon extends L2Playable
 		// ************************************* Check skill availability *******************************************
 		
 		// Check if this skill is enabled (ex : reuse time)
-		if (isSkillDisabled(skill) && (getOwner() != null) && getOwner().getAccessLevel().allowPeaceAttack())
+		if (isSkillDisabled(skill) && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_PREPARED_FOR_REUSE);
 			sm.addString(skill.getName());
-			getOwner().sendPacket(sm);
+			_owner.sendPacket(sm);
 			return;
 		}
 		
 		// Check if all skills are disabled
-		if (isAllSkillsDisabled() && (getOwner() != null) && getOwner().getAccessLevel().allowPeaceAttack())
+		if (isAllSkillsDisabled() && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 		{
 			return;
 		}
@@ -696,9 +696,9 @@ public abstract class L2Summon extends L2Playable
 		if (getCurrentMp() < (getStat().getMpConsume(skill) + getStat().getMpInitialConsume(skill)))
 		{
 			// Send a System Message to the caster
-			if (getOwner() != null)
+			if (_owner != null)
 			{
-				getOwner().sendPacket(SystemMessageId.NOT_ENOUGH_MP);
+				_owner.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
 			}
 			
 			return;
@@ -708,9 +708,9 @@ public abstract class L2Summon extends L2Playable
 		if (getCurrentHp() <= skill.getHpConsume())
 		{
 			// Send a System Message to the caster
-			if (getOwner() != null)
+			if (_owner != null)
 			{
-				getOwner().sendPacket(SystemMessageId.NOT_ENOUGH_HP);
+				_owner.sendPacket(SystemMessageId.NOT_ENOUGH_HP);
 			}
 			
 			return;
@@ -721,20 +721,20 @@ public abstract class L2Summon extends L2Playable
 		// Check if this is offensive magic skill
 		if (skill.isOffensive())
 		{
-			if ((getOwner() != null) && (getOwner() == target) && !getOwner().isBetrayed())
+			if ((_owner != null) && (_owner == target) && !_owner.isBetrayed())
 			{
 				sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				return;
 			}
 			
-			if (isInsidePeaceZone(this, target) && (getOwner() != null) && !getOwner().getAccessLevel().allowPeaceAttack())
+			if (isInsidePeaceZone(this, target) && (_owner != null) && !_owner.getAccessLevel().allowPeaceAttack())
 			{
 				// If summon or target is in a peace zone, send a system message TARGET_IN_PEACEZONE
 				sendPacket(new SystemMessage(SystemMessageId.TARGET_IN_PEACEZONE));
 				return;
 			}
 			
-			if ((getOwner() != null) && getOwner().isInOlympiadMode() && !getOwner().isOlympiadStart())
+			if ((_owner != null) && _owner.isInOlympiadMode() && !_owner.isOlympiadStart())
 			{
 				// if L2PcInstance is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -744,14 +744,14 @@ public abstract class L2Summon extends L2Playable
 			// Check if the target is attackable
 			if (target instanceof L2DoorInstance)
 			{
-				if (!((L2DoorInstance) target).isAttackable(getOwner()))
+				if (!((L2DoorInstance) target).isAttackable(_owner))
 				{
 					return;
 				}
 			}
 			else
 			{
-				if (!target.isAttackable() && (getOwner() != null) && getOwner().getAccessLevel().allowPeaceAttack())
+				if (!target.isAttackable() && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 				{
 					return;
 				}
@@ -775,7 +775,7 @@ public abstract class L2Summon extends L2Playable
 		
 		if (value)
 		{
-			_previousFollowStatus = getFollowStatus();
+			_previousFollowStatus = _follow;
 			
 			// if imobilized temporarly disable follow mode
 			if (_previousFollowStatus)
@@ -814,7 +814,7 @@ public abstract class L2Summon extends L2Playable
 	@Override
 	public boolean isInCombat()
 	{
-		return getOwner() != null ? getOwner().isInCombat() : false;
+		return _owner != null ? _owner.isInCombat() : false;
 	}
 	
 	/**

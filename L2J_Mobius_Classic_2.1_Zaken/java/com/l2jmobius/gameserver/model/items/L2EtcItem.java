@@ -89,7 +89,7 @@ public final class L2EtcItem extends L2Item
 	@Override
 	public int getItemMask()
 	{
-		return getItemType().mask();
+		return _type.mask();
 	}
 	
 	/**

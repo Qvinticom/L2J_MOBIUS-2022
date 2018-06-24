@@ -102,7 +102,7 @@ public final class MailManager
 	public final boolean hasUnreadPost(L2PcInstance player)
 	{
 		final int objectId = player.getObjectId();
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getReceiverId() == objectId) && msg.isUnread())
 			{
@@ -115,7 +115,7 @@ public final class MailManager
 	public final int getInboxSize(int objectId)
 	{
 		int size = 0;
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getReceiverId() == objectId) && !msg.isDeletedByReceiver())
 			{
@@ -128,7 +128,7 @@ public final class MailManager
 	public final int getOutboxSize(int objectId)
 	{
 		int size = 0;
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getSenderId() == objectId) && !msg.isDeletedBySender())
 			{
@@ -141,7 +141,7 @@ public final class MailManager
 	public final List<Message> getInbox(int objectId)
 	{
 		final List<Message> inbox = new LinkedList<>();
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getReceiverId() == objectId) && !msg.isDeletedByReceiver())
 			{
@@ -159,7 +159,7 @@ public final class MailManager
 	public int getMailsInProgress(int objectId)
 	{
 		int count = 0;
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getMailType() == MailType.REGULAR))
 			{
@@ -179,7 +179,7 @@ public final class MailManager
 	public final List<Message> getOutbox(int objectId)
 	{
 		final List<Message> outbox = new LinkedList<>();
-		for (Message msg : getMessages())
+		for (Message msg : _messages.values())
 		{
 			if ((msg != null) && (msg.getSenderId() == objectId) && !msg.isDeletedBySender())
 			{

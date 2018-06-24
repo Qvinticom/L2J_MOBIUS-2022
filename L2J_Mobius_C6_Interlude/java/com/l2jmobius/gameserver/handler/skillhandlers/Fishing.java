@@ -115,7 +115,7 @@ public class Fishing implements ISkillHandler
 			return;
 		}
 		
-		if (player.isInCraftMode() || player.isInStoreMode())
+		if (player.isCrafting() || player.isInStoreMode())
 		{
 			player.sendPacket(SystemMessageId.CANNOT_FISH_WHILE_USING_RECIPE_BOOK);
 			// if(!player.isGM())

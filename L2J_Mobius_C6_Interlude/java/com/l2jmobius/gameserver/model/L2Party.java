@@ -102,7 +102,7 @@ public class L2Party
 	{
 		_members = new ArrayList<>();
 		_itemDistribution = itemDistribution;
-		getPartyMembers().add(leader);
+		_members.add(leader);
 		_partyLvl = leader.getLevel();
 	}
 	
@@ -112,7 +112,7 @@ public class L2Party
 	 */
 	public int getMemberCount()
 	{
-		return getPartyMembers().size();
+		return _members.size();
 	}
 	
 	/**
@@ -163,7 +163,7 @@ public class L2Party
 	{
 		final List<L2PcInstance> availableMembers = new ArrayList<>();
 		
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 			{
@@ -186,9 +186,9 @@ public class L2Party
 	 */
 	private L2PcInstance getCheckedNextLooter(int ItemId, L2Character target)
 	{
-		for (int i = 0; i < getMemberCount(); i++)
+		for (int i = 0; i < _members.size(); i++)
 		{
-			if (++_itemLastLoot >= getMemberCount())
+			if (++_itemLastLoot >= _members.size())
 			{
 				_itemLastLoot = 0;
 			}
@@ -196,7 +196,7 @@ public class L2Party
 			L2PcInstance member;
 			try
 			{
-				member = getPartyMembers().get(_itemLastLoot);
+				member = _members.get(_itemLastLoot);
 				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
 				{
 					return member;
@@ -286,7 +286,7 @@ public class L2Party
 	 */
 	public void broadcastToPartyMembers(L2GameServerPacket msg)
 	{
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member != null)
 			{
@@ -297,7 +297,7 @@ public class L2Party
 	
 	public void broadcastToPartyMembersNewLeader()
 	{
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member != null)
 			{
@@ -310,7 +310,7 @@ public class L2Party
 	
 	public void broadcastCSToPartyMembers(CreatureSay msg, L2PcInstance broadcaster)
 	{
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if ((member == null) || (broadcaster == null))
 			{
@@ -332,7 +332,7 @@ public class L2Party
 	 */
 	public void broadcastToPartyMembers(L2PcInstance player, L2GameServerPacket msg)
 	{
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if ((member != null) && !member.equals(player))
 			{
@@ -347,7 +347,7 @@ public class L2Party
 	 */
 	public synchronized void addPartyMember(L2PcInstance player)
 	{
-		if (getPartyMembers().contains(player))
+		if (_members.contains(player))
 		{
 			return;
 		}
@@ -365,14 +365,14 @@ public class L2Party
 		broadcastToPartyMembers(new PartySmallWindowAdd(player, this));
 		
 		// add player to party, adjust party level
-		getPartyMembers().add(player);
+		_members.add(player);
 		if (player.getLevel() > _partyLvl)
 		{
 			_partyLvl = player.getLevel();
 		}
 		
 		// update partySpelled
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member != null)
 			{
@@ -424,10 +424,10 @@ public class L2Party
 	
 	public synchronized void removePartyMember(L2PcInstance player, boolean sendMessage)
 	{
-		if (getPartyMembers().contains(player))
+		if (_members.contains(player))
 		{
 			final boolean isLeader = isLeader(player);
-			getPartyMembers().remove(player);
+			_members.remove(player);
 			recalculatePartyLevel();
 			
 			if (player.isFestivalParticipant())
@@ -464,7 +464,7 @@ public class L2Party
 				player.sendPacket(new ExCloseMPCC());
 			}
 			
-			if (isLeader && (getPartyMembers().size() > 1))
+			if (isLeader && (_members.size() > 1))
 			{
 				SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
 				msg.addString(getLeader().getName());
@@ -472,18 +472,18 @@ public class L2Party
 				broadcastToPartyMembersNewLeader();
 			}
 			
-			if (getPartyMembers().size() == 1)
+			if (_members.size() == 1)
 			{
 				if (isInCommandChannel())
 				{
 					// delete the whole command channel when the party who opened the channel is disbanded
-					if (getCommandChannel().getChannelLeader().equals(getLeader()))
+					if (_commandChannel.getChannelLeader().equals(getLeader()))
 					{
-						getCommandChannel().disbandChannel();
+						_commandChannel.disbandChannel();
 					}
 					else
 					{
-						getCommandChannel().removeParty(this);
+						_commandChannel.removeParty(this);
 					}
 				}
 				
@@ -518,7 +518,7 @@ public class L2Party
 		
 		if ((player != null) && !player.isInDuel())
 		{
-			if (getPartyMembers().contains(player))
+			if (_members.contains(player))
 			{
 				if (isLeader(player))
 				{
@@ -528,10 +528,10 @@ public class L2Party
 				{
 					// Swap party members
 					L2PcInstance temp;
-					final int p1 = getPartyMembers().indexOf(player);
+					final int p1 = _members.indexOf(player);
 					temp = getLeader();
-					getPartyMembers().set(0, getPartyMembers().get(p1));
-					getPartyMembers().set(p1, temp);
+					_members.set(0, _members.get(p1));
+					_members.set(p1, temp);
 					
 					SystemMessage msg = new SystemMessage(SystemMessageId.S1_HAS_BECOME_A_PARTY_LEADER);
 					msg.addString(getLeader().getName());
@@ -567,7 +567,7 @@ public class L2Party
 	 */
 	private L2PcInstance getPlayerByName(String name)
 	{
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member.getName().equalsIgnoreCase(name))
 			{
@@ -663,7 +663,7 @@ public class L2Party
 	public void distributeAdena(L2PcInstance player, int adena, L2Character target)
 	{
 		// Get all the party members
-		final List<L2PcInstance> membersList = getPartyMembers();
+		final List<L2PcInstance> membersList = _members;
 		
 		// Check the number of party members that must be rewarded
 		// (The party member must be in range to receive its reward)
@@ -797,11 +797,11 @@ public class L2Party
 	{
 		int newLevel = 0;
 		
-		for (L2PcInstance member : getPartyMembers())
+		for (L2PcInstance member : _members)
 		{
 			if (member == null)
 			{
-				getPartyMembers().remove(member);
+				_members.remove(member);
 				continue;
 			}
 			

@@ -49,7 +49,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final List<L2Spawn> monsterList = _siegeGuards.get(getFort().getResidenceId());
+			final List<L2Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
 			if (monsterList != null)
 			{
 				for (L2Spawn spawnDat : monsterList)
@@ -68,7 +68,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Error spawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error spawning siege guards for fort " + _fort.getName() + ":" + e.getMessage(), e);
 		}
 	}
 	
@@ -79,7 +79,7 @@ public final class FortSiegeGuardManager
 	{
 		try
 		{
-			final List<L2Spawn> monsterList = _siegeGuards.get(getFort().getResidenceId());
+			final List<L2Spawn> monsterList = _siegeGuards.get(_fort.getResidenceId());
 			if (monsterList != null)
 			{
 				for (L2Spawn spawnDat : monsterList)
@@ -94,7 +94,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Error unspawning siege guards for fort " + getFort().getName() + ":" + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error unspawning siege guards for fort " + _fort.getName() + ":" + e.getMessage(), e);
 		}
 	}
 	
@@ -107,7 +107,7 @@ public final class FortSiegeGuardManager
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT npcId, x, y, z, heading, respawnDelay FROM fort_siege_guards WHERE fortId = ?"))
 		{
-			final int fortId = getFort().getResidenceId();
+			final int fortId = _fort.getResidenceId();
 			ps.setInt(1, fortId);
 			try (ResultSet rs = ps.executeQuery())
 			{
@@ -130,7 +130,7 @@ public final class FortSiegeGuardManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Error loading siege guard for fort " + getFort().getName() + ": " + e.getMessage(), e);
+			LOGGER.log(Level.WARNING, "Error loading siege guard for fort " + _fort.getName() + ": " + e.getMessage(), e);
 		}
 	}
 	

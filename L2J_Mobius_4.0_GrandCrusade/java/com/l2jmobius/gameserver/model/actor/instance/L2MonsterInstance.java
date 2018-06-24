@@ -75,7 +75,7 @@ public class L2MonsterInstance extends L2Attackable
 		}
 		
 		// Check if the L2MonsterInstance target is aggressive
-		if (Config.GUARD_ATTACK_AGGRO_MOB && isAggressive() && (attacker instanceof L2GuardInstance))
+		if (Config.GUARD_ATTACK_AGGRO_MOB && getTemplate().isAggressive() && (attacker instanceof L2GuardInstance))
 		{
 			return true;
 		}
@@ -108,11 +108,11 @@ public class L2MonsterInstance extends L2Attackable
 	{
 		if (!isTeleporting())
 		{
-			if (getLeader() != null)
+			if (_master != null)
 			{
 				setRandomWalking(false);
-				setIsRaidMinion(getLeader().isRaid());
-				getLeader().getMinionList().onMinionSpawn(this);
+				setIsRaidMinion(_master.isRaid());
+				_master.getMinionList().onMinionSpawn(this);
 			}
 			
 			startMaintenanceTask();
@@ -173,9 +173,9 @@ public class L2MonsterInstance extends L2Attackable
 			getMinionList().onMasterDie(true);
 		}
 		
-		if (getLeader() != null)
+		if (_master != null)
 		{
-			getLeader().getMinionList().onMinionDie(this, 0);
+			_master.getMinionList().onMinionDie(this, 0);
 		}
 		
 		return super.deleteMe();
@@ -229,7 +229,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isWalker()
 	{
-		return ((getLeader() == null) ? super.isWalker() : getLeader().isWalker());
+		return ((_master == null) ? super.isWalker() : _master.isWalker());
 	}
 	
 	/**
@@ -238,7 +238,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean giveRaidCurse()
 	{
-		return (isRaidMinion() && (getLeader() != null)) ? getLeader().giveRaidCurse() : super.giveRaidCurse();
+		return (isRaidMinion() && (_master != null)) ? _master.giveRaidCurse() : super.giveRaidCurse();
 	}
 	
 	@Override

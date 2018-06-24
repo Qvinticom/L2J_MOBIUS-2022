@@ -539,7 +539,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isCupidBow()
 	{
-		if ((getItemId() == 9140) || (getItemId() == 9141))
+		if ((_itemId == 9140) || (_itemId == 9141))
 		{
 			return true;
 		}
@@ -615,7 +615,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public int getPriceToSell()
 	{
-		return isConsumable() ? (int) (_priceSell * Config.RATE_CONSUMABLE_COST) : _priceSell;
+		return _item.isConsumable() ? (int) (_priceSell * Config.RATE_CONSUMABLE_COST) : _priceSell;
 	}
 	
 	/**
@@ -719,9 +719,9 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isAvailable(L2PcInstance player, boolean allowAdena, boolean allowEquipped)
 	{
-		return (!isEquipped() || allowEquipped) && (getItem().getType2() != L2Item.TYPE2_QUEST) && ((getItem().getType2() != L2Item.TYPE2_MONEY) || (getItem().getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // TODO: what does this mean?
+		return (!isEquipped() || allowEquipped) && (_item.getType2() != L2Item.TYPE2_QUEST) && ((_item.getType2() != L2Item.TYPE2_MONEY) || (_item.getType1() != L2Item.TYPE1_SHIELD_ARMOR)) // TODO: what does this mean?
 			&& ((player.getPet() == null) || (getObjectId() != player.getPet().getControlItemId())) // Not Control item of currently summoned pet
-			&& (player.getActiveEnchantItem() != this) && (allowAdena || (getItemId() != 57)) && ((player.getCurrentSkill() == null) || (player.getCurrentSkill().getSkill().getItemConsumeId() != getItemId())) && isTradeable();
+			&& (player.getActiveEnchantItem() != this) && (allowAdena || (_itemId != 57)) && ((player.getCurrentSkill() == null) || (player.getCurrentSkill().getSkill().getItemConsumeId() != _itemId)) && isTradeable();
 	}
 	
 	/*
@@ -946,21 +946,21 @@ public final class L2ItemInstance extends L2Object
 				case 10:
 				{
 					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_10);
-					sm.addString(getItemName());
+					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
 				}
 				case 5:
 				{
 					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_5);
-					sm.addString(getItemName());
+					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
 				}
 				case 1:
 				{
 					sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_1);
-					sm.addString(getItemName());
+					sm.addString(_item.getName());
 					player.sendPacket(sm);
 					break;
 				}
@@ -969,7 +969,7 @@ public final class L2ItemInstance extends L2Object
 			if (_mana == 0) // The life time has expired
 			{
 				sm = new SystemMessage(SystemMessageId.S1S_REMAINING_MANA_IS_NOW_0);
-				sm.addString(getItemName());
+				sm.addString(_item.getName());
 				player.sendPacket(sm);
 				
 				// unequip
@@ -987,7 +987,7 @@ public final class L2ItemInstance extends L2Object
 					player.sendPacket(iu);
 				}
 				
-				if (getLocation() != ItemLocation.WAREHOUSE)
+				if (_loc != ItemLocation.WAREHOUSE)
 				{
 					// destroy
 					player.getInventory().destroyItem("L2ItemInstance", this, player, null);
@@ -1017,7 +1017,7 @@ public final class L2ItemInstance extends L2Object
 					scheduleConsumeManaTask();
 				}
 				
-				if (getLocation() != ItemLocation.WAREHOUSE)
+				if (_loc != ItemLocation.WAREHOUSE)
 				{
 					InventoryUpdate iu = new InventoryUpdate();
 					iu.addModifiedItem(this);
@@ -1108,7 +1108,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public Func[] getStatFuncs(L2Character player)
 	{
-		return getItem().getStatFuncs(this, player);
+		return _item.getStatFuncs(this, player);
 	}
 	
 	/**
@@ -1127,9 +1127,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public void updateDatabase()
 	{
-		// LOGGER.info("Item: "+getItemId()+" Loc: "+_loc.name()+" ExistInDb: "+_existsInDb+" owner: "+_ownerId);
-		
-		if (isWear())
+		if (_wear)
 		{
 			return;
 		}
@@ -1374,15 +1372,15 @@ public final class L2ItemInstance extends L2Object
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,price_sell=?,price_buy=?,custom_type1=?,custom_type2=?,mana_left=? WHERE object_id = ?");
 			statement.setInt(1, _ownerId);
-			statement.setInt(2, getCount());
+			statement.setInt(2, _count);
 			statement.setString(3, _loc.name());
 			statement.setInt(4, _locData);
-			statement.setInt(5, getEnchantLevel());
+			statement.setInt(5, _enchantLevel);
 			statement.setInt(6, _priceSell);
 			statement.setInt(7, _priceBuy);
-			statement.setInt(8, getCustomType1());
-			statement.setInt(9, getCustomType2());
-			statement.setInt(10, getMana());
+			statement.setInt(8, _type1);
+			statement.setInt(9, _type2);
+			statement.setInt(10, _mana);
 			statement.setInt(11, getObjectId());
 			statement.executeUpdate();
 			_existsInDb = true;
@@ -1420,16 +1418,16 @@ public final class L2ItemInstance extends L2Object
 			PreparedStatement statement = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,price_sell,price_buy,object_id,custom_type1,custom_type2,mana_left) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 			statement.setInt(1, _ownerId);
 			statement.setInt(2, _itemId);
-			statement.setInt(3, getCount());
+			statement.setInt(3, _count);
 			statement.setString(4, _loc.name());
 			statement.setInt(5, _locData);
-			statement.setInt(6, getEnchantLevel());
+			statement.setInt(6, _enchantLevel);
 			statement.setInt(7, _priceSell);
 			statement.setInt(8, _priceBuy);
 			statement.setInt(9, getObjectId());
 			statement.setInt(10, _type1);
 			statement.setInt(11, _type2);
-			statement.setInt(12, getMana());
+			statement.setInt(12, _mana);
 			
 			statement.executeUpdate();
 			_existsInDb = true;
@@ -1440,7 +1438,7 @@ public final class L2ItemInstance extends L2Object
 		{
 			if (Config.DEBUG)
 			{
-				LOGGER.warning("ATTENTION: Update Item instead of Insert one, check player with id " + getOwnerId() + " actions on item " + getObjectId());
+				LOGGER.warning("ATTENTION: Update Item instead of Insert one, check player with id " + _ownerId + " actions on item " + getObjectId());
 			}
 			updateInDb();
 		}
@@ -1659,7 +1657,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isVarkaKetraAllyQuestItem()
 	{
-		if (((getItemId() >= 7211) && (getItemId() <= 7215)) || ((getItemId() >= 7221) && (getItemId() <= 7225)))
+		if (((_itemId >= 7211) && (_itemId <= 7215)) || ((_itemId >= 7221) && (_itemId <= 7225)))
 		{
 			return true;
 		}
@@ -1679,7 +1677,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public boolean checkOlympCondition()
 	{
-		if (isHeroItem() || isOlyRestrictedItem() || isWear() || (!Config.ALT_OLY_AUGMENT_ALLOW && isAugmented()))
+		if (isHeroItem() || isOlyRestrictedItem() || _wear || (!Config.ALT_OLY_AUGMENT_ALLOW && isAugmented()))
 		{
 			return false;
 		}

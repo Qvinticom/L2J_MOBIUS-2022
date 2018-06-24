@@ -215,13 +215,13 @@ public final class Transform implements IIdentifiable
 			player.setIsFlying(true);
 		}
 		
-		if (getName() != null)
+		if (_name != null)
 		{
-			player.getAppearance().setVisibleName(getName());
+			player.getAppearance().setVisibleName(_name);
 		}
-		if (getTitle() != null)
+		if (_title != null)
 		{
-			player.getAppearance().setVisibleTitle(getTitle());
+			player.getAppearance().setVisibleTitle(_title);
 		}
 		
 		// Set inventory blocks if needed.
@@ -283,11 +283,11 @@ public final class Transform implements IIdentifiable
 			player.setIsFlying(false);
 		}
 		
-		if (getName() != null)
+		if (_name != null)
 		{
 			player.getAppearance().setVisibleName(null);
 		}
-		if (getTitle() != null)
+		if (_title != null)
 		{
 			player.getAppearance().setVisibleTitle(null);
 		}

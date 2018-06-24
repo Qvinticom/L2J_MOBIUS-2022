@@ -106,7 +106,7 @@ public class MultiSort
 			totalValue += 1 / currValue;
 		}
 		
-		return getCount() / totalValue;
+		return getValues().size() / totalValue;
 	}
 	
 	public final List<?> getKeys()
@@ -141,7 +141,7 @@ public class MultiSort
 			return -1;
 		}
 		
-		return getTotalValue() / getCount();
+		return getTotalValue() / getValues().size();
 	}
 	
 	public final double getStandardDeviation()
@@ -154,7 +154,7 @@ public class MultiSort
 		final List<Double> tempValList = new ArrayList<>();
 		
 		final int meanValue = getMean();
-		final int numValues = getCount();
+		final int numValues = getValues().size();
 		
 		for (int value : getValues())
 		{
@@ -226,7 +226,7 @@ public class MultiSort
 			
 			int lastValue = 0;
 			
-			if (!isSortDescending())
+			if (!_isSortDescending)
 			{
 				// If there are no keys, just return the ascendingly sorted values.
 				if (getKeys().isEmpty())

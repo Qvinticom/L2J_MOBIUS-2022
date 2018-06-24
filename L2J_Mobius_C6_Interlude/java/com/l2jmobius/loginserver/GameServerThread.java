@@ -255,12 +255,12 @@ public class GameServerThread extends Thread
 		
 		if (isAuthed())
 		{
-			AuthResponse ar = new AuthResponse(getGameServerInfo().getId());
+			AuthResponse ar = new AuthResponse(_gsi.getId());
 			sendPacket(ar);
 			
 			if (Config.DEBUG)
 			{
-				LOGGER.info("Authed: id: " + getGameServerInfo().getId());
+				LOGGER.info("Authed: id: " + _gsi.getId());
 			}
 		}
 	}
@@ -628,12 +628,12 @@ public class GameServerThread extends Thread
 	 */
 	public boolean isAuthed()
 	{
-		if (getGameServerInfo() == null)
+		if (_gsi == null)
 		{
 			return false;
 		}
 		
-		return getGameServerInfo().isAuthed();
+		return _gsi.isAuthed();
 	}
 	
 	public void setGameServerInfo(GameServerInfo gsi)
@@ -656,9 +656,9 @@ public class GameServerThread extends Thread
 	
 	private int getServerId()
 	{
-		if (getGameServerInfo() != null)
+		if (_gsi != null)
 		{
-			return getGameServerInfo().getId();
+			return _gsi.getId();
 		}
 		
 		return -1;

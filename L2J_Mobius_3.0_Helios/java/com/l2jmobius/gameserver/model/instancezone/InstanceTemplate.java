@@ -788,6 +788,6 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 	@Override
 	public String toString()
 	{
-		return "ID: " + getId() + " Name: " + getName();
+		return "ID: " + _templateId + " Name: " + _name;
 	}
 }

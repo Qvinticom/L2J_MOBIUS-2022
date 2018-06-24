@@ -99,9 +99,9 @@ public class Lottery
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement(UPDATE_PRICE);
-			statement.setInt(1, getPrize());
-			statement.setInt(2, getPrize());
-			statement.setInt(3, getId());
+			statement.setInt(1, _prize);
+			statement.setInt(2, _prize);
+			statement.setInt(3, _number);
 			statement.execute();
 			statement.close();
 		}
@@ -187,7 +187,7 @@ public class Lottery
 			
 			if (Config.DEBUG)
 			{
-				LOGGER.info("Lottery: Starting ticket sell for lottery #" + getId() + ".");
+				LOGGER.info("Lottery: Starting ticket sell for lottery #" + _number + ".");
 			}
 			
 			_isSellingTickets = true;
@@ -219,10 +219,10 @@ public class Lottery
 			{
 				statement = con.prepareStatement(INSERT_LOTTERY);
 				statement.setInt(1, 1);
-				statement.setInt(2, getId());
-				statement.setLong(3, getEndDate());
-				statement.setInt(4, getPrize());
-				statement.setInt(5, getPrize());
+				statement.setInt(2, _number);
+				statement.setLong(3, _enddate);
+				statement.setInt(4, _prize);
+				statement.setInt(5, _prize);
 				statement.execute();
 				statement.close();
 			}
@@ -245,7 +245,7 @@ public class Lottery
 		{
 			if (Config.DEBUG)
 			{
-				LOGGER.info("Lottery: Stopping ticket sell for lottery #" + getId() + ".");
+				LOGGER.info("Lottery: Stopping ticket sell for lottery #" + _number + ".");
 			}
 			
 			_isSellingTickets = false;
@@ -266,7 +266,7 @@ public class Lottery
 		{
 			if (Config.DEBUG)
 			{
-				LOGGER.info("Lottery: Ending lottery #" + getId() + ".");
+				LOGGER.info("Lottery: Ending lottery #" + _number + ".");
 			}
 			
 			final int[] luckynums = new int[5];
@@ -327,7 +327,7 @@ public class Lottery
 			try (Connection con = DatabaseFactory.getInstance().getConnection())
 			{
 				statement = con.prepareStatement(SELECT_LOTTERY_ITEM);
-				statement.setInt(1, getId());
+				statement.setInt(1, _number);
 				ResultSet rset = statement.executeQuery();
 				
 				while (rset.next())
@@ -394,17 +394,17 @@ public class Lottery
 			
 			if (count1 > 0)
 			{
-				prize1 = (int) (((getPrize() - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
+				prize1 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_5_NUMBER_RATE) / count1);
 			}
 			
 			if (count2 > 0)
 			{
-				prize2 = (int) (((getPrize() - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
+				prize2 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_4_NUMBER_RATE) / count2);
 			}
 			
 			if (count3 > 0)
 			{
-				prize3 = (int) (((getPrize() - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
+				prize3 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
 			}
 			
 			if (Config.DEBUG)
@@ -415,7 +415,7 @@ public class Lottery
 				LOGGER.info("Lottery: " + count4 + " players with ONE or TWO numbers each win " + prize4 + ".");
 			}
 			
-			final int newprize = getPrize() - (prize1 + prize2 + prize3 + prize4);
+			final int newprize = _prize - (prize1 + prize2 + prize3 + prize4);
 			if (Config.DEBUG)
 			{
 				LOGGER.info("Lottery: Jackpot for next lottery is " + newprize + ".");
@@ -427,8 +427,8 @@ public class Lottery
 			{
 				// There are winners.
 				sm = new SystemMessage(SystemMessageId.AMOUNT_FOR_WINNER_S1_IS_S2_ADENA_WE_HAVE_S3_PRIZE_WINNER);
-				sm.addNumber(getId());
-				sm.addNumber(getPrize());
+				sm.addNumber(_number);
+				sm.addNumber(_prize);
 				sm.addNumber(count1);
 				Announcements.getInstance().announceToAll(sm);
 			}
@@ -436,22 +436,22 @@ public class Lottery
 			{
 				// There are no winners.
 				sm = new SystemMessage(SystemMessageId.AMOUNT_FOR_LOTTERY_S1_IS_S2_ADENA_NO_WINNER);
-				sm.addNumber(getId());
-				sm.addNumber(getPrize());
+				sm.addNumber(_number);
+				sm.addNumber(_prize);
 				Announcements.getInstance().announceToAll(sm);
 			}
 			
 			try (Connection con = DatabaseFactory.getInstance().getConnection())
 			{
 				statement = con.prepareStatement(UPDATE_LOTTERY);
-				statement.setInt(1, getPrize());
+				statement.setInt(1, _prize);
 				statement.setInt(2, newprize);
 				statement.setInt(3, enchant);
 				statement.setInt(4, type2);
 				statement.setInt(5, prize1);
 				statement.setInt(6, prize2);
 				statement.setInt(7, prize3);
-				statement.setInt(8, getId());
+				statement.setInt(8, _number);
 				statement.execute();
 				statement.close();
 			}

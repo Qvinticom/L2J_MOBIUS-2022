@@ -93,7 +93,7 @@ public class L2ControllableMobInstance extends L2MonsterInstance
 	@Override
 	public void reduceCurrentHp(double i, L2Character attacker, boolean awake)
 	{
-		if (isInvul() || isDead())
+		if (_isInvul || isDead())
 		{
 			return;
 		}

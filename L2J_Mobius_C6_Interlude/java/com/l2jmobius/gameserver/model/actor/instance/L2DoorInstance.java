@@ -110,7 +110,7 @@ public class L2DoorInstance extends L2Character
 	protected final String _name;
 	
 	/** The _open. */
-	private boolean _open;
+	boolean _open;
 	
 	/** The _unlockable. */
 	private final boolean _unlockable;
@@ -262,7 +262,7 @@ public class L2DoorInstance extends L2Character
 			{
 				String doorAction;
 				
-				if (!getOpen())
+				if (!_open)
 				{
 					doorAction = "opened";
 					openMe();
@@ -512,7 +512,7 @@ public class L2DoorInstance extends L2Character
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if (isUnlockable())
+		if (_unlockable)
 		{
 			return true;
 		}
@@ -681,12 +681,12 @@ public class L2DoorInstance extends L2Character
 				LOGGER.info("player clanid " + player.getClanId());
 				LOGGER.info("player clanleaderid " + player.getClan().getLeaderId());
 			}
-			LOGGER.info("clanhall " + getClanHall());
-			if (getClanHall() != null)
+			LOGGER.info("clanhall " + _clanHall);
+			if (_clanHall != null)
 			{
-				LOGGER.info("clanhallID " + getClanHall().getId());
-				LOGGER.info("clanhallOwner " + getClanHall().getOwnerId());
-				for (L2DoorInstance door : getClanHall().getDoors())
+				LOGGER.info("clanhallID " + _clanHall.getId());
+				LOGGER.info("clanhallOwner " + _clanHall.getOwnerId());
+				for (L2DoorInstance door : _clanHall.getDoors())
 				{
 					LOGGER.info("clanhallDoor " + door.getObjectId());
 				}
@@ -721,7 +721,7 @@ public class L2DoorInstance extends L2Character
 				player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 			}
 		}
-		else if ((player.getClan() != null) && (getClanHall() != null) && (player.getClanId() == getClanHall().getOwnerId()))
+		else if ((player.getClan() != null) && (_clanHall != null) && (player.getClanId() == _clanHall.getOwnerId()))
 		{
 			if (!isInsideRadius(player, L2NpcInstance.INTERACTION_DISTANCE, false, false))
 			{
@@ -731,7 +731,7 @@ public class L2DoorInstance extends L2Character
 			{
 				// Like L2OFF Clanhall's doors get request to be closed/opened
 				player.gatesRequest(this);
-				if (!getOpen())
+				if (!_open)
 				{
 					player.sendPacket(new ConfirmDlg(1140));
 				}
@@ -768,12 +768,12 @@ public class L2DoorInstance extends L2Character
 				LOGGER.info("player clanid " + player.getClanId());
 				LOGGER.info("player clanleaderid " + player.getClan().getLeaderId());
 			}
-			LOGGER.info("clanhall " + getClanHall());
-			if (getClanHall() != null)
+			LOGGER.info("clanhall " + _clanHall);
+			if (_clanHall != null)
 			{
-				LOGGER.info("clanhallID " + getClanHall().getId());
-				LOGGER.info("clanhallOwner " + getClanHall().getOwnerId());
-				for (L2DoorInstance door : getClanHall().getDoors())
+				LOGGER.info("clanhallID " + _clanHall.getId());
+				LOGGER.info("clanhallOwner " + _clanHall.getOwnerId());
+				for (L2DoorInstance door : _clanHall.getDoors())
 				{
 					LOGGER.info("clanhallDoor " + door.getObjectId());
 				}
@@ -799,7 +799,7 @@ public class L2DoorInstance extends L2Character
 			html1.append("<tr><td>Max HP       " + getMaxHp() + "</td></tr>");
 			
 			html1.append("<tr><td>Object ID: " + getObjectId() + "</td></tr>");
-			html1.append("<tr><td>Door ID: " + getDoorId() + "</td></tr>");
+			html1.append("<tr><td>Door ID: " + _doorId + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			
 			html1.append("<tr><td>Class: " + getClass().getName() + "</td></tr>");
@@ -807,8 +807,8 @@ public class L2DoorInstance extends L2Character
 			html1.append("</table>");
 			
 			html1.append("<table><tr>");
-			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + getDoorId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
-			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + getDoorId() + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+			html1.append("<td><button value=\"Open\" action=\"bypass -h admin_open " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
+			html1.append("<td><button value=\"Close\" action=\"bypass -h admin_close " + _doorId + "\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			html1.append("<td><button value=\"Delete\" action=\"bypass -h admin_delete\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			html1.append("</tr></table></body></html>");
@@ -888,7 +888,7 @@ public class L2DoorInstance extends L2Character
 	{
 		synchronized (this)
 		{
-			if (!getOpen())
+			if (!_open)
 			{
 				return;
 			}
@@ -906,7 +906,7 @@ public class L2DoorInstance extends L2Character
 	{
 		synchronized (this)
 		{
-			if (getOpen())
+			if (_open)
 			{
 				return;
 			}

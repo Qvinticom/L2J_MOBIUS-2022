@@ -235,7 +235,7 @@ public class GameServerTable
 	
 	public String getServerNameById(int id)
 	{
-		return getServerNames().get(id);
+		return _serverNames.get(id);
 	}
 	
 	public Map<Integer, String> getServerNames()

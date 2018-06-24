@@ -68,7 +68,7 @@ public class L2DoorInstance extends L2Character
 	/** The fort index in the array of L2Fort this L2NpcInstance belongs to */
 	private int _fortIndex = -2;
 	private ClanHall _clanHall;
-	private boolean _open = false;
+	boolean _open = false;
 	private boolean _isAttackableDoor = false;
 	private boolean _isTargetable;
 	private int _meshindex = 1;
@@ -319,7 +319,7 @@ public class L2DoorInstance extends L2Character
 		{
 			return true;
 		}
-		if ((getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).getSiegeZone().isActive() && getIsShowHp())
+		if ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).getSiegeZone().isActive() && getIsShowHp())
 		{
 			return true;
 		}
@@ -335,7 +335,7 @@ public class L2DoorInstance extends L2Character
 			return false;
 		}
 		
-		if (getIsAttackableDoor())
+		if (_isAttackableDoor)
 		{
 			return true;
 		}
@@ -346,9 +346,9 @@ public class L2DoorInstance extends L2Character
 		
 		final L2PcInstance actingPlayer = attacker.getActingPlayer();
 		
-		if (getClanHall() != null)
+		if (_clanHall != null)
 		{
-			final SiegableHall hall = (SiegableHall) getClanHall();
+			final SiegableHall hall = (SiegableHall) _clanHall;
 			if (!hall.isSiegableHall())
 			{
 				return false;
@@ -430,7 +430,7 @@ public class L2DoorInstance extends L2Character
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
-			oe = new OnEventTrigger(this, isOpen());
+			oe = new OnEventTrigger(this, _open);
 		}
 		
 		for (L2PcInstance player : knownPlayers)
@@ -630,7 +630,7 @@ public class L2DoorInstance extends L2Character
 		
 		final boolean isFort = ((getFort() != null) && (getFort().getResidenceId() > 0) && getFort().getSiege().isInProgress());
 		final boolean isCastle = ((getCastle() != null) && (getCastle().getResidenceId() > 0) && getCastle().getSiege().isInProgress());
-		final boolean isHall = ((getClanHall() != null) && getClanHall().isSiegableHall() && ((SiegableHall) getClanHall()).isInSiege());
+		final boolean isHall = ((_clanHall != null) && _clanHall.isSiegableHall() && ((SiegableHall) _clanHall).isInSiege());
 		
 		if (isFort || isCastle || isHall)
 		{
@@ -666,7 +666,7 @@ public class L2DoorInstance extends L2Character
 		{
 			if (getEmitter() > 0)
 			{
-				activeChar.sendPacket(new OnEventTrigger(this, isOpen()));
+				activeChar.sendPacket(new OnEventTrigger(this, _open));
 			}
 			
 			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
@@ -731,7 +731,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			if (isOpen())
+			if (_open)
 			{
 				closeMe();
 			}
@@ -743,8 +743,7 @@ public class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			final boolean open = isOpen();
-			if (open)
+			if (_open)
 			{
 				closeMe();
 			}
@@ -753,7 +752,7 @@ public class L2DoorInstance extends L2Character
 				openMe();
 			}
 			
-			int delay = open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
+			int delay = _open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
 			if (getTemplate().getRandomTime() > 0)
 			{
 				delay += Rnd.get(getTemplate().getRandomTime());

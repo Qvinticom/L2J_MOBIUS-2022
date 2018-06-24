@@ -744,7 +744,7 @@ public abstract class L2Skill
 	
 	public final boolean hasEffectWhileCasting()
 	{
-		return getSkillType() == SkillType.SIGNET_CASTTIME;
+		return _skillType == SkillType.SIGNET_CASTTIME;
 	}
 	
 	public final BaseStats getSavevs()
@@ -1148,17 +1148,17 @@ public abstract class L2Skill
 	
 	public final boolean useSoulShot()
 	{
-		return (getSkillType() == SkillType.PDAM) || (getSkillType() == SkillType.STUN) || (getSkillType() == SkillType.CHARGEDAM) || (getSkillType() == SkillType.BLOW);
+		return (_skillType == SkillType.PDAM) || (_skillType == SkillType.STUN) || (_skillType == SkillType.CHARGEDAM) || (_skillType == SkillType.BLOW);
 	}
 	
 	public final boolean useSpiritShot()
 	{
-		return isMagic();
+		return _magic;
 	}
 	
 	public final boolean useFishShot()
 	{
-		return (getSkillType() == SkillType.PUMPING) || (getSkillType() == SkillType.REELING);
+		return (_skillType == SkillType.PUMPING) || (_skillType == SkillType.REELING);
 	}
 	
 	public final int getWeaponsAllowed()
@@ -1353,7 +1353,7 @@ public abstract class L2Skill
 			return true;
 		}
 		final SystemMessage message = new SystemMessage(SystemMessageId.S1_CANNOT_BE_USED);
-		message.addSkillName(getId());
+		message.addSkillName(_id);
 		activeChar.sendPacket(message);
 		
 		return false;
@@ -1361,7 +1361,7 @@ public abstract class L2Skill
 	
 	public final boolean getWeaponDependancy(L2Character activeChar, boolean chance)
 	{
-		final int weaponsAllowed = getWeaponsAllowed();
+		final int weaponsAllowed = _weaponsAllowed;
 		// check to see if skill has a weapon dependency.
 		if (weaponsAllowed == 0)
 		{
@@ -1467,7 +1467,7 @@ public abstract class L2Skill
 		if (activeChar instanceof L2PcInstance)
 		{ // to avoid attacks during oly start period
 			
-			if (isOffensive() && (((L2PcInstance) activeChar).isInOlympiadMode() && !((L2PcInstance) activeChar).isOlympiadStart()))
+			if (_isOffensive && (((L2PcInstance) activeChar).isInOlympiadMode() && !((L2PcInstance) activeChar).isOlympiadStart()))
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 				return null;
@@ -1476,7 +1476,7 @@ public abstract class L2Skill
 		
 		final List<L2Character> targetList = new ArrayList<>();
 		
-		if (isPotion())
+		if (_ispotion)
 		{
 			return new L2Character[]
 			{
@@ -1484,21 +1484,13 @@ public abstract class L2Skill
 			};
 		}
 		
-		// Get the target type of the skill
-		// (ex : ONE, SELF, HOLY, PET, AURA, AURA_CLOSE, AREA, MULTIFACE, PARTY, CLAN, CORPSE_PLAYER, CORPSE_MOB, CORPSE_CLAN, UNLOCKABLE, ITEM, UNDEAD)
-		final SkillTargetType targetType = getTargetType();
-		
-		// Get the type of the skill
-		// (ex : PDAM, MDAM, DOT, BLEED, POISON, HEAL, HOT, MANAHEAL, MANARECHARGE, AGGDAMAGE, BUFF, DEBUFF, STUN, ROOT, RESURRECT, PASSIVE...)
-		final SkillType skillType = getSkillType();
-		
-		switch (targetType)
+		switch (_targetType)
 		{
 			// The skill can only be used on the L2Character targeted, or on the caster itself
 			case TARGET_ONE:
 			{
 				boolean canTargetSelf = false;
-				switch (skillType)
+				switch (_skillType)
 				{
 					case BUFF:
 					case HEAL:
@@ -1524,7 +1516,7 @@ public abstract class L2Skill
 					}
 				}
 				
-				switch (skillType)
+				switch (_skillType)
 				{
 					case CONFUSION:
 					case DEBUFF:
@@ -1548,7 +1540,7 @@ public abstract class L2Skill
 					}
 				}
 				
-				switch (skillType)
+				switch (_skillType)
 				{
 					case AGGDEBUFF:
 					case DEBUFF:
@@ -1579,7 +1571,7 @@ public abstract class L2Skill
 				}
 				
 				// Like L2OFF Shield stun can't be used on Npc
-				if ((getId() == 92) && (target instanceof L2NpcInstance) && !(target instanceof L2MonsterInstance))
+				if ((_id == 92) && (target instanceof L2NpcInstance) && !(target instanceof L2MonsterInstance))
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 					return null;
@@ -1665,7 +1657,7 @@ public abstract class L2Skill
 			}
 			case TARGET_AURA:
 			{
-				final int radius = getSkillRadius();
+				final int radius = _skillRadius;
 				final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 				L2PcInstance src = null;
 				if (activeChar instanceof L2PcInstance)
@@ -1684,7 +1676,7 @@ public abstract class L2Skill
 						continue;
 					}
 					// Like L2OFF you can cast the skill on peace zone but hasn't any effect
-					if (isOffensive() && L2Character.isInsidePeaceZone(target, activeChar))
+					if (_isOffensive && L2Character.isInsidePeaceZone(target, activeChar))
 					{
 						continue;
 					}
@@ -1792,13 +1784,13 @@ public abstract class L2Skill
 			{
 				// Like L2OFF players can use TARGET_AREA skills on NPC in peacezone
 				if ((!(target instanceof L2Attackable) && !(target instanceof L2Playable) && !(target instanceof L2NpcInstance)) || // Target is not L2Attackable or L2PlayableInstance or L2NpcInstance
-					((getCastRange() >= 0) && ((target == activeChar) || target.isAlikeDead()))) // target is null or self or dead/faking
+					((_castRange >= 0) && ((target == activeChar) || target.isAlikeDead()))) // target is null or self or dead/faking
 				{
 					activeChar.sendPacket(new SystemMessage(SystemMessageId.TARGET_IS_INCORRECT));
 					return null;
 				}
 				L2Character cha;
-				if (getCastRange() >= 0)
+				if (_castRange >= 0)
 				{
 					cha = target;
 					if (!onlyFirst)
@@ -1827,7 +1819,7 @@ public abstract class L2Skill
 				{
 					src = ((L2Summon) activeChar).getOwner();
 				}
-				final int radius = getSkillRadius();
+				final int radius = _skillRadius;
 				final boolean srcInArena = activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE);
 				for (L2Object obj : activeChar.getKnownList().getKnownObjects().values())
 				{
@@ -1852,7 +1844,7 @@ public abstract class L2Skill
 					{
 						continue;
 					}
-					if (isOffensive() && L2Character.isInsidePeaceZone(activeChar, target))
+					if (_isOffensive && L2Character.isInsidePeaceZone(activeChar, target))
 					{
 						continue;
 					}
@@ -1994,7 +1986,7 @@ public abstract class L2Skill
 						target
 					};
 				}
-				final int radius = getSkillRadius();
+				final int radius = _skillRadius;
 				L2PcInstance src = null;
 				if (activeChar instanceof L2PcInstance)
 				{
@@ -2121,7 +2113,7 @@ public abstract class L2Skill
 								continue;
 							}
 						}
-						if (!partyMember.isDead() && Util.checkIfInRange(getSkillRadius(), activeChar, partyMember, true))
+						if (!partyMember.isDead() && Util.checkIfInRange(_skillRadius, activeChar, partyMember, true))
 						{
 							L2PcInstance src = null;
 							if (activeChar instanceof L2PcInstance)
@@ -2183,10 +2175,10 @@ public abstract class L2Skill
 			{
 				if (activeChar instanceof L2PcInstance)
 				{
-					final int radius = getSkillRadius();
+					final int radius = _skillRadius;
 					L2PcInstance player = (L2PcInstance) activeChar;
 					L2Clan clan = player.getClan();
-					if (targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpose, the caster is not included
+					if (_targetType != SkillTargetType.TARGET_CORPSE_ALLY) // if corpose, the caster is not included
 					{
 						if (player.isInOlympiadMode())
 						{
@@ -2227,7 +2219,7 @@ public abstract class L2Skill
 								continue;
 							}
 							final L2PcInstance playerTarget = (L2PcInstance) newTarget;
-							if (playerTarget.isDead() && (targetType != SkillTargetType.TARGET_CORPSE_ALLY))
+							if (playerTarget.isDead() && (_targetType != SkillTargetType.TARGET_CORPSE_ALLY))
 							{
 								continue;
 							}
@@ -2267,17 +2259,17 @@ public abstract class L2Skill
 							 * trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)) ){ continue; } }
 							 */
 							L2Summon pet = ((L2PcInstance) newTarget).getPet();
-							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((targetType == SkillTargetType.TARGET_CORPSE_ALLY) && pet.isDead()) || ((targetType == SkillTargetType.TARGET_ALLY) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
+							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_ALLY) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_ALLY) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
 								targetList.add(pet);
 							}
-							if (targetType == SkillTargetType.TARGET_CORPSE_ALLY)
+							if (_targetType == SkillTargetType.TARGET_CORPSE_ALLY)
 							{
 								if (!((L2PcInstance) newTarget).isDead())
 								{
 									continue;
 								}
-								if ((getSkillType() == SkillType.RESURRECT) && ((L2PcInstance) newTarget).isInsideZone(ZoneId.SIEGE))
+								if ((_skillType == SkillType.RESURRECT) && ((L2PcInstance) newTarget).isInsideZone(ZoneId.SIEGE))
 								{
 									continue;
 								}
@@ -2312,10 +2304,10 @@ public abstract class L2Skill
 			{
 				if (activeChar instanceof L2PcInstance)
 				{
-					final int radius = getSkillRadius();
+					final int radius = _skillRadius;
 					L2PcInstance player = (L2PcInstance) activeChar;
 					L2Clan clan = player.getClan();
-					if (targetType != SkillTargetType.TARGET_CORPSE_CLAN)
+					if (_targetType != SkillTargetType.TARGET_CORPSE_CLAN)
 					{
 						if (player.isInOlympiadMode())
 						{
@@ -2365,17 +2357,17 @@ public abstract class L2Skill
 							 * player._inEventTvT)) { continue; } if((newTarget._inEventCTF && !player._inEventCTF) || (!newTarget._inEventCTF && player._inEventCTF)) { continue; } if((newTarget._inEventDM && !player._inEventDM) || (!newTarget._inEventDM && player._inEventDM)) { continue; } }
 							 */
 							L2Summon pet = newTarget.getPet();
-							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
+							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
 								targetList.add(pet);
 							}
-							if (targetType == SkillTargetType.TARGET_CORPSE_CLAN)
+							if (_targetType == SkillTargetType.TARGET_CORPSE_CLAN)
 							{
 								if (!newTarget.isDead())
 								{
 									continue;
 								}
-								if (getSkillType() == SkillType.RESURRECT)
+								if (_skillType == SkillType.RESURRECT)
 								{
 									// check target is not in a active siege zone
 									Siege siege = SiegeManager.getInstance().getSiege(newTarget);
@@ -2427,7 +2419,7 @@ public abstract class L2Skill
 						{
 							if ((newTarget instanceof L2NpcInstance) && npc.getFactionId().equals(((L2NpcInstance) newTarget).getFactionId()))
 							{
-								if (!Util.checkIfInRange(getCastRange(), activeChar, newTarget, true))
+								if (!Util.checkIfInRange(_castRange, activeChar, newTarget, true))
 								{
 									continue;
 								}
@@ -2460,7 +2452,7 @@ public abstract class L2Skill
 					if ((player != null) && ((targetPlayer != null) || (targetPet != null)))
 					{
 						boolean condGood = true;
-						if (getSkillType() == SkillType.RESURRECT)
+						if (_skillType == SkillType.RESURRECT)
 						{
 							// check target is not in a active siege zone
 							if (target.isInsideZone(ZoneId.SIEGE))
@@ -2551,7 +2543,7 @@ public abstract class L2Skill
 					src = (L2PcInstance) activeChar;
 				}
 				L2PcInstance trg = null;
-				final int radius = getSkillRadius();
+				final int radius = _skillRadius;
 				if (activeChar.getKnownList() != null)
 				{
 					for (L2Object obj : activeChar.getKnownList().getKnownObjects().values())
@@ -2572,7 +2564,7 @@ public abstract class L2Skill
 						{
 							continue;
 						}
-						if (isOffensive() && L2Character.isInsidePeaceZone(activeChar, obj))
+						if (_isOffensive && L2Character.isInsidePeaceZone(activeChar, obj))
 						{
 							continue;
 						}
@@ -2708,8 +2700,8 @@ public abstract class L2Skill
 			case TARGET_AREA_UNDEAD:
 			{
 				L2Character cha;
-				final int radius = getSkillRadius();
-				if ((getCastRange() >= 0) && ((target instanceof L2NpcInstance) || (target instanceof L2SummonInstance)) && target.isUndead() && !target.isAlikeDead())
+				final int radius = _skillRadius;
+				if ((_castRange >= 0) && ((target instanceof L2NpcInstance) || (target instanceof L2SummonInstance)) && target.isUndead() && !target.isAlikeDead())
 				{
 					cha = target;
 					if (!onlyFirst)
@@ -2854,7 +2846,7 @@ public abstract class L2Skill
 					{
 						if ((newTarget instanceof L2NpcInstance) && npc.getFactionId().equals(((L2NpcInstance) newTarget).getFactionId()))
 						{
-							if (!Util.checkIfInRange(getCastRange(), activeChar, newTarget, true))
+							if (!Util.checkIfInRange(_castRange, activeChar, newTarget, true))
 							{
 								continue;
 							}
@@ -2936,7 +2928,7 @@ public abstract class L2Skill
 	
 	public boolean hasEffects()
 	{
-		return (getEffectTemplates() != null) && (getEffectTemplates().length > 0);
+		return (_effectTemplates != null) && (_effectTemplates.length > 0);
 	}
 	
 	public final L2Effect[] getEffects(L2Character effector, L2Character effected)
@@ -2951,7 +2943,7 @@ public abstract class L2Skill
 			return _emptyEffectSet;
 		}
 		
-		if (getEffectTemplates() == null)
+		if (_effectTemplates == null)
 		{
 			return _emptyEffectSet;
 		}
@@ -2961,7 +2953,7 @@ public abstract class L2Skill
 			return _emptyEffectSet;
 		}
 		
-		if ((getSkillType() == SkillType.BUFF) && effected.isBlockBuff())
+		if ((_skillType == SkillType.BUFF) && effected.isBlockBuff())
 		{
 			return _emptyEffectSet;
 		}
@@ -2976,7 +2968,7 @@ public abstract class L2Skill
 		}
 		
 		/*
-		 * if(getSkillType()==SkillType.BUFF) for(L2Effect ef: effector.getAllEffects()) { if(ef!=null && ef.getSkill()!=null){ if(ef.getSkill().getId() == getId() && ef.getSkill().getLevel() > getLevel()) return _emptyEffectSet; } }
+		 * if(_skillType==SkillType.BUFF) for(L2Effect ef: effector.getAllEffects()) { if(ef!=null && ef.getSkill()!=null){ if(ef.getSkill().getId() == getId() && ef.getSkill().getLevel() > getLevel()) return _emptyEffectSet; } }
 		 */
 		
 		final Env env = new Env();
@@ -2985,7 +2977,7 @@ public abstract class L2Skill
 		env.skill = this;
 		env.skillMastery = skillMastery;
 		
-		for (EffectTemplate et : getEffectTemplates())
+		for (EffectTemplate et : _effectTemplates)
 		{
 			boolean success = true;
 			if (et.effectPower > -1)
@@ -3100,7 +3092,7 @@ public abstract class L2Skill
 	
 	public final void attach(EffectTemplate effect)
 	{
-		if (getEffectTemplates() == null)
+		if (_effectTemplates == null)
 		{
 			setEffectTemplates(new EffectTemplate[]
 			{
@@ -3109,9 +3101,9 @@ public abstract class L2Skill
 		}
 		else
 		{
-			final int len = getEffectTemplates().length;
+			final int len = _effectTemplates.length;
 			EffectTemplate[] tmp = new EffectTemplate[len + 1];
-			System.arraycopy(getEffectTemplates(), 0, tmp, 0, len);
+			System.arraycopy(_effectTemplates, 0, tmp, 0, len);
 			tmp[len] = effect;
 			setEffectTemplates(tmp);
 		}
@@ -3145,12 +3137,12 @@ public abstract class L2Skill
 			return false;
 		}
 		
-		if (getEffectTemplates() == null)
+		if (_effectTemplates == null)
 		{
 			return false;
 		}
 		
-		for (EffectTemplate et : getEffectTemplates())
+		for (EffectTemplate et : _effectTemplates)
 		{
 			if (et.abnormalEffect == abnormalEffect)
 			{

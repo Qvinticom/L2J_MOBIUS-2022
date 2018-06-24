@@ -122,7 +122,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_eventName(String _eventName)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._eventName = _eventName;
 			return true;
@@ -146,7 +146,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_eventDesc(String _eventDesc)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._eventDesc = _eventDesc;
 			return true;
@@ -170,7 +170,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_joiningLocationName(String _joiningLocationName)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._joiningLocationName = _joiningLocationName;
 			return true;
@@ -194,7 +194,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_npcId(int _npcId)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._npcId = _npcId;
 			return true;
@@ -229,7 +229,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_rewardId(int _rewardId)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._rewardId = _rewardId;
 			return true;
@@ -253,7 +253,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_rewardAmount(int _rewardAmount)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._rewardAmount = _rewardAmount;
 			return true;
@@ -277,7 +277,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_minlvl(int _minlvl)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._minlvl = _minlvl;
 			return true;
@@ -301,7 +301,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_maxlvl(int _maxlvl)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._maxlvl = _maxlvl;
 			return true;
@@ -325,7 +325,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_joinTime(int _joinTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._joinTime = _joinTime;
 			return true;
@@ -349,7 +349,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_eventTime(int _eventTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._eventTime = _eventTime;
 			return true;
@@ -373,7 +373,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_minPlayers(int _minPlayers)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._minPlayers = _minPlayers;
 			return true;
@@ -397,7 +397,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_maxPlayers(int _maxPlayers)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._maxPlayers = _maxPlayers;
 			return true;
@@ -421,7 +421,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_intervalBetweenMatchs(long _intervalBetweenMatchs)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._intervalBetweenMatchs = _intervalBetweenMatchs;
 			return true;
@@ -445,7 +445,7 @@ public class DM implements EventTask
 	 */
 	public boolean setStartEventTime(String startEventTime)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			this.startEventTime = startEventTime;
 			return true;
@@ -2022,7 +2022,7 @@ public class DM implements EventTask
 	 */
 	public static boolean set_playerColors(int _playerColors)
 	{
-		if (!is_inProgress())
+		if (!_inProgress)
 		{
 			DM._playerColors = _playerColors;
 			return true;

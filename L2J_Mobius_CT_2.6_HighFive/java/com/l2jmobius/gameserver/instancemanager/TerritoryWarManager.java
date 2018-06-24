@@ -95,7 +95,7 @@ public final class TerritoryWarManager implements Siegable
 	protected Calendar _startTWDate = Calendar.getInstance();
 	protected boolean _isRegistrationOver = true;
 	protected boolean _isTWChannelOpen = false;
-	private boolean _isTWInProgress = false;
+	boolean _isTWInProgress = false;
 	protected ScheduledFuture<?> _scheduledStartTWTask = null;
 	protected ScheduledFuture<?> _scheduledEndTWTask = null;
 	protected ScheduledFuture<?> _scheduledRewardOnlineTask = null;
@@ -376,7 +376,7 @@ public final class TerritoryWarManager implements Siegable
 				ward._npcId = territoryId;
 				ret = spawnNPC(36491 + territoryId, ward.getLocation());
 				ward.setNPC(ret);
-				if (!isTWInProgress() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+				if (!_isTWInProgress && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
 				{
 					ret.decayMe();
 				}
@@ -548,7 +548,7 @@ public final class TerritoryWarManager implements Siegable
 			if (twWard.playerId == player.getObjectId())
 			{
 				twWard.dropIt();
-				if (isTWInProgress())
+				if (_isTWInProgress)
 				{
 					if (isKilled)
 					{
@@ -1236,7 +1236,7 @@ public final class TerritoryWarManager implements Siegable
 		@Override
 		public void run()
 		{
-			if (isTWInProgress())
+			if (_isTWInProgress)
 			{
 				for (L2PcInstance player : L2World.getInstance().getPlayers())
 				{

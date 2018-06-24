@@ -94,24 +94,24 @@ public final class L2Crest implements IIdentifiable
 	public String getClientPath(L2PcInstance activeChar)
 	{
 		String path = null;
-		switch (getType())
+		switch (_type)
 		{
 			case PLEDGE:
 			{
-				activeChar.sendPacket(new PledgeCrest(getId(), getData()));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
+				activeChar.sendPacket(new PledgeCrest(_id, _data));
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
 				break;
 			}
 			case PLEDGE_LARGE:
 			{
-				activeChar.sendPacket(new ExPledgeEmblem(getId(), getData()));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId() + "_l";
+				activeChar.sendPacket(new ExPledgeEmblem(_id, _data));
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id + "_l";
 				break;
 			}
 			case ALLY:
 			{
-				activeChar.sendPacket(new AllyCrest(getId(), getData()));
-				path = "Crest.crest_" + Config.SERVER_ID + "_" + getId();
+				activeChar.sendPacket(new AllyCrest(_id, _data));
+				path = "Crest.crest_" + Config.SERVER_ID + "_" + _id;
 				break;
 			}
 		}

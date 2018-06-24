@@ -51,7 +51,7 @@ public class OfflineShop implements IVoicedCommandHandler
 		}
 		
 		// Message like L2OFF
-		if ((!player.isInStoreMode() && (!player.isInCraftMode())) || !player.isSitting())
+		if ((!player.isInStoreMode() && (!player.isCrafting())) || !player.isSitting())
 		{
 			player.sendMessage("You are not running a private store or private work shop.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -146,7 +146,7 @@ public class OfflineShop implements IVoicedCommandHandler
 			player.removeSkill(SkillTable.getInstance().getInfo(4289, 1));
 		}
 		
-		if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) || (player.isInCraftMode() && Config.OFFLINE_CRAFT_ENABLE))
+		if ((player.isInStoreMode() && Config.OFFLINE_TRADE_ENABLE) || (player.isCrafting() && Config.OFFLINE_CRAFT_ENABLE))
 		{
 			// Sleep effect, not official feature but however L2OFF features (like offline trade)
 			if (Config.OFFLINE_SLEEP_EFFECT)

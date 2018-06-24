@@ -80,7 +80,7 @@ public class L2SkillSummon extends L2Skill
 		{
 			final L2PcInstance player = (L2PcInstance) activeChar;
 			
-			if (isCubic())
+			if (_isCubic)
 			{
 				if (getTargetType() != L2Skill.SkillTargetType.TARGET_SELF)
 				{

@@ -71,7 +71,7 @@ public final class Fort extends AbstractResidence
 	private Calendar _siegeDate;
 	private Calendar _lastOwnedTime;
 	private L2SiegeZone _zone;
-	private L2Clan _fortOwner = null;
+	L2Clan _fortOwner = null;
 	private int _fortType = 0;
 	private int _state = 0;
 	private int _castleId = 0;
@@ -97,12 +97,12 @@ public final class Fort extends AbstractResidence
 	
 	public class FortFunction
 	{
-		private final int _type;
+		final int _type;
 		private int _lvl;
 		protected int _fee;
 		protected int _tempFee;
-		private final long _rate;
-		private long _endDate;
+		final long _rate;
+		long _endDate;
 		protected boolean _inDebt;
 		public boolean _cwh;
 		
@@ -159,7 +159,7 @@ public final class Fort extends AbstractResidence
 		
 		private void initializeTask(boolean cwh)
 		{
-			if (getOwnerClan() == null)
+			if (_fortOwner == null)
 			{
 				return;
 			}
@@ -186,24 +186,24 @@ public final class Fort extends AbstractResidence
 			{
 				try
 				{
-					if (getOwnerClan() == null)
+					if (_fortOwner == null)
 					{
 						return;
 					}
-					if ((getOwnerClan().getWarehouse().getAdena() >= _fee) || !_cwh)
+					if ((_fortOwner.getWarehouse().getAdena() >= _fee) || !_cwh)
 					{
-						final int fee = getEndTime() == -1 ? _tempFee : _fee;
-						setEndTime(System.currentTimeMillis() + getRate());
+						final int fee = _endDate == -1 ? _tempFee : _fee;
+						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave();
 						if (_cwh)
 						{
-							getOwnerClan().getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
+							_fortOwner.getWarehouse().destroyItemByItemId("CS_function_fee", Inventory.ADENA_ID, fee, null, null);
 						}
-						ThreadPool.schedule(new FunctionTask(true), getRate());
+						ThreadPool.schedule(new FunctionTask(true), _rate);
 					}
 					else
 					{
-						removeFunction(getType());
+						removeFunction(_type);
 					}
 				}
 				catch (Throwable t)
@@ -218,11 +218,11 @@ public final class Fort extends AbstractResidence
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO fort_functions (fort_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)"))
 			{
 				ps.setInt(1, getResidenceId());
-				ps.setInt(2, getType());
-				ps.setInt(3, getLvl());
-				ps.setInt(4, getLease());
-				ps.setLong(5, getRate());
-				ps.setLong(6, getEndTime());
+				ps.setInt(2, _type);
+				ps.setInt(3, _lvl);
+				ps.setInt(4, _fee);
+				ps.setLong(5, _rate);
+				ps.setLong(6, _endDate);
 				ps.execute();
 			}
 			catch (Exception e)
@@ -237,7 +237,7 @@ public final class Fort extends AbstractResidence
 		super(fortId);
 		load();
 		loadFlagPoles();
-		if (getOwnerClan() != null)
+		if (_fortOwner != null)
 		{
 			setVisibleFlag(true);
 			loadFunctions();
@@ -250,7 +250,7 @@ public final class Fort extends AbstractResidence
 		initNpcCommanders(); // npc Commanders (not monsters) (Spawned during siege)
 		spawnNpcCommanders(); // spawn npc Commanders
 		initSpecialEnvoys(); // envoys from castles (Spawned after fort taken)
-		if ((getOwnerClan() != null) && (getFortState() == 0))
+		if ((_fortOwner != null) && (_state == 0))
 		{
 			spawnSpecialEnvoys();
 		}
@@ -277,7 +277,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public void banishForeigners()
 	{
-		getResidenceZone().banishForeigners(getOwnerClan().getId());
+		getResidenceZone().banishForeigners(_fortOwner.getId());
 	}
 	
 	/**
@@ -335,7 +335,7 @@ public final class Fort extends AbstractResidence
 	
 	public void openCloseDoor(L2PcInstance activeChar, int doorId, boolean open)
 	{
-		if (activeChar.getClan() != getOwnerClan())
+		if (activeChar.getClan() != _fortOwner)
 		{
 			return;
 		}
@@ -378,7 +378,7 @@ public final class Fort extends AbstractResidence
 		sm.addCastleId(getResidenceId());
 		getSiege().announceToPlayer(sm);
 		
-		final L2Clan oldowner = getOwnerClan();
+		final L2Clan oldowner = _fortOwner;
 		if ((oldowner != null) && (clan != oldowner))
 		{
 			// Remove points from old owner
@@ -442,7 +442,7 @@ public final class Fort extends AbstractResidence
 	
 	public void removeOwner(boolean updateDB)
 	{
-		final L2Clan clan = getOwnerClan();
+		final L2Clan clan = _fortOwner;
 		if (clan != null)
 		{
 			for (L2PcInstance member : clan.getOnlineMembers(0))
@@ -506,7 +506,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public void setVisibleFlag(boolean val)
 	{
-		final L2StaticObjectInstance flagPole = getFlagPole();
+		final L2StaticObjectInstance flagPole = _flagPole;
 		if (flagPole != null)
 		{
 			flagPole.setMeshIndex(val ? 1 : 0);
@@ -781,7 +781,7 @@ public final class Fort extends AbstractResidence
 	
 	private void updateOwnerInDB()
 	{
-		final L2Clan clan = getOwnerClan();
+		final L2Clan clan = _fortOwner;
 		int clanId = 0;
 		if (clan != null)
 		{
@@ -873,7 +873,7 @@ public final class Fort extends AbstractResidence
 			return null;
 		}
 		
-		for (L2DoorInstance door : getDoors())
+		for (L2DoorInstance door : _doors)
 		{
 			if (door.getId() == doorId)
 			{
@@ -1001,8 +1001,8 @@ public final class Fort extends AbstractResidence
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE fort SET state=?,castleId=? WHERE id = ?"))
 		{
-			ps.setInt(1, getFortState());
-			ps.setInt(2, getContractedCastleId());
+			ps.setInt(1, _state);
+			ps.setInt(2, _castleId);
 			ps.setInt(3, getResidenceId());
 			ps.execute();
 		}
@@ -1068,7 +1068,7 @@ public final class Fort extends AbstractResidence
 	 */
 	public final int getFortSize()
 	{
-		return getFortType() == 0 ? 3 : 5;
+		return _fortType == 0 ? 3 : 5;
 	}
 	
 	public void spawnSuspiciousMerchant()

@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class L2CommandChannel
 {
-	private final List<L2Party> _partys;
+	private final List<L2Party> _parties;
 	private L2PcInstance _commandLeader = null;
 	private int _channelLvl;
 	
@@ -46,8 +46,8 @@ public class L2CommandChannel
 	public L2CommandChannel(L2PcInstance leader)
 	{
 		_commandLeader = leader;
-		_partys = new ArrayList<>();
-		_partys.add(leader.getParty());
+		_parties = new ArrayList<>();
+		_parties.add(leader.getParty());
 		_channelLvl = leader.getParty().getLevel();
 		leader.getParty().setCommandChannel(this);
 		leader.getParty().broadcastToPartyMembers(new SystemMessage(SystemMessageId.COMMAND_CHANNEL_FORMED));
@@ -65,7 +65,7 @@ public class L2CommandChannel
 			return;
 		}
 		
-		_partys.add(party);
+		_parties.add(party);
 		
 		if (party.getLevel() > _channelLvl)
 		{
@@ -88,10 +88,10 @@ public class L2CommandChannel
 			return;
 		}
 		
-		_partys.remove(party);
+		_parties.remove(party);
 		_channelLvl = 0;
 		
-		for (L2Party pty : _partys)
+		for (L2Party pty : _parties)
 		{
 			if (pty.getLevel() > _channelLvl)
 			{
@@ -102,7 +102,7 @@ public class L2CommandChannel
 		party.setCommandChannel(null);
 		party.broadcastToPartyMembers(new ExCloseMPCC());
 		
-		if (_partys.size() < 2)
+		if (_parties.size() < 2)
 		{
 			broadcastToChannelMembers(new SystemMessage(SystemMessageId.COMMAND_CHANNEL_DISBANDED));
 			disbandChannel();
@@ -114,16 +114,16 @@ public class L2CommandChannel
 	 */
 	public void disbandChannel()
 	{
-		if (_partys != null)
+		if (_parties != null)
 		{
-			for (L2Party party : _partys)
+			for (L2Party party : _parties)
 			{
 				if (party != null)
 				{
 					removeParty(party);
 				}
 			}
-			_partys.clear();
+			_parties.clear();
 		}
 	}
 	
@@ -134,7 +134,7 @@ public class L2CommandChannel
 	{
 		int count = 0;
 		
-		for (L2Party party : _partys)
+		for (L2Party party : _parties)
 		{
 			if (party != null)
 			{
@@ -150,9 +150,9 @@ public class L2CommandChannel
 	 */
 	public void broadcastToChannelMembers(L2GameServerPacket gsp)
 	{
-		if ((_partys != null) && !_partys.isEmpty())
+		if ((_parties != null) && !_parties.isEmpty())
 		{
-			for (L2Party party : _partys)
+			for (L2Party party : _parties)
 			{
 				if (party != null)
 				{
@@ -164,9 +164,9 @@ public class L2CommandChannel
 	
 	public void broadcastCSToChannelMembers(CreatureSay gsp, L2PcInstance broadcaster)
 	{
-		if ((_partys != null) && !_partys.isEmpty())
+		if ((_parties != null) && !_parties.isEmpty())
 		{
-			for (L2Party party : _partys)
+			for (L2Party party : _parties)
 			{
 				if (party != null)
 				{
@@ -181,7 +181,7 @@ public class L2CommandChannel
 	 */
 	public List<L2Party> getPartys()
 	{
-		return _partys;
+		return _parties;
 	}
 	
 	/**
@@ -190,7 +190,7 @@ public class L2CommandChannel
 	public List<L2PcInstance> getMembers()
 	{
 		final List<L2PcInstance> members = new ArrayList<>();
-		for (L2Party party : getPartys())
+		for (L2Party party : _parties)
 		{
 			members.addAll(party.getPartyMembers());
 		}

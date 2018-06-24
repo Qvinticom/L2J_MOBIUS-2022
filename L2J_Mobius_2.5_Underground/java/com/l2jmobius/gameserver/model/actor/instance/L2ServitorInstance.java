@@ -240,7 +240,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		final Map<Integer, List<SummonEffect>> servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
 		if (servitorEffects != null)
 		{
-			final List<SummonEffect> effects = servitorEffects.get(getReferenceSkill());
+			final List<SummonEffect> effects = servitorEffects.get(_referenceSkill);
 			if ((effects != null) && !effects.isEmpty())
 			{
 				for (SummonEffect effect : effects)
@@ -294,7 +294,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			// Delete all current stored effects for summon to avoid dupe
 			statement.setInt(1, getOwner().getObjectId());
 			statement.setInt(2, getOwner().getClassIndex());
-			statement.setInt(3, getReferenceSkill());
+			statement.setInt(3, _referenceSkill);
 			statement.execute();
 			
 			int buff_index = 0;
@@ -348,7 +348,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 						
 						ps2.setInt(1, getOwner().getObjectId());
 						ps2.setInt(2, getOwner().getClassIndex());
-						ps2.setInt(3, getReferenceSkill());
+						ps2.setInt(3, _referenceSkill);
 						ps2.setInt(4, skill.getId());
 						ps2.setInt(5, skill.getLevel());
 						ps2.setInt(6, info.getTime());
@@ -397,7 +397,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 				{
 					statement.setInt(1, getOwner().getObjectId());
 					statement.setInt(2, getOwner().getClassIndex());
-					statement.setInt(3, getReferenceSkill());
+					statement.setInt(3, _referenceSkill);
 					try (ResultSet rset = statement.executeQuery())
 					{
 						while (rset.next())
@@ -437,7 +437,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			{
 				statement.setInt(1, getOwner().getObjectId());
 				statement.setInt(2, getOwner().getClassIndex());
-				statement.setInt(3, getReferenceSkill());
+				statement.setInt(3, _referenceSkill);
 				statement.executeUpdate();
 			}
 		}
@@ -554,12 +554,12 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			_consumeItemIntervalRemaining -= usedtime;
 			
 			// check if it is time to consume another item
-			if ((_consumeItemIntervalRemaining <= 0) && (getItemConsume().getCount() > 0) && (getItemConsume().getId() > 0) && !isDead())
+			if ((_consumeItemIntervalRemaining <= 0) && (_itemConsume.getCount() > 0) && (_itemConsume.getId() > 0) && !isDead())
 			{
-				if (destroyItemByItemId("Consume", getItemConsume().getId(), getItemConsume().getCount(), this, false))
+				if (destroyItemByItemId("Consume", _itemConsume.getId(), _itemConsume.getCount(), this, false))
 				{
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.A_SUMMONED_MONSTER_USES_S1);
-					msg.addItemName(getItemConsume().getId());
+					msg.addItemName(_itemConsume.getId());
 					sendPacket(msg);
 					
 					// Reset
@@ -573,7 +573,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			}
 		}
 		
-		sendPacket(new SetSummonRemainTime(getLifeTime(), _lifeTimeRemaining));
+		sendPacket(new SetSummonRemainTime(_lifeTime, _lifeTimeRemaining));
 		
 		// Using same task to check if owner is in visible range
 		if (calculateDistance(getOwner(), true, false) > 2000)

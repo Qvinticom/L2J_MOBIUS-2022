@@ -156,19 +156,19 @@ public class Options
 	
 	public void apply(L2PcInstance player)
 	{
-		if (hasFuncs())
+		if (!_funcs.isEmpty())
 		{
 			player.addStatFuncs(getStatFuncs(null, player));
 		}
 		if (hasActiveSkill())
 		{
-			addSkill(player, getActiveSkill().getSkill());
+			addSkill(player, _activeSkill.getSkill());
 		}
 		if (hasPassiveSkill())
 		{
-			addSkill(player, getPassiveSkill().getSkill());
+			addSkill(player, _passiveSkill.getSkill());
 		}
-		if (hasActivationSkills())
+		if (!_activationSkills.isEmpty())
 		{
 			for (OptionsSkillHolder holder : _activationSkills)
 			{
@@ -181,19 +181,19 @@ public class Options
 	
 	public void remove(L2PcInstance player)
 	{
-		if (hasFuncs())
+		if (!_funcs.isEmpty())
 		{
 			player.removeStatsOwner(this);
 		}
 		if (hasActiveSkill())
 		{
-			player.removeSkill(getActiveSkill().getSkill(), false, false);
+			player.removeSkill(_activeSkill.getSkill(), false, false);
 		}
 		if (hasPassiveSkill())
 		{
-			player.removeSkill(getPassiveSkill().getSkill(), false, true);
+			player.removeSkill(_passiveSkill.getSkill(), false, true);
 		}
-		if (hasActivationSkills())
+		if (!_activationSkills.isEmpty())
 		{
 			for (OptionsSkillHolder holder : _activationSkills)
 			{

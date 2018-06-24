@@ -157,10 +157,10 @@ public class L2DropData
 	@Override
 	public String toString()
 	{
-		String out = "ItemID: " + getItemId() + " Min: " + getMinDrop() + " Max: " + getMaxDrop() + " Chance: " + (getChance() / 10000.0) + "%";
+		String out = "ItemID: " + _itemId + " Min: " + _minDrop + " Max: " + _maxDrop + " Chance: " + (_chance / 10000.0) + "%";
 		if (isQuestDrop())
 		{
-			out += " QuestID: " + getQuestID() + " StateID's: " + Arrays.toString(getStateIDs());
+			out += " QuestID: " + _questID + " StateID's: " + Arrays.toString(_stateID);
 		}
 		
 		return out;
@@ -185,6 +185,6 @@ public class L2DropData
 	@Override
 	public int hashCode()
 	{
-		return getItemId();
+		return _itemId;
 	}
 }

@@ -679,7 +679,7 @@ public class MercTicketManager
 	
 	public void reload()
 	{
-		getDroppedTickets().clear();
+		_droppedTickets.clear();
 		load();
 	}
 	
@@ -733,7 +733,7 @@ public class MercTicketManager
 							dropticket.dropMe(null, x, y, z);
 							dropticket.setDropTime(0); // avoids it from beeing removed by the auto item destroyer
 							L2World.getInstance().storeObject(dropticket);
-							getDroppedTickets().add(dropticket);
+							_droppedTickets.add(dropticket);
 						}
 						break;
 					}
@@ -742,7 +742,7 @@ public class MercTicketManager
 			statement.close();
 			rs.close();
 			
-			LOGGER.info("Loaded: " + getDroppedTickets().size() + " Mercenary Tickets");
+			LOGGER.info("Loaded: " + _droppedTickets.size() + " Mercenary Tickets");
 		}
 		catch (Exception e)
 		{
@@ -778,9 +778,9 @@ public class MercTicketManager
 		
 		int count = 0;
 		L2ItemInstance ticket;
-		for (int i = 0; i < getDroppedTickets().size(); i++)
+		for (int i = 0; i < _droppedTickets.size(); i++)
 		{
-			ticket = getDroppedTickets().get(i);
+			ticket = _droppedTickets.get(i);
 			if ((ticket != null) && (ticket.getItemId() == itemId))
 			{
 				count++;
@@ -815,9 +815,9 @@ public class MercTicketManager
 		
 		int count = 0;
 		L2ItemInstance ticket;
-		for (int i = 0; i < getDroppedTickets().size(); i++)
+		for (int i = 0; i < _droppedTickets.size(); i++)
 		{
-			ticket = getDroppedTickets().get(i);
+			ticket = _droppedTickets.get(i);
 			if ((ticket != null) && (getTicketCastleId(ticket.getItemId()) == castleId))
 			{
 				count++;
@@ -906,16 +906,16 @@ public class MercTicketManager
 	public void deleteTickets(int castleId)
 	{
 		int i = 0;
-		while (i < getDroppedTickets().size())
+		while (i < _droppedTickets.size())
 		{
-			L2ItemInstance item = getDroppedTickets().get(i);
+			L2ItemInstance item = _droppedTickets.get(i);
 			if ((item != null) && (getTicketCastleId(item.getItemId()) == castleId))
 			{
 				item.decayMe();
 				L2World.getInstance().removeObject(item);
 				
 				// remove from the list
-				getDroppedTickets().remove(i);
+				_droppedTickets.remove(i);
 			}
 			else
 			{
@@ -950,7 +950,7 @@ public class MercTicketManager
 			new SiegeGuardManager(castle).removeMerc(npcId, item.getX(), item.getY(), item.getZ());
 		}
 		
-		getDroppedTickets().remove(item);
+		_droppedTickets.remove(item);
 	}
 	
 	public int[] getItemIds()

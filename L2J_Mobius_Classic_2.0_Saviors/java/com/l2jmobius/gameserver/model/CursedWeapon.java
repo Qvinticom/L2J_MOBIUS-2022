@@ -71,7 +71,7 @@ public class CursedWeapon implements INamable
 	private ScheduledFuture<?> _removeTask;
 	
 	private int _nbKills = 0;
-	private long _endTime = 0;
+	long _endTime = 0;
 	
 	private int _playerId = 0;
 	protected L2PcInstance _player = null;
@@ -238,7 +238,7 @@ public class CursedWeapon implements INamable
 		@Override
 		public void run()
 		{
-			if (System.currentTimeMillis() >= getEndTime())
+			if (System.currentTimeMillis() >= _endTime)
 			{
 				endOfLife();
 			}

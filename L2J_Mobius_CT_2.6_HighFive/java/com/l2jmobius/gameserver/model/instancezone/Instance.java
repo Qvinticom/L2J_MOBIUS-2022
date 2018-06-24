@@ -252,7 +252,7 @@ public final class Instance
 	{
 		if (_doorTemplates.contains(set))
 		{
-			LOGGER.warning("Door ID " + set.getInt("DoorId") + " already exists in instance " + getId());
+			LOGGER.warning("Door ID " + set.getInt("DoorId") + " already exists in instance " + _id);
 			return;
 		}
 		_doorTemplates.add(set);
@@ -269,7 +269,7 @@ public final class Instance
 			final int doorId = template.getInt("DoorId");
 			final StatsSet doorTemplate = DoorData.getInstance().getDoorTemplate(doorId);
 			final L2DoorInstance newdoor = new L2DoorInstance(new L2DoorTemplate(doorTemplate));
-			newdoor.setInstanceId(getId());
+			newdoor.setInstanceId(_id);
 			newdoor.setCurrentHp(newdoor.getMaxHp());
 			newdoor.spawnMe(newdoor.getTemplate().getX(), newdoor.getTemplate().getY(), newdoor.getTemplate().getZ());
 			
@@ -361,12 +361,12 @@ public final class Instance
 		for (Integer objectId : _players)
 		{
 			final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-			if ((player != null) && (player.getInstanceId() == getId()))
+			if ((player != null) && (player.getInstanceId() == _id))
 			{
 				player.setInstanceId(0);
-				if (getExitLoc() != null)
+				if (_exitLocation != null)
 				{
-					player.teleToLocation(getExitLoc(), true);
+					player.teleToLocation(_exitLocation, true);
 				}
 				else
 				{
@@ -435,7 +435,7 @@ public final class Instance
 					spawnDat.setAmount(1);
 					spawnDat.setHeading(set.getInt("heading"));
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));
-					spawnDat.setInstanceId(getId());
+					spawnDat.setInstanceId(_id);
 					spawnDat.setRandomWalking(set.getBoolean("allowRandomWalk"));
 					final L2Npc spawned = spawnDat.doSpawn();
 					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
@@ -806,7 +806,7 @@ public final class Instance
 			interval = 300000;
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
-			Broadcast.toPlayersInInstance(sm, getId());
+			Broadcast.toPlayersInInstance(sm, _id);
 			remaining = remaining - 300000;
 		}
 		else if (remaining > 60000)
@@ -815,7 +815,7 @@ public final class Instance
 			interval = 60000;
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
-			Broadcast.toPlayersInInstance(sm, getId());
+			Broadcast.toPlayersInInstance(sm, _id);
 			remaining = remaining - 60000;
 		}
 		else if (remaining > 30000)
@@ -837,7 +837,7 @@ public final class Instance
 			for (Integer objectId : _players)
 			{
 				final L2PcInstance player = L2World.getInstance().getPlayer(objectId);
-				if ((player != null) && (player.getInstanceId() == getId()))
+				if ((player != null) && (player.getInstanceId() == _id))
 				{
 					player.sendPacket(cs);
 				}
@@ -887,12 +887,12 @@ public final class Instance
 			// Start eject task
 			_ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
 			{
-				if (player.isDead() && (player.getInstanceId() == getId()))
+				if (player.isDead() && (player.getInstanceId() == _id))
 				{
 					player.setInstanceId(0);
-					if (getExitLoc() != null)
+					if (_exitLocation != null)
 					{
-						player.teleToLocation(getExitLoc(), true);
+						player.teleToLocation(_exitLocation, true);
 					}
 					else
 					{
@@ -945,7 +945,7 @@ public final class Instance
 	
 	public boolean isRemoveBuffEnabled()
 	{
-		return getRemoveBuffType() != InstanceRemoveBuffType.NONE;
+		return _removeBuffType != InstanceRemoveBuffType.NONE;
 	}
 	
 	public InstanceRemoveBuffType getRemoveBuffType()

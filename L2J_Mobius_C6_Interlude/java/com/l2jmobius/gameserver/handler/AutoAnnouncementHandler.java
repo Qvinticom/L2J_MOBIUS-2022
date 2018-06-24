@@ -424,7 +424,7 @@ public class AutoAnnouncementHandler
 			
 			_isActive = activeValue;
 			
-			if (isActive())
+			if (_isActive)
 			{
 				AutoAnnouncementRunner acr = new AutoAnnouncementRunner(_defaultId);
 				_chatTask = ThreadPool.scheduleAtFixedRate(acr, _defaultDelay, _defaultDelay);

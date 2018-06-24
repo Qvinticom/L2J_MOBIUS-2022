@@ -232,7 +232,7 @@ public final class L2ChestInstance extends L2MonsterInstance
 			return true;
 		}
 		
-		if (isInteracted())
+		if (_isInteracted)
 		{
 			return false;
 		}

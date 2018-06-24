@@ -145,7 +145,7 @@ public final class TeleportHolder
 		// Build html
 		final StringBuilder sb = new StringBuilder();
 		final StringBuilder sb_f = new StringBuilder();
-		for (TeleportLocation loc : getLocations())
+		for (TeleportLocation loc : _teleportData)
 		{
 			String finalName = loc.getName();
 			String confirmDesc = loc.getName();

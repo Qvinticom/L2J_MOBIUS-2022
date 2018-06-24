@@ -33,12 +33,12 @@ public class L2PoisonZone extends L2ZoneType
 {
 	protected final Logger LOGGER = Logger.getLogger(L2PoisonZone.class.getName());
 	protected int _skillId;
-	private int _chance;
+	int _chance;
 	private int _initialDelay;
 	protected int _skillLvl;
 	private int _reuse;
-	private boolean _enabled;
-	private String _target;
+	boolean _enabled;
+	String _target;
 	private Future<?> _task;
 	
 	public L2PoisonZone(int id)
@@ -161,13 +161,13 @@ public class L2PoisonZone extends L2ZoneType
 		@Override
 		public void run()
 		{
-			if (isEnabled())
+			if (_enabled)
 			{
 				for (L2Character temp : _characterList.values())
 				{
 					if ((temp != null) && !temp.isDead())
 					{
-						if ((((temp instanceof L2Playable) && getTargetType().equalsIgnoreCase("pc")) || ((temp instanceof L2PcInstance) && getTargetType().equalsIgnoreCase("pc_only")) || ((temp instanceof L2MonsterInstance) && getTargetType().equalsIgnoreCase("npc"))) && (Rnd.get(100) < getChance()))
+						if ((((temp instanceof L2Playable) && _target.equalsIgnoreCase("pc")) || ((temp instanceof L2PcInstance) && _target.equalsIgnoreCase("pc_only")) || ((temp instanceof L2MonsterInstance) && _target.equalsIgnoreCase("npc"))) && (Rnd.get(100) < _chance))
 						{
 							L2Skill skill = getSkill();
 							if (skill == null)

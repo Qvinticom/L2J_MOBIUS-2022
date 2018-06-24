@@ -330,7 +330,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem addItem(int objectId, int count, int price)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to modify locked TradeList! ", Config.DEFAULT_PUNISH);
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
@@ -361,7 +361,7 @@ public class TradeList
 		}
 		
 		// GM items trade restriction (valid for trade and private sell)
-		if ((getOwner().isGM() && Config.GM_TRADE_RESTRICTED_ITEMS))
+		if ((_owner.isGM() && Config.GM_TRADE_RESTRICTED_ITEMS))
 		{
 			return null;
 		}
@@ -404,7 +404,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem addItemByItemId(int itemId, int count, int price, int enchant)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to modify locked TradeList! Banned ", Config.DEFAULT_PUNISH);
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
@@ -456,7 +456,7 @@ public class TradeList
 	 */
 	public synchronized TradeItem removeItem(int objectId, int itemId, int count)
 	{
-		if (isLocked())
+		if (_locked)
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to modify locked TradeList! Banned ", Config.DEFAULT_PUNISH);
 			LOGGER.warning(_owner.getName() + ": Attempt to modify locked TradeList!");
@@ -770,12 +770,12 @@ public class TradeList
 		if (!getOwner().getInventory().validateWeight(partnerList.calcItemsWeight()) || !partnerList.getOwner().getInventory().validateWeight(calcItemsWeight()))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
-			getOwner().sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
+			_owner.sendPacket(SystemMessageId.WEIGHT_LIMIT_EXCEEDED);
 		}
 		else if (!getOwner().getInventory().validateCapacity(partnerList.countItemsSlots(getOwner())) || !partnerList.getOwner().getInventory().validateCapacity(countItemsSlots(partnerList.getOwner())))
 		{
 			partnerList.getOwner().sendPacket(SystemMessageId.SLOTS_FULL);
-			getOwner().sendPacket(SystemMessageId.SLOTS_FULL);
+			_owner.sendPacket(SystemMessageId.SLOTS_FULL);
 		}
 		else
 		{
@@ -784,7 +784,7 @@ public class TradeList
 			InventoryUpdate partnerIU = Config.FORCE_INVENTORY_UPDATE ? null : new InventoryUpdate();
 			
 			// Transfer items
-			partnerList.TransferItems(getOwner(), partnerIU, ownerIU);
+			partnerList.TransferItems(_owner, partnerIU, ownerIU);
 			TransferItems(partnerList.getOwner(), ownerIU, partnerIU);
 			
 			// Send inventory update packet
@@ -820,7 +820,7 @@ public class TradeList
 		}
 		// Finish the trade
 		partnerList.getOwner().onTradeFinish(success);
-		getOwner().onTradeFinish(success);
+		_owner.onTradeFinish(success);
 	}
 	
 	/**

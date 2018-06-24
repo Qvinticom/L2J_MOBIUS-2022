@@ -109,7 +109,7 @@ public class FortSiege
 		@Override
 		public void run()
 		{
-			if (!getIsInProgress())
+			if (!_isInProgress)
 			{
 				return;
 			}
@@ -179,7 +179,7 @@ public class FortSiege
 		@Override
 		public void run()
 		{
-			if (getIsInProgress())
+			if (_isInProgress)
 			{
 				return;
 			}
@@ -266,7 +266,7 @@ public class FortSiege
 	private final Fort[] _fort;
 	
 	/** The _is in progress. */
-	private boolean _isInProgress = false;
+	boolean _isInProgress = false;
 	
 	/** The _is scheduled. */
 	private boolean _isScheduled = false;
@@ -309,7 +309,7 @@ public class FortSiege
 	 */
 	public void endSiege()
 	{
-		if (getIsInProgress())
+		if (_isInProgress)
 		{
 			announceToPlayer("The siege of " + getFort().getName() + " has finished!", false);
 			
@@ -420,7 +420,7 @@ public class FortSiege
 	 */
 	public void midVictory()
 	{
-		if (getIsInProgress()) // Siege still in progress
+		if (_isInProgress) // Siege still in progress
 		{
 			// defenders to attacker
 			for (L2SiegeClan sc : getDefenderClans())
@@ -449,7 +449,7 @@ public class FortSiege
 	 */
 	public void startSiege()
 	{
-		if (!getIsInProgress())
+		if (!_isInProgress)
 		{
 			if (getAttackerClans().size() <= 0)
 			{
@@ -627,7 +627,7 @@ public class FortSiege
 	 */
 	public boolean checkIfInZone(int x, int y, int z)
 	{
-		return getIsInProgress() && getFort().checkIfInZone(x, y, z); // Fort zone during siege
+		return _isInProgress && getFort().checkIfInZone(x, y, z); // Fort zone during siege
 	}
 	
 	/**
@@ -682,7 +682,7 @@ public class FortSiege
 			
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -710,7 +710,7 @@ public class FortSiege
 			statement.execute();
 			statement.close();
 			
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 		}
 		catch (Exception e)
 		{
@@ -1124,7 +1124,7 @@ public class FortSiege
 			}
 			default:
 			{
-				players = getPlayersInZone();
+				players = getFort().getZone().getAllPlayers();
 			}
 		}
 		
@@ -1184,7 +1184,7 @@ public class FortSiege
 	 */
 	private void addDefenderWaiting(int clanId)
 	{
-		getDefenderWaitingClans().add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
+		_defenderWaitingClans.add(new L2SiegeClan(clanId, SiegeClanType.DEFENDER_PENDING)); // Add registered defender to defender list
 	}
 	
 	/**
@@ -1195,11 +1195,11 @@ public class FortSiege
 	 */
 	private boolean checkIfCanRegister(L2PcInstance player)
 	{
-		if (getIsRegistrationOver())
+		if (_isRegistrationOver)
 		{
 			player.sendMessage("The deadline to register for the siege of " + getFort().getName() + " has passed.");
 		}
-		else if (getIsInProgress())
+		else if (_isInProgress)
 		{
 			player.sendMessage("This is not the time for siege registration and so registration and cancellation cannot be done.");
 		}
@@ -1249,7 +1249,7 @@ public class FortSiege
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
-			getDefenderWaitingClans().clear();
+			_defenderWaitingClans.clear();
 			
 			// Add fort owner as defender (add owner first so that they are on the top of the defender list)
 			if (getFort().getOwnerId() > 0)
@@ -1344,7 +1344,7 @@ public class FortSiege
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update fort set siegeDate = ? where id = ?");
-			statement.setLong(1, getSiegeDate().getTimeInMillis());
+			statement.setLong(1, getFort().getSiegeDate().getTimeInMillis());
 			statement.setInt(2, getFort().getFortId());
 			statement.execute();
 			
@@ -1676,7 +1676,7 @@ public class FortSiege
 	 */
 	public final L2SiegeClan getDefenderWaitingClan(int clanId)
 	{
-		for (L2SiegeClan sc : getDefenderWaitingClans())
+		for (L2SiegeClan sc : _defenderWaitingClans)
 		{
 			if ((sc != null) && (sc.getClanId() == clanId))
 			{

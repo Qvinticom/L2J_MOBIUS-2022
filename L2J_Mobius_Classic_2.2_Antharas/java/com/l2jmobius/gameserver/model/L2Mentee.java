@@ -52,7 +52,7 @@ public class L2Mentee
 			try (Connection con = DatabaseFactory.getInstance().getConnection();
 				PreparedStatement statement = con.prepareStatement("SELECT char_name, level, base_class FROM characters WHERE charId = ?"))
 			{
-				statement.setInt(1, getObjectId());
+				statement.setInt(1, _objectId);
 				try (ResultSet rset = statement.executeQuery())
 				{
 					if (rset.next())

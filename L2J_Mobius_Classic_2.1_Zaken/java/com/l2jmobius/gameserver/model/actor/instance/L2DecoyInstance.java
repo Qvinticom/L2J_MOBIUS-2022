@@ -53,7 +53,7 @@ public class L2DecoyInstance extends L2Character
 		_totalLifeTime = totalLifeTime;
 		_timeRemaining = _totalLifeTime;
 		final int skilllevel = getTemplate().getDisplayId() - 13070;
-		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(getOwner(), this), 1000, 1000);
+		_DecoyLifeTask = ThreadPool.scheduleAtFixedRate(new DecoyLifetime(_owner, this), 1000, 1000);
 		_HateSpam = ThreadPool.scheduleAtFixedRate(new HateSpam(this, SkillData.getInstance().getSkill(5272, skilllevel)), 2000, 5000);
 	}
 	
@@ -269,18 +269,18 @@ public class L2DecoyInstance extends L2Character
 	@Override
 	public void sendPacket(IClientOutgoingPacket... packets)
 	{
-		if (getOwner() != null)
+		if (_owner != null)
 		{
-			getOwner().sendPacket(packets);
+			_owner.sendPacket(packets);
 		}
 	}
 	
 	@Override
 	public void sendPacket(SystemMessageId id)
 	{
-		if (getOwner() != null)
+		if (_owner != null)
 		{
-			getOwner().sendPacket(id);
+			_owner.sendPacket(id);
 		}
 	}
 }

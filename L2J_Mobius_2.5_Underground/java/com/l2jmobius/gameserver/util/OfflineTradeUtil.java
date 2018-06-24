@@ -68,7 +68,7 @@ public final class OfflineTradeUtil
 			}
 			default:
 			{
-				canSetShop = Config.OFFLINE_CRAFT_ENABLE && player.isInCraftMode();
+				canSetShop = Config.OFFLINE_CRAFT_ENABLE && player.isCrafting();
 				break;
 			}
 		}

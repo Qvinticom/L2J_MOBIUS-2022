@@ -73,9 +73,9 @@ public final class HellboundEngine extends AbstractNpcAI
 		if (event.equals(UPDATE_EVENT))
 		{
 			int level = getLevel();
-			if ((level > 0) && (level == getCachedLevel()))
+			if ((level > 0) && (level == _cachedLevel))
 			{
-				if ((getTrust() == getMaxTrust()) && (level != 4)) // Only exclusion is kill of Derek.
+				if ((getTrust() == _maxTrust) && (level != 4)) // Only exclusion is kill of Derek.
 				{
 					level++;
 					setLevel(level);

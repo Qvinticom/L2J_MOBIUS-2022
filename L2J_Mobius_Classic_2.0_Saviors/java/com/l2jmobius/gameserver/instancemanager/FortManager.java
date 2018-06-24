@@ -47,7 +47,7 @@ public final class FortManager implements InstanceListManager
 		Fort nearestFort = getFort(obj);
 		if (nearestFort == null)
 		{
-			for (Fort fort : getForts())
+			for (Fort fort : _forts.values())
 			{
 				final double distance = fort.getDistance(obj);
 				if (maxDistance > distance)
@@ -62,7 +62,7 @@ public final class FortManager implements InstanceListManager
 	
 	public final Fort getFortById(int fortId)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts.values())
 		{
 			if (f.getResidenceId() == fortId)
 			{
@@ -74,7 +74,7 @@ public final class FortManager implements InstanceListManager
 	
 	public final Fort getFortByOwner(L2Clan clan)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts.values())
 		{
 			if (f.getOwnerClan() == clan)
 			{
@@ -86,7 +86,7 @@ public final class FortManager implements InstanceListManager
 	
 	public final Fort getFort(String name)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts.values())
 		{
 			if (f.getName().equalsIgnoreCase(name.trim()))
 			{
@@ -98,7 +98,7 @@ public final class FortManager implements InstanceListManager
 	
 	public final Fort getFort(int x, int y, int z)
 	{
-		for (Fort f : getForts())
+		for (Fort f : _forts.values())
 		{
 			if (f.checkIfInZone(x, y, z))
 			{
@@ -131,8 +131,8 @@ public final class FortManager implements InstanceListManager
 				_forts.put(fortId, new Fort(fortId));
 			}
 			
-			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + getForts().size() + " fortress");
-			for (Fort fort : getForts())
+			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _forts.values().size() + " fortress");
+			for (Fort fort : _forts.values())
 			{
 				fort.getSiege().loadSiegeGuard();
 			}
@@ -151,7 +151,7 @@ public final class FortManager implements InstanceListManager
 	@Override
 	public void activateInstances()
 	{
-		for (Fort fort : getForts())
+		for (Fort fort : _forts.values())
 		{
 			fort.activateInstance();
 		}

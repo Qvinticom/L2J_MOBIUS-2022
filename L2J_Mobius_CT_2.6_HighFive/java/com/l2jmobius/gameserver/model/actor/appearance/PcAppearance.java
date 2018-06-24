@@ -65,7 +65,7 @@ public class PcAppearance
 	 */
 	public final String getVisibleName()
 	{
-		return _visibleName == null ? getOwner().getName() : _visibleName;
+		return _visibleName == null ? _owner.getName() : _visibleName;
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class PcAppearance
 	 */
 	public final String getVisibleTitle()
 	{
-		return _visibleTitle == null ? getOwner().getTitle() : _visibleTitle;
+		return _visibleTitle == null ? _owner.getTitle() : _visibleTitle;
 	}
 	
 	public final byte getFace()

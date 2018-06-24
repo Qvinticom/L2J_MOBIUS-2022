@@ -44,7 +44,7 @@ public final class SoDManager
 		_SoDLastStateChangeDate = Calendar.getInstance();
 		loadData();
 		handleSodStages();
-		LOGGER.info("Seed of Destruction Manager: Loaded. Current stage is: " + getSoDState());
+		LOGGER.info("Seed of Destruction Manager: Loaded. Current stage is: " + _SoDState);
 	}
 	
 	public void saveData(byte seedType)

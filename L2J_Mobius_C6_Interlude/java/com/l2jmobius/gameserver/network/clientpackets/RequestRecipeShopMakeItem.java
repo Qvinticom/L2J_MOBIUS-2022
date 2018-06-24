@@ -69,7 +69,7 @@ public final class RequestRecipeShopMakeItem extends L2GameClientPacket
 			return;
 		}
 		
-		if (activeChar.isInCraftMode() || manufacturer.isInCraftMode())
+		if (activeChar.isCrafting() || manufacturer.isCrafting())
 		{
 			activeChar.sendMessage("Currently in Craft Mode");
 			return;

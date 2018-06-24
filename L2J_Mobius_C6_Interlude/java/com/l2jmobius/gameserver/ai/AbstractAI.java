@@ -744,7 +744,7 @@ abstract class AbstractAI implements Ctrl
 			}
 			return;
 		}
-		if (!isAutoAttacking())
+		if (!_clientAutoAttacking)
 		{
 			if ((_actor instanceof L2PcInstance) && (((L2PcInstance) _actor).getPet() != null))
 			{
@@ -775,7 +775,7 @@ abstract class AbstractAI implements Ctrl
 			return;
 		}
 		
-		final boolean isAutoAttacking = isAutoAttacking();
+		final boolean isAutoAttacking = _clientAutoAttacking;
 		
 		if (_actor instanceof L2PcInstance)
 		{

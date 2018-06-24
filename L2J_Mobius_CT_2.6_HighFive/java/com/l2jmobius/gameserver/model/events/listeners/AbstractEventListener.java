@@ -93,7 +93,7 @@ public abstract class AbstractEventListener implements Comparable<AbstractEventL
 	 */
 	public void unregisterMe()
 	{
-		getContainer().removeListener(this);
+		_container.removeListener(this);
 	}
 	
 	@Override

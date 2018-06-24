@@ -2739,7 +2739,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public String showHtmlFile(L2PcInstance player, String filename, L2Npc npc)
 	{
 		final boolean questwindow = !filename.endsWith(".html");
-		final int questId = getId();
 		
 		// Create handler to file linked to the quest
 		String content = getHtm(player, filename);
@@ -2752,9 +2751,9 @@ public class Quest extends AbstractScript implements IIdentifiable
 				content = content.replaceAll("%objectId%", String.valueOf(npc.getObjectId()));
 			}
 			
-			if (questwindow && (questId > 0) && (questId < 20000) && (questId != 999))
+			if (questwindow && (_questId > 0) && (_questId < 20000) && (_questId != 999))
 			{
-				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, questId);
+				final NpcQuestHtmlMessage npcReply = new NpcQuestHtmlMessage(npc != null ? npc.getObjectId() : 0, _questId);
 				npcReply.setHtml(content);
 				npcReply.replace("%playername%", player.getName());
 				player.sendPacket(npcReply);
@@ -2942,7 +2941,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	{
 		if (activeChar.getQuestState(getName()) != null)
 		{
-			final ExQuestNpcLogList packet = new ExQuestNpcLogList(getId());
+			final ExQuestNpcLogList packet = new ExQuestNpcLogList(_questId);
 			getNpcLogList(activeChar).forEach(packet::add);
 			activeChar.sendPacket(packet);
 		}

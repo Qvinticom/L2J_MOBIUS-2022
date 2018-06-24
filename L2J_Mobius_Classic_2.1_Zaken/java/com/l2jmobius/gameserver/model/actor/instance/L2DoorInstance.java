@@ -51,7 +51,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class L2DoorInstance extends L2Character
 {
-	private boolean _open = false;
+	boolean _open = false;
 	private boolean _isAttackableDoor = false;
 	private boolean _isInverted = false;
 	private int _meshindex = 1;
@@ -293,7 +293,7 @@ public final class L2DoorInstance extends L2Character
 		{
 			return false;
 		}
-		else if (getIsAttackableDoor())
+		else if (_isAttackableDoor)
 		{
 			return true;
 		}
@@ -369,13 +369,13 @@ public final class L2DoorInstance extends L2Character
 		OnEventTrigger oe = null;
 		if (getEmitter() > 0)
 		{
-			if (isInverted())
+			if (_isInverted)
 			{
-				oe = new OnEventTrigger(getEmitter(), !isOpen());
+				oe = new OnEventTrigger(getEmitter(), !_open);
 			}
 			else
 			{
-				oe = new OnEventTrigger(getEmitter(), isOpen());
+				oe = new OnEventTrigger(getEmitter(), _open);
 			}
 		}
 		
@@ -592,13 +592,13 @@ public final class L2DoorInstance extends L2Character
 		{
 			if (getEmitter() > 0)
 			{
-				if (isInverted())
+				if (_isInverted)
 				{
-					activeChar.sendPacket(new OnEventTrigger(getEmitter(), !isOpen()));
+					activeChar.sendPacket(new OnEventTrigger(getEmitter(), !_open));
 				}
 				else
 				{
-					activeChar.sendPacket(new OnEventTrigger(getEmitter(), isOpen()));
+					activeChar.sendPacket(new OnEventTrigger(getEmitter(), _open));
 				}
 			}
 			activeChar.sendPacket(new StaticObject(this, activeChar.isGM()));
@@ -649,7 +649,7 @@ public final class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			if (isOpen())
+			if (_open)
 			{
 				closeMe();
 			}
@@ -661,8 +661,7 @@ public final class L2DoorInstance extends L2Character
 		@Override
 		public void run()
 		{
-			final boolean open = isOpen();
-			if (open)
+			if (_open)
 			{
 				closeMe();
 			}
@@ -671,7 +670,7 @@ public final class L2DoorInstance extends L2Character
 				openMe();
 			}
 			
-			int delay = open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
+			int delay = _open ? getTemplate().getCloseTime() : getTemplate().getOpenTime();
 			if (getTemplate().getRandomTime() > 0)
 			{
 				delay += Rnd.get(getTemplate().getRandomTime());

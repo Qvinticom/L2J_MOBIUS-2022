@@ -168,7 +168,7 @@ public class InstanceWorld
 	 */
 	public List<L2Npc> getAliveNpcs()
 	{
-		return getNpcs().stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toList());
+		return _instance.getNpcs().stream().filter(n -> n.getCurrentHp() > 0).collect(Collectors.toList());
 	}
 	
 	/**
@@ -178,7 +178,7 @@ public class InstanceWorld
 	 */
 	public List<L2Npc> getNpcs(int... id)
 	{
-		return getNpcs().stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		return _instance.getNpcs().stream().filter(n -> CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
 	
 	/**
@@ -191,7 +191,7 @@ public class InstanceWorld
 	@SafeVarargs
 	public final <T extends L2Character> List<T> getNpcs(Class<T> clazz, int... ids)
 	{
-		return getNpcs().stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		return _instance.getNpcs().stream().filter(n -> (ids.length == 0) || CommonUtil.contains(ids, n.getId())).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
 	
 	/**
@@ -204,7 +204,7 @@ public class InstanceWorld
 	@SafeVarargs
 	public final <T extends L2Character> List<T> getAliveNpcs(Class<T> clazz, int... ids)
 	{
-		return getNpcs().stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
+		return _instance.getNpcs().stream().filter(n -> ((ids.length == 0) || CommonUtil.contains(ids, n.getId())) && (n.getCurrentHp() > 0)).filter(clazz::isInstance).map(clazz::cast).collect(Collectors.toList());
 	}
 	
 	/**
@@ -214,7 +214,7 @@ public class InstanceWorld
 	 */
 	public List<L2Npc> getAliveNpcs(int... id)
 	{
-		return getNpcs().stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
+		return _instance.getNpcs().stream().filter(n -> (n.getCurrentHp() > 0) && CommonUtil.contains(id, n.getId())).collect(Collectors.toList());
 	}
 	
 	/**
@@ -224,7 +224,7 @@ public class InstanceWorld
 	 */
 	public L2Npc getNpc(int id)
 	{
-		return getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
+		return _instance.getNpcs().stream().filter(n -> n.getId() == id).findFirst().orElse(null);
 	}
 	
 	/**

@@ -111,8 +111,8 @@ public class ClanHallManager
 			rs.close();
 			statement.close();
 			
-			LOGGER.info("Loaded: " + getClanHalls().size() + " clan halls");
-			LOGGER.info("Loaded: " + getFreeClanHalls().size() + " free clan halls");
+			LOGGER.info("Loaded: " + _clanHall.size() + " clan halls");
+			LOGGER.info("Loaded: " + _freeClanHall.size() + " free clan halls");
 			_loaded = true;
 		}
 		catch (Exception e)

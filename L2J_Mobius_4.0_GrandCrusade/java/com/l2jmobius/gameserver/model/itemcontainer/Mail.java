@@ -115,9 +115,9 @@ public class Mail extends ItemContainer
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
-			statement.setInt(1, getOwnerId());
+			statement.setInt(1, _ownerId);
 			statement.setString(2, getBaseLocation().name());
-			statement.setInt(3, getMessageId());
+			statement.setInt(3, _messageId);
 			try (ResultSet inv = statement.executeQuery())
 			{
 				while (inv.next())

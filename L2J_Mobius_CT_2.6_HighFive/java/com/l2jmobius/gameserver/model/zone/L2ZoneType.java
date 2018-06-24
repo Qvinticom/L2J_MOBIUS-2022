@@ -188,7 +188,7 @@ public abstract class L2ZoneType extends ListenersContainer
 		}
 		else
 		{
-			LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + getId());
+			LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + _id);
 		}
 	}
 	
@@ -392,12 +392,12 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public double getDistanceToZone(int x, int y)
 	{
-		return getZone().getDistanceToZone(x, y);
+		return _zone.getDistanceToZone(x, y);
 	}
 	
 	public double getDistanceToZone(L2Object object)
 	{
-		return getZone().getDistanceToZone(object.getX(), object.getY());
+		return _zone.getDistanceToZone(object.getX(), object.getY());
 	}
 	
 	public void revalidateInZone(L2Character character)
@@ -557,7 +557,7 @@ public abstract class L2ZoneType extends ListenersContainer
 	
 	public void visualizeZone(int z)
 	{
-		getZone().visualizeZone(z);
+		_zone.visualizeZone(z);
 	}
 	
 	public void setEnabled(boolean state)

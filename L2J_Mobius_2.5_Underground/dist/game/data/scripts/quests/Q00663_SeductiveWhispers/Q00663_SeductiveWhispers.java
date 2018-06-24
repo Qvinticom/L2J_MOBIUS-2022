@@ -530,7 +530,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		@Override
 		public String toString()
 		{
-			return getSide() == Side.MOON ? "<font color=\"LEVEL\">" + getSide().getName() + ": " + getNumber() + "</font>" : "<font color=\"FF0000\">" + getSide().getName() + ": " + getNumber() + "</font>";
+			return _side == Side.MOON ? "<font color=\"LEVEL\">" + _side.getName() + ": " + _number + "</font>" : "<font color=\"FF0000\">" + _side.getName() + ": " + _number + "</font>";
 		}
 	}
 }
