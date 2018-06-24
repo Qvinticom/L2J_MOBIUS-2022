@@ -1722,6 +1722,11 @@
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
+		<selfEffects>
+			<effect name="ManaHeal">
+				<param power="29" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="1555" levels="1" name="Aura Cannon">
 		<!-- Confirmed High Five -->
@@ -1743,6 +1748,11 @@
 		<for>
 			<effect name="MagicalAttack" />
 		</for>
+		<selfEffects>
+			<effect name="ManaHeal">
+				<param power="25" />
+			</effect>
+		</selfEffects>
 	</skill>
 	<skill id="1556" levels="1" name="Arcane Shield">
 		<!-- High Five Skill -->
