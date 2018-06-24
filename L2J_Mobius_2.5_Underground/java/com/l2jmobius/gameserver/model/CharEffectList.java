@@ -535,20 +535,32 @@ public final class CharEffectList
 			{
 				case TRIGGER:
 				{
-					return (_triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT);
+					if (_triggerBuffCount.get() > Config.TRIGGERED_BUFFS_MAX_AMOUNT)
+					{
+						return true;
+					}
 				}
 				case DANCE:
 				{
-					return (_danceCount.get() > Config.DANCES_MAX_AMOUNT);
+					if (_danceCount.get() > Config.DANCES_MAX_AMOUNT)
+					{
+						return true;
+					}
 				}
 				// case TOGGLE: Do toggles have limit?
 				case DEBUFF:
 				{
-					return (_debuffCount.get() > 24);
+					if (_debuffCount.get() > 24)
+					{
+						return true;
+					}
 				}
 				case BUFF:
 				{
-					return (getBuffCount() > _owner.getStat().getMaxBuffCount());
+					if (getBuffCount() > _owner.getStat().getMaxBuffCount())
+					{
+						return true;
+					}
 				}
 			}
 		}
