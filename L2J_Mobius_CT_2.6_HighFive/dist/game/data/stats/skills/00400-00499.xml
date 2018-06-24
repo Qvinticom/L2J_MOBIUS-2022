@@ -1652,6 +1652,10 @@
 		</cond>
 		<for>
 			<effect name="Invincible" />
+			<effect name="Buff">
+				<set stat="debuffImmunity" val="1" />
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="443" levels="1" name="Force Barrier">
@@ -1678,6 +1682,10 @@
 		</cond>
 		<for>
 			<effect name="Invincible" />
+			<effect name="Buff">
+				<set stat="debuffImmunity" val="1" />
+				<sub stat="cancelVuln" val="100" />
+			</effect>
 		</for>
 	</skill>
 	<skill id="444" levels="1" name="Sweeper Festival">
