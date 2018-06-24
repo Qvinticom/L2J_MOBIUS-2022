@@ -107,7 +107,7 @@ public class MultilayerBlock implements IBlock
 	
 	private int _extractLayerNswe(short layer)
 	{
-		return (byte) (layer & 0x000F);
+		return (layer & 0x000F);
 	}
 	
 	private int _extractLayerHeight(short layer)

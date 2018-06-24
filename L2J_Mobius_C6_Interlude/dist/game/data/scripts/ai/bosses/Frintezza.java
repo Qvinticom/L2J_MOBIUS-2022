@@ -2594,7 +2594,7 @@ public class Frintezza extends Quest
 				startQuestTimer("remove_players", 900000, npc, null);
 				
 				GrandBossManager.getInstance().setBossStatus(FRINTEZZA, DEAD);
-				final long respawnTime = (long) (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
+				final long respawnTime = (Config.FRINTEZZA_RESP_FIRST + Rnd.get(Config.FRINTEZZA_RESP_SECOND)) * 3600000;
 				startQuestTimer("frintezza_unlock", respawnTime, npc, null);
 				// also save the respawn time so that the info is maintained past reboots
 				final StatsSet info = GrandBossManager.getInstance().getStatsSet(FRINTEZZA);

@@ -918,7 +918,7 @@ public class L2Attackable extends L2NpcInstance
 						// If the party didn't killed this L2Attackable alone
 						if (partyDmg < getMaxHp())
 						{
-							partyMul = (float) partyDmg / (float) getMaxHp();
+							partyMul = (float) partyDmg / getMaxHp();
 						}
 						
 						// Avoid "over damage"
@@ -1290,7 +1290,7 @@ public class L2Attackable extends L2NpcInstance
 			{ // core ring
 				if (Config.CORE_RING_CHANCE > 0)
 				{
-					dropChance = ((float) 10000 * Config.CORE_RING_CHANCE);
+					dropChance = (10000 * Config.CORE_RING_CHANCE);
 				}
 				else
 				{
@@ -1302,7 +1302,7 @@ public class L2Attackable extends L2NpcInstance
 			{ // orfen earring
 				if (Config.ORFEN_EARRING_CHANCE > 0)
 				{
-					dropChance = ((float) 10000 * Config.ORFEN_EARRING_CHANCE);
+					dropChance = (10000 * Config.ORFEN_EARRING_CHANCE);
 				}
 				else
 				{
@@ -1314,7 +1314,7 @@ public class L2Attackable extends L2NpcInstance
 			{ // zaken earring
 				if (Config.ZAKEN_EARRING_CHANCE > 0)
 				{
-					dropChance = ((float) 10000 * Config.ZAKEN_EARRING_CHANCE);
+					dropChance = (10000 * Config.ZAKEN_EARRING_CHANCE);
 				}
 				else
 				{
@@ -1326,7 +1326,7 @@ public class L2Attackable extends L2NpcInstance
 			{ // aq ring
 				if (Config.QA_RING_CHANCE > 0)
 				{
-					dropChance = ((float) 10000 * Config.QA_RING_CHANCE);
+					dropChance = (10000 * Config.QA_RING_CHANCE);
 				}
 				else
 				{
@@ -3092,14 +3092,14 @@ public class L2Attackable extends L2NpcInstance
 			diff = -5; // makes possible to use ALT_GAME_EXPONENT configuration
 		}
 		
-		xp = ((double) getExpReward() * damage) / getMaxHp();
+		xp = (getExpReward() * damage) / getMaxHp();
 		
 		if (Config.ALT_GAME_EXPONENT_XP != 0)
 		{
 			xp *= Math.pow(2., -diff / Config.ALT_GAME_EXPONENT_XP);
 		}
 		
-		sp = ((double) getSpReward() * damage) / getMaxHp();
+		sp = (getSpReward() * damage) / getMaxHp();
 		
 		if (Config.ALT_GAME_EXPONENT_SP != 0)
 		{

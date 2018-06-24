@@ -137,8 +137,8 @@ public class SSQStatus extends L2GameServerPacket
 				
 				if (totalOverallScore != 0)
 				{
-					dawnPercent = Math.round(((float) dawnTotalScore / (float) totalOverallScore) * 100);
-					duskPercent = Math.round(((float) duskTotalScore / (float) totalOverallScore) * 100);
+					dawnPercent = Math.round(((float) dawnTotalScore / totalOverallScore) * 100);
+					duskPercent = Math.round(((float) duskTotalScore / totalOverallScore) * 100);
 				}
 				
 				if (Config.DEBUG)
@@ -246,18 +246,18 @@ public class SSQStatus extends L2GameServerPacket
 						else
 						{
 							writeC(0);
-							writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
+							writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
 						}
 					}
 					else if (totalDawnMembers == 0)
 					{
-						writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
+						writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
 						writeC(0);
 					}
 					else
 					{
-						writeC(Math.round(((float) duskProportion / (float) totalDuskMembers) * 100));
-						writeC(Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100));
+						writeC(Math.round(((float) duskProportion / totalDuskMembers) * 100));
+						writeC(Math.round(((float) dawnProportion / totalDawnMembers) * 100));
 					}
 				}
 				break;

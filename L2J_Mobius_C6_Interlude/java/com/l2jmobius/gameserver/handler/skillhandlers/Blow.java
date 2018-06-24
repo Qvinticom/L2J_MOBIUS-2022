@@ -171,7 +171,7 @@ public class Blow implements ISkillHandler
 					crit = true;
 				}
 				
-				double damage = (int) Formulas.calcBlowDamage(activeChar, target, skill, shld, crit, soul);
+				double damage = Formulas.calcBlowDamage(activeChar, target, skill, shld, crit, soul);
 				
 				// if (soul)
 				// weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE);

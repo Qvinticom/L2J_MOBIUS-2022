@@ -1155,7 +1155,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		adminReply.replace("%pkkills%", String.valueOf(player.getPkKills()));
 		adminReply.replace("%currentload%", String.valueOf(player.getCurrentLoad()));
 		adminReply.replace("%maxload%", String.valueOf(player.getMaxLoad()));
-		adminReply.replace("%percent%", String.format("%.2f", (((float) player.getCurrentLoad() / (float) player.getMaxLoad()) * 100)));
+		adminReply.replace("%percent%", String.format("%.2f", (((float) player.getCurrentLoad() / player.getMaxLoad()) * 100)));
 		adminReply.replace("%patk%", String.valueOf(player.getPAtk()));
 		adminReply.replace("%matk%", String.valueOf(player.getMAtk()));
 		adminReply.replace("%pdef%", String.valueOf(player.getPDef()));

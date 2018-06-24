@@ -172,7 +172,7 @@ public class CharStat
 	 */
 	public int getCriticalHit(L2Character target, Skill skill)
 	{
-		double val = (int) calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
+		double val = calcStat(Stats.CRITICAL_RATE, _activeChar.getTemplate().getBaseCritRate(), target, skill);
 		if (!_activeChar.canOverrideCond(PcCondOverride.MAX_STATS_VALUE))
 		{
 			val = Math.min(val, Config.MAX_PCRIT_RATE);

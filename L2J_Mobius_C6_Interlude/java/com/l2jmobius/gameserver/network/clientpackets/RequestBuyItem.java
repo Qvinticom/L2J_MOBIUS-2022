@@ -281,7 +281,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 				return;
 			}
 			
-			subTotal += (long) count * price; // Before tax
+			subTotal += count * price; // Before tax
 			tax = (int) (subTotal * taxRate);
 			
 			// Check subTotal + tax
@@ -293,7 +293,7 @@ public final class RequestBuyItem extends L2GameClientPacket
 				return;
 			}
 			
-			weight += (long) count * template.getWeight();
+			weight += count * template.getWeight();
 			if (!template.isStackable())
 			{
 				slots += count;

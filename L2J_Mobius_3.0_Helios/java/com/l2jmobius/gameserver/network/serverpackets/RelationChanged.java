@@ -48,9 +48,9 @@ public final class RelationChanged implements IClientOutgoingPacket
 	public static final int RELATION_TERRITORY_WAR = 0x80000; // show Territory War icon
 	
 	// Masks
-	public static final byte SEND_ONE = (byte) 0x00;
-	public static final byte SEND_DEFAULT = (byte) 0x01;
-	public static final byte SEND_MULTI = (byte) 0x04;
+	public static final byte SEND_ONE = 0x00;
+	public static final byte SEND_DEFAULT = 0x01;
+	public static final byte SEND_MULTI = 0x04;
 	
 	protected static class Relation
 	{
@@ -59,7 +59,7 @@ public final class RelationChanged implements IClientOutgoingPacket
 	
 	private Relation _singled;
 	private final List<Relation> _multi;
-	private byte _mask = (byte) 0x00;
+	private byte _mask = 0x00;
 	
 	public RelationChanged(L2Playable activeChar, int relation, boolean autoattackable)
 	{

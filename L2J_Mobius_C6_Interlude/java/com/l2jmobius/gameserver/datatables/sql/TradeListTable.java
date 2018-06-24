@@ -58,7 +58,7 @@ public class TradeListTable
 		{
 			restoreCount(timer);
 			dataTimerSave(timer);
-			ThreadPool.schedule(new RestoreCount(timer), (long) timer * 60 * 60 * 1000);
+			ThreadPool.schedule(new RestoreCount(timer), timer * 60 * 60 * 1000);
 		}
 	}
 	
@@ -264,7 +264,7 @@ public class TradeListTable
 	
 	protected void dataTimerSave(int time)
 	{
-		final long timerSave = System.currentTimeMillis() + ((long) time * 3600000); // 60*60*1000
+		final long timerSave = System.currentTimeMillis() + (time * 3600000); // 60*60*1000
 		
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{

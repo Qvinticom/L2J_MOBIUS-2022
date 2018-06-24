@@ -1345,7 +1345,7 @@ public final class Formulas
 					env.skill = skill;
 					env.value = damage;
 					func.calc(env);
-					damage = (int) env.value;
+					damage = env.value;
 				}
 			}
 		}

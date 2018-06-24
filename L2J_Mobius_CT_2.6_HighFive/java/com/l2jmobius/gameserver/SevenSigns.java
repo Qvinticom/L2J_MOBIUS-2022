@@ -1297,10 +1297,10 @@ public class SevenSigns
 			int newSealOwner = CABAL_NULL;
 			final int dawnProportion = getSealProportion(currSeal, CABAL_DAWN);
 			final int totalDawnMembers = getTotalMembers(CABAL_DAWN) == 0 ? 1 : getTotalMembers(CABAL_DAWN);
-			final int dawnPercent = Math.round(((float) dawnProportion / (float) totalDawnMembers) * 100);
+			final int dawnPercent = Math.round(((float) dawnProportion / totalDawnMembers) * 100);
 			final int duskProportion = getSealProportion(currSeal, CABAL_DUSK);
 			final int totalDuskMembers = getTotalMembers(CABAL_DUSK) == 0 ? 1 : getTotalMembers(CABAL_DUSK);
-			final int duskPercent = Math.round(((float) duskProportion / (float) totalDuskMembers) * 100);
+			final int duskPercent = Math.round(((float) duskProportion / totalDuskMembers) * 100);
 			
 			/**
 			 * If a Seal was already closed or owned by the opponent and the new winner wants to assume ownership of the Seal, 35% or more of the members of the Cabal must have chosen the Seal.<br>

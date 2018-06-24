@@ -615,7 +615,7 @@ public class Valakas extends Quest
 		{
 			GrandBossManager.getInstance().setBossStatus(VALAKAS, DEAD);
 			
-			final long respawnTime = (long) (Config.VALAKAS_RESP_FIRST + Rnd.get(Config.VALAKAS_RESP_SECOND)) * 3600000;
+			final long respawnTime = (Config.VALAKAS_RESP_FIRST + Rnd.get(Config.VALAKAS_RESP_SECOND)) * 3600000;
 			
 			startQuestTimer("valakas_unlock", respawnTime, null, null);
 			// also save the respawn time so that the info is maintained past reboots

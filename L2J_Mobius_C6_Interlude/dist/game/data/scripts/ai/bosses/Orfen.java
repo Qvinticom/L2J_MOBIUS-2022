@@ -247,7 +247,7 @@ public class Orfen extends Quest
 			{
 				GrandBossManager.getInstance().setBossStatus(ORFEN, DEAD);
 				// time is 48hour +/- 20hour
-				final long respawnTime = (long) (Config.ORFEN_RESP_FIRST + Rnd.get(Config.ORFEN_RESP_SECOND)) * 3600000;
+				final long respawnTime = (Config.ORFEN_RESP_FIRST + Rnd.get(Config.ORFEN_RESP_SECOND)) * 3600000;
 				cancelQuestTimer("ORFEN_REFRESH", npc, null);
 				startQuestTimer("ORFEN_SPAWN", respawnTime, null, null);
 				// also save the respawn time so that the info is maintained past reboots

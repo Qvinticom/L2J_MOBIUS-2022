@@ -66,6 +66,6 @@ public class FuncAtkEvasion extends AbstractFunction
 				value += (level - 69) + 2;
 			}
 		}
-		return (int) value;
+		return value;
 	}
 }

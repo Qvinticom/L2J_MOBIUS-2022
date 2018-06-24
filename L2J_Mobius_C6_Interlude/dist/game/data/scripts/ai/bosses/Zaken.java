@@ -874,7 +874,7 @@ public class Zaken extends Quest
 			{
 				GrandBossManager.getInstance().setBossStatus(ZAKEN, DEAD);
 				// time is 36hour +/- 17hour
-				final long respawnTime = (long) (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
+				final long respawnTime = (Config.ZAKEN_RESP_FIRST + Rnd.get(Config.ZAKEN_RESP_SECOND)) * 3600000;
 				startQuestTimer("zaken_unlock", respawnTime, null, null);
 				cancelQuestTimer("1001", npc, null);
 				cancelQuestTimer("1003", npc, null);

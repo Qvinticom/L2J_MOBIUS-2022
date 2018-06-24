@@ -1058,7 +1058,7 @@ public final class Formulas
 		}
 		else
 		{
-			rate = (int) attacker.getStat().calcStat(Stats.CRITICAL_RATE_POS, attacker.getStat().getCriticalHit(target, null));
+			rate = attacker.getStat().calcStat(Stats.CRITICAL_RATE_POS, attacker.getStat().getCriticalHit(target, null));
 		}
 		return (target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE, rate, null, null) + target.getStat().calcStat(Stats.DEFENCE_CRITICAL_RATE_ADD, 0, null, null)) > Rnd.get(1000);
 	}

@@ -523,7 +523,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 						
 						for (Object p : box.getAccess())
 						{
-							msg += " " + (String) p;
+							msg += " " + p;
 						}
 						
 						activeChar.sendMessage(msg);

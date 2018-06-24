@@ -67,7 +67,7 @@ public class TradeController
 			{
 				restoreCount(_timer);
 				dataTimerSave(_timer);
-				ThreadPool.schedule(new RestoreCount(_timer), (long) _timer * 60 * 60 * 1000);
+				ThreadPool.schedule(new RestoreCount(_timer), _timer * 60 * 60 * 1000);
 			}
 			catch (Throwable t)
 			{
@@ -613,7 +613,7 @@ public class TradeController
 	
 	protected void dataTimerSave(int time)
 	{
-		final long timerSave = System.currentTimeMillis() + ((long) time * 60 * 60 * 1000);
+		final long timerSave = System.currentTimeMillis() + (time * 60 * 60 * 1000);
 		try (Connection con = DatabaseFactory.getInstance().getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");

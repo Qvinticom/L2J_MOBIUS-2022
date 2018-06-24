@@ -392,7 +392,7 @@ public class DoorTable
 							continue; // Parallel
 						}
 						
-						final float p = (float) ((doorInst.getA() * x) + (doorInst.getB() * y) + (doorInst.getC() * z) + doorInst.getD()) / (float) dk;
+						final float p = (float) ((doorInst.getA() * x) + (doorInst.getB() * y) + (doorInst.getC() * z) + doorInst.getD()) / dk;
 						
 						final int fx = (int) (x - (l * p));
 						final int fy = (int) (y - (m * p));
