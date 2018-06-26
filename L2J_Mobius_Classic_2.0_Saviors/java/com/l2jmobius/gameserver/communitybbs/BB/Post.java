@@ -70,7 +70,7 @@ public class Post
 		insertindb(cp);
 	}
 	
-	public void insertindb(CPost cp)
+	private void insertindb(CPost cp)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)"))

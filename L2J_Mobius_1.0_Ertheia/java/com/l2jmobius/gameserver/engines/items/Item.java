@@ -21,10 +21,10 @@ import com.l2jmobius.gameserver.model.items.L2Item;
 
 public class Item
 {
-	public int id;
-	public String type;
-	public String name;
-	public StatsSet set;
-	public int currentLevel;
-	public L2Item item;
+	int id;
+	String type;
+	String name;
+	StatsSet set;
+	int currentLevel;
+	L2Item item;
 }

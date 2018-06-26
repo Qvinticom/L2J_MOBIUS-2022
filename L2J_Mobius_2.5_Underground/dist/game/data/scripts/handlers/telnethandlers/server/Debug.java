@@ -251,7 +251,7 @@ public class Debug implements ITelnetCommand
 		throw new IllegalStateException("Deadlocked Thread not found");
 	}
 	
-	public static String getServerStatus()
+	static String getServerStatus()
 	{
 		int playerCount = 0, objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();

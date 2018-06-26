@@ -80,28 +80,28 @@ public final class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
-	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
-	public static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
-	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
-	public static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-	public static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	public static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
-	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
-	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	public static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
-	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
-	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
-	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-	public static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
+	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
 	public static final String TW_CONFIG_FILE = "./config/TerritoryWar.ini";
-	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	public static final String HEXID_FILE = "./config/hexid.txt";
-	public static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
+	private static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
+	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
+	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
+	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
+	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
+	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
+	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
+	private static final String HEXID_FILE = "./config/hexid.txt";
+	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 	
 	// --------------------------------------------------
 	// Custom Config File Definitions

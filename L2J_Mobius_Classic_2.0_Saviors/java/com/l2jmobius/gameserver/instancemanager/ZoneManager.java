@@ -47,7 +47,6 @@ import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCuboid;
 import com.l2jmobius.gameserver.model.zone.form.ZoneCylinder;
 import com.l2jmobius.gameserver.model.zone.form.ZoneNPoly;
-import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
 import com.l2jmobius.gameserver.model.zone.type.L2OlympiadStadiumZone;
 import com.l2jmobius.gameserver.model.zone.type.L2RespawnZone;
 import com.l2jmobius.gameserver.model.zone.type.L2SpawnTerritory;
@@ -62,9 +61,9 @@ public final class ZoneManager implements IGameXmlReader
 	
 	private static final Map<String, AbstractZoneSettings> SETTINGS = new HashMap<>();
 	
-	public static final int SHIFT_BY = 15;
-	public static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
-	public static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
+	private static final int SHIFT_BY = 15;
+	private static final int OFFSET_X = Math.abs(L2World.MAP_MIN_X >> SHIFT_BY);
+	private static final int OFFSET_Y = Math.abs(L2World.MAP_MIN_Y >> SHIFT_BY);
 	
 	private final Map<Class<? extends L2ZoneType>, Map<Integer, ? extends L2ZoneType>> _classZones = new HashMap<>();
 	private final Map<String, L2SpawnTerritory> _spawnTerritories = new HashMap<>();
@@ -424,7 +423,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param id the id
 	 * @return true, if successful
 	 */
-	public boolean checkId(int id)
+	private boolean checkId(int id)
 	{
 		for (Map<Integer, ? extends L2ZoneType> map : _classZones.values())
 		{
@@ -443,7 +442,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @param zone the zone
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> void addZone(Integer id, T zone)
+	private <T extends L2ZoneType> void addZone(Integer id, T zone)
 	{
 		Map<Integer, T> map = (Map<Integer, T>) _classZones.get(zone.getClass());
 		if (map == null)
@@ -612,7 +611,7 @@ public final class ZoneManager implements IGameXmlReader
 	 * @return zone from given coordinates
 	 */
 	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getZone(int x, int y, int z, Class<T> type)
+	private <T extends L2ZoneType> T getZone(int x, int y, int z, Class<T> type)
 	{
 		for (L2ZoneType zone : getRegion(x, y).getZones().values())
 		{
@@ -654,29 +653,6 @@ public final class ZoneManager implements IGameXmlReader
 	}
 	
 	/**
-	 * Gets the arena.
-	 * @param character the character
-	 * @return the arena
-	 */
-	public final L2ArenaZone getArena(L2Character character)
-	{
-		if (character == null)
-		{
-			return null;
-		}
-		
-		for (L2ZoneType temp : getInstance().getZones(character.getX(), character.getY(), character.getZ()))
-		{
-			if ((temp instanceof L2ArenaZone) && temp.isCharacterInZone(character))
-			{
-				return (L2ArenaZone) temp;
-			}
-		}
-		
-		return null;
-	}
-	
-	/**
 	 * Gets the olympiad stadium.
 	 * @param character the character
 	 * @return the olympiad stadium
@@ -696,33 +672,6 @@ public final class ZoneManager implements IGameXmlReader
 			}
 		}
 		return null;
-	}
-	
-	/**
-	 * For testing purposes only.
-	 * @param <T> the generic type
-	 * @param obj the obj
-	 * @param type the type
-	 * @return the closest zone
-	 */
-	@SuppressWarnings("unchecked")
-	public <T extends L2ZoneType> T getClosestZone(L2Object obj, Class<T> type)
-	{
-		T zone = getZone(obj, type);
-		if (zone == null)
-		{
-			double closestdis = Double.MAX_VALUE;
-			for (T temp : (Collection<T>) _classZones.get(type).values())
-			{
-				final double distance = temp.getDistanceToZone(obj);
-				if (distance < closestdis)
-				{
-					closestdis = distance;
-					zone = temp;
-				}
-			}
-		}
-		return zone;
 	}
 	
 	/**

@@ -36,7 +36,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Fear extends AbstractEffect
 {
-	public static final int FEAR_RANGE = 500;
+	private static final int FEAR_RANGE = 500;
 	
 	public Fear(StatsSet params)
 	{

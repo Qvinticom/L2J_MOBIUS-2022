@@ -16,6 +16,7 @@
  */
 package ai.bosses.Baylor;
 
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
@@ -28,6 +29,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 import instances.AbstractInstance;
 
@@ -324,6 +326,20 @@ public final class BaylorWarzone extends AbstractInstance
 			npc.initSeenCreatures();
 		}
 		return super.onSpawn(npc);
+	}
+	
+	/**
+	 * Broadcasts SocialAction packet to self and known players.
+	 * @param character
+	 * @param actionId
+	 */
+	private void broadcastSocialAction(L2Character character, int actionId)
+	{
+		final SocialAction action = new SocialAction(character.getObjectId(), actionId);
+		L2World.getInstance().forEachVisibleObject(character, L2PcInstance.class, player ->
+		{
+			player.sendPacket(action);
+		});
 	}
 	
 	public static void main(String[] args)

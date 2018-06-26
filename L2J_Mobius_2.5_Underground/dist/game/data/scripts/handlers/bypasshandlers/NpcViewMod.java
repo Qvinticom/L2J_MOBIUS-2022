@@ -271,7 +271,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	public static void sendNpcSkillView(L2PcInstance activeChar, L2Npc npc)
+	private static void sendNpcSkillView(L2PcInstance activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/Skills.htm");
@@ -303,7 +303,7 @@ public class NpcViewMod implements IBypassHandler
 		activeChar.sendPacket(html);
 	}
 	
-	public static void sendAggroListView(L2PcInstance activeChar, L2Npc npc)
+	private static void sendAggroListView(L2PcInstance activeChar, L2Npc npc)
 	{
 		final NpcHtmlMessage html = new NpcHtmlMessage();
 		html.setFile(activeChar, "data/html/mods/NpcView/AggroList.htm");

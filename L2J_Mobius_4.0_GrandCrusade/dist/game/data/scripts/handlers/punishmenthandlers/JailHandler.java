@@ -47,7 +47,7 @@ public class JailHandler implements IPunishmentHandler
 		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_LOGIN, (OnPlayerLogin event) -> onPlayerLogin(event), this));
 	}
 	
-	public void onPlayerLogin(OnPlayerLogin event)
+	private void onPlayerLogin(OnPlayerLogin event)
 	{
 		final L2PcInstance activeChar = event.getActiveChar();
 		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneId.JAIL))

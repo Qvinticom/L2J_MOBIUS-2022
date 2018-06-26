@@ -34,7 +34,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 public class StatBonusSkillCritical extends AbstractEffect
 {
 	private final BaseStats _stat;
-	protected final Condition _armorTypeCondition;
+	private final Condition _armorTypeCondition;
 	
 	public StatBonusSkillCritical(StatsSet params)
 	{

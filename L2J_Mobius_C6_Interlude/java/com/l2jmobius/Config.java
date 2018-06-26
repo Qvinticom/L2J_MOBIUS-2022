@@ -56,59 +56,59 @@ public final class Config
 	// --------------------------------------------------
 	
 	// standard
-	public static final String FILTER_FILE = "./config/chatfilter.txt";
-	public static final String HEXID_FILE = "./config/hexid.txt";
+	private static final String FILTER_FILE = "./config/chatfilter.txt";
+	private static final String HEXID_FILE = "./config/hexid.txt";
 	// head
-	public static final String ALT_SETTINGS_CONFIG_FILE = "./config/main/altsettings.ini";
-	public static final String CLANHALL_CONFIG_FILE = "./config/main/clanhall.ini";
-	public static final String ENCHANT_CONFIG_FILE = "./config/main/enchant.ini";
+	private static final String ALT_SETTINGS_CONFIG_FILE = "./config/main/altsettings.ini";
+	private static final String CLANHALL_CONFIG_FILE = "./config/main/clanhall.ini";
+	private static final String ENCHANT_CONFIG_FILE = "./config/main/enchant.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/main/fort.ini";
-	public static final String GEODATA_CONFIG_FILE = "./config/main/geodata.ini";
-	public static final String OLYMP_CONFIG_FILE = "./config/main/olympiad.ini";
-	public static final String OPTIONS_CONFIG_FILE = "./config/main/options.ini";
-	public static final String OTHER_CONFIG_FILE = "./config/main/other.ini";
-	public static final String RATES_CONFIG_FILE = "./config/main/rates.ini";
-	public static final String SEVENSIGNS_CONFIG_FILE = "./config/main/sevensigns.ini";
+	private static final String GEODATA_CONFIG_FILE = "./config/main/geodata.ini";
+	private static final String OLYMP_CONFIG_FILE = "./config/main/olympiad.ini";
+	private static final String OPTIONS_CONFIG_FILE = "./config/main/options.ini";
+	private static final String OTHER_CONFIG_FILE = "./config/main/other.ini";
+	private static final String RATES_CONFIG_FILE = "./config/main/rates.ini";
+	private static final String SEVENSIGNS_CONFIG_FILE = "./config/main/sevensigns.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/main/siege.ini";
-	public static final String ELIT_CLANHALL_CONFIG_FILE = "./config/main/eliteclanhall.ini";
-	public static final String BOSS_CONFIG_FILE = "./config/main/boss.ini";
-	public static final String ACCESS_CONFIG_FILE = "./config/main/access.ini";
-	public static final String CRAFTING_CONFIG_FILE = "./config/main/crafting.ini";
-	public static final String DEVELOPER_CONFIG_FILE = "./config/main/developer.ini";
-	public static final String PHYSICS_CONFIG_FILE = "./config/main/physics.ini";
-	public static final String PVP_CONFIG_FILE = "./config/main/pvp.ini";
+	private static final String ELIT_CLANHALL_CONFIG_FILE = "./config/main/eliteclanhall.ini";
+	private static final String BOSS_CONFIG_FILE = "./config/main/boss.ini";
+	private static final String ACCESS_CONFIG_FILE = "./config/main/access.ini";
+	private static final String CRAFTING_CONFIG_FILE = "./config/main/crafting.ini";
+	private static final String DEVELOPER_CONFIG_FILE = "./config/main/developer.ini";
+	private static final String PHYSICS_CONFIG_FILE = "./config/main/physics.ini";
+	private static final String PVP_CONFIG_FILE = "./config/main/pvp.ini";
 	public static final String CLASS_DAMAGE_CONFIG_FILE = "./config/main/classDamage.ini";
 	// protected
-	public static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/flood.ini";
-	public static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/other.ini";
-	public static final String ID_CONFIG_FILE = "./config/protected/idfactory.ini";
-	public static final String EXTENDER_CONFIG_FILE = "./config/protected/extender.ini";
-	public static final String SCRIPT_CONFIG_FILE = "./config/protected/script.ini";
-	public static final String DAEMONS_CONFIG_FILE = "./config/protected/daemons.ini";
+	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/flood.ini";
+	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/other.ini";
+	private static final String ID_CONFIG_FILE = "./config/protected/idfactory.ini";
+	private static final String EXTENDER_CONFIG_FILE = "./config/protected/extender.ini";
+	private static final String SCRIPT_CONFIG_FILE = "./config/protected/script.ini";
+	private static final String DAEMONS_CONFIG_FILE = "./config/protected/daemons.ini";
 	public static final String TELNET_CONFIG_FILE = "./config/protected/telnet.ini";
 	// events
-	public static final String EVENT_CTF_CONFIG_FILE = "./config/events/ctf.ini";
-	public static final String EVENT_DM_CONFIG_FILE = "./config/events/dm.ini";
-	public static final String EVENT_TVT_CONFIG_FILE = "./config/events/tvt.ini";
-	public static final String EVENT_TW_CONFIG_FILE = "./config/events/tw.ini";
-	public static final String EVENT_PC_BANG_POINT_CONFIG_FILE = "./config/events/pcBang.ini";
+	private static final String EVENT_CTF_CONFIG_FILE = "./config/events/ctf.ini";
+	private static final String EVENT_DM_CONFIG_FILE = "./config/events/dm.ini";
+	private static final String EVENT_TVT_CONFIG_FILE = "./config/events/tvt.ini";
+	private static final String EVENT_TW_CONFIG_FILE = "./config/events/tw.ini";
+	private static final String EVENT_PC_BANG_POINT_CONFIG_FILE = "./config/events/pcBang.ini";
 	// custom
-	public static final String CUSTOM_SERVER_CONFIG_FILE = "./config/custom/customserver.ini";
-	public static final String AWAY_CONFIG_FILE = "./config/custom/away.ini";
-	public static final String BANK_CONFIG_FILE = "./config/custom/bank.ini";
-	public static final String BUFFER_CONFIG_FILE = "./config/custom/buffer.ini";
-	public static final String EVENT_CHAMPION_CONFIG_FILE = "./config/custom/champion.ini";
-	public static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/rebirth.ini";
-	public static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/wedding.ini";
-	public static final String OFFLINE_CONFIG_FILE = "./config/custom/offline.ini";
+	private static final String CUSTOM_SERVER_CONFIG_FILE = "./config/custom/customserver.ini";
+	private static final String AWAY_CONFIG_FILE = "./config/custom/away.ini";
+	private static final String BANK_CONFIG_FILE = "./config/custom/bank.ini";
+	private static final String BUFFER_CONFIG_FILE = "./config/custom/buffer.ini";
+	private static final String EVENT_CHAMPION_CONFIG_FILE = "./config/custom/champion.ini";
+	private static final String EVENT_REBIRTH_CONFIG_FILE = "./config/custom/rebirth.ini";
+	private static final String EVENT_WEDDING_CONFIG_FILE = "./config/custom/wedding.ini";
+	private static final String OFFLINE_CONFIG_FILE = "./config/custom/offline.ini";
 	// network
-	public static final String SERVER_CONFIG_FILE = "./config/network/gameserver.ini";
-	public static final String LOGIN_CONFIG_FILE = "./config/network/loginserver.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/network/gameserver.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/network/loginserver.ini";
 	// others
-	public static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
+	private static final String BANNED_IP_FILE = "./config/others/banned_ip.cfg";
 	public static final String SERVER_NAME_FILE = "./config/others/servername.xml";
 	// legacy
-	public static final String LEGACY_BANNED_IP = "./config/banned_ip.cfg";
+	private static final String LEGACY_BANNED_IP = "./config/banned_ip.cfg";
 	
 	// --------------------------------------------------
 	// Constants

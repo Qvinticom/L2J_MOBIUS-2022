@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.util.MathUtil;
  */
 public class CriticalRatePositionBonus extends AbstractEffect
 {
-	protected final double _amount;
-	protected final Position _position;
+	private final double _amount;
+	private final Position _position;
 	
 	public CriticalRatePositionBonus(StatsSet params)
 	{

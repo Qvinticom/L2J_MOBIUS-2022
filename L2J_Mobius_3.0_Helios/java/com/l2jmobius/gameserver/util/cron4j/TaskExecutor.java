@@ -257,7 +257,7 @@ public class TaskExecutor
 	/**
 	 * Resumes the execution after it has been paused.
 	 */
-	public void resume()
+	private void resume()
 	{
 		synchronized (lock)
 		{

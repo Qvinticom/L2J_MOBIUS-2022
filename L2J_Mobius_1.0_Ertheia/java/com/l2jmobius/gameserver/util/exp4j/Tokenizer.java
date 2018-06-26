@@ -312,12 +312,12 @@ public class Tokenizer
 		return Character.isDigit(ch) || (ch == '.') || (ch == 'e') || (ch == 'E') || (lastCharE && ((ch == '-') || (ch == '+')));
 	}
 	
-	public static boolean isAlphabetic(int codePoint)
+	private static boolean isAlphabetic(int codePoint)
 	{
 		return Character.isLetter(codePoint);
 	}
 	
-	public static boolean isVariableOrFunctionCharacter(int codePoint)
+	private static boolean isVariableOrFunctionCharacter(int codePoint)
 	{
 		return isAlphabetic(codePoint) || Character.isDigit(codePoint) || (codePoint == '_') || (codePoint == '.');
 	}

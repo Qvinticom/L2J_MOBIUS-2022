@@ -18,6 +18,7 @@ package handlers.bypasshandlers;
 
 import java.util.logging.Level;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -37,6 +38,11 @@ public class PrivateWarehouse implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, L2PcInstance activeChar, L2Character target)
 	{
+		if (!Config.ALLOW_WAREHOUSE)
+		{
+			return false;
+		}
+		
 		if (!target.isNpc())
 		{
 			return false;

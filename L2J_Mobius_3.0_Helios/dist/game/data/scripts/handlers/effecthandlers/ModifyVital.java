@@ -30,7 +30,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 public final class ModifyVital extends AbstractEffect
 {
 	// Modify types
-	enum ModifyType
+	private enum ModifyType
 	{
 		DIFF,
 		SET,

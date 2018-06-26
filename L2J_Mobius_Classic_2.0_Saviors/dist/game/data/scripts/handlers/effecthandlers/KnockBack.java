@@ -100,7 +100,7 @@ public final class KnockBack extends AbstractEffect
 		}
 	}
 	
-	public void knockBack(L2Character effector, L2Character effected)
+	private void knockBack(L2Character effector, L2Character effected)
 	{
 		final double radians = Math.toRadians(Util.calculateAngleFrom(effector, effected));
 		final int x = (int) (effected.getX() + (_distance * Math.cos(radians)));

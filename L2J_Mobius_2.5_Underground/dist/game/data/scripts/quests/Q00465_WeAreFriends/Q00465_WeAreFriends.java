@@ -31,10 +31,10 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00465_WeAreFriends extends Quest
 {
-	// Npc
-	public static final int FAIRY_CITIZEN = 32921;
-	public static final int FAIRY_CITIZEN_SPAWN = 32923;
-	// item
+	// NPCs
+	private static final int FAIRY_CITIZEN = 32921;
+	private static final int FAIRY_CITIZEN_SPAWN = 32923;
+	// Item
 	private static final int MARK_OF_FRIENDSHIP = 17377;
 	private static final int FAIRY_LEAF_FLUTE = 17378;
 	private static final int CERTIFICATE_OF_PROMISE = 30384;

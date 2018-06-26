@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
 public class ZoneCuboid extends L2ZoneForm
 {
 	private final int _z1, _z2;
-	Rectangle _r;
+	private final Rectangle _r;
 	
 	public ZoneCuboid(int x1, int x2, int y1, int y2, int z1, int z2)
 	{

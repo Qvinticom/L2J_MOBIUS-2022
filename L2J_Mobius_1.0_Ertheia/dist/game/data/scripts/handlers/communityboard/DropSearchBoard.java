@@ -55,16 +55,16 @@ public class DropSearchBoard implements IParseBoardHandler
 		"_bbs_npc_trace"
 	};
 	
-	class CBDropHolder
+	private class CBDropHolder
 	{
-		int itemId;
-		int npcId;
-		byte npcLevel;
-		long min;
-		long max;
-		double chance;
-		boolean isSpoil;
-		boolean isRaid;
+		final int itemId;
+		final int npcId;
+		final byte npcLevel;
+		final long min;
+		final long max;
+		final double chance;
+		final boolean isSpoil;
+		final boolean isRaid;
 		
 		public CBDropHolder(L2NpcTemplate npcTemplate, DropHolder dropHolder)
 		{

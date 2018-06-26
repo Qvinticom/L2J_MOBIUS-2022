@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class TargetMyPartySkillCondition implements ISkillCondition
 {
-	final boolean _includeMe;
+	private final boolean _includeMe;
 	
 	public TargetMyPartySkillCondition(StatsSet params)
 	{

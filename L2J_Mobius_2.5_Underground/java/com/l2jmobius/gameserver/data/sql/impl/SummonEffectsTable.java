@@ -60,8 +60,8 @@ public class SummonEffectsTable
 	
 	public static class SummonEffect
 	{
-		Skill _skill;
-		int _effectCurTime;
+		private final Skill _skill;
+		private final int _effectCurTime;
 		
 		public SummonEffect(Skill skill, int effectCurTime)
 		{

@@ -28,8 +28,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class WarehouseCacheManager
 {
-	protected final Map<L2PcInstance, Long> _cachedWh = new ConcurrentHashMap<>();
-	protected final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
+	final Map<L2PcInstance, Long> _cachedWh = new ConcurrentHashMap<>();
+	final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
 	
 	protected WarehouseCacheManager()
 	{
@@ -46,8 +46,12 @@ public class WarehouseCacheManager
 		_cachedWh.remove(pc);
 	}
 	
-	public class CacheScheduler implements Runnable
+	private class CacheScheduler implements Runnable
 	{
+		public CacheScheduler()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

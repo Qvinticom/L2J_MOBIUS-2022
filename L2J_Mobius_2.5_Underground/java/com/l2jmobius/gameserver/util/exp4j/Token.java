@@ -28,7 +28,7 @@ public abstract class Token
 	public static final short TOKEN_VARIABLE = 6;
 	public static final short TOKEN_SEPARATOR = 7;
 	
-	protected final int type;
+	private final int type;
 	
 	Token(int type)
 	{
@@ -39,5 +39,4 @@ public abstract class Token
 	{
 		return type;
 	}
-	
 }

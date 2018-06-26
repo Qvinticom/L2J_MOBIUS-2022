@@ -29,15 +29,12 @@ import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.FenceData;
 import com.l2jmobius.gameserver.geoengine.geodata.ABlock;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockComplex;
-import com.l2jmobius.gameserver.geoengine.geodata.BlockComplexDynamic;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockFlat;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockMultilayer;
-import com.l2jmobius.gameserver.geoengine.geodata.BlockMultilayerDynamic;
 import com.l2jmobius.gameserver.geoengine.geodata.BlockNull;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
-import com.l2jmobius.gameserver.geoengine.geodata.IBlockDynamic;
 import com.l2jmobius.gameserver.geoengine.geodata.IGeoObject;
 import com.l2jmobius.gameserver.instancemanager.WarpedSpaceManager;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -276,7 +273,7 @@ public class GeoEngine
 	 * @param geoY : Geodata Y
 	 * @return {@link ABlock} : Block of geodata.
 	 */
-	public final ABlock getBlock(int geoX, int geoY)
+	private final ABlock getBlock(int geoX, int geoY)
 	{
 		final int x = geoX / GeoStructure.BLOCK_CELLS_X;
 		final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
@@ -328,7 +325,7 @@ public class GeoEngine
 	 * @param worldZ : Cell world Z coordinate.
 	 * @return short : Cell geodata Z coordinate, closest to given coordinates.
 	 */
-	public final short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
+	private final short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		return block != null ? block.getHeightNearestOriginal(geoX, geoY, worldZ) : (short) worldZ;
@@ -355,7 +352,7 @@ public class GeoEngine
 	 * @param worldZ : Cell world Z coordinate.
 	 * @return short : Cell NSWE flag byte coordinate, closest to given coordinates.
 	 */
-	public final byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
+	private final byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		return block != null ? block.getNsweNearestOriginal(geoX, geoY, worldZ) : (byte) 0xFF;
@@ -382,200 +379,6 @@ public class GeoEngine
 	public final short getHeight(int worldX, int worldY, int worldZ)
 	{
 		return getHeightNearest(getGeoX(worldX), getGeoY(worldY), worldZ);
-	}
-	
-	// GEODATA - DYNAMIC
-	
-	/**
-	 * Returns calculated NSWE flag byte as a description of {@link IGeoObject}.<br>
-	 * The {@link IGeoObject} is defined by boolean 2D array, saying if the object is present on given cell or not.
-	 * @param inside : 2D description of {@link IGeoObject}
-	 * @return byte[][] : Returns NSWE flags of {@link IGeoObject}.
-	 */
-	public static byte[][] calculateGeoObject(boolean inside[][])
-	{
-		// get dimensions
-		final int width = inside.length;
-		final int height = inside[0].length;
-		
-		// create object flags for geodata, according to the geo object 2D description
-		final byte[][] result = new byte[width][height];
-		
-		// loop over each cell of the geo object
-		for (int ix = 0; ix < width; ix++)
-		{
-			for (int iy = 0; iy < height; iy++)
-			{
-				if (inside[ix][iy])
-				{
-					// cell is inside geo object, block whole movement (nswe = 0)
-					result[ix][iy] = 0;
-				}
-				else
-				{
-					// cell is outside of geo object, block only movement leading inside geo object
-					
-					// set initial value -> no geodata change
-					byte nswe = (byte) 0xFF;
-					
-					// perform axial and diagonal checks
-					if (iy < (height - 1))
-					{
-						if (inside[ix][iy + 1])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_S;
-						}
-					}
-					if (iy > 0)
-					{
-						if (inside[ix][iy - 1])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_N;
-						}
-					}
-					if (ix < (width - 1))
-					{
-						if (inside[ix + 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_E;
-						}
-					}
-					if (ix > 0)
-					{
-						if (inside[ix - 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_W;
-						}
-					}
-					if ((ix < (width - 1)) && (iy < (height - 1)))
-					{
-						if (inside[ix + 1][iy + 1] || inside[ix][iy + 1] || inside[ix + 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_SE;
-						}
-					}
-					if ((ix < (width - 1)) && (iy > 0))
-					{
-						if (inside[ix + 1][iy - 1] || inside[ix][iy - 1] || inside[ix + 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_NE;
-						}
-					}
-					if ((ix > 0) && (iy < (height - 1)))
-					{
-						if (inside[ix - 1][iy + 1] || inside[ix][iy + 1] || inside[ix - 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_SW;
-						}
-					}
-					if ((ix > 0) && (iy > 0))
-					{
-						if (inside[ix - 1][iy - 1] || inside[ix][iy - 1] || inside[ix - 1][iy])
-						{
-							nswe &= ~GeoStructure.CELL_FLAG_NW;
-						}
-					}
-					
-					result[ix][iy] = nswe;
-				}
-			}
-		}
-		
-		return result;
-	}
-	
-	/**
-	 * Add {@link IGeoObject} to the geodata.
-	 * @param object : An object using {@link IGeoObject} interface.
-	 */
-	public final void addGeoObject(IGeoObject object)
-	{
-		toggleGeoObject(object, true);
-	}
-	
-	/**
-	 * Remove {@link IGeoObject} from the geodata.
-	 * @param object : An object using {@link IGeoObject} interface.
-	 */
-	public final void removeGeoObject(IGeoObject object)
-	{
-		toggleGeoObject(object, false);
-	}
-	
-	/**
-	 * Toggles an {@link IGeoObject} in the geodata.
-	 * @param object : An object using {@link IGeoObject} interface.
-	 * @param add : Add/remove object.
-	 */
-	private final void toggleGeoObject(IGeoObject object, boolean add)
-	{
-		// get object geo coordinates and data
-		final int minGX = object.getGeoX();
-		final int minGY = object.getGeoY();
-		final byte[][] geoData = object.getObjectGeoData();
-		
-		// get min/max block coordinates
-		int minBX = minGX / GeoStructure.BLOCK_CELLS_X;
-		int maxBX = ((minGX + geoData.length) - 1) / GeoStructure.BLOCK_CELLS_X;
-		int minBY = minGY / GeoStructure.BLOCK_CELLS_Y;
-		int maxBY = ((minGY + geoData[0].length) - 1) / GeoStructure.BLOCK_CELLS_Y;
-		
-		// loop over affected blocks in X direction
-		for (int bx = minBX; bx <= maxBX; bx++)
-		{
-			// loop over affected blocks in Y direction
-			for (int by = minBY; by <= maxBY; by++)
-			{
-				ABlock block;
-				
-				// conversion to dynamic block must be synchronized to prevent 2 independent threads converting same block
-				synchronized (_blocks)
-				{
-					// get related block
-					block = _blocks[bx][by];
-					
-					// check for dynamic block
-					if (!(block instanceof IBlockDynamic))
-					{
-						// null block means no geodata (particular region file is not loaded), no geodata means no geobjects
-						if (block instanceof BlockNull)
-						{
-							continue;
-						}
-						
-						// not a dynamic block, convert it
-						if (block instanceof BlockFlat)
-						{
-							// convert flat block to the dynamic complex block
-							block = new BlockComplexDynamic(bx, by, (BlockFlat) block);
-							_blocks[bx][by] = block;
-						}
-						else if (block instanceof BlockComplex)
-						{
-							// convert complex block to the dynamic complex block
-							block = new BlockComplexDynamic(bx, by, (BlockComplex) block);
-							_blocks[bx][by] = block;
-						}
-						else if (block instanceof BlockMultilayer)
-						{
-							// convert multilayer block to the dynamic multilayer block
-							block = new BlockMultilayerDynamic(bx, by, (BlockMultilayer) block);
-							_blocks[bx][by] = block;
-						}
-					}
-				}
-				
-				// add/remove geo object to/from dynamic block
-				if (add)
-				{
-					((IBlockDynamic) block).addGeoObject(object);
-				}
-				else
-				{
-					((IBlockDynamic) block).removeGeoObject(object);
-				}
-			}
-		}
 	}
 	
 	// PATHFINDING
@@ -732,7 +535,7 @@ public class GeoEngine
 	 * @param instance
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	protected final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance)
+	private final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance)
 	{
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
@@ -915,7 +718,7 @@ public class GeoEngine
 	 * @param instance
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	protected final boolean checkSeeOriginal(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance)
+	private final boolean checkSeeOriginal(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance)
 	{
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);

@@ -52,7 +52,7 @@ public final class TimerExecutor<T>
 	 * @param holder
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addTimer(TimerHolder<T> holder)
+	private boolean addTimer(TimerHolder<T> holder)
 	{
 		final Set<TimerHolder<T>> timers = _timers.computeIfAbsent(holder.getEvent(), key -> ConcurrentHashMap.newKeySet());
 		removeAndCancelTimers(timers, holder::isEqual);
@@ -123,23 +123,9 @@ public final class TimerExecutor<T>
 	 * @param eventTimer
 	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
 	 */
-	public boolean addRepeatingTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, IEventTimerEvent<T> eventTimer)
+	private boolean addRepeatingTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player, IEventTimerEvent<T> eventTimer)
 	{
 		return addTimer(new TimerHolder<>(event, params, time, npc, player, true, eventTimer, _cancelListener, this));
-	}
-	
-	/**
-	 * Adds repeating timer
-	 * @param event
-	 * @param params
-	 * @param time
-	 * @param npc
-	 * @param player
-	 * @return {@code true} if timer were successfully added, {@code false} in case it exists already
-	 */
-	public boolean addRepeatingTimer(T event, StatsSet params, long time, L2Npc npc, L2PcInstance player)
-	{
-		return addRepeatingTimer(event, params, time, npc, player, _eventListener);
 	}
 	
 	/**
@@ -182,22 +168,6 @@ public final class TimerExecutor<T>
 	}
 	
 	/**
-	 * @param timer
-	 */
-	public void onTimerCancel(TimerHolder<T> timer)
-	{
-		final Set<TimerHolder<T>> timers = _timers.get(timer.getEvent());
-		if ((timers != null) && timers.remove(timer))
-		{
-			_eventListener.onTimerEvent(timer);
-			if (timers.isEmpty())
-			{
-				_timers.remove(timer.getEvent());
-			}
-		}
-	}
-	
-	/**
 	 * Cancels and removes all timers from the _timers map
 	 */
 	public void cancelAllTimers()
@@ -221,15 +191,6 @@ public final class TimerExecutor<T>
 		}
 		
 		return timers.stream().anyMatch(holder -> holder.isEqual(event, npc, player));
-	}
-	
-	/**
-	 * @param event
-	 * @return {@code true} if there is at least one timer with the given event, {@code false} otherwise
-	 */
-	public boolean hasTimers(T event)
-	{
-		return _timers.containsKey(event);
 	}
 	
 	/**
@@ -304,33 +265,5 @@ public final class TimerExecutor<T>
 				timer.cancelTimer();
 			}
 		}
-	}
-	
-	/**
-	 * @param event
-	 * @param npc
-	 * @param player
-	 * @return the remaining time of the timer, or -1 in case it doesn't exists
-	 */
-	public long getRemainingTime(T event, L2Npc npc, L2PcInstance player)
-	{
-		final Set<TimerHolder<T>> timers = _timers.get(event);
-		if ((timers == null) || timers.isEmpty())
-		{
-			return -1;
-		}
-		
-		final Iterator<TimerHolder<T>> holders = timers.iterator();
-		while (holders.hasNext())
-		{
-			final TimerHolder<T> holder = holders.next();
-			if (holder.isEqual(event, npc, player))
-			{
-				holders.remove();
-				return holder.getRemainingTime();
-			}
-		}
-		
-		return -1;
 	}
 }

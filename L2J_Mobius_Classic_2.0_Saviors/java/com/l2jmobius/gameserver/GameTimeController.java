@@ -39,9 +39,7 @@ public final class GameTimeController extends Thread
 	public static final int IG_DAYS_PER_DAY = 6;
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
-	public static final int MINUTES_PER_IG_DAY = SECONDS_PER_IG_DAY / 60;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
-	public static final int TICKS_SUN_STATE_CHANGE = TICKS_PER_IG_DAY / 4;
 	
 	private static GameTimeController _instance;
 	

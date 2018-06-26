@@ -35,8 +35,8 @@ public class Q00466_PlacingMySmallPower extends Quest
 {
 	// NPCs
 	private static final int ASTERIOS = 30154;
-	public static final int NOETI_MIMILEAD = 32895;
-	public static final int[] COCON =
+	private static final int NOETI_MIMILEAD = 32895;
+	private static final int[] COCON =
 	{
 		19394 // Large Cocoon
 	};
@@ -60,13 +60,13 @@ public class Q00466_PlacingMySmallPower extends Quest
 		22878 // Fairy Rogue
 	};
 	// Items
-	public static final int FAIRY_WING = 17597;
-	public static final int COCOON_FRAGMENT = 17598;
-	public static final int KIMERIANS_BREATH = 17599;
-	public static final int TEMINIELS_TONIC = 17596;
-	public static final int TONIC_RECIPE = 17603;
+	private static final int FAIRY_WING = 17597;
+	private static final int COCOON_FRAGMENT = 17598;
+	private static final int KIMERIANS_BREATH = 17599;
+	private static final int TEMINIELS_TONIC = 17596;
+	private static final int TONIC_RECIPE = 17603;
 	// Reward
-	public static final int CERTIFICATE_OF_PROMISE = 30384;
+	private static final int CERTIFICATE_OF_PROMISE = 30384;
 	// Misc
 	private static final int MIN_LEVEL = 90;
 	

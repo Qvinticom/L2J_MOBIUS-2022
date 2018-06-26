@@ -31,9 +31,9 @@ import com.l2jmobius.gameserver.model.quest.State;
  */
 public class Q00483_IntendedTactic extends Quest
 {
-	// Npc
-	public static final int ENDE = 33357;
-	// Mobs
+	// NPC
+	private static final int ENDE = 33357;
+	// Monsters
 	private static final int[] MOBS =
 	{
 		23069, // Vladimir's Warrior
@@ -50,7 +50,7 @@ public class Q00483_IntendedTactic extends Quest
 		25811, // Lazearth
 		25815 // Ken
 	};
-	// items
+	// Items
 	private static final int LOYAL_SERVANS_BLOOD = 17736;
 	private static final int TRUTTHFUL_ONES_BLOOD = 17737;
 	private static final int TOKEN_OF_INSOLENCE_TOWER = 17624;

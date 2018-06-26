@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
  */
 public final class TaskRestart extends Task
 {
-	public static final String NAME = "restart";
+	private static final String NAME = "restart";
 	
 	@Override
 	public String getName()

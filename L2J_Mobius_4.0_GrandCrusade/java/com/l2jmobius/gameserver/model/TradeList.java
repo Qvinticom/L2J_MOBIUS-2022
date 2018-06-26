@@ -158,26 +158,6 @@ public class TradeList
 	}
 	
 	/**
-	 * Adjust ItemRequest by corresponding item in this list using its <b>ObjectId</b>
-	 * @param item : ItemRequest to be adjusted
-	 */
-	public void adjustItemRequest(ItemRequest item)
-	{
-		for (TradeItem filtItem : _items)
-		{
-			if (filtItem.getObjectId() == item.getObjectId())
-			{
-				if (filtItem.getCount() < item.getCount())
-				{
-					item.setCount(filtItem.getCount());
-				}
-				return;
-			}
-		}
-		item.setCount(0);
-	}
-	
-	/**
 	 * Add simplified item to TradeList
 	 * @param objectId : int
 	 * @param count : int
@@ -312,7 +292,7 @@ public class TradeList
 	 * @param count : int
 	 * @return
 	 */
-	public synchronized TradeItem removeItem(int objectId, int itemId, long count)
+	private synchronized TradeItem removeItem(int objectId, int itemId, long count)
 	{
 		if (_locked)
 		{
@@ -462,7 +442,7 @@ public class TradeList
 	/**
 	 * Cancels TradeList confirmation
 	 */
-	public void invalidateConfirmation()
+	private void invalidateConfirmation()
 	{
 		_confirmed = false;
 	}
@@ -548,7 +528,7 @@ public class TradeList
 	 * @param partner
 	 * @return items slots count
 	 */
-	public int countItemsSlots(L2PcInstance partner)
+	private int countItemsSlots(L2PcInstance partner)
 	{
 		int slots = 0;
 		
@@ -579,7 +559,7 @@ public class TradeList
 	/**
 	 * @return the weight of items in tradeList
 	 */
-	public int calcItemsWeight()
+	private int calcItemsWeight()
 	{
 		long weight = 0;
 		

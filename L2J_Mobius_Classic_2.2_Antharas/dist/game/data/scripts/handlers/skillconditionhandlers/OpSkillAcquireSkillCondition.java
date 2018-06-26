@@ -27,7 +27,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public class OpSkillAcquireSkillCondition implements ISkillCondition
 {
-	final int _skillId;
+	private final int _skillId;
 	private final boolean _hasLearned;
 	
 	public OpSkillAcquireSkillCondition(StatsSet params)

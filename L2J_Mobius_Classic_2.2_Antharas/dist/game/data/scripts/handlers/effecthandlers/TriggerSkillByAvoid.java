@@ -46,7 +46,6 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 	/**
 	 * @param params
 	 */
-	
 	public TriggerSkillByAvoid(StatsSet params)
 	{
 		_chance = params.getInt("chance", 100);
@@ -54,7 +53,7 @@ public final class TriggerSkillByAvoid extends AbstractEffect
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 	}
 	
-	public void onAvoidEvent(OnCreatureAttackAvoid event)
+	private void onAvoidEvent(OnCreatureAttackAvoid event)
 	{
 		if (event.isDamageOverTime() || (_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
 		{

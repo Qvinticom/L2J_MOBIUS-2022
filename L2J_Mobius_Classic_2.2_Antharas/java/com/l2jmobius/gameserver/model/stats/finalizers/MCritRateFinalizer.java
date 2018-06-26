@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.Optional;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
@@ -37,12 +38,12 @@ public class MCritRateFinalizer implements IStatsFunction
 		double baseValue = calcWeaponPlusBaseValue(creature, stat);
 		if (creature.isPlayer())
 		{
+			// Enchanted legs bonus
 			baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_LEGS);
 		}
 		
 		final double witBonus = creature.getWIT() > 0 ? BaseStats.WIT.calcBonus(creature) : 1.;
-		baseValue *= witBonus * 10;
-		return Stats.defaultValue(creature, stat, baseValue);
+		return validateValue(creature, Stats.defaultValue(creature, stat, baseValue * witBonus * 10), 0, Config.MAX_MCRIT_RATE);
 	}
 	
 	@Override

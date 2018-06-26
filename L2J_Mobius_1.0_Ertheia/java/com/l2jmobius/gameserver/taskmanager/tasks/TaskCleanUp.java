@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
  */
 public final class TaskCleanUp extends Task
 {
-	public static final String NAME = "clean_up";
+	private static final String NAME = "clean_up";
 	
 	@Override
 	public String getName()

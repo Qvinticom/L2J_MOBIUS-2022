@@ -35,8 +35,7 @@ import com.l2jmobius.gameserver.model.holders.LuckyGameDataHolder;
 public class LuckyGameData implements IGameXmlReader
 {
 	private final Map<Integer, LuckyGameDataHolder> _luckyGame = new HashMap<>();
-	
-	final AtomicInteger _serverPlay = new AtomicInteger();
+	private final AtomicInteger _serverPlay = new AtomicInteger();
 	
 	protected LuckyGameData()
 	{

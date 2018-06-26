@@ -167,8 +167,12 @@ public final class Parade extends AbstractNpcAI
 		return (dd * 1000) / 6;
 	}
 	
-	class Start implements Runnable
+	private class Start implements Runnable
 	{
+		public Start()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -179,8 +183,12 @@ public final class Parade extends AbstractNpcAI
 		}
 	}
 	
-	class Spawn implements Runnable
+	private class Spawn implements Runnable
 	{
+		public Spawn()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -209,8 +217,12 @@ public final class Parade extends AbstractNpcAI
 		}
 	}
 	
-	class Delete implements Runnable
+	private class Delete implements Runnable
 	{
+		public Delete()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -240,8 +252,12 @@ public final class Parade extends AbstractNpcAI
 		}
 	}
 	
-	class Clean implements Runnable
+	private class Clean implements Runnable
 	{
+		public Clean()
+		{
+		}
+		
 		@Override
 		public void run()
 		{

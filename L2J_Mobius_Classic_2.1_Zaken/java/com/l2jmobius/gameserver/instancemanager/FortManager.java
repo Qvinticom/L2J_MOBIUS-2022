@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.entity.Fort;
 
 public final class FortManager implements InstanceListManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
 	private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 	

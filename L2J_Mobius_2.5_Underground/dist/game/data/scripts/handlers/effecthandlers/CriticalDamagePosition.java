@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.util.MathUtil;
  */
 public class CriticalDamagePosition extends AbstractEffect
 {
-	protected final double _amount;
-	protected final Position _position;
+	private final double _amount;
+	private final Position _position;
 	
 	public CriticalDamagePosition(StatsSet params)
 	{

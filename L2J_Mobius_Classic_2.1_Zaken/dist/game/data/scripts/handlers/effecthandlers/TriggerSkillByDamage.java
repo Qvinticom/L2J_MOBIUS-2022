@@ -58,7 +58,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
-	public void onDamageReceivedEvent(OnCreatureDamageReceived event)
+	private void onDamageReceivedEvent(OnCreatureDamageReceived event)
 	{
 		if (event.isDamageOverTime() || (_chance == 0) || (_skill.getSkillLevel() == 0))
 		{

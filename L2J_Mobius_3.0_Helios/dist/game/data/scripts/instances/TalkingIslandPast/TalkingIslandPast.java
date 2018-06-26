@@ -112,7 +112,7 @@ public final class TalkingIslandPast extends AbstractInstance
 		return super.onExitZone(character, zone);
 	}
 	
-	public void onCreatureSee(OnCreatureSee event)
+	private void onCreatureSee(OnCreatureSee event)
 	{
 		final L2Character creature = event.getSeen();
 		final L2Npc npc = (L2Npc) event.getSeer();

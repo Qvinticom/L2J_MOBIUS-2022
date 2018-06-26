@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class GetMomentum extends AbstractEffect
 {
-	public static int _ticks;
+	private static int _ticks;
 	
 	public GetMomentum(StatsSet params)
 	{

@@ -20,14 +20,11 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.MinionHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
-import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
-import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -74,27 +71,6 @@ public abstract class AbstractNpcAI extends Quest
 		addSkillSeeId(mobs);
 		addAggroRangeEnterId(mobs);
 		addFactionCallId(mobs);
-	}
-	
-	/**
-	 * Broadcasts SocialAction packet to self and known players.
-	 * @param character
-	 * @param actionId
-	 */
-	protected void broadcastSocialAction(L2Character character, int actionId)
-	{
-		Broadcast.toSelfAndKnownPlayers(character, new SocialAction(character.getObjectId(), actionId));
-	}
-	
-	/**
-	 * Broadcasts SocialAction packet to self and known players in specific radius.
-	 * @param character
-	 * @param actionId
-	 * @param radius
-	 */
-	protected void broadcastSocialAction(L2Character character, int actionId, int radius)
-	{
-		Broadcast.toSelfAndKnownPlayersInRadius(character, new SocialAction(character.getObjectId(), actionId), radius);
 	}
 	
 	public void spawnMinions(L2Npc npc, String spawnName)

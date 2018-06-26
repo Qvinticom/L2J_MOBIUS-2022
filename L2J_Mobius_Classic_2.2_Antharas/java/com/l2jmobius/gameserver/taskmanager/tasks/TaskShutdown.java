@@ -25,7 +25,7 @@ import com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask;
  */
 public class TaskShutdown extends Task
 {
-	public static final String NAME = "shutdown";
+	private static final String NAME = "shutdown";
 	
 	@Override
 	public String getName()

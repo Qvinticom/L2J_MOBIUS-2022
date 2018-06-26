@@ -287,7 +287,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		return event;
 	}
 	
-	public String play(L2PcInstance player, boolean isPlayerTurn, boolean isPractice)
+	private String play(L2PcInstance player, boolean isPlayerTurn, boolean isPractice)
 	{
 		boolean isPlayerWin = false;
 		boolean isNpcWin = false;

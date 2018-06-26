@@ -26,12 +26,12 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * @hlwrave
+ * @author hlwrave
  * @URL https://l2wiki.com/Devils_Strike_Back,_Advent_of_Balok
  */
 public class Q00181_DevilsStrikeBackAdventOfBalok extends Quest
 {
-	// Npc
+	// NPC
 	private static final int FIOREN = 33044;
 	// Monster
 	private static final int BALOK = 29218;
@@ -41,7 +41,7 @@ public class Q00181_DevilsStrikeBackAdventOfBalok extends Quest
 	private static final int EWR = 17526;
 	private static final int POUCH = 34861;
 	// Misc
-	public static final int MIN_LEVEL = 97;
+	private static final int MIN_LEVEL = 97;
 	
 	public Q00181_DevilsStrikeBackAdventOfBalok()
 	{

@@ -34,8 +34,8 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class Q00469_SuspiciousGardener extends Quest
 {
-	// Npc
-	public static final int GOFINA = 33031;
+	// NPC
+	private static final int GOFINA = 33031;
 	// Monsters
 	private static final int APHERIUS_LOOKOUT_BEWILDERED = 22964;
 	// Items

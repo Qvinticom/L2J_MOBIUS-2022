@@ -24,7 +24,7 @@ import java.time.temporal.ChronoUnit;
  */
 public class TimeUtil
 {
-	public static int findIndexOfNonDigit(CharSequence text)
+	private static int findIndexOfNonDigit(CharSequence text)
 	{
 		for (int i = 0; i < text.length(); i++)
 		{

@@ -81,7 +81,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc The table containing quests of the L2NpcInstance
 	 * @param quests
 	 */
-	public static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
+	private static void showQuestChooseWindow(L2PcInstance player, L2Npc npc, Collection<Quest> quests)
 	{
 		final StringBuilder sbStarted = new StringBuilder(128);
 		final StringBuilder sbCanStart = new StringBuilder(128);
@@ -186,7 +186,7 @@ public class QuestLink implements IBypassHandler
 	 * @param npc the L2NpcInstance that chats with the {@code player}
 	 * @param questId the Id of the quest to display the message
 	 */
-	public static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
+	private static void showQuestWindow(L2PcInstance player, L2Npc npc, String questId)
 	{
 		String content = null;
 		

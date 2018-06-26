@@ -93,11 +93,6 @@ public class TrainingHolder implements Serializable
 		return TimeUnit.SECONDS.toMinutes(Config.TRAINING_CAMP_MAX_DURATION - getElapsedTime());
 	}
 	
-	public long getRemainingTime(long time)
-	{
-		return TimeUnit.SECONDS.toMinutes(Config.TRAINING_CAMP_MAX_DURATION - time);
-	}
-	
 	public long getTrainingTime(TimeUnit unit)
 	{
 		return Math.min(unit.convert(Config.TRAINING_CAMP_MAX_DURATION, TimeUnit.SECONDS), unit.convert(_endTime - _startTime, TimeUnit.MILLISECONDS));

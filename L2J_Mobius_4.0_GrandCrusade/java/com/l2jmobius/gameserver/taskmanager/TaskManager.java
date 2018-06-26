@@ -47,12 +47,12 @@ import com.l2jmobius.gameserver.taskmanager.tasks.TaskShutdown;
  */
 public final class TaskManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(TaskManager.class.getName());
+	static final Logger LOGGER = Logger.getLogger(TaskManager.class.getName());
 	
 	private final Map<Integer, Task> _tasks = new ConcurrentHashMap<>();
-	protected final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
+	final List<ExecutedTask> _currentTasks = new CopyOnWriteArrayList<>();
 	
-	protected static final String[] SQL_STATEMENTS =
+	static final String[] SQL_STATEMENTS =
 	{
 		"SELECT id,task,type,last_activation,param1,param2,param3 FROM global_tasks",
 		"UPDATE global_tasks SET last_activation=? WHERE id=?",
@@ -70,13 +70,13 @@ public final class TaskManager
 	public class ExecutedTask implements Runnable
 	{
 		int id;
-		long lastActivation;
-		Task task;
-		TaskTypes type;
-		String[] params;
+		private long lastActivation;
+		private final Task task;
+		private final TaskTypes type;
+		private final String[] params;
 		ScheduledFuture<?> scheduled;
 		
-		public ExecutedTask(Task ptask, TaskTypes ptype, ResultSet rset) throws SQLException
+		ExecutedTask(Task ptask, TaskTypes ptype, ResultSet rset) throws SQLException
 		{
 			task = ptask;
 			type = ptype;
@@ -150,7 +150,7 @@ public final class TaskManager
 			return lastActivation;
 		}
 		
-		public void stopTask()
+		private void stopTask()
 		{
 			task.onDestroy();
 			
@@ -171,7 +171,7 @@ public final class TaskManager
 		registerTask(new TaskShutdown());
 	}
 	
-	public void registerTask(Task task)
+	private void registerTask(Task task)
 	{
 		_tasks.computeIfAbsent(task.getName().hashCode(), k ->
 		{
@@ -312,7 +312,7 @@ public final class TaskManager
 		return addUniqueTask(task, type, param1, param2, param3, 0);
 	}
 	
-	public static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
+	private static boolean addUniqueTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement ps1 = con.prepareStatement(SQL_STATEMENTS[2]))
@@ -348,7 +348,7 @@ public final class TaskManager
 		return addTask(task, type, param1, param2, param3, 0);
 	}
 	
-	public static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
+	private static boolean addTask(String task, TaskTypes type, String param1, String param2, String param3, long lastActivation)
 	{
 		try (Connection con = DatabaseFactory.getInstance().getConnection();
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]))

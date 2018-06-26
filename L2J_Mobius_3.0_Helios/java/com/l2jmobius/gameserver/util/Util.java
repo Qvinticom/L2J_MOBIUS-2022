@@ -40,7 +40,6 @@ import java.util.stream.Collectors;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.commons.util.file.filter.ExtFilter;
 import com.l2jmobius.gameserver.enums.HtmlActionScope;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -51,7 +50,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.tasks.player.IllegalPlayerActionTask;
 import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractHtmlPacket;
-import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
 
 /**
@@ -117,15 +115,6 @@ public final class Util
 	{
 		final double degree = clientHeading / 182.044444444;
 		return degree;
-	}
-	
-	public static int convertDegreeToClientHeading(double degree)
-	{
-		if (degree < 0)
-		{
-			degree = 360 + degree;
-		}
-		return (int) (degree * 182.044444444);
 	}
 	
 	public static int calculateHeadingFrom(ILocational from, ILocational to)
@@ -447,16 +436,6 @@ public final class Util
 		return dateFormat.format(date);
 	}
 	
-	public static File[] getDatapackFiles(String dirname, String extention)
-	{
-		final File dir = new File(Config.DATAPACK_ROOT, "data/" + dirname);
-		if (!dir.exists())
-		{
-			return null;
-		}
-		return dir.listFiles(new ExtFilter(extention));
-	}
-	
 	public static String getDateString(Date date)
 	{
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -565,18 +544,6 @@ public final class Util
 		player.setHtmlActionOriginObjectId(scope, npcObjId);
 		buildHtmlBypassCache(player, scope, html);
 		buildHtmlLinkCache(player, scope, html);
-	}
-	
-	/**
-	 * Helper method to send a NpcHtmlMessage to the specified player.
-	 * @param activeChar the player to send the html content to
-	 * @param html the html content
-	 */
-	public static void sendHtml(L2PcInstance activeChar, String html)
-	{
-		final NpcHtmlMessage npcHtml = new NpcHtmlMessage();
-		npcHtml.setHtml(html);
-		activeChar.sendPacket(npcHtml);
 	}
 	
 	/**

@@ -70,17 +70,21 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 {
 	Logger LOGGER = Logger.getLogger(Stage1.class.getName());
 	
-	protected static class SODSpawn
+	private static class SODSpawn
 	{
-		public boolean isZone = false;
-		public boolean isNeededNextFlag = false;
-		public int npcId;
-		public int x = 0;
-		public int y = 0;
-		public int z = 0;
-		public int h = 0;
-		public int zone = 0;
-		public int count = 0;
+		public SODSpawn()
+		{
+		}
+		
+		boolean isZone = false;
+		boolean isNeededNextFlag = false;
+		int npcId;
+		int x = 0;
+		int y = 0;
+		int z = 0;
+		int h = 0;
+		int zone = 0;
+		int count = 0;
 	}
 	
 	// Spawn data

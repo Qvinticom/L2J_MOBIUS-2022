@@ -81,7 +81,7 @@ public abstract class AbstractAI implements Ctrl
 	/** Flags about client's state, in order to know which messages to send */
 	protected volatile boolean _clientMoving;
 	/** Flags about client's state, in order to know which messages to send */
-	protected volatile boolean _clientAutoAttacking;
+	private volatile boolean _clientAutoAttacking;
 	/** Flags about client's state, in order to know which messages to send */
 	protected int _clientMovingToPawnOffset;
 	
@@ -97,7 +97,7 @@ public abstract class AbstractAI implements Ctrl
 	/** Different internal state flags */
 	protected int _moveToPawnTimeout;
 	
-	protected Future<?> _followTask = null;
+	private Future<?> _followTask = null;
 	private static final int FOLLOW_INTERVAL = 1000;
 	private static final int ATTACK_FOLLOW_INTERVAL = 500;
 	
@@ -630,7 +630,7 @@ public abstract class AbstractAI implements Ctrl
 	 * Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop <I>(broadcast)</I>.<br>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : Low level function, used by AI subclasses</B></FONT>
 	 */
-	public void clientStopAutoAttack()
+	void clientStopAutoAttack()
 	{
 		if (_actor.isSummon())
 		{

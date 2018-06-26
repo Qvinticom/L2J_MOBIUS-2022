@@ -32,12 +32,7 @@ public final class GeoStructure
 	public static final byte CELL_FLAG_SW = 1 << 5;
 	public static final byte CELL_FLAG_NE = 1 << 6;
 	public static final byte CELL_FLAG_NW = (byte) (1 << 7);
-	public static final byte CELL_FLAG_S_AND_E = CELL_FLAG_S | CELL_FLAG_E;
-	public static final byte CELL_FLAG_S_AND_W = CELL_FLAG_S | CELL_FLAG_W;
-	public static final byte CELL_FLAG_N_AND_E = CELL_FLAG_N | CELL_FLAG_E;
-	public static final byte CELL_FLAG_N_AND_W = CELL_FLAG_N | CELL_FLAG_W;
 	
-	public static final int CELL_SIZE = 16;
 	public static final int CELL_HEIGHT = 8;
 	public static final int CELL_IGNORE_HEIGHT = CELL_HEIGHT * 6;
 	
@@ -64,8 +59,8 @@ public final class GeoStructure
 	public static final int REGION_CELLS_Y = REGION_BLOCKS_Y * BLOCK_CELLS_Y;
 	
 	// global geodata
-	public static final int GEO_REGIONS_X = ((L2World.TILE_X_MAX - L2World.TILE_X_MIN) + 1);
-	public static final int GEO_REGIONS_Y = ((L2World.TILE_Y_MAX - L2World.TILE_Y_MIN) + 1);
+	private static final int GEO_REGIONS_X = ((L2World.TILE_X_MAX - L2World.TILE_X_MIN) + 1);
+	private static final int GEO_REGIONS_Y = ((L2World.TILE_Y_MAX - L2World.TILE_Y_MIN) + 1);
 	
 	public static final int GEO_BLOCKS_X = GEO_REGIONS_X * REGION_BLOCKS_X;
 	public static final int GEO_BLOCKS_Y = GEO_REGIONS_Y * REGION_BLOCKS_Y;

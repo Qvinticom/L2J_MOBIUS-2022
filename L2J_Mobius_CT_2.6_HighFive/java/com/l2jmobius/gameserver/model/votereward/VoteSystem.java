@@ -40,12 +40,11 @@ public abstract class VoteSystem implements Runnable
 	
 	private static List<VoteSystem> voteSystems = new ArrayList<>();
 	
-	protected int votesDiff;
-	protected boolean allowReport;
-	protected int boxes;
-	protected Map<Integer, Integer> rewards;
-	protected int checkMins;
-	protected int lastVotes = 0;
+	private final int votesDiff;
+	private final boolean allowReport;
+	private final int boxes;
+	private final Map<Integer, Integer> rewards;
+	private int lastVotes = 0;
 	private final Map<String, Integer> playerIps = new HashMap<>();
 	
 	public static void initialize()
@@ -87,26 +86,12 @@ public abstract class VoteSystem implements Runnable
 		}
 	}
 	
-	public static VoteSystem getVoteSystem(String name)
-	{
-		for (VoteSystem vs : voteSystems)
-		{
-			if (vs.getSiteName().equals(name))
-			{
-				return vs;
-			}
-		}
-		
-		return null;
-	}
-	
 	public VoteSystem(int votesDiff, boolean allowReport, int boxes, Map<Integer, Integer> rewards, int checkMins)
 	{
 		this.votesDiff = votesDiff;
 		this.allowReport = allowReport;
 		this.boxes = boxes;
 		this.rewards = rewards;
-		this.checkMins = checkMins;
 		
 		ThreadPool.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
 	}

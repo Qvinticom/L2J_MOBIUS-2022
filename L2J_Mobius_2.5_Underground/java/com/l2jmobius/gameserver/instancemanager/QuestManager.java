@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.scripting.ScriptEngineManager;
  */
 public final class QuestManager
 {
-	protected static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(QuestManager.class.getName());
 	
 	/** Map containing all the quests. */
 	private final Map<String, Quest> _quests = new ConcurrentHashMap<>();

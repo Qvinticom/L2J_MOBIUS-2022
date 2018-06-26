@@ -37,10 +37,10 @@ import com.l2jmobius.Config;
  */
 public final class ThreadPool
 {
-	protected static final Logger LOGGER = Logger.getLogger(ThreadPool.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(ThreadPool.class.getName());
 	
-	protected static ScheduledThreadPoolExecutor[] SCHEDULED_POOLS;
-	protected static ThreadPoolExecutor[] INSTANT_POOLS;
+	private static ScheduledThreadPoolExecutor[] SCHEDULED_POOLS;
+	private static ThreadPoolExecutor[] INSTANT_POOLS;
 	private static int THREAD_POOL_RANDOMIZER;
 	
 	/**

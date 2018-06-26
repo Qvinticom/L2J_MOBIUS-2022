@@ -16231,18 +16231,6 @@ public final class SystemMessageId
 		return VALUES.get(id);
 	}
 	
-	public static SystemMessageId getSystemMessageId(String name)
-	{
-		try
-		{
-			return (SystemMessageId) SystemMessageId.class.getField(name).get(null);
-		}
-		catch (Exception e)
-		{
-			return null;
-		}
-	}
-	
 	private final int _id;
 	private String _name;
 	private byte _params;

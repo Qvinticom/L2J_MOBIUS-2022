@@ -44,11 +44,6 @@ public class AutoPotion implements IVoicedCommandHandler
 		"apoff"
 	};
 	
-	public static AutoPotion getInstance()
-	{
-		return null;
-	}
-	
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{

@@ -24,7 +24,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 /**
  * @author UnAfraid
  */
-public abstract class AbstractConditionalHpEffect extends AbstractStatEffect
+abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 {
 	private final int _hpPercent;
 	

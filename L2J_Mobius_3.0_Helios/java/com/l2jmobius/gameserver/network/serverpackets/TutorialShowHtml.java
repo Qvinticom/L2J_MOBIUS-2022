@@ -38,18 +38,6 @@ public final class TutorialShowHtml extends AbstractHtmlPacket
 		_type = NORMAL_WINDOW;
 	}
 	
-	/**
-	 * This constructor is just here to be able to show a tutorial html<br>
-	 * window bound to an npc.
-	 * @param npcObjId
-	 * @param html
-	 */
-	public TutorialShowHtml(int npcObjId, String html)
-	{
-		super(npcObjId, html);
-		_type = NORMAL_WINDOW;
-	}
-	
 	public TutorialShowHtml(int npcObjId, String html, int type)
 	{
 		super(npcObjId, html);

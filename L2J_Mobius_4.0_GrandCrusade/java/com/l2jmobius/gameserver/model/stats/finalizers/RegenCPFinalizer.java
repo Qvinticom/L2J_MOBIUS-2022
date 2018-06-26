@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.Optional;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.stats.BaseStats;
@@ -39,7 +40,7 @@ public class RegenCPFinalizer implements IStatsFunction
 		}
 		
 		final L2PcInstance player = creature.getActingPlayer();
-		double baseValue = player.getTemplate().getBaseCpRegen(creature.getLevel()) * creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
+		double baseValue = player.getTemplate().getBaseCpRegen(creature.getLevel()) * creature.getLevelMod() * BaseStats.CON.calcBonus(creature) * Config.CP_REGEN_MULTIPLIER;
 		if (player.isSitting())
 		{
 			baseValue *= 1.5; // Sitting

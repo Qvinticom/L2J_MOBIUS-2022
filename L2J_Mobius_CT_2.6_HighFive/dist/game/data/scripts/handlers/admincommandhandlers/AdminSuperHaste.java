@@ -29,7 +29,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
  */
 public final class AdminSuperHaste implements IAdminCommandHandler
 {
-	public static final String[] ADMIN_COMMANDS =
+	static final String[] ADMIN_COMMANDS =
 	{
 		"admin_superhaste",
 		"admin_superhaste_menu",

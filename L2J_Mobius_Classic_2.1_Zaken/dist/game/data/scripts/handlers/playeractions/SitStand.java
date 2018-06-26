@@ -58,7 +58,7 @@ public final class SitStand implements IPlayerActionHandler
 	 * @param target the target to sit, throne, bench or chair
 	 * @return {@code true} if the player can sit, {@code false} otherwise
 	 */
-	protected boolean useSit(L2PcInstance activeChar, L2Object target)
+	private boolean useSit(L2PcInstance activeChar, L2Object target)
 	{
 		if (activeChar.getMountType() != MountType.NONE)
 		{

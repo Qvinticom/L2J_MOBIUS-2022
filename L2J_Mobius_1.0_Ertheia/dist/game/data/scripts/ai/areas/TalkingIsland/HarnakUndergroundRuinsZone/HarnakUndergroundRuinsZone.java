@@ -73,11 +73,15 @@ public class HarnakUndergroundRuinsZone extends AbstractNpcAI
 		return super.onAdvEvent(event, npc, player);
 	}
 	
-	public static final class zoneInfo
+	private static final class zoneInfo
 	{
 		private int currentPoints = 0;
 		private int currentMonitorizedDamage = 0;
 		private int zoneStage = 0;
+		
+		public zoneInfo()
+		{
+		}
 		
 		void setZoneStage(int a)
 		{

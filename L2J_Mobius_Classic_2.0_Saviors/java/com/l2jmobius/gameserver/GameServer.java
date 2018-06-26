@@ -481,7 +481,7 @@ public class GameServer
 		INSTANCE = new GameServer();
 	}
 	
-	public static void printSection(String s)
+	private static void printSection(String s)
 	{
 		s = "=[ " + s + " ]";
 		while (s.length() < 61)

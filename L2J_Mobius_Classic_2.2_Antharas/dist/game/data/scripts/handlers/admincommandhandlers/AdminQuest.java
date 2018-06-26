@@ -42,7 +42,7 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class AdminQuest implements IAdminCommandHandler
 {
-	public static final Logger LOGGER = Logger.getLogger(AdminQuest.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AdminQuest.class.getName());
 	
 	private static final String[] ADMIN_COMMANDS =
 	{

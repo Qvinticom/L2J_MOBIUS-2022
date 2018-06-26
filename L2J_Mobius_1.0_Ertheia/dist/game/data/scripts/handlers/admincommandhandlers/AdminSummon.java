@@ -26,7 +26,7 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminSummon implements IAdminCommandHandler
 {
-	public static final String[] ADMIN_COMMANDS =
+	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_summon"
 	};

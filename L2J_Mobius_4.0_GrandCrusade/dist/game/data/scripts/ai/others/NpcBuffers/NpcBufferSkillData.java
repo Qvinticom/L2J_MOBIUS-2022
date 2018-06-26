@@ -23,13 +23,13 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author UnAfraid
  */
-public class NpcBufferSkillData
+class NpcBufferSkillData
 {
 	private final SkillHolder _skill;
 	private final int _scaleToLevel;
 	private final int _initialDelay;
 	
-	public NpcBufferSkillData(StatsSet set)
+	NpcBufferSkillData(StatsSet set)
 	{
 		_skill = new SkillHolder(set.getInt("id"), set.getInt("level"));
 		_scaleToLevel = set.getInt("scaleToLevel", -1);

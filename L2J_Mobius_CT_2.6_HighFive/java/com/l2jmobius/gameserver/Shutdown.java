@@ -62,10 +62,10 @@ public class Shutdown extends Thread
 	
 	private int _secondsShut;
 	private int _shutdownMode;
-	public static final int SIGTERM = 0;
-	public static final int GM_SHUTDOWN = 1;
-	public static final int GM_RESTART = 2;
-	public static final int ABORT = 3;
+	private static final int SIGTERM = 0;
+	private static final int GM_SHUTDOWN = 1;
+	private static final int GM_RESTART = 2;
+	private static final int ABORT = 3;
 	private static final String[] MODE_TEXT =
 	{
 		"SIGTERM",

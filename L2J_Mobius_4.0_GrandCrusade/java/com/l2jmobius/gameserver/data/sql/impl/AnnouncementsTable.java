@@ -104,7 +104,7 @@ public final class AnnouncementsTable
 	 * @param player
 	 * @param type
 	 */
-	public void sendAnnouncements(L2PcInstance player, AnnouncementType type)
+	private void sendAnnouncements(L2PcInstance player, AnnouncementType type)
 	{
 		for (IAnnouncement announce : _announcements.values())
 		{

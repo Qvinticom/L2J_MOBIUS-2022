@@ -37,8 +37,8 @@ import javax.swing.WindowConstants;
 public class frmAbout
 {
 	private JFrame frmAbout;
-	static final String URL = "www.l2jmobius.com";
-	URI uri;
+	private static final String URL = "www.l2jmobius.com";
+	final URI uri;
 	
 	public frmAbout()
 	{
@@ -101,7 +101,7 @@ public class frmAbout
 		frmAbout.setLocationRelativeTo(null);
 	}
 	
-	public static URI createURI(String str)
+	private static URI createURI(String str)
 	{
 		try
 		{

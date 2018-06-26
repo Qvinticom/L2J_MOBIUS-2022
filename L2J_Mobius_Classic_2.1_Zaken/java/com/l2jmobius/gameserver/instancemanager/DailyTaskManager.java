@@ -253,7 +253,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		});
 	}
 	
-	public void resetTrainingCamp()
+	private void resetTrainingCamp()
 	{
 		if (Config.TRAINING_CAMP_ENABLE)
 		{

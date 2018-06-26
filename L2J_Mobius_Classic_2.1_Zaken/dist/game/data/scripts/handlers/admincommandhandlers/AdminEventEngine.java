@@ -464,7 +464,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		return note + result;
 	}
 	
-	public void showMainPage(L2PcInstance activeChar)
+	private void showMainPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		
@@ -473,7 +473,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	public void showNewEventPage(L2PcInstance activeChar)
+	private void showNewEventPage(L2PcInstance activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		
@@ -515,7 +515,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 		activeChar.sendPacket(adminReply);
 	}
 	
-	public void showEventParameters(L2PcInstance activeChar, int teamnumbers)
+	private void showEventParameters(L2PcInstance activeChar, int teamnumbers)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		final StringBuilder sb = new StringBuilder();

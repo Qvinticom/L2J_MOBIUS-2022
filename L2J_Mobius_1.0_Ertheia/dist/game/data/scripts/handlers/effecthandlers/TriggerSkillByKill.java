@@ -42,7 +42,7 @@ public final class TriggerSkillByKill extends AbstractEffect
 		_skill = new SkillHolder(params.getInt("skillId", 0), params.getInt("skillLevel", 0));
 	}
 	
-	public void onCreatureKilled(OnCreatureKilled event, L2Character target)
+	private void onCreatureKilled(OnCreatureKilled event, L2Character target)
 	{
 		if ((_chance == 0) || ((_skill.getSkillId() == 0) || (_skill.getSkillLevel() == 0)))
 		{

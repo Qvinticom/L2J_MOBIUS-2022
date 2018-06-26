@@ -595,25 +595,28 @@ public final class BotReportTable
 		}
 	}
 	
-	class PunishHolder
+	private class PunishHolder
 	{
 		final Skill _punish;
 		final int _systemMessageId;
 		
-		PunishHolder(Skill sk, int sysMsg)
+		public PunishHolder(Skill sk, int sysMsg)
 		{
 			_punish = sk;
 			_systemMessageId = sysMsg;
 		}
 	}
 	
-	class ResetPointTask implements Runnable
+	private class ResetPointTask implements Runnable
 	{
+		public ResetPointTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
 			resetPointsAndSchedule();
-			
 		}
 	}
 	

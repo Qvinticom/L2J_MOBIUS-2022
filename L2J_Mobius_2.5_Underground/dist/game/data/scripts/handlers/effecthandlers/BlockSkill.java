@@ -39,7 +39,7 @@ public final class BlockSkill extends AbstractEffect
 		_magicTypes = params.getIntArray("magicTypes", ";");
 	}
 	
-	public TerminateReturn onSkillUseEvent(OnCreatureSkillUse event)
+	private TerminateReturn onSkillUseEvent(OnCreatureSkillUse event)
 	{
 		if (CommonUtil.contains(_magicTypes, event.getSkill().getMagicType()))
 		{
@@ -65,5 +65,4 @@ public final class BlockSkill extends AbstractEffect
 	{
 		effected.removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == this);
 	}
-	
 }

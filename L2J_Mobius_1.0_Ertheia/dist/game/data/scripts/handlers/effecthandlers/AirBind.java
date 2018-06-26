@@ -96,20 +96,6 @@ public final class AirBind extends AbstractEffect
 	@Override
 	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		airBind(effector, effected);
-	}
-	
-	@Override
-	public void onExit(L2Character effector, L2Character effected, Skill skill)
-	{
-		if (!effected.isPlayer())
-		{
-			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
-		}
-	}
-	
-	public void airBind(L2Character effector, L2Character effected)
-	{
 		for (L2PcInstance nearbyPlayer : L2World.getInstance().getVisibleObjects(effected, L2PcInstance.class, 1200))
 		{
 			if ((nearbyPlayer.getRace() != Race.ERTHEIA) && (nearbyPlayer.getTarget() == effected) //
@@ -121,6 +107,15 @@ public final class AirBind extends AbstractEffect
 					nearbyPlayer.sendPacket(new ExAlterSkillRequest(nearbyPlayer, chainSkill, chainSkill, 5));
 				}
 			}
+		}
+	}
+	
+	@Override
+	public void onExit(L2Character effector, L2Character effected, Skill skill)
+	{
+		if (!effected.isPlayer())
+		{
+			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}
 	}
 }

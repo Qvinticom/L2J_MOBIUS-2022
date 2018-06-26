@@ -60,7 +60,7 @@ public final class TriggerSkillByMagicType extends AbstractEffect
 		_targetType = params.getEnum("targetType", TargetType.class, TargetType.TARGET);
 	}
 	
-	public void onSkillUseEvent(OnCreatureSkillFinishCast event)
+	private void onSkillUseEvent(OnCreatureSkillFinishCast event)
 	{
 		if (!event.getTarget().isCharacter())
 		{

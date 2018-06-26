@@ -30,12 +30,12 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class Q00180_InfernalFlamesBurningInCrystalPrison extends Quest
 {
-	// Npc
-	public static final int FIOREN = 33044;
+	// NPC
+	private static final int FIOREN = 33044;
 	// Monster
-	public static final int BAYLOR = 29213;
+	private static final int BAYLOR = 29213;
 	// Misc
-	public static final int MIN_LEVEL = 97;
+	private static final int MIN_LEVEL = 97;
 	// Quest Item
 	private static final int BELETH_MARK = 17591;
 	// Item

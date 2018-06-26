@@ -52,7 +52,7 @@ public class TelnetServer
 		}
 	}
 	
-	public void init()
+	private void init()
 	{
 		addHandler(new ITelnetCommand()
 		{

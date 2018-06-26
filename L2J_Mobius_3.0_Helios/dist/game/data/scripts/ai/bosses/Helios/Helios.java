@@ -50,7 +50,7 @@ public class Helios extends AbstractNpcAI
 	// Misc
 	private static final int HELIOS_RAID_DURATION = 5; // hours
 	private static L2Npc bossInstance;
-	protected L2NoSummonFriendZone bossZone;
+	private final L2NoSummonFriendZone bossZone;
 	
 	private Helios()
 	{

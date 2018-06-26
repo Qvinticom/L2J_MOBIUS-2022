@@ -36,11 +36,11 @@ public class TwoHandedBluntBonus extends AbstractEffect
 	private static final Condition _weaponTypeCondition = new ConditionUsingItemType(WeaponType.BLUNT.mask());
 	private static final Condition _slotCondition = new ConditionUsingSlotType(L2Item.SLOT_LR_HAND);
 	
-	protected final double _pAtkAmount;
-	protected final StatModifierType _pAtkmode;
+	private final double _pAtkAmount;
+	private final StatModifierType _pAtkmode;
 	
-	protected final double _accuracyAmount;
-	protected final StatModifierType _accuracyMode;
+	private final double _accuracyAmount;
+	private final StatModifierType _accuracyMode;
 	
 	public TwoHandedBluntBonus(StatsSet params)
 	{

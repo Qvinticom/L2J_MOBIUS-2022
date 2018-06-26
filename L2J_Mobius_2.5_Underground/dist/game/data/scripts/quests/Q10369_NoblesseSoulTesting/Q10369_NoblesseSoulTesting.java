@@ -658,7 +658,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 		return super.onFirstTalk(npc, player);
 	}
 	
-	public boolean canProgress(L2PcInstance player)
+	private boolean canProgress(L2PcInstance player)
 	{
 		return ((player.getLevel() > MIN_LEVEL) && player.isSubClassActive());
 	}

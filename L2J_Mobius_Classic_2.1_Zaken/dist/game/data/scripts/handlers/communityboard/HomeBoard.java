@@ -77,7 +77,7 @@ public final class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
 	};
 	
-	public static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) ->
+	private static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) ->
 	{
 		boolean commandCheck = false;
 		for (String c : CUSTOM_COMMANDS)
@@ -92,7 +92,7 @@ public final class HomeBoard implements IParseBoardHandler
 		return commandCheck && (activeChar.isCastingNow() || activeChar.isInCombat() || activeChar.isInDuel() || activeChar.isInOlympiadMode() || activeChar.isInsideZone(ZoneId.SIEGE) || activeChar.isInsideZone(ZoneId.PVP));
 	};
 	
-	public static final Predicate<L2PcInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
+	private static final Predicate<L2PcInstance> KARMA_CHECK = player -> Config.COMMUNITYBOARD_KARMA_DISABLED && (player.getReputation() < 0);
 	
 	@Override
 	public String[] getCommunityBoardCommands()

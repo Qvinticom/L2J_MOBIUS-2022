@@ -122,7 +122,7 @@ public final class Transform implements IIdentifiable
 		return _title;
 	}
 	
-	public TransformTemplate getTemplate(L2Character creature)
+	private TransformTemplate getTemplate(L2Character creature)
 	{
 		if (creature.isPlayer())
 		{

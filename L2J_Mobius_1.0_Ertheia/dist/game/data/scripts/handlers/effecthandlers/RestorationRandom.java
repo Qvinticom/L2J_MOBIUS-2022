@@ -45,7 +45,7 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class RestorationRandom extends AbstractEffect
 {
-	final List<L2ExtractableProductItem> _products = new ArrayList<>();
+	private final List<L2ExtractableProductItem> _products = new ArrayList<>();
 	
 	public RestorationRandom(StatsSet params)
 	{

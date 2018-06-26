@@ -56,7 +56,7 @@ public final class TriggerSkillByDeathBlow extends AbstractEffect
 		_attackerType = params.getEnum("attackerType", InstanceType.class, InstanceType.L2Character);
 	}
 	
-	public void onDamageReceivedEvent(OnCreatureDamageReceived event)
+	private void onDamageReceivedEvent(OnCreatureDamageReceived event)
 	{
 		if (event.getDamage() < event.getTarget().getCurrentHp())
 		{

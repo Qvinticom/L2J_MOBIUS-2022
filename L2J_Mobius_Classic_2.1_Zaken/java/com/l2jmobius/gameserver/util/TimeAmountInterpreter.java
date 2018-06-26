@@ -13,7 +13,6 @@ package com.l2jmobius.gameserver.util;
 
 import static java.util.concurrent.TimeUnit.DAYS;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -33,16 +32,6 @@ public class TimeAmountInterpreter
 	}
 	
 	/**
-	 * Calls {@link #consolidate(long, TimeUnit)} with {@link TimeUnit#NANOSECONDS}.
-	 * @param timeAmountInNanos amount of time in nanoseconds
-	 * @return an user-friendly description of the given time amount
-	 */
-	public static String consolidateNanos(long timeAmountInNanos)
-	{
-		return consolidate(timeAmountInNanos, NANOSECONDS);
-	}
-	
-	/**
 	 * Calls {@link #consolidate(long, TimeUnit)} with {@link TimeUnit#MILLISECONDS}.
 	 * @param timeAmountInMillis amount of time in milliseconds
 	 * @return an user-friendly description of the given time amount
@@ -58,7 +47,7 @@ public class TimeAmountInterpreter
 	 * @param timeUnit unit of the given amount
 	 * @return an user-friendly description of the given time amount
 	 */
-	public static String consolidate(long timeAmount, TimeUnit timeUnit)
+	private static String consolidate(long timeAmount, TimeUnit timeUnit)
 	{
 		return consolidate(timeAmount, timeUnit, timeUnit, DAYS, "0 " + timeUnit.name().toLowerCase(Locale.ENGLISH));
 	}
@@ -92,7 +81,7 @@ public class TimeAmountInterpreter
 	 * @throws RuntimeException if {@code textBuilder} throws an {@link IOException}
 	 */
 	@SuppressWarnings("unchecked")
-	public static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long timeAmount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator) throws RuntimeException
+	private static <T extends Appendable & CharSequence> T appendConsolidated(T textBuilder, long timeAmount, TimeUnit timeUnit, TimeUnit minConsolidationUnit, TimeUnit maxConsolidationUnit, String noTimeUsedIndicator) throws RuntimeException
 	{
 		try
 		{

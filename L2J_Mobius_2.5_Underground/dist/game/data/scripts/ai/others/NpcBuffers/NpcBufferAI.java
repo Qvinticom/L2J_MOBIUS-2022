@@ -28,7 +28,7 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author UnAfraid
  */
-public class NpcBufferAI implements Runnable
+class NpcBufferAI implements Runnable
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcBufferAI.class.getName());
 	private final L2Npc _npc;

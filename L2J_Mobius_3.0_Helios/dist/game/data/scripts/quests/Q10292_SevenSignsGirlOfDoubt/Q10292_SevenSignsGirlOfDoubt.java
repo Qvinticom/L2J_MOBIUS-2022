@@ -43,7 +43,7 @@ public final class Q10292_SevenSignsGirlOfDoubt extends Quest
 	private static final ItemHolder ELCADIAS_MARK = new ItemHolder(17226, 10);
 	// Misc
 	private static final int MIN_LEVEL = 81;
-	boolean isBusy = false;
+	private boolean isBusy = false;
 	// Monster
 	private static final int CREATURE_OF_THE_DUSK1 = 27422;
 	private static final int CREATURE_OF_THE_DUSK2 = 27424;

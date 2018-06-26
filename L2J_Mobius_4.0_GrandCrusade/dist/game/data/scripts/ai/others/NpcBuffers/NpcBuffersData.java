@@ -33,7 +33,7 @@ import com.l2jmobius.gameserver.model.StatsSet;
 /**
  * @author UnAfraid
  */
-public class NpcBuffersData implements IGameXmlReader
+class NpcBuffersData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(NpcBuffersData.class.getName());
 	
@@ -93,7 +93,7 @@ public class NpcBuffersData implements IGameXmlReader
 		}
 	}
 	
-	public NpcBufferData getNpcBuffer(int npcId)
+	NpcBufferData getNpcBuffer(int npcId)
 	{
 		return _npcBuffers.get(npcId);
 	}

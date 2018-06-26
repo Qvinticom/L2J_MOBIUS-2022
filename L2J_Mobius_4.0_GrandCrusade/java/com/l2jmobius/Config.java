@@ -71,7 +71,7 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Config
 {
-	protected static final Logger LOGGER = Logger.getLogger(Config.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(Config.class.getName());
 	
 	// --------------------------------------------------
 	// Constants
@@ -81,61 +81,60 @@ public final class Config
 	// --------------------------------------------------
 	// Config File Definitions
 	// --------------------------------------------------
-	public static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
-	public static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
-	public static final String CH_SIEGE_CONFIG_FILE = "./config/ConquerableHallSiege.ini";
-	public static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
-	public static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
-	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
-	public static final String GENERAL_CONFIG_FILE = "./config/General.ini";
 	public static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
-	public static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
-	public static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
-	public static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
-	public static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
-	public static final String NPC_CONFIG_FILE = "./config/NPC.ini";
 	public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
-	public static final String PVP_CONFIG_FILE = "./config/PVP.ini";
-	public static final String RATES_CONFIG_FILE = "./config/Rates.ini";
-	public static final String SERVER_CONFIG_FILE = "./config/Server.ini";
 	public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
-	public static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
-	public static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
-	public static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
-	public static final String HEXID_FILE = "./config/hexid.txt";
-	public static final String IPCONFIG_FILE = "./config/ipconfig.xml";
+	public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
+	private static final String ATTENDANCE_CONFIG_FILE = "./config/AttendanceRewards.ini";
+	private static final String CHARACTER_CONFIG_FILE = "./config/Character.ini";
+	private static final String FEATURE_CONFIG_FILE = "./config/Feature.ini";
+	private static final String FLOOD_PROTECTOR_CONFIG_FILE = "./config/FloodProtector.ini";
+	private static final String GENERAL_CONFIG_FILE = "./config/General.ini";
+	private static final String GRACIASEEDS_CONFIG_FILE = "./config/GraciaSeeds.ini";
+	private static final String GRANDBOSS_CONFIG_FILE = "./config/GrandBoss.ini";
+	private static final String IDFACTORY_CONFIG_FILE = "./config/IdFactory.ini";
+	private static final String LOGIN_CONFIG_FILE = "./config/LoginServer.ini";
+	private static final String NPC_CONFIG_FILE = "./config/NPC.ini";
+	private static final String PVP_CONFIG_FILE = "./config/PVP.ini";
+	private static final String RATES_CONFIG_FILE = "./config/Rates.ini";
+	private static final String SERVER_CONFIG_FILE = "./config/Server.ini";
+	private static final String TELNET_CONFIG_FILE = "./config/Telnet.ini";
+	private static final String TRAINING_CAMP_CONFIG_FILE = "./config/TrainingCamp.ini";
+	private static final String CHAT_FILTER_FILE = "./config/chatfilter.txt";
+	private static final String HEXID_FILE = "./config/hexid.txt";
+	private static final String IPCONFIG_FILE = "./config/ipconfig.xml";
 	
 	// --------------------------------------------------
 	// Custom Config File Definitions
 	// --------------------------------------------------
-	public static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
-	public static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
-	public static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
-	public static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
-	public static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
-	public static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
-	public static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-	public static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
-	public static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
-	public static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
-	public static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
-	public static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
-	public static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
-	public static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
-	public static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
-	public static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
-	public static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
-	public static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
-	public static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
-	public static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
-	public static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
-	public static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
-	public static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
-	public static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
-	public static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
-	public static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
-	public static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
-	public static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
+	private static final String CUSTOM_ALLOWED_PLAYER_RACES_CONFIG_FILE = "./config/Custom/AllowedPlayerRaces.ini";
+	private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
+	private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
+	private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
+	private static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
+	private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
+	private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
+	private static final String CUSTOM_FACTION_SYSTEM_CONFIG_FILE = "./config/Custom/FactionSystem.ini";
+	private static final String CUSTOM_FAKE_PLAYERS_CONFIG_FILE = "./config/Custom/FakePlayers.ini";
+	private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
+	private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
+	private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
+	private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
+	private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
+	private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
+	private static final String CUSTOM_PREMIUM_SYSTEM_CONFIG_FILE = "./config/Custom/PremiumSystem.ini";
+	private static final String CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE = "./config/Custom/PrivateStoreRange.ini";
+	private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
+	private static final String CUSTOM_PVP_REWARD_ITEM_CONFIG_FILE = "./config/Custom/PvpRewardItem.ini";
+	private static final String CUSTOM_PVP_TITLE_CONFIG_FILE = "./config/Custom/PvpTitleColor.ini";
+	private static final String CUSTOM_RANDOM_SPAWNS_CONFIG_FILE = "./config/Custom/RandomSpawns.ini";
+	private static final String CUSTOM_SAYUNE_FOR_ALL_CONFIG_FILE = "./config/Custom/SayuneForAll.ini";
+	private static final String CUSTOM_SCREEN_WELCOME_MESSAGE_CONFIG_FILE = "./config/Custom/ScreenWelcomeMessage.ini";
+	private static final String CUSTOM_SELL_BUFFS_CONFIG_FILE = "./config/Custom/SellBuffs.ini";
+	private static final String CUSTOM_SERVER_TIME_CONFIG_FILE = "./config/Custom/ServerTime.ini";
+	private static final String CUSTOM_STARTING_LOCATION_CONFIG_FILE = "./config/Custom/StartingLocation.ini";
+	private static final String CUSTOM_VOTE_REWARD_CONFIG_FILE = "./config/Custom/VoteReward.ini";
+	private static final String CUSTOM_WALKER_BOT_PROTECTION_CONFIG_FILE = "./config/Custom/WalkerBotProtection.ini";
 	
 	// --------------------------------------------------
 	// Variable Definitions
@@ -178,7 +177,6 @@ public final class Config
 	public static long EFFECT_TICK_RATIO;
 	public static boolean ENABLE_ALTER_SKILLS;
 	public static boolean LIFE_CRYSTAL_NEEDED;
-	public static boolean ES_SP_BOOK_NEEDED;
 	public static boolean DIVINE_SP_BOOK_NEEDED;
 	public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
 	public static boolean ALT_GAME_DUALCLASS_WITHOUT_QUEST;
@@ -234,14 +232,8 @@ public final class Config
 	public static int CASTLE_ZONE_FAME_AQUIRE_POINTS;
 	public static boolean FAME_FOR_DEAD_PLAYERS;
 	public static boolean IS_CRAFTING_ENABLED;
-	public static boolean CRAFT_MASTERWORK;
 	public static int DWARF_RECIPE_LIMIT;
 	public static int COMMON_RECIPE_LIMIT;
-	public static boolean ALT_GAME_CREATION;
-	public static double ALT_GAME_CREATION_SPEED;
-	public static double ALT_GAME_CREATION_XP_RATE;
-	public static double ALT_GAME_CREATION_RARE_XPSP_RATE;
-	public static double ALT_GAME_CREATION_SP_RATE;
 	public static boolean ALT_CLAN_LEADER_INSTANT_ACTIVATION;
 	public static int ALT_CLAN_JOIN_DAYS;
 	public static int ALT_CLAN_CREATE_DAYS;
@@ -410,7 +402,6 @@ public final class Config
 	public static boolean GM_TRADE_RESTRICTED_ITEMS;
 	public static boolean GM_RESTART_FIGHTING;
 	public static boolean GM_ANNOUNCER_NAME;
-	public static boolean GM_CRITANNOUNCER_NAME;
 	public static boolean GM_GIVE_SPECIAL_SKILLS;
 	public static boolean GM_GIVE_SPECIAL_AURA_SKILLS;
 	public static boolean GM_DEBUG_HTML_PATHS;
@@ -426,9 +417,7 @@ public final class Config
 	public static boolean SKILL_CHECK_REMOVE;
 	public static boolean SKILL_CHECK_GM;
 	public static boolean HTML_ACTION_CACHE_DEBUG;
-	public static boolean PACKET_HANDLER_DEBUG;
 	public static boolean DEVELOPER;
-	public static boolean ALT_DEV_NO_HANDLERS;
 	public static boolean ALT_DEV_NO_QUESTS;
 	public static boolean ALT_DEV_NO_SPAWNS;
 	public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
@@ -491,7 +480,6 @@ public final class Config
 	public static int EJECT_DEAD_PLAYER_TIME;
 	public static boolean ALLOW_RACE;
 	public static boolean ALLOW_WATER;
-	public static boolean ALLOW_RENTPET;
 	public static boolean ALLOW_FISHING;
 	public static boolean ALLOW_BOAT;
 	public static int BOAT_BROADCAST_RADIUS;
@@ -556,18 +544,6 @@ public final class Config
 	public static boolean ALT_ITEM_AUCTION_ENABLED;
 	public static int ALT_ITEM_AUCTION_EXPIRED_AFTER;
 	public static long ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID;
-	public static int RIFT_MIN_PARTY_SIZE;
-	public static int RIFT_SPAWN_DELAY;
-	public static int RIFT_MAX_JUMPS;
-	public static int RIFT_AUTO_JUMPS_TIME_MIN;
-	public static int RIFT_AUTO_JUMPS_TIME_MAX;
-	public static float RIFT_BOSS_ROOM_TIME_MUTIPLY;
-	public static int RIFT_ENTER_COST_RECRUIT;
-	public static int RIFT_ENTER_COST_SOLDIER;
-	public static int RIFT_ENTER_COST_OFFICER;
-	public static int RIFT_ENTER_COST_CAPTAIN;
-	public static int RIFT_ENTER_COST_COMMANDER;
-	public static int RIFT_ENTER_COST_HERO;
 	public static IllegalActionPunishmentType DEFAULT_PUNISH;
 	public static int DEFAULT_PUNISH_PARAM;
 	public static boolean ONLY_GM_ITEMS_FREE;
@@ -588,8 +564,6 @@ public final class Config
 	public static boolean HBCE_FAIR_PLAY;
 	public static int PLAYER_MOVEMENT_BLOCK_TIME;
 	public static long ABILITY_POINTS_RESET_SP;
-	public static int NORMAL_ENCHANT_COST_MULTIPLIER;
-	public static int SAFE_ENCHANT_COST_MULTIPLIER;
 	public static boolean BOTREPORT_ENABLE;
 	public static String[] BOTREPORT_RESETPOINT_HOUR;
 	public static long BOTREPORT_REPORT_DELAY;
@@ -632,12 +606,10 @@ public final class Config
 	public static Map<Integer, Float> NPC_SKILL_DMG_PENALTY;
 	public static int MIN_NPC_LVL_MAGIC_PENALTY;
 	public static Map<Integer, Float> NPC_SKILL_CHANCE_PENALTY;
-	public static int DECAY_TIME_TASK;
 	public static int DEFAULT_CORPSE_TIME;
 	public static int SPOILED_CORPSE_EXTEND_TIME;
 	public static int CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY;
 	public static boolean GUARD_ATTACK_AGGRO_MOB;
-	public static boolean ALLOW_WYVERN_UPGRADER;
 	public static double RAID_HP_REGEN_MULTIPLIER;
 	public static double RAID_MP_REGEN_MULTIPLIER;
 	public static double RAID_PDEFENCE_MULTIPLIER;
@@ -663,7 +635,6 @@ public final class Config
 	// PvP Settings
 	// --------------------------------------------------
 	public static boolean KARMA_DROP_GM;
-	public static boolean KARMA_AWARD_PK_KILL;
 	public static int KARMA_PK_LIMIT;
 	public static String KARMA_NONDROPPABLE_PET_ITEMS;
 	public static String KARMA_NONDROPPABLE_ITEMS;
@@ -721,10 +692,6 @@ public final class Config
 	public static float RATE_KARMA_LOST;
 	public static float RATE_KARMA_EXP_LOST;
 	public static float RATE_SIEGE_GUARDS_PRICE;
-	public static float RATE_DROP_COMMON_HERBS;
-	public static float RATE_DROP_HP_HERBS;
-	public static float RATE_DROP_MP_HERBS;
-	public static float RATE_DROP_SPECIAL_HERBS;
 	public static int PLAYER_DROP_LIMIT;
 	public static int PLAYER_RATE_DROP;
 	public static int PLAYER_RATE_DROP_ITEM;
@@ -781,15 +748,6 @@ public final class Config
 	public static String[] SERVER_RESTART_SCHEDULE;
 	
 	// --------------------------------------------------
-	// MMO Settings
-	// --------------------------------------------------
-	public static int MMO_SELECTOR_SLEEP_TIME;
-	public static int MMO_MAX_SEND_PER_PASS;
-	public static int MMO_MAX_READ_PER_PASS;
-	public static int MMO_HELPER_BUFFER_COUNT;
-	public static boolean MMO_TCP_NODELAY;
-	
-	// --------------------------------------------------
 	// Hardin (Agent of Chaos)
 	// --------------------------------------------------
 	public static boolean HARDIN_ENABLE_ALL_RACES;
@@ -807,7 +765,6 @@ public final class Config
 	public static boolean RAIDBOSS_USE_VITALITY;
 	public static float RATE_VITALITY_EXP_MULTIPLIER;
 	public static int VITALITY_MAX_ITEMS_ALLOWED;
-	public static float RATE_DROP_VITALITY_HERBS;
 	public static float RATE_VITALITY_LOST;
 	public static float RATE_VITALITY_GAIN;
 	
@@ -840,22 +797,6 @@ public final class Config
 	public static double ENCHANT_CHANCE_ELEMENT_ENERGY;
 	public static int[] ENCHANT_BLACKLIST;
 	public static boolean DISABLE_OVER_ENCHANTING;
-	public static int AUGMENTATION_NG_SKILL_CHANCE;
-	public static int AUGMENTATION_NG_GLOW_CHANCE;
-	public static int AUGMENTATION_MID_SKILL_CHANCE;
-	public static int AUGMENTATION_MID_GLOW_CHANCE;
-	public static int AUGMENTATION_HIGH_SKILL_CHANCE;
-	public static int AUGMENTATION_HIGH_GLOW_CHANCE;
-	public static int AUGMENTATION_TOP_SKILL_CHANCE;
-	public static int AUGMENTATION_TOP_GLOW_CHANCE;
-	public static int AUGMENTATION_BASESTAT_CHANCE;
-	public static int AUGMENTATION_ACC_SKILL_CHANCE;
-	public static boolean RETAIL_LIKE_AUGMENTATION;
-	public static int[] RETAIL_LIKE_AUGMENTATION_NG_CHANCE;
-	public static int[] RETAIL_LIKE_AUGMENTATION_MID_CHANCE;
-	public static int[] RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE;
-	public static int[] RETAIL_LIKE_AUGMENTATION_TOP_CHANCE;
-	public static boolean RETAIL_LIKE_AUGMENTATION_ACCESSORY;
 	public static int[] AUGMENTATION_BLACKLIST;
 	public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
 	public static double HP_REGEN_MULTIPLIER;
@@ -944,16 +885,12 @@ public final class Config
 	// Anakim
 	public static int ANAKIM_MIN_PLAYERS;
 	public static int ANAKIM_MAX_PLAYERS;
-	public static int ANAKIM_SPAWN_INTERVAL;
-	public static int ANAKIM_SPAWN_RANDOM;
 	public static int ANAKIM_MIN_PLAYER_LVL;
 	public static int ANAKIM_MAX_PLAYER_LVL;
 	
 	// Lilith
 	public static int LILITH_MIN_PLAYERS;
 	public static int LILITH_MAX_PLAYERS;
-	public static int LILITH_SPAWN_INTERVAL;
-	public static int LILITH_SPAWN_RANDOM;
 	public static int LILITH_MIN_PLAYER_LVL;
 	public static int LILITH_MAX_PLAYER_LVL;
 	
@@ -970,14 +907,6 @@ public final class Config
 	
 	// chatfilter
 	public static List<String> FILTER_LIST;
-	
-	// Conquerable Halls Settings
-	public static int CHS_CLAN_MINLEVEL;
-	public static int CHS_MAX_ATTACKERS;
-	public static int CHS_MAX_FLAGS_PER_CLAN;
-	public static boolean CHS_ENABLE_FAME;
-	public static int CHS_FAME_AMOUNT;
-	public static int CHS_FAME_FREQUENCY;
 	
 	// --------------------------------------------------
 	// GeoEngine
@@ -1156,7 +1085,6 @@ public final class Config
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static int COMMUNITYBOARD_HEAL_PRICE;
-	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean COMMUNITYBOARD_KARMA_DISABLED;
 	public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
 	public static boolean COMMUNITY_PREMIUM_SYSTEM_ENABLED;
@@ -1564,7 +1492,6 @@ public final class Config
 			EFFECT_TICK_RATIO = Character.getLong("EffectTickRatio", 666);
 			ENABLE_ALTER_SKILLS = Character.getBoolean("EnableAlterSkills", true);
 			LIFE_CRYSTAL_NEEDED = Character.getBoolean("LifeCrystalNeeded", true);
-			ES_SP_BOOK_NEEDED = Character.getBoolean("EnchantSkillSpBookNeeded", true);
 			DIVINE_SP_BOOK_NEEDED = Character.getBoolean("DivineInspirationSpBookNeeded", true);
 			ALT_GAME_SUBCLASS_WITHOUT_QUESTS = Character.getBoolean("AltSubClassWithoutQuests", false);
 			ALT_GAME_DUALCLASS_WITHOUT_QUEST = Character.getBoolean("AltDualClassWithoutQuest", false);
@@ -1630,45 +1557,7 @@ public final class Config
 			}
 			Arrays.sort(ENCHANT_BLACKLIST);
 			DISABLE_OVER_ENCHANTING = Character.getBoolean("DisableOverEnchanting", true);
-			AUGMENTATION_NG_SKILL_CHANCE = Character.getInt("AugmentationNGSkillChance", 15);
-			AUGMENTATION_NG_GLOW_CHANCE = Character.getInt("AugmentationNGGlowChance", 0);
-			AUGMENTATION_MID_SKILL_CHANCE = Character.getInt("AugmentationMidSkillChance", 30);
-			AUGMENTATION_MID_GLOW_CHANCE = Character.getInt("AugmentationMidGlowChance", 40);
-			AUGMENTATION_HIGH_SKILL_CHANCE = Character.getInt("AugmentationHighSkillChance", 45);
-			AUGMENTATION_HIGH_GLOW_CHANCE = Character.getInt("AugmentationHighGlowChance", 70);
-			AUGMENTATION_TOP_SKILL_CHANCE = Character.getInt("AugmentationTopSkillChance", 60);
-			AUGMENTATION_TOP_GLOW_CHANCE = Character.getInt("AugmentationTopGlowChance", 100);
-			AUGMENTATION_BASESTAT_CHANCE = Character.getInt("AugmentationBaseStatChance", 1);
-			AUGMENTATION_ACC_SKILL_CHANCE = Character.getInt("AugmentationAccSkillChance", 0);
-			
-			RETAIL_LIKE_AUGMENTATION = Character.getBoolean("RetailLikeAugmentation", true);
-			String[] array = Character.getString("RetailLikeAugmentationNoGradeChance", "55,35,7,3").split(",");
-			RETAIL_LIKE_AUGMENTATION_NG_CHANCE = new int[array.length];
-			for (int i = 0; i < 4; i++)
-			{
-				RETAIL_LIKE_AUGMENTATION_NG_CHANCE[i] = Integer.parseInt(array[i]);
-			}
-			array = Character.getString("RetailLikeAugmentationMidGradeChance", "55,35,7,3").split(",");
-			RETAIL_LIKE_AUGMENTATION_MID_CHANCE = new int[array.length];
-			for (int i = 0; i < 4; i++)
-			{
-				RETAIL_LIKE_AUGMENTATION_MID_CHANCE[i] = Integer.parseInt(array[i]);
-			}
-			array = Character.getString("RetailLikeAugmentationHighGradeChance", "55,35,7,3").split(",");
-			RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE = new int[array.length];
-			for (int i = 0; i < 4; i++)
-			{
-				RETAIL_LIKE_AUGMENTATION_HIGH_CHANCE[i] = Integer.parseInt(array[i]);
-			}
-			array = Character.getString("RetailLikeAugmentationTopGradeChance", "55,35,7,3").split(",");
-			RETAIL_LIKE_AUGMENTATION_TOP_CHANCE = new int[array.length];
-			for (int i = 0; i < 4; i++)
-			{
-				RETAIL_LIKE_AUGMENTATION_TOP_CHANCE[i] = Integer.parseInt(array[i]);
-			}
-			RETAIL_LIKE_AUGMENTATION_ACCESSORY = Character.getBoolean("RetailLikeAugmentationAccessory", true);
-			
-			array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
+			String[] array = Character.getString("AugmentationBlackList", "6656,6657,6658,6659,6660,6661,6662,8191,10170,10314,13740,13741,13742,13743,13744,13745,13746,13747,13748,14592,14593,14594,14595,14596,14597,14598,14599,14600,14664,14665,14666,14667,14668,14669,14670,14671,14672,14801,14802,14803,14804,14805,14806,14807,14808,14809,15282,15283,15284,15285,15286,15287,15288,15289,15290,15291,15292,15293,15294,15295,15296,15297,15298,15299,16025,16026,21712,22173,22174,22175").split(",");
 			AUGMENTATION_BLACKLIST = new int[array.length];
 			
 			for (int i = 0; i < array.length; i++)
@@ -1691,14 +1580,8 @@ public final class Config
 			CASTLE_ZONE_FAME_AQUIRE_POINTS = Character.getInt("CastleZoneFameAquirePoints", 125);
 			FAME_FOR_DEAD_PLAYERS = Character.getBoolean("FameForDeadPlayers", true);
 			IS_CRAFTING_ENABLED = Character.getBoolean("CraftingEnabled", true);
-			CRAFT_MASTERWORK = Character.getBoolean("CraftMasterwork", true);
 			DWARF_RECIPE_LIMIT = Character.getInt("DwarfRecipeLimit", 50);
 			COMMON_RECIPE_LIMIT = Character.getInt("CommonRecipeLimit", 50);
-			ALT_GAME_CREATION = Character.getBoolean("AltGameCreation", false);
-			ALT_GAME_CREATION_SPEED = Character.getDouble("AltGameCreationSpeed", 1);
-			ALT_GAME_CREATION_XP_RATE = Character.getDouble("AltGameCreationXpRate", 1);
-			ALT_GAME_CREATION_SP_RATE = Character.getDouble("AltGameCreationSpRate", 1);
-			ALT_GAME_CREATION_RARE_XPSP_RATE = Character.getDouble("AltGameCreationRareXpSpRate", 2);
 			ALT_CLAN_LEADER_INSTANT_ACTIVATION = Character.getBoolean("AltClanLeaderInstantActivation", false);
 			ALT_CLAN_JOIN_DAYS = Character.getInt("DaysBeforeJoinAClan", 1);
 			ALT_CLAN_CREATE_DAYS = Character.getInt("DaysBeforeCreateAClan", 10);
@@ -1832,7 +1715,6 @@ public final class Config
 			GM_TRADE_RESTRICTED_ITEMS = General.getBoolean("GMTradeRestrictedItems", false);
 			GM_RESTART_FIGHTING = General.getBoolean("GMRestartFighting", true);
 			GM_ANNOUNCER_NAME = General.getBoolean("GMShowAnnouncerName", false);
-			GM_CRITANNOUNCER_NAME = General.getBoolean("GMShowCritAnnouncerName", false);
 			GM_GIVE_SPECIAL_SKILLS = General.getBoolean("GMGiveSpecialSkills", false);
 			GM_GIVE_SPECIAL_AURA_SKILLS = General.getBoolean("GMGiveSpecialAuraSkills", false);
 			GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
@@ -1848,9 +1730,7 @@ public final class Config
 			SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
 			SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);
 			HTML_ACTION_CACHE_DEBUG = General.getBoolean("HtmlActionCacheDebug", false);
-			PACKET_HANDLER_DEBUG = General.getBoolean("PacketHandlerDebug", false);
 			DEVELOPER = General.getBoolean("Developer", false);
-			ALT_DEV_NO_HANDLERS = General.getBoolean("AltDevNoHandlers", false) || Boolean.getBoolean("nohandlers");
 			ALT_DEV_NO_QUESTS = General.getBoolean("AltDevNoQuests", false) || Boolean.getBoolean("noquests");
 			ALT_DEV_NO_SPAWNS = General.getBoolean("AltDevNoSpawns", false) || Boolean.getBoolean("nospawns");
 			ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS = General.getBoolean("AltDevShowQuestsLoadInLogs", false);
@@ -1909,7 +1789,6 @@ public final class Config
 			EJECT_DEAD_PLAYER_TIME = General.getInt("EjectDeadPlayerTime", 1);
 			ALLOW_RACE = General.getBoolean("AllowRace", true);
 			ALLOW_WATER = General.getBoolean("AllowWater", true);
-			ALLOW_RENTPET = General.getBoolean("AllowRentPet", false);
 			ALLOW_FISHING = General.getBoolean("AllowFishing", true);
 			ALLOW_MANOR = General.getBoolean("AllowManor", true);
 			ALLOW_BOAT = General.getBoolean("AllowBoat", true);
@@ -1946,18 +1825,6 @@ public final class Config
 			ALT_ITEM_AUCTION_ENABLED = General.getBoolean("AltItemAuctionEnabled", true);
 			ALT_ITEM_AUCTION_EXPIRED_AFTER = General.getInt("AltItemAuctionExpiredAfter", 14);
 			ALT_ITEM_AUCTION_TIME_EXTENDS_ON_BID = General.getInt("AltItemAuctionTimeExtendsOnBid", 0) * 1000;
-			RIFT_MIN_PARTY_SIZE = General.getInt("RiftMinPartySize", 5);
-			RIFT_MAX_JUMPS = General.getInt("MaxRiftJumps", 4);
-			RIFT_SPAWN_DELAY = General.getInt("RiftSpawnDelay", 10000);
-			RIFT_AUTO_JUMPS_TIME_MIN = General.getInt("AutoJumpsDelayMin", 480);
-			RIFT_AUTO_JUMPS_TIME_MAX = General.getInt("AutoJumpsDelayMax", 600);
-			RIFT_BOSS_ROOM_TIME_MUTIPLY = General.getFloat("BossRoomTimeMultiply", 1.5f);
-			RIFT_ENTER_COST_RECRUIT = General.getInt("RecruitCost", 18);
-			RIFT_ENTER_COST_SOLDIER = General.getInt("SoldierCost", 21);
-			RIFT_ENTER_COST_OFFICER = General.getInt("OfficerCost", 24);
-			RIFT_ENTER_COST_CAPTAIN = General.getInt("CaptainCost", 27);
-			RIFT_ENTER_COST_COMMANDER = General.getInt("CommanderCost", 30);
-			RIFT_ENTER_COST_HERO = General.getInt("HeroCost", 33);
 			DEFAULT_PUNISH = IllegalActionPunishmentType.findByName(General.getString("DefaultPunish", "KICK"));
 			DEFAULT_PUNISH_PARAM = General.getInt("DefaultPunishParam", 0);
 			ONLY_GM_ITEMS_FREE = General.getBoolean("OnlyGMItemsFree", true);
@@ -1984,9 +1851,6 @@ public final class Config
 				MIN_BLOCK_CHECKER_TEAM_MEMBERS = 6;
 			}
 			HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
-			
-			NORMAL_ENCHANT_COST_MULTIPLIER = General.getInt("NormalEnchantCostMultipiler", 1);
-			SAFE_ENCHANT_COST_MULTIPLIER = General.getInt("SafeEnchantCostMultipiler", 5);
 			
 			BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
 			BOTREPORT_RESETPOINT_HOUR = General.getString("BotReportPointsResetHour", "00:00").split(":");
@@ -2016,12 +1880,10 @@ public final class Config
 			NPC_SKILL_DMG_PENALTY = parseConfigLine(NPC.getString("SkillDmgPenaltyForLvLDifferences", "0.8, 0.7, 0.65, 0.62"));
 			MIN_NPC_LVL_MAGIC_PENALTY = NPC.getInt("MinNPCLevelForMagicPenalty", 78);
 			NPC_SKILL_CHANCE_PENALTY = parseConfigLine(NPC.getString("SkillChancePenaltyForLvLDifferences", "2.5, 3.0, 3.25, 3.5"));
-			DECAY_TIME_TASK = NPC.getInt("DecayTimeTask", 5000);
 			DEFAULT_CORPSE_TIME = NPC.getInt("DefaultCorpseTime", 7);
 			SPOILED_CORPSE_EXTEND_TIME = NPC.getInt("SpoiledCorpseExtendTime", 10);
 			CORPSE_CONSUME_SKILL_ALLOWED_TIME_BEFORE_DECAY = NPC.getInt("CorpseConsumeSkillAllowedTimeBeforeDecay", 2000);
 			GUARD_ATTACK_AGGRO_MOB = NPC.getBoolean("GuardAttackAggroMob", false);
-			ALLOW_WYVERN_UPGRADER = NPC.getBoolean("AllowWyvernUpgrader", false);
 			RAID_HP_REGEN_MULTIPLIER = NPC.getDouble("RaidHpRegenMultiplier", 100) / 100;
 			RAID_MP_REGEN_MULTIPLIER = NPC.getDouble("RaidMpRegenMultiplier", 100) / 100;
 			RAID_PDEFENCE_MULTIPLIER = NPC.getDouble("RaidPDefenceMultiplier", 100) / 100;
@@ -2214,7 +2076,6 @@ public final class Config
 			final PropertiesParser PVPSettings = new PropertiesParser(PVP_CONFIG_FILE);
 			
 			KARMA_DROP_GM = PVPSettings.getBoolean("CanGMDropEquipment", false);
-			KARMA_AWARD_PK_KILL = PVPSettings.getBoolean("AwardPKKillPVPPoint", false);
 			KARMA_PK_LIMIT = PVPSettings.getInt("MinimumPKRequiredToDrop", 5);
 			KARMA_NONDROPPABLE_PET_ITEMS = PVPSettings.getString("ListOfPetItems", "2375,3500,3501,3502,4422,4423,4424,4425,6648,6649,6650,9882");
 			KARMA_NONDROPPABLE_ITEMS = PVPSettings.getString("ListOfNonDroppableItems", "57,1147,425,1146,461,10,2368,7,6,2370,2369,6842,6611,6612,6613,6614,6615,6616,6617,6618,6619,6620,6621,7694,8181,5575,7694,9388,9389,9390");
@@ -2364,15 +2225,11 @@ public final class Config
 			
 			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
 			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
-			ANAKIM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfAnakimSpawn", 192);
-			ANAKIM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAnakimSpawn", 148);
 			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
 			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
 			
 			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
 			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
-			LILITH_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfLilithSpawn", 192);
-			LILITH_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfLilithSpawn", 148);
 			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
 			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
 			
@@ -2415,15 +2272,6 @@ public final class Config
 			{
 				LOGGER.log(Level.WARNING, "Error while loading chat filter words!", e);
 			}
-			
-			final PropertiesParser ClanHallSiege = new PropertiesParser(CH_SIEGE_CONFIG_FILE);
-			
-			CHS_MAX_ATTACKERS = ClanHallSiege.getInt("MaxAttackers", 500);
-			CHS_CLAN_MINLEVEL = ClanHallSiege.getInt("MinClanLevel", 4);
-			CHS_MAX_FLAGS_PER_CLAN = ClanHallSiege.getInt("MaxFlagsPerClan", 1);
-			CHS_ENABLE_FAME = ClanHallSiege.getBoolean("EnableFame", false);
-			CHS_FAME_AMOUNT = ClanHallSiege.getInt("FameAmount", 0);
-			CHS_FAME_FREQUENCY = ClanHallSiege.getInt("FameFrequency", 0);
 			
 			final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
 			
@@ -2567,7 +2415,6 @@ public final class Config
 			COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
 			COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);
-			COMMUNITYBOARD_COMBAT_DISABLED = CommunityBoard.getBoolean("CommunityCombatDisabled", true);
 			COMMUNITYBOARD_KARMA_DISABLED = CommunityBoard.getBoolean("CommunityKarmaDisabled", true);
 			COMMUNITYBOARD_CAST_ANIMATIONS = CommunityBoard.getBoolean("CommunityCastAnimations", false);
 			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);
@@ -3024,7 +2871,7 @@ public final class Config
 	 * @param hexId the hexadecimal ID to store
 	 * @param fileName name of the config file
 	 */
-	public static void saveHexid(int serverId, String hexId, String fileName)
+	private static void saveHexid(int serverId, String hexId, String fileName)
 	{
 		try
 		{

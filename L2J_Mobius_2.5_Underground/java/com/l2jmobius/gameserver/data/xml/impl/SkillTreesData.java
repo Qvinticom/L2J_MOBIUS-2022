@@ -1215,7 +1215,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the transformation skill level
 	 * @return the transform skill from the Transform Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getTransformSkill(int id, int lvl)
+	private L2SkillLearn getTransformSkill(int id, int lvl)
 	{
 		return _transformSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1237,7 +1237,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the alchemy skill level
 	 * @return the alchemy skill from the Alchemy Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getAlchemySkill(int id, int lvl)
+	private L2SkillLearn getAlchemySkill(int id, int lvl)
 	{
 		return _alchemySkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1260,7 +1260,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the fishing skill level
 	 * @return Fishing skill from the Fishing Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getFishingSkill(int id, int lvl)
+	private L2SkillLearn getFishingSkill(int id, int lvl)
 	{
 		return _fishingSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1271,7 +1271,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the pledge skill level
 	 * @return the pledge skill from the Pledge Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getPledgeSkill(int id, int lvl)
+	private L2SkillLearn getPledgeSkill(int id, int lvl)
 	{
 		return _pledgeSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1282,7 +1282,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the sub-pledge skill level
 	 * @return the sub-pledge skill from the Sub-Pledge Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getSubPledgeSkill(int id, int lvl)
+	private L2SkillLearn getSubPledgeSkill(int id, int lvl)
 	{
 		return _subPledgeSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1294,7 +1294,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param classId the transfer skill tree Id
 	 * @return the transfer skill from the Transfer Skill Trees for a given {@code classId}, {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getTransferSkill(int id, int lvl, ClassId classId)
+	private L2SkillLearn getTransferSkill(int id, int lvl, ClassId classId)
 	{
 		if (_transferSkillTrees.get(classId) != null)
 		{
@@ -1310,7 +1310,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param race the race skill tree Id
 	 * @return the transfer skill from the Race Skill Trees for a given {@code race}, {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getRaceSkill(int id, int lvl, Race race)
+	private L2SkillLearn getRaceSkill(int id, int lvl, Race race)
 	{
 		for (L2SkillLearn skill : getRaceSkillTree(race))
 		{
@@ -1328,7 +1328,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the sub-class skill level
 	 * @return the sub-class skill from the Sub-Class Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	public L2SkillLearn getSubClassSkill(int id, int lvl)
+	private L2SkillLearn getSubClassSkill(int id, int lvl)
 	{
 		return _subClassSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}

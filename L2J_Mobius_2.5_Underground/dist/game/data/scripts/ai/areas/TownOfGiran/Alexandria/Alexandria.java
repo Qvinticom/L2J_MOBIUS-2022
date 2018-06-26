@@ -122,7 +122,7 @@ public final class Alexandria extends AbstractNpcAI
 		return htmltext;
 	}
 	
-	public static class AdditionalQuestItemHolder extends QuestItemHolder
+	private static class AdditionalQuestItemHolder extends QuestItemHolder
 	{
 		private final int _additionalId;
 		

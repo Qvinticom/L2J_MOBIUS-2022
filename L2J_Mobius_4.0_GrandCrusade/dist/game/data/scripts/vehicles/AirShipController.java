@@ -43,8 +43,12 @@ import ai.AbstractNpcAI;
 
 public abstract class AirShipController extends AbstractNpcAI
 {
-	protected final class DecayTask implements Runnable
+	private final class DecayTask implements Runnable
 	{
+		public DecayTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -55,8 +59,12 @@ public abstract class AirShipController extends AbstractNpcAI
 		}
 	}
 	
-	protected final class DepartTask implements Runnable
+	private final class DepartTask implements Runnable
 	{
+		public DepartTask()
+		{
+		}
+		
 		@Override
 		public void run()
 		{
@@ -74,14 +82,14 @@ public abstract class AirShipController extends AbstractNpcAI
 		}
 	}
 	
-	public static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(AirShipController.class.getName());
 	protected int _dockZone = 0;
 	protected int _shipSpawnX = 0;
 	protected int _shipSpawnY = 0;
 	
 	protected int _shipSpawnZ = 0;
 	
-	protected int _shipHeading = 0;
+	private final int _shipHeading = 0;
 	protected Location _oustLoc = null;
 	protected int _locationId = 0;
 	
@@ -94,8 +102,8 @@ public abstract class AirShipController extends AbstractNpcAI
 	
 	protected Movie _movie = null;
 	
-	protected boolean _isBusy = false;
-	protected L2ControllableAirShipInstance _dockedShip = null;
+	private boolean _isBusy = false;
+	L2ControllableAirShipInstance _dockedShip = null;
 	private final Runnable _decayTask = new DecayTask();
 	
 	private final Runnable _departTask = new DepartTask();

@@ -30,14 +30,14 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class Q00472_ChallengeSteamCorridor extends Quest
 {
-	// Npc
-	public static final int FIOREN = 33044;
+	// NPC
+	private static final int FIOREN = 33044;
 	// Monster
-	public static final int KECHI = 25532;
+	private static final int KECHI = 25532;
 	// Mis
-	public static final int MIN_LEVEL = 97;
+	private static final int MIN_LEVEL = 97;
 	// Item
-	public static final int CERTIFICATE = 30387;
+	private static final int CERTIFICATE = 30387;
 	
 	public Q00472_ChallengeSteamCorridor()
 	{

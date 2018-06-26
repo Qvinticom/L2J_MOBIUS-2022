@@ -46,7 +46,7 @@ public final class ItemsAutoDestroy
 		_items.add(item);
 	}
 	
-	public synchronized void removeItems()
+	private synchronized void removeItems()
 	{
 		if (_items.isEmpty())
 		{

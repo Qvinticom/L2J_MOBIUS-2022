@@ -33,7 +33,7 @@ public class Q00254_LegendaryTales extends Quest
 	private static final int GILMORE = 30754;
 	
 	// Monsters
-	public enum Bosses
+	private enum Bosses
 	{
 		EMERALD_HORN(25718),
 		DUST_RIDER(25719),
