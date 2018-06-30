@@ -1104,7 +1104,7 @@ public class GameStatusThread extends Thread
 						AICount++;
 					}
 				}
-				if (obj instanceof L2ItemInstance)
+				if (obj.isItem())
 				{
 					if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
 					{

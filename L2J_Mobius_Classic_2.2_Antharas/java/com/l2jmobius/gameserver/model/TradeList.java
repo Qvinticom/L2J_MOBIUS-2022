@@ -184,7 +184,7 @@ public class TradeList
 		}
 		
 		final L2Object o = L2World.getInstance().findObject(objectId);
-		if (!(o instanceof L2ItemInstance))
+		if (!o.isItem())
 		{
 			LOGGER.warning(_owner.getName() + ": Trying to add something other than an item!");
 			return null;

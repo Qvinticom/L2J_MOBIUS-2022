@@ -413,7 +413,7 @@ public class L2CharacterAI extends AbstractAI
 		// Stop the actor auto-attack client side by sending Server->Client packet AutoAttackStop (broadcast)
 		clientStopAutoAttack();
 		
-		if ((object instanceof L2ItemInstance) && (((L2ItemInstance) object).getItemLocation() != ItemLocation.VOID))
+		if (object.isItem() && (((L2ItemInstance) object).getItemLocation() != ItemLocation.VOID))
 		{
 			return;
 		}

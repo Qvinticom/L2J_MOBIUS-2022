@@ -84,7 +84,7 @@ public class RequestRecordInfo extends L2GameClientPacket
 			}
 			else
 			{
-				if (object instanceof L2ItemInstance)
+				if (object.isItem())
 				{
 					_activeChar.sendPacket(new SpawnItem((L2ItemInstance) object));
 				}

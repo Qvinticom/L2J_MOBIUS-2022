@@ -94,7 +94,7 @@ public final class UseItem implements IClientIncomingPacket
 			if (activeChar.isGM())
 			{
 				final L2Object obj = L2World.getInstance().findObject(_objectId);
-				if (obj instanceof L2ItemInstance)
+				if (obj.isItem())
 				{
 					AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
 				}

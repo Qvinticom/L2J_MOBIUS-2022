@@ -120,7 +120,7 @@ public class PcKnownList extends PlayableKnownList
 		}
 		else
 		{
-			if (object instanceof L2ItemInstance)
+			if (object.isItem())
 			{
 				if (dropper != null)
 				{

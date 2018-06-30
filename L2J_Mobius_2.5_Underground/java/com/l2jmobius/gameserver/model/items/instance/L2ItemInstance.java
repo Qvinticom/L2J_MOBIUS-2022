@@ -273,7 +273,7 @@ public final class L2ItemInstance extends L2Object
 	 * <BR>
 	 * <B><U> Assert </U> :</B><BR>
 	 * <BR>
-	 * <li>this instanceof L2ItemInstance</li>
+	 * <li>this.isItem().</li>
 	 * <li>_worldRegion != null <I>(L2Object is visible at the beginning)</I></li><BR>
 	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>

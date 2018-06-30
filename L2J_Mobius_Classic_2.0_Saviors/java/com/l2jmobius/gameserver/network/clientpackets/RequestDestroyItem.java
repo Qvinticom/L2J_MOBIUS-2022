@@ -102,7 +102,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 			if (activeChar.isGM())
 			{
 				final L2Object obj = L2World.getInstance().findObject(_objectId);
-				if (obj instanceof L2ItemInstance)
+				if (obj.isItem())
 				{
 					if (_count > ((L2ItemInstance) obj).getCount())
 					{

@@ -43,7 +43,7 @@ public final class SpawnItem implements IClientOutgoingPacket
 			Thread.dumpStack(); // Why? Also check DropItem, just in case.
 		}
 		
-		if (obj instanceof L2ItemInstance)
+		if (obj.isItem())
 		{
 			final L2ItemInstance item = (L2ItemInstance) obj;
 			_itemId = item.getDisplayId();

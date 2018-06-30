@@ -6647,7 +6647,7 @@ public final class L2PcInstance extends L2Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		// Check if the L2Object to pick up is a L2ItemInstance
-		if (!(object instanceof L2ItemInstance))
+		if (!object.isItem())
 		{
 			// dont try to pickup anything that is not an item :)
 			LOGGER.warning(this + "trying to pickup wrong target." + getTarget());

@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 /**
@@ -99,7 +98,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 			_lhand = _template.lhand;
 		}
 		
-		if (_obj instanceof L2ItemInstance)
+		if (_obj.isItem())
 		{
 			_x = _obj.getX();
 			_y = _obj.getY();

@@ -482,7 +482,7 @@ public class L2PetInstance extends L2Summon
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		broadcastPacket(new StopMove(this));
 		
-		if (!(object instanceof L2ItemInstance))
+		if (!object.isItem())
 		{
 			// dont try to pickup anything that is not an item :)
 			LOGGER_PET.warning(this + " trying to pickup wrong target." + object);
