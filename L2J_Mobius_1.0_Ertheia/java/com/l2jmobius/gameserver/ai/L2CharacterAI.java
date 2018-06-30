@@ -958,7 +958,6 @@ public class L2CharacterAI extends AbstractAI
 			// Caller should be L2Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
 			if (isFollowing())
 			{
-				
 				// allow larger hit range when the target is moving (check is run only once per second)
 				if (!_actor.isInsideRadius(target, offset + 100, false, false))
 				{
@@ -981,14 +980,11 @@ public class L2CharacterAI extends AbstractAI
 			}
 			
 			// while flying there is no move to cast
-			if (_actor.getAI().getIntention() == AI_INTENTION_CAST)
+			if (_actor.getAI().getIntention() == AI_INTENTION_CAST && _actor.isPlayer() && _actor.checkTransformed(transform -> !transform.isCombat()))
 			{
-				if (_actor.checkTransformed(transform -> !transform.isCombat()))
-				{
-					_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
-					_actor.sendPacket(ActionFailed.STATIC_PACKET);
-					return true;
-				}
+				_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
+				_actor.sendPacket(ActionFailed.STATIC_PACKET);
+				return true;
 			}
 			
 			// If not running, set the L2Character movement type to run and send Server->Client packet ChangeMoveType to all others L2PcInstance

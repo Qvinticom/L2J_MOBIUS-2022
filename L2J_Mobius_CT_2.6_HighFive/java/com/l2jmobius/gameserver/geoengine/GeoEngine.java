@@ -35,12 +35,10 @@ import com.l2jmobius.gameserver.geoengine.geodata.BlockNull;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoFormat;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoLocation;
 import com.l2jmobius.gameserver.geoengine.geodata.GeoStructure;
-import com.l2jmobius.gameserver.geoengine.geodata.IGeoObject;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.util.MathUtil;
 
 /**
@@ -271,7 +269,7 @@ public class GeoEngine
 	 * @param geoY : Geodata Y
 	 * @return {@link ABlock} : Block of geodata.
 	 */
-	public final ABlock getBlock(int geoX, int geoY)
+	private final ABlock getBlock(int geoX, int geoY)
 	{
 		final int x = geoX / GeoStructure.BLOCK_CELLS_X;
 		final int y = geoY / GeoStructure.BLOCK_CELLS_Y;
@@ -316,20 +314,6 @@ public class GeoEngine
 	}
 	
 	/**
-	 * Returns the height of cell, which is closest to given coordinates.<br>
-	 * Geodata without {@link IGeoObject} are taken in consideration.
-	 * @param geoX : Cell geodata X coordinate.
-	 * @param geoY : Cell geodata Y coordinate.
-	 * @param worldZ : Cell world Z coordinate.
-	 * @return short : Cell geodata Z coordinate, closest to given coordinates.
-	 */
-	public final short getHeightNearestOriginal(int geoX, int geoY, int worldZ)
-	{
-		final ABlock block = getBlock(geoX, geoY);
-		return block != null ? block.getHeightNearestOriginal(geoX, geoY, worldZ) : (short) worldZ;
-	}
-	
-	/**
 	 * Returns the NSWE flag byte of cell, which is closes to given coordinates.
 	 * @param geoX : Cell geodata X coordinate.
 	 * @param geoY : Cell geodata Y coordinate.
@@ -340,20 +324,6 @@ public class GeoEngine
 	{
 		final ABlock block = getBlock(geoX, geoY);
 		return block != null ? block.getNsweNearest(geoX, geoY, worldZ) : (byte) 0xFF;
-	}
-	
-	/**
-	 * Returns the NSWE flag byte of cell, which is closes to given coordinates.<br>
-	 * Geodata without {@link IGeoObject} are taken in consideration.
-	 * @param geoX : Cell geodata X coordinate.
-	 * @param geoY : Cell geodata Y coordinate.
-	 * @param worldZ : Cell world Z coordinate.
-	 * @return short : Cell NSWE flag byte coordinate, closest to given coordinates.
-	 */
-	public final byte getNsweNearestOriginal(int geoX, int geoY, int worldZ)
-	{
-		final ABlock block = getBlock(geoX, geoY);
-		return block != null ? block.getNsweNearestOriginal(geoX, geoY, worldZ) : (byte) 0xFF;
 	}
 	
 	/**
@@ -389,6 +359,11 @@ public class GeoEngine
 	 */
 	public final boolean canSeeTarget(L2Object origin, L2Object target)
 	{
+		if (target.isDoor())
+		{
+			return true;
+		}
+		
 		// get origin and target world coordinates
 		final int ox = origin.getX();
 		final int oy = origin.getY();
@@ -397,7 +372,7 @@ public class GeoEngine
 		final int ty = target.getY();
 		final int tz = target.getZ();
 		
-		if (!target.isDoor() && DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), false))
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), true))
 		{
 			return false;
 		}
@@ -424,8 +399,7 @@ public class GeoEngine
 			return true;
 		}
 		
-		final boolean door = target.isDoor();
-		final short gtz = door ? getHeightNearestOriginal(gtx, gty, tz) : getHeightNearest(gtx, gty, tz);
+		final short gtz = getHeightNearest(gtx, gty, tz);
 		
 		// origin and target coordinates are same
 		if ((gox == gtx) && (goy == gty))
@@ -447,7 +421,7 @@ public class GeoEngine
 		}
 		
 		// perform geodata check
-		return door ? checkSeeOriginal(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceId()) : checkSee(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceId());
+		return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceId());
 	}
 	
 	/**
@@ -466,7 +440,7 @@ public class GeoEngine
 		final int ty = position.getY();
 		final int tz = position.getZ();
 		
-		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), false))
+		if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceId(), true))
 		{
 			return false;
 		}
@@ -525,7 +499,7 @@ public class GeoEngine
 	 * @param instanceId
 	 * @return {@code boolean} : True, when target can be seen.
 	 */
-	protected final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
+	private final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
 	{
 		// get line of sight Z coordinates
 		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
@@ -680,189 +654,6 @@ public class GeoEngine
 				
 				// get layer nswe
 				nswet = block.getNswe(index);
-			}
-			
-			// update coords
-			gox = nox;
-			goy = noy;
-			gtx = ntx;
-			gty = nty;
-		}
-		
-		// when iteration is completed, compare final Z coordinates
-		return Math.abs(goz - gtz) < (GeoStructure.CELL_HEIGHT * 4);
-	}
-	
-	/**
-	 * Simple check for origin to target visibility.<br>
-	 * Geodata without {@link IGeoObject} are taken in consideration.<br>
-	 * NOTE: When two doors close between each other and the LoS check of one doors is performed through another door, result will not be accurate (the other door are skipped).
-	 * @param gox : origin X geodata coordinate
-	 * @param goy : origin Y geodata coordinate
-	 * @param goz : origin Z geodata coordinate
-	 * @param oheight : origin height (if instance of {@link Character})
-	 * @param gtx : target X geodata coordinate
-	 * @param gty : target Y geodata coordinate
-	 * @param gtz : target Z geodata coordinate
-	 * @param theight : target height (if instance of {@link Character} or {@link L2DoorInstance})
-	 * @param instanceId
-	 * @return {@code boolean} : True, when target can be seen.
-	 */
-	protected final boolean checkSeeOriginal(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, int instanceId)
-	{
-		// get line of sight Z coordinates
-		double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
-		double lostz = gtz + ((theight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
-		
-		// get X delta and signum
-		final int dx = Math.abs(gtx - gox);
-		final int sx = gox < gtx ? 1 : -1;
-		final byte dirox = sx > 0 ? GeoStructure.CELL_FLAG_E : GeoStructure.CELL_FLAG_W;
-		final byte dirtx = sx > 0 ? GeoStructure.CELL_FLAG_W : GeoStructure.CELL_FLAG_E;
-		
-		// get Y delta and signum
-		final int dy = Math.abs(gty - goy);
-		final int sy = goy < gty ? 1 : -1;
-		final byte diroy = sy > 0 ? GeoStructure.CELL_FLAG_S : GeoStructure.CELL_FLAG_N;
-		final byte dirty = sy > 0 ? GeoStructure.CELL_FLAG_N : GeoStructure.CELL_FLAG_S;
-		
-		// get Z delta
-		final int dm = Math.max(dx, dy);
-		final double dz = (lostz - losoz) / dm;
-		
-		// get direction flag for diagonal movement
-		final byte diroxy = getDirXY(dirox, diroy);
-		final byte dirtxy = getDirXY(dirtx, dirty);
-		
-		// delta, determines axis to move on (+..X axis, -..Y axis)
-		int d = dx - dy;
-		
-		// NSWE direction of movement
-		byte diro;
-		byte dirt;
-		
-		// clearDebugItems();
-		// dropDebugItem(728, 0, new GeoLocation(gox, goy, goz)); // blue potion
-		// dropDebugItem(728, 0, new GeoLocation(gtx, gty, gtz)); // blue potion
-		
-		// initialize node values
-		int nox = gox;
-		int noy = goy;
-		int ntx = gtx;
-		int nty = gty;
-		byte nsweo = getNsweNearestOriginal(gox, goy, goz);
-		byte nswet = getNsweNearestOriginal(gtx, gty, gtz);
-		
-		// loop
-		ABlock block;
-		int index;
-		for (int i = 0; i < ((dm + 1) / 2); i++)
-		{
-			// dropDebugItem(57, 0, new GeoLocation(gox, goy, goz)); // antidote
-			// dropDebugItem(1831, 0, new GeoLocation(gtx, gty, gtz)); // adena
-			
-			// reset direction flag
-			diro = 0;
-			dirt = 0;
-			
-			// calculate next point coordinates
-			int e2 = 2 * d;
-			if ((e2 > -dy) && (e2 < dx))
-			{
-				// calculate next point XY coordinates
-				d -= dy;
-				d += dx;
-				nox += sx;
-				ntx -= sx;
-				noy += sy;
-				nty -= sy;
-				diro |= diroxy;
-				dirt |= dirtxy;
-			}
-			else if (e2 > -dy)
-			{
-				// calculate next point X coordinate
-				d -= dy;
-				nox += sx;
-				ntx -= sx;
-				diro |= dirox;
-				dirt |= dirtx;
-			}
-			else if (e2 < dx)
-			{
-				// calculate next point Y coordinate
-				d += dx;
-				noy += sy;
-				nty -= sy;
-				diro |= diroy;
-				dirt |= dirty;
-			}
-			
-			{
-				// get block of the next cell
-				block = getBlock(nox, noy);
-				
-				// get index of particular layer, based on movement conditions
-				if ((nsweo & diro) == 0)
-				{
-					index = block.getIndexAboveOriginal(nox, noy, goz - GeoStructure.CELL_IGNORE_HEIGHT);
-				}
-				else
-				{
-					index = block.getIndexBelowOriginal(nox, noy, goz + GeoStructure.CELL_IGNORE_HEIGHT);
-				}
-				
-				// layer does not exist, return
-				if (index == -1)
-				{
-					return false;
-				}
-				
-				// get layer and next line of sight Z coordinate
-				goz = block.getHeightOriginal(index);
-				losoz += dz;
-				
-				// perform line of sight check, return when fails
-				if ((goz - losoz) > Config.MAX_OBSTACLE_HEIGHT)
-				{
-					return false;
-				}
-				
-				// get layer nswe
-				nsweo = block.getNsweOriginal(index);
-			}
-			{
-				// get block of the next cell
-				block = getBlock(ntx, nty);
-				
-				// get index of particular layer, based on movement conditions
-				if ((nswet & dirt) == 0)
-				{
-					index = block.getIndexAboveOriginal(ntx, nty, gtz - GeoStructure.CELL_IGNORE_HEIGHT);
-				}
-				else
-				{
-					index = block.getIndexBelowOriginal(ntx, nty, gtz + GeoStructure.CELL_IGNORE_HEIGHT);
-				}
-				
-				// layer does not exist, return
-				if (index == -1)
-				{
-					return false;
-				}
-				
-				// get layer and next line of sight Z coordinate
-				gtz = block.getHeightOriginal(index);
-				lostz -= dz;
-				
-				// perform line of sight check, return when fails
-				if ((gtz - lostz) > Config.MAX_OBSTACLE_HEIGHT)
-				{
-					return false;
-				}
-				
-				// get layer nswe
-				nswet = block.getNsweOriginal(index);
 			}
 			
 			// update coords

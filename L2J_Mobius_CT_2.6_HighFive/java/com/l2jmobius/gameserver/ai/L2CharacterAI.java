@@ -42,7 +42,6 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -999,36 +998,12 @@ public class L2CharacterAI extends AbstractAI
 		}
 		
 		offset += _actor.getTemplate().getCollisionRadius();
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			offset += ((L2Character) target).getTemplate().getCollisionRadius();
 		}
 		
-		final boolean needToMove;
-		
-		if (target.isDoor())
-		{
-			final L2DoorInstance dor = (L2DoorInstance) target;
-			int xPoint = 0;
-			int yPoint = 0;
-			for (int i : dor.getTemplate().getNodeX())
-			{
-				xPoint += i;
-			}
-			for (int i : dor.getTemplate().getNodeY())
-			{
-				yPoint += i;
-			}
-			xPoint /= 4;
-			yPoint /= 4;
-			needToMove = !_actor.isInsideRadius(xPoint, yPoint, dor.getTemplate().getNodeZ(), offset, false, false);
-		}
-		else
-		{
-			needToMove = !_actor.isInsideRadius(target, offset, false, false);
-		}
-		
-		if (needToMove)
+		if (!_actor.isInsideRadius(target, offset, false, false))
 		{
 			// Caller should be L2Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
 			if (getFollowTarget() != null)
@@ -1042,7 +1017,7 @@ public class L2CharacterAI extends AbstractAI
 				return false;
 			}
 			
-			if (_actor.isMovementDisabled())
+			if (_actor.isMovementDisabled() || (_actor.getMoveSpeed() <= 0))
 			{
 				// If player is trying attack target but he cannot move to attack target
 				// change his intention to idle
@@ -1055,7 +1030,7 @@ public class L2CharacterAI extends AbstractAI
 			}
 			
 			// while flying there is no move to cast
-			if ((_actor.getAI().getIntention() == AI_INTENTION_CAST) && (_actor instanceof L2PcInstance) && _actor.isTransformed() && !_actor.getTransformation().isCombat())
+			if ((_actor.getAI().getIntention() == AI_INTENTION_CAST) && _actor.isPlayer() && _actor.isTransformed() && !_actor.getTransformation().isCombat())
 			{
 				_actor.sendPacket(SystemMessageId.THE_DISTANCE_IS_TOO_FAR_AND_SO_THE_CASTING_HAS_BEEN_STOPPED);
 				_actor.sendPacket(ActionFailed.STATIC_PACKET);
@@ -1069,7 +1044,7 @@ public class L2CharacterAI extends AbstractAI
 			}
 			
 			stopFollow();
-			if ((target instanceof L2Character) && !(target instanceof L2DoorInstance))
+			if (target.isCharacter() && !target.isDoor())
 			{
 				if (((L2Character) target).isMoving())
 				{
