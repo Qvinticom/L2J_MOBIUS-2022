@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -50,7 +49,7 @@ public class AttackableKnownList extends NpcKnownList
 		}
 		
 		// Remove the L2Object from the _aggrolist of the L2Attackable
-		if ((object != null) && (object instanceof L2Character))
+		if ((object != null) && object.isCharacter())
 		{
 			getActiveChar().getAggroList().remove(object);
 		}
@@ -95,7 +94,7 @@ public class AttackableKnownList extends NpcKnownList
 	@Override
 	public int getDistanceToWatchObject(L2Object object)
 	{
-		if ((object instanceof L2FolkInstance) || !(object instanceof L2Character))
+		if ((object instanceof L2FolkInstance) || !object.isCharacter())
 		{
 			return 0;
 		}

@@ -62,7 +62,7 @@ public class AdminInvul implements IAdminCommandHandler
 		else if (command.equals("admin_setundying"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2Character)
+			if (target.isCharacter())
 			{
 				handleUndying(activeChar, (L2Character) target);
 			}

@@ -1402,7 +1402,7 @@ public abstract class L2Skill
 		
 		Env env = new Env();
 		env.player = activeChar;
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			env.target = (L2Character) target;
 		}
@@ -1432,7 +1432,7 @@ public abstract class L2Skill
 		// Get the L2Objcet targeted by the user of the skill at this moment
 		final L2Object objTarget = activeChar.getTarget();
 		// If the L2Object targeted is a L2Character, it becomes the L2Character target
-		if (objTarget instanceof L2Character)
+		if (objTarget.isCharacter())
 		{
 			target = (L2Character) objTarget;
 		}

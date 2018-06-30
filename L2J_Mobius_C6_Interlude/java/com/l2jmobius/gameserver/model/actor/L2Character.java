@@ -1581,7 +1581,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		L2Character target;
 		for (L2Object obj : getKnownList().getKnownObjects().values())
 		{
-			if (obj instanceof L2Character)
+			if (obj.isCharacter())
 			{
 				if ((obj instanceof L2PetInstance) && (this instanceof L2PcInstance) && (((L2PetInstance) obj).getOwner() == (L2PcInstance) this))
 				{
@@ -3195,7 +3195,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	 * <BR>
 	 * <B><U> Assert </U> :</B><BR>
 	 * <BR>
-	 * <li>this instanceof L2Character</li><BR>
+	 * <li>this.isCharacter().</li><BR>
 	 * <BR
 	 * @param template the new template
 	 */
@@ -7457,7 +7457,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	@Override
 	public void onForcedAttack(L2PcInstance player)
 	{
-		if ((player.getTarget() == null) || !(player.getTarget() instanceof L2Character))
+		if ((player.getTarget() == null) || !player.getTarget().isCharacter())
 		{
 			// If target is not attackable, send a Server->Client packet ActionFailed
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -7668,7 +7668,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			}
 		}
 		
-		if ((attacker instanceof L2Character) && ((L2Character) attacker).isInsideZone(ZoneId.PEACE)
+		if (attacker.isCharacter() && ((L2Character) attacker).isInsideZone(ZoneId.PEACE)
 		// the townzone has to be already peace zone
 		// || TownManager.getInstance().getTown(attacker.getX(), attacker.getY(), attacker.getZ())!= null
 		)
@@ -7676,7 +7676,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return true;
 		}
 		
-		if ((target instanceof L2Character) && ((L2Character) target).isInsideZone(ZoneId.PEACE)
+		if (target.isCharacter() && ((L2Character) target).isInsideZone(ZoneId.PEACE)
 		// the townzone has to be already peace zone
 		// || TownManager.getInstance().getTown(target.getX(), target.getY(), target.getZ())!= null
 		)
@@ -8387,7 +8387,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			
 			for (int i = 0; (targets != null) && (i < targets.length); i++)
 			{
-				if (targets[i] instanceof L2Character)
+				if (targets[i].isCharacter())
 				{
 					if (!Util.checkIfInRange(escapeRange, this, targets[i], true))
 					{
@@ -8712,12 +8712,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						// Like L2OFF if the skill is BLOW the player doesn't auto attack
 						// If on XML skill nextActionAttack = true the char auto attack
 						// If CTRL is pressed the autoattack is aborted (like L2OFF)
-						if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.nextActionIsAttack() && (_target != null) && (_target instanceof L2Character))
+						if ((skilldat != null) && !skilldat.isCtrlPressed() && skill.nextActionIsAttack() && (_target != null) && _target.isCharacter())
 						{
 							getAI().setIntention(AI_INTENTION_ATTACK, _target);
 						}
 					}
-					else if (skill.nextActionIsAttack() && (_target != null) && (_target instanceof L2Character))
+					else if (skill.nextActionIsAttack() && (_target != null) && _target.isCharacter())
 					{
 						getAI().setIntention(AI_INTENTION_ATTACK, _target);
 					}
@@ -8790,7 +8790,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						{
 							for (L2Object target : targets)
 							{
-								if ((target != null) && (target instanceof L2Character) && !((L2Character) target).isDead())
+								if ((target != null) && target.isCharacter() && !((L2Character) target).isDead())
 								{
 									final L2Character player = (L2Character) target;
 									
@@ -9048,7 +9048,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			// Do initial checkings for skills and set pvp flag/draw aggro when needed
 			for (L2Object target : targets)
 			{
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					// Set some values inside target's instance for later use
 					L2Character player = (L2Character) target;
@@ -9066,7 +9066,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					 * instanceof L2PcInstance) { sendPacket(SystemMessage.sendString("Target affected by weapon special ability!")); } }
 					 */
 					
-					if (target instanceof L2Character)
+					if (target.isCharacter())
 					{
 						final L2Character targ = (L2Character) target;
 						
@@ -9476,7 +9476,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return false;
 		}
 		
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			((L2Character) target).sendPacket(new ValidateLocation(this));
 			sendPacket(new ValidateLocation(((L2Character) target)));
@@ -9567,7 +9567,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return false;
 		}
 		
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			((L2Character) target).sendPacket(new ValidateLocation(this));
 			sendPacket(new ValidateLocation(((L2Character) target)));
@@ -9628,7 +9628,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return false;
 		}
 		
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			if (isBehind(_target) || isFront(_target))
 			{

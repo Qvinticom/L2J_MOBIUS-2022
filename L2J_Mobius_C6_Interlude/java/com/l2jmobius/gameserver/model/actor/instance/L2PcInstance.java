@@ -1297,7 +1297,7 @@ public final class L2PcInstance extends L2Playable
 				default:
 				{
 					L2Object mainTarget = skill.getFirstOfTargetList(L2PcInstance.this);
-					if ((mainTarget == null) || !(mainTarget instanceof L2Character))
+					if ((mainTarget == null) || !mainTarget.isCharacter())
 					{
 						return;
 					}
@@ -6893,7 +6893,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// Remove the L2PcInstance from the _statusListener of the old target if it was a L2Character
-			if (oldTarget instanceof L2Character)
+			if (oldTarget.isCharacter())
 			{
 				((L2Character) oldTarget).removeStatusListener(this);
 			}
@@ -6901,7 +6901,7 @@ public final class L2PcInstance extends L2Playable
 		oldTarget = null;
 		
 		// Add the L2PcInstance to the _statusListener of the new target if it's a L2Character
-		if ((newTarget != null) && (newTarget instanceof L2Character))
+		if ((newTarget != null) && newTarget.isCharacter())
 		{
 			((L2Character) newTarget).addStatusListener(this);
 			TargetSelected my = new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ());

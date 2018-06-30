@@ -97,7 +97,7 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		L2Character caster;
 		final L2Object target = activeChar.getTarget();
-		if (!(target instanceof L2Character))
+		if (!target.isCharacter())
 		{
 			caster = activeChar;
 		}

@@ -4676,7 +4676,7 @@ public final class L2PcInstance extends L2Playable
 			oldTarget.removeStatusListener(this);
 		}
 		
-		if (newTarget instanceof L2Character)
+		if ((newTarget != null) && newTarget.isCharacter())
 		{
 			final L2Character target = (L2Character) newTarget;
 			

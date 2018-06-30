@@ -58,7 +58,7 @@ public class RequestRecordInfo implements IClientIncomingPacket
 				{
 					object.sendInfo(activeChar);
 					
-					if (object instanceof L2Character)
+					if (object.isCharacter())
 					{
 						// Update the state of the L2Character object client
 						// side by sending Server->Client packet

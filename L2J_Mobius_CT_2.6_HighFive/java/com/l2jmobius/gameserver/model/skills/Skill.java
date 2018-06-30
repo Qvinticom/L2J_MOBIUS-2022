@@ -1020,7 +1020,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		final L2Character target = (object instanceof L2Character) ? (L2Character) object : null;
+		final L2Character target = object.isCharacter() ? (L2Character) object : null;
 		for (Condition cond : preCondition)
 		{
 			if (!cond.test(activeChar, target, this))
@@ -1064,7 +1064,7 @@ public final class Skill implements IIdentifiable
 		// Get the L2Objcet targeted by the user of the skill at this moment
 		final L2Object objTarget = activeChar.getTarget();
 		// If the L2Object targeted is a L2Character, it becomes the L2Character target
-		if (objTarget instanceof L2Character)
+		if ((objTarget != null) && objTarget.isCharacter())
 		{
 			target = (L2Character) objTarget;
 		}

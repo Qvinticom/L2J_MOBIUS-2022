@@ -5286,7 +5286,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final List<L2Object> targetList = new ArrayList<>();
 			for (L2Object target : targets)
 			{
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					if (!isInsideRadius(target.getX(), target.getY(), target.getZ(), escapeRange + _template.getCollisionRadius(), true, false))
 					{
@@ -5535,7 +5535,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Attack target after skill use
-		if ((skill.nextActionIsAttack()) && (_target instanceof L2Character) && (_target != this) && (target != null) && (_target == target) && target.canBeAttacked())
+		if ((skill.nextActionIsAttack()) && _target.isCharacter() && (_target != this) && (target != null) && (_target == target) && target.canBeAttacked())
 		{
 			if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
@@ -5845,7 +5845,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			return false;
 		}
 		
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			final L2Character target1 = (L2Character) target;
 			angleChar = Util.calculateAngleFrom(this, target1);
@@ -5929,7 +5929,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public boolean isInFrontOfTarget()
 	{
 		final L2Object target = _target;
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			return isInFrontOf((L2Character) target);
 		}

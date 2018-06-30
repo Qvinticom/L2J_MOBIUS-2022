@@ -1029,7 +1029,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		offset += _actor.getTemplate().collisionRadius;
 		
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			offset += ((L2Character) target).getTemplate().collisionRadius;
 		}
@@ -1086,7 +1086,7 @@ public class L2CharacterAI extends AbstractAI
 			
 			stopFollow();
 			
-			if ((target instanceof L2Character) && !(target instanceof L2DoorInstance))
+			if (target.isCharacter() && !(target instanceof L2DoorInstance))
 			{
 				if (((L2Character) target).isMoving())
 				{

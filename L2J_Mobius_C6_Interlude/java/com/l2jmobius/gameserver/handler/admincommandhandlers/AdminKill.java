@@ -123,7 +123,7 @@ public class AdminKill implements IAdminCommandHandler
 			{
 				L2Object obj = activeChar.getTarget();
 				
-				if ((obj == null) || (obj instanceof L2ControllableMobInstance) || !(obj instanceof L2Character))
+				if ((obj == null) || (obj instanceof L2ControllableMobInstance) || !obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				}

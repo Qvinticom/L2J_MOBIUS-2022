@@ -239,7 +239,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					if (type.equals("1"))
@@ -267,7 +267,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.stopAbnormalEffect((short) 0x0400);
@@ -322,7 +322,7 @@ public class AdminEffects implements IAdminCommandHandler
 				L2Object target = activeChar.getTarget();
 				L2Character player = null;
 				
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.startAbnormalEffect(0x2000);
@@ -340,7 +340,7 @@ public class AdminEffects implements IAdminCommandHandler
 				L2Object target = activeChar.getTarget();
 				L2Character player = null;
 				
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.stopAbnormalEffect((short) 0x2000);
@@ -545,7 +545,7 @@ public class AdminEffects implements IAdminCommandHandler
 				L2Object target = activeChar.getTarget();
 				L2Character player = null;
 				
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.stopAllEffects();
@@ -662,7 +662,7 @@ public class AdminEffects implements IAdminCommandHandler
 					obj = activeChar;
 				}
 				
-				if (!(obj instanceof L2Character))
+				if (!obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				}
@@ -696,7 +696,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private boolean performAbnormal(int action, L2Object target)
 	{
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			L2Character character = (L2Character) target;
 			
@@ -718,7 +718,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		try
 		{
-			if (target instanceof L2Character)
+			if (target.isCharacter())
 			{
 				if ((target instanceof L2Summon) || (target instanceof L2ChestInstance))
 				{

@@ -266,7 +266,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					if (type.equals("1"))
@@ -299,7 +299,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					if (type.equals("1"))
@@ -323,7 +323,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.startAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
@@ -339,7 +339,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final L2Object target = activeChar.getTarget();
 				L2Character player = null;
-				if (target instanceof L2Character)
+				if (target.isCharacter())
 				{
 					player = (L2Character) target;
 					player.stopAbnormalVisualEffect(true, AbnormalVisualEffect.BIG_HEAD);
@@ -403,7 +403,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final Team team = Team.valueOf(st.nextToken().toUpperCase());
 				L2Character target = null;
-				if (activeChar.getTarget() instanceof L2Character)
+				if (activeChar.getTarget().isCharacter())
 				{
 					target = (L2Character) activeChar.getTarget();
 				}
@@ -549,7 +549,7 @@ public class AdminEffects implements IAdminCommandHandler
 				{
 					obj = activeChar;
 				}
-				if (!(obj instanceof L2Character))
+				if (!obj.isCharacter())
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
@@ -601,7 +601,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private boolean performAbnormalVisualEffect(AbnormalVisualEffect ave, L2Object target)
 	{
-		if (target instanceof L2Character)
+		if (target.isCharacter())
 		{
 			final L2Character character = (L2Character) target;
 			if (character.hasAbnormalVisualEffect(ave))
@@ -621,7 +621,7 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		try
 		{
-			if (target instanceof L2Character)
+			if (target.isCharacter())
 			{
 				if (target instanceof L2ChestInstance)
 				{

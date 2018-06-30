@@ -177,11 +177,11 @@ public final class Util
 		}
 		
 		int rad = 0;
-		if (obj1 instanceof L2Character)
+		if (obj1.isCharacter())
 		{
 			rad += ((L2Character) obj1).getTemplate().collisionRadius;
 		}
-		if (obj2 instanceof L2Character)
+		if (obj2.isCharacter())
 		{
 			rad += ((L2Character) obj2).getTemplate().collisionRadius;
 		}

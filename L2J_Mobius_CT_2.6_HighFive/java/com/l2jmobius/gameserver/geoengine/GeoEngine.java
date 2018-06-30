@@ -477,7 +477,7 @@ public class GeoEngine
 		
 		// get origin and target height, real height = collision height * 2
 		double oheight = 0;
-		if (origin instanceof L2Character)
+		if (origin.isCharacter())
 		{
 			oheight = ((L2Character) origin).getTemplate().getCollisionHeight();
 		}

@@ -114,7 +114,7 @@ public class ObjectKnownList
 	public final synchronized void updateKnownObjects()
 	{
 		// Only bother updating knownobjects for L2Character; don't for L2Object
-		if (_activeObject instanceof L2Character)
+		if (_activeObject.isCharacter())
 		{
 			findCloseObjects();
 			forgetObjects();
@@ -150,7 +150,7 @@ public class ObjectKnownList
 				
 				// Try to add active object to object's known objects
 				// Only if object is a L2Character and active object is a L2PlayableInstance
-				if (object instanceof L2Character)
+				if (object.isCharacter())
 				{
 					object.getKnownList().addKnownObject(_activeObject);
 				}

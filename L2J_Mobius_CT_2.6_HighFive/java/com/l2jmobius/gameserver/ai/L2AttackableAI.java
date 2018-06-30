@@ -2070,7 +2070,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					continue;
 				}
-				final L2Character obj = target instanceof L2Character ? (L2Character) target : null;
+				final L2Character obj = target.isCharacter() ? (L2Character) target : null;
 				if ((obj == null) || !GeoEngine.getInstance().canSeeTarget(actor, obj) || (dist2 > range))
 				{
 					continue;

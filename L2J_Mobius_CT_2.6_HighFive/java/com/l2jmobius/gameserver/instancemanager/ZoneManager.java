@@ -128,7 +128,7 @@ public final class ZoneManager implements IGameXmlReader
 		// Re-validate all characters in zones
 		for (L2Object obj : L2World.getInstance().getVisibleObjects())
 		{
-			if (obj instanceof L2Character)
+			if (obj.isCharacter())
 			{
 				((L2Character) obj).revalidateZone(true);
 			}

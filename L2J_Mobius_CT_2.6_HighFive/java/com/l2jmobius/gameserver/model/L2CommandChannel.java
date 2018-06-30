@@ -194,7 +194,7 @@ public class L2CommandChannel extends AbstractPlayerGroup
 	 */
 	public boolean meetRaidWarCondition(L2Object obj)
 	{
-		if (!((obj instanceof L2Character) && ((L2Character) obj).isRaid()))
+		if (!(obj.isCharacter() && ((L2Character) obj).isRaid()))
 		{
 			return false;
 		}

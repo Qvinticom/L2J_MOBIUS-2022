@@ -440,7 +440,7 @@ public class L2ControllableMobAI extends L2AttackableAI
 		
 		for (L2Object obj : npc.getKnownList().getKnownObjects().values())
 		{
-			if (!(obj instanceof L2Character))
+			if (!obj.isCharacter())
 			{
 				continue;
 			}

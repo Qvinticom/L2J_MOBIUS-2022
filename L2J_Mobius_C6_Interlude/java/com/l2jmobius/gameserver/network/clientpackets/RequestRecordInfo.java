@@ -160,7 +160,7 @@ public class RequestRecordInfo extends L2GameClientPacket
 					}
 				}
 				
-				if (object instanceof L2Character)
+				if (object.isCharacter())
 				{
 					// Update the state of the L2Character object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the L2PcInstance
 					final L2Character obj = (L2Character) object;

@@ -588,7 +588,7 @@ public class SkillCaster implements Runnable
 			{
 				for (L2Object obj : targets)
 				{
-					if (!(obj instanceof L2Character))
+					if (!obj.isCharacter())
 					{
 						continue;
 					}

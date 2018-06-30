@@ -820,7 +820,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			return true;
 		}
 		
-		final L2Character target = (object instanceof L2Character) ? (L2Character) object : null;
+		final L2Character target = object.isCharacter() ? (L2Character) object : null;
 		for (Condition preCondition : _preConditions)
 		{
 			if (preCondition == null)

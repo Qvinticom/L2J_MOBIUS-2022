@@ -53,7 +53,7 @@ public class CombatPointHeal implements ISkillHandler
 		
 		for (L2Object object : targets)
 		{
-			if (!(object instanceof L2Character))
+			if (!object.isCharacter())
 			{
 				continue;
 			}

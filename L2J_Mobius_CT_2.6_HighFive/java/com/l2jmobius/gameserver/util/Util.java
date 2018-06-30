@@ -201,11 +201,11 @@ public final class Util
 		}
 		
 		int radius = 0;
-		if (obj1 instanceof L2Character)
+		if (obj1.isCharacter())
 		{
 			radius += ((L2Character) obj1).getTemplate().getCollisionRadius();
 		}
-		if (obj2 instanceof L2Character)
+		if (obj2.isCharacter())
 		{
 			radius += ((L2Character) obj2).getTemplate().getCollisionRadius();
 		}

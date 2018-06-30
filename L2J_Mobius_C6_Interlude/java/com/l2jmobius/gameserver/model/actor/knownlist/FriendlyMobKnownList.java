@@ -67,7 +67,7 @@ public class FriendlyMobKnownList extends AttackableKnownList
 			return false;
 		}
 		
-		if (!(object instanceof L2Character))
+		if (!object.isCharacter())
 		{
 			return true;
 		}

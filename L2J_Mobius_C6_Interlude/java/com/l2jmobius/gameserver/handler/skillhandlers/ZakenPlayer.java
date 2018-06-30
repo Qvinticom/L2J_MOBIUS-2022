@@ -38,7 +38,7 @@ public class ZakenPlayer implements ISkillHandler
 		{
 			for (L2Object target1 : targets)
 			{
-				if (!(target1 instanceof L2Character))
+				if (!target1.isCharacter())
 				{
 					continue;
 				}

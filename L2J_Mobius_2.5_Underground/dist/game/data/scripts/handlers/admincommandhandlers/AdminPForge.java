@@ -492,7 +492,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$ttitle":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && (target instanceof L2Character))
+								if ((target != null) && target.isCharacter())
 								{
 									value = ((L2Character) target).getTitle();
 								}

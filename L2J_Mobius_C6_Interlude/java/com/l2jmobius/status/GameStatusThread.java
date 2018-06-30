@@ -1097,7 +1097,7 @@ public class GameStatusThread extends Thread
 				{
 					continue;
 				}
-				if (obj instanceof L2Character)
+				if (obj.isCharacter())
 				{
 					if (((L2Character) obj).hasAI())
 					{
@@ -1144,7 +1144,7 @@ public class GameStatusThread extends Thread
 				{
 					doorCount++;
 				}
-				else if (obj instanceof L2Character)
+				else if (obj.isCharacter())
 				{
 					charCount++;
 				}

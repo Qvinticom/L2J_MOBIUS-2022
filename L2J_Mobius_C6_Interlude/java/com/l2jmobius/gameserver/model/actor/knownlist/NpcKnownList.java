@@ -46,7 +46,7 @@ public class NpcKnownList extends CharKnownList
 			return false;
 		}
 		
-		if (getActiveObject().isNpc() && (object instanceof L2Character))
+		if (getActiveObject().isNpc() && object.isCharacter())
 		{
 			// Broadcast correct walking NPC position.
 			if (object.isPlayer() && getActiveChar().isMoving() && !getActiveChar().isInCombat())
@@ -77,7 +77,7 @@ public class NpcKnownList extends CharKnownList
 			return 10000;
 		}
 		
-		if ((object instanceof L2FolkInstance) || !(object instanceof L2Character))
+		if ((object instanceof L2FolkInstance) || !object.isCharacter())
 		{
 			return 0;
 		}
