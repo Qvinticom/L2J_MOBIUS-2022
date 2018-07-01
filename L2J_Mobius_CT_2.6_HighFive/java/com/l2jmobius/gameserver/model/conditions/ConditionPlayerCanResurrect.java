@@ -16,9 +16,12 @@
  */
 package com.l2jmobius.gameserver.model.conditions;
 
+import com.l2jmobius.gameserver.instancemanager.SiegeManager;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -78,6 +81,46 @@ public class ConditionPlayerCanResurrect extends Condition
 				if (effector.isPlayer())
 				{
 					effector.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED);
+				}
+			}
+			else if (skill.getId() != 2393) // Blessed Scroll of Battlefield Resurrection
+			{
+				final Siege siege = SiegeManager.getInstance().getSiege(player);
+				if ((siege != null) && siege.isInProgress())
+				{
+					final L2Clan clan = player.getClan();
+					if (clan == null)
+					{
+						canResurrect = false;
+						if (effector.isPlayer())
+						{
+							effector.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+						}
+					}
+					else if (siege.checkIsDefender(clan) && (siege.getControlTowerCount() == 0))
+					{
+						canResurrect = false;
+						if (effector.isPlayer())
+						{
+							effector.sendPacket(SystemMessageId.THE_GUARDIAN_TOWER_HAS_BEEN_DESTROYED_AND_RESURRECTION_IS_NOT_POSSIBLE);
+						}
+					}
+					else if (siege.checkIsAttacker(clan) && (siege.getAttackerClan(clan).getNumFlags() == 0))
+					{
+						canResurrect = false;
+						if (effector.isPlayer())
+						{
+							effector.sendPacket(SystemMessageId.IF_A_BASE_CAMP_DOES_NOT_EXIST_RESURRECTION_IS_NOT_POSSIBLE);
+						}
+					}
+					else
+					{
+						canResurrect = false;
+						if (effector.isPlayer())
+						{
+							effector.sendPacket(SystemMessageId.IT_IS_NOT_POSSIBLE_TO_RESURRECT_IN_BATTLEFIELDS_WHERE_A_SIEGE_WAR_IS_TAKING_PLACE);
+						}
+					}
 				}
 			}
 		}
