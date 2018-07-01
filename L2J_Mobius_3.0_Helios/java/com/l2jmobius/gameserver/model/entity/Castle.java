@@ -55,7 +55,6 @@ import com.l2jmobius.gameserver.model.holders.CastleSpawnHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.type.L2CastleZone;
 import com.l2jmobius.gameserver.model.zone.type.L2ResidenceTeleportZone;
 import com.l2jmobius.gameserver.model.zone.type.L2SiegeZone;
@@ -1156,8 +1155,10 @@ public final class Castle extends AbstractResidence
 	public void giveResidentialSkills(L2PcInstance player)
 	{
 		super.giveResidentialSkills(player);
-		final Skill skill = _castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill();
-		player.addSkill(skill);
+		if (player.getPledgeClass() > 8) // Marquis
+		{
+			player.addSkill(_castleSide == CastleSide.DARK ? CommonSkill.ABILITY_OF_DARKNESS.getSkill() : CommonSkill.ABILITY_OF_LIGHT.getSkill());
+		}
 	}
 	
 	@Override

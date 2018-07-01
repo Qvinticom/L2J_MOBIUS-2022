@@ -1271,7 +1271,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the pledge skill level
 	 * @return the pledge skill from the Pledge Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	private L2SkillLearn getPledgeSkill(int id, int lvl)
+	public L2SkillLearn getPledgeSkill(int id, int lvl)
 	{
 		return _pledgeSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}
@@ -1282,7 +1282,7 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param lvl the sub-pledge skill level
 	 * @return the sub-pledge skill from the Sub-Pledge Skill Tree for a given {@code id} and {@code lvl}
 	 */
-	private L2SkillLearn getSubPledgeSkill(int id, int lvl)
+	public L2SkillLearn getSubPledgeSkill(int id, int lvl)
 	{
 		return _subPledgeSkillTree.get(SkillData.getSkillHashCode(id, lvl));
 	}

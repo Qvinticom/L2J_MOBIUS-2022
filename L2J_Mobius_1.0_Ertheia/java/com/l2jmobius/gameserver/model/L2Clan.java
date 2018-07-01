@@ -41,6 +41,7 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
@@ -1447,19 +1448,24 @@ public class L2Clan implements IIdentifiable, INamable
 			return;
 		}
 		
+		final int playerSocialClass = player.getPledgeClass() + 1;
 		for (Skill skill : _skills.values())
 		{
-			if (skill.getMinPledgeClass() <= player.getPledgeClass())
+			final L2SkillLearn skillLearn = SkillTreesData.getInstance().getPledgeSkill(skill.getId(), skill.getLevel());
+			if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal()))
 			{
 				player.addSkill(skill, false); // Skill is not saved to player DB
 			}
 		}
-		
 		if (player.getPledgeType() == 0)
 		{
 			for (Skill skill : _subPledgeSkills.values())
 			{
-				player.addSkill(skill, false); // Skill is not saved to player DB
+				final L2SkillLearn skillLearn = SkillTreesData.getInstance().getSubPledgeSkill(skill.getId(), skill.getLevel());
+				if ((skillLearn == null) || (skillLearn.getSocialClass() == null) || (playerSocialClass >= skillLearn.getSocialClass().ordinal()))
+				{
+					player.addSkill(skill, false); // Skill is not saved to player DB
+				}
 			}
 		}
 		else
