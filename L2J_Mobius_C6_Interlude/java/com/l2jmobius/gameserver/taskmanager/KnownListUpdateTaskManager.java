@@ -22,6 +22,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 
 public class KnownListUpdateTaskManager
@@ -117,7 +118,7 @@ public class KnownListUpdateTaskManager
 					}
 				}
 			}
-			else if (object.isCharacter())
+			else if (object instanceof L2Character)
 			{
 				for (L2WorldRegion regi : region.getSurroundingRegions()) // offer members of this and surrounding regions
 				{

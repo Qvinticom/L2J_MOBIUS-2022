@@ -71,7 +71,7 @@ final class EffectConfusion extends L2Effect
 				continue;
 			}
 			
-			if (obj.isCharacter() && (obj != getEffected()))
+			if ((obj instanceof L2Character) && (obj != getEffected()))
 			{
 				targetList.add((L2Character) obj);
 			}

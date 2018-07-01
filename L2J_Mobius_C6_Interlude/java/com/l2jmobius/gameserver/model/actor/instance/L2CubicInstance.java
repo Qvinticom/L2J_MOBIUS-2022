@@ -534,7 +534,7 @@ public class L2CubicInstance
 			}
 			
 			// test owners target if it is valid then use it
-			if (ownerTarget.isCharacter() && (ownerTarget != _owner.getPet()) && (ownerTarget != _owner))
+			if ((ownerTarget instanceof L2Character) && (ownerTarget != _owner.getPet()) && (ownerTarget != _owner))
 			{
 				// target mob which has aggro on you or your summon
 				if (ownerTarget instanceof L2Attackable)

@@ -339,7 +339,7 @@ public class TradeList
 		
 		L2Object o = L2World.getInstance().findObject(objectId);
 		
-		if ((o == null) || !o.isItem())
+		if ((o == null) || !(o instanceof L2ItemInstance))
 		{
 			Util.handleIllegalPlayerAction(_owner, "Player " + _owner.getName() + " Attempt to add invalid item to TradeList! ", Config.DEFAULT_PUNISH);
 			LOGGER.warning(_owner.getName() + ": Attempt to add invalid item to TradeList!");
@@ -1159,7 +1159,7 @@ public class TradeList
 					}
 					
 					final L2Object obj = L2World.getInstance().findObject(item.getObjectId());
-					if ((obj == null) || !obj.isItem())
+					if ((obj == null) || (!(obj instanceof L2ItemInstance)))
 					{
 						final String msgErr = "[RequestPrivateStoreSell] player " + _owner.getName() + " tried to sell null item in a private store (buy), ban this player!";
 						Util.handleIllegalPlayerAction(_owner, msgErr, Config.DEFAULT_PUNISH);

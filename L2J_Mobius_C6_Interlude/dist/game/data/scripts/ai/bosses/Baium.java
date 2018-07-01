@@ -485,7 +485,7 @@ public class Baium extends Quest
 		{
 			for (L2Object obj : objs)
 			{
-				if (obj.isCharacter())
+				if (obj instanceof L2Character)
 				{
 					if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoData.getInstance().canSeeTarget(obj, npc))
 					{

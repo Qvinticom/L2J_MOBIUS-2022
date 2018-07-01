@@ -196,7 +196,7 @@ public class AdminTest implements IAdminCommandHandler
 		L2Character player;
 		L2Object target = activeChar.getTarget();
 		
-		if ((target == null) || !target.isCharacter())
+		if ((target == null) || !(target instanceof L2Character))
 		{
 			player = activeChar;
 		}

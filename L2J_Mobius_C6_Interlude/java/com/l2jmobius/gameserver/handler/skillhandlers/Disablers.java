@@ -95,7 +95,7 @@ public class Disablers implements ISkillHandler
 		for (L2Object target2 : targets)
 		{
 			// Get a target
-			if (!target2.isCharacter())
+			if (!(target2 instanceof L2Character))
 			{
 				continue;
 			}

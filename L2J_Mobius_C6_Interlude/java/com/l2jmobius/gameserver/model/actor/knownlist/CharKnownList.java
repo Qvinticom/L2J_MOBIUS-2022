@@ -147,7 +147,7 @@ public class CharKnownList extends ObjectKnownList
 		
 		for (L2Object obj : getKnownObjects().values())
 		{
-			if ((obj != null) && obj.isCharacter())
+			if ((obj != null) && (obj instanceof L2Character))
 			{
 				result.add((L2Character) obj);
 			}

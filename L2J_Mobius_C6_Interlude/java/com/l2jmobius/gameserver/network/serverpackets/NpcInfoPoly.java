@@ -19,6 +19,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 /**
@@ -90,7 +91,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 		_isSummoned = false;
 		_collisionRadius = _template.collisionRadius;
 		_collisionHeight = _template.collisionHeight;
-		if (_obj.isCharacter())
+		if (_obj instanceof L2Character)
 		{
 			_activeChar = (L2Character) obj;
 			_isAttackable = obj.isAutoAttackable(attacker);
@@ -98,7 +99,7 @@ public class NpcInfoPoly extends L2GameServerPacket
 			_lhand = _template.lhand;
 		}
 		
-		if (_obj.isItem())
+		if (_obj instanceof L2ItemInstance)
 		{
 			_x = _obj.getX();
 			_y = _obj.getY();

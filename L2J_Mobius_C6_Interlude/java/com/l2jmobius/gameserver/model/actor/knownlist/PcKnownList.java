@@ -120,7 +120,7 @@ public class PcKnownList extends PlayableKnownList
 		}
 		else
 		{
-			if (object.isItem())
+			if (object instanceof L2ItemInstance)
 			{
 				if (dropper != null)
 				{
@@ -229,7 +229,7 @@ public class PcKnownList extends PlayableKnownList
 				}
 			}
 			
-			if (object.isCharacter())
+			if (object instanceof L2Character)
 			{
 				// Update the state of the L2Character object client side by sending Server->Client packet MoveToPawn/CharMoveToLocation and AutoAttackStart to the L2PcInstance
 				L2Character obj = (L2Character) object;

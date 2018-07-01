@@ -53,7 +53,7 @@ public class ItemFilter implements Filter
 		}
 		if (_excludeItemType != null)
 		{
-			// if (record.getParameters() == null || record.getParameters().length == 0 || !(record.getParameters()[0].isItem().))
+			// if (record.getParameters() == null || record.getParameters().length == 0 || !(record.getParameters()[0] instanceof L2ItemInstance))
 			// return true;
 			final L2ItemInstance item = (L2ItemInstance) record.getParameters()[0];
 			

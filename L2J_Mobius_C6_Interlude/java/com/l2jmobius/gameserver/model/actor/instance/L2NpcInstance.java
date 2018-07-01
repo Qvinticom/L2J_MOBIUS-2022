@@ -607,7 +607,7 @@ public class L2NpcInstance extends L2Character
 			return 10000;
 		}
 		
-		if ((object instanceof L2FolkInstance) || !object.isCharacter())
+		if ((object instanceof L2FolkInstance) || !(object instanceof L2Character))
 		{
 			return 0;
 		}

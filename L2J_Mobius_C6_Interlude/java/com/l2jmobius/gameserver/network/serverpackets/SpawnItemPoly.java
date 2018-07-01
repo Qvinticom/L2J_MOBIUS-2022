@@ -32,7 +32,7 @@ public class SpawnItemPoly extends L2GameServerPacket
 	
 	public SpawnItemPoly(L2Object object)
 	{
-		if (object.isItem())
+		if (object instanceof L2ItemInstance)
 		{
 			final L2ItemInstance item = (L2ItemInstance) object;
 			_objectId = object.getObjectId();

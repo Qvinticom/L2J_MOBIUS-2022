@@ -427,7 +427,7 @@ public class L2AttackableAI extends L2CharacterAI
 			// Go through visible objects
 			for (L2Object obj : npc.getKnownList().getKnownObjects().values())
 			{
-				if ((obj == null) || !obj.isCharacter())
+				if ((obj == null) || !(obj instanceof L2Character))
 				{
 					continue;
 				}

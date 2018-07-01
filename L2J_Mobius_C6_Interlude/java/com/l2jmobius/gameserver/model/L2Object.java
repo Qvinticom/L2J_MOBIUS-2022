@@ -297,7 +297,7 @@ public abstract class L2Object
 	 * <BR>
 	 * <B><U> Assert </U> :</B><BR>
 	 * <BR>
-	 * <li>this.isItem().</li>
+	 * <li>this instanceof L2ItemInstance</li>
 	 * <li>_worldRegion != null <I>(L2Object is visible at the beginning)</I></li> <BR>
 	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
@@ -331,7 +331,7 @@ public abstract class L2Object
 		}
 		
 		// if this item is a mercenary ticket, remove the spawns!
-		if (isItem())
+		if (this instanceof L2ItemInstance)
 		{
 			final int itemId = ((L2ItemInstance) this).getItemId();
 			if (MercTicketManager.getInstance().getTicketCastleId(itemId) > 0)

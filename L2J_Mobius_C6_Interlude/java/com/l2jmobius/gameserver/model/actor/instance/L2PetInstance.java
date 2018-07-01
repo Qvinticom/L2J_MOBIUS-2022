@@ -558,7 +558,7 @@ public class L2PetInstance extends L2Summon
 		
 		broadcastPacket(sm);
 		
-		if (!object.isItem())
+		if (!(object instanceof L2ItemInstance))
 		{
 			// dont try to pickup anything that is not an item :)
 			LOGGER.warning("Trying to pickup wrong target." + object);

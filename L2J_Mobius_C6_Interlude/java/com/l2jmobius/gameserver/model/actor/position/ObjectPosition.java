@@ -23,6 +23,7 @@ import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
+import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
@@ -106,7 +107,7 @@ public class ObjectPosition
 				((L2PcInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
 				
 			}
-			else if (_activeObject.isCharacter())
+			else if (_activeObject instanceof L2Character)
 			{
 				_activeObject.decayMe();
 			}

@@ -120,7 +120,7 @@ public final class Action extends L2GameClientPacket
 				}
 				case 1:
 				{
-					if (obj.isCharacter() && ((L2Character) obj).isAlikeDead())
+					if ((obj instanceof L2Character) && ((L2Character) obj).isAlikeDead())
 					{
 						obj.onAction(activeChar);
 					}

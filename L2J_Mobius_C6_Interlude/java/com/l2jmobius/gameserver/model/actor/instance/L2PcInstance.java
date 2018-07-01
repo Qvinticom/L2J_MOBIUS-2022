@@ -1297,7 +1297,7 @@ public final class L2PcInstance extends L2Playable
 				default:
 				{
 					L2Object mainTarget = skill.getFirstOfTargetList(L2PcInstance.this);
-					if ((mainTarget == null) || !mainTarget.isCharacter())
+					if ((mainTarget == null) || !(mainTarget instanceof L2Character))
 					{
 						return;
 					}
@@ -6647,7 +6647,7 @@ public final class L2PcInstance extends L2Playable
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		
 		// Check if the L2Object to pick up is a L2ItemInstance
-		if (!object.isItem())
+		if (!(object instanceof L2ItemInstance))
 		{
 			// dont try to pickup anything that is not an item :)
 			LOGGER.warning(this + "trying to pickup wrong target." + getTarget());
@@ -6893,7 +6893,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// Remove the L2PcInstance from the _statusListener of the old target if it was a L2Character
-			if (oldTarget.isCharacter())
+			if (oldTarget instanceof L2Character)
 			{
 				((L2Character) oldTarget).removeStatusListener(this);
 			}
@@ -6901,7 +6901,7 @@ public final class L2PcInstance extends L2Playable
 		oldTarget = null;
 		
 		// Add the L2PcInstance to the _statusListener of the new target if it's a L2Character
-		if ((newTarget != null) && newTarget.isCharacter())
+		if ((newTarget != null) && (newTarget instanceof L2Character))
 		{
 			((L2Character) newTarget).addStatusListener(this);
 			TargetSelected my = new TargetSelected(getObjectId(), newTarget.getObjectId(), getX(), getY(), getZ());

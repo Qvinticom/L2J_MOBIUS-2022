@@ -507,7 +507,7 @@ public class L2CharacterAI extends AbstractAI
 			return;
 		}
 		
-		if (object.isItem() && (((L2ItemInstance) object).getLocation() != ItemLocation.VOID))
+		if ((object instanceof L2ItemInstance) && (((L2ItemInstance) object).getLocation() != ItemLocation.VOID))
 		{
 			// Cancel action client side by sending Server->Client packet ActionFailed to the L2PcInstance actor
 			clientActionFailed();
@@ -1029,7 +1029,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		offset += _actor.getTemplate().collisionRadius;
 		
-		if (target.isCharacter())
+		if (target instanceof L2Character)
 		{
 			offset += ((L2Character) target).getTemplate().collisionRadius;
 		}
@@ -1086,7 +1086,7 @@ public class L2CharacterAI extends AbstractAI
 			
 			stopFollow();
 			
-			if (target.isCharacter() && !(target instanceof L2DoorInstance))
+			if ((target instanceof L2Character) && !(target instanceof L2DoorInstance))
 			{
 				if (((L2Character) target).isMoving())
 				{

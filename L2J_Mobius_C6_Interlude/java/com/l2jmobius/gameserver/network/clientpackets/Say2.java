@@ -225,7 +225,7 @@ public final class Say2 extends L2GameClientPacket
 			final CreatureSay cs = new CreatureSay(actor, _type, name, _text);
 			for (L2Object obj : list)
 			{
-				if ((obj == null) || !obj.isCharacter())
+				if ((obj == null) || !(obj instanceof L2Character))
 				{
 					continue;
 				}

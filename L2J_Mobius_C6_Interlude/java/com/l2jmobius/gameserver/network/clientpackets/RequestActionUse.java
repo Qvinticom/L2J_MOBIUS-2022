@@ -747,7 +747,7 @@ public final class RequestActionUse extends L2GameClientPacket
 			
 			boolean force = _ctrlPressed;
 			
-			if (target.isCharacter())
+			if (target instanceof L2Character)
 			{
 				if (activeSummon.isInsideZone(ZoneId.PVP) && ((L2Character) target).isInsideZone(ZoneId.PVP))
 				{

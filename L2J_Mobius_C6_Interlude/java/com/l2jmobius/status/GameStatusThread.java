@@ -1097,14 +1097,14 @@ public class GameStatusThread extends Thread
 				{
 					continue;
 				}
-				if (obj.isCharacter())
+				if (obj instanceof L2Character)
 				{
 					if (((L2Character) obj).hasAI())
 					{
 						AICount++;
 					}
 				}
-				if (obj.isItem())
+				if (obj instanceof L2ItemInstance)
 				{
 					if (((L2ItemInstance) obj).getLocation() == L2ItemInstance.ItemLocation.VOID)
 					{
@@ -1144,7 +1144,7 @@ public class GameStatusThread extends Thread
 				{
 					doorCount++;
 				}
-				else if (obj.isCharacter())
+				else if (obj instanceof L2Character)
 				{
 					charCount++;
 				}
