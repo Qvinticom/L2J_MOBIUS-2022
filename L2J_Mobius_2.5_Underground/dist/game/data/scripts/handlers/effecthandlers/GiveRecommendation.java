@@ -53,7 +53,7 @@ public final class GiveRecommendation extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		final L2PcInstance target = effected instanceof L2PcInstance ? (L2PcInstance) effected : null;
+		final L2PcInstance target = (effected != null) && effected.isPlayer() ? (L2PcInstance) effected : null;
 		if (target != null)
 		{
 			int recommendationsGiven = _amount;
@@ -74,7 +74,7 @@ public final class GiveRecommendation extends AbstractEffect
 			}
 			else
 			{
-				final L2PcInstance player = effector instanceof L2PcInstance ? (L2PcInstance) effector : null;
+				final L2PcInstance player = (effector != null) && effector.isPlayer() ? (L2PcInstance) effector : null;
 				if (player != null)
 				{
 					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);

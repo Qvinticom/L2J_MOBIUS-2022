@@ -46,7 +46,7 @@ public class ConditionTargetAggro extends Condition
 		{
 			return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
 		}
-		if (effected instanceof L2PcInstance)
+		if (effected.isPlayer())
 		{
 			return ((L2PcInstance) effected).getReputation() < 0;
 		}

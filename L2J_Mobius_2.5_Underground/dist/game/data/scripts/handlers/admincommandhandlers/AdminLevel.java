@@ -66,7 +66,7 @@ public class AdminLevel implements IAdminCommandHandler
 			final int maxLevel = ExperienceData.getInstance().getMaxLevel();
 			try
 			{
-				if (!(targetChar instanceof L2PcInstance))
+				if ((targetChar == null) || !targetChar.isPlayer())
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
 					return false;

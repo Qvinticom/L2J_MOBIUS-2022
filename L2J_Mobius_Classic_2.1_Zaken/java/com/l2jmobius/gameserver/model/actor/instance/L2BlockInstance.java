@@ -103,7 +103,7 @@ public class L2BlockInstance extends L2MonsterInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if (attacker instanceof L2PcInstance)
+		if (attacker.isPlayer())
 		{
 			return (attacker.getActingPlayer() != null) && (attacker.getActingPlayer().getBlockCheckerArena() > -1);
 		}

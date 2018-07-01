@@ -262,7 +262,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 			
 			// Check if the L2PcInstance target has karma (=PK)
-			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getKarma() > 0))
+			if (target.isPlayer() && (((L2PcInstance) target).getKarma() > 0))
 			{
 				return GeoEngine.getInstance().canSeeTarget(me, target); // Los Check
 			}
@@ -555,7 +555,7 @@ public class L2AttackableAI extends L2CharacterAI
 				/*
 				 * Check to see if this is a festival mob spawn. If it is, then check to see if the aggro trigger is a festival participant...if so, move to attack it.
 				 */
-				if ((npc instanceof L2FestivalMonsterInstance) && (target instanceof L2PcInstance))
+				if ((npc instanceof L2FestivalMonsterInstance) && target.isPlayer())
 				{
 					final L2PcInstance targetPlayer = (L2PcInstance) target;
 					
@@ -1938,7 +1938,7 @@ public class L2AttackableAI extends L2CharacterAI
 						continue;
 					}
 					
-					if (((obj instanceof L2PcInstance) || (obj instanceof L2Summon)) && (dist2 <= range) && !getAttackTarget().isAffectedBySkill(sk.getId()))
+					if ((obj.isPlayer() || (obj instanceof L2Summon)) && (dist2 <= range) && !getAttackTarget().isAffectedBySkill(sk.getId()))
 					{
 						return obj;
 					}
@@ -2010,7 +2010,7 @@ public class L2AttackableAI extends L2CharacterAI
 					continue;
 				}
 				
-				if (((obj instanceof L2PcInstance) || (obj instanceof L2Summon)) && (dist2 <= range) && (getAttackTarget().getEffectList().getFirstEffect(L2EffectType.BUFF) != null))
+				if ((obj.isPlayer() || (obj instanceof L2Summon)) && (dist2 <= range) && (getAttackTarget().getEffectList().getFirstEffect(L2EffectType.BUFF) != null))
 				{
 					return obj;
 				}
@@ -2075,7 +2075,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					continue;
 				}
-				if (obj instanceof L2PcInstance)
+				if (obj.isPlayer())
 				{
 					return obj;
 				}
@@ -2143,7 +2143,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					return;
 				}
-				if (obj instanceof L2PcInstance)
+				if (obj.isPlayer())
 				{
 					actor.addDamageHate(obj, 0, MostHate != null ? actor.getHating(MostHate) : 2000);
 					actor.setTarget(obj);
@@ -2216,7 +2216,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					return;
 				}
-				if (obj instanceof L2PcInstance)
+				if (obj.isPlayer())
 				{
 					actor.addDamageHate(obj, 0, (MostHate != null) && !MostHate.isDead() ? actor.getHating(MostHate) : 2000);
 					actor.setTarget(obj);

@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.zone.type;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -36,7 +35,7 @@ public class L2ArenaZone extends L2ZoneType
 	@Override
 	protected void onEnter(L2Character character)
 	{
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			if (!character.isInsideZone(ZoneId.PVP))
 			{
@@ -50,7 +49,7 @@ public class L2ArenaZone extends L2ZoneType
 	@Override
 	protected void onExit(L2Character character)
 	{
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			if (!character.isInsideZone(ZoneId.PVP))
 			{

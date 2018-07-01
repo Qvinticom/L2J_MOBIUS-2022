@@ -195,7 +195,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a clan member of the attacker!");
 				}
-				else if (!(rawTarget instanceof L2PcInstance))
+				else if (!rawTarget.isPlayer())
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a player with clan!");
 				}
@@ -250,7 +250,7 @@ public final class AdminCHSiege implements IAdminCommandHandler
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a clan member of the attacker!");
 				}
-				else if (!(rawTarget instanceof L2PcInstance))
+				else if (!rawTarget.isPlayer())
 				{
 					BuilderUtil.sendSysMessage(activeChar, "You must target a player with clan!");
 				}

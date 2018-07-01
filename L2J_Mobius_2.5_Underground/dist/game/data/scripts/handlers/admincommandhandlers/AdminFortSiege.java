@@ -72,7 +72,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			final L2Object target = activeChar.getTarget();
 			L2PcInstance player = null;
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				player = (L2PcInstance) target;
 			}

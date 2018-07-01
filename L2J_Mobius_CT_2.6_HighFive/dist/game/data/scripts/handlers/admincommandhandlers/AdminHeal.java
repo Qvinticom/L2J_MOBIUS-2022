@@ -96,7 +96,7 @@ public class AdminHeal implements IAdminCommandHandler
 					L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
 					{
 						character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
-						if (character instanceof L2PcInstance)
+						if (character.isPlayer())
 						{
 							character.setCurrentCp(character.getMaxCp());
 						}
@@ -118,7 +118,7 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			final L2Character target = (L2Character) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				target.setCurrentCp(target.getMaxCp());
 			}

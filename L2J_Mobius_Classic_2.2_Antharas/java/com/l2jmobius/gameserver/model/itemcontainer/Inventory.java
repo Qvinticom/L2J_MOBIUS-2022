@@ -399,7 +399,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -494,7 +494,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -623,7 +623,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -1503,13 +1503,13 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public void equipItem(L2ItemInstance item)
 	{
-		if ((getOwner() instanceof L2PcInstance) && (((L2PcInstance) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE))
-		{
-			return;
-		}
-		
 		if (getOwner().isPlayer())
 		{
+			if (((L2PcInstance) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE)
+			{
+				return;
+			}
+			
 			final L2PcInstance player = (L2PcInstance) getOwner();
 			
 			if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())

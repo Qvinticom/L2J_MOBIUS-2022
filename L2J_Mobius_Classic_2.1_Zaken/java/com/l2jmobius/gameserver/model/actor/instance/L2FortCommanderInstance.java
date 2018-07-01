@@ -50,7 +50,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		if ((attacker == null) || !(attacker instanceof L2PcInstance))
+		if ((attacker == null) || !attacker.isPlayer())
 		{
 			return false;
 		}

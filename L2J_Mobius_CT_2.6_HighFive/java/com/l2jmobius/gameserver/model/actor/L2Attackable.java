@@ -890,7 +890,7 @@ public class L2Attackable extends L2Npc
 			return 0;
 		}
 		
-		if (ai.getAttacker() instanceof L2PcInstance)
+		if (ai.getAttacker().isPlayer())
 		{
 			final L2PcInstance act = (L2PcInstance) ai.getAttacker();
 			if (act.isInvisible() || act.isInvul() || act.isSpawnProtected())

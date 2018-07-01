@@ -220,7 +220,7 @@ public abstract class L2ZoneType extends ListenersContainer
 			return false;
 		}
 		
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			// Check class type
 			if (_classType != 0)

@@ -569,7 +569,7 @@ public final class QuestState
 	 */
 	public void addNotifyOfDeath(L2Character character)
 	{
-		if (!(character instanceof L2PcInstance))
+		if (!character.isPlayer())
 		{
 			return;
 		}

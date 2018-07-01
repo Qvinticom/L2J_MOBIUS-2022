@@ -69,7 +69,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 		}
 		L2PcInstance player = null;
 		
-		if (killer instanceof L2PcInstance)
+		if (killer.isPlayer())
 		{
 			player = (L2PcInstance) killer;
 		}

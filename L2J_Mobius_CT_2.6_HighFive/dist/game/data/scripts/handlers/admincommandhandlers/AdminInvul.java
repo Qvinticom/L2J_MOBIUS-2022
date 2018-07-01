@@ -45,7 +45,7 @@ public class AdminInvul implements IAdminCommandHandler
 		if (command.equals("admin_setinvul"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				handleInvul((L2PcInstance) target);
 			}

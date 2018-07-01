@@ -24,6 +24,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
@@ -49,13 +50,14 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			try
 			{
 				final int lvl = Integer.parseInt(parts[1]);
-				if (activeChar.getTarget() instanceof L2PcInstance)
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isPlayer())
 				{
-					onlineChange(activeChar, (L2PcInstance) activeChar.getTarget(), lvl);
+					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
 				{
-					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+					onlineChange(activeChar, (L2PcInstance) target, lvl);
 				}
 			}
 			catch (Exception e)

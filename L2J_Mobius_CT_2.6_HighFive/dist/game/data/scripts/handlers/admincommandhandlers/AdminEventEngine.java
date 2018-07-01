@@ -385,7 +385,7 @@ public class AdminEventEngine implements IAdminCommandHandler
 				}
 				else
 				{
-					if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
+					if ((activeChar.getTarget() != null) && (activeChar.getTarget().isPlayer()))
 					{
 						L2Event.removeAndResetPlayer((L2PcInstance) activeChar.getTarget());
 					}

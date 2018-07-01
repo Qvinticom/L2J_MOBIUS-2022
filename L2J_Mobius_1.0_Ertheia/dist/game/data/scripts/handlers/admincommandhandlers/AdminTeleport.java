@@ -295,7 +295,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else
 			{
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					teleportHome(target.getActingPlayer());
 				}
@@ -386,7 +386,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			player = (L2PcInstance) target;
 		}
@@ -406,7 +406,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			player = (L2PcInstance) target;
 		}

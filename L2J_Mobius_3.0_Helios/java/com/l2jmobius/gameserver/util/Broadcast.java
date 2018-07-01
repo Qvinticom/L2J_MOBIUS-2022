@@ -136,7 +136,7 @@ public final class Broadcast
 	 */
 	public static void toSelfAndKnownPlayers(L2Character character, IClientOutgoingPacket mov)
 	{
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			character.sendPacket(mov);
 		}
@@ -152,7 +152,7 @@ public final class Broadcast
 			radius = 600;
 		}
 		
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			character.sendPacket(mov);
 		}

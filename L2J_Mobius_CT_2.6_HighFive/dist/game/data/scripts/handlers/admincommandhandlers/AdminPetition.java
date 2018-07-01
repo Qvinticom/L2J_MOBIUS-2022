@@ -102,7 +102,7 @@ public class AdminPetition implements IAdminCommandHandler
 			try
 			{
 				final L2Object targetChar = activeChar.getTarget();
-				if ((targetChar == null) || !(targetChar instanceof L2PcInstance))
+				if ((targetChar == null) || !targetChar.isPlayer())
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 					return false;

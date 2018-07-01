@@ -269,7 +269,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -388,7 +388,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -486,7 +486,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -612,7 +612,7 @@ public abstract class Inventory extends ItemContainer
 		@Override
 		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
 		{
-			if (!(inventory.getOwner() instanceof L2PcInstance))
+			if (!inventory.getOwner().isPlayer())
 			{
 				return;
 			}
@@ -1308,7 +1308,7 @@ public abstract class Inventory extends ItemContainer
 		try
 		{
 			unEquipItemInSlot(slot);
-			if (getOwner() instanceof L2PcInstance)
+			if (getOwner().isPlayer())
 			{
 				((L2PcInstance) getOwner()).refreshExpertisePenalty();
 			}
@@ -1451,7 +1451,7 @@ public abstract class Inventory extends ItemContainer
 			final L2ItemInstance old = setPaperdollItem(pdollSlot, null);
 			if (old != null)
 			{
-				if (getOwner() instanceof L2PcInstance)
+				if (getOwner().isPlayer())
 				{
 					((L2PcInstance) getOwner()).refreshExpertisePenalty();
 				}
@@ -1488,13 +1488,13 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public void equipItem(L2ItemInstance item)
 	{
-		if ((getOwner() instanceof L2PcInstance) && (((L2PcInstance) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE))
+		if (getOwner().isPlayer())
 		{
-			return;
-		}
-		
-		if (getOwner() instanceof L2PcInstance)
-		{
+			if (((L2PcInstance) getOwner()).getPrivateStoreType() != PrivateStoreType.NONE)
+			{
+				return;
+			}
+			
 			final L2PcInstance player = (L2PcInstance) getOwner();
 			
 			if (!player.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && !player.isHero() && item.isHeroItem())
@@ -1808,7 +1808,7 @@ public abstract class Inventory extends ItemContainer
 						continue;
 					}
 					
-					if (getOwner() instanceof L2PcInstance)
+					if (getOwner().isPlayer())
 					{
 						final L2PcInstance player = (L2PcInstance) getOwner();
 						

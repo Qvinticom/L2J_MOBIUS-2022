@@ -1045,7 +1045,7 @@ public class L2CharacterAI extends AbstractAI
 		if ((target == null) || target.isAlikeDead())
 		{
 			// check if player is fakedeath
-			if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isFakeDeath())
+			if ((target != null) && target.isPlayer() && ((L2PcInstance) target).isFakeDeath())
 			{
 				target.stopFakeDeath(true);
 				return false;
@@ -1076,7 +1076,7 @@ public class L2CharacterAI extends AbstractAI
 	protected boolean checkTargetLost(L2Object target)
 	{
 		// check if player is fakedeath
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			final L2PcInstance target2 = (L2PcInstance) target; // convert object to chara
 			

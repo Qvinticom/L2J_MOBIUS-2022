@@ -92,7 +92,7 @@ public class L2FestivalMonsterInstance extends L2MonsterInstance
 	{
 		L2PcInstance killingChar = null;
 		
-		if (!(lastAttacker instanceof L2PcInstance))
+		if (!lastAttacker.isPlayer())
 		{
 			return;
 		}

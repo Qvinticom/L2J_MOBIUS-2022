@@ -826,7 +826,7 @@ public class TvTEvent
 				return;
 			}
 		}
-		else if (killerCharacter instanceof L2PcInstance)
+		else if (killerCharacter.isPlayer())
 		{
 			killerPlayerInstance = (L2PcInstance) killerCharacter;
 		}

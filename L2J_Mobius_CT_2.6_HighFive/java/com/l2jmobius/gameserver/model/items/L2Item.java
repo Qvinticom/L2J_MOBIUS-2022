@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -802,7 +801,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		}
 		
 		// Don't allow hero equipment and restricted items during Olympiad
-		if ((isOlyRestrictedItem() || _heroItem) && (activeChar instanceof L2PcInstance) && activeChar.getActingPlayer().isInOlympiadMode())
+		if ((isOlyRestrictedItem() || _heroItem) && activeChar.isPlayer() && activeChar.getActingPlayer().isInOlympiadMode())
 		{
 			if (isEquipable())
 			{

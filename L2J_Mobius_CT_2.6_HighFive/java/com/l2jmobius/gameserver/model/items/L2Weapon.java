@@ -20,7 +20,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.conditions.ConditionGameChance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -414,7 +413,7 @@ public final class L2Weapon extends L2Item
 		onMagicSkill.activateSkill(caster, target);
 		
 		// notify quests of a skill use
-		if (caster instanceof L2PcInstance)
+		if (caster.isPlayer())
 		{
 			final L2Character[] targets =
 			{

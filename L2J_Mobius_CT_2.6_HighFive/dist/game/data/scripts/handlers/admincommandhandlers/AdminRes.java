@@ -141,7 +141,7 @@ public class AdminRes implements IAdminCommandHandler
 				
 				L2World.getInstance().forEachVisibleObjectInRange(activeChar, L2Character.class, radius, knownChar ->
 				{
-					if (!(knownChar instanceof L2PcInstance) && !(knownChar instanceof L2ControllableMobInstance))
+					if (!knownChar.isPlayer() && !(knownChar instanceof L2ControllableMobInstance))
 					{
 						doResurrect(knownChar);
 					}
@@ -156,9 +156,9 @@ public class AdminRes implements IAdminCommandHandler
 			return;
 		}
 		
-		if ((obj instanceof L2PcInstance) || (obj instanceof L2ControllableMobInstance))
+		if ((obj == null) || (obj.isPlayer()) || (obj instanceof L2ControllableMobInstance))
 		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
+			activeChar.sendPacket(SystemMessageId.INCORRECT_ITEM);
 			return;
 		}
 		
@@ -173,7 +173,7 @@ public class AdminRes implements IAdminCommandHandler
 		}
 		
 		// If the target is a player, then restore the XP lost on death.
-		if (targetChar instanceof L2PcInstance)
+		if (targetChar.isPlayer())
 		{
 			((L2PcInstance) targetChar).restoreExp(100.0);
 		}

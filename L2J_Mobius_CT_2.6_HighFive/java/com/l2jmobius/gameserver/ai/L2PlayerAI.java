@@ -250,7 +250,7 @@ public class L2PlayerAI extends L2PlayableAI
 	private void thinkCast()
 	{
 		final L2Character target = getCastTarget();
-		if ((_skill.getTargetType() == L2TargetType.GROUND) && (_actor instanceof L2PcInstance))
+		if ((_skill.getTargetType() == L2TargetType.GROUND) && _actor.isPlayer())
 		{
 			if (maybeMoveToPosition(((L2PcInstance) _actor).getCurrentSkillWorldPosition(), _actor.getMagicalAttackRange(_skill)))
 			{

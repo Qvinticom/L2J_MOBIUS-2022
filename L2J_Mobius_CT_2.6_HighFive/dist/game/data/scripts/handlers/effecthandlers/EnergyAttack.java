@@ -73,7 +73,7 @@ public final class EnergyAttack extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		final L2PcInstance attacker = info.getEffector() instanceof L2PcInstance ? (L2PcInstance) info.getEffector() : null;
+		final L2PcInstance attacker = info.getEffector().isPlayer() ? (L2PcInstance) info.getEffector() : null;
 		if (attacker == null)
 		{
 			return;
@@ -137,14 +137,14 @@ public final class EnergyAttack extends AbstractEffect
 			attack *= energyChargesBoost;
 			attack *= weaponTypeBoost;
 			
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				defence *= target.getStat().calcStat(Stats.PVP_PHYS_SKILL_DEF, 1.0);
 			}
 			
 			damage = attack / defence;
 			damage *= damageMultiplier;
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				damage *= attacker.getStat().calcStat(Stats.PVP_PHYS_SKILL_DMG, 1.0);
 				damage = attacker.getStat().calcStat(Stats.PHYSICAL_SKILL_POWER, damage);

@@ -44,7 +44,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		{
 			final L2Object target = activeChar.getTarget();
 			
-			if (!(target instanceof L2PcInstance))
+			if ((target == null) || !target.isPlayer())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");
 				return true;
@@ -56,7 +56,7 @@ public class AdminTvTEvent implements IAdminCommandHandler
 		{
 			final L2Object target = activeChar.getTarget();
 			
-			if (!(target instanceof L2PcInstance))
+			if ((target == null) || !target.isPlayer())
 			{
 				BuilderUtil.sendSysMessage(activeChar, "You should select a player!");
 				return true;

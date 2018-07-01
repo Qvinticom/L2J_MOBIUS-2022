@@ -125,7 +125,7 @@ public class AdminKill implements IAdminCommandHandler
 	
 	private void kill(L2PcInstance activeChar, L2Character target)
 	{
-		if (target instanceof L2PcInstance)
+		if (target.isPlayer())
 		{
 			if (!target.isGM())
 			{

@@ -75,7 +75,7 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 	@Override
 	public void addDamageHate(L2Character attacker, int damage, int aggro)
 	{
-		if (!_isPassive && !(attacker instanceof L2PcInstance))
+		if (!_isPassive && !attacker.isPlayer())
 		{
 			super.addDamageHate(attacker, damage, aggro);
 		}
@@ -89,7 +89,7 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
-		return _isAutoAttackable && !(attacker instanceof L2PcInstance);
+		return _isAutoAttackable && !attacker.isPlayer();
 	}
 	
 	@Override

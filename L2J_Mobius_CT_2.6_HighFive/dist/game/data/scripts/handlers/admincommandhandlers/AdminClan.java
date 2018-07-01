@@ -201,15 +201,12 @@ public class AdminClan implements IAdminCommandHandler
 		else
 		{
 			final L2Object targetObj = activeChar.getTarget();
-			if (targetObj instanceof L2PcInstance)
-			{
-				player = targetObj.getActingPlayer();
-			}
-			else
+			if ((targetObj == null) || !targetObj.isPlayer())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return null;
 			}
+			player = targetObj.getActingPlayer();
 		}
 		return player;
 	}

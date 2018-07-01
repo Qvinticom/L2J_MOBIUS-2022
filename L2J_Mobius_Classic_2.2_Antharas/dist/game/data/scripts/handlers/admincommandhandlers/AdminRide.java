@@ -131,7 +131,7 @@ public class AdminRide implements IAdminCommandHandler
 	{
 		L2PcInstance player = null;
 		
-		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !(activeChar.getTarget() instanceof L2PcInstance))
+		if ((activeChar.getTarget() == null) || (activeChar.getTarget().getObjectId() == activeChar.getObjectId()) || !activeChar.getTarget().isPlayer())
 		{
 			player = activeChar;
 		}

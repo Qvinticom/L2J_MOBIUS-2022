@@ -178,7 +178,7 @@ public class AdminEnchant implements IAdminCommandHandler
 			target = activeChar;
 		}
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if (target.isPlayer())
 		{
 			player = (L2PcInstance) target;
 		}

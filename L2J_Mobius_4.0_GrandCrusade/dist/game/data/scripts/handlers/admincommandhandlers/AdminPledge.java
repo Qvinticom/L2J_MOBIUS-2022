@@ -52,7 +52,7 @@ public class AdminPledge implements IAdminCommandHandler
 		final StringTokenizer st = new StringTokenizer(command);
 		final String cmd = st.nextToken();
 		final L2Object target = activeChar.getTarget();
-		final L2PcInstance targetPlayer = target instanceof L2PcInstance ? (L2PcInstance) target : null;
+		final L2PcInstance targetPlayer = (target != null) && target.isPlayer() ? (L2PcInstance) target : null;
 		L2Clan clan = targetPlayer != null ? targetPlayer.getClan() : null;
 		if (targetPlayer == null)
 		{

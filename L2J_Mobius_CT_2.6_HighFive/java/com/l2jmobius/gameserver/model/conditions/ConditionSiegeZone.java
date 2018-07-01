@@ -92,7 +92,7 @@ public final class ConditionSiegeZone extends Condition
 	 */
 	public static boolean checkIfOk(L2Character activeChar, Castle castle, int value)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((activeChar == null) || !activeChar.isPlayer())
 		{
 			return false;
 		}
@@ -138,7 +138,7 @@ public final class ConditionSiegeZone extends Condition
 	 */
 	public static boolean checkIfOk(L2Character activeChar, Fort fort, int value)
 	{
-		if ((activeChar == null) || !(activeChar instanceof L2PcInstance))
+		if ((activeChar == null) || !activeChar.isPlayer())
 		{
 			return false;
 		}

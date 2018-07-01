@@ -207,7 +207,7 @@ public class TerritoryWarSuperClass extends Quest
 	@Override
 	public String onDeath(L2Character killer, L2Character victim, QuestState qs)
 	{
-		if ((killer == victim) || !(victim instanceof L2PcInstance) || (victim.getLevel() < 61))
+		if ((killer == victim) || !victim.isPlayer() || (victim.getLevel() < 61))
 		{
 			return "";
 		}

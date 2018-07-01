@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import com.l2jmobius.gameserver.model.items.type.WeaponType;
@@ -288,7 +287,7 @@ public final class L2Weapon extends L2Item
 			if (type == ItemSkillType.ON_MAGIC_SKILL)
 			{
 				// notify quests of a skill use
-				if (caster instanceof L2PcInstance)
+				if (caster.isPlayer())
 				{
 					L2World.getInstance().forEachVisibleObjectInRange(caster, L2Npc.class, 1000, npc ->
 					{

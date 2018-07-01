@@ -132,7 +132,7 @@ public final class L2TrapInstance extends L2Npc
 			return true;
 		}
 		
-		if (cha instanceof L2PcInstance)
+		if (cha.isPlayer())
 		{
 			// observers can't see trap
 			if (((L2PcInstance) cha).inObserverMode())
@@ -260,7 +260,7 @@ public final class L2TrapInstance extends L2Npc
 			return;
 		}
 		
-		if (_owner.isInOlympiadMode() && (target instanceof L2PcInstance) && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
+		if (_owner.isInOlympiadMode() && target.isPlayer() && ((L2PcInstance) target).isInOlympiadMode() && (((L2PcInstance) target).getOlympiadGameId() == _owner.getOlympiadGameId()))
 		{
 			OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
 		}

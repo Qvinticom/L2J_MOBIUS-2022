@@ -95,7 +95,7 @@ public class AdminInstanceZone implements IAdminCommandHandler
 			}
 			else if (activeChar.getTarget() != null)
 			{
-				if (activeChar.getTarget() instanceof L2PcInstance)
+				if (activeChar.getTarget().isPlayer())
 				{
 					display((L2PcInstance) activeChar.getTarget(), activeChar);
 				}

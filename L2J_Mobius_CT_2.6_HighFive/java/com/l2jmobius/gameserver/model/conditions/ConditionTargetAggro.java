@@ -42,13 +42,16 @@ public class ConditionTargetAggro extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		if (effected instanceof L2MonsterInstance)
+		if (effected != null)
 		{
-			return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
-		}
-		if (effected instanceof L2PcInstance)
-		{
-			return ((L2PcInstance) effected).getKarma() > 0;
+			if (effected instanceof L2MonsterInstance)
+			{
+				return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
+			}
+			if (effected.isPlayer())
+			{
+				return ((L2PcInstance) effected).getKarma() > 0;
+			}
 		}
 		return false;
 	}

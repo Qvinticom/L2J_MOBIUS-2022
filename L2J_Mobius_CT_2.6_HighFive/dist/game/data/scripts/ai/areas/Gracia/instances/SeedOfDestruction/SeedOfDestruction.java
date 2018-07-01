@@ -1456,7 +1456,7 @@ public class SeedOfDestruction extends AbstractNpcAI
 	@Override
 	public String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(character);
 			if (tmpworld instanceof SODWorld)

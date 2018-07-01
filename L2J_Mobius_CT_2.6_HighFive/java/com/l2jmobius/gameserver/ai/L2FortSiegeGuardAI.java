@@ -127,7 +127,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		if ((target == null) || (target instanceof L2DefenderInstance) || (target instanceof L2NpcInstance) || (target instanceof L2DoorInstance) || target.isAlikeDead() || (target instanceof L2FortCommanderInstance) || (target instanceof L2Playable))
 		{
 			L2PcInstance player = null;
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				player = (L2PcInstance) target;
 			}
@@ -357,7 +357,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		{
 			if (!(cha instanceof L2Npc))
 			{
-				if (_selfAnalysis.hasHealOrResurrect && (cha instanceof L2PcInstance) && ((L2Npc) _actor).getFort().getSiege().checkIsDefender(((L2PcInstance) cha).getClan())//
+				if (_selfAnalysis.hasHealOrResurrect && cha.isPlayer() && ((L2Npc) _actor).getFort().getSiege().checkIsDefender(((L2PcInstance) cha).getClan())//
 					&& !_actor.isAttackingDisabled() && (cha.getCurrentHp() < (cha.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && cha.isInCombat())
 				{
 					for (Skill sk : _selfAnalysis.healSkills)
@@ -458,7 +458,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 		}
 		
 		// never attack defenders
-		if ((attackTarget instanceof L2PcInstance) && sGuard.getFort().getSiege().checkIsDefender(((L2PcInstance) attackTarget).getClan()))
+		if (attackTarget.isPlayer() && sGuard.getFort().getSiege().checkIsDefender(((L2PcInstance) attackTarget).getClan()))
 		{
 			// Cancel the target
 			sGuard.stopHating(attackTarget);

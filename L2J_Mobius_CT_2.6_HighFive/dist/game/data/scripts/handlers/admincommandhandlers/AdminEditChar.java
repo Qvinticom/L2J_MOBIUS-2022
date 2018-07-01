@@ -119,7 +119,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				showCharacterInfo(activeChar, L2World.getInstance().getPlayer(data[1]));
 			}
-			else if (activeChar.getTarget() instanceof L2PcInstance)
+			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
 				showCharacterInfo(activeChar, activeChar.getTarget().getActingPlayer());
 			}
@@ -192,7 +192,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				editCharacter(activeChar, data[1]);
 			}
-			else if (activeChar.getTarget() instanceof L2PcInstance)
+			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isPlayer())
 			{
 				editCharacter(activeChar, null);
 			}
@@ -230,7 +230,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(12);
 				final int pk = Integer.parseInt(val);
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.setPkKills(pk);
@@ -261,7 +261,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(13);
 				final int pvp = Integer.parseInt(val);
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.setPvpKills(pvp);
@@ -292,7 +292,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(14);
 				final int fame = Integer.parseInt(val);
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.setFame(fame);
@@ -323,7 +323,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(10);
 				final int recVal = Integer.parseInt(val);
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.setRecomHave(recVal);
@@ -355,7 +355,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final int classidval = Integer.parseInt(val);
 				final L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					player = (L2PcInstance) target;
 				}
@@ -452,7 +452,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(15);
 				final L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					player = (L2PcInstance) target;
 				}
@@ -476,7 +476,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(17);
 				final L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					player = (L2PcInstance) target;
 				}
@@ -523,7 +523,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			final L2Object target = activeChar.getTarget();
 			L2PcInstance player = null;
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				player = (L2PcInstance) target;
 			}
@@ -546,7 +546,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(15);
 				final L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					player = (L2PcInstance) target;
 				}
@@ -570,7 +570,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(16);
 				final L2Object target = activeChar.getTarget();
 				L2PcInstance player = null;
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					player = (L2PcInstance) target;
 				}
@@ -695,7 +695,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 			{
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2PcInstance)
+				if ((target != null) && target.isPlayer())
 				{
 					pl = (L2PcInstance) target;
 				}
@@ -832,7 +832,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				target = activeChar.getTarget();
 			}
 			
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				if (((L2PcInstance) target).isInParty())
 				{
@@ -856,7 +856,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				player = activeChar;
 			}
-			else if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
+			else if ((activeChar.getTarget() != null) && (activeChar.getTarget().isPlayer()))
 			{
 				player = (L2PcInstance) activeChar.getTarget();
 			}
@@ -991,7 +991,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		if (player == null)
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2PcInstance)
+			if ((target != null) && target.isPlayer())
 			{
 				player = (L2PcInstance) target;
 			}
@@ -1095,7 +1095,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		// function to change karma of selected char
 		final L2Object target = activeChar.getTarget();
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			player = (L2PcInstance) target;
 		}
@@ -1136,7 +1136,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			target = activeChar.getTarget();
 		}
 		
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			final L2PcInstance player = (L2PcInstance) target;
 			gatherCharacterInfo(activeChar, player, "charedit.htm");

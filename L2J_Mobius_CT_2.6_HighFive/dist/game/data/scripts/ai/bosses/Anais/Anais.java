@@ -86,7 +86,7 @@ public final class Anais extends AbstractNpcAI
 				if ((_current != null) || (_pot < 4))
 				{
 					final L2Object target = npc.getTarget();
-					_nextTarget = target instanceof L2PcInstance ? (L2PcInstance) target : null;
+					_nextTarget = (target != null) && target.isPlayer() ? (L2PcInstance) target : null;
 					final L2Npc b = _divineBurners.get(_pot);
 					_pot = _pot + 1;
 					b.setDisplayEffect(1);

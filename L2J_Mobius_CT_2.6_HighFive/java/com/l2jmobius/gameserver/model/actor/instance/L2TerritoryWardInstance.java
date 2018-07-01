@@ -133,7 +133,7 @@ public final class L2TerritoryWardInstance extends L2Attackable
 			return false;
 		}
 		
-		if (killer instanceof L2PcInstance)
+		if (killer.isPlayer())
 		{
 			if ((((L2PcInstance) killer).getSiegeSide() > 0) && !((L2PcInstance) killer).isCombatFlagEquipped())
 			{

@@ -423,7 +423,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	protected void clientActionFailed()
 	{
-		if (_actor instanceof L2PcInstance)
+		if (_actor.isPlayer())
 		{
 			_actor.sendPacket(ActionFailed.STATIC_PACKET);
 		}
@@ -641,7 +641,7 @@ public abstract class AbstractAI implements Ctrl
 			}
 			return;
 		}
-		if (_actor instanceof L2PcInstance)
+		if (_actor.isPlayer())
 		{
 			if (!AttackStanceTaskManager.getInstance().hasAttackStanceTask(_actor) && isAutoAttacking())
 			{

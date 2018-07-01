@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
+import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -123,12 +124,8 @@ public class AdminCreateItem implements IAdminCommandHandler
 		{
 			try
 			{
-				L2PcInstance target;
-				if (activeChar.getTarget() instanceof L2PcInstance)
-				{
-					target = (L2PcInstance) activeChar.getTarget();
-				}
-				else
+				final L2Object target = activeChar.getTarget();
+				if ((target == null) || !target.isPlayer())
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Invalid target.");
 					return false;
@@ -142,13 +139,13 @@ public class AdminCreateItem implements IAdminCommandHandler
 					final int idval = Integer.parseInt(id);
 					final String num = st.nextToken();
 					final long numval = Long.parseLong(num);
-					createItem(activeChar, target, idval, numval);
+					createItem(activeChar, (L2PcInstance) target, idval, numval);
 				}
 				else if (st.countTokens() == 1)
 				{
 					final String id = st.nextToken();
 					final int idval = Integer.parseInt(id);
-					createItem(activeChar, target, idval, 1);
+					createItem(activeChar, (L2PcInstance) target, idval, 1);
 				}
 			}
 			catch (StringIndexOutOfBoundsException e)

@@ -355,7 +355,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		{
 			if (!(cha instanceof L2Npc))
 			{
-				if (_selfAnalysis.hasHealOrResurrect && (cha instanceof L2PcInstance) && (((L2Npc) _actor).getCastle().getSiege().checkIsDefender(((L2PcInstance) cha).getClan()))//
+				if (_selfAnalysis.hasHealOrResurrect && cha.isPlayer() && (((L2Npc) _actor).getCastle().getSiege().checkIsDefender(((L2PcInstance) cha).getClan()))//
 					&& !_actor.isAttackingDisabled() && (cha.getCurrentHp() < (cha.getMaxHp() * 0.6)) && (_actor.getCurrentHp() > (_actor.getMaxHp() / 2)) && (_actor.getCurrentMp() > (_actor.getMaxMp() / 2)) && cha.isInCombat())
 				{
 					for (Skill sk : _selfAnalysis.healSkills)
@@ -457,7 +457,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		}
 		
 		// never attack defenders
-		if ((attackTarget instanceof L2PcInstance) && (sGuard.getConquerableHall() == null) && sGuard.getCastle().getSiege().checkIsDefender(((L2PcInstance) attackTarget).getClan()))
+		if (attackTarget.isPlayer() && (sGuard.getConquerableHall() == null) && sGuard.getCastle().getSiege().checkIsDefender(((L2PcInstance) attackTarget).getClan()))
 		{
 			// Cancel the target
 			sGuard.stopHating(attackTarget);

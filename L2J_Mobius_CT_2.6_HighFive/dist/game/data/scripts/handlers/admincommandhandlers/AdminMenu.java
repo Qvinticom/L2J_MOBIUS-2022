@@ -233,7 +233,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		if (target != null)
 		{
-			if (target instanceof L2PcInstance)
+			if (target.isPlayer())
 			{
 				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null);
 				filename = "charmanage.htm";
@@ -267,7 +267,7 @@ public class AdminMenu implements IAdminCommandHandler
 	private void teleportToCharacter(L2PcInstance activeChar, L2Object target)
 	{
 		L2PcInstance player = null;
-		if (target instanceof L2PcInstance)
+		if ((target != null) && target.isPlayer())
 		{
 			player = (L2PcInstance) target;
 		}

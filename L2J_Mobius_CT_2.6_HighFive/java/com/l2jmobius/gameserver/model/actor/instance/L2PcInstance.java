@@ -4224,7 +4224,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void doInteract(L2Character target)
 	{
-		if (target instanceof L2PcInstance)
+		if (target == null)
+		{
+			return;
+		}
+		
+		if (target.isPlayer())
 		{
 			final L2PcInstance temp = (L2PcInstance) target;
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -4242,8 +4247,7 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(new RecipeShopSellList(this, temp));
 			}
 		}
-		// _interactTarget=null should never happen but one never knows ^^;
-		else if (target != null)
+		else // _interactTarget=null should never happen but one never knows ^^;
 		{
 			target.onAction(this);
 		}
@@ -5368,7 +5372,7 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void increasePvpKills(L2Character target)
 	{
-		if ((target instanceof L2PcInstance) && AntiFeedManager.getInstance().check(this, target))
+		if (target.isPlayer() && AntiFeedManager.getInstance().check(this, target))
 		{
 			setPvpKills(_pvpKills + 1);
 			

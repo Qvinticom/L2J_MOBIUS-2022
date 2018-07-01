@@ -114,7 +114,7 @@ public class AdminInstance implements IAdminCommandHandler
 					return false;
 				}
 				target.setInstanceId(val);
-				if (target instanceof L2PcInstance)
+				if (target.isPlayer())
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.sendMessage("Admin set your instance to:" + val);

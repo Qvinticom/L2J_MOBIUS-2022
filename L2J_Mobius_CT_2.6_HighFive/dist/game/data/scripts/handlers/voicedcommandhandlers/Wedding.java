@@ -138,7 +138,7 @@ public class Wedding implements IVoicedCommandHandler
 			activeChar.sendMessage("You have no one targeted.");
 			return false;
 		}
-		else if (!(activeChar.getTarget() instanceof L2PcInstance))
+		else if (!activeChar.getTarget().isPlayer())
 		{
 			activeChar.sendMessage("You can only ask another player to engage you.");
 			return false;

@@ -459,7 +459,7 @@ public class EnergySeeds extends AbstractNpcAI
 			return super.onEnterZone(character, zone);
 		}
 		
-		if (character instanceof L2PcInstance)
+		if (character.isPlayer())
 		{
 			switch (zone.getId())
 			{

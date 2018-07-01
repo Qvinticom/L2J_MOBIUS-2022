@@ -4260,7 +4260,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void doInteract(L2Character target)
 	{
-		if (target instanceof L2PcInstance)
+		if (target == null)
+		{
+			return;
+		}
+		
+		if (target.isPlayer())
 		{
 			final L2PcInstance targetPlayer = (L2PcInstance) target;
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -4278,7 +4283,7 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(new RecipeShopSellList(this, targetPlayer));
 			}
 		}
-		else if (target != null) // _interactTarget=null should never happen but one never knows ^^;
+		else // _interactTarget=null should never happen but one never knows ^^;
 		{
 			target.onAction(this);
 		}
