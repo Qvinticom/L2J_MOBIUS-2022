@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2BoatInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.AdminForgePacket;
@@ -475,7 +474,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$tboid":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && (target instanceof L2Playable))
+								if ((target != null) && target.isPlayable())
 								{
 									boat = target.getActingPlayer().getBoat();
 									if (boat != null)

@@ -41,7 +41,7 @@ public abstract class L2PlayableAI extends L2CharacterAI
 	@Override
 	protected void onIntentionAttack(L2Character target)
 	{
-		if (target instanceof L2Playable)
+		if ((target != null) && target.isPlayable())
 		{
 			if (target.getActingPlayer().isProtectionBlessingAffected() && ((_actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (_actor.getActingPlayer().getReputation() < 0) && !(target.isInsideZone(ZoneId.PVP)))
 			{

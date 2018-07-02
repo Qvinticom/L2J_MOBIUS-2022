@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.actor.status;
 
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Duel;
@@ -68,7 +67,7 @@ public class SummonStatus extends PlayableStatus
 							membersInRange++;
 						}
 					}
-					if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))
+					if (attacker.isPlayable() && (caster.getCurrentCp() > 0))
 					{
 						if (caster.getCurrentCp() > transferDmg)
 						{
@@ -94,7 +93,7 @@ public class SummonStatus extends PlayableStatus
 			
 			if (transferDmg > 0)
 			{
-				if ((attacker instanceof L2Playable) && (caster.getCurrentCp() > 0))
+				if (attacker.isPlayable() && (caster.getCurrentCp() > 0))
 				{
 					if (caster.getCurrentCp() > transferDmg)
 					{

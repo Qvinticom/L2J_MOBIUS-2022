@@ -51,7 +51,7 @@ public class AdminLevel implements IAdminCommandHandler
 		{
 			try
 			{
-				if (targetChar instanceof L2Playable)
+				if ((targetChar != null) && targetChar.isPlayable())
 				{
 					((L2Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
 				}

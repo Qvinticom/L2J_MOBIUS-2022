@@ -8650,7 +8650,7 @@ public final class L2PcInstance extends L2Playable
 		if (_isInDuel)
 		{
 			// Get L2PcInstance
-			if (target instanceof L2Playable)
+			if (target.isPlayable())
 			{
 				// Get L2PcInstance
 				final L2PcInstance cha = target.getActingPlayer();
@@ -13785,11 +13785,15 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean canAttackCharacter(L2Character cha)
 	{
+		if (cha == null)
+		{
+			return false;
+		}
 		if (cha instanceof L2Attackable)
 		{
 			return true;
 		}
-		if (cha instanceof L2Playable)
+		if (cha.isPlayable())
 		{
 			if (cha.isInsideZone(ZoneId.PVP) && !cha.isInsideZone(ZoneId.SIEGE))
 			{

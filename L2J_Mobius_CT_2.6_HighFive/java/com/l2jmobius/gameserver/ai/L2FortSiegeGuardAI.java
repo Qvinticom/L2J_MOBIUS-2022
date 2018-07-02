@@ -123,11 +123,16 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 	 */
 	private boolean autoAttackCondition(L2Character target)
 	{
+		if (target == null)
+		{
+			return false;
+		}
+		
 		// Check if the target isn't another guard, folk or a door
-		if ((target == null) || (target instanceof L2DefenderInstance) || (target instanceof L2NpcInstance) || (target instanceof L2DoorInstance) || target.isAlikeDead() || (target instanceof L2FortCommanderInstance) || (target instanceof L2Playable))
+		if ((target instanceof L2DefenderInstance) || (target instanceof L2NpcInstance) || (target instanceof L2DoorInstance) || target.isAlikeDead() || (target instanceof L2FortCommanderInstance) || target.isPlayable())
 		{
 			L2PcInstance player = null;
-			if ((target != null) && target.isPlayer())
+			if (target.isPlayer())
 			{
 				player = (L2PcInstance) target;
 			}
@@ -140,7 +145,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				return false;
 			}
 		}
-		if ((target != null) && target.isInvul() && ((target.isPlayer() && target.isGM()) || (target.isSummon() && ((L2Summon) target).getOwner().isGM())))
+		if (target.isInvul() && ((target.isPlayer() && target.isGM()) || (target.isSummon() && ((L2Summon) target).getOwner().isGM())))
 		{
 			return false;
 		}
@@ -154,7 +159,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				target = owner;
 			}
 		}
-		return (!(target instanceof L2Playable) || !((L2Playable) target).isSilentMovingAffected() || _actor.isInsideRadius(target, 250, false, false)) && _actor.isAutoAttackable(target) && GeoEngine.getInstance().canSeeTarget(_actor, target);
+		return (!target.isPlayable() || !((L2Playable) target).isSilentMovingAffected() || _actor.isInsideRadius(target, 250, false, false)) && _actor.isAutoAttackable(target) && GeoEngine.getInstance().canSeeTarget(_actor, target);
 	}
 	
 	/**

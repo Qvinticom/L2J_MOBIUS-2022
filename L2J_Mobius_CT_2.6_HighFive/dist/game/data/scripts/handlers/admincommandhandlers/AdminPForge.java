@@ -475,7 +475,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$tboid":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && (target instanceof L2Playable))
+								if ((target != null) && target.isPlayable())
 								{
 									boat = ((L2Playable) target).getActingPlayer().getBoat();
 									if (boat != null)

@@ -45,7 +45,6 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -1249,12 +1248,12 @@ public final class Skill implements IIdentifiable
 	
 	public List<AbstractFunction> getStatFuncs(AbstractEffect effect, L2Character player)
 	{
-		if (_funcTemplates == null)
+		if ((_funcTemplates == null) || (player == null))
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}
 		
-		if (!(player instanceof L2Playable) && !(player instanceof L2Attackable))
+		if (!player.isPlayable() && !(player instanceof L2Attackable))
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}

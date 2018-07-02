@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.entity.Fort;
@@ -60,7 +59,7 @@ public class L2DefenderInstance extends L2Attackable
 	public boolean isAutoAttackable(L2Character attacker)
 	{
 		// Attackable during siege by all except defenders
-		if (!(attacker instanceof L2Playable))
+		if (!attacker.isPlayable())
 		{
 			return false;
 		}

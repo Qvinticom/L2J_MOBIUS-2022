@@ -37,7 +37,6 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.stat.DoorStat;
 import com.l2jmobius.gameserver.model.actor.status.DoorStatus;
 import com.l2jmobius.gameserver.model.actor.templates.L2DoorTemplate;
@@ -330,7 +329,7 @@ public class L2DoorInstance extends L2Character
 	public boolean isAutoAttackable(L2Character attacker)
 	{
 		// Doors can`t be attacked by NPCs
-		if (!(attacker instanceof L2Playable))
+		if (!attacker.isPlayable())
 		{
 			return false;
 		}
