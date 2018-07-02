@@ -40,7 +40,7 @@ public class PetStatusUpdate implements IClientOutgoingPacket
 			_curFed = pet.getCurrentFed(); // how fed it is
 			_maxFed = pet.getMaxFed(); // max fed it can be
 		}
-		else if (_summon instanceof L2ServitorInstance)
+		else if (_summon.isServitor())
 		{
 			final L2ServitorInstance sum = (L2ServitorInstance) _summon;
 			_curFed = sum.getLifeTimeRemaining();
