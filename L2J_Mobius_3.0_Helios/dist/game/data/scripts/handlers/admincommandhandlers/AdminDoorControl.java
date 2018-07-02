@@ -118,7 +118,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			else if (command.equals("admin_open"))
 			{
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2DoorInstance)
+				if ((target != null) && target.isDoor())
 				{
 					((L2DoorInstance) target).openMe();
 				}
@@ -130,7 +130,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			else if (command.equals("admin_close"))
 			{
 				final L2Object target = activeChar.getTarget();
-				if (target instanceof L2DoorInstance)
+				if ((target != null) && target.isDoor())
 				{
 					((L2DoorInstance) target).closeMe();
 				}

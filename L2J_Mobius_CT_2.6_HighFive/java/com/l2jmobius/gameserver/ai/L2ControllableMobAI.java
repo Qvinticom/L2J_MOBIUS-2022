@@ -31,7 +31,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ControllableMobInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.Util;
@@ -371,7 +370,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	
 	private boolean checkAutoAttackCondition(L2Character target)
 	{
-		if ((target == null) || target.isNpc() || (target instanceof L2DoorInstance))
+		if ((target == null) || target.isNpc() || target.isDoor())
 		{
 			return false;
 		}
