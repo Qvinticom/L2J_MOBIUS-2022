@@ -246,7 +246,7 @@ public class L2AttackableAI extends L2CharacterAI
 				return GeoEngine.getInstance().canSeeTarget(me, player); // Los Check
 			}
 			// Check if the L2MonsterInstance target is aggressive
-			if ((target instanceof L2MonsterInstance) && Config.GUARD_ATTACK_AGGRO_MOB)
+			if (target.isMonster() && Config.GUARD_ATTACK_AGGRO_MOB)
 			{
 				return (((L2MonsterInstance) target).isAggressive() && GeoEngine.getInstance().canSeeTarget(me, target));
 			}
@@ -2336,7 +2336,7 @@ public class L2AttackableAI extends L2CharacterAI
 			setIntention(AI_INTENTION_ATTACK, attacker);
 		}
 		
-		if (me instanceof L2MonsterInstance)
+		if (me.isMonster())
 		{
 			L2MonsterInstance master = (L2MonsterInstance) me;
 			
@@ -2388,7 +2388,7 @@ public class L2AttackableAI extends L2CharacterAI
 			setIntention(AI_INTENTION_ATTACK, target);
 		}
 		
-		if (me instanceof L2MonsterInstance)
+		if (me.isMonster())
 		{
 			L2MonsterInstance master = (L2MonsterInstance) me;
 			

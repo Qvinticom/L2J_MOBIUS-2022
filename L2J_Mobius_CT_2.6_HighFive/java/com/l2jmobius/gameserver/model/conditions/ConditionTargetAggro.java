@@ -44,7 +44,7 @@ public class ConditionTargetAggro extends Condition
 	{
 		if (effected != null)
 		{
-			if (effected instanceof L2MonsterInstance)
+			if (effected.isMonster())
 			{
 				return ((L2MonsterInstance) effected).isAggressive() == _isAggro;
 			}

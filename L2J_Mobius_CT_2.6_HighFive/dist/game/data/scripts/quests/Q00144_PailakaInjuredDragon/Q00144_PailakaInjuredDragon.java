@@ -848,7 +848,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	@Override
 	public String onSpawn(L2Npc npc)
 	{
-		if (npc instanceof L2MonsterInstance)
+		if (npc.isMonster())
 		{
 			for (int mobId : WALL_MONSTERS)
 			{

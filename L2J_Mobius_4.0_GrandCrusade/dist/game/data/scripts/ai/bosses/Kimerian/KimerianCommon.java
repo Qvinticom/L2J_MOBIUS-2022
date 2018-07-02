@@ -23,7 +23,6 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureDeath;
 import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureSee;
@@ -109,7 +108,7 @@ public final class KimerianCommon extends AbstractInstance
 						else if (!npc.isInCombat() || !npc.isAttackingNow() || (npc.getTarget() == null))
 						{
 							final L2Character monster = (L2Character) player.getTarget();
-							if ((monster != null) && (monster instanceof L2MonsterInstance) && player.isInCombat())
+							if ((monster != null) && monster.isMonster() && player.isInCombat())
 							{
 								addAttackDesire(npc, monster);
 							}

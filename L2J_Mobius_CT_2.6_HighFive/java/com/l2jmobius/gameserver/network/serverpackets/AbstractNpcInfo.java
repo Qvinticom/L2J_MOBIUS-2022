@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
-import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2TrapInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -113,7 +112,7 @@ public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 				_title = cha.getTitle(); // On every subclass
 			}
 			
-			if (Config.SHOW_NPC_LVL && (_npc instanceof L2MonsterInstance))
+			if (Config.SHOW_NPC_LVL && _npc.isMonster())
 			{
 				String t = "Lv " + cha.getLevel() + (cha.isAggressive() ? "*" : "");
 				if (_title != null)

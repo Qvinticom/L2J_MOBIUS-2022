@@ -269,7 +269,7 @@ public class L2Attackable extends L2Npc
 		}
 		
 		// If this L2Attackable is a L2MonsterInstance and it has spawned minions, call its minions to battle
-		if (this instanceof L2MonsterInstance)
+		if (isMonster())
 		{
 			L2MonsterInstance master = (L2MonsterInstance) this;
 			
