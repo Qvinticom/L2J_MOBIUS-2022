@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
 import com.l2jmobius.gameserver.model.skills.Skill;
@@ -64,12 +63,7 @@ public final class RequestAcquireSkillInfo implements IClientIncomingPacket
 		}
 		
 		final L2Npc trainer = activeChar.getLastFolkNPC();
-		if (!(trainer instanceof L2NpcInstance))
-		{
-			return;
-		}
-		
-		if (!trainer.canInteract(activeChar) && !activeChar.isGM())
+		if ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM()))
 		{
 			return;
 		}

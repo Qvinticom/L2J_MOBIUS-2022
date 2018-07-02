@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.SummonStat;
 import com.l2jmobius.gameserver.model.actor.status.SummonStatus;
@@ -779,7 +778,7 @@ public abstract class L2Summon extends L2Playable
 			
 			final SystemMessage sm;
 			
-			if (target.isInvul() && !(target instanceof L2NpcInstance))
+			if (target.isInvul() && !target.isNpc())
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 			}

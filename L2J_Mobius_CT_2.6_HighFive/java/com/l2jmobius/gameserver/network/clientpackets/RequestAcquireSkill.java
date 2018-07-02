@@ -101,12 +101,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		}
 		
 		final L2Npc trainer = activeChar.getLastFolkNPC();
-		if (!(trainer instanceof L2NpcInstance))
-		{
-			return;
-		}
-		
-		if (!trainer.canInteract(activeChar) && !activeChar.isGM())
+		if ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM()))
 		{
 			return;
 		}

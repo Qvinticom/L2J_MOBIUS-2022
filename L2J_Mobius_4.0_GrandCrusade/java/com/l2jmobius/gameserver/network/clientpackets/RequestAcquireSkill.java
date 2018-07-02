@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2FishermanInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2VillageMasterInstance;
 import com.l2jmobius.gameserver.model.base.AcquireSkillType;
@@ -111,12 +110,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		}
 		
 		final L2Npc trainer = activeChar.getLastFolkNPC();
-		if (!(trainer instanceof L2NpcInstance) && (_skillType != AcquireSkillType.CLASS))
-		{
-			return;
-		}
-		
-		if ((_skillType != AcquireSkillType.CLASS) && !trainer.canInteract(activeChar) && !activeChar.isGM())
+		if ((_skillType != AcquireSkillType.CLASS) && ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM())))
 		{
 			return;
 		}

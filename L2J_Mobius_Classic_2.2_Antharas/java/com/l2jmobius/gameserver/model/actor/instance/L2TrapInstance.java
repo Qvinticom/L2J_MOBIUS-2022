@@ -265,7 +265,7 @@ public final class L2TrapInstance extends L2Npc
 			OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
 		}
 		
-		if (target.isHpBlocked() && !(target instanceof L2NpcInstance))
+		if (target.isHpBlocked() && !target.isNpc())
 		{
 			_owner.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
 		}
