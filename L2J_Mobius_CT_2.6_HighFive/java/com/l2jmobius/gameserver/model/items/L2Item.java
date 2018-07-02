@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
@@ -829,7 +828,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			
 			if (!preCondition.test(activeChar, target, null, null))
 			{
-				if (activeChar instanceof L2Summon)
+				if (activeChar.isSummon())
 				{
 					activeChar.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 					return false;

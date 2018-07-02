@@ -21,7 +21,6 @@ import java.util.StringTokenizer;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -108,7 +107,7 @@ public class AdminInstance implements IAdminCommandHandler
 				}
 				
 				final L2Object target = activeChar.getTarget();
-				if ((target == null) || (target instanceof L2Summon)) // Don't separate summons from masters
+				if ((target == null) || target.isSummon()) // Don't separate summons from masters
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 					return false;

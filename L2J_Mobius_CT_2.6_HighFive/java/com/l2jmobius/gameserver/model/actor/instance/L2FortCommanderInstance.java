@@ -135,7 +135,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 						}
 						case 2:
 						{
-							if (attacker instanceof L2Summon)
+							if (attacker.isSummon())
 							{
 								attacker = ((L2Summon) attacker).getOwner();
 							}

@@ -1938,7 +1938,7 @@ public class L2AttackableAI extends L2CharacterAI
 						continue;
 					}
 					
-					if ((obj.isPlayer() || (obj instanceof L2Summon)) && (dist2 <= range) && !getAttackTarget().isAffectedBySkill(sk.getId()))
+					if ((obj.isPlayer() || obj.isSummon()) && (dist2 <= range) && !getAttackTarget().isAffectedBySkill(sk.getId()))
 					{
 						return obj;
 					}
@@ -2010,7 +2010,7 @@ public class L2AttackableAI extends L2CharacterAI
 					continue;
 				}
 				
-				if ((obj.isPlayer() || (obj instanceof L2Summon)) && (dist2 <= range) && (getAttackTarget().getEffectList().getFirstEffect(L2EffectType.BUFF) != null))
+				if ((obj.isPlayer() || obj.isSummon()) && (dist2 <= range) && (getAttackTarget().getEffectList().getFirstEffect(L2EffectType.BUFF) != null))
 				{
 					return obj;
 				}
@@ -2087,7 +2087,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 					continue;
 				}
-				if (obj instanceof L2Summon)
+				if (obj.isSummon())
 				{
 					return obj;
 				}
@@ -2162,7 +2162,7 @@ public class L2AttackableAI extends L2CharacterAI
 						setAttackTarget(obj);
 					}
 				}
-				else if (obj instanceof L2Summon)
+				else if (obj.isSummon())
 				{
 					actor.addDamageHate(obj, 0, MostHate != null ? actor.getHating(MostHate) : 2000);
 					actor.setTarget(obj);
@@ -2235,7 +2235,7 @@ public class L2AttackableAI extends L2CharacterAI
 						setAttackTarget(obj);
 					}
 				}
-				else if (obj instanceof L2Summon)
+				else if (obj.isSummon())
 				{
 					actor.addDamageHate(obj, 0, MostHate != null ? actor.getHating(MostHate) : 2000);
 					actor.setTarget(obj);

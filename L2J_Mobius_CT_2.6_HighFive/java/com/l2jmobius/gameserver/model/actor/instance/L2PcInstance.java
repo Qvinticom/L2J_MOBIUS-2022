@@ -13801,7 +13801,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			L2PcInstance target;
-			if (cha instanceof L2Summon)
+			if (cha.isSummon())
 			{
 				target = ((L2Summon) cha).getOwner();
 			}

@@ -95,7 +95,7 @@ public abstract class AbstractAI implements Ctrl
 				final L2Character followTarget = _followTarget; // copy to prevent NPE
 				if (followTarget == null)
 				{
-					if (_actor instanceof L2Summon)
+					if (_actor.isSummon())
 					{
 						((L2Summon) _actor).setFollowStatus(false);
 					}
@@ -108,7 +108,7 @@ public abstract class AbstractAI implements Ctrl
 					if (!_actor.isInsideRadius(followTarget, 3000, true, false))
 					{
 						// if the target is too far (maybe also teleported)
-						if (_actor instanceof L2Summon)
+						if (_actor.isSummon())
 						{
 							((L2Summon) _actor).setFollowStatus(false);
 						}
@@ -713,7 +713,7 @@ public abstract class AbstractAI implements Ctrl
 	
 	public void setAutoAttacking(boolean isAutoAttacking)
 	{
-		if (_actor instanceof L2Summon)
+		if (_actor.isSummon())
 		{
 			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)
@@ -731,7 +731,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void clientStartAutoAttack()
 	{
-		if (_actor instanceof L2Summon)
+		if (_actor.isSummon())
 		{
 			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)
@@ -759,7 +759,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	public void clientStopAutoAttack()
 	{
-		if (_actor instanceof L2Summon)
+		if (_actor.isSummon())
 		{
 			final L2Summon summon = (L2Summon) _actor;
 			if (summon.getOwner() != null)

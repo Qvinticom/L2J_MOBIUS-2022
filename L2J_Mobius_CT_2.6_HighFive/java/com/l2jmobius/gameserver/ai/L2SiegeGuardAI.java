@@ -136,7 +136,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		}
 		
 		// Get the owner if the target is a summon
-		if (target instanceof L2Summon)
+		if (target.isSummon())
 		{
 			final L2PcInstance owner = ((L2Summon) target).getOwner();
 			if (_actor.isInsideRadius(owner, 1000, true, false))

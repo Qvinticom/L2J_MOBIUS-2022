@@ -743,7 +743,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_summon_info"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2Summon)
+			if ((target != null) && target.isSummon())
 			{
 				gatherSummonInfo((L2Summon) target, activeChar);
 			}
@@ -755,7 +755,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_unsummon"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2Summon)
+			if ((target != null) && target.isSummon())
 			{
 				((L2Summon) target).unSummon(((L2Summon) target).getOwner());
 			}

@@ -73,7 +73,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 		{
 			player = (L2PcInstance) killer;
 		}
-		else if (killer instanceof L2Summon)
+		else if (killer.isSummon())
 		{
 			player = ((L2Summon) killer).getOwner();
 		}
