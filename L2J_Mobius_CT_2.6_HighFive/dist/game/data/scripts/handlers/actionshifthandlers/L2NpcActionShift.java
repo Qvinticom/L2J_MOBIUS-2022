@@ -73,7 +73,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%lvl%", String.valueOf(((L2Npc) target).getTemplate().getLevel()));
 			html.replace("%name%", ((L2Npc) target).getTemplate().getName());
 			html.replace("%tmplid%", String.valueOf(((L2Npc) target).getTemplate().getId()));
-			html.replace("%aggro%", String.valueOf((target instanceof L2Attackable) ? ((L2Attackable) target).getAggroRange() : 0));
+			html.replace("%aggro%", String.valueOf(target.isAttackable() ? ((L2Attackable) target).getAggroRange() : 0));
 			html.replace("%hp%", String.valueOf((int) ((L2Character) target).getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(((L2Character) target).getMaxHp()));
 			html.replace("%mp%", String.valueOf((int) ((L2Character) target).getCurrentMp()));

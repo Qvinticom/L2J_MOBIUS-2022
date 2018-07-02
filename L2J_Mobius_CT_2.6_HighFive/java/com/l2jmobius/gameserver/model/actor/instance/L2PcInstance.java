@@ -13789,7 +13789,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			return false;
 		}
-		if (cha instanceof L2Attackable)
+		if (cha.isAttackable())
 		{
 			return true;
 		}

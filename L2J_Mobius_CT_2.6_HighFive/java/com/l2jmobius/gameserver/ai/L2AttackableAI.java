@@ -270,7 +270,7 @@ public class L2AttackableAI extends L2CharacterAI
 		}
 		else
 		{
-			if (target instanceof L2Attackable)
+			if (target.isAttackable())
 			{
 				if (!target.isAutoAttackable(me))
 				{
@@ -288,7 +288,7 @@ public class L2AttackableAI extends L2CharacterAI
 				}
 			}
 			
-			if ((target instanceof L2Attackable) || (target instanceof L2Npc))
+			if (target.isAttackable() || (target instanceof L2Npc))
 			{
 				return false;
 			}
@@ -854,7 +854,7 @@ public class L2AttackableAI extends L2CharacterAI
 								called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, originalAttackTarget, 1);
 								EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), originalAttackTarget.getActingPlayer(), originalAttackTarget.isSummon()), called);
 							}
-							else if ((called instanceof L2Attackable) && (getAttackTarget() != null) && (called.getAI()._intention != AI_INTENTION_ATTACK))
+							else if (called.isAttackable() && (getAttackTarget() != null) && (called.getAI()._intention != AI_INTENTION_ATTACK))
 							{
 								((L2Attackable) called).addDamageHate(getAttackTarget(), 0, npc.getHating(getAttackTarget()));
 								called.getAI().setIntention(AI_INTENTION_ATTACK, getAttackTarget());
@@ -2079,7 +2079,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					return obj;
 				}
-				if ((obj instanceof L2Attackable) && actor.isChaos())
+				if (obj.isAttackable() && actor.isChaos())
 				{
 					if (!((L2Attackable) obj).isInMyClan(actor))
 					{
@@ -2149,7 +2149,7 @@ public class L2AttackableAI extends L2CharacterAI
 					actor.setTarget(obj);
 					setAttackTarget(obj);
 				}
-				else if (obj instanceof L2Attackable)
+				else if (obj.isAttackable())
 				{
 					if (actor.isChaos())
 					{
@@ -2222,7 +2222,7 @@ public class L2AttackableAI extends L2CharacterAI
 					actor.setTarget(obj);
 					setAttackTarget(obj);
 				}
-				else if (obj instanceof L2Attackable)
+				else if (obj.isAttackable())
 				{
 					if (actor.isChaos())
 					{

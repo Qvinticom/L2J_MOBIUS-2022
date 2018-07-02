@@ -43,7 +43,6 @@ import com.l2jmobius.gameserver.model.L2ExtractableSkill;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2BlockInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
@@ -1210,7 +1209,7 @@ public final class Skill implements IIdentifiable
 		else
 		{
 			// target is mob
-			if ((targetPlayer == null) && (target instanceof L2Attackable) && (caster instanceof L2Attackable))
+			if ((targetPlayer == null) && target.isAttackable() && caster.isAttackable())
 			{
 				return false;
 			}
@@ -1253,7 +1252,7 @@ public final class Skill implements IIdentifiable
 			return Collections.<AbstractFunction> emptyList();
 		}
 		
-		if (!player.isPlayable() && !(player instanceof L2Attackable))
+		if (!player.isPlayable() && !player.isAttackable())
 		{
 			return Collections.<AbstractFunction> emptyList();
 		}

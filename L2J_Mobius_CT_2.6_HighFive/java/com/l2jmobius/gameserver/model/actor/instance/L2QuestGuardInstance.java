@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
@@ -49,7 +48,7 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 	{
 		super.addDamage(attacker, damage, skill);
 		
-		if (attacker instanceof L2Attackable)
+		if (attacker.isAttackable())
 		{
 			EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(null, this, damage, skill, false), this);
 		}
@@ -64,7 +63,7 @@ public final class L2QuestGuardInstance extends L2GuardInstance
 			return false;
 		}
 		
-		if (killer instanceof L2Attackable)
+		if (killer.isAttackable())
 		{
 			// Delayed notification
 			EventDispatcher.getInstance().notifyEventAsyncDelayed(new OnAttackableKill(null, this, false), this, _onKillDelay);

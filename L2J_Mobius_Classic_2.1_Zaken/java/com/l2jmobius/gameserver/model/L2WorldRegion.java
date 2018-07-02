@@ -88,7 +88,7 @@ public final class L2WorldRegion
 		{
 			for (L2Object o : _visibleObjects.values())
 			{
-				if (o instanceof L2Attackable)
+				if (o.isAttackable())
 				{
 					c++;
 					final L2Attackable mob = (L2Attackable) o;
@@ -123,7 +123,7 @@ public final class L2WorldRegion
 		{
 			for (L2Object o : _visibleObjects.values())
 			{
-				if (o instanceof L2Attackable)
+				if (o.isAttackable())
 				{
 					c++;
 					// Start HP/MP/CP Regeneration task

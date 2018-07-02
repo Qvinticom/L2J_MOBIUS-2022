@@ -3218,7 +3218,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	 */
 	protected void addAttackPlayerDesire(L2Npc npc, L2Playable target, int desire)
 	{
-		if (npc instanceof L2Attackable)
+		if (npc.isAttackable())
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}

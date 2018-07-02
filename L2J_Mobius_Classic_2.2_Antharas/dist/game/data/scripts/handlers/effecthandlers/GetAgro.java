@@ -18,7 +18,6 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -50,7 +49,7 @@ public final class GetAgro extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (effected instanceof L2Attackable)
+		if ((effected != null) && effected.isAttackable())
 		{
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 		}

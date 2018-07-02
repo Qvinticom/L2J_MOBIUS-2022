@@ -438,7 +438,7 @@ public final class Instance
 					spawnDat.setInstanceId(_id);
 					spawnDat.setRandomWalking(set.getBoolean("allowRandomWalk"));
 					final L2Npc spawned = spawnDat.doSpawn();
-					if ((set.getInt("delay") >= 0) && (spawned instanceof L2Attackable))
+					if ((set.getInt("delay") >= 0) && spawned.isAttackable())
 					{
 						((L2Attackable) spawned).setOnKillDelay(set.getInt("delay"));
 					}

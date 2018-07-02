@@ -740,7 +740,7 @@ public class HeartInfinityDefence extends AbstractNpcAI
 	@Override
 	public final String onEnterZone(L2Character character, L2ZoneType zone)
 	{
-		if (character instanceof L2Attackable)
+		if (character.isAttackable())
 		{
 			final L2Attackable npc = (L2Attackable) character;
 			final InstanceWorld tmpworld = InstanceManager.getInstance().getWorld(npc);

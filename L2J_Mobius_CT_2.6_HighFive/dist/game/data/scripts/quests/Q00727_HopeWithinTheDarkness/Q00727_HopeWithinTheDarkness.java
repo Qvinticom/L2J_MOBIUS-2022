@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
@@ -262,7 +261,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 			{
 				for (L2Character foe : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
 				{
-					if ((foe instanceof L2Attackable) && !(foe instanceof L2QuestGuardInstance))
+					if (foe.isAttackable() && !(foe instanceof L2QuestGuardInstance))
 					{
 						((L2QuestGuardInstance) npc).addDamageHate(foe, 0, 999);
 						((L2QuestGuardInstance) npc).getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, foe, null);

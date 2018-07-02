@@ -58,7 +58,7 @@ public class ConditionPlayerCanSweep extends Condition
 			{
 				skill.forEachTargetAffected(sweeper, effected, o ->
 				{
-					if (o instanceof L2Attackable)
+					if ((o != null) && o.isAttackable())
 					{
 						final L2Attackable target = (L2Attackable) o;
 						if (target.isDead())

@@ -136,7 +136,7 @@ public class L2CharacterAI extends AbstractAI
 	@Override
 	protected void onEvtAttacked(L2Character attacker)
 	{
-		if ((attacker instanceof L2Attackable) && !attacker.isCoreAIDisabled())
+		if ((attacker != null) && attacker.isAttackable() && !attacker.isCoreAIDisabled())
 		{
 			clientStartAutoAttack();
 		}
@@ -204,7 +204,7 @@ public class L2CharacterAI extends AbstractAI
 		
 		// Also enable random animations for this L2Character if allowed
 		// This is only for mobs - town npcs are handled in their constructor
-		if (_actor instanceof L2Attackable)
+		if (_actor.isAttackable())
 		{
 			((L2Npc) _actor).startRandomAnimationTask();
 		}
@@ -672,7 +672,7 @@ public class L2CharacterAI extends AbstractAI
 			return;
 		}
 		
-		if (_actor instanceof L2Attackable)
+		if (_actor.isAttackable())
 		{
 			((L2Attackable) _actor).setisReturningToSpawnPoint(false);
 		}
@@ -1424,7 +1424,7 @@ public class L2CharacterAI extends AbstractAI
 				boolean cancast = true;
 				for (L2Character target : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, sk.getAffectRange()))
 				{
-					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target.isAttackable() && !((L2Npc) _actor).isChaos()))
 					{
 						continue;
 					}
@@ -1443,7 +1443,7 @@ public class L2CharacterAI extends AbstractAI
 				boolean cancast = true;
 				for (L2Character target : L2World.getInstance().getVisibleObjects(getAttackTarget(), L2Character.class, sk.getAffectRange()))
 				{
-					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target == null) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+					if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target == null) || (target.isAttackable() && !((L2Npc) _actor).isChaos()))
 					{
 						continue;
 					}
@@ -1463,7 +1463,7 @@ public class L2CharacterAI extends AbstractAI
 			boolean cancast = false;
 			for (L2Character target : L2World.getInstance().getVisibleObjects(_actor, L2Character.class, sk.getAffectRange()))
 			{
-				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target.isAttackable() && !((L2Npc) _actor).isChaos()))
 				{
 					continue;
 				}
@@ -1482,7 +1482,7 @@ public class L2CharacterAI extends AbstractAI
 			boolean cancast = true;
 			for (L2Character target : L2World.getInstance().getVisibleObjects(getAttackTarget(), L2Character.class, sk.getAffectRange()))
 			{
-				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || ((target instanceof L2Attackable) && !((L2Npc) _actor).isChaos()))
+				if (!GeoEngine.getInstance().canSeeTarget(_actor, target) || (target.isAttackable() && !((L2Npc) _actor).isChaos()))
 				{
 					continue;
 				}

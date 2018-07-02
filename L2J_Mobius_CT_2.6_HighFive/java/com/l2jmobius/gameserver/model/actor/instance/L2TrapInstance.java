@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.enums.TrapAction;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.tasks.npc.trap.TrapTask;
@@ -210,7 +209,7 @@ public final class L2TrapInstance extends L2Npc
 		// trap owned by players not attack non-flagged players
 		if (_owner != null)
 		{
-			if (target instanceof L2Attackable)
+			if (target.isAttackable())
 			{
 				return true;
 			}

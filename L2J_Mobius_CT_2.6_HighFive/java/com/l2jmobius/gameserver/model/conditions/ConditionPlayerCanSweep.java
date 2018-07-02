@@ -61,7 +61,7 @@ public class ConditionPlayerCanSweep extends Condition
 					L2Attackable target;
 					for (L2Object objTarget : targets)
 					{
-						if (objTarget instanceof L2Attackable)
+						if ((objTarget != null) && objTarget.isAttackable())
 						{
 							target = (L2Attackable) objTarget;
 							if (target.isDead())

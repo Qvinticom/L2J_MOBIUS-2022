@@ -18,7 +18,6 @@ package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -50,7 +49,7 @@ public final class GetAgro extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if (info.getEffected() instanceof L2Attackable)
+		if ((info.getEffected() != null) && info.getEffected().isAttackable())
 		{
 			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, info.getEffector());
 		}

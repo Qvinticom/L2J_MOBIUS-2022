@@ -2726,7 +2726,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected void addAttackDesire(L2Npc npc, L2Character target, int desire)
 	{
-		if (npc instanceof L2Attackable)
+		if (npc.isAttackable())
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}
@@ -2790,7 +2790,7 @@ public abstract class AbstractScript extends ManagedScript
 	 */
 	protected void addSkillCastDesire(L2Npc npc, L2Character target, Skill skill, int desire)
 	{
-		if (npc instanceof L2Attackable)
+		if (npc.isAttackable())
 		{
 			((L2Attackable) npc).addDamageHate(target, 0, desire);
 		}

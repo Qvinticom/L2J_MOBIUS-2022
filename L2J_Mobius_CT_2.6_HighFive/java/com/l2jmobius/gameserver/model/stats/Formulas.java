@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2CubicInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -590,7 +589,7 @@ public final class Formulas
 		final double weaponMod = attacker.getRandomDamageMultiplier();
 		
 		double penaltyMod = 1;
-		if ((target instanceof L2Attackable) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
+		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 2))
 		{
 			final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
 			if (lvlDiff >= Config.NPC_SKILL_DMG_PENALTY.size())
