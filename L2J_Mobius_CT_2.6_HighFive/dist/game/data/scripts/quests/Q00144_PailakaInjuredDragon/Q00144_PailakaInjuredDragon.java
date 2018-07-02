@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.instancezone.InstanceWorld;
@@ -969,7 +968,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	private void checkMaxSummonLevel(L2PcInstance player)
 	{
 		final L2Summon pet = player.getSummon();
-		if (pet instanceof L2PetInstance)
+		if ((pet != null) && pet.isPet())
 		{
 			if (pet.getLevel() > MAX_SUMMON_LEVEL)
 			{

@@ -40,7 +40,6 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.events.OnTvTEventFinish;
@@ -817,7 +816,7 @@ public class TvTEvent
 		
 		L2PcInstance killerPlayerInstance = null;
 		
-		if ((killerCharacter instanceof L2PetInstance) || (killerCharacter instanceof L2ServitorInstance))
+		if (killerCharacter.isPet() || (killerCharacter instanceof L2ServitorInstance))
 		{
 			killerPlayerInstance = ((L2Summon) killerCharacter).getOwner();
 			

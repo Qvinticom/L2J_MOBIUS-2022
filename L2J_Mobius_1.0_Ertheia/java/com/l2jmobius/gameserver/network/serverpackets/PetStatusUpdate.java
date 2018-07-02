@@ -34,7 +34,7 @@ public class PetStatusUpdate implements IClientOutgoingPacket
 	public PetStatusUpdate(L2Summon summon)
 	{
 		_summon = summon;
-		if (_summon instanceof L2PetInstance)
+		if (_summon.isPet())
 		{
 			final L2PetInstance pet = (L2PetInstance) _summon;
 			_curFed = pet.getCurrentFed(); // how fed it is

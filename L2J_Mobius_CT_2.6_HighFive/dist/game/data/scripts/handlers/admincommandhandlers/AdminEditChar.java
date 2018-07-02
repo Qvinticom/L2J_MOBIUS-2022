@@ -590,7 +590,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_fullfood"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2PetInstance)
+			if ((target != null) && target.isPet())
 			{
 				final L2PetInstance targetPet = (L2PetInstance) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
@@ -763,7 +763,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_summon_setlvl"))
 		{
 			final L2Object target = activeChar.getTarget();
-			if (target instanceof L2PetInstance)
+			if ((target != null) && target.isPet())
 			{
 				final L2PetInstance pet = (L2PetInstance) target;
 				try
@@ -805,7 +805,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				target = activeChar.getTarget();
 			}
 			
-			if (target instanceof L2PetInstance)
+			if ((target != null) && target.isPet())
 			{
 				activeChar.sendPacket(new GMViewItemList((L2PetInstance) target));
 			}
@@ -1537,7 +1537,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStat().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getKarma()));
 		html.replace("%race%", target.getTemplate().getRace().toString());
-		if (target instanceof L2PetInstance)
+		if (target.isPet())
 		{
 			final int objId = target.getActingPlayer().getObjectId();
 			html.replace("%inv%", " <a action=\"bypass admin_show_pet_inv " + objId + "\">view</a>");
@@ -1546,7 +1546,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			html.replace("%inv%", "none");
 		}
-		if (target instanceof L2PetInstance)
+		if (target.isPet())
 		{
 			html.replace("%food%", ((L2PetInstance) target).getCurrentFed() + "/" + ((L2PetInstance) target).getPetLevelData().getPetMaxFeed());
 			html.replace("%load%", ((L2PetInstance) target).getInventory().getTotalWeight() + "/" + ((L2PetInstance) target).getMaxLoad());
