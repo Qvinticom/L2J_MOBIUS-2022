@@ -50,6 +50,23 @@
 			<height normal="42" />
 		</collision>
 	</npc>
+	<npc id="34017" level="99" type="L2Npc" name="Eilis Ein" title="Captain">
+	<!-- Confirmed Antharas -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<speed>
+				<walk ground="50" />
+				<run ground="100" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="7" />
+			<height normal="25" />
+		</collision>
+	</npc>
 	<npc id="34019" level="99" type="L2Npc" name="Fethin" title="Devil's Isle Agent">
 	<!-- Confirmed Antharas -->
 		<race>HUMAN</race>

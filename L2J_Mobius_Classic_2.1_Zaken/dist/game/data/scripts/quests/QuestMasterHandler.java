@@ -147,6 +147,7 @@ import quests.Q00418_PathOfTheArtisan.Q00418_PathOfTheArtisan;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.Q00933_ExploringTheWestWingOfTheDungeonOfAbyss;
 import quests.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.Q00935_ExploringTheEastWingOfTheDungeonOfAbyss;
+import quests.Q10866_PunitiveOperationOnTheDevilIsle.Q10866_PunitiveOperationOnTheDevilIsle;
 import quests.Q10993_FutureDwarves.Q10993_FutureDwarves;
 import quests.Q10994_FutureOrcs.Q10994_FutureOrcs;
 import quests.Q10995_MutualBenefit.Q10995_MutualBenefit;
@@ -316,6 +317,7 @@ public class QuestMasterHandler
 		Q00662_AGameOfCards.class,
 		Q00933_ExploringTheWestWingOfTheDungeonOfAbyss.class,
 		Q00935_ExploringTheEastWingOfTheDungeonOfAbyss.class,
+		Q10866_PunitiveOperationOnTheDevilIsle.class,
 		Q10993_FutureDwarves.class,
 		Q10994_FutureOrcs.class,
 		Q10995_MutualBenefit.class,
