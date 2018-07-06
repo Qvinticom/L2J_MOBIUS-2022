@@ -36,7 +36,7 @@ public class TradeUpdate extends AbstractItemPacket
 		_sendType = sendType;
 		_count = count;
 		_item = item;
-		_newCount = player.getInventory().getItemByObjectId(item.getObjectId()).getCount() - item.getCount();
+		_newCount = player == null ? 0 : player.getInventory().getItemByObjectId(item.getObjectId()).getCount() - item.getCount();
 	}
 	
 	@Override
