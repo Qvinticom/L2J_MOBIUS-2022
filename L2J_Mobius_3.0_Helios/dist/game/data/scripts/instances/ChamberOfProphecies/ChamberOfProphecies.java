@@ -352,7 +352,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 					world.openCloseDoor(DOOR_4, true);
 					cancelQuestTimers("ATTACK2");
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, player);
-					startQuestTimer("CLOSE", 15000, null, player);
+					startQuestTimer("CLOSE", 15000, world.getNpc(GRAIL), player);
 					break;
 				}
 				case "CLOSE":
@@ -365,7 +365,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 					}
 					else
 					{
-						startQuestTimer("CLOSE", 3000, null, player);
+						startQuestTimer("CLOSE", 3000, npc, player);
 					}
 					break;
 				}
