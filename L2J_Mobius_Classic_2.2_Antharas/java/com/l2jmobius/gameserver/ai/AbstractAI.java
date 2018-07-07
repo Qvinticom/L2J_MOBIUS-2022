@@ -737,7 +737,7 @@ public abstract class AbstractAI implements Ctrl
 					return;
 				}
 				
-				final L2Object followTarget = _target; // copy to prevent NPE
+				final L2Object followTarget = getTarget(); // copy to prevent NPE
 				if (followTarget == null)
 				{
 					if (_actor.isSummon())
