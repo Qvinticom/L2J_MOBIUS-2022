@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.network.serverpackets.TutorialCloseHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialEnableClientEvent;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowHtml;
 import com.l2jmobius.gameserver.network.serverpackets.TutorialShowQuestionMark;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * Quest state class.
@@ -749,7 +748,7 @@ public final class QuestState
 	public boolean isNowAvailable()
 	{
 		final String val = get("restartTime");
-		return (val == null) || !Util.isDigit(val) || (Long.parseLong(val) <= System.currentTimeMillis());
+		return (val != null) && (Long.parseLong(val) <= System.currentTimeMillis());
 	}
 	
 	/**

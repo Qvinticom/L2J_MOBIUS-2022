@@ -61,7 +61,7 @@ public final class BlackMarketeerOfMammon extends AbstractNpcAI
 				if (player.getLevel() >= MIN_LEVEL)
 				{
 					final QuestState qs = getQuestState(player, true);
-					if (!qs.isNowAvailable())
+					if ((qs.get("restartTime") != null) && !qs.isNowAvailable())
 					{
 						htmltext = "31092-03.html";
 					}
