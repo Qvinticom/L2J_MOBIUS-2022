@@ -5376,6 +5376,8 @@ public final class L2PcInstance extends L2Playable
 		{
 			setPvpKills(_pvpKills + 1);
 			
+			updatePvpTitleAndColor(true);
+			
 			// Send a Server->Client UserInfo packet to attacker with its Karma and PK Counter
 			sendPacket(new UserInfo(this));
 			sendPacket(new ExBrExtraUserInfo(this));
@@ -5406,6 +5408,43 @@ public final class L2PcInstance extends L2Playable
 		// Update player's UI.
 		sendPacket(new UserInfo(this));
 		sendPacket(new ExBrExtraUserInfo(this));
+	}
+	
+	public void updatePvpTitleAndColor(boolean broadcastInfo)
+	{
+		if (Config.PVP_COLOR_SYSTEM_ENABLED && !Config.FACTION_SYSTEM_ENABLED) // Faction system uses title colors.
+		{
+			if ((_pvpKills >= (Config.PVP_AMOUNT1)) && (_pvpKills < (Config.PVP_AMOUNT2)))
+			{
+				setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT1 + " \u00AE");
+				_appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT1);
+			}
+			else if ((_pvpKills >= (Config.PVP_AMOUNT2)) && (_pvpKills < (Config.PVP_AMOUNT3)))
+			{
+				setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT2 + " \u00AE");
+				_appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT2);
+			}
+			else if ((_pvpKills >= (Config.PVP_AMOUNT3)) && (_pvpKills < (Config.PVP_AMOUNT4)))
+			{
+				setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT3 + " \u00AE");
+				_appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT3);
+			}
+			else if ((_pvpKills >= (Config.PVP_AMOUNT4)) && (_pvpKills < (Config.PVP_AMOUNT5)))
+			{
+				setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT4 + " \u00AE");
+				_appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT4);
+			}
+			else if (_pvpKills >= (Config.PVP_AMOUNT5))
+			{
+				setTitle("\u00AE " + Config.TITLE_FOR_PVP_AMOUNT5 + " \u00AE");
+				_appearance.setTitleColor(Config.NAME_COLOR_FOR_PVP_AMOUNT5);
+			}
+			
+			if (broadcastInfo)
+			{
+				broadcastTitleInfo();
+			}
+		}
 	}
 	
 	public void updatePvPStatus()

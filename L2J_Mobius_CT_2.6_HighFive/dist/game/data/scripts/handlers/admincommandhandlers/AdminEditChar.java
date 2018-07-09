@@ -265,6 +265,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					player.setPvpKills(pvp);
+					player.updatePvpTitleAndColor(false);
 					player.broadcastUserInfo();
 					player.sendPacket(new UserInfo(player));
 					player.sendPacket(new ExBrExtraUserInfo(player));
