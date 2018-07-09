@@ -81,6 +81,7 @@ import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.TimeStamp;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
@@ -3268,7 +3269,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
 			
 			// Movement checks.
-			if (Config.PATHFINDING)
+			if (Config.PATHFINDING && !(this instanceof FriendlyNpcInstance))
 			{
 				if (isOnGeodataPath())
 				{
