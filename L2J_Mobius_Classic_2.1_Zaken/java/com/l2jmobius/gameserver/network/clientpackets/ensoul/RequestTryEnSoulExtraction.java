@@ -16,10 +16,13 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.ensoul;
 
+import java.util.Collection;
+
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.xml.impl.EnsoulData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.ensoul.EnsoulOption;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -74,72 +77,42 @@ public class RequestTryEnSoulExtraction implements IClientIncomingPacket
 			return;
 		}
 		
-		boolean success = false;
-		
-		// TODO: Move to XML.
-		switch (item.getItem().getItemGrade())
+		final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getItem().getCrystalType());
+		if (removalFee.isEmpty())
 		{
-			case D:
+			return;
+		}
+		
+		// Check if player has required items.
+		for (ItemHolder itemHolder : removalFee)
+		{
+			if (player.getInventory().getInventoryItemCount(itemHolder.getId(), -1) < itemHolder.getCount())
 			{
-				if (player.getInventory().getInventoryItemCount(2130, -1) >= 89)
-				{
-					player.destroyItemByItemId("Rune Extract", 2130, 89, player, true);
-					success = true;
-				}
-				break;
-			}
-			case C:
-			{
-				if (player.getInventory().getInventoryItemCount(2131, -1) >= 89)
-				{
-					player.destroyItemByItemId("Rune Extract", 2131, 89, player, true);
-					success = true;
-				}
-				break;
-			}
-			case B:
-			{
-				if ((player.getInventory().getInventoryItemCount(2132, -1) >= 19) //
-					&& (player.getInventory().getInventoryItemCount(57, -1) >= 700000))
-				{
-					player.destroyItemByItemId("Rune Extract", 2132, 19, player, true);
-					player.reduceAdena("Rune Extract", 700000, player, true);
-					success = true;
-				}
-				break;
-			}
-			case A:
-			{
-				if ((player.getInventory().getInventoryItemCount(2133, -1) >= 5) //
-					&& (player.getInventory().getInventoryItemCount(57, -1) >= 3500000))
-				{
-					player.destroyItemByItemId("Rune Extract", 2133, 5, player, true);
-					player.reduceAdena("Rune Extract", 3500000, player, true);
-					success = true;
-				}
-				break;
+				player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+				player.sendPacket(new ExEnSoulExtractionResult(false, item));
+				return;
 			}
 		}
 		
-		if (success)
+		// Take required items.
+		for (ItemHolder itemHolder : removalFee)
 		{
-			item.removeSpecialAbility(_position, _type);
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addModifiedItem(item);
-			
-			final int runeId = EnsoulData.getInstance().getStone(_type, option.getId());
-			if (runeId > 0)
-			{
-				iu.addItem(player.addItem("Rune Extract", runeId, 1, player, true));
-			}
-			
-			player.sendInventoryUpdate(iu);
-		}
-		else
-		{
-			player.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
+			player.destroyItemByItemId("Rune Extract", itemHolder.getId(), itemHolder.getCount(), player, true);
 		}
 		
-		player.sendPacket(new ExEnSoulExtractionResult(success, item));
+		// Remove equipped rune.
+		item.removeSpecialAbility(_position, _type);
+		final InventoryUpdate iu = new InventoryUpdate();
+		iu.addModifiedItem(item);
+		
+		// Add rune in player inventory.
+		final int runeId = EnsoulData.getInstance().getStone(_type, option.getId());
+		if (runeId > 0)
+		{
+			iu.addItem(player.addItem("Rune Extract", runeId, 1, player, true));
+		}
+		
+		player.sendInventoryUpdate(iu);
+		player.sendPacket(new ExEnSoulExtractionResult(true, item));
 	}
 }

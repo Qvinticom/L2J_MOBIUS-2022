@@ -34,6 +34,7 @@
 							<xs:element name="reNormal" minOccurs="0" type="fee" />
 							<xs:element name="reSecondary" minOccurs="0" type="fee" />
 							<xs:element name="reThird" minOccurs="0" type="fee" />
+							<xs:element name="remove" minOccurs="0" maxOccurs="unbounded" type="fee" />
 						</xs:sequence>
 						<xs:attribute type="crystalType" name="crystalType" use="required" />
 					</xs:complexType>
