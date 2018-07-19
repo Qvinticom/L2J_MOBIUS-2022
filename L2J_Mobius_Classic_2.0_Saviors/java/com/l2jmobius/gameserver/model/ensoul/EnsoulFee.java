@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model.ensoul;
 
-import java.util.Collection;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.type.CrystalType;
@@ -31,7 +31,7 @@ public class EnsoulFee
 	
 	private final ItemHolder[] _ensoulFee = new ItemHolder[3];
 	private final ItemHolder[] _resoulFees = new ItemHolder[3];
-	private final Collection<ItemHolder> _removalFee = Collections.emptyList();
+	private final List<ItemHolder> _removalFee = new ArrayList<>();
 	
 	public EnsoulFee(CrystalType type)
 	{
@@ -68,7 +68,7 @@ public class EnsoulFee
 		return _resoulFees[index];
 	}
 	
-	public Collection<ItemHolder> getRemovalFee()
+	public List<ItemHolder> getRemovalFee()
 	{
 		return _removalFee;
 	}
