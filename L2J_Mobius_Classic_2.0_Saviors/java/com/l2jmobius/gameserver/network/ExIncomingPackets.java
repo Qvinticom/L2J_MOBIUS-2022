@@ -60,6 +60,7 @@ import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrys
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
 import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
 import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import com.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
 import com.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGameStartInfo;
@@ -373,7 +374,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_SSO_AUTHN_TOKEN(0x124, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET_LOGIN(0x125, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_MEMO_INFO(0x126, null, ConnectionState.IN_GAME),
-	REQUEST_TRY_EN_SOUL_EXTRACTION(0x127, null, ConnectionState.IN_GAME);
+	REQUEST_TRY_EN_SOUL_EXTRACTION(0x127, RequestTryEnSoulExtraction::new, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

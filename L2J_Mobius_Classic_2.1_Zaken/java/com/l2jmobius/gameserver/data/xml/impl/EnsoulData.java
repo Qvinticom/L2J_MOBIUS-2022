@@ -187,6 +187,24 @@ public class EnsoulData implements IGameXmlReader
 		return _ensoulStones.get(id);
 	}
 	
+	public int getStone(int type, int optionId)
+	{
+		for (EnsoulStone stone : _ensoulStones.values())
+		{
+			if (stone.getSlotType() == type)
+			{
+				for (int id : stone.getOptions())
+				{
+					if (id == optionId)
+					{
+						return stone.getId();
+					}
+				}
+			}
+		}
+		return 0;
+	}
+	
 	/**
 	 * Gets the single instance of EnsoulData.
 	 * @return single instance of EnsoulData
