@@ -376,7 +376,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param spawn the spawn to add
 	 * @param store if {@code true} it'll be saved in the spawn XML files
 	 */
-	public void addNewSpawn(L2Spawn spawn, boolean store)
+	public synchronized void addNewSpawn(L2Spawn spawn, boolean store)
 	{
 		addSpawn(spawn);
 		
@@ -470,7 +470,7 @@ public final class SpawnTable implements IGameXmlReader
 	 * @param spawn the spawn to delete
 	 * @param update if {@code true} the spawn XML files will be updated
 	 */
-	public void deleteSpawn(L2Spawn spawn, boolean update)
+	public synchronized void deleteSpawn(L2Spawn spawn, boolean update)
 	{
 		if (!removeSpawn(spawn))
 		{
