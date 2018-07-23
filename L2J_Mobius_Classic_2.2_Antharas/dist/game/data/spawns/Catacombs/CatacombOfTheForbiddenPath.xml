@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <!-- Catacomb of the Forbidden Path 23_20 -->
-	<spawn name="Catacomb_npc">
-	<group>
-		<npc id="31075" x="104192" y="84064" z="-4376" heading="0" respawnTime="60sec" />
-		<npc id="31076" x="-20208" y="-250800" z="-8160" heading="32768" respawnTime="60sec" />
-	</group>
+	<spawn name="Catacomb_otfp_npc">
+		<group>
+			<npc id="31075" x="104192" y="84064" z="-4376" heading="0" respawnTime="60sec" />
+			<npc id="31076" x="-20208" y="-250800" z="-8160" heading="32768" respawnTime="60sec" />
+		</group>
 	</spawn>
 	<spawn>
 		<territories>
