@@ -64,6 +64,8 @@ public class ItemInfo
 	private int _mana;
 	private int _time;
 	
+	private boolean _available = true;
+	
 	private int _location;
 	
 	private byte _elemAtkType = -2;
@@ -137,6 +139,7 @@ public class ItemInfo
 		// Get shadow item mana
 		_mana = item.getMana();
 		_time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
+		_available = item.isAvailable();
 		_location = item.getLocationSlot();
 		
 		_elemAtkType = item.getAttackAttributeType().getClientId();
@@ -357,6 +360,11 @@ public class ItemInfo
 	public int getTime()
 	{
 		return _time > 0 ? _time : _visualExpiration > 0 ? (int) _visualExpiration : -9999;
+	}
+	
+	public boolean isAvailable()
+	{
+		return _available;
 	}
 	
 	public int getLocation()

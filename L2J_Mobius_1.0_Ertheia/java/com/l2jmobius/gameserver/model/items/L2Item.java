@@ -705,6 +705,11 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 		_preConditions.add(c);
 	}
 	
+	public List<Condition> getConditions()
+	{
+		return _preConditions;
+	}
+	
 	/**
 	 * Method to retrieve skills linked to this item armor and weapon: passive skills etcitem: skills used on item use <-- ???
 	 * @return Skills linked to this item as SkillHolder[]

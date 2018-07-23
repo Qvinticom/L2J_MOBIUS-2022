@@ -80,7 +80,7 @@ public abstract class AbstractItemPacket extends AbstractMaskPacket<ItemListType
 		packet.writeC(0x01); // TODO : Find me
 		packet.writeD(item.getMana());
 		packet.writeD(item.getTime());
-		packet.writeC(0x01); // GOD Item enabled = 1 disabled (red) = 0
+		packet.writeC(item.isAvailable() ? 1 : 0); // GOD Item enabled = 1 disabled (red) = 0
 		if (containsMask(mask, ItemListType.AUGMENT_BONUS))
 		{
 			writeItemAugment(packet, item);

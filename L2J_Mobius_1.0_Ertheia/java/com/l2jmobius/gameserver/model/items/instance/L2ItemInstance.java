@@ -59,6 +59,7 @@ import com.l2jmobius.gameserver.model.VariationInstance;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.entity.Castle;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerAugment;
@@ -1762,6 +1763,33 @@ public final class L2ItemInstance extends L2Object
 	public boolean isProtected()
 	{
 		return _protected;
+	}
+	
+	public boolean isAvailable()
+	{
+		if (!_item.isConditionAttached())
+		{
+			return true;
+		}
+		final L2PcInstance owner = getActingPlayer();
+		for (Condition condition : _item.getConditions())
+		{
+			if (condition == null)
+			{
+				continue;
+			}
+			try
+			{
+				if (!condition.test(owner, owner, null, null))
+				{
+					return false;
+				}
+			}
+			catch (Exception e)
+			{
+			}
+		}
+		return true;
 	}
 	
 	public void setCountDecrease(boolean decrease)
