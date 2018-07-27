@@ -1018,7 +1018,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		final L2Character target = object.isCharacter() ? (L2Character) object : null;
+		final L2Character target = object instanceof L2Character ? (L2Character) object : null;
 		for (Condition cond : preCondition)
 		{
 			if (!cond.test(activeChar, target, this))
