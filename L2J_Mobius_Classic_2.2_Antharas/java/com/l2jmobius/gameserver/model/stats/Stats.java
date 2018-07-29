@@ -248,6 +248,9 @@ public enum Stats
 	// Brooches
 	BROOCH_JEWELS("broochJewels"),
 	
+	// Agathions
+	AGATHION_SLOTS("agathionSlots"),
+	
 	// Summon Points
 	MAX_SUMMON_POINTS("summonPoints"),
 	

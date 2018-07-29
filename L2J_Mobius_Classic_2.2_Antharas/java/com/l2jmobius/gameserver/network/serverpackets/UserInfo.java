@@ -328,7 +328,10 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeC(_activeChar.getTeam().getId());
 			packet.writeC(0x00);
 			packet.writeC(0x00);
-			packet.writeD(0x00);
+			packet.writeC(0x00);
+			packet.writeC(0x00);
+			packet.writeC(_activeChar.getInventory().getAgathionSlots());
+			packet.writeC(_activeChar.getInventory().getAgathionSlots() - 1);
 		}
 		
 		if (containsMask(UserInfoType.MOVEMENTS))

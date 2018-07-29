@@ -666,6 +666,15 @@ public class PcStat extends PlayableStat
 		return (int) getValue(Stats.BROOCH_JEWELS, 0);
 	}
 	
+	/**
+	 * Gets the maximum agathion count.
+	 * @return the maximum agathion count
+	 */
+	public int getAgathionSlots()
+	{
+		return (int) getValue(Stats.AGATHION_SLOTS, 0);
+	}
+	
 	@Override
 	protected void onRecalculateStats(boolean broadcast)
 	{
