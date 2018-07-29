@@ -20,7 +20,6 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -832,12 +831,31 @@ public class L2Attackable extends L2Npc
 	 */
 	public L2Character getMostHated()
 	{
-		if (getAggroList().isEmpty() || isAlikeDead())
+		if (_aggroList.isEmpty() || isAlikeDead())
 		{
 			return null;
 		}
 		
-		return getAggroList().values().stream().filter(Objects::nonNull).sorted(Comparator.comparingInt(AggroInfo::getHate).reversed()).map(AggroInfo::getAttacker).findFirst().orElse(null);
+		L2Character mostHated = null;
+		int maxHate = 0;
+		
+		// While Interacting over This Map Removing Object is Not Allowed
+		// Go through the aggroList of the L2Attackable
+		for (AggroInfo ai : _aggroList.values())
+		{
+			if (ai == null)
+			{
+				continue;
+			}
+			
+			if (ai.checkHate(this) > maxHate)
+			{
+				mostHated = ai.getAttacker();
+				maxHate = ai.getHate();
+			}
+		}
+		
+		return mostHated;
 	}
 	
 	/**
