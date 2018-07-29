@@ -50,6 +50,7 @@ import com.l2jmobius.gameserver.model.conditions.ConditionLogicAnd;
 import com.l2jmobius.gameserver.model.conditions.ConditionLogicNot;
 import com.l2jmobius.gameserver.model.conditions.ConditionLogicOr;
 import com.l2jmobius.gameserver.model.conditions.ConditionMinDistance;
+import com.l2jmobius.gameserver.model.conditions.ConditionMinimumVitalityPoints;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerActiveEffectId;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerActiveSkillId;
 import com.l2jmobius.gameserver.model.conditions.ConditionPlayerAgathionId;
@@ -133,7 +134,6 @@ import com.l2jmobius.gameserver.model.conditions.ConditionTargetWeight;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSkill;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
-import com.l2jmobius.gameserver.model.conditions.ConditionMaxVitalityItemsUsed;
 import com.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
@@ -1091,10 +1091,10 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionTargetCheckCrtEffect(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
-				case "maxvitalityitemsused":
+				case "minimumvitalitypoints":
 				{
 					final int count = Integer.decode(getValue(a.getNodeValue(), null));
-					cond = joinAnd(cond, new ConditionMaxVitalityItemsUsed(count));
+					cond = joinAnd(cond, new ConditionMinimumVitalityPoints(count));
 					break;
 				}
 			}

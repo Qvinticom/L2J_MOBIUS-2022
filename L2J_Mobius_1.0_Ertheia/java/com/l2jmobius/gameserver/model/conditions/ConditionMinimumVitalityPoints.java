@@ -24,11 +24,11 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author Mobius
  */
-public class ConditionMaxVitalityItemsUsed extends Condition
+public class ConditionMinimumVitalityPoints extends Condition
 {
 	private final int _count;
 	
-	public ConditionMaxVitalityItemsUsed(int count)
+	public ConditionMinimumVitalityPoints(int count)
 	{
 		_count = count;
 	}
@@ -39,7 +39,7 @@ public class ConditionMaxVitalityItemsUsed extends Condition
 		final L2PcInstance player = effector.getActingPlayer();
 		if (player != null)
 		{
-			return player.getVitalityItemsUsed() < _count;
+			return player.getVitalityPoints() >= _count;
 		}
 		return false;
 	}
