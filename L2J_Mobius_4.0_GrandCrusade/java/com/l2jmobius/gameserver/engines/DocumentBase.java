@@ -132,6 +132,7 @@ import com.l2jmobius.gameserver.model.conditions.ConditionTargetWeight;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingItemType;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSkill;
 import com.l2jmobius.gameserver.model.conditions.ConditionUsingSlotType;
+import com.l2jmobius.gameserver.model.conditions.ConditionMaxVitalityItemsUsed;
 import com.l2jmobius.gameserver.model.conditions.ConditionWithSkill;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.type.ArmorType;
@@ -1081,6 +1082,12 @@ public abstract class DocumentBase
 				case "checkcrteffect":
 				{
 					cond = joinAnd(cond, new ConditionTargetCheckCrtEffect(Boolean.parseBoolean(a.getNodeValue())));
+					break;
+				}
+				case "maxvitalityitemsused":
+				{
+					final int count = Integer.decode(getValue(a.getNodeValue(), null));
+					cond = joinAnd(cond, new ConditionMaxVitalityItemsUsed(count));
 					break;
 				}
 			}
