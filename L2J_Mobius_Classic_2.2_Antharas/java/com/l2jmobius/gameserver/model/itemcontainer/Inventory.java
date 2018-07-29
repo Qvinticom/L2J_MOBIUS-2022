@@ -1000,6 +1000,10 @@ public abstract class Inventory extends ItemContainer
 			{
 				return PAPERDOLL_BROOCH_JEWEL1;
 			}
+			case L2Item.SLOT_AGATHION:
+			{
+				return PAPERDOLL_AGATHION1;
+			}
 		}
 		return -1;
 	}
@@ -1294,6 +1298,15 @@ public abstract class Inventory extends ItemContainer
 				slot = L2Item.SLOT_BROOCH_JEWEL;
 				break;
 			}
+			case PAPERDOLL_AGATHION1:
+			case PAPERDOLL_AGATHION2:
+			case PAPERDOLL_AGATHION3:
+			case PAPERDOLL_AGATHION4:
+			case PAPERDOLL_AGATHION5:
+			{
+				slot = L2Item.SLOT_AGATHION;
+				break;
+			}
 		}
 		return slot;
 	}
@@ -1482,6 +1495,11 @@ public abstract class Inventory extends ItemContainer
 			case L2Item.SLOT_BROOCH_JEWEL:
 			{
 				pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
+				break;
+			}
+			case L2Item.SLOT_AGATHION:
+			{
+				pdollSlot = PAPERDOLL_AGATHION1;
 				break;
 			}
 			default:

@@ -121,9 +121,18 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51025" toLevel="4" name="Expand Primary and Secondary Agathion Slots">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<icon>icon.skill51025</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="AgathionSlot">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">4</value>
+					<value level="4">5</value>
+				</amount>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51026" toLevel="1" name="Summon Aries Agathion">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

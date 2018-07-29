@@ -277,6 +277,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="1440" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70924" name="Agathion Bracelet - Lv. 1" additionalName="7-day" type="Armor">
 		<!-- 7-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
@@ -291,6 +294,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70925" name="Agathion Bracelet - Lv. 1" additionalName="15-day" type="Armor">
 		<!-- 15-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
@@ -305,6 +311,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70926" name="Agathion Bracelet - Lv. 1" additionalName="30-day" type="Armor">
 		<!-- 30-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
@@ -319,6 +328,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70927" name="Agathion Bracelet - Lv. 1" additionalName="60-day" type="Armor">
 		<!-- 60-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
@@ -333,12 +345,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="86400" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70928" name="Agathion Bracelet - Lv. 1" additionalName="90-day" type="Armor">
 		<!-- 90-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -347,56 +362,71 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="129600" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70929" name="Agathion Bracelet - Lv. 1" type="Armor">
 		<!-- When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="1" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70930" name="Agathion Bracelet - Lv. 2" type="Armor">
 		<!-- When equipped, 1 Agathion's main slot and 2 Agathion's side slots activated. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="2" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70931" name="Agathion Bracelet - Lv. 3" type="Armor">
 		<!-- When equipped, 1 Agathion's main slot and 2 Agathion's side slots activated. STR/ INT/ CON/ MEN +1. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewel_garnet" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="3" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70932" name="Agathion Bracelet - Lv. 4" type="Armor">
 		<!-- When equipped, 1 Agathion's main slot and 3 Agathion's side slots activated. STR/ INT/ CON/ MEN +1. Resistance to Mental Attacks/ Stun/ Sleep/ Paralysis +5%. Cannot be dropped. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="51025" level="4" /> <!-- Expand Primary and Secondary Agathion Slots -->
+		</skills>
 	</item>
 	<item id="70933" name="Agathion - Love (Event)" additionalName="7-day" type="Armor">
 		<!-- 7-day item. Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -410,7 +440,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Nevit's Herald Kanna. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -423,7 +453,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Uthanka. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -436,7 +466,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Singer and Dancer. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_jade_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -449,7 +479,7 @@
 		<!-- 7-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -463,7 +493,7 @@
 		<!-- 30-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -477,7 +507,7 @@
 		<!-- 90-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -491,7 +521,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Griffin and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>.  - STR/ INT +1. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -505,7 +535,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Cheerleader Mae and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. Cheerleader Mae's Support : P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage +3%. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -519,7 +549,7 @@
 		<!-- Equipping it in the main slot summons the Agathion One-eyed Bat Drove. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -532,7 +562,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Zaken's Spirit Swords. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -545,7 +575,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Pegasus. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -558,7 +588,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Guangong. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -571,7 +601,7 @@
 		<!-- Equipping it in the main slot summons the Agathion God of Fortune. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -584,7 +614,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Phoenix. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -597,7 +627,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Saerom. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -610,7 +640,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Gwanseum Nyang. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -623,7 +653,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Blue Opera. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -636,7 +666,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Red Opera. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_diamond_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -649,7 +679,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Miss Chipao. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -662,7 +692,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Flower Fairy Spirit. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -675,7 +705,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Iken. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -688,7 +718,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Lanya. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -701,7 +731,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Gnosian. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_pearl_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -714,7 +744,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Cheerleader Orodriel. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -727,7 +757,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Lakinos. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -740,7 +770,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Mortia. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -753,7 +783,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Heintz. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -766,7 +796,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Meruril. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
@@ -779,7 +809,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Taman Zu Rapatui. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.bm_pendant_pve" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="is_tradable" val="false" />
@@ -791,7 +821,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Kaurin. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -807,7 +837,7 @@
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="onepiece" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="FINE_STEEL" />
@@ -822,7 +852,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Naonin. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t62_g_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -837,7 +867,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Minion Eye. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t62_b_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -852,7 +882,7 @@
 		<!-- 7-day item. Equipping it in the main slot summons the Agathion Minion Eye and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Monster Eye Corage Lv 1.  - Monster Eye Blessed Resurrection Lv 1 -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -869,7 +899,7 @@
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
-		<set name="bodypart" val="onepiece" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -885,7 +915,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Matryoshka. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t45_g_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -900,7 +930,7 @@
 		<!-- 7-day item. Equipping it in the main slot summons the Agathion Matryoshka and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Matryoshka's Blessing Lv 1.  - Matryoshka's Gift Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<set name="icon" val="icon.armor_t45_b_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lhand" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
@@ -916,7 +946,7 @@
 		<!-- 30-day item. Equipping it in the main slot summons the Agathion Matryoshka and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Matryoshka's Blessing Lv 1.  - Matryoshka's Gift Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="head" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="STEEL" />
@@ -932,8 +962,7 @@
 		<!-- Equipping it in the main slot summons the Agathion Babayaga. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
 		<set name="icon" val="icon.armor_t57_u_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="MAGIC" />
-		<set name="bodypart" val="hair2" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="CLOTH" />
@@ -943,18 +972,13 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
-		<stats>
-			<stat type="maxMp">314</stat>
-		</stats>
 	</item>
 	<item id="70997" name="Agathion: Babayaga" additionalName="7-day" type="Armor">
 		<!-- 7-day item. Equipping it in the main slot summons the Agathion Babayaga and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Babayaga's Courage Lv 1.  - Babayaga's Serenade Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<set name="icon" val="icon.armor_t57_l_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="C" />
-		<set name="material" val="CLOTH" />
 		<set name="weight" val="960" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_tradable" val="false" />
@@ -962,15 +986,12 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
-		<stats>
-			<stat type="maxMp">196</stat>
-		</stats>
 	</item>
 	<item id="70998" name="Agathion: Babayaga" additionalName="30-day" type="Armor">
 		<!-- 30-day item. Equipping it in the main slot summons the Agathion Babayaga and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Babayaga's Courage Lv 1.  - Babayaga's Serenade Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
 		<set name="icon" val="icon.armor_t57_g_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hair" />
+		<set name="bodypart" val="agathion" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="C" />
 		<set name="material" val="LEATHER" />
