@@ -1419,6 +1419,10 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<cond>
+			<player minimumVitalityPoints="35000" />
+		</cond>
 		<skills>
 			<skill id="27615" level="1" /> <!-- Maphr's Wind Scroll -->
 		</skills>
