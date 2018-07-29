@@ -716,6 +716,34 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	private static final class AgathionBraceletListener implements PaperdollListener
+	{
+		private static AgathionBraceletListener instance = new AgathionBraceletListener();
+		
+		public static AgathionBraceletListener getInstance()
+		{
+			return instance;
+		}
+		
+		@Override
+		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+			if (item.getItem().getBodyPart() == L2Item.SLOT_L_BRACELET)
+			{
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION2);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION3);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION4);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION5);
+			}
+		}
+		
+		@Override
+		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+		}
+	}
+	
 	/**
 	 * Constructor of the inventory
 	 */
@@ -731,6 +759,7 @@ public abstract class Inventory extends ItemContainer
 			addPaperdollListener(ItemSkillsListener.getInstance());
 			addPaperdollListener(BraceletListener.getInstance());
 			addPaperdollListener(BroochListener.getInstance());
+			addPaperdollListener(AgathionBraceletListener.getInstance());
 		}
 		
 		// common
