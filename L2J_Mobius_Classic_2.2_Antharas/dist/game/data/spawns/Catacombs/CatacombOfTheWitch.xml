@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <!-- Catacombs of the Witch -->
-	<spawn name="Catacomb_otw_npc">
-		<group>
-			<npc id="31079" x="140032" y="79680" z="-5424" heading="32500" respawnTime="60sec" />
-			<npc id="31080" x="140784" y="79680" z="-5424" heading="16500" respawnTime="60sec" />
-		</group>
-	</spawn>
 	<spawn>
 		<territories>
 			<territory name="ssq13_2420_ssq01" minZ="-5464" maxZ="-5264">

@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <!-- The Patriot's Necropolis -->
-	<spawn name="Catacomb_tpn_npc">
-		<group>
-			<npc id="31077" x="-22224" y="77376" z="-5168" heading="32500" respawnTime="60sec" />
-			<npc id="31078" x="-21392" y="77376" z="-5168" heading="16500" respawnTime="60sec" />
-		</group>
-	</spawn>
 	<spawn>
 		<territories>
 			<territory name="сatacombs_ssq1" minZ="-5168" maxZ="-5176">
