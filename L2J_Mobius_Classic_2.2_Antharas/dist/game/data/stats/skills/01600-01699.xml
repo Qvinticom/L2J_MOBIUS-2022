@@ -218,7 +218,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1607" toLevel="40" name="Excruciating Strike">
+	<skill id="1607" toLevel="45" name="Excruciating Strike">
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -307,6 +307,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">80</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">42</value>
@@ -349,6 +354,11 @@
 			<value level="38">94</value>
 			<value level="39">95</value>
 			<value level="40">96</value>
+			<value level="41">98</value>
+			<value level="42">99</value>
+			<value level="43">100</value>
+			<value level="44">101</value>
+			<value level="45">102</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -361,7 +371,6 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>BLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -408,6 +417,11 @@
 					<value level="38">2361</value>
 					<value level="39">2420</value>
 					<value level="40">2478</value>
+					<value level="41">2592</value>
+					<value level="42">2649</value>
+					<value level="43">2706</value>
+					<value level="44">2763</value>
+					<value level="45">2820</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -454,16 +468,18 @@
 			</effect>
 		 </endEffects>
 	</skill>
-	<skill id="1609" toLevel="3" name="Sword Expert">
+	<skill id="1609" toLevel="4" name="Sword Expert">
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">58</value>
-			<value level="2">70</value>
+			<value level="3">70</value>
+			<value level="4">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">1</value>
-			<value level="2">2</value>
-			<value level="2">3</value>
+			<value level="2">1</value>
+			<value level="3">1</value>
+			<value level="4">1</value>
 		</mpConsume>	
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -474,24 +490,16 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
-					<item>BLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="ManaDamOverTime">
-				<power>
-					<value level="1">1</value>
-					<value level="2">2</value>
-					<value level="3">3</value>
-				</power>
-				<ticks>2</ticks>
-			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">40</value>
 					<value level="2">50</value>
 					<value level="3">60</value>
+					<value level="4">90</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -500,14 +508,16 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
+					<value level="4">3</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
 					<value level="1">30</value>
-					<value level="2">30</value>
-					<value level="3">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+					<value level="4">80</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -616,13 +626,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1611" toLevel="4" name="Power Supremacy">
+	<skill id="1611" toLevel="5" name="Power Supremacy">
 		<icon>icon.skill1611</icon>
 		<mpInitialConsume>
 			<value level="1">0</value>
 			<value level="2">0</value>
 			<value level="3">0</value>
 			<value level="4">0</value>
+			<value level="5">0</value>
 		</mpInitialConsume>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -635,6 +646,7 @@
 					<value level="2">12</value>
 					<value level="3">14</value>
 					<value level="4">16</value>
+					<value level="5">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -644,6 +656,7 @@
 					<value level="2">-16</value>
 					<value level="3">-18</value>
 					<value level="4">-20</value>
+					<value level="5">-24</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -654,7 +667,7 @@
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="1613" toLevel="10" name="Body Impale">
+	<skill id="1613" toLevel="11" name="Body Impale">
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -687,6 +700,7 @@
 			<value level="8">70</value>
 			<value level="9">74</value>
 			<value level="10">78</value>
+			<value level="11">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
@@ -699,6 +713,7 @@
 			<value level="8">68</value>
 			<value level="9">72</value>
 			<value level="10">79</value>
+			<value level="11">85</value>
 		</mpConsume>
 		<icon>icon.skill1613</icon>
 		<isDebuff>true</isDebuff>
@@ -717,6 +732,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>BLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</condition>
 		</conditions>
@@ -733,6 +749,7 @@
 					<value level="8">2361</value>
 					<value level="9">2652</value>
 					<value level="10">2942</value>
+					<value level="11">3232</value>
 				</power>	
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -743,11 +760,10 @@
 				<rate>25</rate>
 				<max>1</max>
 			</effect>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 		</effects>			
 	</skill>
-	<skill id="1615" toLevel="3" name="Weapon Reinforcement">
+	<skill id="1615" toLevel="4" name="Weapon Reinforcement">
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
 		<hitTime>2000</hitTime>
@@ -755,11 +771,13 @@
 			<value level="1">42</value>
 			<value level="2">52</value>
 			<value level="3">62</value>
+			<value level="3">82</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">12</value>
 			<value level="2">15</value>
 			<value level="3">18</value>
+			<value level="4">36</value>
 		</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -773,17 +791,19 @@
 					<value level="1">3</value>
 					<value level="2">4</value>
 					<value level="3">5</value>
+					<value level="4">7</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>POLE</item>
 					<item>BLUNT</item>
+					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
+				<maxAttackerLevel>100</maxAttackerLevel>
 				<chance>10</chance>
 				<targetType>ENEMY</targetType>
 				<minDamage>60</minDamage>
@@ -813,7 +833,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1617" toLevel="3" name="Tenacity">
+	<skill id="1617" toLevel="4" name="Tenacity">
 		<reuseDelay>2000</reuseDelay>
 		<coolTime>500</coolTime>
 		<hitTime>2000</hitTime>
@@ -821,11 +841,13 @@
 			<value level="1">44</value>
 			<value level="2">56</value>
 			<value level="3">64</value>
+			<value level="4">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">12</value>
 			<value level="2">15</value>
 			<value level="3">18</value>
+			<value level="4">36</value>
 		</mpConsume>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -839,13 +861,14 @@
 					<value level="1">3</value>
 					<value level="2">4</value>
 					<value level="3">5</value>
+					<value level="4">10</value>
 				</SHOCK>
 			</effect>
 			<effect name="TriggerSkillByDamage">
 				<attackerType>L2Character</attackerType>
 				<minAttackerLevel>1</minAttackerLevel>
-				<maxAttackerLevel>99</maxAttackerLevel>
-				<chance>5</chance>
+				<maxAttackerLevel>100</maxAttackerLevel>
+				<chance>10</chance>
 				<targetType>SELF</targetType>
 				<minDamage>50</minDamage>
 				<skillId>1618</skillId>
@@ -1250,15 +1273,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1631" toLevel="1" name="Clear Movements">
+	<skill id="1631" toLevel="2" name="Clear Movements">
 		<icon>icon.skill1631</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>80</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">80</value>
+			<value level="2">104</value>
+		</mpConsume>
 		<hitTime>1000</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

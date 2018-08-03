@@ -652,7 +652,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1126" toLevel="37" name="Servitor Recharge">
+	<skill id="1126" toLevel="42" name="Servitor Recharge">
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">227</value>
@@ -735,6 +735,11 @@
 			<value level="35">76</value>
 			<value level="36">77</value>
 			<value level="37">78</value>
+			<value level="38">80</value>
+			<value level="39">81</value>
+			<value level="40">82</value>
+			<value level="41">83</value>
+			<value level="42">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">33</value>
@@ -774,6 +779,11 @@
 			<value level="35">151</value>
 			<value level="36">153</value>
 			<value level="37">155</value>
+			<value level="38">158</value>
+			<value level="39">160</value>
+			<value level="40">162</value>
+			<value level="41">165</value>
+			<value level="42">167</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">9</value>
@@ -813,6 +823,11 @@
 			<value level="35">28</value>
 			<value level="36">28</value>
 			<value level="37">28</value>
+			<value level="38">29</value>
+			<value level="39">29</value>
+			<value level="40">29</value>
+			<value level="41">30</value>
+			<value level="42">30</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -860,11 +875,16 @@
 					<value level="35">137</value>
 					<value level="36">138</value>
 					<value level="37">139</value>
+					<value level="38">141</value>
+					<value level="39">142</value>
+					<value level="40">143</value>
+					<value level="41">144</value>
+					<value level="42">145</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1127" toLevel="48" name="Servitor Heal">
+	<skill id="1127" toLevel="53" name="Servitor Heal">
 		<!-- Confirmed CT2.5 -->
 		<castRange>600</castRange>
 		<effectPoint>
@@ -970,6 +990,11 @@
 			<value level="46">76</value>
 			<value level="47">77</value>
 			<value level="48">78</value>
+			<value level="49">80</value>
+			<value level="50">81</value>
+			<value level="51">82</value>
+			<value level="52">83</value>
+			<value level="53">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">19</value>
@@ -1020,6 +1045,11 @@
 			<value level="46">132</value>
 			<value level="47">134</value>
 			<value level="48">136</value>
+			<value level="49">140</value>
+			<value level="50">142</value>
+			<value level="51">144</value>
+			<value level="52">148</value>
+			<value level="53">150</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">5</value>
@@ -1070,6 +1100,11 @@
 			<value level="46">24</value>
 			<value level="47">24</value>
 			<value level="48">25</value>
+			<value level="49">26</value>
+			<value level="50">26</value>
+			<value level="51">26</value>
+			<value level="52">27</value>
+			<value level="53">27</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -1128,6 +1163,11 @@
 					<value level="46">1096</value>
 					<value level="47">1100</value>
 					<value level="48">1104</value>
+					<value level="49">1108</value>
+					<value level="50">1112</value>
+					<value level="51">1116</value>
+					<value level="52">1120</value>
+					<value level="53">1124</value>
 				</power>
 			</effect>
 		</effects>
@@ -1749,7 +1789,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1148" toLevel="15" name="Death Spike">
+	<skill id="1148" toLevel="20" name="Death Spike">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1792,6 +1832,11 @@
 			<value level="13">74</value>
 			<value level="14">76</value>
 			<value level="15">78</value>
+			<value level="16">80</value>
+			<value level="17">81</value>
+			<value level="18">82</value>
+			<value level="19">83</value>
+			<value level="20">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">19</value>
@@ -1809,6 +1854,11 @@
 			<value level="13">40</value>
 			<value level="14">53</value>
 			<value level="15">55</value>
+			<value level="16">61</value>
+			<value level="17">64</value>
+			<value level="18">67</value>
+			<value level="19">70</value>
+			<value level="20">73</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -1826,6 +1876,11 @@
 			<value level="13">10</value>
 			<value level="14">10</value>
 			<value level="15">10</value>
+			<value level="16">11</value>
+			<value level="17">11</value>
+			<value level="18">11</value>
+			<value level="19">12</value>
+			<value level="20">12</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -1851,6 +1906,11 @@
 					<value level="13">108</value>
 					<value level="14">112</value>
 					<value level="15">115</value>
+					<value level="16">121</value>
+					<value level="17">124</value>
+					<value level="18">127</value>
+					<value level="19">130</value>
+					<value level="20">133</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -2198,7 +2258,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1157" toLevel="5" name="Body To Mind">
+	<skill id="1157" toLevel="6" name="Body To Mind">
 		<effectPoint>
 			<value level="1">243</value>
 			<value level="2">379</value>
@@ -2213,6 +2273,7 @@
 			<value level="3">280</value>
 			<value level="4">318</value>
 			<value level="5">366</value>
+			<value level="6">440</value>
 		</hpConsume>
 		<icon>icon.skill1157</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -2226,6 +2287,7 @@
 			<value level="3">52</value>
 			<value level="4">58</value>
 			<value level="5">66</value>
+			<value level="6">80</value>
 		</magicLvl>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2237,6 +2299,7 @@
 					<value level="3">47</value>
 					<value level="4">53</value>
 					<value level="5">61</value>
+					<value level="6">80</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -3760,7 +3823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1178" toLevel="8" name="Twister">
+	<skill id="1178" toLevel="33" name="Twister">
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -3779,7 +3842,7 @@
 		<icon>icon.skill1178</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
-			<value level="1">17</value>
+			<value level="1">20</value>
 			<value level="2">20</value>
 			<value level="3">23</value>
 			<value level="4">25</value>
@@ -3787,16 +3850,66 @@
 			<value level="6">30</value>
 			<value level="7">33</value>
 			<value level="8">35</value>
+			<value level="9">40</value>
+			<value level="10">42</value>
+			<value level="11">44</value>
+			<value level="12">46</value>
+			<value level="13">48</value>
+			<value level="14">50</value>
+			<value level="15">52</value>
+			<value level="16">54</value>
+			<value level="17">56</value>
+			<value level="18">58</value>
+			<value level="19">60</value>
+			<value level="20">62</value>
+			<value level="21">64</value>
+			<value level="22">66</value>
+			<value level="23">68</value>
+			<value level="24">70</value>
+			<value level="25">72</value>
+			<value level="26">74</value>
+			<value level="27">76</value>
+			<value level="28">78</value>
+			<value level="29">80</value>
+			<value level="30">81</value>
+			<value level="31">82</value>
+			<value level="32">83</value>
+			<value level="33">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">14</value>
-			<value level="2">16</value>
-			<value level="3">17</value>
-			<value level="4">18</value>
-			<value level="5">20</value>
-			<value level="6">21</value>
-			<value level="7">23</value>
-			<value level="8">24</value>
+			<value level="1">18</value>
+			<value level="2">20</value>
+			<value level="3">22</value>
+			<value level="4">23</value>
+			<value level="5">25</value>
+			<value level="6">27</value>
+			<value level="7">29</value>
+			<value level="8">31</value>
+			<value level="9">33</value> <!-- Guessed -->
+			<value level="10">35</value> <!-- Guessed -->
+			<value level="11">37</value> <!-- Guessed -->
+			<value level="12">39</value> <!-- Guessed -->
+			<value level="13">41</value> <!-- Guessed -->
+			<value level="14">43</value> <!-- Guessed -->
+			<value level="15">45</value> <!-- Guessed -->
+			<value level="16">47</value> <!-- Guessed -->
+			<value level="17">49</value> <!-- Guessed -->
+			<value level="18">51</value> <!-- Guessed -->
+			<value level="19">53</value> <!-- Guessed -->
+			<value level="20">54</value> <!-- Guessed -->
+			<value level="21">55</value> <!-- Guessed -->
+			<value level="22">56</value> <!-- Guessed -->
+			<value level="23">57</value> <!-- Guessed -->
+			<value level="24">58</value> <!-- Guessed -->
+			<value level="25">59</value> <!-- Guessed -->
+			<value level="26">60</value> <!-- Guessed -->
+			<value level="27">61</value> <!-- Guessed -->
+			<value level="28">62</value> <!-- Guessed -->
+			<value level="29">63</value> <!-- Guessed -->
+			<value level="30">64</value> <!-- Guessed -->
+			<value level="31">65</value> <!-- Guessed -->
+			<value level="32">66</value> <!-- Guessed -->
+			<value level="33">67</value> <!-- Guessed -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -3807,6 +3920,31 @@
 			<value level="6">6</value>
 			<value level="7">6</value>
 			<value level="8">6</value>
+			<value level="9">7</value> <!-- Guessed -->
+			<value level="10">7</value> <!-- Guessed -->
+			<value level="11">7</value> <!-- Guessed -->
+			<value level="12">8</value> <!-- Guessed -->
+			<value level="13">8</value> <!-- Guessed -->
+			<value level="14">8</value> <!-- Guessed -->
+			<value level="15">9</value> <!-- Guessed -->
+			<value level="16">9</value> <!-- Guessed -->
+			<value level="17">9</value> <!-- Guessed -->
+			<value level="18">10</value> <!-- Guessed -->
+			<value level="19">10</value> <!-- Guessed -->
+			<value level="20">10</value> <!-- Guessed -->
+			<value level="21">11</value> <!-- Guessed -->
+			<value level="22">11</value> <!-- Guessed -->
+			<value level="23">11</value> <!-- Guessed -->
+			<value level="24">12</value> <!-- Guessed -->
+			<value level="25">12</value> <!-- Guessed -->
+			<value level="26">12</value> <!-- Guessed -->
+			<value level="27">13</value> <!-- Guessed -->
+			<value level="28">13</value> <!-- Guessed -->
+			<value level="29">13</value> <!-- Guessed -->
+			<value level="30">14</value> <!-- Guessed -->
+			<value level="31">14</value> <!-- Guessed -->
+			<value level="32">14</value> <!-- Guessed -->
+			<value level="33">15</value> <!-- Guessed -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -3825,6 +3963,31 @@
 					<value level="6">38</value>
 					<value level="7">42</value>
 					<value level="8">44</value>
+					<value level="9">47</value>
+					<value level="10">49</value>
+					<value level="11">51</value>
+					<value level="12">53</value>
+					<value level="13">55</value>
+					<value level="14">57</value>
+					<value level="15">59</value>
+					<value level="16">61</value>
+					<value level="17">63</value>
+					<value level="18">65</value>
+					<value level="19">67</value>
+					<value level="20">69</value>
+					<value level="21">71</value>
+					<value level="22">73</value>
+					<value level="23">75</value>
+					<value level="24">77</value>
+					<value level="25">79</value>
+					<value level="26">81</value>
+					<value level="27">83</value>
+					<value level="28">85</value>
+					<value level="29">87</value>
+					<value level="30">89</value>
+					<value level="31">91</value>
+					<value level="32">93</value>
+					<value level="33">95</value>
 				</power>
 			</effect>
 		</effects>

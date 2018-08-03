@@ -2777,7 +2777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1542" toLevel="1" name="Counter Critical">
+	<skill id="1542" toLevel="2" name="Counter Critical">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL</abnormalType>
@@ -2787,8 +2787,14 @@
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1542</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>80</magicLvl>
-		<mpConsume>73</mpConsume>
+		<magicLvl>
+			<value level="1">80</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">73</value>
+			<value level="2">81</value>
+		</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -2810,7 +2816,10 @@
 				<skillLevel>1</skillLevel>
 			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>-30</amount>
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -2941,11 +2950,13 @@
 			<effect name="Fear" />
 		</effects>
 	</skill>
-	<skill id="1547" toLevel="3" name="Spirit Sharing">
+	<skill id="1547" toLevel="5" name="Spirit Sharing">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">4</value>
 		</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPIRIT_SHARING</abnormalType>
@@ -2961,16 +2972,22 @@
 			<value level="1">44</value>
 			<value level="2">62</value>
 			<value level="3">70</value>
+			<value level="4">78</value>
+			<value level="5">82</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">31</value>
-			<value level="2">46</value>
-			<value level="3">52</value>
+			<value level="1">39</value>
+			<value level="2">58</value>
+			<value level="3">65</value>
+			<value level="4">78</value>
+			<value level="5">86</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">8</value>
 			<value level="2">12</value>
 			<value level="3">13</value>
+			<value level="3">15</value>
+			<value level="3">17</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -2982,51 +2999,63 @@
 		<effects>
 			<effect name="PAtk">
 				<amount>
-					<value level="1">3</value>
-					<value level="2">4</value>
-					<value level="3">5</value>
+					<value level="1">4</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
 				<amount>
-					<value level="1">3</value>
-					<value level="2">4</value>
-					<value level="3">5</value>
+					<value level="1">4</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>
-					<value level="1">2</value>
-					<value level="2">5</value>
-					<value level="3">7</value>
+					<value level="1">4</value>
+					<value level="2">7</value>
+					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>
-					<value level="1">1</value>
-					<value level="2">3</value>
-					<value level="3">5</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalSkillPower">
-				<amount>
-					<value level="1">5</value>
+					<value level="1">4</value>
 					<value level="2">7</value>
 					<value level="3">10</value>
+					<value level="4">12</value>
+					<value level="5">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
 				<amount>
-					<value level="1">5</value>
-					<value level="2">7</value>
-					<value level="3">10</value>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">40</value>
 				</amount>
-				<mode>PER</mode>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+					<value level="4">40</value>
+					<value level="5">40</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -3162,14 +3191,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1552" toLevel="1" name="Mass Vitalize">
+	<skill id="1552" toLevel="2" name="Mass Vitalize">
 		<affectRange>1000</affectRange>
 		<effectPoint>1261</effectPoint>
 		<hitTime>4000</hitTime>
 		<icon>icon.skill1552</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>154</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">193</value>
+			<value level="2">212</value>
+		</mpConsume>
 		<mpInitialConsume>39</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>9000</reuseDelay>
@@ -3180,14 +3215,17 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="Heal">
-				<power>796</power>
+				<power>
+					<value level="1">796</value>
+					<value level="2">875</value>
+				</power>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>POISON,10;BLEEDING,10</dispel>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1553" toLevel="1" name="Chain Heal">
+	<skill id="1553" toLevel="2" name="Chain Heal">
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -3196,10 +3234,19 @@
 		<hitTime>3000</hitTime>
 		<icon>icon.skill1553</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>4</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">4</value>
+			<value level="2">6</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>78</magicLvl>
-		<mpConsume>194</mpConsume>
+		<magicLvl>
+			<value level="1">78</value>
+			<value level="2">82</value>
+		</magicLvl>
+		<mpConsume>		
+			<value level="1">194</value>
+			<value level="2">214</value>
+		</mpConsume>
 		<mpInitialConsume>39</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -3210,7 +3257,10 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="HealPercent">
-				<power>30</power>
+				<power>
+					<value level="1">30</value>
+					<value level="2">35</value>
+				</power>
 			</effect>
 		</effects>
 	</skill>

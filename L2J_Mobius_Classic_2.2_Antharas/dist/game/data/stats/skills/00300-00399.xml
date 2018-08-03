@@ -50,7 +50,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="302" toLevel="11" name="Spoil Festival">
+	<skill id="302" toLevel="14" name="Spoil Festival">
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -82,6 +82,9 @@
 			<value level="9">74</value>
 			<value level="10">76</value>
 			<value level="11">78</value>	
+			<value level="12">80</value>	
+			<value level="13">82</value>	
+			<value level="14">84</value>	
 		</magicLvl>
 		<mpConsume>
 			<value level="1">73</value>
@@ -95,6 +98,9 @@
 			<value level="9">204</value>
 			<value level="10">224</value>
 			<value level="11">225</value>
+			<value level="12">245</value>	
+			<value level="13">255</value>	
+			<value level="14">265</value>	
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -159,7 +165,7 @@
 	</skill>
 	<skill id="304" toLevel="1" name="Song of Vitality">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_VITALITY</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>611</effectPoint>
@@ -185,7 +191,7 @@
 	</skill>
 	<skill id="305" toLevel="1" name="Song of Vengeance">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_VENGEANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>655</effectPoint>
@@ -210,7 +216,7 @@
 	</skill>
 	<skill id="306" toLevel="1" name="Flame Guard's Song">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_FLAME_GUARD</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>582</effectPoint>
@@ -236,7 +242,7 @@
 	</skill>
 	<skill id="307" toLevel="1" name="Dance of Aqua Guard">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_AQUA_GUARD</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>635</effectPoint>
@@ -270,7 +276,7 @@
 	</skill>
 	<skill id="308" toLevel="1" name="Storm Guard's Song">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_STORM_GUARD</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>635</effectPoint>
@@ -296,7 +302,7 @@
 	</skill>
 	<skill id="309" toLevel="1" name="Dance of Earth Guard">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_EARTH_GUARD</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>582</effectPoint>
@@ -330,7 +336,7 @@
 	</skill>
 	<skill id="310" toLevel="1" name="Dance of the Vampire">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>655</effectPoint>
@@ -364,7 +370,7 @@
 	</skill>
 	<skill id="311" toLevel="1" name="Dance of Protection">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_PROTECTION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>611</effectPoint>
@@ -479,7 +485,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="313" toLevel="8" name="Snipe">
+	<skill id="313" toLevel="9" name="Snipe">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -489,6 +495,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
+			<value level="9">9</value>
 		</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
@@ -513,6 +520,7 @@
 			<value level="6">70</value>
 			<value level="7">72</value>
 			<value level="8">74</value>
+			<value level="9">80</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">28</value>
@@ -523,6 +531,7 @@
 			<value level="6">33</value>
 			<value level="7">34</value>
 			<value level="8">34</value>
+			<value level="9">35</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>75000</reuseDelay>
@@ -550,6 +559,7 @@
 					<value level="6">177</value>
 					<value level="7">188</value>
 					<value level="8">199</value>
+					<value level="9">210</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -566,6 +576,7 @@
 					<value level="6">5</value>
 					<value level="7">6</value>
 					<value level="8">6</value>
+					<value level="9">6</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -582,6 +593,7 @@
 					<value level="6">150</value>
 					<value level="7">200</value>
 					<value level="8">200</value>
+					<value level="9">200</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -1631,14 +1643,20 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="344" toLevel="1" name="Lethal Blow">
+	<skill id="344" toLevel="2" name="Lethal Blow">
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1800</hitTime>
 		<icon>icon.skill0344</icon>
-		<magicLvl>76</magicLvl>
-		<mpConsume>85</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">82</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">85</value>
+			<value level="2">95</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -1657,7 +1675,10 @@
 		</conditions>
 		<effects>
 			<effect name="FatalBlow">
-				<power>5773</power>
+				<power>
+					<value level="1">7148</value>
+					<value level="2">8577</value>
+				</power>
 				<criticalChance>20</criticalChance>
 				<chanceBoost>300</chanceBoost>
 				<overHit>true</overHit>
@@ -1668,8 +1689,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="345" toLevel="3" name="Sonic Rage">
-		<abnormalLvl>4</abnormalLvl>
+	<skill id="345" toLevel="5" name="Sonic Rage">
+		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>80</activateRate>
@@ -1683,11 +1704,15 @@
 			<value level="1">76</value>
 			<value level="2">78</value>
 			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">55</value>
 			<value level="3">56</value>
+			<value level="4">57</value>
+			<value level="5">58</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1700,6 +1725,7 @@
 			<condition name="EquipWeapon">
 				<weaponType>
 					<item>SWORD</item>
+					<item>POLE</item>
 					<item>BLUNT</item>
 					<item>DUALFIST</item>
 					<item>DUAL</item>
@@ -1712,13 +1738,15 @@
 					<value level="1">195</value>
 					<value level="2">205</value>
 					<value level="3">215</value>
+					<value level="4">225</value>
+					<value level="5">235</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="1" toLevel="3">
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="5">
 				<amount>
-					<value fromLevel="1" toLevel="3">-23</value>
+					<value fromLevel="1" toLevel="5">-23</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1729,7 +1757,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="346" toLevel="3" name="Raging Force">
+	<skill id="346" toLevel="5" name="Raging Force">
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
 		<effectRange>1100</effectRange>
@@ -1740,11 +1768,15 @@
 			<value level="1">76</value>
 			<value level="2">78</value>
 			<value level="3">80</value>
+			<value level="4">82</value>
+			<value level="5">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
 			<value level="2">55</value>
 			<value level="3">56</value>
+			<value level="4">57</value>
+			<value level="5">58</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1769,7 +1801,15 @@
 					<value level="1">195</value>
 					<value level="2">205</value>
 					<value level="3">215</value>
+					<value level="4">225</value>
+					<value level="5">235</value>
 				</power>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="5">
+				<amount>
+					<value fromLevel="1" toLevel="5">-23</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 		<selfEffects>
@@ -1816,15 +1856,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="348" toLevel="1" name="Spoil Crush">
+	<skill id="348" toLevel="2" name="Spoil Crush">
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0348</icon>
-		<magicLvl>77</magicLvl>
-		<mpConsume>70</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">83</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">70</value>
+			<value level="2">80</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -1851,7 +1897,7 @@
 	</skill>
 	<skill id="349" toLevel="1" name="Song of Renewal">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_RENEWAL</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>666</effectPoint>
@@ -2293,8 +2339,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="361" toLevel="2" name="Stun Blast">
-		<abnormalLvl>2</abnormalLvl>
+	<skill id="361" toLevel="3" name="Stun Blast">
+		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -2312,14 +2358,17 @@
 		<hpConsume>
 			<value level="1">-507</value>
 			<value level="2">-558</value>
+			<value level="3">-609</value>
 		</hpConsume>
 		<magicLvl>
 			<value level="1">77</value>
 			<value level="2">80</value>
+			<value level="2">83</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">53</value>
 			<value level="2">58</value>
+			<value level="3">63</value>
 		</mpConsume>
 		<icon>icon.skill0361</icon>
 		<isDebuff>true</isDebuff>
@@ -2349,6 +2398,7 @@
 			<power>
  				<value level="1">2486</value>
 				<value level="2">2731</value>
+				<value level="3">2991</value>
 			</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
@@ -2419,7 +2469,7 @@
 	</skill>
 	<skill id="363" toLevel="1" name="Song of Meditation">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_MEDITATION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>666</effectPoint>
@@ -2450,7 +2500,7 @@
 	</skill>
 	<skill id="364" toLevel="1" name="Champion Song">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>SONG_OF_CHAMPION</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
@@ -2492,7 +2542,7 @@
 	</skill>
 	<skill id="365" toLevel="1" name="Dance of Siren">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
@@ -2525,7 +2575,7 @@
 	</skill>
 	<skill id="366" toLevel="1" name="Dance of Shadows">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>120</abnormalTime>
+		<abnormalTime>300</abnormalTime>
 		<abnormalType>DANCE_OF_SHADOW</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<affectRange>1000</affectRange>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1" toLevel="40" name="Triple Slash">
+	<skill id="1" toLevel="45" name="Triple Slash">
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
 		<effectPoint>
@@ -89,6 +89,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">42</value>
@@ -131,6 +136,11 @@
 			<value level="38">95</value>
 			<value level="39">96</value>
 			<value level="40">97</value>
+			<value level="41">99</value>
+			<value level="42">100</value>
+			<value level="43">101</value>
+			<value level="44">102</value>
+			<value level="45">103</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -190,6 +200,11 @@
 					<value level="38">2581</value>
 					<value level="39">2604</value>
 					<value level="40">2627</value>
+					<value level="41">2673</value>
+					<value level="42">2696</value>
+					<value level="43">2719</value>
+					<value level="44">2742</value>
+					<value level="45">2765</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
@@ -562,7 +577,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6" toLevel="40" name="Sonic Blaster">
+	<skill id="6" toLevel="45" name="Sonic Blaster">
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-183</value>
@@ -650,6 +665,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -692,6 +712,11 @@
 			<value level="38">122</value>
 			<value level="39">123</value>
 			<value level="40">124</value>
+			<value level="41">126</value>
+			<value level="42">127</value>
+			<value level="43">128</value>
+			<value level="44">129</value>
+			<value level="45">130</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -754,6 +779,11 @@
 					<value level="38">1843</value>
 					<value level="39">1860</value>
 					<value level="40">1876</value>
+					<value level="41">1908</value>
+					<value level="42">1924</value>
+					<value level="43">1940</value>
+					<value level="44">1956</value>
+					<value level="45">1972</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -2033,7 +2063,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18" toLevel="40" name="Aggression Aura">
+	<skill id="18" toLevel="45" name="Aggression Aura">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2126,6 +2156,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -2168,6 +2203,11 @@
 			<value level="38">112</value>
 			<value level="39">113</value>
 			<value level="40">114</value>
+			<value level="41">116</value>
+			<value level="42">117</value>
+			<value level="43">118</value>
+			<value level="44">119</value>
+			<value level="45">120</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>40000</reuseDelay>
@@ -2183,7 +2223,7 @@
 			<effect name="GetAgro" />
 		</effects>
 	</skill>
-	<skill id="19" toLevel="40" name="Double Shot">
+	<skill id="19" toLevel="45" name="Double Shot">
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
 		<effectPoint>
@@ -2272,6 +2312,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">72</value>
@@ -2314,6 +2359,11 @@
 			<value level="38">165</value>
 			<value level="39">167</value>
 			<value level="40">169</value>
+			<value level="41">173</value>
+			<value level="42">175</value>
+			<value level="43">177</value>
+			<value level="44">179</value>
+			<value level="45">181</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2371,6 +2421,11 @@
 					<value level="38">4915</value>
 					<value level="39">4959</value>
 					<value level="40">5003</value>
+					<value level="41">5089</value>
+					<value level="42">5132</value>
+					<value level="43">5175</value>
+					<value level="44">5218</value>
+					<value level="45">5261</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
@@ -2847,7 +2902,7 @@
 			<effect name="OpenChest" />
 		</effects>
 	</skill>
-	<skill id="28" toLevel="52" name="Aggression">
+	<skill id="28" toLevel="57" name="Aggression">
 		<!-- Confirmed CT2.5 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3071,6 +3126,11 @@
 			<value level="50">76</value>
 			<value level="51">77</value>
 			<value level="52">78</value>
+			<value level="53">80</value>
+			<value level="54">81</value>
+			<value level="55">82</value>
+			<value level="56">83</value>
+			<value level="57">84</value>
 		</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
@@ -3189,7 +3249,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30" toLevel="40" name="Backstab">
+	<skill id="30" toLevel="45" name="Backstab">
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3278,6 +3338,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">54</value>
@@ -3320,6 +3385,11 @@
 			<value level="38">123</value>
 			<value level="39">125</value>
 			<value level="40">127</value>
+			<value level="41">131</value>
+			<value level="42">133</value>
+			<value level="43">135</value>
+			<value level="44">137</value>
+			<value level="45">139</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3339,46 +3409,51 @@
 		<effects>
 			<effect name="Backstab">
 				<power>
-					<value level="1">1107</value>
-					<value level="2">1176</value>
-					<value level="3">1249</value>
-					<value level="4">1325</value>
-					<value level="5">1405</value>
-					<value level="6">1488</value>
-					<value level="7">1574</value>
-					<value level="8">1664</value>
-					<value level="9">1757</value>
-					<value level="10">1853</value>
-					<value level="11">1953</value>
-					<value level="12">2057</value>
-					<value level="13">2164</value>
-					<value level="14">2274</value>
-					<value level="15">2388</value>
-					<value level="16">2505</value>
-					<value level="17">2625</value>
-					<value level="18">2748</value>
-					<value level="19">2875</value>
-					<value level="20">3004</value>
-					<value level="21">3136</value>
-					<value level="22">3271</value>
-					<value level="23">3408</value>
-					<value level="24">3548</value>
-					<value level="25">3690</value>
-					<value level="26">3834</value>
-					<value level="27">3980</value>
-					<value level="28">4127</value>
-					<value level="29">4275</value>
-					<value level="30">4425</value>
-					<value level="31">4575</value>
-					<value level="32">4726</value>
-					<value level="33">4878</value>
-					<value level="34">5029</value>
-					<value level="35">5180</value>
-					<value level="36">5330</value>
-					<value level="37">5479</value>
-					<value level="38">6317</value>
-					<value level="39">6332</value>
-					<value level="40">6498</value>
+					<value level="1">1273</value>
+					<value level="2">1352</value>
+					<value level="3">1436</value>
+					<value level="4">1524</value>
+					<value level="5">1616</value>
+					<value level="6">1711</value>
+					<value level="7">1810</value>
+					<value level="8">1914</value>
+					<value level="9">2021</value>
+					<value level="10">2131</value>
+					<value level="11">2246</value>
+					<value level="12">2366</value>
+					<value level="13">2489</value>
+					<value level="14">2615</value>
+					<value level="15">2746</value>
+					<value level="16">2881</value>
+					<value level="17">3019</value>
+					<value level="18">3160</value>
+					<value level="19">3306</value>
+					<value level="20">3455</value>
+					<value level="21">3606</value>
+					<value level="22">3762</value>
+					<value level="23">3919</value>
+					<value level="24">4080</value>
+					<value level="25">4244</value>
+					<value level="26">4409</value>
+					<value level="27">4577</value>
+					<value level="28">4746</value>
+					<value level="29">4916</value>
+					<value level="30">5089</value>
+					<value level="31">5261</value>
+					<value level="32">5435</value>
+					<value level="33">5610</value>
+					<value level="34">5783</value>
+					<value level="35">5957</value>
+					<value level="36">6130</value>
+					<value level="37">6301</value>
+					<value level="38">6461</value>
+					<value level="39">6621</value>
+					<value level="40">6781</value>
+					<value level="41">7081</value>
+					<value level="42">7231</value>
+					<value level="43">7381</value>
+					<value level="44">7531</value>
+					<value level="45">7681</value>
 				</power>
 				<criticalChance>
 					<value level="1">5</value>
@@ -3421,6 +3496,11 @@
 					<value level="38">15</value>
 					<value level="39">15</value>
 					<value level="40">15</value>
+					<value level="41">15</value>
+					<value level="42">15</value>
+					<value level="43">15</value>
+					<value level="44">15</value>
+					<value level="45">15</value>
 				</criticalChance>
 				<chanceBoost>400</chanceBoost>
 				<overHit>true</overHit>
@@ -3467,6 +3547,11 @@
 					<value level="38">15</value>
 					<value level="39">15</value>
 					<value level="40">15</value>
+					<value level="41">15</value>
+					<value level="42">15</value>
+					<value level="43">15</value>
+					<value level="44">15</value>
+					<value level="45">15</value>
 				</halfLethal>
 			</effect>
 		</effects>
@@ -4719,7 +4804,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="54" toLevel="52" name="Force Blaster">
+	<skill id="54" toLevel="57" name="Force Blaster">
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-130</value>
@@ -4831,6 +4916,11 @@
 			<value level="50">76</value>
 			<value level="51">77</value>
 			<value level="52">78</value>
+			<value level="53">80</value>
+			<value level="54">81</value>
+			<value level="55">82</value>
+			<value level="56">83</value>
+			<value level="57">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -4885,6 +4975,11 @@
 			<value level="50">67</value>
 			<value level="51">68</value>
 			<value level="52">69</value>
+			<value level="53">71</value>
+			<value level="54">72</value>
+			<value level="55">73</value>
+			<value level="56">74</value>
+			<value level="57">75</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -4956,6 +5051,11 @@
 					<value level="50">2151</value>
 					<value level="51">2170</value>
 					<value level="52">2189</value>
+					<value level="53">2227</value>
+					<value level="54">2246</value>
+					<value level="55">2265</value>
+					<value level="56">2284</value>
+					<value level="57">2303</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
@@ -5449,7 +5549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="65" toLevel="15" name="Horror">
+	<skill id="65" toLevel="18" name="Horror">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -5496,6 +5596,9 @@
 			<value level="13">74</value>
 			<value level="14">76</value>
 			<value level="15">78</value>
+			<value level="16">80</value>
+			<value level="17">82</value>
+			<value level="18">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -5513,6 +5616,9 @@
 			<value level="13">28</value>
 			<value level="14">39</value>
 			<value level="15">42</value>
+			<value level="16">45</value>
+			<value level="17">48</value>
+			<value level="18">51</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">5</value>
@@ -5530,6 +5636,9 @@
 			<value level="13">7</value>
 			<value level="14">8</value>
 			<value level="15">8</value>
+			<value level="16">9</value>
+			<value level="17">9</value>
+			<value level="18">9</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -6254,12 +6363,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="78" toLevel="2" name="War Cry">
+	<skill id="78" toLevel="4" name="War Cry">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLvl>
-		<abnormalTime>60</abnormalTime>
+		<abnormalTime>
+			<value level="1">120</value>
+			<value level="2">120</value>
+			<value level="3">150</value>
+			<value level="4">180</value>
+		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>
 			<value level="1">204</value>
@@ -6270,10 +6386,14 @@
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">43</value>
+			<value level="3">80</value>
+			<value level="4">83</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">10</value>
 			<value level="2">19</value>
+			<value level="3">28</value>
+			<value level="4">38</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>45000</reuseDelay>
@@ -6287,6 +6407,8 @@
 				<amount>
 					<value level="1">20</value>
 					<value level="2">25</value>
+					<value level="3">25</value>
+					<value level="4">25</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -6456,12 +6578,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="84" toLevel="4" name="Poison Blade Dance">
+	<skill id="84" toLevel="5" name="Poison Blade Dance">
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
 			<value level="3">8</value>
 			<value level="4">9</value>
+			<value level="5">10</value>
 		</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -6487,12 +6610,14 @@
 			<value level="2">60</value>
 			<value level="3">72</value>
 			<value level="4">78</value>
+			<value level="5">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">38</value>
 			<value level="2">42</value>
 			<value level="3">50</value>
 			<value level="4">55</value>
+			<value level="5">65</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -6520,6 +6645,7 @@
 					<value level="2">58</value>
 					<value level="3">63</value>
 					<value level="4">69</value>
+					<value level="5">76</value> <!-- Guessed -->
 				</power>
 				<ticks>5</ticks>
 			</effect>
@@ -6660,7 +6786,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="92" toLevel="55" name="Shield Stun">
+	<skill id="92" toLevel="60" name="Shield Stun">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -6787,6 +6913,11 @@
 			<value level="53">76</value>
 			<value level="54">77</value>
 			<value level="55">78</value>
+			<value level="56">80</value>
+			<value level="57">81</value>
+			<value level="58">82</value>
+			<value level="59">83</value>
+			<value level="60">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">10</value>
@@ -6844,6 +6975,11 @@
 			<value level="53">41</value>
 			<value level="54">42</value>
 			<value level="55">42</value>
+			<value level="56">45</value>
+			<value level="57">46</value>
+			<value level="58">47</value>
+			<value level="59">48</value>
+			<value level="60">49</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -7277,7 +7413,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="98" toLevel="6" name="Sword Symphony">
+	<skill id="98" toLevel="8" name="Sword Symphony">
 		<!-- Glory Days Confirmed -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -7306,6 +7442,8 @@
 			<value level="4">68</value>
 			<value level="5">72</value>
 			<value level="6">76</value>
+			<value level="7">80</value>
+			<value level="8">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -7314,6 +7452,8 @@
 			<value level="4">73</value>
 			<value level="5">77</value>
 			<value level="6">85</value>
+			<value level="7">93</value>
+			<value level="8">97</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -7332,6 +7472,8 @@
 					<value level="4">1373</value>
 					<value level="5">1554</value>
 					<value level="6">1726</value> <!-- Guessed -->
+					<value level="7">2109</value> <!-- Confirmed https://eu.4gameforum.com/threads/654631/ -->
+					<value level="8">2298</value> <!-- Confirmed https://eu.4gameforum.com/threads/654631/ -->
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>

@@ -313,14 +313,23 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1406" toLevel="1" name="Summon Feline King">
+	<skill id="1406" toLevel="2" name="Summon Feline King">
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1406</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>12</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">12</value>
+			<value level="2">14</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>144</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>		
+		</magicLvl>
+		<mpConsume>
+			<value level="1">144</value>
+			<value level="2">159</value>
+		</mpConsume>
 		<mpInitialConsume>29</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -337,14 +346,23 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1407" toLevel="1" name="Summon Magnus the Unicorn">
+	<skill id="1407" toLevel="2" name="Summon Magnus the Unicorn">
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1407</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>12</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">12</value>
+			<value level="2">14</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>144</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>		
+		</magicLvl>
+		<mpConsume>
+			<value level="1">144</value>
+			<value level="2">159</value>
+		</mpConsume>
 		<mpInitialConsume>29</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -361,17 +379,29 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1408" toLevel="1" name="Summon Spectral Lord">
+	<skill id="1408" toLevel="2" name="Summon Spectral Lord">
 		<hitTime>6000</hitTime>
 		<icon>icon.skill1408</icon>
 		<inheritElementals>true</inheritElementals>
 		<inheritPercent>1.00</inheritPercent>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>12</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">12</value>
+			<value level="1">14</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>77</magicLvl>
-		<mpConsume>144</mpConsume>
-		<mpInitialConsume>29</mpInitialConsume>
+		<magicLvl>
+			<value level="1">1</value>
+			<value level="1">2</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">144</value>
+			<value level="1">159</value>
+		</mpConsume>
+		<mpInitialConsume>
+			<value level="1">29</value>
+			<value level="1">30</value>
+		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -584,9 +614,9 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1414" toLevel="1" name="Victories of Pa'agrio">
+	<skill id="1414" toLevel="2" name="Victories of Pa'agrio">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
+		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectLimit>50-100</affectLimit>
 		<affectRange>1000</affectRange>
@@ -594,10 +624,19 @@
 		<hitTime>2500</hitTime>
 		<icon>icon.skill1414</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<itemConsumeCount>60</itemConsumeCount>
+		<itemConsumeCount>
+			<value level="1">60</value>
+			<value level="1">70</value>
+		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
-		<magicLvl>76</magicLvl>
-		<mpConsume>284</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="1">82</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">284</value>
+			<value level="1">313</value>
+		</mpConsume>
 		<mpInitialConsume>57</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
@@ -609,11 +648,17 @@
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="MaxCp">
-				<amount>10</amount>
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CpRegen">
-				<amount>20</amount>
+				<amount>
+					<value level="1">20</value>
+					<value level="2">40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -633,11 +678,17 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
@@ -649,11 +700,17 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalRate">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicCriticalRate">
-				<amount>15</amount>
+				<amount>
+					<value level="1">15</value>
+					<value level="2">20</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
@@ -2742,7 +2799,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1451" toLevel="1" name="Fire Vortex Buster">
+	<skill id="1451" toLevel="2" name="Fire Vortex Buster">
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
@@ -2751,8 +2808,14 @@
 		<hitTime>2000</hitTime>
 		<icon>icon.skill1451</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>78</magicLvl>
-		<mpConsume>118</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">118</value>
+			<value level="2">134</value>
+		</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -2769,7 +2832,10 @@
 		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>175</power>
+				<power>
+					<value level="1">175</value>
+					<value level="2">205</value>
+				</power>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>MULTI_DEBUFF_FIRE,9</dispel>
@@ -2810,7 +2876,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1453" toLevel="1" name="Ice Vortex Crusher">
+	<skill id="1453" toLevel="2" name="Ice Vortex Crusher">
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
@@ -2819,8 +2885,14 @@
 		<hitTime>2000</hitTime>
 		<icon>icon.skill1453</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>78</magicLvl>
-		<mpConsume>118</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">118</value>
+			<value level="2">134</value>
+		</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -2837,7 +2909,10 @@
 		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>175</power>
+				<power>
+					<value level="1">175</value>
+					<value level="2">205</value>
+				</power>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>MULTI_DEBUFF_WATER,9</dispel>
@@ -2911,7 +2986,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1456" toLevel="1" name="Wind Vortex Slug">
+	<skill id="1456" toLevel="2" name="Wind Vortex Slug">
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
@@ -2920,8 +2995,14 @@
 		<hitTime>2000</hitTime>
 		<icon>icon.skill1456</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>78</magicLvl>
-		<mpConsume>118</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">118</value>
+			<value level="2">134</value>
+		</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -2938,7 +3019,10 @@
 		</conditions>
 		<effects>
 			<effect name="MagicalAttack">
-				<power>175</power>
+				<power>
+					<value level="1">175</value>
+					<value level="2">205</value>
+				</power>
 			</effect>
 			<effect name="DispelBySlot">
 				<dispel>MULTI_DEBUFF_WIND,9</dispel>

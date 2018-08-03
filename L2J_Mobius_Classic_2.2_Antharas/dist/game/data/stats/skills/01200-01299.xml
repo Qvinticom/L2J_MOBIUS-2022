@@ -770,48 +770,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1217" toLevel="36" name="Greater Heal">
-		<abnormalLvl>
-			<value level="1">2</value>
-			<value level="2">2</value>
-			<value level="3">2</value>
-			<value level="4">3</value>
-			<value level="5">3</value>
-			<value level="6">3</value>
-			<value level="7">3</value>
-			<value level="8">4</value>
-			<value level="9">4</value>
-			<value level="10">4</value>
-			<value level="11">4</value>
-			<value level="12">4</value>
-			<value level="13">4</value>
-			<value level="14">4</value>
-			<value level="15">5</value>
-			<value level="16">5</value>
-			<value level="17">5</value>
-			<value level="18">5</value>
-			<value level="19">5</value>
-			<value level="20">5</value>
-			<value level="21">5</value>
-			<value level="22">5</value>
-			<value level="23">6</value>
-			<value level="24">6</value>
-			<value level="25">6</value>
-			<value level="26">6</value>
-			<value level="27">6</value>
-			<value level="28">6</value>
-			<value level="29">6</value>
-			<value level="30">6</value>
-			<value level="31">6</value>
-			<value level="32">7</value>
-			<value level="33">7</value>
-			<value level="34">7</value>
-			<value level="35">7</value>
-			<value level="36">7</value>
-		</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
-		<activateRate>0</activateRate>
+	<skill id="1217" toLevel="41" name="Greater Heal">
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">236</value>
@@ -892,6 +851,11 @@
 			<value level="34">76</value>
 			<value level="35">77</value>
 			<value level="36">78</value>
+			<value level="37">80</value>
+			<value level="38">81</value>
+			<value level="39">82</value>
+			<value level="40">83</value>
+			<value level="41">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">58</value>
@@ -930,6 +894,11 @@
 			<value level="34">132</value>
 			<value level="35">134</value>
 			<value level="36">136</value>
+			<value level="37">140</value>
+			<value level="38">142</value>
+			<value level="39">144</value>
+			<value level="40">146</value>
+			<value level="41">148</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">12</value>
@@ -968,8 +937,13 @@
 			<value level="34">24</value>
 			<value level="35">24</value>
 			<value level="36">25</value>
+			<value level="37">25</value>
+			<value level="38">25</value>
+			<value level="39">25</value>
+			<value level="40">26</value>
+			<value level="41">26</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
@@ -977,47 +951,6 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="HealOverTime">
-				<power>
-					<value level="1">14</value>
-					<value level="2">15</value>
-					<value level="3">15</value>
-					<value level="4">16</value>
-					<value level="5">17</value>
-					<value level="6">17</value>
-					<value level="7">18</value>
-					<value level="8">19</value>
-					<value level="9">19</value>
-					<value level="10">20</value>
-					<value level="11">21</value>
-					<value level="12">22</value>
-					<value level="13">23</value>
-					<value level="14">23</value>
-					<value level="15">24</value>
-					<value level="16">24</value>
-					<value level="17">25</value>
-					<value level="18">25</value>
-					<value level="19">26</value>
-					<value level="20">26</value>
-					<value level="21">27</value>
-					<value level="22">27</value>
-					<value level="23">28</value>
-					<value level="24">28</value>
-					<value level="25">29</value>
-					<value level="26">29</value>
-					<value level="27">30</value>
-					<value level="28">30</value>
-					<value level="29">30</value>
-					<value level="30">31</value>
-					<value level="31">31</value>
-					<value level="32">32</value>
-					<value level="33">32</value>
-					<value level="34">33</value>
-					<value level="35">33</value>
-					<value level="36">34</value>
-				</power>
-				<ticks>1</ticks>
-			</effect>
 			<effect name="Heal">
 				<power>
 					<value level="1">326</value>
@@ -1056,11 +989,16 @@
 					<value level="34">763</value>
 					<value level="35">771</value>
 					<value level="36">779</value>
+					<value level="37">812</value>
+					<value level="38">824</value>
+					<value level="39">836</value>
+					<value level="40">848</value>
+					<value level="41">860</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1218" toLevel="36" name="Greater Battle Heal">
+	<skill id="1218" toLevel="41" name="Greater Battle Heal">
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1141,6 +1079,11 @@
 			<value level="34">76</value>
 			<value level="35">77</value>
 			<value level="36">78</value>
+			<value level="37">80</value>
+			<value level="38">81</value>
+			<value level="39">82</value>
+			<value level="40">83</value>
+			<value level="41">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">87</value>
@@ -1179,6 +1122,11 @@
 			<value level="34">197</value>
 			<value level="35">199</value>
 			<value level="36">201</value>
+			<value level="37">212</value>
+			<value level="38">215</value>
+			<value level="39">218</value>
+			<value level="40">221</value>
+			<value level="41">224</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">18</value>
@@ -1217,6 +1165,11 @@
 			<value level="34">36</value>
 			<value level="35">36</value>
 			<value level="36">37</value>
+			<value level="37">37</value>
+			<value level="38">37</value>
+			<value level="39">37</value>
+			<value level="40">38</value>
+			<value level="41">38</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -1263,52 +1216,16 @@
 					<value level="34">863</value>
 					<value level="35">868</value>
 					<value level="36">873</value>
+					<value level="37">890</value>
+					<value level="38">903</value>
+					<value level="39">916</value>
+					<value level="40">929</value>
+					<value level="41">941</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1219" toLevel="36" name="Greater Group Heal">
-		<abnormalLvl>
-			<value level="1">1</value>
-			<value level="2">1</value>
-			<value level="3">1</value>
-			<value level="4">2</value>
-			<value level="5">2</value>
-			<value level="6">2</value>
-			<value level="7">2</value>
-			<value level="8">2</value>
-			<value level="9">3</value>
-			<value level="10">3</value>
-			<value level="11">3</value>
-			<value level="12">3</value>
-			<value level="13">3</value>
-			<value level="14">4</value>
-			<value level="15">4</value>
-			<value level="16">4</value>
-			<value level="17">4</value>
-			<value level="18">4</value>
-			<value level="19">4</value>
-			<value level="20">4</value>
-			<value level="21">4</value>
-			<value level="22">4</value>
-			<value level="23">4</value>
-			<value level="24">4</value>
-			<value level="25">4</value>
-			<value level="26">4</value>
-			<value level="27">5</value>
-			<value level="28">5</value>
-			<value level="29">5</value>
-			<value level="30">5</value>
-			<value level="31">5</value>
-			<value level="32">5</value>
-			<value level="33">5</value>
-			<value level="34">5</value>
-			<value level="35">5</value>
-			<value level="36">5</value>
-		</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>LIFE_FORCE_OTHERS</abnormalType>
-		<activateRate>0</activateRate>
+	<skill id="1219" toLevel="41" name="Greater Group Heal">
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">202</value>
@@ -1388,6 +1305,11 @@
 			<value level="34">76</value>
 			<value level="35">77</value>
 			<value level="36">78</value>
+			<value level="37">80</value>
+			<value level="38">81</value>
+			<value level="39">82</value>
+			<value level="40">83</value>
+			<value level="41">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">115</value>
@@ -1426,6 +1348,11 @@
 			<value level="34">263</value>
 			<value level="35">265</value>
 			<value level="36">267</value>
+			<value level="37">293</value>
+			<value level="38">299</value>
+			<value level="39">305</value>
+			<value level="40">310</value>
+			<value level="41">316</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">23</value>
@@ -1464,8 +1391,13 @@
 			<value level="34">48</value>
 			<value level="35">49</value>
 			<value level="36">49</value>
+			<value level="37">49</value>
+			<value level="38">50</value>
+			<value level="39">50</value>
+			<value level="40">50</value>
+			<value level="41">51</value>
 		</mpInitialConsume>
-		<operateType>A2</operateType>
+		<operateType>A1</operateType>
 		<reuseDelay>6000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
@@ -1474,47 +1406,6 @@
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
-			<effect name="HealOverTime">
-				<power>
-					<value level="1">11</value>
-					<value level="2">12</value>
-					<value level="3">12</value>
-					<value level="4">13</value>
-					<value level="5">13</value>
-					<value level="6">14</value>
-					<value level="7">15</value>
-					<value level="8">15</value>
-					<value level="9">16</value>
-					<value level="10">16</value>
-					<value level="11">17</value>
-					<value level="12">17</value>
-					<value level="13">18</value>
-					<value level="14">19</value>
-					<value level="15">19</value>
-					<value level="16">19</value>
-					<value level="17">20</value>
-					<value level="18">20</value>
-					<value level="19">21</value>
-					<value level="20">21</value>
-					<value level="21">21</value>
-					<value level="22">22</value>
-					<value level="23">22</value>
-					<value level="24">23</value>
-					<value level="25">23</value>
-					<value level="26">23</value>
-					<value level="27">24</value>
-					<value level="28">24</value>
-					<value level="29">24</value>
-					<value level="30">25</value>
-					<value level="31">25</value>
-					<value level="32">25</value>
-					<value level="33">26</value>
-					<value level="34">26</value>
-					<value level="35">26</value>
-					<value level="36">27</value>
-				</power>
-				<ticks>1</ticks>
-			</effect>
 			<effect name="Heal">
 				<power>
 					<value level="1">261</value>
@@ -1553,11 +1444,16 @@
 					<value level="34">613</value>
 					<value level="35">621</value>
 					<value level="36">628</value>
+					<value level="37">665</value>
+					<value level="38">678</value>
+					<value level="39">691</value>
+					<value level="40">704</value>
+					<value level="41">717</value>
 				</power>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1220" toLevel="8" name="Blaze">
+	<skill id="1220" toLevel="33" name="Blaze">
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -1576,7 +1472,7 @@
 		<icon>icon.skill1220</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
-			<value level="1">17</value>
+			<value level="1">20</value>
 			<value level="2">20</value>
 			<value level="3">23</value>
 			<value level="4">25</value>
@@ -1584,16 +1480,66 @@
 			<value level="6">30</value>
 			<value level="7">33</value>
 			<value level="8">35</value>
+			<value level="9">40</value>
+			<value level="10">42</value>
+			<value level="11">44</value>
+			<value level="12">46</value>
+			<value level="13">48</value>
+			<value level="14">50</value>
+			<value level="15">52</value>
+			<value level="16">54</value>
+			<value level="17">56</value>
+			<value level="18">58</value>
+			<value level="19">60</value>
+			<value level="20">62</value>
+			<value level="21">64</value>
+			<value level="22">66</value>
+			<value level="23">68</value>
+			<value level="24">70</value>
+			<value level="25">72</value>
+			<value level="26">74</value>
+			<value level="27">76</value>
+			<value level="28">78</value>
+			<value level="29">80</value>
+			<value level="30">81</value>
+			<value level="31">82</value>
+			<value level="32">83</value>
+			<value level="33">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">14</value>
-			<value level="2">16</value>
-			<value level="3">17</value>
-			<value level="4">18</value>
-			<value level="5">20</value>
-			<value level="6">21</value>
-			<value level="7">23</value>
-			<value level="8">24</value>
+			<value level="1">18</value>
+			<value level="2">20</value>
+			<value level="3">22</value>
+			<value level="4">23</value>
+			<value level="5">25</value>
+			<value level="6">27</value>
+			<value level="7">29</value>
+			<value level="8">30</value>
+			<value level="9">30</value> <!-- Guessed -->
+			<value level="10">30</value> <!-- Guessed -->
+			<value level="11">30</value> <!-- Guessed -->
+			<value level="12">30</value> <!-- Guessed -->
+			<value level="13">30</value> <!-- Guessed -->
+			<value level="14">30</value> <!-- Guessed -->
+			<value level="15">30</value> <!-- Guessed -->
+			<value level="16">30</value> <!-- Guessed -->
+			<value level="17">30</value> <!-- Guessed -->
+			<value level="18">30</value> <!-- Guessed -->
+			<value level="19">30</value> <!-- Guessed -->
+			<value level="20">30</value> <!-- Guessed -->
+			<value level="21">30</value> <!-- Guessed -->
+			<value level="22">30</value> <!-- Guessed -->
+			<value level="23">30</value> <!-- Guessed -->
+			<value level="24">30</value> <!-- Guessed -->
+			<value level="25">30</value> <!-- Guessed -->
+			<value level="26">30</value> <!-- Guessed -->
+			<value level="27">30</value> <!-- Guessed -->
+			<value level="28">30</value> <!-- Guessed -->
+			<value level="29">30</value> <!-- Guessed -->
+			<value level="30">30</value> <!-- Guessed -->
+			<value level="31">30</value> <!-- Guessed -->
+			<value level="32">30</value> <!-- Guessed -->
+			<value level="33">30</value> <!-- Guessed -->
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">4</value>
@@ -1604,6 +1550,31 @@
 			<value level="6">6</value>
 			<value level="7">6</value>
 			<value level="8">6</value>
+			<value level="9">6</value> <!-- Guessed -->
+			<value level="10">6</value> <!-- Guessed -->
+			<value level="11">6</value> <!-- Guessed -->
+			<value level="12">6</value> <!-- Guessed -->
+			<value level="13">6</value> <!-- Guessed -->
+			<value level="14">6</value> <!-- Guessed -->
+			<value level="15">6</value> <!-- Guessed -->
+			<value level="16">6</value> <!-- Guessed -->
+			<value level="17">6</value> <!-- Guessed -->
+			<value level="18">6</value> <!-- Guessed -->
+			<value level="19">6</value> <!-- Guessed -->
+			<value level="20">6</value> <!-- Guessed -->
+			<value level="21">6</value> <!-- Guessed -->
+			<value level="22">6</value> <!-- Guessed -->
+			<value level="23">6</value> <!-- Guessed -->
+			<value level="24">6</value> <!-- Guessed -->
+			<value level="25">6</value> <!-- Guessed -->
+			<value level="26">6</value> <!-- Guessed -->
+			<value level="27">6</value> <!-- Guessed -->
+			<value level="28">6</value> <!-- Guessed -->
+			<value level="29">6</value> <!-- Guessed -->
+			<value level="30">6</value> <!-- Guessed -->
+			<value level="31">6</value> <!-- Guessed -->
+			<value level="32">6</value> <!-- Guessed -->
+			<value level="33">6</value> <!-- Guessed -->
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -1622,6 +1593,31 @@
 					<value level="6">38</value>
 					<value level="7">42</value>
 					<value level="8">44</value>
+					<value level="9">47</value>
+					<value level="10">49</value>
+					<value level="11">51</value>
+					<value level="12">53</value>
+					<value level="13">55</value>
+					<value level="14">57</value>
+					<value level="15">59</value>
+					<value level="16">61</value>
+					<value level="17">63</value>
+					<value level="18">65</value>
+					<value level="19">67</value>
+					<value level="20">69</value>
+					<value level="21">71</value>
+					<value level="22">73</value>
+					<value level="23">75</value>
+					<value level="24">77</value>
+					<value level="25">79</value>
+					<value level="26">81</value>
+					<value level="27">83</value>
+					<value level="28">85</value>
+					<value level="29">87</value>
+					<value level="30">89</value>
+					<value level="31">91</value>
+					<value level="32">93</value>
+					<value level="33">95</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -2666,7 +2662,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1229" toLevel="20" name="Chant of Life">
+	<skill id="1229" toLevel="23" name="Chant of Life">
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2688,6 +2684,9 @@
 			<value level="18">18</value>
 			<value level="19">19</value>
 			<value level="20">20</value>
+			<value level="21">21</value>
+			<value level="22">22</value>
+			<value level="23">23</value>
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
@@ -2738,6 +2737,9 @@
 			<value level="18">74</value>
 			<value level="19">76</value>
 			<value level="20">78</value>
+			<value level="21">80</value>
+			<value level="22">82</value>
+			<value level="23">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">47</value>
@@ -2760,6 +2762,9 @@
 			<value level="18">191</value>
 			<value level="19">263</value>
 			<value level="20">267</value>
+			<value level="21">272</value>
+			<value level="22">277</value>
+			<value level="23">282</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">12</value>
@@ -2782,6 +2787,9 @@
 			<value level="18">58</value>
 			<value level="19">58</value>
 			<value level="20">59</value>	
+			<value level="21">60</value>	
+			<value level="22">60</value>	
+			<value level="23">61</value>	
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2814,12 +2822,15 @@
 					<value level="18">58</value>
 					<value level="19">60</value>
 					<value level="20">62</value>
+					<value level="21">64</value>
+					<value level="22">66</value>
+					<value level="23">68</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1230" toLevel="31" name="Prominence">
+	<skill id="1230" toLevel="36" name="Prominence">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -2893,6 +2904,11 @@
 			<value level="29">76</value>
 			<value level="30">77</value>
 			<value level="31">78</value>
+			<value level="32">80</value>
+			<value level="33">81</value>
+			<value level="34">82</value>
+			<value level="35">83</value>
+			<value level="36">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">34</value>
@@ -2926,6 +2942,11 @@
 			<value level="29">83</value>
 			<value level="30">84</value>
 			<value level="31">85</value>
+			<value level="32">88</value>
+			<value level="33">89</value>
+			<value level="34">91</value>
+			<value level="35">93</value>
+			<value level="36">94</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -2959,6 +2980,11 @@
 			<value level="29">14</value>
 			<value level="30">14</value>
 			<value level="31">15</value>
+			<value level="32">15</value>
+			<value level="33">15</value>
+			<value level="34">15</value>
+			<value level="35">15</value>
+			<value level="36">15</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -3001,6 +3027,11 @@
 					<value level="29">110</value>
 					<value level="30">111</value>
 					<value level="31">112</value>
+					<value level="32">114</value>
+					<value level="33">115</value>
+					<value level="34">116</value>
+					<value level="35">117</value>
+					<value level="36">118</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -3317,7 +3348,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1234" toLevel="31" name="Vampiric Claw">
+	<skill id="1234" toLevel="36" name="Vampiric Claw">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -3390,6 +3421,11 @@
 			<value level="29">76</value>
 			<value level="30">77</value>
 			<value level="31">78</value>
+			<value level="32">80</value>
+			<value level="33">81</value>
+			<value level="34">82</value>
+			<value level="35">83</value>
+			<value level="36">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">60</value>
@@ -3423,6 +3459,11 @@
 			<value level="29">136</value>
 			<value level="30">138</value>
 			<value level="31">140</value>
+			<value level="32">147</value>
+			<value level="33">149</value>
+			<value level="34">154</value>
+			<value level="35">156</value>
+			<value level="36">158</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">12</value>
@@ -3456,6 +3497,11 @@
 			<value level="29">25</value>
 			<value level="30">25</value>
 			<value level="31">25</value>
+			<value level="32">25</value>
+			<value level="33">25</value>
+			<value level="34">25</value>
+			<value level="35">25</value>
+			<value level="36">25</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -3498,6 +3544,11 @@
 					<value level="29">109</value>
 					<value level="30">110</value>
 					<value level="31">111</value>
+					<value level="32">113</value>
+					<value level="33">114</value>
+					<value level="34">115</value>
+					<value level="35">116</value>
+					<value level="36">117</value>
 				</power>
 				<percentage>40</percentage>
 			</effect>
@@ -4055,7 +4106,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1239" toLevel="31" name="Hurricane">
+	<skill id="1239" toLevel="36" name="Hurricane">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -4129,6 +4180,11 @@
 			<value level="29">76</value>
 			<value level="30">77</value>
 			<value level="31">78</value>
+			<value level="32">80</value>
+			<value level="33">81</value>
+			<value level="34">82</value>
+			<value level="35">83</value>
+			<value level="36">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">34</value>
@@ -4162,6 +4218,11 @@
 			<value level="29">75</value>
 			<value level="30">77</value>
 			<value level="31">79</value>
+			<value level="32">84</value>
+			<value level="33">86</value>
+			<value level="34">89</value>
+			<value level="35">91</value>
+			<value level="36">93</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">7</value>
@@ -4195,6 +4256,11 @@
 			<value level="29">14</value>
 			<value level="30">14</value>
 			<value level="31">15</value>
+			<value level="32">15</value>
+			<value level="33">15</value>
+			<value level="34">15</value>
+			<value level="35">15</value>
+			<value level="36">15</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1200</reuseDelay>
@@ -4237,6 +4303,11 @@
 					<value level="29">109</value>
 					<value level="30">110</value>
 					<value level="31">111</value>
+					<value level="32">113</value>
+					<value level="33">114</value>
+					<value level="34">115</value>
+					<value level="35">116</value>
+					<value level="36">117</value>
 				</power>
 				<shieldDefPercent>40</shieldDefPercent>
 			</effect>
@@ -4590,7 +4661,7 @@
  			</effect>
 		</pveEffects>
 	</skill>
-	<skill id="1245" toLevel="16" name="Steal Essence">
+	<skill id="1245" toLevel="19" name="Steal Essence">
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -4631,6 +4702,9 @@
 			<value level="14">74</value>
 			<value level="15">76</value>
 			<value level="16">78</value>
+			<value level="17">80</value>
+			<value level="18">82</value>
+			<value level="19">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">74</value>
@@ -4649,6 +4723,9 @@
 			<value level="14">142</value>
 			<value level="15">195</value>
 			<value level="16">197</value>
+			<value level="17">202</value>
+			<value level="18">207</value>
+			<value level="19">212</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">18</value>
@@ -4667,6 +4744,9 @@
 			<value level="14">35</value>
 			<value level="15">36</value>
 			<value level="16">37</value>
+			<value level="17">37</value>
+			<value level="18">37</value>
+			<value level="19">37</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
@@ -4693,6 +4773,9 @@
 					<value level="14">108</value>
 					<value level="15">109</value>
 					<value level="16">111</value>
+					<value level="17">113</value>
+					<value level="18">115</value>
+					<value level="19">117</value>
 				</power>
 				<percentage>80</percentage>
 			</effect>
@@ -5339,7 +5422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1256" toLevel="15" name="Pa'agrio's Heart">
+	<skill id="1256" toLevel="18" name="Pa'agrio's Heart">
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">7</value>
@@ -5356,6 +5439,9 @@
 			<value level="13">18</value>
 			<value level="14">19</value>
 			<value level="15">20</value>
+			<value level="16">21</value>
+			<value level="17">22</value>
+			<value level="18">23</value>
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
@@ -5397,6 +5483,9 @@
 			<value level="13">74</value>
 			<value level="14">76</value>
 			<value level="15">78</value>
+			<value level="16">80</value>
+			<value level="17">82</value>
+			<value level="18">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">134</value>
@@ -5414,6 +5503,9 @@
 			<value level="13">239</value>
 			<value level="14">263</value>
 			<value level="15">267</value>
+			<value level="16">272</value>
+			<value level="17">277</value>
+			<value level="18">282</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">27</value>
@@ -5431,6 +5523,9 @@
 			<value level="13">48</value>
 			<value level="14">49</value>
 			<value level="15">50</value>
+			<value level="16">50</value>
+			<value level="17">50</value>
+			<value level="18">50</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -5458,6 +5553,9 @@
 					<value level="13">58</value>
 					<value level="14">60</value>
 					<value level="15">62</value>
+					<value level="16">64</value>
+					<value level="17">66</value>
+					<value level="18">68</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -5478,6 +5576,9 @@
 					<value level="13">172</value>
 					<value level="14">175</value>
 					<value level="15">178</value>
+					<value level="16">181</value>
+					<value level="17">184</value>
+					<value level="18">187</value>
 				</power>
 			</effect>
 		</effects>

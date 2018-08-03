@@ -104,7 +104,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="101" toLevel="43" name="Stun Shot">
+	<skill id="101" toLevel="48" name="Stun Shot">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -207,6 +207,11 @@
 			<value level="41">76</value>
 			<value level="42">77</value>
 			<value level="43">78</value>
+			<value level="44">80</value>
+			<value level="45">81</value>
+			<value level="46">82</value>
+			<value level="47">83</value>
+			<value level="48">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">46</value>
@@ -252,6 +257,11 @@
 			<value level="41">125</value>
 			<value level="42">127</value>
 			<value level="43">129</value>
+			<value level="44">133</value>
+			<value level="45">135</value>
+			<value level="46">137</value>
+			<value level="47">139</value>
+			<value level="48">141</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -313,6 +323,11 @@
 					<value level="41">2252</value>
 					<value level="42">2312</value>
 					<value level="43">2372</value>
+					<value level="44">2492</value>
+					<value level="45">2552</value>
+					<value level="46">2612</value>
+					<value level="47">2672</value>
+					<value level="48">2732</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -2126,7 +2141,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="144" toLevel="40" name="Dual Weapon Mastery">
+	<skill id="144" toLevel="45" name="Dual Weapon Mastery">
 		<icon>icon.skill0144</icon>
 		<magicLvl>
 			<value level="1">38</value>
@@ -2169,6 +2184,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2215,6 +2235,11 @@
 					<value level="38">137</value>
 					<value level="39">140</value>
 					<value level="40">143</value>
+					<value level="41">149</value>
+					<value level="42">152</value>
+					<value level="43">155</value>
+					<value level="44">158</value>
+					<value level="45">161</value>
 				</amount>
 				<mode>DIFF</mode>
 				<weaponType>
@@ -2223,7 +2248,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="146" toLevel="48" name="Anti Magic">
+	<skill id="146" toLevel="53" name="Anti Magic">
 		<icon>icon.skill0146</icon>
 		<magicLvl>
 			<value level="1">4</value>
@@ -2274,6 +2299,11 @@
 			<value level="46">76</value>
 			<value level="47">77</value>
 			<value level="48">78</value>
+			<value level="49">80</value>
+			<value level="50">81</value>
+			<value level="51">82</value>
+			<value level="52">83</value>
+			<value level="53">84</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2328,6 +2358,11 @@
 					<value level="46">112</value>
 					<value level="47">114</value>
 					<value level="48">116</value>
+					<value level="49">120</value>
+					<value level="50">122</value>
+					<value level="51">124</value>
+					<value level="52">126</value>
+					<value level="53">128</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2386,7 +2421,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="147" toLevel="54" name="Magic Resistance">
+	<skill id="147" toLevel="59" name="Magic Resistance">
 		<icon>icon.skill0147</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2443,6 +2478,11 @@
 			<value level="52">76</value>
 			<value level="53">77</value>
 			<value level="54">78</value>
+			<value level="55">80</value>
+			<value level="56">81</value>
+			<value level="57">82</value>
+			<value level="58">83</value>
+			<value level="59">84</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2503,6 +2543,11 @@
 					<value level="52">133</value>
 					<value level="53">136</value>
 					<value level="54">139</value>
+					<value level="55">145</value>
+					<value level="56">148</value>
+					<value level="57">151</value>
+					<value level="58">154</value>
+					<value level="59">157</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2562,6 +2607,11 @@
 					<value level="52">20</value>
 					<value level="53">20</value>
 					<value level="54">20</value>
+					<value level="55">20</value>
+					<value level="56">20</value>
+					<value level="57">20</value>
+					<value level="58">20</value>
+					<value level="59">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -3105,7 +3155,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="190" toLevel="40" name="Fatal Strike">
+	<skill id="190" toLevel="45" name="Fatal Strike">
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3194,6 +3244,11 @@
 			<value level="38">76</value>
 			<value level="39">77</value>
 			<value level="40">78</value>
+			<value level="41">80</value>
+			<value level="42">81</value>
+			<value level="43">82</value>
+			<value level="44">83</value>
+			<value level="45">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">36</value>
@@ -3233,9 +3288,14 @@
 			<value level="35">73</value>
 			<value level="36">74</value>
 			<value level="37">75</value>
-			<value level="38">76</value>
-			<value level="39">77</value>
-			<value level="40">78</value>
+			<value level="38">83</value>
+			<value level="39">84</value>
+			<value level="40">85</value>
+			<value level="41">87</value>
+			<value level="42">88</value>
+			<value level="43">89</value>
+			<value level="44">90</value>
+			<value level="45">91</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3295,6 +3355,11 @@
 					<value level="38">3692</value>
 					<value level="39">3731</value>
 					<value level="40">3770</value>
+					<value level="41">3848</value>
+					<value level="42">3887</value>
+					<value level="43">3926</value>
+					<value level="44">3965</value>
+					<value level="45">4004</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>

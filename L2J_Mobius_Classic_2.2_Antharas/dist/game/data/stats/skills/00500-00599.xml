@@ -1741,8 +1741,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="1" name="Critical Wound">
-		<abnormalLvl>1</abnormalLvl>
+	<skill id="531" toLevel="2" name="Critical Wound">
+		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>80</activateRate>
@@ -1754,8 +1754,14 @@
 		<icon>icon.skill0531</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>47</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">81</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">47</value>
+			<value level="2">60</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
@@ -1772,7 +1778,10 @@
 		</conditions>
 		<effects>
 			<effect name="DefenceCriticalDamage">
-				<amount>10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>				
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
