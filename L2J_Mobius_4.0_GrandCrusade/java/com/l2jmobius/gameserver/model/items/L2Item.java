@@ -131,7 +131,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private CrystalType _crystalType;
 	private int _equipReuseDelay;
 	private int _duration;
-	private int _time;
+	private long _time;
 	private int _autoDestroyTime;
 	private int _bodyPart;
 	private long _referencePrice;
@@ -267,9 +267,9 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	
 	/**
 	 * Returns the time of the item
-	 * @return int
+	 * @return long
 	 */
-	public final int getTime()
+	public final long getTime()
 	{
 		return _time;
 	}
