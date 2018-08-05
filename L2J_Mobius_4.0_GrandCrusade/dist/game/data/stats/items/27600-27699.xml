@@ -691,7 +691,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<cond>
-			<player minimumVitalityPoints="35000" />
+			<player MinimumVitalityPoints="35000" />
 		</cond>
 		<skills>
 			<skill id="18646" level="1" /> <!-- Freya's Scroll of Storm -->

@@ -199,7 +199,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<cond>
-			<player minimumVitalityPoints="35000" />
+			<player MinimumVitalityPoints="35000" />
 		</cond>
 		<skills>
 			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->

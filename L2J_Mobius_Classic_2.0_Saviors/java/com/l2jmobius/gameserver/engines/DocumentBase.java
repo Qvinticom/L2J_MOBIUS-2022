@@ -896,6 +896,12 @@ public abstract class DocumentBase
 					cond = joinAnd(cond, new ConditionPlayerInInstance(Boolean.parseBoolean(a.getNodeValue())));
 					break;
 				}
+				case "minimumvitalitypoints":
+				{
+					final int count = Integer.decode(getValue(a.getNodeValue(), null));
+					cond = joinAnd(cond, new ConditionMinimumVitalityPoints(count));
+					break;
+				}
 			}
 		}
 		
@@ -1089,12 +1095,6 @@ public abstract class DocumentBase
 				case "checkcrteffect":
 				{
 					cond = joinAnd(cond, new ConditionTargetCheckCrtEffect(Boolean.parseBoolean(a.getNodeValue())));
-					break;
-				}
-				case "minimumvitalitypoints":
-				{
-					final int count = Integer.decode(getValue(a.getNodeValue(), null));
-					cond = joinAnd(cond, new ConditionMinimumVitalityPoints(count));
 					break;
 				}
 			}
