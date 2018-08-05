@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3500" toLevel="1" name="Set Effect - Wooden Light Armor">
+		<!-- https://l2wiki.com/classic/Wooden_Set -->
 		<icon>icon.armor_t06_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>2.2</amount>
+				<amount>2</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
@@ -28,130 +29,212 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3502" toLevel="1" name="Set Effect - Mithril Heavy Armor, 3-piece">
+	<skill id="3502" toLevel="2" name="Set Effect - Mithril Heavy Armor, 3-piece">
 		<icon>icon.armor_t19_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<POISON>20</POISON>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">126</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
+				<POISON>30</POISON>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3503" toLevel="1" name="Set Effect - Reinforced Leather Light Armor, 3-piece">
+	<skill id="3503" toLevel="2" name="Set Effect - Reinforced Leather Light Armor, 3-piece">
 		<icon>icon.armor_t13_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxMp">
-				<amount>80</amount>
+				<amount>
+					<value level="1">80</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="2">10</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3504" toLevel="1" name="Set Effect - Knowledge Robe Armor, 3-piece">
+	<skill id="3504" toLevel="2" name="Set Effect - Knowledge Robe Armor, 3-piece">
 		<icon>icon.armor_t41_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MAtk">
-				<amount>10.25</amount>
-				<mode>PER</mode>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">40</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>-5</amount>
+			<effect name="MAtk">
+				<amount>
+					<value level="2">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3505" toLevel="1" name="Set Effect - Manticore Light Armor, 3-piece">
+	<skill id="3505" toLevel="2" name="Set Effect - Manticore Light Armor, 3-piece">
 		<icon>icon.armor_t42_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxMp">
-				<amount>91.81</amount>
+				<amount>
+					<value level="1">92</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="2">15</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3506" toLevel="1" name="Set Effect - Brigandine Heavy Armor, 3-piece">
+	<skill id="3506" toLevel="2" name="Set Effect - Brigandine Heavy Armor, 3-piece">
 		<icon>icon.armor_t43_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5</amount>
-				<mode>PER</mode>
-			</effect>
 			<effect name="MaxHp">
-				<amount>153</amount>
+				<amount>
+					<value level="1">153</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3507" toLevel="1" name="Set Effect - Elven Mithril Robe Armor, 3-piece">
+	<skill id="3507" toLevel="2" name="Set Effect - Elven Mithril Robe Armor, 3-piece">
 		<icon>icon.armor_t51_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>
+					<value level="1">7</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+				</amount>
+				<stat>WIT</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3508" toLevel="1" name="Set Effect - Reinforced Mithril Light Armor, 3-piece">
+	<skill id="3508" toLevel="2" name="Set Effect - Reinforced Mithril Light Armor, 3-piece">
 		<icon>icon.armor_t47_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalEvasion">
-				<amount>4</amount>
+				<amount>
+					<value level="1">4</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
+				<POISON>30</POISON>
+				<BLEED>30</BLEED>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3509" toLevel="1" name="Set Effect - Chain Heavy Armor, 3-piece">
+	<skill id="3509" toLevel="2" name="Set Effect - Chain Heavy Armor, 3-piece">
 		<icon>icon.armor_t48_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<DAGGER>6</DAGGER>
-				<DUALDAGGER>6</DUALDAGGER>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">198</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<SLEEP>20</SLEEP>
+				<HOLD>20</HOLD>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3510" toLevel="1" name="Set Effect - Karmian Robe Armor, 3-piece">
+	<skill id="3510" toLevel="2" name="Set Effect - Karmian Robe Armor, 3-piece">
 		<icon>icon.armor_t53_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<SLEEP>20</SLEEP>
+				<HOLD>20</HOLD>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="2">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5.26</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3511" toLevel="1" name="Set Effect - Plate Light Armor, 2-piece">
+	<skill id="3511" toLevel="2" name="Set Effect - Plate Light Armor, 2-piece">
 		<icon>icon.armor_t47_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<SLEEP>20</SLEEP>
+				<HOLD>20</HOLD>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">4</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">-1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="3512" toLevel="1" name="Set Effect - Compound Heavy Armor, 2-piece">
 		<icon>icon.armor_t61_ul_i00</icon>
@@ -159,31 +242,62 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="WeightPenalty">
+			<effect name="WeightLimit">
 				<amount>5795</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="1">
+				<PARALYZE>10</PARALYZE>
+				<HOLD>10</HOLD>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3513" toLevel="1" name="Set Effect - Demon Robe Armor, 3-piece">
+	<skill id="3513" toLevel="2" name="Set Effect - Demon Robe Armor, 3-piece">
 		<icon>icon.armor_t54_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<SHOCK>10</SHOCK>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">4</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">-1</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
 			<effect name="MaxHp">
-				<amount>-269.65</amount>
+				<amount>
+					<value level="2">-270</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3514" toLevel="1" name="Set Effect - Theca Light Armor, 3-piece">
+	<skill id="3514" toLevel="2" name="Set Effect - Theca Light Armor, 3-piece">
 		<icon>icon.armor_t63_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<PARALYZE>10</PARALYZE>
+			</effect>
 			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
+				<amount>
+					<value level="2">5.26</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -195,8 +309,13 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>5.26</amount>
+				<amount>
+					<value level="1">5</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="1">
+				<PARALYZE>10</PARALYZE>
 			</effect>
 		</effects>
 	</skill>
@@ -207,393 +326,854 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxHp">
-				<amount>269.65</amount>
+				<amount>
+					<value level="1">270</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="1">
+				<PARALYZE>10</PARALYZE>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3517" toLevel="1" name="Set Effect - Divine Robe Armor, 2-piece">
+	<skill id="3517" toLevel="2" name="Set Effect - Divine Robe Armor, 2-piece">
 		<icon>icon.armor_t57_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
+				<PARALYZE>10</PARALYZE>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+				</amount>
+				<stat>WIT</stat>
 			</effect>
 			<effect name="MaxMp">
-				<amount>170.62</amount>
+				<amount>
+					<value level="2">171</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5.26</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3518" toLevel="1" name="Set Effect - Zubei Heavy Armor, 4-piece">
+	<skill id="3518" toLevel="4" name="Set Effect - Zubei Heavy Armor, 4-piece">
 		<icon>icon.armor_t64_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">5.24</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MaxHp">
-				<amount>294.49</amount>
+				<amount>
+					<value level="2">294</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<PARALYZE>30</PARALYZE>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="4">5.26</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3519" toLevel="1" name="Set Effect - Avadon Heavy Armor, 5-piece">
+	<skill id="3519" toLevel="4" name="Set Effect - Avadon Heavy Armor, 5-piece">
 		<icon>icon.armor_t66_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MaxHp">
-				<amount>294.49</amount>
+				<amount>
+					<value level="1">294</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<POISON>60</POISON>
+				<BLEED>60</BLEED>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+				</amount>
+				<stat>CON</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3520" toLevel="1" name="Set Effect - Zubei Light Armor, 5-piece">
+	<skill id="3520" toLevel="4" name="Set Effect - Zubei Light Armor, 5-piece">
 		<icon>icon.armor_t65_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalEvasion">
-				<amount>4</amount>
+				<amount>
+					<value level="1">4</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>
+					<value level="2">10</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<PARALYZE>30</PARALYZE>		
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+				</amount>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3521" toLevel="1" name="Set Effect - Avadon Light Armor, 2-piece">
+	<skill id="3521" toLevel="3" name="Set Effect - Avadon Light Armor, 2-piece">
 		<icon>icon.armor_t67_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>5.25</amount>
-				<mode>PER</mode>
+			<effect name="WeightLimit">
+				<amount>
+					<value level="1">5795</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5795</amount>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<POISON>30</POISON>		
+				<BLEED>30</BLEED>		
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="3">5.25</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3522" toLevel="1" name="Set Effect - Zubei Robe Armor, 5-piece">
+	<skill id="3522" toLevel="4" name="Set Effect - Zubei Robe Armor, 5-piece">
 		<icon>icon.armor_t56_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MAtk">
-				<amount>10.25</amount>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>-5</amount>
+			<effect name="MaxMp">
+				<amount>
+					<value level="2">102</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<PARALYZE>30</PARALYZE>		
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="4">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3523" toLevel="1" name="Set Effect - Avadon Robe Armor, 2-piece">
+	<skill id="3523" toLevel="3" name="Set Effect - Avadon Robe Armor, 2-piece">
 		<icon>icon.armor_t59_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="DefenceTrait" fromLevel="1" toLevel="3">
+				<POISON>60</POISON>		
+				<BLEED>60</BLEED>		
+			</effect>
 			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
+				<amount>
+					<value level="2">5.26</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="3">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3524" toLevel="1" name="Set Effect - Blue Wolf Heavy Armor, 4-piece">
+	<skill id="3524" toLevel="4" name="Set Effect - Blue Wolf Heavy Armor, 4-piece">
 		<icon>icon.armor_t68_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">5.24</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>
+					<value level="2">7</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="HpRegen">
-				<amount>5.26</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<SHOCK>30</SHOCK>		
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">3</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-2</value>
+				</amount>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3525" toLevel="1" name="Set Effect - Doom Heavy Armor, 3-piece">
+	<skill id="3525" toLevel="3" name="Set Effect - Doom Heavy Armor, 3-piece">
 		<icon>icon.armor_t71_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Breath">
-				<amount>200</amount>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">320</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MaxHp">
-				<amount>320</amount>
-				<mode>DIFF</mode>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
+				<SLEEP>50</SLEEP>		
+				<HOLD>50</HOLD>		
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-3</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">3</value>
+				</amount>
+				<stat>CON</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3526" toLevel="1" name="Set Effect - Blue Wolf Light Armor, 4-piece">
+	<skill id="3526" toLevel="3" name="Set Effect - Blue Wolf Light Armor, 4-piece">
 		<icon>icon.armor_t69_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalDefence">
-				<amount>5.26</amount>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">3</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">-1</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">-2</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="2">5.26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SHOCK>30</SHOCK>		
+			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="3">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3527" toLevel="1" name="Set Effect - Doom Light Armor, 4-piece">
+	<skill id="3527" toLevel="3" name="Set Effect - Doom Light Armor, 4-piece">
 		<icon>icon.armor_t72_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<POISON>20</POISON>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk">
-				<amount>2.7</amount>
+				<amount>
+					<value level="2">2.7</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>2.5</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SLEEP>50</SLEEP>
+				<HOLD>50</HOLD>
 			</effect>
-			<effect name="Breath">
-				<amount>200</amount>
-				<mode>DIFF</mode>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">3</value>
+				</amount>
+				<stat>DEX</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3528" toLevel="1" name="Set Effect - Blue Wolf Robe Armor, 5-piece">
+	<skill id="3528" toLevel="4" name="Set Effect - Blue Wolf Robe Armor, 5-piece">
 		<icon>icon.armor_t70_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="MaxMp">
-				<amount>206</amount>
+				<amount>
+					<value level="2">206</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>5.24</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<SHOCK>30</SHOCK>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-2</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">3</value>
+				</amount>
+				<stat>WIT</stat>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3529" toLevel="1" name="Set Effect - Doom Robe Armor, 5-piece">
+	<skill id="3529" toLevel="4" name="Set Effect - Doom Robe Armor, 5-piece">
 		<icon>icon.armor_t73_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>
+					<value level="2">7</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>5.26</amount>
-				<mode>PER</mode>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<SLEEP>50</SLEEP>
+				<HOLD>50</HOLD>
 			</effect>
 			<effect name="Breath">
 				<amount>200</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">2</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-3</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="4">30</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
-	<skill id="3530" toLevel="1" name="Set Effect - Dark Crystal Heavy Armor, 4-piece">
+	<skill id="3530" toLevel="4" name="Set Effect - Dark Crystal Heavy Armor, 4-piece">
 		<icon>icon.armor_t74_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<PARALYZE>50</PARALYZE>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">5.24</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="HealEffect">
-				<amount>4</amount>
+				<amount>
+					<value level="2">4</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<PARALYZE>50</PARALYZE>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-2</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">3</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="4">238</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3531" toLevel="1" name="Set Effect - Tallum Heavy Armor, 3-piece">
+	<skill id="3531" toLevel="3" name="Set Effect - Tallum Heavy Armor, 3-piece">
 		<icon>icon.armor_t77_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
+			<effect name="WeightLimit">
+				<amount>
+					<value level="1">5759</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<POISON>80</POISON>
 				<BLEED>80</BLEED>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>8</amount>
-				<mode>PER</mode>
+			<effect name="Speed">
+				<amount>
+					<value level="2">4</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="3">8</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3532" toLevel="1" name="Set Effect - Dark Crystal Light Armor, 3-piece">
+	<skill id="3532" toLevel="4" name="Set Effect - Dark Crystal Light Armor, 3-piece">
 		<icon>icon.armor_t75_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<PARALYZE>50</PARALYZE>
+			<effect name="PhysicalEvasion">
+				<amount>
+					<value level="1">4</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>4</amount>
-				<mode>PER</mode>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>4</amount>
+				<amount>
+					<value level="3">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
+				<PARALYZE>50</PARALYZE>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">1</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="4">4</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3533" toLevel="1" name="Set Effect - Tallum Light Armor, 4-piece">
+	<skill id="3533" toLevel="3" name="Set Effect - Tallum Light Armor, 4-piece">
 		<icon>icon.armor_t78_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">8</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="2">222</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<POISON>80</POISON>
 				<BLEED>80</BLEED>
 			</effect>
-			<effect name="MaxMp">
-				<amount>222</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>8</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
-	<skill id="3534" toLevel="1" name="Set Effect - Tallum Robe Armor, 5-piece">
+	<skill id="3534" toLevel="4" name="Set Effect - Tallum Robe Armor, 5-piece">
 		<icon>icon.armor_t79_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="4">
 				<POISON>80</POISON>
 				<BLEED>80</BLEED>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>8</amount>
+				<amount>
+					<value level="3">8</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">-2</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="4">2</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="4">15</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3535" toLevel="1" name="Set Effect - Dark Crystal Robe, 3-piece">
+	<skill id="3535" toLevel="3" name="Set Effect - Dark Crystal Robe, 3-piece">
 		<icon>icon.armor_t76_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<PARALYZE>50</PARALYZE>
+			<effect name="ReduceCancel">
+				<amount>
+					<value level="1">-50</value> <!-- Guessed -->
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="Speed">
-				<amount>7</amount>
+				<amount>
+					<value level="1">7</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
+				<PARALYZE>50</PARALYZE>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>8</amount>
+				<amount>
+					<value level="2">8</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>MEN</stat>
 			</effect>
 			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+				<amount>
+					<value level="3">15</value>
+				</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ReduceCancel">
-				<amount>-50</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3536" toLevel="1" name="Set Effect - Nightmare Heavy Armor, 4-piece">
+	<skill id="3536" toLevel="3" name="Set Effect - Nightmare Heavy Armor, 4-piece">
 		<icon>icon.armor_t80_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">3</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">5.24</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>
+					<value level="2">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<SLEEP>70</SLEEP>
 				<HOLD>70</HOLD>
 			</effect>
-			<effect name="PAtk">
-				<amount>4</amount>
-				<mode>PER</mode>
-			</effect>
 		</effects>
 	</skill>
-	<skill id="3537" toLevel="1" name="Set Effect - Majestic Heavy Armor, 3-piece">
+	<skill id="3537" toLevel="3" name="Set Effect - Majestic Heavy Armor, 3-piece">
 		<icon>icon.armor_t83_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SHOCK>50</SHOCK>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">3</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>4</amount>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">5.24</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Accuracy">
-				<amount>3.1</amount>
+			<effect name="PAtk">
+				<amount>
+					<value level="2">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="2">7</value>
+				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SHOCK>50</SHOCK>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3538" toLevel="1" name="Set Effect - Nightmare Light Armor, 4-piece">
+	<skill id="3538" toLevel="3" name="Set Effect - Nightmare Light Armor, 4-piece">
 		<icon>icon.armor_t81_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SLEEP>70</SLEEP>
-				<HOLD>70</HOLD>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="VampiricAttack">
-				<amount>3</amount>
-				<chance>30</chance>
+				<amount>
+					<value level="1">0</value>
+					<value level="2">3</value>
+					<value level="3">3</value>
+				</amount>
+				<chance>100</chance>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>4</amount>
+				<amount>
+					<value level="2">4</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">1</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SLEEP>70</SLEEP>
+				<HOLD>70</HOLD>
 			</effect>
 		</effects>
 	</skill>
@@ -603,11 +1183,22 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SHOCK>50</SHOCK>
+			<effect name="WeightPenalty">
+				<amount>
+					<value level="1">5759</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>
+					<value level="1">3</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="PAtk">
-				<amount>8</amount>
+				<amount>
+					<value level="2">8</value>
+				</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
@@ -615,54 +1206,108 @@
 				</weaponType>
 			</effect>
 			<effect name="MaxMp">
-				<amount>240</amount>
+				<amount>
+					<value level="2">240</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="WeightPenalty">
-				<amount>5759</amount>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">1</value>
+				</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-1</value>
+				</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SHOCK>50</SHOCK>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3540" toLevel="1" name="Set Effect - Nightmare Robe Armor, 4-piece">
+	<skill id="3540" toLevel="3" name="Set Effect - Nightmare Robe Armor, 4-piece">
 		<icon>icon.armor_t82_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">5.26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<SLEEP>70</SLEEP>
 				<HOLD>70</HOLD>
 			</effect>
-			<effect name="MAtk">
-				<amount>8</amount>
-				<mode>PER</mode>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="2">30</value>
+				</amount>
+				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>4</amount>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">2</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="3">-2</value>
+				</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="3">8</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3541" toLevel="1" name="Set Effect - Majestic Robe Armor, 4-piece">
+	<skill id="3541" toLevel="3" name="Set Effect - Majestic Robe Armor, 4-piece">
 		<icon>icon.armor_t85_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DefenceTrait">
-				<SHOCK>50</SHOCK>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>15</amount>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">8</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">1</value>
+				</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="2">-1</value>
+				</amount>
+				<stat>INT</stat>
 			</effect>
 			<effect name="MaxMp">
-				<amount>240</amount>
+				<amount>
+					<value level="2">240</value>
+				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MpRegen">
-				<amount>8</amount>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="3">15</value>
+				</amount>
 				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
+				<SHOCK>50</SHOCK>
 			</effect>
 		</effects>
 	</skill>
@@ -700,9 +1345,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>126.13</amount>
-				<mode>DIFF</mode>
+			<effect name="ShieldDefence">
+				<amount>2.63</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -726,9 +1371,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>198.21</amount>
-				<mode>DIFF</mode>
+			<effect name="ShieldDefenceRate">
+				<amount>5.26</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -740,7 +1385,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicalDefence">
-				<amount>5.26</amount>
+				<amount>3</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -792,7 +1437,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="ShieldDefenceRate">
-				<amount>18</amount>
+				<amount>24</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -804,9 +1449,9 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="DamageShield">
-				<amount>5</amount>
-				<mode>DIFF</mode>
+			<effect name="ShieldDefenceRate">
+				<amount>24</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
