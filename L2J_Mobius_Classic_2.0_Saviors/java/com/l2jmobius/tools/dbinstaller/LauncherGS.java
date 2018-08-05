@@ -29,7 +29,7 @@ import com.l2jmobius.tools.dbinstaller.gui.DBConfigGUI;
  */
 public class LauncherGS extends AbstractDBLauncher
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws Exception
 	{
 		final String defDatabase = "l2jmobius";
 		final String dir = "sql/game/";

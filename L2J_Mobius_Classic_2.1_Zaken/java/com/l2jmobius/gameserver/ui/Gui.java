@@ -299,8 +299,8 @@ public class Gui
 		JScrollPane scrollPanel = new JScrollPane(txtrConsole);
 		scrollPanel.setBounds(0, 0, 800, 550);
 		JLayeredPane layeredPanel = new JLayeredPane();
-		layeredPanel.add(scrollPanel, new Integer(0), 0);
-		layeredPanel.add(systemPanel, new Integer(1), 0);
+		layeredPanel.add(scrollPanel, 0, 0);
+		layeredPanel.add(systemPanel, 1, 0);
 		
 		// Set frame.
 		JFrame frame = new JFrame("Mobius - GameServer");

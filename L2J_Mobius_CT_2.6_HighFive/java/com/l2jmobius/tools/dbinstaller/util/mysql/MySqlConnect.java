@@ -31,11 +31,11 @@ public class MySqlConnect
 {
 	Connection con = null;
 	
-	public MySqlConnect(String host, String port, String user, String password, String db, boolean console)
+	public MySqlConnect(String host, String port, String user, String password, String db, boolean console) throws Exception
 	{
 		try (Formatter form = new Formatter())
 		{
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("com.mysql.jdbc.Driver").getDeclaredConstructor().newInstance();
 			final String formattedText = form.format("jdbc:mysql://%1$s:%2$s", host, port).toString();
 			con = DriverManager.getConnection(formattedText, user, password);
 			

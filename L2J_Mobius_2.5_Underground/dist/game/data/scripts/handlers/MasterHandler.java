@@ -717,7 +717,7 @@ public class MasterHandler
 				
 				try
 				{
-					final Object handler = c.newInstance();
+					final Object handler = c.getDeclaredConstructor().newInstance();
 					for (Entry<IHandler<?, ?>, Method> entry : registerHandlerMethods.entrySet())
 					{
 						if ((entry.getValue() != null) && entry.getValue().getParameterTypes()[0].isInstance(handler))

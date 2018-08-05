@@ -1049,7 +1049,7 @@ public class QuestMasterHandler
 		{
 			try
 			{
-				quest.newInstance();
+				quest.getDeclaredConstructor().newInstance();
 			}
 			catch (Exception e)
 			{

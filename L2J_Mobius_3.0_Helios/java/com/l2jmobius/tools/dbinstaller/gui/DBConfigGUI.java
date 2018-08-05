@@ -33,6 +33,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 
 import com.l2jmobius.commons.util.SplashScreen;
 import com.l2jmobius.tools.dbinstaller.RunTasks;
@@ -82,7 +83,7 @@ public class DBConfigGUI extends JFrame
 		final int height = 220;
 		final Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds((resolution.width - width) / 2, (resolution.height - height) / 2, width, height);
 		setResizable(false);
 		
@@ -137,9 +138,17 @@ public class DBConfigGUI extends JFrame
 		
 		final ActionListener connectListener = e ->
 		{
-			final MySqlConnect connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
+			MySqlConnect connector = null;
+			try
+			{
+				connector = new MySqlConnect(_dbHost.getText(), _dbPort.getText(), _dbUser.getText(), new String(_dbPass.getPassword()), _dbDbse.getText(), false);
+			}
+			catch (Exception ex)
+			{
+				ex.printStackTrace();
+			}
 			
-			if (connector.getConnection() != null)
+			if ((connector != null) && (connector.getConnection() != null))
 			{
 				_prop.put("dbHost_" + _db, _dbHost.getText());
 				_prop.put("dbPort_" + _db, _dbPort.getText());

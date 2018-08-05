@@ -370,7 +370,7 @@ public class SchedulingPattern
 			ArrayList<Integer> values = new ArrayList<>();
 			for (int i = min; i <= max; i++)
 			{
-				values.add(new Integer(i));
+				values.add(i);
 			}
 			return values;
 		}
@@ -393,7 +393,7 @@ public class SchedulingPattern
 		if (size == 1)
 		{
 			ArrayList<Integer> values = new ArrayList<>();
-			values.add(new Integer(v1));
+			values.add(v1);
 			return values;
 		}
 		String v2Str = st.nextToken();
@@ -411,7 +411,7 @@ public class SchedulingPattern
 		{
 			for (int i = v1; i <= v2; i++)
 			{
-				values.add(new Integer(i));
+				values.add(i);
 			}
 		}
 		else if (v1 > v2)
@@ -420,17 +420,17 @@ public class SchedulingPattern
 			int max = parser.getMaxValue();
 			for (int i = v1; i <= max; i++)
 			{
-				values.add(new Integer(i));
+				values.add(i);
 			}
 			for (int i = min; i <= v2; i++)
 			{
-				values.add(new Integer(i));
+				values.add(i);
 			}
 		}
 		else
 		{
 			// v1 == v2
-			values.add(new Integer(v1));
+			values.add(v1);
 		}
 		return values;
 	}

@@ -32,7 +32,7 @@ public class DBInstallerConsole implements DBOutputInterface
 {
 	Connection _con;
 	
-	public DBInstallerConsole(String db, String dir)
+	public DBInstallerConsole(String db, String dir) throws Exception
 	{
 		System.out.println("Welcome to L2J DataBase installer");
 		final Preferences prop = Preferences.userRoot();
@@ -98,8 +98,9 @@ public class DBInstallerConsole implements DBOutputInterface
 	 * @param pass the password
 	 * @param database the database name
 	 * @param mode the mode, c: Clean, u:update
+	 * @throws Exception
 	 */
-	public DBInstallerConsole(String defDatabase, String dir, String host, String port, String user, String pass, String database, String mode)
+	public DBInstallerConsole(String defDatabase, String dir, String host, String port, String user, String pass, String database, String mode) throws Exception
 	{
 		if ((database == null) || database.isEmpty())
 		{

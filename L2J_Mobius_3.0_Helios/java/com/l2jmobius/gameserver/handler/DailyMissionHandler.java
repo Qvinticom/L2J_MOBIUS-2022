@@ -49,7 +49,6 @@ public class DailyMissionHandler
 	{
 		try
 		{
-			
 			ScriptEngineManager.getInstance().executeDailyMissionMasterHandler();
 		}
 		catch (Exception e)

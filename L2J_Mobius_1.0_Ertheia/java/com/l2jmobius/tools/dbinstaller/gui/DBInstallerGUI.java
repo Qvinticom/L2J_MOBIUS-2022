@@ -30,6 +30,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
 
 import com.l2jmobius.tools.dbinstaller.DBOutputInterface;
 
@@ -62,7 +63,7 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		final int height = 360;
 		final Dimension resolution = Toolkit.getDefaultToolkit().getScreenSize();
 		
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds((resolution.width - width) / 2, (resolution.height - height) / 2, width, height);
 		setResizable(false);
 		
