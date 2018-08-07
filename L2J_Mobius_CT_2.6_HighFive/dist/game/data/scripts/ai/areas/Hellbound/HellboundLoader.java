@@ -127,7 +127,7 @@ public final class HellboundLoader
 		{
 			try
 			{
-				final Object instance = script.newInstance();
+				final Object instance = script.getDeclaredConstructor().newInstance();
 				if (instance instanceof IAdminCommandHandler)
 				{
 					AdminCommandHandler.getInstance().registerHandler((IAdminCommandHandler) instance);

@@ -149,7 +149,7 @@ public final class ScriptEngineManager implements IGameXmlReader
 	private Properties loadProperties()
 	{
 		Properties props = null;
-		try (FileInputStream fis = new FileInputStream("config/ScriptEngines.ini"))
+		try (FileInputStream fis = new FileInputStream("config/ScriptEngine.ini"))
 		{
 			props = new Properties();
 			props.load(fis);
@@ -157,7 +157,7 @@ public final class ScriptEngineManager implements IGameXmlReader
 		catch (Exception e)
 		{
 			props = null;
-			LOGGER.warning("Couldn't load ScriptEngines.properties: " + e.getMessage());
+			LOGGER.warning("Couldn't load ScriptEngine.ini: " + e.getMessage());
 		}
 		return props;
 	}

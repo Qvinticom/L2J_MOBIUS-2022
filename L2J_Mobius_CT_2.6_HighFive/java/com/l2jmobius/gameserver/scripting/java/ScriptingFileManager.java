@@ -24,10 +24,10 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Set;
 
-import javax.tools.FileObject;
-import javax.tools.JavaFileObject;
-import javax.tools.JavaFileObject.Kind;
-import javax.tools.StandardJavaFileManager;
+import org.openjavac.tools.FileObject;
+import org.openjavac.tools.JavaFileObject;
+import org.openjavac.tools.JavaFileObject.Kind;
+import org.openjavac.tools.StandardJavaFileManager;
 
 /**
  * @author HorridoJoho

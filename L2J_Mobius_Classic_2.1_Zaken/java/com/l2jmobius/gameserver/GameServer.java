@@ -206,7 +206,7 @@ public class GameServer
 		}
 		
 		// load script engines
-		printSection("Scripting Engines");
+		printSection("Scripting Engine");
 		EventDispatcher.getInstance();
 		ScriptEngineManager.getInstance();
 		

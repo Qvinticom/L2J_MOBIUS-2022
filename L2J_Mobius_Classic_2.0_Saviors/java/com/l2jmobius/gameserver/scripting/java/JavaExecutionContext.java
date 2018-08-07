@@ -30,9 +30,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Logger;
 
-import javax.tools.Diagnostic;
-import javax.tools.DiagnosticCollector;
-import javax.tools.JavaFileObject;
+import org.openjavac.tools.Diagnostic;
+import org.openjavac.tools.DiagnosticCollector;
+import org.openjavac.tools.JavaFileObject;
 
 import com.l2jmobius.gameserver.scripting.AbstractExecutionContext;
 import com.l2jmobius.gameserver.scripting.annotations.Disabled;
@@ -44,9 +44,41 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 {
 	private static final Logger LOGGER = Logger.getLogger(JavaExecutionContext.class.getName());
 	
+	private static final List<String> _options = new LinkedList<>();
+	
 	JavaExecutionContext(JavaScriptingEngine engine)
 	{
 		super(engine);
+		
+		// Set options.
+		addOptionIfNotNull(_options, getProperty("source"), "-source");
+		addOptionIfNotNull(_options, getProperty("sourcepath"), "-sourcepath");
+		if (!addOptionIfNotNull(_options, getProperty("cp"), "-cp") && !addOptionIfNotNull(_options, getProperty("classpath"), "-classpath"))
+		{
+			addOptionIfNotNull(_options, System.getProperty("java.class.path"), "-cp");
+		}
+		addOptionIfNotNull(_options, getProperty("g"), "-g:");
+		
+		// We always set the target JVM to the current running version.
+		final String targetVersion = System.getProperty("java.specification.version");
+		if (!targetVersion.contains("."))
+		{
+			_options.add("-target");
+			_options.add(targetVersion);
+		}
+		else
+		{
+			final String[] versionSplit = targetVersion.split("\\.");
+			if (versionSplit.length > 1)
+			{
+				_options.add("-target");
+				_options.add(versionSplit[0] + '.' + versionSplit[1]);
+			}
+			else
+			{
+				throw new JavaCompilerException("Could not determine target version!");
+			}
+		}
 	}
 	
 	private boolean addOptionIfNotNull(List<String> list, String nullChecked, String before)
@@ -109,37 +141,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 		
 		try (ScriptingFileManager fileManager = new ScriptingFileManager(getScriptingEngine().getCompiler().getStandardFileManager(fileManagerDiagnostics, null, StandardCharsets.UTF_8)))
 		{
-			final List<String> options = new LinkedList<>();
-			addOptionIfNotNull(options, getProperty("source"), "-source");
-			addOptionIfNotNull(options, getProperty("sourcepath"), "-sourcepath");
-			if (!addOptionIfNotNull(options, getProperty("cp"), "-cp") && !addOptionIfNotNull(options, getProperty("classpath"), "-classpath"))
-			{
-				addOptionIfNotNull(options, System.getProperty("java.class.path"), "-cp");
-			}
-			addOptionIfNotNull(options, getProperty("g"), "-g:");
-			
-			// we always add the target JVM to the current running version
-			final String targetVersion = System.getProperty("java.specification.version");
-			if (!targetVersion.contains("."))
-			{
-				options.add("-target");
-				options.add(targetVersion);
-			}
-			else
-			{
-				final String[] versionSplit = targetVersion.split("\\.");
-				if (versionSplit.length > 1)
-				{
-					options.add("-target");
-					options.add(versionSplit[0] + '.' + versionSplit[1]);
-				}
-				else
-				{
-					throw new JavaCompilerException("Could not determine target version!");
-				}
-			}
-			
-			// we really need an iterable of files or strings
+			// We really need an iterable of files or strings.
 			final List<String> sourcePathStrings = new LinkedList<>();
 			for (Path sourcePath : sourcePaths)
 			{
@@ -148,7 +150,7 @@ public final class JavaExecutionContext extends AbstractExecutionContext<JavaScr
 			
 			final StringWriter strOut = new StringWriter();
 			final PrintWriter out = new PrintWriter(strOut);
-			final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(out, fileManager, compilationDiagnostics, options, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
+			final boolean compilationSuccess = getScriptingEngine().getCompiler().getTask(out, fileManager, compilationDiagnostics, _options, null, fileManager.getJavaFileObjectsFromStrings(sourcePathStrings)).call();
 			if (!compilationSuccess)
 			{
 				out.println();

@@ -100,7 +100,7 @@ public final class GraciaLoader
 		{
 			try
 			{
-				script.newInstance();
+				script.getDeclaredConstructor().newInstance();
 			}
 			catch (Exception e)
 			{

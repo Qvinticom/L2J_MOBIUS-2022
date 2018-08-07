@@ -17,19 +17,17 @@
 package com.l2jmobius.gameserver.scripting.java;
 
 import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.ServiceLoader;
 
 import javax.lang.model.SourceVersion;
-import javax.tools.JavaCompiler;
-import javax.tools.ToolProvider;
+
+import org.openjavac.tools.JavaCompiler;
+import org.openjavac.tools.javac.api.JavacTool;
 
 import com.l2jmobius.gameserver.scripting.AbstractScriptingEngine;
 import com.l2jmobius.gameserver.scripting.IExecutionContext;
 
 /**
- * @author HorridoJoho
+ * @author HorridoJoho, Mobius
  */
 public final class JavaScriptingEngine extends AbstractScriptingEngine
 {
@@ -37,64 +35,20 @@ public final class JavaScriptingEngine extends AbstractScriptingEngine
 	
 	public JavaScriptingEngine()
 	{
-		super("L2J Java Engine", "1.0", "java");
+		super("Java Engine", "10", "java");
 	}
 	
 	private void determineCompilerOrThrow()
 	{
-		final String preferedCompiler = getProperty("preferedCompiler");
-		LinkedList<JavaCompiler> allCompilers = null;
-		
-		JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-		if (compiler != null)
+		if (_compiler == null)
 		{
-			if ((preferedCompiler == null) || compiler.getClass().getName().equals(preferedCompiler))
-			{
-				_compiler = compiler;
-				return;
-			}
-			
-			allCompilers = new LinkedList<>();
-			allCompilers.add(compiler);
+			_compiler = JavacTool.create();
 		}
 		
-		final ServiceLoader<JavaCompiler> thirdPartyCompilers = ServiceLoader.load(JavaCompiler.class);
-		Iterator<JavaCompiler> compilersIterator = thirdPartyCompilers.iterator();
-		while (compilersIterator.hasNext())
+		if (_compiler == null)
 		{
-			compiler = compilersIterator.next();
-			if ((preferedCompiler == null) || compiler.getClass().getName().equals(preferedCompiler))
-			{
-				_compiler = compiler;
-				return;
-			}
-			
-			if (allCompilers == null)
-			{
-				allCompilers = new LinkedList<>();
-			}
-			allCompilers.add(compilersIterator.next());
+			throw new IllegalStateException("No JavaCompiler service installed!");
 		}
-		
-		if (allCompilers != null)
-		{
-			compilersIterator = allCompilers.iterator();
-			while (compilersIterator.hasNext())
-			{
-				compiler = compilersIterator.next();
-				if ((preferedCompiler == null) || compiler.getClass().getName().equals(preferedCompiler))
-				{
-					break;
-				}
-			}
-		}
-		
-		if (compiler == null)
-		{
-			throw new IllegalStateException("No javax.tools.JavaCompiler service installed!");
-		}
-		
-		_compiler = compiler;
 	}
 	
 	private void ensureCompilerOrThrow()
