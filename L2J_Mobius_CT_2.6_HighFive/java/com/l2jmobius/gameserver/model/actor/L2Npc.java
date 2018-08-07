@@ -136,6 +136,7 @@ public class L2Npc extends L2Character
 	private boolean _isRandomAnimationEnabled = true;
 	private boolean _isRandomWalkingEnabled = true;
 	private boolean _isTalkable = getTemplate().isTalkable();
+	private final boolean _isQuestMonster = getTemplate().isQuestMonster();
 	private final boolean _isFakePlayer = getTemplate().isFakePlayer();
 	
 	protected RandomAnimationTask _rAniTask;
@@ -1924,6 +1925,15 @@ public class L2Npc extends L2Character
 	public boolean isTalkable()
 	{
 		return _isTalkable;
+	}
+	
+	/**
+	 * Checks if the NPC is a Quest Monster.
+	 * @return {@code true} if the NPC is a Quest Monster, {@code false} otherwise.
+	 */
+	public boolean isQuestMonster()
+	{
+		return _isQuestMonster;
 	}
 	
 	/**
