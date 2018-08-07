@@ -1508,50 +1508,6 @@
 		</collision>
 	</npc>
 	<npc id="24046" level="70" type="L2Monster" name="Floating Eye Seer">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-		</parameters>
-		<race>ETC</race> <!-- TODO: Magic Creatures -->
-		<acquire exp="14700" sp="441" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6111" hpRegen="7.5" mp="2018" mpRegen="2.7" />
-			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
-			</speed>
-			<attack physical="4277.7" magical="1816.2" critical="4" attackSpeed="253" range="40" />
-			<defence physical="1833.3" magical="1009" />
-			<hit_time>840</hit_time>
-		</stats>
-		<status attackable="true" />
-		<skill_list>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-		</skill_list>
-		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
-		</collision>
-		<drop_lists>
-			<drop>
-				<item id="864" min="1" max="1" chance="0.03" /> <!-- Black Ore Earring -->
-				<item id="895" min="1" max="1" chance="0.03" /> <!-- Black Ore Ring -->
-				<item id="57" min="620" max="1447" chance="70" /> <!-- Adena -->
-				<item id="1878" min="1" max="1" chance="11.32" /> <!-- Durable Braid -->
-				<item id="1865" min="1" max="3" chance="9.007" /> <!-- Varnish -->
-				<item id="1895" min="1" max="1" chance="7.748" /> <!-- Metallic Fiber -->
-				<item id="1864" min="4" max="12" chance="6.725" /> <!-- Stem -->
-				<item id="4053" min="1" max="1" chance="4.056" /> <!-- Black Ore Ring Gemstone -->
-				<item id="4052" min="1" max="1" chance="3.426" /> <!-- Black Ore Earring Piece -->
-			</drop>
-			<spoil>
-				<item id="4974" min="1" max="1" chance="7.219" /> <!-- Recipe: Black Ore Ring (70%) -->
-				<item id="4973" min="1" max="1" chance="4.789" /> <!-- Recipe: Black Ore Earring (70%) -->
-			</spoil>
-		</drop_lists>
-	</npc>
-	<npc id="24046" level="70" type="L2Monster" name="Floating Eye Seer">
 		<!-- Source: www.l2wiki.com -->
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="14700" sp="441" />

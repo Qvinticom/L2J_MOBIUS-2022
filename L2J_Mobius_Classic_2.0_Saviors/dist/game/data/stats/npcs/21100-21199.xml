@@ -2780,25 +2780,6 @@
 		</collision>
 	</npc>
 	<npc id="21145" level="38" type="L2Monster" name="Catacomb Stakato Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>BUG</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1246" hpRegen="18" mp="447" mpRegen="1.8" />
-			<speed>
-				<walk ground="25" />
-				<run ground="150" />
-			</speed>
-			<attack physical="156.22273" magical="106.67987" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="126.1764395" magical="108.62405" evasion="10" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="38" />
-		</collision>
-	</npc>
-	<npc id="21145" level="38" type="L2Monster" name="Catacomb Stakato Soldier">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
