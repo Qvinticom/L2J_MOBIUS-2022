@@ -160,7 +160,7 @@ public class Observation implements IBypassHandler
 		{
 			// enter mode
 			player.enterObserverMode(pos);
-			player.sendItemList(false);
+			player.sendItemList();
 		}
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}

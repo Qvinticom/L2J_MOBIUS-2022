@@ -325,8 +325,8 @@ public class EnterWorld implements IClientIncomingPacket
 		client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
 		
 		// Send Item List
-		client.sendPacket(new ItemList(1, activeChar, false));
-		client.sendPacket(new ItemList(2, activeChar, false));
+		client.sendPacket(new ItemList(1, activeChar));
+		client.sendPacket(new ItemList(2, activeChar));
 		
 		// Send Quest Item List
 		client.sendPacket(new ExQuestItemList(1, activeChar));

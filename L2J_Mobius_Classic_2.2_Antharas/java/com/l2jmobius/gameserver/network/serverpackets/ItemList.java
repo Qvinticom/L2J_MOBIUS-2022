@@ -29,13 +29,11 @@ public final class ItemList extends AbstractItemPacket
 	private final int _sendType;
 	private final L2PcInstance _activeChar;
 	private final List<L2ItemInstance> _items;
-	private final boolean _showWindow;
 	
-	public ItemList(int sendType, L2PcInstance activeChar, boolean showWindow)
+	public ItemList(int sendType, L2PcInstance activeChar)
 	{
 		_sendType = sendType;
 		_activeChar = activeChar;
-		_showWindow = showWindow;
 		_items = activeChar.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
 	}
 	
@@ -55,7 +53,7 @@ public final class ItemList extends AbstractItemPacket
 		}
 		else
 		{
-			packet.writeC(_showWindow ? 0x01 : 0x00);
+			packet.writeC(0x01); // _showWindow ? 0x01 : 0x00
 			packet.writeD(0x00);
 			packet.writeD(_items.size());
 		}

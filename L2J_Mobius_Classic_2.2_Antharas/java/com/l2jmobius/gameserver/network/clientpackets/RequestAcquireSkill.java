@@ -706,7 +706,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 		
 		player.addSkill(skill, store);
 		
-		player.sendItemList(false);
+		player.sendItemList();
 		player.sendPacket(new ShortCutInit(player));
 		player.sendPacket(new ExBasicActionList(ExBasicActionList.DEFAULT_ACTION_LIST));
 		player.sendSkillList(skill.getId());

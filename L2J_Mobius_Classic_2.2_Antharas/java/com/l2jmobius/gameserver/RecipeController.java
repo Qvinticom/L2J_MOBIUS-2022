@@ -439,7 +439,7 @@ public class RecipeController
 			updateCurMp();
 			_activeMakers.remove(_player.getObjectId());
 			_player.setIsCrafting(false);
-			_target.sendItemList(false);
+			_target.sendItemList();
 		}
 		
 		private void updateMakeInfo(boolean success)

@@ -202,7 +202,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendItemList(false);
+			player.sendItemList();
 		}
 	}
 	

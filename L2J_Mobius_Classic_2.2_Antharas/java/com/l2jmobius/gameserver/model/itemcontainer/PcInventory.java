@@ -413,7 +413,7 @@ public class PcInventory extends Inventory
 				}
 				else
 				{
-					actor.sendItemList(false);
+					actor.sendItemList();
 				}
 				
 				// Notify to scripts
@@ -481,7 +481,7 @@ public class PcInventory extends Inventory
 				}
 				else
 				{
-					actor.sendItemList(false);
+					actor.sendItemList();
 				}
 			}
 			
@@ -528,7 +528,7 @@ public class PcInventory extends Inventory
 		
 		if ((item != null) && (actor != null))
 		{
-			actor.sendItemList(false);
+			actor.sendItemList();
 		}
 		return item;
 	}
@@ -865,7 +865,7 @@ public class PcInventory extends Inventory
 		_blockMode = mode;
 		_blockItems = items;
 		
-		_owner.sendItemList(false);
+		_owner.sendItemList();
 	}
 	
 	/**
@@ -876,7 +876,7 @@ public class PcInventory extends Inventory
 		_blockMode = InventoryBlockType.NONE;
 		_blockItems = null;
 		
-		_owner.sendItemList(false);
+		_owner.sendItemList();
 	}
 	
 	/**
@@ -1048,7 +1048,7 @@ public class PcInventory extends Inventory
 		{
 			if (Config.FORCE_INVENTORY_UPDATE)
 			{
-				_owner.sendItemList(false);
+				_owner.sendItemList();
 			}
 			else
 			{

@@ -616,7 +616,7 @@ public class TradeList
 			}
 			else
 			{
-				_owner.sendItemList(false);
+				_owner.sendItemList();
 			}
 			
 			if (partnerIU != null)
@@ -625,7 +625,7 @@ public class TradeList
 			}
 			else
 			{
-				_partner.sendItemList(false);
+				_partner.sendItemList();
 			}
 			success = true;
 		}

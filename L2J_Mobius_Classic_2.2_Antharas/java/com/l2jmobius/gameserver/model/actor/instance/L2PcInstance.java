@@ -2949,7 +2949,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 		}
 	}
@@ -2990,7 +2990,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3040,7 +3040,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3093,7 +3093,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 		}
 	}
@@ -3134,7 +3134,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3360,7 +3360,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3474,7 +3474,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3538,7 +3538,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Send target update packet
@@ -3563,7 +3563,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				targetPlayer.sendItemList(false);
+				targetPlayer.sendItemList();
 			}
 		}
 		else if (target instanceof PetInventory)
@@ -3690,7 +3690,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3777,7 +3777,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -5861,7 +5861,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				// Equip arrows needed in left hand
 				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
-				sendItemList(false);
+				sendItemList();
 				return true;
 			}
 		}
@@ -13735,13 +13735,10 @@ public final class L2PcInstance extends L2Playable
 		sendPacket(new ExUserInfoInvenWeight(this));
 	}
 	
-	/**
-	 * @param open
-	 */
-	public void sendItemList(boolean open)
+	public void sendItemList()
 	{
-		sendPacket(new ItemList(1, this, open));
-		sendPacket(new ItemList(2, this, open));
+		sendPacket(new ItemList(1, this));
+		sendPacket(new ItemList(2, this));
 		sendPacket(new ExQuestItemList(1, this));
 		sendPacket(new ExQuestItemList(2, this));
 		sendPacket(new ExAdenaInvenCount(this));
