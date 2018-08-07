@@ -112,7 +112,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				}
 				break;
 			}
-			case "30570-07a.html":
+			case "30570-07a.htm":
 			{
 				if (hasQuestItems(player, GOBLIN_DWELLING_MAP) && (getQuestItemsCount(player, KURUKA_RATMAN_TOOTH) >= 10))
 				{
@@ -125,7 +125,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				}
 				break;
 			}
-			case "30570-07b.html":
+			case "30570-07b.htm":
 			{
 				if (hasQuestItems(player, GOBLIN_DWELLING_MAP) && (getQuestItemsCount(player, KURUKA_RATMAN_TOOTH) >= 10))
 				{
@@ -137,7 +137,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				}
 				break;
 			}
-			case "31978-04.html":
+			case "31978-04.htm":
 			{
 				if (qs.isMemoState(2))
 				{
@@ -145,7 +145,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				}
 				break;
 			}
-			case "31978-02.html":
+			case "31978-02.htm":
 			{
 				if (qs.isMemoState(2))
 				{
@@ -259,22 +259,22 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				{
 					if (hasQuestItems(player, GOBLIN_DWELLING_MAP) && (getQuestItemsCount(player, KURUKA_RATMAN_TOOTH) < 10))
 					{
-						htmltext = "30570-06.html";
+						htmltext = "30570-06.htm";
 					}
 					else if (hasQuestItems(player, GOBLIN_DWELLING_MAP) && (getQuestItemsCount(player, KURUKA_RATMAN_TOOTH) >= 10))
 					{
 						if (!hasAtLeastOneQuestItem(player, BETRAYER_UMBAR_REPORT, BETRAYER_ZAKAN_REPORT))
 						{
-							htmltext = "30570-07.html";
+							htmltext = "30570-07.htm";
 						}
 					}
 					else if (hasQuestItems(player, HEAD_OF_BETRAYER) || hasAtLeastOneQuestItem(player, BETRAYER_UMBAR_REPORT, BETRAYER_ZAKAN_REPORT))
 					{
-						htmltext = "30570-08.html";
+						htmltext = "30570-08.htm";
 					}
 					else if (qs.isMemoState(2))
 					{
-						htmltext = "30570-07b.html";
+						htmltext = "30570-07b.htm";
 					}
 					break;
 				}
@@ -282,11 +282,11 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 				{
 					if (!hasQuestItems(player, HEAD_OF_BETRAYER) && (getQuestItemsCount(player, BETRAYER_UMBAR_REPORT, BETRAYER_ZAKAN_REPORT) >= 2))
 					{
-						htmltext = "30501-01.html";
+						htmltext = "30501-01.htm";
 					}
 					else if (getQuestItemsCount(player, HEAD_OF_BETRAYER) == 1)
 					{
-						htmltext = "30501-02.html";
+						htmltext = "30501-02.htm";
 					}
 					else if (getQuestItemsCount(player, HEAD_OF_BETRAYER) == 2)
 					{
@@ -306,7 +306,7 @@ public final class Q00414_PathOfTheOrcRaider extends Quest
 						}
 						qs.exitQuest(false, true);
 						player.sendPacket(new SocialAction(player.getObjectId(), 3));
-						htmltext = "30501-03.html";
+						htmltext = "30501-03.htm";
 					}
 					break;
 				}
