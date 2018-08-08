@@ -34,7 +34,6 @@ import java.util.concurrent.LinkedBlockingDeque;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Predicate;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
@@ -223,9 +222,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private final byte[] _zones = new byte[ZoneId.getZoneCount()];
 	protected byte _zoneValidateCounter = 4;
-	
-	private final ReentrantLock _teleportLock = new ReentrantLock();
-	private final Object _attackLock = new Object();
 	
 	private Team _team = Team.NONE;
 	
@@ -577,26 +573,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 	}
 	
-	public void onTeleported()
+	public synchronized void onTeleported()
 	{
-		if (!_teleportLock.tryLock())
+		if (!_isTeleporting)
 		{
 			return;
 		}
-		try
-		{
-			if (!_isTeleporting)
-			{
-				return;
-			}
-			spawnMe(getX(), getY(), getZ());
-			setIsTeleporting(false);
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
-		}
-		finally
-		{
-			_teleportLock.unlock();
-		}
+		spawnMe(getX(), getY(), getZ());
+		setIsTeleporting(false);
+		EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
 	}
 	
 	/**
@@ -905,273 +890,266 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * </ul>
 	 * @param target The L2Character targeted
 	 */
-	public void doAutoAttack(L2Character target)
+	public synchronized void doAutoAttack(L2Character target)
 	{
-		synchronized (_attackLock)
+		if ((target == null) || isAttackingDisabled() || !target.isTargetable())
 		{
-			if ((target == null) || isAttackingDisabled())
-			{
-				return;
-			}
-			
-			if (!target.isTargetable())
-			{
-				return;
-			}
-			
-			if (!isAlikeDead())
-			{
-				if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
-				{
-					getAI().setIntention(AI_INTENTION_ACTIVE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				else if (isPlayer())
-				{
-					if (target.isDead())
-					{
-						getAI().setIntention(AI_INTENTION_ACTIVE);
-						sendPacket(ActionFailed.STATIC_PACKET);
-						return;
-					}
-				}
-				
-				if (checkTransformed(transform -> !transform.canAttack()))
-				{
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-			
-			// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
-			final L2Weapon weaponItem = getActiveWeaponItem();
-			final WeaponType weaponType = getAttackType();
-			
-			if (getActingPlayer() != null)
-			{
-				if (getActingPlayer().inObserverMode())
-				{
-					sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				
-				else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide()))
-				{
-					sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-				
-				// Checking if target has moved to peace zone
-				else if (target.isInsidePeaceZone(getActingPlayer()))
-				{
-					getAI().setIntention(AI_INTENTION_ACTIVE);
-					sendPacket(ActionFailed.STATIC_PACKET);
-					return;
-				}
-			}
-			else if (isInsidePeaceZone(this, target))
+			return;
+		}
+		
+		if (!isAlikeDead())
+		{
+			if ((isNpc() && target.isAlikeDead()) || !isInSurroundingRegion(target))
 			{
 				getAI().setIntention(AI_INTENTION_ACTIVE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
-			stopEffectsOnAction();
-			
-			// GeoData Los Check here (or dz > 1000)
-			if (!GeoEngine.getInstance().canSeeTarget(this, target))
+			else if (isPlayer())
 			{
-				if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
+				if (target.isDead())
 				{
-					sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
 					getAI().setIntention(AI_INTENTION_ACTIVE);
 					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 			}
 			
-			// BOW and CROSSBOW checks
-			if (weaponItem != null)
+			if (checkTransformed(transform -> !transform.canAttack()))
 			{
-				if (!weaponItem.isAttackWeapon() && !isGM())
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+		}
+		
+		// Get the active weapon item corresponding to the active weapon instance (always equipped in the right hand)
+		final L2Weapon weaponItem = getActiveWeaponItem();
+		final WeaponType weaponType = getAttackType();
+		
+		if (getActingPlayer() != null)
+		{
+			if (getActingPlayer().inObserverMode())
+			{
+				sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide()))
+			{
+				sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			// Checking if target has moved to peace zone
+			else if (target.isInsidePeaceZone(getActingPlayer()))
+			{
+				getAI().setIntention(AI_INTENTION_ACTIVE);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+		}
+		else if (isInsidePeaceZone(this, target))
+		{
+			getAI().setIntention(AI_INTENTION_ACTIVE);
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
+		}
+		
+		stopEffectsOnAction();
+		
+		// GeoData Los Check here (or dz > 1000)
+		if (!GeoEngine.getInstance().canSeeTarget(this, target))
+		{
+			if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
+			{
+				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+				getAI().setIntention(AI_INTENTION_ACTIVE);
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+		}
+		
+		// BOW and CROSSBOW checks
+		if (weaponItem != null)
+		{
+			if (!weaponItem.isAttackWeapon() && !isGM())
+			{
+				if (weaponItem.getItemType() == WeaponType.FISHINGROD)
 				{
-					if (weaponItem.getItemType() == WeaponType.FISHINGROD)
+					sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+				}
+				else
+				{
+					sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
+				}
+				sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			// Ranged weapon checks.
+			if (weaponItem.getItemType().isRanged())
+			{
+				// Check if bow delay is still active.
+				if (_disableRangedAttackEndTime > System.nanoTime())
+				{
+					if (isPlayer())
 					{
-						sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
+						ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+						sendPacket(ActionFailed.STATIC_PACKET);
 					}
-					else
-					{
-						sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
-					}
-					sendPacket(ActionFailed.STATIC_PACKET);
 					return;
 				}
 				
-				// Ranged weapon checks.
-				if (weaponItem.getItemType().isRanged())
+				// Check for arrows and MP
+				if (isPlayer())
 				{
-					// Check if bow delay is still active.
-					if (_disableRangedAttackEndTime > System.nanoTime())
+					// Check if there are arrows to use or else cancel the attack.
+					if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
 					{
-						if (isPlayer())
-						{
-							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
-							sendPacket(ActionFailed.STATIC_PACKET);
-						}
+						// Cancel the action because the L2PcInstance have no arrow
+						getAI().setIntention(AI_INTENTION_ACTIVE);
+						sendPacket(ActionFailed.STATIC_PACKET);
+						sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
 						return;
 					}
 					
-					// Check for arrows and MP
-					if (isPlayer())
+					// Checking if target has moved to peace zone - only for player-bow attacks at the moment
+					// Other melee is checked in movement code and for offensive spells a check is done every time
+					if (target.isInsidePeaceZone(getActingPlayer()))
 					{
-						// Check if there are arrows to use or else cancel the attack.
-						if (!checkAndEquipAmmunition(weaponItem.getItemType().isCrossbow() ? EtcItemType.BOLT : EtcItemType.ARROW))
-						{
-							// Cancel the action because the L2PcInstance have no arrow
-							getAI().setIntention(AI_INTENTION_ACTIVE);
-							sendPacket(ActionFailed.STATIC_PACKET);
-							sendPacket(SystemMessageId.YOU_HAVE_RUN_OUT_OF_ARROWS);
-							return;
-						}
-						
-						// Checking if target has moved to peace zone - only for player-bow attacks at the moment
-						// Other melee is checked in movement code and for offensive spells a check is done every time
-						if (target.isInsidePeaceZone(getActingPlayer()))
-						{
-							getAI().setIntention(AI_INTENTION_ACTIVE);
-							sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
-							sendPacket(ActionFailed.STATIC_PACKET);
-							return;
-						}
-						
-						// Check if player has enough MP to shoot.
-						int mpConsume = weaponItem.getMpConsume();
-						if ((weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance()))
-						{
-							mpConsume = weaponItem.getReducedMpConsume();
-						}
-						mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
-						if (_status.getCurrentMp() < mpConsume)
-						{
-							// If L2PcInstance doesn't have enough MP, stop the attack
-							ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
-							sendPacket(SystemMessageId.NOT_ENOUGH_MP);
-							sendPacket(ActionFailed.STATIC_PACKET);
-							return;
-						}
-						
-						// If L2PcInstance have enough MP, the bow consumes it
-						if (mpConsume > 0)
-						{
-							_status.reduceMp(mpConsume);
-						}
+						getAI().setIntention(AI_INTENTION_ACTIVE);
+						sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_IN_A_PEACEFUL_ZONE);
+						sendPacket(ActionFailed.STATIC_PACKET);
+						return;
+					}
+					
+					// Check if player has enough MP to shoot.
+					int mpConsume = weaponItem.getMpConsume();
+					if ((weaponItem.getReducedMpConsume() > 0) && (Rnd.get(100) < weaponItem.getReducedMpConsumeChance()))
+					{
+						mpConsume = weaponItem.getReducedMpConsume();
+					}
+					mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
+					if (_status.getCurrentMp() < mpConsume)
+					{
+						// If L2PcInstance doesn't have enough MP, stop the attack
+						ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+						sendPacket(SystemMessageId.NOT_ENOUGH_MP);
+						sendPacket(ActionFailed.STATIC_PACKET);
+						return;
+					}
+					
+					// If L2PcInstance have enough MP, the bow consumes it
+					if (mpConsume > 0)
+					{
+						_status.reduceMp(mpConsume);
 					}
 				}
 			}
-			
-			final WeaponType attackType = getAttackType();
-			final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == L2Item.SLOT_LR_HAND);
-			final int timeAtk = Formulas.calculateTimeBetweenAttacks(_stat.getPAtkSpd());
-			final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
-			_attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
-			
-			// Make sure that char is facing selected target
-			// also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
-			setHeading(Util.calculateHeadingFrom(this, target));
-			
-			// Get the Attack Reuse Delay of the L2Weapon
-			final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
-			boolean crossbow = false;
-			switch (attackType)
+		}
+		
+		// Mobius: Do not move when attack is launched.
+		if (isMoving())
+		{
+			stopMove(getLocation());
+		}
+		
+		final WeaponType attackType = getAttackType();
+		final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == L2Item.SLOT_LR_HAND);
+		final int timeAtk = Formulas.calculateTimeBetweenAttacks(_stat.getPAtkSpd());
+		final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
+		_attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
+		
+		// Make sure that char is facing selected target
+		// also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
+		setHeading(Util.calculateHeadingFrom(this, target));
+		
+		// Get the Attack Reuse Delay of the L2Weapon
+		final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
+		boolean crossbow = false;
+		switch (attackType)
+		{
+			case CROSSBOW:
+			case TWOHANDCROSSBOW:
 			{
-				case CROSSBOW:
-				case TWOHANDCROSSBOW:
+				crossbow = true;
+			}
+			case BOW:
+			{
+				final int reuse = Formulas.calculateReuseTime(this, weaponItem);
+				
+				// Consume arrows
+				final Inventory inventory = getInventory();
+				if (inventory != null)
 				{
-					crossbow = true;
+					inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
 				}
-				case BOW:
+				
+				// Check if the L2Character is a L2PcInstance
+				if (isPlayer())
 				{
-					final int reuse = Formulas.calculateReuseTime(this, weaponItem);
-					
-					// Consume arrows
-					final Inventory inventory = getInventory();
-					if (inventory != null)
+					if (crossbow)
 					{
-						inventory.reduceArrowCount(crossbow ? EtcItemType.BOLT : EtcItemType.ARROW);
+						sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
 					}
 					
-					if (isMoving())
-					{
-						stopMove(null);
-					}
-					
-					// Check if the L2Character is a L2PcInstance
-					if (isPlayer())
-					{
-						if (crossbow)
-						{
-							sendPacket(SystemMessageId.YOUR_CROSSBOW_IS_PREPARING_TO_FIRE);
-						}
-						
-						sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
-					}
-					
-					// Calculate and set the disable delay of the bow in function of the Attack Speed
-					_disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
-					_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
-					break;
+					sendPacket(new SetupGauge(getObjectId(), SetupGauge.RED, reuse));
 				}
-				case FIST:
-				{
-					if (!isPlayer())
-					{
-						_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
-						break;
-					}
-				}
-				case DUAL:
-				case DUALFIST:
-				case DUALBLUNT:
-				case DUALDAGGER:
-				{
-					final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
-					_hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
-					break;
-				}
-				default:
+				
+				// Calculate and set the disable delay of the bow in function of the Attack Speed
+				_disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
+				_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+				break;
+			}
+			case FIST:
+			{
+				if (!isPlayer())
 				{
 					_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
 					break;
 				}
 			}
-			
-			// If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
-			// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
-			if (attack.hasHits())
+			case DUAL:
+			case DUALFIST:
+			case DUALBLUNT:
+			case DUALDAGGER:
 			{
-				broadcastPacket(attack);
+				final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
+				_hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
+				break;
 			}
-			
-			// Flag the attacker if it's a L2PcInstance outside a PvP area
-			final L2PcInstance player = getActingPlayer();
-			if (player != null)
+			default:
 			{
-				AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
-				player.updatePvPStatus(target);
+				_hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+				break;
 			}
-			
-			if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer()))
+		}
+		
+		// If the Server->Client packet Attack contains at least 1 hit, send the Server->Client packet Attack
+		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
+		if (attack.hasHits())
+		{
+			broadcastPacket(attack);
+		}
+		
+		// Flag the attacker if it's a L2PcInstance outside a PvP area
+		final L2PcInstance player = getActingPlayer();
+		if (player != null)
+		{
+			AttackStanceTaskManager.getInstance().addAttackStanceTask(player);
+			player.updatePvPStatus(target);
+		}
+		
+		if (isFakePlayer() && (target.isPlayable() || target.isFakePlayer()))
+		{
+			final L2Npc npc = ((L2Npc) this);
+			if (!npc.isScriptValue(1))
 			{
-				final L2Npc npc = ((L2Npc) this);
-				if (!npc.isScriptValue(1))
-				{
-					npc.setScriptValue(1); // in combat
-					broadcastInfo(); // update flag status
-					QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
-				}
+				npc.setScriptValue(1); // in combat
+				broadcastInfo(); // update flag status
+				QuestManager.getInstance().getQuest("PvpFlaggingStopTask").notifyEvent("FLAG_CHECK" + npc.getObjectId(), npc, null);
 			}
 		}
 	}
