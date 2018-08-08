@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="1001" toLevel="15" name="Soul Cry">
-		<!-- Confirmed CT2.5 and updated to IO -->
+	<skill id="1001" toLevel="11" name="Soul Cry">
+		<!-- Source: https://l2wiki.com/classic/Soul_Cry -->
 		<icon>icon.skill1001</icon>
 		<magicLvl>
 			<value level="1">1</value>
@@ -15,10 +15,6 @@
 			<value level="9">66</value>
 			<value level="10">72</value>
 			<value level="11">78</value>
-			<value level="12">85</value>
-			<value level="13">90</value>
-			<value level="14">95</value>
-			<value level="15">99</value>
 		</magicLvl>
 		<mpInitialConsume>1</mpInitialConsume>
 		<operateType>T</operateType>
@@ -28,30 +24,42 @@
 		<effects>
 			<effect name="ManaDamOverTime">
 				<power>
-					<value level="1">0</value>
-					<value level="2">0</value>
+					<value level="1">1</value>
+					<value level="2">1</value>
 					<value level="3">1</value>
-					<value level="4">2</value>
-					<value level="5">2</value>
-					<value level="6">2</value>
-					<value level="7">3</value>
-					<value level="8">3</value>
-					<value level="9">4</value>
-					<value level="10">4</value>
-					<value level="11">5</value>
-					<value level="12">5</value>
-					<value level="13">6</value>
-					<value level="14">6</value>
-					<value level="15">7</value>
+					<value level="4">1</value>
+					<value level="5">1</value>
+					<value level="6">1</value>
+					<value level="7">1</value>
+					<value level="8">1</value>
+					<value level="9">1</value>
+					<value level="10">1</value>
+					<value level="11">1</value>
 				</power>
 				<ticks>5</ticks>
 			</effect>
 			<effect name="PAtk">
 				<amount>
+					<value level="1">2</value>
+					<value level="2">5</value>
+					<value level="3">10</value>
+					<value level="4">20</value>
+					<value level="5">30</value>
+					<value level="6">40</value>
+					<value level="7">50</value>
+					<value level="8">60</value>
+					<value level="9">70</value>
+					<value level="10">80</value>
+					<value level="11">90</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
 					<value level="1">0</value>
 					<value level="2">0</value>
-					<value level="3">4</value>
-					<value level="4">5</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
 					<value level="5">5</value>
 					<value level="6">5</value>
 					<value level="7">5</value>
@@ -59,10 +67,6 @@
 					<value level="9">7</value>
 					<value level="10">10</value>
 					<value level="11">12</value>
-					<value level="12">14</value>
-					<value level="13">16</value>
-					<value level="14">18</value>
-					<value level="15">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -73,76 +77,60 @@
 					<value level="3">0</value>
 					<value level="4">0</value>
 					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">5</value>
-					<value level="8">5</value>
-					<value level="9">7</value>
-					<value level="10">10</value>
-					<value level="11">12</value>
-					<value level="12">14</value>
-					<value level="13">16</value>
-					<value level="14">18</value>
-					<value level="15">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="1">2</value>
-					<value level="2">3</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
-					<value level="6">0</value>
-					<value level="7">0</value>
-					<value level="8">0</value>
-					<value level="9">0</value>
-					<value level="10">0</value>
-					<value level="11">0</value>
-					<value level="12">0</value>
-					<value level="13">0</value>
-					<value level="14">0</value>
-					<value level="15">0</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">-100</value>
-					<value level="2">-100</value>
-					<value level="3">-100</value>
-					<value level="4">-100</value>
-					<value level="5">-100</value>
-					<value level="6">-100</value>
-					<value level="7">-100</value>
-					<value level="8">5</value>
-					<value level="9">7</value>
-					<value level="10">10</value>
-					<value level="11">12</value>
-					<value level="12">14</value>
-					<value level="13">16</value>
-					<value level="14">18</value>
-					<value level="15">20</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">0</value>
-					<value level="3">0</value>
-					<value level="4">0</value>
-					<value level="5">0</value>
 					<value level="6">5</value>
 					<value level="7">5</value>
 					<value level="8">5</value>
 					<value level="9">7</value>
 					<value level="10">10</value>
 					<value level="11">12</value>
-					<value level="12">14</value>
-					<value level="13">16</value>
-					<value level="14">18</value>
-					<value level="15">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">5</value>
+					<value level="8">5</value>
+					<value level="9">7</value>
+					<value level="10">10</value>
+					<value level="11">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">5</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">5</value>
+					<value level="9">5</value>
+					<value level="10">5</value>
+					<value level="11">5</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
