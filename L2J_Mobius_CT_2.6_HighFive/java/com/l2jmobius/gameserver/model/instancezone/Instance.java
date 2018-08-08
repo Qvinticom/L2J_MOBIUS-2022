@@ -77,7 +77,7 @@ public final class Instance
 	private final List<StatsSet> _doorTemplates = new CopyOnWriteArrayList<>();
 	private final Map<Integer, L2DoorInstance> _doors = new ConcurrentHashMap<>();
 	private final List<StatsSet> _spawnTemplates = new CopyOnWriteArrayList<>();
-	private List<Location> _enterLocations = null;
+	private List<Location> _enterLocations = new CopyOnWriteArrayList<>();
 	private Location _exitLocation = null;
 	private boolean _allowSummon = true;
 	private long _emptyDestroyTime = -1;

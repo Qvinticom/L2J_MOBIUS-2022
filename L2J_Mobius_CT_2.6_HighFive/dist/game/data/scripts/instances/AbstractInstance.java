@@ -60,6 +60,10 @@ public abstract class AbstractInstance extends AbstractNpcAI
 				{
 					handleRemoveBuffs(player, world);
 				}
+				if (!inst.getEnterLocs().isEmpty())
+				{
+					teleportPlayer(player, inst.getEnterLocs().get(getRandom(inst.getEnterLocs().size())), world.getInstanceId(), false);
+				}
 				return;
 			}
 			player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANCE_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
@@ -78,10 +82,13 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				handleReenterTime(instance);
 			}
-			
 			if (inst.isRemoveBuffEnabled())
 			{
 				handleRemoveBuffs(instance);
+			}
+			if (!inst.getEnterLocs().isEmpty())
+			{
+				teleportPlayer(player, inst.getEnterLocs().get(getRandom(inst.getEnterLocs().size())), instance.getInstanceId(), false);
 			}
 		}
 	}
