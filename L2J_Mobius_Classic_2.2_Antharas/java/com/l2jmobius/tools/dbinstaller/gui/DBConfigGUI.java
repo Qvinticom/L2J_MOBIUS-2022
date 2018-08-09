@@ -201,6 +201,8 @@ public class DBConfigGUI extends JFrame
 		add(btnConnect);
 		
 		SpringUtilities.makeCompactGrid(getContentPane(), 6, 2, 5, 5, 5, 5);
+		
+		pack();
 	}
 	
 	@Override

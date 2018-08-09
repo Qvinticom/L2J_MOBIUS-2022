@@ -78,6 +78,9 @@ public class DBInstallerGUI extends JFrame implements DBOutputInterface
 		appendToProgressArea("Connected");
 		
 		add(scrollPane, BorderLayout.CENTER);
+		
+		getContentPane().setPreferredSize(new Dimension(width, height));
+		pack();
 	}
 	
 	@Override
