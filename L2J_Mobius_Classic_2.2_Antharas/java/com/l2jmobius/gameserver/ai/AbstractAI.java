@@ -438,7 +438,7 @@ public abstract class AbstractAI implements Ctrl
 	protected void moveToPawn(L2Object pawn, int offset)
 	{
 		// Check if actor can move
-		if (!_actor.isMovementDisabled())
+		if (!_actor.isMovementDisabled() && !_actor.isAttackingNow())
 		{
 			if (offset < 10)
 			{
@@ -525,7 +525,7 @@ public abstract class AbstractAI implements Ctrl
 	 */
 	protected void moveTo(int x, int y, int z)
 	{
-		// Chek if actor can move
+		// Check if actor can move
 		if (!_actor.isMovementDisabled())
 		{
 			// Set AI movement data
