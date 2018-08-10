@@ -24,7 +24,7 @@ import java.util.Map;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.holders.IntIntHolder;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
@@ -50,18 +50,18 @@ public class Q325_GrimCollector extends Quest
 	private static final int VARSAK = 30342;
 	private static final int SAMED = 30434;
 	
-	private static final Map<Integer, List<IntIntHolder>> DROPLIST = new HashMap<>();
+	private static final Map<Integer, List<ItemHolder>> DROPLIST = new HashMap<>();
 	{
-		DROPLIST.put(20026, Arrays.asList(new IntIntHolder(ZOMBIE_HEAD, 30), new IntIntHolder(ZOMBIE_HEART, 50), new IntIntHolder(ZOMBIE_LIVER, 75)));
-		DROPLIST.put(20029, Arrays.asList(new IntIntHolder(ZOMBIE_HEAD, 30), new IntIntHolder(ZOMBIE_HEART, 52), new IntIntHolder(ZOMBIE_LIVER, 75)));
-		DROPLIST.put(20035, Arrays.asList(new IntIntHolder(SKULL, 5), new IntIntHolder(RIB_BONE, 15), new IntIntHolder(SPINE, 29), new IntIntHolder(THIGH_BONE, 79)));
-		DROPLIST.put(20042, Arrays.asList(new IntIntHolder(SKULL, 6), new IntIntHolder(RIB_BONE, 19), new IntIntHolder(ARM_BONE, 69), new IntIntHolder(THIGH_BONE, 86)));
-		DROPLIST.put(20045, Arrays.asList(new IntIntHolder(SKULL, 9), new IntIntHolder(SPINE, 59), new IntIntHolder(ARM_BONE, 77), new IntIntHolder(THIGH_BONE, 97)));
-		DROPLIST.put(20051, Arrays.asList(new IntIntHolder(SKULL, 9), new IntIntHolder(RIB_BONE, 59), new IntIntHolder(SPINE, 79), new IntIntHolder(ARM_BONE, 100)));
-		DROPLIST.put(20457, Arrays.asList(new IntIntHolder(ZOMBIE_HEAD, 40), new IntIntHolder(ZOMBIE_HEART, 60), new IntIntHolder(ZOMBIE_LIVER, 80)));
-		DROPLIST.put(20458, Arrays.asList(new IntIntHolder(ZOMBIE_HEAD, 40), new IntIntHolder(ZOMBIE_HEART, 70), new IntIntHolder(ZOMBIE_LIVER, 100)));
-		DROPLIST.put(20514, Arrays.asList(new IntIntHolder(SKULL, 6), new IntIntHolder(RIB_BONE, 21), new IntIntHolder(SPINE, 30), new IntIntHolder(ARM_BONE, 31), new IntIntHolder(THIGH_BONE, 64)));
-		DROPLIST.put(20515, Arrays.asList(new IntIntHolder(SKULL, 5), new IntIntHolder(RIB_BONE, 20), new IntIntHolder(SPINE, 31), new IntIntHolder(ARM_BONE, 33), new IntIntHolder(THIGH_BONE, 69)));
+		DROPLIST.put(20026, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 30), new ItemHolder(ZOMBIE_HEART, 50), new ItemHolder(ZOMBIE_LIVER, 75)));
+		DROPLIST.put(20029, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 30), new ItemHolder(ZOMBIE_HEART, 52), new ItemHolder(ZOMBIE_LIVER, 75)));
+		DROPLIST.put(20035, Arrays.asList(new ItemHolder(SKULL, 5), new ItemHolder(RIB_BONE, 15), new ItemHolder(SPINE, 29), new ItemHolder(THIGH_BONE, 79)));
+		DROPLIST.put(20042, Arrays.asList(new ItemHolder(SKULL, 6), new ItemHolder(RIB_BONE, 19), new ItemHolder(ARM_BONE, 69), new ItemHolder(THIGH_BONE, 86)));
+		DROPLIST.put(20045, Arrays.asList(new ItemHolder(SKULL, 9), new ItemHolder(SPINE, 59), new ItemHolder(ARM_BONE, 77), new ItemHolder(THIGH_BONE, 97)));
+		DROPLIST.put(20051, Arrays.asList(new ItemHolder(SKULL, 9), new ItemHolder(RIB_BONE, 59), new ItemHolder(SPINE, 79), new ItemHolder(ARM_BONE, 100)));
+		DROPLIST.put(20457, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 40), new ItemHolder(ZOMBIE_HEART, 60), new ItemHolder(ZOMBIE_LIVER, 80)));
+		DROPLIST.put(20458, Arrays.asList(new ItemHolder(ZOMBIE_HEAD, 40), new ItemHolder(ZOMBIE_HEART, 70), new ItemHolder(ZOMBIE_LIVER, 100)));
+		DROPLIST.put(20514, Arrays.asList(new ItemHolder(SKULL, 6), new ItemHolder(RIB_BONE, 21), new ItemHolder(SPINE, 30), new ItemHolder(ARM_BONE, 31), new ItemHolder(THIGH_BONE, 64)));
+		DROPLIST.put(20515, Arrays.asList(new ItemHolder(SKULL, 5), new ItemHolder(RIB_BONE, 20), new ItemHolder(SPINE, 31), new ItemHolder(ARM_BONE, 33), new ItemHolder(THIGH_BONE, 69)));
 	}
 	
 	public Q325_GrimCollector()
@@ -247,9 +247,9 @@ public class Q325_GrimCollector extends Quest
 		if (st.hasQuestItems(ANATOMY_DIAGRAM))
 		{
 			final int chance = Rnd.get(100);
-			for (IntIntHolder drop : DROPLIST.get(npc.getNpcId()))
+			for (ItemHolder drop : DROPLIST.get(npc.getNpcId()))
 			{
-				if (chance < drop.getValue())
+				if (chance < drop.getCount())
 				{
 					st.dropItemsAlways(drop.getId(), 1, 0);
 					break;

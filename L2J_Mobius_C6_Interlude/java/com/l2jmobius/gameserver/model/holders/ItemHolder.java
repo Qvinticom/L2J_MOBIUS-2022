@@ -16,54 +16,40 @@
  */
 package com.l2jmobius.gameserver.model.holders;
 
-import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.model.L2Skill;
-
 /**
- * A generic int/int container.
+ * A simple DTO for items; contains item ID and count.<br>
+ * @author UnAfraid
  */
-public class IntIntHolder
+public class ItemHolder
 {
-	private int _id;
-	private int _value;
+	private final int _id;
+	private final long _count;
 	
-	public IntIntHolder(int id, int value)
+	public ItemHolder(int id, long count)
 	{
 		_id = id;
-		_value = value;
+		_count = count;
 	}
 	
+	/**
+	 * @return the ID of the item contained in this object
+	 */
 	public int getId()
 	{
 		return _id;
 	}
 	
-	public int getValue()
-	{
-		return _value;
-	}
-	
-	public void setId(int id)
-	{
-		_id = id;
-	}
-	
-	public void setValue(int value)
-	{
-		_value = value;
-	}
-	
 	/**
-	 * @return the L2Skill associated to the id/value.
+	 * @return the count of items contained in this object
 	 */
-	public final L2Skill getSkill()
+	public long getCount()
 	{
-		return SkillTable.getInstance().getInfo(_id, _value);
+		return _count;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return getClass().getSimpleName() + ": Id: " + _id + ", Value: " + _value;
+		return "[" + getClass().getSimpleName() + "] ID: " + _id + ", count: " + _count;
 	}
 }

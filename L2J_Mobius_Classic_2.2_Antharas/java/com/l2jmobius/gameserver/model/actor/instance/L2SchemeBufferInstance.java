@@ -429,7 +429,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		int fee = 0;
 		for (int sk : list)
 		{
-			fee += SchemeBufferTable.getInstance().getAvailableBuff(sk).getValue();
+			fee += SchemeBufferTable.getInstance().getAvailableBuff(sk).getPrice();
 		}
 		
 		return fee;

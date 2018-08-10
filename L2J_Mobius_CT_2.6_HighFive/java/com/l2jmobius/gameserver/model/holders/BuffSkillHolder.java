@@ -19,17 +19,29 @@ package com.l2jmobius.gameserver.model.holders;
 /**
  * A container used for schemes buffer.
  */
-public final class BuffSkillHolder extends IntIntHolder
+public final class BuffSkillHolder
 {
+	private final int _id;
+	private final int _price;
 	private final String _type;
 	private final String _description;
 	
 	public BuffSkillHolder(int id, int price, String type, String description)
 	{
-		super(id, price);
-		
+		_id = id;
+		_price = price;
 		_type = type;
 		_description = description;
+	}
+	
+	public int getId()
+	{
+		return _id;
+	}
+	
+	public int getPrice()
+	{
+		return _price;
 	}
 	
 	public final String getType()

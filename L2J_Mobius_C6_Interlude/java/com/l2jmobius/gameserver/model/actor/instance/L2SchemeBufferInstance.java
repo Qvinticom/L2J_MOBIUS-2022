@@ -438,7 +438,7 @@ public class L2SchemeBufferInstance extends L2FolkInstance
 		int fee = 0;
 		for (int sk : list)
 		{
-			fee += BufferTable.getInstance().getAvailableBuff(sk).getValue();
+			fee += BufferTable.getInstance().getAvailableBuff(sk).getPrice();
 		}
 		
 		return fee;
