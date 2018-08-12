@@ -35,10 +35,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">126</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="2">
+				<amount>126</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
@@ -52,16 +50,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxMp">
-				<amount>
-					<value level="1">80</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="1" toLevel="2">
+				<amount>80</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="2">10</value>
-				</amount>
+			<effect name="CriticalDamage" fromLevel="2" toLevel="2">
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -72,16 +66,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxMp">
-				<amount>
-					<value level="1">40</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="1" toLevel="2">
+				<amount>40</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MAtk">
-				<amount>
-					<value level="2">10</value>
-				</amount>
+			<effect name="MAtk" fromLevel="2" toLevel="2">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -92,16 +82,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxMp">
-				<amount>
-					<value level="1">92</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="1" toLevel="2">
+				<amount>92</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="2">15</value>
-				</amount>
+			<effect name="CriticalDamage" fromLevel="2" toLevel="2">
+				<amount>15</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -112,16 +98,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">153</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="2">
+				<amount>153</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -132,16 +114,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Speed">
-				<amount>
-					<value level="1">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="1" toLevel="2">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>1</amount>
 				<stat>WIT</stat>
 			</effect>
 		</effects>
@@ -152,10 +130,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalEvasion">
-				<amount>
-					<value level="1">4</value>
-				</amount>
+			<effect name="PhysicalEvasion" fromLevel="1" toLevel="2">
+				<amount>4</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="2">
@@ -170,20 +146,16 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">198</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="2">
+				<amount>198</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -198,16 +170,12 @@
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="2">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="2" toLevel="2">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -222,16 +190,12 @@
 				<SLEEP>20</SLEEP>
 				<HOLD>20</HOLD>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>4</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>-1</amount>
 				<stat>CON</stat>
 			</effect>
 		</effects>
@@ -242,11 +206,11 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="WeightLimit">
+			<effect name="WeightLimit" fromLevel="1" toLevel="1">
 				<amount>5795</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalDefence">
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1">
 				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
@@ -265,22 +229,16 @@
 			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
 				<SHOCK>10</SHOCK>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>4</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>-1</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="2">-270</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="2" toLevel="2">
+				<amount>-270</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -294,10 +252,8 @@
 			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
 				<PARALYZE>10</PARALYZE>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -308,10 +264,8 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="1">5</value>
-				</amount>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="1" toLevel="1">
@@ -325,16 +279,12 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">270</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="1">
+				<amount>270</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">5</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="1" toLevel="1">
@@ -351,22 +301,16 @@
 			<effect name="DefenceTrait" fromLevel="1" toLevel="2">
 				<PARALYZE>10</PARALYZE>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="2">
+				<amount>1</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">171</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="2">
+				<amount>171</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="2">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -377,25 +321,19 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpRegen">
-				<amount>
-					<value level="1">5.24</value>
-				</amount>
+			<effect name="HpRegen" fromLevel="1" toLevel="4">
+				<amount>5.24</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="2">294</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="2" toLevel="4">
+				<amount>294</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<PARALYZE>30</PARALYZE>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="4">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="4">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -406,26 +344,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">294</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="4">
+				<amount>294</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="4">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<POISON>60</POISON>
 				<BLEED>60</BLEED>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>1</amount>
 				<stat>CON</stat>
 			</effect>
 		</effects>
@@ -436,25 +368,19 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalEvasion">
-				<amount>
-					<value level="1">4</value>
-				</amount>
+			<effect name="PhysicalEvasion" fromLevel="1" toLevel="4">
+				<amount>4</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>
-					<value level="2">10</value>
-				</amount>
+			<effect name="CriticalRate" fromLevel="2" toLevel="4">
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<PARALYZE>30</PARALYZE>		
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>1</amount>
 				<stat>DEX</stat>
 			</effect>
 		</effects>
@@ -465,26 +391,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="WeightLimit">
-				<amount>
-					<value level="1">5795</value>
-				</amount>
+			<effect name="WeightLimit" fromLevel="1" toLevel="3">
+				<amount>5795</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="2">30</value>
-				</amount>
+			<effect name="CriticalDamage" fromLevel="2" toLevel="3">
+				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<POISON>30</POISON>		
 				<BLEED>30</BLEED>		
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="3">5.25</value>
-				</amount>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="3">
+				<amount>5.25</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -495,25 +415,19 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="4">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">102</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="4">
+				<amount>102</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<PARALYZE>30</PARALYZE>		
 			</effect>
-			<effect name="MAtk">
-				<amount>
-					<value level="4">10</value>
-				</amount>
+			<effect name="MAtk" fromLevel="4" toLevel="4">
+				<amount>10</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -528,16 +442,12 @@
 				<POISON>60</POISON>		
 				<BLEED>60</BLEED>		
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="3">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -548,37 +458,27 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpRegen">
-				<amount>
-					<value level="1">5.24</value>
-				</amount>
+			<effect name="HpRegen" fromLevel="1" toLevel="4">
+				<amount>5.24</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="2">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="2" toLevel="4">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SHOCK>30</SHOCK>		
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>3</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-1</amount>
 				<stat>CON</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-2</amount>
 				<stat>DEX</stat>
 			</effect>
 		</effects>
@@ -589,26 +489,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MaxHp">
-				<amount>
-					<value level="1">320</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="1" toLevel="3">
+				<amount>320</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<SLEEP>50</SLEEP>		
 				<HOLD>50</HOLD>		
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-3</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>3</amount>
 				<stat>CON</stat>
 			</effect>
 		</effects>
@@ -619,43 +513,31 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>3</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>-1</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>-2</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">5.26</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<SHOCK>30</SHOCK>		
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="3">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -666,26 +548,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="2">2.7</value>
-				</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>2.7</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
 				<SLEEP>50</SLEEP>
 				<HOLD>50</HOLD>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>3</amount>
 				<stat>DEX</stat>
 			</effect>
 		</effects>
@@ -696,37 +572,27 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="4">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">206</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="4">
+				<amount>206</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SHOCK>30</SHOCK>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-2</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-1</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>3</amount>
 				<stat>WIT</stat>
 			</effect>
 		</effects>
@@ -737,48 +603,36 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="4">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="2">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="2" toLevel="4">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<SLEEP>50</SLEEP>
 				<HOLD>50</HOLD>
 			</effect>
-			<effect name="Breath">
+			<effect name="Breath" fromLevel="3" toLevel="4">
 				<amount>200</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>2</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>1</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-3</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>
-					<value level="4">30</value>
-				</amount>
+			<effect name="MagicCriticalDamage" fromLevel="4" toLevel="4">
+				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -789,37 +643,27 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="HpRegen">
-				<amount>
-					<value level="1">5.24</value>
-				</amount>
+			<effect name="HpRegen" fromLevel="1" toLevel="4">
+				<amount>5.24</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="HealEffect">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="HealEffect" fromLevel="2" toLevel="4">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<PARALYZE>50</PARALYZE>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-2</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">3</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>3</amount>
 				<stat>CON</stat>
 			</effect>
-			<effect name="MaxHp">
-				<amount>
-					<value level="4">238</value>
-				</amount>
+			<effect name="MaxHp" fromLevel="4" toLevel="4">
+				<amount>238</amount>
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
@@ -830,38 +674,28 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="WeightLimit">
-				<amount>
-					<value level="1">5759</value>
-				</amount>
+			<effect name="WeightLimit" fromLevel="1" toLevel="3">
+				<amount>5795</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<POISON>80</POISON>
 				<BLEED>80</BLEED>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="Speed" fromLevel="2" toLevel="3">
+				<amount>4</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>CON</stat>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="3">8</value>
-				</amount>
+			<effect name="PhysicalAttackSpeed" fromLevel="3" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -872,43 +706,31 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="PhysicalEvasion">
-				<amount>
-					<value level="1">4</value>
-				</amount>
+			<effect name="PhysicalEvasion" fromLevel="1" toLevel="4">
+				<amount>4</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>
-					<value level="2">30</value>
-				</amount>
+			<effect name="CriticalDamage" fromLevel="2" toLevel="4">
+				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>
-					<value level="3">4</value>
-				</amount>
+			<effect name="PhysicalAttackSpeed" fromLevel="3" toLevel="4">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="4">
 				<PARALYZE>50</PARALYZE>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>1</amount>
 				<stat>STR</stat>
 			</effect>
 			<effect name="StatUp">
-				<amount>
-					<value level="4">-1</value>
-				</amount>
+				<amount>-1</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="PAtk">
-				<amount>
-					<value level="4">4</value>
-				</amount>
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -919,28 +741,20 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">8</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">222</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="3">
+				<amount>222</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>WIT</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
@@ -955,38 +769,28 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="4">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="4">
 				<POISON>80</POISON>
 				<BLEED>80</BLEED>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="3">8</value>
-				</amount>
+			<effect name="MagicalDefence" fromLevel="3" toLevel="4">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>-2</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="4">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="4" toLevel="4">
+				<amount>2</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="4">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="4" toLevel="4">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -997,43 +801,31 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="ReduceCancel">
-				<amount>
-					<value level="1">-50</value> <!-- Guessed -->
-				</amount>
+			<effect name="ReduceCancel" fromLevel="1" toLevel="3">
+				<amount>-50</amount> <!-- Guessed -->
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="1">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="1" toLevel="3">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<PARALYZE>50</PARALYZE>
 			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="2">8</value>
-				</amount>
+			<effect name="PhysicalDefence" fromLevel="2" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="3">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1044,40 +836,28 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Accuracy">
-				<amount>
-					<value level="1">3</value>
-				</amount>
+			<effect name="Accuracy" fromLevel="1" toLevel="3">
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="HpRegen">
-				<amount>
-					<value level="1">5.24</value>
-				</amount>
+			<effect name="HpRegen" fromLevel="1" toLevel="3">
+				<amount>5.24</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DamageShield">
-				<amount>
-					<value level="2">5</value>
-				</amount>
+			<effect name="DamageShield" fromLevel="2" toLevel="3">
+				<amount>5</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>CON</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>DEX</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
@@ -1092,40 +872,28 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Accuracy">
-				<amount>
-					<value level="1">3</value>
-				</amount>
+			<effect name="Accuracy" fromLevel="1" toLevel="3">
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="HpRegen">
-				<amount>
-					<value level="1">5.24</value>
-				</amount>
+			<effect name="HpRegen" fromLevel="1" toLevel="3">
+				<amount>5.24</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed">
-				<amount>
-					<value level="2">7</value>
-				</amount>
+			<effect name="Speed" fromLevel="2" toLevel="3">
+				<amount>7</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>STR</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
@@ -1139,36 +907,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="VampiricAttack">
-				<amount>
-					<value level="1">0</value>
-					<value level="2">3</value>
-					<value level="3">3</value>
-				</amount>
+			<effect name="VampiricAttack" fromLevel="2" toLevel="3">
+				<amount>3</amount>
 				<chance>100</chance>
 			</effect>
-			<effect name="MagicalDefence">
-				<amount>
-					<value level="2">4</value>
-				</amount>
+			<effect name="MagicalDefence" fromLevel="2" toLevel="3">
+				<amount>4</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>1</amount>
 				<stat>DEX</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
@@ -1177,50 +933,38 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3539" toLevel="1" name="Set Effect - Majestic Light Armor, 4-piece">
+	<skill id="3539" toLevel="3" name="Set Effect - Majestic Light Armor, 4-piece">
 		<icon>icon.armor_t84_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="WeightPenalty">
-				<amount>
-					<value level="1">5759</value>
-				</amount>
+			<effect name="WeightPenalty" fromLevel="1" toLevel="3">
+				<amount>5795</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Accuracy">
-				<amount>
-					<value level="1">3</value>
-				</amount>
+			<effect name="Accuracy" fromLevel="1" toLevel="3">
+				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PAtk">
-				<amount>
-					<value level="2">8</value>
-				</amount>
+			<effect name="PAtk" fromLevel="2" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>BOW</item>
 					<item>CROSSBOW</item>
 				</weaponType>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">240</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="3">
+				<amount>240</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>1</amount>
 				<stat>DEX</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-1</amount>
 				<stat>CON</stat>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
@@ -1234,38 +978,28 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">5.26</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>5.26</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="2" toLevel="3">
 				<SLEEP>70</SLEEP>
 				<HOLD>70</HOLD>
 			</effect>
-			<effect name="MagicCriticalDamage">
-				<amount>
-					<value level="2">30</value>
-				</amount>
+			<effect name="MagicCriticalDamage" fromLevel="2" toLevel="3">
+				<amount>30</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>2</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="3">-2</value>
-				</amount>
+			<effect name="StatUp" fromLevel="3" toLevel="3">
+				<amount>-2</amount>
 				<stat>WIT</stat>
 			</effect>
-			<effect name="MAtk">
-				<amount>
-					<value level="3">8</value>
-				</amount>
+			<effect name="MAtk" fromLevel="3" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1276,34 +1010,24 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="MpRegen">
-				<amount>
-					<value level="1">8</value>
-				</amount>
+			<effect name="MpRegen" fromLevel="1" toLevel="3">
+				<amount>8</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>1</amount>
 				<stat>MEN</stat>
 			</effect>
-			<effect name="StatUp">
-				<amount>
-					<value level="2">-1</value>
-				</amount>
+			<effect name="StatUp" fromLevel="2" toLevel="3">
+				<amount>-1</amount>
 				<stat>INT</stat>
 			</effect>
-			<effect name="MaxMp">
-				<amount>
-					<value level="2">240</value>
-				</amount>
+			<effect name="MaxMp" fromLevel="2" toLevel="3">
+				<amount>240</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>
-					<value level="3">15</value>
-				</amount>
+			<effect name="MagicalAttackSpeed" fromLevel="3" toLevel="3">
+				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceTrait" fromLevel="3" toLevel="3">
