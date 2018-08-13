@@ -158,6 +158,7 @@ import quests.Q00645_GhostsOfBatur.Q00645_GhostsOfBatur;
 import quests.Q00648_AnIceMerchantsDream.Q00648_AnIceMerchantsDream;
 import quests.Q00662_AGameOfCards.Q00662_AGameOfCards;
 import quests.Q00663_SeductiveWhispers.Q00663_SeductiveWhispers;
+import quests.Q00670_DefeatingTheLordOfSeed.Q00670_DefeatingTheLordOfSeed;
 import quests.Q00688_DefeatTheElrokianRaiders.Q00688_DefeatTheElrokianRaiders;
 import quests.Q00726_LightWithinTheDarkness.Q00726_LightWithinTheDarkness;
 import quests.Q00727_HopeWithinTheDarkness.Q00727_HopeWithinTheDarkness;
@@ -593,6 +594,7 @@ public class QuestMasterHandler
 		Q00648_AnIceMerchantsDream.class,
 		Q00662_AGameOfCards.class,
 		Q00663_SeductiveWhispers.class,
+		Q00670_DefeatingTheLordOfSeed.class,
 		Q00688_DefeatTheElrokianRaiders.class,
 		Q00726_LightWithinTheDarkness.class,
 		Q00727_HopeWithinTheDarkness.class,
