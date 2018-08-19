@@ -217,7 +217,7 @@ public final class AntiFeedManager
 	 */
 	public void onDisconnect(L2GameClient client)
 	{
-		if ((client == null) || (client.getConnectionAddress() == null))
+		if ((client == null) || (client.getConnectionAddress() == null) || (client.getActiveChar() == null))
 		{
 			return;
 		}
