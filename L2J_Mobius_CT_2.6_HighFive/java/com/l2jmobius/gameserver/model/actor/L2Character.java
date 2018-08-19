@@ -5859,7 +5859,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * @param target
 	 * @return True if the target is facing the L2Character.
 	 */
-	public boolean isInFrontOf(L2Character target)
+	public boolean isInFrontOf(L2Object target)
 	{
 		double angleChar, angleTarget, angleDiff;
 		final double maxAngleDiff = 60;
@@ -5913,7 +5913,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		if ((_target != null) && _target.isCharacter())
 		{
-			return isInFrontOf((L2Character) _target);
+			return isInFrontOf(_target);
 		}
 		return false;
 	}
