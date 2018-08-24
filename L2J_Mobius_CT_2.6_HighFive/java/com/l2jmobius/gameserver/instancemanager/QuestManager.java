@@ -69,8 +69,7 @@ public final class QuestManager
 	}
 	
 	/**
-	 * Reload all quests and scripts.<br>
-	 * Unload all quests and scripts and load scripts.cfg.
+	 * Unload all quests and scripts and reload them.
 	 */
 	public void reloadAllScripts()
 	{
@@ -101,7 +100,7 @@ public final class QuestManager
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.SEVERE, "Failed loading scripts.cfg, no script going to be loaded!", e);
+			LOGGER.log(Level.SEVERE, "Failed executing script list!", e);
 		}
 		
 		getInstance().report();
