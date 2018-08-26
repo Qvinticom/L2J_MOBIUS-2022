@@ -14132,7 +14132,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			canBeRewarded = true;
 			// Reset index if max is reached.
-			if (rewardIndex >= AttendanceRewardData.getInstance().getRewardsCount())
+			if (rewardIndex >= (AttendanceRewardData.getInstance().getRewardsCount() - 1))
 			{
 				rewardIndex = 0;
 			}
