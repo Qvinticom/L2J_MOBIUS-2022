@@ -3816,7 +3816,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public L2ItemInstance checkItemManipulation(int objectId, long count, String action)
 	{
-		// TODO: if we remove objects that are not visisble from the L2World, we'll have to remove this check
+		// TODO: if we remove objects that are not visible from the L2World, we'll have to remove this check
 		if (L2World.getInstance().findObject(objectId) == null)
 		{
 			LOGGER.finest(getObjectId() + ": player tried to " + action + " item not available in L2World");
@@ -3854,7 +3854,7 @@ public final class L2PcInstance extends L2Playable
 			return null;
 		}
 		
-		// We cannot put a Weapon with Augmention in WH while casting (Possible Exploit)
+		// We cannot put a Weapon with Augmentation in WH while casting (Possible Exploit)
 		if (item.isAugmented() && isCastingNow())
 		{
 			return null;
@@ -11014,7 +11014,6 @@ public final class L2PcInstance extends L2Playable
 				{
 					clanMember.setPlayerInstance(null);
 				}
-				
 			}
 			catch (Exception e)
 			{

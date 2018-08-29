@@ -20,6 +20,7 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
@@ -195,6 +196,10 @@ public class RequestPackageSend implements IClientIncomingPacket
 					playerIU.addRemovedItem(oldItem);
 				}
 			}
+			
+			// Remove item objects from the world.
+			L2World.getInstance().removeObject(oldItem);
+			L2World.getInstance().removeObject(newItem);
 		}
 		
 		warehouse.deleteMe();
