@@ -11,7 +11,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="458" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -26,7 +25,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="460" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -41,7 +39,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="462" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -56,7 +53,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="464" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -71,7 +67,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="466" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -86,7 +81,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="468" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -101,7 +95,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="470" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -116,7 +109,6 @@
 		<set name="price" val="52400" />
 		<set name="recipe_id" val="472" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -131,7 +123,6 @@
 		<set name="price" val="31320" />
 		<set name="recipe_id" val="138" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -145,7 +136,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -163,7 +153,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2066" level="1" /> <!-- Item - Theme Sound Crystal -->
 		</skills>
@@ -181,7 +170,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -192,7 +180,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -203,7 +190,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="7200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -214,7 +200,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="7200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -225,7 +210,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="7200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -240,7 +224,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -256,7 +239,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -272,7 +254,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -288,7 +269,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -304,7 +284,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -320,7 +299,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -336,7 +314,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -352,7 +329,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -368,7 +344,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -384,7 +359,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -400,7 +374,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -416,7 +389,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -432,7 +404,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -448,7 +419,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -464,7 +434,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -480,7 +449,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -496,7 +464,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -512,7 +479,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -528,7 +494,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -544,7 +509,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -560,7 +524,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -576,7 +539,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -592,7 +554,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -608,7 +569,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -624,7 +584,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -640,7 +599,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -656,7 +614,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -672,7 +629,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -688,7 +644,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -704,7 +659,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -720,7 +674,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -736,7 +689,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -752,7 +704,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -768,7 +719,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -784,7 +734,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -800,7 +749,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -816,7 +764,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -832,7 +779,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -848,7 +794,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -864,7 +809,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -880,7 +824,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -896,7 +839,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -912,7 +854,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -928,7 +869,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -944,7 +884,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -960,7 +899,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="Seed" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -972,7 +910,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="1" /> <!-- Sowing -->
 		</skills>
@@ -984,7 +921,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="2" /> <!-- Sowing -->
 		</skills>
@@ -996,7 +932,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
@@ -1008,7 +943,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1018,7 +952,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1029,7 +962,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1040,7 +972,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1051,7 +982,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1062,7 +992,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1073,7 +1002,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="300" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1083,7 +1011,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1094,7 +1021,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1104,7 +1030,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1115,7 +1040,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="250" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1125,7 +1049,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1136,7 +1059,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1147,7 +1069,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1158,7 +1079,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1168,7 +1088,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1178,7 +1097,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1189,7 +1107,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1199,7 +1116,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1210,7 +1126,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1221,7 +1136,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="400" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1231,7 +1145,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1242,7 +1155,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1253,7 +1165,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="400" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1263,7 +1174,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1274,7 +1184,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="1000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1285,7 +1194,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1296,7 +1204,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1306,7 +1213,6 @@
 		<set name="etcitem_type" val="CROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1317,7 +1223,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="2" />
 		<set name="price" val="750" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1328,7 +1233,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1338,7 +1242,6 @@
 		<set name="etcitem_type" val="MATURECROP" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1349,7 +1252,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1360,7 +1262,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1371,7 +1272,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="price" val="200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>

@@ -19,7 +19,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3007" level="3" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -51,7 +50,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3022" level="3" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Drain -->
 		</skills>
@@ -83,7 +81,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" /> <!-- Special Ability: Health -->
 		</skills>
@@ -115,7 +112,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3076" level="3" /> <!-- Special Ability: Empower -->
 		</skills>
@@ -147,7 +143,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3077" level="3" /> <!-- Special Ability: M. Atk. -->
 		</skills>
@@ -179,7 +174,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3078" level="3" type_chance="10" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Silence -->
 		</skills>
@@ -209,7 +203,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
@@ -241,7 +234,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
@@ -275,7 +267,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3079" level="3" type_chance="5" type="ON_MAGIC_SKILL" /> <!-- Special Ability: Magic Paralyze -->
 		</skills>
@@ -297,7 +288,6 @@
 		<set name="weight" val="20" />
 		<set name="price" val="1" />
 		<set name="is_dropable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="Book" />
 	</item>
@@ -309,7 +299,6 @@
 		<set name="weight" val="50" />
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -325,7 +314,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -337,7 +325,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="price" val="500" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
 	</item>
@@ -353,7 +340,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -370,7 +356,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -386,7 +371,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1340000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
@@ -404,7 +388,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1005000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="EARRING" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
@@ -422,7 +405,6 @@
 		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="670000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
@@ -440,7 +422,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1998000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
@@ -459,7 +440,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1498000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="EARRING" />
 		<stats>
 			<stat type="mDef">60</stat>
@@ -476,7 +456,6 @@
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="999000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<set name="enchant_enabled" val="1" />
 		<stats>
@@ -494,7 +473,6 @@
 		<set name="price" val="34800" />
 		<set name="recipe_id" val="617" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -509,7 +487,6 @@
 		<set name="price" val="34800" />
 		<set name="recipe_id" val="618" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -524,7 +501,6 @@
 		<set name="price" val="26200" />
 		<set name="recipe_id" val="613" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -539,7 +515,6 @@
 		<set name="price" val="26200" />
 		<set name="recipe_id" val="614" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -554,7 +529,6 @@
 		<set name="price" val="17420" />
 		<set name="recipe_id" val="621" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -569,7 +543,6 @@
 		<set name="price" val="17420" />
 		<set name="recipe_id" val="622" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -584,7 +557,6 @@
 		<set name="price" val="52000" />
 		<set name="recipe_id" val="619" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -599,7 +571,6 @@
 		<set name="price" val="52000" />
 		<set name="recipe_id" val="620" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -614,7 +585,6 @@
 		<set name="price" val="39000" />
 		<set name="recipe_id" val="615" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -629,7 +599,6 @@
 		<set name="price" val="39000" />
 		<set name="recipe_id" val="616" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -644,7 +613,6 @@
 		<set name="price" val="26000" />
 		<set name="recipe_id" val="623" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -659,7 +627,6 @@
 		<set name="price" val="26000" />
 		<set name="recipe_id" val="624" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -671,7 +638,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="7231" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -683,7 +649,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="8829" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -695,7 +660,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="9354" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -707,7 +671,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="13643" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -719,7 +682,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="5228" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -731,7 +693,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="6143" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -754,7 +715,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3010" level="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -786,7 +746,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3542" level="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -818,7 +777,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3037" level="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -838,7 +796,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="8700" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -849,7 +806,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="8200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -860,7 +816,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="8700" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -869,7 +824,6 @@
 		<set name="icon" val="icon.etc_jewel_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -891,7 +845,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3033" level="1" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -923,7 +876,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3033" level="2" /> <!-- Special Ability: Rsk. Haste -->
 		</skills>
@@ -953,7 +905,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<skills>
@@ -985,7 +936,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<skills>
@@ -1007,7 +957,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="200" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -1017,7 +966,6 @@
 		<set name="icon" val="icon.etc_permit_card_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1030,7 +978,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2003" level="1" /> <!-- Squash Seed -->
 		</skills>
@@ -1044,7 +991,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2004" level="1" /> <!-- Large Squash Seed -->
 		</skills>
@@ -1058,7 +1004,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2005" level="1" /> <!-- Nectar -->
 		</skills>
@@ -1067,7 +1012,6 @@
 		<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
 		<set name="icon" val="icon.etc_event_medal_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1075,7 +1019,6 @@
 		<!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
 		<set name="icon" val="icon.etc_event_glitter_medal_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1086,7 +1029,6 @@
 		<set name="bodypart" val="hair" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="enchant_enabled" val="7" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 		<set name="isAppearanceable" val="true" />
@@ -1099,7 +1041,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="4600" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1110,7 +1051,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="4600" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1121,7 +1061,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="3850" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1132,7 +1071,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="price" val="4600" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPELLBOOK" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1148,7 +1086,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />

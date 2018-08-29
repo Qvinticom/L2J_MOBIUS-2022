@@ -40,7 +40,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -64,7 +63,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_private_storeable" val="false" />
@@ -163,7 +161,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
-		<set name="is_freightable" val="false" />	
 		<set name="commissionItemType" val="RING" />
 		<set name="handler" val="ItemSkills" />
 		<set name="enchant_enabled" val="7" />
@@ -864,7 +861,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3562" level="2" /> <!-- Queen Ant's Ring -->
@@ -884,7 +880,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="EARRING" />
 		<skills>
 			<skill id="3560" level="2" /> <!-- Orfen's Earring -->
@@ -904,7 +899,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3563" level="2" /> <!-- Ring of Core -->
@@ -924,7 +918,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->
@@ -944,7 +937,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="EARRING" />
 		<skills>
 			<skill id="3560" level="3" /> <!-- Orfen's Earring -->
@@ -964,7 +956,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3563" level="3" /> <!-- Ring of Core -->
@@ -985,7 +976,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3561" level="1" /> <!-- Baium's Ring -->
@@ -1005,7 +995,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3561" level="2" /> <!-- Baium's Ring -->
@@ -1025,7 +1014,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="100000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3561" level="3" /> <!-- Baium's Ring -->
@@ -1167,7 +1155,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3562" level="3" /> <!-- Queen Ant's Ring -->

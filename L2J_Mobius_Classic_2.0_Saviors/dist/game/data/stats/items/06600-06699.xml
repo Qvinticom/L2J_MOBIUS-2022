@@ -21,7 +21,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -61,7 +60,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -101,7 +99,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -142,7 +139,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -183,7 +179,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -224,7 +219,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -265,7 +259,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -308,7 +301,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -349,7 +341,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -389,7 +380,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="is_private_storeable" val="false" />
 		<cond msgId="1518">
@@ -419,7 +409,6 @@
 		<set name="price" val="20" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BeastSoulShot" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
@@ -437,7 +426,6 @@
 		<set name="price" val="40" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
@@ -455,7 +443,6 @@
 		<set name="price" val="100" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="BeastSpiritShot" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="etcitem_type" val="SOULSHOT" />
 		<set name="for_npc" val="true" />
@@ -473,7 +460,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="123200" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3562" level="1" /> <!-- Queen Ant's Ring -->
@@ -493,7 +479,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="1300000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="EARRING" />
 		<skills>
 			<skill id="3560" level="1" /> <!-- Orfen's Earring -->
@@ -513,7 +498,6 @@
 		<set name="weight" val="150" />
 		<set name="price" val="870000" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RING" />
 		<skills>
 			<skill id="3563" level="1" /> <!-- Ring of Core -->

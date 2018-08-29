@@ -1072,7 +1072,6 @@
 	<item id="23460" name="Ink Herb" additionalName="Event" type="EtcItem">
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1088,7 +1087,6 @@
 	<item id="23461" name="Greater Ink Herb" additionalName="Event" type="EtcItem">
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
@@ -1104,7 +1102,6 @@
 	<item id="23462" name="Fantasy Isle Invitation" additionalName="Event" type="EtcItem">
 		<!-- Invitation for Aden's celebrities to attend the Fantasy Isle Festival, entrusted to you by Small Bard. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_invitation" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -1112,7 +1109,6 @@
 	<item id="23463" name="Fantasy Isle VIP Invitation" additionalName="Event" type="EtcItem">
 		<!-- VIP Invitation for Aden's celebrities to attend the Fantasy Isle Festival, entrusted to you by Small Bard. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_vip_invitation" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -1122,7 +1118,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_attendance" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1136,7 +1131,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_nonparticipation" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1148,7 +1142,6 @@
 	<item id="23466" name="Fantasy Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift from the Fantasy Isle Festival Manager. Has a chance of obtaining one of many items. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_fantasy_box" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1162,7 +1155,6 @@
 		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_red_potion" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="500" />
 		<set name="commissionItemType" val="POTION" />
@@ -1181,7 +1173,6 @@
 		<set name="icon" val="BranchSys3.icon1.g_ev_invite_blue_potion" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="reuse_delay" val="500" />
 		<set name="is_coc_restricted" val="true" />
@@ -1200,7 +1191,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1219,7 +1209,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1238,7 +1227,6 @@
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1254,7 +1242,6 @@
 	<item id="23472" name="Fantasy Cookie Set" additionalName="Event" type="EtcItem">
 		<!-- Cookie set made for the Fantasy Isle Festival. Contains 1 Fantasy Cookie, 1 Fantasy Homemade Cookie, and 1 Fantasy Special Cookie. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1583,7 +1570,6 @@
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1605,7 +1591,6 @@
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -1625,7 +1610,6 @@
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />

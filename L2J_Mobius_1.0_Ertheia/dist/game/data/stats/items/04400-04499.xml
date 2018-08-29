@@ -7,7 +7,6 @@
 		<set name="material" val="CLOTH" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -20,7 +19,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
 		<!-- H5 Price -->
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -32,7 +30,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
 		<!-- H5 Price -->
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -44,7 +41,6 @@
 		<set name="weight" val="10" />
 		<set name="price" val="10000" />
 		<!-- H5 Price -->
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -55,7 +51,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -66,7 +61,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -77,7 +71,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="10" />
 		<set name="price" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -87,7 +80,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="price" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
@@ -99,7 +91,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -110,7 +101,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -121,7 +111,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -135,7 +124,6 @@
 		<set name="reuse_delay" val="20000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2069" level="1" /> <!-- Item - Race Sound Crystal -->
@@ -152,7 +140,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2068" level="1" /> <!-- Item - Race Sound Crystal -->
 		</skills>
@@ -167,7 +154,6 @@
 		<set name="reuse_delay" val="24000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2070" level="1" /> <!-- Item - Race Sound Crystal -->
@@ -183,7 +169,6 @@
 		<set name="reuse_delay" val="20000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2072" level="1" /> <!-- Item - Race Sound Crystal -->
@@ -199,7 +184,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2071" level="1" /> <!-- Item - Race Sound Crystal -->
@@ -215,7 +199,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2073" level="1" /> <!-- Item - Theme Sound Crystal -->
@@ -231,7 +214,6 @@
 		<set name="reuse_delay" val="3000" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
 			<skill id="2067" level="1" /> <!-- Item - Theme Sound Crystal -->
@@ -244,7 +226,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -255,7 +236,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -266,7 +246,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -277,7 +256,6 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -292,7 +270,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -311,7 +288,6 @@
 		<set name="price" val="2000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -331,7 +307,6 @@
 		<set name="price" val="2000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
 		<cond addName="1" msgId="113">
@@ -357,7 +332,6 @@
 		<set name="handler" val="SummonItems" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
@@ -377,7 +351,6 @@
 		<set name="weight" val="50" />
 		<set name="price" val="22000" />
 		<set name="is_dropable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
@@ -387,7 +360,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="100" />
 	</item>
@@ -397,7 +369,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="2000" />
 	</item>
@@ -407,7 +378,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="10000" />
 	</item>
@@ -417,7 +387,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="200" />
 	</item>
@@ -427,7 +396,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="4000" />
 	</item>
@@ -437,7 +405,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="20000" />
 	</item>
@@ -448,7 +415,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="10" />
 		<set name="price" val="50" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -459,7 +425,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="100" />
 		<set name="price" val="500" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -470,7 +435,6 @@
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="1000" />
 		<set name="price" val="5000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -486,7 +450,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
@@ -503,7 +466,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_questitem" val="true" />
@@ -516,7 +478,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="5609" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -528,7 +489,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="580" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -543,7 +503,6 @@
 		<set name="price" val="11480" />
 		<set name="recipe_id" val="495" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -558,7 +517,6 @@
 		<set name="price" val="2180" />
 		<set name="recipe_id" val="479" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
@@ -569,7 +527,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="20" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="price" val="2" />
 	</item>
@@ -585,7 +542,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -602,7 +558,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -615,7 +570,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -627,7 +581,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -639,7 +592,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -651,7 +603,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -663,7 +614,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -675,7 +625,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -687,7 +636,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -699,7 +647,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -711,7 +658,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -723,7 +669,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -735,7 +680,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -747,7 +691,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="5100" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -759,7 +702,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -771,7 +713,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -783,7 +724,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -795,7 +735,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -807,7 +746,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -819,7 +757,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -831,7 +768,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -843,7 +779,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -855,7 +790,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -867,7 +801,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -879,7 +812,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -891,7 +823,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -903,7 +834,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -915,7 +845,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -927,7 +856,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -939,7 +867,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -951,7 +878,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -963,7 +889,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -975,7 +900,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -987,7 +911,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -999,7 +922,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1011,7 +933,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1023,7 +944,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1035,7 +955,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="35000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1047,7 +966,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1059,7 +977,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1071,7 +988,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1083,7 +999,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1095,7 +1010,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1107,7 +1021,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1119,7 +1032,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1131,7 +1043,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1143,7 +1054,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1155,7 +1065,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1167,7 +1076,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1179,7 +1087,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="12000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1191,7 +1098,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1203,7 +1109,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1215,7 +1120,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1227,7 +1131,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1239,7 +1142,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1251,7 +1153,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1263,7 +1164,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="150" />
 		<set name="price" val="21000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DYES" />
 		<set name="is_stackable" val="true" />
 	</item>

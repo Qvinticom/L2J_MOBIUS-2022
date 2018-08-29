@@ -1084,7 +1084,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1218,7 +1217,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
-		<set name="is_freightable" val="false" />	
 		<set name="commissionItemType" val="RING" />
 		<set name="handler" val="ItemSkills" />
 		<set name="enchant_enabled" val="7" />
@@ -1327,7 +1325,6 @@
 		<set name="reuse_delay" val="10000" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_coc_restricted" val="true" />
 	    <set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1398,7 +1395,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
-		<set name="is_freightable" val="false" />	
 		<set name="commissionItemType" val="EARRING" />
 		<set name="handler" val="ItemSkills" />
 		<set name="enchant_enabled" val="7" />
@@ -1488,7 +1484,6 @@
 		<set name="icon" val="icon.skilltransform4" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />

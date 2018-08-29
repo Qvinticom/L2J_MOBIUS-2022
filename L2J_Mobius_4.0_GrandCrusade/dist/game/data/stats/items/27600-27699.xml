@@ -560,7 +560,6 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
-		<set name="is_freightable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<capsuled_items>
 			<item id="38941" min="55" max="30" chance="100" />
@@ -582,7 +581,6 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="is_clan_depositable" val="true" />
 		<set name="is_mailable" val="true" />
-		<set name="is_freightable" val="true" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>

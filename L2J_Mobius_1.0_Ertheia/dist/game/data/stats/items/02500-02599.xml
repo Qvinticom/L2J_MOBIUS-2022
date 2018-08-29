@@ -16,7 +16,6 @@
 		<set name="change_weaponId" val="9340" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -40,7 +39,6 @@
 		<set name="weight" val="1850" />
 		<set name="price" val="21000" />
 		<set name="soulshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<set name="spiritshots" val="2" />
@@ -69,7 +67,6 @@
 		<set name="price" val="441940" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -99,7 +96,6 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<stats>
@@ -128,7 +124,6 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<stats>
@@ -153,7 +148,6 @@
 		<set name="weight" val="100" />
 		<set name="price" val="7000" />
 		<!-- H5 Price -->
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_EQUIPMENT" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -180,7 +174,6 @@
 		<set name="weight" val="160" />
 		<set name="price" val="3060" />
 		<!-- H5 Price -->
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_EQUIPMENT" />
 		<set name="isAppearanceable" val="true" />
 		<set name="for_npc" val="true" />
@@ -205,7 +198,6 @@
 		<set name="price" val="409000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_EQUIPMENT" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -226,7 +218,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="3" />
 		<set name="price" val="240" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -242,7 +233,6 @@
 		<set name="handler" val="SpiritShot" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2047" level="1" /> <!-- Spiritshot (No-grade) -->
 		</skills>
@@ -261,7 +251,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2155" level="1" /> <!-- Spiritshot (D-grade) -->
 		</skills>
@@ -280,7 +269,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2156" level="1" /> <!-- Spiritshot (C-grade) -->
 		</skills>
@@ -299,7 +287,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2157" level="1" /> <!-- Spiritshot (B-grade) -->
 		</skills>
@@ -318,7 +305,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2158" level="1" /> <!-- Spiritshot (A-grade) -->
 		</skills>
@@ -337,7 +323,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2159" level="1" /> <!-- Spiritshot (S-grade) -->
 		</skills>
@@ -354,7 +339,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="for_npc" val="true" />
 		<cond addName="1" msgId="113">
@@ -378,7 +362,6 @@
 		<set name="price" val="134880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -405,7 +388,6 @@
 		<set name="price" val="163560" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -432,7 +414,6 @@
 		<set name="price" val="163560" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -459,7 +440,6 @@
 		<set name="price" val="163560" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -486,7 +466,6 @@
 		<set name="price" val="163560" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -513,7 +492,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -540,7 +518,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -567,7 +544,6 @@
 		<set name="price" val="300880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -594,7 +570,6 @@
 		<set name="price" val="352580" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -621,7 +596,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -648,7 +622,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -675,7 +648,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -702,7 +674,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -729,7 +700,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -757,7 +727,6 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<stats>
@@ -783,7 +752,6 @@
 		<set name="price" val="326000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -810,7 +778,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -837,7 +804,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -864,7 +830,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -891,7 +856,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -918,7 +882,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -945,7 +908,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -972,7 +934,6 @@
 		<set name="price" val="326000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -999,7 +960,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1026,7 +986,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1053,7 +1012,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1080,7 +1038,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1107,7 +1064,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1134,7 +1090,6 @@
 		<set name="price" val="326000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1161,7 +1116,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1188,7 +1142,6 @@
 		<set name="price" val="214800" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1215,7 +1168,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1242,7 +1194,6 @@
 		<set name="price" val="255140" />
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1269,7 +1220,6 @@
 		<set name="price" val="326000" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1296,7 +1246,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1324,7 +1273,6 @@
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<stats>
@@ -1350,7 +1298,6 @@
 		<set name="price" val="300880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1377,7 +1324,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1408,7 +1354,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="2" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1435,7 +1380,6 @@
 		<set name="price" val="300880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1462,7 +1406,6 @@
 		<set name="price" val="380700" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="2" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -1493,7 +1436,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="2" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1524,7 +1466,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1555,7 +1496,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1586,7 +1526,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1617,7 +1556,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="6" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1648,7 +1586,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1679,7 +1616,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1710,7 +1646,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1741,7 +1676,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="7" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1772,7 +1706,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1803,7 +1736,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1834,7 +1766,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1865,7 +1796,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1896,7 +1826,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="9" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1927,7 +1856,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="11" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1958,7 +1886,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1989,7 +1916,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2020,7 +1946,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2051,7 +1976,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2082,7 +2006,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2113,7 +2036,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2144,7 +2066,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2175,7 +2096,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2206,7 +2126,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -2237,7 +2156,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="12" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2268,7 +2186,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -2299,7 +2216,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2330,7 +2246,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2361,7 +2276,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2392,7 +2306,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2423,7 +2336,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2454,7 +2366,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2485,7 +2396,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -2516,7 +2426,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="12" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2547,7 +2456,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2578,7 +2486,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="8" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2609,7 +2516,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3046" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -2640,7 +2546,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3042" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -2671,7 +2576,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2702,7 +2606,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3044" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -2733,7 +2636,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3045" level="10" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -2764,7 +2666,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Health -->
 		</skills>
@@ -2793,7 +2694,6 @@
 		<set name="soulshots" val="3" />
 		<set name="spiritshots" val="3" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>

@@ -59,7 +59,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -72,7 +71,6 @@
 		<!-- Can transform into Pirate Captain Uthanka. -->
 		<set name="icon" val="icon.etc_lesser_potion_green_i00" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -81,7 +79,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -95,7 +92,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -109,7 +105,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -163,7 +158,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -209,7 +203,6 @@
 		<!-- Pirate Captain Uthanka's treasure. Double-click for a chance to obtain one of many items. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="weight" val="10" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -218,7 +211,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="RING" />
 	</item>
@@ -229,7 +221,6 @@
 		<set name="weight" val="150" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -241,7 +232,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
@@ -249,7 +239,6 @@
 	<item id="23820" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
 		<!-- Return to Uthanka's Tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -257,7 +246,6 @@
 	<item id="23821" name="Agathion - Pirate Captain Uthanka" type="Armor">
 		<!-- Summon Uthanka Agathion. -->
 		<set name="icon" val="BranchSys.icon.br_aga_uthanka_i00" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="default_action" val="EQUIP" />
@@ -268,7 +256,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -281,7 +268,6 @@
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="10080" />
@@ -290,7 +276,6 @@
 		<!-- Resurrects a dead person and restores their XP. -->
 		<set name="icon" val="icon.etc_scroll_of_resurrection_i01" />
 		<set name="weight" val="120" />
-		<set name="is_freightable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -392,7 +377,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -405,7 +389,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -418,7 +401,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -431,7 +413,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -444,7 +425,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -458,7 +438,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -472,7 +451,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -486,7 +464,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
 		<set name="weight" val="5" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_sellable" val="false" />
 		<skills>
@@ -880,7 +857,6 @@
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -915,49 +891,42 @@
 		<!-- Bottle Fragment of Valakas' Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Valakas' Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_valakas_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23862" name="Bottle Fragment of Antharas' Soul" type="EtcItem">
 		<!-- Bottle Fragment of Antharas' Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Antharas' Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_antaras_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23863" name="Bottle Fragment of Baium's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Baium's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Baium's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_baium_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23864" name="Bottle Fragment of Orfen's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Orfen's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Orfen's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_orfen_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23865" name="Bottle Fragment of Queen Ant's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Queen Ant's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Queen Ant's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_queen_ant_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23866" name="Bottle Fragment of Frintezza's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Frintezza's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Frintezza's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_frintessa_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23867" name="Bottle Fragment of Freya's Soul" type="EtcItem">
 		<!-- Bottle Fragment of Freya's Soul. Collect 1000 and bring to Rafforty to exchange for a bottle containing Freya's Soul. -->
 		<set name="icon" val="BranchSys3.iconItem.g_bottle_of_freya_soul_fragment" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="23868" name="Agathion - Van Halter's Memory" type="Armor">
@@ -991,7 +960,6 @@
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1005,7 +973,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1019,7 +986,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -1033,7 +999,6 @@
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />

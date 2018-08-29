@@ -8,7 +8,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -20,7 +19,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -32,7 +30,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -44,7 +41,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -56,7 +52,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -68,7 +63,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -80,7 +74,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -92,7 +85,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
 		<set name="price" val="312000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -106,7 +98,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2504" level="1" /> <!-- Old Agathion -->
 		</skills>
@@ -127,7 +118,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -148,7 +138,6 @@
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -170,7 +159,6 @@
 		<set name="handler" val="ItemSkillsTemplate" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<cond addName="1" msgId="113">
@@ -192,7 +180,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="handler" val="ItemSkills" />
@@ -205,7 +192,6 @@
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="60" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -217,7 +203,6 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -241,7 +226,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3411" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Special Ability: Focus -->
@@ -270,7 +254,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -293,7 +276,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -316,7 +298,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -339,7 +320,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -362,7 +342,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -385,7 +364,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -408,7 +386,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -430,7 +407,6 @@
 		<set name="duration" val="60" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="1" />
@@ -453,7 +429,6 @@
 		<set name="duration" val="65" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="useSkillDisTime" val="6" />
@@ -473,7 +448,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="PetFood" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<set name="for_npc" val="true" />
 		<cond addName="1" msgId="113">
@@ -493,7 +467,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="SummonItems" />
 		<set name="use_condition" val="{{uc_transmode_exclude;{tt_pure_stat}}}" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="PET_SUPPLIES" />
 		<cond addName="1" msgId="113">
 			<player flyMounted="false" />
@@ -513,7 +486,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -529,7 +501,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -545,7 +516,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -561,7 +531,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -577,7 +546,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -590,7 +558,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
 		<skills>
@@ -605,7 +572,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="for_npc" val="true" />
 		<skills>
@@ -630,7 +596,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
@@ -665,7 +630,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -698,7 +662,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -732,7 +695,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3566" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -765,7 +727,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -798,7 +759,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
@@ -832,7 +792,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3047" level="2" /> <!-- Special Ability: Acumen -->
 		</skills>
@@ -865,7 +824,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -898,7 +856,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3048" level="2" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -933,7 +890,6 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="8312" level="1" /> <!-- Special Ability: Cheap Shot -->
@@ -970,7 +926,6 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3573" level="2" /> <!-- Special Ability: Guidance -->
 		</skills>
@@ -1006,7 +961,6 @@
 		<set name="reuse_delay" val="1500" />
 		<set name="commissionItemType" val="BOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3567" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1037,7 +991,6 @@
 		<set name="spiritshots" val="1" />
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="DAGGER" />
 		<skills>
@@ -1072,7 +1025,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3009" level="8" /> <!-- Special Ability: Evasion -->
@@ -1106,7 +1058,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="DAGGER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3066" level="4" /> <!-- Special Ability: Critical Damage -->
 		</skills>
@@ -1139,7 +1090,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3600" level="10" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1172,7 +1122,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3070" level="4" type="ON_CRITICAL_SKILL" /> <!-- Special Ability: Critical Stun -->
@@ -1206,7 +1155,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3498" level="1" /> <!-- Special Ability: Light -->
 			<skill id="3552" level="2" /> <!-- Special Ability: PvP Damage -->
@@ -1240,7 +1188,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3057" level="4" /> <!-- Special Ability: Anger -->
 		</skills>
@@ -1273,7 +1220,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3013" level="3" /> <!-- Special Ability: Health -->
 		</skills>
@@ -1306,7 +1252,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3027" level="7" /> <!-- Special Ability: Rsk. Focus -->
 		</skills>
@@ -1340,7 +1285,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3014" level="2" /> <!-- Special Ability: Mana Up -->
 		</skills>
@@ -1374,7 +1318,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3048" level="2" /> <!-- Special Ability: Conversion -->
 		</skills>
@@ -1406,7 +1349,6 @@
 		<set name="element_enabled" val="true" />
 		<set name="enchant_enabled" val="1" />
 		<set name="is_magic_weapon" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
@@ -1441,7 +1383,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3552" level="1" /> <!-- Special Ability: PvP Damage -->
 			<skill id="3069" level="1" /> <!-- Special Ability: Rsk. Evasion -->
@@ -1475,7 +1416,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3565" level="2" /> <!-- Special Ability: Focus -->
 		</skills>
@@ -1508,7 +1448,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3564" level="2" /> <!-- Special Ability: Haste -->
 		</skills>
@@ -1542,7 +1481,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1580,7 +1518,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1618,7 +1555,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="RAPIER" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1657,7 +1593,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1694,7 +1629,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1731,7 +1665,6 @@
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="ANCIENT_SWORD" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1770,7 +1703,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1809,7 +1741,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1847,7 +1778,6 @@
 		<set name="reuse_delay" val="400" />
 		<set name="commissionItemType" val="CROSSBOW" />
 		<set name="isAppearanceable" val="true" />
-		<set name="is_freightable" val="false" />
 		<cond msgId="1518">
 			<player races="KAMAEL" />
 		</cond>
@@ -1878,7 +1808,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -1900,7 +1829,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -1922,7 +1850,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -1944,7 +1871,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
@@ -1969,7 +1895,6 @@
 		<set name="is_magic_weapon" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2003,7 +1928,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2037,7 +1961,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2071,7 +1994,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2107,7 +2029,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2141,7 +2062,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="duration" val="180" />
@@ -2166,7 +2086,6 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<skills>
@@ -2182,7 +2101,6 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<skills>
@@ -2198,7 +2116,6 @@
 		<set name="weight" val="20" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 		<skills>
@@ -2213,7 +2130,6 @@
 		<set name="weight" val="2" />
 		<set name="price" val="34560" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
@@ -2227,7 +2143,6 @@
 		<set name="weight" val="2" />
 		<set name="price" val="138240" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
@@ -2241,7 +2156,6 @@
 		<set name="weight" val="2" />
 		<set name="price" val="691200" />
 		<set name="is_stackable" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<cond msgId="113">
 			<player level="82" />
@@ -2254,7 +2168,6 @@
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="2" />
 		<set name="price" val="3456000" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
 		<cond msgId="113">
@@ -2274,7 +2187,6 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -2298,7 +2210,6 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -2322,7 +2233,6 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -2346,7 +2256,6 @@
 		<set name="weight" val="4180" />
 		<set name="price" val="25255000" />
 		<set name="element_enabled" val="true" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="ARMOR_TOP" />
 		<set name="isAppearanceable" val="true" />
 		<set name="enchant_enabled" val="1" />
@@ -2370,7 +2279,6 @@
 		<set name="price" val="16000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3439" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Silk Shirt -->
 		</skills>
@@ -2391,7 +2299,6 @@
 		<set name="price" val="16000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3440" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Silk Shirt -->
 		</skills>
@@ -2412,7 +2319,6 @@
 		<set name="price" val="16000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3441" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Silk Shirt -->
 		</skills>
@@ -2433,7 +2339,6 @@
 		<set name="price" val="52000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3445" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Thin Leather Shirt -->
 		</skills>
@@ -2454,7 +2359,6 @@
 		<set name="price" val="52000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3446" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Thin Leather Shirt -->
 		</skills>
@@ -2475,7 +2379,6 @@
 		<set name="price" val="52000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3447" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Thin Leather Shirt -->
 		</skills>
@@ -2496,7 +2399,6 @@
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3451" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Scale Shirt -->
 		</skills>
@@ -2517,7 +2419,6 @@
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3452" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Scale Shirt -->
 		</skills>
@@ -2538,7 +2439,6 @@
 		<set name="price" val="588000" />
 		<set name="enchant_enabled" val="1" />
 		<set name="commissionItemType" val="UNDERWEAR" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="3453" level="1" type="ON_ENCHANT" type_value="4" /> <!-- Scale Shirt -->
 		</skills>

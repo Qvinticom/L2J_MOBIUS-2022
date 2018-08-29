@@ -12,7 +12,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -29,7 +28,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -46,7 +44,6 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_freightable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
@@ -60,7 +57,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2023" level="1" /> <!-- Star Shard -->
 		</skills>
@@ -69,7 +65,6 @@
 		<!-- Starlight Festival Event - Black powder. Ingredient used to make larger fireworks. -->
 		<set name="icon" val="icon.etc_powder_black_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -77,7 +72,6 @@
 		<!-- Starlight Festival Event - Chemical compound that generates a powerful flash when ignited. It is needed to make large fireworks. -->
 		<set name="icon" val="icon.etc_broken_crystal_silver_i00" />
 		<set name="material" val="STEEL" />
-		<set name="is_freightable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -91,7 +85,6 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_coc_restricted" val="true" />
-		<set name="is_freightable" val="false" />
 		<skills>
 			<skill id="2024" level="1" /> <!-- Firecracker -->
 		</skills>
@@ -104,7 +97,6 @@
 		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<set name="is_freightable" val="false" />
 		<set name="is_coc_restricted" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<skills>
@@ -121,7 +113,6 @@
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="1000" />
 		<set name="price" val="5000000" />
-		<set name="is_freightable" val="false" />
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
