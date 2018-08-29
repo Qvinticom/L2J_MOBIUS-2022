@@ -24,17 +24,18 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author -Wooden-
- * @author UnAfraid, mrTJO
+ * @author Mobius
  */
 public class PackageSendableList extends AbstractItemPacket
 {
 	private final Collection<L2ItemInstance> _items;
 	private final int _objectId;
 	private final long _adena;
+	private final int _sendType;
 	
-	public PackageSendableList(L2PcInstance player, int objectId)
+	public PackageSendableList(int sendType, L2PcInstance player, int objectId)
 	{
+		_sendType = sendType;
 		_items = player.getInventory().getAvailableItems(true, true, true);
 		_objectId = objectId;
 		_adena = player.getAdena();
@@ -45,13 +46,22 @@ public class PackageSendableList extends AbstractItemPacket
 	{
 		OutgoingPackets.PACKAGE_SENDABLE_LIST.writeId(packet);
 		
-		packet.writeD(_objectId);
-		packet.writeQ(_adena);
-		packet.writeD(_items.size());
-		for (L2ItemInstance item : _items)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			writeItem(packet, item);
-			packet.writeD(item.getObjectId());
+			packet.writeD(_items.size());
+			packet.writeD(_items.size());
+			for (L2ItemInstance item : _items)
+			{
+				writeItem(packet, item);
+				packet.writeD(item.getObjectId());
+			}
+		}
+		else
+		{
+			packet.writeD(_objectId);
+			packet.writeQ(_adena);
+			packet.writeD(_items.size());
 		}
 		return true;
 	}

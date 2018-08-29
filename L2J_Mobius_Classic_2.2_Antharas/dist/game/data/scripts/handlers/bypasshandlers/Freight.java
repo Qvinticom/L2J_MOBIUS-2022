@@ -60,6 +60,7 @@ public class Freight implements IBypassHandler
 						}
 					}
 					activeChar.sendPacket(new WareHouseWithdrawalList(1, activeChar, WareHouseWithdrawalList.FREIGHT));
+					activeChar.sendPacket(new WareHouseWithdrawalList(2, activeChar, WareHouseWithdrawalList.FREIGHT));
 				}
 				else
 				{
