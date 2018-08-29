@@ -502,6 +502,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49845" name="Sayha's Blessing" type="EtcItem">
 		<!-- Sayha Grace points +35,000 (1 slot). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
@@ -511,6 +512,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49846" name="Sayha's Silver Light Blessing" type="EtcItem">
 		<!-- Sayha Grace points +70,000 (2 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
@@ -520,6 +522,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49847" name="Sayha's Golden Light Blessing" type="EtcItem">
 		<!-- Sayha Grace points +105,000 (3 slots). Reuse Time is 10 minutes. Cannot be dropped or sold in the grocery store. -->
@@ -529,6 +532,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49848" name="Fire Dragon Pendant Chest +10" type="EtcItem">
 		<!-- Double-click to get Fire Dragon Pendant +10. Cannot be dropped or sold in the grocery store. -->
@@ -538,6 +542,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="49467" min="1" max="1" chance="100" minEnchant="10" maxEnchant="10" />
@@ -551,6 +556,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49850" name="Ornament Supply Box (A-grade)" type="EtcItem">
 		<!-- Double-click to get an A-grade Ornament. Cannot be dropped or sold in the grocery store. -->
@@ -560,6 +566,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39187" level="1"/> <!--Ornament Supply Box (A-grade)-->
@@ -573,6 +580,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49852" name="Secret Book of Baggins’ Enchantments - IV" type="EtcItem">
 		<!-- Prevents the Talisman of Insolence from degrading to Lv. 2 in case of a failed enchantment to Lv. 4 using the Secret Method of Baggins. Cannot be dropped or sold in the grocery store. -->
@@ -581,6 +589,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49853" name="Secret Book of Baggins’ Enchantments - V" type="EtcItem">
 		<!-- Prevents the Talisman of Insolence from degrading to Lv. 3 in case of a failed enchantment to Lv. 5 using the Secret Method of Baggins. Cannot be dropped or sold in the grocery store. -->
@@ -589,6 +598,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49854" name="Melissa’s MP Recovery Potion" type="EtcItem">
 		<!-- Instantly recovers MP. Cannot be dropped or sold in the grocery store. -->
@@ -598,6 +608,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49855" name="Sayha's Golden Gift" type="EtcItem">
 		<!-- Double-click to randomly receive one rare accessory or one rare item. Cannot be dropped or sold in the grocery store. -->
@@ -607,6 +618,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49856" name="Sayha's Silver Gift" type="EtcItem">
 		<!-- Double-click to get one of Ready Product (C/B/A-grade) Boxes, one of various Enchantment Scrolls, or one Sayha's Golden Light Blessing. Cannot be dropped or sold in the grocery store. -->
@@ -616,6 +628,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49857" name="Sayha's Gift" type="EtcItem">
 		<!-- Double-click to randomly receive one of Talismans of Insolence, one of the enchantment items, or one of the supply types. Cannot be dropped or sold in the grocery store. -->
@@ -625,6 +638,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49858" name="Wind Token" type="EtcItem">
 		<!-- Double-click to receive Sayha's Blessing Box and Sayha's Gust. If you are lucky, you can also get one of the following items: Golden, Silver, or Average Gift. Cannot be dropped or sold in the grocery store. -->
@@ -634,6 +648,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49859" name="Weapon Exchange Coupon" additionalName="Event" type="EtcItem">
 		<!-- Using Dimensional Merchant, you can trade it for an excellent D-, C-, or No-grade item. A certain amount of coupons is required for exchange. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -644,6 +659,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49860" name="Hero’s Wondrous Cubic" additionalName="7-day" type="EtcItem">
 		<!-- Available at level 20 or higher. Double-click the Cube to receive one of the following items: Ticket for Soulshot, Scroll of Mood Melody, Warrior's Major Healing Potion, Warrior's Quick Healing Potion, Angel Cat's Blessing, Greater Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing Kit Box, Box of Scroll of Escape to the Base, Blade Spirit, or Weapon Exchange Coupon (can be used only once a day). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Duration: 7 days. -->
@@ -673,6 +689,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49863" name="Best Dye of STR (STR +1 CON - 3)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 3rd class transfer. All classes. -->

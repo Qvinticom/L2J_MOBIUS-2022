@@ -61,6 +61,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="39272" level="1"/> <!--Officer of Balthus Knights -->
@@ -93,6 +94,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90510" name="Talisman of Border Pack +5" type="EtcItem">
 		<!-- Double-click to obtain Talisman of Border - Lv. 5. Cannot be dropped. Note: cannot be returned once opened. -->
@@ -157,6 +159,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90517" name="Greater GM's Blessing Chest" type="EtcItem">
 		<!-- Double-click to receive one of the following items: Spellbook Box - 3rd Class Transfer, Magic Gem, Spellbook Chest, Common Life Stone, Scroll of Mood Melody. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -167,6 +170,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90518" name="Greatest GM's Blessing Chest" type="EtcItem">
 		<!-- Double-click to receive one of the following items: Refined Rare Accessory Pack (30-day), Rare Accessory Box (15-day), Unidentified Stone, Dandy Shining Pendant (7-day), Dandy Shining Pendant (1-day), Dandy Pendant (7-day), Dandy Pendant (1-day). Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -177,6 +181,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90519" name="Shining Scroll of Mood Melody" type="EtcItem">
 		<!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. This effect will not be removed after death. Cannot be dropped. -->

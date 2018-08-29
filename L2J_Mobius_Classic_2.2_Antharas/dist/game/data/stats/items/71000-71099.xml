@@ -47,6 +47,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71004" name="Agathion: Minion Eye Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion: Minion Eye (30-day). Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -59,6 +60,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71005" name="Agathion: Matryoshka Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion: Matryoshka (7-day). Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -71,6 +73,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71006" name="Agathion: Matryoshka Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion: Matryoshka (30-day). Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -83,6 +86,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71007" name="Agathion: Babayaga Pack (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion: Babayaga (7-day). Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -95,6 +99,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71008" name="Agathion: Babayaga Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion: Babayaga (30-day). Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -107,6 +112,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71009" name="Jack O'Lantern" type="EtcItem">
 		<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing buff. Will be deleted after the event. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
@@ -694,6 +700,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71066" name="Agathion Rudolph Box (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Agathion Rudolph (30-day). Cannot be dropped. Can be shared within account through Dimensional Merchant. -->
@@ -704,6 +711,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71067" name="Glittering Enchant Scroll of Border" type="EtcItem">
 		<!-- An Enchant Scroll enhancing the properties of Talisman of Border. Can be applied to Talisman enchanted up to +9. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
@@ -1045,6 +1053,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71098" name="Formal Wear" type="Armor">
 		<!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. -->

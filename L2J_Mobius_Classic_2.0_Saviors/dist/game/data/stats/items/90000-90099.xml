@@ -6,6 +6,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90001" name="Best Dye of INT (INT + 4 MEN - 2)" additionalName="3rd Class Transfer" type="EtcItem">
 		<!-- Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 3rd Class Transfer. -->
@@ -59,6 +60,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90008" name="Remnant Ashes" type="EtcItem">
 		<!-- An item you got from a prisoner of the Dungeon of Abyss. -->
@@ -144,6 +146,7 @@
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="EtcItem">
 		<!-- Double-click to receive one of A-grade Armor Ingredients. -->

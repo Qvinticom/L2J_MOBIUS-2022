@@ -538,6 +538,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36954" name="No-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a no-grade item and a D-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -551,6 +552,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36955" name="D-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a D-grade item and a C-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -564,6 +566,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36956" name="C-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a C-grade item and a B-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -577,6 +580,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36957" name="B-grade" type="EtcItem">
 		<!-- Double-click to receive a box with a B-grade item and an A-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -590,6 +594,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36958" name="A-grade" type="EtcItem">
 		<!-- Double-click to receive a box with an A-grade item and an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -603,6 +608,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36959" name="S-grade" type="EtcItem">
 		<!-- Double-click to receive an S-grade item. Items are provided according to the PC's level and class. The box whose level does not match the PC's level cannot be used. -->
@@ -616,6 +622,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="36960" name="Fire Stone (+ 60)" type="EtcItem">
 		<!-- Can bestow fire attribute up to 60 at one time. Additional Elemental attributes cannot be bestowed. Up to 3 types of attributes can be enchanted for armor. Opposite attributes cannot be bestowed at the same time. -->

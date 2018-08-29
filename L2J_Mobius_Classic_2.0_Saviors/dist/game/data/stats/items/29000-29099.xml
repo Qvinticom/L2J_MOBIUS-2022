@@ -449,6 +449,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
@@ -467,6 +468,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29034" name="Adventurer Hat - Event" type="Armor">
 		<!-- 2nd month Hair Accessory. -->
@@ -480,6 +482,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29035" name="Adventurer Hat - Event" type="Armor">
 		<!-- 3rd month Hair Accessory. -->
@@ -493,6 +496,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29036" name="Refined Romantic Chapeau: Red" type="Armor">
 		<!-- Refined Romantic Chapeau: Red. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
@@ -506,6 +510,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29037" name="Refined Angel Ring" type="Armor">
 		<!-- Refined Angel Ring. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
@@ -519,6 +524,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29038" name="Refined Wizard Hat" type="Armor">
 		<!-- Mystery Mage Hat. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
@@ -532,6 +538,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29039" name="Laborer Hat" type="Armor">
 		<!-- Laborer's Hat. Cannot be exchanged, dropped, or sold. -->
@@ -545,6 +552,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29040" name="Top Hat" type="Armor">
 		<!-- A top hat which belonged to a mysterious magician. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -557,6 +565,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29041" name="Vigilante Hat" type="Armor">
 		<!-- Vigilante Hat. Cannot be exchanged, dropped, or sold. -->
@@ -570,6 +579,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29042" name="Adventurer Hat - Event" type="Armor">
 		<!-- 10th month Hair Accessory. -->
@@ -583,6 +593,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29043" name="Adventurer Hat - Event" type="Armor">
 		<!-- 11th month Hair Accessory. -->
@@ -596,6 +607,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29044" name="Adventurer Hat - Event" type="Armor">
 		<!-- 12th month Hair Accessory. -->
@@ -609,6 +621,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29045" name="Adventurer Hat - Event" type="Armor">
 		<!-- 1st month Hair Accessory. 30-day item. Allows to use special skill. -->
@@ -778,6 +791,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29058" name="Agathion - Virgo" type="Armor">
 		<!-- Summons Virgo. 30-day item. Allows to use special skill. -->
@@ -804,6 +818,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29060" name="Agathion - Capricorn" type="Armor">
 		<!-- Summons Capricorn. 30-day item. Allows to use special skill. -->
@@ -830,6 +845,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29062" name="Agathion - Libra" type="Armor">
 		<!-- Summons Libra. 30-day item. Allows to use special skill. -->
@@ -856,6 +872,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29064" name="Agathion - Aries" type="Armor">
 		<!-- Summons Aries. 30-day item. Allows to use special skill. -->
@@ -882,6 +899,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29066" name="Agathion - Taurus" type="Armor">
 		<!-- Summons Taurus. 30-day item. Allows to use special skill. -->
@@ -908,6 +926,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29068" name="Agathion - Leo" type="Armor">
 		<!-- Summons Leo. 30-day item. Allows to use special skill. -->
@@ -934,6 +953,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29070" name="Agathion - Gemini" type="Armor">
 		<!-- Summons Gemini. 30-day item. Allows to use special skill. -->
@@ -960,6 +980,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29072" name="Agathion - Scorpio" type="Armor">
 		<!-- Summons Scorpio. 30-day item. Allows to use special skill. -->
@@ -986,6 +1007,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29074" name="Agathion - Aquarius" type="Armor">
 		<!-- Summons Aquarius. 30-day item. Allows to use special skill. -->
@@ -1012,6 +1034,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29076" name="Agathion - Pisces" type="Armor">
 		<!-- Summons Pisces. 30-day item. Allows to use special skill. -->
@@ -1038,6 +1061,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29078" name="Agathion - Sagittarius" type="Armor">
 		<!-- Summons Sagittarius. 30-day item. Allows to use special skill. -->
@@ -1064,6 +1088,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29080" name="Agathion - Cancer" type="Armor">
 		<!-- Summons Cancer. 30-day item. Allows to use special skill. -->

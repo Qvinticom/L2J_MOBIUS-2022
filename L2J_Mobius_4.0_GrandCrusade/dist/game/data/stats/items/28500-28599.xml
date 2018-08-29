@@ -123,6 +123,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -136,6 +137,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -149,6 +151,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -163,6 +166,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
@@ -356,6 +360,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28529" name="Messiah's Castle's Lost Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain random lost treasures of Messiah's Castle. -->
@@ -385,6 +390,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28532" name="Ruby Lv. 3" additionalName="30-day" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 7.5%. Effect does not stack with additional jewels of the same type. -->
@@ -879,6 +885,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -917,6 +924,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -955,6 +963,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -993,6 +1002,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1029,6 +1039,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1074,6 +1085,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1119,6 +1131,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />
@@ -1164,6 +1177,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="enchant_enabled" val="5" />
 		<cond msgId="2453">
 			<player cloakStatus="true" />

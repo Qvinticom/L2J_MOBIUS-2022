@@ -1345,6 +1345,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37491" name="Awakened Warrior's Attribute Stone Pack" type="EtcItem">
 		<!-- Double-click to receive 50 Fire/Water/Earth/Wind/Darkness/Holy Attribute Stones. Cannot be used in the Olympiad. -->
@@ -1358,6 +1359,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37492" name="Awakened Warrior's Talisman Pack" type="EtcItem">
@@ -1372,6 +1374,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37493" name="Hair Accessory Restoration Stone" type="EtcItem">
@@ -1454,6 +1457,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />

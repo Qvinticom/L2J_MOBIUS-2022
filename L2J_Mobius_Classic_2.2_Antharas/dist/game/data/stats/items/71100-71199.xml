@@ -38,6 +38,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71103" name="XP and SP Rune - 50%" additionalName="5 hours" type="EtcItem">
 		<!-- 5-hour item?. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -56,6 +57,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71105" name="XP and SP Rune - 50%" additionalName="7-day" type="EtcItem">
 		<!-- 7-day item. When in inventory, your XP and SP gain is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -73,6 +75,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71107" name="Irene' Hourglass - 1 Hour" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -83,6 +86,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71108" name="Package: Irene' Hourglass (1 hour)" type="EtcItem">
 		<!-- Double-click to obtain Irene' Hourglass - 1 Hour. Intended for Lv. 1 - 75 characters. -->
@@ -92,6 +96,7 @@
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71109" name="Package: Golden Mermaid's Fishing Rod (7-day)" type="EtcItem">
 		<!-- Double-click to obtain Golden Mermaid's Fishing Rod (7-day). -->
@@ -100,6 +105,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71110" name="Package: Golden Mermaid's Fishing Rod (30-day)" type="EtcItem">
 		<!-- Double-click to obtain Golden Mermaid's Fishing Rod (30-day). -->
@@ -108,6 +114,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71111" name="Ruthless Tribe Mask" type="Armor">
 		<!-- A mask which formerly belonged to Looters. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -121,6 +128,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71112" name="Artisan's Goggles" type="Armor">
 		<!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -135,6 +143,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71113" name="Fairy Antennae" type="Armor">
 		<!-- A lovely hair accessory shaped as antennae with starlets. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -148,6 +157,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="maxMp">22</stat>
 		</stats>
@@ -164,6 +174,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="maxMp">28</stat>
 		</stats>
@@ -180,6 +191,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="maxMp">34</stat>
 		</stats>
@@ -196,6 +208,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="maxMp">22</stat>
 		</stats>
@@ -212,6 +225,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71118" name="Outlaw Eyepatch" type="Armor">
 		<!-- A purple colored accessory that will certainly adorn its owner. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -225,6 +239,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71119" name="Monocle" type="Armor">
 		<!-- An accessory for those who like to stand out from the crowd. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
@@ -238,6 +253,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71120" name="Sing Of Adventurer - Recovery" type="EtcItem">
 		<!-- Endowed with a mysterious power, the song allows resurrecting a character and restoring their lost experience at the death of an NPC. -->
@@ -247,6 +263,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71121" name="Agathion - Bugbear" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -260,6 +277,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71122" name="Agathion - Dryad" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -273,6 +291,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71123" name="Agathion - Griffin" type="Armor">
 		<!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -285,6 +304,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71124" name="Stable Cloak Enchantment Scroll - Legendary" type="EtcItem">
 		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
@@ -359,6 +379,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71135" name="Agathion Mermaid Enchant Scroll" type="EtcItem">
 		<!-- Only for Mermaid Agathion. Increases M. Def. when the Agathion grows. Can be safely strengthened up to +3 and can be enhanced up to +10. Starting from +1 enchanting special abilities increases step by step. If enchanting fails, the enchanl level is maintained. -->
@@ -390,6 +411,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71140" name="Shining Fishing Box" type="EtcItem">
 		<!-- Double click to obtain a random item. -->
@@ -407,6 +429,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="71142" name="Complete Arms Supplies Pack" type="EtcItem">
 		<!-- Double click to obtain one item for powerful weapon at random. -->

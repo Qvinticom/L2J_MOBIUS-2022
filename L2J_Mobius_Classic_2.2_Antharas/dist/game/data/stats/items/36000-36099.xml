@@ -10,6 +10,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<skills>
 			<skill id="9618" level="1" /> <!-- Yum Yum Candy -->
@@ -25,6 +26,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<skills>
 			<skill id="9619" level="1" /> <!-- Nom Nom Candy -->
@@ -41,6 +43,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9620" level="1" /> <!-- Yummy Gift Box -->

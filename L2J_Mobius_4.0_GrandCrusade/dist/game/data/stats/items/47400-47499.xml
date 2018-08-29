@@ -313,6 +313,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47420" name="Energy of Longing" type="EtcItem">
 		<!-- Compounding the Energy of Longing with Talisman - Longing gives a certain probability of the production of a Talisman - Insanity. If production fails, the Talisman - Longing is not destroyed, and only the Energy of Longing is lost. -->

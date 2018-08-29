@@ -12,6 +12,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="120" />
 	</item>
 	<item id="38101" name="Leona's Scroll: 1,000,000 SP" type="EtcItem">
@@ -73,6 +74,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="38105" name="Superior CP Potion" type="EtcItem">
 		<!-- Restores 1000 CP. -->

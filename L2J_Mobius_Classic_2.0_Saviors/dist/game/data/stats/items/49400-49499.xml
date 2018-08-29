@@ -387,6 +387,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49417" name="Spirit Energy" type="EtcItem">
 		<!-- Used to exchange Soul Crystals. Cannot be dropped. -->
@@ -429,6 +430,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49421" name="Package: Cube of Sayha (30-day)" type="EtcItem">
 		<!-- Double-click the package to receive 30-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
@@ -442,6 +444,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49422" name="Package: Cube of Sayha (90-day)" type="EtcItem">
 		<!-- Double-click the package to receive 90-day Cube of Sayha. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Available since level 40. -->
@@ -455,6 +458,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49423" name="Spellbook: Dual Weapon Defense" type="EtcItem">
 		<!-- Spellbook needed to learn Dual Weapon Defense. Used by Gladiator. Required level: 41 -->
@@ -544,6 +548,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49435" name="Scroll: Berserker Spirit" type="EtcItem">
 		<!-- P. Def. -5%, M. Def. -10%, Evasion -2 -->
@@ -1174,6 +1179,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49474" name="Scroll Part: Enchant Weapon" type="EtcItem">
 		<!-- Take those to exquisite goods merchant Galladucci. If you are lucky, you will get one of these Scrolls: Scroll: Enchant Weapon D / C / B. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -1313,6 +1319,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49488" name="Major Healing Potion" type="EtcItem">
 		<!-- Magic potion that quickly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -1324,6 +1331,7 @@
 		<set name="weight" val="5" />
 		<set name="reuse_delay" val="10000" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_coc_restricted" val="true" />
 	    <set name="is_tradable" val="false" />
@@ -1345,6 +1353,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49490" name="Fishing kit" type="EtcItem">
 		<!-- Double-click to receive 1 Fishing Rod (1-day), Bait (720 pcs), 1 Hero's Dual Swords, 1 Soulshot Ticket. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
@@ -1357,6 +1366,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49491" name="Weapon Supply Box (D-grade)" type="EtcItem">
 		<!-- Double-click to get the highest quality D-grade weapon. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -1466,6 +1476,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="49498" name="My Teleport Scroll Package" type="EtcItem">
 		<!-- Double-click to get 1 My Teleport Book or 30 My Teleport Scrolls. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->

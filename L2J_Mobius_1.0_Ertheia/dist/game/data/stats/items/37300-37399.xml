@@ -2214,6 +2214,7 @@
 	<item id="37378" name="Emerald Weapon Appearance Stone" type="EtcItem">
 		<set name="icon" val="BranchSys.Icon.br_spirit_skill_i00" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -1192,6 +1192,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1240,6 +1241,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
 		<!-- A letter from the Supply Officer Sibis of the Balthus Knights. Will be deleted when the Balthus Knights Event ends. -->

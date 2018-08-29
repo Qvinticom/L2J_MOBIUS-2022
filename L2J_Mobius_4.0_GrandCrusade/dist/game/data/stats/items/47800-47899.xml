@@ -151,6 +151,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47813" name="Sayha's Talisman Stage 7" type="Armor">
 		<!-- When equipped, through Sayha's strength, grants P. Def 1351, M. Def 883, XP/SP Obtained 15% increases. When equipped with Venir Talisman Stage 10 or higher, additionally grants Skill power +3% and Cooldown -3%. Active Skills. Sayha's Grace Lv1. Sayha's Encouragement Lv1. Sayha's Rage Lv1. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
@@ -165,6 +166,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47814" name="Sayha's Talisman Stage 8" type="Armor">
 		<!-- When equipped, through Sayha's strength, grants P. Def 1576, M. Def 1030, XP/SP Obtained 20% increases. When equipped with Venir Talisman Stage 10 or higher, additionally grants Skill power +5% and Cooldown -5%. Active Skills. Sayha's Grace Lv2. Sayha's Encouragement Lv2. Sayha's Rage Lv2. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
@@ -179,6 +181,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47815" name="Sayha's Talisman Stage 9" type="Armor">
 		<!-- When equipped, through Sayha's strength, grants P. Def 1801, M. Def 1178, XP/SP Obtained 25%, and Recovery Potion effect 1000 increases. When equipped with Venir Talisman Stage 10 or higher, additionally grants Skill power +5% and Cooldown -5%. Active Skills. Sayha's Grace Lv3. Sayha's Encouragement Lv3. Sayha's Rage Lv3. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
@@ -193,6 +196,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47816" name="Sayha's Talisman Stage 10" type="Armor">
 		<!-- When equipped, through Sayha's strength, grants P. Def 2027, M. Def 1325, XP/SP Obtained 30%, and Recovery Potion effect 2000 increases. When equipped with Venir Talisman Stage 10 or higher, additionally grants Skill power +9% and Cooldown -5%. Active Skills. Sayha's Grace Lv4. Sayha's Encouragement Lv4. Sayha's Rage Lv4. When identical Talismans are equipped, the higher level Talisman's effects are applied. -->
@@ -207,6 +211,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47817" name="Sayha's Talisman Box" type="EtcItem">
 		<!-- When used, Sayha's Talisman Stage 1 can be obtained. -->
@@ -241,6 +246,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="18097" level="1" /> <!-- Dimensional Bracelet -->
 		</skills>
@@ -288,6 +294,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47824" name="Sweet Rice Cakes" additionalName="Event" type="EtcItem">
 		<!-- Songpyeon looks sweet. When you use it, a certain amount of Vitality is recovered. Cooldown 1 minute. -->
@@ -301,6 +308,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47825" name="Hanbok Outfit" additionalName="Event" type="EtcItem">
 		<!-- Formal Wear from a far east festival. When used, all basic abilities are increased by 1 for 30 minutes and the appearance is changed to wearing Hanbok. Cooldown 5 minutes. Will be deleted on September 28, 2016 (Wed), after regular maintenance. -->
@@ -313,6 +321,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47826" name="Hanbok" type="Armor">
 		<!-- Items to make a Hanbok Outfit. -->
@@ -1308,6 +1317,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="26300" name="3rd Anniversary Hat" type="Armor">
 		<!-- Hair accessory for the 3rd anniversary of Lineage 2. Uses 2 hair accessory slots. -->
@@ -11,6 +11,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="26301" name="3rd Anniversary Agathion" additionalName="14-day" type="Armor">
@@ -38,6 +39,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 	</item>
 	<item id="26303" name="6th Anniversary Agathion" additionalName="14-day" type="Armor">

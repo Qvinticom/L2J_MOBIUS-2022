@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20100" name="Rock-Paper-Scissors Santa Hat" additionalName="24-hour" type="Armor">
 		<!-- This festive holiday hat allows you to participate in a "Rock-Paper-Scissors" contest with Thomas D. Turkey. Requires 2 hair accessory slots. -->
@@ -2948,6 +2948,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_premium" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

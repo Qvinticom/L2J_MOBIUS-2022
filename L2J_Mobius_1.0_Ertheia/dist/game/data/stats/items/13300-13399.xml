@@ -12,6 +12,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="allow_self_resurrection" val="true" />
 	</item>
 	<item id="13301" name="My Teleport Book (Event)" type="EtcItem">
@@ -24,6 +25,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -47,6 +49,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13303" name="White Weasel Minion Necklace (Event)" type="EtcItem">
 		<!-- Item that allows you to summon a Minion who temporarily casts warrior-type battle support magic. -->
@@ -159,6 +162,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="NicknameColor" />
 	</item>
 	<item id="13308" name="Mount - Darkmane Pacer (Event)" additionalName="7-day" type="Armor">
@@ -1789,6 +1793,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13384" name="Minion Coupon 3-unit Pack (Event)" type="EtcItem">
 		<!-- Wrapped box containing ticket that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->

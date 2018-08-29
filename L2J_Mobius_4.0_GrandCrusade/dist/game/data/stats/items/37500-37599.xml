@@ -9,6 +9,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />
@@ -30,6 +31,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />
@@ -51,6 +53,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />
@@ -72,6 +75,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />
@@ -93,6 +97,7 @@
 		<set name="material" val="PAPER" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="EnchantAttribute" />
 		<set name="commissionItemType" val="ATTRIBUTE_STONE" />
 		<set name="is_clan_depositable" val="false" />
@@ -388,6 +393,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -399,6 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37525" name="Agathion - Pomona" additionalName="90-day" type="Armor">
 		<!-- Bracelet for summoning Pomona Agathion. 90-day. <Active Skill>. Pomona Agathion Teleport. Lets you teleport to various strongholds. (Cooldown is 30 min.) -->
@@ -468,6 +475,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="icon" val="icon.etc_ev_lind_egg" />
 	</item>
 	<item id="37533" name="NC Messenger's Hat" type="Armor">
@@ -483,6 +491,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="13543" level="1" /> <!-- NC Messenger's Hat -->
 		</skills>
@@ -537,6 +546,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37538" name="Pomona Agathion Pack" type="EtcItem">
 		<!-- Double-click to receive a Pomona Agathion (90-day). Cannot be used in the Olympiad. -->
@@ -547,6 +557,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37539" name="Enchant Scroll Pack" type="EtcItem">
 		<!-- Double-click to receive 1 Scroll: Enchant Armor (R-grade) and 1 Scroll: Enchant Weapon (R-grade). Cannot be used in the Olympiad. -->
@@ -657,6 +668,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />

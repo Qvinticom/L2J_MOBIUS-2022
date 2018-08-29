@@ -1132,6 +1132,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="27615" level="1" /> <!-- Maphr's Wind Scroll -->

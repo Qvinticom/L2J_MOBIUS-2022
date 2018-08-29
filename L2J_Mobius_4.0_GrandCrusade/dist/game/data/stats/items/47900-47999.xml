@@ -269,6 +269,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47925" name="Red Libra Request - Altar of Shilen" type="EtcItem">
 		<!-- A request letter from the Red Libra merchants to hunt monsters in the Altar of Shilen. A character of level 101 or over can receive the request by double-clicking the item. It will be deleted on Wednesday, September 28, 2016 after regular maintenance when the Red Libra merchants leave. Can be performed twice a day. -->
@@ -310,6 +311,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>
@@ -497,6 +499,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">1</stat>
 			<stat type="mAtk">1</stat>

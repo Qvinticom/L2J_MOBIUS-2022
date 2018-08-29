@@ -127,6 +127,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47613" name="Angler's Bait (85)" type="EtcItem">
 		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Use to catch Ugly, Swift, Powerful Fish, with a chance to obtain Angler's Treasure Chest. Can be used only at levels 85 - 94. -->
@@ -659,6 +660,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47669" name="Intermediate Arena Loot" type="EtcItem">
 		<!-- Arena Event reward. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
@@ -671,6 +673,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47670" name="High-grade Arena Loot" type="EtcItem">
 		<!-- Arena Event reward. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
@@ -683,6 +686,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47671" name="PC Points Coupon (180)" type="EtcItem">
 		<!-- Double click to receive 180 PC Cafe Points. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
@@ -728,6 +732,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -750,6 +755,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -770,6 +776,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47676" name="Pa'agrio's Blessing - EXP" additionalName="Event" type="EtcItem">
 		<!-- When used, increases Max HP/MP/CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/M. Def 10%, and Accuracy by 4, Magic Accuracy by 4, P. Atk./Casting Spd. by 10%, Movement Speed by 10, Attack Attribute by 100, and reduces Skill MP Consumption by 10% for 30 minutes. Additionally Increases XP by 30%, and grants 12% bonus Vitality. Buff effect persists through death. Cooldown Time 5min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. Will be deleted on May 25, 2016 (Wed) after regular maintenance. -->
@@ -783,6 +790,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47677" name="Red Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage + 1% and P. Skill Critical Damage + 1%. Effect does not stack with additional jewels of the same type. -->

@@ -321,6 +321,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70532" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.bm_gold_shose" />
@@ -351,6 +352,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70535" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.etc_treasure_box_i08" />
@@ -382,6 +384,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70538" name="NoItemName" type="EtcItem">
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
@@ -393,5 +396,6 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 </list>

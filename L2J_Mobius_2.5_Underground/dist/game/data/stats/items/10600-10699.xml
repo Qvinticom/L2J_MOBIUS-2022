@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="10600" name="Battle Manual - Soul Barrier" type="EtcItem">
 		<!-- Spellbook needed to learn Soul Barrier. Used by Berserkers and Arbalesters. Required level: 58 -->
@@ -756,6 +756,7 @@
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_commissionable" val="false" />
+		<set name="is_freightable" val="true" />
 		<set name="allow_self_resurrection" val="true" />
 	</item>
 	<item id="10650" name="Adventurer's Scroll of Escape" type="EtcItem">

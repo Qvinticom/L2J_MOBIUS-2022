@@ -10,6 +10,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">18</stat>
 		</stats>
@@ -24,6 +25,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 		</stats>
@@ -38,6 +40,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">22</stat>
 		</stats>
@@ -52,6 +55,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">24</stat>
 		</stats>
@@ -66,6 +70,7 @@
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">16</stat>
 		</stats>
@@ -331,6 +336,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29521" name="Package: Mysterious Soulshot (No-grade, 1000 pcs.)" type="EtcItem">
 		<!-- Double-click the item to receive 1000 Mysterious Soulshots (No-grade). -->
@@ -495,6 +501,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29023" min="5000" max="5000" chance="100" />
@@ -513,6 +520,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29024" min="1000" max="1000" chance="100" />
@@ -531,6 +539,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29025" min="5000" max="5000" chance="100" />
@@ -549,6 +558,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29026" min="1000" max="1000" chance="100" />
@@ -567,6 +577,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29027" min="5000" max="5000" chance="100" />
@@ -585,6 +596,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="29028" min="1000" max="1000" chance="100" />
@@ -611,6 +623,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29539" name="Blessed Spiritshot (No-grade)" type="EtcItem">
 		<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
@@ -624,6 +637,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29540" name="Soulshot (D-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
@@ -638,6 +652,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29541" name="Blessed Spiritshot (D-grade)" type="EtcItem">
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
@@ -652,6 +667,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29542" name="Soulshot (C-grade)" type="EtcItem">
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
@@ -666,6 +682,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29543" name="Blessed Spiritshot (C-grade)" type="EtcItem">
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
@@ -680,6 +697,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29544" name="Expensive Ring of Chronicle Heir" type="Armor">
 		<!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
@@ -1293,6 +1311,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="29589" name="Black Long Samurai Sword Box" additionalName="30-day" type="EtcItem">
@@ -1363,6 +1382,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="29593" name="Floating Bird Box" additionalName="30-day" type="EtcItem">
@@ -1452,6 +1472,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="29599" name="Chronic Noble Successor Box" type="EtcItem">
 		<!-- Double-click to get the armor of the Noble Successor of Chronicle (for 3, 7, 15, 30 days or unlimited). -->

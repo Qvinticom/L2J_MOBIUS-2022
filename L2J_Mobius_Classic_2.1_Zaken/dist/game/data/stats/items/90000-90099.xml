@@ -59,6 +59,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90008" name="Remnant Ashes" type="EtcItem">
 		<!-- An item you got from a prisoner of the Dungeon of Abyss. -->
@@ -144,6 +145,7 @@
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90017" name="Weapons Ingredient Box (A-grade)" type="EtcItem">
 		<!-- Double-click to receive one of A-grade Armor Ingredients. -->

@@ -12,6 +12,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">18</stat>
 		</stats>
@@ -28,6 +29,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
 		<set name="is_depositable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 		</stats>
@@ -83,6 +85,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70206" name="Mystic's Mysterious Package (No-grade)" type="EtcItem">
 		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (No-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -95,6 +98,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70207" name="Sniper's Mysterious Package (D-grade)" type="EtcItem">
 		<!-- Double-click the package to receive Mysterious Soulshots (D-grade, 2,500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -107,6 +111,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70208" name="Mystic's Mysterious Package (D-grade)" type="EtcItem">
 		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (D-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -119,6 +124,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70209" name="Sniper's Mysterious Package (C-grade)" type="EtcItem">
 		<!-- Double-click the package to receive Mysterious Soulshots (C-grade, 2,500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -131,6 +137,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70210" name="Mystic's Mysterious Package (C-grade)" type="EtcItem">
 		<!-- Double-click the package to receive Mysterious Blessed Spiritshots (C-grade, 500 pcs.), XP/SP Scrolls (30%, 6 pcs.), and 1st Class Transfer Effect Scrolls (6 pcs.). Cannot be exchanged, dropped, or sold in a private store. -->
@@ -143,6 +150,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70211" name="Wondrous Cubic" additionalName="General" type="EtcItem">
 		<!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
@@ -200,6 +208,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70216" name="Chronicle Cube" additionalName="21-day" type="EtcItem">
 		<!-- A 21-item. Can be used once a day. Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -509,6 +518,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70240" name="Irene' Hourglass - 2 Hours" additionalName="1~19" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -520,6 +530,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70241" name="Irene' Hourglass - 3 Hours" additionalName="1~19" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -531,6 +542,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70242" name="Irene' Hourglass - 1 Hour" additionalName="20~39" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -542,6 +554,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70243" name="Irene' Hourglass - 2 Hours" additionalName="20~39" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -553,6 +566,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70244" name="Irene' Hourglass - 3 Hours" additionalName="20~39" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -564,6 +578,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70245" name="Irene' Hourglass - 1 Hour" additionalName="40~51" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -575,6 +590,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70246" name="Irene' Hourglass - 2 Hours" additionalName="40~51" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -586,6 +602,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70247" name="Irene' Hourglass - 3 Hours" additionalName="40~51" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -597,6 +614,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70248" name="Irene' Hourglass - 1 Hour" additionalName="52~60" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -608,6 +626,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70249" name="Irene' Hourglass - 2 Hours" additionalName="52~60" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -619,6 +638,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70250" name="Irene' Hourglass - 3 Hours" additionalName="52~60" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -630,6 +650,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70251" name="Irene' Hourglass - 1 Hour" additionalName="61~75" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -641,6 +662,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70252" name="Irene' Hourglass - 2 Hours" additionalName="61~75" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -652,6 +674,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70253" name="Irene' Hourglass - 3 Hours" additionalName="61~75" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -663,6 +686,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70254" name="Irene' Hourglass - 1 Hour" additionalName="76~79" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -674,6 +698,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70255" name="Irene' Hourglass - 2 Hours" additionalName="76~79" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -685,6 +710,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70256" name="Irene' Hourglass - 3 Hours" additionalName="76~79" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -696,6 +722,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70257" name="Irene' Hourglass - 1 Hour" additionalName="80~85" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -707,6 +734,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70258" name="Irene' Hourglass - 2 Hours" additionalName="80~85" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -718,6 +746,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70259" name="Irene' Hourglass - 3 Hours" additionalName="80~85" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -729,6 +758,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70260" name="Irene' Hourglass - 1 Hour" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -740,6 +770,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70261" name="Irene' Hourglass - 2 Hours" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -751,6 +782,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70262" name="Irene' Hourglass - 3 Hours" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -762,6 +794,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70263" name="Irene' Hourglass - 4 Hours" type="EtcItem">
 		<!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -773,6 +806,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70264" name="Irene's Song 100%" additionalName="1 hour" type="EtcItem">
 		<!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -825,6 +859,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70269" name="Irene's Song 100% - 3 Hours" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 100% - 3 Hours. -->
@@ -837,6 +872,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70270" name="Irene's Song 100% - 5 Hours" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 100% - 5 Hours. -->
@@ -849,6 +885,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70271" name="Irene's Song 100% - 7 Days" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 100% - 7 Days. -->
@@ -861,6 +898,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70272" name="Irene's Song 200%" additionalName="1 hour" type="EtcItem">
 		<!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -913,6 +951,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70277" name="Irene's Song 200% - 3 Hours" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 200% - 3 Hours. -->
@@ -925,6 +964,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70278" name="Irene's Song 200% - 5 hours" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 200% - 5 Hours. -->
@@ -937,6 +977,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70279" name="Irene's Song 200% - 7 Days" type="EtcItem">
 		<!-- By double-clicking the item, you will receive Irene's Song 200% - 7 Days. -->
@@ -949,6 +990,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70280" name="Clan Reputation Score - 10" additionalName="1-day" type="EtcItem">
 		<!-- Double-click to add 10 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->

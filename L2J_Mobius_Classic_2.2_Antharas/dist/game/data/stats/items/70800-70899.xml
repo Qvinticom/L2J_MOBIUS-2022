@@ -378,6 +378,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70837" name="Shining Golden Chest of Mermaid's Fishing Supplies" type="EtcItem">
 		<!-- Double-click to obtain the following items: Shining Golden Bait (180 pcs), Fishing Shot (180 pcs), Scroll of Escape to Giran Harbor/Gludin Harbor (5 of each). Cannot be dropped. -->
@@ -465,6 +466,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70846" name="XP Rune - 50%" additionalName="5 hours" type="EtcItem">
 		<!-- A 5-hour item. When in inventory, your XP and SP gain is increased by 50%. Can be used by characters with lvl 1-60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -482,6 +484,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70848" name="XP Rune - 50%" additionalName="7-day" type="EtcItem">
 		<!-- A 7-hour item. When in inventory, your XP and SP gain is increased by 50%. Can be used by characters with lvl 1-60. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -499,6 +502,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70850" name="Package: Irene' Hourglass - 1 Hour" type="EtcItem">
 		<!-- Pack containing Irene' Hourglass - 1 Hour. Can be used by characters with lvl 1-60. -->
@@ -507,6 +511,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70851" name="High-grade Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
 		<!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold. Can store in a private warehouse. Duration: 7 day. -->
@@ -544,6 +549,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70855" name="Feather Rune" additionalName="7-day" type="EtcItem">
 		<!-- When possessed, increase weight limit by 20%. Cannot be exchanged, dropped or sold, shared within account. Can store in a private warehouse. Duration: 7 days. -->
@@ -561,6 +567,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70857" name="Squeaking Shoes" type="Armor">
 		<!-- Makes a unique sound when walking in them. -->
@@ -584,6 +591,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70859" name="Scroll: Summon Storm" type="EtcItem">
 		<!-- Fills you with Storm Energy, granting +50% XP and SP gain bonus for 2 hours. Cooldown: 2 hours. Storm Energy does not disappear after character's death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Available for  Lv. 40-51 characters. -->
@@ -594,6 +602,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70860" name="Note on Changing Name" type="EtcItem">
 		<!-- How to change your character's name:. 1. Create a new character on the same account and give it the name you want to transfer to your current character. 2. Create a request with the following subject: Change character's name. 3. The request must be created on your account.\0 -->
@@ -758,6 +767,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -774,6 +784,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -790,6 +801,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -806,6 +818,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">10</stat>
 		</stats>
@@ -820,6 +833,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 			<stat type="pDef">10</stat>
@@ -835,6 +849,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 			<stat type="pDef">10</stat>
@@ -850,6 +865,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 			<stat type="pDef">10</stat>
@@ -865,6 +881,7 @@
 		<set name="weight" val="220" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">20</stat>
 			<stat type="pDef">10</stat>

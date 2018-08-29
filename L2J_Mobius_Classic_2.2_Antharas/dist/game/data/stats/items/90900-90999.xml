@@ -123,6 +123,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90911" name="Battle Box Lv. 1" type="EtcItem">
 		<!-- Reward for clan members. Double-click to obtain various items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -713,6 +714,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90969" name="Blessed Fire Dragon Pendant" type="Armor">
 		<!-- P./ M. Def. +24, XP and SP gain +30%, P./ M. Atk. +80, P./ M. Critical Damage +10%, Reflect Damage Resistance +10%, when equipped. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Cannot be dropped. -->
@@ -722,6 +724,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -734,6 +737,7 @@
 		<set name="material" val="GOLD" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pDef">55</stat>
 		</stats>
@@ -937,6 +941,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">60</stat>
 		</stats>
@@ -962,6 +967,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90990" name="Scroll: Enchant Savior's Earring" type="EtcItem">
 		<!-- Only for Savior's Earring. Increases M. Def. Can be safely strengthened up to +3 and can be enhanced up to +7. If enchanting fails, the enchant level is maintained. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
@@ -972,6 +978,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90991" name="Lucky Hat" additionalName="30-day" type="Armor">
 		<!-- A 30-day item. Leather hat. Allows to use Blessing of Luck skill. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->

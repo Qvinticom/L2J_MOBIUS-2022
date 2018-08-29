@@ -36,6 +36,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70304" name="Tuna" type="EtcItem">
 		<!-- To exchange Tuna for the special items, bring it to Chef Monkey in town. Cannot be dropped. The item will be removed after the event is over. -->
@@ -667,6 +668,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70358" name="First Mate Hat" type="Armor">
 		<!-- First Mate Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -677,6 +679,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70359" name="Warrior's Helmet" type="Armor">
 		<!-- Helmet of a brave ancient warrior. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -687,6 +690,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70360" name="Chapeau" type="Armor">
 		<!-- Wide-brimmed hat with a feather. Uses 2 accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -697,6 +701,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70361" name="Red Horn of Victory" type="Armor">
 		<!-- Red Horn of Victory Hair accessory. Uses 1 accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -707,6 +712,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70362" name="Refined Black Skeleton Circlet" type="Armor">
 		<!-- Uses 2 hair accessory slots.Refined Black Skeleton Circlet. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -717,6 +723,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70363" name="Refined Orange Skeleton Circlet" type="Armor">
 		<!-- Refined Orange Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -727,6 +734,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70364" name="Refined Green Skeleton Circlet" type="Armor">
 		<!-- Refined Green Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -737,6 +745,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70365" name="Refined Brown Skeleton Circlet" type="Armor">
 		<!-- Refined Brown Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -747,6 +756,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70366" name="Gold Skeleton Circlet" type="Armor">
 		<!-- Gold skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -757,6 +767,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70367" name="Silver Skeleton Circlet" type="Armor">
 		<!-- Silver skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -767,6 +778,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70368" name="Red Skeleton Circlet" type="Armor">
 		<!-- Red skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -777,6 +789,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70369" name="Black Skeleton Circlet" type="Armor">
 		<!-- Black skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -787,6 +800,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70370" name="Chick Gold Horn Cap" type="Armor">
 		<!-- Chick Gold Horn Cap. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -797,6 +811,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70371" name="Chick Silver Horn Cap" type="Armor">
 		<!-- Chick Silver Horn Cap. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -807,6 +822,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70372" name="Refined Brown Turban" type="Armor">
 		<!-- Refined Brown Turban. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -817,6 +833,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70373" name="Refined Yellow Turban" type="Armor">
 		<!-- Refined Yellow Turban. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -827,6 +844,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70374" name="Mining Hat" type="Armor">
 		<!-- Hat used during mining. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -837,6 +855,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70375" name="Enhanced Mining Hat" type="Armor">
 		<!-- Hat used during mining. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -847,6 +866,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70376" name="Search Hat" type="Armor">
 		<!-- Hat used when searching for minerals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -857,6 +877,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70377" name="Enhanced Search Hat" type="Armor">
 		<!-- Hat used when searching for minerals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -867,6 +888,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70378" name="Circlet of Flames" type="Armor">
 		<!-- Circlet that has the power of Flame. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -877,6 +899,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70379" name="Circlet of Ice" type="Armor">
 		<!-- Circlet that has the power of Freeze. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -887,6 +910,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70380" name="Circlet of Storm" type="Armor">
 		<!-- Circlet that has the power of Storm. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -897,6 +921,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70381" name="Circlet of Earthquake" type="Armor">
 		<!-- Circlet that has the power of Severe Earthquake. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -907,6 +932,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70382" name="Circlet of Darkness" type="Armor">
 		<!-- Circlet that has the power of Darkness. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -917,6 +943,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70383" name="Circlet of Splendor" type="Armor">
 		<!-- Circlet that has the power of Splendor. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -927,6 +954,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70384" name="Refined Carnival Circlet" type="Armor">
 		<!-- Refined Carnival Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -937,6 +965,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70385" name="Refined Devil Horn" type="Armor">
 		<!-- Refined Devil Horn. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -947,6 +976,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70386" name="Refined Carnival Circlet" type="Armor">
 		<!-- Refined Carnival Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -957,6 +987,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70387" name="Demon Circlet" type="Armor">
 		<!-- Hair accessory possessed of dark energy. It uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -967,6 +998,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70388" name="Medieval Party Mask" type="Armor">
 		<!-- Medieval-style party mask. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -977,6 +1009,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70389" name="Black Half Mask" type="Armor">
 		<!-- Black-colored half mask. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -987,6 +1020,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70390" name="Eva's Mark" type="Armor">
 		<!-- Eva's Mark. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -997,6 +1031,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 		<skills>
 			<skill id="39025" level="1" /> <!-- Adventurer's Scroll of Escape -->
 		</skills>
@@ -1010,6 +1045,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70392" name="Black Phantom Mask" type="Armor">
 		<!-- A Phantom Mask hair accessory accented with black and gold metals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1020,6 +1056,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70393" name="Black Feather Mask" type="Armor">
 		<!-- Hair accessory containing dark feather. It uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1030,6 +1067,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70394" name="Goblin Circlet" type="Armor">
 		<!-- Gold colored, Goblin shaped hair accessory. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1040,6 +1078,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70395" name="Gold-rimmed Glasses" type="Armor">
 		<!-- Expensive-looking gold-rimmed glasses. Uses 1 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1050,6 +1089,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70396" name="Refined Romantic Chapeau: Blue" type="Armor">
 		<!-- Refined blue romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1060,6 +1100,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70397" name="Refined Romantic Chapeau: Gold" type="Armor">
 		<!-- Refined  gold romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1070,6 +1111,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70398" name="Refined Romantic Chapeau: Green" type="Armor">
 		<!-- Refined green romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1080,6 +1122,7 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="70399" name="Refined Romantic Chapeau: Red" type="Armor">
 		<!-- Refined red romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
@@ -1090,5 +1133,6 @@
 		<set name="weight" val="10" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 </list>

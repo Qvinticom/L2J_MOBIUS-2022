@@ -286,6 +286,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90138" name="Pendant Shiny Varnish" type="EtcItem">
 		<!-- Varnish that enhances effects of a Pendant. For Fire Dragon Pendant enchanted up to +9 or Land Dragon Pendant enchanted up to +6. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. Depending on the Pendant, additional special effects are activated starting from +4 enchantment. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
@@ -295,6 +296,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90139" name="Silver Bait" type="EtcItem">
 		<!-- A fishing bait enabling to catch a Whale. At a low probability, you may get Golden Necklace of Mermaid. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
@@ -307,6 +309,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90140" name="Cadmus Transformation Bracelet - Prophet" additionalName="7-day" type="Armor">
 		<!-- Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 7 days. -->
@@ -375,6 +378,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="mDef">32</stat>
 		</stats>
@@ -399,6 +403,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90148" name="Savior' Growth Scroll" type="EtcItem">
 		<!-- XP/SP gain + 50% for 2 hours. Reuse Time: 2 hours. The effects persists through death. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. Intended for Lv. 75 or lower. The item will be removed after the event is over. -->
@@ -410,6 +415,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90149" name="Savior Scroll: Enchant Weapon" type="EtcItem">
 		<!-- Only for Savior�s weapons. If an enchantment is failed, the item is not destroyed preserving its current level of enchantment. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on one account and be stored in a private warehouse. Intended for Lv. 75 or lower. The item will be removed after the event is over. -->
@@ -422,6 +428,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90150" name="Savior’s Dualsword" additionalName="30-day" type="Weapon">
 		<!-- A 30-day item. <Soul Crystal Effect>. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
@@ -821,6 +828,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="90172" name="Gemstone of Border" type="EtcItem">
 		<!-- For enchanting Talisman of Border above Lv. 7. Give this item, along with a low-level Talisman of Border, to Baggins, and you will get a higher-level Talisman of Border. <Note>. Cannot be used to enchant Talisman of Border Lv. 10 and Blessed Talisman of Border. -->

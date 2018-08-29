@@ -391,6 +391,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27642" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -401,6 +402,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27643" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -411,6 +413,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27644" name="Heine Exclusive Bait (99-)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -421,6 +424,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27645" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
@@ -463,6 +467,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27651" name="Heine Exclusive Bait (90-94)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 90 - 94. -->
@@ -473,6 +478,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27652" name="Heine Exclusive Bait (95-98)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Can be used by characters Lv. 95 - 98. -->
@@ -483,6 +489,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27653" name="Heine Exclusive Bait (99-)" type="EtcItem">
 		<!-- Bait for fishing. Double-click to get a Heine Exclusive Reward Chest. Lv. 99 or above. -->
@@ -493,6 +500,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27654" name="Heine Exclusive Bait Coupon" type="EtcItem">
 		<!-- Exchange for 1 Heine Exclusive Bait of your choice through a fishing guild member. -->
@@ -535,6 +543,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27660" name="Shadai's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of the La Vie En Rose's Jewelry Boxes. Has a very low chance of obtaining a Radiant Gemstone Fragment or a La Vie En Rose's Radiant Brooch. -->
@@ -701,6 +710,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27675" name="Freya's Wish-filled Gift" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random rare item. -->
@@ -708,6 +718,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27676" name="Sirra's Wish-filled Gift" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random item for enchantment. -->
@@ -715,6 +726,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27677" name="Snowman's Wish-filled Gift" type="EtcItem">
 		<!-- Wrapped Pack containing 1 random item for skill enchantment. -->
@@ -722,6 +734,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="27678" name="Gran Kain's Necklace - Stage 1" type="Armor">
 		<!-- MP + 107, Dark Attack Resistance + 50, STR + 3, INT + 3, CON + 3, Skill Cooldown -10%, Damage Reflection + 5%, P. Atk. + 15%, M. Atk. + 10%, Skill Power + 15%, Max HP + 3%, Max MP + 5% Resistance to the following abnormal statuses: Stun + 25%, Aggression + 25%, Windstorm + 25%, Banishment + 25%, Disarm + 15%, Sleep + 15%. -->

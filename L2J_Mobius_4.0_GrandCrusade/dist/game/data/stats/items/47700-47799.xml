@@ -165,6 +165,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47714" name="Rare Accessory Spirit Stone" type="EtcItem">
 		<!-- Ordinary Mineral that has been petrified by a creature's physical or magical damage. Usable by characters level 46 or above when augmenting Rare items. -->
@@ -202,6 +203,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 		<stats>
 			<stat type="pAtk">92</stat>
 			<stat type="mAtk">54</stat>
@@ -875,6 +877,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47759" name="Dragon's Gold Key" type="EtcItem">
 		<!-- If you take 6 of these to the Dimensional Merchant, or 1 Gold Key and 30 Wind Vitality Tonics, you will receive a Shining Dragon's Treasure Chest. Will be deleted on July 6th 2016 (Wed) after regular maintenance. -->
@@ -886,6 +889,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47760" name="Dragon's Rare Accessory Pack" type="EtcItem">
 		<!-- Double click this to obtain one of Blessed Antharas' Earring, Antharas' Earring, Blessed Valakas' Necklace, Valakas' Necklace, Lindvior's Earring. -->
