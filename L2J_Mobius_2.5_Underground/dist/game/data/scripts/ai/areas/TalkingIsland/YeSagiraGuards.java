@@ -46,9 +46,9 @@ public final class YeSagiraGuards extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((npc != null))
+		if ((npc != null) && !npc.isDead())
 		{
-			if (!npc.isInCombat() && !npc.isDead())
+			if (!npc.isInCombat())
 			{
 				final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 1000);
 				if (!nearbyMonsters.isEmpty())

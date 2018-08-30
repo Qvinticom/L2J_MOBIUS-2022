@@ -40,9 +40,9 @@ public final class TrainningSoldier extends AbstractNpcAI
 	@Override
 	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		if ((npc != null))
+		if ((npc != null) && !npc.isDead())
 		{
-			if (!npc.isInCombat() && !npc.isDead())
+			if (!npc.isInCombat())
 			{
 				for (L2Npc nearby : L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 150))
 				{
