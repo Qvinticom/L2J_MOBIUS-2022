@@ -1171,13 +1171,8 @@ public class L2AttackableAI extends L2CharacterAI
 	@Override
 	protected void onEvtThink()
 	{
-		// Check if the actor can't use skills
-		if (getActiveChar().isAllSkillsDisabled())
-		{
-			return;
-		}
-		// Check if a thinking action isn't already in progress
-		if (_thinking)
+		// Check if the actor can't use skills and if a thinking action isn't already in progress
+		if (_thinking || getActiveChar().isAllSkillsDisabled())
 		{
 			return;
 		}
