@@ -335,11 +335,22 @@ public class SkillCaster implements Runnable
 			caster.sendPacket(new SetupGauge(caster.getObjectId(), SetupGauge.BLUE, displayedCastTime));
 		}
 		
+		// Consume reagent item.
+		if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
+		{
+			// Get the L2ItemInstance consumed by the spell.
+			final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
+			if (requiredItem.getItem().getDefaultAction() == ActionType.NONE) // Non reagent items are removed at finishSkill or item handler.
+			{
+				caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
+			}
+		}
+		
 		if (caster.isPlayer())
 		{
 			final L2PcInstance player = caster.getActingPlayer();
 			
-			// Consume fame points
+			// Consume fame points.
 			if (_skill.getFamePointConsume() > 0)
 			{
 				if (player.getFame() < _skill.getFamePointConsume())
@@ -354,7 +365,7 @@ public class SkillCaster implements Runnable
 				player.sendPacket(msg);
 			}
 			
-			// Consume clan reputation points
+			// Consume clan reputation points.
 			if (_skill.getClanRepConsume() > 0)
 			{
 				final L2Clan clan = player.getClan();
@@ -997,8 +1008,8 @@ public class SkillCaster implements Runnable
 		if ((skill.getItemConsumeId() > 0) && (skill.getItemConsumeCount() > 0) && (caster.getInventory() != null))
 		{
 			// Get the L2ItemInstance consumed by the spell
-			final L2ItemInstance requiredItems = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
-			if ((requiredItems == null) || (requiredItems.getCount() < skill.getItemConsumeCount()))
+			final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(skill.getItemConsumeId());
+			if ((requiredItem == null) || (requiredItem.getCount() < skill.getItemConsumeCount()))
 			{
 				if (skill.hasEffectType(L2EffectType.SUMMON))
 				{
