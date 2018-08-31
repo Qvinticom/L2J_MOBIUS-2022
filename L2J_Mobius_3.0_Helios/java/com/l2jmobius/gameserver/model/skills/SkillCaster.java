@@ -168,7 +168,7 @@ public class SkillCaster implements Runnable
 			return null;
 		}
 		
-		if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange(), caster, target, true))
+		if ((skill.getCastRange() > 0) && !Util.checkIfInRange(skill.getCastRange(), caster, target, false))
 		{
 			return null;
 		}
