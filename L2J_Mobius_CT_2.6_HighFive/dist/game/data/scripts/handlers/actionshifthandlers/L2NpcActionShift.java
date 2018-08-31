@@ -101,7 +101,8 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%heading%", String.valueOf(((L2Character) target).getHeading()));
 			html.replace("%collision_radius%", String.valueOf(((L2Character) target).getTemplate().getfCollisionRadius()));
 			html.replace("%collision_height%", String.valueOf(((L2Character) target).getTemplate().getfCollisionHeight()));
-			html.replace("%dist%", String.valueOf((int) activeChar.calculateDistance(target, true, false)));
+			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance(target, false, false)));
+			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance(target, true, false)));
 			
 			final byte attackAttribute = ((L2Character) target).getAttackElement();
 			html.replace("%ele_atk%", Elementals.getElementName(attackAttribute));
@@ -127,8 +128,6 @@ public class L2NpcActionShift implements IActionShiftHandler
 					html.replace("%spawntype%", "Fixed");
 					html.replace("%spawn%", ((L2Npc) target).getSpawn().getX() + " " + ((L2Npc) target).getSpawn().getY() + " " + ((L2Npc) target).getSpawn().getZ());
 				}
-				html.replace("%loc2d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(), false, false)));
-				html.replace("%loc3d%", String.valueOf((int) target.calculateDistance(((L2Npc) target).getSpawn().getLocation(), true, false)));
 				if (((L2Npc) target).getSpawn().getRespawnMinDelay() == 0)
 				{
 					html.replace("%resp%", "None");
@@ -151,8 +150,6 @@ public class L2NpcActionShift implements IActionShiftHandler
 				html.replace("%territory%", "<font color=FF0000>--</font>");
 				html.replace("%spawntype%", "<font color=FF0000>--</font>");
 				html.replace("%spawn%", "<font color=FF0000>null</font>");
-				html.replace("%loc2d%", "<font color=FF0000>--</font>");
-				html.replace("%loc3d%", "<font color=FF0000>--</font>");
 				html.replace("%resp%", "<font color=FF0000>--</font>");
 			}
 			
