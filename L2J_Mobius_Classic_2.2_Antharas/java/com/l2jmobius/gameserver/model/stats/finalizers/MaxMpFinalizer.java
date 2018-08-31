@@ -49,9 +49,8 @@ public class MaxMpFinalizer implements IStatsFunction
 				baseValue += player.getTemplate().getBaseMpMax(player.getLevel());
 			}
 		}
-		final double chaBonus = creature.isPlayer() ? BaseStats.CHA.calcBonus(creature) : 1.;
 		final double menBonus = creature.getMEN() > 0 ? BaseStats.MEN.calcBonus(creature) : 1.;
-		baseValue *= menBonus * chaBonus;
+		baseValue *= menBonus;
 		return Stats.defaultValue(creature, stat, baseValue);
 	}
 }

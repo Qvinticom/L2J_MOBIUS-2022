@@ -69,16 +69,6 @@ public class StatUp extends AbstractEffect
 				stat = Stats.STAT_MEN;
 				break;
 			}
-			case CHA:
-			{
-				stat = Stats.STAT_CHA;
-				break;
-			}
-			case LUC:
-			{
-				stat = Stats.STAT_LUC;
-				break;
-			}
 		}
 		effected.getStat().mergeAdd(stat, _amount);
 	}

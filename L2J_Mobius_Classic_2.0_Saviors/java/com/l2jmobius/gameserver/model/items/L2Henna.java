@@ -54,8 +54,6 @@ public class L2Henna
 		_baseStats.put(BaseStats.INT, set.getInt("int", 0));
 		_baseStats.put(BaseStats.MEN, set.getInt("men", 0));
 		_baseStats.put(BaseStats.WIT, set.getInt("wit", 0));
-		_baseStats.put(BaseStats.LUC, set.getInt("luc", 0));
-		_baseStats.put(BaseStats.CHA, set.getInt("cha", 0));
 		_wear_fee = set.getInt("wear_fee");
 		_wear_count = set.getInt("wear_count");
 		_cancel_fee = set.getInt("cancel_fee");

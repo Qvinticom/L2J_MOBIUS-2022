@@ -20,8 +20,6 @@
 							<xs:element type="xs:nonNegativeInteger" name="baseMEN" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:nonNegativeInteger" name="baseDEX" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:nonNegativeInteger" name="baseWIT" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:nonNegativeInteger" name="baseLUC" minOccurs="1" maxOccurs="1" />
-							<xs:element type="xs:nonNegativeInteger" name="baseCHA" minOccurs="1" maxOccurs="1" />
 							<xs:element type="xs:integer" name="physicalAbnormalResist" minOccurs="0" maxOccurs="1" />
 							<xs:element type="xs:integer" name="magicAbnormalResist" minOccurs="0" maxOccurs="1" />
 							<xs:element name="creationPoints" minOccurs="1" maxOccurs="1">

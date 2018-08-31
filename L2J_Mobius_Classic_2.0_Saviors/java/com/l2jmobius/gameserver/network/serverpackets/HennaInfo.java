@@ -57,8 +57,8 @@ public final class HennaInfo implements IClientOutgoingPacket
 		packet.writeH(_activeChar.getHennaValue(BaseStats.MEN)); // equip MEN
 		packet.writeH(_activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
 		packet.writeH(_activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-		packet.writeH(_activeChar.getHennaValue(BaseStats.LUC)); // equip LUC
-		packet.writeH(_activeChar.getHennaValue(BaseStats.CHA)); // equip CHA
+		packet.writeH(0x00); // equip LUC
+		packet.writeH(0x00); // equip CHA
 		packet.writeD(3 - _activeChar.getHennaEmptySlots()); // Slots
 		packet.writeD(_hennas.size()); // Size
 		for (L2Henna henna : _hennas)

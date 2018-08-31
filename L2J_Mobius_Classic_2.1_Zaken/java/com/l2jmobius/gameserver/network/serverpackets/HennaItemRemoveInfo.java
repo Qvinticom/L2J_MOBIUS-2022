@@ -59,10 +59,10 @@ public final class HennaItemRemoveInfo implements IClientOutgoingPacket
 		packet.writeH(_activeChar.getDEX() - _activeChar.getHennaValue(BaseStats.DEX)); // equip DEX
 		packet.writeD(_activeChar.getWIT()); // current WIT
 		packet.writeH(_activeChar.getWIT() - _activeChar.getHennaValue(BaseStats.WIT)); // equip WIT
-		packet.writeD(_activeChar.getLUC()); // current LUC
-		packet.writeH(_activeChar.getLUC() - _activeChar.getHennaValue(BaseStats.LUC)); // equip LUC
-		packet.writeD(_activeChar.getCHA()); // current CHA
-		packet.writeH(_activeChar.getCHA() - _activeChar.getHennaValue(BaseStats.CHA)); // equip CHA
+		packet.writeD(0x00); // current LUC
+		packet.writeH(0x00); // equip LUC
+		packet.writeD(0x00); // current CHA
+		packet.writeH(0x00); // equip CHA
 		packet.writeD(0x00);
 		return true;
 	}

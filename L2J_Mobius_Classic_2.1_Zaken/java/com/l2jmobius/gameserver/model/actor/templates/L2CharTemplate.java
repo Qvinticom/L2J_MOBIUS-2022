@@ -63,8 +63,6 @@ public class L2CharTemplate extends ListenersContainer
 		_baseValues.put(Stats.STAT_INT, set.getDouble("baseINT", 0));
 		_baseValues.put(Stats.STAT_WIT, set.getDouble("baseWIT", 0));
 		_baseValues.put(Stats.STAT_MEN, set.getDouble("baseMEN", 0));
-		_baseValues.put(Stats.STAT_LUC, set.getDouble("baseLUC", 0));
-		_baseValues.put(Stats.STAT_CHA, set.getDouble("baseCHA", 0));
 		
 		// Max HP/MP/CP
 		_baseValues.put(Stats.MAX_HP, set.getDouble("baseHpMax", 0));
@@ -189,22 +187,6 @@ public class L2CharTemplate extends ListenersContainer
 	public int getBaseMEN()
 	{
 		return _baseValues.getOrDefault(Stats.STAT_MEN, 0d).intValue();
-	}
-	
-	/**
-	 * @return the baseLUC
-	 */
-	public int getBaseLUC()
-	{
-		return _baseValues.getOrDefault(Stats.STAT_LUC, 0d).intValue();
-	}
-	
-	/**
-	 * @return the baseCHA
-	 */
-	public int getBaseCHA()
-	{
-		return _baseValues.getOrDefault(Stats.STAT_CHA, 0d).intValue();
 	}
 	
 	/**

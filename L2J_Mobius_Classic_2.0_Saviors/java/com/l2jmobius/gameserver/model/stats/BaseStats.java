@@ -37,9 +37,7 @@ public enum BaseStats
 	DEX(Stats.STAT_DEX),
 	WIT(Stats.STAT_WIT),
 	CON(Stats.STAT_CON),
-	MEN(Stats.STAT_MEN),
-	CHA(Stats.STAT_CHA),
-	LUC(Stats.STAT_LUC);
+	MEN(Stats.STAT_MEN);
 	
 	public static final int MAX_STAT_VALUE = 201;
 	

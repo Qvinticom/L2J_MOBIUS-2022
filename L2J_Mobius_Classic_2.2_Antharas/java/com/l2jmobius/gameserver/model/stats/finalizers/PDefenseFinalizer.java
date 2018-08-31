@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.stats.BaseStats;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
 import com.l2jmobius.gameserver.model.stats.Stats;
 
@@ -78,7 +77,6 @@ public class PDefenseFinalizer implements IStatsFunction
 						baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
 					}
 				}
-				baseValue *= BaseStats.CHA.calcBonus(creature);
 			}
 		}
 		if (creature.isRaid())

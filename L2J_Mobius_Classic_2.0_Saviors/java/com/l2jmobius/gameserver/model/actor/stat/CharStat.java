@@ -289,16 +289,6 @@ public class CharStat
 		return (int) getValue(Stats.STAT_MEN);
 	}
 	
-	public final int getLUC()
-	{
-		return (int) getValue(Stats.STAT_LUC);
-	}
-	
-	public final int getCHA()
-	{
-		return (int) getValue(Stats.STAT_CHA);
-	}
-	
 	public double getMovementSpeedMultiplier()
 	{
 		double baseSpeed;

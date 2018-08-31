@@ -66,8 +66,8 @@ public class GMViewCharacterInfo implements IClientOutgoingPacket
 		packet.writeD(_activeChar.getINT());
 		packet.writeD(_activeChar.getWIT());
 		packet.writeD(_activeChar.getMEN());
-		packet.writeD(_activeChar.getLUC());
-		packet.writeD(_activeChar.getCHA());
+		packet.writeD(0x00); // LUC
+		packet.writeD(0x00); // CHA
 		packet.writeD(_activeChar.getMaxHp());
 		packet.writeD((int) _activeChar.getCurrentHp());
 		packet.writeD(_activeChar.getMaxMp());

@@ -74,8 +74,6 @@ public class MDefenseFinalizer implements IStatsFunction
 					baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
 				}
 			}
-			
-			baseValue *= BaseStats.CHA.calcBonus(creature);
 		}
 		else if (creature.isPet() && (creature.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0))
 		{
