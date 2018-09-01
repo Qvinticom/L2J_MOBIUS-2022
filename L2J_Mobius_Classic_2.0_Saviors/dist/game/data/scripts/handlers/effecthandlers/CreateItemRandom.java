@@ -64,9 +64,12 @@ public class CreateItemRandom extends AbstractEffect
 			return;
 		}
 		
+		double cumulativeChance = 0;
+		final int random = Rnd.get(100);
 		for (ItemChanceHolder holder : item.getItem().getCreateItems())
 		{
-			if (holder.getChance() < Rnd.get(100))
+			cumulativeChance += holder.getChance();
+			if (random < cumulativeChance)
 			{
 				player.addItem("CreateItems", holder.getId(), holder.getCount(), player, true);
 				return;
