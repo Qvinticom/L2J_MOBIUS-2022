@@ -561,7 +561,7 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="55248" level="1" /> <!--Bracelet of Duty - Lv. 1-->
+			<skill id="55248" level="1" /> <!-- Bracelet of Duty - Lv. 1 -->
 		</skills>
 	</item>
 	<item id="29979" name="Bracelet of Duty - Lv. 2" type="Armor">
@@ -579,14 +579,13 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="55249" level="1" /> <!--Bracelet of Duty - Lv. 1-->
+			<skill id="55249" level="1" /> <!-- Bracelet of Duty - Lv. 2 -->
 		</skills>
 	</item>
 	<item id="29980" name="Bracelet of Duty - Lv. 3" type="Armor">
 		<!-- Opens up two Talisman slots. CON + 1, MEN + 1. Can be enhanced up to Lv. 5 using Clan Coins at Grand Master�s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_03" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -598,14 +597,13 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="55250" level="1" /> <!--Bracelet of Duty - Lv. 1-->
+			<skill id="55250" level="1" /> <!-- Bracelet of Duty - Lv. 3 -->
 		</skills>
 	</item>
 	<item id="29981" name="Bracelet of Duty - Lv. 4" type="Armor">
 		<!-- Opens up two Talisman slots. DEX + 1, WIT + 1, CON + 1, MEN + 1. Can be enhanced up to Lv. 5 using Clan Coins at Grand Master�s in each town. Cannot be exchanged, dropped, destroyed, or sold. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -617,14 +615,13 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="55251" level="1" /> <!--Bracelet of Duty - Lv. 1-->
+			<skill id="55251" level="1" /> <!-- Bracelet of Duty - Lv. 4 -->
 		</skills>
 	</item>
 	<item id="29982" name="Bracelet of Duty - Lv. 5" type="Armor">
 		<!-- Opens up three Talisman slots. STR + 1, INT + 1, DEX + 1, WIT + 1, CON + 1, MEN + 1. Cannot be exchanged, dropped, destroyed, or sold. -->
 		<set name="icon" val="BranchIcon.Icon.g_pledge_bracelet_05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
@@ -636,7 +633,7 @@
 		<set name="bodypart" val="rbracelet" />
 		<set name="commissionItemType" val="BRACELET" />
 		<skills>
-			<skill id="55252" level="1" /> <!--Bracelet of Duty - Lv. 1-->
+			<skill id="55252" level="1" /> <!-- Bracelet of Duty - Lv. 5 -->
 		</skills>
 	</item>
 	<item id="29983" name="Silver Coin" type="EtcItem">

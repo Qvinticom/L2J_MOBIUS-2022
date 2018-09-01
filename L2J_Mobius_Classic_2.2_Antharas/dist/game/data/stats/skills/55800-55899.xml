@@ -416,9 +416,39 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55884" toLevel="1" name="Bracelet of Duty - Lv. 6">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
-		<operateType>A1</operateType>
+		<magicLvl>20</magicLvl>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<effects>
+			<effect name="TalismanSlot">
+				<slots>3</slots>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>MEN</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>1</amount>
+				<stat>INT</stat>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="55885" toLevel="1" name="Agathion Bracelet Stats Increase">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->

@@ -67,6 +67,7 @@ Antharas: https://eu.4game.com/lineage2classic/play/antharas/
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki and client
+-Clan Arena
 
 Customs:
 -Newbie Helper NPC location info

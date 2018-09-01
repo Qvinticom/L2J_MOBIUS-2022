@@ -2410,4 +2410,172 @@
 			</drop>
 		</drop_lists>
 	</npc>
+	<npc id="25794" level="62" type="L2Monster" name="Kutis">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="77" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1584086" hpRegen="1087.71929824561" mp="675524" mpRegen="1148.14814814815" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="29523.8095238095" magical="5210.08403361345" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2296.2962962963" magical="1333.33333333333" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25795" level="64" type="L2Monster" name="Garan">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="160" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1746452" hpRegen="1122.80701754386" mp="716664" mpRegen="1185.18518518519" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="30476.1904761905" magical="5378.1512605042" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2370.37037037037" magical="1376.34408602151" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25796" level="66" type="L2Monster" name="Batur">
+		<!-- Source: www.l2wiki.com -->
+		<race>GIANT</race>
+		<equipment rhand="75" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2017154" hpRegen="1192.98245614035" mp="760310" mpRegen="1259.25925925926" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="31380.9523809524" magical="5514.28571428571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2418.51851851852" magical="1400.36559139785" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
+			<skill id="4416" level="11" /> <!-- Giant -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25797" level="68" type="L2Monster" name="Venir">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<equipment rhand="76" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2440755" hpRegen="1192.98245614035" mp="806611" mpRegen="1259.25925925926" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="32380.9523809524" magical="5714.28571428571" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2518.51851851852" magical="1462.36559139785" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25798" level="70" type="L2Monster" name="Oel">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="2503" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2953314" hpRegen="1228.0701754386" mp="855734" mpRegen="1296.2962962963" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="33333.3333333333" magical="5882.35294117647" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2592.59259259259" magical="1505.37634408602" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25799" level="72" type="L2Monster" name="Taranka">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="2502" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="3573511" hpRegen="1263.15789473684" mp="925476" mpRegen="1333.33333333333" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="34285.7142857143" magical="6050.42016806723" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2666.66666666667" magical="1548.38709677419" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
 </list>

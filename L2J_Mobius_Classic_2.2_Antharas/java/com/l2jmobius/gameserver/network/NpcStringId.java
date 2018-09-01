@@ -31102,6 +31102,12 @@ public final class NpcStringId
 	@ClientString(id = 1810363, message = "You are too far from the corpse.")
 	public static NpcStringId YOU_ARE_TOO_FAR_FROM_THE_CORPSE;
 	
+	@ClientString(id = 1803665, message = "Ha! Not bad.")
+	public static NpcStringId HA_NOT_BAD;
+	
+	@ClientString(id = 1803666, message = "Welcome to the Arena! Test your clan's strength!")
+	public static NpcStringId WELCOME_TO_THE_ARENA_TEST_YOUR_CLAN_S_STRENGTH;
+	
 	@ClientString(id = 1810364, message = "Grudge of Ye Sagira victims have been relieved with your tears.")
 	public static NpcStringId GRUDGE_OF_YE_SAGIRA_VICTIMS_HAVE_BEEN_RELIEVED_WITH_YOUR_TEARS;
 	

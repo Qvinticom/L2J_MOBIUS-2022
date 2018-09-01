@@ -195,24 +195,100 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51038" toLevel="1" name="Battle Box Lv. 1">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70917</itemConsumeId> <!-- Battle Box Lv. 1 -->
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CreateItemRandom" />
+		</effects>
 	</skill>
 	<skill id="51039" toLevel="1" name="Battle Box Lv. 2">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70918</itemConsumeId> <!-- Battle Box Lv. 2 -->
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CreateItemRandom" />
+		</effects>
 	</skill>
 	<skill id="51040" toLevel="1" name="Battle Box Lv. 3">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70919</itemConsumeId> <!-- Battle Box Lv. 3 -->
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CreateItemRandom" />
+		</effects>
 	</skill>
 	<skill id="51041" toLevel="1" name="Battle Box Lv. 4">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>70920</itemConsumeId> <!-- Battle Box Lv. 4 -->
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CreateItemRandom" />
+		</effects>
 	</skill>
 	<skill id="51042" toLevel="1" name="Battle Box">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
@@ -220,19 +296,64 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51043" toLevel="1" name="XP Scroll: 10,000,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill51043</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90917</itemConsumeId> <!-- XP Scroll: 10,000,000 -->
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>10000000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51044" toLevel="1" name="XP Scroll: 50,000,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill51044</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90918</itemConsumeId> <!-- XP Scroll: 50,000,000 -->
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>50000000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51045" toLevel="1" name="XP Scroll: 100,000,000">
-		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill51045</icon>
 		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90919</itemConsumeId> <!-- XP Scroll: 100,000,000 -->
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveXp">
+				<xp>100000000</xp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="51046" toLevel="1" name="Zodiac Agathion Box">
 		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
