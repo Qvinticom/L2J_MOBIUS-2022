@@ -26,6 +26,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * @author UnAfraid
@@ -63,19 +64,15 @@ public class CreateItemRandom extends AbstractEffect
 			return;
 		}
 		
-		final double random = Rnd.nextDouble() * 100;
-		double comulativeChance = 0;
-		for (int attempt = 0; attempt <= 1000; attempt++) // 1000 attempts! TODO: Remove this whole handler.
+		for (ItemChanceHolder holder : item.getItem().getCreateItems())
 		{
-			for (ItemChanceHolder holder : item.getItem().getCreateItems())
+			if (holder.getChance() < Rnd.get(100))
 			{
-				comulativeChance += holder.getChance();
-				if (comulativeChance >= random)
-				{
-					player.addItem("CreateItems", holder.getId(), holder.getCount(), player, true);
-					return;
-				}
+				player.addItem("CreateItems", holder.getId(), holder.getCount(), player, true);
+				return;
 			}
 		}
+		
+		player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
 	}
 }
