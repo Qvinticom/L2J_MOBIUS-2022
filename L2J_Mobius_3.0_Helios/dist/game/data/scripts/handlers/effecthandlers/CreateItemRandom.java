@@ -25,9 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
-import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
  * @author UnAfraid
@@ -65,28 +63,19 @@ public class CreateItemRandom extends AbstractEffect
 			return;
 		}
 		
-		ItemChanceHolder selectedItem = null;
 		final double random = Rnd.nextDouble() * 100;
 		double comulativeChance = 0;
-		for (ItemChanceHolder holder : item.getItem().getCreateItems())
+		for (int attempt = 0; attempt <= 1000; attempt++) // 1000 attempts! TODO: Remove this whole handler.
 		{
-			comulativeChance += holder.getChance();
-			if (comulativeChance >= random)
+			for (ItemChanceHolder holder : item.getItem().getCreateItems())
 			{
-				selectedItem = holder;
-				break;
+				comulativeChance += holder.getChance();
+				if (comulativeChance >= random)
+				{
+					player.addItem("CreateItems", holder.getId(), holder.getCount(), player, true);
+					return;
+				}
 			}
-		}
-		
-		if (selectedItem == null)
-		{
-			player.sendPacket(SystemMessageId.THERE_WAS_NOTHING_FOUND_INSIDE);
-			return;
-		}
-		
-		if ((item.getItem().getDefaultAction() != ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) || player.destroyItem("Consume", item.getObjectId(), 1, player, true))
-		{
-			player.addItem("CreateItems", selectedItem.getId(), selectedItem.getCount(), player, true);
 		}
 	}
 }
