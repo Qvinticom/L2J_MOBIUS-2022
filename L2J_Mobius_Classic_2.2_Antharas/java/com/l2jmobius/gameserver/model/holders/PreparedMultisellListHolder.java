@@ -93,7 +93,7 @@ public class PreparedMultisellListHolder extends MultisellListHolder
 	 */
 	public long getIngredientCount(ItemHolder ingredient)
 	{
-		return (ingredient.getId() == Inventory.ADENA_ID) ? Math.round(ingredient.getCount() * getIngredientMultiplier() * (1 + _taxRate)) : Math.round(ingredient.getCount() * getIngredientMultiplier());
+		return (ingredient.getId() == Inventory.ADENA_ID) ? Math.round(ingredient.getCount() * getIngredientMultiplier() * (1 + getTaxRate())) : Math.round(ingredient.getCount() * getIngredientMultiplier());
 	}
 	
 	/**
