@@ -64,12 +64,8 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 		_name = set.getString("name");
 		
 		// position
-		_posX = set.getInt("x");
-		_posY = set.getInt("y");
-		_posZ = set.getInt("z");
 		_height = set.getInt("height", 150);
 		_nodeZ = set.getInt("nodeZ");
-		
 		_nodeX = new int[4]; // 4 * x
 		_nodeY = new int[4]; // 4 * y
 		for (int i = 0; i < 4; i++)
@@ -77,6 +73,9 @@ public class L2DoorTemplate extends L2CharTemplate implements IIdentifiable
 			_nodeX[i] = set.getInt("nodeX_" + i);
 			_nodeY[i] = set.getInt("nodeY_" + i);
 		}
+		_posX = set.getInt("x");
+		_posY = set.getInt("y");
+		_posZ = Math.min(set.getInt("z"), _nodeZ);
 		
 		// optional
 		_emmiter = set.getInt("emmiterId", 0);
