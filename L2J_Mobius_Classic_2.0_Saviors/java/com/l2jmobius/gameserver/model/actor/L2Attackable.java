@@ -1317,68 +1317,58 @@ public class L2Attackable extends L2Npc
 	private double[] calculateExpAndSp(int charLevel, long damage, long totalDamage)
 	{
 		final int levelDiff = charLevel - getLevel();
-		double xp = 0;
-		double sp = 0;
+		double xp = Math.max(0, (getExpReward() * damage) / totalDamage);
+		double sp = Math.max(0, (getSpReward() * damage) / totalDamage);
 		
-		if ((levelDiff < 11) && (levelDiff > -11))
+		// According to https://4gameforum.com/threads/483941/
+		if (levelDiff > 2)
 		{
-			xp = Math.max(0, (getExpReward() * damage) / totalDamage);
-			sp = Math.max(0, (getSpReward() * damage) / totalDamage);
-			
-			if ((charLevel > 84) && (levelDiff <= -3))
+			double mul;
+			switch (levelDiff)
 			{
-				double mul;
-				switch (levelDiff)
+				case 3:
 				{
-					case -3:
-					{
-						mul = 0.97;
-						break;
-					}
-					case -4:
-					{
-						mul = 0.67;
-						break;
-					}
-					case -5:
-					{
-						mul = 0.42;
-						break;
-					}
-					case -6:
-					{
-						mul = 0.25;
-						break;
-					}
-					case -7:
-					{
-						mul = 0.15;
-						break;
-					}
-					case -8:
-					{
-						mul = 0.09;
-						break;
-					}
-					case -9:
-					{
-						mul = 0.05;
-						break;
-					}
-					case -10:
-					{
-						mul = 0.03;
-						break;
-					}
-					default:
-					{
-						mul = 1.;
-						break;
-					}
+					mul = 0.97;
+					break;
 				}
-				xp *= mul;
-				sp *= mul;
+				case 4:
+				{
+					mul = 0.80;
+					break;
+				}
+				case 5:
+				{
+					mul = 0.61;
+					break;
+				}
+				case 6:
+				{
+					mul = 0.37;
+					break;
+				}
+				case 7:
+				{
+					mul = 0.22;
+					break;
+				}
+				case 8:
+				{
+					mul = 0.13;
+					break;
+				}
+				case 9:
+				{
+					mul = 0.08;
+					break;
+				}
+				default:
+				{
+					mul = 0.05;
+					break;
+				}
 			}
+			xp *= mul;
+			sp *= mul;
 		}
 		
 		return new double[]
