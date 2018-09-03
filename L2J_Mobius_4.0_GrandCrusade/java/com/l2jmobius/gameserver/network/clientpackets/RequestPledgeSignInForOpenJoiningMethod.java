@@ -57,7 +57,7 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 		if (pledgeRecruitInfo != null)
 		{
 			final L2Clan clan = pledgeRecruitInfo.getClan();
-			if (clan != null)
+			if ((clan != null) && (activeChar.getClan() == null))
 			{
 				clan.addClanMember(activeChar);
 				activeChar.sendPacket(new JoinPledge(_clanId));

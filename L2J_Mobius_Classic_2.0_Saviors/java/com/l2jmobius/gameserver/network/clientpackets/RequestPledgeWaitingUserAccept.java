@@ -60,7 +60,7 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 		if (_acceptRequest)
 		{
 			final L2PcInstance player = L2World.getInstance().getPlayer(_playerId);
-			if (player != null)
+			if ((player != null) && (player.getClan() == null))
 			{
 				final L2Clan clan = activeChar.getClan();
 				clan.addClanMember(player);

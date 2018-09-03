@@ -81,12 +81,17 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 			// we must double check this cause during response time conditions can be changed, i.e. another player could join clan
 			if (clan.checkClanJoinCondition(requestor, activeChar, requestPacket.getPledgeType()))
 			{
+				if (activeChar.getClan() != null)
+				{
+					return;
+				}
+				
 				activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 				
 				activeChar.setPledgeType(requestPacket.getPledgeType());
 				if (requestPacket.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
 				{
-					activeChar.setPowerGrade(9); // adademy
+					activeChar.setPowerGrade(9); // academy
 					activeChar.setLvlJoinedAcademy(activeChar.getLevel());
 				}
 				else
