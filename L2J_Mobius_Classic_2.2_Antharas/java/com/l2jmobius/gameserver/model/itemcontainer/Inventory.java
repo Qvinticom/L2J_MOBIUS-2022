@@ -1083,8 +1083,10 @@ public abstract class Inventory extends ItemContainer
 	 */
 	public synchronized void addPaperdollListener(PaperdollListener listener)
 	{
-		assert !_paperdollListeners.contains(listener);
-		_paperdollListeners.add(listener);
+		if (!_paperdollListeners.contains(listener))
+		{
+			_paperdollListeners.add(listener);
+		}
 	}
 	
 	/**

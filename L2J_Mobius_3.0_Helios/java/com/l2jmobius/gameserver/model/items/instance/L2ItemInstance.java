@@ -272,11 +272,6 @@ public final class L2ItemInstance extends L2Object
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T REMOVE the object from _allObjects of L2World </B></FONT><BR>
 	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>this.isItem().</li>
-	 * <li>_worldRegion != null <I>(L2Object is visible at the beginning)</I></li><BR>
-	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>
 	 * <li>Do Pickup Item : PCInstance and Pet</li><BR>
@@ -285,8 +280,6 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public final void pickupMe(L2Character character)
 	{
-		assert getWorldRegion() != null;
-		
 		final L2WorldRegion oldregion = getWorldRegion();
 		
 		// Create a server->client GetItem packet to pick up the L2ItemInstance
@@ -591,7 +584,6 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public int getLocationSlot()
 	{
-		assert (_loc == ItemLocation.PAPERDOLL) || (_loc == ItemLocation.PET_EQUIP) || (_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.MAIL) || (_loc == ItemLocation.FREIGHT);
 		return _locData;
 	}
 	
@@ -1519,10 +1511,6 @@ public final class L2ItemInstance extends L2Object
 	 * <BR>
 	 * <FONT COLOR=#FF0000><B> <U>Caution</U> : This method DOESN'T ADD the object to _allObjects of L2World </B></FONT><BR>
 	 * <BR>
-	 * <B><U> Assert </U> :</B><BR>
-	 * <BR>
-	 * <li>_worldRegion == null <I>(L2Object is invisible at the beginning)</I></li><BR>
-	 * <BR>
 	 * <B><U> Example of use </U> :</B><BR>
 	 * <BR>
 	 * <li>Drop item</li>
@@ -1546,8 +1534,6 @@ public final class L2ItemInstance extends L2Object
 		@Override
 		public final void run()
 		{
-			assert _itеm.getWorldRegion() == null;
-			
 			if (_dropper != null)
 			{
 				final Instance instance = _dropper.getInstanceWorld();
@@ -1597,14 +1583,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	private void updateInDb()
 	{
-		assert _existsInDb;
-		
-		if (_wear)
-		{
-			return;
-		}
-		
-		if (_storedInDb)
+		if (!_existsInDb || _wear || _storedInDb)
 		{
 			return;
 		}
@@ -1637,9 +1616,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	private void insertIntoDb()
 	{
-		assert !_existsInDb && (getObjectId() != 0);
-		
-		if (_wear)
+		if (_existsInDb || (getObjectId() == 0) || _wear)
 		{
 			return;
 		}
@@ -1687,9 +1664,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	private void removeFromDb()
 	{
-		assert _existsInDb;
-		
-		if (_wear)
+		if (!_existsInDb || _wear)
 		{
 			return;
 		}
