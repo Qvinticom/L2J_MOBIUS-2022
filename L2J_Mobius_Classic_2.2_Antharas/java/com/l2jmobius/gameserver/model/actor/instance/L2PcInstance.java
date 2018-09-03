@@ -486,6 +486,7 @@ public final class L2PcInstance extends L2Playable
 	
 	/** Duel */
 	private boolean _isInDuel = false;
+	private boolean _startingDuel = false;
 	private int _duelState = Duel.DUELSTATE_NODUEL;
 	private int _duelId = 0;
 	private SystemMessageId _noDuelReason = SystemMessageId.THERE_IS_NO_OPPONENT_TO_RECEIVE_YOUR_CHALLENGE_FOR_A_DUEL;
@@ -9312,6 +9313,11 @@ public final class L2PcInstance extends L2Playable
 		return _isInDuel;
 	}
 	
+	public void setStartingDuel()
+	{
+		_startingDuel = true;
+	}
+	
 	public int getDuelId()
 	{
 		return _duelId;
@@ -9350,6 +9356,7 @@ public final class L2PcInstance extends L2Playable
 			_duelState = Duel.DUELSTATE_NODUEL;
 			_duelId = 0;
 		}
+		_startingDuel = false;
 	}
 	
 	/**
@@ -9381,7 +9388,7 @@ public final class L2PcInstance extends L2Playable
 			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
 			return false;
 		}
-		if (_isInDuel)
+		if (_isInDuel || _startingDuel)
 		{
 			_noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL;
 			return false;
@@ -12005,7 +12012,7 @@ public final class L2PcInstance extends L2Playable
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_WHILE_PARTICIPATING_A_LARGE_SCALE_BATTLE_SUCH_AS_A_CASTLE_SIEGE_FORTRESS_SIEGE_OR_CLAN_HALL_SIEGE);
 			return false;
 		}
-		else if (_isInDuel)
+		else if (_isInDuel || _startingDuel)
 		{
 			sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_DURING_A_DUEL);
 			return false;
