@@ -942,10 +942,7 @@ public final class TerritoryWarManager implements Siegable
 		}
 		
 		_isTWInProgress = true;
-		if (!updatePlayerTWStateFlags(false))
-		{
-			return;
-		}
+		updatePlayerTWStateFlags(false);
 		
 		// teleportPlayer(Siege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town); // Teleport to the closest town
 		for (Territory t : activeTerritoryList)
@@ -1035,15 +1032,7 @@ public final class TerritoryWarManager implements Siegable
 			}
 		}
 		
-		if (activeTerritoryList.size() < 2)
-		{
-			return;
-		}
-		
-		if (!updatePlayerTWStateFlags(true))
-		{
-			return;
-		}
+		updatePlayerTWStateFlags(true);
 		
 		for (TerritoryWard twWard : _territoryWards)
 		{
@@ -1052,56 +1041,60 @@ public final class TerritoryWarManager implements Siegable
 		_territoryWards.clear();
 		
 		// teleportPlayer(Siege.TeleportWhoType.Attacker, MapRegionTable.TeleportWhereType.Town); // Teleport to the closest town
-		for (Territory t : activeTerritoryList)
+		if (activeTerritoryList.size() > 1)
 		{
-			final Castle castle = CastleManager.getInstance().getCastleById(t.getCastleId());
-			final Fort fort = FortManager.getInstance().getFortById(t.getFortId());
-			
-			if (castle != null)
+			for (Territory t : activeTerritoryList)
 			{
-				castle.spawnDoor();
-				t.changeNPCsSpawn(2, false);
-				castle.getZone().setIsActive(false);
-				castle.getZone().updateZoneStatusForCharactersInside();
-				castle.getZone().setSiegeInstance(null);
-			}
-			else
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
-			}
-			
-			if (fort != null)
-			{
-				t.changeNPCsSpawn(1, false);
-				fort.getZone().setIsActive(false);
-				fort.getZone().updateZoneStatusForCharactersInside();
-				fort.getZone().setSiegeInstance(null);
-			}
-			else
-			{
-				LOGGER.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
-			}
-			
-			if (t.getHQ() != null)
-			{
-				t.getHQ().deleteMe();
-			}
-			
-			for (TerritoryNPCSpawn ward : t.getOwnedWard())
-			{
-				if (ward.getNpc() != null)
+				final Castle castle = CastleManager.getInstance().getCastleById(t.getCastleId());
+				final Fort fort = FortManager.getInstance().getFortById(t.getFortId());
+				
+				if (castle != null)
 				{
-					if (!ward.getNpc().isSpawned() && SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+					castle.spawnDoor();
+					t.changeNPCsSpawn(2, false);
+					castle.getZone().setIsActive(false);
+					castle.getZone().updateZoneStatusForCharactersInside();
+					castle.getZone().setSiegeInstance(null);
+				}
+				else
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Castle missing! CastleId: " + t.getCastleId());
+				}
+				
+				if (fort != null)
+				{
+					t.changeNPCsSpawn(1, false);
+					fort.getZone().setIsActive(false);
+					fort.getZone().updateZoneStatusForCharactersInside();
+					fort.getZone().setSiegeInstance(null);
+				}
+				else
+				{
+					LOGGER.warning(getClass().getSimpleName() + ": Fort missing! FortId: " + t.getFortId());
+				}
+				
+				if (t.getHQ() != null)
+				{
+					t.getHQ().deleteMe();
+				}
+				
+				for (TerritoryNPCSpawn ward : t.getOwnedWard())
+				{
+					if (ward.getNpc() != null)
 					{
-						ward.setNPC(ward.getNpc().getSpawn().doSpawn());
-					}
-					else if (ward.getNpc().isSpawned() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
-					{
-						ward.getNpc().decayMe();
+						if (!ward.getNpc().isSpawned() && SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+						{
+							ward.setNPC(ward.getNpc().getSpawn().doSpawn());
+						}
+						else if (ward.getNpc().isSpawned() && !SPAWN_WARDS_WHEN_TW_IS_NOT_IN_PROGRESS)
+						{
+							ward.getNpc().decayMe();
+						}
 					}
 				}
 			}
 		}
+		
 		for (L2SiegeFlagInstance flag : _clanFlags.values())
 		{
 			flag.deleteMe();
@@ -1115,6 +1108,7 @@ public final class TerritoryWarManager implements Siegable
 				changeRegistration(castleId, clan.getId(), true);
 			}
 		}
+		
 		for (Integer castleId : _registeredMercenaries.keySet())
 		{
 			for (Integer pl_objId : _registeredMercenaries.get(castleId))
@@ -1122,19 +1116,20 @@ public final class TerritoryWarManager implements Siegable
 				changeRegistration(castleId, pl_objId, true);
 			}
 		}
+		
 		// change next TW date
 		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.TERRITORY_WAR_HAS_ENDED);
 		Broadcast.toAllOnlinePlayers(sm);
 	}
 	
-	protected boolean updatePlayerTWStateFlags(boolean clear)
+	protected void updatePlayerTWStateFlags(boolean clear)
 	{
 		final Quest twQuest = QuestManager.getInstance().getQuest(qn);
-		if (twQuest == null)
+		if (twQuest != null)
 		{
-			LOGGER.warning(getClass().getSimpleName() + ": missing main Quest!");
-			return false;
+			twQuest.setOnEnterWorld(_isTWInProgress);
 		}
+		
 		for (int castleId : _registeredClans.keySet())
 		{
 			for (L2Clan clan : _registeredClans.get(castleId))
@@ -1227,8 +1222,6 @@ public final class TerritoryWarManager implements Siegable
 				}
 			}
 		}
-		twQuest.setOnEnterWorld(_isTWInProgress);
-		return true;
 	}
 	
 	protected class RewardOnlineParticipants implements Runnable
