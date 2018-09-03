@@ -212,7 +212,7 @@ public final class OctavisWarzone extends AbstractInstance
 					
 					if ((hpPer < 50) && npc.isScriptValue(0))
 					{
-						npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, 95000d);
+						npc.getStat().addFixedValue(Stats.REGENERATE_HP_RATE, 100d); // On original script 95000d was added, making Octavis targetable for two seconds.
 						npc.setScriptValue(1);
 					}
 					else if ((hpPer > 90) && npc.isScriptValue(1))
