@@ -934,14 +934,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
 			else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide()))
 			{
 				sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
-			
 			// Checking if target has moved to peace zone
 			else if (target.isInsidePeaceZone(getActingPlayer()))
 			{
@@ -962,13 +960,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// GeoData Los Check here (or dz > 1000)
 		if (!GeoEngine.getInstance().canSeeTarget(this, target))
 		{
-			if (!target.isDoor() || (target.calculateDistance(this, false, false) > 200)) // fix for big door targeting
-			{
-				sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
-				getAI().setIntention(AI_INTENTION_ACTIVE);
-				sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
+			sendPacket(SystemMessageId.CANNOT_SEE_TARGET);
+			getAI().setIntention(AI_INTENTION_ACTIVE);
+			sendPacket(ActionFailed.STATIC_PACKET);
+			return;
 		}
 		
 		// BOW and CROSSBOW checks
