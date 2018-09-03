@@ -3321,7 +3321,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * <li>_xDestination, _yDestination, _zDestination : Position of the destination</li>
 	 * <li>_xMoveFrom, _yMoveFrom, _zMoveFrom : Position of the origin</li>
 	 * <li>_moveStartTime : Start time of the movement</li>
-	 * <li>_ticksToMove : Nb of ticks between the start and the destination</li>
+	 * <li>_ticksToMove : Number of ticks between the start and the destination</li>
 	 * <li>_xSpeedTicks, _ySpeedTicks : Speed in unit/ticks</li>
 	 * </ul>
 	 */
@@ -4305,7 +4305,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					return;
 				}
 				
-				if (!isInVehicle)
+				if (!isInVehicle // Not in vehicle.
+					&& !(((curZ - z) > 300) && (distance < 300))) // Character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
 					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
@@ -4385,7 +4386,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			distance = Math.hypot(distance, dz);
 		}
 		
-		// Caclulate the Nb of ticks between the current position and the destination
+		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
 		m._xDestination = x;
@@ -4476,7 +4477,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			setHeading(Util.calculateHeadingFrom(curX, curY, m._xDestination, m._yDestination));
 		}
 		
-		// Caclulate the Nb of ticks between the current position and the destination
+		// Calculate the number of ticks between the current position and the destination
 		// One tick added for rounding reasons
 		final int ticksToMove = 1 + (int) ((GameTimeController.TICKS_PER_SECOND * distance) / speed);
 		
@@ -4625,7 +4626,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 * <li>if attack isn't aborted and hit isn't missed, manage attack or cast break of the target (calculating rate, sending message...)</li>
 	 * </ul>
 	 * @param target The L2Character targeted
-	 * @param damage Nb of HP to reduce
+	 * @param damage Number of HP to reduce
 	 * @param crit True if hit is critical
 	 * @param miss True if hit is missed
 	 * @param soulshot True if SoulShot are charged
