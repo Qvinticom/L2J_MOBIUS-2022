@@ -256,9 +256,8 @@ public final class WalkingManager implements IGameXmlReader
 					
 					if (!npc.isInsideRadius(node, 3000, true, false))
 					{
-						final String message = "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance(node, true, true) + "), walking will not start";
-						LOGGER.warning(getClass().getSimpleName() + ": " + message);
-						return;
+						LOGGER.warning(getClass().getSimpleName() + ": " + "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance(node, true, true) + "). Teleporting to proper location.");
+						npc.teleToLocation(node);
 					}
 					
 					if (node.runToLocation())
