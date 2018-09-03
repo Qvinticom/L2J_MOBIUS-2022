@@ -382,8 +382,11 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						if (npc.getVariables().getInt("FREYA_MOVE") == 0)
 						{
 							controller.getVariables().set("FREYA_MOVE", 1);
-							freya.setRunning();
-							freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+							if (!freya.isInCombat())
+							{
+								freya.setRunning();
+								freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+							}
 						}
 						break;
 					}
@@ -750,9 +753,12 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					if ((controller.getVariables().getInt("FREYA_MOVE") == 0) && world.isStatus(1))
 					{
 						controller.getVariables().set("FREYA_MOVE", 1);
-						manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
-						freya.setRunning();
-						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						if (!freya.isInCombat())
+						{
+							manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
+							freya.setRunning();
+							freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						}
 					}
 					
 					if (npc.getCurrentHp() < (npc.getMaxHp() * 0.02))
@@ -825,8 +831,11 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					if (controller.getVariables().getInt("FREYA_MOVE") == 0)
 					{
 						controller.getVariables().set("FREYA_MOVE", 1);
-						freya.setRunning();
-						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						if (!freya.isInCombat())
+						{
+							freya.setRunning();
+							freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						}
 					}
 					
 					if ((npc.getCurrentHp() < (npc.getMaxHp() * 0.2)) && !params.getBoolean("isSupportActive", false))
@@ -1113,11 +1122,13 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					if ((var.getInt("FREYA_MOVE") == 0) && world.isStatus(1))
 					{
 						var.set("FREYA_MOVE", 1);
-						manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
-						
 						final L2Npc freya = params.getObject("freya", L2Npc.class);
-						freya.setRunning();
-						freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						if (!freya.isInCombat())
+						{
+							manageScreenMsg(world, NpcStringId.FREYA_HAS_STARTED_TO_MOVE);
+							freya.setRunning();
+							freya.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, MIDDLE_POINT);
+						}
 					}
 					
 					if ((knightCount < 10) && (world.isStatus(2)))
