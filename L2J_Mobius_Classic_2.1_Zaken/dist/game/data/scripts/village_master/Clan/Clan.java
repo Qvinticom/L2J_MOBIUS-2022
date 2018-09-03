@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerClanL
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogin;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogout;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
-import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.skills.CommonSkill;
 
 import ai.AbstractNpcAI;
 
@@ -40,8 +40,6 @@ import ai.AbstractNpcAI;
  */
 public final class Clan extends AbstractNpcAI
 {
-	private final SkillHolder CLAN_ADVENT = new SkillHolder(19009, 1);
-	
 	// @formatter:off
 	private static final int[] NPCS =
 	{
@@ -106,13 +104,13 @@ public final class Clan extends AbstractNpcAI
 			{
 				if (member.isOnline())
 				{
-					CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
+					CommonSkill.CLAN_ADVENT.getSkill().applyEffects(member.getPlayerInstance(), member.getPlayerInstance());
 				}
 			});
 		}
 		else if ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline())
 		{
-			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
 		}
 	}
 	
@@ -128,13 +126,13 @@ public final class Clan extends AbstractNpcAI
 			{
 				if (member.isOnline())
 				{
-					member.getPlayerInstance().getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+					member.getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
 				}
 			});
 		}
 		if (activeChar.getClan() != null)
 		{
-			activeChar.getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+			activeChar.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
 		}
 	}
 	
@@ -145,7 +143,7 @@ public final class Clan extends AbstractNpcAI
 		final L2PcInstance activeChar = event.getActiveChar();
 		if (activeChar.isClanLeader() || ((activeChar.getClan() != null) && activeChar.getClan().getLeader().isOnline()))
 		{
-			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
 		}
 	}
 	
@@ -156,7 +154,7 @@ public final class Clan extends AbstractNpcAI
 		final L2PcInstance activeChar = event.getActiveChar().getPlayerInstance();
 		if (activeChar.getClan().getLeader().isOnline())
 		{
-			CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
+			CommonSkill.CLAN_ADVENT.getSkill().applyEffects(activeChar, activeChar);
 		}
 	}
 	
@@ -164,7 +162,7 @@ public final class Clan extends AbstractNpcAI
 	@RegisterType(ListenerRegisterType.GLOBAL_PLAYERS)
 	public void onPlayerClanLeft(OnPlayerClanLeft event)
 	{
-		event.getActiveChar().getPlayerInstance().getEffectList().stopSkillEffects(true, CLAN_ADVENT.getSkill());
+		event.getActiveChar().getPlayerInstance().getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
 	}
 	
 	public static void main(String[] args)

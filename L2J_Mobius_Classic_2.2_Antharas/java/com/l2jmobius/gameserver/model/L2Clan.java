@@ -59,6 +59,7 @@ import com.l2jmobius.gameserver.model.interfaces.INamable;
 import com.l2jmobius.gameserver.model.itemcontainer.ClanWarehouse;
 import com.l2jmobius.gameserver.model.itemcontainer.ItemContainer;
 import com.l2jmobius.gameserver.model.pledge.ClanRewardBonus;
+import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.variables.ClanVariables;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -500,8 +501,10 @@ public class L2Clan implements IIdentifiable, INamable
 				SiegeManager.getInstance().removeSiegeSkills(player);
 				player.setClanCreateExpiryTime(System.currentTimeMillis() + (Config.ALT_CLAN_CREATE_DAYS * 86400000)); // 24*60*60*1000 = 86400000
 			}
+			
 			// remove Clan skills from Player
 			removeSkillEffects(player);
+			player.getEffectList().stopSkillEffects(true, CommonSkill.CLAN_ADVENT.getId());
 			
 			// remove Residential skills
 			if (player.getClan().getCastleId() > 0)
