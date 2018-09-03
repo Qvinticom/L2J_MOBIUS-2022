@@ -1089,9 +1089,12 @@ public final class Skill implements IIdentifiable
 		
 		if (!checkConditions(SkillConditionScope.GENERAL, activeChar, object) || !checkConditions(SkillConditionScope.TARGET, activeChar, object))
 		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
-			sm.addSkillName(_id);
-			activeChar.sendPacket(sm);
+			if (!((activeChar == object) && isBad())) // Self targeted bad skills should not send a message.
+			{
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
+				sm.addSkillName(_id);
+				activeChar.sendPacket(sm);
+			}
 			return false;
 		}
 		
