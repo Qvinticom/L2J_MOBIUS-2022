@@ -519,7 +519,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 				_actor.setTarget(null);
 				setIntention(AI_INTENTION_IDLE, null, null);
 			}
-			else
+			else if (sGuard.getSpawn() != null)
 			{
 				final double dx = _actor.getX() - attackTarget.getX();
 				final double dy = _actor.getY() - attackTarget.getY();
