@@ -4306,7 +4306,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				if (!isInVehicle // Not in vehicle.
-					&& !(((curZ - z) > 300) && (distance < 300))) // Character wants to fall.
+					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
 					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
