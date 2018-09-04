@@ -344,7 +344,7 @@ public final class SeedOfAnnihilation extends AbstractNpcAI
 		{
 			final Location teleLoc = TELEPORT_ZONES.get(zone.getId());
 			// Conditions for Quest 454
-			L2World.getInstance().forEachVisibleObject(character, L2Npc.class, 500, npc ->
+			L2World.getInstance().forEachVisibleObjectInRange(character, L2Npc.class, 500, npc ->
 			{
 				if ((npc.getId() == 32738) && (npc.getTarget() != null))
 				{

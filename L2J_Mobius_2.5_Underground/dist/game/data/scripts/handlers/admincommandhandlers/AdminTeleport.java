@@ -190,7 +190,7 @@ public class AdminTeleport implements IAdminCommandHandler
 				st.nextToken();
 				final int x = (int) Float.parseFloat(st.nextToken());
 				final int y = (int) Float.parseFloat(st.nextToken());
-				final int z = st.hasMoreTokens() ? ((int) Float.parseFloat(st.nextToken())) : GeoEngine.getInstance().getHeight(x, y, L2World.MAP_MAX_Z);
+				final int z = st.hasMoreTokens() ? ((int) Float.parseFloat(st.nextToken())) : GeoEngine.getInstance().getHeight(x, y, 10000);
 				
 				activeChar.teleToLocation(x, y, z);
 			}

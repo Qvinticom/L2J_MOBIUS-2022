@@ -35,14 +35,13 @@ import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.instancemanager.PlayerCountManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
-import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
-import com.l2jmobius.gameserver.util.Util;
 
 public final class L2World
 {
@@ -54,11 +53,10 @@ public final class L2World
 	
 	/** Bit shift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 11 divides one tile to 16x16 regions. */
 	public static final int SHIFT_BY = 11;
-	public static final int SHIFT_BY_Z = 10;
 	
 	public static final int TILE_SIZE = 32768;
 	
-	/** Map dimensions */
+	/** Map dimensions. */
 	public static final int TILE_X_MIN = 11;
 	public static final int TILE_Y_MIN = 10;
 	public static final int TILE_X_MAX = 28;
@@ -67,23 +65,20 @@ public final class L2World
 	public static final int TILE_ZERO_COORD_Y = 18;
 	public static final int MAP_MIN_X = (TILE_X_MIN - TILE_ZERO_COORD_X) * TILE_SIZE;
 	public static final int MAP_MIN_Y = (TILE_Y_MIN - TILE_ZERO_COORD_Y) * TILE_SIZE;
-	public static final int MAP_MIN_Z = -TILE_SIZE / 2;
 	
 	public static final int MAP_MAX_X = ((TILE_X_MAX - TILE_ZERO_COORD_X) + 1) * TILE_SIZE;
 	public static final int MAP_MAX_Y = ((TILE_Y_MAX - TILE_ZERO_COORD_Y) + 1) * TILE_SIZE;
-	public static final int MAP_MAX_Z = TILE_SIZE / 2;
 	
-	/** calculated offset used so top left region is 0,0 */
+	/** Calculated offset used so top left region is 0,0 */
 	public static final int OFFSET_X = Math.abs(MAP_MIN_X >> SHIFT_BY);
 	public static final int OFFSET_Y = Math.abs(MAP_MIN_Y >> SHIFT_BY);
-	public static final int OFFSET_Z = Math.abs(MAP_MIN_Z >> SHIFT_BY_Z);
 	
-	/** number of regions */
+	/** Number of regions. */
 	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
-	private static final int REGIONS_Z = (MAP_MAX_Z >> SHIFT_BY_Z) + OFFSET_Z;
 	
-	public static final int REGION_MIN_DIMENSION = Math.min(TILE_SIZE / (TILE_SIZE >> SHIFT_BY_Z), TILE_SIZE / (TILE_SIZE >> SHIFT_BY));
+	/** Max client visibility distance. **/
+	private static final int VISIBILITY_RANGE = 3000;
 	
 	/** Map containing all the players in game. */
 	private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
@@ -99,7 +94,7 @@ public final class L2World
 	private final AtomicInteger _partyNumber = new AtomicInteger();
 	private final AtomicInteger _memberInPartyNumber = new AtomicInteger();
 	
-	private final L2WorldRegion[][][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1][REGIONS_Z + 1];
+	private final L2WorldRegion[][] _worldRegions = new L2WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 	
 	/** Constructor of L2World. */
 	protected L2World()
@@ -108,14 +103,11 @@ public final class L2World
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
 			{
-				for (int z = 0; z <= REGIONS_Z; z++)
-				{
-					_worldRegions[x][y][z] = new L2WorldRegion(x, y, z);
-				}
+				_worldRegions[x][y] = new L2WorldRegion(x, y);
 			}
 		}
 		
-		LOGGER.info(getClass().getSimpleName() + ": (" + REGIONS_X + " by " + REGIONS_Y + " by " + REGIONS_Z + ") World Region Grid set up.");
+		LOGGER.info(getClass().getSimpleName() + ": (" + REGIONS_X + " by " + REGIONS_Y + ") World Region Grid set up.");
 	}
 	
 	/**
@@ -139,7 +131,7 @@ public final class L2World
 			PlayerCountManager.getInstance().incConnectedCount();
 			
 			final L2PcInstance newPlayer = (L2PcInstance) object;
-			if (newPlayer.isTeleporting()) // TODO: drop when we stop removing player from the world while teleporting.
+			if (newPlayer.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{
 				return;
 			}
@@ -176,7 +168,7 @@ public final class L2World
 			PlayerCountManager.getInstance().decConnectedCount();
 			
 			final L2PcInstance player = (L2PcInstance) object;
-			if (player.isTeleporting()) // TODO: drop when we stop removing player from the world while teleportingq.
+			if (player.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
 			{
 				return;
 			}
@@ -309,7 +301,7 @@ public final class L2World
 			return;
 		}
 		
-		forEachVisibleObject(object, L2Object.class, 1, wo ->
+		forEachVisibleObject(object, L2Object.class, wo ->
 		{
 			if (object.isPlayer() && wo.isVisibleFor((L2PcInstance) object))
 			{
@@ -584,47 +576,9 @@ public final class L2World
 		});
 	}
 	
-	public <T extends L2Object> void forEachVisibleObject(L2Object object, Class<T> clazz, int depth, Consumer<T> c)
-	{
-		if (object == null)
-		{
-			return;
-		}
-		
-		final L2WorldRegion centerWorldRegion = getRegion(object);
-		if (centerWorldRegion == null)
-		{
-			return;
-		}
-		
-		for (int x = Math.max(centerWorldRegion.getRegionX() - depth, 0); x <= Math.min(centerWorldRegion.getRegionX() + depth, REGIONS_X); x++)
-		{
-			for (int y = Math.max(centerWorldRegion.getRegionY() - depth, 0); y <= Math.min(centerWorldRegion.getRegionY() + depth, REGIONS_Y); y++)
-			{
-				for (int z = Math.max(centerWorldRegion.getRegionZ() - depth, 0); z <= Math.min(centerWorldRegion.getRegionZ() + depth, REGIONS_Z); z++)
-				{
-					for (L2Object visibleObject : _worldRegions[x][y][z].getVisibleObjects().values())
-					{
-						if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
-						{
-							continue;
-						}
-						
-						if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
-						{
-							continue;
-						}
-						
-						c.accept(clazz.cast(visibleObject));
-					}
-				}
-			}
-		}
-	}
-	
 	public <T extends L2Object> void forEachVisibleObject(L2Object object, Class<T> clazz, Consumer<T> c)
 	{
-		forEachVisibleObject(object, clazz, 1, c);
+		forEachVisibleObjectInRange(object, clazz, VISIBILITY_RANGE, c);
 	}
 	
 	public <T extends L2Object> void forEachVisibleObjectInRange(L2Object object, Class<T> clazz, int range, Consumer<T> c)
@@ -640,39 +594,36 @@ public final class L2World
 			return;
 		}
 		
-		final int depth = (range / REGION_MIN_DIMENSION) + 1;
-		for (int x = Math.max(centerWorldRegion.getRegionX() - depth, 0); x <= Math.min(centerWorldRegion.getRegionX() + depth, REGIONS_X); x++)
+		final int regionX = centerWorldRegion.getRegionX();
+		final int regionY = centerWorldRegion.getRegionY();
+		for (int x = regionX - 1; x <= (regionX + 1); x++)
 		{
-			for (int y = Math.max(centerWorldRegion.getRegionY() - depth, 0); y <= Math.min(centerWorldRegion.getRegionY() + depth, REGIONS_Y); y++)
+			for (int y = regionY - 1; y <= (regionY + 1); y++)
 			{
-				for (int z = Math.max(centerWorldRegion.getRegionZ() - depth, 0); z <= Math.min(centerWorldRegion.getRegionZ() + depth, REGIONS_Z); z++)
+				if (validRegion(x, y))
 				{
-					final int x1 = (x - OFFSET_X) << SHIFT_BY;
-					final int y1 = (y - OFFSET_Y) << SHIFT_BY;
-					final int z1 = (z - OFFSET_Z) << SHIFT_BY_Z;
-					final int x2 = ((x + 1) - OFFSET_X) << SHIFT_BY;
-					final int y2 = ((y + 1) - OFFSET_Y) << SHIFT_BY;
-					final int z2 = ((z + 1) - OFFSET_Z) << SHIFT_BY_Z;
-					if (Util.cubeIntersectsSphere(x1, y1, z1, x2, y2, z2, object.getX(), object.getY(), object.getZ(), range))
+					for (L2Object visibleObject : _worldRegions[x][y].getVisibleObjects().values())
 					{
-						for (L2Object visibleObject : _worldRegions[x][y][z].getVisibleObjects().values())
+						if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
 						{
-							if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
-							{
-								continue;
-							}
-							
-							if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
-							{
-								continue;
-							}
-							
-							if (visibleObject.calculateDistance(object, true, false) <= range)
-							{
-								c.accept(clazz.cast(visibleObject));
-							}
+							continue;
+						}
+						
+						if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
+						{
+							continue;
+						}
+						
+						if (visibleObject.calculateDistance(object, true, false) <= range)
+						{
+							c.accept(clazz.cast(visibleObject));
 						}
 					}
+				}
+				else if ((x == regionX) && (y == regionY)) // Precaution. Moved at invalid region?
+				{
+					disposeOutOfBoundsObject(object);
+					return;
 				}
 			}
 		}
@@ -680,22 +631,12 @@ public final class L2World
 	
 	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz)
 	{
-		final List<T> result = new LinkedList<>();
-		forEachVisibleObject(object, clazz, result::add);
-		return result;
+		return getVisibleObjects(object, clazz, VISIBILITY_RANGE);
 	}
 	
 	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, Predicate<T> predicate)
 	{
-		final List<T> result = new LinkedList<>();
-		forEachVisibleObject(object, clazz, o ->
-		{
-			if (predicate.test(o))
-			{
-				result.add(o);
-			}
-		});
-		return result;
+		return getVisibleObjects(object, clazz, VISIBILITY_RANGE, predicate);
 	}
 	
 	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range)
@@ -722,24 +663,31 @@ public final class L2World
 	 * Calculate the current L2WorldRegions of the object according to its position (x,y). <B><U> Example of use </U> :</B>
 	 * <li>Set position of a new L2Object (drop, spawn...)</li>
 	 * <li>Update position of a L2Object after a movement</li><BR>
-	 * @param point position of the object
+	 * @param object the object
 	 * @return
 	 */
-	public L2WorldRegion getRegion(ILocational point)
-	{
-		return getRegion(point.getX(), point.getY(), point.getZ());
-	}
-	
-	public L2WorldRegion getRegion(int x, int y, int z)
+	public L2WorldRegion getRegion(L2Object object)
 	{
 		try
 		{
-			return _worldRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y][(z >> SHIFT_BY_Z) + OFFSET_Z];
+			return _worldRegions[(object.getX() >> SHIFT_BY) + OFFSET_X][(object.getY() >> SHIFT_BY) + OFFSET_Y];
+		}
+		catch (ArrayIndexOutOfBoundsException e) // Precaution. Moved at invalid region?
+		{
+			disposeOutOfBoundsObject(object);
+			return null;
+		}
+	}
+	
+	public L2WorldRegion getRegion(int x, int y)
+	{
+		try
+		{
+			return _worldRegions[(x >> SHIFT_BY) + OFFSET_X][(y >> SHIFT_BY) + OFFSET_Y];
 		}
 		catch (ArrayIndexOutOfBoundsException e)
 		{
-			// TODO: Find when this can be null. (Bad geodata? Check GeoEngine hasGeoPos method.)
-			// LOGGER.warning(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y) + " Z: " + ((z >> SHIFT_BY_Z) + OFFSET_Z) + " for coordinates x: " + x + " y: " + y + " z: " + z);
+			LOGGER.warning(getClass().getSimpleName() + ": Incorrect world region X: " + ((x >> SHIFT_BY) + OFFSET_X) + " Y: " + ((y >> SHIFT_BY) + OFFSET_Y));
 			return null;
 		}
 	}
@@ -748,7 +696,7 @@ public final class L2World
 	 * Returns the whole 3d array containing the world regions used by ZoneData.java to setup zones inside the world regions
 	 * @return
 	 */
-	public L2WorldRegion[][][] getWorldRegions()
+	public L2WorldRegion[][] getWorldRegions()
 	{
 		return _worldRegions;
 	}
@@ -758,31 +706,49 @@ public final class L2World
 	 * <li>Init L2WorldRegions</li><BR>
 	 * @param x X position of the object
 	 * @param y Y position of the object
-	 * @param z Z position of the object
 	 * @return True if the L2WorldRegion is valid
 	 */
-	public static boolean validRegion(int x, int y, int z)
+	public static boolean validRegion(int x, int y)
 	{
-		return ((x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y)) && (z >= 0) && (z <= REGIONS_Z);
+		return ((x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y));
 	}
 	
-	/**
-	 * Deleted all spawns in the world.
-	 */
-	public void deleteVisibleNpcSpawns()
+	public synchronized void disposeOutOfBoundsObject(L2Object object)
 	{
-		LOGGER.info(getClass().getSimpleName() + ": Deleting all visible NPCs.");
-		for (int x = 0; x <= REGIONS_X; x++)
+		if (object.isPlayer())
 		{
-			for (int y = 0; y <= REGIONS_Y; y++)
+			((L2Character) object).stopMove(((L2PcInstance) object).getLastServerPosition());
+		}
+		else if (object.isSummon())
+		{
+			final L2Summon summon = (L2Summon) object;
+			summon.unSummon(summon.getOwner());
+		}
+		else if (_allObjects.remove(object.getObjectId()) != null)
+		{
+			if (object.isNpc())
 			{
-				for (int z = 0; z <= REGIONS_Z; z++)
+				final L2Npc npc = (L2Npc) object;
+				LOGGER.warning("Deleting npc " + object.getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
+				npc.deleteMe();
+				
+				final L2Spawn spawn = npc.getSpawn();
+				if (spawn != null)
 				{
-					_worldRegions[x][y][z].deleteVisibleNpcSpawns();
+					LOGGER.warning("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
 				}
 			}
+			else if (object.isCharacter())
+			{
+				LOGGER.warning("Deleting object " + object.getName() + " OID[" + object.getObjectId() + "] from invalid location X:" + object.getX() + " Y:" + object.getY() + " Z:" + object.getZ());
+				((L2Character) object).deleteMe();
+			}
+			
+			if (object.getWorldRegion() != null)
+			{
+				object.getWorldRegion().removeVisibleObject(object);
+			}
 		}
-		LOGGER.info(getClass().getSimpleName() + ": All visible NPCs deleted.");
 	}
 	
 	public void incrementParty()

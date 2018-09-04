@@ -184,7 +184,7 @@ public final class FenceData implements IGameXmlReader
 			return false;
 		};
 		
-		final L2WorldRegion region = L2World.getInstance().getRegion(x, y, z); // FIXME: Should not be null.
+		final L2WorldRegion region = L2World.getInstance().getRegion(x, y); // Should never be null.
 		return region == null ? false : _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
 	}
 	

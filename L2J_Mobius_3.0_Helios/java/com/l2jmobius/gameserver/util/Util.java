@@ -227,50 +227,6 @@ public final class Util
 	}
 	
 	/**
-	 * Checks if the cube intersects the sphere.
-	 * @param x1 the cube's first point x
-	 * @param y1 the cube's first point y
-	 * @param z1 the cube's first point z
-	 * @param x2 the cube's second point x
-	 * @param y2 the cube's second point y
-	 * @param z2 the cube's second point z
-	 * @param sX the sphere's middle x
-	 * @param sY the sphere's middle y
-	 * @param sZ the sphere's middle z
-	 * @param radius the sphere's radius
-	 * @return {@code true} if cube intersects sphere, {@code false} otherwise
-	 */
-	public static boolean cubeIntersectsSphere(int x1, int y1, int z1, int x2, int y2, int z2, int sX, int sY, int sZ, int radius)
-	{
-		double d = radius * radius;
-		if (sX < x1)
-		{
-			d -= Math.pow(sX - x1, 2);
-		}
-		else if (sX > x2)
-		{
-			d -= Math.pow(sX - x2, 2);
-		}
-		if (sY < y1)
-		{
-			d -= Math.pow(sY - y1, 2);
-		}
-		else if (sY > y2)
-		{
-			d -= Math.pow(sY - y2, 2);
-		}
-		if (sZ < z1)
-		{
-			d -= Math.pow(sZ - z1, 2);
-		}
-		else if (sZ > z2)
-		{
-			d -= Math.pow(sZ - z2, 2);
-		}
-		return d > 0;
-	}
-	
-	/**
 	 * @param text - the text to check
 	 * @return {@code true} if {@code text} contains only numbers, {@code false} otherwise
 	 */

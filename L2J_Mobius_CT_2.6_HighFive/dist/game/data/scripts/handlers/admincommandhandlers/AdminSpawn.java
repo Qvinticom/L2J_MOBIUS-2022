@@ -218,8 +218,21 @@ public class AdminSpawn implements IAdminCommandHandler
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
-			AdminData.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
+			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			{
+				if ((obj != null) && obj.isNpc())
+				{
+					final L2Npc target = (L2Npc) obj;
+					target.deleteMe();
+					final L2Spawn spawn = target.getSpawn();
+					if (spawn != null)
+					{
+						spawn.stopRespawn();
+						SpawnTable.getInstance().deleteSpawn(spawn, false);
+					}
+				}
+			}
+			AdminData.getInstance().broadcastMessageToGMs("NPC unspawn completed!");
 		}
 		else if (command.startsWith("admin_spawnday"))
 		{
@@ -234,7 +247,20 @@ public class AdminSpawn implements IAdminCommandHandler
 			// make sure all spawns are deleted
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
+			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			{
+				if ((obj != null) && obj.isNpc())
+				{
+					final L2Npc target = (L2Npc) obj;
+					target.deleteMe();
+					final L2Spawn spawn = target.getSpawn();
+					if (spawn != null)
+					{
+						spawn.stopRespawn();
+						SpawnTable.getInstance().deleteSpawn(spawn, false);
+					}
+				}
+			}
 			// now respawn all
 			NpcData.getInstance().load();
 			SpawnTable.getInstance().load();
@@ -242,7 +268,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			AutoSpawnHandler.getInstance().reload();
 			SevenSigns.getInstance().spawnSevenSignsNPC();
 			QuestManager.getInstance().reloadAllScripts();
-			AdminData.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
+			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");
 		}
 		else if (command.startsWith("admin_spawn_monster") || command.startsWith("admin_spawn"))
 		{

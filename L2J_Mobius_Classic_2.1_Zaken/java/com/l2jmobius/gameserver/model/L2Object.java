@@ -169,7 +169,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		{
 			// Set the x,y,z position of the L2Object spawn and update its _worldregion
 			_isSpawned = true;
-			setWorldRegion(L2World.getInstance().getRegion(getLocation()));
+			setWorldRegion(L2World.getInstance().getRegion(this));
 			
 			// Add the L2Object spawn in the _allobjects of L2World
 			L2World.getInstance().addObject(this);
@@ -206,14 +206,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 			if (y < L2World.MAP_MIN_Y)
 			{
 				y = L2World.MAP_MIN_Y + 5000;
-			}
-			if (z > L2World.MAP_MAX_Z)
-			{
-				z = L2World.MAP_MAX_Z - 1000;
-			}
-			if (z < L2World.MAP_MIN_Z)
-			{
-				z = L2World.MAP_MIN_Z + 1000;
 			}
 			
 			// Set the x,y,z position of the WorldObject. If flagged with _isSpawned, setXYZ will automatically update world region, so avoid that.

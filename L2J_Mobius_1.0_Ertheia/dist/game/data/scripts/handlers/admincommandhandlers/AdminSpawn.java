@@ -213,14 +213,40 @@ public class AdminSpawn implements IAdminCommandHandler
 		{
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
 			DBSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
+			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			{
+				if ((obj != null) && obj.isNpc())
+				{
+					final L2Npc target = (L2Npc) obj;
+					target.deleteMe();
+					final L2Spawn spawn = target.getSpawn();
+					if (spawn != null)
+					{
+						spawn.stopRespawn();
+						SpawnTable.getInstance().deleteSpawn(spawn, false);
+					}
+				}
+			}
 			AdminData.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
 		}
 		else if (command.startsWith("admin_respawnall") || command.startsWith("admin_spawn_reload"))
 		{
 			// make sure all spawns are deleted
 			DBSpawnManager.getInstance().cleanUp();
-			L2World.getInstance().deleteVisibleNpcSpawns();
+			for (L2Object obj : L2World.getInstance().getVisibleObjects())
+			{
+				if ((obj != null) && obj.isNpc())
+				{
+					final L2Npc target = (L2Npc) obj;
+					target.deleteMe();
+					final L2Spawn spawn = target.getSpawn();
+					if (spawn != null)
+					{
+						spawn.stopRespawn();
+						SpawnTable.getInstance().deleteSpawn(spawn, false);
+					}
+				}
+			}
 			// now respawn all
 			NpcData.getInstance().load();
 			DBSpawnManager.getInstance().load();

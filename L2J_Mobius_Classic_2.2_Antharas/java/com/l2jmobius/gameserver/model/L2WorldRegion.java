@@ -25,7 +25,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.L2Vehicle;
@@ -38,17 +37,15 @@ public final class L2WorldRegion
 	private volatile Map<Integer, L2Object> _visibleObjects;
 	private final int _regionX;
 	private final int _regionY;
-	private final int _regionZ;
 	private boolean _active = false;
 	private ScheduledFuture<?> _neighborsTask = null;
 	
-	public L2WorldRegion(int regionX, int regionY, int regionZ)
+	public L2WorldRegion(int regionX, int regionY)
 	{
 		_regionX = regionX;
 		_regionY = regionY;
-		_regionZ = regionZ;
 		
-		// default a newly initialized region to inactive, unless always on is specified
+		// Default a newly initialized region to inactive, unless always on is specified.
 		_active = Config.GRIDS_ALWAYS_ON;
 	}
 	
@@ -93,19 +90,19 @@ public final class L2WorldRegion
 					c++;
 					final L2Attackable mob = (L2Attackable) o;
 					
-					// Set target to null and cancel Attack or Cast
+					// Set target to null and cancel attack or cast.
 					mob.setTarget(null);
 					
-					// Stop movement
+					// Stop movement.
 					mob.stopMove(null);
 					
-					// Stop all active skills effects in progress on the L2Character
+					// Stop all active skills effects in progress on the L2Character.
 					mob.stopAllEffects();
 					
 					mob.clearAggroList();
 					mob.getAttackByList().clear();
 					
-					// stop the ai tasks
+					// Stop the AI tasks.
 					if (mob.hasAI())
 					{
 						mob.getAI().setIntention(com.l2jmobius.gameserver.ai.CtrlIntention.AI_INTENTION_IDLE);
@@ -126,7 +123,7 @@ public final class L2WorldRegion
 				if (o.isAttackable())
 				{
 					c++;
-					// Start HP/MP/CP Regeneration task
+					// Start HP/MP/CP regeneration task.
 					((L2Attackable) o).getStatus().startHpMpRegeneration();
 				}
 				else if (o instanceof L2Npc)
@@ -161,7 +158,7 @@ public final class L2WorldRegion
 		
 		_active = value;
 		
-		// turn the AI on or off to match the region's activation.
+		// Turn the AI on or off to match the region's activation.
 		switchAI(value);
 		
 		LOGGER.finer((value ? "Starting" : "Stopping") + " Grid " + this);
@@ -172,10 +169,10 @@ public final class L2WorldRegion
 	 */
 	private void startActivation()
 	{
-		// first set self to active and do self-tasks...
+		// First set self to active and do self-tasks...
 		setActive(true);
 		
-		// if the timer to deactivate neighbors is running, cancel it.
+		// If the timer to deactivate neighbors is running, cancel it.
 		synchronized (this)
 		{
 			if (_neighborsTask != null)
@@ -184,7 +181,7 @@ public final class L2WorldRegion
 				_neighborsTask = null;
 			}
 			
-			// then, set a timer to activate the neighbors
+			// Then, set a timer to activate the neighbors.
 			_neighborsTask = ThreadPool.schedule(new NeighborsTask(true), 1000 * Config.GRID_NEIGHBOR_TURNON_TIME);
 		}
 	}
@@ -194,7 +191,7 @@ public final class L2WorldRegion
 	 */
 	private void startDeactivation()
 	{
-		// if the timer to activate neighbors is running, cancel it.
+		// If the timer to activate neighbors is running, cancel it.
 		synchronized (this)
 		{
 			if (_neighborsTask != null)
@@ -203,8 +200,8 @@ public final class L2WorldRegion
 				_neighborsTask = null;
 			}
 			
-			// start a timer to "suggest" a deactivate to self and neighbors.
-			// suggest means: first check if a neighbor has L2PcInstances in it. If not, deactivate.
+			// Start a timer to "suggest" a deactivate to self and neighbors.
+			// Suggest means: first check if a neighbor has L2PcInstances in it. If not, deactivate.
 			_neighborsTask = ThreadPool.schedule(new NeighborsTask(false), 1000 * Config.GRID_NEIGHBOR_TURNOFF_TIME);
 		}
 	}
@@ -235,7 +232,7 @@ public final class L2WorldRegion
 		
 		if (object.isPlayable())
 		{
-			// if this is the first player to enter the region, activate self & neighbors
+			// If this is the first player to enter the region, activate self and neighbors.
 			if (!_active && (!Config.GRIDS_ALWAYS_ON))
 			{
 				startActivation();
@@ -274,50 +271,18 @@ public final class L2WorldRegion
 		return _visibleObjects != null ? _visibleObjects : Collections.emptyMap();
 	}
 	
-	/**
-	 * Deleted all spawns in the world.
-	 */
-	public void deleteVisibleNpcSpawns()
-	{
-		if (_visibleObjects == null)
-		{
-			return;
-		}
-		
-		LOGGER.info("Deleting all visible NPCs in Region: " + this);
-		for (L2Object obj : _visibleObjects.values())
-		{
-			if (obj instanceof L2Npc)
-			{
-				final L2Npc target = (L2Npc) obj;
-				target.deleteMe();
-				final L2Spawn spawn = target.getSpawn();
-				if (spawn != null)
-				{
-					spawn.stopRespawn();
-					SpawnTable.getInstance().deleteSpawn(spawn, false);
-				}
-				LOGGER.finest("Removed NPC " + target.getObjectId());
-			}
-		}
-		LOGGER.info("All visible NPCs deleted in Region: " + this);
-	}
-	
 	public boolean forEachSurroundingRegion(Predicate<L2WorldRegion> p)
 	{
 		for (int x = _regionX - 1; x <= (_regionX + 1); x++)
 		{
 			for (int y = _regionY - 1; y <= (_regionY + 1); y++)
 			{
-				for (int z = _regionZ - 1; z <= (_regionZ + 1); z++)
+				if (L2World.validRegion(x, y))
 				{
-					if (L2World.validRegion(x, y, z))
+					final L2WorldRegion worldRegion = L2World.getInstance().getWorldRegions()[x][y];
+					if (!p.test(worldRegion))
 					{
-						final L2WorldRegion worldRegion = L2World.getInstance().getWorldRegions()[x][y][z];
-						if (!p.test(worldRegion))
-						{
-							return false;
-						}
+						return false;
 					}
 				}
 			}
@@ -335,19 +300,14 @@ public final class L2WorldRegion
 		return _regionY;
 	}
 	
-	public int getRegionZ()
-	{
-		return _regionZ;
-	}
-	
 	public boolean isSurroundingRegion(L2WorldRegion region)
 	{
-		return (region != null) && (getRegionX() >= (region.getRegionX() - 1)) && (getRegionX() <= (region.getRegionX() + 1)) && (getRegionY() >= (region.getRegionY() - 1)) && (getRegionY() <= (region.getRegionY() + 1)) && (getRegionZ() >= (region.getRegionZ() - 1)) && (getRegionZ() <= (region.getRegionZ() + 1));
+		return (region != null) && (_regionX >= (region.getRegionX() - 1)) && (_regionX <= (region.getRegionX() + 1)) && (_regionY >= (region.getRegionY() - 1)) && (_regionY <= (region.getRegionY() + 1));
 	}
 	
 	@Override
 	public String toString()
 	{
-		return "(" + _regionX + ", " + _regionY + ", " + _regionZ + ")";
+		return "(" + _regionX + ", " + _regionY + ")";
 	}
 }

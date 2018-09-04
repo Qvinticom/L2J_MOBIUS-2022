@@ -62,7 +62,6 @@ import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
-import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.Location;
@@ -72,7 +71,6 @@ import com.l2jmobius.gameserver.model.TimeStamp;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2QuestGuardInstance;
-import com.l2jmobius.gameserver.model.actor.instance.L2ServitorInstance;
 import com.l2jmobius.gameserver.model.actor.stat.CharStat;
 import com.l2jmobius.gameserver.model.actor.status.CharStatus;
 import com.l2jmobius.gameserver.model.actor.tasks.character.FlyToLocationTask;
@@ -3983,31 +3981,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		else // Precaution. Moved at invalid region?
 		{
-			if (isPlayer())
-			{
-				stopMove(((L2PcInstance) this).getLastServerPosition());
-			}
-			else if (isServitor())
-			{
-				final L2ServitorInstance servitor = (L2ServitorInstance) this;
-				servitor.unSummon(servitor.getOwner());
-			}
-			else if (isNpc())
-			{
-				final L2Npc npc = (L2Npc) this;
-				LOGGER.warning("Deleting npc " + getName() + " NPCID[" + npc.getId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
-				final L2Spawn spawn = npc.getSpawn();
-				if (spawn != null)
-				{
-					LOGGER.warning("Spawn location X:" + spawn.getX() + " Y:" + spawn.getY() + " Z:" + spawn.getZ() + " Heading:" + spawn.getHeading());
-				}
-				deleteMe();
-			}
-			else
-			{
-				LOGGER.warning("Deleting object " + getName() + " OID[" + getObjectId() + "] from invalid location X:" + getX() + " Y:" + getY() + " Z:" + getZ());
-				deleteMe();
-			}
+			L2World.getInstance().disposeOutOfBoundsObject(this);
 		}
 	}
 	
