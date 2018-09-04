@@ -183,7 +183,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 				{
 					if (summon.canAttack(_ctrlPressed))
 					{
-						summon.doAttack();
+						summon.doSummonAttack(target);
 					}
 				}
 				break;
@@ -241,7 +241,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 				{
 					if (summon.canAttack(_ctrlPressed))
 					{
-						summon.doAttack();
+						summon.doSummonAttack(target);
 					}
 				}
 				break;

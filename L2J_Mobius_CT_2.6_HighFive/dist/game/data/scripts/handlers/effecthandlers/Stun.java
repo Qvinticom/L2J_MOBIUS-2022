@@ -16,7 +16,10 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -49,7 +52,20 @@ public final class Stun extends AbstractEffect
 	@Override
 	public void onExit(BuffInfo info)
 	{
-		info.getEffected().stopStunning(false);
+		final L2Character effected = info.getEffected();
+		effected.stopStunning(false);
+		if (effected.isSummon())
+		{
+			final L2Character effector = info.getEffector();
+			if ((effector != null) && !effector.isDead())
+			{
+				((L2Summon) effected).doSummonAttack(effector);
+			}
+			else
+			{
+				effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
+			}
+		}
 	}
 	
 	@Override

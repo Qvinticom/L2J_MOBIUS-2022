@@ -945,12 +945,12 @@ public abstract class L2Summon extends L2Playable
 	
 	/**
 	 * Performs an attack to the owner's target.
+	 * @param target the target to attack.
 	 */
-	public void doAttack()
+	public void doSummonAttack(L2Object target)
 	{
 		if (_owner != null)
 		{
-			final L2Object target = _owner.getTarget();
 			if (target != null)
 			{
 				setTarget(target);
