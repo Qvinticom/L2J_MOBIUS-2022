@@ -1317,82 +1317,63 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	private boolean doAttackHitByPole(Attack attack, L2Character target, int sAtk)
 	{
-		// double angleChar;
-		final int maxRadius = _stat.getPhysicalAttackRange();
-		final int maxAngleDiff = _stat.getPhysicalAttackAngle();
-		
-		// o1 x: 83420 y: 148158 (Giran)
-		// o2 x: 83379 y: 148081 (Giran)
-		// dx = -41
-		// dy = -77
-		// distance between o1 and o2 = 87.24
-		// arctan2 = -120 (240) degree (excel arctan2(dx, dy); java arctan2(dy, dx))
-		//
-		// o2
-		//
-		// o1 ----- (heading)
-		// In the diagram above:
-		// o1 has a heading of 0/360 degree from horizontal (facing East)
-		// Degree of o2 in respect to o1 = -120 (240) degree
-		//
-		// o2 / (heading)
-		// /
-		// o1
-		// In the diagram above
-		// o1 has a heading of -80 (280) degree from horizontal (facing north east)
-		// Degree of o2 in respect to 01 = -40 (320) degree
-		
-		// Get char's heading degree
-		// angleChar = Util.convertHeadingToDegree(getHeading());
+		// Perform the main target hit.
+		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
 		
 		// H5 Changes: without Polearm Mastery (skill 216) max simultaneous attacks is 3 (1 by default + 2 in skill 3599).
-		final int attackRandomCountMax = (int) _stat.calcStat(Stats.ATTACK_COUNT_MAX, 1, null, null);
-		int attackcount = 0;
-		
-		// if (angleChar <= 0) angleChar += 360;
-		
-		boolean hitted = doAttackHitSimple(attack, target, 100, sAtk);
-		double attackpercent = 85;
-		for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
+		int attackCountMax = (int) _stat.calcStat(Stats.ATTACK_COUNT_MAX, 1, null, null);
+		if (attackCountMax > 1)
 		{
-			if (obj == target)
+			final int maxRadius = _stat.getPhysicalAttackRange();
+			final int maxAngleDiff = _stat.getPhysicalAttackAngle();
+			double attackpercent = 85;
+			for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
 			{
-				continue; // do not hit twice
-			}
-			
-			if (obj.isPet() && isPlayer() && (((L2PetInstance) obj).getOwner() == getActingPlayer()))
-			{
-				continue;
-			}
-			
-			if (!isFacing(obj, maxAngleDiff))
-			{
-				continue;
-			}
-			
-			if (isAttackable() && obj.isPlayer() && _target.isAttackable())
-			{
-				continue;
-			}
-			
-			if (isAttackable() && obj.isAttackable() && !((L2Attackable) this).isChaos())
-			{
-				continue;
-			}
-			
-			// Launch a simple attack against the L2Character targeted
-			if (!obj.isAlikeDead())
-			{
-				if ((obj == getAI().getAttackTarget()) || obj.isAutoAttackable(this))
+				// Skip main target.
+				if (obj == target)
 				{
-					hitted |= doAttackHitSimple(attack, obj, attackpercent, sAtk);
-					attackpercent /= 1.15;
-					
-					attackcount++;
-					if (attackcount > attackRandomCountMax)
-					{
-						break;
-					}
+					continue;
+				}
+				
+				// Skip dead or fake dead target.
+				if (obj.isAlikeDead())
+				{
+					continue;
+				}
+				
+				// Check if target is auto attackable.
+				if (!obj.isAutoAttackable(this))
+				{
+					continue;
+				}
+				
+				// Check if target is within attack angle.
+				if (!isFacing(obj, maxAngleDiff))
+				{
+					continue;
+				}
+				
+				if (obj.isPet() && isPlayer() && (((L2PetInstance) obj).getOwner() == getActingPlayer()))
+				{
+					continue;
+				}
+				
+				if (isAttackable() && obj.isPlayer() && _target.isAttackable())
+				{
+					continue;
+				}
+				
+				if (isAttackable() && obj.isAttackable() && !((L2Attackable) this).isChaos())
+				{
+					continue;
+				}
+				
+				// Launch a simple attack against the additional target.
+				hitted |= doAttackHitSimple(attack, obj, attackpercent, sAtk);
+				attackpercent /= 1.15;
+				if (--attackCountMax <= 0)
+				{
+					break;
 				}
 			}
 		}

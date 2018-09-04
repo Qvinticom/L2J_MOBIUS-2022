@@ -1153,10 +1153,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	{
 		final boolean isDual = WeaponType.DUAL.equals(weaponType) || WeaponType.DUALBLUNT.equals(weaponType) || WeaponType.DUALDAGGER.equals(weaponType) || WeaponType.DUALFIST.equals(weaponType);
 		final Attack attack = new Attack(this, target);
-		
 		boolean shotConsumed = false;
 		
-		// Calculate the main target hit
+		// Calculate the main target hit.
 		Hit hit = generateHit(target, weapon, shotConsumed, isDual);
 		attack.addHit(hit);
 		shotConsumed = hit.isShotUsed();
@@ -1184,23 +1183,31 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					continue;
 				}
 				
+				// Skip dead or fake dead target.
+				if (obj.isAlikeDead())
+				{
+					continue;
+				}
+				
+				// Check if target is auto attackable.
+				if (!obj.isAutoAttackable(this))
+				{
+					continue;
+				}
+				
 				// Check if target is within attack angle.
 				if (Math.abs(calculateDirectionTo(obj) - headingAngle) > physicalAttackAngle)
 				{
 					continue;
 				}
 				
-				// Launch a simple attack against the L2Character targeted
-				if (obj.isAutoAttackable(this))
+				// Launch a simple attack against the additional target.
+				hit = generateHit(obj, weapon, shotConsumed, false);
+				attack.addHit(hit);
+				shotConsumed = hit.isShotUsed();
+				if (--attackCountMax <= 0)
 				{
-					hit = generateHit(obj, weapon, shotConsumed, false);
-					attack.addHit(hit);
-					shotConsumed = hit.isShotUsed();
-					
-					if (--attackCountMax <= 0)
-					{
-						break;
-					}
+					break;
 				}
 			}
 		}
