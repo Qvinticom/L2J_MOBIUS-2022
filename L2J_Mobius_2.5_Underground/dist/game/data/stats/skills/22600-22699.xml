@@ -100,7 +100,6 @@
 		</effects>
 	</skill>
 	<skill id="22604" toLevel="2" name="Expand Warehouse Lv. 1">
-		<!-- AUTO GENERATED SKILL -->
 		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -113,10 +112,20 @@
 		<conditions>
 			<condition name="OpSkill">
 				<skillId>1371</skillId>
-				<skillLevel>8</skillLevel>
+				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
 		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>1371</skillId>
+				<skillLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLvl>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="22605" toLevel="1" name="Scroll: Enchant Power Shirt">
 		<!-- AUTO GENERATED SKILL -->
