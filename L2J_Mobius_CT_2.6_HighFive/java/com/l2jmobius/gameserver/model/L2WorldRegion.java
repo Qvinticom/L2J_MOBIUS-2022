@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
@@ -34,7 +33,9 @@ public final class L2WorldRegion
 	private static final Logger LOGGER = Logger.getLogger(L2WorldRegion.class.getName());
 	
 	/** Map containing visible objects in this world region. */
-	private volatile Map<Integer, L2Object> _visibleObjects;
+	private volatile Map<Integer, L2Object> _visibleObjects = new ConcurrentHashMap<>();
+	/** Map containing nearby regions forming this world region's effective area. */
+	private L2WorldRegion[] _surroundingRegions;
 	private final int _regionX;
 	private final int _regionY;
 	private boolean _active = false;
@@ -75,7 +76,7 @@ public final class L2WorldRegion
 	
 	private void switchAI(boolean isOn)
 	{
-		if (_visibleObjects == null)
+		if (_visibleObjects.isEmpty())
 		{
 			return;
 		}
@@ -218,16 +219,6 @@ public final class L2WorldRegion
 			return;
 		}
 		
-		if (_visibleObjects == null)
-		{
-			synchronized (object)
-			{
-				if (_visibleObjects == null)
-				{
-					_visibleObjects = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_visibleObjects.put(object.getObjectId(), object);
 		
 		if (object.isPlayable())
@@ -251,7 +242,7 @@ public final class L2WorldRegion
 			return;
 		}
 		
-		if (_visibleObjects == null)
+		if (_visibleObjects.isEmpty())
 		{
 			return;
 		}
@@ -268,26 +259,34 @@ public final class L2WorldRegion
 	
 	public Map<Integer, L2Object> getVisibleObjects()
 	{
-		return _visibleObjects != null ? _visibleObjects : Collections.emptyMap();
+		return _visibleObjects;
 	}
 	
 	public boolean forEachSurroundingRegion(Predicate<L2WorldRegion> p)
 	{
-		for (int x = _regionX - 1; x <= (_regionX + 1); x++)
+		for (L2WorldRegion worldRegion : _surroundingRegions)
 		{
-			for (int y = _regionY - 1; y <= (_regionY + 1); y++)
+			if (!p.test(worldRegion))
 			{
-				if (L2World.validRegion(x, y))
-				{
-					final L2WorldRegion worldRegion = L2World.getInstance().getWorldRegions()[x][y];
-					if (!p.test(worldRegion))
-					{
-						return false;
-					}
-				}
+				return false;
 			}
 		}
 		return true;
+	}
+	
+	public void setSurroundingRegions(L2WorldRegion[] regions)
+	{
+		_surroundingRegions = regions;
+	}
+	
+	public L2WorldRegion[] getSurroundingRegions()
+	{
+		return _surroundingRegions;
+	}
+	
+	public boolean isSurroundingRegion(L2WorldRegion region)
+	{
+		return (region != null) && (_regionX >= (region.getRegionX() - 1)) && (_regionX <= (region.getRegionX() + 1)) && (_regionY >= (region.getRegionY() - 1)) && (_regionY <= (region.getRegionY() + 1));
 	}
 	
 	public int getRegionX()
@@ -298,11 +297,6 @@ public final class L2WorldRegion
 	public int getRegionY()
 	{
 		return _regionY;
-	}
-	
-	public boolean isSurroundingRegion(L2WorldRegion region)
-	{
-		return (region != null) && (_regionX >= (region.getRegionX() - 1)) && (_regionX <= (region.getRegionX() + 1)) && (_regionY >= (region.getRegionY() - 1)) && (_regionY <= (region.getRegionY() + 1));
 	}
 	
 	@Override

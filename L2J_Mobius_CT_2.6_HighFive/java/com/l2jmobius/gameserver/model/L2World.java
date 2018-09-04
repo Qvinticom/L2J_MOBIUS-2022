@@ -16,8 +16,8 @@
  */
 package com.l2jmobius.gameserver.model;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -95,11 +95,34 @@ public final class L2World
 	/** Constructor of L2World. */
 	protected L2World()
 	{
+		// Initialize regions.
 		for (int x = 0; x <= REGIONS_X; x++)
 		{
 			for (int y = 0; y <= REGIONS_Y; y++)
 			{
 				_worldRegions[x][y] = new L2WorldRegion(x, y);
+			}
+		}
+		
+		// Set surrounding regions.
+		for (int rx = 0; rx <= REGIONS_X; rx++)
+		{
+			for (int ry = 0; ry <= REGIONS_Y; ry++)
+			{
+				final List<L2WorldRegion> surroundingRegions = new ArrayList<>();
+				for (int sx = rx - 1; sx <= (rx + 1); sx++)
+				{
+					for (int sy = ry - 1; sy <= (ry + 1); sy++)
+					{
+						if (((sx >= 0) && (sx <= REGIONS_X) && (sy >= 0) && (sy <= REGIONS_Y)))
+						{
+							surroundingRegions.add(_worldRegions[sx][sy]);
+						}
+					}
+				}
+				L2WorldRegion[] regionArray = new L2WorldRegion[surroundingRegions.size()];
+				regionArray = surroundingRegions.toArray(regionArray);
+				_worldRegions[rx][ry].setSurroundingRegions(regionArray);
 			}
 		}
 		
@@ -590,36 +613,23 @@ public final class L2World
 			return;
 		}
 		
-		final int regionX = centerWorldRegion.getRegionX();
-		final int regionY = centerWorldRegion.getRegionY();
-		for (int x = regionX - 1; x <= (regionX + 1); x++)
+		for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions())
 		{
-			for (int y = regionY - 1; y <= (regionY + 1); y++)
+			for (L2Object visibleObject : region.getVisibleObjects().values())
 			{
-				if (validRegion(x, y))
+				if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
 				{
-					for (L2Object visibleObject : _worldRegions[x][y].getVisibleObjects().values())
-					{
-						if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
-						{
-							continue;
-						}
-						
-						if (visibleObject.getInstanceId() != object.getInstanceId())
-						{
-							continue;
-						}
-						
-						if (visibleObject.calculateDistance(object, true, false) <= range)
-						{
-							c.accept(clazz.cast(visibleObject));
-						}
-					}
+					continue;
 				}
-				else if ((x == regionX) && (y == regionY)) // Precaution. Moved at invalid region?
+				
+				if (visibleObject.getInstanceId() != object.getInstanceId())
 				{
-					disposeOutOfBoundsObject(object);
-					return;
+					continue;
+				}
+				
+				if (visibleObject.calculateDistance(object, true, false) <= range)
+				{
+					c.accept(clazz.cast(visibleObject));
 				}
 			}
 		}
@@ -637,14 +647,14 @@ public final class L2World
 	
 	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range)
 	{
-		final List<T> result = new LinkedList<>();
+		final List<T> result = new ArrayList<>();
 		forEachVisibleObjectInRange(object, clazz, range, result::add);
 		return result;
 	}
 	
 	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range, Predicate<T> predicate)
 	{
-		final List<T> result = new LinkedList<>();
+		final List<T> result = new ArrayList<>();
 		forEachVisibleObjectInRange(object, clazz, range, o ->
 		{
 			if (predicate.test(o))
@@ -695,18 +705,6 @@ public final class L2World
 	public L2WorldRegion[][] getWorldRegions()
 	{
 		return _worldRegions;
-	}
-	
-	/**
-	 * Check if the current L2WorldRegions of the object is valid according to its position (x,y). <B><U> Example of use </U> :</B>
-	 * <li>Init L2WorldRegions</li><BR>
-	 * @param x X position of the object
-	 * @param y Y position of the object
-	 * @return True if the L2WorldRegion is valid
-	 */
-	public static boolean validRegion(int x, int y)
-	{
-		return ((x >= 0) && (x <= REGIONS_X) && (y >= 0) && (y <= REGIONS_Y));
 	}
 	
 	public synchronized void disposeOutOfBoundsObject(L2Object object)
