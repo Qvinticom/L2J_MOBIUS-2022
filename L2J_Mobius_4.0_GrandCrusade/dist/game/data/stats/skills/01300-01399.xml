@@ -3220,6 +3220,7 @@
 	</skill>
 	<skill id="1372" toLevel="8" name="Expand Inventory">
 		<icon>icon.skill0332</icon>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
