@@ -5488,7 +5488,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Attack target after skill use
-		if ((skill.nextActionIsAttack()) && _target.isCharacter() && (_target != this) && (target != null) && (_target == target) && target.canBeAttacked())
+		if ((skill.nextActionIsAttack()) && (_target != this) && (target != null) && (_target == target) && _target.isCharacter() && target.canBeAttacked())
 		{
 			if ((getAI().getNextIntention() == null) || (getAI().getNextIntention().getCtrlIntention() != CtrlIntention.AI_INTENTION_MOVE_TO))
 			{
