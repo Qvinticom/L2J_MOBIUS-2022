@@ -149,7 +149,7 @@ public class Q00711_PathToBecomingALordInnadril extends Quest
 					}
 					else if (isLordAvailable(2, qs))
 					{
-						if (castleOwner.calculateDistance(npc, false, false) <= 200)
+						if (castleOwner.calculateDistance2D(npc) <= 200)
 						{
 							htmltext = "neurath_q711_07.htm";
 						}

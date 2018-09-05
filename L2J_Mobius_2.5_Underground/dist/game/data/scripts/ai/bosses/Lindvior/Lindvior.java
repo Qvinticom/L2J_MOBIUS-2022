@@ -803,7 +803,7 @@ public class Lindvior extends AbstractNpcAI
 						{
 							npc.setTarget(generator);
 							npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, generator.getLocation());
-							if (npc.distFromMe(generator) < 500)
+							if (npc.calculateDistance3D(generator) < 500)
 							{
 								npc.reduceCurrentHp(1, generator, null);
 								generator.reduceCurrentHp(1, npc, null);

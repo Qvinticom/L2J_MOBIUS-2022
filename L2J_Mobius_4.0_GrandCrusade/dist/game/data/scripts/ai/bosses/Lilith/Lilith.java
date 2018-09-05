@@ -556,11 +556,11 @@ public class Lilith extends AbstractNpcAI
 			
 			for (L2PcInstance member : members)
 			{
-				if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == ENTER_CUBIC))
+				if (member.isInsideRadius3D(npc, 1000) && (npc.getId() == ENTER_CUBIC))
 				{
 					member.teleToLocation(ENTER_LOC, true);
 				}
-				else if (member.isInsideRadius(npc, 1000, true, false) && (npc.getId() == LILITH_CUBIC))
+				else if (member.isInsideRadius3D(npc, 1000) && (npc.getId() == LILITH_CUBIC))
 				{
 					member.teleToLocation(ENTER_LILITH_LOC, true);
 				}

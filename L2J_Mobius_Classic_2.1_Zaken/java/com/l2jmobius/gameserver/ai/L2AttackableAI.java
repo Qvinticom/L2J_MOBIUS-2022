@@ -239,7 +239,7 @@ public class L2AttackableAI extends L2CharacterAI
 					final Location loc = npc.getSpawn().getLocation();
 					final int range = Config.MAX_DRIFT_RANGE;
 					
-					if (!npc.isInsideRadius(loc, range + range, true, false))
+					if (!npc.isInsideRadius3D(loc, range + range))
 					{
 						intention = AI_INTENTION_ACTIVE;
 					}
@@ -369,7 +369,7 @@ public class L2AttackableAI extends L2CharacterAI
 							|| (Config.FAKE_PLAYER_AGGRO_PLAYERS && t.isPlayer()))
 						{
 							final int hating = npc.getHating(t);
-							final double distance = npc.calculateDistance(t, false, false);
+							final double distance = npc.calculateDistance2D(t);
 							if ((hating == 0) && (closestDistance > distance))
 							{
 								nearestTarget = t;
@@ -388,7 +388,7 @@ public class L2AttackableAI extends L2CharacterAI
 					final L2ItemInstance droppedItem = npc.getFakePlayerDrops().get(itemIndex);
 					if ((droppedItem != null) && droppedItem.isSpawned())
 					{
-						if (npc.calculateDistance(droppedItem, false, false) > 50)
+						if (npc.calculateDistance2D(droppedItem) > 50)
 						{
 							moveTo(droppedItem);
 						}
@@ -542,7 +542,7 @@ public class L2AttackableAI extends L2CharacterAI
 				npc.setWalking();
 			}
 			
-			if (npc.calculateDistance(leader, false, true) > (offset * offset))
+			if (npc.calculateDistanceSq2D(leader) > (offset * offset))
 			{
 				int x1, y1, z1;
 				x1 = Rnd.get(minRadius * 2, offset * 2); // x
@@ -607,7 +607,7 @@ public class L2AttackableAI extends L2CharacterAI
 			y1 = npc.getSpawn().getY();
 			z1 = npc.getSpawn().getZ();
 			
-			if (!npc.isInsideRadius(x1, y1, 0, range, false, false))
+			if (!npc.isInsideRadius2D(x1, y1, 0, range))
 			{
 				npc.setisReturningToSpawnPoint(true);
 			}
@@ -752,7 +752,7 @@ public class L2AttackableAI extends L2CharacterAI
 		{
 			for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class))
 			{
-				if (npc.isInsideRadius(nearby, collision, false, false) && (nearby != target))
+				if (npc.isInsideRadius2D(nearby, collision) && (nearby != target))
 				{
 					int newX = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
@@ -773,7 +773,7 @@ public class L2AttackableAI extends L2CharacterAI
 						newY = target.getY() - newY;
 					}
 					
-					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
+					if (!npc.isInsideRadius2D(newX, newY, 0, collision))
 					{
 						final int newZ = npc.getZ() + 30;
 						
@@ -790,7 +790,7 @@ public class L2AttackableAI extends L2CharacterAI
 			if (Rnd.get(100) <= npc.getTemplate().getDodge())
 			{
 				// Micht: kepping this one otherwise we should do 2 sqrt
-				final double distance2 = npc.calculateDistance(target, false, true);
+				final double distance2 = npc.calculateDistanceSq2D(target);
 				if (Math.sqrt(distance2) <= (60 + combinedCollision))
 				{
 					int posX = npc.getX();
@@ -971,7 +971,7 @@ public class L2AttackableAI extends L2CharacterAI
 		
 		// Check if target is within range or move.
 		final int range = npc.getPhysicalAttackRange() + combinedCollision;
-		if (npc.calculateDistance(target, false, false) > range)
+		if (npc.calculateDistance2D(target) > range)
 		{
 			if (checkTarget(target))
 			{
@@ -1070,7 +1070,7 @@ public class L2AttackableAI extends L2CharacterAI
 			
 			if (npc.isMovementDisabled())
 			{
-				if (!npc.isInsideRadius(target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((L2Character) target).getTemplate().getCollisionRadius(), false, true))
+				if (!npc.isInsideRadius2D(target, npc.getPhysicalAttackRange() + npc.getTemplate().getCollisionRadius() + ((L2Character) target).getTemplate().getCollisionRadius()))
 				{
 					return false;
 				}

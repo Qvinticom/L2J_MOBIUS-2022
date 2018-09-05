@@ -127,7 +127,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 		
 		if (!player.isGM() && (npc != null))
 		{
-			if (!player.isInsideRadius(npc, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != npc.getInstanceId()))
+			if (!player.isInsideRadius3D(npc, INTERACTION_DISTANCE) || (player.getInstanceId() != npc.getInstanceId()))
 			{
 				player.setMultiSell(null);
 				return;

@@ -98,7 +98,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 		}
 		
 		final L2PcInstance storePlayer = object;
-		if (!player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
+		if (!player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;
 		}

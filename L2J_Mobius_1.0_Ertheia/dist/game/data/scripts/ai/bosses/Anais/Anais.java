@@ -107,7 +107,7 @@ public final class Anais extends AbstractNpcAI
 			{
 				if (_nextTarget != null)
 				{
-					final double distance = npc.calculateDistance(_nextTarget, false, false);
+					final double distance = npc.calculateDistance2D(_nextTarget);
 					if (distance < 100)
 					{
 						npc.doCast(DIVINE_NOVA.getSkill());

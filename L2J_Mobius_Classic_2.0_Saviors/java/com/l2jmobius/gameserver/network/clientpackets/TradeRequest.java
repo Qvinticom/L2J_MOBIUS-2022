@@ -222,7 +222,7 @@ public final class TradeRequest implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.calculateDistance(partner, true, false) > 150)
+		if (player.calculateDistance3D(partner) > 150)
 		{
 			client.sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
 			return;

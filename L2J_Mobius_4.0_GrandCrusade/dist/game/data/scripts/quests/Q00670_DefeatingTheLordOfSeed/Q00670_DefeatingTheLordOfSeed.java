@@ -160,7 +160,7 @@ public class Q00670_DefeatingTheLordOfSeed extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
+		if ((qs != null) && qs.isCond(1) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			qs.setCond(2, true);
 		}

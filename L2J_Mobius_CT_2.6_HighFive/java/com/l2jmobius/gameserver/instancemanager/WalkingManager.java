@@ -254,9 +254,9 @@ public final class WalkingManager implements IGameXmlReader
 						node = walk.getCurrentNode();
 					}
 					
-					if (!npc.isInsideRadius(node, 3000, true, false))
+					if (!npc.isInsideRadius3D(node, 3000))
 					{
-						LOGGER.warning(getClass().getSimpleName() + ": " + "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance(node, true, true) + "). Teleporting to proper location.");
+						LOGGER.warning(getClass().getSimpleName() + ": " + "Route '" + routeName + "': NPC (id=" + npc.getId() + ", x=" + npc.getX() + ", y=" + npc.getY() + ", z=" + npc.getZ() + ") is too far from starting point (node x=" + node.getX() + ", y=" + node.getY() + ", z=" + node.getZ() + ", range=" + npc.calculateDistance3D(node) + "). Teleporting to proper location.");
 						npc.teleToLocation(node);
 					}
 					
@@ -394,7 +394,7 @@ public final class WalkingManager implements IGameXmlReader
 		}
 		
 		final L2NpcWalkerNode node = walk.getRoute().getNodeList().get(walk.getCurrentNodeId());
-		if (!npc.isInsideRadius(node, 10, false, false))
+		if (!npc.isInsideRadius2D(node, 10))
 		{
 			return;
 		}

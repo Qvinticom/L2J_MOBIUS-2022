@@ -748,9 +748,9 @@ public abstract class AbstractAI implements Ctrl
 					return;
 				}
 				
-				if (!_actor.isInsideRadius(followTarget, followRange, true, false))
+				if (!_actor.isInsideRadius3D(followTarget, followRange))
 				{
-					if (!_actor.isInsideRadius(followTarget, 3000, true, false))
+					if (!_actor.isInsideRadius3D(followTarget, 3000))
 					{
 						// if the target is too far (maybe also teleported)
 						if (_actor.isSummon())

@@ -105,7 +105,7 @@ public final class KartiaHelperAdolph extends AbstractNpcAI
 			player = npcVars.getObject("PLAYER_OBJECT", L2PcInstance.class);
 			if (player != null)
 			{
-				final double distance = npc.calculateDistance(player, false, false);
+				final double distance = npc.calculateDistance2D(player);
 				if (distance > 300)
 				{
 					final Location loc = new Location(player.getX(), player.getY(), player.getZ() + 50);

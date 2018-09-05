@@ -167,7 +167,7 @@ public class L2DoorAI extends L2CharacterAI
 		{
 			L2World.getInstance().forEachVisibleObject(_door, L2DefenderInstance.class, guard ->
 			{
-				if (_actor.isInsideRadius(guard, guard.getTemplate().getClanHelpRange(), true, true))
+				if (_actor.isInsideRadius3D(guard, guard.getTemplate().getClanHelpRange()))
 				{
 					guard.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, _attacker, 15);
 				}

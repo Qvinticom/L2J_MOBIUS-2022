@@ -89,7 +89,7 @@ public class RequestPackageSend implements IClientIncomingPacket
 		}
 		
 		final L2Npc manager = player.getLastFolkNPC();
-		if (((manager == null) || !player.isInsideRadius(manager, L2Npc.INTERACTION_DISTANCE, false, false)))
+		if (((manager == null) || !player.isInsideRadius2D(manager, L2Npc.INTERACTION_DISTANCE)))
 		{
 			return;
 		}

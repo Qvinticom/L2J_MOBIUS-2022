@@ -1456,7 +1456,7 @@ public final class L2PcInstance extends L2Playable
 		
 		final L2Npc target = _lastFolkNpc;
 		
-		if ((target != null) && isInsideRadius(target, L2Npc.INTERACTION_DISTANCE, false, false))
+		if ((target != null) && isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE))
 		{
 			quest.notifyEvent(event, target, this);
 		}
@@ -1464,7 +1464,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			final L2Object object = L2World.getInstance().findObject(getLastQuestNpcObject());
 			
-			if (object.isNpc() && isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
+			if (object.isNpc() && isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE))
 			{
 				final L2Npc npc = (L2Npc) object;
 				quest.notifyEvent(event, npc, this);
@@ -4202,7 +4202,7 @@ public final class L2PcInstance extends L2Playable
 		
 		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if (!isVisibleFor(player) || (calculateDistance(player, true, false) >= radiusInKnownlist))
+			if (!isVisibleFor(player) || (calculateDistance3D(player) >= radiusInKnownlist))
 			{
 				return;
 			}

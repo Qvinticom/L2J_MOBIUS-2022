@@ -146,7 +146,7 @@ public class Q00716_PathToBecomingALordRune extends Quest
 					}
 					else if ((castleOwner != null) && (castleOwner != qs.getPlayer()) && (castleOwner.getQuestState(Q00716_PathToBecomingALordRune.class.getSimpleName()) != null) && (castleOwner.getQuestState(Q00716_PathToBecomingALordRune.class.getSimpleName()).isCond(4)))
 					{
-						if (castleOwner.calculateDistance(npc, false, false) <= 200)
+						if (castleOwner.calculateDistance2D(npc) <= 200)
 						{
 							htmltext = "frederick_q716_07.htm";
 						}

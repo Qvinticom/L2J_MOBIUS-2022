@@ -35,6 +35,6 @@ public class RangeCondition implements ICubicCondition
 	@Override
 	public boolean test(CubicInstance cubic, L2Character owner, L2Object target)
 	{
-		return owner.calculateDistance(target, false, false) <= _range;
+		return owner.calculateDistance2D(target) <= _range;
 	}
 }

@@ -95,7 +95,7 @@ public final class RequestRefundItem implements IClientIncomingPacket
 		L2Character merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if (!(target instanceof L2MerchantInstance) || (!player.isInsideRadius(target, INTERACTION_DISTANCE, true, false)) || (player.getInstanceId() != target.getInstanceId()))
+			if (!(target instanceof L2MerchantInstance) || (!player.isInsideRadius3D(target, INTERACTION_DISTANCE)) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;

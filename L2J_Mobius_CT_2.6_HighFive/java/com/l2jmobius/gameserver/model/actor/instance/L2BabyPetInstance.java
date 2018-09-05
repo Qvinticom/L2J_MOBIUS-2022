@@ -222,7 +222,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 		final boolean previousFollowStatus = getFollowStatus();
 		
 		// pet not following and owner outside cast range
-		if (!previousFollowStatus && !isInsideRadius(getOwner(), skill.getCastRange(), true, true))
+		if (!previousFollowStatus && !isInsideRadius3D(getOwner(), skill.getCastRange()))
 		{
 			return;
 		}

@@ -230,7 +230,7 @@ public final class Q00197_SevenSignsTheSacredBookOfSeal extends Quest
 		}
 		
 		final QuestState qs = getQuestState(partyMember, false);
-		if (npc.isInsideRadius(partyMember, 1500, true, false))
+		if (npc.isInsideRadius3D(partyMember, 1500))
 		{
 			giveItems(player, SCULPTURE_OF_DOUBT, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);

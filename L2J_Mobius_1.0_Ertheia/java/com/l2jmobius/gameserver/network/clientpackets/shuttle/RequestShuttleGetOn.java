@@ -54,13 +54,13 @@ public class RequestShuttleGetOn implements IClientIncomingPacket
 		// TODO: better way?
 		for (L2ShuttleInstance shuttle : L2World.getInstance().getVisibleObjects(activeChar, L2ShuttleInstance.class))
 		{
-			if (shuttle.calculateDistance(activeChar, true, false) < 1000)
+			if (shuttle.calculateDistance3D(activeChar) < 1000)
 			{
 				shuttle.addPassenger(activeChar);
 				activeChar.getInVehiclePosition().setXYZ(_x, _y, _z);
 				break;
 			}
-			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance(activeChar, true, false));
+			LOGGER.info(getClass().getSimpleName() + ": range between char and shuttle: " + shuttle.calculateDistance3D(activeChar));
 		}
 	}
 }

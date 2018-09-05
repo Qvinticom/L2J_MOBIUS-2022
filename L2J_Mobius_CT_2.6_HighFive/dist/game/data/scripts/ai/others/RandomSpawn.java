@@ -87,7 +87,7 @@ public final class RandomSpawn extends AbstractNpcAI
 	{
 		final Location[] spawnlist = SPAWN_POINTS.get(npc.getId());
 		final Location loc = spawnlist[getRandom(spawnlist.length)];
-		if (!npc.isInsideRadius(loc, 200, false, false))
+		if (!npc.isInsideRadius2D(loc, 200))
 		{
 			npc.getSpawn().setLocation(loc);
 			ThreadPool.schedule(new Teleport(npc, loc), 100);

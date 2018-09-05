@@ -100,7 +100,7 @@ public final class Q00624_TheFinestIngredientsPart1 extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance partyMember = getRandomPartyMember(killer, 1);
-		if ((partyMember != null) && partyMember.isInsideRadius(npc, 1500, true, false))
+		if ((partyMember != null) && partyMember.isInsideRadius3D(npc, 1500))
 		{
 			final int item = MONSTER_DROPS.get(npc.getId());
 			final long count = getQuestItemsCount(partyMember, item);

@@ -578,7 +578,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 			{
 				return "32370-01.htm";
 			}
-			else if (npc.isInsideRadius(-45531, 245872, -14192, 100, true, false)) // Hello from Tower of Naia! :) Due to onFirstTalk limitation it should be here
+			else if (npc.isInsideRadius3D(-45531, 245872, -14192, 100)) // Hello from Tower of Naia! :) Due to onFirstTalk limitation it should be here
 			{
 				return "32370-03.htm";
 			}
@@ -604,11 +604,11 @@ public final class TullyWorkshop extends AbstractNpcAI
 		}
 		else if (npcId == CUBE_68)
 		{
-			if (npc.isInsideRadius(-12752, 279696, -13596, 100, true, false))
+			if (npc.isInsideRadius3D(-12752, 279696, -13596, 100))
 			{
 				return "32467-01.htm";
 			}
-			else if (npc.isInsideRadius(-12752, 279696, -10492, 100, true, false))
+			else if (npc.isInsideRadius3D(-12752, 279696, -10492, 100))
 			{
 				return "32467-02.htm";
 			}
@@ -1195,7 +1195,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	{
 		final int npcId = npc.getId();
 		
-		if ((npcId == TULLY) && npc.isInsideRadius(-12557, 273901, -9000, 1000, false, false))
+		if ((npcId == TULLY) && npc.isInsideRadius2D(-12557, 273901, -9000, 1000))
 		{
 			for (int i[] : POST_MORTEM_SPAWNLIST)
 			{
@@ -1399,7 +1399,7 @@ public final class TullyWorkshop extends AbstractNpcAI
 	@Override
 	public final String onSpawn(L2Npc npc)
 	{
-		if ((npc.getId() == TULLY) && npc.isInsideRadius(-12557, 273901, -9000, 1000, true, false))
+		if ((npc.getId() == TULLY) && npc.isInsideRadius3D(-12557, 273901, -9000, 1000))
 		{
 			for (L2Npc spawnedNpc : postMortemSpawn)
 			{

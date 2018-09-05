@@ -294,7 +294,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	
 	public boolean isTooFarFromHome()
 	{
-		return !isInsideRadius(_homeX, _homeY, _homeZ, MAX_DISTANCE_FROM_HOME, true, true);
+		return !isInsideRadius3D(_homeX, _homeY, _homeZ, MAX_DISTANCE_FROM_HOME);
 	}
 	
 	@Override
@@ -334,7 +334,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			return;
 		}
 		// if the owner is too far away, stop anything else and immediately run towards the owner.
-		if (!_owner.isInsideRadius(this, MAX_DISTANCE_FROM_OWNER, true, true))
+		if (!_owner.isInsideRadius3D(this, MAX_DISTANCE_FROM_OWNER))
 		{
 			getAI().startFollow(_owner);
 			return;
@@ -510,7 +510,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				return;
 			}
 			// if the owner is too far away, stop anything else and immediately run towards the owner.
-			if (!isInsideRadius(owner, MAX_DISTANCE_FROM_OWNER, true, true))
+			if (!isInsideRadius3D(owner, MAX_DISTANCE_FROM_OWNER))
 			{
 				getAI().startFollow(owner);
 				return;

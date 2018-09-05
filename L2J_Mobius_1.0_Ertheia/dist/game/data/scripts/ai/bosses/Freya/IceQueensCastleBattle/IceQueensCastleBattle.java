@@ -632,7 +632,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					case "LEADER_DASH":
 					{
 						final L2Character mostHated = ((L2Attackable) npc).getMostHated();
-						if (getRandomBoolean() && !npc.isCastingNow(SkillCaster::isAnyNormalType) && (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance(mostHated, true, false) < 1000))
+						if (getRandomBoolean() && !npc.isCastingNow(SkillCaster::isAnyNormalType) && (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) < 1000))
 						{
 							npc.setTarget(mostHated);
 							npc.doCast(LEADER_RUSH.getSkill());
@@ -772,13 +772,13 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						}
 						
 						final L2Character mostHated = ((L2Attackable) npc).getMostHated();
-						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance(mostHated, true, false) <= 800);
+						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) <= 800);
 						
 						if (getRandom(10000) < 3333)
 						{
 							if (getRandomBoolean())
 							{
-								if ((npc.calculateDistance(attacker, true, false) <= 800) && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
+								if ((npc.calculateDistance3D(attacker) <= 800) && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
 								{
 									npc.setTarget(attacker);
 									npc.doCast(ICE_BALL.getSkill());
@@ -794,7 +794,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 						{
 							if (getRandomBoolean())
 							{
-								if ((npc.calculateDistance(attacker, true, false) <= 800) && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
+								if ((npc.calculateDistance3D(attacker) <= 800) && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
 								{
 									npc.setTarget(attacker);
 									npc.doCast(SUMMON_ELEMENTAL.getSkill());
@@ -856,13 +856,13 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					}
 					
 					final L2Character mostHated = ((L2Attackable) npc).getMostHated();
-					final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance(mostHated, true, false) <= 800);
+					final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) <= 800);
 					
 					if (getRandom(10000) < 3333)
 					{
 						if (getRandomBoolean())
 						{
-							if ((npc.calculateDistance(attacker, true, false) <= 800) && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
+							if ((npc.calculateDistance3D(attacker) <= 800) && SkillCaster.checkUseConditions(npc, ICE_BALL.getSkill()))
 							{
 								npc.setTarget(attacker);
 								npc.doCast(ICE_BALL.getSkill());
@@ -878,7 +878,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					{
 						if (getRandomBoolean())
 						{
-							if ((npc.calculateDistance(attacker, true, false) <= 800) && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
+							if ((npc.calculateDistance3D(attacker) <= 800) && SkillCaster.checkUseConditions(npc, SUMMON_ELEMENTAL.getSkill()))
 							{
 								npc.setTarget(attacker);
 								npc.doCast(SUMMON_ELEMENTAL.getSkill());
@@ -961,7 +961,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 					else if ((npc.getVariables().getInt("OFF_SHOUT") == 0) && (npc.getVariables().getInt("DELAY_VAL") == 1))
 					{
 						final L2Character mostHated = ((L2Attackable) npc).getMostHated();
-						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance(mostHated, true, false) < 1000);
+						final boolean canReachMostHated = (mostHated != null) && !mostHated.isDead() && (npc.calculateDistance3D(mostHated) < 1000);
 						
 						if (npc.getVariables().getInt("TIMER_ON") == 0)
 						{

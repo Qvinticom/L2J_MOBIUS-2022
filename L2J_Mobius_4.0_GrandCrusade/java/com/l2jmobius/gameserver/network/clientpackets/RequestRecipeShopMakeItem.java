@@ -92,7 +92,7 @@ public final class RequestRecipeShopMakeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if ((manufacturer.getInstanceWorld() != activeChar.getInstanceWorld()) || (activeChar.calculateDistance(manufacturer, false, false) > 250))
+		if ((manufacturer.getInstanceWorld() != activeChar.getInstanceWorld()) || (activeChar.calculateDistance2D(manufacturer) > 250))
 		{
 			return;
 		}

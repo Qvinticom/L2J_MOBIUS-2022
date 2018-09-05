@@ -143,7 +143,7 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			final L2Playable playable = npc.getVariables().getObject("playable", L2Playable.class);
 			
-			if ((playable != null) && (npc.calculateDistance(playable, true, false) < 250))
+			if ((playable != null) && (npc.calculateDistance3D(playable) < 250))
 			{
 				npc.disableCoreAI(true);
 				npc.doCast(SELF_DESTRUCTION.getSkill());
@@ -229,7 +229,7 @@ public final class DragonValley extends AbstractNpcAI
 		{
 			for (L2PcInstance member : player.getParty().getMembers())
 			{
-				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (npc.calculateDistance(member, true, false) < MIN_DISTANCE))
+				if ((member.getLevel() >= MIN_LVL) && (member.getClassId().level() >= CLASS_LVL) && (npc.calculateDistance3D(member) < MIN_DISTANCE))
 				{
 					points += CLASS_POINTS.get(member.getClassId());
 				}
@@ -250,7 +250,7 @@ public final class DragonValley extends AbstractNpcAI
 			
 			for (L2PcInstance member : player.getParty().getMembers())
 			{
-				if (npc.calculateDistance(member, true, false) < MIN_DISTANCE)
+				if (npc.calculateDistance3D(member) < MIN_DISTANCE)
 				{
 					switch (moraleBoostLv)
 					{

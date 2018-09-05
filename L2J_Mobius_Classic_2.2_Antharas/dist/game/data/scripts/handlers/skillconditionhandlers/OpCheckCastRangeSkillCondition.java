@@ -37,6 +37,6 @@ public class OpCheckCastRangeSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		return (target != null) && (caster.calculateDistance(target, true, true) >= _distance);
+		return (target != null) && (caster.calculateDistance3D(target) /* for some reason this used Sq3D check */ >= _distance);
 	}
 }

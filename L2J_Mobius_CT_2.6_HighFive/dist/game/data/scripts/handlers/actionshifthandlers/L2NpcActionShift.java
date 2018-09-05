@@ -101,8 +101,8 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%heading%", String.valueOf(((L2Character) target).getHeading()));
 			html.replace("%collision_radius%", String.valueOf(((L2Character) target).getTemplate().getfCollisionRadius()));
 			html.replace("%collision_height%", String.valueOf(((L2Character) target).getTemplate().getfCollisionHeight()));
-			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance(target, false, false)));
-			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance(target, true, false)));
+			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance2D(target)));
+			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance3D(target)));
 			
 			final byte attackAttribute = ((L2Character) target).getAttackElement();
 			html.replace("%ele_atk%", Elementals.getElementName(attackAttribute));

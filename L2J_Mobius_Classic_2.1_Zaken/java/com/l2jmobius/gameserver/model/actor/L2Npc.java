@@ -507,7 +507,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if (!isInsideRadius(player, INTERACTION_DISTANCE, true, false))
+		else if (!isInsideRadius3D(player, INTERACTION_DISTANCE))
 		{
 			return false;
 		}
@@ -1025,7 +1025,7 @@ public class L2Npc extends L2Character
 				{
 					for (L2PcInstance member : party.getMembers())
 					{
-						if ((member != killerPlayer) && (member.calculateDistance(getX(), getY(), getZ(), true, false) <= Config.ALT_PARTY_RANGE))
+						if ((member != killerPlayer) && (member.calculateDistance3D(getX(), getY(), getZ()) <= Config.ALT_PARTY_RANGE))
 						{
 							new MpRewardTask(member, this);
 							for (L2Summon summon : member.getServitors().values())

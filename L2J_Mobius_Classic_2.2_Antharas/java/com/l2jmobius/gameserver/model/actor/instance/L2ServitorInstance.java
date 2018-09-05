@@ -576,7 +576,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		sendPacket(new SetSummonRemainTime(_lifeTime, _lifeTimeRemaining));
 		
 		// Using same task to check if owner is in visible range
-		if (calculateDistance(getOwner(), true, false) > 2000)
+		if (calculateDistance3D(getOwner()) > 2000)
 		{
 			getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, getOwner());
 		}

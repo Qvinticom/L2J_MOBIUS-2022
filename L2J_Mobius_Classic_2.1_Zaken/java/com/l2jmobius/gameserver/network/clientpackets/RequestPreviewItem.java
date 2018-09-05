@@ -137,7 +137,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		final L2Object target = activeChar.getTarget();
 		if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
 		) || !((target instanceof L2MerchantInstance)) // Target not a merchant
-			|| !activeChar.isInsideRadius(target, L2Npc.INTERACTION_DISTANCE, false, false) // Distance is too far
+			|| !activeChar.isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
 			return;

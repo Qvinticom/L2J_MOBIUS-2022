@@ -91,7 +91,7 @@ public final class TradeDone implements IClientIncomingPacket
 				return;
 			}
 			
-			if (player.calculateDistance(trade.getPartner(), true, false) > 150)
+			if (player.calculateDistance3D(trade.getPartner()) > 150)
 			{
 				player.cancelActiveTrade();
 				return;

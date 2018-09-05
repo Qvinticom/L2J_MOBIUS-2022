@@ -128,7 +128,7 @@ public final class Q10329_BackupSeekers extends Quest
 				final L2PcInstance owner = npc.getSummoner().getActingPlayer();
 				if (owner != null)
 				{
-					if (npc.calculateDistance(owner, false, false) < 150)
+					if (npc.calculateDistance2D(owner) < 150)
 					{
 						npc.getVariables().set("FAIL_COUNT", 0);
 						final int loc_index = npc.getVariables().getInt("MOVE_INDEX", -1) + 1;

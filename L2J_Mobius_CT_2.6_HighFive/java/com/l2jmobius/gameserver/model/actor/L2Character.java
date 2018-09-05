@@ -1137,7 +1137,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			
 			// Bows Ranged Damage Formula (Damage gradually decreases when 60% or lower than full hit range, and increases when 60% or higher).
 			// full hit range is 500 which is the base bow range, and the 60% of this is 800.
-			damage1 *= (calculateDistance(target, true, false) / 4000) + 0.8;
+			damage1 *= (calculateDistance3D(target) / 4000) + 0.8;
 		}
 		
 		// Check if the L2Character is a L2PcInstance
@@ -4482,32 +4482,51 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * Check if this object is inside the given radius around the given point.
+	 * Check if this object is inside the given 2D radius around the given point.
 	 * @param loc Location of the target
 	 * @param radius the radius around the target
-	 * @param checkZAxis should we check Z axis also
-	 * @param strictCheck true if (distance < radius), false if (distance <= radius)
 	 * @return true if the L2Character is inside the radius.
 	 */
-	public final boolean isInsideRadius(ILocational loc, int radius, boolean checkZAxis, boolean strictCheck)
+	public final boolean isInsideRadius2D(ILocational loc, int radius)
 	{
-		return isInsideRadius(loc.getX(), loc.getY(), loc.getZ(), radius, checkZAxis, strictCheck);
+		return isInsideRadius2D(loc.getX(), loc.getY(), loc.getZ(), radius);
 	}
 	
 	/**
-	 * Check if this object is inside the given radius around the given point.
+	 * Check if this object is inside the given 2D radius around the given point.
 	 * @param x X position of the target
 	 * @param y Y position of the target
 	 * @param z Z position of the target
 	 * @param radius the radius around the target
-	 * @param checkZAxis should we check Z axis also
-	 * @param strictCheck true if (distance < radius), false if (distance <= radius)
 	 * @return true if the L2Character is inside the radius.
 	 */
-	public final boolean isInsideRadius(int x, int y, int z, int radius, boolean checkZAxis, boolean strictCheck)
+	public final boolean isInsideRadius2D(int x, int y, int z, int radius)
 	{
-		final double distance = calculateDistance(x, y, z, checkZAxis, true);
-		return (strictCheck) ? (distance < (radius * radius)) : (distance <= (radius * radius));
+		return calculateDistanceSq2D(x, y, z) < (radius * radius);
+	}
+	
+	/**
+	 * Check if this object is inside the given 3D radius around the given point.
+	 * @param loc Location of the target
+	 * @param radius the radius around the target
+	 * @return true if the L2Character is inside the radius.
+	 */
+	public final boolean isInsideRadius3D(ILocational loc, int radius)
+	{
+		return isInsideRadius3D(loc.getX(), loc.getY(), loc.getZ(), radius);
+	}
+	
+	/**
+	 * Check if this object is inside the given 3D radius around the given point.
+	 * @param x X position of the target
+	 * @param y Y position of the target
+	 * @param z Z position of the target
+	 * @param radius the radius around the target
+	 * @return true if the L2Character is inside the radius.
+	 */
+	public final boolean isInsideRadius3D(int x, int y, int z, int radius)
+	{
+		return calculateDistanceSq3D(x, y, z) < (radius * radius);
 	}
 	
 	/**
@@ -5222,7 +5241,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			{
 				if (target.isCharacter())
 				{
-					if (!isInsideRadius(target.getX(), target.getY(), target.getZ(), escapeRange + _template.getCollisionRadius(), true, false))
+					if (!isInsideRadius3D(target.getX(), target.getY(), target.getZ(), escapeRange + _template.getCollisionRadius()))
 					{
 						skipRange++;
 						continue;

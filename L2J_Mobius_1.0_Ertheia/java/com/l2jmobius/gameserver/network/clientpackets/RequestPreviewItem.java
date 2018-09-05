@@ -29,8 +29,8 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.buylist.Product;
+import com.l2jmobius.gameserver.model.buylist.ProductList;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Armor;
 import com.l2jmobius.gameserver.model.items.L2Item;
@@ -137,7 +137,7 @@ public final class RequestPreviewItem implements IClientIncomingPacket
 		final L2Object target = activeChar.getTarget();
 		if (!activeChar.isGM() && ((target == null // No target (i.e. GM Shop)
 		) || !((target instanceof L2MerchantInstance)) // Target not a merchant
-			|| !activeChar.isInsideRadius(target, L2Npc.INTERACTION_DISTANCE, false, false) // Distance is too far
+			|| !activeChar.isInsideRadius2D(target, L2Npc.INTERACTION_DISTANCE) // Distance is too far
 		))
 		{
 			return;

@@ -120,7 +120,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 		{
 			for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class))
 			{
-				if (npc.isInsideRadius(nearby, collision, false, false) && (nearby != originalAttackTarget))
+				if (npc.isInsideRadius2D(nearby, collision) && (nearby != originalAttackTarget))
 				{
 					int newX = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
@@ -141,7 +141,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 						newY = originalAttackTarget.getY() - newY;
 					}
 					
-					if (!npc.isInsideRadius(newX, newY, 0, collision, false, false))
+					if (!npc.isInsideRadius2D(newX, newY, 0, collision))
 					{
 						final int newZ = npc.getZ() + 30;
 						if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), newX, newY, newZ, npc.getInstanceWorld()))
@@ -158,7 +158,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 		{
 			if (Rnd.get(100) <= npc.getTemplate().getDodge())
 			{
-				final double distance2 = npc.calculateDistance(originalAttackTarget, false, true);
+				final double distance2 = npc.calculateDistanceSq2D(originalAttackTarget);
 				if (Math.sqrt(distance2) <= (60 + combinedCollision))
 				{
 					int posX = npc.getX();
@@ -192,7 +192,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 			}
 		}
 		
-		final double dist = npc.calculateDistance(originalAttackTarget, false, false);
+		final double dist = npc.calculateDistance2D(originalAttackTarget);
 		final int dist2 = (int) dist - collision;
 		int range = npc.getPhysicalAttackRange() + combinedCollision;
 		if (originalAttackTarget.isMoving())

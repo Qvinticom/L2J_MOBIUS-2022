@@ -926,7 +926,7 @@ public class L2CharacterAI extends AbstractAI
 			return false; // skill radius -1
 		}
 		
-		if (!_actor.isInsideRadius(worldPosition, offset + _actor.getTemplate().getCollisionRadius(), false, false))
+		if (!_actor.isInsideRadius2D(worldPosition, offset + _actor.getTemplate().getCollisionRadius()))
 		{
 			if (_actor.isMovementDisabled())
 			{
@@ -1003,13 +1003,13 @@ public class L2CharacterAI extends AbstractAI
 			offset += ((L2Character) target).getTemplate().getCollisionRadius();
 		}
 		
-		if (!_actor.isInsideRadius(target, offset, false, false))
+		if (!_actor.isInsideRadius2D(target, offset))
 		{
 			// Caller should be L2Playable and thinkAttack/thinkCast/thinkInteract/thinkPickUp
 			if (getFollowTarget() != null)
 			{
 				// allow larger hit range when the target is moving (check is run only once per second)
-				if (!_actor.isInsideRadius(target, offset + 100, false, false))
+				if (!_actor.isInsideRadius2D(target, offset + 100))
 				{
 					return true;
 				}

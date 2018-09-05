@@ -716,7 +716,7 @@ public final class Util
 	public static boolean isInsideRangeOfObjectId(L2Object obj, int targetObjId, int radius)
 	{
 		final L2Object target = L2World.getInstance().findObject(targetObjId);
-		return (target != null) && (obj.calculateDistance(target, true, false) <= radius);
+		return (target != null) && (obj.calculateDistance3D(target) <= radius);
 	}
 	
 	public static int min(int value1, int value2, int... values)

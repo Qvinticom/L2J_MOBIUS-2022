@@ -2464,7 +2464,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				continue;
 			}
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius(target, 1500, true, false))
+			if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, 1500))
 			{
 				candidates.add(partyMember);
 			}
@@ -2527,7 +2527,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				continue;
 			}
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius(target, 1500, true, false))
+			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, 1500))
 			{
 				candidates.add(partyMember);
 			}

@@ -255,7 +255,7 @@ public final class AnomicFoundry extends AbstractNpcAI
 		for (L2Spawn spawn : SpawnTable.getInstance().getSpawns(helperId))
 		{
 			final L2MonsterInstance monster = (L2MonsterInstance) spawn.getLastSpawn();
-			if ((monster != null) && (agressor != null) && !monster.isDead() && monster.isInsideRadius(requester, range, true, false) && !agressor.isDead())
+			if ((monster != null) && (agressor != null) && !monster.isDead() && monster.isInsideRadius3D(requester, range) && !agressor.isDead())
 			{
 				monster.addDamageHate(agressor, 0, 1000);
 			}

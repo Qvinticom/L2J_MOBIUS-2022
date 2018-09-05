@@ -49,7 +49,7 @@ public final class RequestRecipeShopManagePrev implements IClientIncomingPacket
 			return;
 		}
 		
-		if (player.calculateDistance(player.getTarget(), false, false) > 250)
+		if (player.calculateDistance2D(player.getTarget()) > 250)
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

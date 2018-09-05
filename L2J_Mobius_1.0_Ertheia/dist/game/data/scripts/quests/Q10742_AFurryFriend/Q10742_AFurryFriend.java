@@ -133,7 +133,7 @@ public final class Q10742_AFurryFriend extends Quest
 					npc.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, player);
 					
 					// Check Ricky position
-					final double distanceToRicky = player.calculateDistance(npc, false, false);
+					final double distanceToRicky = player.calculateDistance2D(npc);
 					if (distanceToRicky > 350)
 					{
 						showOnScreenMsg(player, NpcStringId.YOU_ARE_FAR_FROM_RICKY, ExShowScreenMessage.TOP_CENTER, 5000);

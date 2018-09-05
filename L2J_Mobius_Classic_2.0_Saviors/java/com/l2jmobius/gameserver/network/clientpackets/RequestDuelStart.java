@@ -130,7 +130,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 			return;
 		}
 		// Players may not be too far apart
-		else if (!activeChar.isInsideRadius(targetChar, 250, false, false))
+		else if (!activeChar.isInsideRadius2D(targetChar, 250))
 		{
 			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_TOO_FAR_AWAY_TO_RECEIVE_A_DUEL_CHALLENGE);
 			msg.addString(targetChar.getName());

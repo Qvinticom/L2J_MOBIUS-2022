@@ -242,7 +242,7 @@ public final class CabaleBuffer extends AbstractNpcAI
 		 */
 		private boolean handleCast(L2PcInstance player, int skillId)
 		{
-			if (player.isDead() || !player.isSpawned() || !_npc.isInsideRadius(player, DISTANCE_TO_WATCH_OBJECT, false, false))
+			if (player.isDead() || !player.isSpawned() || !_npc.isInsideRadius2D(player, DISTANCE_TO_WATCH_OBJECT))
 			{
 				return false;
 			}

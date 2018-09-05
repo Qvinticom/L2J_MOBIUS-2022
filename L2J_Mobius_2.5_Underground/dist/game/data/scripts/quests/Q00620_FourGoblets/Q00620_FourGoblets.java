@@ -1180,7 +1180,7 @@ public class Q00620_FourGoblets extends Quest
 				{
 					return null;
 				}
-				if ((npc.isInsideRadius(partyMember, 1000, true, false) && (getQuestItemsCount(partyMember, GOBLETS[0]) < 1)))
+				if ((npc.isInsideRadius3D(partyMember, 1000) && (getQuestItemsCount(partyMember, GOBLETS[0]) < 1)))
 				{
 					giveItems(partyMember, GOBLETS[0], 1);
 				}
@@ -1192,7 +1192,7 @@ public class Q00620_FourGoblets extends Quest
 				{
 					return null;
 				}
-				if ((npc.isInsideRadius(partyMember, 1000, true, false) && (getQuestItemsCount(partyMember, GOBLETS[1]) < 1)))
+				if ((npc.isInsideRadius3D(partyMember, 1000) && (getQuestItemsCount(partyMember, GOBLETS[1]) < 1)))
 				{
 					giveItems(partyMember, GOBLETS[1], 1);
 				}
@@ -1204,7 +1204,7 @@ public class Q00620_FourGoblets extends Quest
 				{
 					return null;
 				}
-				if ((npc.isInsideRadius(partyMember, 1000, true, false) && (getQuestItemsCount(partyMember, GOBLETS[2]) < 1)))
+				if ((npc.isInsideRadius3D(partyMember, 1000) && (getQuestItemsCount(partyMember, GOBLETS[2]) < 1)))
 				{
 					giveItems(partyMember, GOBLETS[2], 1);
 				}
@@ -1216,7 +1216,7 @@ public class Q00620_FourGoblets extends Quest
 				{
 					return null;
 				}
-				if ((npc.isInsideRadius(partyMember, 1000, true, false) && (getQuestItemsCount(partyMember, GOBLETS[3]) < 1)))
+				if ((npc.isInsideRadius3D(partyMember, 1000) && (getQuestItemsCount(partyMember, GOBLETS[3]) < 1)))
 				{
 					giveItems(partyMember, GOBLETS[3], 1);
 				}

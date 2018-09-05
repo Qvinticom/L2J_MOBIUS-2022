@@ -631,7 +631,7 @@ public final class L2World
 					continue;
 				}
 				
-				if (visibleObject.calculateDistance(object, true, false) <= range)
+				if (visibleObject.calculateDistance3D(object) <= range)
 				{
 					c.accept(clazz.cast(visibleObject));
 				}

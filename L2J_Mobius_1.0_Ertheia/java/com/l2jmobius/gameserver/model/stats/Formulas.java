@@ -656,7 +656,7 @@ public final class Formulas
 			final double sphericBarrierRange = target.getStat().getValue(Stats.SPHERIC_BARRIER_RANGE, 0);
 			if (!resisted && (sphericBarrierRange > 0))
 			{
-				resisted = attacker.calculateDistance(target, true, false) > sphericBarrierRange;
+				resisted = attacker.calculateDistance3D(target) > sphericBarrierRange;
 			}
 			
 			if (resisted)

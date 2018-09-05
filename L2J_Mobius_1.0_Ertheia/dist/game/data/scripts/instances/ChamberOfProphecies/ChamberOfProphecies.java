@@ -357,7 +357,7 @@ public final class ChamberOfProphecies extends AbstractInstance
 				}
 				case "CLOSE":
 				{
-					if (player.calculateDistance(world.getNpc(GRAIL), false, false) < 390)
+					if (player.calculateDistance2D(world.getNpc(GRAIL)) < 390)
 					{
 						world.openCloseDoor(DOOR_4, false);
 						world.despawnGroup("q10753_16_instance_halter_1_1");

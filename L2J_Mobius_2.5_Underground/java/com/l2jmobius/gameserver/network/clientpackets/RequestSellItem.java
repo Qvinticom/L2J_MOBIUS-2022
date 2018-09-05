@@ -107,7 +107,7 @@ public final class RequestSellItem implements IClientIncomingPacket
 		L2MerchantInstance merchant = null;
 		if (!player.isGM() && (_listId != CUSTOM_CB_SELL_LIST))
 		{
-			if ((target == null) || !player.isInsideRadius(target, INTERACTION_DISTANCE, true, false) || (player.getInstanceId() != target.getInstanceId()))
+			if ((target == null) || !player.isInsideRadius3D(target, INTERACTION_DISTANCE) || (player.getInstanceId() != target.getInstanceId()))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;

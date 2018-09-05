@@ -347,7 +347,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	public Set<L2PcInstance> getPlayersInsideRadius(ILocational object, int radius)
 	{
-		return _players.stream().filter(p -> p.isInsideRadius(object, radius, true, true)).collect(Collectors.toSet());
+		return _players.stream().filter(p -> p.isInsideRadius3D(object, radius)).collect(Collectors.toSet());
 	}
 	
 	/**

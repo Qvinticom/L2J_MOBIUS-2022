@@ -59,7 +59,7 @@ public class MonsterBook extends AbstractNpcAI
 		final MonsterBookCardHolder card = MonsterBookData.getInstance().getMonsterBookCardByMonsterId(npc.getId());
 		for (L2PcInstance player : rewardedPlayers)
 		{
-			if ((player != null) && (player.calculateDistance(killer, false, false) < MAXIMUM_REWARD_RANGE))
+			if ((player != null) && (player.calculateDistance2D(killer) < MAXIMUM_REWARD_RANGE))
 			{
 				player.updateMonsterBook(card);
 			}

@@ -196,7 +196,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		final L2ControllableMobAI ctrlAi = (L2ControllableMobAI) theTarget.getAI();
 		ctrlAi.forceAttack(_actor);
 		
-		final double dist2 = _actor.calculateDistance(target, false, true);
+		final double dist2 = _actor.calculateDistanceSq2D(target);
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 		int max_range = range;
 		
@@ -236,7 +236,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		}
 		
 		setTarget(getForcedTarget());
-		final double dist2 = _actor.calculateDistance(getForcedTarget(), false, true);
+		final double dist2 = _actor.calculateDistanceSq2D(getForcedTarget());
 		final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + getForcedTarget().getTemplate().getCollisionRadius();
 		int max_range = range;
 		
@@ -295,7 +295,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 						return;
 					}
 					
-					if (_actor.isInsideRadius(npc, npc.getTemplate().getClanHelpRange(), true, true))
+					if (_actor.isInsideRadius3D(npc, npc.getTemplate().getClanHelpRange()))
 					{
 						npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
 					}
@@ -303,7 +303,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			}
 			
 			setTarget(target);
-			final double dist2 = _actor.calculateDistance(target, false, true);
+			final double dist2 = _actor.calculateDistanceSq2D(target);
 			final int range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + target.getTemplate().getCollisionRadius();
 			int max_range = range;
 			
@@ -403,7 +403,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 			return false;
 		}
 		
-		if (target.isAlikeDead() || !me.isInsideRadius(target, me.getAggroRange(), false, false) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
+		if (target.isAlikeDead() || !me.isInsideRadius2D(target, me.getAggroRange()) || (Math.abs(_actor.getZ() - target.getZ()) > 100))
 		{
 			return false;
 		}

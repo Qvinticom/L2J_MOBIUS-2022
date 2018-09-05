@@ -456,7 +456,7 @@ public final class CommissionManager
 		final L2Npc npc = player.getLastFolkNPC();
 		if ((npc != null) && (npc instanceof CommissionManagerInstance))
 		{
-			return npc.calculateDistance(player, true, false) <= INTERACTION_DISTANCE;
+			return npc.calculateDistance3D(player) <= INTERACTION_DISTANCE;
 		}
 		return false;
 	}

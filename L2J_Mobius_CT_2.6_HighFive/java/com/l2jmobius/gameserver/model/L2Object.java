@@ -802,30 +802,91 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	}
 	
 	/**
-	 * Calculates distance between this L2Object and given x, y , z.
+	 * Calculates 2D distance between this L2Object and given x, y, z.
 	 * @param x the X coordinate
 	 * @param y the Y coordinate
 	 * @param z the Z coordinate
-	 * @param includeZAxis if {@code true} Z axis will be included
-	 * @param squared if {@code true} return will be squared
 	 * @return distance between object and given x, y, z.
 	 */
-	public final double calculateDistance(int x, int y, int z, boolean includeZAxis, boolean squared)
+	public double calculateDistance2D(int x, int y, int z)
 	{
-		final double distance = Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + (includeZAxis ? Math.pow(z - _z.get(), 2) : 0);
-		return squared ? distance : Math.sqrt(distance);
+		return Math.sqrt(Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2));
 	}
 	
 	/**
-	 * Calculates distance between this L2Object and given location.
+	 * Calculates the 2D distance between this L2Object and given location.
 	 * @param loc the location object
-	 * @param includeZAxis if {@code true} Z axis will be included
-	 * @param squared if {@code true} return will be squared
 	 * @return distance between object and given location.
 	 */
-	public final double calculateDistance(ILocational loc, boolean includeZAxis, boolean squared)
+	public double calculateDistance2D(ILocational loc)
 	{
-		return calculateDistance(loc.getX(), loc.getY(), loc.getZ(), includeZAxis, squared);
+		return calculateDistance2D(loc.getX(), loc.getY(), loc.getZ());
+	}
+	
+	/**
+	 * Calculates the 3D distance between this L2Object and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistance3D(int x, int y, int z)
+	{
+		return Math.sqrt(Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + Math.pow(z - _z.get(), 2));
+	}
+	
+	/**
+	 * Calculates 3D distance between this L2Object and given location.
+	 * @param loc the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistance3D(ILocational loc)
+	{
+		return calculateDistance3D(loc.getX(), loc.getY(), loc.getZ());
+	}
+	
+	/**
+	 * Calculates the non squared 2D distance between this L2Object and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistanceSq2D(int x, int y, int z)
+	{
+		return Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2);
+	}
+	
+	/**
+	 * Calculates the non squared 2D distance between this L2Object and given location.
+	 * @param loc the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistanceSq2D(ILocational loc)
+	{
+		return calculateDistanceSq2D(loc.getX(), loc.getY(), loc.getZ());
+	}
+	
+	/**
+	 * Calculates the non squared 3D distance between this L2Object and given x, y, z.
+	 * @param x the X coordinate
+	 * @param y the Y coordinate
+	 * @param z the Z coordinate
+	 * @return distance between object and given x, y, z.
+	 */
+	public double calculateDistanceSq3D(int x, int y, int z)
+	{
+		return Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + Math.pow(z - _z.get(), 2);
+	}
+	
+	/**
+	 * Calculates the non squared 3D distance between this L2Object and given location.
+	 * @param loc the location object
+	 * @return distance between object and given location.
+	 */
+	public double calculateDistanceSq3D(ILocational loc)
+	{
+		return calculateDistanceSq3D(loc.getX(), loc.getY(), loc.getZ());
 	}
 	
 	/**
@@ -835,7 +896,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 * @param target the object to which to calculate the angle
 	 * @return the angle this object has to turn to have the given object in front of it
 	 */
-	public final double calculateDirectionTo(ILocational target)
+	public double calculateDirectionTo(ILocational target)
 	{
 		int heading = Util.calculateHeadingFrom(this, target) - _heading.get();
 		if (heading < 0)

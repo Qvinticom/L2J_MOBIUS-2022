@@ -137,14 +137,14 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		if (target.isSummon())
 		{
 			final L2PcInstance owner = ((L2Summon) target).getOwner();
-			if (_actor.isInsideRadius(owner, 1000, true, false))
+			if (_actor.isInsideRadius3D(owner, 1000))
 			{
 				target = owner;
 			}
 		}
 		
 		// Check if the target isn't in silent move mode AND too far (>100)
-		if (target.isPlayable() && ((L2Playable) target).isSilentMovingAffected() && !_actor.isInsideRadius(target, 250, false, false))
+		if (target.isPlayable() && ((L2Playable) target).isSilentMovingAffected() && !_actor.isInsideRadius2D(target, 250))
 		{
 			return false;
 		}
@@ -391,7 +391,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			
 			if (npc.getAI() != null) // TODO: possibly check not needed
 			{
-				if (!npc.isDead() && (Math.abs(target.getZ() - npc.getZ()) < 600) && ((npc.getAI()._intention == AI_INTENTION_IDLE) || (npc.getAI()._intention == AI_INTENTION_ACTIVE)) && target.isInsideRadius(npc, 1500, true, false) && GeoEngine.getInstance().canSeeTarget(npc, target))
+				if (!npc.isDead() && (Math.abs(target.getZ() - npc.getZ()) < 600) && ((npc.getAI()._intention == AI_INTENTION_IDLE) || (npc.getAI()._intention == AI_INTENTION_ACTIVE)) && target.isInsideRadius3D(npc, 1500) && GeoEngine.getInstance().canSeeTarget(npc, target))
 				{
 					// Notify the L2Object AI with EVT_AGGRESSION
 					npc.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, getAttackTarget(), 1);
@@ -440,7 +440,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		{
 			_actor.setTarget(attackTarget);
 			skills = _actor.getAllSkills();
-			dist_2 = _actor.calculateDistance(attackTarget, false, true);
+			dist_2 = _actor.calculateDistanceSq2D(attackTarget);
 			range = _actor.getPhysicalAttackRange() + _actor.getTemplate().getCollisionRadius() + attackTarget.getTemplate().getCollisionRadius();
 			if (attackTarget.isMoving())
 			{

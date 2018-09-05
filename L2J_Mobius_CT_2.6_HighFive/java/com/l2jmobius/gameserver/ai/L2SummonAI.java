@@ -226,7 +226,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 	private void avoidAttack(L2Character attacker)
 	{
 		// trying to avoid if summon near owner
-		if ((((L2Summon) _actor).getOwner() != null) && (((L2Summon) _actor).getOwner() != attacker) && ((L2Summon) _actor).getOwner().isInsideRadius(_actor, 2 * AVOID_RADIUS, true, false))
+		if ((((L2Summon) _actor).getOwner() != null) && (((L2Summon) _actor).getOwner() != attacker) && ((L2Summon) _actor).getOwner().isInsideRadius3D(_actor, 2 * AVOID_RADIUS))
 		{
 			_startAvoid = true;
 		}

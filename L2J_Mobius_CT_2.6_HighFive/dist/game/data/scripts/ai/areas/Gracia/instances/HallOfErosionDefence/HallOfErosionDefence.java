@@ -451,7 +451,7 @@ public class HallOfErosionDefence extends AbstractNpcAI
 					broadCastPacket(world, new ExShowScreenMessage(NpcStringId.S1_S_PARTY_HAS_MOVED_TO_A_DIFFERENT_LOCATION_THROUGH_THE_CRACK_IN_THE_TUMOR, 2, 8000));
 					for (L2PcInstance partyMember : player.getParty().getMembers())
 					{
-						if (partyMember.isInsideRadius(player, 500, true, false))
+						if (partyMember.isInsideRadius3D(player, 500))
 						{
 							partyMember.teleToLocation(loc, true);
 						}

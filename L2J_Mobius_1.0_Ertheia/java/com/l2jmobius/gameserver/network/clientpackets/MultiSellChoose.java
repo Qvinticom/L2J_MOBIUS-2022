@@ -611,7 +611,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 			{
 				return false;
 			}
-			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius(npc, L2Npc.INTERACTION_DISTANCE, true, false)))
+			else if (list.isNpcOnly() && (!list.checkNpcObjectId(npc.getObjectId()) || (npc.getInstanceWorld() != player.getInstanceWorld()) || !player.isInsideRadius3D(npc, L2Npc.INTERACTION_DISTANCE)))
 			{
 				return false;
 			}

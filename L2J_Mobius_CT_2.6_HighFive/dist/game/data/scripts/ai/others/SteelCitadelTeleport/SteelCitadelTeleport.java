@@ -80,7 +80,7 @@ public final class SteelCitadelTeleport extends AbstractNpcAI
 				
 				for (L2PcInstance pl : party.getMembers())
 				{
-					if (pl.isInsideRadius(npc.getX(), npc.getY(), npc.getZ(), 3000, true, false))
+					if (pl.isInsideRadius3D(npc.getX(), npc.getY(), npc.getZ(), 3000))
 					{
 						zone.allowPlayerEntry(pl, 30);
 						pl.teleToLocation(TELEPORT_CITADEL, true);

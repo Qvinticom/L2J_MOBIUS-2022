@@ -95,8 +95,8 @@ public class L2NpcActionShift implements IActionShiftHandler
 			html.replace("%mpRewardTicks%", npc.getTemplate().getMpRewardTicks());
 			html.replace("%mpRewardType%", npc.getTemplate().getMpRewardType().name());
 			html.replace("%mpRewardAffectType%", npc.getTemplate().getMpRewardAffectType().name());
-			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance(npc, false, false)));
-			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance(npc, true, false)));
+			html.replace("%loc2d%", String.valueOf((int) activeChar.calculateDistance2D(npc)));
+			html.replace("%loc3d%", String.valueOf((int) activeChar.calculateDistance3D(npc)));
 			
 			final AttributeType attackAttribute = npc.getAttackElement();
 			html.replace("%ele_atk%", attackAttribute.name());

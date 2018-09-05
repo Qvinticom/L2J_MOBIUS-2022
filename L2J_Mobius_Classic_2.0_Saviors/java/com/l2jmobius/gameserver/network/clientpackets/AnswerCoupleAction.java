@@ -63,7 +63,7 @@ public class AnswerCoupleAction implements IClientIncomingPacket
 		}
 		else if (_answer == 1) // approve
 		{
-			final int distance = (int) activeChar.calculateDistance(target, false, false);
+			final int distance = (int) activeChar.calculateDistance2D(target);
 			if ((distance > 125) || (distance < 15) || (activeChar.getObjectId() == target.getObjectId()))
 			{
 				client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);

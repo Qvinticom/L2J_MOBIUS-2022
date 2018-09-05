@@ -40,6 +40,6 @@ public class ConditionMinDistance extends Condition
 	@Override
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
-		return (effected != null) && (effector.calculateDistance(effected, true, true) >= _sqDistance);
+		return (effected != null) && (effector.calculateDistanceSq3D(effected) >= _sqDistance);
 	}
 }

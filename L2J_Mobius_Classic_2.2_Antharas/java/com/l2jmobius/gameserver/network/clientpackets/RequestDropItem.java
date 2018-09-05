@@ -153,7 +153,7 @@ public final class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		if (!activeChar.isInsideRadius(_x, _y, 0, 150, false, false) || (Math.abs(_z - activeChar.getZ()) > 50))
+		if (!activeChar.isInsideRadius2D(_x, _y, 0, 150) || (Math.abs(_z - activeChar.getZ()) > 50))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DISCARD_SOMETHING_THAT_FAR_AWAY_FROM_YOU);
 			return;

@@ -829,7 +829,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 		int time = 0;
 		if (npc != null)
 		{
-			final double distance = npc.calculateDistance(coords[0], coords[1], coords[2], true, false);
+			final double distance = npc.calculateDistance3D(coords[0], coords[1], coords[2]);
 			final int heading = Util.calculateHeadingFrom(npc.getX(), npc.getY(), coords[0], coords[1]);
 			time = (int) ((distance / npc.getWalkSpeed()) * 1000);
 			npc.setWalking();

@@ -161,7 +161,7 @@ public final class RequestBypassToServer implements IClientIncomingPacket
 				{
 					final L2Object object = L2World.getInstance().findObject(Integer.parseInt(id));
 					
-					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
+					if ((object != null) && object.isNpc() && (endOfId > 0) && activeChar.isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE))
 					{
 						((L2Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
 					}

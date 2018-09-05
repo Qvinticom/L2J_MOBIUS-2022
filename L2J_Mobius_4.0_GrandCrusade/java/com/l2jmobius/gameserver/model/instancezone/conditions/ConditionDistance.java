@@ -38,6 +38,6 @@ public final class ConditionDistance extends Condition
 	public boolean test(L2PcInstance player, L2Npc npc)
 	{
 		final int distance = getParameters().getInt("distance", 1000);
-		return player.isInsideRadius(npc, distance, true, true);
+		return player.isInsideRadius3D(npc, distance);
 	}
 }

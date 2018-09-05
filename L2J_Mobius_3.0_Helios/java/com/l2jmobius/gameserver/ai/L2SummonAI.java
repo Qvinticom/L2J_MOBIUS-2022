@@ -259,7 +259,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		
 		final L2Character owner = getActor().getOwner();
 		// trying to avoid if summon near owner
-		if ((owner != null) && (owner != attacker) && owner.isInsideRadius(_actor, 2 * AVOID_RADIUS, true, false))
+		if ((owner != null) && (owner != attacker) && owner.isInsideRadius3D(_actor, 2 * AVOID_RADIUS))
 		{
 			_startAvoid = true;
 		}
@@ -274,7 +274,7 @@ public class L2SummonAI extends L2PlayableAI implements Runnable
 		}
 		
 		final L2Summon summon = getActor();
-		if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius(_actor, 2 * AVOID_RADIUS, true, false))
+		if ((summon.getOwner() != null) && (summon.getOwner() != attacker) && !summon.isMoving() && summon.canAttack(attacker, false) && summon.getOwner().isInsideRadius3D(_actor, 2 * AVOID_RADIUS))
 		{
 			summon.doAutoAttack(attacker);
 		}

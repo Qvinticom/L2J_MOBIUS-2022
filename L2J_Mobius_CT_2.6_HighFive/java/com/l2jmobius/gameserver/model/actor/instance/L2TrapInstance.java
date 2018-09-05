@@ -175,7 +175,7 @@ public final class L2TrapInstance extends L2Npc
 	public boolean checkTarget(L2Character target)
 	{
 		// Range seems to be reduced from Freya(300) to H5(150)
-		if (!target.isInsideRadius(this, 150, false, false))
+		if (!target.isInsideRadius2D(this, 150))
 		{
 			return false;
 		}

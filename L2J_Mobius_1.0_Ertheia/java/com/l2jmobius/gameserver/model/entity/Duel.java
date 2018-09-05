@@ -906,7 +906,7 @@ public class Duel
 			}
 			
 			// Are the players too far apart?
-			if (!_playerA.isInsideRadius(_playerB, 1600, false, false))
+			if (!_playerA.isInsideRadius2D(_playerB, 1600))
 			{
 				return DuelResult.CANCELED;
 			}

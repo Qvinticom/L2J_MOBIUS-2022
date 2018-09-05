@@ -396,8 +396,8 @@ public class L2Attackable extends L2Npc
 					final L2CommandChannel command = party.getCommandChannel();
 					//@formatter:off
 					final List<L2PcInstance> members = command != null ? 
-						command.getMembers().stream().filter(p -> p.calculateDistance(this, true, false) < Config.ALT_PARTY_RANGE).collect(Collectors.toList()) :
-						player.getParty().getMembers().stream().filter(p -> p.calculateDistance(this, true, false) < Config.ALT_PARTY_RANGE).collect(Collectors.toList());
+						command.getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList()) :
+						player.getParty().getMembers().stream().filter(p -> p.calculateDistance3D(this) < Config.ALT_PARTY_RANGE).collect(Collectors.toList());
 					//@formatter:on
 					
 					members.forEach(p ->

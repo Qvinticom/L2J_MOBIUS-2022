@@ -170,7 +170,7 @@ public final class Q10818_ConfrontingAGiantMonster extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true))
+		if ((qs != null) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 		{
 			if (npc.getId() == TRASKEN)
 			{

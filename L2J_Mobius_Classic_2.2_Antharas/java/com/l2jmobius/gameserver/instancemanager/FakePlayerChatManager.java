@@ -106,7 +106,7 @@ public final class FakePlayerChatManager implements IGameXmlReader
 				final L2Npc npc = spawn.getLastSpawn();
 				if (npc != null)
 				{
-					if (npc.calculateDistance(player, false, false) < 3000)
+					if (npc.calculateDistance2D(player) < 3000)
 					{
 						if (GeoEngine.getInstance().canSeeTarget(npc, player) && !player.isInvisible())
 						{

@@ -225,7 +225,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 				{
 					if (qs.isCond(1) && (npc.getId() == KANADIS_GUIDE3))
 					{
-						if (!partymember.isDead() && partymember.isInsideRadius(npc, 1000, true, false))
+						if (!partymember.isDead() && partymember.isInsideRadius3D(npc, 1000))
 						{
 							if (qs.getInt("kanadis") == 0)
 							{
@@ -312,7 +312,7 @@ public class Q00726_LightWithinTheDarkness extends Quest
 		}
 		for (L2PcInstance partymember : party.getMembers())
 		{
-			if (!partymember.isInsideRadius(player, 1000, true, true))
+			if (!partymember.isInsideRadius3D(player, 1000))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partymember);

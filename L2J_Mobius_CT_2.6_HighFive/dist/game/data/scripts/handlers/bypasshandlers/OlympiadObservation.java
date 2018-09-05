@@ -65,7 +65,7 @@ public class OlympiadObservation implements IBypassHandler
 					return false;
 				}
 				
-				if (!activeChar.inObserverMode() && !activeChar.isInsideRadius(olymanager, 300, false, false))
+				if (!activeChar.inObserverMode() && !activeChar.isInsideRadius2D(olymanager, 300))
 				{
 					return false;
 				}

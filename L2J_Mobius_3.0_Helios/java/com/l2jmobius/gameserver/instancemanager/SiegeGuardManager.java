@@ -121,7 +121,7 @@ public final class SiegeGuardManager
 	 */
 	public boolean isTooCloseToAnotherTicket(L2PcInstance player)
 	{
-		return _droppedTickets.stream().filter(g -> g.calculateDistance(player, true, false) < 25).findFirst().orElse(null) != null;
+		return _droppedTickets.stream().filter(g -> g.calculateDistance3D(player) < 25).findFirst().orElse(null) != null;
 	}
 	
 	/**

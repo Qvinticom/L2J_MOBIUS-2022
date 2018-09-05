@@ -69,7 +69,7 @@ public final class RequestGetOnVehicle implements IClientIncomingPacket
 		else
 		{
 			boat = BoatManager.getInstance().getBoat(_boatId);
-			if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius(boat, 1000, true, false))
+			if ((boat == null) || boat.isMoving() || !activeChar.isInsideRadius3D(boat, 1000))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;

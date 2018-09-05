@@ -49,7 +49,7 @@ public final class RequestGetOffVehicle implements IClientIncomingPacket
 		{
 			return;
 		}
-		if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !activeChar.isInsideRadius(_x, _y, _z, 1000, true, false))
+		if (!activeChar.isInBoat() || (activeChar.getBoat().getObjectId() != _boatId) || activeChar.getBoat().isMoving() || !activeChar.isInsideRadius3D(_x, _y, _z, 1000))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

@@ -1070,7 +1070,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 			return false;
 		}
 		
-		if (!activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && activeChar.isInsideRadius(target, L2StaticObjectInstance.INTERACTION_DISTANCE, false, false))
+		if (!activeChar.isSitting() && (target instanceof L2StaticObjectInstance) && (((L2StaticObjectInstance) target).getType() == 1) && activeChar.isInsideRadius2D(target, L2StaticObjectInstance.INTERACTION_DISTANCE))
 		{
 			final ChairSit cs = new ChairSit(activeChar, target.getId());
 			_client.sendPacket(cs);
@@ -1315,7 +1315,7 @@ public final class RequestActionUse implements IClientIncomingPacket
 			return;
 		}
 		
-		final int distance = (int) requester.calculateDistance(target, false, false);
+		final int distance = (int) requester.calculateDistance2D(target);
 		if ((distance > 125) || (distance < 15) || (requester.getObjectId() == target.getObjectId()))
 		{
 			_client.sendPacket(SystemMessageId.THE_REQUEST_CANNOT_BE_COMPLETED_BECAUSE_THE_TARGET_DOES_NOT_MEET_LOCATION_REQUIREMENTS);

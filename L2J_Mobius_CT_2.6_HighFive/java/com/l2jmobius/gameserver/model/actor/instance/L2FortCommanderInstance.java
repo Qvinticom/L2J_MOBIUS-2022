@@ -102,7 +102,7 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 	@Override
 	public void returnHome()
 	{
-		if (!isInsideRadius(getSpawn(), 200, false, false))
+		if (!isInsideRadius2D(getSpawn(), 200))
 		{
 			setisReturningToSpawnPoint(true);
 			clearAggroList();

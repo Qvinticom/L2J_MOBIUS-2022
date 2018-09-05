@@ -428,7 +428,7 @@ public final class NornilsGarden extends AbstractInstance
 				return "32330-06.html";
 			}
 			// player must be near party leader
-			if (!partyMember.isInsideRadius(player, 500, true, true))
+			if (!partyMember.isInsideRadius3D(player, 500))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED);
 				sm.addPcName(partyMember);

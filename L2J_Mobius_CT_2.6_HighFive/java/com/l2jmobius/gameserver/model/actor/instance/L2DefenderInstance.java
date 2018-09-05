@@ -112,7 +112,7 @@ public class L2DefenderInstance extends L2Attackable
 		{
 			return;
 		}
-		if (!isInsideRadius(getSpawn(), 40, false, false))
+		if (!isInsideRadius2D(getSpawn(), 40))
 		{
 			setisReturningToSpawnPoint(true);
 			clearAggroList();

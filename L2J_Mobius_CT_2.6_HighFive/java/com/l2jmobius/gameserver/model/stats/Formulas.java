@@ -514,7 +514,7 @@ public final class Formulas
 		}
 		
 		// Check the distance between the player and the player spawn point, in the center of the arena.
-		final double distToCenter = activeChar.calculateDistance(festivalCenter[0], festivalCenter[1], 0, false, false);
+		final double distToCenter = activeChar.calculateDistance2D(festivalCenter[0], festivalCenter[1], 0);
 		
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}

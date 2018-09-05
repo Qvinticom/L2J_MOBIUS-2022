@@ -385,7 +385,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			case PLATINUM_TRIBE_SHAMAN:
 			{
 				final QuestState st = getRandomPartyMemberState(attacker, -1, 3, npc);
-				if ((st != null) && npc.isInsideRadius(attacker, 1500, true, false))
+				if ((st != null) && npc.isInsideRadius3D(attacker, 1500))
 				{
 					if (((st.getMemoStateEx(0) == 12) || (st.getMemoStateEx(0) == 13)) && hasQuestItems(st.getPlayer(), WHITE_FABRIC_1))
 					{
@@ -419,7 +419,7 @@ public class Q00348_AnArrogantSearch extends Quest
 			case PLATINUM_TRIBE_OVERLORD:
 			{
 				final QuestState st = getRandomPartyMemberState(attacker, -1, 3, npc);
-				if ((st != null) && npc.isInsideRadius(attacker, 1500, true, false))
+				if ((st != null) && npc.isInsideRadius3D(attacker, 1500))
 				{
 					if (((st.getMemoStateEx(0) == 12) || (st.getMemoStateEx(0) == 13)) && hasQuestItems(st.getPlayer(), WHITE_FABRIC_1))
 					{
@@ -458,13 +458,13 @@ public class Q00348_AnArrogantSearch extends Quest
 	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
 	{
 		final QuestState st = getRandomPartyMemberState(player, -1, 3, npc);
-		if ((st != null) && npc.isInsideRadius(player, 1500, true, false))
+		if ((st != null) && npc.isInsideRadius3D(player, 1500))
 		{
 			switch (npc.getId())
 			{
 				case ARK_GUARDIAN_ELBEROTH:
 				{
-					if (npc.isInsideRadius(player, 1500, true, false))
+					if (npc.isInsideRadius3D(player, 1500))
 					{
 						if ((st.getMemoStateEx(0) < 8) && (((st.getMemoStateEx(1) % 1000) / 100) == 1) && !hasQuestItems(st.getPlayer(), SECOND_KEY_OF_ARK) && !hasQuestItems(st.getPlayer(), BOOK_OF_SAINT))
 						{
@@ -483,7 +483,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				}
 				case ARK_GUARDIAN_SHADOWFANG:
 				{
-					if (npc.isInsideRadius(player, 1500, true, false))
+					if (npc.isInsideRadius3D(player, 1500))
 					{
 						if ((st.getMemoStateEx(0) < 8) && (((st.getMemoStateEx(1) % 10000) / 1000) == 1) && !hasQuestItems(st.getPlayer(), THIRD_KEY_OF_ARK) && !hasQuestItems(st.getPlayer(), BOUGH_OF_SAINT))
 						{
@@ -503,7 +503,7 @@ public class Q00348_AnArrogantSearch extends Quest
 				case YINTZU:
 				case PALIOTE:
 				{
-					if (npc.isInsideRadius(player, 1500, true, false) && st.isMemoState(1) && !hasQuestItems(st.getPlayer(), SHELL_OF_MONSTERS))
+					if (npc.isInsideRadius3D(player, 1500) && st.isMemoState(1) && !hasQuestItems(st.getPlayer(), SHELL_OF_MONSTERS))
 					{
 						giveItems(st.getPlayer(), SHELL_OF_MONSTERS, 1);
 						playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

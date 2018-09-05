@@ -113,7 +113,7 @@ public final class RequestMoveToLocationInVehicle implements IClientIncomingPack
 		else
 		{
 			boat = BoatManager.getInstance().getBoat(_boatId);
-			if ((boat == null) || !boat.isInsideRadius(activeChar, 300, true, false))
+			if ((boat == null) || !boat.isInsideRadius3D(activeChar, 300))
 			{
 				client.sendPacket(ActionFailed.STATIC_PACKET);
 				return;

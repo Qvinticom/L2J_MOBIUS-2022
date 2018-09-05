@@ -44,7 +44,7 @@ public class Ground implements ITargetTypeHandler
 		
 		L2World.getInstance().forEachVisibleObject(activeChar, L2Character.class, character ->
 		{
-			if ((character != null) && character.isInsideRadius(player.getCurrentSkillWorldPosition(), skill.getAffectRange(), false, false))
+			if ((character != null) && character.isInsideRadius2D(player.getCurrentSkillWorldPosition(), skill.getAffectRange()))
 			{
 				if (!Skill.checkForAreaOffensiveSkills(activeChar, character, skill, srcInArena))
 				{

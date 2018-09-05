@@ -629,7 +629,7 @@ public final class Beleth extends AbstractNpcAI
 		{
 			if (!player.isDead())
 			{
-				final double distance2 = npc.calculateDistance(player, false, false);
+				final double distance2 = npc.calculateDistance2D(player);
 				if ((distance2 > 890) && !npc.isMovementDisabled())
 				{
 					npc.setTarget(player);
@@ -709,7 +709,7 @@ public final class Beleth extends AbstractNpcAI
 			return null;
 		}
 		
-		final double distance = npc.calculateDistance(attacker, false, false);
+		final double distance = npc.calculateDistance2D(attacker);
 		if ((distance > 500) || (getRandom(100) < 80))
 		{
 			for (L2Npc beleth : _minions)

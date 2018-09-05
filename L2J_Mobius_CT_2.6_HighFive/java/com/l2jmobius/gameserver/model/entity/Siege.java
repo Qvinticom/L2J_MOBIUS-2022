@@ -1536,7 +1536,7 @@ public class Siege implements Siegable
 					continue;
 				}
 				
-				final double distance = ct.calculateDistance(spawn, true, true);
+				final double distance = ct.calculateDistanceSq3D(spawn);
 				
 				if (distance < distanceClosest)
 				{

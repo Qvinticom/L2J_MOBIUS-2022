@@ -107,7 +107,7 @@ public final class RequestPrivateStoreSell implements IClientIncomingPacket
 		}
 		
 		final L2PcInstance storePlayer = L2World.getInstance().getPlayer(_storePlayerId);
-		if ((storePlayer == null) || !player.isInsideRadius(storePlayer, INTERACTION_DISTANCE, true, false))
+		if ((storePlayer == null) || !player.isInsideRadius3D(storePlayer, INTERACTION_DISTANCE))
 		{
 			return;
 		}

@@ -199,7 +199,7 @@ public final class Q10363_RequestOfTheSeeker extends Quest
 		{
 			final L2Npc npc = (L2Npc) player.getTarget();
 			
-			if (!player.isInsideRadius(npc, 120, true, true))
+			if (!player.isInsideRadius3D(npc, 120))
 			{
 				showOnScreenMsg(player, NpcStringId.YOU_ARE_TOO_FAR_FROM_THE_CORPSE, ExShowScreenMessage.TOP_CENTER, 4500);
 				npc.deleteMe();

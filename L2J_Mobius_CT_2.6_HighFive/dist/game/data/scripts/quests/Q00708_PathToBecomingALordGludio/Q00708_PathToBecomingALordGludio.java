@@ -183,7 +183,7 @@ public class Q00708_PathToBecomingALordGludio extends Quest
 					}
 					else if (isLordAvailable(2, qs))
 					{
-						if (castleOwner.calculateDistance(npc, false, false) <= 200)
+						if (castleOwner.calculateDistance2D(npc) <= 200)
 						{
 							htmltext = "sayres_q708_07.htm";
 						}

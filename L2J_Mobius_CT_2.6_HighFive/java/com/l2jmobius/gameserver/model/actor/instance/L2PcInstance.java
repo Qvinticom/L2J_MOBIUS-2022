@@ -1474,7 +1474,7 @@ public final class L2PcInstance extends L2Playable
 		if (_questNpcObject > 0)
 		{
 			final L2Object object = L2World.getInstance().findObject(getLastQuestNpcObject());
-			if (object.isNpc() && isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
+			if (object.isNpc() && isInsideRadius2D(object, L2Npc.INTERACTION_DISTANCE))
 			{
 				final L2Npc npc = (L2Npc) object;
 				quest.notifyEvent(event, npc, this);
@@ -4154,7 +4154,7 @@ public final class L2PcInstance extends L2Playable
 		
 		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
-			if (!isVisibleFor(player) || (calculateDistance(player, true, false) >= radiusInKnownlist))
+			if (!isVisibleFor(player) || (calculateDistance3D(player) >= radiusInKnownlist))
 			{
 				return;
 			}
@@ -8837,7 +8837,7 @@ public final class L2PcInstance extends L2Playable
 				// Calculate the distance between the L2PcInstance and the target
 				if (sklTargetType == L2TargetType.GROUND)
 				{
-					if (!isInsideRadius(_currentSkillWorldPosition.getX(), _currentSkillWorldPosition.getY(), _currentSkillWorldPosition.getZ(), skill.getCastRange() + getTemplate().getCollisionRadius(), false, false))
+					if (!isInsideRadius2D(_currentSkillWorldPosition.getX(), _currentSkillWorldPosition.getY(), _currentSkillWorldPosition.getZ(), skill.getCastRange() + getTemplate().getCollisionRadius()))
 					{
 						// Send a System Message to the caster
 						sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);
@@ -8847,7 +8847,7 @@ public final class L2PcInstance extends L2Playable
 						return false;
 					}
 				}
-				else if ((skill.getCastRange() > 0) && !isInsideRadius(target, skill.getCastRange() + getTemplate().getCollisionRadius(), false, false))
+				else if ((skill.getCastRange() > 0) && !isInsideRadius2D(target, skill.getCastRange() + getTemplate().getCollisionRadius()))
 				{
 					// Send a System Message to the caster
 					sendPacket(SystemMessageId.YOUR_TARGET_IS_OUT_OF_RANGE);

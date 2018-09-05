@@ -222,7 +222,7 @@ public final class Q10812_FacingSadness extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && player.isInsideRadius(npc, Config.ALT_PARTY_RANGE, true, true) && CommonUtil.contains(MONSTERS, npc.getId()))
+		if ((qs != null) && player.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE) && CommonUtil.contains(MONSTERS, npc.getId()))
 		{
 			giveItems(player, PROOF_OF_DISPOSAL, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

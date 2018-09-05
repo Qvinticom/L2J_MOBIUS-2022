@@ -238,7 +238,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 				return false;
 			}
 			
-			if (!player.isInsideRadius(groupMembers, 1000, true, true))
+			if (!player.isInsideRadius3D(groupMembers, 1000))
 			{
 				broadcastSystemMessage(player, groupMembers, SystemMessageId.C1_IS_IN_A_LOCATION_WHICH_CANNOT_BE_ENTERED_THEREFORE_IT_CANNOT_BE_PROCESSED, true);
 				return false;
@@ -381,7 +381,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 			{
 				for (L2PcInstance playersInside : world.getParameters().getList("playersInside", L2PcInstance.class))
 				{
-					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius(npc, 1500, true, true)))
+					if ((playersInside != null) && ((playersInside.getInstanceId() == world.getInstanceId()) && playersInside.isInsideRadius3D(npc, 1500)))
 					{
 						final long time = System.currentTimeMillis() - world.getParameters().getLong("storeTime", 0);
 						if (time <= 300000) // 5 minutes

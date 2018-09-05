@@ -273,7 +273,7 @@ public class L2BossZone extends L2ZoneType
 						{
 							continue;
 						}
-						if (!raid.isInsideRadius(raid.getSpawn(), 150, false, false))
+						if (!raid.isInsideRadius2D(raid.getSpawn(), 150))
 						{
 							raid.returnHome();
 						}
