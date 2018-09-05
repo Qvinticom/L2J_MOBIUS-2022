@@ -699,7 +699,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	/**
 	 * Sets the instance ID of object.<br>
 	 * 0 - Global<br>
-	 * TODO: Add listener here.
 	 * @param instanceId the ID of the instance
 	 */
 	@Override
@@ -755,17 +754,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		}
 		
 		_instanceId.set(instanceId);
-		if (_isSpawned)
-		{
-			// We don't want some ugly looking disappear/appear effects, so don't update
-			// the knownlist here, but players usually enter instancezones through teleporting
-			// and the teleport will do the revalidation for us.
-			if (!isPlayer())
-			{
-				decayMe();
-				spawnMe();
-			}
-		}
 	}
 	
 	/**
