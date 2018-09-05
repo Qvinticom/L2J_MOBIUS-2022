@@ -94,6 +94,26 @@ public final class ZoneManager implements IGameXmlReader
 	 */
 	public void reload()
 	{
+		// Unload zones.
+		unload();
+		
+		// Load the zones.
+		load();
+		
+		// Re-validate all characters in zones.
+		for (L2Object obj : L2World.getInstance().getVisibleObjects())
+		{
+			if (obj.isCharacter())
+			{
+				((L2Character) obj).revalidateZone(true);
+			}
+		}
+		
+		SETTINGS.clear();
+	}
+	
+	public void unload()
+	{
 		// Get the world regions
 		int count = 0;
 		
@@ -119,20 +139,6 @@ public final class ZoneManager implements IGameXmlReader
 			}
 		}
 		LOGGER.info(getClass().getSimpleName() + ": Removed zones in " + count + " regions.");
-		
-		// Load the zones
-		load();
-		
-		// Re-validate all characters in zones
-		for (L2Object obj : L2World.getInstance().getVisibleObjects())
-		{
-			if (obj.isCharacter())
-			{
-				((L2Character) obj).revalidateZone(true);
-			}
-		}
-		
-		SETTINGS.clear();
 	}
 	
 	@Override

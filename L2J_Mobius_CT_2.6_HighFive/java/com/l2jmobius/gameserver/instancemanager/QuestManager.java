@@ -73,7 +73,28 @@ public final class QuestManager
 	 */
 	public void reloadAllScripts()
 	{
+		unloadAllScripts();
+		
 		LOGGER.info("Reloading all server scripts.");
+		
+		try
+		{
+			ScriptEngineManager.getInstance().executeScriptList();
+		}
+		catch (Exception e)
+		{
+			LOGGER.log(Level.SEVERE, "Failed executing script list!", e);
+		}
+		
+		getInstance().report();
+	}
+	
+	/**
+	 * Unload all quests and scripts.
+	 */
+	public void unloadAllScripts()
+	{
+		LOGGER.info("Unloading all server scripts.");
 		
 		// Unload quests.
 		for (Quest quest : _quests.values())
@@ -93,17 +114,6 @@ public final class QuestManager
 			}
 		}
 		_scripts.clear();
-		
-		try
-		{
-			ScriptEngineManager.getInstance().executeScriptList();
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.SEVERE, "Failed executing script list!", e);
-		}
-		
-		getInstance().report();
 	}
 	
 	/**

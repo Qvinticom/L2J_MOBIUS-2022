@@ -26,11 +26,13 @@ import java.util.regex.Pattern;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.data.xml.impl.NpcData;
+import com.l2jmobius.gameserver.data.xml.impl.SpawnsData;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.instancemanager.DBSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.L2World;
@@ -212,6 +214,19 @@ public class AdminSpawn implements IAdminCommandHandler
 		else if (command.startsWith("admin_unspawnall"))
 		{
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
+			// Unload all scripts.
+			QuestManager.getInstance().unloadAllScripts();
+			// Unload all zones.
+			ZoneManager.getInstance().unload();
+			// Delete all spawns.
+			for (L2Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			{
+				if (npc != null)
+				{
+					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					npc.deleteMe();
+				}
+			}
 			DBSpawnManager.getInstance().cleanUp();
 			for (L2Object obj : L2World.getInstance().getVisibleObjects())
 			{
@@ -227,11 +242,26 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 				}
 			}
-			AdminData.getInstance().broadcastMessageToGMs("NPC Unspawn completed!");
+			// Reload.
+			ZoneManager.getInstance().reload();
+			QuestManager.getInstance().reloadAllScripts();
+			AdminData.getInstance().broadcastMessageToGMs("NPC unspawn completed!");
 		}
 		else if (command.startsWith("admin_respawnall") || command.startsWith("admin_spawn_reload"))
 		{
-			// make sure all spawns are deleted
+			// Unload all scripts.
+			QuestManager.getInstance().unloadAllScripts();
+			// Unload all zones.
+			ZoneManager.getInstance().unload();
+			// Delete all spawns.
+			for (L2Npc npc : DBSpawnManager.getInstance().getNpcs().values())
+			{
+				if (npc != null)
+				{
+					DBSpawnManager.getInstance().deleteSpawn(npc.getSpawn(), true);
+					npc.deleteMe();
+				}
+			}
 			DBSpawnManager.getInstance().cleanUp();
 			for (L2Object obj : L2World.getInstance().getVisibleObjects())
 			{
@@ -247,11 +277,12 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 				}
 			}
-			// now respawn all
-			NpcData.getInstance().load();
+			// Reload.
+			SpawnsData.getInstance().init();
 			DBSpawnManager.getInstance().load();
+			ZoneManager.getInstance().reload();
 			QuestManager.getInstance().reloadAllScripts();
-			AdminData.getInstance().broadcastMessageToGMs("NPC Respawn completed!");
+			AdminData.getInstance().broadcastMessageToGMs("NPC respawn completed!");
 		}
 		else if (command.startsWith("admin_spawnat"))
 		{

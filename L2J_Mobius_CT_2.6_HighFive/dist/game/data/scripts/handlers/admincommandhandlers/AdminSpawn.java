@@ -216,6 +216,10 @@ public class AdminSpawn implements IAdminCommandHandler
 		else if (command.startsWith("admin_unspawnall"))
 		{
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_NPC_SERVER_IS_NOT_OPERATING_AT_THIS_TIME));
+			// Unload all scripts.
+			QuestManager.getInstance().unloadAllScripts();
+			// Delete all spawns.
+			AutoSpawnHandler.getInstance().unload();
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			for (L2Object obj : L2World.getInstance().getVisibleObjects())
@@ -232,6 +236,8 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 				}
 			}
+			// Reload.
+			QuestManager.getInstance().reloadAllScripts();
 			AdminData.getInstance().broadcastMessageToGMs("NPC unspawn completed!");
 		}
 		else if (command.startsWith("admin_spawnday"))
@@ -244,7 +250,10 @@ public class AdminSpawn implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_respawnall") || command.startsWith("admin_spawn_reload"))
 		{
-			// make sure all spawns are deleted
+			// Unload all scripts.
+			QuestManager.getInstance().unloadAllScripts();
+			// Delete all spawns.
+			AutoSpawnHandler.getInstance().unload();
 			RaidBossSpawnManager.getInstance().cleanUp();
 			DayNightSpawnManager.getInstance().cleanUp();
 			for (L2Object obj : L2World.getInstance().getVisibleObjects())
@@ -261,8 +270,7 @@ public class AdminSpawn implements IAdminCommandHandler
 					}
 				}
 			}
-			// now respawn all
-			NpcData.getInstance().load();
+			// Reload.
 			SpawnTable.getInstance().load();
 			RaidBossSpawnManager.getInstance().load();
 			AutoSpawnHandler.getInstance().reload();

@@ -90,6 +90,19 @@ public class AutoSpawnHandler
 	
 	public void reload()
 	{
+		// unload
+		unload();
+		
+		// create clean list
+		_registeredSpawns.clear();
+		_runningSpawns.clear();
+		
+		// load
+		restoreSpawnData();
+	}
+	
+	public void unload()
+	{
 		// stop all timers
 		for (ScheduledFuture<?> sf : _runningSpawns.values())
 		{
@@ -106,13 +119,6 @@ public class AutoSpawnHandler
 				removeSpawn(asi);
 			}
 		}
-		
-		// create clean list
-		_registeredSpawns.clear();
-		_runningSpawns.clear();
-		
-		// load
-		restoreSpawnData();
 	}
 	
 	private void restoreSpawnData()
