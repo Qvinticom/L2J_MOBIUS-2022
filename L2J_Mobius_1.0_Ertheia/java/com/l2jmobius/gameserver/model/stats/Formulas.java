@@ -484,13 +484,7 @@ public final class Formulas
 	
 	public static double calcSkillCancelTime(L2Character creature, Skill skill)
 	{
-		// Fishing skills.
-		if ((skill.getId() == 1312) || (skill.getId() == 1314) || (skill.getId() == 1315))
-		{
-			return 0;
-		}
-		// return (int) Math.max(skill.getCancelTime() / calcSkillTimeFactor(attacker, skill), 500);
-		return Math.max(skill.getHitTime() / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
+		return Math.max((skill.getHitCancelTime() * 1000) / calcSkillTimeFactor(creature, skill), SKILL_LAUNCH_TIME);
 	}
 	
 	/**

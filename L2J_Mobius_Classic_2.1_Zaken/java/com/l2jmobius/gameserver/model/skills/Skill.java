@@ -126,7 +126,7 @@ public final class Skill implements IIdentifiable
 	private final int _refId;
 	// all times in milliseconds
 	private final int _hitTime;
-	// private final int _skillInterruptTime;
+	private final double _hitCancelTime;
 	private final int _coolTime;
 	private final long _reuseHashCode;
 	private final int _reuseDelay;
@@ -185,8 +185,8 @@ public final class Skill implements IIdentifiable
 	
 	// Channeling data
 	private final int _channelingSkillId;
-	private final int _channelingTickInitialDelay;
-	private final int _channelingTickInterval;
+	private final long _channelingStart;
+	private final long _channelingTickInterval;
 	
 	// Mentoring
 	private final boolean _isMentoring;
@@ -259,6 +259,7 @@ public final class Skill implements IIdentifiable
 		_stayAfterDeath = set.getBoolean("stayAfterDeath", false);
 		
 		_hitTime = set.getInt("hitTime", 0);
+		_hitCancelTime = set.getDouble("hitCancelTime", 0);
 		_coolTime = set.getInt("coolTime", 0);
 		_isDebuff = set.getBoolean("isDebuff", false);
 		_isRecoveryHerb = set.getBoolean("isRecoveryHerb", false);
@@ -391,8 +392,8 @@ public final class Skill implements IIdentifiable
 		_icon = set.getString("icon", "icon.skill0000");
 		
 		_channelingSkillId = set.getInt("channelingSkillId", 0);
-		_channelingTickInterval = set.getInt("channelingTickInterval", 2000);
-		_channelingTickInitialDelay = set.getInt("channelingTickInitialDelay", _channelingTickInterval);
+		_channelingTickInterval = (long) set.getFloat("channelingTickInterval", 2000f) * 1000;
+		_channelingStart = (long) (set.getFloat("channelingStart", 0f) * 1000);
 		
 		_isMentoring = set.getBoolean("isMentoring", false);
 		
@@ -476,11 +477,6 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		return false;
-	}
-	
-	public boolean isDamage()
-	{
-		return hasEffectType(L2EffectType.MAGICAL_ATTACK, L2EffectType.HP_DRAIN, L2EffectType.PHYSICAL_ATTACK, L2EffectType.PHYSICAL_ATTACK_HP_LINK);
 	}
 	
 	public boolean isSuicideAttack()
@@ -861,6 +857,11 @@ public final class Skill implements IIdentifiable
 	public int getHitTime()
 	{
 		return _hitTime;
+	}
+	
+	public double getHitCancelTime()
+	{
+		return _hitCancelTime;
 	}
 	
 	/**
@@ -1355,8 +1356,6 @@ public final class Skill implements IIdentifiable
 			final EffectScope pvpOrPveEffectScope = effector.isPlayable() && effected.isAttackable() ? EffectScope.PVE : effector.isPlayable() && effected.isPlayable() ? EffectScope.PVP : null;
 			applyEffectScope(pvpOrPveEffectScope, info, instant, addContinuousEffects);
 			
-			applyEffectScope(EffectScope.CHANNELING, info, instant, addContinuousEffects);
-			
 			if (addContinuousEffects)
 			{
 				// Aura skills reset the abnormal time.
@@ -1431,6 +1430,23 @@ public final class Skill implements IIdentifiable
 	}
 	
 	/**
+	 * Applies the channeling effects from this skill to the target.
+	 * @param effector the caster of the skill
+	 * @param effected the target of the effect
+	 */
+	public void applyChannelingEffects(L2Character effector, L2Character effected)
+	{
+		// null targets cannot receive any effects.
+		if (effected == null)
+		{
+			return;
+		}
+		
+		final BuffInfo info = new BuffInfo(effector, effected, this, false, null, null);
+		applyEffectScope(EffectScope.CHANNELING, info, true, true);
+	}
+	
+	/**
 	 * Activates a skill for the given creature and targets.
 	 * @param caster the caster
 	 * @param targets the targets
@@ -1489,8 +1505,6 @@ public final class Skill implements IIdentifiable
 				
 				final EffectScope pvpOrPveEffectScope = caster.isPlayable() && target.isAttackable() ? EffectScope.PVE : caster.isPlayable() && target.isPlayable() ? EffectScope.PVP : null;
 				applyEffectScope(pvpOrPveEffectScope, info, true, false);
-				
-				applyEffectScope(EffectScope.CHANNELING, info, true, false);
 			}
 			else
 			{
@@ -1709,14 +1723,14 @@ public final class Skill implements IIdentifiable
 		return _icon;
 	}
 	
-	public int getChannelingTickInterval()
+	public long getChannelingTickInterval()
 	{
 		return _channelingTickInterval;
 	}
 	
-	public int getChannelingTickInitialDelay()
+	public long getChannelingTickInitialDelay()
 	{
-		return _channelingTickInitialDelay;
+		return _channelingStart;
 	}
 	
 	public Set<MountType> getRideState()

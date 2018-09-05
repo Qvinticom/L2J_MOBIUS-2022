@@ -389,7 +389,7 @@ public class SkillCaster implements Runnable
 		}
 		
 		// Start channeling if skill is channeling.
-		if (_skill.isChanneling() && (_skill.getChannelingSkillId() > 0))
+		if (_skill.isChanneling())
 		{
 			caster.getSkillChannelizer().startChanneling(_skill);
 		}

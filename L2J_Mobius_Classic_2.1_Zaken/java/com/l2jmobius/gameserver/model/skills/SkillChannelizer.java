@@ -149,82 +149,84 @@ public class SkillChannelizer implements Runnable
 			}
 			
 			// Apply channeling skills on the targets.
-			if (skill.getChannelingSkillId() > 0)
+			final List<L2Character> targetList = new ArrayList<>();
+			final L2Object target = skill.getTarget(_channelizer, false, false, false);
+			if (target != null)
 			{
-				final List<L2Character> targetList = new ArrayList<>();
-				final L2Object target = skill.getTarget(_channelizer, false, false, false);
-				if (target != null)
+				skill.forEachTargetAffected(_channelizer, target, o ->
 				{
-					skill.forEachTargetAffected(_channelizer, target, o ->
+					if (o.isCharacter())
 					{
-						if (o.isCharacter())
+						targetList.add((L2Character) o);
+						((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
+					}
+				});
+			}
+			
+			if (targetList.isEmpty())
+			{
+				return;
+			}
+			channelized = targetList;
+			
+			for (L2Character character : channelized)
+			{
+				if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, character, true))
+				{
+					continue;
+				}
+				else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character))
+				{
+					continue;
+				}
+				
+				if (skill.getChannelingSkillId() > 0)
+				{
+					final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
+					final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
+					final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
+					
+					if ((info == null) || (info.getSkill().getLevel() < skillLevel))
+					{
+						final Skill channeledSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
+						if (channeledSkill == null)
 						{
-							targetList.add((L2Character) o);
-							((L2Character) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
+							LOGGER.warning(getClass().getSimpleName() + ": Non existent channeling skill requested: " + skill);
+							_channelizer.abortCast();
+							return;
 						}
-					});
-				}
-				
-				if (targetList.isEmpty())
-				{
-					return;
-				}
-				channelized = targetList;
-				
-				for (L2Character character : channelized)
-				{
-					if (!Util.checkIfInRange(skill.getEffectRange(), _channelizer, character, true))
-					{
-						continue;
-					}
-					else if (!GeoEngine.getInstance().canSeeTarget(_channelizer, character))
-					{
-						continue;
-					}
-					else
-					{
-						final int maxSkillLevel = SkillData.getInstance().getMaxLevel(skill.getChannelingSkillId());
-						final int skillLevel = Math.min(character.getSkillChannelized().getChannerlizersSize(skill.getChannelingSkillId()), maxSkillLevel);
-						final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(skill.getChannelingSkillId());
 						
-						if ((info == null) || (info.getSkill().getLevel() < skillLevel))
+						// Update PvP status
+						if (character.isPlayable() && _channelizer.isPlayer())
 						{
-							final Skill channeledSkill = SkillData.getInstance().getSkill(skill.getChannelingSkillId(), skillLevel);
-							if (channeledSkill == null)
-							{
-								LOGGER.warning(getClass().getSimpleName() + ": Non existent channeling skill requested: " + skill);
-								_channelizer.abortCast();
-								return;
-							}
-							
-							// Update PvP status
-							if (character.isPlayable() && _channelizer.isPlayer())
-							{
-								((L2PcInstance) _channelizer).updatePvPStatus(character);
-							}
-							
-							// Be warned, this method has the possibility to call doDie->abortCast->stopChanneling method. Variable cache above try"+ +" is used in this case to avoid NPEs.
-							channeledSkill.applyEffects(_channelizer, character);
-							
-							// Reduce shots.
-							if (skill.useSpiritShot())
-							{
-								_channelizer.unchargeShot(_channelizer.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS);
-							}
-							else
-							{
-								_channelizer.unchargeShot(_channelizer.isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
-							}
-							
-							// Shots are re-charged every cast.
-							_channelizer.rechargeShots(skill.useSoulShot(), skill.useSpiritShot(), false);
+							((L2PcInstance) _channelizer).updatePvPStatus(character);
 						}
-						if (!skill.isToggle())
-						{
-							_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, skill.getId(), skill.getLevel(), SkillCastingType.NORMAL, character));
-						}
+						
+						// Be warned, this method has the possibility to call doDie->abortCast->stopChanneling method. Variable cache above try{} is used in this case to avoid NPEs.
+						channeledSkill.applyEffects(_channelizer, character);
+					}
+					if (!skill.isToggle())
+					{
+						_channelizer.broadcastPacket(new MagicSkillLaunched(_channelizer, skill.getId(), skill.getLevel(), SkillCastingType.NORMAL, character));
 					}
 				}
+				else
+				{
+					skill.applyChannelingEffects(_channelizer, character);
+				}
+				
+				// Reduce shots.
+				if (skill.useSpiritShot())
+				{
+					_channelizer.unchargeShot(_channelizer.isChargedShot(ShotType.BLESSED_SPIRITSHOTS) ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS);
+				}
+				else
+				{
+					_channelizer.unchargeShot(_channelizer.isChargedShot(ShotType.BLESSED_SOULSHOTS) ? ShotType.BLESSED_SOULSHOTS : ShotType.SOULSHOTS);
+				}
+				
+				// Shots are re-charged every cast.
+				_channelizer.rechargeShots(skill.useSoulShot(), skill.useSpiritShot(), false);
 			}
 		}
 		catch (Exception e)
