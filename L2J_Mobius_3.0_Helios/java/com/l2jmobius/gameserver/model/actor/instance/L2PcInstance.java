@@ -121,6 +121,7 @@ import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.ClanWar;
+import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
 import com.l2jmobius.gameserver.model.Fishing;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -930,12 +931,16 @@ public final class L2PcInstance extends L2Playable
 	
 	public int getRelation(L2PcInstance target)
 	{
+		final L2Clan clan = getClan();
+		final L2Party party = getParty();
+		final L2Clan targetClan = target.getClan();
+		
 		int result = 0;
 		
-		if (_clan != null)
+		if (clan != null)
 		{
 			result |= RelationChanged.RELATION_CLAN_MEMBER;
-			if (getClan() == target.getClan())
+			if (clan == target.getClan())
 			{
 				result |= RelationChanged.RELATION_CLAN_MATE;
 			}
@@ -948,12 +953,12 @@ public final class L2PcInstance extends L2Playable
 		{
 			result |= RelationChanged.RELATION_LEADER;
 		}
-		if ((getParty() != null) && (getParty() == target.getParty()))
+		if ((party != null) && (party == target.getParty()))
 		{
 			result |= RelationChanged.RELATION_HAS_PARTY;
-			for (int i = 0; i < _party.getMembers().size(); i++)
+			for (int i = 0; i < party.getMembers().size(); i++)
 			{
-				if (_party.getMembers().get(i) != this)
+				if (party.getMembers().get(i) != this)
 				{
 					continue;
 				}
@@ -1023,14 +1028,28 @@ public final class L2PcInstance extends L2Playable
 				result |= RelationChanged.RELATION_ATTACKER;
 			}
 		}
-		if ((getClan() != null) && (target.getClan() != null))
+		if ((clan != null) && (targetClan != null))
 		{
-			if ((target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && target.getClan().isAtWarWith(getClan().getId()))
+			if ((target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (getPledgeType() != L2Clan.SUBUNIT_ACADEMY))
 			{
-				result |= RelationChanged.RELATION_1SIDED_WAR;
-				if (getClan().isAtWarWith(target.getClan().getId()))
+				ClanWar war = clan.getWarWith(target.getClan().getId());
+				if (war != null)
 				{
-					result |= RelationChanged.RELATION_MUTUAL_WAR;
+					switch (war.getState())
+					{
+						case DECLARATION:
+						case BLOOD_DECLARATION:
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+							break;
+						}
+						case MUTUAL:
+						{
+							result |= RelationChanged.RELATION_DECLARED_WAR;
+							result |= RelationChanged.RELATION_MUTUAL_WAR;
+							break;
+						}
+					}
 				}
 			}
 		}
@@ -4138,6 +4157,29 @@ public final class L2PcInstance extends L2Playable
 				{
 					player.sendPacket(charInfo);
 				}
+				
+				// Update relation.
+				final int relation = getRelation(player);
+				Integer oldrelation = getKnownRelations().get(player.getObjectId());
+				if ((oldrelation == null) || (oldrelation != relation))
+				{
+					final RelationChanged rc = new RelationChanged();
+					rc.addRelation(this, relation, isAutoAttackable(player));
+					if (hasSummon())
+					{
+						final L2Summon pet = getPet();
+						if (pet != null)
+						{
+							rc.addRelation(pet, relation, isAutoAttackable(player));
+						}
+						if (hasServitors())
+						{
+							getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+						}
+					}
+					player.sendPacket(rc);
+					getKnownRelations().put(player.getObjectId(), relation);
+				}
 			}
 		});
 	}
@@ -4156,10 +4198,12 @@ public final class L2PcInstance extends L2Playable
 	@Override
 	public final void broadcastPacket(IClientOutgoingPacket mov)
 	{
-		if (!(mov instanceof CharInfo))
+		if (mov instanceof CharInfo)
 		{
-			sendPacket(mov);
+			new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
 		}
+		
+		sendPacket(mov);
 		
 		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
@@ -4169,36 +4213,18 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			player.sendPacket(mov);
-			final int relation = getRelation(player);
-			final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-			if ((oldrelation == null) || (oldrelation != relation))
-			{
-				final RelationChanged rc = new RelationChanged();
-				rc.addRelation(this, relation, isAutoAttackable(player));
-				if (hasSummon())
-				{
-					if (_pet != null)
-					{
-						rc.addRelation(_pet, relation, isAutoAttackable(player));
-					}
-					if (hasServitors())
-					{
-						getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
-					}
-				}
-				player.sendPacket(rc);
-				getKnownRelations().put(player.getObjectId(), relation);
-			}
 		});
 	}
 	
 	@Override
 	public void broadcastPacket(IClientOutgoingPacket mov, int radiusInKnownlist)
 	{
-		if (!(mov instanceof CharInfo))
+		if (mov instanceof CharInfo)
 		{
-			sendPacket(mov);
+			new IllegalArgumentException("CharInfo is being send via broadcastPacket. Do NOT do that! Use broadcastCharInfo() instead.");
 		}
+		
+		sendPacket(mov);
 		
 		L2World.getInstance().forEachVisibleObject(this, L2PcInstance.class, player ->
 		{
@@ -4207,29 +4233,6 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			player.sendPacket(mov);
-			if (mov instanceof CharInfo)
-			{
-				final int relation = getRelation(player);
-				final Integer oldrelation = getKnownRelations().get(player.getObjectId());
-				if ((oldrelation == null) || (oldrelation != relation))
-				{
-					final RelationChanged rc = new RelationChanged();
-					rc.addRelation(this, relation, isAutoAttackable(player));
-					if (hasSummon())
-					{
-						if (_pet != null)
-						{
-							rc.addRelation(_pet, relation, isAutoAttackable(player));
-						}
-						if (hasServitors())
-						{
-							getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
-						}
-					}
-					player.sendPacket(rc);
-					getKnownRelations().put(player.getObjectId(), relation);
-				}
-			}
 		});
 	}
 	
@@ -8263,29 +8266,34 @@ public final class L2PcInstance extends L2Playable
 			
 			// Get L2PcInstance
 			final L2PcInstance attackerPlayer = attacker.getActingPlayer();
-			
-			if (_clan != null)
+			final L2Clan clan = getClan();
+			final L2Clan attackerClan = attackerPlayer.getClan();
+			if (clan != null)
 			{
 				final Siege siege = SiegeManager.getInstance().getSiege(getX(), getY(), getZ());
 				if (siege != null)
 				{
 					// Check if a siege is in progress and if attacker and the L2PcInstance aren't in the Defender clan
-					if (siege.checkIsDefender(attackerPlayer.getClan()) && siege.checkIsDefender(getClan()))
+					if (siege.checkIsDefender(attackerClan) && siege.checkIsDefender(clan))
 					{
 						return false;
 					}
 					
 					// Check if a siege is in progress and if attacker and the L2PcInstance aren't in the Attacker clan
-					if (siege.checkIsAttacker(attackerPlayer.getClan()) && siege.checkIsAttacker(getClan()))
+					if (siege.checkIsAttacker(attackerClan) && siege.checkIsAttacker(clan))
 					{
 						return false;
 					}
 				}
 				
 				// Check if clan is at war
-				if ((getClan() != null) && (attackerPlayer.getClan() != null) && getClan().isAtWarWith(attackerPlayer.getClanId()) && attackerPlayer.getClan().isAtWarWith(getClanId()) && (getWantsPeace() == 0) && (attackerPlayer.getWantsPeace() == 0) && !isAcademyMember())
+				if ((attackerClan != null) && (getWantsPeace() == 0) && (attackerPlayer.getWantsPeace() == 0) && !isAcademyMember())
 				{
-					return true;
+					final ClanWar war = attackerClan.getWarWith(getClanId());
+					if ((war != null) && (war.getState() == ClanWarState.MUTUAL))
+					{
+						return true;
+					}
 				}
 			}
 			
@@ -8297,7 +8305,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			// Check if the attacker is not in the same clan
-			if ((_clan != null) && _clan.isMember(attacker.getObjectId()))
+			if ((clan != null) && clan.isMember(attacker.getObjectId()))
 			{
 				return false;
 			}

@@ -19,6 +19,8 @@ package com.l2jmobius.gameserver.model.actor;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.ClanWar;
+import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -212,13 +214,17 @@ public abstract class L2Playable extends L2Character
 		{
 			return true;
 		}
+		else if (player.isInParty() && player.getParty().containsPlayer(target))
+		{
+			return false;
+		}
 		
 		final L2Clan playerClan = player.getClan();
-		final L2Clan targetClan = target.getClan();
 		
-		if ((playerClan != null) && (targetClan != null) && playerClan.isAtWarWith(targetClan) && targetClan.isAtWarWith(playerClan))
+		if ((playerClan != null) && !player.isAcademyMember() && !target.isAcademyMember())
 		{
-			return (player.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY);
+			final ClanWar war = playerClan.getWarWith(target.getClanId());
+			return (war != null) && (war.getState() == ClanWarState.MUTUAL);
 		}
 		return false;
 	}
