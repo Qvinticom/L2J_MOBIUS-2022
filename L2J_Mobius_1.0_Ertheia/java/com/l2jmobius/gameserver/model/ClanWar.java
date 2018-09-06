@@ -147,7 +147,7 @@ public final class ClanWar
 				_attackedKillCount.incrementAndGet();
 			}
 		}
-		else if ((_state == ClanWarState.BLOOD_DECLARATION) && (victimClan.getId() == _attackerClanId))
+		else if ((_state == ClanWarState.BLOOD_DECLARATION) && (victimClan.getId() == _attackerClanId) && (victim.getReputation() >= 0))
 		{
 			final int killCount = _attackedKillCount.incrementAndGet();
 			
