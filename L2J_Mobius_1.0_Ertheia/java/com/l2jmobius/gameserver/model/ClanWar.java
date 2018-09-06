@@ -183,28 +183,26 @@ public final class ClanWar
 	{
 		final L2Clan winnerClan = cancelor.getId() == _attackerClanId ? ClanTable.getInstance().getClan(_attackedClanId) : ClanTable.getInstance().getClan(_attackerClanId);
 		
-		if (cancelor.getReputationScore() > 5000)
+		// Reduce reputation.
+		cancelor.takeReputationScore(5000, true);
+		
+		player.sendPacket(new SurrenderPledgeWar(cancelor.getName(), player.getName()));
+		
+		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_ENDED_BY_YOUR_DEFEAT_DECLARATION_WITH_THE_S1_CLAN);
+		sm.addString(winnerClan.getName());
+		cancelor.broadcastToOnlineMembers(sm);
+		
+		sm = SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_ENDED_BY_THE_S1_CLAN_S_DEFEAT_DECLARATION_YOU_HAVE_WON_THE_CLAN_WAR_OVER_THE_S1_CLAN);
+		sm.addString(cancelor.getName());
+		winnerClan.broadcastToOnlineMembers(sm);
+		
+		_winnerClanId = winnerClan.getId();
+		_endTime = System.currentTimeMillis();
+		
+		ThreadPool.schedule(() ->
 		{
-			cancelor.takeReputationScore(5000, true);
-			
-			player.sendPacket(new SurrenderPledgeWar(cancelor.getName(), player.getName()));
-			
-			SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_ENDED_BY_YOUR_DEFEAT_DECLARATION_WITH_THE_S1_CLAN);
-			sm.addString(winnerClan.getName());
-			cancelor.broadcastToOnlineMembers(sm);
-			
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_WAR_ENDED_BY_THE_S1_CLAN_S_DEFEAT_DECLARATION_YOU_HAVE_WON_THE_CLAN_WAR_OVER_THE_S1_CLAN);
-			sm.addString(cancelor.getName());
-			winnerClan.broadcastToOnlineMembers(sm);
-			
-			_winnerClanId = winnerClan.getId();
-			_endTime = System.currentTimeMillis();
-			
-			ThreadPool.schedule(() ->
-			{
-				ClanTable.getInstance().deleteclanswars(cancelor.getId(), winnerClan.getId());
-			}, (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
-		}
+			ClanTable.getInstance().deleteclanswars(cancelor.getId(), winnerClan.getId());
+		}, (_endTime + TIME_TO_DELETION_AFTER_DEFEAT) - System.currentTimeMillis());
 	}
 	
 	public void clanWarTimeout()

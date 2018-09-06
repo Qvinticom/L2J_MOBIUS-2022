@@ -75,25 +75,6 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		// LOGGER.info("RequestStopPledgeWar: By leader or authorized player: " + playerClan.getLeaderName() + " of clan: "
-		// + playerClan.getName() + " to clan: " + _pledgeName);
-		
-		// L2PcInstance leader = L2World.getInstance().getPlayer(clan.getLeaderName());
-		// if(leader != null && leader.isOnline() == 0)
-		// {
-		// player.sendMessage("Clan leader isn't online.");
-		// player.sendPacket(ActionFailed.STATIC_PACKET);
-		// return;
-		// }
-		
-		// if (leader.isProcessingRequest())
-		// {
-		// SystemMessage sm = SystemMessage.getSystemMessage(SystemMessage.S1_IS_BUSY_TRY_LATER);
-		// sm.addString(leader.getName());
-		// player.sendPacket(sm);
-		// return;
-		// }
-		
 		for (L2ClanMember member : playerClan.getMembers())
 		{
 			if ((member == null) || (member.getPlayerInstance() == null))
@@ -106,6 +87,9 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 				return;
 			}
 		}
+		
+		// Reduce reputation.
+		playerClan.takeReputationScore(500, true);
 		
 		ClanTable.getInstance().deleteclanswars(playerClan.getId(), clan.getId());
 		
