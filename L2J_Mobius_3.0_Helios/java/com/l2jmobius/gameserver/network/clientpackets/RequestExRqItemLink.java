@@ -41,7 +41,7 @@ public class RequestExRqItemLink implements IClientIncomingPacket
 	public void run(L2GameClient client)
 	{
 		final L2Object object = L2World.getInstance().findObject(_objectId);
-		if (object.isItem())
+		if ((object != null) && object.isItem())
 		{
 			final L2ItemInstance item = (L2ItemInstance) object;
 			if (item.isPublished())
