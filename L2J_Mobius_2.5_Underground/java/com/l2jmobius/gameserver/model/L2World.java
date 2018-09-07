@@ -77,9 +77,6 @@ public final class L2World
 	private static final int REGIONS_X = (MAP_MAX_X >> SHIFT_BY) + OFFSET_X;
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
 	
-	/** Max client visibility distance. **/
-	private static final int VISIBILITY_RANGE = 3000;
-	
 	/** Map containing all the players in game. */
 	private final Map<Integer, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
 	/** Map containing all the Good players in game. */
@@ -599,9 +596,76 @@ public final class L2World
 		});
 	}
 	
+	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz)
+	{
+		final List<T> result = new ArrayList<>();
+		forEachVisibleObject(object, clazz, result::add);
+		return result;
+	}
+	
+	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, Predicate<T> predicate)
+	{
+		final List<T> result = new ArrayList<>();
+		forEachVisibleObject(object, clazz, o ->
+		{
+			if (predicate.test(o))
+			{
+				result.add(o);
+			}
+		});
+		return result;
+	}
+	
 	public <T extends L2Object> void forEachVisibleObject(L2Object object, Class<T> clazz, Consumer<T> c)
 	{
-		forEachVisibleObjectInRange(object, clazz, VISIBILITY_RANGE, c);
+		if (object == null)
+		{
+			return;
+		}
+		
+		final L2WorldRegion centerWorldRegion = getRegion(object);
+		if (centerWorldRegion == null)
+		{
+			return;
+		}
+		
+		for (L2WorldRegion region : centerWorldRegion.getSurroundingRegions())
+		{
+			for (L2Object visibleObject : region.getVisibleObjects().values())
+			{
+				if ((visibleObject == null) || (visibleObject == object) || !clazz.isInstance(visibleObject))
+				{
+					continue;
+				}
+				
+				if (visibleObject.getInstanceWorld() != object.getInstanceWorld())
+				{
+					continue;
+				}
+				
+				c.accept(clazz.cast(visibleObject));
+			}
+		}
+	}
+	
+	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range)
+	{
+		final List<T> result = new ArrayList<>();
+		forEachVisibleObjectInRange(object, clazz, range, result::add);
+		return result;
+	}
+	
+	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range, Predicate<T> predicate)
+	{
+		final List<T> result = new ArrayList<>();
+		forEachVisibleObjectInRange(object, clazz, range, o ->
+		{
+			if (predicate.test(o))
+			{
+				result.add(o);
+			}
+		});
+		return result;
 	}
 	
 	public <T extends L2Object> void forEachVisibleObjectInRange(L2Object object, Class<T> clazz, int range, Consumer<T> c)
@@ -637,36 +701,6 @@ public final class L2World
 				}
 			}
 		}
-	}
-	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz)
-	{
-		return getVisibleObjects(object, clazz, VISIBILITY_RANGE);
-	}
-	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, Predicate<T> predicate)
-	{
-		return getVisibleObjects(object, clazz, VISIBILITY_RANGE, predicate);
-	}
-	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range)
-	{
-		final List<T> result = new ArrayList<>();
-		forEachVisibleObjectInRange(object, clazz, range, result::add);
-		return result;
-	}
-	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range, Predicate<T> predicate)
-	{
-		final List<T> result = new ArrayList<>();
-		forEachVisibleObjectInRange(object, clazz, range, o ->
-		{
-			if (predicate.test(o))
-			{
-				result.add(o);
-			}
-		});
-		return result;
 	}
 	
 	/**
