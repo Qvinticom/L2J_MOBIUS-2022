@@ -1689,8 +1689,16 @@
 		<node X="168576" Y="-17920" />
 		<node X="169216" Y="-17280" />
 	</zone>
-	<zone name="25_17_water2" type="WaterZone" shape="Cuboid" minZ="-5568" maxZ="-4991">
+	<zone name="25_17_water2" type="WaterZone" shape="Cuboid" minZ="-5568" maxZ="-2653">
 		<node X="169216" Y="-17920" />
 		<node X="170688" Y="-17280" />
+	</zone>
+	<zone name="Forbitten Path Descend" type="WaterZone" shape="Cuboid" minZ="-4970" maxZ="-2681">
+		<node X="103807" Y="81660" />
+		<node X="104570" Y="80899" />
+	</zone>
+	<zone name="Forbitten Path Descend 2" type="WaterZone" shape="Cuboid" minZ="-4970" maxZ="-4478">
+		<node X="103926" Y="81413" />
+		<node X="104485" Y="83134" />
 	</zone>
 </list>
