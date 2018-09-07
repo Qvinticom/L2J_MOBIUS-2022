@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.serverpackets.pledgebonus;
 
 import java.util.Comparator;
-import java.util.logging.Logger;
 
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
@@ -27,49 +26,24 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 
 /**
- * @author UnAfraid
+ * @author Mobius
  */
 public class ExPledgeBonusList implements IClientOutgoingPacket
 {
-	private static final Logger LOGGER = Logger.getLogger(ExPledgeBonusList.class.getName());
-	
 	@Override
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_PLEDGE_BONUS_LIST.writeId(packet);
-		for (ClanRewardType type : ClanRewardType.values())
+		packet.writeC(0x00); // 140
+		ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
 		{
-			ClanRewardData.getInstance().getClanRewardBonuses(type).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
-			{
-				switch (type)
-				{
-					case MEMBERS_ONLINE:
-					{
-						if (bonus.getSkillReward() == null)
-						{
-							LOGGER.warning("Missing clan reward skill for reward level: " + bonus.getLevel());
-							packet.writeD(0);
-							return;
-						}
-						
-						packet.writeD(bonus.getSkillReward().getSkillId());
-						break;
-					}
-					case HUNTING_MONSTERS:
-					{
-						if (bonus.getItemReward() == null)
-						{
-							LOGGER.warning("Missing clan reward skill for reward level: " + bonus.getLevel());
-							packet.writeD(0);
-							return;
-						}
-						
-						packet.writeD(bonus.getItemReward().getId());
-						break;
-					}
-				}
-			});
-		}
+			packet.writeD(bonus.getSkillReward().getSkillId());
+		});
+		packet.writeC(0x01); // 140
+		ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
+		{
+			packet.writeD(bonus.getItemReward().getId());
+		});
 		return true;
 	}
 }
