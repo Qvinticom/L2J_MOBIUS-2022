@@ -1665,6 +1665,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		// Cancel all timers related to this Creature
 		TimersManager.getInstance().cancelTimers(getObjectId());
+		
+		// Set world region to null.
+		setWorldRegion(null);
+		
 		return true;
 	}
 	

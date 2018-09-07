@@ -151,7 +151,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		_isSpawned = false;
 		L2World.getInstance().removeVisibleObject(this, _worldRegion);
 		L2World.getInstance().removeObject(this);
-		setWorldRegion(null);
 		return true;
 	}
 	
@@ -229,16 +228,12 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	
 	public final boolean isSpawned()
 	{
-		return _worldRegion != null;
+		return _isSpawned;
 	}
 	
 	public final void setSpawned(boolean value)
 	{
 		_isSpawned = value;
-		if (!_isSpawned)
-		{
-			setWorldRegion(null);
-		}
 	}
 	
 	@Override

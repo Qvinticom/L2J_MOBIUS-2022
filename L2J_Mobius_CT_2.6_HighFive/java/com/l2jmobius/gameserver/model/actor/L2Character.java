@@ -2419,6 +2419,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		{
 			getAI().stopAITask();
 		}
+		
+		// Set world region to null.
+		setWorldRegion(null);
+		
 		return true;
 	}
 	
