@@ -524,7 +524,7 @@ public final class Formulas
 			return 0;
 		}
 		
-		double shldRate = target.getStat().getValue(Stats.SHIELD_DEFENCE_RATE, 0) * BaseStats.DEX.calcBonus(target);
+		double shldRate = target.getStat().getValue(Stats.SHIELD_DEFENCE_RATE) * BaseStats.DEX.calcBonus(target);
 		
 		// if attacker use bow and target wear shield, shield block rate is multiplied by 1.3 (30%)
 		if (attacker.getAttackType().isRanged())
