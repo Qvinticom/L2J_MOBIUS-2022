@@ -135,7 +135,7 @@ public class CorpseClan implements ITargetTypeHandler
 			
 			targetList.add(activeChar);
 			
-			for (L2Npc newTarget : L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, skill.getCastRange()))
+			for (L2Npc newTarget : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, skill.getCastRange()))
 			{
 				if (npc.isInMyClan(newTarget))
 				{

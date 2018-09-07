@@ -77,7 +77,7 @@ public final class RequestDuelStart implements IClientIncomingPacket
 				return;
 			}
 			boolean npcInRange = false;
-			for (L2Npc npc : L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, 250))
+			for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, 250))
 			{
 				if (npc.getName().equals(name))
 				{

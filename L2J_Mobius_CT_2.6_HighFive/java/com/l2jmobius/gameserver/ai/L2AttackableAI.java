@@ -491,7 +491,7 @@ public class L2AttackableAI extends L2CharacterAI
 					{
 						L2Character nearestTarget = null;
 						double closestDistance = Double.MAX_VALUE;
-						for (L2Character t : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+						for (L2Character t : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange()))
 						{
 							if ((t == _actor) || (t == null) || t.isDead())
 							{
@@ -824,7 +824,7 @@ public class L2AttackableAI extends L2CharacterAI
 			// Go through all L2Object that belong to its faction
 			try
 			{
-				for (L2Npc called : L2World.getInstance().getVisibleObjects(npc, L2Npc.class, factionRange))
+				for (L2Npc called : L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, factionRange))
 				{
 					if (!getActiveChar().getTemplate().isClan(called.getTemplate().getClans()))
 					{
@@ -1080,7 +1080,7 @@ public class L2AttackableAI extends L2CharacterAI
 					
 					if (sk.getTargetType() == L2TargetType.ONE)
 					{
-						for (L2Attackable obj : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class, sk.getCastRange() + collision))
+						for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(npc, L2Attackable.class, sk.getCastRange() + collision))
 						{
 							if (!obj.isDead())
 							{
@@ -1167,7 +1167,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 					if (sk.getTargetType() == L2TargetType.ONE)
 					{
-						for (L2Attackable obj : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class, sk.getCastRange() + collision))
+						for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(npc, L2Attackable.class, sk.getCastRange() + collision))
 						{
 							if (!obj.isDead())
 							{
@@ -1456,7 +1456,7 @@ public class L2AttackableAI extends L2CharacterAI
 			
 			if (sk.getTargetType() == L2TargetType.ONE)
 			{
-				for (L2Attackable obj : L2World.getInstance().getVisibleObjects(caster, L2Attackable.class, sk.getCastRange() + caster.getTemplate().getCollisionRadius()))
+				for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(caster, L2Attackable.class, sk.getCastRange() + caster.getTemplate().getCollisionRadius()))
 				{
 					if (obj.isDead())
 					{
@@ -1484,7 +1484,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 			if (isParty(sk))
 			{
-				for (L2Attackable obj : L2World.getInstance().getVisibleObjects(caster, L2Attackable.class, sk.getAffectRange() + caster.getTemplate().getCollisionRadius()))
+				for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(caster, L2Attackable.class, sk.getAffectRange() + caster.getTemplate().getCollisionRadius()))
 				{
 					if (obj.isInMyClan(caster))
 					{
@@ -1675,7 +1675,7 @@ public class L2AttackableAI extends L2CharacterAI
 					}
 				}
 				
-				for (L2Attackable obj : L2World.getInstance().getVisibleObjects(caster, L2Attackable.class, sk.getCastRange() + caster.getTemplate().getCollisionRadius()))
+				for (L2Attackable obj : L2World.getInstance().getVisibleObjectsInRange(caster, L2Attackable.class, sk.getCastRange() + caster.getTemplate().getCollisionRadius()))
 				{
 					if (!obj.isDead())
 					{
@@ -1702,7 +1702,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 			else if (isParty(sk))
 			{
-				for (L2Npc obj : L2World.getInstance().getVisibleObjects(caster, L2Npc.class, sk.getAffectRange() + caster.getTemplate().getCollisionRadius()))
+				for (L2Npc obj : L2World.getInstance().getVisibleObjectsInRange(caster, L2Npc.class, sk.getAffectRange() + caster.getTemplate().getCollisionRadius()))
 				{
 					if (caster.isInMyClan(obj))
 					{
@@ -1916,7 +1916,7 @@ public class L2AttackableAI extends L2CharacterAI
 				
 				// ----------------------------------------------------------------------
 				// If there is nearby Target with aggro, start going on random target that is attackable
-				for (L2Character obj : L2World.getInstance().getVisibleObjects(actor, L2Character.class, range))
+				for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(actor, L2Character.class, range))
 				{
 					if (obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj))
 					{
@@ -1949,7 +1949,7 @@ public class L2AttackableAI extends L2CharacterAI
 				double dist = 0;
 				double dist2 = 0;
 				int range = 0;
-				for (L2Attackable targets : L2World.getInstance().getVisibleObjects(actor, L2Attackable.class, range))
+				for (L2Attackable targets : L2World.getInstance().getVisibleObjectsInRange(actor, L2Attackable.class, range))
 				{
 					if (targets.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, targets))
 					{
@@ -1988,7 +1988,7 @@ public class L2AttackableAI extends L2CharacterAI
 			double dist = 0;
 			double dist2 = 0;
 			int range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + getAttackTarget().getTemplate().getCollisionRadius();
-			for (L2Character obj : L2World.getInstance().getVisibleObjects(actor, L2Character.class, range))
+			for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(actor, L2Character.class, range))
 			{
 				if (obj.isDead() || !GeoEngine.getInstance().canSeeTarget(actor, obj))
 				{

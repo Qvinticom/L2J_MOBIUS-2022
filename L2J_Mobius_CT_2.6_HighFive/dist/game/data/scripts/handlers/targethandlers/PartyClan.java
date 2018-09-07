@@ -71,7 +71,7 @@ public class PartyClan implements ITargetTypeHandler
 		
 		// Get all visible objects in a spherical area near the L2Character
 		final int maxTargets = skill.getAffectLimit();
-		for (L2PcInstance obj : L2World.getInstance().getVisibleObjects(activeChar, L2PcInstance.class, radius))
+		for (L2PcInstance obj : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2PcInstance.class, radius))
 		{
 			if (obj == null)
 			{

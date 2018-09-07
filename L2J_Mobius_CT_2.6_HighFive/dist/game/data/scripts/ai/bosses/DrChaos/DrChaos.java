@@ -175,7 +175,7 @@ public class DrChaos extends AbstractNpcAI
 		{
 			if (GrandBossManager.getInstance().getBossStatus(CHAOS_GOLEM) == NORMAL)
 			{
-				for (L2PcInstance obj : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 500))
+				for (L2PcInstance obj : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 500))
 				{
 					if (obj.isDead())
 					{

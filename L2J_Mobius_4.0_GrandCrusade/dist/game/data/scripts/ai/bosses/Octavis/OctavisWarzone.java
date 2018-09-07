@@ -312,7 +312,7 @@ public final class OctavisWarzone extends AbstractInstance
 					final L2PcInstance mostHated = ((L2Attackable) npc).getMostHated().getActingPlayer();
 					if ((mostHated != null) && (mostHated.calculateDistance3D(npc) < 5000))
 					{
-						L2World.getInstance().getVisibleObjects(npc, L2Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion ->
+						L2World.getInstance().getVisibleObjectsInRange(npc, L2Attackable.class, 4000, obj -> CommonUtil.contains(BEASTS_MINIONS, obj.getId()) || CommonUtil.contains(GLADIATORS, obj.getId())).forEach(minion ->
 						{
 							addAttackPlayerDesire(minion, mostHated, 23);
 						});

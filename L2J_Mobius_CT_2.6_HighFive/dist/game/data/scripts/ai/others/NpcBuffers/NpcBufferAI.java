@@ -81,7 +81,7 @@ public class NpcBufferAI implements Runnable
 			}
 			case RANGE:
 			{
-				for (L2Character target : L2World.getInstance().getVisibleObjects(_npc, L2Character.class, skill.getAffectRange()))
+				for (L2Character target : L2World.getInstance().getVisibleObjectsInRange(_npc, L2Character.class, skill.getAffectRange()))
 				{
 					switch (_skillData.getAffectObject())
 					{

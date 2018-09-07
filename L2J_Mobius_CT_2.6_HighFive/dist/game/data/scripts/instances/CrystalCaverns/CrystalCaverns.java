@@ -1366,7 +1366,7 @@ public final class CrystalCaverns extends AbstractInstance
 				
 				final CrystalGolem cryGolem = world.crystalGolems.get(npc);
 				int minDist = 300000;
-				for (L2ItemInstance object : L2World.getInstance().getVisibleObjects(npc, L2ItemInstance.class, 300))
+				for (L2ItemInstance object : L2World.getInstance().getVisibleObjectsInRange(npc, L2ItemInstance.class, 300))
 				{
 					if (object.getId() == CRYSTALFOOD)
 					{

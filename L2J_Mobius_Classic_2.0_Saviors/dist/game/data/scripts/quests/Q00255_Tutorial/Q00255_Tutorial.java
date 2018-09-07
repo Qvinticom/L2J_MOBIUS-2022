@@ -310,7 +310,7 @@ public class Q00255_Tutorial extends Quest
 		{
 			// check for too many gems on ground
 			int counter = 0;
-			for (L2ItemInstance item : L2World.getInstance().getVisibleObjects(killer, L2ItemInstance.class, 1500))
+			for (L2ItemInstance item : L2World.getInstance().getVisibleObjectsInRange(killer, L2ItemInstance.class, 1500))
 			{
 				if (item.getId() == BLUE_GEM)
 				{

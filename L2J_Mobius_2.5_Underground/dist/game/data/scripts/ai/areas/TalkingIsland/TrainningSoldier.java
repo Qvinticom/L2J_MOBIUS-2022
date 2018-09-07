@@ -44,7 +44,7 @@ public final class TrainningSoldier extends AbstractNpcAI
 		{
 			if (!npc.isInCombat())
 			{
-				for (L2Npc nearby : L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 150))
+				for (L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 150))
 				{
 					if ((nearby != null) && (nearby.getId() == DUMMY))
 					{

@@ -112,7 +112,7 @@ public final class TradeRequest implements IClientIncomingPacket
 		{
 			final String name = FakePlayerData.getInstance().getProperName(target.getName());
 			boolean npcInRange = false;
-			for (L2Npc npc : L2World.getInstance().getVisibleObjects(player, L2Npc.class, 150))
+			for (L2Npc npc : L2World.getInstance().getVisibleObjectsInRange(player, L2Npc.class, 150))
 			{
 				if (npc.getName().equals(name))
 				{

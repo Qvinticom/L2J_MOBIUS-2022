@@ -1173,7 +1173,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = _stat.getPhysicalAttackRadius();
 			final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
-			for (L2Character obj : L2World.getInstance().getVisibleObjects(this, L2Character.class, maxRadius))
+			for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, maxRadius))
 			{
 				// Skip main target.
 				if (obj == target)

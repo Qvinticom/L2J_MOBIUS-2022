@@ -50,7 +50,7 @@ public final class YeSagiraGuards extends AbstractNpcAI
 		{
 			if (!npc.isInCombat())
 			{
-				final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjects(npc, L2MonsterInstance.class, 1000);
+				final List<L2MonsterInstance> nearbyMonsters = L2World.getInstance().getVisibleObjectsInRange(npc, L2MonsterInstance.class, 1000);
 				if (!nearbyMonsters.isEmpty())
 				{
 					final L2MonsterInstance monster = nearbyMonsters.get(getRandom(nearbyMonsters.size()));

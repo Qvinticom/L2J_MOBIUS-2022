@@ -148,7 +148,7 @@ public final class AirShipGludioGracia extends AbstractNpcAI implements Runnable
 	private final L2Npc findController()
 	{
 		// check objects around the ship
-		for (L2Npc obj : L2World.getInstance().getVisibleObjects(_ship, L2Npc.class, 600))
+		for (L2Npc obj : L2World.getInstance().getVisibleObjectsInRange(_ship, L2Npc.class, 600))
 		{
 			for (int id : CONTROLLERS)
 			{

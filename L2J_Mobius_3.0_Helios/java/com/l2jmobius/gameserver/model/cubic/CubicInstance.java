@@ -173,7 +173,7 @@ public class CubicInstance
 					Stream<L2Character> stream;
 					if (party != null)
 					{
-						stream = L2World.getInstance().getVisibleObjects(_owner, L2Character.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
+						stream = L2World.getInstance().getVisibleObjectsInRange(_owner, L2Character.class, Config.ALT_PARTY_RANGE, c -> (c.getParty() == party) && _template.validateConditions(this, _owner, c) && cubicSkill.validateConditions(this, _owner, c)).stream();
 					}
 					else
 					{

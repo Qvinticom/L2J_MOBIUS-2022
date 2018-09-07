@@ -418,7 +418,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 				qs.set(KILL_COUNT_VAR, ++killCount);
 			}
 			
-			if ((killCount >= 5) && !L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 1000).stream().anyMatch(n -> ((n.getId() == TELESHA) && (n.getSummoner() == killer))))
+			if ((killCount >= 5) && !L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 1000).stream().anyMatch(n -> ((n.getId() == TELESHA) && (n.getSummoner() == killer))))
 			{
 				final L2Npc telsha = addSpawn(TELESHA, npc, false, 30000);
 				telsha.setSummoner(killer);

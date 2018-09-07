@@ -38,7 +38,7 @@ public class BehindAura implements ITargetTypeHandler
 		final List<L2Character> targetList = new ArrayList<>();
 		final boolean srcInArena = (activeChar.isInsideZone(ZoneId.PVP) && !activeChar.isInsideZone(ZoneId.SIEGE));
 		final int maxTargets = skill.getAffectLimit();
-		for (L2Character obj : L2World.getInstance().getVisibleObjects(activeChar, L2Character.class, skill.getAffectRange()))
+		for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Character.class, skill.getAffectRange()))
 		{
 			if (obj.isAttackable() || obj.isPlayable())
 			{

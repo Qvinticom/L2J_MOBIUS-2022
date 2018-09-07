@@ -1227,7 +1227,7 @@ public final class IceQueensCastleBattle extends AbstractInstance
 	private void manageMovie(Instance world, Movie movie)
 	{
 		final L2Npc controller = world.getParameters().getObject("controller", L2Npc.class);
-		playMovie(L2World.getInstance().getVisibleObjects(controller, L2PcInstance.class, 8000), movie);
+		playMovie(L2World.getInstance().getVisibleObjectsInRange(controller, L2PcInstance.class, 8000), movie);
 	}
 	
 	private List<L2Npc> getKnightStatues(Instance world)

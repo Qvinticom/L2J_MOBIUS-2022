@@ -610,7 +610,7 @@ public final class Beleth extends AbstractNpcAI
 	{
 		if (!npc.isDead() && !npc.isCastingNow())
 		{
-			if ((getRandom(100) < 40) && !L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 200).isEmpty())
+			if ((getRandom(100) < 40) && !L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 200).isEmpty())
 			{
 				npc.doCast(BLEED.getSkill());
 				return null;
@@ -643,12 +643,12 @@ public final class Beleth extends AbstractNpcAI
 				}
 				return null;
 			}
-			if ((getRandom(100) < 40) && !L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 200).isEmpty())
+			if ((getRandom(100) < 40) && !L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 200).isEmpty())
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return null;
 			}
-			for (L2PcInstance plr : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 950))
+			for (L2PcInstance plr : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 950))
 			{
 				npc.setTarget(plr);
 				npc.doCast(FIREBALL.getSkill());
@@ -663,7 +663,7 @@ public final class Beleth extends AbstractNpcAI
 	public String onSpawn(L2Npc npc)
 	{
 		npc.setRunning();
-		if (!L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 300).isEmpty() && (getRandom(100) < 60))
+		if (!L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 300).isEmpty() && (getRandom(100) < 60))
 		{
 			npc.doCast(BLEED.getSkill());
 		}
@@ -728,7 +728,7 @@ public final class Beleth extends AbstractNpcAI
 		}
 		else if (!npc.isDead() && !npc.isCastingNow())
 		{
-			if (!L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 200).isEmpty())
+			if (!L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 200).isEmpty())
 			{
 				npc.doCast(LIGHTENING.getSkill());
 				return null;

@@ -175,7 +175,7 @@ public class AdminScan implements IAdminCommandHandler
 		html.setFile(activeChar, "data/html/admin/scan.htm");
 		
 		//@formatter:off
-		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjects(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())
+		final PageResult result = PageBuilder.newBuilder(L2World.getInstance().getVisibleObjectsInRange(activeChar, L2Npc.class, radius, condition), 15, bypassParser.toString())
 			.currentPage(page)
 			.pageHandler(NextPrevPageHandler.INSTANCE)
 			.formatter(BypassParserFormatter.INSTANCE)

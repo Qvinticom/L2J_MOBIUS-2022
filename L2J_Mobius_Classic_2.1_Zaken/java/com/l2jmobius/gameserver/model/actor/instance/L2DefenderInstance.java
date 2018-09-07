@@ -173,7 +173,7 @@ public class L2DefenderInstance extends L2Attackable
 		{
 			L2Character target = this;
 			double lowestHpValue = Double.MAX_VALUE;
-			for (L2Character nearby : L2World.getInstance().getVisibleObjects(this, L2Character.class, skill.getCastRange()))
+			for (L2Character nearby : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, skill.getCastRange()))
 			{
 				if ((nearby == null) || nearby.isDead() || !GeoEngine.getInstance().canSeeTarget(this, nearby))
 				{

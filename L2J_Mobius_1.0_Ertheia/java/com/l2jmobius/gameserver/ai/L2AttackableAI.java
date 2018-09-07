@@ -358,7 +358,7 @@ public class L2AttackableAI extends L2CharacterAI
 				{
 					L2Character nearestTarget = null;
 					double closestDistance = Double.MAX_VALUE;
-					for (L2Character t : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+					for (L2Character t : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange()))
 					{
 						if ((t == _actor) || (t == null) || t.isDead())
 						{
@@ -1118,7 +1118,7 @@ public class L2AttackableAI extends L2CharacterAI
 		}
 		else
 		{
-			stream = L2World.getInstance().getVisibleObjects(npc, L2Character.class, range, c -> checkSkillTarget(skill, c)).stream();
+			stream = L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, range, c -> checkSkillTarget(skill, c)).stream();
 			
 			// Maybe add self to the list of targets since getVisibleObjects doesn't return yourself.
 			if (checkSkillTarget(skill, npc))
@@ -1149,7 +1149,7 @@ public class L2AttackableAI extends L2CharacterAI
 			// If npc is aggressive, add characters within aggro range too
 			if (npc.isAggressive())
 			{
-				stream = Stream.concat(stream, L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream());
+				stream = Stream.concat(stream, L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream());
 			}
 			
 			return stream.findAny().orElse(null);
@@ -1161,7 +1161,7 @@ public class L2AttackableAI extends L2CharacterAI
 			.sorted(Comparator.comparingInt(AggroInfo::getHate))
 			.map(AggroInfo::getAttacker)
 			.findFirst()
-			.orElse(npc.isAggressive() ? L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
+			.orElse(npc.isAggressive() ? L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange(), this::checkTarget).stream().findAny().orElse(null) : null);
 		//@formatter:on
 	}
 	

@@ -682,7 +682,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	// This function will check if there is other mob alive in this wall of mobs. If all mobs in the first row are dead then despawn the second row mobs, the mages.
 	private void checkIfLastInWall(L2Npc npc)
 	{
-		final Collection<L2Npc> knowns = L2World.getInstance().getVisibleObjects(npc, L2Npc.class, 700);
+		final Collection<L2Npc> knowns = L2World.getInstance().getVisibleObjectsInRange(npc, L2Npc.class, 700);
 		for (L2Npc npcs : knowns)
 		{
 			if (npcs.isDead())
@@ -876,7 +876,7 @@ public class Q00144_PailakaInjuredDragon extends Quest
 				final int[] zoneTeleport = NOEXIT_ZONES.get(zone.getId());
 				if (zoneTeleport != null)
 				{
-					for (L2Character npc : L2World.getInstance().getVisibleObjects(character, L2Npc.class, 700))
+					for (L2Character npc : L2World.getInstance().getVisibleObjectsInRange(character, L2Npc.class, 700))
 					{
 						if (npc.isDead())
 						{

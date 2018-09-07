@@ -4573,7 +4573,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if ((Config.SHOP_MIN_RANGE_FROM_NPC > 0) || (Config.SHOP_MIN_RANGE_FROM_PLAYER > 0))
 		{
-			for (L2Character cha : L2World.getInstance().getVisibleObjects(this, L2Character.class, 1000))
+			for (L2Character cha : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, 1000))
 			{
 				if (Util.checkIfInRange(cha.getMinShopDistance(), this, cha, true))
 				{

@@ -644,14 +644,14 @@ public final class L2World
 		}
 	}
 	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range)
+	public <T extends L2Object> List<T> getVisibleObjectsInRange(L2Object object, Class<T> clazz, int range)
 	{
 		final List<T> result = new ArrayList<>();
 		forEachVisibleObjectInRange(object, clazz, range, result::add);
 		return result;
 	}
 	
-	public <T extends L2Object> List<T> getVisibleObjects(L2Object object, Class<T> clazz, int range, Predicate<T> predicate)
+	public <T extends L2Object> List<T> getVisibleObjectsInRange(L2Object object, Class<T> clazz, int range, Predicate<T> predicate)
 	{
 		final List<T> result = new ArrayList<>();
 		forEachVisibleObjectInRange(object, clazz, range, o ->

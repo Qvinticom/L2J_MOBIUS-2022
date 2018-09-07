@@ -49,7 +49,7 @@ public class ConditionPlayerRangeFromNpc extends Condition
 		boolean existNpc = false;
 		if ((_npcIds != null) && (_npcIds.length > 0) && (_radius > 0))
 		{
-			for (L2Npc target : L2World.getInstance().getVisibleObjects(effector, L2Npc.class, _radius))
+			for (L2Npc target : L2World.getInstance().getVisibleObjectsInRange(effector, L2Npc.class, _radius))
 			{
 				if (CommonUtil.contains(_npcIds, target.getId()))
 				{

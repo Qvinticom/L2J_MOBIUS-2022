@@ -301,7 +301,7 @@ public final class Baium extends AbstractNpcAI
 				}
 				else
 				{
-					for (L2Character creature : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 2000))
+					for (L2Character creature : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 2000))
 					{
 						if (zone.isInsideZone(creature) && !creature.isDead())
 						{
@@ -336,7 +336,7 @@ public final class Baium extends AbstractNpcAI
 					else
 					{
 						boolean found = false;
-						for (L2Playable creature : L2World.getInstance().getVisibleObjects(mob, L2Playable.class, 1000))
+						for (L2Playable creature : L2World.getInstance().getVisibleObjectsInRange(mob, L2Playable.class, 1000))
 						{
 							if (zone.isInsideZone(creature) && !creature.isDead())
 							{

@@ -312,7 +312,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "START_MOVE":
 			{
-				for (L2PcInstance players : L2World.getInstance().getVisibleObjects(npc, L2PcInstance.class, 4000))
+				for (L2PcInstance players : L2World.getInstance().getVisibleObjectsInRange(npc, L2PcInstance.class, 4000))
 				{
 					if (players.isHero())
 					{

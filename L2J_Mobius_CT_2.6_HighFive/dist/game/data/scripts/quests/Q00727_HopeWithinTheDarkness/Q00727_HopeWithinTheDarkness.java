@@ -259,7 +259,7 @@ public class Q00727_HopeWithinTheDarkness extends Quest
 		{
 			if (npc.getAI().getIntention() != CtrlIntention.AI_INTENTION_ATTACK)
 			{
-				for (L2Character foe : L2World.getInstance().getVisibleObjects(npc, L2Character.class, npc.getAggroRange()))
+				for (L2Character foe : L2World.getInstance().getVisibleObjectsInRange(npc, L2Character.class, npc.getAggroRange()))
 				{
 					if (foe.isAttackable() && !(foe instanceof L2QuestGuardInstance))
 					{
