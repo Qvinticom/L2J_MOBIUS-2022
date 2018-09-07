@@ -4261,6 +4261,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				if (!isInVehicle // Not in vehicle.
+					&& !(isMonster() && (Math.abs(dz) > 100)) // Monsters can move on ledges.
 					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
