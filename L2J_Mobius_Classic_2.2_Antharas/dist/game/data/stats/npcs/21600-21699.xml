@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21602" level="65" type="L2Monster" name="Ancient Holy Ground's Wing">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -27,10 +27,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4076" level="3" /> <!--Decrease Speed -->
-			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		    <skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -77,7 +77,7 @@
 	</npc>
 	<npc id="21603" level="66" type="L2Monster" name="Ancient Holy Ground's Guardian Spirit">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -104,12 +104,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4101" level="8" /> <!--NPC Spinning Slash -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->	
+			<skill id="4101" level="8" /> <!-- NPC Spinning Slash -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->	
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -148,7 +148,7 @@
 	</npc>
 	<npc id="21604" level="66" type="L2Monster" name="Ancient Holy Ground's Vision">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="24" />
 			<param name="MoveAroundSocial1" value="24" />
@@ -177,13 +177,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4046" level="9" /> <!--Sleep -->
-			<skill id="4094" level="9" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="9" /> <!--Silence -->
-			<skill id="4105" level="9" /> <!--NPC Straight Beam Cannon -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4046" level="9" /> <!-- Sleep -->
+			<skill id="4094" level="9" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="9" /> <!-- Silence -->
+			<skill id="4105" level="9" /> <!-- NPC Straight Beam Cannon -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -220,7 +220,7 @@
 	</npc>
 	<npc id="21605" level="67" type="L2Monster" name="Lilim Knight Captain">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -254,14 +254,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="7" /> <!--NPC Strike -->
-			<skill id="4072" level="7" /> <!--Stun -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="7" /> <!-- NPC Strike -->
+			<skill id="4072" level="7" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -310,7 +310,7 @@
 	</npc>
 	<npc id="21606" level="67" type="L2Monster" name="Lilim Great Magus">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -340,14 +340,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="8" /> <!--NPC HP Drain -->
-			<skill id="4046" level="8" /> <!--Sleep -->
-			<skill id="4094" level="8" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="8" /> <!--Silence -->
-			<skill id="4285" level="5" /> <!--Resist Sleep Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill id="4046" level="8" /> <!-- Sleep -->
+			<skill id="4094" level="8" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="8" /> <!-- Silence -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -393,7 +393,7 @@
 	</npc>
 	<npc id="21607" level="68" type="L2Monster" name="Nephilim Cardinal">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -422,15 +422,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4030" level="3" /> <!--NPC Clan Might -->
-			<skill id="4046" level="8" /> <!--Sleep -->
-			<skill id="4065" level="8" /> <!--NPC Heal -->
-			<skill id="4094" level="8" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="8" /> <!--Silence -->
-			<skill id="4285" level="5" /> <!--Resist Sleep Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4046" level="8" /> <!-- Sleep -->
+			<skill id="4065" level="8" /> <!-- NPC Heal -->
+			<skill id="4094" level="8" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="8" /> <!-- Silence -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -472,7 +472,7 @@
 	</npc>
 	<npc id="21608" level="68" type="L2Monster" name="Nephilim Commander">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -499,14 +499,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="9" /> <!--NPC Strike -->
-			<skill id="4072" level="9" /> <!--Stun -->
-			<skill id="4091" level="1" /> <!--NPC Ogre Spirit Totem -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="9" /> <!-- NPC Strike -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -544,7 +544,7 @@
 	</npc>
 	<npc id="21609" level="69" type="L2Monster" name="Netherworld Royal Guard">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -576,10 +576,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="8" /> <!--NPC Strike -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -617,7 +617,7 @@
 	</npc>
 	<npc id="21610" level="69" type="L2Monster" name="Netherworld Prophet">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -643,10 +643,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="8" /> <!--NPC HP Drain -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4002" level="8" /> <!-- NPC HP Drain -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
@@ -685,7 +685,7 @@
 	</npc>
 	<npc id="21611" level="71" type="L2Monster" name="Lilim Assassin">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="75" />
 			<param name="MoveAroundSocial1" value="75" />
@@ -717,10 +717,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4067" level="6" /> <!--NPC Mortal Blow -->
-			<skill id="4287" level="5" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="7" /> <!--Daggers -->
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -768,7 +768,7 @@
 	</npc>
 	<npc id="21612" level="72" type="L2Monster" name="Lilim Soldier">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -803,14 +803,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="6" /> <!--NPC HP Drain -->
-			<skill id="4046" level="6" /> <!--Sleep -->
-			<skill id="4094" level="6" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="6" /> <!--Silence -->
-			<skill id="4285" level="5" /> <!--Resist Sleep Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="6" /> <!-- Silence -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -848,7 +848,7 @@
 	</npc>
 	<npc id="21613" level="72" type="L2Monster" name="Nephilim Archbishop">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -882,15 +882,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4030" level="3" /> <!--NPC Clan Might -->
-			<skill id="4046" level="6" /> <!--Sleep -->
-			<skill id="4065" level="6" /> <!--NPC Heal -->
-			<skill id="4094" level="6" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="6" /> <!--Silence -->
-			<skill id="4285" level="5" /> <!--Resist Sleep Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4065" level="6" /> <!-- NPC Heal -->
+			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="6" /> <!-- Silence -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -933,7 +933,7 @@
 	</npc>
 	<npc id="21614" level="73" type="L2Monster" name="Nephilim Praetorian">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -965,14 +965,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="7" /> <!--NPC Strike -->
-			<skill id="4072" level="7" /> <!--Stun -->
-			<skill id="4091" level="1" /> <!--NPC Ogre Spirit Totem -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->	
+			<skill id="4032" level="7" /> <!-- NPC Strike -->
+			<skill id="4072" level="7" /> <!-- Stun -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->	
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1014,7 +1014,7 @@
 	</npc>
 	<npc id="21615" level="73" type="L2Monster" name="Graveyard Guardian">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1047,13 +1047,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4317" level="1" /> <!--Increase Rage Might -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1091,7 +1091,7 @@
 	</npc>
 	<npc id="21616" level="74" type="L2Monster" name="Graveyard Sage">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -1123,9 +1123,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1163,7 +1163,7 @@
 	</npc>
 	<npc id="21617" level="74" type="L2Monster" name="Netherworld Guardian">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -1194,10 +1194,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -1240,7 +1240,7 @@
 	</npc>
 	<npc id="21618" level="75" type="L2Monster" name="Netherworld Sage">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1271,10 +1271,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="6" /> <!--NPC HP Drain -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -1317,7 +1317,7 @@
 	</npc>
 	<npc id="21619" level="75" type="L2Monster" name="Graveyard Royal Guard">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1350,13 +1350,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4317" level="1" /> <!--Increase Rage Might -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -1392,7 +1392,7 @@
 	</npc>
 	<npc id="21620" level="65" type="L2Monster" name="Purgatory Serpent">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="120" />
@@ -1423,9 +1423,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4101" level="5" /> <!--NPC Spinning Slash -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->		
+			<skill id="4101" level="5" /> <!-- NPC Spinning Slash -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->		
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
@@ -1471,7 +1471,7 @@
 	</npc>
 	<npc id="21621" level="66" type="L2Monster" name="Hell Keeper Medusa">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1501,10 +1501,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4035" level="5" /> <!--Poison -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4035" level="5" /> <!-- Poison -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1548,7 +1548,7 @@
 	</npc>
 	<npc id="21622" level="66" type="L2Monster" name="Purgatory Conjurer">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1578,10 +1578,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="5" /> <!--NPC HP Drain -->
-			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->		
+			<skill id="4002" level="5" /> <!-- NPC HP Drain -->
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->		
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1624,7 +1624,7 @@
 	</npc>
 	<npc id="21623" level="67" type="L2Monster" name="Purgatory Gargoyle">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1654,13 +1654,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
@@ -1704,7 +1704,7 @@
 	</npc>
 	<npc id="21624" level="67" type="L2Monster" name="Nephilim Swordsman">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -1736,14 +1736,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="5" /> <!--NPC Strike -->
-			<skill id="4072" level="5" /> <!--Stun -->
-			<skill id="4091" level="1" /> <!--NPC Ogre Spirit Totem -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4072" level="5" /> <!-- Stun -->
+			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1784,7 +1784,7 @@
 	</npc>
 	<npc id="21625" level="68" type="L2Monster" name="Nephilim Guard">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -1814,10 +1814,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="5" /> <!--NPC Strike -->
-			<skill id="4287" level="5" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1860,7 +1860,7 @@
 	</npc>
 	<npc id="21626" level="68" type="L2Monster" name="Mausoleum Inquisitor">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -1891,9 +1891,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -1943,7 +1943,7 @@
 	</npc>
 	<npc id="21627" level="69" type="L2Monster" name="Sepulcher Archon">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -1975,10 +1975,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="5" /> <!--NPC Strike -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->	
+			<skill id="4032" level="5" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->	
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2018,7 +2018,7 @@
 	</npc>
 	<npc id="21628" level="69" type="L2Monster" name="Sepulcher Inquisitor">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
 			<param name="MoveAroundSocial1" value="60" />
@@ -2049,9 +2049,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="5" /> <!--NPC HP Drain -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4002" level="5" /> <!-- NPC HP Drain -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2099,7 +2099,7 @@
 	</npc>
 	<npc id="21629" level="71" type="L2Monster" name="Purgatory Tarantula">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2129,9 +2129,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4035" level="6" /> <!--Poison -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4035" level="6" /> <!-- Poison -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bug -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2177,7 +2177,7 @@
 	</npc>
 	<npc id="21630" level="72" type="L2Monster" name="Purgatory Shadow">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2208,12 +2208,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4076" level="3" /> <!--Decrease Speed -->
-			<skill id="4158" level="6" /> <!--NPC Prominence - Magic -->
-			<skill id="4160" level="6" /> <!--NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!--Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4076" level="3" /> <!-- Decrease Speed -->
+			<skill id="4158" level="6" /> <!-- NPC Prominence - Magic -->
+			<skill id="4160" level="6" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2251,7 +2251,7 @@
 	</npc>
 	<npc id="21631" level="72" type="L2Monster" name="Hell Keeper Crimson Doll">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -2282,12 +2282,12 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4073" level="4" /> <!--Stun -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4073" level="4" /> <!-- Stun -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2325,7 +2325,7 @@
 	</npc>
 	<npc id="21632" level="73" type="L2Monster" name="Lilim Priest">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
 			<param name="MoveAroundSocial1" value="110" />
@@ -2360,14 +2360,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4002" level="6" /> <!--NPC HP Drain -->
-			<skill id="4046" level="6" /> <!--Sleep -->
-			<skill id="4094" level="6" /> <!--NPC Cancel Magic -->
-			<skill id="4098" level="6" /> <!--Silence -->
-			<skill id="4285" level="5" /> <!--Resist Sleep Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="5" /> <!--Blunt Weapons -->
+			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
+			<skill id="4046" level="6" /> <!-- Sleep -->
+			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
+			<skill id="4098" level="6" /> <!-- Silence -->
+			<skill id="4285" level="5" /> <!-- Resist Sleep Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
@@ -2410,7 +2410,7 @@
 	</npc>
 	<npc id="21633" level="73" type="L2Monster" name="Lilim Knight">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2444,14 +2444,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4072" level="6" /> <!--Stun -->
-			<skill id="4092" level="1" /> <!--NPC Puma Spirit Totem -->
-			<skill id="4285" level="3" /> <!--Resist Sleep Attacks -->
-			<skill id="4287" level="3" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4072" level="6" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4285" level="3" /> <!-- Resist Sleep Attacks -->
+			<skill id="4287" level="3" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2493,7 +2493,7 @@
 	</npc>
 	<npc id="21634" level="74" type="L2Monster" name="Nephilim Scout">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="71" />
 			<param name="MoveAroundSocial1" value="71" />
@@ -2523,10 +2523,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4287" level="5" /> <!--Resist Hold Attacks -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4287" level="5" /> <!-- Resist Hold Attacks -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="8" /> <!-- Angel -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2572,7 +2572,7 @@
 	</npc>
 	<npc id="21635" level="74" type="L2Monster" name="Mausoleum Royal Guardian">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
 			<param name="MoveAroundSocial1" value="80" />
@@ -2605,13 +2605,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4273" level="3" /> <!--Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!--Blunt Weapon Weak Point -->
-			<skill id="4317" level="1" /> <!--Increase Rage Might -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="7" /> <!--Daggers -->
-			<skill id="4444" level="2" /> <!--Higher Resist Bow/Crossbow Weapons -->
+			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
@@ -2649,7 +2649,7 @@
 	</npc>
 	<npc id="21636" level="75" type="L2Monster" name="Mausoleum Sage">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="114" />
 			<param name="MoveAroundSocial1" value="114" />
@@ -2681,9 +2681,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4099" level="2" /> <!--NPC Berserk -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->	
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->	
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
@@ -2728,7 +2728,7 @@
 	</npc>
 	<npc id="21637" level="75" type="L2Monster" name="Sepulcher Royal Guardian">
 		<!-- Classic Antharas -->
-		<!-- Catacomb Classic-->
+		<!-- Catacomb Classic -->
 		<parameters>
 			<param name="MoveAroundSocial" value="74" />
 			<param name="MoveAroundSocial1" value="74" />
@@ -2759,10 +2759,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skill_list>
-			<skill id="4032" level="6" /> <!--NPC Strike -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="3" /> <!--One-handed Sword -->
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
