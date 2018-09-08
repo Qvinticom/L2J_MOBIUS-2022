@@ -370,7 +370,7 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			else
 			{
-				html.replace(search, "" + val);
+				html.replace(search, Integer.toString(val));
 				player.setRace(0, val);
 			}
 		}
@@ -382,7 +382,7 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			filename = getHtmlPath(npcId, 3);
 			html.setFile(player, filename);
-			html.replace("0place", "" + player.getRace(0));
+			html.replace("0place", Integer.toString(player.getRace(0)));
 			search = "Mob1";
 			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
@@ -393,7 +393,7 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			else
 			{
-				html.replace(search, "" + _cost[val - 11]);
+				html.replace(search, Integer.toString(_cost[val - 11]));
 				player.setRace(1, val - 10);
 			}
 		}
@@ -405,19 +405,19 @@ public class L2RaceManagerInstance extends L2Npc
 			}
 			filename = getHtmlPath(npcId, 4);
 			html.setFile(player, filename);
-			html.replace("0place", "" + player.getRace(0));
+			html.replace("0place", Integer.toString(player.getRace(0)));
 			search = "Mob1";
 			replace = MonsterRace.getInstance().getMonsters()[player.getRace(0) - 1].getTemplate().getName();
 			html.replace(search, replace);
 			search = "0adena";
 			final int price = _cost[player.getRace(1) - 1];
-			html.replace(search, "" + price);
+			html.replace(search, Integer.toString(price));
 			search = "0tax";
 			final int tax = 0;
-			html.replace(search, "" + tax);
+			html.replace(search, Integer.toString(tax));
 			search = "0total";
 			final int total = price + tax;
-			html.replace(search, "" + total);
+			html.replace(search, Integer.toString(total));
 		}
 		else
 		{

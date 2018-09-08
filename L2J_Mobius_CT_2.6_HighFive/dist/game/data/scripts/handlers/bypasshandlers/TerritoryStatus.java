@@ -55,7 +55,7 @@ public class TerritoryStatus implements IBypassHandler
 			}
 		}
 		html.replace("%castlename%", npc.getCastle().getName());
-		html.replace("%taxpercent%", "" + npc.getCastle().getTaxPercent());
+		html.replace("%taxpercent%", Integer.toString(npc.getCastle().getTaxPercent()));
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
 		{
 			if (npc.getCastle().getResidenceId() > 6)

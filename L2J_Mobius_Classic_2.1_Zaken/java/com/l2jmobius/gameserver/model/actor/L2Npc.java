@@ -683,7 +683,7 @@ public class L2Npc extends L2Character
 		
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

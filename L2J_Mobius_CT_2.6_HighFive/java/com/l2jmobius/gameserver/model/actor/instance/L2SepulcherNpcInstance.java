@@ -258,7 +258,7 @@ public class L2SepulcherNpcInstance extends L2Npc
 		String pom = "";
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

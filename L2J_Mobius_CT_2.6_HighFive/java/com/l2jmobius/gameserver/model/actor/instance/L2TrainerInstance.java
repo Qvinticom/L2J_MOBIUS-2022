@@ -37,7 +37,7 @@ public class L2TrainerInstance extends L2NpcInstance
 		String pom = "";
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

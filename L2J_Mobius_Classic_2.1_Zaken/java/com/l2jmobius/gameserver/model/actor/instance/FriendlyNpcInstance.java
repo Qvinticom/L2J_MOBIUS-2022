@@ -154,7 +154,7 @@ public class FriendlyNpcInstance extends L2Attackable
 		String pom = "";
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

@@ -55,7 +55,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 		
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

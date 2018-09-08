@@ -41,7 +41,7 @@ public class L2PetManagerInstance extends L2MerchantInstance
 		
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

@@ -52,7 +52,7 @@ public final class L2FishermanInstance extends L2MerchantInstance
 		
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

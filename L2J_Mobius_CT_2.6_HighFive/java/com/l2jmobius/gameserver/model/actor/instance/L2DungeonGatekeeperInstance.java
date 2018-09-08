@@ -186,7 +186,7 @@ public class L2DungeonGatekeeperInstance extends L2Npc
 		String pom = "";
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

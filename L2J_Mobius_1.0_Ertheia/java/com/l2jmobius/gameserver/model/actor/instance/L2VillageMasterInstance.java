@@ -81,7 +81,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		
 		if (val == 0)
 		{
-			pom = "" + npcId;
+			pom = Integer.toString(npcId);
 		}
 		else
 		{

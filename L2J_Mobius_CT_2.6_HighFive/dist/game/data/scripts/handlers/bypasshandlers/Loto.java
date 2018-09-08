@@ -334,13 +334,13 @@ public class Loto implements IBypassHandler
 			return;
 		}
 		html.replace("%objectId%", String.valueOf(npc.getObjectId()));
-		html.replace("%race%", "" + Lottery.getInstance().getId());
-		html.replace("%adena%", "" + Lottery.getInstance().getPrize());
-		html.replace("%ticket_price%", "" + Config.ALT_LOTTERY_TICKET_PRICE);
-		html.replace("%prize5%", "" + (Config.ALT_LOTTERY_5_NUMBER_RATE * 100));
-		html.replace("%prize4%", "" + (Config.ALT_LOTTERY_4_NUMBER_RATE * 100));
-		html.replace("%prize3%", "" + (Config.ALT_LOTTERY_3_NUMBER_RATE * 100));
-		html.replace("%prize2%", "" + Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE);
+		html.replace("%race%", Integer.toString(Lottery.getInstance().getId()));
+		html.replace("%adena%", Long.toString(Lottery.getInstance().getPrize()));
+		html.replace("%ticket_price%", Long.toString(Config.ALT_LOTTERY_TICKET_PRICE));
+		html.replace("%prize5%", Float.toString(Config.ALT_LOTTERY_5_NUMBER_RATE * 100));
+		html.replace("%prize4%", Float.toString(Config.ALT_LOTTERY_4_NUMBER_RATE * 100));
+		html.replace("%prize3%", Float.toString(Config.ALT_LOTTERY_3_NUMBER_RATE * 100));
+		html.replace("%prize2%", Long.toString(Config.ALT_LOTTERY_2_AND_1_NUMBER_PRIZE));
 		html.replace("%enddate%", "" + DateFormat.getDateInstance().format(Lottery.getInstance().getEndDate()));
 		player.sendPacket(html);
 		

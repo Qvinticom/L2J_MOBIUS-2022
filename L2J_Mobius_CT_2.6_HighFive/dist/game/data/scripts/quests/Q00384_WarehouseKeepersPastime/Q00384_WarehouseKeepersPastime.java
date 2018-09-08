@@ -362,7 +362,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 			int i1 = getNumberFromBingoBoard(qs, i0);
 			if (isSelectedBingoNumber(qs, i1))
 			{
-				html = html.replace("<?Cell" + (i0 + 1) + "?>", i1 + "");
+				html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
 			}
 			else
 			{
@@ -378,7 +378,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			int i1 = getNumberFromBingoBoard(qs, i0);
 			html = html.replace("<?FontColor" + (i0 + 1) + "?>", (isSelectedBingoNumber(qs, i1)) ? "ff0000" : "ffffff");
-			html = html.replace("<?Cell" + (i0 + 1) + "?>", i1 + "");
+			html = html.replace("<?Cell" + (i0 + 1) + "?>", Integer.toString(i1));
 		}
 		return html;
 	}
@@ -596,7 +596,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 		{
 			if (i == pos)
 			{
-				selected[i] = num + "";
+				selected[i] = Integer.toString(num);
 				continue;
 			}
 		}
@@ -615,7 +615,7 @@ public final class Q00384_WarehouseKeepersPastime extends Quest
 	 */
 	private boolean isSelectedBingoNumber(QuestState qs, int num)
 	{
-		return qs.get("selected").contains(num + "");
+		return qs.get("selected").contains(Integer.toString(num));
 	}
 	
 	/**

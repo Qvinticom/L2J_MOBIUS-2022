@@ -229,7 +229,7 @@ public class L2SchemeBufferInstance extends L2Npc
 		String filename = "";
 		if (val == 0)
 		{
-			filename = "" + npcId;
+			filename = Integer.toString(npcId);
 		}
 		else
 		{
