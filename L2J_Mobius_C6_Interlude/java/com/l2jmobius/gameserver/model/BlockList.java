@@ -70,7 +70,7 @@ public class BlockList
 	{
 		List<Integer> list = new ArrayList<>();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id = ? AND relation = 1");
 			statement.setInt(1, ObjId);
@@ -100,7 +100,7 @@ public class BlockList
 	
 	private void updateInDB(int targetId, boolean state)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

@@ -749,7 +749,7 @@ public final class TerritoryWarManager implements Siegable
 	private void changeRegistration(int castleId, int objId, boolean delete)
 	{
 		final String query = delete ? DELETE : INSERT;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, castleId);
@@ -770,7 +770,7 @@ public final class TerritoryWarManager implements Siegable
 			wardList.append(i + ";");
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE territories SET ownedWardIds=? WHERE territoryId=?"))
 		{
 			ps.setString(1, wardList.toString());
@@ -800,7 +800,7 @@ public final class TerritoryWarManager implements Siegable
 		MINTWBADGEFORSTRIDERS = territoryWarSettings.getInt("MinTerritoryBadgeForStriders", 50);
 		MINTWBADGEFORBIGSTRIDER = territoryWarSettings.getInt("MinTerritoryBadgeForBigStrider", 80);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM territory_spawnlist"))
 		{
@@ -840,7 +840,7 @@ public final class TerritoryWarManager implements Siegable
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": SpawnList error: " + e.getMessage(), e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM territories"))
 		{
@@ -878,7 +878,7 @@ public final class TerritoryWarManager implements Siegable
 			LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": territory list error(): " + e.getMessage(), e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM territory_registrations"))
 		{

@@ -91,7 +91,7 @@ public class Lottery
 	public void increasePrize(long count)
 	{
 		_prize += count;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PRICE))
 		{
 			ps.setLong(1, _prize);
@@ -125,7 +125,7 @@ public class Lottery
 		@Override
 		public void run()
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				Statement statement = con.createStatement();
 				ResultSet rset = statement.executeQuery(SELECT_LAST_LOTTERY))
 			{
@@ -194,7 +194,7 @@ public class Lottery
 			ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 			ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_LOTTERY))
 			{
 				ps.setInt(1, 1);
@@ -281,7 +281,7 @@ public class Lottery
 			int count3 = 0;
 			int count4 = 0;
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_LOTTERY_ITEM))
 			{
 				ps.setInt(1, _number);
@@ -382,7 +382,7 @@ public class Lottery
 			}
 			Broadcast.toAllOnlinePlayers(sm);
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(UPDATE_LOTTERY))
 			{
 				ps.setLong(1, _prize);
@@ -452,7 +452,7 @@ public class Lottery
 			0,
 			0
 		};
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_LOTTERY_TICKET))
 		{
 			ps.setInt(1, id);

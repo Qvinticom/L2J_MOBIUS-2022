@@ -163,7 +163,7 @@ public class AirShipManager
 		final StatsSet info = new StatsSet();
 		info.set("fuel", 600);
 		_airShipsInfo.put(ownerId, info);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(ADD_DB))
 		{
 			ps.setInt(1, ownerId);
@@ -233,7 +233,7 @@ public class AirShipManager
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(LOAD_DB))
 		{
@@ -264,7 +264,7 @@ public class AirShipManager
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_DB))
 		{
 			ps.setInt(1, info.getInt("fuel"));

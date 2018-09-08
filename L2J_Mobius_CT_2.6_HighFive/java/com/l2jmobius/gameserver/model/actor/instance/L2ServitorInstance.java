@@ -217,7 +217,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 		// Clear list for overwrite
 		SummonEffectsTable.getInstance().clearServitorEffects(getOwner(), getReferenceSkill());
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_SKILL_SAVE))
 		{
 			// Delete all current stored effects for summon to avoid dupe
@@ -296,7 +296,7 @@ public class L2ServitorInstance extends L2Summon implements Runnable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (!SummonEffectsTable.getInstance().containsSkill(getOwner(), getReferenceSkill()))
 			{

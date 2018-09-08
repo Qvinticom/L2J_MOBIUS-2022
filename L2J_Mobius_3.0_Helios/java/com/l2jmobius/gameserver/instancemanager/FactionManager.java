@@ -46,7 +46,7 @@ public class FactionManager
 	private void loadAll()
 	{
 		_playerFactions.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT charId, faction FROM characters"))
 		{
@@ -75,7 +75,7 @@ public class FactionManager
 			return factionId;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT faction FROM characters WHERE charId=?"))
 		{
 			ps.setInt(1, id);

@@ -128,7 +128,7 @@ public abstract class IdFactory
 	 */
 	private void setAllCharacterOffline()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final Statement s2 = con.createStatement();
 			s2.executeUpdate("update characters set online=0");
@@ -146,7 +146,7 @@ public abstract class IdFactory
 	 */
 	private void cleanUpDB()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int cleanCount = 0;
 			final Statement stmt = con.createStatement();
@@ -202,7 +202,7 @@ public abstract class IdFactory
 	 */
 	protected int[] extractUsedObjectIDTable() throws SQLException
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// create a temporary table
 			final Statement s = con.createStatement();

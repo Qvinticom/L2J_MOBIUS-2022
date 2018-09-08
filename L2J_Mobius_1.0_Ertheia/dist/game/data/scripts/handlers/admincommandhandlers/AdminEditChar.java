@@ -631,7 +631,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				
 				if (player == null)
 				{
-					final Connection con = DatabaseFactory.getInstance().getConnection();
+					final Connection con = DatabaseFactory.getConnection();
 					final PreparedStatement ps = con.prepareStatement("UPDATE characters SET " + (changeCreateExpiryTime ? "clan_create_expiry_time" : "clan_join_expiry_time") + " WHERE char_name=? LIMIT 1");
 					
 					ps.setString(1, playerName);

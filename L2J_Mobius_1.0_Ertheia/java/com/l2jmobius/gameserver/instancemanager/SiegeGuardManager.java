@@ -57,7 +57,7 @@ public final class SiegeGuardManager
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			ResultSet rs = con.createStatement().executeQuery("SELECT * FROM castle_siege_guards Where isHired = 1"))
 		{
 			while (rs.next())
@@ -158,7 +158,7 @@ public final class SiegeGuardManager
 		final SiegeGuardHolder holder = getSiegeGuardByItem(castle.getResidenceId(), itemId);
 		if (holder != null)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)"))
 			{
 				statement.setInt(1, castle.getResidenceId());
@@ -249,7 +249,7 @@ public final class SiegeGuardManager
 	 */
 	private void loadSiegeGuard(Castle castle)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?"))
 		{
 			ps.setInt(1, castle.getResidenceId());
@@ -283,7 +283,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeSiegeGuard(int npcId, IPositionable pos)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1"))
 		{
 			ps.setInt(1, npcId);
@@ -304,7 +304,7 @@ public final class SiegeGuardManager
 	 */
 	public void removeSiegeGuards(Castle castle)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1"))
 		{
 			ps.setInt(1, castle.getResidenceId());

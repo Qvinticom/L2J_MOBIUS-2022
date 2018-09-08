@@ -223,7 +223,7 @@ public class MailBBSManager extends BaseBBSManager
 	
 	private void initId()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SELECT_LAST_ID);
 			ResultSet result = statement.executeQuery();
@@ -255,7 +255,7 @@ public class MailBBSManager extends BaseBBSManager
 		if (_letters == null)
 		{
 			_letters = new ArrayList<>();
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement(SELECT_CHAR_MAILS);
 				statement.setInt(1, objId);
@@ -570,7 +570,7 @@ public class MailBBSManager extends BaseBBSManager
 		// Edit message.
 		message = message.replaceAll("\n", "<br1>");
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Get the current time under timestamp format.
 			final Timestamp time = new Timestamp(currentDate);
@@ -758,7 +758,7 @@ public class MailBBSManager extends BaseBBSManager
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE_MAIL);
 			statement.setInt(1, letterId);
@@ -775,7 +775,7 @@ public class MailBBSManager extends BaseBBSManager
 	{
 		getLetter(activeChar, letterId).unread = false;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(MARK_MAIL_READ);
 			statement.setInt(1, 0);
@@ -793,7 +793,7 @@ public class MailBBSManager extends BaseBBSManager
 	{
 		getLetter(activeChar, letterId).location = location;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SET_LETTER_LOC);
 			statement.setString(1, location.toString().toLowerCase());
@@ -816,7 +816,7 @@ public class MailBBSManager extends BaseBBSManager
 	private static boolean isGM(int charId)
 	{
 		boolean isGM = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id = ?");
 			statement.setInt(1, charId);

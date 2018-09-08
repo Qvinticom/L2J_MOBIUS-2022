@@ -215,7 +215,7 @@ public final class AuctionableHall extends ClanHall
 	@Override
 	public final void updateDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE clanhall SET ownerId=?, paidUntil=?, paid=? WHERE id=?"))
 		{
 			ps.setInt(1, getOwnerId());

@@ -78,7 +78,7 @@ public class ChangePassword extends BaseRecievePacket
 				int passUpdated = 0;
 				
 				// SQL connection
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement ps = con.prepareStatement("SELECT password FROM accounts WHERE login=?"))
 				{
 					ps.setString(1, accountName);
@@ -95,7 +95,7 @@ public class ChangePassword extends BaseRecievePacket
 				{
 					final byte[] password = md.digest(newpass.getBytes("UTF-8"));
 					// SQL connection
-					try (Connection con = DatabaseFactory.getInstance().getConnection();
+					try (Connection con = DatabaseFactory.getConnection();
 						PreparedStatement ps = con.prepareStatement("UPDATE accounts SET password=? WHERE login=?"))
 					{
 						ps.setString(1, Base64.getEncoder().encodeToString(password));

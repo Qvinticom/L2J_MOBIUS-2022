@@ -103,7 +103,7 @@ public final class CustomNpcInstanceManager
 			"SELECT spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph",
 		};
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int count = 0;
 			for (String selectQuery : SQL_ITEM_SELECTS)
@@ -286,7 +286,7 @@ public final class CustomNpcInstanceManager
 	{
 		String Query = "REPLACE INTO npc_to_pc_polymorph VALUES spawn,template,name,title,class_id,female,hair_style,hair_color,face,name_color,title_color, noble,hero,pvp,karma,wpn_enchant,right_hand,left_hand,gloves,chest,legs,feet,hair,hair2, pledge,cw_level,clan_id,ally_id,clan_crest,ally_crest,rnd_class,rnd_appearance,rnd_weapon,rnd_armor,max_rnd_enchant FROM npc_to_pc_polymorph";
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(Query);
 			ResultSet rset = statement.executeQuery();

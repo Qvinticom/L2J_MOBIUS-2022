@@ -97,7 +97,7 @@ public final class TaskManager
 			task.onTimeElapsed(this);
 			lastActivation = System.currentTimeMillis();
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[1]);
 				statement.setLong(1, lastActivation);
@@ -210,7 +210,7 @@ public final class TaskManager
 	
 	private void startAllTasks()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[0]);
 			ResultSet rset = statement.executeQuery();
@@ -346,7 +346,7 @@ public final class TaskManager
 	{
 		boolean output = false;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[2]);
 			statement.setString(1, task);
@@ -386,7 +386,7 @@ public final class TaskManager
 	{
 		boolean output = false;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SQL_STATEMENTS[3]);
 			statement.setString(1, task);

@@ -49,7 +49,7 @@ public class Wedding
 	{
 		_Id = coupleId;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -95,7 +95,7 @@ public class Wedding
 		_weddingDate = Calendar.getInstance();
 		_weddingDate.setTimeInMillis(Calendar.getInstance().getTimeInMillis());
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -122,7 +122,7 @@ public class Wedding
 	public void marry(int type)
 	{
 		_type = type;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -147,7 +147,7 @@ public class Wedding
 	
 	public void divorce()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

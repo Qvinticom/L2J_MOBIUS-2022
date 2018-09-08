@@ -187,6 +187,7 @@ public abstract class BaseGameServerRegister
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		
 		Config.load();
+		DatabaseFactory.init();
 		GameServerTable.getInstance();
 		
 		_loaded = true;
@@ -215,7 +216,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void unregisterGameServer(int id) throws SQLException
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM gameservers WHERE server_id = ?"))
 		
 		{
@@ -231,7 +232,7 @@ public abstract class BaseGameServerRegister
 	 */
 	public static void unregisterAllGameServers() throws SQLException
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("DELETE FROM gameservers");

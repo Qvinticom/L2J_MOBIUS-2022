@@ -132,7 +132,7 @@ public class AuctionManager
 	
 	private final void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -208,7 +208,7 @@ public class AuctionManager
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("INSERT INTO `auction` VALUES " + ITEM_INIT_DATA[i]);

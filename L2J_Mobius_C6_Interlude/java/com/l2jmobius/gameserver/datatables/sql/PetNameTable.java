@@ -47,7 +47,7 @@ public class PetNameTable
 	public boolean doesPetNameExist(String name, int petNpcId)
 	{
 		boolean result = true;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT name FROM pets p, items i WHERE p.item_obj_id = i.object_id AND name=? AND i.item_id IN (?)");
 			statement.setString(1, name);

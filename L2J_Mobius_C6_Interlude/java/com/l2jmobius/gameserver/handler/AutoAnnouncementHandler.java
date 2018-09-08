@@ -54,7 +54,7 @@ public class AutoAnnouncementHandler
 		PreparedStatement statement = null;
 		ResultSet rs = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement("SELECT * FROM auto_announcements ORDER BY id");
 			rs = statement.executeQuery();
@@ -169,7 +169,7 @@ public class AutoAnnouncementHandler
 	{
 		final int nextId = nextAutoAnnouncmentId();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO auto_announcements (id,announcement,delay) VALUES (?,?,?)");
 			statement.setInt(1, nextId);
@@ -195,7 +195,7 @@ public class AutoAnnouncementHandler
 		PreparedStatement statement = null;
 		ResultSet rs = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement("SELECT id FROM auto_announcements ORDER BY id");
 			rs = statement.executeQuery();
@@ -265,7 +265,7 @@ public class AutoAnnouncementHandler
 	{
 		final AutoAnnouncementInstance announcementInst = _registeredAnnouncements.get(id);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM auto_announcements WHERE id=?");
 			statement.setInt(1, announcementInst.getDefaultId());

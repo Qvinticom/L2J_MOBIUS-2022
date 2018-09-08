@@ -176,7 +176,7 @@ public class AdminAio implements IAdminCommandHandler
 			_player.setEndTime("aio", days);
 			_player.getStat().addExp(_player.getStat().getExpForLevel(81));
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET aio=1, aio_end=? WHERE obj_id=?");
 				statement.setLong(1, _player.getAioEndTime());
@@ -223,7 +223,7 @@ public class AdminAio implements IAdminCommandHandler
 		_player.setAio(false);
 		_player.setAioEndTime(0);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET Aio=0, Aio_end=0 WHERE obj_id=?");
 			statement.setInt(1, _player.getObjectId());

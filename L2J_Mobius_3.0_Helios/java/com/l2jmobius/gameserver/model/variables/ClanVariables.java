@@ -50,7 +50,7 @@ public class ClanVariables extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement st = con.prepareStatement(SELECT_QUERY))
 		{
 			st.setInt(1, _objectId);
@@ -83,7 +83,7 @@ public class ClanVariables extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))
@@ -120,7 +120,7 @@ public class ClanVariables extends AbstractVariables
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Clear previous entries.
 			try (PreparedStatement st = con.prepareStatement(DELETE_QUERY))

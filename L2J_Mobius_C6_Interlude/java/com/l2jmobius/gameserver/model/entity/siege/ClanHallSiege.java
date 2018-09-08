@@ -37,7 +37,7 @@ public abstract class ClanHallSiege
 	public long restoreSiegeDate(int ClanHallId)
 	{
 		long res = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT siege_data FROM clanhall_siege WHERE id=?");
 			statement.setInt(1, ClanHallId);
@@ -72,7 +72,7 @@ public abstract class ClanHallSiege
 			tmpDate.set(Calendar.SECOND, 0);
 			
 			setSiegeDate(tmpDate);
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE clanhall_siege SET siege_data=? WHERE id = ?");
 				statement.setLong(1, _siegeDate.getTimeInMillis());

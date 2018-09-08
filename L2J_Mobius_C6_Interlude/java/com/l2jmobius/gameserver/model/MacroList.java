@@ -139,7 +139,7 @@ public class MacroList
 	
 	private void registerMacroInDb(L2Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO character_macroses (char_obj_id,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)");
 			statement.setInt(1, _owner.getObjectId());
@@ -192,7 +192,7 @@ public class MacroList
 	 */
 	private void deleteMacroFromDb(L2Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_macroses WHERE char_obj_id=? AND id=?");
 			statement.setInt(1, _owner.getObjectId());
@@ -209,7 +209,7 @@ public class MacroList
 	public void restore()
 	{
 		_macroses.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, id, icon, name, descr, acronym, commands FROM character_macroses WHERE char_obj_id=?");
 			statement.setInt(1, _owner.getObjectId());

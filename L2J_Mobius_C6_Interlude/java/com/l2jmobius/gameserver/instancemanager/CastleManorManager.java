@@ -196,7 +196,7 @@ public class CastleManorManager
 	{
 		ResultSet rs = null;
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (Castle castle : CastleManager.getInstance().getCastles())
 			{

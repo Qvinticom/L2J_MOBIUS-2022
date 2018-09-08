@@ -76,7 +76,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	{
 		String result = "";
 		final String repCharAcc = activeChar.getAccountName();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT char_name FROM characters WHERE account_name=?");
 			statement.setString(1, repCharAcc);
@@ -104,7 +104,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	{
 		boolean result = false;
 		String repCharAcc = "";
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT account_name FROM characters WHERE char_name=?");
 			statement.setString(1, repairChar);
@@ -133,7 +133,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		boolean result = false;
 		int accessLevel = 0;
 		int repCharJail = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel,punish_level FROM characters WHERE char_name=?");
 			statement.setString(1, repairChar);
@@ -162,7 +162,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	{
 		boolean result = false;
 		int repCharKarma = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT karma FROM characters WHERE char_name=?");
 			statement.setString(1, repairChar);
@@ -198,7 +198,7 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 	
 	private void repairBadCharacter(String charName)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");

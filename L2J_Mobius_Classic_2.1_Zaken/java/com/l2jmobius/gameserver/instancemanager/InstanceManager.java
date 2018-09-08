@@ -498,7 +498,7 @@ public final class InstanceManager implements IGameXmlReader
 	 */
 	private void restoreInstanceTimes()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM character_instance_time ORDER BY charId"))
 		{
@@ -550,7 +550,7 @@ public final class InstanceManager implements IGameXmlReader
 		// Remove them
 		if (!invalidPenalty.isEmpty())
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME))
 			{
 				for (Integer id : invalidPenalty)
@@ -615,7 +615,7 @@ public final class InstanceManager implements IGameXmlReader
 	 */
 	public void deleteInstanceTime(L2PcInstance player, int id)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME))
 		{
 			ps.setInt(1, player.getObjectId());

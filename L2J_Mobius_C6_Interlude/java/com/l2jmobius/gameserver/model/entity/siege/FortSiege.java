@@ -665,7 +665,7 @@ public class FortSiege
 	 */
 	public void clearSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=?");
 			statement.setInt(1, getFort().getFortId());
@@ -703,7 +703,7 @@ public class FortSiege
 	 */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=? and type = 2");
 			statement.setInt(1, getFort().getFortId());
@@ -990,7 +990,7 @@ public class FortSiege
 	 */
 	public void removeSiegeClan(int clanId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -1245,7 +1245,7 @@ public class FortSiege
 	/** Load siege clans. */
 	private void loadSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
@@ -1341,7 +1341,7 @@ public class FortSiege
 	/** Save siege date to database. */
 	private void saveSiegeDate()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update fort set siegeDate = ? where id = ?");
 			statement.setLong(1, getFort().getSiegeDate().getTimeInMillis());
@@ -1383,7 +1383,7 @@ public class FortSiege
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			if (!isUpdateRegistration)

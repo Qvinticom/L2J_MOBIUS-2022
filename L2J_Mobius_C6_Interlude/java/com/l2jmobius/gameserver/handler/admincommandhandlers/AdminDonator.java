@@ -136,7 +136,7 @@ public class AdminDonator implements IAdminCommandHandler
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement(newDonator ? INSERT_DATA : DEL_DATA);
 			

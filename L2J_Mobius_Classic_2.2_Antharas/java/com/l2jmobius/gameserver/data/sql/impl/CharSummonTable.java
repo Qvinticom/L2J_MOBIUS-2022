@@ -70,7 +70,7 @@ public class CharSummonTable
 	{
 		if (Config.RESTORE_SERVITOR_ON_RECONNECT)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_SUMMONS))
 			{
@@ -87,7 +87,7 @@ public class CharSummonTable
 		
 		if (Config.RESTORE_PET_ON_RECONNECT)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_PET))
 			{
@@ -111,7 +111,7 @@ public class CharSummonTable
 			return !v.isEmpty() ? v : null;
 		});
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(REMOVE_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -181,7 +181,7 @@ public class CharSummonTable
 	
 	public void restoreServitor(L2PcInstance activeChar)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -229,7 +229,7 @@ public class CharSummonTable
 		
 		_servitors.computeIfAbsent(summon.getOwner().getObjectId(), k -> ConcurrentHashMap.newKeySet()).add(summon.getObjectId());
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SAVE_SUMMON))
 		{
 			ps.setInt(1, summon.getOwner().getObjectId());

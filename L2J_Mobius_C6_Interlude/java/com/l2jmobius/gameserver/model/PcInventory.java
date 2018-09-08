@@ -670,7 +670,7 @@ public class PcInventory extends Inventory
 	public static int[][] restoreVisibleInventory(int objectId)
 	{
 		final int[][] paperdoll = new int[0x12][3];
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'");
 			statement2.setInt(1, objectId);

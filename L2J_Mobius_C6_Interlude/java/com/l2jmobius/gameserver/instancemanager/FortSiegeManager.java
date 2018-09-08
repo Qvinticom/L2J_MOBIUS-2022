@@ -144,7 +144,7 @@ public class FortSiegeManager
 		}
 		
 		boolean register = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM fortsiege_clans where clan_id=? and fort_id=?");
 			statement.setInt(1, clan.getClanId());

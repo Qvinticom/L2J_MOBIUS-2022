@@ -86,7 +86,7 @@ public class HeroCustomItem implements IItemHandler
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement(INSERT_DATA);
 			

@@ -584,7 +584,7 @@ public class LoginServerThread extends Thread
 		
 		int chars = 0;
 		final List<Long> charToDel = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT deletetime FROM characters WHERE account_name=?"))
 		{
 			ps.setString(1, account);

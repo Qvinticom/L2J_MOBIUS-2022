@@ -164,7 +164,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 				pet.unSummon(activeChar);
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 			{
 				statement.setInt(1, _objectId);

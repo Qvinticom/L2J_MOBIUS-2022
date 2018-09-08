@@ -86,7 +86,7 @@ public class HelperBuffTable
 	 */
 	private void restoreHelperBuffData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM helper_buff_list");
 			final ResultSet helperbuffdata = statement.executeQuery();

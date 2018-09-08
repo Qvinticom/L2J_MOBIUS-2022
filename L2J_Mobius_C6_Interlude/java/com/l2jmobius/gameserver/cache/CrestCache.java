@@ -167,7 +167,7 @@ public class CrestCache
 				file.renameTo(new File(Config.DATAPACK_ROOT, "data/crests/Crest_" + newId + ".bmp"));
 				LOGGER.info("Renamed Clan crest to new format: Crest_" + newId + ".bmp");
 				
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
 					statement.setInt(1, newId);

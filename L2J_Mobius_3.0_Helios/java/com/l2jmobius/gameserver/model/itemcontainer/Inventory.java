@@ -1813,7 +1813,7 @@ public abstract class Inventory extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=? OR loc=?) ORDER BY loc_data"))
 		{
 			ps.setInt(1, getOwnerId());

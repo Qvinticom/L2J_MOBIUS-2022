@@ -1150,7 +1150,7 @@ public class Quest extends ManagedScript
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -1255,7 +1255,7 @@ public class Quest extends ManagedScript
 	 */
 	public final void saveGlobalQuestVar(String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("REPLACE INTO quest_global_data (quest_name,var,value) VALUES (?,?,?)");
@@ -1280,7 +1280,7 @@ public class Quest extends ManagedScript
 	public final String loadGlobalQuestVar(String var)
 	{
 		String result = "";
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("SELECT value FROM quest_global_data WHERE quest_name = ? AND var = ?");
@@ -1309,7 +1309,7 @@ public class Quest extends ManagedScript
 	 */
 	public final void deleteGlobalQuestVar(String var)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ? AND var = ?");
@@ -1329,7 +1329,7 @@ public class Quest extends ManagedScript
 	 */
 	public final void deleteAllGlobalQuestVars()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM quest_global_data WHERE quest_name = ?");
@@ -1351,7 +1351,7 @@ public class Quest extends ManagedScript
 	 */
 	public static void createQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("INSERT INTO character_quests (char_id,name,var,value) VALUES (?,?,?,?)");
@@ -1389,7 +1389,7 @@ public class Quest extends ManagedScript
 	 */
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE char_id=? AND name=? AND var = ?");
@@ -1413,7 +1413,7 @@ public class Quest extends ManagedScript
 	 */
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND name=? AND var=?");
@@ -1435,7 +1435,7 @@ public class Quest extends ManagedScript
 	 */
 	public static void deleteQuestInDb(QuestState qs)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM character_quests WHERE char_id=? AND name=?");

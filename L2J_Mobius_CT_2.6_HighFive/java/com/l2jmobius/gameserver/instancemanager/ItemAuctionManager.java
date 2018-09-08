@@ -58,7 +58,7 @@ public final class ItemAuctionManager
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
 		{
@@ -135,7 +135,7 @@ public final class ItemAuctionManager
 	
 	public static void deleteAuction(int auctionId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
 			{

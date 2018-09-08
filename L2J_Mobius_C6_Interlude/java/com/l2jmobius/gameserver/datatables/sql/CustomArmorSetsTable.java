@@ -43,7 +43,7 @@ public final class CustomArmorSetsTable
 	
 	public CustomArmorSetsTable()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill FROM custom_armorsets");
 			final ResultSet rset = statement.executeQuery();

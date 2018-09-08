@@ -169,7 +169,7 @@ public final class CursedWeaponsManager
 	
 	private final void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT itemId, charId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons"))
 		{
@@ -202,7 +202,7 @@ public final class CursedWeaponsManager
 		// or a lost-child entry in the cursed weapons table, without a corresponding one in items...
 		
 		// Retrieve the L2PcInstance from the characters table of the database
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT owner_id FROM items WHERE item_id=?"))
 		{
 			for (CursedWeapon cw : _cursedWeapons.values())
@@ -362,7 +362,7 @@ public final class CursedWeaponsManager
 	
 	public static void removeFromDb(int itemId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?"))
 		{
 			ps.setInt(1, itemId);

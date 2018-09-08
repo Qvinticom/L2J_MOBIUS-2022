@@ -114,7 +114,7 @@ public class Hero
 		_herodiary.clear();
 		_heroMessage.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s1 = con.createStatement();
 			ResultSet rset = s1.executeQuery(GET_HEROES);
 			PreparedStatement ps = con.prepareStatement(GET_CLAN_ALLY);
@@ -211,7 +211,7 @@ public class Hero
 	 */
 	public void loadMessage(int charId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT message FROM heroes WHERE charId=?"))
 		{
 			statement.setInt(1, charId);
@@ -233,7 +233,7 @@ public class Hero
 	{
 		final List<StatsSet> _diary = new CopyOnWriteArrayList<>();
 		int diaryentries = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM  heroes_diary WHERE charId=? ORDER BY time ASC"))
 		{
 			statement.setInt(1, charId);
@@ -300,7 +300,7 @@ public class Hero
 		int _losses = 0;
 		int _draws = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM olympiad_fights WHERE (charOneId=? OR charTwoId=?) AND start<? ORDER BY start ASC"))
 		{
 			statement.setInt(1, charId);
@@ -699,7 +699,7 @@ public class Hero
 	
 	public void updateHeroes(boolean setDefault)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (setDefault)
 			{
@@ -841,7 +841,7 @@ public class Hero
 	
 	public void setDiaryData(int charId, int action, int param)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO heroes_diary (charId, time, action, param) values(?,?,?,?)"))
 		{
 			statement.setInt(1, charId);
@@ -877,7 +877,7 @@ public class Hero
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE heroes SET message=? WHERE charId=?;"))
 		{
 			statement.setString(1, _heroMessage.get(charId));
@@ -892,7 +892,7 @@ public class Hero
 	
 	private void deleteItemsInDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(DELETE_ITEMS))
 		{
 			statement.execute();

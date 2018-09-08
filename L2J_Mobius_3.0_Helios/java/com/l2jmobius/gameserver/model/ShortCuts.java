@@ -85,7 +85,7 @@ public class ShortCuts implements IRestorable
 			deleteShortCutFromDb(oldShortCut);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("REPLACE INTO character_shortcuts (charId,slot,page,type,shortcut_id,level,sub_level,class_index) values(?,?,?,?,?,?,?,?)"))
 		{
 			statement.setInt(1, _owner.getObjectId());
@@ -154,7 +154,7 @@ public class ShortCuts implements IRestorable
 	 */
 	private void deleteShortCutFromDb(Shortcut shortcut)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_shortcuts WHERE charId=? AND slot=? AND page=? AND class_index=?"))
 		{
 			statement.setInt(1, _owner.getObjectId());
@@ -173,7 +173,7 @@ public class ShortCuts implements IRestorable
 	public boolean restoreMe()
 	{
 		_shortCuts.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT charId, slot, page, type, shortcut_id, level, sub_level FROM character_shortcuts WHERE charId=? AND class_index=?"))
 		{
 			statement.setInt(1, _owner.getObjectId());

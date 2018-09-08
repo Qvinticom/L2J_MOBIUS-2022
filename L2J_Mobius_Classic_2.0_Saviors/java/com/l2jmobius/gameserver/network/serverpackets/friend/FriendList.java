@@ -70,7 +70,7 @@ public class FriendList implements IClientOutgoingPacket
 			
 			if (player1 == null)
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement("SELECT char_name, online, classid, level FROM characters WHERE charId = ?"))
 				{
 					statement.setInt(1, objId);

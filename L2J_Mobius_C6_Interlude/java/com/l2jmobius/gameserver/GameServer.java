@@ -184,7 +184,7 @@ public class GameServer
 		Config.load();
 		
 		Util.printSection("Database");
-		DatabaseFactory.getInstance();
+		DatabaseFactory.init();
 		
 		Util.printSection("ThreadPool");
 		ThreadPool.init();

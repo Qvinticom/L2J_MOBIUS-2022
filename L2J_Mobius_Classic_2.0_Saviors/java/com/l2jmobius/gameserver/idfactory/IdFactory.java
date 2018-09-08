@@ -128,7 +128,7 @@ public abstract class IdFactory
 	 */
 	private void setAllCharacterOffline()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("UPDATE characters SET online = 0");
@@ -145,7 +145,7 @@ public abstract class IdFactory
 	 */
 	private void cleanUpDB()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement stmt = con.createStatement())
 		{
 			final long cleanupStart = System.currentTimeMillis();
@@ -253,7 +253,7 @@ public abstract class IdFactory
 	
 	private void cleanUpTimeStamps()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int cleanCount = 0;
 			for (String line : TIMESTAMPS_CLEAN)
@@ -279,7 +279,7 @@ public abstract class IdFactory
 	protected final Integer[] extractUsedObjectIDTable() throws Exception
 	{
 		final List<Integer> temp = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			String extractUsedObjectIdsQuery = "";

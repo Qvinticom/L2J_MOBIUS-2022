@@ -62,7 +62,7 @@ public class RequestPetitionFeedback implements IClientIncomingPacket
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(INSERT_FEEDBACK))
 		{
 			statement.setString(1, player.getName());

@@ -57,7 +57,7 @@ public class SkillTreeTable
 		int classId = 0;
 		int count = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM class_list ORDER BY id");
 			final ResultSet classlist = statement.executeQuery();
@@ -122,7 +122,7 @@ public class SkillTreeTable
 		int count2 = 0;
 		int count3 = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			_fishingSkillTrees = new ArrayList<>();
 			_expandDwarfCraftSkillTrees = new ArrayList<>();
@@ -172,7 +172,7 @@ public class SkillTreeTable
 		}
 		
 		int count4 = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			_enchantSkillTrees = new ArrayList<>();
 			
@@ -215,7 +215,7 @@ public class SkillTreeTable
 		}
 		
 		int count5 = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			_pledgeSkillTrees = new ArrayList<>();
 			

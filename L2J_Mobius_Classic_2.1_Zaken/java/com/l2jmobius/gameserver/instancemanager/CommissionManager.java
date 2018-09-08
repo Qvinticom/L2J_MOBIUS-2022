@@ -79,7 +79,7 @@ public final class CommissionManager
 	protected CommissionManager()
 	{
 		final Map<Integer, L2ItemInstance> itemInstances = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement(SELECT_ALL_ITEMS))
 			{
@@ -245,7 +245,7 @@ public final class CommissionManager
 				return;
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_COMMISSION_ITEM, Statement.RETURN_GENERATED_KEYS))
 			{
 				final Instant startTime = Instant.now();
@@ -398,7 +398,7 @@ public final class CommissionManager
 	 */
 	private boolean deleteItemFromDB(long commissionId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_COMMISSION_ITEM))
 		{
 			ps.setLong(1, commissionId);

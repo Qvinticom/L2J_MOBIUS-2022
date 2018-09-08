@@ -123,7 +123,7 @@ public class ZoneData
 		boolean done = false;
 		
 		// Load the zone xml
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 			factory.setValidating(false);

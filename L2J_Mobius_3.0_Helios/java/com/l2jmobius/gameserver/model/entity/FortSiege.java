@@ -501,7 +501,7 @@ public class FortSiege implements Siegable
 	/** Clear all registered siege clans from database for fort */
 	public void clearSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM fortsiege_clans WHERE fort_id=?"))
 		{
 			ps.setInt(1, _fort.getResidenceId());
@@ -785,7 +785,7 @@ public class FortSiege implements Siegable
 	private void removeSiegeClan(int clanId)
 	{
 		final String query = (clanId != 0) ? DELETE_FORT_SIEGECLANS_BY_CLAN_ID : DELETE_FORT_SIEGECLANS;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(query))
 		{
 			statement.setInt(1, _fort.getResidenceId());
@@ -999,7 +999,7 @@ public class FortSiege implements Siegable
 	private void loadSiegeClan()
 	{
 		_attackerClans.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT clan_id FROM fortsiege_clans WHERE fort_id=?"))
 		{
 			ps.setInt(1, _fort.getResidenceId());
@@ -1057,7 +1057,7 @@ public class FortSiege implements Siegable
 	/** Save siege date to database. */
 	private void saveSiegeDate()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE fort SET siegeDate = ? WHERE id = ?"))
 		{
 			ps.setLong(1, _fort.getSiegeDate().getTimeInMillis());
@@ -1081,7 +1081,7 @@ public class FortSiege implements Siegable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO fortsiege_clans (clan_id,fort_id) values (?,?)"))
 		{
 			statement.setInt(1, clan.getId());
@@ -1146,7 +1146,7 @@ public class FortSiege implements Siegable
 	public void loadSiegeGuard()
 	{
 		_siegeGuards.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT npcId, x, y, z, heading, respawnDelay FROM fort_siege_guards WHERE fortId = ?"))
 		{
 			final int fortId = _fort.getResidenceId();

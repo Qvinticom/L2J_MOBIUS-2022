@@ -57,7 +57,7 @@ public class TerritoryTable
 	public void reload_data()
 	{
 		_territory.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT loc_id, loc_x, loc_y, loc_zmin, loc_zmax, proc FROM `locations`");
 			final ResultSet rset = statement.executeQuery();

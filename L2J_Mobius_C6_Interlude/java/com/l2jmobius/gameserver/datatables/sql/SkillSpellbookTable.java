@@ -49,7 +49,7 @@ public class SkillSpellbookTable
 	private SkillSpellbookTable()
 	{
 		skillSpellbooks = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT skill_id, item_id FROM skill_spellbooks");
 			final ResultSet spbooks = statement.executeQuery();

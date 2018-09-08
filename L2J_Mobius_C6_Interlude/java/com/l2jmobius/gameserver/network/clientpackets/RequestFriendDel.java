@@ -56,7 +56,7 @@ public final class RequestFriendDel extends L2GameClientPacket
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (char_id = ? AND friend_id = ?) OR (char_id = ? AND friend_id = ?)");
 			statement.setInt(1, activeChar.getObjectId());

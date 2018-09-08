@@ -898,7 +898,7 @@ public final class L2ItemInstance extends L2Object
 		}
 		
 		_augmentation = augmentation;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			updateItemAttributes(con);
 		}
@@ -924,7 +924,7 @@ public final class L2ItemInstance extends L2Object
 		final L2Augmentation augment = _augmentation;
 		_augmentation = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM item_attributes WHERE itemId = ?"))
 		{
 			ps.setInt(1, getObjectId());
@@ -941,7 +941,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void restoreAttributes()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement("SELECT augAttributes FROM item_attributes WHERE itemId=?");
 			PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?"))
 		{
@@ -1139,7 +1139,7 @@ public final class L2ItemInstance extends L2Object
 	public void setElementAttr(byte element, int value)
 	{
 		applyAttribute(element, value);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			updateItemElements(con);
 		}
@@ -1176,7 +1176,7 @@ public final class L2ItemInstance extends L2Object
 		_elementals = array;
 		
 		final String query = (element != -1) ? "DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?" : "DELETE FROM item_elementals WHERE itemId = ?";
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			if (element != -1)
@@ -1598,7 +1598,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
@@ -1631,7 +1631,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time) VALUES (?,?,?,?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _ownerId);
@@ -1675,7 +1675,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE object_id = ?"))
 			{

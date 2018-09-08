@@ -842,7 +842,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	
 	private static void updateAttacker(int clanId, long count, boolean remove)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			if (remove)
@@ -868,7 +868,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	@Override
 	public void loadAttackers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM rainbowsprings_attacker_list");
 			final ResultSet rset = statement.executeQuery();

@@ -176,7 +176,7 @@ public class CharTemplateTable
 	private CharTemplateTable()
 	{
 		_templates = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM class_list, char_templates, lvlupgain WHERE class_list.id = char_templates.classId AND class_list.id = lvlupgain.classId ORDER BY class_list.id");
 			ResultSet rset = statement.executeQuery();

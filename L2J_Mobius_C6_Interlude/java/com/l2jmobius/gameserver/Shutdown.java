@@ -357,7 +357,7 @@ public class Shutdown extends Thread
 		// commit data, last chance
 		try
 		{
-			DatabaseFactory.getInstance().close();
+			DatabaseFactory.close();
 		}
 		catch (Throwable t)
 		{

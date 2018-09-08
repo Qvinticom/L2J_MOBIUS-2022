@@ -69,7 +69,7 @@ public class AdminWalker implements IAdminCommandHandler
 				{
 					_npcid = Integer.parseInt(parts[1]);
 					
-					try (Connection con = DatabaseFactory.getInstance().getConnection())
+					try (Connection con = DatabaseFactory.getConnection())
 					{
 						PreparedStatement statement = con.prepareStatement("SELECT `route_id` FROM `walker_routes` WHERE `npc_id` = " + _npcid + ";");
 						final ResultSet rset = statement.executeQuery();
@@ -151,7 +151,7 @@ public class AdminWalker implements IAdminCommandHandler
 	
 	private void setPoint(int x, int y, int z)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

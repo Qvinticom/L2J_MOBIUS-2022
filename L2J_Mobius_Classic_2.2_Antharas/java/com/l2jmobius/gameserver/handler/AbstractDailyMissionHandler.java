@@ -77,7 +77,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	public synchronized void reset()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_daily_rewards WHERE rewardId = ? AND status = ?"))
 		{
 			ps.setInt(1, _holder.getId());
@@ -118,7 +118,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 	
 	protected void storePlayerEntry(DailyMissionPlayerEntry entry)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO character_daily_rewards (charId, rewardId, status, progress, lastCompleted) VALUES (?, ?, ?, ?, ?)"))
 		{
 			ps.setInt(1, entry.getObjectId());
@@ -145,7 +145,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer
 			return existingEntry;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM character_daily_rewards WHERE charId = ? AND rewardId = ?"))
 		{
 			ps.setInt(1, objectId);

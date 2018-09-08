@@ -50,7 +50,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 	public boolean restoreMe()
 	{
 		// Restore previous variables.
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery(SELECT_QUERY))
 		{
@@ -81,7 +81,7 @@ public final class GlobalVariablesManager extends AbstractVariables
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement del = con.createStatement();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY))
 		{

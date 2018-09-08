@@ -186,7 +186,7 @@ public class CursedWeaponsManager
 	
 	private final void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT itemId, playerId, playerKarma, playerPkKills, nbKills, endTime FROM cursed_weapons");
 			ResultSet rset = statement.executeQuery();
@@ -223,7 +223,7 @@ public class CursedWeaponsManager
 	
 	private final void controlPlayers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
 			ResultSet rset = null;
@@ -411,7 +411,7 @@ public class CursedWeaponsManager
 	
 	public static void removeFromDb(int itemId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			statement.setInt(1, itemId);

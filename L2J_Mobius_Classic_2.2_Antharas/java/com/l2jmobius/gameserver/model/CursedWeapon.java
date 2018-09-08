@@ -136,7 +136,7 @@ public class CursedWeapon implements INamable
 				// Remove from Db
 				LOGGER.info(_name + " being removed offline.");
 				
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement del = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
 					PreparedStatement ps = con.prepareStatement("UPDATE characters SET reputation=?, pkkills=? WHERE charId=?"))
 				{
@@ -471,7 +471,7 @@ public class CursedWeapon implements INamable
 	
 	public void saveData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement del = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");
 			PreparedStatement ps = con.prepareStatement("INSERT INTO cursed_weapons (itemId, charId, playerReputation, playerPkKills, nbKills, endTime) VALUES (?, ?, ?, ?, ?, ?)"))
 		{

@@ -297,7 +297,7 @@ public class VanHalter extends Quest
 	{
 		_royalGuardSpawn.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid between ? and ? ORDER BY id");
 			statement.setInt(1, 22175);
@@ -372,7 +372,7 @@ public class VanHalter extends Quest
 	{
 		_triolRevelationSpawn.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid between ? and ? ORDER BY id");
 			statement.setInt(1, 32058);
@@ -451,7 +451,7 @@ public class VanHalter extends Quest
 	{
 		_royalGuardCaptainSpawn.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 22188);
@@ -526,7 +526,7 @@ public class VanHalter extends Quest
 	{
 		_royalGuardHelperSpawn.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 22191);
@@ -594,7 +594,7 @@ public class VanHalter extends Quest
 	{
 		_guardOfAltarSpawn.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 32051);
@@ -668,7 +668,7 @@ public class VanHalter extends Quest
 	{
 		_vanHalterSpawn = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 29062);
@@ -733,7 +733,7 @@ public class VanHalter extends Quest
 	{
 		_ritualOfferingSpawn = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 32038);
@@ -799,7 +799,7 @@ public class VanHalter extends Quest
 	{
 		_ritualSacrificeSpawn = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay FROM vanhalter_spawnlist Where npc_templateid = ? ORDER BY id");
 			statement.setInt(1, 22195);

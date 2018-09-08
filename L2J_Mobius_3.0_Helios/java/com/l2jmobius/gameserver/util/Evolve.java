@@ -248,7 +248,7 @@ public final class Evolve
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 		{
 			ps.setInt(1, removedItem.getObjectId());

@@ -319,7 +319,7 @@ public class ItemTable
 			// if it's a pet control item, delete the pet as well
 			if (L2PetDataTable.isPetItem(item.getItemId()))
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 					statement.setInt(1, item.getObjectId());

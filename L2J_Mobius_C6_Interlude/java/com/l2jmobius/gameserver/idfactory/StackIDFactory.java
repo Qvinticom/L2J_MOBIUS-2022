@@ -46,7 +46,7 @@ public class StackIDFactory extends IdFactory
 		_curOID = FIRST_OID;
 		_tempOID = FIRST_OID;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final int[] tmp_obj_ids = extractUsedObjectIDTable();
 			if (tmp_obj_ids.length > 0)

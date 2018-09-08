@@ -141,7 +141,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		
 		if (L2PetDataTable.isPetItem(itemId))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				if ((activeChar.getPet() != null) && (activeChar.getPet().getControlItemId() == _objectId))
 				{

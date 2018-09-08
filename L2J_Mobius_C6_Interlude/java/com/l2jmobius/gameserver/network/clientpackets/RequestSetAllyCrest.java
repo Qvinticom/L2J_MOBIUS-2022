@@ -93,7 +93,7 @@ public final class RequestSetAllyCrest extends L2GameClientPacket
 				crestCache.removeAllyCrest(leaderclan.getAllyCrestId());
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET ally_crest_id = ? WHERE ally_id = ?");
 				statement.setInt(1, newId);

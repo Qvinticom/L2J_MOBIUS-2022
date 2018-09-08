@@ -673,7 +673,7 @@ public abstract class ItemContainer
 	 */
 	public void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND (loc=?)"))
 		{
 			ps.setInt(1, getOwnerId());

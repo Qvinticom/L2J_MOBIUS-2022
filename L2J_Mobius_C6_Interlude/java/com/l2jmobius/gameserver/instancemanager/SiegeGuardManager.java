@@ -117,7 +117,7 @@ public class SiegeGuardManager
 	 */
 	public void removeMerc(int npcId, int x, int y, int z)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where npcId = ? And x = ? AND y = ? AND z = ? AND isHired = 1");
 			statement.setInt(1, npcId);
@@ -139,7 +139,7 @@ public class SiegeGuardManager
 	 */
 	public void removeMercs()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Delete From castle_siege_guards Where castleId = ? And isHired = 1");
 			statement.setInt(1, _castle.getCastleId());
@@ -196,7 +196,7 @@ public class SiegeGuardManager
 	 */
 	private void loadSiegeGuard()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM castle_siege_guards Where castleId = ? And isHired = ?");
 			statement.setInt(1, _castle.getCastleId());
@@ -255,7 +255,7 @@ public class SiegeGuardManager
 	 */
 	private void saveSiegeGuard(int x, int y, int z, int heading, int npcId, int isHire)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Insert Into castle_siege_guards (castleId, npcId, x, y, z, heading, respawnDelay, isHired) Values (?, ?, ?, ?, ?, ?, ?, ?)");
 			statement.setInt(1, _castle.getCastleId());

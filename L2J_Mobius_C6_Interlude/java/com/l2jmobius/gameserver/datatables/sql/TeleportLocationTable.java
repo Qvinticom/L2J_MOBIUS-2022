@@ -58,7 +58,7 @@ public class TeleportLocationTable
 	{
 		teleports = new HashMap<>();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT Description, id, loc_x, loc_y, loc_z, price, fornoble FROM teleport");
 			final ResultSet rset = statement.executeQuery();
@@ -90,7 +90,7 @@ public class TeleportLocationTable
 		
 		if (Config.CUSTOM_TELEPORT_TABLE)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("SELECT Description, id, loc_x, loc_y, loc_z, price, fornoble FROM custom_teleport");
 				final ResultSet rset = statement.executeQuery();

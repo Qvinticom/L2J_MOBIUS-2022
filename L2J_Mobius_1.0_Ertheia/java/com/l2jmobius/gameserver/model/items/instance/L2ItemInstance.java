@@ -976,7 +976,7 @@ public final class L2ItemInstance extends L2Object
 		final VariationInstance augment = _augmentation;
 		_augmentation = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM item_variations WHERE itemId = ?"))
 		{
 			ps.setInt(1, getObjectId());
@@ -993,7 +993,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void restoreAttributes()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?");
 			PreparedStatement ps2 = con.prepareStatement("SELECT elemType,elemValue FROM item_elementals WHERE itemId=?"))
 		{
@@ -1034,7 +1034,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void updateItemOptions()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			updateItemOptions(con);
 		}
@@ -1062,7 +1062,7 @@ public final class L2ItemInstance extends L2Object
 	
 	public void updateItemElementals()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			updateItemElements(con);
 		}
@@ -1224,7 +1224,7 @@ public final class L2ItemInstance extends L2Object
 			_elementals.remove(type);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ? AND elemType = ?"))
 		{
 			ps.setInt(1, getObjectId());
@@ -1249,7 +1249,7 @@ public final class L2ItemInstance extends L2Object
 			_elementals.clear();
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM item_elementals WHERE itemId = ?"))
 		{
 			ps.setInt(1, getObjectId());
@@ -1581,7 +1581,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?"))
 		{
 			ps.setInt(1, _ownerId);
@@ -1614,7 +1614,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time) VALUES (?,?,?,?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _ownerId);
@@ -1658,7 +1658,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM items WHERE object_id = ?"))
 			{

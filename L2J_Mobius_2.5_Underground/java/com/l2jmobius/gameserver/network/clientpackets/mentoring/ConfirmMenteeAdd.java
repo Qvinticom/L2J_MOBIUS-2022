@@ -74,7 +74,7 @@ public class ConfirmMenteeAdd implements IClientIncomingPacket
 		}
 		else if (validate(mentor, mentee))
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("INSERT INTO character_mentees (charId, mentorId) VALUES (?, ?)"))
 			{
 				statement.setInt(1, mentee.getObjectId());

@@ -724,7 +724,7 @@ public class Siege implements Siegable
 	/** Clear all registered siege clans from database for castle */
 	public void clearSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -752,7 +752,7 @@ public class Siege implements Siegable
 	/** Clear all siege clans waiting for approval from database for castle */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -972,7 +972,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?"))
 		{
 			ps.setInt(1, getCastle().getResidenceId());
@@ -1237,7 +1237,7 @@ public class Siege implements Siegable
 	/** Load siege clans. */
 	private void loadSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
 		{
 			getAttackerClans().clear();
@@ -1348,7 +1348,7 @@ public class Siege implements Siegable
 			_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(getCastle()), 1000);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle SET siegeDate = ?, regTimeEnd = ?, regTimeOver = ?  WHERE id = ?"))
 		{
 			ps.setLong(1, getSiegeDate().getTimeInMillis());
@@ -1377,7 +1377,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if ((typeId == DEFENDER) || (typeId == DEFENDER_NOT_APPROVED) || (typeId == OWNER))
 			{

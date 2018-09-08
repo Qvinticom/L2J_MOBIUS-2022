@@ -266,7 +266,7 @@ public class Auction
 	 */
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -308,7 +308,7 @@ public class Auction
 		_highestBidderName = "";
 		_highestBidderMaxBid = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -373,7 +373,7 @@ public class Auction
 	 */
 	private void saveAuctionDate()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update auction set endDate = ? where id = ?");
 			statement.setLong(1, _endDate);
@@ -461,7 +461,7 @@ public class Auction
 	 */
 	private void updateInDB(L2PcInstance bidder, int bid)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -523,7 +523,7 @@ public class Auction
 	 */
 	private void removeBids()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -559,7 +559,7 @@ public class Auction
 	public void deleteAuctionFromDB()
 	{
 		AuctionManager.getInstance().getAuctions().remove(this);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM auction WHERE itemId=?");
@@ -623,7 +623,7 @@ public class Auction
 	 */
 	public synchronized void cancelBid(int bidder)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -660,7 +660,7 @@ public class Auction
 	public void confirmAuction()
 	{
 		AuctionManager.getInstance().getAuctions().add(this);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");

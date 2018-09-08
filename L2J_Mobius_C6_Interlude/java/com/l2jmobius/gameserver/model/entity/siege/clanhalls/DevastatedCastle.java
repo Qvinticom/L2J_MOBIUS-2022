@@ -866,7 +866,7 @@ public class DevastatedCastle
 	
 	private void update()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

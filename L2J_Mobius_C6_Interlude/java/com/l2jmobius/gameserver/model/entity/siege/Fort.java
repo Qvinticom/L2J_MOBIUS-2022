@@ -342,7 +342,7 @@ public class Fort
 	// This method loads fort
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -402,7 +402,7 @@ public class Fort
 	// This method loads fort door data from database
 	private void loadDoor()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from fort_door where fortId = ?");
 			statement.setInt(1, _fortId);
@@ -434,7 +434,7 @@ public class Fort
 	// This method loads fort door upgrade data from database
 	private void loadDoorUpgrade()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from fort_doorupgrade where doorId in (Select Id from fort_door where fortId = ?)");
 			statement.setInt(1, _fortId);
@@ -456,7 +456,7 @@ public class Fort
 	
 	private void removeDoorUpgrade()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("delete from fort_doorupgrade where doorId in (select id from fort_door where fortId=?)");
 			statement.setInt(1, _fortId);
@@ -472,7 +472,7 @@ public class Fort
 	
 	private void saveDoorUpgrade(int doorId, int hp, int pDef, int mDef)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO fort_doorupgrade (doorId, hp, pDef, mDef) values (?,?,?,?)");
 			statement.setInt(1, doorId);
@@ -500,7 +500,7 @@ public class Fort
 			_ownerId = 0; // Remove owner
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

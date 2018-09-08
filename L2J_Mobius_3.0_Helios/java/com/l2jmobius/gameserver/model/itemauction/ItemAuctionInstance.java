@@ -161,7 +161,7 @@ public final class ItemAuctionInstance
 			throw new IllegalArgumentException("No items defined");
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_AUCTION_ID_BY_INSTANCE_ID))
 		{
 			ps.setInt(1, _instanceId);
@@ -533,7 +533,7 @@ public final class ItemAuctionInstance
 	
 	private ItemAuction loadAuction(int auctionId) throws SQLException
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int auctionItemId = 0;
 			long startingTime = 0;

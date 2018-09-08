@@ -119,7 +119,7 @@ public final class InstanceManager implements IGameXmlReader
 			restoreInstanceTimes(playerObjId);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(ADD_INSTANCE_TIME))
 		{
 			ps.setInt(1, playerObjId);
@@ -141,7 +141,7 @@ public final class InstanceManager implements IGameXmlReader
 	 */
 	public void deleteInstanceTime(int playerObjId, int id)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_INSTANCE_TIME))
 		{
 			ps.setInt(1, playerObjId);
@@ -165,7 +165,7 @@ public final class InstanceManager implements IGameXmlReader
 			return; // already restored
 		}
 		_playerInstanceTimes.put(playerObjId, new ConcurrentHashMap<>());
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(RESTORE_INSTANCE_TIMES))
 		{
 			ps.setInt(1, playerObjId);

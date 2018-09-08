@@ -211,7 +211,7 @@ public class Wedding implements IVoicedCommandHandler
 		// check if target has player on friendlist
 		boolean FoundOnFriendList = false;
 		int objectId;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT friendId FROM character_friends WHERE charId=?");
 			statement.setInt(1, ptarget.getObjectId());

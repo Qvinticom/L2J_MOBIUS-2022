@@ -56,7 +56,7 @@ public class TaskBirthday extends Task
 	private int giveBirthdayGifts(long lastActivation)
 	{
 		int birthdayGiftCount = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SELECT_PENDING_BIRTHDAY_GIFTS))
 		{
 			ps.setLong(1, TimeUnit.SECONDS.convert(lastActivation, TimeUnit.MILLISECONDS));

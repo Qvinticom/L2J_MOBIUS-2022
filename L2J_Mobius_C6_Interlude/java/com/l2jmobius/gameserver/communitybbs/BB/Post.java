@@ -71,7 +71,7 @@ public class Post
 	
 	public void insertindb(CPost cp)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO posts (post_id,post_owner_name,post_ownerid,post_date,post_topic_id,post_forum_id,post_txt) values (?,?,?,?,?,?,?)");
 			statement.setInt(1, cp.postId);
@@ -112,7 +112,7 @@ public class Post
 	public void deleteMe(Topic t)
 	{
 		PostBBSManager.getInstance().delPostByTopic(t);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM posts WHERE post_forum_id=? AND post_topic_id=?");
 			statement.setInt(1, t.getForumID());
@@ -128,7 +128,7 @@ public class Post
 	
 	private void load(Topic t)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM posts WHERE post_forum_id=? AND post_topic_id=? ORDER BY post_id ASC");
 			statement.setInt(1, t.getForumID());
@@ -157,7 +157,7 @@ public class Post
 	
 	public void updateText(int i)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			CPost cp = getCPost(i);
 			PreparedStatement statement = con.prepareStatement("UPDATE posts SET post_txt=? WHERE post_id=? AND post_topic_id=? AND post_forum_id=?");

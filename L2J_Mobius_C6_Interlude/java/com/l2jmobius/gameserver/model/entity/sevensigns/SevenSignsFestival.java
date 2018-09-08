@@ -3415,7 +3415,7 @@ public class SevenSignsFestival implements SpawnListener
 			LOGGER.info("SevenSignsFestival: Restoring festival data. Current SS Cycle: " + _signsCycle);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT festivalId, cabal, cycle, date, score, members FROM seven_signs_festival");
 			ResultSet rset = statement.executeQuery();
@@ -3508,7 +3508,7 @@ public class SevenSignsFestival implements SpawnListener
 			LOGGER.info("SevenSignsFestival: Saving festival data to disk.");
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
 			
@@ -3651,7 +3651,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		else
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement(GET_CLAN_NAME);
 				statement.setString(1, partyMemberName);

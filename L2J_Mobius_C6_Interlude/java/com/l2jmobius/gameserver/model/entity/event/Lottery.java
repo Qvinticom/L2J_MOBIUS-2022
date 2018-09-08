@@ -95,7 +95,7 @@ public class Lottery
 	public void increasePrize(int count)
 	{
 		_prize += count;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement(UPDATE_PRICE);
@@ -132,7 +132,7 @@ public class Lottery
 		public void run()
 		{
 			PreparedStatement statement;
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement(SELECT_LAST_LOTTERY);
 				ResultSet rset = statement.executeQuery();
@@ -215,7 +215,7 @@ public class Lottery
 			ThreadPool.schedule(new stopSellingTickets(), _enddate - System.currentTimeMillis() - (10 * MINUTE));
 			ThreadPool.schedule(new finishLottery(), _enddate - System.currentTimeMillis());
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement(INSERT_LOTTERY);
 				statement.setInt(1, 1);
@@ -324,7 +324,7 @@ public class Lottery
 			int count4 = 0;
 			
 			PreparedStatement statement;
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement(SELECT_LOTTERY_ITEM);
 				statement.setInt(1, _number);
@@ -441,7 +441,7 @@ public class Lottery
 				Announcements.getInstance().announceToAll(sm);
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement(UPDATE_LOTTERY);
 				statement.setInt(1, _prize);
@@ -516,7 +516,7 @@ public class Lottery
 		};
 		
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(SELECT_LOTTERY_TICKET);
 			statement.setInt(1, id);

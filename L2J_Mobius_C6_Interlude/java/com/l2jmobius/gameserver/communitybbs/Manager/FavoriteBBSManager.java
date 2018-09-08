@@ -56,7 +56,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 			// Load Favorite links
 			final String list = HtmCache.getInstance().getHtm(CB_PATH + "favorite_list.html");
 			final StringBuilder sb = new StringBuilder();
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(SELECT_FAVORITES))
 			{
 				ps.setInt(1, activeChar.getObjectId());
@@ -93,7 +93,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 					return;
 				}
 				
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement ps = con.prepareStatement(ADD_FAVORITE))
 				{
 					ps.setInt(1, activeChar.getObjectId());
@@ -118,7 +118,7 @@ public class FavoriteBBSManager extends BaseBBSManager
 				return;
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_FAVORITE))
 			{
 				ps.setInt(1, activeChar.getObjectId());

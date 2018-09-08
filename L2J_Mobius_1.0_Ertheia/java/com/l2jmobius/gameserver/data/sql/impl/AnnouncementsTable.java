@@ -52,7 +52,7 @@ public final class AnnouncementsTable
 	private void load()
 	{
 		_announcements.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery("SELECT * FROM announcements"))
 		{

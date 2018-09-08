@@ -158,7 +158,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	private final void loadDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stProduction = con.prepareStatement("SELECT * FROM castle_manor_production WHERE castle_id=?");
 			PreparedStatement stProcure = con.prepareStatement("SELECT * FROM castle_manor_procure WHERE castle_id=?"))
 		{
@@ -432,7 +432,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		_productionNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement dps = con.prepareStatement("DELETE FROM castle_manor_production WHERE castle_id = ? AND next_period = 1");
 				PreparedStatement ips = con.prepareStatement(INSERT_PRODUCT))
 			{
@@ -468,7 +468,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		_procureNext.put(castleId, list);
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement dps = con.prepareStatement("DELETE FROM castle_manor_procure WHERE castle_id = ? AND next_period = 1");
 				PreparedStatement ips = con.prepareStatement(INSERT_CROP))
 			{
@@ -502,7 +502,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final void updateCurrentProduction(int castleId, Collection<SeedProduction> items)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_production SET amount = ? WHERE castle_id = ? AND seed_id = ? AND next_period = 0"))
 		{
 			for (SeedProduction sp : items)
@@ -522,7 +522,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final void updateCurrentProcure(int castleId, Collection<CropProcure> items)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE castle_manor_procure SET amount = ? WHERE castle_id = ? AND crop_id = ? AND next_period = 0"))
 		{
 			for (CropProcure sp : items)
@@ -595,7 +595,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	@Override
 	public final boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ds = con.prepareStatement("DELETE FROM castle_manor_production");
 			PreparedStatement is = con.prepareStatement(INSERT_PRODUCT);
 			PreparedStatement dp = con.prepareStatement("DELETE FROM castle_manor_procure");
@@ -693,7 +693,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 		
 		if (Config.ALT_MANOR_SAVE_ALL_ACTIONS)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ds = con.prepareStatement("DELETE FROM castle_manor_production WHERE castle_id = ?");
 				PreparedStatement dc = con.prepareStatement("DELETE FROM castle_manor_procure WHERE castle_id = ?"))
 			{

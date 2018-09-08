@@ -941,7 +941,7 @@ public class SevenSignsFestival implements SpawnListener
 	 */
 	protected void restoreFestivalData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT festivalId, cabal, cycle, date, score, members FROM seven_signs_festival"))
 		{
@@ -989,7 +989,7 @@ public class SevenSignsFestival implements SpawnListener
 		query.append(' ');
 		query.append("FROM seven_signs_status WHERE id=0");
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery(query.toString()))
 		{
@@ -1015,7 +1015,7 @@ public class SevenSignsFestival implements SpawnListener
 	 */
 	public void saveFestivalData(boolean updateSettings)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement psInsert = con.prepareStatement("REPLACE INTO seven_signs_festival (festivalId, cabal, cycle, date, score, members) VALUES (?,?,?,?,?,?)"))
 		{
 			for (Map<Integer, StatsSet> currCycleData : _festivalData.values())
@@ -1118,7 +1118,7 @@ public class SevenSignsFestival implements SpawnListener
 		}
 		else
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(GET_CLAN_NAME))
 			{
 				ps.setString(1, partyMemberName);

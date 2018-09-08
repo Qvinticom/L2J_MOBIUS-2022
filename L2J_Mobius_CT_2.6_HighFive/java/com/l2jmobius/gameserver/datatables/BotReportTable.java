@@ -112,7 +112,7 @@ public final class BotReportTable
 	 */
 	private void loadReportedCharData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery(SQL_LOAD_REPORTED_CHAR_DATA))
 		{
@@ -181,7 +181,7 @@ public final class BotReportTable
 	 */
 	public void saveReportedCharData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
 			PreparedStatement ps = con.prepareStatement(SQL_INSERT_REPORTED_CHAR_DATA))
 		{

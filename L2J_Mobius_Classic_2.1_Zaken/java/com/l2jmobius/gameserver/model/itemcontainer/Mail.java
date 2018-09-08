@@ -112,7 +112,7 @@ public class Mail extends ItemContainer
 	@Override
 	public void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM items WHERE owner_id=? AND loc=? AND loc_data=?"))
 		{
 			statement.setInt(1, _ownerId);

@@ -40,7 +40,7 @@ public class ForumsBBSManager extends BaseBBSManager
 	protected ForumsBBSManager()
 	{
 		_table = new CopyOnWriteArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0"))
 		{

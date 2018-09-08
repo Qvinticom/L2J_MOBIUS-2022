@@ -191,7 +191,7 @@ public final class ItemAuction
 	
 	public final void storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO item_auction (auctionId,instanceId,auctionItemId,startingTime,endingTime,auctionStateId) VALUES (?,?,?,?,?,?) ON DUPLICATE KEY UPDATE auctionStateId=?"))
 		{
 			statement.setInt(1, _auctionId);
@@ -225,7 +225,7 @@ public final class ItemAuction
 	final void updatePlayerBidInternal(ItemAuctionBid bid, boolean delete)
 	{
 		final String query = delete ? DELETE_ITEM_AUCTION_BID : INSERT_ITEM_AUCTION_BID;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, _auctionId);

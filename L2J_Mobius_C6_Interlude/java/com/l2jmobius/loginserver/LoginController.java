@@ -487,7 +487,7 @@ public class LoginController
 			final boolean loginOk = ((gsi.getCurrentPlayerCount() < gsi.getMaxPlayers()) && (gsi.getStatus() != ServerStatus.STATUS_GM_ONLY)) || (access >= 100);
 			if (loginOk && (client.getLastServer() != serverId))
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final String stmt = "UPDATE accounts SET lastServer = ? WHERE login = ?";
 					PreparedStatement statement = con.prepareStatement(stmt);
@@ -508,7 +508,7 @@ public class LoginController
 	
 	public void setAccountAccessLevel(String account, int banLevel)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final String stmt = "UPDATE accounts SET accessLevel=? WHERE login=?";
 			PreparedStatement statement = con.prepareStatement(stmt);
@@ -526,7 +526,7 @@ public class LoginController
 	public boolean isGM(String user)
 	{
 		boolean ok = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);
@@ -582,7 +582,7 @@ public class LoginController
 			return false;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			MessageDigest md = MessageDigest.getInstance("SHA");
 			final byte[] raw = password.getBytes("UTF-8");
@@ -718,7 +718,7 @@ public class LoginController
 	{
 		boolean ok = false;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT accessLevel FROM accounts WHERE login=?");
 			statement.setString(1, user);

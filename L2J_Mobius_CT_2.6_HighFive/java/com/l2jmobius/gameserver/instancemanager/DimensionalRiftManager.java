@@ -74,7 +74,7 @@ public final class DimensionalRiftManager
 	
 	private void loadRooms()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM dimensional_rift"))
 		{

@@ -34,7 +34,7 @@ public class DBInstallerConsole implements DBOutputInterface
 	
 	public DBInstallerConsole(String db, String dir) throws Exception
 	{
-		System.out.println("Welcome to L2J DataBase installer");
+		System.out.println("Welcome to DataBase installer");
 		final Preferences prop = Preferences.userRoot();
 		RunTasks rt = null;
 		try (Scanner scn = new Scanner(new CloseShieldedInputStream(System.in)))

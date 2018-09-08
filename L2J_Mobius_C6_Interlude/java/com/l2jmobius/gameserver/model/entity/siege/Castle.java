@@ -228,7 +228,7 @@ public class Castle
 			_treasury += amount;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set treasury = ? where id = ?");
 			statement.setInt(1, _treasury);
@@ -435,7 +435,7 @@ public class Castle
 		_taxPercent = taxPercent;
 		_taxRate = _taxPercent / 100.0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set taxPercent = ? where id = ?");
 			statement.setInt(1, taxPercent);
@@ -515,7 +515,7 @@ public class Castle
 	// This method loads castle
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -582,7 +582,7 @@ public class Castle
 	// This method loads castle door data from database
 	private void loadDoor()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
 			statement.setInt(1, _castleId);
@@ -611,7 +611,7 @@ public class Castle
 	// This method loads castle door upgrade data from database
 	private void loadDoorUpgrade()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_doorupgrade where doorId in (Select Id from castle_door where castleId = ?)");
 			statement.setInt(1, _castleId);
@@ -633,7 +633,7 @@ public class Castle
 	
 	private void removeDoorUpgrade()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("delete from castle_doorupgrade where doorId in (select id from castle_door where castleId=?)");
 			statement.setInt(1, _castleId);
@@ -648,7 +648,7 @@ public class Castle
 	
 	private void saveDoorUpgrade(int doorId, int hp, int pDef, int mDef)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO castle_doorupgrade (doorId, hp, pDef, mDef) values (?,?,?,?)");
 			statement.setInt(1, doorId);
@@ -675,7 +675,7 @@ public class Castle
 			_ownerId = 0; // Remove owner
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -896,7 +896,7 @@ public class Castle
 	public void saveSeedData()
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION);
 			statement.setInt(1, _castleId);
@@ -968,7 +968,7 @@ public class Castle
 	public void saveSeedData(int period)
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PRODUCTION_PERIOD);
 			statement.setInt(1, _castleId);
@@ -1014,7 +1014,7 @@ public class Castle
 	public void saveCropData()
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PROCURE);
 			statement.setInt(1, _castleId);
@@ -1085,7 +1085,7 @@ public class Castle
 	public void saveCropData(int period)
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_MANOR_DELETE_PROCURE_PERIOD);
 			statement.setInt(1, _castleId);
@@ -1133,7 +1133,7 @@ public class Castle
 	public void updateCrop(int cropId, int amount, int period)
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_UPDATE_CROP);
 			statement.setInt(1, amount);
@@ -1152,7 +1152,7 @@ public class Castle
 	public void updateSeed(int seedId, int amount, int period)
 	{
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(CASTLE_UPDATE_SEED);
 			statement.setInt(1, amount);

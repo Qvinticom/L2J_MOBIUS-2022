@@ -567,7 +567,7 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		_mysteriousBoxSpawns.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY id");
 			statement.setInt(1, 0);
@@ -651,7 +651,7 @@ public class FourSepulchersManager extends GrandBossManager
 		_physicalMonsters.clear();
 		
 		int loaded = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 1);
@@ -716,7 +716,7 @@ public class FourSepulchersManager extends GrandBossManager
 		_magicalMonsters.clear();
 		
 		int loaded = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 2);
@@ -782,7 +782,7 @@ public class FourSepulchersManager extends GrandBossManager
 		_archonSpawned.clear();
 		
 		int loaded = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 5);
@@ -848,7 +848,7 @@ public class FourSepulchersManager extends GrandBossManager
 		_emperorsGraveNpcs.clear();
 		
 		int loaded = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
 			statement1.setInt(1, 6);

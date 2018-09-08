@@ -292,7 +292,7 @@ public class L2TradeList
 	 * update.addModifiedItem(playerItem); } else { L2World world = L2World.getInstance(); world.removeObject(playerItem); update.addRemovedItem(playerItem); world = null; } player.sendPacket(update); update = null; update = new InventoryUpdate(); if(recieverItem.getLastChange() ==
 	 * L2ItemInstance.MODIFIED) { update.addModifiedItem(recieverItem); } else { update.addNewItem(recieverItem); } reciever.sendPacket(update); } // weight status update both player and reciever StatusUpdate su = new StatusUpdate(player.getObjectId()); su.addAttribute(StatusUpdate.CUR_LOAD,
 	 * player.getCurrentLoad()); player.sendPacket(su); su = null; su = new StatusUpdate(reciever.getObjectId()); su.addAttribute(StatusUpdate.CUR_LOAD, reciever.getCurrentLoad()); reciever.sendPacket(su); su = null; playersInv = null; recieverInv = null; playerItem = null; recieverItem = null; temp
-	 * = null; newitem = null; update = null; itemTable = null; } private void changePetItemObjectId(int oldObjectId, int newObjectId) { Connection con = null; try { con = L2DatabaseFactory.getInstance().getConnection(false); PreparedStatement statement =
+	 * = null; newitem = null; update = null; itemTable = null; } private void changePetItemObjectId(int oldObjectId, int newObjectId) { Connection con = null; try { con = L2DatabaseFactory.getConnection(false); PreparedStatement statement =
 	 * con.prepareStatement("UPDATE pets SET item_obj_id = ? WHERE item_obj_id = ?"); statement.setInt(1, newObjectId); statement.setInt(2, oldObjectId); statement.executeUpdate(); DatabaseUtils.close(statement); statement = null; } catch(Exception e) {
 	 * LOGGER.warning("could not change pet item object id: " + e); } finally { CloseUtil.close(con); con = null; } }
 	 */

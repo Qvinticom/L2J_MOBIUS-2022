@@ -69,7 +69,7 @@ public class CharSummonTable
 	{
 		if (Config.RESTORE_SERVITOR_ON_RECONNECT)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_SUMMONS))
 			{
@@ -86,7 +86,7 @@ public class CharSummonTable
 		
 		if (Config.RESTORE_PET_ON_RECONNECT)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(INIT_PET))
 			{
@@ -105,7 +105,7 @@ public class CharSummonTable
 	public void removeServitor(L2PcInstance activeChar)
 	{
 		_servitors.remove(activeChar.getObjectId());
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(REMOVE_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -175,7 +175,7 @@ public class CharSummonTable
 	public void restoreServitor(L2PcInstance activeChar)
 	{
 		final int skillId = _servitors.get(activeChar.getObjectId());
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_SUMMON))
 		{
 			ps.setInt(1, activeChar.getObjectId());
@@ -222,7 +222,7 @@ public class CharSummonTable
 		
 		_servitors.put(summon.getOwner().getObjectId(), summon.getReferenceSkill());
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SAVE_SUMMON))
 		{
 			ps.setInt(1, summon.getOwner().getObjectId());

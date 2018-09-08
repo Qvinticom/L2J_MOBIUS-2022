@@ -64,7 +64,7 @@ public class AutoChatHandler implements SpawnListener
 	{
 		int numLoaded = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM auto_chat ORDER BY groupId ASC");
 			final ResultSet rs = statement.executeQuery();

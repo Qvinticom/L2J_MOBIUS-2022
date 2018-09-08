@@ -125,7 +125,7 @@ public class AdminNoble implements IAdminCommandHandler
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement(newNoble ? INSERT_DATA : DEL_DATA);
 			

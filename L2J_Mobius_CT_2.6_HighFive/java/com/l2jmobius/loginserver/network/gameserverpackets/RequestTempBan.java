@@ -58,7 +58,7 @@ public class RequestTempBan extends BaseRecievePacket
 	
 	private void banUser()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO account_data VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE value=?"))
 		{
 			ps.setString(1, _accountName);

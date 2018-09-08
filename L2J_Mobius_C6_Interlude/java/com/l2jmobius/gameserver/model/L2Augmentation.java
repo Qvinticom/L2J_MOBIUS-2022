@@ -121,7 +121,7 @@ public final class L2Augmentation
 	
 	private void saveAugmentationData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO augmentations (item_id,attributes,skill,level) VALUES (?,?,?,?)");
 			statement.setInt(1, _item.getObjectId());
@@ -155,7 +155,7 @@ public final class L2Augmentation
 		}
 		
 		// delete the augmentation from the database
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM augmentations WHERE item_id=?");
 			statement.setInt(1, _item.getObjectId());

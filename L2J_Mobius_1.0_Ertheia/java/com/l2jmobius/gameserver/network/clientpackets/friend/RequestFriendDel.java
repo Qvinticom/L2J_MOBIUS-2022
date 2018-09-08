@@ -75,7 +75,7 @@ public final class RequestFriendDel implements IClientIncomingPacket
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE (charId=? AND friendId=?) OR (charId=? AND friendId=?)"))
 		{
 			statement.setInt(1, activeChar.getObjectId());

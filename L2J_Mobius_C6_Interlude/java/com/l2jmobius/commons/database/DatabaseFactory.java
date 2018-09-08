@@ -16,117 +16,68 @@
  */
 package com.l2jmobius.commons.database;
 
-import java.beans.PropertyVetoException;
 import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.mchange.v2.c3p0.ComboPooledDataSource;
+import com.zaxxer.hikari.HikariDataSource;
 
 /**
- * Database Factory implementation.
- * @author Zoey76
+ * @author Mobius
  */
 public class DatabaseFactory
 {
 	private static final Logger LOGGER = Logger.getLogger(DatabaseFactory.class.getName());
 	
-	private final ComboPooledDataSource _dataSource;
+	private static final HikariDataSource _hds = new HikariDataSource();
 	
-	public DatabaseFactory()
+	public static void init()
 	{
-		if (Config.DATABASE_MAX_CONNECTIONS < 2)
-		{
-			Config.DATABASE_MAX_CONNECTIONS = 2;
-			LOGGER.warning("A minimum of 2 connections are required.");
-		}
+		_hds.setDriverClassName(Config.DATABASE_DRIVER);
+		_hds.setJdbcUrl(Config.DATABASE_URL);
+		_hds.setUsername(Config.DATABASE_LOGIN);
+		_hds.setPassword(Config.DATABASE_PASSWORD);
+		_hds.setMaximumPoolSize(Config.DATABASE_MAX_CONNECTIONS);
+		_hds.setIdleTimeout(Config.DATABASE_MAX_IDLE_TIME);
 		
-		_dataSource = new ComboPooledDataSource();
-		_dataSource.setAutoCommitOnClose(true);
-		
-		_dataSource.setInitialPoolSize(10);
-		_dataSource.setMinPoolSize(10);
-		_dataSource.setMaxPoolSize(Math.max(10, Config.DATABASE_MAX_CONNECTIONS));
-		
-		_dataSource.setAcquireRetryAttempts(0); // try to obtain connections indefinitely (0 = never quit)
-		_dataSource.setAcquireRetryDelay(500); // 500 milliseconds wait before try to acquire connection again
-		_dataSource.setCheckoutTimeout(0); // 0 = wait indefinitely for new connection if pool is exhausted
-		_dataSource.setAcquireIncrement(5); // if pool is exhausted, get 5 more connections at a time cause there is
-		// a "long" delay on acquire connection so taking more than one connection at once will make connection pooling more effective.
-		
-		// testing OnCheckin used with IdleConnectionTestPeriod is faster than testing on checkout
-		_dataSource.setIdleConnectionTestPeriod(3600); // test idle connection every 60 sec
-		_dataSource.setMaxIdleTime(Config.DATABASE_MAX_IDLE_TIME); // 0 = idle connections never expire
-		// *THANKS* to connection testing configured above but I prefer to disconnect all connections not used for more than 1 hour
-		
-		// enables statement caching, there is a "semi-bug" in c3p0 0.9.0 but in 0.9.0.2 and later it's fixed
-		_dataSource.setMaxStatementsPerConnection(100);
-		
-		_dataSource.setBreakAfterAcquireFailure(false); // never fail if any way possible setting this to true will make c3p0 "crash"
-		// and refuse to work till restart thus making acquire errors "FATAL" ... we don't want that it should be possible to recover
-		
+		// Test if connection is valid.
 		try
 		{
-			_dataSource.setDriverClass(Config.DATABASE_DRIVER);
+			_hds.getConnection().close();
+			LOGGER.info("Database: Initialized.");
 		}
-		catch (PropertyVetoException e)
+		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
-		_dataSource.setJdbcUrl(Config.DATABASE_URL);
-		_dataSource.setUser(Config.DATABASE_LOGIN);
-		_dataSource.setPassword(Config.DATABASE_PASSWORD);
-		
-		/* Test the connection */
-		try
-		{
-			_dataSource.getConnection().close();
-		}
-		catch (SQLException e)
-		{
-			e.printStackTrace();
-		}
-		
-		LOGGER.info("Database: Initialized.");
 	}
 	
-	public Connection getConnection()
+	public static Connection getConnection()
 	{
 		Connection con = null;
 		while (con == null)
 		{
 			try
 			{
-				con = _dataSource.getConnection();
+				con = _hds.getConnection();
 			}
-			catch (SQLException e)
+			catch (Exception e)
 			{
-				LOGGER.warning(getClass().getSimpleName() + ": Unable to get a connection: " + e.getMessage());
+				LOGGER.severe("DatabaseFactory: Cound not get a connection. " + e);
 			}
 		}
 		return con;
 	}
 	
-	public void close()
+	public static void close()
 	{
 		try
 		{
-			_dataSource.close();
+			_hds.close();
 		}
 		catch (Exception e)
 		{
-			LOGGER.info(e.getMessage());
+			LOGGER.severe("DatabaseFactory: There was a problem closing the data source. " + e);
 		}
-	}
-	
-	public static DatabaseFactory getInstance()
-	{
-		return SingletonHolder.INSTANCE;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final DatabaseFactory INSTANCE = new DatabaseFactory();
 	}
 }

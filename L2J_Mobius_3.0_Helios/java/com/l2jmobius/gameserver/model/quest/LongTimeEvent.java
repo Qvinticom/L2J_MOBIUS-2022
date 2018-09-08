@@ -409,7 +409,7 @@ public class LongTimeEvent extends Quest
 					}
 				}
 				// Update database
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE item_id=?"))
 				{
 					statement.setInt(1, itemId);

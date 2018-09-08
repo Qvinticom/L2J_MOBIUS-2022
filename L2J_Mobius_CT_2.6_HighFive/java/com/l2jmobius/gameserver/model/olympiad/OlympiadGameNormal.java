@@ -713,7 +713,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 	
 	protected static void saveResults(Participant one, Participant two, int winner, long startTime, long fightTime, CompetitionType type)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO olympiad_fights (charOneId, charTwoId, charOneClass, charTwoClass, winner, start, time, classed) values(?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, one.getObjectId());

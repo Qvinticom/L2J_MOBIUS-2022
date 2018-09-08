@@ -51,7 +51,7 @@ public final class CoupleManager
 	
 	private final void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT id FROM mods_wedding ORDER BY id"))
 		{

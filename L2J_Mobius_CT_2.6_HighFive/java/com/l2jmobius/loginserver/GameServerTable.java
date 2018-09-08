@@ -115,7 +115,7 @@ public final class GameServerTable implements IGameXmlReader
 	 */
 	private void loadRegisteredGameServers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM gameservers"))
 		{
@@ -222,7 +222,7 @@ public final class GameServerTable implements IGameXmlReader
 	public void registerServerOnDB(byte[] hexId, int id, String externalHost)
 	{
 		register(id, new GameServerInfo(id, hexId));
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO gameservers (hexid,server_id,host) values (?,?,?)"))
 		{
 			ps.setString(1, hexToString(hexId));

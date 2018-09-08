@@ -49,6 +49,8 @@ public class SQLAccountManager
 	{
 		Server.serverMode = Server.MODE_LOGINSERVER;
 		Config.load();
+		DatabaseFactory.init();
+		
 		while (true)
 		{
 			System.out.println("Please choose an option:");
@@ -161,7 +163,7 @@ public class SQLAccountManager
 	{
 		int count = 0;
 		Connection con = null;
-		con = DatabaseFactory.getInstance().getConnection();
+		con = DatabaseFactory.getConnection();
 		String q = "SELECT login, accessLevel FROM accounts ";
 		if (m.equals("1"))
 		{
@@ -200,7 +202,7 @@ public class SQLAccountManager
 		
 		// Add to Base
 		Connection con = null;
-		con = DatabaseFactory.getInstance().getConnection();
+		con = DatabaseFactory.getConnection();
 		PreparedStatement statement = con.prepareStatement("REPLACE accounts (login, password, accessLevel) VALUES (?,?,?)");
 		statement.setString(1, account);
 		statement.setString(2, Base64.getEncoder().encodeToString(newpass));
@@ -213,7 +215,7 @@ public class SQLAccountManager
 	private static void changeAccountLevel(String account, String level) throws SQLException
 	{
 		Connection con = null;
-		con = DatabaseFactory.getInstance().getConnection();
+		con = DatabaseFactory.getConnection();
 		
 		// Check Account Exist
 		PreparedStatement statement = con.prepareStatement("SELECT COUNT(*) FROM accounts WHERE login=?;");
@@ -248,7 +250,7 @@ public class SQLAccountManager
 	private static void deleteAccount(String account) throws SQLException
 	{
 		Connection con = null;
-		con = DatabaseFactory.getInstance().getConnection();
+		con = DatabaseFactory.getConnection();
 		
 		// Check Account Exist
 		PreparedStatement statement = con.prepareStatement("SELECT COUNT(*) FROM accounts WHERE login=?;");

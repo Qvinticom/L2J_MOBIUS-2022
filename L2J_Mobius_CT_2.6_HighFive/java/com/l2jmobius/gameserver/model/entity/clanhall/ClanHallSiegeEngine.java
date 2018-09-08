@@ -93,7 +93,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public void loadAttackers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_LOAD_ATTACKERS))
 		{
 			ps.setInt(1, _hall.getId());
@@ -114,7 +114,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 	
 	public final void saveAttackers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_siege_attackers WHERE clanhall_id = ?"))
 		{
 			ps.setInt(1, _hall.getId());
@@ -148,7 +148,7 @@ public abstract class ClanHallSiegeEngine extends Quest implements Siegable
 			return;
 		}
 		_guards = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_LOAD_GUARDS))
 		{
 			ps.setInt(1, _hall.getId());

@@ -120,7 +120,7 @@ public final class RequestSetPledgeCrest extends L2GameClientPacket
 				return;
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_id = ? WHERE clan_id = ?");
 				statement.setInt(1, newId);

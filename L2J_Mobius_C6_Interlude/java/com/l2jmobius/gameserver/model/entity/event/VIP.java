@@ -149,7 +149,7 @@ public class VIP
 	
 	public static void setLoc()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT endx,endy,endz FROM VIPinfo WHERE teamID = " + _team);
 			final ResultSet rset = statement.executeQuery();
@@ -167,7 +167,7 @@ public class VIP
 			LOGGER.info("Could not check End LOC for team" + _team + " got: " + e.getMessage());
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT startx,starty,startz FROM VIPinfo WHERE teamID = " + _team);
 			final ResultSet rset = statement.executeQuery();

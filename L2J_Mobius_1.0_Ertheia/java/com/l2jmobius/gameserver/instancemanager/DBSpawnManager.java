@@ -85,7 +85,7 @@ public class DBSpawnManager
 		_storedInfo.clear();
 		_schedules.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM npc_respawns");
 			ResultSet rset = statement.executeQuery())
 		{
@@ -275,7 +275,7 @@ public class DBSpawnManager
 		
 		if (storeInDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("INSERT INTO npc_respawns (id, x, y, z, heading, respawnTime, currentHp, currentMp) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"))
 			{
 				statement.setInt(1, spawn.getId());
@@ -331,7 +331,7 @@ public class DBSpawnManager
 		
 		if (storeInDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("INSERT INTO npc_respawns (id, x, y, z, heading, respawnTime, currentHp, currentMp) VALUES(?, ?, ?, ?, ?, ?, ?, ?)"))
 			{
 				statement.setInt(1, spawn.getId());
@@ -380,7 +380,7 @@ public class DBSpawnManager
 		
 		if (updateDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("DELETE FROM npc_respawns WHERE id = ?"))
 			{
 				ps.setInt(1, npcId);
@@ -401,7 +401,7 @@ public class DBSpawnManager
 	 */
 	private void updateDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE npc_respawns SET respawnTime = ?, currentHP = ?, currentMP = ? WHERE id = ?"))
 		{
 			for (Integer npcId : _storedInfo.keySet())

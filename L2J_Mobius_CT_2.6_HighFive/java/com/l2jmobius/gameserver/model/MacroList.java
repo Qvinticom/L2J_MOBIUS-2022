@@ -128,7 +128,7 @@ public class MacroList implements IRestorable
 	
 	private void registerMacroInDb(Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO character_macroses (charId,id,icon,name,descr,acronym,commands) values(?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _owner.getObjectId());
@@ -164,7 +164,7 @@ public class MacroList implements IRestorable
 	
 	private void deleteMacroFromDb(Macro macro)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_macroses WHERE charId=? AND id=?"))
 		{
 			ps.setInt(1, _owner.getObjectId());
@@ -181,7 +181,7 @@ public class MacroList implements IRestorable
 	public boolean restoreMe()
 	{
 		_macroses.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT charId, id, icon, name, descr, acronym, commands FROM character_macroses WHERE charId=?"))
 		{
 			ps.setInt(1, _owner.getObjectId());

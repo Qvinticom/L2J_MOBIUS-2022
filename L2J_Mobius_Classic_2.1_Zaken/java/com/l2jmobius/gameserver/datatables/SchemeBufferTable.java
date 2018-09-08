@@ -58,7 +58,7 @@ public class SchemeBufferTable
 	{
 		int count = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement st = con.prepareStatement(LOAD_SCHEMES);
 			ResultSet rs = st.executeQuery();
@@ -135,7 +135,7 @@ public class SchemeBufferTable
 	
 	public void saveSchemes()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete all entries from database.
 			PreparedStatement st = con.prepareStatement(DELETE_SCHEMES);

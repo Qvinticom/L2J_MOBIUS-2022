@@ -55,7 +55,7 @@ public final class ItemAuctionManager implements IGameXmlReader
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT auctionId FROM item_auction ORDER BY auctionId DESC LIMIT 0, 1"))
 		{
@@ -134,7 +134,7 @@ public final class ItemAuctionManager implements IGameXmlReader
 	
 	public static void deleteAuction(int auctionId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement statement = con.prepareStatement("DELETE FROM item_auction WHERE auctionId=?"))
 			{

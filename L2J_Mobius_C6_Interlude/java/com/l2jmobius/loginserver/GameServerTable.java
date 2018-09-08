@@ -138,7 +138,7 @@ public class GameServerTable
 	{
 		PreparedStatement statement = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			int id;
 			statement = con.prepareStatement("SELECT * FROM gameservers");
@@ -217,7 +217,7 @@ public class GameServerTable
 	public void registerServerOnDB(byte[] hexId, int id, String externalHost)
 	{
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement("INSERT INTO gameservers (hexid,server_id,host) values (?,?,?)");
 			statement.setString(1, hexToString(hexId));

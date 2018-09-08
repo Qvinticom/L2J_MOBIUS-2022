@@ -69,7 +69,7 @@ public class AdminRepairChar implements IAdminCommandHandler
 		}
 		
 		String cmd = "UPDATE characters SET x=-84318, y=244579, z=-3730 WHERE char_name=?";
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(cmd);
 			statement.setString(1, parts[1]);

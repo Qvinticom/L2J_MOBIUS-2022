@@ -42,7 +42,7 @@ public class StackIDFactory extends IdFactory
 		_curOID = FIRST_OID;
 		_tempOID = FIRST_OID;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// con.createStatement().execute("drop table if exists tmp_obj_id");
 			

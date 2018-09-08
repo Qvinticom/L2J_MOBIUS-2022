@@ -87,7 +87,7 @@ public class FishingChampionshipManager
 	{
 		_enddate = GlobalVariablesManager.getInstance().getLong("fishChampionshipEnd", 0);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(SELECT);
 			ResultSet rs = statement.executeQuery();
@@ -367,7 +367,7 @@ public class FishingChampionshipManager
 	{
 		GlobalVariablesManager.getInstance().set("fishChampionshipEnd", _enddate);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE);
 			statement.execute();

@@ -73,7 +73,7 @@ public final class RequestAnswerFriendInvite implements IClientIncomingPacket
 		
 		if (_response == 1)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (charId, friendId) VALUES (?, ?), (?, ?)"))
 			{
 				statement.setInt(1, requestor.getObjectId());

@@ -80,7 +80,7 @@ public class TradeListTable
 	
 	private void load(boolean custom)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement1 = con.prepareStatement("SELECT shop_id,npc_id FROM " + (custom ? "custom_merchant_shopids" : "merchant_shopids"));
 			final ResultSet rset1 = statement1.executeQuery();
@@ -266,7 +266,7 @@ public class TradeListTable
 	{
 		final long timerSave = System.currentTimeMillis() + (time * 3600000); // 60*60*1000
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");
 			statement.setLong(1, timerSave);
@@ -288,7 +288,7 @@ public class TradeListTable
 		}
 		
 		int listId;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

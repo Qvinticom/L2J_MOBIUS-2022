@@ -177,7 +177,7 @@ public class L2BoxInstance extends L2NpcInstance
 	public boolean hasAccess(String player)
 	{
 		boolean result = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement st = con.prepareStatement("SELECT spawn, charname FROM boxaccess WHERE charname=? AND spawn=?");
 			st.setString(1, player);
@@ -202,7 +202,7 @@ public class L2BoxInstance extends L2NpcInstance
 	public List<String> getAccess()
 	{
 		final List<String> acl = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement st = con.prepareStatement(LIST_GRANT);
 			st.setInt(1, getSpawn().getId());
@@ -225,7 +225,7 @@ public class L2BoxInstance extends L2NpcInstance
 	public boolean grantAccess(String player, boolean what)
 	{
 		boolean result = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			String _query;
 			if (what)
@@ -387,7 +387,7 @@ public class L2BoxInstance extends L2NpcInstance
 	private Set<L2BoxItem> getItems(String drawer)
 	{
 		final Set<L2BoxItem> it = new HashSet<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT id, spawn, npcid, drawer, itemid, name, count, enchant FROM boxes where spawn=? and npcid=? and drawer=?");
 			statement.setInt(1, getSpawn().getId());
@@ -415,7 +415,7 @@ public class L2BoxInstance extends L2NpcInstance
 		 * Integer.parseInt(part[0].substring(1)); int count = Integer.parseInt(part[1]); if (count <= 0) continue; int realCount = player.getInventory().getItemByItemId(id).getCount(); if (count < realCount) realCount = count; L2ItemInstance item = player.getInventory().destroyItemByItemId("Box",
 		 * id, realCount, player, this); // other than previous l2j, destroyItemByItemId does not return the count destroyed // and we cannot just use the returned item as we cannot change the count L2ItemInstance newItem = ItemTable.getInstance().createItem(id); newItem.setCount(realCount);
 		 * newItem.setEnchantLevel(item.getEnchantLevel()); putItemInBox(player, drawername, newItem); } catch (Exception e) { LOGGER.fine("putInBox "+command+" failed: "+e); } } } private void putItemInBox(L2PcInstance player, String drawer, L2ItemInstance item) { String charname =
-		 * player.getName(); java.sql.Connection con = null; int foundId = 0; int foundCount = 0; try { con = L2DatabaseFactory.getInstance().getConnection(false); if (item.isStackable()) { PreparedStatement st2 =
+		 * player.getName(); java.sql.Connection con = null; int foundId = 0; int foundCount = 0; try { con = L2DatabaseFactory.getConnection(false); if (item.isStackable()) { PreparedStatement st2 =
 		 * con.prepareStatement("SELECT id,count FROM boxes where spawn=? and npcid=? and drawer=? and itemid=?"); st2.setInt(1, getSpawn().getId()); st2.setInt(2, getNpcId()); st2.setString(3, drawer); st2.setInt(4, item.getItemId()); ResultSet rs = st2.executeQuery(); if (rs.next()) { foundId =
 		 * rs.getInt("id"); foundCount = rs.getInt("count"); } rs.close(); st2.close(); } if (foundCount == 0) { PreparedStatement statement = con.prepareStatement("INSERT INTO boxes (spawn,npcid,drawer,itemid,name,count,enchant) VALUES(?,?,?,?,?,?,?)"); statement.setInt(1, getSpawn().getId());
 		 * statement.setInt(2, getNpcId()); statement.setString(3, drawer); statement.setInt(4, item.getItemId()); statement.setString(5, item.getItem().getName()); statement.setInt(6, item.getCount()); statement.setInt(7, item.getEnchantLevel()); statement.execute(); statement.close(); } else {
@@ -429,7 +429,7 @@ public class L2BoxInstance extends L2NpcInstance
 		 * NOTE: Item storing in box is currently not implemented String[] cmd = command.split(","); if (cmd.length<=1) return; String drawername = cmd[0]; L2BoxItem bi = null; for (int i = 1; i < cmd.length; i++) { String[] part = cmd[i].split(" "); if (part == null || part.length < 2) continue;
 		 * try { int id = Integer.parseInt(part[0].substring(1)); int count = Integer.parseInt(part[1]); if (count <= 0) continue; L2ItemInstance item = ItemTable.getInstance().createItem(id); item.setCount(count); bi = takeItemOutBox(player, drawername, item); if (bi.count > 0) {
 		 * item.setCount(bi.count); item.setEnchantLevel(bi.enchant); player.getInventory().addItem("Box", item, player, this); } } catch (Exception e) { LOGGER.fine("takeOutBox "+command+" failed: "+e); } } } private L2BoxItem takeItemOutBox(L2PcInstance player, String drawer, L2ItemInstance item)
-		 * { String charname = player.getName(); java.sql.Connection con = null; L2BoxItem bi = new L2BoxItem(); bi.count = 0; try { con = L2DatabaseFactory.getInstance().getConnection(false); PreparedStatement statement =
+		 * { String charname = player.getName(); java.sql.Connection con = null; L2BoxItem bi = new L2BoxItem(); bi.count = 0; try { con = L2DatabaseFactory.getConnection(false); PreparedStatement statement =
 		 * con.prepareStatement("SELECT id,count,enchant FROM boxes WHERE spawn=? AND npcid=? AND drawer=? AND itemid=? AND count>=?"); statement.setInt(1, getSpawn().getId()); statement.setInt(2, getNpcId()); statement.setString(3, drawer); statement.setInt(4, item.getItemId()); statement.setInt(5,
 		 * item.getCount()); ResultSet rs = statement.executeQuery(); while (rs.next()) { if (rs.getInt("count") == item.getCount()) { bi.count = item.getCount(); bi.itemid = item.getItemId(); bi.enchant = rs.getInt("enchant"); PreparedStatement st2 =
 		 * con.prepareStatement("DELETE FROM boxes WHERE id=?"); st2.setInt(1, rs.getInt("id")); st2.execute(); st2.close(); break; } if (rs.getInt("count") > item.getCount()) { bi.count = item.getCount(); bi.itemid = item.getItemId(); bi.enchant = rs.getInt("enchant"); PreparedStatement st2 =

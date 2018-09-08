@@ -66,7 +66,7 @@ public class LevelUpData
 	private LevelUpData()
 	{
 		lvlTable = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SELECT_ALL);
 			final ResultSet rset = statement.executeQuery();

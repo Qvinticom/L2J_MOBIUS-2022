@@ -126,7 +126,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	protected void initFunctions()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM residence_functions WHERE residenceId = ?"))
 		{
 			ps.setInt(1, _residenceId);
@@ -164,7 +164,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public void addFunction(ResidenceFunction func)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO residence_functions (id, level, expiration, residenceId) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE level = ?, expiration = ?"))
 		{
 			ps.setInt(1, func.getId());
@@ -196,7 +196,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public void removeFunction(ResidenceFunction func)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM residence_functions WHERE residenceId = ? and id = ?"))
 		{
 			ps.setInt(1, _residenceId);
@@ -219,7 +219,7 @@ public abstract class AbstractResidence extends ListenersContainer implements IN
 	 */
 	public void removeFunctions()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM residence_functions WHERE residenceId = ?"))
 		{
 			ps.setInt(1, _residenceId);

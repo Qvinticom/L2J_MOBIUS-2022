@@ -166,7 +166,7 @@ public class SiegeManager
 		
 		boolean register = false;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?");
 			statement.setInt(1, clan.getClanId());

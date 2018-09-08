@@ -46,7 +46,7 @@ public class RaidBossPointsManager
 	{
 		_list = new HashMap<>();
 		final List<Integer> _chars = new ArrayList<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM `character_raid_points`");
 			ResultSet rset = statement.executeQuery();
@@ -83,7 +83,7 @@ public class RaidBossPointsManager
 	
 	public static final void updatePointsInDB(L2PcInstance player, int raidId, int points)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("REPLACE INTO character_raid_points (`charId`,`boss_id`,`points`) VALUES (?,?,?)");
@@ -154,7 +154,7 @@ public class RaidBossPointsManager
 	
 	public static final void cleanUp()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE from character_raid_points WHERE charId > 0");

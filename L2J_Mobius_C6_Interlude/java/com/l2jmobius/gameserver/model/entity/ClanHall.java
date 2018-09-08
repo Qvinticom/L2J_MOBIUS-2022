@@ -332,7 +332,7 @@ public class ClanHall
 		 */
 		public void dbSave(boolean newFunction)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement;
 				
@@ -728,7 +728,7 @@ public class ClanHall
 	 */
 	private void loadFunctions()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -757,7 +757,7 @@ public class ClanHall
 	public void removeFunction(int functionType)
 	{
 		_functions.remove(functionType);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			statement = con.prepareStatement("DELETE FROM clanhall_functions WHERE hall_id=? AND type=?");
@@ -834,7 +834,7 @@ public class ClanHall
 	 */
 	public void updateDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -969,7 +969,7 @@ public class ClanHall
 	 */
 	private void loadDoor()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Select * from castle_door where castleId = ?");
 			statement.setInt(1, _clanHallId);

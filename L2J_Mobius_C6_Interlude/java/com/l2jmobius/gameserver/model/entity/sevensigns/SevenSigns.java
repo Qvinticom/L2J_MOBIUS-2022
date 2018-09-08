@@ -1025,7 +1025,7 @@ public class SevenSigns
 	 */
 	protected void restoreSevenSignsData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT char_obj_id, cabal, seal, red_stones, green_stones, blue_stones, ancient_adena_amount, contribution_score FROM seven_signs");
 			ResultSet rset = statement.executeQuery();
@@ -1112,7 +1112,7 @@ public class SevenSigns
 			LOGGER.info("SevenSigns: Saving data to disk.");
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
 			
@@ -1270,7 +1270,7 @@ public class SevenSigns
 			_signsPlayerData.put(charObjId, currPlayerData);
 			
 			// Update data in database, as we have a new player signing up.
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement("INSERT INTO seven_signs (char_obj_id, cabal, seal) VALUES (?,?,?)");
 				statement.setInt(1, charObjId);

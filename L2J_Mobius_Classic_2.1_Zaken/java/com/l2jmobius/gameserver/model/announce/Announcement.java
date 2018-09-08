@@ -108,7 +108,7 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 		{
 			ps.setInt(1, _type.ordinal());
@@ -134,7 +134,7 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean updateMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_QUERY))
 		{
 			ps.setInt(1, _type.ordinal());
@@ -154,7 +154,7 @@ public class Announcement implements IAnnouncement
 	@Override
 	public boolean deleteMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_QUERY))
 		{
 			ps.setInt(1, _id);

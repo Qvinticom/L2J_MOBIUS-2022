@@ -162,7 +162,7 @@ public class Auction
 	/** Load auctions */
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("Select * from auction where id = ?"))
 		{
 			ps.setInt(1, _id);
@@ -197,7 +197,7 @@ public class Auction
 		_highestBidderName = "";
 		_highestBidderMaxBid = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT bidderId, bidderName, maxBid, clan_name, time_bid FROM auction_bid WHERE auctionId = ? ORDER BY maxBid DESC"))
 		{
 			ps.setInt(1, _id);
@@ -246,7 +246,7 @@ public class Auction
 	/** Save Auction Data End */
 	private void saveAuctionDate()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("Update auction set endDate = ? where id = ?"))
 		{
 			ps.setLong(1, _endDate);
@@ -337,7 +337,7 @@ public class Auction
 	 */
 	private void updateInDB(L2PcInstance bidder, long bid)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (_bidders.get(bidder.getClanId()) != null)
 			{
@@ -394,7 +394,7 @@ public class Auction
 	/** Remove bids */
 	private void removeBids()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=?"))
 		{
 			ps.setInt(1, _id);
@@ -424,7 +424,7 @@ public class Auction
 	public void deleteAuctionFromDB()
 	{
 		ClanHallAuctionManager.getInstance().getAuctions().remove(this);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM auction WHERE itemId=?"))
 		{
 			ps.setInt(1, _itemId);
@@ -480,7 +480,7 @@ public class Auction
 	 */
 	public synchronized void cancelBid(int bidder)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM auction_bid WHERE auctionId=? AND bidderId=?"))
 		{
 			ps.setInt(1, _id);
@@ -509,7 +509,7 @@ public class Auction
 	public void confirmAuction()
 	{
 		ClanHallAuctionManager.getInstance().getAuctions().add(this);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO auction (id, sellerId, sellerName, sellerClanName, itemType, itemId, itemObjectId, itemName, itemQuantity, startingBid, currentBid, endDate) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _id);

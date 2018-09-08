@@ -104,7 +104,7 @@ public class CastleManager
 	private final void load()
 	{
 		LOGGER.info("Initializing CastleManager");
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("Select id from castle order by id");
 			final ResultSet rs = statement.executeQuery();
@@ -351,7 +351,7 @@ public class CastleManager
 			}
 			// else offline-player circlet removal
 			PreparedStatement statement = null;
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				statement = con.prepareStatement("DELETE FROM items WHERE owner_id = ? and item_id = ?");
 				statement.setInt(1, member.getObjectId());

@@ -94,7 +94,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 		{
 			st.setInt(1, getType().ordinal());
@@ -123,7 +123,7 @@ public final class AutoAnnouncement extends Announcement implements Runnable
 	@Override
 	public boolean updateMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
 		{
 			st.setInt(1, getType().ordinal());

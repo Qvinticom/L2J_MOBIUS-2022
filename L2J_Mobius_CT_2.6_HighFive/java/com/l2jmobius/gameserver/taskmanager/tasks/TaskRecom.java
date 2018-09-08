@@ -44,7 +44,7 @@ public class TaskRecom extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("UPDATE character_reco_bonus SET rec_left=?, time_left=?, rec_have=0 WHERE rec_have <=  20"))
 			{

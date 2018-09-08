@@ -120,7 +120,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement st = con.prepareStatement("UPDATE character_subclasses SET vitality_points = ?"))
 			{
@@ -150,7 +150,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	private void resetExtendDrop()
 	{
 		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.EXTEND_DROP);
@@ -173,7 +173,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetDailySkills()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final List<SkillHolder> dailySkills = getVariables().getList("reset_skills", SkillHolder.class, Collections.emptyList());
 			for (SkillHolder skill : dailySkills)
@@ -200,7 +200,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		}
 		
 		// Update data for offline players.
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE character_variables SET val = ? WHERE var = ?"))
 		{
 			ps.setInt(1, 0);
@@ -225,7 +225,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 	
 	private void resetRecommends()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("UPDATE character_reco_bonus SET rec_left = ?, rec_have = 0 WHERE rec_have <= 20"))
 			{
@@ -258,7 +258,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>>
 		if (Config.TRAINING_CAMP_ENABLE)
 		{
 			// Update data for offline players.
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("DELETE FROM account_gsdata WHERE var = ?"))
 			{
 				ps.setString(1, "TRAINING_CAMP_DURATION");

@@ -303,7 +303,7 @@ public class AdminBan implements IAdminCommandHandler
 			value = 0;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, level);
@@ -339,7 +339,7 @@ public class AdminBan implements IAdminCommandHandler
 	
 	private void jailOfflinePlayer(L2PcInstance activeChar, String name, int delay)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, -114356);
@@ -374,7 +374,7 @@ public class AdminBan implements IAdminCommandHandler
 	
 	private void unjailOfflinePlayer(L2PcInstance activeChar, String name)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, 17836);
@@ -439,7 +439,7 @@ public class AdminBan implements IAdminCommandHandler
 		}
 		else
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("UPDATE characters SET accesslevel=? WHERE char_name=?");
 				statement.setInt(1, lvl);

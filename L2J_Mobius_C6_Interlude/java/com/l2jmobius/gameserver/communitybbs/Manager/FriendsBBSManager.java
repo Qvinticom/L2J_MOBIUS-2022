@@ -79,7 +79,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			else if (action.equals("delall"))
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement("DELETE FROM character_friends WHERE char_id = ? OR friend_id = ?");
 					statement.setInt(1, activeChar.getObjectId());
@@ -117,7 +117,7 @@ public class FriendsBBSManager extends BaseBBSManager
 			}
 			else if (action.equals("del"))
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					for (int friendId : activeChar.getSelectedFriendList())
 					{

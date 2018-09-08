@@ -259,7 +259,7 @@ public class Olympiad
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_NOBLES);
 			ResultSet rset = statement.executeQuery();
@@ -288,7 +288,7 @@ public class Olympiad
 			LOGGER.warning("Olympiad System: Error loading noblesse data from database: " + e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(OLYMPIAD_LOAD_OLD_NOBLES);
 			ResultSet rset = statement.executeQuery();
@@ -1141,7 +1141,7 @@ public class Olympiad
 		}
 		
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (Integer nobleId : _nobles.keySet())
 			{
@@ -1205,7 +1205,7 @@ public class Olympiad
 	protected synchronized void saveOldNobleData(int nobleId)
 	{
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final StatsSet nobleInfo = _oldnobles.get(nobleId);
 			
@@ -1293,7 +1293,7 @@ public class Olympiad
 	protected void updateMonthlyData()
 	{
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(OLYMPIAD_MONTH_CLEAR);
 			statement.execute();
@@ -1340,7 +1340,7 @@ public class Olympiad
 		
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			StatsSet hero;
 			for (int HERO_ID : HERO_IDS)
@@ -1376,7 +1376,7 @@ public class Olympiad
 		
 		PreparedStatement statement = null;
 		ResultSet rset = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (Config.ALT_OLY_SHOW_MONTHLY_WINNERS)
 			{
@@ -1567,7 +1567,7 @@ public class Olympiad
 	protected void deleteNobles()
 	{
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			statement = con.prepareStatement(OLYMPIAD_DELETE_ALL);
 			statement.execute();

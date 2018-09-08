@@ -185,7 +185,7 @@ public class PunishmentTask implements Runnable
 	{
 		if (!_isStored)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement st = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS))
 			{
 				st.setString(1, _key);
@@ -224,7 +224,7 @@ public class PunishmentTask implements Runnable
 	{
 		if (_isStored)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement st = con.prepareStatement(UPDATE_QUERY))
 			{
 				st.setLong(1, System.currentTimeMillis());

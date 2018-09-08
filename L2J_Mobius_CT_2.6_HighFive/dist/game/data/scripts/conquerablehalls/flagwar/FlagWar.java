@@ -762,7 +762,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	@Override
 	public final void loadAttackers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SQL_LOAD_ATTACKERS);
 			statement.setInt(1, _hall.getId());
@@ -796,7 +796,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private final void loadAttackerMembers(int clanId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final ArrayList<Integer> listInstance = _data.get(clanId).players;
 			
@@ -826,7 +826,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private final void saveClan(int clanId, int flag)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SQL_SAVE_CLAN);
 			statement.setInt(1, _hall.getId());
@@ -845,7 +845,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private final void saveNpc(int npc, int clanId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SQL_SAVE_NPC);
 			statement.setInt(1, npc);
@@ -862,7 +862,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private final void saveMember(int clanId, int objectId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement(SQL_SAVE_ATTACKER);
 			statement.setInt(1, _hall.getId());
@@ -880,7 +880,7 @@ public abstract class FlagWar extends ClanHallSiegeEngine
 	
 	private void clearTables()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement stat1 = con.prepareStatement(SQL_CLEAR_CLAN);
 			stat1.setInt(1, _hall.getId());

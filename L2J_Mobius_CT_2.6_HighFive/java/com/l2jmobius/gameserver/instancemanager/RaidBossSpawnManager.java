@@ -75,7 +75,7 @@ public class RaidBossSpawnManager
 		_storedInfo.clear();
 		_schedules.clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM raidboss_spawnlist ORDER BY boss_id"))
 		{
@@ -247,7 +247,7 @@ public class RaidBossSpawnManager
 		
 		if (storeInDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("INSERT INTO raidboss_spawnlist (boss_id,amount,loc_x,loc_y,loc_z,heading,respawn_time,currentHp,currentMp) VALUES(?,?,?,?,?,?,?,?,?)"))
 			{
 				ps.setInt(1, spawnDat.getId());
@@ -307,7 +307,7 @@ public class RaidBossSpawnManager
 		
 		if (updateDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("DELETE FROM raidboss_spawnlist WHERE boss_id=?"))
 			{
 				ps.setInt(1, bossId);
@@ -326,7 +326,7 @@ public class RaidBossSpawnManager
 	 */
 	private void updateDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE raidboss_spawnlist SET respawn_time = ?, currentHP = ?, currentMP = ? WHERE boss_id = ?"))
 		{
 			for (Integer bossId : _storedInfo.keySet())

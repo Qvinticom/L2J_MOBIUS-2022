@@ -688,7 +688,7 @@ public class MercTicketManager
 	private final void load()
 	{
 		// load merc tickets into the world
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;

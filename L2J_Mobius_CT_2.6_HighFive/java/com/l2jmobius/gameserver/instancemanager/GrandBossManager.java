@@ -73,7 +73,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void init()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_data ORDER BY boss_id"))
 		{
@@ -123,7 +123,7 @@ public final class GrandBossManager implements IStorable
 			zones.put(zoneId, new ArrayList<>());
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * from grandboss_list ORDER BY player_id"))
 		{
@@ -229,7 +229,7 @@ public final class GrandBossManager implements IStorable
 	@Override
 	public boolean storeMe()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate(DELETE_GRAND_BOSS_LIST);
@@ -302,7 +302,7 @@ public final class GrandBossManager implements IStorable
 	
 	private void updateDb(int bossId, boolean statusOnly)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final L2GrandBossInstance boss = BOSSES.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);

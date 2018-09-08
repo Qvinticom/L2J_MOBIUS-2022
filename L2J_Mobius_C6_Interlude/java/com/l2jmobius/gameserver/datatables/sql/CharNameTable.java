@@ -42,7 +42,7 @@ public class CharNameTable
 	public synchronized boolean doesCharNameExist(String name)
 	{
 		boolean result = true;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT account_name FROM characters WHERE char_name=?");
 			statement.setString(1, name);
@@ -63,7 +63,7 @@ public class CharNameTable
 	{
 		String name = "";
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT char_name FROM characters WHERE obj_Id=?");
 			statement.setInt(1, objId);
@@ -90,7 +90,7 @@ public class CharNameTable
 	{
 		int id = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT obj_Id FROM characters WHERE char_name=?");
 			statement.setString(1, name);
@@ -117,7 +117,7 @@ public class CharNameTable
 	{
 		int accessLevel = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT accesslevel FROM characters WHERE obj_Id=?");
 			statement.setInt(1, objId);
@@ -144,7 +144,7 @@ public class CharNameTable
 	{
 		int number = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT COUNT(char_name) FROM characters WHERE account_name=?");
 			statement.setString(1, account);

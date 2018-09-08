@@ -160,7 +160,7 @@ public final class FortManager implements InstanceListManager
 	@Override
 	public void loadInstances()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id FROM fort ORDER BY id"))
 		{

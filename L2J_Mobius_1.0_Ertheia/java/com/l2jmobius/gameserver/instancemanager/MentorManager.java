@@ -54,7 +54,7 @@ public class MentorManager
 	
 	private void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT * FROM character_mentees"))
 		{
@@ -76,7 +76,7 @@ public class MentorManager
 	 */
 	public void deleteMentee(int mentorId, int menteeId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?"))
 		{
 			statement.setInt(1, mentorId);
@@ -95,7 +95,7 @@ public class MentorManager
 	 */
 	public void deleteMentor(int mentorId, int menteeId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_mentees WHERE mentorId = ? AND charId = ?"))
 		{
 			statement.setInt(1, mentorId);

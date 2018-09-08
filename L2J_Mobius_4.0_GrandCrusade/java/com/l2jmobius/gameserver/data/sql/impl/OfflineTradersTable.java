@@ -58,7 +58,7 @@ public class OfflineTradersTable
 	
 	public void storeOffliners()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS);
 			PreparedStatement stm3 = con.prepareStatement(SAVE_OFFLINE_STATUS);
@@ -175,7 +175,7 @@ public class OfflineTradersTable
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Loading offline traders...");
 		int nTraders = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement stm = con.createStatement();
 			ResultSet rs = stm.executeQuery(LOAD_OFFLINE_STATUS))
 		{
@@ -333,7 +333,7 @@ public class OfflineTradersTable
 	
 	public static synchronized void onTransaction(L2PcInstance trader, boolean finished, boolean firstCall)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER);
 			PreparedStatement stm3 = con.prepareStatement(SAVE_ITEMS);
@@ -457,7 +457,7 @@ public class OfflineTradersTable
 	{
 		PlayerCountManager.getInstance().decOfflineTradeCount();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stm1 = con.prepareStatement(CLEAR_OFFLINE_TABLE_ITEMS_PLAYER);
 			PreparedStatement stm2 = con.prepareStatement(CLEAR_OFFLINE_TABLE_PLAYER))
 		{

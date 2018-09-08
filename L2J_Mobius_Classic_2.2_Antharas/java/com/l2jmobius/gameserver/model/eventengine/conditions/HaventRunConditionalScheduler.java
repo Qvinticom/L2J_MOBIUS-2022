@@ -52,7 +52,7 @@ public class HaventRunConditionalScheduler implements IConditionalEventScheduler
 			throw new NullPointerException("Scheduler not found: " + _name);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT lastRun FROM event_schedulers WHERE eventName = ? AND schedulerName = ?"))
 		{
 			ps.setString(1, _eventManager.getName());

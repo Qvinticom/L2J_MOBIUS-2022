@@ -93,7 +93,7 @@ public class AutoSpawn
 	private void restoreSpawnData()
 	{
 		int numLoaded = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
 			PreparedStatement statement2 = null;

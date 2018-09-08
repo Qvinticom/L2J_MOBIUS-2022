@@ -115,7 +115,7 @@ public final class RequestExSetPledgeCrestLarge extends L2GameClientPacket
 				crestCache.removePledgeCrestLarge(clan.getCrestLargeId());
 			}
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement("UPDATE clan_data SET crest_large_id = ? WHERE clan_id = ?");
 				statement.setInt(1, newId);

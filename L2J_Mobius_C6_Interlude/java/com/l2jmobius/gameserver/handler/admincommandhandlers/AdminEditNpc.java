@@ -795,7 +795,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void storeTradeList(int itemID, int price, int tradeListID, int order)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement("INSERT INTO merchant_buylists (`item_id`,`price`,`shop_id`,`order`) values (" + itemID + "," + price + "," + tradeListID + "," + order + ")");
 			stmt.execute();
@@ -809,7 +809,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void updateTradeList(int itemID, int price, int tradeListID, int order)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement("UPDATE merchant_buylists SET `price`='" + price + "' WHERE `shop_id`='" + tradeListID + "' AND `order`='" + order + "'");
 			stmt.execute();
@@ -823,7 +823,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void deleteTradeList(int tradeListID, int order)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement("DELETE FROM merchant_buylists WHERE `shop_id`='" + tradeListID + "' AND `order`='" + order + "'");
 			stmt.execute();
@@ -838,7 +838,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	private int findOrderTradeList(int itemID, int price, int tradeListID)
 	{
 		int order = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stmt = con.prepareStatement("SELECT * FROM merchant_buylists WHERE `shop_id`='" + tradeListID + "' AND `item_id` ='" + itemID + "' AND `price` = '" + price + "'");
 			ResultSet rs = stmt.executeQuery();
@@ -1243,7 +1243,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showEditDropData(L2PcInstance activeChar, int npcId, int itemId, int category)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT mobId, itemId, min, max, category, chance FROM droplist WHERE mobId=" + npcId + " AND itemId=" + itemId + " AND category=" + category);
 			ResultSet dropData = statement.executeQuery();
@@ -1307,7 +1307,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void updateDropData(L2PcInstance activeChar, int npcId, int itemId, int min, int max, int category, int chance)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE droplist SET min=?, max=?, chance=? WHERE mobId=? AND itemId=? AND category=?");
 			statement.setInt(1, min);
@@ -1361,7 +1361,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void addDropData(L2PcInstance activeChar, int npcId, int itemId, int min, int max, int category, int chance)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO droplist(mobId, itemId, min, max, category, chance) values(?,?,?,?,?,?)");
 			statement.setInt(1, npcId);
@@ -1392,7 +1392,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void deleteDropData(L2PcInstance activeChar, int npcId, int itemId, int category)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (npcId > 0)
 			{
@@ -1433,7 +1433,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 		npcData.clearAllDropData();
 		
 		// get the drops
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			L2DropData dropData = null;
 			
@@ -1556,7 +1556,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void showNpcSkillEdit(L2PcInstance activeChar, int npcId, int skillId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills WHERE npcid=" + npcId + " AND skillid=" + skillId);
 			final ResultSet skillData = statement.executeQuery();
@@ -1611,7 +1611,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE npcskills SET level=? WHERE npcid=? AND skillid=?");
 			statement.setInt(1, level);
@@ -1682,7 +1682,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("INSERT INTO npcskills(npcid, skillid, level) values(?,?,?)");
 			statement.setInt(1, npcId);
@@ -1710,7 +1710,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void deleteNpcSkillData(L2PcInstance activeChar, int npcId, int skillId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (npcId > 0)
 			{
@@ -1739,7 +1739,7 @@ public class AdminEditNpc implements IAdminCommandHandler
 	
 	private void reLoadNpcSkillList(int npcId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final L2NpcTemplate npcData = NpcTable.getInstance().getTemplate(npcId);
 			npcData.getSkills().clear();

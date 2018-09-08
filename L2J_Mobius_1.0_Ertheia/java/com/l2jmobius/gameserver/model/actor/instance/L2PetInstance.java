@@ -788,7 +788,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id = ?"))
 		{
 			statement.setInt(1, _controlObjectId);
@@ -846,7 +846,7 @@ public class L2PetInstance extends L2Summon
 	
 	private static L2PetInstance restore(L2ItemInstance control, L2NpcTemplate template, L2PcInstance owner)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT item_obj_id, name, level, curHp, curMp, exp, sp, fed FROM pets WHERE item_obj_id=?"))
 		{
 			L2PetInstance pet;
@@ -942,7 +942,7 @@ public class L2PetInstance extends L2Summon
 			req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,fed=?,ownerId=?,restore=? WHERE item_obj_id = ?";
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(req))
 		{
 			statement.setString(1, getName());
@@ -992,7 +992,7 @@ public class L2PetInstance extends L2Summon
 		// Clear list for overwrite
 		SummonEffectsTable.getInstance().getPetEffects().getOrDefault(getControlObjectId(), Collections.emptyList()).clear();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement(DELETE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(ADD_SKILL_SAVE))
 		{
@@ -1067,7 +1067,7 @@ public class L2PetInstance extends L2Summon
 	@Override
 	public void restoreEffects()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps1 = con.prepareStatement(RESTORE_SKILL_SAVE);
 			PreparedStatement ps2 = con.prepareStatement(DELETE_SKILL_SAVE))
 		{

@@ -55,7 +55,7 @@ public final class MailManager
 	private void load()
 	{
 		int count = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement ps = con.createStatement();
 			ResultSet rs = ps.executeQuery("SELECT * FROM messages ORDER BY expiration"))
 		{
@@ -165,7 +165,7 @@ public final class MailManager
 	public void sendMessage(Message msg)
 	{
 		_messages.put(msg.getId(), msg);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = Message.getStatement(msg, con))
 		{
 			ps.execute();
@@ -186,7 +186,7 @@ public final class MailManager
 	
 	public final void markAsReadInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isUnread = 'false' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -200,7 +200,7 @@ public final class MailManager
 	
 	public final void markAsDeletedBySenderInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedBySender = 'true' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -214,7 +214,7 @@ public final class MailManager
 	
 	public final void markAsDeletedByReceiverInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET isDeletedByReceiver = 'true' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -228,7 +228,7 @@ public final class MailManager
 	
 	public final void removeAttachmentsInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("UPDATE messages SET hasAttachments = 'false' WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);
@@ -242,7 +242,7 @@ public final class MailManager
 	
 	public final void deleteMessageInDb(int msgId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM messages WHERE messageId = ?"))
 		{
 			ps.setInt(1, msgId);

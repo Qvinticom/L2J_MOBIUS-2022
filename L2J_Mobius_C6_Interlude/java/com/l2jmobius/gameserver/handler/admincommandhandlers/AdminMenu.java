@@ -340,7 +340,7 @@ public class AdminMenu implements IAdminCommandHandler
 	
 	private void setAccountAccessLevel(String player, L2PcInstance activeChar, int banLevel)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			String stmt = "SELECT account_name FROM characters WHERE char_name = ?";
 			PreparedStatement statement = con.prepareStatement(stmt);

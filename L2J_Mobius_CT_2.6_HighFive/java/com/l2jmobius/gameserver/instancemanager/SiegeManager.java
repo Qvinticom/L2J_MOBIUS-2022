@@ -87,7 +87,7 @@ public final class SiegeManager
 		}
 		
 		boolean register = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT clan_id FROM siege_clans where clan_id=? and castle_id=?"))
 		{
 			ps.setInt(1, clan.getId());
@@ -276,7 +276,7 @@ public final class SiegeManager
 	
 	private final void loadTrapUpgrade(int castleId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM castle_trapupgrade WHERE castleId=?"))
 		{
 			ps.setInt(1, castleId);

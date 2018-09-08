@@ -128,7 +128,7 @@ public class PremiumManager
 	
 	private void loadPremiumData(String accountName)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(LOAD_SQL))
 		{
 			stmt.setString(1, accountName);
@@ -160,7 +160,7 @@ public class PremiumManager
 		long newPremiumExpiration = oldPremiumExpiration + addTime;
 		
 		// UPDATE DATABASE
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(UPDATE_SQL))
 		{
 			stmt.setLong(1, newPremiumExpiration);
@@ -205,7 +205,7 @@ public class PremiumManager
 		premiumData.remove(accountName);
 		
 		// UPDATE DATABASE
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(DELETE_SQL))
 		{
 			stmt.setString(1, accountName);

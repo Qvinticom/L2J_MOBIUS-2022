@@ -386,7 +386,7 @@ public class ItemTable
 			// if it's a pet control item, delete the pet as well
 			if (item.getItem().isPetItem())
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection();
+				try (Connection con = DatabaseFactory.getConnection();
 					PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?"))
 				{
 					// Delete the pet in db

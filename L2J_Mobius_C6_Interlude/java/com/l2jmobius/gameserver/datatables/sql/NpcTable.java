@@ -71,7 +71,7 @@ public class NpcTable
 	
 	private void restoreNpcData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM npc");
 			final ResultSet npcdata = statement.executeQuery();
@@ -86,7 +86,7 @@ public class NpcTable
 		
 		if (Config.CUSTOM_NPC_TABLE)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_npc");
 				final ResultSet npcdata = statement.executeQuery();
@@ -100,7 +100,7 @@ public class NpcTable
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT npcid, skillid, level FROM npcskills");
 			final ResultSet npcskills = statement.executeQuery();
@@ -146,7 +146,7 @@ public class NpcTable
 		
 		if (Config.CUSTOM_DROPLIST_TABLE)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement = con.prepareStatement("SELECT * FROM custom_droplist ORDER BY mobId, chance DESC");
 				final ResultSet dropData = statement.executeQuery();
@@ -186,7 +186,7 @@ public class NpcTable
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM droplist ORDER BY mobId, chance DESC");
 			final ResultSet dropData = statement.executeQuery();
@@ -225,7 +225,7 @@ public class NpcTable
 			LOGGER.warning("NPCTable: Error reading NPC drop data." + e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM skill_learn");
 			final ResultSet learndata = statement.executeQuery();
@@ -259,7 +259,7 @@ public class NpcTable
 			LOGGER.warning("NPCTable: Error reading NPC trainer data." + e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM minions");
 			final ResultSet minionData = statement.executeQuery();
@@ -554,7 +554,7 @@ public class NpcTable
 	
 	public void reloadNpc(int id)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// save a copy of the old data
 			final L2NpcTemplate old = getTemplate(id);
@@ -628,7 +628,7 @@ public class NpcTable
 	
 	public void saveNpc(StatsSet npc)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final Map<String, Object> set = npc.getSet();
 			

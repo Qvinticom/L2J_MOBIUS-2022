@@ -840,7 +840,7 @@ public class Siege
 	 */
 	public void clearSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?");
 			statement.setInt(1, getCastle().getCastleId());
@@ -870,7 +870,7 @@ public class Siege
 	 */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2");
 			statement.setInt(1, getCastle().getCastleId());
@@ -1144,7 +1144,7 @@ public class Siege
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?");
 			statement.setInt(1, getCastle().getCastleId());
@@ -1427,7 +1427,7 @@ public class Siege
 	/** Load siege clans. */
 	private void loadSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			getAttackerClans().clear();
 			getDefenderClans().clear();
@@ -1552,7 +1552,7 @@ public class Siege
 	/** Save siege date to database. */
 	private void saveSiegeDate()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("Update castle set siegeDate = ? where id = ?");
 			statement.setLong(1, getCastle().getSiegeDate().getTimeInMillis());
@@ -1594,7 +1594,7 @@ public class Siege
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

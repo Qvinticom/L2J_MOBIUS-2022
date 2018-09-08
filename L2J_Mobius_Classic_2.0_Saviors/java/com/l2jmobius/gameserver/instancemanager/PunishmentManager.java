@@ -56,7 +56,7 @@ public final class PunishmentManager
 		int expired = 0;
 		
 		// Load punishments.
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement st = con.createStatement();
 			ResultSet rset = st.executeQuery("SELECT * FROM punishments"))
 		{

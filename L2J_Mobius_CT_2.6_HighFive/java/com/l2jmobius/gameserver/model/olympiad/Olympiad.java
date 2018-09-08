@@ -175,7 +175,7 @@ public class Olympiad extends ListenersContainer
 	{
 		NOBLES.clear();
 		boolean loaded = false;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rset = s.executeQuery(OLYMPIAD_LOAD_DATA))
 		{
@@ -253,7 +253,7 @@ public class Olympiad extends ListenersContainer
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rset = s.executeQuery(OLYMPIAD_LOAD_NOBLES))
 		{
@@ -321,7 +321,7 @@ public class Olympiad extends ListenersContainer
 	{
 		NOBLES_RANK.clear();
 		final Map<Integer, Integer> tmpPlace = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery(GET_ALL_CLASSIFIED_NOBLESS))
 		{
@@ -839,7 +839,7 @@ public class Olympiad extends ListenersContainer
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (Entry<Integer, StatsSet> entry : NOBLES.entrySet())
 			{
@@ -911,7 +911,7 @@ public class Olympiad extends ListenersContainer
 	{
 		saveNobleData();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(OLYMPIAD_SAVE_DATA))
 		{
 			ps.setInt(1, _currentCycle);
@@ -952,7 +952,7 @@ public class Olympiad extends ListenersContainer
 	
 	protected void updateMonthlyData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s1 = con.createStatement();
 			Statement s2 = con.createStatement())
 		{
@@ -994,7 +994,7 @@ public class Olympiad extends ListenersContainer
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(OLYMPIAD_GET_HEROS))
 		{
 			StatsSet hero;
@@ -1101,7 +1101,7 @@ public class Olympiad extends ListenersContainer
 	{
 		final List<String> names = new ArrayList<>();
 		final String query = Config.ALT_OLY_SHOW_MONTHLY_WINNERS ? ((classId == 132) ? GET_EACH_CLASS_LEADER_SOULHOUND : GET_EACH_CLASS_LEADER) : ((classId == 132) ? GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND : GET_EACH_CLASS_LEADER_CURRENT);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(query))
 		{
 			ps.setInt(1, classId);
@@ -1184,7 +1184,7 @@ public class Olympiad extends ListenersContainer
 	public int getLastNobleOlympiadPoints(int objId)
 	{
 		int result = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT olympiad_points FROM olympiad_nobles_eom WHERE charId = ?"))
 		{
 			ps.setInt(1, objId);
@@ -1300,7 +1300,7 @@ public class Olympiad extends ListenersContainer
 	
 	protected void deleteNobles()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate(OLYMPIAD_DELETE_ALL);

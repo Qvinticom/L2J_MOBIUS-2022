@@ -53,7 +53,7 @@ public class AdminCommandAccessRights
 	 */
 	private AdminCommandAccessRights()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement stmt = con.prepareStatement("SELECT * FROM admin_command_access_rights");
 			final ResultSet rset = stmt.executeQuery();

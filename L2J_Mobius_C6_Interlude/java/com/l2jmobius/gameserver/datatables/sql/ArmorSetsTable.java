@@ -53,7 +53,7 @@ public class ArmorSetsTable
 	
 	private void loadData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT id, chest, legs, head, gloves, feet, skill_id, shield, shield_skill_id, enchant6skill FROM armorsets");
 			final ResultSet rset = statement.executeQuery();

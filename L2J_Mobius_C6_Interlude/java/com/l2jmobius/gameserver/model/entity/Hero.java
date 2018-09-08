@@ -87,7 +87,7 @@ public class Hero
 	{
 		_heroes = new HashMap<>();
 		_completeHeroes = new HashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
 			PreparedStatement statement2 = null;
@@ -379,7 +379,7 @@ public class Hero
 			}
 			else
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = null;
 					ResultSet rset = null;
@@ -419,7 +419,7 @@ public class Hero
 		PreparedStatement statement = null;
 		PreparedStatement statement2 = null;
 		ResultSet rset2 = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (setDefault)
 			{
@@ -502,7 +502,7 @@ public class Hero
 	
 	private void deleteItemsInDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(DELETE_ITEMS);
 			statement.execute();

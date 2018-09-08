@@ -68,7 +68,7 @@ public class SpawnTable
 	
 	private void fillSpawnTable()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			
@@ -173,7 +173,7 @@ public class SpawnTable
 		// -------------------------------Custom Spawnlist----------------------------//
 		if (Config.CUSTOM_SPAWNLIST_TABLE)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement;
 				
@@ -284,7 +284,7 @@ public class SpawnTable
 		
 		if (storeInDb)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				final PreparedStatement statement = con.prepareStatement("INSERT INTO " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + "(id,count,npc_templateid,locx,locy,locz,heading,respawn_delay,loc_id) values(?,?,?,?,?,?,?,?,?)");
 				statement.setInt(1, spawn.getId());
@@ -317,7 +317,7 @@ public class SpawnTable
 		{
 			if (Config.DELETE_GMSPAWN_ON_CUSTOM)
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final PreparedStatement statement = con.prepareStatement("Replace into custom_notspawned VALUES (?,?)");
 					statement.setInt(1, spawn.getId());
@@ -332,7 +332,7 @@ public class SpawnTable
 			}
 			else
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final PreparedStatement statement = con.prepareStatement("DELETE FROM " + (spawn.isCustom() ? "custom_spawnlist" : "spawnlist") + " WHERE id=?");
 					statement.setInt(1, spawn.getId());

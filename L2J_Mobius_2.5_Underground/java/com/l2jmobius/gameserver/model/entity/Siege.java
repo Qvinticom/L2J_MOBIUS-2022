@@ -760,7 +760,7 @@ public class Siege implements Siegable
 	/** Clear all registered siege clans from database for castle */
 	public void clearSiegeClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=?"))
 		{
 			statement.setInt(1, _castle.getResidenceId());
@@ -788,7 +788,7 @@ public class Siege implements Siegable
 	/** Clear all siege clans waiting for approval from database for castle */
 	public void clearSiegeWaitingClan()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and type = 2"))
 		{
 			statement.setInt(1, _castle.getResidenceId());
@@ -972,7 +972,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM siege_clans WHERE castle_id=? and clan_id=?"))
 		{
 			statement.setInt(1, _castle.getResidenceId());
@@ -1238,7 +1238,7 @@ public class Siege implements Siegable
 	private void loadSiegeClan()
 	{
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT clan_id,type FROM siege_clans where castle_id=?"))
 		{
 			getAttackerClans().clear();
@@ -1349,7 +1349,7 @@ public class Siege implements Siegable
 			_scheduledStartSiegeTask = ThreadPool.schedule(new ScheduleStartSiegeTask(_castle), 1000);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE castle SET siegeDate = ?, regTimeEnd = ?, regTimeOver = ?  WHERE id = ?"))
 		{
 			statement.setLong(1, _castle.getSiegeDate().getTimeInMillis());
@@ -1378,7 +1378,7 @@ public class Siege implements Siegable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if ((typeId == DEFENDER) || (typeId == DEFENDER_NOT_APPROVED) || (typeId == OWNER))
 			{

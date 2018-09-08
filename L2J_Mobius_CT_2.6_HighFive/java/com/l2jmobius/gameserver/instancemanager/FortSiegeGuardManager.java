@@ -104,7 +104,7 @@ public final class FortSiegeGuardManager
 	void loadSiegeGuard()
 	{
 		_siegeGuards.clear();
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT npcId, x, y, z, heading, respawnDelay FROM fort_siege_guards WHERE fortId = ?"))
 		{
 			final int fortId = _fort.getResidenceId();

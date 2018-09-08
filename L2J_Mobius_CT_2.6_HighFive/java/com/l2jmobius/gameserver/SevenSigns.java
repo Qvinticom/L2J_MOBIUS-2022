@@ -850,7 +850,7 @@ public class SevenSigns
 	 */
 	protected void restoreSevenSignsData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (Statement s = con.createStatement();
 				ResultSet rs = s.executeQuery(LOAD_DATA))
@@ -917,7 +917,7 @@ public class SevenSigns
 	 */
 	public void saveSevenSignsData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PLAYER))
 		{
 			for (StatsSet sevenDat : _signsPlayerData.values())
@@ -948,7 +948,7 @@ public class SevenSigns
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_PLAYER))
 		{
 			ps.setString(1, sevenDat.getString("cabal"));
@@ -969,7 +969,7 @@ public class SevenSigns
 	
 	public final void saveSevenSignsStatus()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(UPDATE_STATUS))
 		{
 			ps.setInt(1, _currentCycle);
@@ -1056,7 +1056,7 @@ public class SevenSigns
 			_signsPlayerData.put(objectId, currPlayerData);
 			
 			// Update data in database, as we have a new player signing up.
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(INSERT_PLAYER))
 			{
 				ps.setInt(1, objectId);

@@ -93,7 +93,7 @@ public class GrandBossManager
 		_bosses = new ConcurrentHashMap<>();
 		_storedInfo = new ConcurrentHashMap<>();
 		_bossStatus = new ConcurrentHashMap<>();
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * from grandboss_data ORDER BY boss_id");
 			final ResultSet rset = statement.executeQuery();
@@ -152,7 +152,7 @@ public class GrandBossManager
 			zones.put(zone.getId(), new CopyOnWriteArrayList<Integer>());
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * from grandboss_list ORDER BY player_id");
 			final ResultSet rset = statement.executeQuery();
@@ -287,7 +287,7 @@ public class GrandBossManager
 	
 	private void fastStoreToDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (Integer bossId : _storedInfo.keySet())
 			{
@@ -333,7 +333,7 @@ public class GrandBossManager
 	
 	private void storeToDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement delete = con.prepareStatement(DELETE_GRAND_BOSS_LIST);
 			delete.executeUpdate();
@@ -406,7 +406,7 @@ public class GrandBossManager
 	private void updateDb(int bossId, boolean statusOnly)
 	{
 		PreparedStatement statement = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final L2GrandBossInstance boss = _bosses.get(bossId);
 			final StatsSet info = _storedInfo.get(bossId);

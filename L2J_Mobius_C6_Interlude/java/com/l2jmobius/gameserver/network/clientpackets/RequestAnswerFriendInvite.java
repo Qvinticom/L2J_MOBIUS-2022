@@ -55,7 +55,7 @@ public final class RequestAnswerFriendInvite extends L2GameClientPacket
 			
 			if (_response == 1)
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement("INSERT INTO character_friends (char_id, friend_id) VALUES (?,?), (?,?)");
 					statement.setInt(1, requestor.getObjectId());

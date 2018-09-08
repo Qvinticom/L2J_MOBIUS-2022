@@ -44,7 +44,7 @@ public class TaskDailySkillReuseClean extends Task
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (int skill_id : _daily_skills)
 			{

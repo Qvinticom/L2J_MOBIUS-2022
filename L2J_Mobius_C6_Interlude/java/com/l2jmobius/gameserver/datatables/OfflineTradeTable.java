@@ -56,7 +56,7 @@ public class OfflineTradeTable
 	// of store of normal sellers/buyers also if not in offline mode
 	public static void storeOffliners()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stm = con.prepareStatement(CLEAR_OFFLINE_TABLE);
 			stm.execute();
@@ -174,7 +174,7 @@ public class OfflineTradeTable
 	{
 		LOGGER.info("Loading offline traders...");
 		int nTraders = 0;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement stm = con.prepareStatement(LOAD_OFFLINE_STATUS);
 			final ResultSet rs = stm.executeQuery();
@@ -305,7 +305,7 @@ public class OfflineTradeTable
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement stm = con.prepareStatement(DELETE_OFFLINE_TABLE_ALL_ITEMS);
 			stm.setInt(1, pc.getObjectId());

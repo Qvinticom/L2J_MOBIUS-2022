@@ -286,7 +286,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			return -1;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT clanId FROM characters WHERE charId=?"))
 		{
 			statement.setInt(1, objectId);
@@ -349,7 +349,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE charId=?"))
 		{
 			statement.setInt(1, objectId);
@@ -372,7 +372,7 @@ public final class L2GameClient extends ChannelInboundHandler<L2GameClient>
 		
 		CharNameTable.getInstance().removeName(objid);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			try (PreparedStatement ps = con.prepareStatement("DELETE FROM character_contacts WHERE charId=? OR contactId=?"))
 			{

@@ -83,7 +83,7 @@ public class ItemsOnGroundManager
 		// if DestroyPlayerDroppedItem was previously false, items curently protected will be added to ItemsAutoDestroy
 		if (Config.DESTROY_DROPPED_PLAYER_ITEM)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				String str = null;
 				if (!Config.DESTROY_EQUIPABLE_PLAYER_ITEM)
@@ -108,7 +108,7 @@ public class ItemsOnGroundManager
 		}
 		
 		// Add items to world
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			Statement s = con.createStatement();
 			ResultSet result;
@@ -218,7 +218,7 @@ public class ItemsOnGroundManager
 	
 	public void emptyTable()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement del = con.prepareStatement("delete from itemsonground");
 			del.execute();
@@ -255,7 +255,7 @@ public class ItemsOnGroundManager
 					continue; // Cursed Items not saved to ground, prevent double save
 				}
 				
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					PreparedStatement statement = con.prepareStatement("insert into itemsonground(object_id,item_id,count,enchant_level,x,y,z,drop_time,equipable) values(?,?,?,?,?,?,?,?,?)");
 					statement.setInt(1, item.getObjectId());

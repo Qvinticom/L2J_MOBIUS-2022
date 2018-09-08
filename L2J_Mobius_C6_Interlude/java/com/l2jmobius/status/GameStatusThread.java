@@ -972,7 +972,7 @@ public class GameStatusThread extends Thread
 	
 	private void jailOfflinePlayer(String name, int delay)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, -114356);
@@ -1007,7 +1007,7 @@ public class GameStatusThread extends Thread
 	
 	private void unjailOfflinePlayer(String name)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=?, punish_level=?, punish_timer=? WHERE char_name=?");
 			statement.setInt(1, 17836);

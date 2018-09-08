@@ -659,7 +659,7 @@ public abstract class ItemContainer
 		final int ownerid = getOwnerId();
 		final String baseLocation = getBaseLocation().name();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT object_id FROM items WHERE owner_id=? AND (loc=?) ORDER BY object_id DESC");
 			statement.setInt(1, ownerid);

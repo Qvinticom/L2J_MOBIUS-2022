@@ -871,7 +871,7 @@ public class L2PetInstance extends L2Summon
 		}
 		
 		// pet control item no longer exists, delete the pet from the db
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?");
 			statement.setInt(1, _controlItemId);
@@ -977,7 +977,7 @@ public class L2PetInstance extends L2Summon
 	{
 		L2PetInstance pet = null;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			if (template.type.compareToIgnoreCase("L2BabyPet") == 0)
 			{
@@ -1048,7 +1048,7 @@ public class L2PetInstance extends L2Summon
 			req = "UPDATE pets SET name=?,level=?,curHp=?,curMp=?,exp=?,sp=?,karma=?,pkkills=?,fed=? WHERE item_obj_id = ?";
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement(req);
 			statement.setString(1, getName());

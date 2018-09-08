@@ -162,7 +162,7 @@ public class AutoSaveManager
 			/*
 			 * Perform the clean here instead of every time that the skills are saved in order to do it in once step because if skill have 0 reuse delay doesn't affect the game, just makes the table grows bigger
 			 */
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement;
 				statement = con.prepareStatement("DELETE FROM character_skills_save WHERE reuse_delay=0 && restore_type=1");

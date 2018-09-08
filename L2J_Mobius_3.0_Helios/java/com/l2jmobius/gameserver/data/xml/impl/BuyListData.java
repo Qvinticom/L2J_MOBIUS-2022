@@ -66,7 +66,7 @@ public final class BuyListData implements IGameXmlReader
 		
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _buyLists.size() + " BuyLists.");
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rs = statement.executeQuery("SELECT * FROM `buylists`"))
 		{

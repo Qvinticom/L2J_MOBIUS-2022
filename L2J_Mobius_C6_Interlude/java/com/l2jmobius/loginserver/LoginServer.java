@@ -88,7 +88,7 @@ public class LoginServer
 		Config.load();
 		
 		// Prepare Database
-		DatabaseFactory.getInstance();
+		DatabaseFactory.init();
 		
 		try
 		{

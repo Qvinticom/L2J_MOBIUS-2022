@@ -100,7 +100,7 @@ public final class ClanHall extends AbstractResidence
 	@Override
 	protected void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement loadStatement = con.prepareStatement(LOAD_CLANHALL);
 			PreparedStatement insertStatement = con.prepareStatement(INSERT_CLANHALL))
 		{
@@ -133,7 +133,7 @@ public final class ClanHall extends AbstractResidence
 	
 	public void updateDB()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(UPDATE_CLANHALL))
 		{
 			statement.setInt(1, getOwnerId());

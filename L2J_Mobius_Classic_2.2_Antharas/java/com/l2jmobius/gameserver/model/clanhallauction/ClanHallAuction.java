@@ -58,7 +58,7 @@ public class ClanHallAuction
 	
 	private final void loadBidder()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(LOAD_CLANHALL_BIDDERS))
 		{
 			ps.setInt(1, _clanHallId);
@@ -102,7 +102,7 @@ public class ClanHallAuction
 			}
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(INSERT_CLANHALL_BIDDER))
 		{
 			ps.setInt(1, _clanHallId);
@@ -121,7 +121,7 @@ public class ClanHallAuction
 	public void removeBid(L2Clan clan)
 	{
 		getBids().remove(clan.getId());
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDER))
 		{
 			ps.setInt(1, clan.getId());
@@ -170,7 +170,7 @@ public class ClanHallAuction
 			clanHall.setOwner(highestBidder.getClan());
 			getBids().clear();
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement(DELETE_CLANHALL_BIDDERS))
 			{
 				ps.setInt(1, _clanHallId);

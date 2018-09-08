@@ -55,7 +55,7 @@ public class HennaTreeTable
 		int classId = 0;
 		int count = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT class_name, id, parent_id FROM class_list ORDER BY id");
 			final ResultSet classlist = statement.executeQuery();

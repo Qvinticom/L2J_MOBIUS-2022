@@ -277,7 +277,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		
 		byte answer = -1;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT clanId from characters WHERE obj_Id=?");
 			statement.setInt(1, objid);
@@ -350,7 +350,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE characters SET deletetime=0 WHERE obj_id=?");
 			statement.setInt(1, objid);
@@ -370,7 +370,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

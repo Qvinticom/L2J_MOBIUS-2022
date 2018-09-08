@@ -114,7 +114,7 @@ public class CursedWeapon
 				// Remove from Db
 				LOGGER.info(_name + " being removed offline.");
 				
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					// Delete the item
 					PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE owner_id=? AND item_id=?");
@@ -470,7 +470,7 @@ public class CursedWeapon
 			LOGGER.info("CursedWeapon: Saving data to disk.");
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete previous datas
 			PreparedStatement statement = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?");

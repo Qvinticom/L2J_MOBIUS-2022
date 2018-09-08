@@ -180,7 +180,7 @@ public abstract class ClanHall
 		
 		public void dbSave()
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement ps = con.prepareStatement("REPLACE INTO clanhall_functions (hall_id, type, lvl, lease, rate, endTime) VALUES (?,?,?,?,?,?)"))
 			{
 				ps.setInt(1, _clanHallId);
@@ -440,7 +440,7 @@ public abstract class ClanHall
 	/** Load All Functions */
 	protected void loadFunctions()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT * FROM clanhall_functions WHERE hall_id = ?"))
 		{
 			ps.setInt(1, _clanHallId);
@@ -465,7 +465,7 @@ public abstract class ClanHall
 	public void removeFunction(int functionType)
 	{
 		_functions.remove(functionType);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM clanhall_functions WHERE hall_id=? AND type=?"))
 		{
 			ps.setInt(1, _clanHallId);

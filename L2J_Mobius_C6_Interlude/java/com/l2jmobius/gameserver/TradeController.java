@@ -175,7 +175,7 @@ public class TradeController
 			int dummyItemCount = 0;
 			boolean LimitedItem = false;
 			
-			try (Connection con = DatabaseFactory.getInstance().getConnection())
+			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement1 = con.prepareStatement("SELECT * FROM merchant_shopids");
 				
@@ -355,7 +355,7 @@ public class TradeController
 			 */
 			if (Config.CUSTOM_MERCHANT_TABLES)// Custom merchat Tabels
 			{
-				try (Connection con = DatabaseFactory.getInstance().getConnection())
+				try (Connection con = DatabaseFactory.getConnection())
 				{
 					final int initialSize = _lists.size();
 					
@@ -614,7 +614,7 @@ public class TradeController
 	protected void dataTimerSave(int time)
 	{
 		final long timerSave = System.currentTimeMillis() + (time * 60 * 60 * 1000);
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE merchant_buylists SET savetimer =? WHERE time =?");
 			statement.setLong(1, timerSave);
@@ -638,7 +638,7 @@ public class TradeController
 		}
 		
 		PreparedStatement statement;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			for (L2TradeList list : _listsTaskItem.values())
 			{

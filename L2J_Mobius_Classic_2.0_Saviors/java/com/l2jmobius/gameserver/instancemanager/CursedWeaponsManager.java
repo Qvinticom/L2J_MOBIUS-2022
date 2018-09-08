@@ -142,7 +142,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 	
 	private void restore()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT itemId, charId, playerReputation, playerPkKills, nbKills, endTime FROM cursed_weapons"))
 		{
@@ -167,7 +167,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 	
 	private void controlPlayers()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("SELECT owner_id FROM items WHERE item_id=?"))
 		{
 			// TODO: See comments below...
@@ -338,7 +338,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 	
 	public static void removeFromDb(int itemId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM cursed_weapons WHERE itemId = ?"))
 		{
 			ps.setInt(1, itemId);

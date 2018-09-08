@@ -1589,7 +1589,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void playerEnter(L2PcInstance player)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement invalidQuestData = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ?");
 			PreparedStatement invalidQuestDataVar = con.prepareStatement("DELETE FROM character_quests WHERE charId = ? AND name = ? AND var = ?");
 			PreparedStatement ps1 = con.prepareStatement("SELECT name, value FROM character_quests WHERE charId = ? AND var = ?"))
@@ -1671,7 +1671,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void createQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO character_quests (charId,name,var,value) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE value=?"))
 		{
 			statement.setInt(1, qs.getPlayer().getObjectId());
@@ -1695,7 +1695,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void updateQuestVarInDb(QuestState qs, String var, String value)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("UPDATE character_quests SET value=? WHERE charId=? AND name=? AND var = ?"))
 		{
 			statement.setString(1, value);
@@ -1717,7 +1717,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestVarInDb(QuestState qs, String var)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("DELETE FROM character_quests WHERE charId=? AND name=? AND var=?"))
 		{
 			statement.setInt(1, qs.getPlayer().getObjectId());
@@ -1738,7 +1738,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 */
 	public static void deleteQuestInDb(QuestState qs, boolean repeatable)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(repeatable ? QUEST_DELETE_FROM_CHAR_QUERY : QUEST_DELETE_FROM_CHAR_QUERY_NON_REPEATABLE_QUERY))
 		{
 			ps.setInt(1, qs.getPlayer().getObjectId());

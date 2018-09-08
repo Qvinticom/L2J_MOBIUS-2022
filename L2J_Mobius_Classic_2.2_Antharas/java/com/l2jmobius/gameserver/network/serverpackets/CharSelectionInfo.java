@@ -269,7 +269,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		CharSelectInfoPackage charInfopackage;
 		final List<CharSelectInfoPackage> characterList = new LinkedList<>();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM characters WHERE account_name=? ORDER BY createDate"))
 		{
 			statement.setString(1, loginName);
@@ -302,7 +302,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 	
 	private static void loadCharacterSubclassInfo(CharSelectInfoPackage charInfopackage, int ObjectId, int activeClassId)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("SELECT exp, sp, level, vitality_points FROM character_subclasses WHERE charId=? AND class_id=? ORDER BY charId"))
 		{
 			statement.setInt(1, ObjectId);
@@ -412,7 +412,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		
 		if (weaponObjId > 0)
 		{
-			try (Connection con = DatabaseFactory.getInstance().getConnection();
+			try (Connection con = DatabaseFactory.getConnection();
 				PreparedStatement statement = con.prepareStatement("SELECT mineralId,option1,option2 FROM item_variations WHERE itemId=?"))
 			{
 				statement.setInt(1, weaponObjId);

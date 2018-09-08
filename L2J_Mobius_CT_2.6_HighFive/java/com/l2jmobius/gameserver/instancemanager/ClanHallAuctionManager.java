@@ -98,7 +98,7 @@ public final class ClanHallAuctionManager
 	
 	private final void load()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT id FROM auction ORDER BY id"))
 		{
@@ -163,7 +163,7 @@ public final class ClanHallAuctionManager
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement())
 		{
 			s.executeUpdate("INSERT INTO `auction` VALUES " + ITEM_INIT_DATA[i]);

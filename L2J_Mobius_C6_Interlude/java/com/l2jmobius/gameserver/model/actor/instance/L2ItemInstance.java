@@ -1167,7 +1167,7 @@ public final class L2ItemInstance extends L2Object
 	public static L2ItemInstance restoreFromDb(int objectId)
 	{
 		L2ItemInstance inst = null;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT owner_id, object_id, item_id, count, enchant_level, loc, loc_data, price_sell, price_buy, custom_type1, custom_type2, mana_left FROM items WHERE object_id = ?");
 			statement.setInt(1, objectId);
@@ -1368,7 +1368,7 @@ public final class L2ItemInstance extends L2Object
 			return;
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,price_sell=?,price_buy=?,custom_type1=?,custom_type2=?,mana_left=? WHERE object_id = ?");
 			statement.setInt(1, _ownerId);
@@ -1413,7 +1413,7 @@ public final class L2ItemInstance extends L2Object
 			assert !_existsInDb && (getObjectId() != 0);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,price_sell,price_buy,object_id,custom_type1,custom_type2,mana_left) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
 			statement.setInt(1, _ownerId);
@@ -1469,7 +1469,7 @@ public final class L2ItemInstance extends L2Object
 			_augmentation.deleteAugmentationData();
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM items WHERE object_id=?");
 			statement.setInt(1, getObjectId());

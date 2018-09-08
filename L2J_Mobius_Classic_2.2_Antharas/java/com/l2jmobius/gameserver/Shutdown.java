@@ -205,7 +205,7 @@ public class Shutdown extends Thread
 			// commit data, last chance
 			try
 			{
-				DatabaseFactory.getInstance().close();
+				DatabaseFactory.close();
 				LOGGER.info("Database Factory: Database connection has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
 			}
 			catch (Throwable t)

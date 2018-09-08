@@ -420,7 +420,7 @@ public class L2Rebirth
 		final int playerId = player.getObjectId();
 		int rebirthCount = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			ResultSet rset;
 			PreparedStatement statement = con.prepareStatement("SELECT * FROM `rebirth_manager` WHERE playerId = ?");
@@ -448,7 +448,7 @@ public class L2Rebirth
 	 */
 	public void storePlayerBirth(L2PcInstance player)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("INSERT INTO `rebirth_manager` (playerId,rebirthCount) VALUES (?,1)");
 			statement.setInt(1, player.getObjectId());
@@ -469,7 +469,7 @@ public class L2Rebirth
 	 */
 	public void updatePlayerBirth(L2PcInstance player, int newRebirthCount)
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final int playerId = player.getObjectId();
 			

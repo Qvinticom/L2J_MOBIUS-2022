@@ -122,7 +122,7 @@ public class RequestBrBuyProduct implements IClientIncomingPacket
 		player.broadcastUserInfo();
 		
 		// Save transaction info at SQL table item_mall_transactions
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement("INSERT INTO item_mall_transactions (charId, productId, quantity) values (?,?,?)"))
 		{
 			statement.setLong(1, player.getObjectId());

@@ -130,7 +130,7 @@ public final class SiegableHall extends ClanHall
 	@Override
 	public final void updateDb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(SQL_SAVE))
 		{
 			ps.setInt(1, getOwnerId());

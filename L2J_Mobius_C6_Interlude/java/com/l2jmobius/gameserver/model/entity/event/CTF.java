@@ -1152,7 +1152,7 @@ public class CTF implements EventTask
 						}
 						else
 						{
-							try (Connection con = DatabaseFactory.getInstance().getConnection())
+							try (Connection con = DatabaseFactory.getConnection())
 							{
 								final PreparedStatement statement = con.prepareStatement("UPDATE characters SET x=?, y=?, z=? WHERE char_name=?");
 								statement.setInt(1, _npcX);
@@ -1859,7 +1859,7 @@ public class CTF implements EventTask
 		_maxPlayers = 0;
 		_intervalBetweenMatches = 0;
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			ResultSet rs;
@@ -1941,7 +1941,7 @@ public class CTF implements EventTask
 	 */
 	public static void saveData()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement;
 			

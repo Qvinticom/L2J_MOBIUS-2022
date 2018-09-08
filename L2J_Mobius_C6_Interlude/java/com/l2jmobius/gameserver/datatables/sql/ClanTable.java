@@ -112,7 +112,7 @@ public class ClanTable
 	{
 		_clans = new HashMap<>();
 		L2Clan clan;
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT * FROM clan_data");
 			final ResultSet result = statement.executeQuery();
@@ -355,7 +355,7 @@ public class ClanTable
 		_clans.remove(clanId);
 		IdFactory.getInstance().releaseId(clanId);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = con.prepareStatement("DELETE FROM clan_data WHERE clan_id=?");
 			statement.setInt(1, clanId);
@@ -462,7 +462,7 @@ public class ClanTable
 		clan1.broadcastClanStatus();
 		clan2.broadcastClanStatus();
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, wantspeace1, wantspeace2) VALUES(?,?,?,?)");
 			statement.setInt(1, clanId1);
@@ -514,7 +514,7 @@ public class ClanTable
 		// player.getPlayerInstance().setWantsPeace(0);
 		// }
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("DELETE FROM clan_wars WHERE clan1=? AND clan2=?");
 			statement.setInt(1, clanId1);
@@ -570,7 +570,7 @@ public class ClanTable
 	
 	private void restorewars()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection())
+		try (Connection con = DatabaseFactory.getConnection())
 		{
 			final PreparedStatement statement = con.prepareStatement("SELECT clan1, clan2, wantspeace1, wantspeace2 FROM clan_wars");
 			final ResultSet rset = statement.executeQuery();

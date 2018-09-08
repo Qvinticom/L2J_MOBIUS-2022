@@ -71,7 +71,7 @@ public class Topic
 	
 	private void insertindb()
 	{
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO topic (topic_id,topic_forum_id,topic_name,topic_date,topic_ownername,topic_ownerid,topic_type,topic_reply) values (?,?,?,?,?,?,?,?)"))
 		{
 			ps.setInt(1, _id);
@@ -129,7 +129,7 @@ public class Topic
 	{
 		TopicBBSManager.getInstance().delTopic(this);
 		f.rmTopicByID(_id);
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM topic WHERE topic_id=? AND topic_forum_id=?"))
 		{
 			ps.setInt(1, _id);

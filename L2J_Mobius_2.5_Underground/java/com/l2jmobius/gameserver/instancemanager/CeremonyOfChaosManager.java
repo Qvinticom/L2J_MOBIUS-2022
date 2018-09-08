@@ -91,7 +91,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MARKS, 0);
 		GlobalVariablesManager.getInstance().set(GlobalVariablesManager.COC_TOP_MEMBER, 0);
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_MARKS);
@@ -102,7 +102,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 			LOGGER.severe(getClass().getSimpleName() + ": Could not reset Ceremony Of Chaos victories: " + e);
 		}
 		
-		try (Connection con = DatabaseFactory.getInstance().getConnection();
+		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("DELETE FROM character_variables WHERE var = ?"))
 		{
 			ps.setString(1, PlayerVariables.CEREMONY_OF_CHAOS_PROHIBITED_PENALTIES);
