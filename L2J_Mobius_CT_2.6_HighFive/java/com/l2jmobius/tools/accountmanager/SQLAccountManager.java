@@ -155,17 +155,17 @@ public class SQLAccountManager
 		String q = "SELECT login, accessLevel FROM accounts ";
 		if (m.equals("1"))
 		{
-			q = q.concat("WHERE accessLevel < 0");
+			q += "WHERE accessLevel < 0";
 		}
 		else if (m.equals("2"))
 		{
-			q = q.concat("WHERE accessLevel > 0");
+			q += "WHERE accessLevel > 0";
 		}
 		else if (m.equals("3"))
 		{
-			q = q.concat("WHERE accessLevel = 0");
+			q += "WHERE accessLevel = 0";
 		}
-		q = q.concat(" ORDER BY login ASC");
+		q += " ORDER BY login ASC";
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement(q);
