@@ -2138,9 +2138,7 @@ public class SevenSignsFestival implements SpawnListener
 			{
 				final L2Spawn npcSpawn = new L2Spawn(_witchSpawn._npcId);
 				
-				npcSpawn.setX(_witchSpawn._x);
-				npcSpawn.setY(_witchSpawn._y);
-				npcSpawn.setZ(_witchSpawn._z);
+				npcSpawn.setXYZ(_witchSpawn._x, _witchSpawn._y, _witchSpawn._z);
 				npcSpawn.setHeading(_witchSpawn._heading);
 				npcSpawn.setAmount(1);
 				npcSpawn.setRespawnDelay(1);
@@ -2268,9 +2266,7 @@ public class SevenSignsFestival implements SpawnListener
 				{
 					final L2Spawn npcSpawn = new L2Spawn(currSpawn._npcId);
 					
-					npcSpawn.setX(currSpawn._x);
-					npcSpawn.setY(currSpawn._y);
-					npcSpawn.setZ(currSpawn._z);
+					npcSpawn.setXYZ(currSpawn._x, currSpawn._y, currSpawn._z);
 					npcSpawn.setHeading(Rnd.nextInt(65536));
 					npcSpawn.setAmount(1);
 					npcSpawn.setRespawnDelay(respawnDelay);

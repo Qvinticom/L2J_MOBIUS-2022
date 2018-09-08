@@ -35,9 +35,7 @@ import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
-import com.l2jmobius.gameserver.model.interfaces.ILocational;
 import com.l2jmobius.gameserver.model.interfaces.INamable;
-import com.l2jmobius.gameserver.model.interfaces.IPositionable;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
 
@@ -48,7 +46,7 @@ import com.l2jmobius.gameserver.model.zone.type.NpcSpawnTerritory;
  * The heading of the L2NpcInstance can be a random heading if not defined (value= -1) or an exact heading (ex : merchant...).
  * @author Nightmare
  */
-public class L2Spawn implements IPositionable, IIdentifiable, INamable
+public class L2Spawn extends Location implements IIdentifiable, INamable
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2Spawn.class.getName());
 	
@@ -64,8 +62,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	protected int _scheduledCount;
 	/** The identifier of the location area where L2NpcInstance can be spawned */
 	private int _locationId;
-	/** The Location of this NPC spawn. */
-	private Location _location = new Location(0, 0, 0, 0, 0);
 	/** Link to NPC spawn territory */
 	private NpcSpawnTerritory _spawnTerritory = null;
 	/** Minimum respawn delay */
@@ -126,6 +122,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	 */
 	public L2Spawn(L2NpcTemplate template) throws SecurityException, ClassNotFoundException, NoSuchMethodException, ClassCastException
 	{
+		super(0, 0, 0);
 		// Set the _template of the L2Spawn
 		_template = template;
 		
@@ -182,122 +179,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public int getLocationId()
 	{
 		return _locationId;
-	}
-	
-	@Override
-	public Location getLocation()
-	{
-		return _location;
-	}
-	
-	/**
-	 * @return the X position of the spawn point.
-	 */
-	@Override
-	public int getX()
-	{
-		return _location.getX();
-	}
-	
-	/**
-	 * Set the X position of the spawn point.
-	 * @param x the x coordinate
-	 */
-	@Override
-	public void setX(int x)
-	{
-		_location.setX(x);
-	}
-	
-	/**
-	 * @return the Y position of the spawn point.
-	 */
-	@Override
-	public int getY()
-	{
-		return _location.getY();
-	}
-	
-	/**
-	 * Set the Y position of the spawn point.
-	 * @param y the y coordinate
-	 */
-	@Override
-	public void setY(int y)
-	{
-		_location.setY(y);
-	}
-	
-	/**
-	 * @return the Z position of the spawn point.
-	 */
-	@Override
-	public int getZ()
-	{
-		return _location.getZ();
-	}
-	
-	/**
-	 * Set the Z position of the spawn point.
-	 * @param z the z coordinate
-	 */
-	@Override
-	public void setZ(int z)
-	{
-		_location.setZ(z);
-	}
-	
-	/**
-	 * Set the x, y, z position of the spawn point.
-	 * @param x The x coordinate.
-	 * @param y The y coordinate.
-	 * @param z The z coordinate.
-	 */
-	@Override
-	public void setXYZ(int x, int y, int z)
-	{
-		setX(x);
-		setY(y);
-		setZ(z);
-	}
-	
-	/**
-	 * Set the x, y, z position of the spawn point.
-	 * @param loc The location.
-	 */
-	@Override
-	public void setXYZ(ILocational loc)
-	{
-		setXYZ(loc.getX(), loc.getY(), loc.getZ());
-	}
-	
-	/**
-	 * @return the heading of L2NpcInstance when they are spawned.
-	 */
-	@Override
-	public int getHeading()
-	{
-		return _location.getHeading();
-	}
-	
-	/**
-	 * Set the heading of L2NpcInstance when they are spawned.
-	 * @param heading
-	 */
-	@Override
-	public void setHeading(int heading)
-	{
-		_location.setHeading(heading);
-	}
-	
-	/**
-	 * Set the XYZ position of the spawn point.
-	 * @param loc
-	 */
-	@Override
-	public void setLocation(Location loc)
-	{
-		_location = loc;
 	}
 	
 	/**
@@ -473,7 +354,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			
 			// Call the constructor of the L2Npc
 			final L2Npc npc = _constructor.newInstance(_template);
-			npc.setInstanceId(_location.getInstanceId()); // Must be done before object is spawned into visible world
+			npc.setInstanceId(getInstanceId()); // Must be done before object is spawned into visible world
 			if (isSummonSpawn)
 			{
 				npc.setShowSummonAnimation(isSummonSpawn);
@@ -506,8 +387,9 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 			newlocx = loc.getX();
 			newlocy = loc.getY();
 			newlocz = loc.getZ();
+			setLocation(loc);
 		}
-		else if ((_location.getX() == 0) && (_location.getY() == 0))
+		else if ((getX() == 0) && (getY() == 0))
 		{
 			LOGGER.warning("NPC " + npc + " doesn't have spawn location!");
 			return null;
@@ -515,9 +397,9 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		else
 		{
 			// The L2NpcInstance is spawned at the exact position (Lox, Locy, Locz)
-			newlocx = _location.getX();
-			newlocy = _location.getY();
-			newlocz = _location.getZ();
+			newlocx = getX();
+			newlocy = getY();
+			newlocz = getZ();
 		}
 		
 		// If random spawn system is enabled
@@ -549,13 +431,13 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		npc.setRandomWalking(_randomWalk);
 		
 		// Set the heading of the L2NpcInstance (random heading if not defined)
-		if (_location.getHeading() == -1)
+		if (getHeading() == -1)
 		{
 			npc.setHeading(Rnd.nextInt(61794));
 		}
 		else
 		{
-			npc.setHeading(_location.getHeading());
+			npc.setHeading(getHeading());
 		}
 		
 		if (npc.isAttackable())
@@ -566,7 +448,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 		if (Config.CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
-			if (npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (_location.getInstanceId() == 0)))
+			if (npc.isMonster() && !npc.isQuestMonster() && !_template.isUndying() && !npc.isRaid() && !npc.isRaidMinion() && (Config.CHAMPION_FREQUENCY > 0) && (npc.getLevel() >= Config.CHAMP_MIN_LVL) && (npc.getLevel() <= Config.CHAMP_MAX_LVL) && (Config.CHAMPION_ENABLE_IN_INSTANCES || (getInstanceId() == 0)))
 			{
 				if (Rnd.get(100) < Config.CHAMPION_FREQUENCY)
 				{
@@ -679,7 +561,7 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	
 	public boolean isTerritoryBased()
 	{
-		return (_spawnTerritory != null) && (_location.getX() == 0) && (_location.getY() == 0);
+		return (_spawnTerritory != null) && (getX() == 0) && (getY() == 0);
 	}
 	
 	public L2Npc getLastSpawn()
@@ -695,18 +577,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	public L2NpcTemplate getTemplate()
 	{
 		return _template;
-	}
-	
-	@Override
-	public int getInstanceId()
-	{
-		return _location.getInstanceId();
-	}
-	
-	@Override
-	public void setInstanceId(int instanceId)
-	{
-		_location.setInstanceId(instanceId);
 	}
 	
 	public final boolean getRandomWalking()
@@ -732,6 +602,6 @@ public class L2Spawn implements IPositionable, IIdentifiable, INamable
 	@Override
 	public String toString()
 	{
-		return "L2Spawn ID: " + _template.getId() + " " + _location;
+		return "L2Spawn ID: " + _template.getId() + " X: " + getX() + " Y: " + getY() + " Z: " + getZ() + " Heading: " + getHeading();
 	}
 }

@@ -163,10 +163,6 @@
 	<admin command="admin_para_all_menu" accessLevel="100" />
 	<admin command="admin_unpara_menu" accessLevel="100" />
 	<admin command="admin_para_menu" accessLevel="100" />
-	<admin command="admin_polyself" accessLevel="100" />
-	<admin command="admin_unpolyself" accessLevel="100" />
-	<admin command="admin_polyself_menu" accessLevel="100" />
-	<admin command="admin_unpolyself_menu" accessLevel="100" />
 	<admin command="admin_clearteams" accessLevel="100" />
 	<admin command="admin_setteam_close" accessLevel="100" />
 	<admin command="admin_setteam" accessLevel="100" />
@@ -237,8 +233,6 @@
 	<admin command="admin_event_name" accessLevel="100" />
 	<admin command="admin_event_control_kill" accessLevel="100" />
 	<admin command="admin_event_control_res" accessLevel="100" />
-	<admin command="admin_event_control_poly" accessLevel="100" />
-	<admin command="admin_event_control_unpoly" accessLevel="100" />
 	<admin command="admin_event_control_transform" accessLevel="100" />
 	<admin command="admin_event_control_untransform" accessLevel="100" />
 	<admin command="admin_event_control_prize" accessLevel="100" />
@@ -432,9 +426,7 @@
 	<!-- ADMIN PLEDGE -->
 	<admin command="admin_pledge" accessLevel="100" />
 
-	<!-- ADMIN POLYMORPH -->
-	<admin command="admin_polymorph" accessLevel="100" />
-	<admin command="admin_unpolymorph" accessLevel="100" />
+	<!-- ADMIN TRANSFORM -->
 	<admin command="admin_transform" accessLevel="100" />
 	<admin command="admin_untransform" accessLevel="100" />
 	<admin command="admin_transform_menu" accessLevel="100" />

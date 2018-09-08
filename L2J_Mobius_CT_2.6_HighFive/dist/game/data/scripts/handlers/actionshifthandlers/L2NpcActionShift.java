@@ -120,7 +120,7 @@ public class L2NpcActionShift implements IActionShiftHandler
 				if (((L2Npc) target).getSpawn().isTerritoryBased())
 				{
 					html.replace("%spawntype%", "Random");
-					final Location spawnLoc = ((L2Npc) target).getSpawn().getLocation();
+					final Location spawnLoc = ((L2Npc) target).getSpawn();
 					html.replace("%spawn%", spawnLoc.getX() + " " + spawnLoc.getY() + " " + spawnLoc.getZ());
 				}
 				else

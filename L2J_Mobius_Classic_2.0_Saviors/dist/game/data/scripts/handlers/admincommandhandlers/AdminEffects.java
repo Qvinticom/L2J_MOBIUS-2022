@@ -58,7 +58,6 @@ import com.l2jmobius.gameserver.util.Util;
  * <li>gmspeed = temporary Super Haste effect.
  * <li>para/unpara = paralyze/remove paralysis from target
  * <li>para_all/unpara_all = same as para/unpara, affects the whole world.
- * <li>polyself/unpolyself = makes you look as a specified mob.
  * <li>changename = temporary change name
  * <li>clearteams/setteam_close/setteam = team related commands
  * <li>social = forces an L2Character instance to broadcast social action packets.
@@ -89,10 +88,6 @@ public class AdminEffects implements IAdminCommandHandler
 		"admin_para_all_menu",
 		"admin_unpara_menu",
 		"admin_para_menu",
-		"admin_polyself",
-		"admin_unpolyself",
-		"admin_polyself_menu",
-		"admin_unpolyself_menu",
 		"admin_clearteams",
 		"admin_setteam_close",
 		"admin_setteam",
@@ -368,25 +363,6 @@ public class AdminEffects implements IAdminCommandHandler
 			catch (Exception e)
 			{
 			}
-		}
-		else if (command.startsWith("admin_polyself"))
-		{
-			try
-			{
-				final String id = st.nextToken();
-				activeChar.getPoly().setPolyInfo("npc", id);
-				activeChar.teleToLocation(activeChar.getLocation());
-				activeChar.broadcastUserInfo();
-			}
-			catch (Exception e)
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //polyself <npcId>");
-			}
-		}
-		else if (command.startsWith("admin_unpolyself"))
-		{
-			activeChar.getPoly().setPolyInfo(null, "1");
-			activeChar.broadcastUserInfo();
 		}
 		else if (command.equals("admin_clearteams"))
 		{

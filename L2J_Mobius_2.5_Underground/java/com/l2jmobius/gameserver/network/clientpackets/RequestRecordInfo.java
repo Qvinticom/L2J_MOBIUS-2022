@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
-import com.l2jmobius.gameserver.network.serverpackets.SpawnItem;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
 public class RequestRecordInfo implements IClientIncomingPacket
@@ -46,27 +45,20 @@ public class RequestRecordInfo implements IClientIncomingPacket
 		
 		L2World.getInstance().forEachVisibleObject(activeChar, L2Object.class, object ->
 		{
-			if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
+			if (object.isVisibleFor(activeChar))
 			{
-				client.sendPacket(new SpawnItem(object));
-			}
-			else
-			{
-				if (object.isVisibleFor(activeChar))
+				object.sendInfo(activeChar);
+				
+				if (object.isCharacter())
 				{
-					object.sendInfo(activeChar);
-					
-					if (object.isCharacter())
+					// Update the state of the L2Character object client
+					// side by sending Server->Client packet
+					// MoveToPawn/CharMoveToLocation and AutoAttackStart to
+					// the L2PcInstance
+					final L2Character obj = (L2Character) object;
+					if (obj.getAI() != null)
 					{
-						// Update the state of the L2Character object client
-						// side by sending Server->Client packet
-						// MoveToPawn/CharMoveToLocation and AutoAttackStart to
-						// the L2PcInstance
-						final L2Character obj = (L2Character) object;
-						if (obj.getAI() != null)
-						{
-							obj.getAI().describeStateToPlayer(activeChar);
-						}
+						obj.getAI().describeStateToPlayer(activeChar);
 					}
 				}
 			}

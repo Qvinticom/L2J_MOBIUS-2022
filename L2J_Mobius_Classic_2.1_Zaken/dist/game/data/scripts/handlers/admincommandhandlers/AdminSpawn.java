@@ -482,9 +482,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(template1);
-			spawn.setX(target.getX());
-			spawn.setY(target.getY());
-			spawn.setZ(target.getZ());
+			spawn.setXYZ(target);
 			spawn.setAmount(mobCount);
 			spawn.setHeading(activeChar.getHeading());
 			spawn.setRespawnDelay(respawnTime);
@@ -530,9 +528,7 @@ public class AdminSpawn implements IAdminCommandHandler
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(template1);
-			spawn.setX(x);
-			spawn.setY(y);
-			spawn.setZ(z);
+			spawn.setXYZ(x, y, z);
 			spawn.setAmount(1);
 			spawn.setHeading(h);
 			spawn.setRespawnDelay(60);

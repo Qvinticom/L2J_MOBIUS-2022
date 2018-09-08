@@ -18,11 +18,9 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.actor.L2Decoy;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
@@ -41,7 +39,6 @@ public class CharInfo implements IClientOutgoingPacket
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private final float _attackSpeedMultiplier;
 	
 	private int _vehicleId = 0;
 	private final boolean _gmSeeInvis;
@@ -91,7 +88,6 @@ public class CharInfo implements IClientOutgoingPacket
 		_heading = _activeChar.getHeading();
 		_mAtkSpd = _activeChar.getMAtkSpd();
 		_pAtkSpd = (int) _activeChar.getPAtkSpd();
-		_attackSpeedMultiplier = _activeChar.getAttackSpeedMultiplier();
 		
 		_moveMultiplier = cha.getMovementSpeedMultiplier();
 		_runSpd = (int) Math.round(cha.getRunSpeed() / _moveMultiplier);
@@ -116,206 +112,135 @@ public class CharInfo implements IClientOutgoingPacket
 	@Override
 	public boolean write(PacketWriter packet)
 	{
-		final L2NpcTemplate template = _activeChar.getPoly().isMorphed() ? NpcData.getInstance().getTemplate(_activeChar.getPoly().getPolyId()) : null;
-		if (template != null)
+		OutgoingPackets.CHAR_INFO.writeId(packet);
+		packet.writeD(_x);
+		packet.writeD(_y);
+		packet.writeD(_z);
+		packet.writeD(_vehicleId);
+		packet.writeD(_objId);
+		packet.writeS(_activeChar.getAppearance().getVisibleName());
+		packet.writeD(_activeChar.getRace().ordinal());
+		packet.writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
+		packet.writeD(_activeChar.getBaseClass());
+		
+		for (int slot : getPaperdollOrder())
 		{
-			OutgoingPackets.NPC_INFO.writeId(packet);
-			packet.writeD(_objId);
-			packet.writeD(template.getId() + 1000000); // npctype id
-			packet.writeD(_activeChar.getKarma() > 0 ? 1 : 0);
-			packet.writeD(_x);
-			packet.writeD(_y);
-			packet.writeD(_z);
-			packet.writeD(_heading);
-			packet.writeD(0x00);
-			packet.writeD(_mAtkSpd);
-			packet.writeD(_pAtkSpd);
-			packet.writeD(_runSpd);
-			packet.writeD(_walkSpd);
-			packet.writeD(_swimRunSpd);
-			packet.writeD(_swimWalkSpd);
-			packet.writeD(_flyRunSpd);
-			packet.writeD(_flyWalkSpd);
-			packet.writeD(_flyRunSpd);
-			packet.writeD(_flyWalkSpd);
-			packet.writeF(_moveMultiplier);
-			packet.writeF(_attackSpeedMultiplier);
-			packet.writeF(template.getfCollisionRadius());
-			packet.writeF(template.getfCollisionHeight());
-			packet.writeD(template.getRHandId()); // right hand weapon
-			packet.writeD(template.getChestId()); // chest
-			packet.writeD(template.getLHandId()); // left hand weapon
-			packet.writeC(1); // name above char 1=true ... ??
-			packet.writeC(_activeChar.isRunning() ? 1 : 0);
-			packet.writeC(_activeChar.isInCombat() ? 1 : 0);
-			packet.writeC(_activeChar.isAlikeDead() ? 1 : 0);
-			packet.writeC(!_gmSeeInvis && _activeChar.isInvisible() ? 1 : 0); // invisible ?? 0=false 1=true 2=summoned (only works if model has a summon animation)
-			
-			packet.writeD(-1); // High Five NPCString ID
-			packet.writeS(_activeChar.getAppearance().getVisibleName());
-			packet.writeD(-1); // High Five NPCString ID
-			packet.writeS(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
-			
-			packet.writeD(_activeChar.getAppearance().getTitleColor()); // Title color 0=client default
-			packet.writeD(_activeChar.getPvpFlag()); // pvp flag
-			packet.writeD(_activeChar.getKarma()); // karma ??
-			
-			packet.writeD(_gmSeeInvis ? (_activeChar.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _activeChar.getAbnormalVisualEffects()); // C2
-			
-			packet.writeD(_activeChar.getClanId()); // clan id
-			packet.writeD(_activeChar.getClanCrestId()); // crest id
-			packet.writeD(_activeChar.getAllyId()); // ally id
-			packet.writeD(_activeChar.getAllyCrestId()); // all crest
-			
-			packet.writeC(_activeChar.isFlying() ? 2 : 0); // is Flying
-			packet.writeC(_activeChar.getTeam().getId());
-			
-			packet.writeF(template.getfCollisionRadius());
-			packet.writeF(template.getfCollisionHeight());
-			
-			packet.writeD(0x00); // enchant effect
-			packet.writeD(_activeChar.isFlying() ? 2 : 0); // is Flying again?
-			
-			packet.writeD(0x00);
-			
-			packet.writeD(0x00); // CT1.5 Pet form and skills, Color effect
-			packet.writeC(template.isTargetable() ? 1 : 0); // targetable
-			packet.writeC(template.isShowName() ? 1 : 0); // show name
-			packet.writeC(_activeChar.getAbnormalVisualEffectSpecial());
-			packet.writeD(0x00);
+			packet.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
+		}
+		
+		for (int slot : getPaperdollOrder())
+		{
+			packet.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
+		}
+		
+		packet.writeD(_activeChar.getInventory().getTalismanSlots());
+		packet.writeD(_activeChar.getInventory().canEquipCloak() ? 1 : 0);
+		
+		packet.writeD(_activeChar.getPvpFlag());
+		packet.writeD(_activeChar.getKarma());
+		
+		packet.writeD(_mAtkSpd);
+		packet.writeD(_pAtkSpd);
+		
+		packet.writeD(0x00); // ?
+		
+		packet.writeD(_runSpd);
+		packet.writeD(_walkSpd);
+		packet.writeD(_swimRunSpd);
+		packet.writeD(_swimWalkSpd);
+		packet.writeD(_flyRunSpd);
+		packet.writeD(_flyWalkSpd);
+		packet.writeD(_flyRunSpd);
+		packet.writeD(_flyWalkSpd);
+		packet.writeF(_moveMultiplier);
+		packet.writeF(_activeChar.getAttackSpeedMultiplier());
+		
+		packet.writeF(_activeChar.getCollisionRadius());
+		packet.writeF(_activeChar.getCollisionHeight());
+		
+		packet.writeD(_activeChar.getAppearance().getHairStyle());
+		packet.writeD(_activeChar.getAppearance().getHairColor());
+		packet.writeD(_activeChar.getAppearance().getFace());
+		
+		packet.writeS(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
+		
+		if (!_activeChar.isCursedWeaponEquipped())
+		{
+			packet.writeD(_activeChar.getClanId());
+			packet.writeD(_activeChar.getClanCrestId());
+			packet.writeD(_activeChar.getAllyId());
+			packet.writeD(_activeChar.getAllyCrestId());
 		}
 		else
 		{
-			OutgoingPackets.CHAR_INFO.writeId(packet);
-			packet.writeD(_x);
-			packet.writeD(_y);
-			packet.writeD(_z);
-			packet.writeD(_vehicleId);
-			packet.writeD(_objId);
-			packet.writeS(_activeChar.getAppearance().getVisibleName());
-			packet.writeD(_activeChar.getRace().ordinal());
-			packet.writeD(_activeChar.getAppearance().getSex() ? 1 : 0);
-			packet.writeD(_activeChar.getBaseClass());
-			
-			for (int slot : getPaperdollOrder())
-			{
-				packet.writeD(_activeChar.getInventory().getPaperdollItemDisplayId(slot));
-			}
-			
-			for (int slot : getPaperdollOrder())
-			{
-				packet.writeD(_activeChar.getInventory().getPaperdollAugmentationId(slot));
-			}
-			
-			packet.writeD(_activeChar.getInventory().getTalismanSlots());
-			packet.writeD(_activeChar.getInventory().canEquipCloak() ? 1 : 0);
-			
-			packet.writeD(_activeChar.getPvpFlag());
-			packet.writeD(_activeChar.getKarma());
-			
-			packet.writeD(_mAtkSpd);
-			packet.writeD(_pAtkSpd);
-			
-			packet.writeD(0x00); // ?
-			
-			packet.writeD(_runSpd);
-			packet.writeD(_walkSpd);
-			packet.writeD(_swimRunSpd);
-			packet.writeD(_swimWalkSpd);
-			packet.writeD(_flyRunSpd);
-			packet.writeD(_flyWalkSpd);
-			packet.writeD(_flyRunSpd);
-			packet.writeD(_flyWalkSpd);
-			packet.writeF(_moveMultiplier);
-			packet.writeF(_activeChar.getAttackSpeedMultiplier());
-			
-			packet.writeF(_activeChar.getCollisionRadius());
-			packet.writeF(_activeChar.getCollisionHeight());
-			
-			packet.writeD(_activeChar.getAppearance().getHairStyle());
-			packet.writeD(_activeChar.getAppearance().getHairColor());
-			packet.writeD(_activeChar.getAppearance().getFace());
-			
-			packet.writeS(_gmSeeInvis ? "Invisible" : _activeChar.getAppearance().getVisibleTitle());
-			
-			if (!_activeChar.isCursedWeaponEquipped())
-			{
-				packet.writeD(_activeChar.getClanId());
-				packet.writeD(_activeChar.getClanCrestId());
-				packet.writeD(_activeChar.getAllyId());
-				packet.writeD(_activeChar.getAllyCrestId());
-			}
-			else
-			{
-				packet.writeD(0x00);
-				packet.writeD(0x00);
-				packet.writeD(0x00);
-				packet.writeD(0x00);
-			}
-			
-			packet.writeC(_activeChar.isSitting() ? 0 : 1); // standing = 1 sitting = 0
-			packet.writeC(_activeChar.isRunning() ? 1 : 0); // running = 1 walking = 0
-			packet.writeC(_activeChar.isInCombat() ? 1 : 0);
-			
-			packet.writeC(!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 1 : 0);
-			
-			packet.writeC(!_gmSeeInvis && _activeChar.isInvisible() ? 1 : 0); // invisible = 1 visible =0
-			
-			packet.writeC(_activeChar.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
-			packet.writeC(_activeChar.getPrivateStoreType().getId());
-			
-			packet.writeH(_activeChar.getCubics().size());
-			for (int cubicId : _activeChar.getCubics().keySet())
-			{
-				packet.writeH(cubicId);
-			}
-			
-			packet.writeC(_activeChar.isInPartyMatchRoom() ? 1 : 0);
-			
-			packet.writeD(_gmSeeInvis ? (_activeChar.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _activeChar.getAbnormalVisualEffects());
-			
-			packet.writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
-			
-			packet.writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
-			packet.writeD(_activeChar.getMountNpcId() + 1000000);
-			packet.writeD(_activeChar.getClassId().getId());
-			packet.writeD(0x00); // ?
-			packet.writeC(_activeChar.isMounted() ? 0 : _activeChar.getEnchantEffect());
-			
-			packet.writeC(_activeChar.getTeam().getId());
-			
-			packet.writeD(_activeChar.getClanCrestLargeId());
-			packet.writeC(_activeChar.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
-			packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
-			
-			packet.writeC(_activeChar.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
-			packet.writeD(_activeChar.getFishx());
-			packet.writeD(_activeChar.getFishy());
-			packet.writeD(_activeChar.getFishz());
-			
-			packet.writeD(_activeChar.getAppearance().getNameColor());
-			
-			packet.writeD(_heading);
-			
-			packet.writeD(_activeChar.getPledgeClass());
-			packet.writeD(_activeChar.getPledgeType());
-			
-			packet.writeD(_activeChar.getAppearance().getTitleColor());
-			
-			packet.writeD(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
-			
-			packet.writeD(_activeChar.getClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
-			
-			// T1
-			packet.writeD(_activeChar.getTransformationDisplayId());
-			packet.writeD(_activeChar.getAgathionId());
-			
-			// T2
-			packet.writeD(0x01);
-			
-			// T2.3
-			packet.writeD(_activeChar.getAbnormalVisualEffectSpecial());
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
+		
+		packet.writeC(_activeChar.isSitting() ? 0 : 1); // standing = 1 sitting = 0
+		packet.writeC(_activeChar.isRunning() ? 1 : 0); // running = 1 walking = 0
+		packet.writeC(_activeChar.isInCombat() ? 1 : 0);
+		
+		packet.writeC(!_activeChar.isInOlympiadMode() && _activeChar.isAlikeDead() ? 1 : 0);
+		
+		packet.writeC(!_gmSeeInvis && _activeChar.isInvisible() ? 1 : 0); // invisible = 1 visible =0
+		
+		packet.writeC(_activeChar.getMountType().ordinal()); // 1-on Strider, 2-on Wyvern, 3-on Great Wolf, 0-no mount
+		packet.writeC(_activeChar.getPrivateStoreType().getId());
+		
+		packet.writeH(_activeChar.getCubics().size());
+		for (int cubicId : _activeChar.getCubics().keySet())
+		{
+			packet.writeH(cubicId);
+		}
+		
+		packet.writeC(_activeChar.isInPartyMatchRoom() ? 1 : 0);
+		
+		packet.writeD(_gmSeeInvis ? (_activeChar.getAbnormalVisualEffects() | AbnormalVisualEffect.STEALTH.getMask()) : _activeChar.getAbnormalVisualEffects());
+		
+		packet.writeC(_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0);
+		
+		packet.writeH(_activeChar.getRecomHave()); // Blue value for name (0 = white, 255 = pure blue)
+		packet.writeD(_activeChar.getMountNpcId() + 1000000);
+		packet.writeD(_activeChar.getClassId().getId());
+		packet.writeD(0x00); // ?
+		packet.writeC(_activeChar.isMounted() ? 0 : _activeChar.getEnchantEffect());
+		
+		packet.writeC(_activeChar.getTeam().getId());
+		
+		packet.writeD(_activeChar.getClanCrestLargeId());
+		packet.writeC(_activeChar.isNoble() ? 1 : 0); // Symbol on char menu ctrl+I
+		packet.writeC(_activeChar.isHero() || (_activeChar.isGM() && Config.GM_HERO_AURA) ? 1 : 0); // Hero Aura
+		
+		packet.writeC(_activeChar.isFishing() ? 1 : 0); // 0x01: Fishing Mode (Cant be undone by setting back to 0)
+		packet.writeD(_activeChar.getFishx());
+		packet.writeD(_activeChar.getFishy());
+		packet.writeD(_activeChar.getFishz());
+		
+		packet.writeD(_activeChar.getAppearance().getNameColor());
+		
+		packet.writeD(_heading);
+		
+		packet.writeD(_activeChar.getPledgeClass());
+		packet.writeD(_activeChar.getPledgeType());
+		
+		packet.writeD(_activeChar.getAppearance().getTitleColor());
+		
+		packet.writeD(_activeChar.isCursedWeaponEquipped() ? CursedWeaponsManager.getInstance().getLevel(_activeChar.getCursedWeaponEquippedId()) : 0);
+		
+		packet.writeD(_activeChar.getClanId() > 0 ? _activeChar.getClan().getReputationScore() : 0);
+		
+		// T1
+		packet.writeD(_activeChar.getTransformationDisplayId());
+		packet.writeD(_activeChar.getAgathionId());
+		
+		// T2
+		packet.writeD(0x01);
+		
+		// T2.3
+		packet.writeD(_activeChar.getAbnormalVisualEffectSpecial());
 		return true;
 	}
 	

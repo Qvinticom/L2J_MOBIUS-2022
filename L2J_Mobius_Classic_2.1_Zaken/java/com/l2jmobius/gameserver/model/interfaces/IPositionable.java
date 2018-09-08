@@ -25,24 +25,6 @@ import com.l2jmobius.gameserver.model.Location;
 public interface IPositionable extends ILocational
 {
 	/**
-	 * Sets the X coordinate of this object.
-	 * @param x the new X coordinate
-	 */
-	void setX(int x);
-	
-	/**
-	 * Sets the Y coordinate of this object.
-	 * @param y the new Y coordinate
-	 */
-	void setY(int y);
-	
-	/**
-	 * Sets the Z coordinate of this object.
-	 * @param z the new Z coordinate
-	 */
-	void setZ(int z);
-	
-	/**
 	 * Sets all three coordinates of this object.
 	 * @param x the new X coordinate
 	 * @param y the new Y coordinate

@@ -450,9 +450,7 @@ public class AutoSpawnHandler
 				final int heading = locationList[locationIndex].getHeading();
 				
 				final L2Spawn newSpawn = new L2Spawn(spawnInst.getId());
-				newSpawn.setX(x);
-				newSpawn.setY(y);
-				newSpawn.setZ(z);
+				newSpawn.setXYZ(x, y, z);
 				if (heading != -1)
 				{
 					newSpawn.setHeading(heading);

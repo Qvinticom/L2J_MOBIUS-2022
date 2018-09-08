@@ -152,9 +152,7 @@ public final class MobGroup
 				final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
 				final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
 				
-				spawn.setX(x + (signX * randX));
-				spawn.setY(y + (signY * randY));
-				spawn.setZ(z);
+				spawn.setXYZ(x + (signX * randX), y + (signY * randY), z);
 				spawn.stopRespawn();
 				
 				SpawnTable.getInstance().addNewSpawn(spawn, false);

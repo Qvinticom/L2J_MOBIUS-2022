@@ -156,9 +156,7 @@ public class L2Event
 		try
 		{
 			final L2Spawn spawn = new L2Spawn(_npcId);
-			spawn.setX(target.getX() + 50);
-			spawn.setY(target.getY() + 50);
-			spawn.setZ(target.getZ());
+			spawn.setXYZ(target.getX() + 50, target.getY() + 50, target.getZ());
 			spawn.setAmount(1);
 			spawn.setHeading(target.getHeading());
 			spawn.stopRespawn();
@@ -275,7 +273,6 @@ public class L2Event
 					player.setCurrentCp(player.getMaxCp());
 				}
 				
-				player.getPoly().setPolyInfo(null, "1");
 				player.decayMe();
 				player.spawnMe(player.getX(), player.getY(), player.getZ());
 				player.broadcastUserInfo();

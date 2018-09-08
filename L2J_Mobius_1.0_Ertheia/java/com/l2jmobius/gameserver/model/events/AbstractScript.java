@@ -2239,9 +2239,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 			
 			spawn.setInstanceId(instance);
 			spawn.setHeading(heading);
-			spawn.setX(x);
-			spawn.setY(y);
-			spawn.setZ(z);
+			spawn.setXYZ(x, y, z);
 			spawn.stopRespawn();
 			
 			final L2Npc npc = spawn.doSpawn(isSummonSpawn);

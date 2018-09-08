@@ -478,9 +478,7 @@ public final class BlockCheckerEngine
 				for (int i = 0; i < _numOfBoxes; i++)
 				{
 					final L2Spawn spawn = new L2Spawn(18672);
-					spawn.setX(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400));
-					spawn.setY(_arenaCoordinates[_arena][5] + Rnd.get(-400, 400));
-					spawn.setZ(_zCoord);
+					spawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
 					spawn.setAmount(1);
 					spawn.setHeading(1);
 					spawn.setRespawnDelay(1);
@@ -506,9 +504,7 @@ public final class BlockCheckerEngine
 				try
 				{
 					final L2Spawn girlSpawn = new L2Spawn(18676);
-					girlSpawn.setX(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400));
-					girlSpawn.setY(_arenaCoordinates[_arena][5] + Rnd.get(-400, 400));
-					girlSpawn.setZ(_zCoord);
+					girlSpawn.setXYZ(_arenaCoordinates[_arena][4] + Rnd.get(-400, 400), _arenaCoordinates[_arena][5] + Rnd.get(-400, 400), _zCoord);
 					girlSpawn.setAmount(1);
 					girlSpawn.setHeading(1);
 					girlSpawn.setRespawnDelay(1);

@@ -82,7 +82,7 @@ public final class RaidbossInfo extends AbstractNpcAI
 				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(bossId);
 				if (spawn != null)
 				{
-					final Location loc = spawn.getLocation();
+					final Location loc = spawn;
 					player.getRadar().addMarker(loc.getX(), loc.getY(), loc.getZ());
 				}
 			}

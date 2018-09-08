@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.handler.ActionHandler;
@@ -29,7 +28,6 @@ import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.InstanceManager;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.poly.ObjectPoly;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.interfaces.IDecayable;
@@ -58,18 +56,18 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	/** World Region */
 	private L2WorldRegion _worldRegion;
 	/** Instance type */
-	private InstanceType _instanceType = null;
+	private InstanceType _instanceType;
 	private volatile Map<String, Object> _scripts;
 	/** X coordinate */
-	private final AtomicInteger _x = new AtomicInteger(0);
+	private volatile int _x = 0;
 	/** Y coordinate */
-	private final AtomicInteger _y = new AtomicInteger(0);
+	private volatile int _y = 0;
 	/** Z coordinate */
-	private final AtomicInteger _z = new AtomicInteger(0);
+	private volatile int _z = 0;
 	/** Orientation */
-	private final AtomicInteger _heading = new AtomicInteger(0);
+	private volatile int _heading = 0;
 	/** Instance id of object. 0 - Global */
-	private Instance _instance = null;
+	private Instance _instance;
 	private boolean _isSpawned;
 	private boolean _isInvisible;
 	private boolean _isTargetable = true;
@@ -251,12 +249,6 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	public final int getObjectId()
 	{
 		return _objectId;
-	}
-	
-	public final ObjectPoly getPoly()
-	{
-		final ObjectPoly poly = getScript(ObjectPoly.class);
-		return (poly == null) ? addScript(new ObjectPoly(this)) : poly;
 	}
 	
 	public abstract void sendInfo(L2PcInstance activeChar);
@@ -546,7 +538,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public int getX()
 	{
-		return _x.get();
+		return _x;
 	}
 	
 	/**
@@ -556,7 +548,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public int getY()
 	{
-		return _y.get();
+		return _y;
 	}
 	
 	/**
@@ -566,7 +558,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public int getZ()
 	{
-		return _z.get();
+		return _z;
 	}
 	
 	/**
@@ -576,7 +568,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public int getHeading()
 	{
-		return _heading.get();
+		return _heading;
 	}
 	
 	/**
@@ -614,37 +606,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public Location getLocation()
 	{
-		return new Location(_x.get(), _y.get(), _z.get(), _heading.get());
-	}
-	
-	/**
-	 * Sets the X coordinate
-	 * @param newX the X coordinate
-	 */
-	@Override
-	public void setX(int newX)
-	{
-		_x.set(newX);
-	}
-	
-	/**
-	 * Sets the Y coordinate
-	 * @param newY the Y coordinate
-	 */
-	@Override
-	public void setY(int newY)
-	{
-		_y.set(newY);
-	}
-	
-	/**
-	 * Sets the Z coordinate
-	 * @param newZ the Z coordinate
-	 */
-	@Override
-	public void setZ(int newZ)
-	{
-		_z.set(newZ);
+		return new Location(_x, _y, _z, _heading);
 	}
 	
 	/**
@@ -656,9 +618,9 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public void setXYZ(int newX, int newY, int newZ)
 	{
-		setX(newX);
-		setY(newY);
-		setZ(newZ);
+		_x = newX;
+		_y = newY;
+		_z = newZ;
 		
 		if (_isSpawned)
 		{
@@ -693,7 +655,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public void setHeading(int newHeading)
 	{
-		_heading.set(newHeading);
+		_heading = newHeading;
 	}
 	
 	/**
@@ -745,10 +707,10 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	@Override
 	public void setLocation(Location loc)
 	{
-		_x.set(loc.getX());
-		_y.set(loc.getY());
-		_z.set(loc.getZ());
-		_heading.set(loc.getHeading());
+		_x = loc.getX();
+		_y = loc.getY();
+		_z = loc.getZ();
+		_heading = loc.getHeading();
 	}
 	
 	/**
@@ -760,7 +722,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public double calculateDistance2D(int x, int y, int z)
 	{
-		return Math.sqrt(Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2));
+		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2));
 	}
 	
 	/**
@@ -782,7 +744,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public double calculateDistance3D(int x, int y, int z)
 	{
-		return Math.sqrt(Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + Math.pow(z - _z.get(), 2));
+		return Math.sqrt(Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2));
 	}
 	
 	/**
@@ -804,7 +766,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public double calculateDistanceSq2D(int x, int y, int z)
 	{
-		return Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2);
+		return Math.pow(x - _x, 2) + Math.pow(y - _y, 2);
 	}
 	
 	/**
@@ -826,7 +788,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public double calculateDistanceSq3D(int x, int y, int z)
 	{
-		return Math.pow(x - _x.get(), 2) + Math.pow(y - _y.get(), 2) + Math.pow(z - _z.get(), 2);
+		return Math.pow(x - _x, 2) + Math.pow(y - _y, 2) + Math.pow(z - _z, 2);
 	}
 	
 	/**
@@ -848,7 +810,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 	 */
 	public double calculateDirectionTo(ILocational target)
 	{
-		int heading = Util.calculateHeadingFrom(this, target) - _heading.get();
+		int heading = Util.calculateHeadingFrom(this, target) - _heading;
 		if (heading < 0)
 		{
 			heading = 65535 + heading;

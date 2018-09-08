@@ -202,9 +202,7 @@ public final class SiegeGuardManager
 				{
 					final L2Spawn spawn = new L2Spawn(rs.getInt("npcId"));
 					spawn.setAmount(1);
-					spawn.setX(rs.getInt("x"));
-					spawn.setY(rs.getInt("y"));
-					spawn.setZ(rs.getInt("z"));
+					spawn.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawn.setHeading(rs.getInt("heading"));
 					spawn.setRespawnDelay(rs.getInt("respawnDelay"));
 					spawn.setLocationId(0);

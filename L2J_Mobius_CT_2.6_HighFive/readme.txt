@@ -36,3 +36,4 @@ What is done
 -Faction System (Good vs Evil)
 -Fake players
 -Automated database backups
+-Reworked L2World, L2WorldRegion and L2Object

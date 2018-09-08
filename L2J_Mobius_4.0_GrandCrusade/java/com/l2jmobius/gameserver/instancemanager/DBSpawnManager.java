@@ -95,9 +95,7 @@ public class DBSpawnManager
 				if (template != null)
 				{
 					final L2Spawn spawn = new L2Spawn(template);
-					spawn.setX(rset.getInt("x"));
-					spawn.setY(rset.getInt("y"));
-					spawn.setZ(rset.getInt("z"));
+					spawn.setXYZ(rset.getInt("x"), rset.getInt("y"), rset.getInt("z"));
 					spawn.setAmount(1);
 					spawn.setHeading(rset.getInt("heading"));
 					

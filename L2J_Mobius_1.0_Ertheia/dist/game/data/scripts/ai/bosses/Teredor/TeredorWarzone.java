@@ -136,7 +136,7 @@ public final class TeredorWarzone extends AbstractInstance
 				}
 				case "TEREDOR_LAIR_CHECK":
 				{
-					final Location spawnLoc = npc.getSpawn().getLocation();
+					final Location spawnLoc = npc.getSpawn();
 					
 					if (((spawnLoc.getX() - npc.getX()) > 1000) || ((spawnLoc.getX() - npc.getX()) < -2000))
 					{

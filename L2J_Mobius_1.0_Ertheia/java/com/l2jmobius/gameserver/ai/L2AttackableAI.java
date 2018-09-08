@@ -236,7 +236,7 @@ public class L2AttackableAI extends L2CharacterAI
 				}
 				else if (npc.getSpawn() != null)
 				{
-					final Location loc = npc.getSpawn().getLocation();
+					final Location loc = npc.getSpawn();
 					final int range = Config.MAX_DRIFT_RANGE;
 					
 					if (!npc.isInsideRadius3D(loc, range + range))

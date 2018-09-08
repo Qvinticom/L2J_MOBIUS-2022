@@ -34,12 +34,12 @@ public class Location implements IPositionable
 	
 	public Location(int x, int y, int z)
 	{
-		this(x, y, z, 0, -1);
+		this(x, y, z, 0, 0);
 	}
 	
 	public Location(int x, int y, int z, int heading)
 	{
-		this(x, y, z, heading, -1);
+		this(x, y, z, heading, 0);
 	}
 	
 	public Location(L2Object obj)
@@ -67,16 +67,6 @@ public class Location implements IPositionable
 	}
 	
 	/**
-	 * Set the x coordinate.
-	 * @param x the x coordinate
-	 */
-	@Override
-	public void setX(int x)
-	{
-		_x = x;
-	}
-	
-	/**
 	 * Get the y coordinate.
 	 * @return the y coordinate
 	 */
@@ -84,16 +74,6 @@ public class Location implements IPositionable
 	public int getY()
 	{
 		return _y;
-	}
-	
-	/**
-	 * Set the y coordinate.
-	 * @param y the x coordinate
-	 */
-	@Override
-	public void setY(int y)
-	{
-		_y = y;
 	}
 	
 	/**
@@ -107,16 +87,6 @@ public class Location implements IPositionable
 	}
 	
 	/**
-	 * Set the z coordinate.
-	 * @param z the z coordinate
-	 */
-	@Override
-	public void setZ(int z)
-	{
-		_z = z;
-	}
-	
-	/**
 	 * Set the x, y, z coordinates.
 	 * @param x the x coordinate
 	 * @param y the y coordinate
@@ -125,9 +95,9 @@ public class Location implements IPositionable
 	@Override
 	public void setXYZ(int x, int y, int z)
 	{
-		setX(x);
-		setY(y);
-		setZ(z);
+		_x = x;
+		_y = y;
+		_z = z;
 	}
 	
 	/**

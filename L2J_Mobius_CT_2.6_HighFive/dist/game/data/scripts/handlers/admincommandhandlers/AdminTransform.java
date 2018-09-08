@@ -22,21 +22,16 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
-import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * Polymorph admin command implementation.
- * @author Zoey76
+ * @author Mobius
  */
-public class AdminPolymorph implements IAdminCommandHandler
+public class AdminTransform implements IAdminCommandHandler
 {
 	private static final String[] ADMIN_COMMANDS =
 	{
-		"admin_polymorph",
-		"admin_unpolymorph",
 		"admin_transform",
 		"admin_untransform",
 		"admin_transform_menu",
@@ -115,28 +110,6 @@ public class AdminPolymorph implements IAdminCommandHandler
 				return false;
 			}
 		}
-		if (command.startsWith("admin_polymorph"))
-		{
-			final String[] parts = command.split(" ");
-			if ((parts.length < 2) || !Util.isDigit(parts[1]))
-			{
-				BuilderUtil.sendSysMessage(activeChar, "Usage: //polymorph [type] <id>");
-				return false;
-			}
-			
-			if (parts.length > 2)
-			{
-				doPolymorph(activeChar, activeChar.getTarget(), parts[2], parts[1]);
-			}
-			else
-			{
-				doPolymorph(activeChar, activeChar.getTarget(), parts[1], "npc");
-			}
-		}
-		else if (command.equals("admin_unpolymorph"))
-		{
-			doUnPolymorph(activeChar, activeChar.getTarget());
-		}
 		
 		return true;
 	}
@@ -145,57 +118,5 @@ public class AdminPolymorph implements IAdminCommandHandler
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
-	}
-	
-	/**
-	 * Polymorph a creature.
-	 * @param activeChar the active Game Master
-	 * @param obj the target
-	 * @param id the polymorph ID
-	 * @param type the polymorph type
-	 */
-	private static void doPolymorph(L2PcInstance activeChar, L2Object obj, String id, String type)
-	{
-		if (obj != null)
-		{
-			obj.getPoly().setPolyInfo(type, id);
-			// animation
-			if (obj.isCharacter())
-			{
-				final L2Character Char = (L2Character) obj;
-				final MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0);
-				Char.broadcastPacket(msk);
-				final SetupGauge sg = new SetupGauge(Char.getObjectId(), 0, 4000);
-				Char.sendPacket(sg);
-			}
-			// end of animation
-			obj.decayMe();
-			obj.spawnMe(obj.getX(), obj.getY(), obj.getZ());
-			BuilderUtil.sendSysMessage(activeChar, "Polymorph succeed");
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-		}
-	}
-	
-	/**
-	 * Unpolymorh a creature.
-	 * @param activeChar the active Game Master
-	 * @param target the target
-	 */
-	private static void doUnPolymorph(L2PcInstance activeChar, L2Object target)
-	{
-		if (target != null)
-		{
-			target.getPoly().setPolyInfo(null, "1");
-			target.decayMe();
-			target.spawnMe(target.getX(), target.getY(), target.getZ());
-			BuilderUtil.sendSysMessage(activeChar, "Unpolymorph succeed");
-		}
-		else
-		{
-			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
-		}
 	}
 }

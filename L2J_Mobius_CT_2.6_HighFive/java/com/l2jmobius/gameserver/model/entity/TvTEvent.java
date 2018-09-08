@@ -122,9 +122,7 @@ public class TvTEvent
 		{
 			_npcSpawn = new L2Spawn(Config.TVT_EVENT_PARTICIPATION_NPC_ID);
 			
-			_npcSpawn.setX(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0]);
-			_npcSpawn.setY(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1]);
-			_npcSpawn.setZ(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
+			_npcSpawn.setXYZ(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[0], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[1], Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[2]);
 			_npcSpawn.setAmount(1);
 			_npcSpawn.setHeading(Config.TVT_EVENT_PARTICIPATION_NPC_COORDINATES[3]);
 			_npcSpawn.setRespawnDelay(1);

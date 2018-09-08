@@ -1877,9 +1877,7 @@ public abstract class AbstractScript extends ManagedScript
 			final L2Spawn spawn = new L2Spawn(npcId);
 			spawn.setInstanceId(instanceId);
 			spawn.setHeading(heading);
-			spawn.setX(x);
-			spawn.setY(y);
-			spawn.setZ(z);
+			spawn.setXYZ(x, y, z);
 			spawn.stopRespawn();
 			
 			final L2Npc npc = spawn.doSpawn(isSummonSpawn);

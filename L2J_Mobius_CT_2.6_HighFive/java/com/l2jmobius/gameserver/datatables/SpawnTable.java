@@ -263,9 +263,7 @@ public final class SpawnTable implements IGameXmlReader
 		{
 			spawnDat = new L2Spawn(spawnInfo.getInt("npcTemplateid"));
 			spawnDat.setAmount(spawnInfo.getInt("count", 1));
-			spawnDat.setX(spawnInfo.getInt("x", 0));
-			spawnDat.setY(spawnInfo.getInt("y", 0));
-			spawnDat.setZ(spawnInfo.getInt("z", 0));
+			spawnDat.setXYZ(spawnInfo.getInt("x", 0), spawnInfo.getInt("y", 0), spawnInfo.getInt("z", 0));
 			spawnDat.setHeading(spawnInfo.getInt("heading", -1));
 			spawnDat.setRespawnDelay(spawnInfo.getInt("respawnDelay", 0), spawnInfo.getInt("respawnRandom", 0));
 			spawnDat.setLocationId(spawnInfo.getInt("locId", 0));

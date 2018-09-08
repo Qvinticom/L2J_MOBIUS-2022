@@ -258,7 +258,7 @@ public final class Transform implements IIdentifiable
 			}
 			
 			// Get player a bit higher so he doesn't drops underground after transformation happens
-			creature.setZ(creature.getZ() + (int) getCollisionHeight(creature, 0));
+			creature.setXYZ(creature.getX(), creature.getY(), (int) (creature.getZ() + getCollisionHeight(creature, 0)));
 			
 			if (creature.isPlayer())
 			{

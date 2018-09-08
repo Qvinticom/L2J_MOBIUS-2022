@@ -546,9 +546,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				spawn = new L2Spawn(target.getTemplate().getId());
-				spawn.setX(activeChar.getX());
-				spawn.setY(activeChar.getY());
-				spawn.setZ(activeChar.getZ());
+				spawn.setXYZ(activeChar);
 				spawn.setAmount(1);
 				spawn.setHeading(activeChar.getHeading());
 				spawn.setRespawnDelay(respawnTime);
@@ -587,9 +585,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			try
 			{
 				final L2Spawn spawnDat = new L2Spawn(target.getId());
-				spawnDat.setX(activeChar.getX());
-				spawnDat.setY(activeChar.getY());
-				spawnDat.setZ(activeChar.getZ());
+				spawnDat.setXYZ(activeChar);
 				spawnDat.setAmount(1);
 				spawnDat.setHeading(activeChar.getHeading());
 				spawnDat.setRespawnMinDelay(43200);

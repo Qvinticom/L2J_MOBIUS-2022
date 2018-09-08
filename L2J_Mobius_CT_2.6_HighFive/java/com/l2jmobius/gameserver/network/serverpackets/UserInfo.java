@@ -19,12 +19,10 @@ package com.l2jmobius.gameserver.network.serverpackets;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
-import com.l2jmobius.gameserver.data.xml.impl.NpcData;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.instancemanager.TerritoryWarManager;
 import com.l2jmobius.gameserver.model.Elementals;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.skills.AbnormalVisualEffect;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -172,14 +170,6 @@ public final class UserInfo implements IClientOutgoingPacket
 		if (_activeChar.isGM() && _activeChar.isInvisible())
 		{
 			title = "[Invisible]";
-		}
-		if (_activeChar.getPoly().isMorphed())
-		{
-			final L2NpcTemplate polyObj = NpcData.getInstance().getTemplate(_activeChar.getPoly().getPolyId());
-			if (polyObj != null)
-			{
-				title += " - " + polyObj.getName();
-			}
 		}
 		packet.writeS(title);
 		

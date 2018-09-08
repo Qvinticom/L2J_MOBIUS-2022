@@ -1101,9 +1101,7 @@ public class FortSiege implements Siegable
 			{
 				final L2Spawn spawnDat = new L2Spawn(_sp.getId());
 				spawnDat.setAmount(1);
-				spawnDat.setX(_sp.getLocation().getX());
-				spawnDat.setY(_sp.getLocation().getY());
-				spawnDat.setZ(_sp.getLocation().getZ());
+				spawnDat.setXYZ(_sp.getLocation());
 				spawnDat.setHeading(_sp.getLocation().getHeading());
 				spawnDat.setRespawnDelay(60);
 				spawnDat.doSpawn();

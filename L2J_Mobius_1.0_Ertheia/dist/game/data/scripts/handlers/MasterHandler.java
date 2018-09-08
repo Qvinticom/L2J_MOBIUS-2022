@@ -112,7 +112,6 @@ import handlers.admincommandhandlers.AdminPcCafePoints;
 import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
-import handlers.admincommandhandlers.AdminPolymorph;
 import handlers.admincommandhandlers.AdminPremium;
 import handlers.admincommandhandlers.AdminPrimePoints;
 import handlers.admincommandhandlers.AdminPunishment;
@@ -134,6 +133,7 @@ import handlers.admincommandhandlers.AdminTarget;
 import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTest;
+import handlers.admincommandhandlers.AdminTransform;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
 import handlers.admincommandhandlers.AdminZone;
@@ -445,7 +445,6 @@ public class MasterHandler
 			AdminPForge.class,
 			AdminPledge.class,
 			AdminZones.class,
-			AdminPolymorph.class,
 			AdminPremium.class,
 			AdminPrimePoints.class,
 			AdminPunishment.class,
@@ -467,6 +466,7 @@ public class MasterHandler
 			AdminTargetSay.class,
 			AdminTeleport.class,
 			AdminTest.class,
+			AdminTransform.class,
 			AdminUnblockIp.class,
 			AdminVitality.class,
 			AdminZone.class,

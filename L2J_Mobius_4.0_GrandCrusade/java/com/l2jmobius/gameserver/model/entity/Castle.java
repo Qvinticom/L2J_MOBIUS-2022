@@ -1188,9 +1188,7 @@ public final class Castle extends AbstractResidence
 					LOGGER.warning(Castle.class.getSimpleName() + ": " + e.getMessage());
 					return;
 				}
-				spawn.setX(holder.getX());
-				spawn.setY(holder.getY());
-				spawn.setZ(holder.getZ());
+				spawn.setXYZ(holder);
 				spawn.setHeading(holder.getHeading());
 				final L2Npc npc = spawn.doSpawn(false);
 				npc.broadcastInfo();

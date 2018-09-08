@@ -82,9 +82,7 @@ public class RaidBossSpawnManager
 			while (rs.next())
 			{
 				final L2Spawn spawnDat = new L2Spawn(rs.getInt("boss_id"));
-				spawnDat.setX(rs.getInt("loc_x"));
-				spawnDat.setY(rs.getInt("loc_y"));
-				spawnDat.setZ(rs.getInt("loc_z"));
+				spawnDat.setXYZ(rs.getInt("loc_x"), rs.getInt("loc_y"), rs.getInt("loc_z"));
 				spawnDat.setAmount(rs.getInt("amount"));
 				spawnDat.setHeading(rs.getInt("heading"));
 				spawnDat.setRespawnDelay(rs.getInt("respawn_delay"), rs.getInt("respawn_random"));

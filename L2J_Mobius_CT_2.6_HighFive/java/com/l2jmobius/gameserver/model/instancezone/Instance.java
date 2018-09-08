@@ -429,9 +429,7 @@ public final class Instance
 				{
 					final L2Spawn spawnDat = new L2Spawn(set.getInt("npcId"));
 					
-					spawnDat.setX(set.getInt("x"));
-					spawnDat.setY(set.getInt("y"));
-					spawnDat.setZ(set.getInt("z"));
+					spawnDat.setXYZ(set.getInt("x"), set.getInt("y"), set.getInt("z"));
 					spawnDat.setAmount(1);
 					spawnDat.setHeading(set.getInt("heading"));
 					spawnDat.setRespawnDelay(set.getInt("respawn"), set.getInt("respawnRandom"));

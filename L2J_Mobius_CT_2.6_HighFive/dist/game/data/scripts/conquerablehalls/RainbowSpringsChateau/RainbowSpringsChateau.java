@@ -717,9 +717,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 				try
 				{
 					_gourds[i] = new L2Spawn(GOURDS[i]);
-					_gourds[i].setX(ARENAS[i].getX() + 150);
-					_gourds[i].setY(ARENAS[i].getY() + 150);
-					_gourds[i].setZ(ARENAS[i].getZ());
+					_gourds[i].setXYZ(ARENAS[i].getX() + 150, ARENAS[i].getY() + 150, ARENAS[i].getZ());
 					_gourds[i].setHeading(1);
 					_gourds[i].setAmount(1);
 				}

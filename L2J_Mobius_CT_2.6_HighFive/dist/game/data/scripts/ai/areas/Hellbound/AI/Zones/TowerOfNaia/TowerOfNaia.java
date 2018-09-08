@@ -745,9 +745,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			_sporeSpawn.add(npc);
 			npc.setWalking();
 			final int[] coord = SPORES_MOVE_POINTS[getRandom(SPORES_MOVE_POINTS.length)];
-			npc.getSpawn().setX(coord[0]);
-			npc.getSpawn().setY(coord[1]);
-			npc.getSpawn().setZ(coord[2]);
+			npc.getSpawn().setXYZ(coord[0], coord[1], coord[2]);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coord[0], coord[1], coord[2], 0));
 			startQuestTimer("despawn_spore", 60000, npc, null);
 		}
@@ -836,9 +834,7 @@ public final class TowerOfNaia extends AbstractNpcAI
 			npc.disableCoreAI(true);
 			npc.setRandomWalking(false);
 			npc.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(coords[0], coords[1], coords[2], heading));
-			npc.getSpawn().setX(coords[0]);
-			npc.getSpawn().setY(coords[1]);
-			npc.getSpawn().setZ(coords[2]);
+			npc.getSpawn().setXYZ(coords[0], coords[1], coords[2]);
 		}
 		return time == 0 ? 100 : time;
 	}

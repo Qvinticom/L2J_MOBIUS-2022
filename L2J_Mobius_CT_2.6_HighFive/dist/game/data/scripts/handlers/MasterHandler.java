@@ -106,7 +106,6 @@ import handlers.admincommandhandlers.AdminPathNode;
 import handlers.admincommandhandlers.AdminPcCondOverride;
 import handlers.admincommandhandlers.AdminPetition;
 import handlers.admincommandhandlers.AdminPledge;
-import handlers.admincommandhandlers.AdminPolymorph;
 import handlers.admincommandhandlers.AdminPremium;
 import handlers.admincommandhandlers.AdminPunishment;
 import handlers.admincommandhandlers.AdminQuest;
@@ -129,6 +128,7 @@ import handlers.admincommandhandlers.AdminTargetSay;
 import handlers.admincommandhandlers.AdminTeleport;
 import handlers.admincommandhandlers.AdminTerritoryWar;
 import handlers.admincommandhandlers.AdminTest;
+import handlers.admincommandhandlers.AdminTransform;
 import handlers.admincommandhandlers.AdminTvTEvent;
 import handlers.admincommandhandlers.AdminUnblockIp;
 import handlers.admincommandhandlers.AdminVitality;
@@ -406,7 +406,6 @@ public class MasterHandler
 			AdminPForge.class,
 			AdminPledge.class,
 			AdminZones.class,
-			AdminPolymorph.class,
 			AdminPremium.class,
 			AdminPunishment.class,
 			AdminQuest.class,
@@ -429,6 +428,7 @@ public class MasterHandler
 			AdminTeleport.class,
 			AdminTerritoryWar.class,
 			AdminTest.class,
+			AdminTransform.class,
 			AdminTvTEvent.class,
 			AdminUnblockIp.class,
 			AdminVitality.class,

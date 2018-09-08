@@ -17,54 +17,16 @@
 package com.l2jmobius.gameserver.network.serverpackets;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class SpawnItem implements IClientOutgoingPacket
 {
-	private final int _objectId;
-	private int _itemId;
-	private final int _x, _y, _z;
-	private int _stackable;
-	private long _count;
-	private int _enchantLevl;
-	private int _isAugmented;
-	private int _saCount;
+	private final L2ItemInstance _item;
 	
-	public SpawnItem(L2Object obj)
+	public SpawnItem(L2ItemInstance item)
 	{
-		_objectId = obj.getObjectId();
-		_x = obj.getX();
-		_y = obj.getY();
-		_z = obj.getZ();
-		
-		// Future test.
-		if ((_x == 0) && (_y == 0))
-		{
-			LOGGER.warning("SpawnItem with x=0 and y=0.");
-			Thread.dumpStack(); // Why? Also check DropItem, just in case.
-		}
-		
-		if (obj.isItem())
-		{
-			final L2ItemInstance item = (L2ItemInstance) obj;
-			_itemId = item.getDisplayId();
-			_stackable = item.isStackable() ? 0x01 : 0x00;
-			_count = item.getCount();
-			_enchantLevl = item.getEnchantLevel();
-			_isAugmented = item.getAugmentation() != null ? 1 : 0;
-			_saCount = item.getSpecialAbilities().size();
-		}
-		else
-		{
-			_itemId = obj.getPoly().getPolyId();
-			_stackable = 0;
-			_count = 1;
-			_enchantLevl = 0;
-			_isAugmented = 0;
-			_saCount = 0;
-		}
+		_item = item;
 	}
 	
 	@Override
@@ -72,20 +34,18 @@ public final class SpawnItem implements IClientOutgoingPacket
 	{
 		OutgoingPackets.SPAWN_ITEM.writeId(packet);
 		
-		packet.writeD(_objectId);
-		packet.writeD(_itemId);
-		
-		packet.writeD(_x);
-		packet.writeD(_y);
-		packet.writeD(_z);
+		packet.writeD(_item.getObjectId());
+		packet.writeD(_item.getDisplayId());
+		packet.writeD(_item.getX());
+		packet.writeD(_item.getY());
+		packet.writeD(_item.getZ());
 		// only show item count if it is a stackable item
-		packet.writeD(_stackable);
-		packet.writeQ(_count);
+		packet.writeD(_item.isStackable() ? 0x01 : 0x00);
+		packet.writeQ(_item.getCount());
 		packet.writeD(0x00); // c2
-		
-		packet.writeC(_enchantLevl); // Grand Crusade
-		packet.writeC(_isAugmented); // Grand Crusade
-		packet.writeC(_saCount); // Grand Crusade
+		packet.writeC(_item.getEnchantLevel()); // Grand Crusade
+		packet.writeC(_item.getAugmentation() != null ? 1 : 0); // Grand Crusade
+		packet.writeC(_item.getSpecialAbilities().size()); // Grand Crusade
 		return true;
 	}
 }

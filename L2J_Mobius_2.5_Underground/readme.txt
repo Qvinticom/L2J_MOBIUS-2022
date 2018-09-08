@@ -122,6 +122,7 @@ Others:
 -Reworked quest system
 -Reworked spawn system
 -Reworked drop system
+-Reworked L2World, L2WorldRegion and L2Object
 -Skill system from L2jUnity
 -GeoEngine from aCis
 

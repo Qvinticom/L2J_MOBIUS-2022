@@ -734,9 +734,7 @@ public final class TerritoryWarManager implements Siegable
 		{
 			final L2Spawn spawnDat = new L2Spawn(npcId);
 			spawnDat.setAmount(1);
-			spawnDat.setX(loc.getX());
-			spawnDat.setY(loc.getY());
-			spawnDat.setZ(loc.getZ());
+			spawnDat.setXYZ(loc);
 			spawnDat.setHeading(loc.getHeading());
 			spawnDat.stopRespawn();
 			return spawnDat.doSpawn(false);

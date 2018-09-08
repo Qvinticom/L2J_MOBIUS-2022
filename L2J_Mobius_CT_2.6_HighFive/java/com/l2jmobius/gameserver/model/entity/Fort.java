@@ -1130,9 +1130,7 @@ public final class Fort extends AbstractResidence
 				{
 					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
-					spawnDat.setX(rs.getInt("x"));
-					spawnDat.setY(rs.getInt("y"));
-					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(60);
 					SpawnTable.getInstance().addNewSpawn(spawnDat, false);
@@ -1161,9 +1159,7 @@ public final class Fort extends AbstractResidence
 				{
 					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
-					spawnDat.setX(rs.getInt("x"));
-					spawnDat.setY(rs.getInt("y"));
-					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(60);
 					_siegeNpcs.add(spawnDat);
@@ -1190,9 +1186,7 @@ public final class Fort extends AbstractResidence
 				{
 					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
-					spawnDat.setX(rs.getInt("x"));
-					spawnDat.setY(rs.getInt("y"));
-					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(60);
 					_npcCommanders.add(spawnDat);
@@ -1223,9 +1217,7 @@ public final class Fort extends AbstractResidence
 					final int castleId = rs.getInt("castleId");
 					final L2Spawn spawnDat = new L2Spawn(rs.getInt("npcId"));
 					spawnDat.setAmount(1);
-					spawnDat.setX(rs.getInt("x"));
-					spawnDat.setY(rs.getInt("y"));
-					spawnDat.setZ(rs.getInt("z"));
+					spawnDat.setXYZ(rs.getInt("x"), rs.getInt("y"), rs.getInt("z"));
 					spawnDat.setHeading(rs.getInt("heading"));
 					spawnDat.setRespawnDelay(60);
 					_specialEnvoys.add(spawnDat);
