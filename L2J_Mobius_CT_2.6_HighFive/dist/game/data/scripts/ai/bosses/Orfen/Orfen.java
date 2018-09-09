@@ -204,9 +204,8 @@ public final class Orfen extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("check_minion_loc"))
 		{
-			for (int i = 0; i < MINIONS.size(); i++)
+			for (L2Attackable mob : MINIONS)
 			{
-				final L2Attackable mob = MINIONS.get(i);
 				if (!npc.isInsideRadius2D(mob, 3000))
 				{
 					mob.teleToLocation(npc.getLocation());
@@ -217,9 +216,8 @@ public final class Orfen extends AbstractNpcAI
 		}
 		else if (event.equalsIgnoreCase("despawn_minions"))
 		{
-			for (int i = 0; i < MINIONS.size(); i++)
+			for (L2Attackable mob : MINIONS)
 			{
-				final L2Attackable mob = MINIONS.get(i);
 				if (mob != null)
 				{
 					mob.decayMe();
