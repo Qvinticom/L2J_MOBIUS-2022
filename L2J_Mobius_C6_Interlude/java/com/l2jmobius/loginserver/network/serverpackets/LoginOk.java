@@ -23,7 +23,8 @@ import com.l2jmobius.loginserver.SessionKey;
  */
 public final class LoginOk extends L2LoginServerPacket
 {
-	private final int _loginOk1, _loginOk2;
+	private final int _loginOk1;
+	private final int _loginOk2;
 	
 	public LoginOk(SessionKey sessionKey)
 	{

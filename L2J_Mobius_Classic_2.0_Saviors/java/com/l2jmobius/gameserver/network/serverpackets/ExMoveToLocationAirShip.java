@@ -22,7 +22,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExMoveToLocationAirShip implements IClientOutgoingPacket
 {
-	private final int _objId, _tx, _ty, _tz, _x, _y, _z;
+	private final int _objId;
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public ExMoveToLocationAirShip(L2Character cha)
 	{

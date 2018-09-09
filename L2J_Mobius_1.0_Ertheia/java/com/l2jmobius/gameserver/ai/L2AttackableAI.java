@@ -544,9 +544,8 @@ public class L2AttackableAI extends L2CharacterAI
 			
 			if (npc.calculateDistanceSq2D(leader) > (offset * offset))
 			{
-				int x1, y1, z1;
-				x1 = Rnd.get(minRadius * 2, offset * 2); // x
-				y1 = Rnd.get(x1, offset * 2); // distance
+				int x1 = Rnd.get(minRadius * 2, offset * 2); // x
+				int y1 = Rnd.get(x1, offset * 2); // distance
 				y1 = (int) Math.sqrt((y1 * y1) - (x1 * x1)); // y
 				if (x1 > (offset + minRadius))
 				{
@@ -565,9 +564,8 @@ public class L2AttackableAI extends L2CharacterAI
 					y1 = (leader.getY() - y1) + minRadius;
 				}
 				
-				z1 = leader.getZ();
 				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
-				moveTo(x1, y1, z1);
+				moveTo(x1, y1, leader.getZ());
 				return;
 			}
 			else if (Rnd.nextInt(RANDOM_WALK_RATE) == 0)

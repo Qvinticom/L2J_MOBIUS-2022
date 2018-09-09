@@ -1727,7 +1727,10 @@ public class Siege
 		{
 			L2ControlTowerInstance closestCt;
 			
-			double distance, x, y, z;
+			double distance;
+			double x;
+			double y;
+			double z;
 			double distanceClosest = 0;
 			
 			for (L2Spawn spawn : getSiegeGuardManager().getSiegeGuardSpawn())

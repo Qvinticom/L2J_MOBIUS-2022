@@ -70,18 +70,22 @@ public class CharInfo extends L2GameServerPacket
 	
 	private final L2PcInstance _activeChar;
 	private final Inventory _inv;
-	private final int _x, _y, _z, _heading;
-	private final int _mAtkSpd, _pAtkSpd;
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
-	
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
 	private int _flRunSpd;
-	
 	private int _flWalkSpd;
-	
 	private int _flyRunSpd;
-	
 	private int _flyWalkSpd;
-	private final float _moveMultiplier, _attackSpeedMultiplier;
+	private final float _moveMultiplier;
+	private final float _attackSpeedMultiplier;
 	private final int _maxCp;
 	
 	/**

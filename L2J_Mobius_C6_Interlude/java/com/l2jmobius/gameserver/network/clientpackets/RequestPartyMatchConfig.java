@@ -28,7 +28,9 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchList;
 
 public final class RequestPartyMatchConfig extends L2GameClientPacket
 {
-	private int _auto, _loc, _lvl;
+	private int _auto;
+	private int _loc;
+	private int _lvl;
 	
 	@Override
 	protected void readImpl()

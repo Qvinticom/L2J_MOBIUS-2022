@@ -24,7 +24,9 @@ import java.io.Serializable;
  */
 public class Point3D implements Serializable
 {
-	private volatile int _x, _y, _z;
+	private volatile int _x;
+	private volatile int _y;
+	private volatile int _z;
 	
 	public Point3D(int pX, int pY, int pZ)
 	{
@@ -98,7 +100,8 @@ public class Point3D implements Serializable
 	
 	public synchronized long distanceSquaredTo(Point3D point)
 	{
-		long dx, dy;
+		long dx;
+		long dy;
 		synchronized (point)
 		{
 			dx = _x - point._x;
@@ -109,7 +112,8 @@ public class Point3D implements Serializable
 	
 	public static long distanceSquared(Point3D point1, Point3D point2)
 	{
-		long dx, dy;
+		long dx;
+		long dy;
 		synchronized (point1)
 		{
 			synchronized (point2)

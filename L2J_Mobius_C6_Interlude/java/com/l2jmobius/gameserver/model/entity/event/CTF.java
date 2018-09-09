@@ -67,16 +67,111 @@ public class CTF implements EventTask
 	protected static final Logger LOGGER = Logger.getLogger(CTF.class.getName());
 	
 	/** The _joining location name. */
-	protected static String _eventName = new String(), _eventDesc = new String(), _joiningLocationName = new String();
+	protected static String _eventName = new String();
+
+	/**
+	 * The _joining location name. 
+	 */
+	protected static String _eventDesc = new String();
+
+	/**
+	 * The _joining location name. 
+	 */
+	protected static String _joiningLocationName = new String();
 	
 	/** The _npc spawn. */
 	private static L2Spawn _npcSpawn;
 	
 	/** The _in progress. */
-	protected static boolean _joining = false, _teleport = false, _started = false, _aborted = false, _sitForced = false, _inProgress = false;
+	protected static boolean _joining = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	protected static boolean _teleport = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	protected static boolean _started = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	protected static boolean _aborted = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	protected static boolean _sitForced = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	protected static boolean _inProgress = false;
 	
 	/** The _max players. */
-	protected static int _npcId = 0, _npcX = 0, _npcY = 0, _npcZ = 0, _npcHeading = 0, _rewardId = 0, _rewardAmount = 0, _minlvl = 0, _maxlvl = 0, _joinTime = 0, _eventTime = 0, _minPlayers = 0, _maxPlayers = 0;
+	protected static int _npcId = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _npcX = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _npcY = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _npcZ = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _npcHeading = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _rewardId = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _rewardAmount = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _minlvl = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _maxlvl = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _joinTime = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _eventTime = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _minPlayers = 0;
+
+	/**
+	 * The _max players. 
+	 */
+	protected static int _maxPlayers = 0;
 	
 	/** The _interval between matches. */
 	protected static long _intervalBetweenMatches = 0;
@@ -97,10 +192,40 @@ public class CTF implements EventTask
 	public static Vector<L2PcInstance> _playersShuffle = new Vector<>();
 	
 	/** The _save player teams. */
-	public static Vector<String> _teams = new Vector<>(), _savePlayers = new Vector<>(), _savePlayerTeams = new Vector<>();
+	public static Vector<String> _teams = new Vector<>();
+
+	/**
+	 * The _save player teams. 
+	 */
+	public static Vector<String> _savePlayers = new Vector<>();
+
+	/**
+	 * The _save player teams. 
+	 */
+	public static Vector<String> _savePlayerTeams = new Vector<>();
 	
 	/** The _teams z. */
-	public static Vector<Integer> _teamPlayersCount = new Vector<>(), _teamColors = new Vector<>(), _teamsX = new Vector<>(), _teamsY = new Vector<>(), _teamsZ = new Vector<>();
+	public static Vector<Integer> _teamPlayersCount = new Vector<>();
+
+	/**
+	 * The _teams z. 
+	 */
+	public static Vector<Integer> _teamColors = new Vector<>();
+
+	/**
+	 * The _teams z. 
+	 */
+	public static Vector<Integer> _teamsX = new Vector<>();
+
+	/**
+	 * The _teams z. 
+	 */
+	public static Vector<Integer> _teamsY = new Vector<>();
+
+	/**
+	 * The _teams z. 
+	 */
+	public static Vector<Integer> _teamsZ = new Vector<>();
 	
 	/** The _team points count. */
 	public static Vector<Integer> _teamPointsCount = new Vector<>();
@@ -109,16 +234,56 @@ public class CTF implements EventTask
 	public static int _topScore = 0;
 	
 	/** The _event offset. */
-	public static int _eventCenterX = 0, _eventCenterY = 0, _eventCenterZ = 0, _eventOffset = 0;
+	public static int _eventCenterX = 0;
+
+	/**
+	 * The _event offset. 
+	 */
+	public static int _eventCenterY = 0;
+
+	/**
+	 * The _event offset. 
+	 */
+	public static int _eventCenterZ = 0;
+
+	/**
+	 * The _event offset. 
+	 */
+	public static int _eventOffset = 0;
 	
 	/** The _ fla g_ i n_ han d_ ite m_ id. */
-	private static int _FlagNPC = 35062, _FLAG_IN_HAND_ITEM_ID = 6718;
+	private static int _FlagNPC = 35062;
+
+	/**
+	 * The _ fla g_ i n_ han d_ ite m_ id. 
+	 */
+	private static int _FLAG_IN_HAND_ITEM_ID = 6718;
 	
 	/** The _flags z. */
-	public static Vector<Integer> _flagIds = new Vector<>(), _flagsX = new Vector<>(), _flagsY = new Vector<>(), _flagsZ = new Vector<>();
+	public static Vector<Integer> _flagIds = new Vector<>();
+
+	/**
+	 * The _flags z. 
+	 */
+	public static Vector<Integer> _flagsX = new Vector<>();
+
+	/**
+	 * The _flags z. 
+	 */
+	public static Vector<Integer> _flagsY = new Vector<>();
+
+	/**
+	 * The _flags z. 
+	 */
+	public static Vector<Integer> _flagsZ = new Vector<>();
 	
 	/** The _throne spawns. */
-	public static Vector<L2Spawn> _flagSpawns = new Vector<>(), _throneSpawns = new Vector<>();
+	public static Vector<L2Spawn> _flagSpawns = new Vector<>();
+
+	/**
+	 * The _throne spawns. 
+	 */
+	public static Vector<L2Spawn> _throneSpawns = new Vector<>();
 	
 	/** The _flags taken. */
 	public static Vector<Boolean> _flagsTaken = new Vector<>();
@@ -2353,7 +2518,8 @@ public class CTF implements EventTask
 	 */
 	public static void shuffleTeams()
 	{
-		int teamCount = 0, playersCount = 0;
+		int teamCount = 0;
+		int playersCount = 0;
 		
 		synchronized (_players)
 		{
@@ -3397,7 +3563,9 @@ public class CTF implements EventTask
 		}
 		final int division = _teams.size() * 2;
 		int pos = 0;
-		final int[] locX = new int[division], locY = new int[division], locZ = new int[division];
+		final int[] locX = new int[division];
+		final int[] locY = new int[division];
+		final int[] locZ = new int[division];
 		// Get all coordinates inorder to create a polygon:
 		for (L2Spawn flag : _flagSpawns)
 		{
@@ -3428,7 +3596,9 @@ public class CTF implements EventTask
 		}
 		// Find the polygon center, note that it's not the mathematical center of the polygon,
 		// Rather than a point which centers all coordinates:
-		int centerX = 0, centerY = 0, centerZ = 0;
+		int centerX = 0;
+		int centerY = 0;
+		int centerZ = 0;
 		for (int x = 0; x < pos; x++)
 		{
 			centerX += (locX[x] / division);
@@ -3437,7 +3607,9 @@ public class CTF implements EventTask
 		}
 		// Now let's find the furthest distance from the "center" to the egg shaped sphere
 		// Surrounding the polygon, size x1.5 (for maximum logical area to wander...):
-		int maxX = 0, maxY = 0, maxZ = 0;
+		int maxX = 0;
+		int maxY = 0;
+		int maxZ = 0;
 		for (int x = 0; x < pos; x++)
 		{
 			if (maxX < (2 * Math.abs(centerX - locX[x])))

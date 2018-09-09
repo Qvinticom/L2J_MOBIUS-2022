@@ -140,7 +140,8 @@ public final class GameTimeController extends Thread
 	{
 		LOGGER.info(getClass().getSimpleName() + ": Started.");
 		
-		long nextTickTime, sleepTime;
+		long nextTickTime;
+		long sleepTime;
 		boolean isNight = isNight();
 		
 		EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));

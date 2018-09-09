@@ -35,8 +35,8 @@ public class L2TradeList
 	private final int _listId;
 	private boolean _confirmed;
 	private boolean _gm;
-	private String _buystorename, _sellstorename;
-	
+	private String _buystorename;
+	private String _sellstorename;
 	private String _npcId;
 	
 	public L2TradeList(int listId)

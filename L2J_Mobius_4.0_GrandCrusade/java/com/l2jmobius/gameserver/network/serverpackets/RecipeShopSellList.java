@@ -24,7 +24,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class RecipeShopSellList implements IClientOutgoingPacket
 {
-	private final L2PcInstance _buyer, _manufacturer;
+	private final L2PcInstance _buyer;
+	private final L2PcInstance _manufacturer;
 	
 	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer)
 	{

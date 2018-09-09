@@ -125,51 +125,51 @@ public class ChristmasManager
 		"I wish everybody a Merry Christmas! May the Holy Spirit be with you all the time.",
 		"May you have the best of Christmas this year and all your dreams come true.",
 		"May the miracle of Christmas fill your heart with warmth and love. Merry Christmas!"
-	},
-		
-		sender =
-		{
-			"Santa Claus",
-			"Papai Noel",
-			"Shengdan Laoren",
-			"Santa",
-			"Viejo Pascuero",
-			"Sinter Klaas",
-			"Father Christmas",
-			"Saint Nicholas",
-			"Joulupukki",
-			"Pere Noel",
-			"Saint Nikolaus",
-			"Kanakaloka",
-			"De Kerstman",
-			"Winter grandfather",
-			"Babbo Natale",
-			"Hoteiosho",
-			"Kaledu Senelis",
-			"Black Peter",
-			"Kerstman",
-			"Julenissen",
-			"Swiety Mikolaj",
-			"Ded Moroz",
-			"Julenisse",
-			"El Nino Jesus",
-			"Jultomten",
-			"Reindeer Dasher",
-			"Reindeer Dancer",
-			"Christmas Spirit",
-			"Reindeer Prancer",
-			"Reindeer Vixen",
-			"Reindeer Comet",
-			"Reindeer Cupid",
-			"Reindeer Donner",
-			"Reindeer Donder",
-			"Reindeer Dunder",
-			"Reindeer Blitzen",
-			"Reindeer Bliksem",
-			"Reindeer Blixem",
-			"Reindeer Rudolf",
-			"Christmas Elf"
-		};
+	};
+
+	protected String[] sender =
+	{
+		"Santa Claus",
+		"Papai Noel",
+		"Shengdan Laoren",
+		"Santa",
+		"Viejo Pascuero",
+		"Sinter Klaas",
+		"Father Christmas",
+		"Saint Nicholas",
+		"Joulupukki",
+		"Pere Noel",
+		"Saint Nikolaus",
+		"Kanakaloka",
+		"De Kerstman",
+		"Winter grandfather",
+		"Babbo Natale",
+		"Hoteiosho",
+		"Kaledu Senelis",
+		"Black Peter",
+		"Kerstman",
+		"Julenissen",
+		"Swiety Mikolaj",
+		"Ded Moroz",
+		"Julenisse",
+		"El Nino Jesus",
+		"Jultomten",
+		"Reindeer Dasher",
+		"Reindeer Dancer",
+		"Christmas Spirit",
+		"Reindeer Prancer",
+		"Reindeer Vixen",
+		"Reindeer Comet",
+		"Reindeer Cupid",
+		"Reindeer Donner",
+		"Reindeer Donder",
+		"Reindeer Dunder",
+		"Reindeer Blitzen",
+		"Reindeer Bliksem",
+		"Reindeer Blixem",
+		"Reindeer Rudolf",
+		"Christmas Elf"
+	};
 		
 	// Presents List:
 	protected int[] presents =
@@ -243,7 +243,9 @@ public class ChristmasManager
 	};
 	
 	// The message task sent at fixed rate
-	protected Future<?> _XMasMessageTask = null, _XMasPresentsTask = null;
+	protected Future<?> _XMasMessageTask = null;
+
+	protected Future<?> _XMasPresentsTask = null;
 	
 	// Manager should only be Initialized once:
 	protected int isManagerInit = 0;
@@ -251,7 +253,9 @@ public class ChristmasManager
 	// Interval of Christmas actions:
 	protected long _IntervalOfChristmas = 600000; // 10 minutes
 	
-	private final int first = 25000, last = 73099;
+	private final int first = 25000;
+
+	private final int last = 73099;
 	
 	/************************************** Initial Functions **************************************/
 	

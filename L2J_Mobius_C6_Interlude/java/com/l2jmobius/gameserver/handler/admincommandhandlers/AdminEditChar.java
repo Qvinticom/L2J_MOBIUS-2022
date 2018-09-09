@@ -880,7 +880,8 @@ public class AdminEditChar implements IAdminCommandHandler
 					if (target != null)
 					{
 						final String[] tokens = command.split(" ");
-						boolean param = true, save = false;
+						boolean param = true;
+						boolean save = false;
 						if (tokens.length == 2)
 						{
 							param = Boolean.parseBoolean(tokens[1]);
@@ -1332,7 +1333,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		int CharactersFound = 0;
 		
-		String name, ip = "0.0.0.0";
+		String name;
+		String ip = "0.0.0.0";
 		StringBuilder replyMSG = new StringBuilder();
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/ipfind.htm");

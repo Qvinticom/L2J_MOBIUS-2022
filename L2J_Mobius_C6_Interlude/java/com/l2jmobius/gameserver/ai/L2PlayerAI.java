@@ -43,7 +43,8 @@ public class L2PlayerAI extends L2CharacterAI
 	class IntentionCommand
 	{
 		protected CtrlIntention _crtlIntention;
-		protected Object _arg0, _arg1;
+		protected Object _arg0;
+		protected Object _arg1;
 		
 		protected IntentionCommand(CtrlIntention pIntention, Object pArg0, Object pArg1)
 		{

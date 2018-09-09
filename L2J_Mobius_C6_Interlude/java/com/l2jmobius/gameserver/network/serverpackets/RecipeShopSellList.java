@@ -26,7 +26,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RecipeShopSellList extends L2GameServerPacket
 {
-	private final L2PcInstance _buyer, _manufacturer;
+	private final L2PcInstance _buyer;
+	private final L2PcInstance _manufacturer;
 	
 	public RecipeShopSellList(L2PcInstance buyer, L2PcInstance manufacturer)
 	{

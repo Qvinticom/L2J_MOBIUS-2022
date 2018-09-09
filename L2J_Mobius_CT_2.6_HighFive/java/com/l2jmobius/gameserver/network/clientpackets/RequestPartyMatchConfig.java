@@ -34,7 +34,9 @@ import com.l2jmobius.gameserver.network.serverpackets.PartyMatchDetail;
  */
 public final class RequestPartyMatchConfig implements IClientIncomingPacket
 {
-	private int _auto, _loc, _lvl;
+	private int _auto;
+	private int _loc;
+	private int _lvl;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)

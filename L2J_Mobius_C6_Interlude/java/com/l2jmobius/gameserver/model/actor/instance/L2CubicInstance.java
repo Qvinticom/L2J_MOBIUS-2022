@@ -1096,7 +1096,9 @@ public class L2CubicInstance
 			return false;
 		}
 		
-		int x, y, z;
+		int x;
+		int y;
+		int z;
 		// temporary range check until real behavior of cubics is known/coded
 		final int range = MAX_MAGIC_RANGE;
 		

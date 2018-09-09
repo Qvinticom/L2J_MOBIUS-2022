@@ -24,7 +24,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExRotation implements IClientOutgoingPacket
 {
-	private final int _charId, _heading;
+	private final int _charId;
+	private final int _heading;
 	
 	public ExRotation(int charId, int heading)
 	{

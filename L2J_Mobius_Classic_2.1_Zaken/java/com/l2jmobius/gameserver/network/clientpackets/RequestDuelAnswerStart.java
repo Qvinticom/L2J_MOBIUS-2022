@@ -60,7 +60,8 @@ public final class RequestDuelAnswerStart implements IClientIncomingPacket
 		
 		if (_response == 1)
 		{
-			SystemMessage msg1 = null, msg2 = null;
+			SystemMessage msg1 = null;
+			SystemMessage msg2 = null;
 			if (requestor.isInDuel())
 			{
 				msg1 = SystemMessage.getSystemMessage(SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_ALREADY_ENGAGED_IN_A_DUEL);

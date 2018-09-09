@@ -22,7 +22,9 @@ package com.l2jmobius.gameserver.network.serverpackets;
  */
 public class ObservationMode extends L2GameServerPacket
 {
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	/**
 	 * @param x

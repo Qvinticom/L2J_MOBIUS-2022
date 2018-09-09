@@ -54,7 +54,9 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	private static final int DURATION_INCREASE_INTERVAL = 20000; // 20 secs (gained upon feeding)
 	private static final int BUFF_INTERVAL = 5000; // 5 seconds
 	private int _remainingTime = MAX_DURATION;
-	private int _homeX, _homeY, _homeZ;
+	private int _homeX;
+	private int _homeY;
+	private int _homeZ;
 	protected L2PcInstance _owner;
 	private Future<?> _buffTask = null;
 	private Future<?> _durationCheckTask = null;

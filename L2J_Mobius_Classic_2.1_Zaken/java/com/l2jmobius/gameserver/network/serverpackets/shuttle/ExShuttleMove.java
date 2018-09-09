@@ -27,7 +27,9 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExShuttleMove implements IClientOutgoingPacket
 {
 	private final L2ShuttleInstance _shuttle;
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public ExShuttleMove(L2ShuttleInstance shuttle, int x, int y, int z)
 	{

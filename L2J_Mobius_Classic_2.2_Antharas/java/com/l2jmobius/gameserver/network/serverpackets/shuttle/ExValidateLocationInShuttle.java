@@ -28,7 +28,8 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
 public class ExValidateLocationInShuttle implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
-	private final int _shipId, _heading;
+	private final int _shipId;
+	private final int _heading;
 	private final Location _loc;
 	
 	public ExValidateLocationInShuttle(L2PcInstance player)

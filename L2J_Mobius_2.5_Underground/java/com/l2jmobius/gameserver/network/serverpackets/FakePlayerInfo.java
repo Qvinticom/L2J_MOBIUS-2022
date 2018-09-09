@@ -36,9 +36,14 @@ public class FakePlayerInfo implements IClientOutgoingPacket
 {
 	private final L2Npc _npc;
 	private final int _objId;
-	private final int _x, _y, _z, _heading;
-	private final int _mAtkSpd, _pAtkSpd;
-	private final int _runSpd, _walkSpd;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
 	private final int _swimRunSpd;
 	private final int _swimWalkSpd;
 	private final int _flyRunSpd;

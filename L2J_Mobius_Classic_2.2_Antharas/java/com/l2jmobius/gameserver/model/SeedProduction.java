@@ -63,7 +63,8 @@ public class SeedProduction
 	
 	public final boolean decreaseAmount(long val)
 	{
-		long current, next;
+		long current;
+		long next;
 		do
 		{
 			current = _amount.get();

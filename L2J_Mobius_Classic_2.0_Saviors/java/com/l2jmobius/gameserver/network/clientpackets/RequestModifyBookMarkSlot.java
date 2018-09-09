@@ -26,8 +26,10 @@ import com.l2jmobius.gameserver.network.L2GameClient;
  */
 public final class RequestModifyBookMarkSlot implements IClientIncomingPacket
 {
-	private int id, icon;
-	private String name, tag;
+	private int id;
+	private int icon;
+	private String name;
+	private String tag;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)

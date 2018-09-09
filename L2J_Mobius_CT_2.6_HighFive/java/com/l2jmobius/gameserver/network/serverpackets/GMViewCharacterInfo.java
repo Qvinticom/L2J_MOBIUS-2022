@@ -24,9 +24,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class GMViewCharacterInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
-	private final int _runSpd, _walkSpd;
-	private final int _swimRunSpd, _swimWalkSpd;
-	private final int _flyRunSpd, _flyWalkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
+	private final int _flyRunSpd;
+	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
 	
 	public GMViewCharacterInfo(L2PcInstance cha)

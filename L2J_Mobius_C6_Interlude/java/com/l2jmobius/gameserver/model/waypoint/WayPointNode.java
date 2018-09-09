@@ -34,12 +34,14 @@ import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
  * This class ...
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
-
 public class WayPointNode extends L2Object
 {
 	private int _id;
-	private String _title, _type;
-	private static final String NORMAL = "Node", SELECTED = "Selected", LINKED = "Linked";
+	private String _title;
+	private String _type;
+	private static final String NORMAL = "Node";
+	private static final String SELECTED = "Selected";
+	private static final String LINKED = "Linked";
 	private static int _lineId = 5560;
 	private static final String LINE_TYPE = "item";
 	private final Map<WayPointNode, List<WayPointNode>> _linkLists;
@@ -181,8 +183,12 @@ public class WayPointNode extends L2Object
 	 */
 	public static void drawLine(WayPointNode nodeA, WayPointNode nodeB)
 	{
-		int x1 = nodeA.getX(), y1 = nodeA.getY(), z1 = nodeA.getZ();
-		final int x2 = nodeB.getX(), y2 = nodeB.getY(), z2 = nodeB.getZ();
+		int x1 = nodeA.getX();
+		int y1 = nodeA.getY();
+		int z1 = nodeA.getZ();
+		final int x2 = nodeB.getX();
+		final int y2 = nodeB.getY();
+		final int z2 = nodeB.getZ();
 		final int modX = (x1 - x2) > 0 ? -1 : 1;
 		final int modY = (y1 - y2) > 0 ? -1 : 1;
 		final int modZ = (z1 - z2) > 0 ? -1 : 1;

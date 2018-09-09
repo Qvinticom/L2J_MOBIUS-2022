@@ -33,12 +33,17 @@ public abstract class Builder
 	{
 		final ArrayList<Builder> builders = new ArrayList<>();
 		
-		int index1 = 0, index2 = 0, paramId, subTextLen;
+		int index1 = 0;
+		int index2 = 0;
+		int paramId;
+		int subTextLen;
 		
 		final char[] array = text.toCharArray();
 		final int arrayLength = array.length;
 		
-		char c, c2, c3;
+		char c;
+		char c2;
+		char c3;
 		LOOP: for (; index1 < arrayLength; index1++)
 		{
 			c = array[index1];

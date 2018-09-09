@@ -40,7 +40,9 @@ public final class RequestMoveToLocationInVehicle extends L2GameClientPacket
 	@Override
 	protected void readImpl()
 	{
-		int _x, _y, _z;
+		int _x;
+		int _y;
+		int _z;
 		_boatId = readD(); // objectId of boat
 		_x = readD();
 		_y = readD();

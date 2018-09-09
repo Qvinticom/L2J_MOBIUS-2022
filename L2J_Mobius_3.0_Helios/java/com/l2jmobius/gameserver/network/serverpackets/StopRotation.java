@@ -21,7 +21,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class StopRotation implements IClientOutgoingPacket
 {
-	private final int _charObjId, _degree, _speed;
+	private final int _charObjId;
+	private final int _degree;
+	private final int _speed;
 	
 	public StopRotation(int objectId, int degree, int speed)
 	{

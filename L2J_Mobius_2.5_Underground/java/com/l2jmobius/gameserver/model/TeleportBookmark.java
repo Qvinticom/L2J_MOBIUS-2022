@@ -23,7 +23,8 @@ public class TeleportBookmark extends Location
 {
 	private final int _id;
 	private int _icon;
-	private String _name, _tag;
+	private String _name;
+	private String _tag;
 	
 	public TeleportBookmark(int id, int x, int y, int z, int icon, String tag, String name)
 	{

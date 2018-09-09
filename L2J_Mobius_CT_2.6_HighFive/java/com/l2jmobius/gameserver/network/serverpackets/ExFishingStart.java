@@ -26,7 +26,10 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExFishingStart implements IClientOutgoingPacket
 {
 	private final L2Character _activeChar;
-	private final int _x, _y, _z, _fishType;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _fishType;
 	private final boolean _isNightLure;
 	
 	public ExFishingStart(L2Character character, int fishType, int x, int y, int z, boolean isNightLure)

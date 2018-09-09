@@ -27,7 +27,9 @@ import com.l2jmobius.gameserver.model.multisell.MultiSellListContainer;
  */
 public class MultiSellList extends L2GameServerPacket
 {
-	protected int _listId, _page, _finished;
+	protected int _listId;
+	protected int _page;
+	protected int _finished;
 	protected MultiSellListContainer _list;
 	
 	public MultiSellList(MultiSellListContainer list, int page, int finished)

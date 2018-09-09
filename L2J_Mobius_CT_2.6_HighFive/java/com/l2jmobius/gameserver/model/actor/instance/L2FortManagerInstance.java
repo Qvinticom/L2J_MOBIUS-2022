@@ -162,7 +162,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 					final NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 					html.setFile(player, "data/html/fortress/foreman-castlereport.htm");
 					html.replace("%objectId%", String.valueOf(getObjectId()));
-					int hour, minutes;
+					int hour;
+					int minutes;
 					if (Config.FS_MAX_OWN_TIME > 0)
 					{
 						hour = (int) Math.floor(getFort().getTimeTillRebelArmy() / 3600);

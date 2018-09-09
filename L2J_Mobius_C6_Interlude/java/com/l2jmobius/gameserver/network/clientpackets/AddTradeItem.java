@@ -30,7 +30,9 @@ import com.l2jmobius.gameserver.network.serverpackets.TradeUpdate;
 public final class AddTradeItem extends L2GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(AddTradeItem.class.getName());
-	private int _tradeId, _objectId, _count;
+	private int _tradeId;
+	private int _objectId;
+	private int _count;
 	
 	public AddTradeItem()
 	{

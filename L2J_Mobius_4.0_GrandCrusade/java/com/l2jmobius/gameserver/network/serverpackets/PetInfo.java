@@ -30,7 +30,8 @@ public class PetInfo implements IClientOutgoingPacket
 {
 	private final L2Summon _summon;
 	private final int _val;
-	private final int _runSpd, _walkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
 	private final int _swimRunSpd;
 	private final int _swimWalkSpd;
 	private final int _flRunSpd = 0;
@@ -38,7 +39,8 @@ public class PetInfo implements IClientOutgoingPacket
 	private final int _flyRunSpd;
 	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private int _maxFed, _curFed;
+	private int _maxFed;
+	private int _curFed;
 	private int _statusMask = 0;
 	
 	public PetInfo(L2Summon summon, int val)

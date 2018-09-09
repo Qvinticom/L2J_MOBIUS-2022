@@ -23,7 +23,8 @@ import com.l2jmobius.loginserver.network.OutgoingPackets;
 
 public final class PlayOk implements IOutgoingPacket
 {
-	private final int _playOk1, _playOk2;
+	private final int _playOk1;
+	private final int _playOk2;
 	
 	public PlayOk(SessionKey sessionKey)
 	{

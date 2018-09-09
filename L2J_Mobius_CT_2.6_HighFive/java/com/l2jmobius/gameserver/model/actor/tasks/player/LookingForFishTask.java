@@ -26,7 +26,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class LookingForFishTask implements Runnable
 {
 	private final L2PcInstance _player;
-	private final boolean _isNoob, _isUpperGrade;
+	private final boolean _isNoob;
+	private final boolean _isUpperGrade;
 	private final int _fishGroup;
 	private final double _fishGutsCheck;
 	private final long _endTaskTime;

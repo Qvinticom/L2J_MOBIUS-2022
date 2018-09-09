@@ -208,7 +208,9 @@ public class AdminTeleport implements IAdminCommandHandler
 		else if (command.startsWith("admin_go"))
 		{
 			int intVal = 150;
-			int x = activeChar.getX(), y = activeChar.getY(), z = activeChar.getZ();
+			int x = activeChar.getX();
+			int y = activeChar.getY();
+			int z = activeChar.getZ();
 			try
 			{
 				final String val = command.substring(8);

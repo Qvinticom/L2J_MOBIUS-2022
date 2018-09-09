@@ -59,7 +59,10 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2)
 	{
-		int tX, tY, uX, uY;
+		int tX;
+		int tY;
+		int uX;
+		int uY;
 		
 		// First check if a point of the polygon lies inside the rectangle
 		if ((_x[0] > ax1) && (_x[0] < ax2) && (_y[0] > ay1) && (_y[0] < ay2))
@@ -109,7 +112,8 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		double test, shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
+		double test;
+		double shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
 		
 		for (int i = 1; i < _y.length; i++)
 		{

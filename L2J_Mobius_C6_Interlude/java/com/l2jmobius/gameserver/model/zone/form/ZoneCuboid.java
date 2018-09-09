@@ -24,7 +24,12 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
  */
 public class ZoneCuboid extends L2ZoneForm
 {
-	private int _x1, _x2, _y1, _y2, _z1, _z2;
+	private int _x1;
+	private int _x2;
+	private int _y1;
+	private int _y2;
+	private int _z1;
+	private int _z2;
 	
 	public ZoneCuboid(int x1, int x2, int y1, int y2, int z1, int z2)
 	{
@@ -166,7 +171,8 @@ public class ZoneCuboid extends L2ZoneForm
 			return 0; // If you are inside the zone distance to zone is 0.
 		}
 		
-		double test, shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
+		double test;
+		double shortestDist = Math.pow(_x1 - x, 2) + Math.pow(_y1 - y, 2);
 		
 		test = Math.pow(_x1 - x, 2) + Math.pow(_y2 - y, 2);
 		if (test < shortestDist)

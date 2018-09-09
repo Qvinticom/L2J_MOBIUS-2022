@@ -2890,7 +2890,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int yPrev = getY();
 		int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
 		
-		double dx, dy, dz;
+		double dx;
+		double dy;
+		double dz;
 		if (Config.COORD_SYNCHRONIZE == 1)
 		// the only method that can modify x,y while moving (otherwise _move would/should be set null)
 		{

@@ -596,7 +596,14 @@ public final class Instance
 							final String spawnGroup = group.getAttributes().getNamedItem("name").getNodeValue();
 							for (Node d = group.getFirstChild(); d != null; d = d.getNextSibling())
 							{
-								int npcId = 0, x = 0, y = 0, z = 0, heading = 0, respawn = 0, respawnRandom = 0, delay = -1;
+								int npcId = 0;
+								int x = 0;
+								int y = 0;
+								int z = 0;
+								int heading = 0;
+								int respawn = 0;
+								int respawnRandom = 0;
+								int delay = -1;
 								Boolean allowRandomWalk = null;
 								if ("npc".equalsIgnoreCase(d.getNodeName()))
 								{

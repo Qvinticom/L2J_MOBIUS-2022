@@ -1518,7 +1518,9 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public class ItemDropTask implements Runnable
 	{
-		private int _x, _y, _z;
+		private int _x;
+		private int _y;
+		private int _z;
 		private final L2Character _dropper;
 		private final L2ItemInstance _itеm;
 		

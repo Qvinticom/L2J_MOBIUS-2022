@@ -30,7 +30,8 @@ public class MonsterRace
 	private static MonsterRace _instance;
 	private Constructor<?> _constructor;
 	private int[][] _speeds;
-	private final int[] _first, _second;
+	private final int[] _first;
+	private final int[] _second;
 	
 	private MonsterRace()
 	{

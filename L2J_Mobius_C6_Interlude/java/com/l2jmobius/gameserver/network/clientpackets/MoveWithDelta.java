@@ -23,7 +23,9 @@ package com.l2jmobius.gameserver.network.clientpackets;
 @SuppressWarnings("unused")
 public class MoveWithDelta extends L2GameClientPacket
 {
-	private int _dx, _dy, _dz;
+	private int _dx;
+	private int _dy;
+	private int _dz;
 	
 	@Override
 	protected void readImpl()

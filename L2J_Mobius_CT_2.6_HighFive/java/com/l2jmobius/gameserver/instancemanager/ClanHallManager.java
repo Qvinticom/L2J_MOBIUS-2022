@@ -65,7 +65,9 @@ public final class ClanHallManager
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT * FROM clanhall ORDER BY id"))
 		{
-			int id, ownerId, lease;
+			int id;
+			int ownerId;
+			int lease;
 			while (rs.next())
 			{
 				final StatsSet set = new StatsSet();

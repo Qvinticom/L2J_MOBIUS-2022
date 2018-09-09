@@ -47,7 +47,9 @@ public class AllianceInfo implements IClientOutgoingPacket
 		
 		final Collection<L2Clan> allies = ClanTable.getInstance().getClanAllies(allianceId);
 		_allies = new ClanInfo[allies.size()];
-		int idx = 0, total = 0, online = 0;
+		int idx = 0;
+		int total = 0;
+		int online = 0;
 		for (L2Clan clan : allies)
 		{
 			final ClanInfo ci = new ClanInfo(clan);

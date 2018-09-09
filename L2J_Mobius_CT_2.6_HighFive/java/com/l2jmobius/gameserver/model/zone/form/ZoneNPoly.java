@@ -65,7 +65,8 @@ public class ZoneNPoly extends L2ZoneForm
 	{
 		final int[] _x = _p.xpoints;
 		final int[] _y = _p.ypoints;
-		double test, shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
+		double test;
+		double shortestDist = Math.pow(_x[0] - x, 2) + Math.pow(_y[0] - y, 2);
 		
 		for (int i = 1; i < _p.npoints; i++)
 		{
@@ -111,15 +112,13 @@ public class ZoneNPoly extends L2ZoneForm
 	@Override
 	public Location getRandomPoint()
 	{
-		int x, y;
-		
 		final int _minX = _p.getBounds().x;
 		final int _maxX = _p.getBounds().x + _p.getBounds().width;
 		final int _minY = _p.getBounds().y;
 		final int _maxY = _p.getBounds().y + _p.getBounds().height;
 		
-		x = Rnd.get(_minX, _maxX);
-		y = Rnd.get(_minY, _maxY);
+		int x = Rnd.get(_minX, _maxX);
+		int y = Rnd.get(_minY, _maxY);
 		
 		int antiBlocker = 0;
 		while (!_p.contains(x, y) && (antiBlocker++ < 1000))

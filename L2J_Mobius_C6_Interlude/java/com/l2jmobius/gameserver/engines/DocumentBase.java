@@ -242,7 +242,8 @@ public abstract class DocumentBase
 	{
 		final NamedNodeMap attrs = n.getAttributes();
 		final String name = attrs.getNamedItem("name").getNodeValue();
-		int time, count = 1;
+		int time;
+		int count = 1;
 		int showIcon = 0;
 		if (attrs.getNamedItem("noicon") != null)
 		{
@@ -381,7 +382,8 @@ public abstract class DocumentBase
 	{
 		final NamedNodeMap attrs = n.getAttributes();
 		
-		int id = 0, lvl = 1;
+		int id = 0;
+		int lvl = 1;
 		
 		if (attrs.getNamedItem("id") != null)
 		{

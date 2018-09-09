@@ -59,7 +59,8 @@ public class ExtractableItems implements IItemHandler
 			{
 				return;
 			}
-			int createItemID = 0, createAmount = 0;
+			int createItemID = 0;
+			int createAmount = 0;
 			final int rndNum = Rnd.get(100);
 			int chanceFrom = 0;
 			for (L2ExtractableProductItem expi : exitem.getProductItems())

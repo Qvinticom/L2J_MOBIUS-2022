@@ -26,8 +26,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExFishingStartCombat implements IClientOutgoingPacket
 {
 	private final L2Character _activeChar;
-	private final int _time, _hp;
-	private final int _lureType, _deceptiveMode, _mode;
+	private final int _time;
+	private final int _hp;
+	private final int _lureType;
+	private final int _deceptiveMode;
+	private final int _mode;
 	
 	public ExFishingStartCombat(L2Character character, int time, int hp, int mode, int lureType, int deceptiveMode)
 	{

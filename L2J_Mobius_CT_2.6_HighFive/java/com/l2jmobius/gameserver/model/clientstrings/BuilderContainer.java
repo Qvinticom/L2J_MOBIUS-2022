@@ -46,7 +46,9 @@ final class BuilderContainer extends Builder
 		
 		Builder builder;
 		String build;
-		int i, paramIndex, buildTextLen = 0;
+		int i;
+		int paramIndex;
+		int buildTextLen = 0;
 		if (paramsLength != 0)
 		{
 			for (i = buildersLength; i-- > 0;)

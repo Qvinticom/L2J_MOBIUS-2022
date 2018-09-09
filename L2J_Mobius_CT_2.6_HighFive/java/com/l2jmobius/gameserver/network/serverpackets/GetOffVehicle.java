@@ -24,7 +24,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class GetOffVehicle implements IClientOutgoingPacket
 {
-	private final int _charObjId, _boatObjId, _x, _y, _z;
+	private final int _charObjId;
+	private final int _boatObjId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	/**
 	 * @param charObjId

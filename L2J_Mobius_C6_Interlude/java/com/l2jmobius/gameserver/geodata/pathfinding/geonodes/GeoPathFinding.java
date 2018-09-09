@@ -130,7 +130,8 @@ public class GeoPathFinding extends PathFinding
 		final int targetX = end.getLoc().getNodeX();
 		final int targetY = end.getLoc().getNodeY();
 		
-		int dx, dy;
+		int dx;
+		int dy;
 		boolean added;
 		int i = 0;
 		while (i < 550)
@@ -224,7 +225,8 @@ public class GeoPathFinding extends PathFinding
 		
 		final List<AbstractNode<GeoNodeLoc>> Neighbors = new ArrayList<>(8);
 		GeoNode newNode;
-		short new_node_x, new_node_y;
+		short new_node_x;
+		short new_node_y;
 		
 		// Region for sure will change, we must read from correct file
 		byte neighbor = pn.get(idx++); // N
@@ -426,7 +428,9 @@ public class GeoPathFinding extends PathFinding
 		final short regionoffset = getRegionOffset(rx, ry);
 		final File file = new File(Config.PATHNODE_DIR, rx + "_" + ry + ".pn");
 		_log.info("Path Engine: - Loading: " + file.getName() + " -> region offset: " + regionoffset + " X: " + rx + " Y: " + ry);
-		int node = 0, size, index = 0;
+		int node = 0;
+		int size;
+		int index = 0;
 		
 		// Create a read-only memory-mapped file
 		try (RandomAccessFile raf = new RandomAccessFile(file, "r");

@@ -396,7 +396,9 @@ public class AdminTeleport implements IAdminCommandHandler
 			case admin_godown:
 			{
 				int intVal = 150;
-				int x = activeChar.getX(), y = activeChar.getY(), z = activeChar.getZ();
+				int x = activeChar.getX();
+				int y = activeChar.getY();
+				int z = activeChar.getZ();
 				try
 				{
 					String val = command.substring(8);

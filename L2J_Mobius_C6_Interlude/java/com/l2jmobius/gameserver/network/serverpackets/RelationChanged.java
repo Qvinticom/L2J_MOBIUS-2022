@@ -35,7 +35,9 @@ public class RelationChanged extends L2GameServerPacket
 	public static final int RELATION_MUTUAL_WAR = 0x08000; // double fist
 	public static final int RELATION_1SIDED_WAR = 0x10000; // single fist
 	
-	private final int _objId, _relation, _autoAttackable;
+	private final int _objId;
+	private final int _relation;
+	private final int _autoAttackable;
 	private int _karma;
 	private int _pvpFlag;
 	

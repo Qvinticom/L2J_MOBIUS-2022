@@ -555,7 +555,8 @@ public class TradeList
 			}
 			
 			// Synchronization order to avoid deadlock
-			TradeList sync1, sync2;
+			TradeList sync1;
+			TradeList sync2;
 			if (getOwner().getObjectId() > partnerList.getOwner().getObjectId())
 			{
 				sync1 = partnerList;

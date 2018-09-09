@@ -651,7 +651,8 @@ public class L2Attackable extends L2NpcInstance
 			
 			long damage;
 			
-			L2Character attacker, ddealer;
+			L2Character attacker;
+			L2Character ddealer;
 			
 			// While Interacting over This Map Removing Object is Not Allowed
 			synchronized (_aggroList)
@@ -724,9 +725,13 @@ public class L2Attackable extends L2NpcInstance
 			if (!rewards.isEmpty())
 			{
 				L2Party attackerParty;
-				long exp, partyDmg;
-				int levelDiff, partyLvl, sp;
-				float partyMul, penalty;
+				long exp;
+				long partyDmg;
+				int levelDiff;
+				int partyLvl;
+				int sp;
+				float partyMul;
+				float penalty;
 				RewardInfo reward2;
 				int[] tmp;
 				

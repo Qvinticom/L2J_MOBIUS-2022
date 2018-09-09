@@ -26,8 +26,11 @@ public class SpawnItem extends L2GameServerPacket
 {
 	private final int _objectId;
 	private final int _itemId;
-	private final int _x, _y, _z;
-	private final int _stackable, _count;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _stackable;
+	private final int _count;
 	
 	public SpawnItem(L2ItemInstance item)
 	{

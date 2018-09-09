@@ -244,7 +244,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_edit_skill_npc "))
 		{
-			int npcId = -1, skillId = -1;
+			int npcId = -1;
+			int skillId = -1;
 			try
 			{
 				final StringTokenizer st = new StringTokenizer(command.substring(21).trim(), " ");
@@ -287,7 +288,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_add_skill_npc "))
 		{
-			int npcId = -1, skillId = -1;
+			int npcId = -1;
+			int skillId = -1;
 			try
 			{
 				final StringTokenizer st = new StringTokenizer(command.substring(20).trim(), " ");
@@ -339,7 +341,8 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_del_skill_npc "))
 		{
-			int npcId = -1, skillId = -1;
+			int npcId = -1;
+			int skillId = -1;
 			try
 			{
 				final String[] input = command.substring(20).split(" ");
@@ -364,7 +367,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_edit_drop "))
 		{
-			int npcId = -1, itemId = 0, category = -1000;
+			int npcId = -1;
+			int itemId = 0;
+			int category = -1000;
 			try
 			{
 				StringTokenizer st = new StringTokenizer(command.substring(16).trim());
@@ -468,7 +473,9 @@ public class AdminEditNpc implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_del_drop "))
 		{
-			int npcId = -1, itemId = -1, category = -1000;
+			int npcId = -1;
+			int itemId = -1;
+			int category = -1000;
 			
 			try
 			{

@@ -37,7 +37,17 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 	/**
 	 * home points for xyz
 	 */
-	int _homeX, _homeY, _homeZ;
+	int _homeX;
+
+	/**
+	 * home points for xyz
+	 */
+	int _homeY;
+
+	/**
+	 * home points for xyz
+	 */
+	int _homeZ;
 	
 	/**
 	 * route of the current npc

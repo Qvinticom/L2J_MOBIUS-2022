@@ -28,8 +28,12 @@ public class ExMoveToLocationInShuttle implements IClientOutgoingPacket
 {
 	private final int _charObjId;
 	private final int _airShipId;
-	private final int _targetX, _targetY, _targetZ;
-	private final int _fromX, _fromY, _fromZ;
+	private final int _targetX;
+	private final int _targetY;
+	private final int _targetZ;
+	private final int _fromX;
+	private final int _fromY;
+	private final int _fromZ;
 	
 	public ExMoveToLocationInShuttle(L2PcInstance player, int fromX, int fromY, int fromZ)
 	{

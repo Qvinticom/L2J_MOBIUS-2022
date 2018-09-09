@@ -457,7 +457,8 @@ public class ClanTable
 	
 	private void restorewars()
 	{
-		L2Clan clan1, clan2;
+		L2Clan clan1;
+		L2Clan clan2;
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();
 			ResultSet rset = statement.executeQuery("SELECT clan1, clan2 FROM clan_wars"))

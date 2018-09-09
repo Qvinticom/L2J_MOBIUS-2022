@@ -121,12 +121,11 @@ public final class DoorData implements IGameXmlReader
 		// Insert Collision data
 		if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeX_1"))
 		{
-			int posX, posY, nodeX, nodeY, height;
-			height = set.getInt("height", 150);
-			nodeX = set.getInt("nodeX_0");
-			nodeY = set.getInt("nodeY_0");
-			posX = set.getInt("nodeX_1");
-			posY = set.getInt("nodeX_1");
+			final int height = set.getInt("height", 150);
+			final int nodeX = set.getInt("nodeX_0");
+			final int nodeY = set.getInt("nodeY_0");
+			final int posX = set.getInt("nodeX_1");
+			final int posY = set.getInt("nodeX_1");
 			int collisionRadius; // (max) radius for movement checks
 			collisionRadius = Math.min(Math.abs(nodeX - posX), Math.abs(nodeY - posY));
 			if (collisionRadius < 20)

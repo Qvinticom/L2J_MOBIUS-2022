@@ -152,7 +152,8 @@ public class Q00700_CursedLife extends Quest
 		{
 			if (npc.getId() == ROK)
 			{
-				int amount = 0, chance = getRandom(1000);
+				int amount = 0;
+				int chance = getRandom(1000);
 				if (chance < 700)
 				{
 					amount = 1;

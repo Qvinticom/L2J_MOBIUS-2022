@@ -28,7 +28,10 @@ public class ExStopMoveInAirShip implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private final int _shipObjId;
-	private final int x, y, z, h;
+	private final int x;
+	private final int y;
+	private final int z;
+	private final int h;
 	
 	public ExStopMoveInAirShip(L2PcInstance player, int shipObjId)
 	{

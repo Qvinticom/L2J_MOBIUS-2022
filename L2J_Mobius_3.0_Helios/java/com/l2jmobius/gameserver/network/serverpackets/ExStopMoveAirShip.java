@@ -25,7 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExStopMoveAirShip implements IClientOutgoingPacket
 {
-	private final int _objectId, _x, _y, _z, _heading;
+	private final int _objectId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	
 	public ExStopMoveAirShip(L2Character ship)
 	{

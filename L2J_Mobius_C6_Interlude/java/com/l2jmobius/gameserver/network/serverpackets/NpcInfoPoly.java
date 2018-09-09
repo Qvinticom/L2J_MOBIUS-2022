@@ -28,51 +28,35 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class NpcInfoPoly extends L2GameServerPacket
 {
-	/** The _active char. */
 	private L2Character _activeChar;
-	
-	/** The _obj. */
 	private final L2Object _obj;
-	
-	/** The _heading. */
-	private int _x, _y, _z, _heading;
-	
-	/** The _npc id. */
+	private int _x;
+	private int _y;
+	private int _z;
+	private int _heading;
 	private final int _npcId;
-	
-	/** The _is alike dead. */
 	private boolean _isAttackable;
-	
 	private final boolean _isSummoned;
-	
 	private boolean _isRunning;
-	
 	private boolean _isInCombat;
-	
 	private boolean _isAlikeDead;
-	
-	/** The _p atk spd. */
-	private int _mAtkSpd, _pAtkSpd;
-	
-	/** The _fly walk spd. */
-	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
-	
-	/** The _lhand. */
-	private int _rhand, _lhand;
-	
-	/** The _title. */
-	private String _name, _title;
-	
-	/** The _abnormal effect. */
+	private int _mAtkSpd;
+	private int _pAtkSpd;
+	private int _runSpd;
+	private int _walkSpd;
+	private int _swimRunSpd;
+	private int _swimWalkSpd;
+	private int _flRunSpd;
+	private int _flWalkSpd;
+	private int _flyRunSpd;
+	private int _flyWalkSpd;
+	private int _rhand;
+	private int _lhand;
+	private String _name;
+	private String _title;
 	private int _abnormalEffect;
-	
-	/** The _template. */
 	L2NpcTemplate _template;
-	
-	/** The _collision radius. */
 	private final int _collisionRadius;
-	
-	/** The _collision height. */
 	private final int _collisionHeight;
 	
 	/**

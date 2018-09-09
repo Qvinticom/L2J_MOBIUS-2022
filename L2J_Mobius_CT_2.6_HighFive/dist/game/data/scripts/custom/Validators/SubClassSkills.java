@@ -144,8 +144,10 @@ public final class SubClassSkills extends AbstractNpcAI
 			st = newQuestState(player);
 		}
 		
-		String qName, qValue;
-		int id, index;
+		String qName;
+		String qValue;
+		int id;
+		int index;
 		for (int i = VARS.length; --i >= 0;)
 		{
 			for (int j = Config.MAX_SUBCLASS; j > 0; j--)

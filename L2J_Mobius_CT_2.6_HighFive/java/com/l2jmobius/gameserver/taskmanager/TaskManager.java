@@ -230,7 +230,8 @@ public final class TaskManager
 	private boolean launchTask(ExecutedTask task)
 	{
 		final TaskTypes type = task.getType();
-		long delay, interval;
+		long delay;
+		long interval;
 		switch (type)
 		{
 			case TYPE_STARTUP:

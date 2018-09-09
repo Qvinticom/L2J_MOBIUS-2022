@@ -27,10 +27,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public final class ServerObjectInfo implements IClientOutgoingPacket
 {
 	private final L2Npc _activeChar;
-	private final int _x, _y, _z, _heading;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	private final int _idTemplate;
 	private final boolean _isAttackable;
-	private final double _collisionHeight, _collisionRadius;
+	private final double _collisionHeight;
+	private final double _collisionRadius;
 	private final String _name;
 	
 	public ServerObjectInfo(L2Npc activeChar, L2Character actor)

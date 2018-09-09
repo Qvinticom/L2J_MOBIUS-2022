@@ -27,16 +27,25 @@ import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
 public class PetInfo extends L2GameServerPacket
 {
 	private final L2Summon _summon;
-	private final int _x, _y, _z, _heading;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	private final boolean _isSummoned;
-	private final int _mAtkSpd, _pAtkSpd;
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
 	private int _flRunSpd;
 	private int _flWalkSpd;
 	private int _flyRunSpd;
 	private int _flyWalkSpd;
-	private final int _maxHp, _maxMp;
-	private int _maxFed, _curFed;
+	private final int _maxHp;
+	private final int _maxMp;
+	private int _maxFed;
+	private int _curFed;
 	
 	/**
 	 * rev 478 dddddddddddddddddddffffdddcccccSSdddddddddddddddddddddddddddhc

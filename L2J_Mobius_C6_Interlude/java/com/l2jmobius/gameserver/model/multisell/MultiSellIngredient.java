@@ -21,8 +21,11 @@ package com.l2jmobius.gameserver.model.multisell;
  */
 public class MultiSellIngredient
 {
-	private int _itemId, _itemCount, _enchantmentLevel;
-	private boolean _isTaxIngredient, _mantainIngredient;
+	private int _itemId;
+	private int _itemCount;
+	private int _enchantmentLevel;
+	private boolean _isTaxIngredient;
+	private boolean _mantainIngredient;
 	
 	public MultiSellIngredient(int itemId, int itemCount, boolean isTaxIngredient, boolean mantainIngredient)
 	{

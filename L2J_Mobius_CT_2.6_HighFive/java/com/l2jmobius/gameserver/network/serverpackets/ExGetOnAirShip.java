@@ -24,7 +24,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExGetOnAirShip implements IClientOutgoingPacket
 {
-	private final int _playerId, _airShipId;
+	private final int _playerId;
+	private final int _airShipId;
 	private final Location _pos;
 	
 	public ExGetOnAirShip(L2PcInstance player, L2Character ship)

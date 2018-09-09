@@ -29,7 +29,10 @@ public class MagicSkillUse extends L2GameServerPacket
 	private final int _skillLevel;
 	private final int _hitTime;
 	private final int _reuseDelay;
-	private final int _charObjId, _x, _y, _z;
+	private final int _charObjId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public MagicSkillUse(L2Character cha, L2Character target, int skillId, int skillLevel, int hitTime, int reuseDelay)
 	{

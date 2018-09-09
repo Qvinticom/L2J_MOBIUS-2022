@@ -264,7 +264,8 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 	private static Map<L2Clan, Integer> _pendingItemToGet = new HashMap<>();
 	
 	protected static SiegableHall _rainbow;
-	protected static ScheduledFuture<?> _nextSiege, _siegeEnd;
+	protected static ScheduledFuture<?> _nextSiege;
+	protected static ScheduledFuture<?> _siegeEnd;
 	private static String _registrationEnds;
 	
 	public RainbowSpringsChateau()

@@ -526,7 +526,10 @@ public class ZoneData
 								
 								// Register the zone into any world region it intersects with...
 								// currently 11136 test for each zone :>
-								int ax, ay, bx, by;
+								int ax;
+								int ay;
+								int bx;
+								int by;
 								
 								for (int x = 0; x < worldRegions.length; x++)
 								{

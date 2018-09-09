@@ -406,7 +406,8 @@ public class L2Multisell
 				final int id = Integer.parseInt(n.getAttributes().getNamedItem("id").getNodeValue());
 				final int count = Integer.parseInt(n.getAttributes().getNamedItem("count").getNodeValue());
 				
-				boolean isTaxIngredient = false, mantainIngredient = false;
+				boolean isTaxIngredient = false;
+				boolean mantainIngredient = false;
 				
 				attribute = n.getAttributes().getNamedItem("isTaxIngredient");
 				

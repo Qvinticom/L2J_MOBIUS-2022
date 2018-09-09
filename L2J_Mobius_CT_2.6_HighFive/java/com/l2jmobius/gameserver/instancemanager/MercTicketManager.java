@@ -151,7 +151,9 @@ public final class MercTicketManager
 		{
 			int npcId;
 			int itemId;
-			int x, y, z;
+			int x;
+			int y;
+			int z;
 			final int mercPlaced[] = new int[20];
 			// start index to begin the search for the itemId corresponding to this NPC
 			// this will help with:

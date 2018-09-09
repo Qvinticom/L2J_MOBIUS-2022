@@ -30,34 +30,29 @@ import com.l2jmobius.gameserver.model.actor.instance.L2SummonInstance;
  */
 public class NpcInfo extends L2GameServerPacket
 {
-	/** The _active char. */
 	private L2Character _activeChar;
-	
-	/** The _heading. */
-	private int _x, _y, _z, _heading;
-	
-	/** The _id template. */
+	private int _x;
+	private int _y;
+	private int _z;
+	private int _heading;
 	private int _idTemplate;
-	
-	/** The _is summoned. */
-	private boolean _isAttackable, _isSummoned;
-	
-	/** The _p atk spd. */
-	private int _mAtkSpd, _pAtkSpd;
-	
-	/** The _fly walk spd. */
-	private int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd, _flRunSpd, _flWalkSpd, _flyRunSpd, _flyWalkSpd;
-	
-	/** The _lhand. */
-	private int _rhand, _lhand;
-	
-	/** The _collision radius. */
-	private int _collisionHeight, _collisionRadius;
-	
-	/** The _name. */
+	private boolean _isAttackable;
+	private boolean _isSummoned;
+	private int _mAtkSpd;
+	private int _pAtkSpd;
+	private int _runSpd;
+	private int _walkSpd;
+	private int _swimRunSpd;
+	private int _swimWalkSpd;
+	private int _flRunSpd;
+	private int _flWalkSpd;
+	private int _flyRunSpd;
+	private int _flyWalkSpd;
+	private int _rhand;
+	private int _lhand;
+	private int _collisionHeight;
+	private int _collisionRadius;
 	private String _name = "";
-	
-	/** The _title. */
 	private String _title = "";
 	
 	/**

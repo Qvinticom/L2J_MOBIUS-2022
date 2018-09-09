@@ -28,7 +28,8 @@ public class Ex2ndPasswordVerify implements IClientOutgoingPacket
 	public static final int PASSWORD_WRONG = 0x01;
 	public static final int PASSWORD_BAN = 0x02;
 	
-	private final int _wrongTentatives, _mode;
+	private final int _wrongTentatives;
+	private final int _mode;
 	
 	public Ex2ndPasswordVerify(int mode, int wrongTentatives)
 	{

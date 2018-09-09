@@ -50,15 +50,13 @@ public final class L2WorldRegion
 	 * L2ObjectHashSet(L2PlayableInstance) containing L2PlayableInstance of all player & summon in game in this L2WorldRegion
 	 */
 	private final L2ObjectSet<L2Playable> _allPlayable;
-	
 	/** L2ObjectHashSet(L2Object) containing L2Object visible in this L2WorldRegion */
 	private final L2ObjectSet<L2Object> _visibleObjects;
-	
 	private final List<L2WorldRegion> _surroundingRegions;
-	private final int _tileX, _tileY;
+	private final int _tileX;
+	private final int _tileY;
 	private Boolean _active = false;
 	private ScheduledFuture<?> _neighborsTask = null;
-	
 	private L2ZoneManager _zoneManager;
 	
 	public L2WorldRegion(int pTileX, int pTileY)

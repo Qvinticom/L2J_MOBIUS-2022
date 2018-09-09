@@ -365,7 +365,9 @@ public class MailBBSManager extends BaseBBSManager
 		}
 		
 		activeChar.setMailPosition(page);
-		int index = 0, minIndex = 0, maxIndex = 0;
+		int index = 0;
+		int minIndex = 0;
+		int maxIndex = 0;
 		maxIndex = (page == 1 ? page * 9 : (page * 10) - 1);
 		minIndex = maxIndex - 9;
 		

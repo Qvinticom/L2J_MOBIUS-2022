@@ -104,7 +104,8 @@ public class RequestProcureCropList implements IClientIncomingPacket
 			return;
 		}
 		
-		int slots = 0, weight = 0;
+		int slots = 0;
+		int weight = 0;
 		for (CropHolder i : _items)
 		{
 			final L2ItemInstance item = player.getInventory().getItemByObjectId(i.getObjectId());

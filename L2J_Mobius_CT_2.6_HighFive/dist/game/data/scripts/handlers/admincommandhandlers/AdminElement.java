@@ -139,7 +139,8 @@ public class AdminElement implements IAdminCommandHandler
 		
 		if (itemInstance != null)
 		{
-			String old, current;
+			String old;
+			String current;
 			final Elementals element = itemInstance.getElemental(type);
 			if (element == null)
 			{

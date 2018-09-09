@@ -22,7 +22,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class MoveToLocation implements IClientOutgoingPacket
 {
-	private final int _charObjId, _x, _y, _z, _xDst, _yDst, _zDst;
+	private final int _charObjId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _xDst;
+	private final int _yDst;
+	private final int _zDst;
 	
 	public MoveToLocation(L2Character cha)
 	{

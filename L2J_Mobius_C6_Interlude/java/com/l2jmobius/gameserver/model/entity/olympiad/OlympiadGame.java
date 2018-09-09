@@ -79,7 +79,12 @@ class OlympiadGame
 	public L2PcInstance _playerTwo;
 	protected List<L2PcInstance> _players;
 	private int[] _stadiumPort;
-	private int x1, y1, z1, x2, y2, z2;
+	private int x1;
+	private int y1;
+	private int z1;
+	private int x2;
+	private int y2;
+	private int z2;
 	public int _stadiumID;
 	private SystemMessage _sm;
 	private SystemMessage _sm2;

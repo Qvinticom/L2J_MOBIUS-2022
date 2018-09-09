@@ -24,7 +24,9 @@ public class ChangeWaitType implements IClientOutgoingPacket
 {
 	private final int _charObjId;
 	private final int _moveType;
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public static final int WT_SITTING = 0;
 	public static final int WT_STANDING = 1;

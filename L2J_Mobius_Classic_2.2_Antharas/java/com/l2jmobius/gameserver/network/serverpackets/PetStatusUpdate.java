@@ -29,7 +29,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class PetStatusUpdate implements IClientOutgoingPacket
 {
 	private final L2Summon _summon;
-	private int _maxFed, _curFed;
+	private int _maxFed;
+	private int _curFed;
 	
 	public PetStatusUpdate(L2Summon summon)
 	{

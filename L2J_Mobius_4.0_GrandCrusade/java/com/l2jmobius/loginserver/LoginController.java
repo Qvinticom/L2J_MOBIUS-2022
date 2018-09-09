@@ -505,7 +505,8 @@ public class LoginController
 				ps.setString(1, info.getLogin());
 				try (ResultSet rset = ps.executeQuery())
 				{
-					String ip, type;
+					String ip;
+					String type;
 					while (rset.next())
 					{
 						ip = rset.getString("ip");

@@ -29,7 +29,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ListPartyWaiting;
 
 public final class RequestPartyMatchConfig implements IClientIncomingPacket
 {
-	private int _page, _location;
+	private int _page;
+	private int _location;
 	private PartyMatchingRoomLevelType _type;
 	
 	@Override

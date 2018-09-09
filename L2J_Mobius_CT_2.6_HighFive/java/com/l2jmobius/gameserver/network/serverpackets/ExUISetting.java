@@ -30,7 +30,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExUISetting implements IClientOutgoingPacket
 {
 	private final UIKeysSettings _uiSettings;
-	private int buffsize, categories;
+	private int buffsize;
+	private int categories;
 	
 	public ExUISetting(L2PcInstance player)
 	{

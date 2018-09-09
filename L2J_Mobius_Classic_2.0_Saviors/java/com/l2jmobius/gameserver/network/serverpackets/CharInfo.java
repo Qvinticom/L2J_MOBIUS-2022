@@ -36,10 +36,14 @@ public class CharInfo implements IClientOutgoingPacket
 {
 	private final L2PcInstance _activeChar;
 	private int _objId;
-	private int _x, _y, _z, _heading;
-	private final int _mAtkSpd, _pAtkSpd;
-	
-	private final int _runSpd, _walkSpd;
+	private int _x;
+	private int _y;
+	private int _z;
+	private int _heading;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
 	private final int _swimRunSpd;
 	private final int _swimWalkSpd;
 	private final int _flyRunSpd;

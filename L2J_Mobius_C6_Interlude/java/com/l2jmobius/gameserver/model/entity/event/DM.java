@@ -61,16 +61,136 @@ public class DM implements EventTask
 	protected static final Logger LOGGER = Logger.getLogger(DM.class.getName());
 	
 	/** The _joining location name. */
-	private static String _eventName = new String(), _eventDesc = new String(), _joiningLocationName = new String();
+	private static String _eventName = new String();
+
+	/**
+	 * The _joining location name. 
+	 */
+	private static String _eventDesc = new String();
+
+	/**
+	 * The _joining location name. 
+	 */
+	private static String _joiningLocationName = new String();
 	
 	/** The _npc spawn. */
 	private static L2Spawn _npcSpawn;
 	
 	/** The _in progress. */
-	private static boolean _joining = false, _teleport = false, _started = false, _aborted = false, _sitForced = false, _inProgress = false;
+	private static boolean _joining = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	private static boolean _teleport = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	private static boolean _started = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	private static boolean _aborted = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	private static boolean _sitForced = false;
+
+	/**
+	 * The _in progress. 
+	 */
+	private static boolean _inProgress = false;
 	
 	/** The _player z. */
-	protected static int _npcId = 0, _npcX = 0, _npcY = 0, _npcZ = 0, _npcHeading = 0, _rewardId = 0, _rewardAmount = 0, _minlvl = 0, _maxlvl = 0, _joinTime = 0, _eventTime = 0, _minPlayers = 0, _maxPlayers = 0, _topKills = 0, _playerColors = 0, _playerX = 0, _playerY = 0, _playerZ = 0;
+	protected static int _npcId = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _npcX = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _npcY = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _npcZ = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _npcHeading = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _rewardId = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _rewardAmount = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _minlvl = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _maxlvl = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _joinTime = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _eventTime = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _minPlayers = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _maxPlayers = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _topKills = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _playerColors = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _playerX = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _playerY = 0;
+
+	/**
+	 * The _player z. 
+	 */
+	protected static int _playerZ = 0;
 	
 	/** The _interval between matchs. */
 	private static long _intervalBetweenMatchs = 0;

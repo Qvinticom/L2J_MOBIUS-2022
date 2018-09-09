@@ -25,7 +25,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class VehicleInfo implements IClientOutgoingPacket
 {
-	private final int _objId, _x, _y, _z, _heading;
+	private final int _objId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	
 	public VehicleInfo(L2BoatInstance boat)
 	{

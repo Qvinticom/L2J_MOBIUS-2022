@@ -275,7 +275,8 @@ public abstract class Inventory extends ItemContainer
 			}
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
 			
-			Skill enchant4Skill, itemSkill;
+			Skill enchant4Skill;
+			Skill itemSkill;
 			final L2Item it = item.getItem();
 			boolean update = false;
 			boolean updateTimeStamp = false;
@@ -395,7 +396,8 @@ public abstract class Inventory extends ItemContainer
 			
 			final L2PcInstance player = (L2PcInstance) inventory.getOwner();
 			
-			Skill enchant4Skill, itemSkill;
+			Skill enchant4Skill;
+			Skill itemSkill;
 			final L2Item it = item.getItem();
 			boolean update = false;
 			boolean updateTimeStamp = false;

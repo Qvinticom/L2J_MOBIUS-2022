@@ -665,7 +665,9 @@ public final class L2CubicInstance implements IIdentifiable
 			return false;
 		}
 		
-		int x, y, z;
+		int x;
+		int y;
+		int z;
 		// temporary range check until real behavior of cubics is known/coded
 		final int range = MAX_MAGIC_RANGE;
 		

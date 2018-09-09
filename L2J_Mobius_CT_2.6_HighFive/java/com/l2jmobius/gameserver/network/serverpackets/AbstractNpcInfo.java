@@ -33,17 +33,29 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public abstract class AbstractNpcInfo implements IClientOutgoingPacket
 {
-	protected int _x, _y, _z, _heading;
+	protected int _x;
+	protected int _y;
+	protected int _z;
+	protected int _heading;
 	protected int _idTemplate;
-	protected boolean _isAttackable, _isSummoned;
-	protected int _mAtkSpd, _pAtkSpd;
-	protected final int _runSpd, _walkSpd;
-	protected final int _swimRunSpd, _swimWalkSpd;
-	protected final int _flyRunSpd, _flyWalkSpd;
+	protected boolean _isAttackable;
+	protected boolean _isSummoned;
+	protected int _mAtkSpd;
+	protected int _pAtkSpd;
+	protected final int _runSpd;
+	protected final int _walkSpd;
+	protected final int _swimRunSpd;
+	protected final int _swimWalkSpd;
+	protected final int _flyRunSpd;
+	protected final int _flyWalkSpd;
 	protected double _moveMultiplier;
 	
-	protected int _rhand, _lhand, _chest, _enchantEffect;
-	protected double _collisionHeight, _collisionRadius;
+	protected int _rhand;
+	protected int _lhand;
+	protected int _chest;
+	protected int _enchantEffect;
+	protected double _collisionHeight;
+	protected double _collisionRadius;
 	protected String _name = "";
 	protected String _title = "";
 	protected final boolean _gmSeeInvis;

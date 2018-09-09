@@ -26,16 +26,25 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class PetInfo implements IClientOutgoingPacket
 {
 	private final L2Summon _summon;
-	private final int _x, _y, _z, _heading;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	private final boolean _isSummoned;
 	private final int _val;
-	private final int _mAtkSpd, _pAtkSpd;
-	private final int _runSpd, _walkSpd;
-	private final int _swimRunSpd, _swimWalkSpd;
-	private final int _flyRunSpd, _flyWalkSpd;
+	private final int _mAtkSpd;
+	private final int _pAtkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
+	private final int _flyRunSpd;
+	private final int _flyWalkSpd;
 	private final double _moveMultiplier;
-	private final int _maxHp, _maxMp;
-	private int _maxFed, _curFed;
+	private final int _maxHp;
+	private final int _maxMp;
+	private int _maxFed;
+	private int _curFed;
 	
 	public PetInfo(L2Summon summon, int val)
 	{

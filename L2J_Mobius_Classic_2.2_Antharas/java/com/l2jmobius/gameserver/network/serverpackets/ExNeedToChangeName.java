@@ -27,7 +27,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExNeedToChangeName implements IClientOutgoingPacket
 {
-	private final int _type, _subType;
+	private final int _type;
+	private final int _subType;
 	private final String _name;
 	
 	public ExNeedToChangeName(int type, int subType, String name)

@@ -25,7 +25,12 @@ public class MoveToPawn implements IClientOutgoingPacket
 	private final int _charObjId;
 	private final int _targetId;
 	private final int _distance;
-	private final int _x, _y, _z, _tx, _ty, _tz;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _tx;
+	private final int _ty;
+	private final int _tz;
 	
 	public MoveToPawn(L2Character cha, L2Character target, int distance)
 	{

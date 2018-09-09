@@ -32,7 +32,13 @@ public class AuthGameGuard implements IIncomingPacket<L2LoginClient>
 	private int _sessionId;
 	
 	@SuppressWarnings("unused")
-	private int _data1, _data2, _data3, _data4;
+	private int _data1;
+	@SuppressWarnings("unused")
+	private int _data2;
+	@SuppressWarnings("unused")
+	private int _data3;
+	@SuppressWarnings("unused")
+	private int _data4;
 	
 	@Override
 	public boolean read(L2LoginClient client, PacketReader packet)

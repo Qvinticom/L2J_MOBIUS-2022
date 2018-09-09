@@ -21,7 +21,11 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class SpecialString implements IClientOutgoingPacket
 {
-	private final int _strId, _fontSize, _x, _y, _color;
+	private final int _strId;
+	private final int _fontSize;
+	private final int _x;
+	private final int _y;
+	private final int _color;
 	private final boolean _isDraw;
 	private final String _text;
 	

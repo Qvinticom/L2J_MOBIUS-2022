@@ -66,8 +66,10 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	/** The _remaining time. */
 	private int _remainingTime = MAX_DURATION;
 	
-	/** The _home z. */
-	private int _homeX, _homeY, _homeZ;
+	/** The _home. */
+	private int _homeX;
+	private int _homeY;
+	private int _homeZ;
 	
 	/** The _owner. */
 	private L2PcInstance _owner;

@@ -23,7 +23,19 @@ package com.l2jmobius.gameserver.network.serverpackets;
 public class ExUseSharedGroupItem extends L2GameServerPacket
 {
 	/** The _unk4. */
-	private final int _unk1, _unk2, _unk3, _unk4;
+	private final int _unk1;
+	/**
+	 * The _unk4. 
+	 */
+	private final int _unk2;
+	/**
+	 * The _unk4. 
+	 */
+	private final int _unk3;
+	/**
+	 * The _unk4. 
+	 */
+	private final int _unk4;
 	
 	/**
 	 * Instantiates a new ex use shared group item.

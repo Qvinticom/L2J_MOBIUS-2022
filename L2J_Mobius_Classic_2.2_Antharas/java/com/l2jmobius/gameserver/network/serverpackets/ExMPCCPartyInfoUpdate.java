@@ -25,7 +25,9 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExMPCCPartyInfoUpdate implements IClientOutgoingPacket
 {
-	private final int _mode, _LeaderOID, _memberCount;
+	private final int _mode;
+	private final int _LeaderOID;
+	private final int _memberCount;
 	private final String _name;
 	
 	/**

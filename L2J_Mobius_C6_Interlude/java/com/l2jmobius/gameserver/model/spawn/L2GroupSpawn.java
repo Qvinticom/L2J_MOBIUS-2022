@@ -67,7 +67,9 @@ public class L2GroupSpawn extends L2Spawn
 			
 			mob = (L2NpcInstance) tmp;
 			
-			int newlocx, newlocy, newlocz;
+			int newlocx;
+			int newlocy;
+			int newlocz;
 			
 			if ((getX() == 0) && (getY() == 0))
 			{

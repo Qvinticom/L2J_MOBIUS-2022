@@ -775,9 +775,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final String val = command.substring(20);
 					final int level = Integer.parseInt(val);
-					long newexp, oldexp = 0;
-					oldexp = pet.getStat().getExp();
-					newexp = pet.getStat().getExpForLevel(level);
+					final long oldexp = pet.getStat().getExp();
+					final long newexp = pet.getStat().getExpForLevel(level);
 					if (oldexp > newexp)
 					{
 						pet.getStat().removeExp(oldexp - newexp);
@@ -1309,7 +1308,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		int CharactersFound = 0;
 		L2GameClient client;
-		String name, ip = "0.0.0.0";
+		String ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");
@@ -1345,7 +1344,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 			}
 			
-			name = player.getName();
+			final String name = player.getName();
 			CharactersFound += 1;
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
 			replyMSG.append(name);

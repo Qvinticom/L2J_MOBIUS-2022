@@ -71,7 +71,8 @@ public class SecondaryPasswordAuth
 	
 	private void loadPassword()
 	{
-		String var, value = null;
+		String var = null;
+		String value = null;
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement = con.prepareStatement(SELECT_PASSWORD))
 		{

@@ -86,7 +86,9 @@ public class AdminMammon implements IAdminCommandHandler
 				L2NpcInstance[] blackInst = blackSpawnInst.getNPCInstanceList();
 				if (blackInst.length > 0)
 				{
-					final int x1 = blackInst[0].getX(), y1 = blackInst[0].getY(), z1 = blackInst[0].getZ();
+					final int x1 = blackInst[0].getX();
+					final int y1 = blackInst[0].getY();
+					final int z1 = blackInst[0].getZ();
 					BuilderUtil.sendSysMessage(activeChar, "Blacksmith of Mammon: " + x1 + " " + y1 + " " + z1);
 					
 					if (teleportIndex == 1)
@@ -106,7 +108,9 @@ public class AdminMammon implements IAdminCommandHandler
 				
 				if (merchInst.length > 0)
 				{
-					final int x2 = merchInst[0].getX(), y2 = merchInst[0].getY(), z2 = merchInst[0].getZ();
+					final int x2 = merchInst[0].getX();
+					final int y2 = merchInst[0].getY();
+					final int z2 = merchInst[0].getZ();
 					
 					BuilderUtil.sendSysMessage(activeChar, "Merchant of Mammon: " + x2 + " " + y2 + " " + z2);
 					

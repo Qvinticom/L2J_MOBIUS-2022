@@ -915,7 +915,8 @@ public class Lindvior extends AbstractNpcAI
 	
 	private void spawnServitor(int count, int radius, Location loc, int... npcIds)
 	{
-		int x = loc.getX(), y = loc.getY();
+		int x = loc.getX();
+		int y = loc.getY();
 		if (radius > 0)
 		{
 			x += Rnd.get(-radius, radius);

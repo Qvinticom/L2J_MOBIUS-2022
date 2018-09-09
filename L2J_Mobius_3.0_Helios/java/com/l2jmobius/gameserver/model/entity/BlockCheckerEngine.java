@@ -319,7 +319,9 @@ public final class BlockCheckerEngine
 	public class StartEvent implements Runnable
 	{
 		// In event used skills
-		private final Skill _freeze, _transformationRed, _transformationBlue;
+		private final Skill _freeze;
+		private final Skill _transformationRed;
+		private final Skill _transformationBlue;
 		// Common and unparametizer packet
 		private final ExCubeGameCloseUI _closeUserInterface = ExCubeGameCloseUI.STATIC_PACKET;
 		
@@ -670,8 +672,10 @@ public final class BlockCheckerEngine
 				}
 			}
 			
-			int first = 0, second = 0;
-			L2PcInstance winner1 = null, winner2 = null;
+			int first = 0;
+			int second = 0;
+			L2PcInstance winner1 = null;
+			L2PcInstance winner2 = null;
 			for (Entry<L2PcInstance, Integer> entry : tempPoints.entrySet())
 			{
 				final L2PcInstance pc = entry.getKey();

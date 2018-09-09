@@ -287,7 +287,8 @@ public final class TalentShow extends AbstractNpcAI
 		final int gameTime = GameTimeController.getInstance().getGameTime();
 		final int hours = (gameTime / 60) % 24;
 		final int minutes = gameTime % 60;
-		int hourDiff, minDiff;
+		int hourDiff;
+		int minDiff;
 		hourDiff = 20 - hours;
 		if (hourDiff < 0)
 		{

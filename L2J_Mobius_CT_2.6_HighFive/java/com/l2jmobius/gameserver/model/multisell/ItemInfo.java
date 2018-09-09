@@ -24,7 +24,8 @@ import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
  */
 public class ItemInfo
 {
-	private final int _enchantLevel, _augmentId;
+	private final int _enchantLevel;
+	private final int _augmentId;
 	private final byte _elementId;
 	private final int _elementPower;
 	private final int[] _elementals = new int[6];

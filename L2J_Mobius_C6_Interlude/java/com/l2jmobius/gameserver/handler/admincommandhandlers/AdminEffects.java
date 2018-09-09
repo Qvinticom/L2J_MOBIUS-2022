@@ -644,7 +644,8 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				L2Object obj = activeChar.getTarget();
 				
-				int level = 1, hittime = 1;
+				int level = 1;
+				int hittime = 1;
 				final int skill = Integer.parseInt(st.nextToken());
 				
 				if (st.hasMoreTokens())

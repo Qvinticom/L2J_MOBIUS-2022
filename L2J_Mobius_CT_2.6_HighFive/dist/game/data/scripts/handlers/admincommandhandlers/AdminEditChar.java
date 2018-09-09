@@ -771,7 +771,8 @@ public class AdminEditChar implements IAdminCommandHandler
 				{
 					final String val = command.substring(20);
 					final int level = Integer.parseInt(val);
-					long newexp, oldexp = 0;
+					long newexp = 0;
+					long oldexp = 0;
 					oldexp = pet.getStat().getExp();
 					newexp = pet.getStat().getExpForLevel(level);
 					if (oldexp > newexp)
@@ -1230,7 +1231,8 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		int CharactersFound = 0;
 		L2GameClient client;
-		String name, ip = "0.0.0.0";
+		String name;
+		String ip = "0.0.0.0";
 		final StringBuilder replyMSG = new StringBuilder(1000);
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage();
 		adminReply.setFile(activeChar, "data/html/admin/ipfind.htm");

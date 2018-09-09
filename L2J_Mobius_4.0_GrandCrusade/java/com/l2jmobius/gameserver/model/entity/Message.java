@@ -42,12 +42,16 @@ public class Message
 	public static final int READED = 1;
 	public static final int REJECTED = 2;
 	
-	private final int _messageId, _senderId, _receiverId;
+	private final int _messageId;
+	private final int _senderId;
+	private final int _receiverId;
 	private final long _expiration;
 	private String _senderName = null;
 	private String _receiverName = null;
-	private final String _subject, _content;
-	private boolean _unread, _returned;
+	private final String _subject;
+	private final String _content;
+	private boolean _unread;
+	private boolean _returned;
 	private MailType _messageType = MailType.REGULAR;
 	private boolean _deletedBySender;
 	private boolean _deletedByReceiver;

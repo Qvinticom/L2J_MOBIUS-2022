@@ -66,8 +66,13 @@ public class ClanHallManager
 		LOGGER.info("Initializing ClanHallManager");
 		try (Connection con = DatabaseFactory.getConnection())
 		{
-			int id, ownerId, lease, grade = 0;
-			String Name, Desc, Location;
+			int id;
+			int ownerId;
+			int lease;
+			int grade = 0;
+			String Name;
+			String Desc;
+			String Location;
 			long paidUntil = 0;
 			boolean paid = false;
 			

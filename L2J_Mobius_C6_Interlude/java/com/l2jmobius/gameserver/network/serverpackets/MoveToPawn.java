@@ -33,7 +33,9 @@ public class MoveToPawn extends L2GameServerPacket
 	private final int _charObjId;
 	private final int _targetId;
 	private final int _distance;
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	
 	public MoveToPawn(L2Character cha, L2Character target, int distance)
 	{

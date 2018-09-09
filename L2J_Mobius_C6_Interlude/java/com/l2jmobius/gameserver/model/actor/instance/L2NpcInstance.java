@@ -138,13 +138,20 @@ public class L2NpcInstance extends L2Character
 	/** The fortress index in the array of L2Fort this L2NpcInstance belongs to. */
 	private int _fortIndex = -2;
 	
-	/** The _is ct f_ flag. */
-	public boolean isEventMob = false, _isEventMobTvT = false, _isEventVIPNPC = false, _isEventVIPNPCEnd = false, _isEventMobDM = false, _isEventMobCTF = false, _isCTF_throneSpawn = false, _isCTF_Flag = false;
+	/** Ctf. */
+	public boolean isEventMob = false;
+	public boolean _isEventMobTvT = false;
+	public boolean _isEventVIPNPC = false;
+	public boolean _isEventVIPNPCEnd = false;
+	public boolean _isEventMobDM = false;
+	public boolean _isEventMobCTF = false;
+	public boolean _isCTF_throneSpawn = false;
+	public boolean _isCTF_Flag = false;
 	
 	/** The _is in town. */
 	private boolean _isInTown = false;
 	
-	/** The _ ct f_ flag team name. */
+	/** The ctf flag team name. */
 	public String _CTF_FlagTeamName;
 	
 	/** The _is spoiled by. */

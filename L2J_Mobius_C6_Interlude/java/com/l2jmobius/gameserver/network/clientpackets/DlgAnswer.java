@@ -28,7 +28,9 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 public final class DlgAnswer extends L2GameClientPacket
 {
 	private static Logger LOGGER = Logger.getLogger(DlgAnswer.class.getName());
-	private int _messageId, _answer, _requestId;
+	private int _messageId;
+	private int _answer;
+	private int _requestId;
 	
 	@Override
 	protected void readImpl()

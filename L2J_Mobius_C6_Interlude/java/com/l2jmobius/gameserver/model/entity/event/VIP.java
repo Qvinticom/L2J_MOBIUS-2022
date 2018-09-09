@@ -45,20 +45,37 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
 public class VIP
 {
 	private static final Logger LOGGER = Logger.getLogger(VIP.class.getName());
-	public static String _teamName = "", _joinArea = "";
-	
-	public static int _time = 0, _winners = 0, _vipReward = 0, _vipRewardAmount = 0, _notVipReward = 0, _notVipRewardAmount = 0, _theVipReward = 0, _theVipRewardAmount = 0, _endNPC = 0, _joinNPC = 0, _delay = 0, _endX = 0, _endY = 0, _endZ = 0, _startX = 0, _startY = 0, _startZ = 0, _joinX = 0,
-		_joinY = 0, _joinZ = 0, _team = 0; // Human = 1
-											// Elf = 2
-											// Dark = 3
-											// Orc = 4
-											// Dwarf = 5
-	
-	public static boolean _started = false, _joining = false, _inProgress = true, _sitForced = false;
-	
-	public static L2Spawn _endSpawn, _joinSpawn;
-	
-	public static Vector<L2PcInstance> _playersVIP = new Vector<>(), _playersNotVIP = new Vector<>();
+	public static String _teamName = "";
+	public static String _joinArea = "";
+	public static int _time = 0;
+	public static int _winners = 0;
+	public static int _vipReward = 0;
+	public static int _vipRewardAmount = 0;
+	public static int _notVipReward = 0;
+	public static int _notVipRewardAmount = 0;
+	public static int _theVipReward = 0;
+	public static int _theVipRewardAmount = 0;
+	public static int _endNPC = 0;
+	public static int _joinNPC = 0;
+	public static int _delay = 0;
+	public static int _endX = 0;
+	public static int _endY = 0;
+	public static int _endZ = 0;
+	public static int _startX = 0;
+	public static int _startY = 0;
+	public static int _startZ = 0;
+	public static int _joinX = 0;
+	public static int _joinY = 0;
+	public static int _joinZ = 0;
+	public static int _team = 0;
+	public static boolean _started = false;
+	public static boolean _joining = false;
+	public static boolean _inProgress = true;
+	public static boolean _sitForced = false;
+	public static L2Spawn _endSpawn;
+	public static L2Spawn _joinSpawn;
+	public static Vector<L2PcInstance> _playersVIP = new Vector<>();
+	public static Vector<L2PcInstance> _playersNotVIP = new Vector<>();
 	
 	public static void setTeam(String team, L2PcInstance activeChar)
 	{

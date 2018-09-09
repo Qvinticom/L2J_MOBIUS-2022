@@ -40,7 +40,8 @@ public class RequestChangeNicknameColor implements IClientIncomingPacket
 		0x999999, // Silver
 	};
 	
-	private int _colorNum, _itemObjectId;
+	private int _colorNum;
+	private int _itemObjectId;
 	private String _title;
 	
 	@Override

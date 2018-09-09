@@ -33,7 +33,8 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExAcquireAPSkillList implements IClientOutgoingPacket
 {
-	private final int _abilityPoints, _usedAbilityPoints;
+	private final int _abilityPoints;
+	private final int _usedAbilityPoints;
 	// private final long _price; Removed on Grand Crusade
 	private final boolean _enable;
 	private final List<Skill> _skills = new ArrayList<>();

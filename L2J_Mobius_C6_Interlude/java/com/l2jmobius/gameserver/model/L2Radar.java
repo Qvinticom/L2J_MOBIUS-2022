@@ -71,7 +71,10 @@ public final class L2Radar
 	private static class RadarMarker
 	{
 		// Simple class to model radar points.
-		public int _type, _x, _y, _z;
+		public int _type;
+		public int _x;
+		public int _y;
+		public int _z;
 		
 		public RadarMarker(int x, int y, int z)
 		{
@@ -104,7 +107,8 @@ public final class L2Radar
 	
 	public class RadarOnPlayer implements Runnable
 	{
-		private final L2PcInstance _myTarget, _me;
+		private final L2PcInstance _myTarget;
+		private final L2PcInstance _me;
 		
 		public RadarOnPlayer(L2PcInstance target, L2PcInstance me)
 		{

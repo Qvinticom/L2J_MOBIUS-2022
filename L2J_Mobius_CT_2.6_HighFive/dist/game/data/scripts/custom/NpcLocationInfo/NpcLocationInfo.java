@@ -279,7 +279,9 @@ public final class NpcLocationInfo extends AbstractNpcAI
 			
 			if (CommonUtil.contains(NPCRADAR, npcId))
 			{
-				int x = 0, y = 0, z = 0;
+				int x = 0;
+				int y = 0;
+				int z = 0;
 				final L2Spawn spawn = SpawnTable.getInstance().getAnySpawn(npcId);
 				if (spawn != null)
 				{

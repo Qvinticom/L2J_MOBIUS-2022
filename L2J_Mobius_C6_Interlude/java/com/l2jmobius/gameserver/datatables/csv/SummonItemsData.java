@@ -73,7 +73,8 @@ public class SummonItemsData
 				final String[] lineSplit = line.split(";");
 				
 				boolean ok = true;
-				int itemID = 0, npcID = 0;
+				int itemID = 0;
+				int npcID = 0;
 				byte summonType = 0;
 				
 				try

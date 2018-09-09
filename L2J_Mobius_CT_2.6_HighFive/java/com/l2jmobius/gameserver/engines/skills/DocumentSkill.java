@@ -529,7 +529,14 @@ public class DocumentSkill extends DocumentBase
 		for (int i = lastLvl; i < (lastLvl + enchantLevels1); i++)
 		{
 			_currentSkill.currentLevel = i - lastLvl;
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
 				if ("enchant1cond".equalsIgnoreCase(n.getNodeName()))
@@ -648,7 +655,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1; i < (lastLvl + enchantLevels1 + enchantLevels2); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -764,7 +778,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -884,7 +905,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2 - enchantLevels3;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -1004,7 +1032,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2 - enchantLevels3 - enchantLevels4;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -1124,7 +1159,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5 + enchantLevels6); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2 - enchantLevels3 - enchantLevels4 - enchantLevels5;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -1244,7 +1286,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5 + enchantLevels6; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5 + enchantLevels6 + enchantLevels7); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2 - enchantLevels3 - enchantLevels4 - enchantLevels5 - enchantLevels6;
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -1364,7 +1413,14 @@ public class DocumentSkill extends DocumentBase
 		}
 		for (int i = lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5 + enchantLevels6 + enchantLevels7; i < (lastLvl + enchantLevels1 + enchantLevels2 + enchantLevels3 + enchantLevels4 + enchantLevels5 + enchantLevels6 + enchantLevels7 + enchantLevels8); i++)
 		{
-			boolean foundCond = false, foundFor = false, foundChannelingEffects = false, foundStartEffects = false, foundPveEffects = false, foundPvpEffects = false, foundEndEffects = false, foundSelfEffects = false;
+			boolean foundCond = false;
+			boolean foundFor = false;
+			boolean foundChannelingEffects = false;
+			boolean foundStartEffects = false;
+			boolean foundPveEffects = false;
+			boolean foundPvpEffects = false;
+			boolean foundEndEffects = false;
+			boolean foundSelfEffects = false;
 			_currentSkill.currentLevel = i - lastLvl - enchantLevels1 - enchantLevels2 - enchantLevels3 - enchantLevels4 - enchantLevels5 - enchantLevels6 - enchantLevels7;
 			for (n = first; n != null; n = n.getNextSibling())
 			{

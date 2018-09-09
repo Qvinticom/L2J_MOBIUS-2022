@@ -57,7 +57,9 @@ public class HeartInfinityDefence extends AbstractNpcAI
 		public List<L2Npc> deadTumors = new ArrayList<>();
 		protected L2Npc deadTumor;
 		public long startTime = 0;
-		protected ScheduledFuture<?> finishTask = null, timerTask = null, wagonSpawnTask = null;
+		protected ScheduledFuture<?> finishTask = null;
+		protected ScheduledFuture<?> timerTask = null;
+		protected ScheduledFuture<?> wagonSpawnTask = null;
 		
 		public HIDWorld()
 		{

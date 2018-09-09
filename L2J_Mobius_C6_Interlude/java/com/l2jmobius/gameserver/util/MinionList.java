@@ -189,7 +189,9 @@ public class MinionList
 		
 		synchronized (minionReferences)
 		{
-			int minionCount, minionId, minionsToSpawn;
+			int minionCount;
+			int minionId;
+			int minionsToSpawn;
 			
 			for (L2MinionData minion : minions)
 			{

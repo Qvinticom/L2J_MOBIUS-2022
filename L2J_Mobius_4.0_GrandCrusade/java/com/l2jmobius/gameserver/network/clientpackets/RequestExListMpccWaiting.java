@@ -26,7 +26,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ExListMpccWaiting;
  */
 public class RequestExListMpccWaiting implements IClientIncomingPacket
 {
-	private int _page, _location, _level;
+	private int _page;
+	private int _location;
+	private int _level;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)

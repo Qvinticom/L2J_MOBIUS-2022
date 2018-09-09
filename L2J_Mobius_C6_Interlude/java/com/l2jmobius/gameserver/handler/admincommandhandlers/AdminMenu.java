@@ -100,7 +100,9 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_recall_party_menu"))
 		{
-			final int x = activeChar.getX(), y = activeChar.getY(), z = activeChar.getZ();
+			final int x = activeChar.getX();
+			final int y = activeChar.getY();
+			final int z = activeChar.getZ();
 			
 			try
 			{
@@ -131,7 +133,9 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_recall_clan_menu"))
 		{
-			final int x = activeChar.getX(), y = activeChar.getY(), z = activeChar.getZ();
+			final int x = activeChar.getX();
+			final int y = activeChar.getY();
+			final int z = activeChar.getZ();
 			try
 			{
 				String targetName = command.substring(23);

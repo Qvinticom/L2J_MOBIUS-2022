@@ -144,8 +144,11 @@ public final class ZoneManager implements IGameXmlReader
 		Node attribute;
 		String zoneName;
 		int[][] coords;
-		int zoneId, minZ, maxZ;
-		String zoneType, zoneShape;
+		int zoneId;
+		int minZ;
+		int maxZ;
+		String zoneType;
+		String zoneShape;
 		final List<int[]> rs = new ArrayList<>();
 		
 		for (Node n = doc.getFirstChild(); n != null; n = n.getNextSibling())

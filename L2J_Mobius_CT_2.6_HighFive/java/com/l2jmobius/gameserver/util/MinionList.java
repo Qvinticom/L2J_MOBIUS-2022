@@ -71,7 +71,9 @@ public class MinionList
 			return;
 		}
 		
-		int minionCount, minionId, minionsToSpawn;
+		int minionCount;
+		int minionId;
+		int minionsToSpawn;
 		for (MinionHolder minion : minions)
 		{
 			minionCount = minion.getCount();

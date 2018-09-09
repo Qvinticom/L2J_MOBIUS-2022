@@ -27,7 +27,8 @@ import java.util.logging.Logger;
 public class DateRange
 {
 	private static Logger LOGGER = Logger.getLogger(DateRange.class.getName());
-	private final Date _startDate, _endDate;
+	private final Date _startDate;
+	private final Date _endDate;
 	
 	public DateRange(Date from, Date to)
 	{

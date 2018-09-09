@@ -48,7 +48,11 @@ public final class RelationChanged implements IClientOutgoingPacket
 	
 	protected static class Relation
 	{
-		int _objId, _relation, _autoAttackable, _karma, _pvpFlag;
+		int _objId;
+		int _relation;
+		int _autoAttackable;
+		int _karma;
+		int _pvpFlag;
 	}
 	
 	private Relation _singled;

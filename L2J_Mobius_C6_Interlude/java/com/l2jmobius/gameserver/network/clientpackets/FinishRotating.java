@@ -23,7 +23,8 @@ import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 @SuppressWarnings("unused")
 public final class FinishRotating extends L2GameClientPacket
 {
-	private int _degree, _unknown;
+	private int _degree;
+	private int _unknown;
 	
 	@Override
 	protected void readImpl()

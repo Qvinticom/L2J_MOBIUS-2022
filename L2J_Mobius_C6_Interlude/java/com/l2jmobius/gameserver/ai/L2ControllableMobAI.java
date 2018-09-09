@@ -432,8 +432,12 @@ public class L2ControllableMobAI extends L2AttackableAI
 		
 		L2Attackable npc = (L2Attackable) _actor;
 		
-		int npcX, npcY, targetX, targetY;
-		double dy, dx;
+		int npcX;
+		int npcY;
+		int targetX;
+		int targetY;
+		double dy;
+		double dx;
 		final double dblAggroRange = aggroRange * aggroRange;
 		
 		final List<L2Character> potentialTarget = new ArrayList<>();

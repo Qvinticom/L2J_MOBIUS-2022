@@ -530,7 +530,8 @@ public class GameStatusThread extends Thread
 				else if (_usrCommand.startsWith("enchant"))
 				{
 					final StringTokenizer st = new StringTokenizer(_usrCommand.substring(8), " ");
-					int enchant = 0, itemType = 0;
+					int enchant = 0;
+					int itemType = 0;
 					
 					try
 					{
@@ -1069,7 +1070,8 @@ public class GameStatusThread extends Thread
 	
 	public String getServerStatus()
 	{
-		int playerCount = 0, objectCount = 0;
+		int playerCount = 0;
+		int objectCount = 0;
 		final int max = LoginServerThread.getInstance().getMaxPlayer();
 		
 		playerCount = L2World.getAllPlayersCount();

@@ -269,7 +269,15 @@ public class Q662_AGameOfCards extends Quest
 			int state = st.getInt("state");
 			int stateEx = st.getInt("stateEx");
 			
-			int i0, i1, i2, i3, i4, i5, i6, i8, i9;
+			int i0;
+			int i1;
+			int i2;
+			int i3;
+			int i4;
+			int i5;
+			int i6;
+			int i8;
+			int i9;
 			
 			i0 = state;
 			i1 = stateEx;
@@ -581,7 +589,13 @@ public class Q662_AGameOfCards extends Quest
 				}
 				else if ((state != 0) && (stateEx != 0))
 				{
-					int i0, i1, i2, i3, i4, i5, i9;
+					int i0;
+					int i1;
+					int i2;
+					int i3;
+					int i4;
+					int i5;
+					int i9;
 					
 					i0 = state;
 					i1 = stateEx;

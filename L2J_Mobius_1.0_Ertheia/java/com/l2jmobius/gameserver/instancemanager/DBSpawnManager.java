@@ -115,7 +115,8 @@ public class DBSpawnManager
 					final NpcSpawnTemplate spawnTemplate = spawns.get(0);
 					spawn.setSpawnTemplate(spawnTemplate);
 					
-					int respawn = 0, respawnRandom = 0;
+					int respawn = 0;
+					int respawnRandom = 0;
 					if (spawnTemplate.getRespawnTime() != null)
 					{
 						respawn = (int) spawnTemplate.getRespawnTime().getSeconds();

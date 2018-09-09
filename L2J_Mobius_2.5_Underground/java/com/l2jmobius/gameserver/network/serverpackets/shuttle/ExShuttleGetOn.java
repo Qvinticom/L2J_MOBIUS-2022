@@ -28,7 +28,8 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class ExShuttleGetOn implements IClientOutgoingPacket
 {
-	private final int _playerObjectId, _shuttleObjectId;
+	private final int _playerObjectId;
+	private final int _shuttleObjectId;
 	private final Location _pos;
 	
 	public ExShuttleGetOn(L2PcInstance player, L2ShuttleInstance shuttle)

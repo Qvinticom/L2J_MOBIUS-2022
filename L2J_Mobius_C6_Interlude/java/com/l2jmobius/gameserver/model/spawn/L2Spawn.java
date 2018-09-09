@@ -541,7 +541,9 @@ public class L2Spawn
 	 */
 	private L2NpcInstance initializeNpcInstance(L2NpcInstance mob)
 	{
-		int newlocx, newlocy, newlocz;
+		int newlocx;
+		int newlocy;
+		int newlocz;
 		
 		// If Locx=0 and Locy=0, the L2NpcInstance must be spawned in an area defined by location
 		if ((_locX == 0) && (_locY == 0))

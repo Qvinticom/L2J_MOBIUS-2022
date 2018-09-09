@@ -65,7 +65,8 @@ public final class RequestPledgeSetAcademyMaster extends L2GameClientPacket
 			return;
 		}
 		
-		L2ClanMember apprenticeMember, sponsorMember;
+		L2ClanMember apprenticeMember;
+		L2ClanMember sponsorMember;
 		
 		if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
 		{

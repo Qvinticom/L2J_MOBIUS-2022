@@ -162,7 +162,8 @@ public class DimensionalRiftManager
 	
 	public void loadSpawns()
 	{
-		int countGood = 0, countBad = 0;
+		int countGood = 0;
+		int countBad = 0;
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -178,8 +179,14 @@ public class DimensionalRiftManager
 			final Document doc = factory.newDocumentBuilder().parse(file);
 			
 			NamedNodeMap attrs;
-			byte type, roomId;
-			int mobId, x, y, z, delay, count;
+			byte type;
+			byte roomId;
+			int mobId;
+			int x;
+			int y;
+			int z;
+			int delay;
+			int count;
 			L2Spawn spawnDat;
 			L2NpcTemplate template;
 			

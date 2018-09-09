@@ -90,7 +90,9 @@ public class AdminTownWar implements IAdminCommandHandler
 		
 		final Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
 		{
-			int x, y, z;
+			int x;
+			int y;
+			int z;
 			L2TownZone Town;
 			
 			for (L2PcInstance onlinePlayer : pls)
@@ -169,7 +171,9 @@ public class AdminTownWar implements IAdminCommandHandler
 		
 		final Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers();
 		{
-			int xx, yy, zz;
+			int xx;
+			int yy;
+			int zz;
 			L2TownZone Town;
 			
 			for (L2PcInstance onlinePlayer : pls)

@@ -1091,7 +1091,10 @@ public class BlowfishEngine
 	private static final int BLOCK_SIZE = 8; // bytes = 64 bits
 	private static final int SBOX_SK = 256;
 	private static final int P_SZ = ROUNDS + 2;
-	private final int[] S0, S1, S2, S3; // the s-boxes
+	private final int[] S0; // the s-boxes
+	private final int[] S1;
+	private final int[] S2;
+	private final int[] S3;
 	private final int[] P; // the p-array
 	private boolean encrypting = false;
 	private byte[] workingKey = null;

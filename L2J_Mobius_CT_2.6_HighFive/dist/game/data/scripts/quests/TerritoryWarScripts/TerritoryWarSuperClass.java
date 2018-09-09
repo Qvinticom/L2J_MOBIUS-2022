@@ -432,7 +432,8 @@ public class TerritoryWarSuperClass extends Quest
 	
 	private static void handleBecomeMercenaryQuest(L2PcInstance player, boolean catapult)
 	{
-		int enemyCount = 10, catapultCount = 1;
+		int enemyCount = 10;
+		int catapultCount = 1;
 		QuestState st = player.getQuestState(Q00147_PathtoBecominganEliteMercenary.class.getSimpleName());
 		if ((st != null) && st.isCompleted())
 		{

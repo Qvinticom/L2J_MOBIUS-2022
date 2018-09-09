@@ -36,7 +36,8 @@ import com.l2jmobius.loginserver.network.OutgoingPackets;
  */
 public final class LoginOk implements IOutgoingPacket
 {
-	private final int _loginOk1, _loginOk2;
+	private final int _loginOk1;
+	private final int _loginOk2;
 	
 	public LoginOk(SessionKey sessionKey)
 	{

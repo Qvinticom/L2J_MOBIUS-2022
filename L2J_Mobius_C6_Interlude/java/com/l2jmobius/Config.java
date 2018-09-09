@@ -1053,7 +1053,9 @@ public final class Config
 	public static float ALT_DAGGER_DMG_VS_HEAVY;
 	public static float ALT_DAGGER_DMG_VS_ROBE;
 	public static float ALT_DAGGER_DMG_VS_LIGHT;
-	public static boolean ALLOW_RAID_LETHAL, ALLOW_LETHAL_PROTECTION_MOBS;
+	public static boolean ALLOW_RAID_LETHAL;
+
+	public static boolean ALLOW_LETHAL_PROTECTION_MOBS;
 	public static String LETHAL_PROTECTED_MOBS;
 	public static List<Integer> LIST_LETHAL_PROTECTED_MOBS = new ArrayList<>();
 	public static float MAGIC_CRITICAL_POWER;

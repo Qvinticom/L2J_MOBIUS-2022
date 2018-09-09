@@ -33,7 +33,10 @@ import java.util.List;
 public class AquireSkillInfo extends L2GameServerPacket
 {
 	private final List<Req> _reqs;
-	private final int _id, _level, _spCost, _mode;
+	private final int _id;
+	private final int _level;
+	private final int _spCost;
+	private final int _mode;
 	
 	private class Req
 	{

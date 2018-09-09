@@ -31,7 +31,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 public class MoveOnVehicle extends L2GameServerPacket
 {
 	private final int _id;
-	private final int _x, _y, _z;
+	private final int _x;
+	private final int _y;
+	private final int _z;
 	private final L2PcInstance _activeChar;
 	
 	public MoveOnVehicle(int vehicleID, L2PcInstance player, int x, int y, int z)

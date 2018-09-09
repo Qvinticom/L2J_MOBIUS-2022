@@ -32,7 +32,11 @@ public class L2Territory
 	
 	protected static class Point
 	{
-		protected int _x, _y, _zmin, _zmax, _proc;
+		protected int _x;
+		protected int _y;
+		protected int _zmin;
+		protected int _zmax;
+		protected int _proc;
 		
 		Point(int x, int y, int zmin, int zmax, int proc)
 		{

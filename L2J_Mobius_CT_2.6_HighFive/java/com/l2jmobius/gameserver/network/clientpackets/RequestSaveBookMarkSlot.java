@@ -27,7 +27,8 @@ import com.l2jmobius.gameserver.network.L2GameClient;
 public final class RequestSaveBookMarkSlot implements IClientIncomingPacket
 {
 	private int icon;
-	private String name, tag;
+	private String name;
+	private String tag;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)

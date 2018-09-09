@@ -93,7 +93,11 @@ public class DoorData implements IGameXmlReader
 	
 	public void insertCollisionData(StatsSet set)
 	{
-		int posX, posY, nodeX, nodeY, height;
+		int posX;
+		int posY;
+		int nodeX;
+		int nodeY;
+		int height;
 		height = set.getInt("height");
 		String[] pos = set.getString("node1").split(",");
 		nodeX = Integer.parseInt(pos[0]);

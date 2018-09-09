@@ -28,7 +28,12 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneForm;
  */
 public class ZoneCylinder extends L2ZoneForm
 {
-	private final int _x, _y, _z1, _z2, _rad, _radS;
+	private final int _x;
+	private final int _y;
+	private final int _z1;
+	private final int _z2;
+	private final int _rad;
+	private final int _radS;
 	
 	public ZoneCylinder(int x, int y, int z1, int z2, int rad)
 	{
@@ -133,12 +138,10 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public Location getRandomPoint()
 	{
-		int x, y, q, r;
-		
-		q = (int) (Rnd.get() * 2 * Math.PI);
-		r = (int) Math.sqrt(Rnd.get());
-		x = (int) ((_rad * r * Math.cos(q)) + _x);
-		y = (int) ((_rad * r * Math.sin(q)) + _y);
+		final int q = (int) (Rnd.get() * 2 * Math.PI);
+		final int r = (int) Math.sqrt(Rnd.get());
+		final int x = (int) ((_rad * r * Math.cos(q)) + _x);
+		final int y = (int) ((_rad * r * Math.sin(q)) + _y);
 		
 		return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
 	}

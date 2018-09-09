@@ -190,7 +190,17 @@ public class Duel
 		private boolean _paDuel;
 		
 		/** The _z. */
-		private int _x, _y, _z;
+		private int _x;
+
+		/**
+		 * The _z. 
+		 */
+		private int _y;
+
+		/**
+		 * The _z. 
+		 */
+		private int _z;
 		
 		/** The _debuffs. */
 		private List<L2Effect> _debuffs;

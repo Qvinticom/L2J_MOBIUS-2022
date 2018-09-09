@@ -269,10 +269,26 @@ public final class L2PcInstance extends L2Playable
 	private static final String DELETE_SKILL_SAVE = "DELETE FROM character_skills_save WHERE char_obj_id=? AND class_index=?";
 	
 	/** The _is the vip. */
-	public boolean _isVIP = false, _inEventVIP = false, _isNotVIP = false, _isTheVIP = false;
+	public boolean _isVIP = false;
+	/**
+	 * The _is the vip. 
+	 */
+	public boolean _inEventVIP = false;
+	/**
+	 * The _is the vip. 
+	 */
+	public boolean _isNotVIP = false;
+	/**
+	 * The _is the vip. 
+	 */
+	public boolean _isTheVIP = false;
 	
 	/** The _original karma vip. */
-	public int _originalNameColourVIP, _originalKarmaVIP;
+	public int _originalNameColourVIP;
+	/**
+	 * The _original karma vip. 
+	 */
+	public int _originalKarmaVIP;
 	
 	/** The _vote timestamp. */
 	private long _voteTimestamp = 0;
@@ -462,22 +478,58 @@ public final class L2PcInstance extends L2Playable
 	public boolean atEvent = false;
 	
 	/** TvT Engine parameters. */
-	public String _teamNameTvT, _originalTitleTvT;
+	public String _teamNameTvT;
+	/**
+	 * TvT Engine parameters. 
+	 */
+	public String _originalTitleTvT;
 	
 	/** The _original karma tv t. */
-	public int _originalNameColorTvT = 0, _countTvTkills, _countTvTdies, _originalKarmaTvT;
+	public int _originalNameColorTvT = 0;
+	/**
+	 * The _original karma tv t. 
+	 */
+	public int _countTvTkills;
+	/**
+	 * The _original karma tv t. 
+	 */
+	public int _countTvTdies;
+	/**
+	 * The _original karma tv t. 
+	 */
+	public int _originalKarmaTvT;
 	
 	/** The _in event tv t. */
 	public boolean _inEventTvT = false;
 	
 	/** CTF Engine parameters. */
-	public String _teamNameCTF, _teamNameHaveFlagCTF, _originalTitleCTF;
+	public String _teamNameCTF;
+	/**
+	 * CTF Engine parameters. 
+	 */
+	public String _teamNameHaveFlagCTF;
+	/**
+	 * CTF Engine parameters. 
+	 */
+	public String _originalTitleCTF;
 	
 	/** The _count ct fflags. */
-	public int _originalNameColorCTF = 0, _originalKarmaCTF, _countCTFflags;
+	public int _originalNameColorCTF = 0;
+	/**
+	 * The _count ct fflags. 
+	 */
+	public int _originalKarmaCTF;
+	/**
+	 * The _count ct fflags. 
+	 */
+	public int _countCTFflags;
 	
 	/** The _have flag ctf. */
-	public boolean _inEventCTF = false, _haveFlagCTF = false;
+	public boolean _inEventCTF = false;
+	/**
+	 * The _have flag ctf. 
+	 */
+	public boolean _haveFlagCTF = false;
 	
 	/** The _pos checker ctf. */
 	public Future<?> _posCheckerCTF = null;
@@ -486,13 +538,33 @@ public final class L2PcInstance extends L2Playable
 	public String _originalTitleDM;
 	
 	/** The _original karma dm. */
-	public int _originalNameColorDM = 0, _countDMkills, _originalKarmaDM;
+	public int _originalNameColorDM = 0;
+	/**
+	 * The _original karma dm. 
+	 */
+	public int _countDMkills;
+	/**
+	 * The _original karma dm. 
+	 */
+	public int _originalKarmaDM;
 	
 	/** The _in event dm. */
 	public boolean _inEventDM = false;
 	
 	/** Event Engine parameters. */
-	public int _originalNameColor, _countKills, _originalKarma, _eventKills;
+	public int _originalNameColor;
+	/**
+	 * Event Engine parameters. 
+	 */
+	public int _countKills;
+	/**
+	 * Event Engine parameters. 
+	 */
+	public int _originalKarma;
+	/**
+	 * Event Engine parameters. 
+	 */
+	public int _eventKills;
 	
 	/** The _in event. */
 	public boolean _inEvent = false;
@@ -7321,7 +7393,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (Config.TW_RESS_ON_DIE)
 		{
-			int x1, y1, z1;
+			int x1;
+			int y1;
+			int z1;
 			x1 = getX();
 			y1 = getY();
 			z1 = getZ();
@@ -8045,7 +8119,9 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void increasePvpKills()
 	{
-		int x, y, z;
+		int x;
+		int y;
+		int z;
 		x = getX();
 		y = getY();
 		z = getZ();
@@ -8433,7 +8509,9 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// Add karma to attacker and increase its PK counter
-		int x, y, z;
+		int x;
+		int y;
+		int z;
 		x = getX();
 		y = getY();
 		z = getZ();
@@ -13160,10 +13238,25 @@ public final class L2PcInstance extends L2Playable
 	class LookingForFishTask implements Runnable
 	{
 		/** The _is upper grade. */
-		boolean _isNoob, _isUpperGrade;
+		boolean _isNoob;
+
+		/**
+		 * The _is upper grade. 
+		 */
+		boolean _isUpperGrade;
 		
 		/** The _guts check time. */
-		int _fishType, _fishGutsCheck, _gutsCheckTime;
+		int _fishType;
+
+		/**
+		 * The _guts check time. 
+		 */
+		int _fishGutsCheck;
+
+		/**
+		 * The _guts check time. 
+		 */
+		int _gutsCheckTime;
 		
 		/** The _end task time. */
 		long _endTaskTime;

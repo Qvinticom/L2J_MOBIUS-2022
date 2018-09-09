@@ -76,7 +76,9 @@ public class ValidatePosition implements IClientIncomingPacket
 			}
 		}
 		
-		int dx, dy, dz;
+		int dx;
+		int dy;
+		int dz;
 		double diffSq;
 		
 		if (activeChar.isInBoat())

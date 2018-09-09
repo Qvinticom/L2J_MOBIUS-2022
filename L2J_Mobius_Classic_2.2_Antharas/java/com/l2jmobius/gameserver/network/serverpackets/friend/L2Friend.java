@@ -29,7 +29,8 @@ import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
  */
 public class L2Friend implements IClientOutgoingPacket
 {
-	private final boolean _action, _online;
+	private final boolean _action;
+	private final boolean _online;
 	private final int _objid;
 	private final String _name;
 	

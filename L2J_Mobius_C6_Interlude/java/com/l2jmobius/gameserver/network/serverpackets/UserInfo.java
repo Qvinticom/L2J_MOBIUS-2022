@@ -43,7 +43,10 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 public class UserInfo extends L2GameServerPacket
 {
 	private final L2PcInstance _activeChar;
-	private final int _runSpd, _walkSpd, _swimRunSpd, _swimWalkSpd;
+	private final int _runSpd;
+	private final int _walkSpd;
+	private final int _swimRunSpd;
+	private final int _swimWalkSpd;
 	private int _flRunSpd;
 	private int _flWalkSpd;
 	private int _flyRunSpd;

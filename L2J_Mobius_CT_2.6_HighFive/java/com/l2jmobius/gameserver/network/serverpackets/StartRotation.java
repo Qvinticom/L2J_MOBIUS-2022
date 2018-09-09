@@ -21,7 +21,10 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class StartRotation implements IClientOutgoingPacket
 {
-	private final int _charObjId, _degree, _side, _speed;
+	private final int _charObjId;
+	private final int _degree;
+	private final int _side;
+	private final int _speed;
 	
 	public StartRotation(int objectId, int degree, int side, int speed)
 	{

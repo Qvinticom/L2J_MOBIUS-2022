@@ -260,7 +260,8 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		
 		// Now iterate over conditions and determine enter group data
 		boolean onlyCC = false;
-		int min = 1, max = 1;
+		int min = 1;
+		int max = 1;
 		for (Condition cond : _conditions)
 		{
 			if (cond instanceof ConditionCommandChannel)

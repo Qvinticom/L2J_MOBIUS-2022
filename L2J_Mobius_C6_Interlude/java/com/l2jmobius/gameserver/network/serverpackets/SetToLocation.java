@@ -31,7 +31,10 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 public class SetToLocation extends L2GameServerPacket
 {
 	private final int _charObjId;
-	private final int _x, _y, _z, _heading;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
 	
 	public SetToLocation(L2Character character)
 	{

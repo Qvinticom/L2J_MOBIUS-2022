@@ -99,7 +99,9 @@ public class ExtractableItemsData
 						continue;
 					}
 					
-					int production = 0, amount = 0, chance = 0;
+					int production = 0;
+					int amount = 0;
+					int chance = 0;
 					
 					try
 					{

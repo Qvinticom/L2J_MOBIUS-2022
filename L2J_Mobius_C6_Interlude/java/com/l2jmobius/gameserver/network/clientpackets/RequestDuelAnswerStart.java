@@ -57,7 +57,8 @@ public final class RequestDuelAnswerStart extends L2GameClientPacket
 		
 		if (_response == 1)
 		{
-			SystemMessage msg1 = null, msg2 = null;
+			SystemMessage msg1 = null;
+			SystemMessage msg2 = null;
 			if (requestor.isInDuel())
 			{
 				msg1 = new SystemMessage(SystemMessageId.S1_CANNOT_DUEL_BECAUSE_S1_IS_ALREADY_ENGAGED_IN_A_DUEL);

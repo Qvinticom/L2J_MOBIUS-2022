@@ -568,7 +568,10 @@ public final class BotReportTable
 		{
 			if (qName.equals("punishment"))
 			{
-				int reportCount = -1, skillId = -1, skillLevel = 1, sysMessage = -1;
+				int reportCount = -1;
+				int skillId = -1;
+				int skillLevel = 1;
+				int sysMessage = -1;
 				try
 				{
 					reportCount = Integer.parseInt(attr.getValue("neededReportCount"));

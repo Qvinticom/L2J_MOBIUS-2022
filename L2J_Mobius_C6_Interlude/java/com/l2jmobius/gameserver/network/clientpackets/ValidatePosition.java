@@ -63,7 +63,9 @@ public final class ValidatePosition extends L2GameClientPacket
 			}
 		}
 		
-		int dx, dy, dz;
+		int dx;
+		int dy;
+		int dz;
 		double diffSq;
 		
 		if (activeChar.isInBoat())

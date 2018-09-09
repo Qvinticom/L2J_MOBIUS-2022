@@ -3893,7 +3893,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int yPrev = getY();
 		int zPrev = getZ(); // the z coordinate may be modified by coordinate synchronizations
 		
-		double dx, dy, dz;
+		double dx;
+		double dy;
+		double dz;
 		if (Config.COORD_SYNCHRONIZE == 1)
 		// the only method that can modify x,y while moving (otherwise _move would/should be set null)
 		{
@@ -5795,7 +5797,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isBehind(L2Object target)
 	{
-		double angleChar, angleTarget, angleDiff;
+		double angleChar;
+		double angleTarget;
+		double angleDiff;
 		final double maxAngleDiff = 60;
 		
 		if (target == null)
@@ -5836,7 +5840,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isInFrontOf(L2Object target)
 	{
-		double angleChar, angleTarget, angleDiff;
+		double angleChar;
+		double angleTarget;
+		double angleDiff;
 		final double maxAngleDiff = 60;
 		if (target == null)
 		{
@@ -5864,7 +5870,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isFacing(L2Object target, int maxAngle)
 	{
-		double angleChar, angleTarget, angleDiff, maxAngleDiff;
+		double angleChar;
+		double angleTarget;
+		double angleDiff;
+		double maxAngleDiff;
 		if (target == null)
 		{
 			return false;

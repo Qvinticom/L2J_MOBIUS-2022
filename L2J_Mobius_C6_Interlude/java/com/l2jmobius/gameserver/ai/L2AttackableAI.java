@@ -553,7 +553,9 @@ public class L2AttackableAI extends L2CharacterAI
 			
 			if (_actor.getPlanDistanceSq(((L2MinionInstance) _actor).getLeader()) > (offset * offset))
 			{
-				int x1, y1, z1;
+				int x1;
+				int y1;
+				int z1;
 				
 				x1 = (((L2MinionInstance) _actor).getLeader().getX() + Rnd.nextInt((offset - 30) * 2)) - (offset - 30);
 				y1 = (((L2MinionInstance) _actor).getLeader().getY() + Rnd.nextInt((offset - 30) * 2)) - (offset - 30);
@@ -566,7 +568,9 @@ public class L2AttackableAI extends L2CharacterAI
 		// Order to the L2MonsterInstance to random walk (1/100)
 		else if (!(npc instanceof L2ChestInstance) && (npc.getSpawn() != null) && (Rnd.nextInt(RANDOM_WALK_RATE) == 0))
 		{
-			int x1, y1, z1;
+			int x1;
+			int y1;
+			int z1;
 			
 			// If NPC with random coord in territory
 			if ((npc.getSpawn().getX() == 0) && (npc.getSpawn().getY() == 0))

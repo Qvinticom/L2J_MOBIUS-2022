@@ -57,7 +57,8 @@ public class L2PetDataTable
 			final PreparedStatement statement = con.prepareStatement("SELECT typeID, level, expMax, hpMax, mpMax, patk, pdef, matk, mdef, acc, evasion, crit, speed, atk_speed, cast_speed, feedMax, feedbattle, feednormal, loadMax, hpregen, mpregen, owner_exp_taken FROM pets_stats");
 			final ResultSet rset = statement.executeQuery();
 			
-			int petId, petLevel;
+			int petId;
+			int petLevel;
 			
 			while (rset.next())
 			{

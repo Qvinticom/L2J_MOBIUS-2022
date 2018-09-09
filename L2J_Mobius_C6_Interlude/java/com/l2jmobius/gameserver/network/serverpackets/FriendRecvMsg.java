@@ -22,7 +22,9 @@ package com.l2jmobius.gameserver.network.serverpackets;
  */
 public class FriendRecvMsg extends L2GameServerPacket
 {
-	private final String _sender, _receiver, _message;
+	private final String _sender;
+	private final String _receiver;
+	private final String _message;
 	
 	public FriendRecvMsg(String sender, String reciever, String message)
 	{

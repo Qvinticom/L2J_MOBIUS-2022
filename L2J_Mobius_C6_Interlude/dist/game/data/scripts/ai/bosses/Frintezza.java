@@ -1113,10 +1113,24 @@ public class Frintezza extends Quest
 	private static int _KillDarkChoirCaptain = 0;
 	
 	private static L2BossZone _Zone;
+	private L2GrandBossInstance frintezza;
+	private L2GrandBossInstance weakScarlet;
+	private L2GrandBossInstance strongScarlet;
 	@SuppressWarnings("unused")
-	private L2GrandBossInstance frintezza, weakScarlet, strongScarlet, activeScarlet;
-	private L2MonsterInstance demon1, demon2, demon3, demon4, portrait1, portrait2, portrait3, portrait4;
-	private L2NpcInstance _frintezzaDummy, _overheadDummy, _portraitDummy1, _portraitDummy3, _scarletDummy;
+	private L2GrandBossInstance activeScarlet;
+	private L2MonsterInstance demon1;
+	private L2MonsterInstance demon2;
+	private L2MonsterInstance demon3;
+	private L2MonsterInstance demon4;
+	private L2MonsterInstance portrait1;
+	private L2MonsterInstance portrait2;
+	private L2MonsterInstance portrait3;
+	private L2MonsterInstance portrait4;
+	private L2NpcInstance _frintezzaDummy;
+	private L2NpcInstance _overheadDummy;
+	private L2NpcInstance _portraitDummy1;
+	private L2NpcInstance _portraitDummy3;
+	private L2NpcInstance _scarletDummy;
 	private final List<L2PcInstance> _PlayersInside = new CopyOnWriteArrayList<>();
 	private final List<L2NpcInstance> _Room1Mobs = new CopyOnWriteArrayList<>();
 	private final List<L2NpcInstance> _Room2Mobs = new CopyOnWriteArrayList<>();
@@ -1378,8 +1392,8 @@ public class Frintezza extends Quest
 			DoorTable.getInstance().getDoor(25150046).closeMe();
 		}
 		/*
-		 * else if (event.equals("loc_check")) { Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA); if (status == FIGHTING) { if (!_Zone.isInsideZone(npc)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); if (npc.getX() < getXFix(171932) ||
-		 * npc.getX() > getXFix(176532) || npc.getY() < getYFix(-90320) || npc.getY() > getYFix(-85720) || npc.getZ() < getZFix(-5130)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); } }
+		 * else if (event.equals("loc_check")) { Integer status = GrandBossManager.getInstance().getBossStatus(FRINTEZZA); if (status == FIGHTING) { if (!_Zone.isInsideZone(npc)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); if (npc.getX() < getXFix(171932) || npc.getX() >
+		 * getXFix(176532) || npc.getY() < getYFix(-90320) || npc.getY() > getYFix(-85720) || npc.getZ() < getZFix(-5130)) npc.teleToLocation(getXFix(174232),getYFix(-88020),getZFix(-5116)); } }
 		 */
 		else if (event.equals("camera_1"))
 		{

@@ -59,50 +59,48 @@ public class TvT implements EventTask
 	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(TvT.class.getName());
 	
-	/** The _joining location name. */
-	protected static String _eventName = new String(), _eventDesc = new String(), _joiningLocationName = new String();
-	
-	/** The _npc spawn. */
+	protected static String _eventName = new String();
+	protected static String _eventDesc = new String();
+	protected static String _joiningLocationName = new String();
 	private static L2Spawn _npcSpawn;
-	
-	/** The _in progress. */
-	protected static boolean _joining = false, _teleport = false, _started = false, _aborted = false, _sitForced = false, _inProgress = false;
-	
-	/** The _max players. */
-	protected static int _npcId = 0, _npcX = 0, _npcY = 0, _npcZ = 0, _npcHeading = 0, _rewardId = 0, _rewardAmount = 0, _minlvl = 0, _maxlvl = 0, _joinTime = 0, _eventTime = 0, _minPlayers = 0, _maxPlayers = 0;
-	
-	/** The _interval between matchs. */
+	protected static boolean _joining = false;
+	protected static boolean _teleport = false;
+	protected static boolean _started = false;
+	protected static boolean _aborted = false;
+	protected static boolean _sitForced = false;
+	protected static boolean _inProgress = false;
+	protected static int _npcId = 0;
+	protected static int _npcX = 0;
+	protected static int _npcY = 0;
+	protected static int _npcZ = 0;
+	protected static int _npcHeading = 0;
+	protected static int _rewardId = 0;
+	protected static int _rewardAmount = 0;
+	protected static int _minlvl = 0;
+	protected static int _maxlvl = 0;
+	protected static int _joinTime = 0;
+	protected static int _eventTime = 0;
+	protected static int _minPlayers = 0;
+	protected static int _maxPlayers = 0;
 	protected static long _intervalBetweenMatchs = 0;
-	
-	/** The start event time. */
 	private String startEventTime;
-	
-	/** The _team event. */
 	private static boolean _teamEvent = true; // TODO to be integrated
-	
-	/** The _players. */
 	public static Vector<L2PcInstance> _players = new Vector<>();
-	
-	/** The _top team. */
 	private static String _topTeam = new String();
-	
-	/** The _players shuffle. */
 	public static Vector<L2PcInstance> _playersShuffle = new Vector<>();
-	
-	/** The _save player teams. */
-	public static Vector<String> _teams = new Vector<>(), _savePlayers = new Vector<>(), _savePlayerTeams = new Vector<>();
-	
-	/** The _teams z. */
-	public static Vector<Integer> _teamPlayersCount = new Vector<>(), _teamColors = new Vector<>(), _teamsX = new Vector<>(), _teamsY = new Vector<>(), _teamsZ = new Vector<>();
-	
-	/** The _team points count. */
+	public static Vector<String> _teams = new Vector<>();
+	public static Vector<String> _savePlayers = new Vector<>();
+	public static Vector<String> _savePlayerTeams = new Vector<>();
+	public static Vector<Integer> _teamPlayersCount = new Vector<>();
+	public static Vector<Integer> _teamColors = new Vector<>();
+	public static Vector<Integer> _teamsX = new Vector<>();
+	public static Vector<Integer> _teamsY = new Vector<>();
+	public static Vector<Integer> _teamsZ = new Vector<>();
 	public static Vector<Integer> _teamPointsCount = new Vector<>();
-	
-	/** The _top kills. */
 	public static int _topKills = 0;
 	
 	/**
-	 * Instantiates a new tv t.
+	 * Instantiates a new tvt.
 	 */
 	private TvT()
 	{
@@ -2230,7 +2228,8 @@ public class TvT implements EventTask
 	 */
 	public static void shuffleTeams()
 	{
-		int teamCount = 0, playersCount = 0;
+		int teamCount = 0;
+		int playersCount = 0;
 		
 		synchronized (_players)
 		{

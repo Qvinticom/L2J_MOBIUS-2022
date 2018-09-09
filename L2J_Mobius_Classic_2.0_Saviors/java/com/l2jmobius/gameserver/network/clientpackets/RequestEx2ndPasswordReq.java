@@ -29,7 +29,8 @@ import com.l2jmobius.gameserver.security.SecondaryPasswordAuth;
 public class RequestEx2ndPasswordReq implements IClientIncomingPacket
 {
 	private int _changePass;
-	private String _password, _newPassword;
+	private String _password;
+	private String _newPassword;
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)

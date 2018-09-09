@@ -150,7 +150,8 @@ public class TvTEvent
 	
 	private static int highestLevelPcInstanceOf(Map<Integer, L2PcInstance> players)
 	{
-		int maxLevel = Integer.MIN_VALUE, maxLevelId = -1;
+		int maxLevel = Integer.MIN_VALUE;
+		int maxLevelId = -1;
 		for (L2PcInstance player : players.values())
 		{
 			if (player.getLevel() >= maxLevel)
@@ -200,7 +201,8 @@ public class TvTEvent
 			0,
 			0
 		};
-		int priority = 0, highestLevelPlayerId;
+		int priority = 0;
+		int highestLevelPlayerId;
 		L2PcInstance highestLevelPlayer;
 		// TODO: allParticipants should be sorted by level instead of using highestLevelPcInstanceOf for every fetch
 		while (!allParticipants.isEmpty())

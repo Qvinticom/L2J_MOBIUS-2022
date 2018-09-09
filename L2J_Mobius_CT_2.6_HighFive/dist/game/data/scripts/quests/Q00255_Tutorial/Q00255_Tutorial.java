@@ -381,7 +381,9 @@ public class Q00255_Tutorial extends Quest
 			}
 			else if ((event_id == 8) && (player.getLevel() < 6))
 			{
-				int x = 0, y = 0, z = 0;
+				int x = 0;
+				int y = 0;
+				int z = 0;
 				for (String[] element : CEEa)
 				{
 					if (classId == Integer.valueOf(element[0]))
@@ -557,7 +559,9 @@ public class Q00255_Tutorial extends Quest
 		// Question mark clicked
 		else if (event.startsWith("QM"))
 		{
-			int x = 0, y = 0, z = 0;
+			int x = 0;
+			int y = 0;
+			int z = 0;
 			switch (Integer.valueOf(event.substring(2)))
 			{
 				case 1:

@@ -29,7 +29,8 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class MultiSellList extends AbstractItemPacket
 {
-	private int _size, _index;
+	private int _size;
+	private int _index;
 	private final PreparedMultisellListHolder _list;
 	private final boolean _finished;
 	

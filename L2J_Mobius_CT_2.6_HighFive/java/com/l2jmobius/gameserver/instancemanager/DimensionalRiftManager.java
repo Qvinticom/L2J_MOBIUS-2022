@@ -122,7 +122,8 @@ public final class DimensionalRiftManager
 	
 	public void loadSpawns()
 	{
-		int countGood = 0, countBad = 0;
+		int countGood = 0;
+		int countBad = 0;
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -138,8 +139,14 @@ public final class DimensionalRiftManager
 			
 			final Document doc = factory.newDocumentBuilder().parse(file);
 			NamedNodeMap attrs;
-			byte type, roomId;
-			int mobId, x, y, z, delay, count;
+			byte type;
+			byte roomId;
+			int mobId;
+			int x;
+			int y;
+			int z;
+			int delay;
+			int count;
 			
 			for (Node rift = doc.getFirstChild(); rift != null; rift = rift.getNextSibling())
 			{

@@ -53,8 +53,18 @@ public final class CharacterCreate extends L2GameClientPacket
 	private static final Object CREATION_LOCK = new Object();
 	
 	private String _name;
-	private byte _sex, _hairStyle, _hairColor, _face;
-	private int _race, _classId, _int, _str, _con, _men, _dex, _wit;
+	private byte _sex;
+	private byte _hairStyle;
+	private byte _hairColor;
+	private byte _face;
+	private int _race;
+	private int _classId;
+	private int _int;
+	private int _str;
+	private int _con;
+	private int _men;
+	private int _dex;
+	private int _wit;
 	
 	@Override
 	protected void readImpl()

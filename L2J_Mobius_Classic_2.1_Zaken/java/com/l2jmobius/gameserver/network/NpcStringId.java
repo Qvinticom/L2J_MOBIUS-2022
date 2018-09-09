@@ -35263,7 +35263,8 @@ public final class NpcStringId
 	private static int parseMessageParameters(String name)
 	{
 		int paramCount = 0;
-		char c1, c2;
+		char c1;
+		char c2;
 		for (int i = 0; i < (name.length() - 1); i++)
 		{
 			c1 = name.charAt(i);

@@ -396,7 +396,8 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 								if ("point".equalsIgnoreCase(cd.getNodeName()))
 								{
 									attrs = cd.getAttributes();
-									int x, y;
+									int x;
+									int y;
 									att = attrs.getNamedItem("x");
 									if (att != null)
 									{

@@ -24,7 +24,10 @@ import com.l2jmobius.gameserver.network.serverpackets.GetOnVehicle;
 
 public final class RequestGetOnVehicle extends L2GameClientPacket
 {
-	private int _id, _x, _y, _z;
+	private int _id;
+	private int _x;
+	private int _y;
+	private int _z;
 	
 	@Override
 	protected void readImpl()

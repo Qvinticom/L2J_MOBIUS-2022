@@ -70,7 +70,8 @@ public class L2CharacterAI extends AbstractAI
 	public static class IntentionCommand
 	{
 		protected final CtrlIntention _crtlIntention;
-		protected final Object _arg0, _arg1;
+		protected final Object _arg0;
+		protected final Object _arg1;
 		
 		protected IntentionCommand(CtrlIntention pIntention, Object pArg0, Object pArg1)
 		{

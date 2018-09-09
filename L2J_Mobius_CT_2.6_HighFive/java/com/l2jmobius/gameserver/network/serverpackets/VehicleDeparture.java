@@ -25,7 +25,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class VehicleDeparture implements IClientOutgoingPacket
 {
-	private final int _objId, _x, _y, _z, _moveSpeed, _rotationSpeed;
+	private final int _objId;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _moveSpeed;
+	private final int _rotationSpeed;
 	
 	/**
 	 * @param boat

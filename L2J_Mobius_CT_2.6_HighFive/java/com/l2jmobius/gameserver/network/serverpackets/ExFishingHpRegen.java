@@ -26,7 +26,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 public class ExFishingHpRegen implements IClientOutgoingPacket
 {
 	private final L2Character _activeChar;
-	private final int _time, _fishHP, _hpMode, _anim, _goodUse, _penalty, _hpBarColor;
+	private final int _time;
+	private final int _fishHP;
+	private final int _hpMode;
+	private final int _anim;
+	private final int _goodUse;
+	private final int _penalty;
+	private final int _hpBarColor;
 	
 	public ExFishingHpRegen(L2Character character, int time, int fishHP, int HPmode, int GoodUse, int anim, int penalty, int hpBarColor)
 	{

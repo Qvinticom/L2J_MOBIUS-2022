@@ -287,7 +287,8 @@ public class Q021_HiddenTruth extends Quest
 							// For cond 6, make checks until cond 7 is activated.
 							if (cond == 6)
 							{
-								int npcId1 = 0, npcId2 = 0;
+								int npcId1 = 0;
+								int npcId2 = 0;
 								if (npcId == AGRIPEL)
 								{
 									npcId1 = BENEDICT;

@@ -365,7 +365,8 @@ public class AugmentationData
 								NamedNodeMap attrs = d.getAttributes();
 								String statName = attrs.getNamedItem("name").getNodeValue();
 								
-								float soloValues[] = null, combinedValues[] = null;
+								float soloValues[] = null;
+								float combinedValues[] = null;
 								
 								for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 								{

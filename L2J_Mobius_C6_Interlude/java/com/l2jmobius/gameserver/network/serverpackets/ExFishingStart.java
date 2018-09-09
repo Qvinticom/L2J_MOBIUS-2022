@@ -25,7 +25,10 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 public class ExFishingStart extends L2GameServerPacket
 {
 	private final L2Character _activeChar;
-	private final int _x, _y, _z, _fishType;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _fishType;
 	@SuppressWarnings("unused")
 	private final boolean _isNightLure;
 	

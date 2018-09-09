@@ -24,7 +24,14 @@ public class ExAirShipInfo implements IClientOutgoingPacket
 {
 	// store some parameters, because they can be changed during broadcast
 	private final L2AirShipInstance _ship;
-	private final int _x, _y, _z, _heading, _moveSpeed, _rotationSpeed, _captain, _helm;
+	private final int _x;
+	private final int _y;
+	private final int _z;
+	private final int _heading;
+	private final int _moveSpeed;
+	private final int _rotationSpeed;
+	private final int _captain;
+	private final int _helm;
 	
 	public ExAirShipInfo(L2AirShipInstance ship)
 	{

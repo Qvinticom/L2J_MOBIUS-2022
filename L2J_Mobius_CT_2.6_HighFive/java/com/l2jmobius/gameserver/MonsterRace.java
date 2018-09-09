@@ -30,7 +30,9 @@ public class MonsterRace
 	
 	private final L2Npc[] _monsters;
 	private int[][] _speeds;
-	private final int[] _first, _second;
+	private final int[] _first;
+
+	private final int[] _second;
 	
 	protected MonsterRace()
 	{

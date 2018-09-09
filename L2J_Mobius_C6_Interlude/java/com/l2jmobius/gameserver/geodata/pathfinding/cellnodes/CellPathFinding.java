@@ -187,7 +187,9 @@ public class CellPathFinding extends PathFinding
 			_postFilterPlayableUses++;
 		}
 		
-		int currentX, currentY, currentZ;
+		int currentX;
+		int currentY;
+		int currentZ;
 		ListIterator<AbstractNodeLoc> middlePoint;
 		boolean remove;
 		int pass = 0;
@@ -246,7 +248,8 @@ public class CellPathFinding extends PathFinding
 		final LinkedList<AbstractNodeLoc> path = new LinkedList<>();
 		int previousDirectionX = Integer.MIN_VALUE;
 		int previousDirectionY = Integer.MIN_VALUE;
-		int directionX, directionY;
+		int directionX;
+		int directionY;
 		
 		while (node.getParent() != null)
 		{

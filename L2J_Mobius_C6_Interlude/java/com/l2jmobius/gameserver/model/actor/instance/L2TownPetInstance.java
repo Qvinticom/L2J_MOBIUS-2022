@@ -31,7 +31,10 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public class L2TownPetInstance extends L2NpcInstance
 {
-	int randomX, randomY, spawnX, spawnY;
+	int randomX;
+	int randomY;
+	int spawnX;
+	int spawnY;
 	
 	public L2TownPetInstance(int objectId, L2NpcTemplate template)
 	{
