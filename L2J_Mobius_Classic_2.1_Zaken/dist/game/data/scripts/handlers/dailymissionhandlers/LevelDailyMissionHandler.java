@@ -79,6 +79,12 @@ public class LevelDailyMissionHandler extends AbstractDailyMissionHandler
 		// Level rewards doesn't reset daily
 	}
 	
+	@Override
+	public int getProgress(L2PcInstance player)
+	{
+		return _level;
+	}
+	
 	private void onPlayerLevelChanged(OnPlayerLevelChanged event)
 	{
 		final L2PcInstance player = event.getActiveChar();
