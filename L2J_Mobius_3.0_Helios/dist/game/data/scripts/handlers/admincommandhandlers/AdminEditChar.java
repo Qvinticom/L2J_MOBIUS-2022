@@ -1458,7 +1458,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			ip = client.getConnectionAddress().getHostAddress();
 			if (ipMap.get(ip) == null)
 			{
-				ipMap.put(ip, new ArrayList<L2PcInstance>());
+				ipMap.put(ip, new ArrayList<>());
 			}
 			ipMap.get(ip).add(player);
 			
@@ -1512,7 +1512,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			final IpPack pack = new IpPack(client.getConnectionAddress().getHostAddress(), client.getTrace());
 			if (ipMap.get(pack) == null)
 			{
-				ipMap.put(pack, new ArrayList<L2PcInstance>());
+				ipMap.put(pack, new ArrayList<>());
 			}
 			ipMap.get(pack).add(player);
 			

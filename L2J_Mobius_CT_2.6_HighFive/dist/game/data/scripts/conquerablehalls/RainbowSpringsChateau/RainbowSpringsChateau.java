@@ -809,7 +809,7 @@ public final class RainbowSpringsChateau extends ClanHallSiegeEngine
 		}
 		else
 		{
-			_usedTextPassages.put(message, new ArrayList<L2Clan>());
+			_usedTextPassages.put(message, new ArrayList<>());
 			final int objId = npc.getObjectId();
 			final NpcSay say = new NpcSay(objId, ChatType.NPC_SHOUT, npc.getId(), message);
 			npc.broadcastPacket(say);

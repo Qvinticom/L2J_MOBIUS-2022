@@ -14,351 +14,95 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.instancemanager;
+package ai.areas.Gracia.AI.NPC.GeneralDilios;
 
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.gameserver.enums.Team;
-import com.l2jmobius.gameserver.instancemanager.tasks.PenaltyRemoveTask;
-import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
+import com.l2jmobius.gameserver.enums.ChatType;
+import com.l2jmobius.gameserver.model.L2Spawn;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
-import com.l2jmobius.gameserver.model.olympiad.OlympiadManager;
-import com.l2jmobius.gameserver.model.zone.ZoneId;
-import com.l2jmobius.gameserver.network.SystemMessageId;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameAddPlayer;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameChangeTeam;
-import com.l2jmobius.gameserver.network.serverpackets.ExCubeGameRemovePlayer;
-import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
+
+import ai.AbstractNpcAI;
 
 /**
- * This class manage the player add/remove, team change and event arena status,<br>
- * as the clearance of the participants list or liberate the arena.
- * @author BiggBoss
+ * Dilios AI
+ * @author JIV, Sephiroth, Apocalipce
  */
-public final class HandysBlockCheckerManager
+public final class GeneralDilios extends AbstractNpcAI
 {
-	// All the participants and their team classified by arena
-	private static final ArenaParticipantsHolder[] _arenaPlayers = new ArenaParticipantsHolder[4];
+	private static final int GENERAL_ID = 32549;
+	private static final int GUARD_ID = 32619;
 	
-	// Arena votes to start the game
-	private static final Map<Integer, Integer> _arenaVotes = new HashMap<>();
+	private L2Npc _general = null;
+	private final Set<L2Spawn> _guards = Collections.newSetFromMap(new ConcurrentHashMap<>());
 	
-	// Arena Status, True = is being used, otherwise, False
-	private static final Map<Integer, Boolean> _arenaStatus = new HashMap<>();
-	
-	// Registration request penalty (10 seconds)
-	protected static Set<Integer> _registrationPenalty = Collections.synchronizedSet(new HashSet<Integer>());
-	
-	/**
-	 * Return the number of event-start votes for the specified arena id
-	 * @param arenaId
-	 * @return int (number of votes)
-	 */
-	public synchronized int getArenaVotes(int arenaId)
+	private static final NpcStringId[] DILIOS_TEXT =
 	{
-		return _arenaVotes.get(arenaId);
+		NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_WE_RE_GATHERING_BRAVE_ADVENTURERS_TO_ATTACK_TIAT_S_MOUNTED_TROOP_THAT_S_ROOTED_IN_THE_SEED_OF_DESTRUCTION,
+		// NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_THE_SEED_OF_DESTRUCTION_IS_CURRENTLY_SECURED_UNDER_THE_FLAG_OF_THE_KEUCEREUS_ALLIANCE,
+		// NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_TIATS_MOUNTED_TROOP_IS_CURRENTLY_TRYING_TO_RETAKE_SEED_OF_DESTRUCTION_COMMIT_ALL_THE_AVAILABLE_REINFORCEMENTS_INTO_SEED_OF_DESTRUCTION,
+		NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_BRAVE_ADVENTURERS_WHO_HAVE_CHALLENGED_THE_SEED_OF_INFINITY_ARE_CURRENTLY_INFILTRATING_THE_HALL_OF_EROSION_THROUGH_THE_DEFENSIVELY_WEAK_HALL_OF_SUFFERING,
+		// NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_SWEEPING_THE_SEED_OF_INFINITY_IS_CURRENTLY_COMPLETE_TO_THE_HEART_OF_THE_SEED_EKIMUS_IS_BEING_DIRECTLY_ATTACKED_AND_THE_UNDEAD_REMAINING_IN_THE_HALL_OF_SUFFERING_ARE_BEING_ERADICATED,
+		NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_THE_SEED_OF_INFINITY_IS_CURRENTLY_SECURED_UNDER_THE_FLAG_OF_THE_KEUCEREUS_ALLIANCE
+		// NpcStringId.MESSENGER_INFORM_THE_PATRONS_OF_THE_KEUCEREUS_ALLIANCE_BASE_THE_RESURRECTED_UNDEAD_IN_THE_SEED_OF_INFINITY_ARE_POURING_INTO_THE_HALL_OF_SUFFERING_AND_THE_HALL_OF_EROSION
+		// NpcStringId.MESSENGER_INFORM_THE_BROTHERS_IN_KUCEREUS_CLAN_OUTPOST_EKIMUS_IS_ABOUT_TO_BE_REVIVED_BY_THE_RESURRECTED_UNDEAD_IN_SEED_OF_INFINITY_SEND_ALL_REINFORCEMENTS_TO_THE_HEART_AND_THE_HALL_OF_SUFFERING
+	};
+	
+	public GeneralDilios()
+	{
+		addSpawnId(GENERAL_ID, GUARD_ID);
 	}
 	
-	/**
-	 * Add a new vote to start the event for the specified arena id
-	 * @param arena
-	 */
-	public synchronized void increaseArenaVotes(int arena)
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
 	{
-		final int newVotes = _arenaVotes.get(arena) + 1;
-		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
-		
-		if ((newVotes > (holder.getAllPlayers().size() / 2)) && !holder.getEvent().isStarted())
+		if (event.startsWith("command_"))
 		{
-			clearArenaVotes(arena);
-			if ((holder.getBlueTeamSize() == 0) || (holder.getRedTeamSize() == 0))
+			int value = Integer.parseInt(event.substring(8));
+			if (value < 6)
 			{
-				return;
-			}
-			if (Config.HBCE_FAIR_PLAY)
-			{
-				holder.checkAndShuffle();
-			}
-			ThreadPool.execute(holder.getEvent().new StartEvent());
-		}
-		else
-		{
-			_arenaVotes.put(arena, newVotes);
-		}
-	}
-	
-	/**
-	 * Will clear the votes queue (of event start) for the specified arena id
-	 * @param arena
-	 */
-	public synchronized void clearArenaVotes(int arena)
-	{
-		_arenaVotes.put(arena, 0);
-	}
-	
-	protected HandysBlockCheckerManager()
-	{
-		// Initialize arena status
-		_arenaStatus.put(0, false);
-		_arenaStatus.put(1, false);
-		_arenaStatus.put(2, false);
-		_arenaStatus.put(3, false);
-		
-		// Initialize arena votes
-		_arenaVotes.put(0, 0);
-		_arenaVotes.put(1, 0);
-		_arenaVotes.put(2, 0);
-		_arenaVotes.put(3, 0);
-	}
-	
-	/**
-	 * Returns the players holder
-	 * @param arena
-	 * @return ArenaParticipantsHolder
-	 */
-	public ArenaParticipantsHolder getHolder(int arena)
-	{
-		return _arenaPlayers[arena];
-	}
-	
-	/**
-	 * Initializes the participants holder
-	 */
-	public void startUpParticipantsQueue()
-	{
-		for (int i = 0; i < 4; ++i)
-		{
-			_arenaPlayers[i] = new ArenaParticipantsHolder(i);
-		}
-	}
-	
-	/**
-	 * Add the player to the specified arena (through the specified arena manager) and send the needed server -> client packets
-	 * @param player
-	 * @param arenaId
-	 * @return
-	 */
-	public boolean addPlayerToArena(L2PcInstance player, int arenaId)
-	{
-		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
-		
-		synchronized (holder)
-		{
-			boolean isRed;
-			
-			for (int i = 0; i < 4; i++)
-			{
-				if (_arenaPlayers[i].getAllPlayers().contains(player))
-				{
-					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST);
-					msg.addString(player.getName());
-					player.sendPacket(msg);
-					return false;
-				}
-			}
-			
-			if (player.isCursedWeaponEquipped())
-			{
-				player.sendPacket(SystemMessageId.YOU_CANNOT_REGISTER_WHILE_IN_POSSESSION_OF_A_CURSED_WEAPON);
-				return false;
-			}
-			
-			if (player.isOnEvent() || player.isInOlympiadMode())
-			{
-				player.sendMessage("Couldnt register you due other event participation");
-				return false;
-			}
-			
-			if (OlympiadManager.getInstance().isRegistered(player))
-			{
-				OlympiadManager.getInstance().unRegisterNoble(player);
-				player.sendPacket(SystemMessageId.APPLICANTS_FOR_THE_OLYMPIAD_UNDERGROUND_COLISEUM_OR_KRATEI_S_CUBE_MATCHES_CANNOT_REGISTER);
-			}
-			
-			// if(UnderGroundColiseum.getInstance().isRegisteredPlayer(player))
-			// {
-			// UngerGroundColiseum.getInstance().removeParticipant(player);
-			// player.sendPacket(SystemMessageId.COLISEUM_OLYMPIAD_KRATEIS_APPLICANTS_CANNOT_PARTICIPATE));
-			// }
-			// if(KrateiCubeManager.getInstance().isRegisteredPlayer(player))
-			// {
-			// KrateiCubeManager.getInstance().removeParticipant(player);
-			// player.sendPacket(SystemMessageId.COLISEUM_OLYMPIAD_KRATEIS_APPLICANTS_CANNOT_PARTICIPATE));
-			// }
-			
-			if (_registrationPenalty.contains(player.getObjectId()))
-			{
-				player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN);
-				return false;
-			}
-			
-			if (holder.getBlueTeamSize() < holder.getRedTeamSize())
-			{
-				holder.addPlayer(player, 1);
-				isRed = false;
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_GENERAL, GENERAL_ID, NpcStringId.STABBING_THREE_TIMES));
+				startQuestTimer("guard_animation_0", 3400, null, null);
 			}
 			else
 			{
-				holder.addPlayer(player, 0);
-				isRed = true;
+				value = -1;
+				_general.broadcastPacket(new NpcSay(_general.getObjectId(), ChatType.NPC_SHOUT, GENERAL_ID, DILIOS_TEXT[getRandom(DILIOS_TEXT.length)]));
 			}
-			holder.broadCastPacketToTeam(new ExCubeGameAddPlayer(player, isRed));
-			return true;
+			startQuestTimer("command_" + (value + 1), 60000, null, null);
 		}
-	}
-	
-	/**
-	 * Will remove the specified player from the specified team and arena and will send the needed packet to all his team mates / enemy team mates
-	 * @param player
-	 * @param arenaId
-	 * @param team
-	 */
-	public void removePlayer(L2PcInstance player, int arenaId, int team)
-	{
-		final ArenaParticipantsHolder holder = _arenaPlayers[arenaId];
-		synchronized (holder)
+		else if (event.startsWith("guard_animation_"))
 		{
-			final boolean isRed = team == 0;
-			
-			holder.removePlayer(player, team);
-			holder.broadCastPacketToTeam(new ExCubeGameRemovePlayer(player, isRed));
-			
-			// End event if theres an empty team
-			final int teamSize = isRed ? holder.getRedTeamSize() : holder.getBlueTeamSize();
-			if (teamSize == 0)
+			final int value = Integer.parseInt(event.substring(16));
+			for (L2Spawn guard : _guards)
 			{
-				holder.getEvent().endEventAbnormally();
+				guard.getLastSpawn().broadcastSocialAction(4);
 			}
-			
-			_registrationPenalty.add(player.getObjectId());
-			schedulePenaltyRemoval(player.getObjectId());
-		}
-	}
-	
-	/**
-	 * Will change the player from one team to other (if possible) and will send the needed packets
-	 * @param player
-	 * @param arena
-	 * @param team
-	 */
-	public void changePlayerToTeam(L2PcInstance player, int arena, int team)
-	{
-		final ArenaParticipantsHolder holder = _arenaPlayers[arena];
-		
-		synchronized (holder)
-		{
-			final boolean isFromRed = holder.getRedPlayers().contains(player);
-			if ((isFromRed && (holder.getBlueTeamSize() == 6)) || (!isFromRed && (holder.getRedTeamSize() == 6)))
+			if (value < 2)
 			{
-				player.sendMessage("The team is full");
-				return;
+				startQuestTimer("guard_animation_" + (value + 1), 1500, null, null);
 			}
-			final int futureTeam = isFromRed ? 1 : 0;
-			holder.addPlayer(player, futureTeam);
-			holder.removePlayer(player, isFromRed ? 0 : 1);
-			holder.broadCastPacketToTeam(new ExCubeGameChangeTeam(player, isFromRed));
 		}
+		return super.onAdvEvent(event, npc, player);
 	}
 	
-	/**
-	 * Will erase all participants from the specified holder
-	 * @param arenaId
-	 */
-	public synchronized void clearPaticipantQueueByArenaId(int arenaId)
+	@Override
+	public String onSpawn(L2Npc npc)
 	{
-		_arenaPlayers[arenaId].clearPlayers();
-	}
-	
-	/**
-	 * Returns true if arena is holding an event at this momment
-	 * @param arenaId
-	 * @return boolean
-	 */
-	public boolean arenaIsBeingUsed(int arenaId)
-	{
-		return (arenaId >= 0) && (arenaId <= 3) && _arenaStatus.get(arenaId);
-	}
-	
-	/**
-	 * Set the specified arena as being used
-	 * @param arenaId
-	 */
-	public void setArenaBeingUsed(int arenaId)
-	{
-		_arenaStatus.put(arenaId, true);
-	}
-	
-	/**
-	 * Set as free the specified arena for future events
-	 * @param arenaId
-	 */
-	public void setArenaFree(int arenaId)
-	{
-		_arenaStatus.put(arenaId, false);
-	}
-	
-	/**
-	 * Called when played logs out while participating in Block Checker Event
-	 * @param player
-	 */
-	public void onDisconnect(L2PcInstance player)
-	{
-		final int arena = player.getBlockCheckerArena();
-		final int team = getHolder(arena).getPlayerTeam(player);
-		getInstance().removePlayer(player, arena, team);
-		if (player.getTeam() == Team.NONE)
+		if (npc.getId() == GENERAL_ID)
 		{
-			return;
+			startQuestTimer("command_0", 60000, null, null);
+			_general = npc;
 		}
-		
-		player.stopAllEffects();
-		// Remove team aura
-		player.setTeam(Team.NONE);
-		
-		// Remove the event items
-		final PcInventory inv = player.getInventory();
-		
-		if (inv.getItemByItemId(13787) != null)
+		else if (npc.getId() == GUARD_ID)
 		{
-			inv.destroyItemByItemId("Handys Block Checker", 13787, inv.getInventoryItemCount(13787, 0), player, player);
+			_guards.add(npc.getSpawn());
 		}
-		if (inv.getItemByItemId(13788) != null)
-		{
-			inv.destroyItemByItemId("Handys Block Checker", 13788, inv.getInventoryItemCount(13788, 0), player, player);
-		}
-		player.setInsideZone(ZoneId.PVP, false);
-		// Teleport Back
-		player.teleToLocation(-57478, -60367, -2370);
-	}
-	
-	public void removePenalty(int objectId)
-	{
-		_registrationPenalty.remove(objectId);
-	}
-	
-	private void schedulePenaltyRemoval(int objId)
-	{
-		ThreadPool.schedule(new PenaltyRemoveTask(objId), 10000);
-	}
-	
-	/**
-	 * Gets the single instance of {@code HandysBlockCheckerManager}.
-	 * @return single instance of {@code HandysBlockCheckerManager}
-	 */
-	public static HandysBlockCheckerManager getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
-	private static class SingletonHolder
-	{
-		protected static final HandysBlockCheckerManager _instance = new HandysBlockCheckerManager();
+		return super.onSpawn(npc);
 	}
 }

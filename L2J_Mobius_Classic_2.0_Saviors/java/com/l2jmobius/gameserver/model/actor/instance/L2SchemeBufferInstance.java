@@ -195,7 +195,7 @@ public class L2SchemeBufferInstance extends L2Npc
 					}
 				}
 				
-				SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName.trim(), new ArrayList<Integer>());
+				SchemeBufferTable.getInstance().setScheme(player.getObjectId(), schemeName.trim(), new ArrayList<>());
 				showGiveBuffsWindow(player);
 			}
 			catch (Exception e)

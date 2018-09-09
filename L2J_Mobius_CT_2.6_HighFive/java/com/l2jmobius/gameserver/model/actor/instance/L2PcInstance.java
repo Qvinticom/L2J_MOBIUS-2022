@@ -5888,7 +5888,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			synchronized (this)
 			{
-				_manufactureItems = Collections.synchronizedMap(new LinkedHashMap<Integer, L2ManufactureItem>());
+				_manufactureItems = Collections.synchronizedMap(new LinkedHashMap<>());
 			}
 		}
 		return _manufactureItems;

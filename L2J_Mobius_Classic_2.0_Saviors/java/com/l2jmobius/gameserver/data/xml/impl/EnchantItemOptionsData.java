@@ -65,7 +65,7 @@ public class EnchantItemOptionsData implements IGameXmlReader
 						final int itemId = parseInteger(d.getAttributes(), "id");
 						if (!_data.containsKey(itemId))
 						{
-							_data.put(itemId, new HashMap<Integer, EnchantOptions>());
+							_data.put(itemId, new HashMap<>());
 						}
 						for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 						{

@@ -98,7 +98,7 @@ public final class DimensionalRiftManager
 				
 				if (!_rooms.containsKey(type))
 				{
-					_rooms.put(type, new HashMap<Byte, DimensionalRiftRoom>(9));
+					_rooms.put(type, new HashMap<>(9));
 				}
 				
 				_rooms.get(type).put(room_id, new DimensionalRiftRoom(type, room_id, xMin, xMax, yMin, yMax, z1, z2, xT, yT, zT, isBossRoom));

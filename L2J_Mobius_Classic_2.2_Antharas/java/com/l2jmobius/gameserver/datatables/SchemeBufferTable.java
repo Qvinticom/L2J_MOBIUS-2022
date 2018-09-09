@@ -181,7 +181,7 @@ public class SchemeBufferTable
 	{
 		if (!_schemesTable.containsKey(playerId))
 		{
-			_schemesTable.put(playerId, new HashMap<String, ArrayList<Integer>>());
+			_schemesTable.put(playerId, new HashMap<>());
 		}
 		else if (_schemesTable.get(playerId).size() >= Config.BUFFER_MAX_SCHEMES)
 		{

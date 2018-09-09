@@ -100,7 +100,7 @@ public final class Keltas extends AbstractNpcAI
 	};
 	// Misc
 	private L2MonsterInstance _spawnedKeltas = null;
-	private final Set<L2Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<L2Spawn, Boolean>());
+	private final Set<L2Spawn> _spawnedMonsters = Collections.newSetFromMap(new ConcurrentHashMap<>());
 	
 	public Keltas()
 	{

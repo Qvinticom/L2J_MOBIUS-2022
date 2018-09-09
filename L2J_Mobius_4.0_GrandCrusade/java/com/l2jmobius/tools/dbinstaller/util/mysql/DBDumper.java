@@ -100,7 +100,7 @@ public class DBDumper
 								{
 									if (!keys.containsKey(dset.getString(4)))
 									{
-										keys.put(dset.getString(4), new ArrayList<String>());
+										keys.put(dset.getString(4), new ArrayList<>());
 									}
 									keys.get(dset.getString(4)).add(dset.getString(1));
 								}

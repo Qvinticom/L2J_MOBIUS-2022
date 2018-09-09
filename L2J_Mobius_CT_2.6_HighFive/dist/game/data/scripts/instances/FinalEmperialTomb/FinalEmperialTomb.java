@@ -262,7 +262,7 @@ public final class FinalEmperialTomb extends AbstractInstance implements IGameXm
 							}
 							
 							final int flag = Integer.parseInt(attrs.getNamedItem("flag").getNodeValue());
-							_spawnList.putIfAbsent(flag, new ArrayList<FETSpawn>());
+							_spawnList.putIfAbsent(flag, new ArrayList<>());
 							
 							for (Node cd = d.getFirstChild(); cd != null; cd = cd.getNextSibling())
 							{

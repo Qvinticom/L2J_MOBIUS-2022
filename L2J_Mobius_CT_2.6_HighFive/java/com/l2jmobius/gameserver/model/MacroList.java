@@ -43,7 +43,7 @@ public class MacroList implements IRestorable
 	private final L2PcInstance _owner;
 	private int _revision;
 	private int _macroId;
-	private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<Integer, Macro>());
+	private final Map<Integer, Macro> _macroses = Collections.synchronizedMap(new LinkedHashMap<>());
 	
 	public MacroList(L2PcInstance owner)
 	{

@@ -432,7 +432,7 @@ public class L2Event
 			// Insert empty lists at _teams.
 			for (int i = 0; i < _teamsNumber; i++)
 			{
-				_teams.put(i + 1, new CopyOnWriteArrayList<L2PcInstance>());
+				_teams.put(i + 1, new CopyOnWriteArrayList<>());
 			}
 			
 			int i = 0;

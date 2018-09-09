@@ -107,9 +107,9 @@ public class SummonEffectsTable
 	
 	public void addServitorEffect(L2PcInstance owner, int referenceSkill, Skill skill, int effectCurTime)
 	{
-		_servitorEffects.putIfAbsent(owner.getObjectId(), new HashMap<Integer, Map<Integer, List<SummonEffect>>>());
-		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new HashMap<Integer, List<SummonEffect>>());
-		getServitorEffects(owner).putIfAbsent(referenceSkill, new CopyOnWriteArrayList<SummonEffect>());
+		_servitorEffects.putIfAbsent(owner.getObjectId(), new HashMap<>());
+		_servitorEffects.get(owner.getObjectId()).putIfAbsent(owner.getClassIndex(), new HashMap<>());
+		getServitorEffects(owner).putIfAbsent(referenceSkill, new CopyOnWriteArrayList<>());
 		getServitorEffects(owner).get(referenceSkill).add(new SummonEffect(skill, effectCurTime));
 	}
 	

@@ -140,7 +140,7 @@ public class DoorData implements IGameXmlReader
 		
 		if (!_regions.containsKey(region))
 		{
-			_regions.put(region, new ArrayList<L2DoorInstance>());
+			_regions.put(region, new ArrayList<>());
 		}
 		_regions.get(region).add(door);
 	}

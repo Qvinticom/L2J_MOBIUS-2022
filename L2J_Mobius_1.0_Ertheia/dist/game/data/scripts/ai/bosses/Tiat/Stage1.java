@@ -239,7 +239,7 @@ public final class Stage1 extends AbstractInstance implements IGameXmlReader
 								
 								if (!_spawnList.containsKey(flag))
 								{
-									_spawnList.put(flag, new ArrayList<SODSpawn>());
+									_spawnList.put(flag, new ArrayList<>());
 								}
 								
 								for (Node f = e.getFirstChild(); f != null; f = f.getNextSibling())
