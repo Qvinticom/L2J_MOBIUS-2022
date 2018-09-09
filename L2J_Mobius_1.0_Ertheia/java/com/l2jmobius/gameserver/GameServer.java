@@ -319,7 +319,6 @@ public class GameServer
 		CastleManager.getInstance().loadInstances();
 		GrandBossManager.getInstance();
 		EventDroplist.getInstance();
-		CommissionManager.getInstance();
 		
 		printSection("Instance");
 		InstanceManager.getInstance();

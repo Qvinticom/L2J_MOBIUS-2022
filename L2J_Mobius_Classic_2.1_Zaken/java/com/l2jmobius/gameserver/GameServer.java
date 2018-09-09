@@ -323,7 +323,6 @@ public class GameServer
 		SchemeBufferTable.getInstance();
 		GrandBossManager.getInstance();
 		EventDroplist.getInstance();
-		CommissionManager.getInstance();
 		
 		printSection("Instance");
 		InstanceManager.getInstance();
