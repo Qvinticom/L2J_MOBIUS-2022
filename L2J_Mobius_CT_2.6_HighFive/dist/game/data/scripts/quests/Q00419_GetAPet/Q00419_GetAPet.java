@@ -297,7 +297,7 @@ public final class Q00419_GetAPet extends Quest
 						int i7 = 1;
 						for (int i = 1; i <= randomLinkOffset; i++)
 						{
-							i7 = i7 * 2;
+							i7 *= 2;
 						}
 						
 						if (((i7 & qs.getMemoState()) == 0) && (randomLinkOffset < 18))
@@ -321,7 +321,7 @@ public final class Q00419_GetAPet extends Quest
 						int i7 = 1;
 						for (int i = 1; i <= randomReplyOffset; i++)
 						{
-							i7 = i7 * 2;
+							i7 *= 2;
 						}
 						
 						if (((i7 & i8) == 0) && (randomReplyOffset < 5))

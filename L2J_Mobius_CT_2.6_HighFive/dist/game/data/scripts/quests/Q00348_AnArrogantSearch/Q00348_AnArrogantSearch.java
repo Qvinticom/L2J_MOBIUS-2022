@@ -985,23 +985,23 @@ public class Q00348_AnArrogantSearch extends Quest
 								int i0 = memoStateEx % 10;
 								if (i0 >= 4)
 								{
-									i1 = i1 + 6;
-									i0 = i0 - 4;
-									i2 = i2 + 1;
+									i1 += 6;
+									i0 -= 4;
+									i2 += 1;
 								}
 								
 								if (i0 >= 2)
 								{
-									i0 = i0 - 2;
-									i1 = i1 + 1;
-									i2 = i2 + 1;
+									i0 -= 2;
+									i1 += 1;
+									i2 += 1;
 								}
 								
 								if (i0 >= 1)
 								{
-									i1 = i1 + 3;
-									i2 = i2 + 1;
-									i0 = i0 - 1;
+									i1 += 3;
+									i2 += 1;
+									i0 -= 1;
 								}
 								
 								if (i0 == 0)

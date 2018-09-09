@@ -813,7 +813,7 @@ public abstract class L2Object extends ListenersContainer implements IIdentifiab
 		int heading = Util.calculateHeadingFrom(this, target) - _heading;
 		if (heading < 0)
 		{
-			heading = 65535 + heading;
+			heading += 65535;
 		}
 		return Util.convertHeadingToDegree(heading);
 	}

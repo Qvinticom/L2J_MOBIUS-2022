@@ -780,22 +780,22 @@ public final class Instance
 			else if ((remaining > 300000) && (emptyTimeLeft > 300000))
 			{
 				interval = 300000;
-				remaining = remaining - 300000;
+				remaining -= 300000;
 			}
 			else if ((remaining > 60000) && (emptyTimeLeft > 60000))
 			{
 				interval = 60000;
-				remaining = remaining - 60000;
+				remaining -= 60000;
 			}
 			else if ((remaining > 30000) && (emptyTimeLeft > 30000))
 			{
 				interval = 30000;
-				remaining = remaining - 30000;
+				remaining -= 30000;
 			}
 			else
 			{
 				interval = 10000;
-				remaining = remaining - 10000;
+				remaining -= 10000;
 			}
 		}
 		else if (remaining > 300000)
@@ -805,7 +805,7 @@ public final class Instance
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
 			Broadcast.toPlayersInInstance(sm, _id);
-			remaining = remaining - 300000;
+			remaining -= 300000;
 		}
 		else if (remaining > 60000)
 		{
@@ -814,21 +814,21 @@ public final class Instance
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 			sm.addString(Integer.toString(timeLeft));
 			Broadcast.toPlayersInInstance(sm, _id);
-			remaining = remaining - 60000;
+			remaining -= 60000;
 		}
 		else if (remaining > 30000)
 		{
 			timeLeft = remaining / 1000;
 			interval = 30000;
 			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
-			remaining = remaining - 30000;
+			remaining -= 30000;
 		}
 		else
 		{
 			timeLeft = remaining / 1000;
 			interval = 10000;
 			cs = new CreatureSay(0, ChatType.ALLIANCE, "Notice", timeLeft + " seconds left.");
-			remaining = remaining - 10000;
+			remaining -= 10000;
 		}
 		if (cs != null)
 		{

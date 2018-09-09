@@ -924,20 +924,20 @@ public class L2AttackableAI extends L2CharacterAI
 					
 					if (originalAttackTarget.getX() < posX)
 					{
-						posX = posX + 300;
+						posX += 300;
 					}
 					else
 					{
-						posX = posX - 300;
+						posX -= 300;
 					}
 					
 					if (originalAttackTarget.getY() < posY)
 					{
-						posY = posY + 300;
+						posY += 300;
 					}
 					else
 					{
-						posY = posY - 300;
+						posY -= 300;
 					}
 					
 					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceId()))
@@ -1213,10 +1213,10 @@ public class L2AttackableAI extends L2CharacterAI
 		int range = npc.getPhysicalAttackRange() + combinedCollision;
 		if (mostHate.isMoving())
 		{
-			range = range + 50;
+			range += 50;
 			if (npc.isMoving())
 			{
-				range = range + 50;
+				range += 50;
 			}
 		}
 		
@@ -1304,7 +1304,7 @@ public class L2AttackableAI extends L2CharacterAI
 		final double srange = sk.getCastRange() + caster.getTemplate().getCollisionRadius();
 		if (attackTarget.isMoving())
 		{
-			dist2 = dist2 - 30;
+			dist2 -= 30;
 		}
 		
 		if (sk.isContinuous())
@@ -1901,7 +1901,7 @@ public class L2AttackableAI extends L2CharacterAI
 						range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + obj.getTemplate().getCollisionRadius();
 						if (obj.isMoving())
 						{
-							dist2 = dist2 - 70;
+							dist2 -= 70;
 						}
 					}
 					catch (NullPointerException e)
@@ -1930,7 +1930,7 @@ public class L2AttackableAI extends L2CharacterAI
 						range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + obj.getTemplate().getCollisionRadius();
 						if (obj.isMoving())
 						{
-							dist2 = dist2 - 70;
+							dist2 -= 70;
 						}
 					}
 					catch (NullPointerException e)
@@ -1969,7 +1969,7 @@ public class L2AttackableAI extends L2CharacterAI
 						range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + targets.getTemplate().getCollisionRadius();
 						if (targets.isMoving())
 						{
-							dist2 = dist2 - 70;
+							dist2 -= 70;
 						}
 					}
 					catch (NullPointerException e)
@@ -2002,7 +2002,7 @@ public class L2AttackableAI extends L2CharacterAI
 					range = sk.getCastRange() + actor.getTemplate().getCollisionRadius() + obj.getTemplate().getCollisionRadius();
 					if (obj.isMoving())
 					{
-						dist2 = dist2 - 70;
+						dist2 -= 70;
 					}
 				}
 				catch (NullPointerException e)
@@ -2118,7 +2118,7 @@ public class L2AttackableAI extends L2CharacterAI
 					range = actor.getPhysicalAttackRange() + actor.getTemplate().getCollisionRadius() + obj.getTemplate().getCollisionRadius();
 					if (obj.isMoving())
 					{
-						dist2 = dist2 - 70;
+						dist2 -= 70;
 					}
 				}
 				catch (NullPointerException e)

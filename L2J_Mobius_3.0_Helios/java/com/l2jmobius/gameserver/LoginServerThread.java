@@ -187,7 +187,7 @@ public class LoginServerThread extends Thread
 					while ((newBytes != -1) && (receivedBytes < (length - 2)))
 					{
 						newBytes = in.read(incoming, receivedBytes, left);
-						receivedBytes = receivedBytes + newBytes;
+						receivedBytes += newBytes;
 						left -= newBytes;
 					}
 					

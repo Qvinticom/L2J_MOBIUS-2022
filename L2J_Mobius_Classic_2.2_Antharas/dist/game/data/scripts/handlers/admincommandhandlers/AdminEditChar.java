@@ -1242,7 +1242,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			name = player.getName();
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))
 			{
-				CharactersFound = CharactersFound + 1;
+				CharactersFound += 1;
 				replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
 				replyMSG.append(name);
 				replyMSG.append("\">");
@@ -1342,7 +1342,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			}
 			
 			name = player.getName();
-			CharactersFound = CharactersFound + 1;
+			CharactersFound += 1;
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info ");
 			replyMSG.append(name);
 			replyMSG.append("\">");

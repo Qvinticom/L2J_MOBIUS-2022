@@ -256,7 +256,7 @@ public final class Formulas
 		// Autoattack critical depends on level difference at high levels as well.
 		if ((activeChar.getLevel() >= 78) || (target.getLevel() >= 78))
 		{
-			rate = rate + (Math.sqrt(activeChar.getLevel()) * (activeChar.getLevel() - target.getLevel()) * 0.125);
+			rate += (Math.sqrt(activeChar.getLevel()) * (activeChar.getLevel() - target.getLevel()) * 0.125);
 		}
 		
 		// Autoattack critical rate is limited between 3%-97%.

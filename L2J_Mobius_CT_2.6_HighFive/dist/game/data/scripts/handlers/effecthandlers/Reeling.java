@@ -102,7 +102,7 @@ public final class Reeling extends AbstractEffect
 		{
 			player.sendPacket(SystemMessageId.DUE_TO_YOUR_REELING_AND_OR_PUMPING_SKILL_BEING_THREE_OR_MORE_LEVELS_HIGHER_THAN_YOUR_FISHING_SKILL_A_50_DAMAGE_PENALTY_WILL_BE_APPLIED);
 			pen = (int) (dmg * 0.05);
-			dmg = dmg - pen;
+			dmg -= pen;
 		}
 		if (SS > 1)
 		{

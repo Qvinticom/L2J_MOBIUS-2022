@@ -781,11 +781,11 @@ public class Q00335_TheSongOfTheHunter extends Quest
 						}
 					}
 					
-					i0 = 33520 + i0;
-					i1 = 33520 + i1;
-					i2 = 33520 + i2;
-					i3 = 33520 + i3;
-					i4 = 33520 + i4;
+					i0 += 33520;
+					i1 += 33520;
+					i2 += 33520;
+					i3 += 33520;
+					i4 += 33520;
 					
 					htmltext = getHtml(player, "30745-16.html", i0, i1, i2, i3, i4);
 				}
@@ -793,20 +793,20 @@ public class Q00335_TheSongOfTheHunter extends Quest
 				{
 					i5 = qs.getMemoState();
 					i0 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i1 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i2 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i3 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i4 = i5 % 32;
-					i5 = i5 / 32;
-					i0 = 33520 + i0;
-					i1 = 33520 + i1;
-					i2 = 33520 + i2;
-					i3 = 33520 + i3;
-					i4 = 33520 + i4;
+					i5 /= 32;
+					i0 += 33520;
+					i1 += 33520;
+					i2 += 33520;
+					i3 += 33520;
+					i4 += 33520;
 					
 					htmltext = getHtml(player, "30745-16.html", i4, i3, i2, i1, i0);
 				}
@@ -901,15 +901,15 @@ public class Q00335_TheSongOfTheHunter extends Quest
 				{
 					i5 = qs.getMemoState();
 					i0 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i1 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i2 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i3 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i4 = i5 % 32;
-					i5 = i5 / 32;
+					i5 /= 32;
 					i0 = 33520 + (i0 + 20);
 					i1 = 33520 + (i1 + 20);
 					i2 = 33520 + (i2 + 20);

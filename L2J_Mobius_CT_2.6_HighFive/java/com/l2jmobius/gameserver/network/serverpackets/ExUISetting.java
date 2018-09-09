@@ -49,21 +49,21 @@ public class ExUISetting implements IClientOutgoingPacket
 			if (_uiSettings.getCategories().containsKey(category))
 			{
 				final List<Integer> catElList1 = _uiSettings.getCategories().get(category);
-				size = size + catElList1.size();
+				size += catElList1.size();
 			}
 			category++;
 			size++;
 			if (_uiSettings.getCategories().containsKey(category))
 			{
 				final List<Integer> catElList2 = _uiSettings.getCategories().get(category);
-				size = size + catElList2.size();
+				size += catElList2.size();
 			}
 			category++;
-			size = size + 4;
+			size += 4;
 			if (_uiSettings.getKeys().containsKey(i))
 			{
 				final List<ActionKey> keyElList = _uiSettings.getKeys().get(i);
-				size = size + (keyElList.size() * 20);
+				size += (keyElList.size() * 20);
 			}
 		}
 		buffsize = size;

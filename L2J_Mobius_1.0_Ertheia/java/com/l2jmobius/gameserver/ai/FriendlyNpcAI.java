@@ -125,7 +125,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 					int newX = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
 					{
-						newX = originalAttackTarget.getX() + newX;
+						newX += originalAttackTarget.getX();
 					}
 					else
 					{
@@ -134,7 +134,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 					int newY = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
 					{
-						newY = originalAttackTarget.getY() + newY;
+						newY += originalAttackTarget.getY();
 					}
 					else
 					{
@@ -167,20 +167,20 @@ public class FriendlyNpcAI extends L2AttackableAI
 					
 					if (originalAttackTarget.getX() < posX)
 					{
-						posX = posX + 300;
+						posX += 300;
 					}
 					else
 					{
-						posX = posX - 300;
+						posX -= 300;
 					}
 					
 					if (originalAttackTarget.getY() < posY)
 					{
-						posY = posY + 300;
+						posY += 300;
 					}
 					else
 					{
-						posY = posY - 300;
+						posY -= 300;
 					}
 					
 					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))
@@ -197,10 +197,10 @@ public class FriendlyNpcAI extends L2AttackableAI
 		int range = npc.getPhysicalAttackRange() + combinedCollision;
 		if (originalAttackTarget.isMoving())
 		{
-			range = range + 50;
+			range += 50;
 			if (npc.isMoving())
 			{
-				range = range + 50;
+				range += 50;
 			}
 		}
 		

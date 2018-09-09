@@ -102,7 +102,7 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 	public void onReceiveFood()
 	{
 		// Eating food extends the duration by 20secs, to a max of 20minutes
-		_remainingTime = _remainingTime + DURATION_INCREASE_INTERVAL;
+		_remainingTime += DURATION_INCREASE_INTERVAL;
 		if (_remainingTime > MAX_DURATION)
 		{
 			_remainingTime = MAX_DURATION;

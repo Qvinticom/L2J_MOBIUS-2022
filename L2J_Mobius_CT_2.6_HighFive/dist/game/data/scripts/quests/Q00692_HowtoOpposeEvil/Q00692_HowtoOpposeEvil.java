@@ -252,7 +252,7 @@ public final class Q00692_HowtoOpposeEvil extends Quest
 			return false;
 		}
 		
-		count = count / minCount;
+		count /= minCount;
 		takeItems(player, itemId, count * minCount);
 		rewardItems(player, rewardItemId, rewardCount * count);
 		return true;

@@ -199,7 +199,7 @@ public class Hero
 	private String calcFightTime(long FightTime)
 	{
 		final String format = String.format("%%0%dd", 2);
-		FightTime = FightTime / 1000;
+		FightTime /= 1000;
 		final String seconds = String.format(format, FightTime % 60);
 		final String minutes = String.format(format, (FightTime % 3600) / 60);
 		return minutes + ":" + seconds;

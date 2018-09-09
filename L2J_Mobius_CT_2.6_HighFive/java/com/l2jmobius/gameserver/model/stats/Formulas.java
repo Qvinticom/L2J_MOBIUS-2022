@@ -1782,12 +1782,12 @@ public final class Formulas
 		attack_attribute += 100;
 		attack_attribute *= attack_attribute;
 		
-		attack_attribute_mod = (attack_attribute / 144.0) * attack_attribute_mod;
+		attack_attribute_mod *= (attack_attribute / 144.0);
 		
 		defence_attribute += 100;
 		defence_attribute *= defence_attribute;
 		
-		defence_attribute_mod = (defence_attribute / 169.0) * defence_attribute_mod;
+		defence_attribute_mod *= (defence_attribute / 169.0);
 		
 		double attribute_mod_diff = attack_attribute_mod - defence_attribute_mod;
 		

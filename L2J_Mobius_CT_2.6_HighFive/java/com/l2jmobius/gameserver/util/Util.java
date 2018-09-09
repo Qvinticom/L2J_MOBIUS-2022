@@ -83,7 +83,7 @@ public final class Util
 		double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
 		if (angleTarget < 0)
 		{
-			angleTarget = 360 + angleTarget;
+			angleTarget += 360;
 		}
 		return angleTarget;
 	}
@@ -97,7 +97,7 @@ public final class Util
 	{
 		if (degree < 0)
 		{
-			degree = 360 + degree;
+			degree += 360;
 		}
 		return (int) (degree * 182.044444444);
 	}
@@ -112,7 +112,7 @@ public final class Util
 		double angleTarget = Math.toDegrees(Math.atan2(toY - fromY, toX - fromX));
 		if (angleTarget < 0)
 		{
-			angleTarget = 360 + angleTarget;
+			angleTarget += 360;
 		}
 		return (int) (angleTarget * 182.044444444);
 	}
@@ -122,7 +122,7 @@ public final class Util
 		double angleTarget = Math.toDegrees(Math.atan2(dy, dx));
 		if (angleTarget < 0)
 		{
-			angleTarget = 360 + angleTarget;
+			angleTarget += 360;
 		}
 		return (int) (angleTarget * 182.044444444);
 	}

@@ -132,7 +132,7 @@ public class StackIDFactory extends IdFactory
 		else
 		{
 			id = _curOID;
-			_curOID = _curOID + 1;
+			_curOID += 1;
 		}
 		return id;
 	}

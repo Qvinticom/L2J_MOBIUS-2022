@@ -112,13 +112,13 @@ public class ZoneCuboid extends L2ZoneForm
 		final int _y2 = _r.y + _r.height;
 		
 		// x1->x2
-		for (int x = _x1; x < _x2; x = x + STEP)
+		for (int x = _x1; x < _x2; x += STEP)
 		{
 			dropDebugItem(Inventory.ADENA_ID, 1, x, _y1, z);
 			dropDebugItem(Inventory.ADENA_ID, 1, x, _y2, z);
 		}
 		// y1->y2
-		for (int y = _y1; y < _y2; y = y + STEP)
+		for (int y = _y1; y < _y2; y += STEP)
 		{
 			dropDebugItem(Inventory.ADENA_ID, 1, _x1, y, z);
 			dropDebugItem(Inventory.ADENA_ID, 1, _x2, y, z);

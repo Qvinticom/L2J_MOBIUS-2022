@@ -757,7 +757,7 @@ public class L2AttackableAI extends L2CharacterAI
 					int newX = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
 					{
-						newX = target.getX() + newX;
+						newX += target.getX();
 					}
 					else
 					{
@@ -766,7 +766,7 @@ public class L2AttackableAI extends L2CharacterAI
 					int newY = combinedCollision + Rnd.get(40);
 					if (Rnd.nextBoolean())
 					{
-						newY = target.getY() + newY;
+						newY += target.getY();
 					}
 					else
 					{
@@ -799,20 +799,20 @@ public class L2AttackableAI extends L2CharacterAI
 					
 					if (target.getX() < posX)
 					{
-						posX = posX + 300;
+						posX += 300;
 					}
 					else
 					{
-						posX = posX - 300;
+						posX -= 300;
 					}
 					
 					if (target.getY() < posY)
 					{
-						posY = posY + 300;
+						posY += 300;
 					}
 					else
 					{
-						posY = posY - 300;
+						posY -= 300;
 					}
 					
 					if (GeoEngine.getInstance().canMoveToTarget(npc.getX(), npc.getY(), npc.getZ(), posX, posY, posZ, npc.getInstanceWorld()))

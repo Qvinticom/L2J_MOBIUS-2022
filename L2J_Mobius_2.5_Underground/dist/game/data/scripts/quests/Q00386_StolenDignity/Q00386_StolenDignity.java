@@ -311,7 +311,7 @@ public final class Q00386_StolenDignity extends Quest
 	
 	private String fillBoard(L2PcInstance player, QuestState qs, String html)
 	{
-		for (int i0 = 0; i0 < 9; i0 = i0 + 1)
+		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
 			final int i1 = getNumberFromBingoBoard(qs, i0);
 			if (isSelectedBingoNumber(qs, i1))
@@ -328,7 +328,7 @@ public final class Q00386_StolenDignity extends Quest
 	
 	private String colorBoard(L2PcInstance player, QuestState qs, String html)
 	{
-		for (int i0 = 0; i0 < 9; i0 = i0 + 1)
+		for (int i0 = 0; i0 < 9; i0 += 1)
 		{
 			final int i1 = getNumberFromBingoBoard(qs, i0);
 			html = html.replace("<?FontColor" + (i0 + 1) + "?>", isSelectedBingoNumber(qs, i1) ? "ff0000" : "ffffff");
