@@ -72,7 +72,7 @@ public class DatabaseBackup
 		final String mysqldumpPath = System.getProperty("os.name").toLowerCase().indexOf("win") >= 0 ? Config.MYSQL_BIN_PATH : "";
 		try
 		{
-			final Process process = Runtime.getRuntime().exec(mysqldumpPath + "mysqldump -u " + Config.DATABASE_LOGIN + (Config.DATABASE_PASSWORD.trim().isEmpty() ? "" : " -p" + Config.DATABASE_PASSWORD) + " " + Config.DATABASE_URL.replace("jdbc:mysql://", "").replaceAll(".*\\/|\\?.*", "") + " -r " + Config.BACKUP_PATH + (Server.serverMode == Server.MODE_GAMESERVER ? "game" : "login") + new SimpleDateFormat("_yyyy_MM_dd_HH_mm'.sql'").format(new Date()));
+			final Process process = Runtime.getRuntime().exec(mysqldumpPath + "mysqldump -u " + Config.DATABASE_LOGIN + (Config.DATABASE_PASSWORD.trim().isEmpty() ? "" : " -p" + Config.DATABASE_PASSWORD) + " " + Config.DATABASE_URL.replace("jdbc:mariadb://", "").replaceAll(".*\\/|\\?.*", "") + " -r " + Config.BACKUP_PATH + (Server.serverMode == Server.MODE_GAMESERVER ? "game" : "login") + new SimpleDateFormat("_yyyy_MM_dd_HH_mm'.sql'").format(new Date()));
 			process.waitFor();
 		}
 		catch (Exception e)

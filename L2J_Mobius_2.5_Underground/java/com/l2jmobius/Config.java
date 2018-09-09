@@ -1207,7 +1207,7 @@ public final class Config
 			ACCEPT_ALTERNATE_ID = serverSettings.getBoolean("AcceptAlternateID", true);
 			
 			DATABASE_DRIVER = serverSettings.getString("Driver", "org.mariadb.jdbc.Driver");
-			DATABASE_URL = serverSettings.getString("URL", "jdbc:mysql://localhost/l2jgs");
+			DATABASE_URL = serverSettings.getString("URL", "jdbc:mariadb://localhost/l2jgs");
 			DATABASE_LOGIN = serverSettings.getString("Login", "root");
 			DATABASE_PASSWORD = serverSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = serverSettings.getInt("MaximumDbConnections", 10);
@@ -2825,7 +2825,7 @@ public final class Config
 			LOGIN_SERVER_SCHEDULE_RESTART_TIME = ServerSettings.getLong("LoginRestartTime", 24);
 			
 			DATABASE_DRIVER = ServerSettings.getString("Driver", "org.mariadb.jdbc.Driver");
-			DATABASE_URL = ServerSettings.getString("URL", "jdbc:mysql://localhost/l2jls");
+			DATABASE_URL = ServerSettings.getString("URL", "jdbc:mariadb://localhost/l2jls");
 			DATABASE_LOGIN = ServerSettings.getString("Login", "root");
 			DATABASE_PASSWORD = ServerSettings.getString("Password", "");
 			DATABASE_MAX_CONNECTIONS = ServerSettings.getInt("MaximumDbConnections", 10);
