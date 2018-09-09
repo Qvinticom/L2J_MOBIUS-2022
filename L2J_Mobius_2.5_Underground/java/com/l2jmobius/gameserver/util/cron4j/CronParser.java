@@ -278,7 +278,7 @@ public class CronParser
 	public static void parseLine(TaskTable table, String line) throws Exception
 	{
 		line = line.trim();
-		if ((line.length() == 0) || (line.charAt(0) == '#'))
+		if ((line.isEmpty()) || (line.charAt(0) == '#'))
 		{
 			return;
 		}
@@ -436,7 +436,7 @@ public class CronParser
 		{
 			// Java inner-process.
 			String className = command.substring(5);
-			if (className.length() == 0)
+			if (className.isEmpty())
 			{
 				throw new Exception("Invalid Java class name on line: " + line);
 			}
@@ -450,7 +450,7 @@ public class CronParser
 			{
 				methodName = className.substring(sep + 1);
 				className = className.substring(0, sep);
-				if (methodName.length() == 0)
+				if (methodName.isEmpty())
 				{
 					throw new Exception("Invalid Java method name on line: " + line);
 				}

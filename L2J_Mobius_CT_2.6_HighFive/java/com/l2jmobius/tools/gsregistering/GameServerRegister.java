@@ -40,7 +40,7 @@ public class GameServerRegister extends BaseGameServerRegister
 		super();
 		load();
 		
-		if (GameServerTable.getInstance().getServerNames().size() == 0)
+		if (GameServerTable.getInstance().getServerNames().isEmpty())
 		{
 			System.out.println("No available names for GameServer, verify servername.xml file exists in the LoginServer folder.");
 			System.exit(1);

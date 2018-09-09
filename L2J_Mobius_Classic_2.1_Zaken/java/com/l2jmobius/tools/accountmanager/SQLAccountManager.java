@@ -64,7 +64,7 @@ public class SQLAccountManager
 				
 				if (_mode.equals("1") || _mode.equals("2") || _mode.equals("3"))
 				{
-					while (_uname.trim().length() == 0)
+					while (_uname.trim().isEmpty())
 					{
 						System.out.print("Username: ");
 						_uname = _scn.next().toLowerCase();
@@ -72,7 +72,7 @@ public class SQLAccountManager
 					
 					if (_mode.equals("1"))
 					{
-						while (_pass.trim().length() == 0)
+						while (_pass.trim().isEmpty())
 						{
 							System.out.print("Password: ");
 							_pass = _scn.next();
@@ -81,7 +81,7 @@ public class SQLAccountManager
 					
 					if (_mode.equals("1") || _mode.equals("2"))
 					{
-						while (_level.trim().length() == 0)
+						while (_level.trim().isEmpty())
 						{
 							System.out.print("Access level: ");
 							_level = _scn.next();

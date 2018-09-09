@@ -368,7 +368,7 @@ public final class PetitionManager
 		
 		final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 		
-		if (_pendingPetitions.size() == 0)
+		if (_pendingPetitions.isEmpty())
 		{
 			htmlContent.append("<tr><td>There are no currently pending petitions.</td></tr>");
 		}

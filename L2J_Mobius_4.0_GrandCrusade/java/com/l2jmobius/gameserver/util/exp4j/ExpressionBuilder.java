@@ -44,7 +44,7 @@ public class ExpressionBuilder
 	 */
 	public ExpressionBuilder(String expression)
 	{
-		if ((expression == null) || (expression.trim().length() == 0))
+		if ((expression == null) || (expression.trim().isEmpty()))
 		{
 			throw new IllegalArgumentException("Expression can not be empty");
 		}
@@ -190,7 +190,7 @@ public class ExpressionBuilder
 	 */
 	public Expression build()
 	{
-		if (expression.length() == 0)
+		if (expression.isEmpty())
 		{
 			throw new IllegalArgumentException("The expression can not be empty");
 		}

@@ -169,7 +169,7 @@ public class AvantGarde extends AbstractNpcAI
 			}
 			case "CancelCertification":
 			{
-				if (player.getSubClasses().size() == 0)
+				if (player.getSubClasses().isEmpty())
 				{
 					htmltext = "32323-07.html";
 				}
