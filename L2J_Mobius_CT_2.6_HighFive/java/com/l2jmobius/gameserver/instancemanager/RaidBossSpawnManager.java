@@ -343,7 +343,7 @@ public class RaidBossSpawnManager
 					continue;
 				}
 				
-				if (boss.getRaidStatus().equals(StatusEnum.ALIVE))
+				if (boss.getRaidStatus() == StatusEnum.ALIVE)
 				{
 					updateStatus(boss, false);
 				}

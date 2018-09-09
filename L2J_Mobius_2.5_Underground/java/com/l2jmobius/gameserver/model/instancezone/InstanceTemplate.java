@@ -498,7 +498,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		}
 		
 		// Now remove buffs by type
-		if (_removeBuffType.equals(InstanceRemoveBuffType.ALL))
+		if (_removeBuffType == InstanceRemoveBuffType.ALL)
 		{
 			for (L2Playable playable : affected)
 			{
@@ -635,7 +635,7 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		// player < party < command channel
 		for (GroupType t : GroupType.values())
 		{
-			if (!t.equals(playerGroup) && groupMaskContains(t))
+			if (t != playerGroup && groupMaskContains(t))
 			{
 				return t;
 			}
@@ -663,11 +663,11 @@ public class InstanceTemplate extends ListenersContainer implements IIdentifiabl
 		
 		// Check if player has group in which he can enter
 		AbstractPlayerGroup pGroup = null;
-		if (type.equals(GroupType.PARTY))
+		if (type == GroupType.PARTY)
 		{
 			pGroup = player.getParty();
 		}
-		else if (type.equals(GroupType.COMMAND_CHANNEL))
+		else if (type == GroupType.COMMAND_CHANNEL)
 		{
 			pGroup = player.getCommandChannel();
 		}

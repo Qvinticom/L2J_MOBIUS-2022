@@ -75,7 +75,7 @@ public final class TeleportHolder
 	 */
 	public boolean isNoblesse()
 	{
-		return _type.equals(TeleportType.NOBLES_ADENA) || _type.equals(TeleportType.NOBLES_TOKEN);
+		return _type == TeleportType.NOBLES_ADENA || _type == TeleportType.NOBLES_TOKEN;
 	}
 	
 	/**

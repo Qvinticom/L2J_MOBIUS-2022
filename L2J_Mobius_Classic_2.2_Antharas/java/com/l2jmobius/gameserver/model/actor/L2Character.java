@@ -1149,7 +1149,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private Attack generateAttackTargetData(L2Character target, L2Weapon weapon, WeaponType weaponType)
 	{
-		final boolean isDual = WeaponType.DUAL.equals(weaponType) || WeaponType.DUALBLUNT.equals(weaponType) || WeaponType.DUALDAGGER.equals(weaponType) || WeaponType.DUALFIST.equals(weaponType);
+		final boolean isDual = WeaponType.DUAL == weaponType || WeaponType.DUALBLUNT == weaponType || WeaponType.DUALDAGGER == weaponType || WeaponType.DUALFIST == weaponType;
 		final Attack attack = new Attack(this, target);
 		boolean shotConsumed = false;
 		

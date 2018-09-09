@@ -464,7 +464,7 @@ public final class L2ClassMasterInstance extends L2MerchantInstance
 			return false;
 		}
 		
-		if (oldCID.equals(newCID.getParent()))
+		if (oldCID == newCID.getParent())
 		{
 			return true;
 		}

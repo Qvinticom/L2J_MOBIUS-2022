@@ -384,7 +384,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					
 					// Sex checks.
 					boolean sexChange = false;
-					if (player.getRace().equals(Race.KAMAEL))
+					if (player.getRace() == Race.KAMAEL)
 					{
 						switch (classidval)
 						{

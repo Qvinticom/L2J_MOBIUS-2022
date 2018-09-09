@@ -417,7 +417,7 @@ public class DBSpawnManager
 					continue;
 				}
 				
-				if (npc.getDBStatus().equals(DBStatusType.ALIVE))
+				if (npc.getDBStatus() == DBStatusType.ALIVE)
 				{
 					updateStatus(npc, false);
 				}

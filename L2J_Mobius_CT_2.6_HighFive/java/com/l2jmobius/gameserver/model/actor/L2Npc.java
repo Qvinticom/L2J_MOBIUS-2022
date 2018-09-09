@@ -293,7 +293,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_NPC_ANIMATION > 0) && isRandomAnimationEnabled() && !getAiType().equals(AIType.CORPSE));
+		return ((Config.MAX_NPC_ANIMATION > 0) && isRandomAnimationEnabled() && getAiType() != AIType.CORPSE);
 	}
 	
 	/**
@@ -1579,7 +1579,7 @@ public class L2Npc extends L2Character
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return super.isMovementDisabled() || !canMove() || getAiType().equals(AIType.CORPSE);
+		return super.isMovementDisabled() || !canMove() || getAiType() == AIType.CORPSE;
 	}
 	
 	public AIType getAiType()

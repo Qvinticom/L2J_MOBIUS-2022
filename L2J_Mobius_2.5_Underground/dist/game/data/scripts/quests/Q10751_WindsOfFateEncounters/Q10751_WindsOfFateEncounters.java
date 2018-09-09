@@ -530,7 +530,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 		final int oldLevel = event.getOldLevel();
 		final int newLevel = event.getNewLevel();
 		
-		if ((st == null) && (player.getRace().equals(Race.ERTHEIA)) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
+		if ((st == null) && (player.getRace() == Race.ERTHEIA) && (oldLevel < newLevel) && (newLevel >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
 			player.sendPacket(new TutorialShowQuestionMark(getId()));
@@ -549,7 +549,7 @@ public final class Q10751_WindsOfFateEncounters extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState st = getQuestState(player, false);
 		
-		if ((st == null) && player.getRace().equals(Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
+		if ((st == null) && player.getRace() == Race.ERTHEIA && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FIRST_CLASS_GROUP)))
 		{
 			showOnScreenMsg(player, NpcStringId.QUEEN_NAVARI_HAS_SENT_A_LETTER_NCLICK_THE_QUESTION_MARK_ICON_TO_READ, ExShowScreenMessage.TOP_CENTER, 10000);
 			player.sendPacket(new TutorialShowQuestionMark(getId()));

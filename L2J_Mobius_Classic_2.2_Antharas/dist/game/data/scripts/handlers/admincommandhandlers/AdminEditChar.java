@@ -380,7 +380,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					}
 					
 					// Sex checks.
-					if (player.getRace().equals(Race.KAMAEL))
+					if (player.getRace() == Race.KAMAEL)
 					{
 						switch (classidval)
 						{
@@ -414,7 +414,7 @@ public class AdminEditChar implements IAdminCommandHandler
 							}
 						}
 					}
-					if (player.getRace().equals(Race.ERTHEIA))
+					if (player.getRace() == Race.ERTHEIA)
 					{
 						player.getAppearance().setSex(true);
 					}

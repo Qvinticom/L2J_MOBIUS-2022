@@ -41,7 +41,7 @@ public class RequestRaidBossSpawnInfo implements IClientIncomingPacket
 		for (int i = 0; i < count; i++)
 		{
 			final int bossId = packet.readD();
-			if (DBSpawnManager.getInstance().getNpcStatusId(bossId).equals(DBStatusType.ALIVE))
+			if (DBSpawnManager.getInstance().getNpcStatusId(bossId) == DBStatusType.ALIVE)
 			{
 				_bossIds.add(bossId);
 			}

@@ -878,7 +878,7 @@ public final class Instance implements IIdentifiable, INamable
 	public void finishInstance(int delay)
 	{
 		// Set re-enter for players
-		if (_template.getReenterType().equals(InstanceReenterType.ON_FINISH))
+		if (_template.getReenterType() == InstanceReenterType.ON_FINISH)
 		{
 			setReenterTime();
 		}
@@ -941,7 +941,7 @@ public final class Instance implements IIdentifiable, INamable
 				addPlayer(player);
 				
 				// Set origin return location if enabled
-				if (_template.getExitLocationType().equals(InstanceTeleportType.ORIGIN))
+				if (_template.getExitLocationType() == InstanceTeleportType.ORIGIN)
 				{
 					player.getVariables().set("INSTANCE_ORIGIN", player.getX() + ";" + player.getY() + ";" + player.getZ());
 				}

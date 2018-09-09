@@ -455,6 +455,6 @@ public final class BuffInfo
 	
 	public boolean isAbnormalType(AbnormalType type)
 	{
-		return _skill.getAbnormalType().equals(type);
+		return _skill.getAbnormalType() == type;
 	}
 }

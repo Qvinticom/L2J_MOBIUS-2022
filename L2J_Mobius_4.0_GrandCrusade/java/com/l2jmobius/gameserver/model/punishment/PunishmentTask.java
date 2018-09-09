@@ -237,7 +237,7 @@ public class PunishmentTask implements Runnable
 			}
 		}
 		
-		if (_type.equals(PunishmentType.CHAT_BAN) && _affect.equals(PunishmentAffect.CHARACTER))
+		if (_type == PunishmentType.CHAT_BAN && _affect == PunishmentAffect.CHARACTER)
 		{
 			final L2PcInstance player = L2World.getInstance().getPlayer(Integer.valueOf(_key));
 			if (player != null)

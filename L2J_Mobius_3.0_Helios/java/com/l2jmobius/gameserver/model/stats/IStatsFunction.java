@@ -118,7 +118,7 @@ public interface IStatsFunction
 				(bodypart == L2Item.SLOT_HAIRALL))
 			{
 				// TODO: Item after enchant shows pDef, but scroll says mDef increase.
-				if (!stat.equals(Stats.PHYSICAL_DEFENCE) && !stat.equals(Stats.MAGICAL_DEFENCE))
+				if (stat != Stats.PHYSICAL_DEFENCE && stat != Stats.MAGICAL_DEFENCE)
 				{
 					continue;
 				}

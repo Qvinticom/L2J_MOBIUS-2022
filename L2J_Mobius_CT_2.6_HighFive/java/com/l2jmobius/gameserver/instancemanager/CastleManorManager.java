@@ -714,17 +714,17 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 	
 	public final boolean isUnderMaintenance()
 	{
-		return _mode.equals(ManorMode.MAINTENANCE);
+		return _mode == ManorMode.MAINTENANCE;
 	}
 	
 	public final boolean isManorApproved()
 	{
-		return _mode.equals(ManorMode.APPROVED);
+		return _mode == ManorMode.APPROVED;
 	}
 	
 	public final boolean isModifiablePeriod()
 	{
-		return _mode.equals(ManorMode.MODIFIABLE);
+		return _mode == ManorMode.MODIFIABLE;
 	}
 	
 	public final String getCurrentModeName()
