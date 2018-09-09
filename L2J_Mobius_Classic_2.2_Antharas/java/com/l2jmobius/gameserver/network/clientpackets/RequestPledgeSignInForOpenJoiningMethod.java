@@ -17,17 +17,20 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
+import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAdd;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Mobius
@@ -59,16 +62,37 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 			final L2Clan clan = pledgeRecruitInfo.getClan();
 			if ((clan != null) && (activeChar.getClan() == null))
 			{
-				clan.addClanMember(activeChar);
-				activeChar.sendPacket(new JoinPledge(_clanId));
-				activeChar.sendPacket(new UserInfo(activeChar));
-				activeChar.broadcastInfo();
+				activeChar.sendPacket(new JoinPledge(clan.getId()));
 				
-				// update clan list
-				clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(activeChar));
-				PledgeShowMemberListAll.sendAllTo(activeChar);
+				// activeChar.setPowerGrade(9); // academy
+				activeChar.setPowerGrade(5); // New member starts at 5, not confirmed.
+				
+				clan.addClanMember(activeChar);
+				activeChar.setClanPrivileges(activeChar.getClan().getRankPrivs(activeChar.getPowerGrade()));
+				activeChar.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
+				
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
+				sm.addString(activeChar.getName());
+				clan.broadcastToOnlineMembers(sm);
+				
+				if (clan.getCastleId() > 0)
+				{
+					CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(activeChar);
+				}
+				if (clan.getFortId() > 0)
+				{
+					FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(activeChar);
+				}
+				activeChar.sendSkillList();
+				
+				clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(activeChar), activeChar);
+				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-				activeChar.sendPacket(new PledgeSkillList(clan));
+				
+				// This activates the clan tab on the new member.
+				PledgeShowMemberListAll.sendAllTo(activeChar);
+				activeChar.setClanJoinExpiryTime(0);
+				activeChar.broadcastUserInfo();
 			}
 		}
 	}

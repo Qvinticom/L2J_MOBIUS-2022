@@ -17,18 +17,20 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import com.l2jmobius.commons.network.PacketReader;
-import com.l2jmobius.gameserver.enums.UserInfoType;
+import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
+import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ExPledgeCount;
 import com.l2jmobius.gameserver.network.serverpackets.JoinPledge;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAdd;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillList;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * @author Sdw
@@ -63,20 +65,42 @@ public class RequestPledgeWaitingUserAccept implements IClientIncomingPacket
 			if ((player != null) && (player.getClan() == null))
 			{
 				final L2Clan clan = activeChar.getClan();
-				clan.addClanMember(player);
-				player.sendPacket(new JoinPledge(_clanId));
-				final UserInfo ui = new UserInfo(player);
-				ui.addComponentType(UserInfoType.CLAN);
-				player.sendPacket(ui);
-				player.broadcastInfo();
+				if (clan != null)
+				{
+					player.sendPacket(new JoinPledge(clan.getId()));
+					
+					// activeChar.setPowerGrade(9); // academy
+					player.setPowerGrade(5); // New member starts at 5, not confirmed.
+					
+					clan.addClanMember(player);
+					player.setClanPrivileges(player.getClan().getRankPrivs(player.getPowerGrade()));
+					player.sendPacket(SystemMessageId.ENTERED_THE_CLAN);
+					
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_JOINED_THE_CLAN);
+					sm.addString(player.getName());
+					clan.broadcastToOnlineMembers(sm);
+					
+					if (clan.getCastleId() > 0)
+					{
+						CastleManager.getInstance().getCastleByOwner(clan).giveResidentialSkills(player);
+					}
+					if (clan.getFortId() > 0)
+					{
+						FortManager.getInstance().getFortByOwner(clan).giveResidentialSkills(player);
+					}
+					player.sendSkillList();
+					
+					clan.broadcastToOtherOnlineMembers(new PledgeShowMemberListAdd(player), player);
+					clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
+					clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
+					
+					// This activates the clan tab on the new member.
+					PledgeShowMemberListAll.sendAllTo(player);
+					player.setClanJoinExpiryTime(0);
+					player.broadcastUserInfo();
+				}
 				
-				// update clan list
-				clan.broadcastToOnlineMembers(new PledgeShowMemberListUpdate(player));
-				PledgeShowMemberListAll.sendAllTo(player);
-				clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
-				player.sendPacket(new PledgeSkillList(clan));
-				
-				ClanEntryManager.getInstance().removePlayerApplication(clan.getId(), _playerId);
+				ClanEntryManager.getInstance().removePlayerApplication(_clanId, _playerId);
 			}
 		}
 		else
