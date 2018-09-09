@@ -54,7 +54,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.scripting.ManagedScript;
 import com.l2jmobius.gameserver.scripting.ScriptManager;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 /**
  * @author Luis Arias
@@ -1362,13 +1361,9 @@ public class Quest extends ManagedScript
 			statement.executeUpdate();
 			statement.close();
 		}
-		catch (MySQLIntegrityConstraintViolationException e)
-		{
-			updateQuestVarInDb(qs, var, value);
-		}
 		catch (Exception e)
 		{
-			LOGGER.warning("could not insert char quest: " + e);
+			updateQuestVarInDb(qs, var, value);
 		}
 	}
 	

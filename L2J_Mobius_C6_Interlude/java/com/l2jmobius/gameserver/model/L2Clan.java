@@ -53,7 +53,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeSkillListAdd;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 /**
  * This class ...
@@ -1139,7 +1138,7 @@ public class L2Clan
 						statement.execute();
 						statement.close();
 					}
-					catch (MySQLIntegrityConstraintViolationException e) // update to avoid miss information
+					catch (Exception e) // update to avoid miss information
 					{
 						statement = con.prepareStatement("UPDATE clan_skills SET skill_level=? WHERE skill_id=? AND clan_id=?");
 						statement.setInt(1, newSkill.getLevel());

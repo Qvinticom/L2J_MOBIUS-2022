@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -52,7 +51,6 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
 import com.l2jmobius.gameserver.templates.item.L2Weapon;
 import com.l2jmobius.gameserver.util.IllegalPlayerAction;
 import com.l2jmobius.gameserver.util.Util;
-import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 
 /**
  * This class manages items.
@@ -1434,17 +1432,13 @@ public final class L2ItemInstance extends L2Object
 			_storedInDb = true;
 			statement.close();
 		}
-		catch (MySQLIntegrityConstraintViolationException e)
+		catch (Exception e)
 		{
 			if (Config.DEBUG)
 			{
 				LOGGER.warning("ATTENTION: Update Item instead of Insert one, check player with id " + _ownerId + " actions on item " + getObjectId());
 			}
 			updateInDb();
-		}
-		catch (SQLException e)
-		{
-			e.printStackTrace();
 		}
 	}
 	
