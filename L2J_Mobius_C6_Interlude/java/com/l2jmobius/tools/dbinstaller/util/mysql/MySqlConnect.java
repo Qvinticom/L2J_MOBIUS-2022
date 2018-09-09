@@ -35,7 +35,7 @@ public class MySqlConnect
 	{
 		try (Formatter form = new Formatter())
 		{
-			Class.forName("com.mysql.jdbc.Driver").newInstance();
+			Class.forName("org.mariadb.jdbc.Driver").newInstance();
 			final String formattedText = form.format("jdbc:mysql://%1$s:%2$s", host, port).toString();
 			con = DriverManager.getConnection(formattedText, user, password);
 			
