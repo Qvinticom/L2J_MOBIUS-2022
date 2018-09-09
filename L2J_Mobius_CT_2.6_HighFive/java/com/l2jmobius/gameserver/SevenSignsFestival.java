@@ -1669,7 +1669,7 @@ public class SevenSignsFestival implements SpawnListener
 		{
 			for (StatsSet festivalData : festivalDataMap.values())
 			{
-				if (festivalData.getString("members").indexOf(playerName) > -1)
+				if (festivalData.getString("members").contains(playerName))
 				{
 					final int festivalId = festivalData.getInt("festivalId");
 					final int numPartyMembers = festivalData.getString("members").split(",").length;
