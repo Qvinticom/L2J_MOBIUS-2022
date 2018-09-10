@@ -17,21 +17,23 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.geodata.GeoData;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.Dice;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
+import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class ...
  * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:30:07 $
  */
-
 public class RollingDice implements IItemHandler
 {
 	private static final int[] ITEM_IDS =
@@ -76,8 +78,18 @@ public class RollingDice implements IItemHandler
 				return;
 			}
 			
-			Dice d = new Dice(activeChar.getObjectId(), item.getItemId(), number, activeChar.getX() - 30, activeChar.getY() - 30, activeChar.getZ());
-			Broadcast.toSelfAndKnownPlayers(activeChar, d);
+			// Mobius: Retail dice position land calculation.
+			final double angle = Util.convertHeadingToDegree(activeChar.getHeading());
+			final double radian = Math.toRadians(angle);
+			final double course = Math.toRadians(180);
+			final int x1 = (int) (Math.cos(Math.PI + radian + course) * 40);
+			final int y1 = (int) (Math.sin(Math.PI + radian + course) * 40);
+			final int x = activeChar.getX() + x1;
+			final int y = activeChar.getY() + y1;
+			final int z = activeChar.getZ();
+			final Location destination = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z);
+			
+			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_ROLLED_S2);
 			sm.addString(activeChar.getName());

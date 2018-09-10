@@ -417,7 +417,10 @@
 		<set name="default_action" val="DICE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="is_destroyable" val="false" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
+		<set name="handler" val="RollingDice" />
 	</item>
 	<item id="4233" type="Weapon" name="Knuckle Duster">
 		<set name="icon" val="icon.weapon_knuckle_dust_i00" />

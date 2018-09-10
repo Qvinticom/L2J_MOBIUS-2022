@@ -518,8 +518,11 @@
 		<set name="default_action" val="DICE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
+		<set name="price" val="500" />
+		<set name="reuse_delay" val="5000" />
+		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
-		<set name="is_destroyable" val="false" />
+		<set name="handler" val="RollingDice" />
 	</item>
 	<item id="4233" name="Fist" type="Weapon">
 		<!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
