@@ -149,7 +149,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
-import com.l2jmobius.gameserver.network.serverpackets.StopRotation;
 import com.l2jmobius.gameserver.network.serverpackets.TeleportToLocation;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
@@ -1149,7 +1148,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	private Attack generateAttackTargetData(L2Character target, L2Weapon weapon, WeaponType weaponType)
 	{
-		final boolean isDual = WeaponType.DUAL == weaponType || WeaponType.DUALBLUNT == weaponType || WeaponType.DUALDAGGER == weaponType || WeaponType.DUALFIST == weaponType;
+		final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUALBLUNT == weaponType) || (WeaponType.DUALDAGGER == weaponType) || (WeaponType.DUALFIST == weaponType);
 		final Attack attack = new Attack(this, target);
 		boolean shotConsumed = false;
 		
@@ -2911,6 +2910,26 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		final boolean isFloating = _isFlying || isInsideZone(ZoneId.WATER);
 		
+		// Stop movement when player has clicked far away and intersected with an obstacle.
+		if (isPlayer() && !isFloating && !_move.disregardingGeodata && (Math.hypot(dx, dy) > 3000))
+		{
+			final double angle = Util.convertHeadingToDegree(getHeading());
+			final double radian = Math.toRadians(angle);
+			final double course = Math.toRadians(180);
+			final double distance = 10 * (_stat.getMoveSpeed() / 100);
+			final int x1 = (int) (Math.cos(Math.PI + radian + course) * distance);
+			final int y1 = (int) (Math.sin(Math.PI + radian + course) * distance);
+			final int x = xPrev + x1;
+			final int y = yPrev + y1;
+			if (!GeoEngine.getInstance().canMoveToTarget(xPrev, yPrev, zPrev, x, y, zPrev, getInstanceWorld()))
+			{
+				_move.disregardingGeodata = true;
+				_move.onGeodataPathIndex = -1; // Set not on geodata path.
+				stopMove(getActingPlayer().getLastServerPosition());
+				return false;
+			}
+		}
+		
 		double delta = (dx * dx) + (dy * dy);
 		if ((delta < 10000) && ((dz * dz) > 2500) // close enough, allows error between client and server geodata if it cannot be avoided
 			&& !isFloating)
@@ -3013,7 +3032,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			setXYZ(loc.getX(), loc.getY(), loc.getZ());
 			setHeading(loc.getHeading());
 			revalidateZone(true);
-			broadcastPacket(new StopRotation(getObjectId(), loc.getHeading(), 0));
 		}
 		broadcastPacket(new StopMove(this));
 	}
@@ -3141,9 +3159,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			distance = Math.abs(dz);
 		}
 		
-		// make water move short and use no geodata checks for swimming chars
-		// distance in a click can easily be over 3000
-		if (isInsideZone(ZoneId.WATER) && (distance > 700))
+		// Make water move short and use no geodata checks for swimming chars distance in a click can easily be over 3000.
+		final boolean isInWater = isInsideZone(ZoneId.WATER);
+		if (isInWater && (distance > 700))
 		{
 			final double divider = 700 / distance;
 			x = curX + (int) (divider * dx);
@@ -3213,7 +3231,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		m.onGeodataPathIndex = -1; // Initialize not on geodata path
 		m.disregardingGeodata = false;
 		
-		if (!_isFlying && !isInsideZone(ZoneId.WATER) && !isVehicle() && !_cursorKeyMovement)
+		if (!_isFlying && !isInWater && !isVehicle() && !_cursorKeyMovement)
 		{
 			final boolean isInVehicle = isPlayer() && (getActingPlayer().getVehicle() != null);
 			if (isInVehicle)
@@ -3239,7 +3257,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						{
 							return;
 						}
-						_move.onGeodataPathIndex = -1; // Set not on geodata path
+						_move.onGeodataPathIndex = -1; // Set not on geodata path.
 					}
 					catch (NullPointerException e)
 					{
@@ -3268,6 +3286,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				if (!isInVehicle // Not in vehicle.
+					&& !(isPlayer() && (distance > 3000)) // Should be able to click far away and move.
 					&& !(isMonster() && (Math.abs(dz) > 100)) // Monsters can move on ledges.
 					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
@@ -3344,7 +3363,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		
 		// Apply Z distance for flying or swimming for correct timing calculations
-		if ((_isFlying || isInsideZone(ZoneId.WATER)) && !verticalMovementOnly)
+		if ((_isFlying || isInWater) && !verticalMovementOnly)
 		{
 			distance = Math.hypot(distance, dz);
 		}
