@@ -258,6 +258,7 @@ public final class Config
 	public static long MAX_ADENA;
 	public static boolean AUTO_LOOT;
 	public static boolean AUTO_LOOT_RAIDS;
+	public static boolean AUTO_LOOT_SLOT_LIMIT;
 	public static int LOOT_RAIDS_PRIVILEGE_INTERVAL;
 	public static int LOOT_RAIDS_PRIVILEGE_CC_SIZE;
 	public static List<Integer> AUTO_LOOT_ITEM_IDS;
@@ -1611,6 +1612,7 @@ public final class Config
 			}
 			AUTO_LOOT = Character.getBoolean("AutoLoot", false);
 			AUTO_LOOT_RAIDS = Character.getBoolean("AutoLootRaids", false);
+			AUTO_LOOT_SLOT_LIMIT = Character.getBoolean("AutoLootSlotLimit", false);
 			LOOT_RAIDS_PRIVILEGE_INTERVAL = Character.getInt("RaidLootRightsInterval", 900) * 1000;
 			LOOT_RAIDS_PRIVILEGE_CC_SIZE = Character.getInt("RaidLootRightsCCSize", 45);
 			final String[] autoLootItemIds = Character.getString("AutoLootItemIds", "0").split(",");

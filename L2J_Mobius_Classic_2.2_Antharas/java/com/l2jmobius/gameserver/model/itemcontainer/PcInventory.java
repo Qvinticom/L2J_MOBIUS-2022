@@ -840,7 +840,7 @@ public class PcInventory extends Inventory
 	
 	public boolean validateCapacity(long slots, boolean questItem)
 	{
-		return (slots == 0) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
+		return ((slots == 0) && !Config.AUTO_LOOT_SLOT_LIMIT) || questItem ? (getSize(item -> item.isQuestItem()) + slots) <= _owner.getQuestInventoryLimit() : (getSize(item -> !item.isQuestItem()) + slots) <= _owner.getInventoryLimit();
 	}
 	
 	@Override
