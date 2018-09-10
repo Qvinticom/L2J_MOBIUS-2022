@@ -62,4 +62,6 @@ public enum TargetType
 	MY_MENTOR,
 	/** Me or my party (if any). Seen in aura skills. */
 	MY_PARTY,
+	/** Pet's owner. */
+	OWNER_PET,
 }

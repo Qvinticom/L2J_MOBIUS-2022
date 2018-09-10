@@ -255,6 +255,7 @@ import handlers.targethandlers.MyParty;
 import handlers.targethandlers.None;
 import handlers.targethandlers.NpcBody;
 import handlers.targethandlers.Others;
+import handlers.targethandlers.OwnerPet;
 import handlers.targethandlers.PcBody;
 import handlers.targethandlers.Self;
 import handlers.targethandlers.Summon;
@@ -614,6 +615,7 @@ public class MasterHandler
 			None.class,
 			NpcBody.class,
 			Others.class,
+			OwnerPet.class,
 			PcBody.class,
 			Self.class,
 			Summon.class,
