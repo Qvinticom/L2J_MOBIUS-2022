@@ -3300,16 +3300,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceWorld());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
-						// No path found
-						// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
-						// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader.
-						// Summons will follow their masters no matter what.
-						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
-						{
-							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-							return;
-						}
-						
 						m.disregardingGeodata = true;
 						
 						// Mobius: Verify destination. Prevents wall collision issues.
