@@ -93,6 +93,8 @@ public class RequestPledgeSignInForOpenJoiningMethod implements IClientIncomingP
 				PledgeShowMemberListAll.sendAllTo(activeChar);
 				activeChar.setClanJoinExpiryTime(0);
 				activeChar.broadcastUserInfo();
+				
+				ClanEntryManager.getInstance().removePlayerApplication(_clanId, activeChar.getObjectId());
 			}
 		}
 	}
