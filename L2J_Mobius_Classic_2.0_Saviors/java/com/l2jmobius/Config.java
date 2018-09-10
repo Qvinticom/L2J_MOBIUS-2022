@@ -989,6 +989,7 @@ public final class Config
 	public static int DUALBOX_CHECK_MAX_PLAYERS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP;
 	public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
+	public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
 	public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
 	public static boolean ALLOW_CHANGE_PASSWORD;
 	public static boolean ALLOW_HUMAN;
@@ -2337,6 +2338,7 @@ public final class Config
 			DUALBOX_CHECK_MAX_PLAYERS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxPlayersPerIP", 0);
 			DUALBOX_CHECK_MAX_OLYMPIAD_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxOlympiadParticipantsPerIP", 0);
 			DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP = DualboxCheck.getInt("DualboxCheckMaxL2EventParticipantsPerIP", 0);
+			DUALBOX_COUNT_OFFLINE_TRADERS = DualboxCheck.getBoolean("DualboxCountOfflineTraders", false);
 			final String[] dualboxCheckWhiteList = DualboxCheck.getString("DualboxCheckWhitelist", "127.0.0.1,0").split(";");
 			DUALBOX_CHECK_WHITELIST = new HashMap<>(dualboxCheckWhiteList.length);
 			for (String entry : dualboxCheckWhiteList)

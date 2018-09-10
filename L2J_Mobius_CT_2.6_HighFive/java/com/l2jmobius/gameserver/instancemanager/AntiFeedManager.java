@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -158,8 +159,19 @@ public final class AntiFeedManager
 		}
 		
 		final Integer addrHash = Integer.valueOf(client.getConnectionAddress().hashCode());
-		
 		final AtomicInteger connectionCount = event.computeIfAbsent(addrHash, k -> new AtomicInteger());
+		
+		if (!Config.DUALBOX_COUNT_OFFLINE_TRADERS)
+		{
+			final String address = client.getConnectionAddress().getHostAddress();
+			for (L2PcInstance player : L2World.getInstance().getPlayers())
+			{
+				if (((player.getClient() == null) || player.getClient().isDetached()) && player.getIPAddress().equals(address))
+				{
+					connectionCount.decrementAndGet();
+				}
+			}
+		}
 		
 		if ((connectionCount.get() + 1) <= (max + Config.DUALBOX_CHECK_WHITELIST.getOrDefault(addrHash, 0)))
 		{

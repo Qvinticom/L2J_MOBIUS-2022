@@ -408,6 +408,7 @@ public final class L2PcInstance extends L2Playable
 	private final List<IEventListener> _eventListeners = new CopyOnWriteArrayList<>();
 	
 	private L2GameClient _client;
+	private String _ip = "N/A";
 	
 	private final String _accountName;
 	private long _deleteTimer;
@@ -3894,16 +3895,15 @@ public final class L2PcInstance extends L2Playable
 	public void setClient(L2GameClient client)
 	{
 		_client = client;
+		if ((_client != null) && (_client.getConnectionAddress() != null))
+		{
+			_ip = _client.getConnectionAddress().getHostAddress();
+		}
 	}
 	
 	public String getIPAddress()
 	{
-		String ip = "N/A";
-		if ((_client != null) && (_client.getConnectionAddress() != null))
-		{
-			ip = _client.getConnectionAddress().getHostAddress();
-		}
-		return ip;
+		return _ip;
 	}
 	
 	public Location getCurrentSkillWorldPosition()
