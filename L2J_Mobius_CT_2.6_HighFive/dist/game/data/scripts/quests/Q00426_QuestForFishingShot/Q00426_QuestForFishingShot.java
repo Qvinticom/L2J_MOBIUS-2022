@@ -312,6 +312,13 @@ public class Q00426_QuestForFishingShot extends Quest
 		MOBS.put(21390, new ChanceReward(750, 5)); // Ashuras of Destruction
 		MOBS.put(21654, new ChanceReward(400, 5)); // Necromancer of Destruction
 		MOBS.put(21656, new ChanceReward(750, 5)); // Ashuras of Destruction
+		MOBS.put(22634, new ChanceReward(280, 4)); // Scarlet Stakato Worker
+		MOBS.put(22636, new ChanceReward(375, 4)); // Scarlet Stakato Noble
+		MOBS.put(22638, new ChanceReward(375, 4)); // Tepra Scarab
+		MOBS.put(22640, new ChanceReward(125, 5)); // Mercenary of Destruction
+		MOBS.put(22644, new ChanceReward(640, 4)); // Arimanes of Destruction
+		MOBS.put(22646, new ChanceReward(750, 5)); // Ashuras of Destruction
+		MOBS.put(22649, new ChanceReward(935, 4)); // Magma Drake
 	}
 	private static final Map<Integer, ChanceReward> MOBS_SPECIAL = new HashMap<>(5);
 	static
