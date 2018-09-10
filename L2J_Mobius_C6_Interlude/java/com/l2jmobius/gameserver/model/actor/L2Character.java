@@ -6018,6 +6018,29 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			speed = getStat().getMoveSpeed();
 		}
 		
+		final boolean isInWater = isInsideZone(ZoneId.WATER);
+		
+		if (isPlayer() && !isInWater && !_move.disregardingGeodata //
+			&& ((Math.hypot(dx, dy) > 3000) // Stop movement when player has clicked far away and intersected with an obstacle.
+				|| _cursorKeyMovement)) // ...or in case of cursor movement, avoid moving through obstacles.
+		{
+			final double angle = Util.convertHeadingToDegree(getHeading());
+			final double radian = Math.toRadians(angle);
+			final double course = Math.toRadians(180);
+			final double distance = 10 * (speed / 100);
+			final int x1 = (int) (Math.cos(Math.PI + radian + course) * distance);
+			final int y1 = (int) (Math.sin(Math.PI + radian + course) * distance);
+			final int x = xPrev + x1;
+			final int y = yPrev + y1;
+			if (!GeoData.getInstance().canMove(xPrev, yPrev, zPrev, x, y, zPrev))
+			{
+				_move.disregardingGeodata = true;
+				_move.onGeodataPathIndex = -1; // Set not on geodata path.
+				stopMove(getActingPlayer().getLastServerPosition());
+				return false;
+			}
+		}
+		
 		final double distPassed = (speed * (gameTicks - m._moveTimestamp)) / GameTimeController.TICKS_PER_SECOND;
 		if ((((dx * dx) + (dy * dy)) < 10000) && ((dz * dz) > 2500)) // close enough, allows error between client and server geodata if it cannot be avoided
 		{
@@ -6030,7 +6053,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		// if (Config.DEVELOPER) LOGGER.warning("Move Ticks:" + (gameTicks - m._moveTimestamp) + ", distPassed:" + distPassed + ", distFraction:" + distFraction);
 		
-		if (distFraction > 1) // already there
+		if (distFraction > 1)
 		{
 			// Set the position of the L2Character to the destination
 			super.getPosition().setXYZ(m._xDestination, m._yDestination, m._zDestination);
@@ -6303,7 +6326,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		// Get the Move Speed of the L2Charcater
 		final float speed = getStat().getMoveSpeed();
-		
 		if ((speed <= 0) || isMovementDisabled())
 		{
 			return;
@@ -6321,15 +6343,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			z = Math.max(z - 500, curZ);
 		}
 		
-		// In case of cursor movement, avoid moving through obstacles.
-		if (_cursorKeyMovement)
-		{
-			final Location newDestination = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z);
-			x = newDestination.getX();
-			y = newDestination.getY();
-			z = newDestination.getZ();
-		}
-		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
 		double dx = (x - curX);
@@ -6343,8 +6356,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			distance = Math.abs(dz);
 		}
 		
-		// make water move short and use no geodata checks for swimming chars
-		// distance in a click can easily be over 3000
+		// Make water move short and use no geodata checks for swimming chars distance in a click can easily be over 3000.
 		if (isInWater && (distance > 700))
 		{
 			final double divider = 700 / distance;
@@ -6441,7 +6453,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						{
 							return;
 						}
-						_move.onGeodataPathIndex = -1; // Set not on geodata path
+						_move.onGeodataPathIndex = -1; // Set not on geodata path.
 					}
 					catch (NullPointerException e)
 					{
@@ -6469,7 +6481,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					return;
 				}
 				
-				if (!isInBoat)
+				if (!isInBoat // Not in vehicle.
+					&& !(isPlayer() && (distance > 3000)) // Should be able to click far away and move.
+					&& !(isMonster() && (Math.abs(dz) > 100)) // Monsters can move on ledges.
+					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
 					final Location destiny = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z);
@@ -6479,14 +6494,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					dx = x - curX;
 					dy = y - curY;
 					dz = z - curZ;
-					distance = verticalMovementOnly ? Math.abs(dz * dz) : Math.sqrt((dx * dx) + (dy * dy));
+					distance = verticalMovementOnly ? Math.pow(dz, 2) : Math.hypot(dx, dy);
 				}
 				
 				// Pathfinding checks.
 				if (((originalDistance - distance) > 30) && !_isAfraid && !isInBoat)
 				{
-					// Path calculation
-					// Overrides previous movement check
+					// Path calculation -- overrides previous movement check
 					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, this instanceof L2Playable);
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
@@ -6494,7 +6508,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						// Even though there's no path found (remember geonodes aren't perfect), the mob is attacking and right now we set it so that the mob will go after target anyway, is dz is small enough.
 						// Currently minions also must move freely since L2AttackableAI commands them to move along with their leader.
 						// Summons will follow their masters no matter what.
-						if ((this instanceof L2PcInstance) || (!(this instanceof L2Playable) && !(this instanceof L2MinionInstance) && (Math.abs(z - curZ) > 140)) || ((this instanceof L2Summon) && !((L2Summon) this).getFollowStatus()))
+						if (isPlayer() || (!isPlayable() && !isMinion() && (Math.abs(z - curZ) > 140)) || (isSummon() && !((L2Summon) this).getFollowStatus()))
 						{
 							getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 							return;

@@ -2910,8 +2910,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		
 		final boolean isFloating = _isFlying || isInsideZone(ZoneId.WATER);
 		
-		// Stop movement when player has clicked far away and intersected with an obstacle.
-		if (isPlayer() && !isFloating && !_move.disregardingGeodata && (Math.hypot(dx, dy) > 3000))
+		if (isPlayer() && !isFloating && !_move.disregardingGeodata //
+			&& ((Math.hypot(dx, dy) > 3000) // Stop movement when player has clicked far away and intersected with an obstacle.
+				|| _cursorKeyMovement)) // ...or in case of cursor movement, avoid moving through obstacles.
 		{
 			final double angle = Util.convertHeadingToDegree(getHeading());
 			final double radian = Math.toRadians(angle);
@@ -3136,15 +3137,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		final int curX = getX();
 		final int curY = getY();
 		final int curZ = getZ();
-		
-		// In case of cursor movement, avoid moving through obstacles.
-		if (_cursorKeyMovement)
-		{
-			final Location newDestination = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceWorld());
-			x = newDestination.getX();
-			y = newDestination.getY();
-			z = newDestination.getZ();
-		}
 		
 		// Calculate distance (dx,dy) between current position and destination
 		// TODO: improve Z axis move/follow support when dx,dy are small compared to dz
