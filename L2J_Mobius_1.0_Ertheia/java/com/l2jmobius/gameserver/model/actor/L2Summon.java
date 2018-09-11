@@ -819,14 +819,7 @@ public abstract class L2Summon extends L2Playable
 				return;
 			}
 			
-			if (isPet())
-			{
-				player.sendPacket(new ExPetInfo(this, player, val));
-			}
-			else
-			{
-				player.sendPacket(new SummonInfo(this, player, val));
-			}
+			player.sendPacket(new ExPetInfo(this, player, val));
 		});
 	}
 	
@@ -857,13 +850,9 @@ public abstract class L2Summon extends L2Playable
 				activeChar.sendPacket(new PetItemList(getInventory().getItems()));
 			}
 		}
-		else if (isPet())
-		{
-			activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
-		}
 		else
 		{
-			activeChar.sendPacket(new SummonInfo(this, activeChar, 0));
+			activeChar.sendPacket(new ExPetInfo(this, activeChar, 0));
 		}
 	}
 	
