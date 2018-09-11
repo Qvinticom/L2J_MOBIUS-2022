@@ -1,0 +1,1388 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="18700" toLevel="1" name="Freya's Art of Seduction">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, Damage Reduction + 10%, All Attributes Defense + 100.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18701" toLevel="1" name="Freya's Art of Seduction">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, XP Gain + 30%, Vitality Bonus + 12.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-12</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18702" toLevel="1" name="Pa'agrio's Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18704" toLevel="1" name="MOPP Combat Ration">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18705" toLevel="3" name="Low-grade Arena Loot">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18706" toLevel="1" name="Player Commendation Points">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18710" toLevel="1" name="Formal Wear Appearance Stone">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+	</skill>
+	<skill id="18711" toLevel="1" name="Blessing of Twilight">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18712" toLevel="1" name="Blessing of the Dawn">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18713" toLevel="6" name="Red Cat's Eye">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="CriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+					<value level="5">12</value>
+					<value level="6">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+					<value level="5">12</value>
+					<value level="6">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower" fromLevel="6" toLevel="6">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18714" toLevel="6" name="Blue Cat's Eye">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">4</value>
+					<value level="4">7</value>
+					<value level="5">12</value>
+					<value level="6">12</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower" fromLevel="6" toLevel="6">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18715" toLevel="1" name="Greater Ruby">
+		<!-- Soulshot damage + 20%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="18716" toLevel="1" name="Greater Ruby">
+		<!-- Beast Soulshot damage + 20%. -->
+		<icon>icon.bm_jewel_ssdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="18717" toLevel="6" name="Ruby">
+		<!-- P. Atk. + 9%. -->
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value fromLevel="6" toLevel="6">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18718" toLevel="2" name="Greater Sapphire">
+		<!-- Blessed Spiritshot Damage + 20%. -->
+		<icon>icon.bm_jewel_spsdmg_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="18719" toLevel="6" name="Sapphire">
+		<!-- M. Atk. + 13%. -->
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value fromLevel="1" toLevel="5">0</value>
+					<value fromLevel="6" toLevel="6">13</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18720" toLevel="1" name="Greater Obsidian - Cancel Target">
+		<!-- Cancels enemy's target on you. -->
+		<icon>icon.bm_jewel_pvpdef_high_lv1_lavianrose</icon>
+		<operateType>A1</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<rideState>NONE</rideState>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
+		<effects>
+			<effect name="TargetCancel" />
+		</effects>
+	</skill>
+	<skill id="18721" toLevel="1" name="Greater Garnet - Cancel Stun/Silence">
+		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>1</abnormalTime>
+		<chance>100</chance>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<rideState>NONE</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<targetConditions>
+			<condition name="OpTargetPc" />
+		</targetConditions>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>
+					<value level="1">STUN,9;SILENCE,9;SILENCE_ALL,9;SILENCE_PHYSICAL,9;</value>
+				</dispel>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18722" toLevel="1" name="Greater Garnet - Cancel Debuffs">
+		<icon>icon.bm_jewel_garnet_high_lv1_lavianrose</icon>
+		<operateType>A2</operateType>
+		<abnormalTime>7</abnormalTime>
+		<chance>100</chance>
+		<reuseDelay>15000</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<rideState>NONE</rideState>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DebuffBlock" fromLevel="1" toLevel="1"/>
+			<effect name="DispelByCategory">
+				<slot>DEBUFF</slot>
+				<rate>100</rate>
+				<max>10</max>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18723" toLevel="4" name="Ultimate Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18724" toLevel="2" name="Red Cat's Eye Fortune Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18725" toLevel="1" name="Freya's Art of Seduction - Barrier">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, Damage Reduction + 10%, All Attributes Defense + 100.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18726" toLevel="1" name="Freya's Art of Seduction - EXP">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, XP Gain + 30%, Vitality Bonus + 12.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-12</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18727" toLevel="1" name="Pa??agrio??s Blessing - Might">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18728" toLevel="1" name="Pa??agrio??s Blessing - EXP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18729" toLevel="1" name="Treat Wounded Soldier">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18730" toLevel="1" name="Craft Protection Battery Parts">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18731" toLevel="1" name="Activate Protection Battery">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18732" toLevel="4" name="Low-grade Keucereus Defense Supply Box">
+		<icon>icon.skill0000</icon>
+		<itemConsumeId>
+				<value level="1">47729</value>
+				<value level="2">47730</value>
+				<value level="3">47731</value>
+				<value level="4">47732</value>
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<staticReuse>true</staticReuse>
+		<isMagic>2</isMagic>
+		<reuseDelay>2000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom" fromLevel="1" toLevel="1">
+				<items>
+					<item chance="11.11111111111111">
+						<item id="19440" count="1" /> <!-- Gemstone (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="35563" count="1" /> <!-- Giant's Energy -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="39634" count="1" /> <!-- Venir's Talisman Stage 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30299" count="1" /> <!-- Superior Giant's Codex - Discipline -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="45931" count="1" /> <!-- High-grade Spirit Stone -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="2" toLevel="2">
+				<items>
+					<item chance="11.11111111111111">
+						<item id="19440" count="1" /> <!-- Gemstone (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="35563" count="1" /> <!-- Giant's Energy -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="39635" count="1" /> <!-- Venir's Talisman Stage 2 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46150" count="1" /> <!-- Superior Giant's Codex Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46151" count="1" /> <!-- Superior Giant's Codex - Discipline Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46152" count="1" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="45932" count="1" /> <!-- Top-grade Spirit Stone -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="3" toLevel="3">
+				<items>
+					<item chance="11.11111111111111">
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="39636" count="1" /> <!-- Venir's Talisman Stage 3 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30299" count="1" /> <!-- Superior Giant's Codex - Discipline -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="45932" count="1" /> <!-- Top-grade Spirit Stone -->
+					</item>
+				</items>
+			</effect>
+			<effect name="RestorationRandom" fromLevel="4" toLevel="4">
+				<items>
+					<item chance="11.11111111111111">
+						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="19447" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="39637" count="1" /> <!-- Venir's Talisman Stage 4 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17527" count="1" /> <!-- Scroll: Enchant Armor (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="17526" count="1" /> <!-- Scroll: Enchant Weapon (R-Grade) -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46150" count="1" /> <!-- Superior Giant's Codex Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46151" count="1" /> <!-- Superior Giant's Codex - Discipline Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="46152" count="1" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+					</item>
+					<item chance="11.11111111111111">
+						<item id="45932" count="1" /> <!-- Top-grade Spirit Stone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18733" toLevel="1" name="Guardian Captain Isburg Elimination Commemorative Supply Items">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18734" toLevel="1" name="Balthus Knight Camouflage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18735" toLevel="1" name="Balthus Knight Camouflage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18736" toLevel="1" name="Balthus Knight Camouflage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18737" toLevel="1" name="Balthus Knight Camouflage">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18738" toLevel="1" name="+10 Blessed Amaranthine Weapon Supply Items">
+		<icon>icon.skill18738</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47746</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="6.66">
+						<item id="18069" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18070" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18071" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18072" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18073" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18074" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18075" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18076" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18077" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18078" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18079" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18080" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18081" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+					<item chance="6.66">
+						<item id="18082" count="1" minEnchant="10" maxEnchant="10" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18739" toLevel="3" name="+8 Blessed Eternal Armor Heavy Capsule">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18740" toLevel="1" name="+8 Blessed Eternal Armor Supply Items">
+		<icon>icon.skill18740</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47747</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<!-- Heavy Armor -->
+					<item chance="5.6">
+						<item id="18083" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18084" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18085" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18086" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18087" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<!-- Leather Armor -->
+					<item chance="5.6">
+						<item id="18089" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18090" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18091" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18092" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18093" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<!-- Robe Armor -->
+					<item chance="5.6">
+						<item id="18094" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18095" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18096" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18097" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18098" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+					<item chance="5.6">
+						<item id="18099" count="1" minEnchant="8" maxEnchant="8" />
+					</item>
+				</items>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18741" toLevel="1" name="Freya's Art of Seduction - Barrier">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, Damage Reduction + 10%, All Attributes Defense + 100.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-10</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>100</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18742" toLevel="1" name="Freya's Art of Seduction - EXP">
+		<!-- Dimensional Item\nFor 30 min., Max HP/MP/CP + 30%, P. Atk. + 10%, M. Atk. + 20%, P./M. Def + 30%, Speed + 20, Skill MP Consumption - 15%.\nAdditionally, XP Gain + 30%, Vitality Bonus + 12.\n\nBuff remains in place after death. -->
+		<icon>icon.bm_freya_rose_red_i00</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>BR_EVENT_BUF1</abnormalType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>3000</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>1</effectPoint>
+		<isMagic>2</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
+		<effects>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>20</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-15</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="ExpModify">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="VitalityPointsRate">
+				<amount>-12</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18743" toLevel="1" name="Pa??agrio??s Blessing - Might">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18744" toLevel="1" name="Pa??agrio??s Blessing - EXP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18745" toLevel="3" name="Dragon??s Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18746" toLevel="1" name="Dragon??s Elemental Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18747" toLevel="1" name="Dragon??s Elemental Potion - XP">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18748" toLevel="4" name="Horn Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18749" toLevel="4" name="Drum Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18750" toLevel="4" name="Pipe Organ Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18751" toLevel="4" name="Guitar Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18752" toLevel="4" name="Harp Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18753" toLevel="4" name="Lute Melody of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18754" toLevel="1" name="Prevailing Sonata of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18755" toLevel="1" name="Daring Sonata of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18756" toLevel="1" name="Refreshing Sonata of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18757" toLevel="1" name="Knight's Harmony of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18758" toLevel="1" name="Warrior's Harmony of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18759" toLevel="1" name="Wizard's Harmony of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18760" toLevel="1" name="Mighty Prophecy of Red">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18761" toLevel="1" name="Pink??s Style Potion - Kelbim Light Armor">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18762" toLevel="1" name="Pink's Style Potion - Freya Robe">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18763" toLevel="1" name="Pink's Style Potion - Blue Dynasty">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18764" toLevel="1" name="Pink's Style Potion - White Assassin">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18765" toLevel="1" name="Pink's Style Potion - Formal Wear">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18766" toLevel="1" name="Pink's Style Potion - Vampiric">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18767" toLevel="1" name="Pink's Style Potion - Green Archer">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18768" toLevel="1" name="Pink's Style Potion - Magician">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18769" toLevel="1" name="Scroll: Enchant Faint Elemental Shirt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18770" toLevel="1" name="Scroll: Enchant Brilliant Elemental Shirt">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18771" toLevel="1" name="Einhasad??s Charisma Potion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18772" toLevel="4" name="Horn Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18773" toLevel="4" name="Drum Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18774" toLevel="4" name="Pipe Organ Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18775" toLevel="4" name="Guitar Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18776" toLevel="4" name="Harp Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18777" toLevel="4" name="Lute Melody">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18778" toLevel="1" name="Knight's Harmony">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18779" toLevel="1" name="Warrior's Harmony">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18780" toLevel="1" name="Wizard's Harmony">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18781" toLevel="1" name="Prevailing Sonata">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18782" toLevel="1" name="Daring Sonata">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18783" toLevel="1" name="Refreshing Sonata">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18784" toLevel="1" name="Elements Resistance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18785" toLevel="1" name="Holy Attack Resistance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18786" toLevel="1" name="Mental Attack Resistance">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18787" toLevel="1" name="Angel Cat's Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18788" toLevel="2" name="Puss the Cat??s Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18789" toLevel="1" name="Puss the Cat??s Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18790" toLevel="1" name="Sweet Rice Cakes">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18791" toLevel="1" name="Hanbok Outfit">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18792" toLevel="1" name="Test Adena Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18793" toLevel="2" name="Spellbook: Vitality of the Exalted Lv. 1">
+		<icon>icon.skill0000</icon>
+		<hitTime>3000</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>
+			<value level="1">47854</value> <!-- Spellbook: Vitality of the Exalted Lv. 1 -->
+			<value level="2">47855</value> <!-- Spellbook: Vitality of the Exalted Lv. 2 -->
+		</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<operateType>A1</operateType>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CheckLevel">
+				<minLevel>99</minLevel>
+				<maxLevel>111</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+			<condition name="OpSkill">
+				<skillId>19290</skillId>
+				<skillLevel>1</skillLevel>
+				<skillLevel>2</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="SetSkill">
+				<skillId>19290</skillId>
+				<skillLvl>
+					<value level="1">1</value>
+					<value level="2">2</value>
+				</skillLvl>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="18794" toLevel="2" name="Puss the Cat??s Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18795" toLevel="1" name="Puss the Cat??s Gift">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18796" toLevel="3" name="Angel??s Fortune Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18797" toLevel="1" name="Nevit??s Gold Hourglass">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18798" toLevel="1" name="Shining Scroll of Growth">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="18799" toLevel="4" name="First Gift Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+</list>

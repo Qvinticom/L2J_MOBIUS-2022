@@ -1,0 +1,1359 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="27700" toLevel="6" name="Inherent Abilities - Gloves Attack">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
+		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
+		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
+		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
+		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
+		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
+		<icon>icon.pk</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1.1</value>
+					<value level="3">1.2</value>
+					<value level="4">1.3</value>
+					<value level="5">1.4</value>
+					<value level="6">1.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">2.2</value>
+					<value level="3">2.4</value>
+					<value level="4">2.6</value>
+					<value level="5">2.8</value>
+					<value level="6">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27701" toLevel="6" name="Inherent Abilities - Shoes Attack">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Level: 1 P. Atk. + 1%, M. Atk. + 2%. -->
+		<!-- Level: 2 P. Atk. + 1.1%, M. Atk. + 2.2%. -->
+		<!-- Level: 3 P. Atk. + 1.2%, M. Atk. + 2.4%. -->
+		<!-- Level: 4 P. Atk. + 1.3%, M. Atk. + 2.6%. -->
+		<!-- Level: 5 P. Atk. + 1.4%, M. Atk. + 2.8%. -->
+		<!-- Level: 6 P. Atk. + 1.5%, M. Atk. + 3%. -->
+		<icon>icon.pk</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">1.1</value>
+					<value level="3">1.2</value>
+					<value level="4">1.3</value>
+					<value level="5">1.4</value>
+					<value level="6">1.5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">2.2</value>
+					<value level="3">2.4</value>
+					<value level="4">2.6</value>
+					<value level="5">2.8</value>
+					<value level="6">3</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27702" toLevel="6" name="Shilen's Ring">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- M. Def. + 50%, Dark Resistance + 130, STR/INT + 8, Skill Critical Damage + 30%, Atk. Spd./Casting Spd. + 20%. Effect does not stack with additional rings. -->
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">32</value>
+					<value level="3">35</value>
+					<value level="4">40</value>
+					<value level="5">45</value>
+					<value level="6">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">100</value>
+					<value level="2">110</value>
+					<value level="3">110</value>
+					<value level="4">120</value>
+					<value level="5">120</value>
+					<value level="6">130</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">6</value>
+					<value level="3">6</value>
+					<value level="4">7</value>
+					<value level="5">7</value>
+					<value level="6">8</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="SkillCriticalDamage">
+				<amount>
+					<value level="1">18</value>
+					<value level="2">20</value>
+					<value level="3">20</value>
+					<value level="4">25</value>
+					<value level="5">25</value>
+					<value level="6">30</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>
+					<value level="2">12</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>
+					<value level="2">12</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+					<value level="5">18</value>
+					<value level="6">20</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27703" toLevel="1" name="Shilen's Harshness">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- When killing another character, there's a 70% chance that the PK count will not increase. -->
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="27704" toLevel="1" name="Shilen's Will">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Increases P./M. Atk. by 100% for 60 seconds. -->
+		<icon>icon.ring_earthworm_heart</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>200</hitTime>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="27705" toLevel="6" name="Shilen's Necklace">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- M. Def. + 60%, Dark Resistance + 120, STR/INT + 7, Physical/Mind attack success rate + 25. Effect does not stack with additional rings. -->
+		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">60</value>
+					<value level="2">62</value>
+					<value level="3">65</value>
+					<value level="4">70</value>
+					<value level="5">75</value>
+					<value level="6">80</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">120</value>
+					<value level="2">130</value>
+					<value level="3">130</value>
+					<value level="4">140</value>
+					<value level="5">140</value>
+					<value level="6">150</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">9</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">7</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">9</value>
+					<value level="5">9</value>
+					<value level="6">10</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="AttackTrait">
+				<DERANGEMENT>
+					<value level="1">25</value>
+					<value level="2">25</value>
+					<value level="3">30</value>
+					<value level="4">35</value>
+					<value level="5">35</value>
+					<value level="6">40</value>
+				</DERANGEMENT>
+			</effect>
+			<effect name="MaxHp">
+				<amount>
+					<value level="2">25</value>
+					<value level="3">30</value>
+					<value level="4">34</value>
+					<value level="5">37</value>
+					<value level="6">40</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27706" toLevel="1" name="Shilen's Strength">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27707" toLevel="1" name="Shilen's Dignity">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27708" toLevel="6" name="Shilen's Earring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- M. Def. + 60%, Dark Resistance + 130, STR/INT + 8, Physical/Mind Resistance + 35, Speed 20, Max CP + 68%. Effect does not stack with additional rings. -->
+		<icon>icon.accessory_earring_of_lind_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<reuseDelay>
+			<value level="1">300000</value>
+			<value level="2">0</value>
+			<value level="3">0</value>
+			<value level="4">0</value>
+			<value level="5">0</value>
+			<value level="6">0</value>
+		</reuseDelay>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">52</value>
+					<value level="3">55</value>
+					<value level="4">60</value>
+					<value level="5">65</value>
+					<value level="6">70</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">110</value>
+					<value level="2">120</value>
+					<value level="3">120</value>
+					<value level="4">130</value>
+					<value level="5">130</value>
+					<value level="6">140</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">8</value>
+					<value level="6">9</value>
+				</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">8</value>
+					<value level="5">8</value>
+					<value level="6">9</value>
+				</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">35</value>
+					<value level="4">35</value>
+					<value level="5">40</value>
+					<value level="6">45</value>
+				</DERANGEMENT>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">15</value>
+					<value level="4">20</value>
+					<value level="5">20</value>
+					<value level="6">25</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="2">50</value>
+					<value level="3">57</value>
+					<value level="4">68</value>
+					<value level="5">80</value>
+					<value level="6">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27709" toLevel="1" name="Shilen's Energy">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- CHA + 10. -->
+		<icon>icon.accessory_earring_of_lind_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="StatUp">
+				<amount>10</amount>
+				<stat>CHA</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27710" toLevel="1" name="Shilen's Protection">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27711" toLevel="1" name="Scroll: Shilen's Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27712" toLevel="1" name="Scroll: Shilen's Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27713" toLevel="1" name="Scroll: Shilen's Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27714" toLevel="1" name="Shilen's Strength">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27715" toLevel="1" name="Prestige Cube">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27716" toLevel="1" name="Zodiac Agathion Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27717" toLevel="6" name="Greater Gemstone's Blessing">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27718" toLevel="1" name="La Vie En Rose's Elegant Brooch">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="JewelSlot">
+				<amount>6</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27719" toLevel="1" name="La Vie En Rose's Elegant Brooch">
+		<icon>icon.skill0000</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="EnlargeSlot">
+				<amount>12</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27720" toLevel="1" name="Ultimate Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27721" toLevel="1" name="Lv.1 La Vie En Rose's Energy">
+		<!-- For 30 sec, party members' M. Atk. increases by 400%. -->
+		<icon>icon.skill10019</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PUBLIC_SLOT</abnormalType>	<!-- Guess -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>900000</reuseDelay>
+		<effectPoint>702</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27722" toLevel="1" name="Lv.2 La Vie En Rose's Energy">
+		<!-- For 30 sec, party members' P. Atk. increases by 100% and M. Atk. increases by 400%. -->
+		<icon>icon.skill10019</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PUBLIC_SLOT</abnormalType>	<!-- Guess -->
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>900000</reuseDelay>
+		<effectPoint>702</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27723" toLevel="1" name="Lv.3 La Vie En Rose's Energy">
+		<!-- For 30 sec, party members' P. Atk. increases by 100%, M. Atk. increases by 400%, and M. Def. increases by 10,000. -->
+		<icon>icon.skill10019</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PUBLIC_SLOT</abnormalType>	<!-- Guess -->
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>900000</reuseDelay>
+		<effectPoint>702</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27724" toLevel="1" name="Lv.4 La Vie En Rose's Energy">
+		<!-- For 30 sec, party members' P. Atk. increases by 100%, M. Atk. increases by 400%, P. Def. increases by 13,000, and M. Def. increases by 10,000. -->
+		<icon>icon.skill10019</icon>
+		<operateType>A2</operateType>
+		<abnormalType>PUBLIC_SLOT</abnormalType>	<!-- Guess -->
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>30</abnormalTime>
+		<hitTime>500</hitTime>
+		<coolTime>1000</coolTime>
+		<reuseDelay>900000</reuseDelay>
+		<effectPoint>702</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>400</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>13000</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>10000</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27725" toLevel="1" name="Ultimate Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27726" toLevel="1" name="Abundance Box - Infinite">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27727" toLevel="1" name="Equip Goddess' Accessory - Lv. 1 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27728" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27729" toLevel="1" name="Equip Goddess' Accessory - Lv. 1 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27730" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27731" toLevel="1" name="Equip Goddess' Accessory - Lv. 1 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27732" toLevel="1" name="Unequip Goddess' Accessory - Lv. 1 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27733" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27734" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27735" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27736" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27737" toLevel="1" name="Equip Goddess' Accessory - Lv. 2 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27738" toLevel="1" name="Unequip Goddess' Accessory - Lv. 2 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27739" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27740" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27741" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27742" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27743" toLevel="1" name="Equip Goddess' Accessory - Lv. 3 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27744" toLevel="1" name="Unequip Goddess' Accessory - Lv. 3 Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27745" toLevel="1" name="Chef Monkey's Belt">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Max CP/HP/MP + 300, Weight + 12800, Damage + 7%, Received Damage - 5%, Inventory Slots + 18, Attribute Resistance + 5. -->
+		<icon>BranchIcon.icon.g_monkey_belt</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxCp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>300</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="WeightLimit">
+				<amount>12800</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="EnlargeSlot">
+				<amount>18</amount>
+				<type>INVENTORY_NORMAL</type>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27746" toLevel="1" name="Item Skill: Unlimited Vitality Agathion">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27747" toLevel="1" name="2016 World Olympiad Hero">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- STR + 5, DEX +5, CON +5, INT +5, WIT +5, MEN +5 -->
+		<icon>icon.accessory_ornithomimus_cap_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>STR</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>DEX</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>CON</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>INT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>WIT</stat>
+			</effect>
+			<effect name="StatUp">
+				<amount>5</amount>
+				<stat>MEN</stat>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27748" toLevel="1" name="Special Treasure Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27749" toLevel="6" name="Gran Kain's Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27750" toLevel="6" name="Einhasad's Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27751" toLevel="6" name="Pa'agrio's Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27752" toLevel="6" name="Eva's Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27753" toLevel="6" name="Sayha's Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27754" toLevel="6" name="Maphr's Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27755" toLevel="1" name="Shilen's Necklace">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27756" toLevel="1" name="Shilen's Earring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27757" toLevel="1" name="Shilen's Ring">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27758" toLevel="1" name="Entrance Pass: Embryo Command Post">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27759" toLevel="1" name="Eva's Rune">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Through the power of Eva, increases Max HP by 10% and decreases Cooldown by 20%. Reflects a portion of damage received back onto the enemy. -->
+		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>5</amount>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-20</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27760" toLevel="1" name="+10 Shiny Elemental Shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27761" toLevel="1" name="+10 Reflect Attack T-shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27762" toLevel="1" name="+10 Reflect Magic T-shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27763" toLevel="1" name="+10 Pa'agrio's Shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27764" toLevel="1" name="+10 Sayha's Shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27765" toLevel="1" name="+10 Eva's Shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27766" toLevel="1" name="+10 Maphr's Shirt Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27767" toLevel="1" name="Shiny Elemental Shirt Special Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27768" toLevel="1" name="Reflect Attack T-shirt Special Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27769" toLevel="1" name="Reflect Magic T-shirt Special Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27770" toLevel="1" name="Royal White Save Ticket (R)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27771" toLevel="1" name="Royal White Save Ticket (R95)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27772" toLevel="1" name="Royal White Save Ticket (R99)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27773" toLevel="1" name="Royal Purple Save Ticket (R)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27774" toLevel="1" name="Royal Purple Save Ticket (R95)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27775" toLevel="1" name="Royal Purple Save Ticket (R99)">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27776" toLevel="1" name="Entrance Pass: Embryo Command Post">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27777" toLevel="1" name="Abundant Seven Signs Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27778" toLevel="1" name="Release Agathion's Seal - Babayaga">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27779" toLevel="1" name="Babayaga Teleport: Town of Aden">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27780" toLevel="1" name="Babayaga Teleport - Town of Rune">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27781" toLevel="1" name="Babayaga Teleport - Town of Giran">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27783" toLevel="1" name="Agathion's Blessing: Meditation">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27784" toLevel="1" name="Agathion's Blessing: Featherweight">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27785" toLevel="1" name="Agathion Cute Trick - Babayaga">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27786" toLevel="1" name="Ride Elk">
+		<icon>icon.skill0000</icon>
+		<operateType>A2</operateType>
+		<effectPoint>1</effectPoint>
+		<abnormalType>TRANSFORM</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60000</abnormalTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanTransform">
+				<transformId>20022</transformId>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Transformation">
+				<transformationId>20022</transformationId>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27787" toLevel="10" name="Sayha's Talisman">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- P. Def. + 112, M. Def. + 74, XP/SP +1%. -->
+		<icon>icon.bm_sayhas_talisman</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>3</isMagic>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">112</value>
+					<value level="2">225</value>
+					<value level="3">450</value>
+					<value level="4">676</value>
+					<value level="5">901</value>
+					<value level="6">1126</value>
+					<value level="7">1351</value>
+					<value level="8">1576</value>
+					<value level="9">1801</value>
+					<value level="10">2027</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">74</value>
+					<value level="2">147</value>
+					<value level="3">294</value>
+					<value level="4">441</value>
+					<value level="5">589</value>
+					<value level="6">736</value>
+					<value level="7">833</value>
+					<value level="8">1030</value>
+					<value level="9">1178</value>
+					<value level="10">1325</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+				</amount>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">5</value>
+					<value level="5">7</value>
+					<value level="6">10</value>
+					<value level="7">15</value>
+					<value level="8">20</value>
+					<value level="9">25</value>
+					<value level="10">30</value>
+				</amount>
+			</effect>
+			<effect name="HealEffect">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">0</value>
+					<value level="4">0</value>
+					<value level="5">0</value>
+					<value level="6">0</value>
+					<value level="7">0</value>
+					<value level="8">0</value>
+					<value level="9">5000</value>
+					<value level="10">7000</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27788" toLevel="4" name="Sayha's Trust">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Skill Power + 2%, Skill Cooldown - 2%. -->
+		<icon>icon.bm_sayhas_talisman</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<isMagic>3</isMagic>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalSkillPower">
+				<amount>
+					<value level="1">2</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">9</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>
+					<value level="1">-2</value>
+					<value level="2">-3</value>
+					<value level="3">-5</value>
+					<value level="4">-5</value>
+				</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27789" toLevel="4" name="Sayha's Protection">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- For 45 seconds, Damage Received - 5%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
+		<icon>
+			<value level="1">icon.sayhas_talisman_g_Lv1</value>
+			<value level="2">icon.sayhas_talisman_g_Lv2</value>
+			<value level="3">icon.sayhas_talisman_g_Lv3</value>
+			<value level="4">icon.sayhas_talisman_g_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>
+					<value level="1">-5</value>
+					<value level="2">-7</value>
+					<value level="3">-7</value>
+					<value level="4">-10</value>
+				</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27790" toLevel="4" name="Sayha's Encouragement">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- For 3 minutes, PvE Damage + 5%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value level="1">180</value>
+			<value level="2">180</value>
+			<value level="3">300</value>
+			<value level="4">600</value>
+		</abnormalTime>
+		<icon>
+			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
+			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
+			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">8</value>
+					<value level="3">8</value>
+					<value level="4">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27791" toLevel="4" name="Sayha's Anger">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- For 45 seconds, PvP Damage + 8%. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
+		<icon>
+			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
+			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
+			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
+		</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>300</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">600000</value>
+			<value level="2">420000</value>
+			<value level="3">300000</value>
+			<value level="4">180000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<castRange>900</castRange>
+		<effectPoint>1</effectPoint>
+		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>
+					<value level="1">8</value>
+					<value level="2">8</value>
+					<value level="3">12</value>
+					<value level="4">15</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27792" toLevel="3" name="Sayha's Support">
+		<!-- Updated to GRAND CRUSADE -->
+		<!-- Recovers HP by 20%, MP by 20%, and CP by 30%. -->
+		<icon>icon.bm_sayhas_talisman</icon>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>3000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>
+			<value level="1">1800000</value>
+			<value level="2">1200000</value>
+			<value level="3">360000</value>
+		</reuseDelay>
+		<staticReuse>true</staticReuse>
+		<effectPoint>10</effectPoint>
+		<effects>
+			<effect name="HealPercent">
+				<power>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</power>
+			</effect>
+			<effect name="CpHealPercent">
+				<power>
+					<value level="1">20</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</power>
+			</effect>
+			<effect name="ManaHealPercent">
+				<power>
+					<value level="1">30</value>
+					<value level="2">30</value>
+					<value level="3">50</value>
+				</power>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27793" toLevel="1" name="Fortune Talisman Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27794" toLevel="1" name="Seed Talisman Enhancement Pack">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27795" toLevel="1" name="Fortune Hair Accessory Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27796" toLevel="1" name="Exclusive Reward Chest">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27797" toLevel="1" name="Ultimate Jewelry Box">
+		<!-- AUTO GENERATED SKILL TODO: FIX IT -->
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="27798" toLevel="1" name="Elk's Blessing">
+		<icon>icon.skill0000</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>VP_KEEP</abnormalType>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
+		<effectPoint>100</effectPoint>
+		<isMagic>4</isMagic> <!-- Item Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>86400000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<hitCancelTime>0</hitCancelTime>
+		<irreplacableBuff>true</irreplacableBuff>
+		<staticReuse>true</staticReuse>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>-100</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="27799" toLevel="1" name="Elk's Summon">
+		<icon>icon.skill0000</icon>
+		<castRange>-2</castRange>
+		<effectPoint>467</effectPoint>
+		<effectRange>-2</effectRange>
+		<hitTime>15000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>-1</magicLvl>
+		<operateType>A1</operateType>
+		<reuseDelay>600000</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>OTHERS</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpCallPc" />
+			<condition name="TargetMyParty">
+				<includeMe>false</includeMe>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="CallPc">
+				<itemId>8615</itemId>
+				<itemCount>0</itemCount>
+			</effect>
+		</effects>
+	</skill>
+</list>
