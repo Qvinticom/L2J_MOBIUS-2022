@@ -25,10 +25,12 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public final class TradeOtherAdd extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final TradeItem _item;
 	
-	public TradeOtherAdd(TradeItem item)
+	public TradeOtherAdd(int sendType, TradeItem item)
 	{
+		_sendType = sendType;
 		_item = item;
 	}
 	
@@ -36,7 +38,12 @@ public final class TradeOtherAdd extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.TRADE_OTHER_ADD.writeId(packet);
-		packet.writeH(1); // item count
+		packet.writeC(_sendType);
+		if (_sendType == 2)
+		{
+			packet.writeD(0x01);
+		}
+		packet.writeD(0x01);
 		writeItem(packet, _item);
 		return true;
 	}

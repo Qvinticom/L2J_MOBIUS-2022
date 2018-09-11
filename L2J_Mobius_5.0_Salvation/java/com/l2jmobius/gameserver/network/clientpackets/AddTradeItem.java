@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.TradeItem;
 import com.l2jmobius.gameserver.model.TradeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.TradeOtherAdd;
@@ -94,12 +95,16 @@ public final class AddTradeItem implements IClientIncomingPacket
 			return;
 		}
 		
-		final TradeItem item = trade.addItem(_objectId, _count);
-		if (item != null)
+		final L2ItemInstance item1 = player.getInventory().getItemByObjectId(_objectId);
+		final TradeItem item2 = trade.addItem(_objectId, _count);
+		if (item2 != null)
 		{
-			player.sendPacket(new TradeOwnAdd(item));
-			player.sendPacket(new TradeUpdate(player, item));
-			partner.sendPacket(new TradeOtherAdd(item));
+			player.sendPacket(new TradeOwnAdd(1, item2));
+			player.sendPacket(new TradeOwnAdd(2, item2));
+			player.sendPacket(new TradeUpdate(1, null, null, 0));
+			player.sendPacket(new TradeUpdate(2, player, item2, item1.getCount() - item2.getCount()));
+			partner.sendPacket(new TradeOtherAdd(1, item2));
+			partner.sendPacket(new TradeOtherAdd(2, item2));
 		}
 	}
 }

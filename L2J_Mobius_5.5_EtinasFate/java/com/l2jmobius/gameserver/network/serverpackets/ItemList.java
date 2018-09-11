@@ -26,14 +26,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class ItemList extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final L2PcInstance _activeChar;
 	private final List<L2ItemInstance> _items;
-	private final boolean _showWindow;
 	
-	public ItemList(L2PcInstance activeChar, boolean showWindow)
+	public ItemList(int sendType, L2PcInstance activeChar)
 	{
+		_sendType = sendType;
 		_activeChar = activeChar;
-		_showWindow = showWindow;
 		_items = activeChar.getInventory().getItems(item -> !item.isQuestItem()).stream().collect(Collectors.toList());
 	}
 	
@@ -41,12 +41,21 @@ public final class ItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.ITEM_LIST.writeId(packet);
-		
-		packet.writeH(_showWindow ? 0x01 : 0x00);
-		packet.writeH(_items.size());
-		for (L2ItemInstance item : _items)
+		if (_sendType == 2)
 		{
-			writeItem(packet, item);
+			packet.writeC(_sendType);
+			packet.writeD(_items.size());
+			packet.writeD(_items.size());
+			for (L2ItemInstance item : _items)
+			{
+				writeItem(packet, item);
+			}
+		}
+		else
+		{
+			packet.writeC(0x01); // _showWindow ? 0x01 : 0x00
+			packet.writeD(0x00);
+			packet.writeD(_items.size());
 		}
 		writeInventoryBlock(packet, _activeChar.getInventory());
 		return true;

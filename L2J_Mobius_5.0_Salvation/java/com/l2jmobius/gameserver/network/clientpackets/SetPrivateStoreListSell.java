@@ -97,14 +97,16 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player) || player.isInDuel())
 		{
 			player.sendPacket(SystemMessageId.WHILE_YOU_ARE_ENGAGED_IN_COMBAT_YOU_CANNOT_OPERATE_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
-			player.sendPacket(new PrivateStoreManageListSell(player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(1, player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(2, player, _packageSale));
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
 		
 		if (player.isInsideZone(ZoneId.NO_STORE))
 		{
-			player.sendPacket(new PrivateStoreManageListSell(player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(1, player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(2, player, _packageSale));
 			player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -113,7 +115,8 @@ public class SetPrivateStoreListSell implements IClientIncomingPacket
 		// Check maximum number of allowed slots for pvt shops
 		if (_items.length > player.getPrivateSellStoreLimit())
 		{
-			player.sendPacket(new PrivateStoreManageListSell(player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(1, player, _packageSale));
+			player.sendPacket(new PrivateStoreManageListSell(2, player, _packageSale));
 			player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
 			return;
 		}

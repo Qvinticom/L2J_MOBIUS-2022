@@ -434,7 +434,11 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
 	EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
-	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME);
+	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15F, null, ConnectionState.IN_GAME), // 152
+	EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
+	EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152
+	EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME); // 152
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

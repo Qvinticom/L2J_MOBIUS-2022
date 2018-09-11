@@ -67,8 +67,6 @@ import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchant
 import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchantTry;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
-import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestOneDayRewardReceive;
-import com.l2jmobius.gameserver.network.clientpackets.dailymission.RequestTodoList;
 import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
 import com.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
@@ -82,6 +80,10 @@ import com.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorLis
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookClose;
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookOpen;
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookReward;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemBuy;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemList;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryInfo;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryReset;
 import com.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusOpen;
 import com.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusReward;
 import com.l2jmobius.gameserver.network.clientpackets.pledgebonus.RequestPledgeBonusRewardList;
@@ -351,6 +353,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_NEW_ENCHANT_CLOSE(0xF8, RequestNewEnchantClose::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_TRY(0xF9, RequestNewEnchantTry::new, ConnectionState.IN_GAME),
 	REQUEST_NEW_ENCHANT_RETRY_TO_PUT_ITEMS(0xFA, RequestNewEnchantRetryToPutItems::new, ConnectionState.IN_GAME),
+	REQUEST_TARGET_ACTION_MENU(0xFE, RequestTargetActionMenu::new, ConnectionState.IN_GAME),
 	EX_SEND_SELECTED_QUEST_ZONE_ID(0xFF, ExSendSelectedQuestZoneID::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_SKILL_LIST(0x100, RequestAlchemySkillList::new, ConnectionState.IN_GAME),
 	REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, RequestAlchemyTryMixCube::new, ConnectionState.IN_GAME),
@@ -382,9 +385,9 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_EVENT_BALTHUS_TOKEN(0x11B, null, ConnectionState.IN_GAME),
 	REQUEST_PARTY_MATCHING_HISTORY(0x11C, null, ConnectionState.IN_GAME),
 	EX_ARENA_CUSTOM_NOTIFICATION(0x11D, null, ConnectionState.IN_GAME),
-	REQUEST_TODO_LIST(0x11E, RequestTodoList::new, ConnectionState.IN_GAME),
+	REQUEST_TODO_LIST(0x11E, null, ConnectionState.IN_GAME),
 	REQUEST_TODO_LIST_HTML(0x11F, null, ConnectionState.IN_GAME),
-	REQUEST_ONE_DAY_REWARD_RECEIVE(0x120, RequestOneDayRewardReceive::new, ConnectionState.IN_GAME),
+	REQUEST_ONE_DAY_REWARD_RECEIVE(0x120, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET(0x121, null, ConnectionState.IN_GAME),
 	REQUEST_PLEDGE_BONUS_OPEN(0x122, RequestPledgeBonusOpen::new, ConnectionState.IN_GAME),
 	REQUEST_PLEDGE_BONUS_REWARD_LIST(0x123, RequestPledgeBonusRewardList::new, ConnectionState.IN_GAME),
@@ -406,9 +409,47 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EXREQUEST_MATCH_GROUP_WITHDRAW(0x133, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_OUST(0x134, null, ConnectionState.IN_GAME),
 	EXREQUEST_MATCH_GROUP_CHANGE_MASTER(0x135, null, ConnectionState.IN_GAME),
-	REQUEST_BLOCK_LIST_FOR_AD(0x136, null, ConnectionState.IN_GAME),
-	REQUEST_UPGRADE_SYSTEM_RESULT(0x137, null, ConnectionState.IN_GAME),
-	REQUEST_USER_BAN_INFO(0x138, null, ConnectionState.IN_GAME);
+	REQUEST_UPGRADE_SYSTEM_RESULT(0x136, null, ConnectionState.IN_GAME),
+	EX_CARD_UPDOWN_PICK_NUMB(0x137, null, ConnectionState.IN_GAME),
+	EX_CARD_UPDOWN_GAME_REWARD_REQUEST(0x138, null, ConnectionState.IN_GAME),
+	EX_CARD_UPDOWN_GAME_RETRY(0x139, null, ConnectionState.IN_GAME),
+	EX_CARD_UPDOWN_GAME_QUIT(0x13A, null, ConnectionState.IN_GAME),
+	EX_ARENA_RANK_ALL(0x13B, null, ConnectionState.IN_GAME),
+	EX_ARENA_MYRANK(0x13C, null, ConnectionState.IN_GAME),
+	EX_SWAP_AGATHION_SLOT_ITEMS(0x13D, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_RANK(0x13E, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_INFO(0x13F, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_CONTRIBUTION_REWARD(0x140, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_LEVEL_UP(0x141, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MISSION_INFO(0x142, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MISSION_REWARD(0x143, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MASTERY_INFO(0x144, RequestExPledgeMasteryInfo::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_MASTERY_SET(0x145, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_MASTERY_RESET(0x146, RequestExPledgeMasteryReset::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_SKILL_INFO(0x147, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_SKILL_ACTIVATE(0x148, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ITEM_LIST(0x149, RequestExPledgeItemList::new, ConnectionState.IN_GAME),
+	EX_PLEDGE_ITEM_ACTIVATE(0x14A, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ANNOUNCE(0x14B, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ANNOUNCE_SET(0x14C, null, ConnectionState.IN_GAME),
+	EX_CREATE_PLEDGE(0x14D, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ITEM_BUY(0x14F, RequestExPledgeItemBuy::new, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_INFO(0x150, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EXTRACT_INFO(0x151, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EXTRACT(0x152, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EVOLUTION_INFO(0x153, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_EVOLUTION(0x154, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_SET_TALENT(0x155, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_INIT_TALENT(0x156, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_ABSORB_INFO(0x157, null, ConnectionState.IN_GAME),
+	EX_ELEMENTAL_SPIRIT_ABSORB(0x158, null, ConnectionState.IN_GAME),
+	EX_REQUEST_LOCKED_ITEM(0x159, null, ConnectionState.IN_GAME),
+	EX_REQUEST_UNLOCKED_ITEM(0x15A, null, ConnectionState.IN_GAME),
+	EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
+	EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
+	REQUEST_BLOCK_LIST_FOR_AD(0x15D, null, ConnectionState.IN_GAME),
+	REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME);
 	
 	public static final ExIncomingPackets[] PACKET_ARRAY;
 	

@@ -52,6 +52,11 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_HAIR2,
 		Inventory.PAPERDOLL_RBRACELET,
 		Inventory.PAPERDOLL_LBRACELET,
+		Inventory.PAPERDOLL_AGATHION1,
+		Inventory.PAPERDOLL_AGATHION2,
+		Inventory.PAPERDOLL_AGATHION3,
+		Inventory.PAPERDOLL_AGATHION4,
+		Inventory.PAPERDOLL_AGATHION5,
 		Inventory.PAPERDOLL_DECO1,
 		Inventory.PAPERDOLL_DECO2,
 		Inventory.PAPERDOLL_DECO3,
@@ -66,7 +71,6 @@ public interface IClientOutgoingPacket extends IOutgoingPacket
 		Inventory.PAPERDOLL_BROOCH_JEWEL4,
 		Inventory.PAPERDOLL_BROOCH_JEWEL5,
 		Inventory.PAPERDOLL_BROOCH_JEWEL6
-	
 	};
 	
 	int[] PAPERDOLL_ORDER_AUGMENT = new int[]

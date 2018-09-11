@@ -355,7 +355,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendItemList(false);
+			player.sendItemList();
 		}
 		
 		return true;

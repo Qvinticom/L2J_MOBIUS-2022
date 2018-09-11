@@ -24,7 +24,6 @@ import com.l2jmobius.gameserver.model.DailyMissionDataHolder;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 
 /**
@@ -57,7 +56,7 @@ public class RequestOneDayRewardReceive implements IClientIncomingPacket
 		}
 		
 		reward.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
-		player.sendPacket(new ExConnectedTimeAndGettableReward(player));
+		// player.sendPacket(new ExConnectedTimeAndGettableReward(player));
 		player.sendPacket(new ExOneDayReceiveRewardList(player, true));
 	}
 }

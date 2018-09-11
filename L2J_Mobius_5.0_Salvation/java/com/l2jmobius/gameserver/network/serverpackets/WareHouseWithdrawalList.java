@@ -31,6 +31,7 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
 	public static final int FREIGHT = 1;
+	private final int _sendType;
 	private L2PcInstance _activeChar;
 	private long _playerAdena;
 	private final int _invSize;
@@ -46,8 +47,9 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	 */
 	private int _whType;
 	
-	public WareHouseWithdrawalList(L2PcInstance player, int type)
+	public WareHouseWithdrawalList(int sendType, L2PcInstance player, int type)
 	{
+		_sendType = sendType;
 		_activeChar = player;
 		_whType = type;
 		
@@ -74,22 +76,26 @@ public final class WareHouseWithdrawalList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WAREHOUSE_WITHDRAW_LIST.writeId(packet);
-		
-		packet.writeH(_whType);
-		packet.writeQ(_playerAdena);
-		packet.writeH(_items.size());
-		packet.writeH(_itemsStackable.size());
-		for (int itemId : _itemsStackable)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			packet.writeD(itemId);
+			packet.writeH(0x00);
+			packet.writeD(_invSize);
+			packet.writeD(_items.size());
+			for (L2ItemInstance item : _items)
+			{
+				writeItem(packet, item);
+				packet.writeD(item.getObjectId());
+				packet.writeD(0x00);
+				packet.writeD(0x00);
+			}
 		}
-		packet.writeD(_invSize);
-		for (L2ItemInstance item : _items)
+		else
 		{
-			writeItem(packet, item);
-			packet.writeD(item.getObjectId());
-			packet.writeD(0);
-			packet.writeD(0);
+			packet.writeH(_whType);
+			packet.writeQ(_playerAdena);
+			packet.writeD(_invSize);
+			packet.writeD(_items.size());
 		}
 		return true;
 	}

@@ -170,7 +170,7 @@ public final class RequestDropItem implements IClientIncomingPacket
 		{
 			activeChar.getInventory().unEquipItemInSlot(item.getLocationSlot());
 			activeChar.broadcastUserInfo();
-			activeChar.sendItemList(true);
+			activeChar.sendItemList();
 		}
 		
 		final L2ItemInstance dropedItem = activeChar.dropItem("Drop", _objectId, _count, _x, _y, _z, null, false, false);

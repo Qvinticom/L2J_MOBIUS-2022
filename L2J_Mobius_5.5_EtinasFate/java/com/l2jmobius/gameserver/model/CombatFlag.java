@@ -92,7 +92,7 @@ public class CombatFlag
 		}
 		else
 		{
-			_player.sendItemList(false);
+			_player.sendItemList();
 		}
 		// Refresh player stats
 		_player.broadcastUserInfo();

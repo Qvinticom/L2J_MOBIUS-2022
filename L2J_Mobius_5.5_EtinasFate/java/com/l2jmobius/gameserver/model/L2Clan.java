@@ -2706,7 +2706,7 @@ public class L2Clan implements IIdentifiable, INamable
 		ui.addComponentType(UserInfoType.CURRENT_HPMPCP_EXP_SP);
 		player.sendPacket(ui);
 		
-		player.sendItemList(false);
+		player.sendItemList();
 		
 		changeLevel(_level + 1);
 		

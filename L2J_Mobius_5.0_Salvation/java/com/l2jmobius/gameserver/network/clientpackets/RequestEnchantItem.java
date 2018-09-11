@@ -490,7 +490,7 @@ public final class RequestEnchantItem implements IClientIncomingPacket
 			}
 			else
 			{
-				activeChar.sendItemList(true);
+				activeChar.sendItemList();
 			}
 			
 			request.setProcessing(false);

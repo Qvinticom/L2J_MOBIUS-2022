@@ -44,7 +44,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendStatus;
 import com.l2jmobius.gameserver.util.Util;
 
@@ -295,7 +294,8 @@ public class PcStat extends PlayableStat
 		// Send acquirable skill list
 		getActiveChar().sendPacket(new AcquireSkillList(getActiveChar()));
 		getActiveChar().sendPacket(new ExVoteSystemInfo(getActiveChar()));
-		getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar(), true));
+		// Removed used by new Pledge system.
+		// getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar(), true));
 		return levelIncreased;
 	}
 	
@@ -427,6 +427,12 @@ public class PcStat extends PlayableStat
 		{
 			super.setLevel(value);
 		}
+		
+		// Removed used by new Pledge system.
+		// if (!getActiveChar().isDead())
+		// {
+		// getActiveChar().sendPacket(new ExOneDayReceiveRewardList(getActiveChar(), false));
+		// }
 	}
 	
 	@Override
@@ -664,6 +670,15 @@ public class PcStat extends PlayableStat
 	public int getBroochJewelSlots()
 	{
 		return (int) getValue(Stats.BROOCH_JEWELS, 0);
+	}
+	
+	/**
+	 * Gets the maximum agathion count.
+	 * @return the maximum agathion count
+	 */
+	public int getAgathionSlots()
+	{
+		return (int) getValue(Stats.AGATHION_SLOTS, 0);
 	}
 	
 	@Override

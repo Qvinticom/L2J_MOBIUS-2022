@@ -228,7 +228,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		}
 		else
 		{
-			activeChar.sendItemList(true);
+			activeChar.sendItemList();
 		}
 	}
 }

@@ -993,7 +993,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 		player.setActiveWarehouse(player.getClan().getWarehouse());
-		player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.CLAN));
+		player.sendPacket(new WareHouseDepositList(1, player, WareHouseDepositList.CLAN));
 	}
 	
 	private void showVaultWindowWithdraw(L2PcInstance player)
@@ -1002,7 +1002,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			player.setActiveWarehouse(player.getClan().getWarehouse());
-			player.sendPacket(new WareHouseWithdrawalList(player, WareHouseWithdrawalList.CLAN));
+			player.sendPacket(new WareHouseWithdrawalList(1, player, WareHouseWithdrawalList.CLAN));
 		}
 		else
 		{

@@ -28,11 +28,13 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
  */
 public class ExQuestItemList extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final L2PcInstance _activeChar;
 	private final Collection<L2ItemInstance> _items;
 	
-	public ExQuestItemList(L2PcInstance activeChar)
+	public ExQuestItemList(int sendType, L2PcInstance activeChar)
 	{
+		_sendType = sendType;
 		_activeChar = activeChar;
 		_items = activeChar.getInventory().getItems(L2ItemInstance::isQuestItem);
 	}
@@ -41,8 +43,16 @@ public class ExQuestItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_QUEST_ITEM_LIST.writeId(packet);
-		
-		packet.writeH(_items.size());
+		packet.writeC(_sendType);
+		if (_sendType == 2)
+		{
+			packet.writeD(_items.size());
+		}
+		else
+		{
+			packet.writeH(0);
+		}
+		packet.writeD(_items.size());
 		for (L2ItemInstance item : _items)
 		{
 			writeItem(packet, item);

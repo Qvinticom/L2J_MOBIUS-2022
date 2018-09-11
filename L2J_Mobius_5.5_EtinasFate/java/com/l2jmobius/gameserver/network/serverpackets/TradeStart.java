@@ -28,13 +28,15 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public final class TradeStart extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final L2PcInstance _activeChar;
 	private final L2PcInstance _partner;
 	private final Collection<L2ItemInstance> _itemList;
 	private int _mask = 0;
 	
-	public TradeStart(L2PcInstance player)
+	public TradeStart(int sendType, L2PcInstance player)
 	{
+		_sendType = sendType;
 		_activeChar = player;
 		_partner = player.getActiveTradeList().getPartner();
 		_itemList = _activeChar.getInventory().getAvailableItems(true, (_activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS) && Config.GM_TRADE_RESTRICTED_ITEMS), false);
@@ -75,16 +77,24 @@ public final class TradeStart extends AbstractItemPacket
 		}
 		
 		OutgoingPackets.TRADE_START.writeId(packet);
-		packet.writeD(_partner.getObjectId());
-		packet.writeC(_mask); // some kind of mask
-		if ((_mask & 0x10) == 0)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			packet.writeC(_partner.getLevel());
+			packet.writeD(_itemList.size());
+			packet.writeD(_itemList.size());
+			for (L2ItemInstance item : _itemList)
+			{
+				writeItem(packet, item);
+			}
 		}
-		packet.writeH(_itemList.size());
-		for (L2ItemInstance item : _itemList)
+		else
 		{
-			writeItem(packet, item);
+			packet.writeD(_partner.getObjectId());
+			packet.writeC(_mask); // some kind of mask
+			if ((_mask & 0x10) == 0)
+			{
+				packet.writeC(_partner.getLevel());
+			}
 		}
 		return true;
 	}

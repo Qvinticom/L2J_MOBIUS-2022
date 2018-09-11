@@ -37,6 +37,6 @@ public class RequestBuySellUIClose implements IClientIncomingPacket
 			return;
 		}
 		
-		activeChar.sendItemList(true);
+		activeChar.sendItemList();
 	}
 }

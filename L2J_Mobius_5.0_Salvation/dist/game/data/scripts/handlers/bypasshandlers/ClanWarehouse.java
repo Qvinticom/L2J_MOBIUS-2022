@@ -102,7 +102,8 @@ public class ClanWarehouse implements IBypassHandler
 						}
 					}
 					
-					activeChar.sendPacket(new WareHouseWithdrawalList(activeChar, WareHouseWithdrawalList.CLAN));
+					activeChar.sendPacket(new WareHouseWithdrawalList(1, activeChar, WareHouseWithdrawalList.CLAN));
+					activeChar.sendPacket(new WareHouseWithdrawalList(2, activeChar, WareHouseWithdrawalList.CLAN));
 					return true;
 				}
 				else if (command.toLowerCase().startsWith(COMMANDS[1])) // DepositC
@@ -110,7 +111,8 @@ public class ClanWarehouse implements IBypassHandler
 					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 					activeChar.setActiveWarehouse(activeChar.getClan().getWarehouse());
 					activeChar.setInventoryBlockingStatus(true);
-					activeChar.sendPacket(new WareHouseDepositList(activeChar, WareHouseDepositList.CLAN));
+					activeChar.sendPacket(new WareHouseDepositList(1, activeChar, WareHouseDepositList.CLAN));
+					activeChar.sendPacket(new WareHouseDepositList(2, activeChar, WareHouseDepositList.CLAN));
 					return true;
 				}
 				

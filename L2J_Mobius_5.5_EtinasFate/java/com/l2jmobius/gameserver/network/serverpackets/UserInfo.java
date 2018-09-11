@@ -133,7 +133,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		packet.writeD(_activeChar.getObjectId());
 		packet.writeD(_initSize);
-		packet.writeH(23);
+		packet.writeH(24);
 		packet.writeB(_masks);
 		
 		if (containsMask(UserInfoType.RELATION))
@@ -324,14 +324,24 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.SLOTS))
 		{
-			packet.writeH(9);
-			packet.writeC(_activeChar.getInventory().getTalismanSlots()); // Confirmed
-			packet.writeC(_activeChar.getInventory().getBroochJewelSlots()); // Confirmed
-			packet.writeC(_activeChar.getTeam().getId()); // Confirmed
-			packet.writeC(0x00); // (1 = Red, 2 = White, 3 = White Pink) dotted ring on the floor
-			packet.writeC(0x00);
-			packet.writeC(0x00);
-			packet.writeC(0x00);
+			packet.writeH(12); // 152
+			packet.writeC(_activeChar.getInventory().getTalismanSlots());
+			packet.writeC(_activeChar.getInventory().getBroochJewelSlots());
+			packet.writeC(_activeChar.getTeam().getId());
+			packet.writeD(0x00);
+			
+			if (_activeChar.getInventory().getAgathionSlots() > 0)
+			{
+				packet.writeC(0x01); // Charm slots
+				packet.writeC(_activeChar.getInventory().getAgathionSlots() - 1);
+				packet.writeC(0x00); // Artifact set slots // 152
+			}
+			else
+			{
+				packet.writeC(0x00); // Charm slots
+				packet.writeC(0x00);
+				packet.writeC(0x00); // Artifact set slots // 152
+			}
 		}
 		
 		if (containsMask(UserInfoType.MOVEMENTS))
@@ -363,6 +373,17 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(0x00);
 			packet.writeH(0x00);
 			packet.writeC(_activeChar.isTrueHero() ? 100 : 0x00);
+		}
+		
+		if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
+		{
+			packet.writeH(26);
+			packet.writeD(-1);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		
 		return true;

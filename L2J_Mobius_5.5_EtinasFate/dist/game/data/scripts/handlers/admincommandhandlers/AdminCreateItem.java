@@ -236,7 +236,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				}
 				
 				player.getInventory().destroyItem("AdminDelete", idval, numval, activeChar, null);
-				activeChar.sendPacket(new GMViewItemList(player));
+				activeChar.sendPacket(new GMViewItemList(1, player));
 				BuilderUtil.sendSysMessage(activeChar, "Item deleted.");
 			}
 			else
@@ -273,7 +273,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 						ih.useItem(player, item, false);
 					}
 				}
-				activeChar.sendPacket(new GMViewItemList(player));
+				activeChar.sendPacket(new GMViewItemList(1, player));
 			}
 			else
 			{

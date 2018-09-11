@@ -95,6 +95,7 @@ public class ItemTable
 		SLOTS.put("babypet", L2Item.SLOT_BABYPET);
 		SLOTS.put("brooch", L2Item.SLOT_BROOCH);
 		SLOTS.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
+		SLOTS.put("agathion", L2Item.SLOT_AGATHION);
 		SLOTS.put("none", L2Item.SLOT_NONE);
 		
 		// retail compatibility

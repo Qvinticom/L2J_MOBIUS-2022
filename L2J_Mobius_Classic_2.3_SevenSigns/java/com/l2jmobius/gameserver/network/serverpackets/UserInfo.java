@@ -29,8 +29,7 @@ import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 /**
- * @author Sdw, UnAfraid, proGenitor <br>
- *         Experimental packet compatible for L2Classic 2.0.
+ * @author Sdw, UnAfraid
  */
 public class UserInfo extends AbstractMaskPacket<UserInfoType>
 {
@@ -322,24 +321,23 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 		
 		if (containsMask(UserInfoType.SLOTS))
 		{
-			packet.writeH(11); // 140
+			packet.writeH(12); // 152
 			packet.writeC(_activeChar.getInventory().getTalismanSlots());
 			packet.writeC(_activeChar.getInventory().getBroochJewelSlots());
 			packet.writeC(_activeChar.getTeam().getId());
-			packet.writeC(0x00);
-			packet.writeC(0x00);
-			packet.writeC(0x00);
-			packet.writeC(0x00);
+			packet.writeD(0x00);
 			
 			if (_activeChar.getInventory().getAgathionSlots() > 0)
 			{
-				packet.writeC(0x01);
+				packet.writeC(0x01); // Charm slots
 				packet.writeC(_activeChar.getInventory().getAgathionSlots() - 1);
+				packet.writeC(0x00); // Artifact set slots // 152
 			}
 			else
 			{
+				packet.writeC(0x00); // Charm slots
 				packet.writeC(0x00);
-				packet.writeC(0x00);
+				packet.writeC(0x00); // Artifact set slots // 152
 			}
 		}
 		
@@ -372,6 +370,17 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			packet.writeD(0x00);
 			packet.writeH(0x00);
 			packet.writeC(_activeChar.isTrueHero() ? 100 : 0x00);
+		}
+		
+		if (containsMask(UserInfoType.ATT_SPIRITS)) // 152
+		{
+			packet.writeH(26);
+			packet.writeD(-1);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
+			packet.writeD(0x00);
 		}
 		
 		return true;

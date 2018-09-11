@@ -2199,7 +2199,7 @@ public final class L2PcInstance extends L2Playable
 			
 			final int slot = _inventory.getSlotFromItem(item);
 			// we can't unequip talisman by body slot
-			if ((slot == L2Item.SLOT_DECO) || (slot == L2Item.SLOT_BROOCH_JEWEL))
+			if ((slot == L2Item.SLOT_DECO) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION))
 			{
 				items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
 			}
@@ -2993,7 +2993,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 		}
 	}
@@ -3034,7 +3034,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3084,7 +3084,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3137,7 +3137,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 		}
 	}
@@ -3178,7 +3178,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				sendItemList(false);
+				sendItemList();
 			}
 			
 			if (sendMessage)
@@ -3404,7 +3404,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3518,7 +3518,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3582,7 +3582,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Send target update packet
@@ -3607,7 +3607,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			else
 			{
-				targetPlayer.sendItemList(false);
+				targetPlayer.sendItemList();
 			}
 		}
 		else if (target instanceof PetInventory)
@@ -3734,7 +3734,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -3821,7 +3821,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		else
 		{
-			sendItemList(false);
+			sendItemList();
 		}
 		
 		// Sends message to client if requested
@@ -4614,7 +4614,8 @@ public final class L2PcInstance extends L2Playable
 					standUp();
 				}
 				setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
-				sendPacket(new PrivateStoreManageListBuy(this));
+				sendPacket(new PrivateStoreManageListBuy(1, this));
+				sendPacket(new PrivateStoreManageListBuy(2, this));
 			}
 		}
 		else
@@ -5661,7 +5662,8 @@ public final class L2PcInstance extends L2Playable
 		final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_BEGIN_TRADING_WITH_C1);
 		msg.addPcName(partner);
 		sendPacket(msg);
-		sendPacket(new TradeStart(this));
+		sendPacket(new TradeStart(1, this));
+		sendPacket(new TradeStart(2, this));
 	}
 	
 	public void onTradeConfirm(L2PcInstance partner)
@@ -5897,7 +5899,7 @@ public final class L2PcInstance extends L2Playable
 			{
 				// Equip arrows needed in left hand
 				_inventory.setPaperdollItem(Inventory.PAPERDOLL_LHAND, arrows);
-				sendItemList(false);
+				sendItemList();
 				return true;
 			}
 		}
@@ -13891,13 +13893,12 @@ public final class L2PcInstance extends L2Playable
 		sendPacket(new ExUserInfoInvenWeight(this));
 	}
 	
-	/**
-	 * @param open
-	 */
-	public void sendItemList(boolean open)
+	public void sendItemList()
 	{
-		sendPacket(new ItemList(this, open));
-		sendPacket(new ExQuestItemList(this));
+		sendPacket(new ItemList(1, this));
+		sendPacket(new ItemList(2, this));
+		sendPacket(new ExQuestItemList(1, this));
+		sendPacket(new ExQuestItemList(2, this));
 		sendPacket(new ExAdenaInvenCount(this));
 		sendPacket(new ExUserInfoInvenWeight(this));
 	}

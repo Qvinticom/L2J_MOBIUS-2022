@@ -230,7 +230,7 @@ public final class RequestPostAttachment implements IClientIncomingPacket
 		}
 		else
 		{
-			activeChar.sendItemList(false);
+			activeChar.sendItemList();
 		}
 		
 		msg.removeAttachments();

@@ -98,22 +98,27 @@ public abstract class Inventory extends ItemContainer
 	public static final int PAPERDOLL_LFINGER = 14;
 	public static final int PAPERDOLL_LBRACELET = 15;
 	public static final int PAPERDOLL_RBRACELET = 16;
-	public static final int PAPERDOLL_DECO1 = 17;
-	public static final int PAPERDOLL_DECO2 = 18;
-	public static final int PAPERDOLL_DECO3 = 19;
-	public static final int PAPERDOLL_DECO4 = 20;
-	public static final int PAPERDOLL_DECO5 = 21;
-	public static final int PAPERDOLL_DECO6 = 22;
-	public static final int PAPERDOLL_CLOAK = 23;
-	public static final int PAPERDOLL_BELT = 24;
-	public static final int PAPERDOLL_BROOCH = 25;
-	public static final int PAPERDOLL_BROOCH_JEWEL1 = 26;
-	public static final int PAPERDOLL_BROOCH_JEWEL2 = 27;
-	public static final int PAPERDOLL_BROOCH_JEWEL3 = 28;
-	public static final int PAPERDOLL_BROOCH_JEWEL4 = 29;
-	public static final int PAPERDOLL_BROOCH_JEWEL5 = 30;
-	public static final int PAPERDOLL_BROOCH_JEWEL6 = 31;
-	public static final int PAPERDOLL_TOTALSLOTS = 32;
+	public static final int PAPERDOLL_AGATHION1 = 17;
+	public static final int PAPERDOLL_AGATHION2 = 18;
+	public static final int PAPERDOLL_AGATHION3 = 19;
+	public static final int PAPERDOLL_AGATHION4 = 20;
+	public static final int PAPERDOLL_AGATHION5 = 21;
+	public static final int PAPERDOLL_DECO1 = 22;
+	public static final int PAPERDOLL_DECO2 = 23;
+	public static final int PAPERDOLL_DECO3 = 24;
+	public static final int PAPERDOLL_DECO4 = 25;
+	public static final int PAPERDOLL_DECO5 = 26;
+	public static final int PAPERDOLL_DECO6 = 27;
+	public static final int PAPERDOLL_CLOAK = 28;
+	public static final int PAPERDOLL_BELT = 29;
+	public static final int PAPERDOLL_BROOCH = 30;
+	public static final int PAPERDOLL_BROOCH_JEWEL1 = 31;
+	public static final int PAPERDOLL_BROOCH_JEWEL2 = 32;
+	public static final int PAPERDOLL_BROOCH_JEWEL3 = 33;
+	public static final int PAPERDOLL_BROOCH_JEWEL4 = 34;
+	public static final int PAPERDOLL_BROOCH_JEWEL5 = 35;
+	public static final int PAPERDOLL_BROOCH_JEWEL6 = 36;
+	public static final int PAPERDOLL_TOTALSLOTS = 37;
 	
 	// Speed percentage mods
 	public static final double MAX_ARMOR_WEIGHT = 12000;
@@ -711,6 +716,34 @@ public abstract class Inventory extends ItemContainer
 		}
 	}
 	
+	private static final class AgathionBraceletListener implements PaperdollListener
+	{
+		private static AgathionBraceletListener instance = new AgathionBraceletListener();
+		
+		public static AgathionBraceletListener getInstance()
+		{
+			return instance;
+		}
+		
+		@Override
+		public void notifyUnequiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+			if (item.getItem().getBodyPart() == L2Item.SLOT_L_BRACELET)
+			{
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION1);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION2);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION3);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION4);
+				inventory.unEquipItemInSlot(PAPERDOLL_AGATHION5);
+			}
+		}
+		
+		@Override
+		public void notifyEquiped(int slot, L2ItemInstance item, Inventory inventory)
+		{
+		}
+	}
+	
 	/**
 	 * Constructor of the inventory
 	 */
@@ -726,6 +759,7 @@ public abstract class Inventory extends ItemContainer
 			addPaperdollListener(ItemSkillsListener.getInstance());
 			addPaperdollListener(BraceletListener.getInstance());
 			addPaperdollListener(BroochListener.getInstance());
+			addPaperdollListener(AgathionBraceletListener.getInstance());
 		}
 		
 		// common
@@ -965,6 +999,10 @@ public abstract class Inventory extends ItemContainer
 			case L2Item.SLOT_BROOCH_JEWEL:
 			{
 				return PAPERDOLL_BROOCH_JEWEL1;
+			}
+			case L2Item.SLOT_AGATHION:
+			{
+				return PAPERDOLL_AGATHION1;
 			}
 		}
 		return -1;
@@ -1262,6 +1300,15 @@ public abstract class Inventory extends ItemContainer
 				slot = L2Item.SLOT_BROOCH_JEWEL;
 				break;
 			}
+			case PAPERDOLL_AGATHION1:
+			case PAPERDOLL_AGATHION2:
+			case PAPERDOLL_AGATHION3:
+			case PAPERDOLL_AGATHION4:
+			case PAPERDOLL_AGATHION5:
+			{
+				slot = L2Item.SLOT_AGATHION;
+				break;
+			}
 		}
 		return slot;
 	}
@@ -1450,6 +1497,11 @@ public abstract class Inventory extends ItemContainer
 			case L2Item.SLOT_BROOCH_JEWEL:
 			{
 				pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
+				break;
+			}
+			case L2Item.SLOT_AGATHION:
+			{
+				pdollSlot = PAPERDOLL_AGATHION1;
 				break;
 			}
 			default:
@@ -1725,6 +1777,11 @@ public abstract class Inventory extends ItemContainer
 				equipBroochJewel(item);
 				break;
 			}
+			case L2Item.SLOT_AGATHION:
+			{
+				equipAgathion(item);
+				break;
+			}
 			default:
 			{
 				LOGGER.warning("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
@@ -1874,7 +1931,7 @@ public abstract class Inventory extends ItemContainer
 			{
 				if (getPaperdollItemId(i) == item.getId())
 				{
-					// overwtite
+					// overwrite
 					setPaperdollItem(i, item);
 					return;
 				}
@@ -1912,7 +1969,7 @@ public abstract class Inventory extends ItemContainer
 		{
 			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
 			{
-				// overwtite
+				// overwrite
 				setPaperdollItem(i, item);
 				return;
 			}
@@ -1930,6 +1987,43 @@ public abstract class Inventory extends ItemContainer
 		
 		// no free slots - put on first
 		setPaperdollItem(PAPERDOLL_BROOCH_JEWEL1, item);
+	}
+	
+	public int getAgathionSlots()
+	{
+		return getOwner().getActingPlayer().getStat().getAgathionSlots();
+	}
+	
+	private void equipAgathion(L2ItemInstance item)
+	{
+		if (getAgathionSlots() == 0)
+		{
+			return;
+		}
+		
+		// find same (or incompatible) agathion type
+		for (int i = PAPERDOLL_AGATHION1; i < (PAPERDOLL_AGATHION1 + getAgathionSlots()); i++)
+		{
+			if ((_paperdoll[i] != null) && (getPaperdollItemId(i) == item.getId()))
+			{
+				// overwrite
+				setPaperdollItem(i, item);
+				return;
+			}
+		}
+		
+		// no free slot found - put on first free
+		for (int i = PAPERDOLL_AGATHION1; i < (PAPERDOLL_AGATHION1 + getAgathionSlots()); i++)
+		{
+			if (_paperdoll[i] == null)
+			{
+				setPaperdollItem(i, item);
+				return;
+			}
+		}
+		
+		// no free slots - put on first
+		setPaperdollItem(PAPERDOLL_AGATHION1, item);
 	}
 	
 	public boolean canEquipCloak()

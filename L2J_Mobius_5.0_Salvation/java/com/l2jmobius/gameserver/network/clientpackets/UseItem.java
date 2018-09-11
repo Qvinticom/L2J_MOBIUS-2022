@@ -239,6 +239,15 @@ public final class UseItem implements IClientIncomingPacket
 					}
 					break;
 				}
+				case L2Item.SLOT_AGATHION:
+				{
+					if (!item.isEquipped() && (activeChar.getInventory().getAgathionSlots() == 0))
+					{
+						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+						return;
+					}
+					break;
+				}
 			}
 			
 			if (activeChar.isCastingNow())

@@ -22,8 +22,7 @@ import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.PackageSendableList;
 
 /**
- * @author -Wooden-
- * @author UnAfraid Thanks mrTJO
+ * @author Mobius
  */
 public class RequestPackageSendableItemList implements IClientIncomingPacket
 {
@@ -44,6 +43,7 @@ public class RequestPackageSendableItemList implements IClientIncomingPacket
 		{
 			return;
 		}
-		client.sendPacket(new PackageSendableList(activeChar, _objectId));
+		client.sendPacket(new PackageSendableList(1, activeChar, _objectId));
+		client.sendPacket(new PackageSendableList(2, activeChar, _objectId));
 	}
 }

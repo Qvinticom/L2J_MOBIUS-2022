@@ -55,7 +55,7 @@ public class AcquireSkillList implements IClientOutgoingPacket
 			packet.writeD(skill.getSkillLevel());
 			packet.writeQ(skill.getLevelUpSp());
 			packet.writeC(skill.getGetLevel());
-			packet.writeC(skill.getDualClassLevel());
+			packet.writeH(skill.getDualClassLevel()); // Salvation: Changed from byte to short.
 			packet.writeC(skill.getRequiredItems().size());
 			for (ItemHolder item : skill.getRequiredItems())
 			{

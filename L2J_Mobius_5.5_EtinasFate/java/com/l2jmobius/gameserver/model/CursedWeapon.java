@@ -126,7 +126,7 @@ public class CursedWeapon implements INamable
 				}
 				else
 				{
-					_player.sendItemList(false);
+					_player.sendItemList();
 				}
 				
 				_player.broadcastUserInfo();
@@ -187,7 +187,7 @@ public class CursedWeapon implements INamable
 				}
 				else
 				{
-					_player.sendItemList(false);
+					_player.sendItemList();
 				}
 				
 				_player.broadcastUserInfo();
@@ -453,7 +453,7 @@ public class CursedWeapon implements INamable
 		}
 		else
 		{
-			_player.sendItemList(false);
+			_player.sendItemList();
 		}
 		
 		// Refresh player stats

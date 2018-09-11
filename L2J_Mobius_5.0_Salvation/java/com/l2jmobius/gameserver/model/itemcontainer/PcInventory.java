@@ -413,7 +413,7 @@ public class PcInventory extends Inventory
 				}
 				else
 				{
-					actor.sendItemList(false);
+					actor.sendItemList();
 				}
 				
 				// Notify to scripts
@@ -481,7 +481,7 @@ public class PcInventory extends Inventory
 				}
 				else
 				{
-					actor.sendItemList(false);
+					actor.sendItemList();
 				}
 			}
 			
@@ -528,7 +528,7 @@ public class PcInventory extends Inventory
 		
 		if ((item != null) && (actor != null))
 		{
-			actor.sendItemList(false);
+			actor.sendItemList();
 		}
 		return item;
 	}
@@ -737,7 +737,7 @@ public class PcInventory extends Inventory
 	
 	public static int[][] restoreVisibleInventory(int objectId)
 	{
-		final int[][] paperdoll = new int[33][4];
+		final int[][] paperdoll = new int[Inventory.PAPERDOLL_TOTALSLOTS][4];
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement statement2 = con.prepareStatement("SELECT object_id,item_id,loc_data,enchant_level FROM items WHERE owner_id=? AND loc='PAPERDOLL'"))
 		{
@@ -865,7 +865,7 @@ public class PcInventory extends Inventory
 		_blockMode = mode;
 		_blockItems = items;
 		
-		_owner.sendItemList(false);
+		_owner.sendItemList();
 	}
 	
 	/**
@@ -876,7 +876,7 @@ public class PcInventory extends Inventory
 		_blockMode = InventoryBlockType.NONE;
 		_blockItems = null;
 		
-		_owner.sendItemList(false);
+		_owner.sendItemList();
 	}
 	
 	/**
@@ -1048,7 +1048,7 @@ public class PcInventory extends Inventory
 		{
 			if (Config.FORCE_INVENTORY_UPDATE)
 			{
-				_owner.sendItemList(false);
+				_owner.sendItemList();
 			}
 			else
 			{

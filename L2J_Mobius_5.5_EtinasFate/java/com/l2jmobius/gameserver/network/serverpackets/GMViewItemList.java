@@ -27,12 +27,14 @@ import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class GMViewItemList extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final List<L2ItemInstance> _items = new ArrayList<>();
 	private final int _limit;
 	private final String _playerName;
 	
-	public GMViewItemList(L2PcInstance cha)
+	public GMViewItemList(int sendType, L2PcInstance cha)
 	{
+		_sendType = sendType;
 		_playerName = cha.getName();
 		_limit = cha.getInventoryLimit();
 		for (L2ItemInstance item : cha.getInventory().getItems())
@@ -41,8 +43,9 @@ public class GMViewItemList extends AbstractItemPacket
 		}
 	}
 	
-	public GMViewItemList(L2PetInstance cha)
+	public GMViewItemList(int sendType, L2PetInstance cha)
 	{
+		_sendType = sendType;
 		_playerName = cha.getName();
 		_limit = cha.getInventoryLimit();
 		for (L2ItemInstance item : cha.getInventory().getItems())
@@ -55,11 +58,17 @@ public class GMViewItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.GM_VIEW_ITEM_LIST.writeId(packet);
-		
-		packet.writeS(_playerName);
-		packet.writeD(_limit); // inventory limit
-		packet.writeH(0x01); // show window ??
-		packet.writeH(_items.size());
+		packet.writeC(_sendType);
+		if (_sendType == 2)
+		{
+			packet.writeD(_items.size());
+		}
+		else
+		{
+			packet.writeS(_playerName);
+			packet.writeD(_limit); // inventory limit
+		}
+		packet.writeD(_items.size());
 		for (L2ItemInstance item : _items)
 		{
 			writeItem(packet, item);

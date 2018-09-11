@@ -1,9 +1,7 @@
-L2J-Mobius Grand Crusade
+L2J-Mobius Etina's Fate
 
-Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=download
-Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
-
-Geodata: http://www.mediafire.com/file/sf1bcc3rvaq50sw/mobius_geodata_grand_crusade_l2d.zip
+Client: https://drive.google.com/uc?id=1qctEGMiiJaTgHeNcJ0li0hBjrUf8lBg_&export=download
+Geodata: http://www.mediafire.com/file/7sl6w0kpuo9a0im/mobius_geodata_salvation_l2d.zip
 
 
 Working features...
@@ -82,6 +80,13 @@ Helios:
 Grand Crusade:
 -Monster Book
 -Live world map information
+
+Salvation:
+-TODO: Skills
+-TODO: Skill trees
+
+Etina's Fate:
+-TODO: Parse new items from client
 
 Events:
 -Birth of Draco

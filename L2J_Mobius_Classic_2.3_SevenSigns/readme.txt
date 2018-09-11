@@ -1,6 +1,6 @@
-L2J-Mobius Classic Antharas
+L2J-Mobius Classic Seven Signs
 
-Client: https://drive.google.com/uc?id=1BxapnPqFunwb3_ZXWuyB51b2HyI-KMrj&export=download
+Client: https://drive.google.com/uc?id=1qctEGMiiJaTgHeNcJ0li0hBjrUf8lBg_&export=download
 Geodata: http://www.mediafire.com/file/7m803pb33wu6016/mobius_geodata_antharas_l2d.zip
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
@@ -68,6 +68,9 @@ Antharas: https://eu.4game.com/lineage2classic/play/antharas/
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki and client
 -Clan Arena
+
+Seven Signs: https://eu.4gameforum.com/threads/658543/
+-TODO: Parse new items from client
 
 Customs:
 -Newbie Helper NPC location info

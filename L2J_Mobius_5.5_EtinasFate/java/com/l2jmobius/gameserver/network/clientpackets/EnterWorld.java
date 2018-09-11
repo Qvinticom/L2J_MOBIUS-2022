@@ -100,8 +100,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SkillList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 import com.l2jmobius.gameserver.network.serverpackets.attendance.ExVipAttendanceItemList;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
-import com.l2jmobius.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
 import com.l2jmobius.gameserver.network.serverpackets.friend.L2FriendList;
 import com.l2jmobius.gameserver.util.BuilderUtil;
 
@@ -326,10 +324,12 @@ public class EnterWorld implements IClientIncomingPacket
 		client.sendPacket(new ExGetBookMarkInfoPacket(activeChar));
 		
 		// Send Item List
-		client.sendPacket(new ItemList(activeChar, false));
+		client.sendPacket(new ItemList(1, activeChar));
+		client.sendPacket(new ItemList(2, activeChar));
 		
 		// Send Quest Item List
-		client.sendPacket(new ExQuestItemList(activeChar));
+		client.sendPacket(new ExQuestItemList(1, activeChar));
+		client.sendPacket(new ExQuestItemList(2, activeChar));
 		
 		// Send Adena and Inventory Count
 		client.sendPacket(new ExAdenaInvenCount(activeChar));
@@ -634,8 +634,9 @@ public class EnterWorld implements IClientIncomingPacket
 		{
 			activeChar.sendPacket(new ExWorldChatCnt(activeChar));
 		}
-		activeChar.sendPacket(new ExConnectedTimeAndGettableReward(activeChar));
-		activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar, true));
+		// Removed used by new Pledge system.
+		// activeChar.sendPacket(new ExConnectedTimeAndGettableReward(activeChar));
+		// activeChar.sendPacket(new ExOneDayReceiveRewardList(activeChar, true));
 		
 		// Handle soulshots, disable all on EnterWorld
 		activeChar.sendPacket(new ExAutoSoulShot(0, true, 0));

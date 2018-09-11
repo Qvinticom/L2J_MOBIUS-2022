@@ -29,7 +29,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 {
 	private final int _inventory;
 	private final int _warehouse;
-	private final int _freight;
+	// private final int _freight; // Removed with 152.
 	private final int _clan;
 	private final int _privateSell;
 	private final int _privateBuy;
@@ -42,7 +42,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 	{
 		_inventory = activeChar.getInventoryLimit();
 		_warehouse = activeChar.getWareHouseLimit();
-		_freight = Config.ALT_FREIGHT_SLOTS;
+		// _freight = Config.ALT_FREIGHT_SLOTS; // Removed with 152.
 		_privateSell = activeChar.getPrivateSellStoreLimit();
 		_privateBuy = activeChar.getPrivateBuyStoreLimit();
 		_clan = Config.WAREHOUSE_SLOTS_CLAN;
@@ -59,7 +59,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 		
 		packet.writeD(_inventory);
 		packet.writeD(_warehouse);
-		packet.writeD(_freight);
+		// packet.writeD(_freight); // Removed with 152.
 		packet.writeD(_clan);
 		packet.writeD(_privateSell);
 		packet.writeD(_privateBuy);
@@ -69,6 +69,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 		packet.writeD(_inventoryQuestItems);
 		packet.writeD(40); // TODO: Find me!
 		packet.writeD(40); // TODO: Find me!
+		packet.writeD(0x00); // Artifact slots // 152
 		return true;
 	}
 }

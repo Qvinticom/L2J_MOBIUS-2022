@@ -197,7 +197,7 @@ public final class SendWareHouseWithDrawList implements IClientIncomingPacket
 		}
 		else
 		{
-			player.sendItemList(false);
+			player.sendItemList();
 		}
 	}
 }

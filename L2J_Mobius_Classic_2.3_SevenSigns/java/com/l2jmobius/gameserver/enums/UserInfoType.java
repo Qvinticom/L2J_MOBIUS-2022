@@ -47,7 +47,9 @@ public enum UserInfoType implements IUpdateTypeComponent
 	MOVEMENTS(0x13, 4),
 	COLOR(0x14, 10),
 	INVENTORY_LIMIT(0x15, 9),
-	TRUE_HERO(0x16, 9);
+	TRUE_HERO(0x16, 9),
+	
+	ATT_SPIRITS(0x17, 26);
 	
 	/** Int mask. */
 	private final int _mask;

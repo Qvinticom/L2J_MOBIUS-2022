@@ -166,16 +166,21 @@
 	<item id="45415" name="Dandy's Home Run Ball" type="EtcItem">
 		<!-- For 1 hr., XP/SP gain + 100%, and changes the appearance of your armor into that of a NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
 		<set name="icon" val="icon.ev_dinos_baseball" />
+		<set name="handler" val="ItemSkills" />	
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="weight" val="5" />
+		<set name="reuse_delay" val="300" />
+		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_destroyable" val="false" />
 		<set name="is_sellable" val="false" />
-		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="etcitem_type" val="SCROLL" />
-		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />		
+		<skills>
+			<skill id="18209" level="1" /> <!-- Dandy's Home Run Ball -->
+		</skills>
 	</item>
 	<item id="45416" name="Blue Save Card (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 10% for weapons (R-grade) with a normal enchant scroll. Only for items enchanted between + 3 and + 6. A failed enchant drops the enchant level by 3 instead of crystallizing. -->

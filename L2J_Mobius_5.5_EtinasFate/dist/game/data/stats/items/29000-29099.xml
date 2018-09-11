@@ -266,6 +266,20 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="29078" name="Greater Vital Stone" type="Armor">
+		<!-- Increases Vitality Status Bonus XP by 30% and the Vitality Point Consumption Speed decreases by 15%. XP Gain increases by 10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="brooch_jewel" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<skills>
+			<skill id="18568" level="6" />
+		</skills>
+	</item>
 	<item id="29080" name="Wondrous Jewelry Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain 1 of the following types of items randomly: Lv. 1 La Vie En Rose�s Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />

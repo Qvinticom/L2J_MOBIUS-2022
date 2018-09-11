@@ -36,7 +36,7 @@ public final class RequestItemList implements IClientIncomingPacket
 	{
 		if ((client != null) && (client.getActiveChar() != null) && !client.getActiveChar().isInventoryDisabled())
 		{
-			client.getActiveChar().sendItemList(true);
+			client.getActiveChar().sendItemList();
 		}
 	}
 }

@@ -203,7 +203,7 @@ public final class RequestCancelPostAttachment implements IClientIncomingPacket
 		}
 		else
 		{
-			activeChar.sendItemList(false);
+			activeChar.sendItemList();
 		}
 		
 		final L2PcInstance receiver = L2World.getInstance().getPlayer(msg.getReceiverId());

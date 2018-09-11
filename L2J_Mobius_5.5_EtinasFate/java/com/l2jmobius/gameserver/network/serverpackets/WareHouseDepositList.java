@@ -30,8 +30,8 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3;
 	public static final int FREIGHT = 1;
+	private final int _sendType;
 	private final long _playerAdena;
-	private final int _warehouseSize;
 	private final List<L2ItemInstance> _items = new ArrayList<>();
 	private final List<Integer> _itemsStackable = new ArrayList<>();
 	/**
@@ -44,11 +44,11 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	 */
 	private final int _whType;
 	
-	public WareHouseDepositList(L2PcInstance player, int type)
+	public WareHouseDepositList(int sendType, L2PcInstance player, int type)
 	{
+		_sendType = sendType;
 		_whType = type;
 		_playerAdena = player.getAdena();
-		_warehouseSize = player.getActiveWarehouse() != null ? player.getActiveWarehouse().getSize() : 0;
 		
 		final boolean isPrivate = _whType == PRIVATE;
 		for (L2ItemInstance temp : player.getInventory().getAvailableItems(true, isPrivate, false))
@@ -68,23 +68,23 @@ public final class WareHouseDepositList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.WAREHOUSE_DEPOSIT_LIST.writeId(packet);
-		
-		packet.writeH(_whType);
-		packet.writeQ(_playerAdena);
-		packet.writeD(_warehouseSize);
-		packet.writeH(_itemsStackable.size());
-		
-		for (int itemId : _itemsStackable)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			packet.writeD(itemId);
+			packet.writeD(_whType);
+			packet.writeD(_items.size());
+			for (L2ItemInstance item : _items)
+			{
+				writeItem(packet, item);
+				packet.writeD(item.getObjectId());
+			}
 		}
-		
-		packet.writeH(_items.size());
-		
-		for (L2ItemInstance item : _items)
+		else
 		{
-			writeItem(packet, item);
-			packet.writeD(item.getObjectId());
+			packet.writeH(_whType);
+			packet.writeQ(_playerAdena);
+			packet.writeD(_itemsStackable.size());
+			packet.writeD(_items.size());
 		}
 		return true;
 	}

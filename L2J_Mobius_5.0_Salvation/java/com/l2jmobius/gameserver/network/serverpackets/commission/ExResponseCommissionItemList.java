@@ -28,10 +28,12 @@ import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
  */
 public class ExResponseCommissionItemList extends AbstractItemPacket
 {
+	private final int _sendType;
 	private final Collection<L2ItemInstance> _items;
 	
-	public ExResponseCommissionItemList(Collection<L2ItemInstance> items)
+	public ExResponseCommissionItemList(int sendType, Collection<L2ItemInstance> items)
 	{
+		_sendType = sendType;
 		_items = items;
 	}
 	
@@ -39,11 +41,20 @@ public class ExResponseCommissionItemList extends AbstractItemPacket
 	public boolean write(PacketWriter packet)
 	{
 		OutgoingPackets.EX_RESPONSE_COMMISSION_ITEM_LIST.writeId(packet);
-		
-		packet.writeD(_items.size());
-		for (L2ItemInstance itemInstance : _items)
+		packet.writeC(_sendType);
+		if (_sendType == 2)
 		{
-			writeItem(packet, itemInstance);
+			packet.writeD(_items.size());
+			packet.writeD(_items.size());
+			for (L2ItemInstance itemInstance : _items)
+			{
+				writeItem(packet, itemInstance);
+			}
+		}
+		else
+		{
+			packet.writeD(0);
+			packet.writeD(0);
 		}
 		return true;
 	}

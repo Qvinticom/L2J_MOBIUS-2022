@@ -101,14 +101,16 @@ public final class PrivateStore implements IPlayerActionHandler
 				case PACKAGE_SELL:
 				{
 					activeChar.setPrivateStoreType(PrivateStoreType.SELL_MANAGE);
-					activeChar.sendPacket(new PrivateStoreManageListSell(activeChar, type == PrivateStoreType.PACKAGE_SELL));
+					activeChar.sendPacket(new PrivateStoreManageListSell(1, activeChar, type == PrivateStoreType.PACKAGE_SELL));
+					activeChar.sendPacket(new PrivateStoreManageListSell(2, activeChar, type == PrivateStoreType.PACKAGE_SELL));
 					break;
 				}
 				case BUY:
 				case BUY_MANAGE:
 				{
 					activeChar.setPrivateStoreType(PrivateStoreType.BUY_MANAGE);
-					activeChar.sendPacket(new PrivateStoreManageListBuy(activeChar));
+					activeChar.sendPacket(new PrivateStoreManageListBuy(1, activeChar));
+					activeChar.sendPacket(new PrivateStoreManageListBuy(2, activeChar));
 					break;
 				}
 				case MANUFACTURE:

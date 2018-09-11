@@ -55,6 +55,7 @@ public final class RequestPostItemList implements IClientIncomingPacket
 			return;
 		}
 		
-		client.sendPacket(new ExReplyPostItemList(activeChar));
+		client.sendPacket(new ExReplyPostItemList(1, activeChar));
+		client.sendPacket(new ExReplyPostItemList(2, activeChar));
 	}
 }

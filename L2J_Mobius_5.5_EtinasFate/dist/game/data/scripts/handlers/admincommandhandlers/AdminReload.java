@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.data.xml.impl.AppearanceItemData;
 import com.l2jmobius.gameserver.data.xml.impl.ArmorSetsData;
 import com.l2jmobius.gameserver.data.xml.impl.AttendanceRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import com.l2jmobius.gameserver.data.xml.impl.ClanShopData;
 import com.l2jmobius.gameserver.data.xml.impl.DoorData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemData;
 import com.l2jmobius.gameserver.data.xml.impl.EnchantItemGroupsData;
@@ -69,7 +70,7 @@ public class AdminReload implements IAdminCommandHandler
 		"admin_reload"
 	};
 	
-	private static final String RELOAD_USAGE = "Usage: //reload <config|access|npc|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant|options|fishing>";
+	private static final String RELOAD_USAGE = "Usage: //reload <config|access|npc|quest [quest_id|quest_name]|walker|htm[l] [file|directory]|multisell|buylist|teleport|skill|item|door|effect|handler|enchant|options|fishing|clanshop>";
 	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
@@ -323,6 +324,12 @@ public class AdminReload implements IAdminCommandHandler
 				{
 					FakePlayerChatManager.getInstance().load();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Fake Player Chat data.");
+					break;
+				}
+				case "clanshop":
+				{
+					ClanShopData.getInstance().load();
+					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Clan Shop data.");
 					break;
 				}
 				default:
