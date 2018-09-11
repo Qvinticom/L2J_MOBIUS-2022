@@ -51,6 +51,7 @@ import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.olympiad.OlympiadGameManager;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.skills.SkillCaster;
+import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -609,7 +610,15 @@ public abstract class L2Summon extends L2Playable
 		}
 		
 		// Get the target for the skill
-		final L2Object target = skill.getTarget(this, forceUse, dontMove, false);
+		final L2Object target;
+		if (skill.getTargetType() == TargetType.OWNER_PET)
+		{
+			target = _owner;
+		}
+		else
+		{
+			target = skill.getTarget(this, forceUse, dontMove, false);
+		}
 		
 		// Check the validity of the target
 		if (target == null)
