@@ -24,7 +24,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.Future;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Stream;
 
@@ -1202,11 +1201,13 @@ public class L2AttackableAI extends L2CharacterAI
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, this + " - " + getIntention().toString() + " - onEvtThink() failed", e);
+			// LOGGER.warning(getClass().getSimpleName() + ": " + this.getActor().getName() + " - onEvtThink() failed!");
 		}
-		
-		// Finish thinking action
-		_thinking = false;
+		finally
+		{
+			// Stop thinking action
+			_thinking = false;
+		}
 	}
 	
 	/**

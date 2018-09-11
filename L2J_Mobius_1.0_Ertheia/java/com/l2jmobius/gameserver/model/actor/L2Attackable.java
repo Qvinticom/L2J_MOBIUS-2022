@@ -784,7 +784,7 @@ public class L2Attackable extends L2Npc
 		final AggroInfo ai = _aggroList.get(target);
 		if (ai == null)
 		{
-			LOGGER.info("target " + target + " not present in aggro list of " + this);
+			LOGGER.info("Target " + target + " not present in aggro list of " + this);
 			return;
 		}
 		
