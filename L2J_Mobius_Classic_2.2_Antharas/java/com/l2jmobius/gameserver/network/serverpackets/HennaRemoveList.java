@@ -50,7 +50,7 @@ public class HennaRemoveList implements IClientOutgoingPacket
 				packet.writeD(henna.getDyeItemId());
 				packet.writeQ(henna.getCancelCount());
 				packet.writeQ(henna.getCancelFee());
-				packet.writeD(henna.isAllowedClass(_player.getClassId()) ? 0x01 : 0x00);
+				packet.writeD(0x00);
 			}
 		}
 		return true;
