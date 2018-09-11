@@ -57,6 +57,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_CHEST,
 		Inventory.PAPERDOLL_LEGS,
 		Inventory.PAPERDOLL_FEET,
+		Inventory.PAPERDOLL_RHAND,
 		Inventory.PAPERDOLL_HAIR,
 		Inventory.PAPERDOLL_HAIR2,
 	};
@@ -93,14 +94,13 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
 		
 		final int size = _characterPackages.length;
-		packet.writeD(size); // How many char there is on this account
+		packet.writeD(size); // Created character count
 		
-		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
+		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
 		packet.writeC(size == Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT ? 0x01 : 0x00); // if 1 can't create new char
-		packet.writeC(0x01); // play mode, if 1 can create only 2 char in regular lobby
-		packet.writeD(0x02); // if 1, korean client
-		packet.writeC(0x00); // if 1 suggest premium account
+		packet.writeC(0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
+		packet.writeD(0x02); // if 1, Korean client
+		packet.writeC(0x00); // Balthus Knights, if 1 suggests premium account
 		
 		long lastAccess = 0;
 		if (_activeId == -1)
@@ -119,15 +119,15 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 			
-			packet.writeS(charInfoPackage.getName()); // char name
-			packet.writeD(charInfoPackage.getObjectId()); // char id
-			packet.writeS(_loginName); // login
-			packet.writeD(_sessionId); // session id
-			packet.writeD(0x00); // ??
-			packet.writeD(0x00); // ??
+			packet.writeS(charInfoPackage.getName()); // Character name
+			packet.writeD(charInfoPackage.getObjectId()); // Character ID
+			packet.writeS(_loginName); // Account name
+			packet.writeD(_sessionId); // Account ID
+			packet.writeD(0x00); // Pledge ID
+			packet.writeD(0x00); // Builder level
 			
-			packet.writeD(charInfoPackage.getSex()); // sex
-			packet.writeD(charInfoPackage.getRace()); // race
+			packet.writeD(charInfoPackage.getSex()); // Sex
+			packet.writeD(charInfoPackage.getRace()); // Race
 			
 			if (charInfoPackage.getClassId() == charInfoPackage.getBaseClassId())
 			{
@@ -138,7 +138,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				packet.writeD(charInfoPackage.getBaseClassId());
 			}
 			
-			packet.writeD(0x01); // server id ??
+			packet.writeD(0x01); // GameServerName
 			
 			packet.writeD(charInfoPackage.getX());
 			packet.writeD(charInfoPackage.getY());
@@ -177,19 +177,18 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 				packet.writeD(charInfoPackage.getPaperdollItemVisualId(slot));
 			}
 			
-			packet.writeD(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
-			packet.writeH(0x00);
+			packet.writeH(0x00); // Upper Body enchant level
+			packet.writeH(0x00); // Lower Body enchant level
+			packet.writeH(0x00); // Headgear enchant level
+			packet.writeH(0x00); // Gloves enchant level
+			packet.writeH(0x00); // Boots enchant level
 			
 			packet.writeD(charInfoPackage.getHairStyle());
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
 			
-			packet.writeF(charInfoPackage.getMaxHp()); // hp max
-			packet.writeF(charInfoPackage.getMaxMp()); // mp max
+			packet.writeF(charInfoPackage.getMaxHp()); // Maximum HP
+			packet.writeF(charInfoPackage.getMaxMp()); // Maximum MP
 			
 			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
 			packet.writeD(charInfoPackage.getClassId());
@@ -202,21 +201,20 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
 			
-			// Freya by Vistall:
-			packet.writeD(0x00); // npdid - 16024 Tame Tiny Baby Kookaburra A9E89C
-			packet.writeD(0x00); // level
-			packet.writeD(0x00); // ?
-			packet.writeD(0x00); // food? - 1200
-			packet.writeF(0x00); // max Hp
-			packet.writeF(0x00); // cur Hp
+			packet.writeD(0x00); // Pet NpcId
+			packet.writeD(0x00); // Pet level
+			packet.writeD(0x00); // Pet Food
+			packet.writeD(0x00); // Pet Food Level
+			packet.writeF(0x00); // Current pet HP
+			packet.writeF(0x00); // Current pet MP
 			
-			packet.writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
-			packet.writeD((int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100); // Vitality Exp Bonus
-			packet.writeD(charInfoPackage.getVitalityItemsUsed()); // Vitality items used, such as potion
+			packet.writeD(charInfoPackage.getVitalityPoints()); // Vitality
+			packet.writeD((int) Config.RATE_VITALITY_EXP_MULTIPLIER * 100); // Vitality Percent
+			packet.writeD(charInfoPackage.getVitalityItemsUsed()); // Remaining vitality item uses
 			packet.writeD(charInfoPackage.getAccessLevel() == -100 ? 0x00 : 0x01); // Char is active or not
 			packet.writeC(charInfoPackage.isNoble() ? 0x01 : 0x00);
-			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00); // hero glow
-			packet.writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // show hair accessory if enabled
+			packet.writeC(Hero.getInstance().isHero(charInfoPackage.getObjectId()) ? 0x01 : 0x00); // Hero glow
+			packet.writeC(charInfoPackage.isHairAccessoryEnabled() ? 0x01 : 0x00); // Show hair accessory if enabled
 		}
 		return true;
 	}
@@ -232,7 +230,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			statement.setString(1, loginName);
 			try (ResultSet charList = statement.executeQuery())
 			{
-				while (charList.next())// fills the package
+				while (charList.next()) // fills the package
 				{
 					charInfopackage = restoreChar(charList);
 					if (charInfopackage != null)

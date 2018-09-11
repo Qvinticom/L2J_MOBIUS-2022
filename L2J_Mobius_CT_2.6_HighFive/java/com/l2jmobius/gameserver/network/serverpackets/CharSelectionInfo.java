@@ -79,10 +79,9 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		OutgoingPackets.CHARACTER_SELECTION_INFO.writeId(packet);
 		
 		final int size = _characterPackages.length;
-		packet.writeD(size); // How many char there is on this account
+		packet.writeD(size); // Created character count
 		
-		// Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
-		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT);
+		packet.writeD(Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT); // Can prevent players from creating new characters (if 0); (if 1, the client will ask if chars may be created (0x13) Response: (0x0D) )
 		packet.writeC(0x00);
 		
 		long lastAccess = 0;
@@ -102,18 +101,18 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		{
 			final CharSelectInfoPackage charInfoPackage = _characterPackages[i];
 			
-			packet.writeS(charInfoPackage.getName());
-			packet.writeD(charInfoPackage.getObjectId());
-			packet.writeS(_loginName);
-			packet.writeD(_sessionId);
-			packet.writeD(charInfoPackage.getClanId());
-			packet.writeD(0x00); // Builder Level
+			packet.writeS(charInfoPackage.getName()); // Character name
+			packet.writeD(charInfoPackage.getObjectId()); // Character ID
+			packet.writeS(_loginName); // Account name
+			packet.writeD(_sessionId); // Account ID
+			packet.writeD(charInfoPackage.getClanId()); // Pledge ID
+			packet.writeD(0x00); // Builder level
 			
-			packet.writeD(charInfoPackage.getSex());
-			packet.writeD(charInfoPackage.getRace());
+			packet.writeD(charInfoPackage.getSex()); // Sex
+			packet.writeD(charInfoPackage.getRace()); // Race
 			packet.writeD(charInfoPackage.getBaseClassId());
 			
-			packet.writeD(0x01); // server id ??
+			packet.writeD(0x01); // GameServerName
 			
 			packet.writeD(charInfoPackage.getX());
 			packet.writeD(charInfoPackage.getY());
@@ -148,27 +147,27 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			packet.writeD(charInfoPackage.getHairColor());
 			packet.writeD(charInfoPackage.getFace());
 			
-			packet.writeF(charInfoPackage.getMaxHp()); // hp max
-			packet.writeF(charInfoPackage.getMaxMp()); // mp max
+			packet.writeF(charInfoPackage.getMaxHp()); // Maximum HP
+			packet.writeF(charInfoPackage.getMaxMp()); // Maximum MP
 			
 			packet.writeD(charInfoPackage.getDeleteTimer() > 0 ? (int) ((charInfoPackage.getDeleteTimer() - System.currentTimeMillis()) / 1000) : 0);
 			packet.writeD(charInfoPackage.getClassId());
-			packet.writeD(i == _activeId ? 0x01 : 0x00); // c3 auto-select char
+			packet.writeD(i == _activeId ? 0x01 : 0x00);
 			
 			packet.writeC(Math.min(charInfoPackage.getEnchantEffect(), 127));
 			packet.writeD(charInfoPackage.getAugmentationId());
 			
+			// packet.writeD(charInfoPackage.getTransformId()); // Used to display Transformations
 			packet.writeD(0x00); // Currently on retail when you are on character select you don't see your transformation.
 			
-			// Implementing it will be waster of resources.
-			packet.writeD(0x00); // Pet ID
-			packet.writeD(0x00); // Pet Level
-			packet.writeD(0x00); // Pet Max Food
-			packet.writeD(0x00); // Pet Current Food
-			packet.writeF(0x00); // Pet Max HP
-			packet.writeF(0x00); // Pet Max MP
+			packet.writeD(0x00); // Pet NpcId
+			packet.writeD(0x00); // Pet level
+			packet.writeD(0x00); // Pet Food
+			packet.writeD(0x00); // Pet Food Level
+			packet.writeF(0x00); // Current pet HP
+			packet.writeF(0x00); // Current pet MP
 			
-			packet.writeD(charInfoPackage.getVitalityPoints()); // H5 Vitality
+			packet.writeD(charInfoPackage.getVitalityPoints()); // Vitality
 		}
 		return true;
 	}
@@ -184,7 +183,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			statement.setString(1, loginName);
 			try (ResultSet charList = statement.executeQuery())
 			{
-				while (charList.next())// fills the package
+				while (charList.next()) // fills the package
 				{
 					charInfopackage = restoreChar(charList);
 					if (charInfopackage != null)
