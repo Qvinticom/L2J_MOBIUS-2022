@@ -1,0 +1,1919 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="21742" level="79" type="L2Monster" name="Varka Silenos Searcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="SelfBuff" id="4092" level="1" />
+			<skill name="SelfRangeDDMagic" id="4072" level="8" />
+			<skill name="PhysicalSpecial" id="4032" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<acquire exp="41658" sp="1124" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14212" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="44" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
+				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.6" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.363" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.432" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.981" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.847" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.338" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="5" chance="84.1" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.384" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.496" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="1.162" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="16" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="21743" level="80" type="L2Monster" name="Varka Silenos Archer">
+		<parameters>
+			<param name="MoveAroundSocial" value="75" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="75" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="PhysicalSpecial" id="4040" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
+		<acquire exp="39456" sp="1065" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14401" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="30" />
+				<run ground="175" />
+			</speed>
+			<hit_time>590</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.14" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.814" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.02" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.67" /> <!-- Silver Nugget -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
+			</drop>
+			<spoil>
+				<item id="1865" min="1" max="9" chance="87.36" /> <!-- Varnish -->
+				<item id="5368" min="1" max="1" chance="2.021" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="2" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="1.952" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="8" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="21744" level="81" type="L2Monster" name="Varka Silenos Searcher Leader">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4572" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" /> <!-- Meteor Shower -->
+		<acquire exp="48794" sp="1317" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14585" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="25" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.51" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.534" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.797" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.761" /> <!-- Varnish -->
+				<item id="5494" min="1" max="1" chance="2.106" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.465" /> <!-- Sealed Shield of Nightmare Fragment -->
+			</drop>
+			<spoil>
+				<item id="5364" min="1" max="1" chance="5.644" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.709" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="18" />
+			<height normal="42.5" />
+		</collision>
+	</npc>
+	<npc id="21745" level="82" type="L2Monster" name="Varka Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="70" />
+			<param name="MoveAroundSocial1" value="70" />
+			<param name="MoveAroundSocial2" value="70" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="DDMagic1" id="4562" level="9" />
+			<skill name="DDMagic2" id="4560" level="9" />
+			<skill name="DeBuff" id="4119" level="3" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
+		<acquire exp="48594" sp="1312" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14758" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="36" />
+				<run ground="180" />
+			</speed>
+			<hit_time>470</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4560" level="9" /> <!-- NPC Fire Burn -->
+			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
+				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="9" />
+			<height normal="41.5" />
+		</collision>
+	</npc>
+	<npc id="21733" level="79" type="L2Monster" name="Ketra Orc Searcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="SelfBuff" id="4099" level="2" />
+			<skill name="SelfRangeDDMagic" id="4072" level="8" />
+			<skill name="PhysicalSpecial" id="4573" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" /> <!-- Damascus Sword -->
+		<acquire exp="41658" sp="1124" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14212" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<hit_time>460</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4099" level="2" /> <!-- NPC Berserk -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
+				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="24.68" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.361" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.421" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.959" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.926" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.283" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="5" chance="81.93" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.382" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.585" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="1.217" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="29" />
+		</collision>
+	</npc>
+	<npc id="21735" level="81" type="L2Monster" name="Ketra Orc Searcher Leader">
+		<parameters>
+			<param name="MoveAroundSocial" value="140" />
+			<param name="MoveAroundSocial1" value="54" />
+			<param name="MoveAroundSocial2" value="140" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
+		<acquire exp="48794" sp="1317" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14585" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="2" />
+			<speed>
+				<walk ground="24" />
+				<run ground="175" />
+			</speed>
+			<hit_time>510</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
+				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="11.04" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.554" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.816" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.788" /> <!-- Varnish -->
+				<item id="5494" min="1" max="1" chance="2.038" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.583" /> <!-- Sealed Shield of Nightmare Fragment -->
+			</drop>
+			<spoil>
+				<item id="5364" min="1" max="1" chance="5.768" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.732" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="11" grown="16" />
+			<height normal="38.5" grown="46.2" />
+		</collision>
+	</npc>
+	<npc id="21736" level="82" type="L2Monster" name="Ketra Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="1" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="8" />
+			<skill name="W_ShortRangeDDMagic" id="4561" level="8" />
+			<skill name="Buff1" id="4030" level="3" />
+			<skill name="Buff2" id="4031" level="3" />
+			<skill name="DeBuff" id="4035" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="92" /> <!-- Spirit's Staff -->
+		<acquire exp="48594" sp="1312" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14758" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="1" />
+			<speed>
+				<walk ground="10" />
+				<run ground="150" />
+			</speed>
+			<hit_time>340</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4035" level="8" /> <!-- Poison -->
+			<skill id="4157" level="8" /> <!-- NPC Blaze - Magic -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
+				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
+				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
+				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
+				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
+				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
+				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="21734" level="80" type="L2Monster" name="Ketra Orc Archer">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4040" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="288" /> <!-- Carnage Bow -->
+		<acquire exp="39456" sp="1065" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="14401" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="45" />
+				<run ground="175" />
+			</speed>
+			<hit_time>910</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="9" /> <!-- Bows -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="ARCHER" aggroRange="300" clanHelpRange="300" dodge="15" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.59" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.816" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.004" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.601" /> <!-- Silver Nugget -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
+			</drop>
+			<spoil>
+				<item id="1865" min="1" max="9" chance="92.645" /> <!-- Varnish -->
+				<item id="5370" min="1" max="1" chance="2.028" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5394" min="1" max="1" chance="2.006" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5368" min="1" max="1" chance="1.911" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="1.901" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="27" />
+		</collision>
+	</npc>
+	<npc id="21759" level="80" type="L2Monster" name="Ketra Orc Leader">
+		<parameters>
+			<param name="MoveAroundSocial" value="140" />
+			<param name="MoveAroundSocial1" value="54" />
+			<param name="MoveAroundSocial2" value="140" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
+		<acquire exp="48203" sp="1123" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="15948" hpRegen="8.5" mp="2607" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="2" />
+			<speed>
+				<walk ground="24" />
+				<run ground="175" />
+			</speed>
+			<hit_time>510</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="11" grown="16" />
+			<height normal="38.5" grown="46.2" />
+		</collision>
+	</npc>
+	<npc id="21760" level="80" type="L2Monster" name="The Leader of the Varka Faunas">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4572" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" /> <!-- Meteor Shower -->
+		<acquire exp="49275" sp="1121" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="15948" hpRegen="8.5" mp="2607" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="25" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="42.5" />
+		</collision>
+	</npc>
+	<npc id="21756" level="81" type="L2Chest" name="Mysterious Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13301" hpRegen="3.18" mp="2920" mpRegen="3.18" />
+			<attack physical="1024.61236488433" magical="741.658070600305" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="391.584384310193" magical="237.213641422467" evasion="6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hit_time>560</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4143" level="1" /> <!-- Bomb -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="21746" level="79" type="L2Monster" name="Varka Silenos Ranger">
+		<parameters>
+			<param name="MoveAroundSocial" value="65" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="65" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="SelfBuff" id="4092" level="1" />
+			<skill name="SelfRangeDDMagic" id="4072" level="8" />
+			<skill name="PhysicalSpecial" id="4032" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<acquire exp="353034" sp="9531" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="56844" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="44" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4032" level="8" /> <!-- NPC Strike -->
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.42" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="17.37" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.304" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.749" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.252" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.513" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="1.029" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
+			</drop>
+			<spoil>
+				<item id="5340" min="1" max="1" chance="4.493" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.867" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.884" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5338" min="1" max="1" chance="1.317" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.307" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="16" />
+			<height normal="38" />
+		</collision>
+	</npc>
+	<npc id="21737" level="79" type="L2Monster" name="Ketra Orc Ranger">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="8" />
+			<skill name="PhysicalSpecial" id="4572" level="8" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
+		<acquire exp="353034" sp="9531" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="56844" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" shield="166" shieldRate="20" />
+			<speed>
+				<walk ground="36" />
+				<run ground="175" />
+			</speed>
+			<hit_time>540</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="8" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="8" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="24.64" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="16.49" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.351" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.779" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.343" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.406" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="1.054" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
+				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
+			</drop>
+			<spoil>
+				<item id="5340" min="1" max="1" chance="4.527" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.737" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.295" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5338" min="1" max="1" chance="1.237" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="24" grown="28.8" />
+		</collision>
+	</npc>
+	<npc id="21748" level="81" type="L2Monster" name="Varka Silenos Grand Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="123" />
+			<param name="MoveAroundSocial1" value="123" />
+			<param name="MoveAroundSocial2" value="123" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="W_LongRangeDDMagic" id="4563" level="8" />
+			<skill name="W_ShortRangeDDMagic" id="4160" level="8" />
+			<skill name="Buff1" id="4030" level="3" />
+			<skill name="Buff2" id="4031" level="3" />
+			<skill name="DeBuff" id="4098" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
+		<acquire exp="402090" sp="10856" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="36" />
+				<run ground="150" />
+			</speed>
+			<hit_time>490</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4098" level="8" /> <!-- Silence -->
+			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="19.17" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.876" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.154" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.976" /> <!-- Silver Nugget -->
+				<item id="5524" min="1" max="1" chance="1.526" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="5520" min="1" max="1" chance="0.946" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="15" chance="87.83" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="3.162" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.907" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.397" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="14" />
+			<height normal="39.5" />
+		</collision>
+	</npc>
+	<npc id="21747" level="80" type="L2Monster" name="Varka Silenos Ranger Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="PhysicalSpecial" id="4573" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<acquire exp="383891" sp="10365" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="67203" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="34" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.12" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.867" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.083" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.946" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.493" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.654" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.096" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="15" chance="88.47" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="4.074" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.532" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.698" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.196" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5352" min="1" max="1" chance="1.07" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
+	</npc>
+	<npc id="21753" level="82" type="L2Monster" name="Varka Silenos Commander">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4572" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" /> <!-- Meteor Shower -->
+		<acquire exp="426859" sp="11525" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="78712" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="25" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.966" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
+				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="15" chance="90.445" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="18" />
+			<height normal="42.5" />
+		</collision>
+	</npc>
+	<npc id="21750" level="81" type="L2Monster" name="Varka Elite Searcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="85" />
+			<param name="MoveAroundSocial1" value="85" />
+			<param name="MoveAroundSocial2" value="85" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="PhysicalSpecial" id="4573" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<acquire exp="400253" sp="10806" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="328.27073" magical="240.21427" />
+			<speed>
+				<walk ground="34" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="5" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="17.09" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="14.98" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.366" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.112" /> <!-- Spiritual Eye Piece -->
+				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
+				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
+				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
+				<item id="5546" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5543" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff Head -->
+				<item id="5542" min="1" max="1" chance="0.3" /> <!-- Halberd Edge -->
+				<item id="5529" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer Edge -->
+				<item id="5535" min="1" max="1" chance="0.3" /> <!-- Carnage Bow Shaft -->
+				<item id="5534" min="1" max="1" chance="0.3" /> <!-- Soul Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="3" chance="51.92" /> <!-- Stone of Purity -->
+				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
+				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
+				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
+				<item id="5460" min="1" max="1" chance="0.3" /> <!-- Recipe: Dasparion's Staff (60%) -->
+				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
+				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="16" />
+			<height normal="41" />
+		</collision>
+	</npc>
+	<npc id="21749" level="82" type="L2Monster" name="Varka Silenos Escort Chief">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="90" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7221" />
+			<param name="FriendShip2" value="7222" />
+			<param name="FriendShip3" value="7223" />
+			<param name="FriendShip4" value="7224" />
+			<param name="FriendShip5" value="7225" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<param name="MeleeAttackerAg" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4572" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="2504" /> <!-- Meteor Shower -->
+		<acquire exp="420270" sp="11347" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68873" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" />
+			<speed>
+				<walk ground="25" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>VARKA_SILENOS</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
+				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="17.53" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.74" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.574" /> <!-- Stone of Purity -->
+				<item id="5525" min="1" max="1" chance="4.141" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5526" min="1" max="1" chance="4.06" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5527" min="1" max="1" chance="3.123" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="3.12" /> <!-- Sealed Majestic Circlet Design -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="3" chance="72.9" /> <!-- Stone of Purity -->
+				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5428" min="1" max="1" chance="6.296" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5432" min="1" max="1" chance="4.16" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
+				<item id="5430" min="1" max="1" chance="4.121" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="18" />
+			<height normal="42.5" />
+		</collision>
+	</npc>
+	<npc id="21739" level="81" type="L2Monster" name="Ketra Orc Grand Priest">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="75" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpeedBonus" value="40" />
+			<param name="HealBonus" value="1" />
+			<param name="SpiritShotRate" value="30" />
+			<skill name="W_LongRangeDDMagic" id="4157" level="8" />
+			<skill name="W_ShortRangeDDMagic" id="4561" level="8" />
+			<skill name="Buff1" id="4030" level="3" />
+			<skill name="Buff2" id="4031" level="3" />
+			<skill name="DeBuff" id="4035" level="8" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="92" /> <!-- Spirit's Staff -->
+		<acquire exp="402090" sp="10856" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="1" />
+			<speed>
+				<walk ground="10" />
+				<run ground="150" />
+			</speed>
+			<hit_time>340</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
+			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
+			<skill id="4035" level="8" /> <!-- Poison -->
+			<skill id="4157" level="8" /> <!-- NPC Blaze - Magic -->
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4561" level="8" /> <!-- NPC Fire Burn - Magic -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<skill primaryId="1" shortRangeId="1" shortRangeChance="90" longRangeId="1" longRangeChance="90" />
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
+				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.72" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.991" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.114" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.969" /> <!-- Silver Nugget -->
+				<item id="5524" min="1" max="1" chance="1.573" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
+				<item id="5520" min="1" max="1" chance="1.038" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
+				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="15" chance="91.81" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="3.15" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.979" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.376" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
+				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
+	</npc>
+	<npc id="21738" level="80" type="L2Monster" name="Ketra Orc Ranger Officer">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="80" /> <!-- Tallum Blade -->
+		<acquire exp="383891" sp="10365" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="67203" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="2" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="1" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
+				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="18.23" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.811" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="4.032" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.833" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.454" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.56" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.129" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
+				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
+			</drop>
+			<spoil>
+				<item id="1873" min="1" max="15" chance="85.84" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="3.986" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.53" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.776" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.191" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5352" min="1" max="1" chance="1.12" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="21752" level="82" type="L2Monster" name="Ketra Orc Commander">
+		<parameters>
+			<param name="MoveAroundSocial" value="140" />
+			<param name="MoveAroundSocial1" value="54" />
+			<param name="MoveAroundSocial2" value="140" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="MaxRoarCount" value="3" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="50" />
+			<skill name="Fury" id="4317" level="1" />
+			<skill name="SelfRangePhysicalSpecial" id="4072" level="9" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
+		<acquire exp="426859" sp="11525" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="78712" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="2" />
+			<speed>
+				<walk ground="24" />
+				<run ground="175" />
+			</speed>
+			<hit_time>510</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4072" level="9" /> <!-- Stun -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="1.059" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
+				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="15" chance="90.935" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="11" grown="16" />
+			<height normal="38.5" grown="46.2" />
+		</collision>
+	</npc>
+	<npc id="21741" level="81" type="L2Monster" name="Ketra Elite Searcher">
+		<parameters>
+			<param name="MoveAroundSocial" value="90" />
+			<param name="MoveAroundSocial1" value="65" />
+			<param name="MoveAroundSocial2" value="90" />
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="30" />
+			<skill name="PhysicalSpecial" id="4573" level="9" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="80" /> <!-- Tallum Blade -->
+		<acquire exp="400253" sp="10806" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="332.70061" magical="243.45587" evasion="2" />
+			<speed>
+				<walk ground="33" />
+				<run ground="180" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4789" level="6" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="18.45" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.35" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.319" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.178" /> <!-- Spiritual Eye Piece -->
+				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
+				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
+				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
+				<item id="5546" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles Edge -->
+				<item id="5545" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge Blade -->
+				<item id="5543" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff Head -->
+				<item id="5542" min="1" max="1" chance="0.3" /> <!-- Halberd Edge -->
+				<item id="5529" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer Edge -->
+				<item id="5535" min="1" max="1" chance="0.3" /> <!-- Carnage Bow Shaft -->
+				<item id="5534" min="1" max="1" chance="0.3" /> <!-- Soul Bow Shaft -->
+				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="3" chance="52.19" /> <!-- Stone of Purity -->
+				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
+				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
+				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
+				<item id="5460" min="1" max="1" chance="0.3" /> <!-- Recipe: Dasparion's Staff (60%) -->
+				<item id="5468" min="1" max="1" chance="0.3" /> <!-- Recipe: Elemental Sword (60%) -->
+				<item id="5470" min="1" max="1" chance="0.3" /> <!-- Recipe: Tallum Blade (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
+	</npc>
+	<npc id="21757" level="81" type="L2Chest" name="Mysterious Treasure Chest">
+		<race>CONSTRUCT</race>
+		<sex>MALE</sex>
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="13301" hpRegen="3.18" mp="2920" mpRegen="3.18" />
+			<attack physical="1024.61236488433" magical="741.658070600305" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="391.584384310193" magical="237.213641422467" evasion="6" />
+			<speed>
+				<walk ground="80" />
+				<run ground="1" />
+			</speed>
+			<hit_time>560</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="4143" level="1" /> <!-- Bomb -->
+		</skill_list>
+		<ex_crt_effect>true</ex_crt_effect>
+		<collision>
+			<radius normal="8.5" />
+			<height normal="8.5" />
+		</collision>
+	</npc>
+	<npc id="21740" level="82" type="L2Monster" name="Ketra Orc Escort Chief">
+		<parameters>
+			<param name="MoveAroundSocial" value="110" />
+			<param name="MoveAroundSocial1" value="54" />
+			<param name="MoveAroundSocial2" value="110" />
+			<minions name="Privates">
+				<npc id="21344" count="2" respawnTime="0" weightPoint="1" />
+			</minions>
+			<param name="FriendShip1" value="7211" />
+			<param name="FriendShip2" value="7212" />
+			<param name="FriendShip3" value="7213" />
+			<param name="FriendShip4" value="7214" />
+			<param name="FriendShip5" value="7215" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="50" />
+			<skill name="PhysicalSpecial" id="4572" level="9" />
+			<skill name="Buff" id="4575" level="2" />
+			<skill name="DeBuff" id="4038" level="5" />
+			<skill name="DeBuff1" id="4578" level="1" />
+		</parameters>
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="80" lhand="6919" /> <!-- Tallum Blade / Monster Only (Shield of Ketra Orc) -->
+		<acquire exp="420270" sp="11347" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="68873" hpRegen="8.721" mp="2614" mpRegen="3.0804" />
+			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
+			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
+			<speed>
+				<walk ground="27" />
+				<run ground="175" />
+			</speed>
+			<hit_time>480</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
+			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4412" level="11" /> <!-- Average P. Def. -->
+			<skill id="4413" level="10" /> <!-- Average M. Def. -->
+			<skill id="4414" level="2" /> <!-- Standard Type -->
+			<skill id="4415" level="7" /> <!-- Daggers -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill id="4789" level="7" /> <!-- NPC High Level -->
+		</skill_list>
+		<shots shotChance="50" spiritChance="50" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<s_npc_prop_hp_rate>2</s_npc_prop_hp_rate>
+		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true">
+			<clan_list>
+				<clan>KETRA_ORC</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
+				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
+				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="18.97" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="15.64" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="7.512" /> <!-- Stone of Purity -->
+				<item id="5526" min="1" max="1" chance="4.079" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5525" min="1" max="1" chance="4.056" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5528" min="1" max="1" chance="3.225" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5527" min="1" max="1" chance="3.094" /> <!-- Sealed Helm of Nightmare Design -->
+			</drop>
+			<spoil>
+				<item id="1875" min="1" max="3" chance="74.81" /> <!-- Stone of Purity -->
+				<item id="5428" min="1" max="1" chance="6.375" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5432" min="1" max="1" chance="4.214" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
+				<item id="5430" min="1" max="1" chance="4.213" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+			</spoil>
+		</drop_lists>
+		<collision>
+			<radius normal="15" />
+			<height normal="36" />
+		</collision>
+	</npc>
+</list>

@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="25800" level="74" type="L2Monster" name="Kasha">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="135" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="4323949" hpRegen="1298.24561403509" mp="1020338" mpRegen="1370.37037037037" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="35238.0952380952" magical="6218.48739495798" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2740.74074074074" magical="1591.39784946237" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25801" level="76" type="L2Monster" name="Dorak">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<equipment rhand="142" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5231979" hpRegen="1333.33333333333" mp="1124924" mpRegen="1407.40740740741" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="36190.4761904762" magical="6386.55462184874" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2814.81481481481" magical="1634.40860215054" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25802" level="78" type="L2Monster" name="Turan">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="91" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6330695" hpRegen="1368.42105263158" mp="1240229" mpRegen="1444.44444444444" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="37142.8571428571" magical="6554.6218487395" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2888.88888888889" magical="1677.41935483871" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25803" level="80" type="L2Monster" name="Varkan">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="229" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25804" level="80" type="L2Monster" name="Ketran">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="175" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="11" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25805" level="80" type="L2Monster" name="Death Lord Likan">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<equipment rhand="78" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="12" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25806" level="80" type="L2Monster" name="Anbarad">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="13" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25807" level="80" type="L2Monster" name="Baranos">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="79" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10187987" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="14" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="4" /> <!-- HP High -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25808" level="80" type="L2Monster" name="Takuran">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="171" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="11183805" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="15" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="5" /> <!-- HP High -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25809" level="80" type="L2Monster" name="Nast">
+		<!-- Source: www.l2wiki.com -->
+		<race>DEMONIC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="12332827" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="16" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25810" level="80" type="L2Monster" name="Keltar">
+		<!-- Source: www.l2wiki.com -->
+		<race>DIVINE</race>
+		<equipment rhand="80" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="13558449" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="17" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4408" level="7" /> <!-- HP Very High -->
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25811" level="80" type="L2Monster" name="Satur">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="2504" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15320282" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="18" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25812" level="80" type="L2Monster" name="Kosnak">
+		<!-- Source: www.l2wiki.com -->
+		<race>HUMANOID</race>
+		<equipment rhand="6719" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="22980422" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="19" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="20" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="25813" level="80" type="L2Monster" name="Garaki">
+		<!-- Source: www.l2wiki.com -->
+		<race>UNDEAD</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="30640563" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
+			<defence physical="2962.96296296296" magical="1720.43010752688" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+			<clan_list>
+				<clan>CLAN_ARENA</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+</list>
