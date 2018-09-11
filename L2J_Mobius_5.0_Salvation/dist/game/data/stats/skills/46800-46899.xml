@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="46800" toLevel="6" name="Sayha's Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Level: 1 Gives Movement Speed + -10%, Attack/Casting Speed + -10%. -->
+		<!-- Level: 2 Gives Movement Speed + -10%, Attack/Casting Speed + -10%. -->
+		<!-- Level: 3 Gives Movement Speed + -15%, Attack/Casting Speed + -15%. -->
+		<!-- Level: 4 Gives Movement Speed + -20%, Attack/Casting Speed + -20%. -->
+		<!-- Level: 5 Gives Movement Speed + -25%, Attack/Casting Speed + -25%. -->
+		<!-- Level: 6 Gives Movement Speed + -35%, Attack/Casting Speed + -35%. -->
+		<icon>BranchIcon.Icon.ring_of_sayhas_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<isDebuff>true</isDebuff>
+	</skill>
+	<skill id="46801" toLevel="6" name="Maphr's Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Level: 1 PvP P. Def + +3%, Physical and Magic Critical Damage Received + -4%, Fixed Damage Resistance + +20%, Shield Def. + +900, Shield Def. Success Rate + +20%, and Movement Speed + -30%. -->
+		<!-- Level: 2 PvP P. Def + +4%, Physical and Magic Critical Damage Received + -6%, Fixed Damage Resistance + +22%, Shield Def. + +930, Shield Def. Success Rate + +22%, and Movement Speed + -28%. -->
+		<!-- Level: 3 PvP P. Def + +5%, Physical and Magic Critical Damage Received + -12%, Fixed Damage Resistance + +24%, Shield Def. + +1000, Shield Def. Success Rate + +24%, and Movement Speed + -26%. -->
+		<!-- Level: 4 PvP P. Def + +9%, Physical and Magic Critical Damage Received + -14%, Fixed Damage Resistance + +28%, Shield Def. + +1300, Shield Def. Success Rate + +30%, and Movement Speed + -23%. -->
+		<!-- Level: 5 PvP P. Def + +12%, Physical and Magic Critical Damage Received + -18%, Fixed Damage Resistance + +34%, Shield Def. + +1800, Shield Def. Success Rate + +36%, and Movement Speed + -17%. -->
+		<!-- Level: 6 PvP P. Def + +15%, Physical and Magic Critical Damage Received + -25%, Fixed Damage Resistance + +40%, Shield Def. + +2500, Shield Def. Success Rate + +45%, and Movement Speed + -10%. -->
+		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
+		<operateType>T</operateType>
+		<targetType>SELF</targetType>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="46802" toLevel="6" name="Maphr's Ring">
+		<!-- AUTO GENERATED SKILL -->
+		<!-- Level: 1 Gives PvP P. Def + +2%, Fixed Damage Resistance + +15%, and Received Heal + +10%. -->
+		<!-- Level: 2 Gives PvP P. Def + +3%, Fixed Damage Resistance + +17%, and Received Heal + +12%. -->
+		<!-- Level: 3 Gives PvP P. Def + +4%, Fixed Damage Resistance + +19%, and Received Heal + +14%. -->
+		<!-- Level: 4 Gives PvP P. Def + +6%, Fixed Damage Resistance + +21%, and Received Heal + +16%. -->
+		<!-- Level: 5 Gives PvP P. Def + +8%, Fixed Damage Resistance + +23%, and Received Heal + +18%. -->
+		<!-- Level: 6 Gives PvP P. Def + +10%, Fixed Damage Resistance + +25%, and Received Heal + +20%. -->
+		<icon>BranchIcon.Icon.ring_of_maphr_i00</icon>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>500</hitTime>
+		<reuseDelay>1000</reuseDelay>
+		<effectPoint>2</effectPoint>
+	</skill>
+</list>
