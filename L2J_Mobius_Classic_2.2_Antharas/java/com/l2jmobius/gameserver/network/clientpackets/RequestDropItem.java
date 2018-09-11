@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
+import com.l2jmobius.gameserver.model.items.type.ActionType;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -140,8 +141,8 @@ public final class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming
-		if (activeChar.isCastingNow(s -> s.getSkill().getItemConsumeId() == item.getId()))
+		// Cannot discard item that the skill is consuming.
+		if (activeChar.isCastingNow(s -> (s.getSkill().getItemConsumeId() == item.getId()) && (item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS)))
 		{
 			activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
 			return;

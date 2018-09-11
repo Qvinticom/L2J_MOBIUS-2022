@@ -23,6 +23,7 @@ import com.l2jmobius.gameserver.datatables.GmListTable;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance.SkillDat;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
@@ -167,10 +168,12 @@ public final class RequestDropItem extends L2GameClientPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consumming
+		// Cannot discard item that the skill is consuming.
 		if (activeChar.isCastingNow())
 		{
-			if ((activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == item.getItemId()))
+			final SkillDat skillDat = activeChar.getCurrentSkill();
+			if ((skillDat != null) && (skillDat.getSkill().getItemConsumeId() == item.getItemId()) //
+				&& ((activeChar.getInventory().getInventoryItemCount(item.getItemId(), -1) - skillDat.getSkill().getItemConsume()) < _count))
 			{
 				activeChar.sendPacket(SystemMessageId.CANNOT_DISCARD_THIS_ITEM);
 				return;

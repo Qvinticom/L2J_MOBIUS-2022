@@ -22,10 +22,12 @@ import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.SkillUseHolder;
 import com.l2jmobius.gameserver.model.itemcontainer.Inventory;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.items.type.EtcItemType;
+import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -136,20 +138,24 @@ public final class RequestDropItem implements IClientIncomingPacket
 			return;
 		}
 		
-		// Cannot discard item that the skill is consuming
+		// Cannot discard item that the skill is consuming.
 		if (activeChar.isCastingNow())
 		{
-			if ((activeChar.getCurrentSkill() != null) && (activeChar.getCurrentSkill().getSkill().getItemConsumeId() == item.getId()))
+			final SkillUseHolder skill = activeChar.getCurrentSkill();
+			if ((skill != null) && (skill.getSkill().getItemConsumeId() == item.getId()) //
+				&& ((activeChar.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getSkill().getItemConsumeCount()) < _count))
 			{
 				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 				return;
 			}
 		}
 		
-		// Cannot discard item that the skill is consuming
+		// Cannot discard item that the skill is consuming.
 		if (activeChar.isCastingSimultaneouslyNow())
 		{
-			if ((activeChar.getLastSimultaneousSkillCast() != null) && (activeChar.getLastSimultaneousSkillCast().getItemConsumeId() == item.getId()))
+			final Skill skill = activeChar.getLastSimultaneousSkillCast();
+			if ((skill != null) && (skill.getItemConsumeId() == item.getId()) //
+				&& ((activeChar.getInventory().getInventoryItemCount(item.getId(), -1) - skill.getItemConsumeCount()) < _count))
 			{
 				activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DISCARDED);
 				return;
