@@ -76,30 +76,34 @@ public class ClanTable
 			ForumsBBSManager.getInstance().initRoot();
 		}
 		
-		L2Clan clan;
-		// Count the clans
-		int clanCount = 0;
+		// Get all clan ids.
+		final List<Integer> cids = new ArrayList<>();
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement s = con.createStatement();
 			ResultSet rs = s.executeQuery("SELECT clan_id FROM clan_data"))
 		{
 			while (rs.next())
 			{
-				final int clanId = rs.getInt("clan_id");
-				_clans.put(clanId, new L2Clan(clanId));
-				clan = getClan(clanId);
-				if (clan.getDissolvingExpiryTime() != 0)
-				{
-					scheduleRemoveClan(clan.getId());
-				}
-				clanCount++;
+				cids.add(rs.getInt("clan_id"));
 			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "Error restoring ClanTable.", e);
 		}
-		LOGGER.info(getClass().getSimpleName() + ": Restored " + clanCount + " clans from the database.");
+		
+		// Create clans.
+		for (int cid : cids)
+		{
+			final L2Clan clan = new L2Clan(cid);
+			_clans.put(cid, clan);
+			if (clan.getDissolvingExpiryTime() != 0)
+			{
+				scheduleRemoveClan(clan.getId());
+			}
+		}
+		
+		LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
 		allianceCheck();
 		restorewars();
 	}
