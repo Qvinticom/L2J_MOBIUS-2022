@@ -6490,7 +6490,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					final Location destiny = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z);
 					x = destiny.getX();
 					y = destiny.getY();
-					z = destiny.getZ();
 					dx = x - curX;
 					dy = y - curY;
 					dz = z - curZ;
