@@ -4376,18 +4376,15 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 			}
 			
-			// Absorb MP from the damage inflicted. Unconfirmed for skill attacks.
-			if (skill == null)
+			// Absorb MP from the damage inflicted.
+			absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
+			if (absorbPercent > 0)
 			{
-				absorbPercent = _stat.getValue(Stats.ABSORB_MANA_DAMAGE_PERCENT, 0);
-				if (absorbPercent > 0)
+				int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
+				absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
+				if (absorbDamage > 0)
 				{
-					int absorbDamage = (int) Math.min((absorbPercent / 100.) * damage, _stat.getMaxRecoverableMp() - _status.getCurrentMp());
-					absorbDamage = Math.min(absorbDamage, (int) target.getCurrentMp());
-					if (absorbDamage > 0)
-					{
-						setCurrentMp(_status.getCurrentMp() + absorbDamage);
-					}
+					setCurrentMp(_status.getCurrentMp() + absorbDamage);
 				}
 			}
 			
