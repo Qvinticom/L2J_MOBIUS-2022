@@ -127,7 +127,6 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.model.stats.functions.AbstractFunction;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.ZoneRegion;
-import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractNpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -4257,26 +4256,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 					{
 						// nothing
 					}
-				}
-				
-				// Temporary fix for character outside world region errors (should not happen)
-				if ((curX < L2World.MAP_MIN_X) || (curX > L2World.MAP_MAX_X) || (curY < L2World.MAP_MIN_Y) || (curY > L2World.MAP_MAX_Y))
-				{
-					LOGGER.warning("Character " + getName() + " outside world area, in coordinates x:" + curX + " y:" + curY);
-					getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-					if (isPlayer())
-					{
-						Disconnection.of(getActingPlayer()).defaultSequence(false);
-					}
-					else if (isSummon())
-					{
-						return;
-					}
-					else
-					{
-						onDecay();
-					}
-					return;
 				}
 				
 				if (!isInVehicle // Not in vehicle.
