@@ -3230,16 +3230,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				m.disregardingGeodata = true;
 			}
 			
-			final double originalDistance = distance;
-			final int originalX = x;
-			final int originalY = y;
-			final int originalZ = z;
-			final int gtx = (originalX - L2World.MAP_MIN_X) >> 4;
-			final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
-			
 			// Movement checks.
 			if (Config.PATHFINDING && !(this instanceof FriendlyNpcInstance))
 			{
+				final double originalDistance = distance;
+				final int originalX = x;
+				final int originalY = y;
+				final int originalZ = z;
+				final int gtx = (originalX - L2World.MAP_MIN_X) >> 4;
+				final int gty = (originalY - L2World.MAP_MIN_Y) >> 4;
+				
 				if (isOnGeodataPath())
 				{
 					try
