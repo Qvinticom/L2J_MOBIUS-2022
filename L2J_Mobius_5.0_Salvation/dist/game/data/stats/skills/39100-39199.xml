@@ -102,13 +102,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="39173" toLevel="1" name="Detection">
+	<skill id="39173" toLevel="1" name="Stealth Detector">
+		<!-- Use it to fire a flash bang that reveals hidden targets around you. -->
 		<affectRange>300</affectRange>
 		<effectPoint>-1</effectPoint>
-		<hitTime>2500</hitTime>
+		<hitTime>200</hitTime>
 		<icon>icon.skill0470</icon>
-		<magicLvl>74</magicLvl>
-		<mpConsume>67</mpConsume>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48283</itemConsumeId>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -118,6 +120,60 @@
 		<affectObject>INVISIBLE</affectObject>
 		<effects>
 			<effect name="Detection" />
+		</effects>
+	</skill>
+	<skill id="39175" toLevel="1" name="Scroll: PK">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>48285</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpNotCursed" />
+			<condition name="OpPkcount">
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="PkCount">
+				<amount>-1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39176" toLevel="1" name="Scroll: Reputation">
+		<icon>icon.skill0000</icon>
+		<operateType>A1</operateType>
+		<hitTime>2000</hitTime>
+		<coolTime>200</coolTime>
+		<itemConsumeId>48286</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<reuseDelay>3000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>CHAOTIC</alignment>
+			</condition>
+			<condition name="OpNotCursed" />
+		</conditions>
+		<effects>
+			<effect name="KarmaCount">
+				<amount>30000</amount>
+				<mode>DIFF</mode>
+			</effect>
 		</effects>
 	</skill>
 </list>
