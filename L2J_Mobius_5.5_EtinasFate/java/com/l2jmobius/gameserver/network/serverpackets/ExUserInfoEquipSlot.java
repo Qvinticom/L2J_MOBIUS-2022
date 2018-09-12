@@ -36,7 +36,10 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		(byte) 0x00,
 		(byte) 0x00,
 		(byte) 0x00,
-		(byte) 0x00
+		(byte) 0x00,
+		(byte) 0x00, // 152
+		(byte) 0x00, // 152
+		(byte) 0x00, // 152
 	};
 	
 	public ExUserInfoEquipSlot(L2PcInstance cha)
@@ -66,7 +69,7 @@ public class ExUserInfoEquipSlot extends AbstractMaskPacket<InventorySlot>
 		OutgoingPackets.EX_USER_INFO_EQUIP_SLOT.writeId(packet);
 		
 		packet.writeD(_activeChar.getObjectId());
-		packet.writeH(InventorySlot.values().length);
+		packet.writeH(60); // 152
 		packet.writeB(_masks);
 		
 		final PcInventory inventory = _activeChar.getInventory();
