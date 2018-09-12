@@ -6018,24 +6018,31 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			speed = getStat().getMoveSpeed();
 		}
 		
-		final boolean isInWater = isInsideZone(ZoneId.WATER);
-		
-		if (isPlayer() && !isInWater && !_move.disregardingGeodata //
-			&& ((Math.hypot(dx, dy) > 3000) // Stop movement when player has clicked far away and intersected with an obstacle.
-				|| _cursorKeyMovement)) // ...or in case of cursor movement, avoid moving through obstacles.
+		if (isPlayer())
 		{
-			final double angle = Util.convertHeadingToDegree(getHeading());
-			final double radian = Math.toRadians(angle);
-			final double course = Math.toRadians(180);
-			final double distance = 10 * (speed / 100);
-			final int x1 = (int) (Math.cos(Math.PI + radian + course) * distance);
-			final int y1 = (int) (Math.sin(Math.PI + radian + course) * distance);
-			final int x = xPrev + x1;
-			final int y = yPrev + y1;
-			if (!GeoData.getInstance().canMove(xPrev, yPrev, zPrev, x, y, zPrev))
+			final double distance = Math.hypot(dx, dy);
+			if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.
+				|| (distance > 3000)) // Stop movement when player has clicked far away and intersected with an obstacle.
 			{
-				_move.disregardingGeodata = true;
-				_move.onGeodataPathIndex = -1; // Set not on geodata path.
+				final double angle = Util.convertHeadingToDegree(getHeading());
+				final double radian = Math.toRadians(angle);
+				final double course = Math.toRadians(180);
+				final double frontDistance = 10 * (_stat.getMoveSpeed() / 100);
+				final int x1 = (int) (Math.cos(Math.PI + radian + course) * frontDistance);
+				final int y1 = (int) (Math.sin(Math.PI + radian + course) * frontDistance);
+				final int x = xPrev + x1;
+				final int y = yPrev + y1;
+				if (!GeoData.getInstance().canMove(xPrev, yPrev, zPrev, x, y, zPrev))
+				{
+					_move.onGeodataPathIndex = -1;
+					stopMove(getActingPlayer().getLastServerPosition());
+					return false;
+				}
+			}
+			// Prevent player moving on ledges.
+			if ((dz > 100) && (distance < 300))
+			{
+				_move.onGeodataPathIndex = -1;
 				stopMove(getActingPlayer().getLastServerPosition());
 				return false;
 			}
@@ -6510,8 +6517,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 						x = newDestination.getX();
 						y = newDestination.getY();
 						z = newDestination.getZ();
-						
-						distance = originalDistance;
 					}
 					else
 					{
