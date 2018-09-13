@@ -25,6 +25,7 @@ import com.l2jmobius.gameserver.ai.L2SummonAI;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.InstanceType;
+import com.l2jmobius.gameserver.enums.NpcInfoType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.enums.Team;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
@@ -55,6 +56,7 @@ import com.l2jmobius.gameserver.model.skills.targets.TargetType;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.ZoneRegion;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.AbstractMaskPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowAdd;
 import com.l2jmobius.gameserver.network.serverpackets.ExPartyPetWindowDelete;
@@ -120,7 +122,7 @@ public abstract class L2Summon extends L2Playable
 		setFollowStatus(true);
 		updateAndBroadcastStatus(0);
 		sendPacket(new RelationChanged(this, _owner.getRelation(_owner), false));
-		L2World.getInstance().forEachVisibleObjectInRange(getOwner(), L2PcInstance.class, 800, player ->
+		L2World.getInstance().forEachVisibleObject(getOwner(), L2PcInstance.class, player ->
 		{
 			player.sendPacket(new RelationChanged(this, _owner.getRelation(player), isAutoAttackable(player)));
 		});
@@ -203,14 +205,17 @@ public abstract class L2Summon extends L2Playable
 				return;
 			}
 			
+			final AbstractMaskPacket<NpcInfoType> packet;
 			if (isPet())
 			{
-				player.sendPacket(new ExPetInfo(this, player, 1));
+				packet = new ExPetInfo(this, player, 1);
 			}
 			else
 			{
-				player.sendPacket(new SummonInfo(this, player, 1));
+				packet = new SummonInfo(this, player, 1);
 			}
+			packet.addComponentType(NpcInfoType.ABNORMALS);
+			player.sendPacket(packet);
 		});
 	}
 	
