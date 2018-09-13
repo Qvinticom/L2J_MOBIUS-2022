@@ -70,7 +70,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.NAME);
 		}
 		
-		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING);
+		addComponentType(NpcInfoType.ATTACKABLE, NpcInfoType.UNKNOWN1, NpcInfoType.TITLE, NpcInfoType.ID, NpcInfoType.POSITION, NpcInfoType.ALIVE, NpcInfoType.RUNNING, NpcInfoType.PVP_FLAG);
 		
 		if (summon.getHeading() > 0)
 		{
@@ -150,11 +150,6 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType>
 		if (summon.getReputation() != 0)
 		{
 			addComponentType(NpcInfoType.REPUTATION);
-		}
-		
-		if (summon.getPvpFlag() != 0)
-		{
-			addComponentType(NpcInfoType.PVP_FLAG);
 		}
 		
 		if (summon.getOwner().getClan() != null)
