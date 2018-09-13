@@ -152,6 +152,11 @@ public class SummonInfo extends AbstractMaskPacket<NpcInfoType>
 			addComponentType(NpcInfoType.REPUTATION);
 		}
 		
+		if (summon.getPvpFlag() != 0)
+		{
+			addComponentType(NpcInfoType.PVP_FLAG);
+		}
+		
 		if (summon.getOwner().getClan() != null)
 		{
 			_clanId = summon.getOwner().getAppearance().getVisibleClanId();
