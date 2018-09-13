@@ -356,6 +356,10 @@ public abstract class L2Summon extends L2Playable
 	@Override
 	public void onDecay()
 	{
+		if (!isPet())
+		{
+			super.onDecay();
+		}
 		deleteMe(_owner);
 	}
 	
