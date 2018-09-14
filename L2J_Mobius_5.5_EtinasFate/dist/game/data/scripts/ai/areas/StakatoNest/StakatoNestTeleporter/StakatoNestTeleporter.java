@@ -19,10 +19,8 @@ package ai.areas.StakatoNest.StakatoNestTeleporter;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
 
 import ai.AbstractNpcAI;
-import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
 
 /**
  * Stakato Nest Teleport AI.
@@ -75,8 +73,10 @@ public final class StakatoNestTeleporter extends AbstractNpcAI
 	@Override
 	public String onTalk(L2Npc npc, L2PcInstance player)
 	{
-		final QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
-		return (((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm");
+		// TODO: Pre-Quest removed with Etina's Fate.
+		// final QuestState accessQuest = player.getQuestState(Q00240_ImTheOnlyOneYouCanTrust.class.getSimpleName());
+		// return (((accessQuest != null) && accessQuest.isCompleted()) ? "32640.htm" : "32640-no.htm");
+		return "32640.htm";
 	}
 	
 	public static void main(String[] args)

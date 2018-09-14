@@ -25,8 +25,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
-import quests.Q10395_NotATraitor.Q10395_NotATraitor;
-
 /**
  * Flames of Sorrow (10707)
  * @author St3eT
@@ -59,7 +57,8 @@ public final class Q10707_FlamesOfSorrow extends Quest
 		addKillId(VENGEFUL_SPIRIT);
 		registerQuestItems(MARK);
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "33863-07.htm");
-		addCondCompletedQuest(Q10395_NotATraitor.class.getSimpleName(), "33863-07.htm");
+		// TODO: Pre-Quest removed with Etina's Fate.
+		// addCondCompletedQuest(Q10395_NotATraitor.class.getSimpleName(), "33863-07.htm");
 	}
 	
 	@Override

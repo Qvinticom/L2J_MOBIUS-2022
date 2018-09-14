@@ -23,11 +23,9 @@ import com.l2jmobius.gameserver.instancemanager.AirShipManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
-import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 
 import ai.AbstractNpcAI;
-import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 
 /**
  * Nottingale AI.
@@ -76,30 +74,32 @@ public final class Nottingale extends AbstractNpcAI
 					}
 					else
 					{
-						final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-						if ((st != null) && st.isCompleted())
-						{
-							htmltext = event;
-						}
-						else
-						{
-							player.sendPacket(RADARS.get(2));
-							htmltext = "32627-01.html";
-						}
+						// TODO: Quest removed with Etina's Fate.
+						// final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+						// if ((st != null) && st.isCompleted())
+						// {
+						// htmltext = event;
+						// }
+						// else
+						// {
+						player.sendPacket(RADARS.get(2));
+						htmltext = "32627-01.html";
+						// }
 					}
 				}
 				else
 				{
-					final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
-					if ((st != null) && st.isCompleted())
-					{
-						htmltext = event;
-					}
-					else
-					{
-						player.sendPacket(RADARS.get(2));
-						htmltext = "32627-01.html";
-					}
+					// TODO: Quest removed with Etina's Fate.
+					// final QuestState st = player.getQuestState(Q10273_GoodDayToFly.class.getSimpleName());
+					// if ((st != null) && st.isCompleted())
+					// {
+					// htmltext = event;
+					// }
+					// else
+					// {
+					player.sendPacket(RADARS.get(2));
+					htmltext = "32627-01.html";
+					// }
 				}
 				break;
 			}

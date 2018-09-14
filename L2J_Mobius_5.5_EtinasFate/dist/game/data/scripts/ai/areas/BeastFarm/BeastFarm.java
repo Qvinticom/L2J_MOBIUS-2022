@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 
 import ai.AbstractNpcAI;
-import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 
 /**
  * Growth-capable mobs: Polymorphing upon successful feeding.<br>
@@ -286,7 +285,8 @@ public final class BeastFarm extends AbstractNpcAI
 				nextNpc.addBeastSkill(st.getSkill(sh.getSkillId(), sh.getSkillLevel()));
 			}
 			
-			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
+			// TODO: Quest removed with Etina's Fate.
+			// Q00020_BringUpWithLove.checkJewelOfInnocence(player);
 		}
 		else
 		{

@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.NpcStringId;
 
 import ai.AbstractNpcAI;
-import quests.Q00020_BringUpWithLove.Q00020_BringUpWithLove;
 
 /**
  * Growth-capable mobs: Polymorphing upon successful feeding.
@@ -424,7 +423,8 @@ public final class FeedableBeasts extends AbstractNpcAI
 			
 			final L2TamedBeastInstance nextNpc = new L2TamedBeastInstance(nextNpcId, player, food - FOODSKILLDIFF, npc.getX(), npc.getY(), npc.getZ());
 			nextNpc.setRunning();
-			Q00020_BringUpWithLove.checkJewelOfInnocence(player);
+			// TODO: Quest removed with Etina's Fate.
+			// Q00020_BringUpWithLove.checkJewelOfInnocence(player);
 			
 			// Support for A Grand Plan for Taming Wild Beasts (655) quest.
 			// Q00655_AGrandPlanForTamingWildBeasts.reward(player, nextNpc); TODO: Replace me?
