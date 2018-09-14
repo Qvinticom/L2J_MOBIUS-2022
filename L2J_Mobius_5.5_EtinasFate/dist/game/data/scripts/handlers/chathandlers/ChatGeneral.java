@@ -83,7 +83,7 @@ public final class ChatGeneral implements IChatHandler
 			
 			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_USE_GENERAL_CHAT_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.GENERAL_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(Config.MINIMUM_CHAT_LEVEL));
 				return;
 			}
 			

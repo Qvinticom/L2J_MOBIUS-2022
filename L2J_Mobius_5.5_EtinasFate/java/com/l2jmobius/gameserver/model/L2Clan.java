@@ -2252,7 +2252,7 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 			else
 			{
-				activeChar.sendPacket(SystemMessageId.THE_ACADEMY_ROYAL_GUARD_ORDER_OF_KNIGHTS_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME);
+				activeChar.sendPacket(SystemMessageId.THIS_CLAN_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME);
 			}
 			return false;
 		}
@@ -2746,7 +2746,7 @@ public class L2Clan implements IIdentifiable, INamable
 		}
 		
 		// notify all the members about it
-		broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_S_LEVEL_HAS_INCREASED));
+		broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_LEVEL_HAS_RISEN));
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
 	}
 	

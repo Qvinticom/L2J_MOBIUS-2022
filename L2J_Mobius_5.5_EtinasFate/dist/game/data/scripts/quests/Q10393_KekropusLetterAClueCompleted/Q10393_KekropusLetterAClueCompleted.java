@@ -94,7 +94,7 @@ public final class Q10393_KekropusLetterAClueCompleted extends LetterQuest
 					giveItems(player, EAC, 4);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 483840, 116);
-					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_52, ExShowScreenMessage.TOP_CENTER, 6000);
+					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_56, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;
 				}
 				break;

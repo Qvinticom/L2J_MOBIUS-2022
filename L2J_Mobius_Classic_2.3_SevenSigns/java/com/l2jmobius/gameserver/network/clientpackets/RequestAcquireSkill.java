@@ -700,7 +700,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 	private void giveSkill(L2PcInstance player, L2Npc trainer, Skill skill, boolean store)
 	{
 		// Send message.
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1_2);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEARNED_S1);
 		sm.addSkillName(skill);
 		player.sendPacket(sm);
 		

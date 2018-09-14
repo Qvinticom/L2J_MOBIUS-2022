@@ -74,7 +74,7 @@ public final class RequestWithdrawalPledge implements IClientIncomingPacket
 		clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(activeChar.getName()));
 		clan.broadcastToOnlineMembers(new ExPledgeCount(clan));
 		
-		client.sendPacket(SystemMessageId.YOU_HAVE_WITHDRAWN_FROM_THE_CLAN);
+		client.sendPacket(SystemMessageId.YOU_HAVE_LEFT_THE_CLAN);
 		client.sendPacket(SystemMessageId.AFTER_LEAVING_OR_HAVING_BEEN_DISMISSED_FROM_A_CLAN_YOU_MUST_WAIT_AT_LEAST_A_DAY_BEFORE_JOINING_ANOTHER_CLAN);
 	}
 }

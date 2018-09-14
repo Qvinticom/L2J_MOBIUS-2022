@@ -550,7 +550,7 @@ public class EnterWorld implements IClientIncomingPacket
 		
 		if (activeChar.getClanJoinExpiryTime() > System.currentTimeMillis())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HOURS);
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_RECENTLY_BEEN_DISMISSED_FROM_A_CLAN_YOU_ARE_NOT_ALLOWED_TO_JOIN_ANOTHER_CLAN_FOR_24_HR);
 		}
 		
 		// remove combat flag before teleporting

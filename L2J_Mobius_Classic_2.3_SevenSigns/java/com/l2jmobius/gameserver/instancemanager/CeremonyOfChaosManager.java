@@ -349,7 +349,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
 		}
 		else if (player.isInInstance())
 		{
-			sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANT_ZONE;
+			sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANCE_ZONE;
 			canRegister = false;
 		}
 		else if (player.isInSiege())

@@ -95,7 +95,7 @@ public final class RequestMoveToLocationInVehicle implements IClientIncomingPack
 		
 		if (activeChar.isTransformed())
 		{
-			client.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_A_BOAT);
+			client.sendPacket(SystemMessageId.YOU_CANNOT_POLYMORPH_WHILE_RIDING_ON_A_BOAT_AIRSHIP_OR_ELEVATOR);
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}

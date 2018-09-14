@@ -65,12 +65,14 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 		NpcStringId.S1_WHY_WOULD_YOU_CHOOSE_THE_PATH_OF_DARKNESS,
 		NpcStringId.S1_HOW_DARE_YOU_DEFY_THE_WILL_OF_EINHASAD
 	};
-	private static final NpcStringId[] SOLINA_KNIGHTS_MSG =
-	{
-		NpcStringId.PUNISH_ALL_THOSE_WHO_TREAD_FOOTSTEPS_IN_THIS_PLACE,
-		NpcStringId.WE_ARE_THE_SWORD_OF_TRUTH_THE_SWORD_OF_SOLINA,
-		NpcStringId.WE_RAISE_OUR_BLADES_FOR_THE_GLORY_OF_SOLINA
-	};
+	
+	// Removed with Etina's Fate.
+	// private static final NpcStringId[] SOLINA_KNIGHTS_MSG =
+	// {
+	// NpcStringId.PUNISH_ALL_THOSE_WHO_TREAD_FOOTSTEPS_IN_THIS_PLACE,
+	// NpcStringId.WE_ARE_THE_SWORD_OF_TRUTH_THE_SWORD_OF_SOLINA,
+	// NpcStringId.WE_RAISE_OUR_BLADES_FOR_THE_GLORY_OF_SOLINA
+	// };
 	
 	private MonasteryOfSilence()
 	{
@@ -94,7 +96,7 @@ public final class MonasteryOfSilence extends AbstractNpcAI
 					{
 						if ((character.getId() == CAPTAIN) && (getRandom(100) < 10) && npc.isScriptValue(0))
 						{
-							character.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
+							// character.broadcastSay(ChatType.NPC_GENERAL, SOLINA_KNIGHTS_MSG[getRandom(SOLINA_KNIGHTS_MSG.length)]);
 							character.setScriptValue(1);
 							startQuestTimer("TIMER", 10000, character, null);
 						}

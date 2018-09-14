@@ -63,7 +63,7 @@ public final class LoveYourGatekeeper extends LongTimeEvent
 						final long remainingTime = (reuse - System.currentTimeMillis()) / 1000;
 						final int hours = (int) (remainingTime / 3600);
 						final int minutes = (int) ((remainingTime % 3600) / 60);
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HR_S3_MIN);
 						sm.addItemName(GATEKEEPER_TRANSFORMATION_STICK);
 						sm.addInt(hours);
 						sm.addInt(minutes);

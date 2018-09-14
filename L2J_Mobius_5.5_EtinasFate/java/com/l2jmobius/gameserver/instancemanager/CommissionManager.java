@@ -300,7 +300,7 @@ public final class CommissionManager
 		
 		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
-			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
+			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_AMOUNT_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
 			player.sendPacket(SystemMessageId.CANCELLATION_OF_SALE_HAS_FAILED_BECAUSE_REQUIREMENTS_ARE_NOT_MET);
 			player.sendPacket(ExResponseCommissionDelete.FAILED);
 			return;
@@ -351,7 +351,7 @@ public final class CommissionManager
 		
 		if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() >= 3))
 		{
-			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_NUMBER_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
+			player.sendPacket(SystemMessageId.IF_THE_WEIGHT_IS_80_OR_MORE_AND_THE_INVENTORY_AMOUNT_IS_90_OR_MORE_PURCHASE_CANCELLATION_IS_NOT_POSSIBLE);
 			player.sendPacket(ExResponseCommissionBuyItem.FAILED);
 			return;
 		}

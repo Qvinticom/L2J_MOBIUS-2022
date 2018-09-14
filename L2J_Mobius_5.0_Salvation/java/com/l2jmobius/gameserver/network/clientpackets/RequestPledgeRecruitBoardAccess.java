@@ -87,11 +87,11 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 			{
 				if (ClanEntryManager.getInstance().addToClanList(clan.getId(), pledgeRecruitInfo))
 				{
-					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_ENTRY_APPLICATION_INFO_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MINUTES);
+					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_MY_APPLICATION_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MIN);
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
 					sm.addLong(ClanEntryManager.getInstance().getClanLockTime(clan.getId()));
 					activeChar.sendPacket(sm);
 				}
@@ -101,11 +101,11 @@ public class RequestPledgeRecruitBoardAccess implements IClientIncomingPacket
 			{
 				if (ClanEntryManager.getInstance().updateClanList(clan.getId(), pledgeRecruitInfo))
 				{
-					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_ENTRY_APPLICATION_INFO_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MINUTES);
+					activeChar.sendPacket(SystemMessageId.ENTRY_APPLICATION_COMPLETE_USE_MY_APPLICATION_TO_CHECK_OR_CANCEL_YOUR_APPLICATION_APPLICATION_IS_AUTOMATICALLY_CANCELLED_AFTER_30_DAYS_IF_YOU_CANCEL_APPLICATION_YOU_CANNOT_APPLY_AGAIN_FOR_5_MIN);
 				}
 				else
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MINUTE_S_DUE_TO_CANCELLING_YOUR_APPLICATION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_MAY_APPLY_FOR_ENTRY_AFTER_S1_MIN_DUE_TO_CANCELLING_YOUR_APPLICATION);
 					sm.addLong(ClanEntryManager.getInstance().getClanLockTime(clan.getId()));
 					activeChar.sendPacket(sm);
 				}

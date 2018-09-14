@@ -102,35 +102,35 @@ public class Siege implements Siegable
 				final long timeRemaining = _siegeEndDate.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();
 				if (timeRemaining > 3600000)
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HOUR_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HR_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt(2);
 					announceToPlayer(sm, true);
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 3600000); // Prepare task for 1 hr left.
 				}
 				else if ((timeRemaining <= 3600000) && (timeRemaining > 600000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 600000); // Prepare task for 10 minute left.
 				}
 				else if ((timeRemaining <= 600000) && (timeRemaining > 300000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 300000); // Prepare task for 5 minute left.
 				}
 				else if ((timeRemaining <= 300000) && (timeRemaining > 10000))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_CASTLE_SIEGE_CONCLUSION);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_CASTLE_SIEGE_CONCLUSION);
 					sm.addInt((int) timeRemaining / 60000);
 					announceToPlayer(sm, true);
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining - 10000); // Prepare task for 10 seconds count down
 				}
 				else if ((timeRemaining <= 10000) && (timeRemaining > 0))
 				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SECOND_S);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_CASTLE_SIEGE_WILL_END_IN_S1_SEC);
 					sm.addInt((int) timeRemaining / 1000);
 					announceToPlayer(sm, true);
 					ThreadPool.schedule(new ScheduleEndSiegeTask(_castleInst), timeRemaining); // Prepare task for second count down

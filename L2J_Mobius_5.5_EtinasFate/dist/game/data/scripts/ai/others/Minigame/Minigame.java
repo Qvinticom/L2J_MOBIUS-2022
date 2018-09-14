@@ -87,7 +87,8 @@ public final class Minigame extends AbstractNpcAI
 				
 				takeItems(player, UNLIT_TORCHLIGHT, 1);
 				giveItems(player, TORCHLIGHT, 1);
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_START_THE_FURNACE_MECHANISM_WATCH_FOR_THE_PATTERN);
+				// Removed with Etina's Fate.
+				// npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_LL_START_THE_FURNACE_MECHANISM_WATCH_FOR_THE_PATTERN);
 				
 				room.getManager().setTarget(player);
 				room.setParticipant(player);
@@ -163,7 +164,8 @@ public final class Minigame extends AbstractNpcAI
 			}
 			case "hurry_up":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ONLY_1_MINUTE_LEFT);
+				// Removed with Etina's Fate.
+				// npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.ONLY_1_MINUTE_LEFT);
 				startQuestTimer("hurry_up2", 60000, npc, null);
 				break;
 			}
@@ -175,7 +177,8 @@ public final class Minigame extends AbstractNpcAI
 			}
 			case "expire":
 			{
-				npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_LATE_THE_TORCH_HAS_RUN_OUT_MAYBE_NEXT_TIME);
+				// Removed with Etina's Fate.
+				// npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_LATE_THE_TORCH_HAS_RUN_OUT_MAYBE_NEXT_TIME);
 			}
 			case "end":
 			{
@@ -283,7 +286,8 @@ public final class Minigame extends AbstractNpcAI
 						else
 						{
 							addSpawn(TREASURE_BOX, room.getParticipant().getLocation(), true, 0);
-							room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THAT_S_IT_YOU_VE_DONE_IT);
+							// Removed with Etina's Fate.
+							// room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THAT_S_IT_YOU_VE_DONE_IT);
 							room.setCurrentPot(0);
 							room.burnThemAll();
 							startQuestTimer("off", 2000, room.getManager(), null);
@@ -292,7 +296,8 @@ public final class Minigame extends AbstractNpcAI
 					}
 					else if (room.getAttemptNumber() == MAX_ATTEMPTS)
 					{
-						room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_VE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
+						// Removed with Etina's Fate.
+						// room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.I_VE_FAILED_ANY_FURTHER_ATTEMPTS_WOULD_BE_WASTEFUL);
 						room.burnThemAll();
 						startQuestTimer("off", 2000, room.getManager(), null);
 						room.getParticipant().removeListenerIf(EventType.ON_CREATURE_SKILL_USE, listener -> listener.getOwner() == room);
@@ -300,7 +305,8 @@ public final class Minigame extends AbstractNpcAI
 					}
 					else if (room.getAttemptNumber() < MAX_ATTEMPTS)
 					{
-						room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_BAD_I_WILL_NOT_GIVE_UP_ON_THIS_THOUGH);
+						// Removed with Etina's Fate.
+						// room.getManager().broadcastSay(ChatType.NPC_GENERAL, NpcStringId.TOO_BAD_I_WILL_NOT_GIVE_UP_ON_THIS_THOUGH);
 						room.burnThemAll();
 						startQuestTimer("off", 2000, room.getManager(), null);
 						room.setAttemptNumber(room.getAttemptNumber() + 1);

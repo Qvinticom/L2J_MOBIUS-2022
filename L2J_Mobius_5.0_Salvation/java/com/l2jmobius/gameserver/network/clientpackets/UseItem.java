@@ -306,20 +306,20 @@ public final class UseItem implements IClientIncomingPacket
 		final SystemMessage sm;
 		if (hours > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HR_S3_MIN_AND_S4_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 			sm.addInt(hours);
 			sm.addInt(minutes);
 		}
 		else if (minutes > 0)
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MIN_S3_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 			sm.addInt(minutes);
 		}
 		else
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 			sm.addItemName(item);
 		}
 		sm.addInt(seconds);

@@ -596,7 +596,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				{
 					if (player.getFame() < totalCount)
 					{
-						player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_FAME_TO_DO_THAT);
+						player.sendPacket(SystemMessageId.YOU_DON_T_HAVE_ENOUGH_CLAN_REPUTATION_POINTS_TO_DO_THAT);
 						return false;
 					}
 					return true;
@@ -614,7 +614,7 @@ public class MultiSellChoose implements IClientIncomingPacket
 				{
 					if (player.getPcCafePoints() < totalCount)
 					{
-						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PC_POINTS));
+						player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.YOU_ARE_SHORT_OF_PA_POINTS));
 						return false;
 					}
 					return true;

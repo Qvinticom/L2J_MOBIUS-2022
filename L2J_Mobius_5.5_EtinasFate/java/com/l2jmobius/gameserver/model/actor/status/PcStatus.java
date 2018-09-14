@@ -181,7 +181,7 @@ public class PcStatus extends PlayableStatus
 				mpDam = (int) (value - mpDam);
 				if (mpDam > getActiveChar().getCurrentMp())
 				{
-					getActiveChar().sendPacket(SystemMessageId.MP_BECAME_0_AND_THE_ARCANE_SHIELD_IS_DISAPPEARING);
+					getActiveChar().sendPacket(SystemMessageId.MP_HAS_REACHED_0_THE_MANA_ARMOR_HAS_DISAPPEARED);
 					getActiveChar().stopSkillEffects(true, 1556);
 					value = mpDam - getActiveChar().getCurrentMp();
 					getActiveChar().setCurrentMp(0);
@@ -189,7 +189,7 @@ public class PcStatus extends PlayableStatus
 				else
 				{
 					getActiveChar().reduceCurrentMp(mpDam);
-					final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.ARCANE_SHIELD_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
+					final SystemMessage smsg = SystemMessage.getSystemMessage(SystemMessageId.MANA_ARMOR_DECREASED_YOUR_MP_BY_S1_INSTEAD_OF_HP);
 					smsg.addInt(mpDam);
 					getActiveChar().sendPacket(smsg);
 					return;

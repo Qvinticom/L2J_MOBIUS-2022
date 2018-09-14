@@ -898,7 +898,7 @@ public final class Instance implements IIdentifiable, INamable
 		if (!player.isOnCustomEvent() && (_template.getEjectTime() > 0))
 		{
 			// Send message
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MINUTE_S_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.IF_YOU_ARE_NOT_RESURRECTED_WITHIN_S1_MIN_YOU_WILL_BE_EXPELLED_FROM_THE_INSTANT_ZONE);
 			sm.addInt(_template.getEjectTime());
 			player.sendPacket(sm);
 			
@@ -1147,7 +1147,7 @@ public final class Instance implements IIdentifiable, INamable
 	 */
 	private void sendWorldDestroyMessage(int delay)
 	{
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_INSTANT_ZONE_WILL_BE_TERMINATED_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
+		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THIS_INSTANT_ZONE_WILL_BE_TERMINATED_IN_S1_MIN_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES);
 		sm.addInt(delay);
 		broadcastPacket(sm);
 	}

@@ -93,7 +93,7 @@ public final class RequestExSetPledgeCrestLarge implements IClientIncomingPacket
 		{
 			if (clan.getLevel() < 3)
 			{
-				client.sendPacket(SystemMessageId.A_CLAN_CREST_CAN_ONLY_BE_REGISTERED_WHEN_THE_CLAN_S_SKILL_LEVEL_IS_3_OR_ABOVE);
+				client.sendPacket(SystemMessageId.THE_CLAN_MUST_BE_LEVEL_3_OR_ABOVE_TO_REGISTER_A_CLAN_CREST);
 				return;
 			}
 			

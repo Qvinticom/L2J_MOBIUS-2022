@@ -280,7 +280,7 @@ public final class BalokWarzone extends AbstractInstance
 				world.getAliveNpcs(MINION, HELL_DISCIPLE, HELLS_GATE).forEach(guard -> guard.doDie(null));
 				world.removeNpcs();
 				world.finishInstance();
-				world.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt((int) 5.0D));
+				world.broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THIS_DUNGEON_WILL_EXPIRE_IN_S1_MIN_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES).addInt((int) 5.0D));
 			}
 			else
 			{

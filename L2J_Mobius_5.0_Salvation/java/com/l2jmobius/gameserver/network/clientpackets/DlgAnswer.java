@@ -76,7 +76,7 @@ public final class DlgAnswer implements IClientIncomingPacket
 				AdminCommandHandler.getInstance().useAdminCommand(activeChar, cmd, false);
 			}
 		}
-		else if ((_messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))
+		else if ((_messageId == SystemMessageId.C1_IS_ATTEMPTING_TO_RESURRECT_YOU_AND_RESTORE_YOUR_XP_S2_S3_ACCEPT.getId()) || (_messageId == SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId()))
 		{
 			activeChar.reviveAnswer(_answer);
 		}

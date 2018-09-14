@@ -523,7 +523,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			{
 				final int time = params.getInt("time", 0);
 				
-				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SECOND_S);
+				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCH_WILL_START_IN_S1_SEC);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				
@@ -549,7 +549,7 @@ public class CeremonyOfChaosEvent extends AbstractEvent<CeremonyOfChaosMember>
 			case "match_end_countdown":
 			{
 				final int time = params.getInt("time", 0);
-				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.IN_S1_SECOND_S_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
+				final SystemMessage countdown = SystemMessage.getSystemMessage(SystemMessageId.IN_S1_SEC_YOU_WILL_BE_MOVED_TO_WHERE_YOU_WERE_BEFORE_PARTICIPATING_IN_THE_CEREMONY_OF_CHAOS);
 				countdown.addByte(time);
 				broadcastPacket(countdown);
 				

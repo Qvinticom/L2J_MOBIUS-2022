@@ -109,7 +109,7 @@ public final class ChatWhisper implements IChatHandler
 			}
 			if ((activeChar.getLevel() < Config.MINIMUM_CHAT_LEVEL) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 			{
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.PLAYERS_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_A_WHISPER_UNTIL_AFTER_LV_S1).addInt(Config.MINIMUM_CHAT_LEVEL));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NON_PREMIUM_USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(Config.MINIMUM_CHAT_LEVEL));
 				return;
 			}
 			if (!BlockList.isBlocked(receiver, activeChar))

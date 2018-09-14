@@ -184,7 +184,7 @@ public final class RequestDestroyItem implements IClientIncomingPacket
 		{
 			if (itemToRemove.getEnchantLevel() > 0)
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(itemToRemove.getEnchantLevel());
 				sm.addItemName(itemToRemove);
 				client.sendPacket(sm);

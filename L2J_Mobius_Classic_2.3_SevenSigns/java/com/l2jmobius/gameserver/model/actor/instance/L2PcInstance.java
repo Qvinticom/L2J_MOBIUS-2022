@@ -6030,21 +6030,21 @@ public final class L2PcInstance extends L2Playable
 			{
 				// A strider cannot be ridden when dead
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD);
+				sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHEN_DEAD);
 				return false;
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN);
+				sendPacket(SystemMessageId.A_DEAD_MOUNT_CANNOT_BE_RIDDEN);
 				return false;
 			}
 			else if (pet.isInCombat() || pet.isRooted())
 			{
 				// A strider in battle cannot be ridden
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN);
+				sendPacket(SystemMessageId.A_MOUNT_IN_BATTLE_CANNOT_BE_RIDDEN);
 				return false;
 				
 			}
@@ -6052,14 +6052,14 @@ public final class L2PcInstance extends L2Playable
 			{
 				// A strider cannot be ridden while in battle
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
+				sendPacket(SystemMessageId.A_MOUNT_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
 				return false;
 			}
 			else if (_waitTypeSitting)
 			{
 				// A strider can be ridden only when standing
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
+				sendPacket(SystemMessageId.A_MOUNT_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
 				return false;
 			}
 			else if (isFishing())
@@ -6085,7 +6085,7 @@ public final class L2PcInstance extends L2Playable
 			else if (pet.isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_HUNGRY_STRIDER_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+				sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
 				return false;
 			}
 			else if (!Util.checkIfInRange(200, this, pet, true))
@@ -6114,7 +6114,7 @@ public final class L2PcInstance extends L2Playable
 			else if (isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_HUNGRY_STRIDER_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+				sendPacket(SystemMessageId.A_HUNGRY_MOUNT_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
 				return false;
 			}
 			else

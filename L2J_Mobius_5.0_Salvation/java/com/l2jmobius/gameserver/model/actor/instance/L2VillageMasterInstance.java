@@ -308,7 +308,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		final L2Clan clan = player.getClan();
 		if (clan.getAllyId() != 0)
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_DISPERSE_THE_CLANS_IN_YOUR_ALLIANCE);
+			player.sendPacket(SystemMessageId.THE_OPPOSING_CLAN_HAS_REQUESTED_TO_DISSOLVE);
 			return;
 		}
 		if (clan.isAtWar())

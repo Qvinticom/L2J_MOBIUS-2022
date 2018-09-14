@@ -93,7 +93,7 @@ public final class FreyaCelebration extends LongTimeEvent
 					final long remainingTime = (_reuse_time - System.currentTimeMillis()) / 1000;
 					final int hours = (int) (remainingTime / 3600);
 					final int minutes = (int) ((remainingTime % 3600) / 60);
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HOUR_S_S3_MINUTE_S);
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_WILL_BE_AVAILABLE_FOR_RE_USE_AFTER_S2_HR_S3_MIN);
 					sm.addItemName(FREYA_POTION);
 					sm.addInt(hours);
 					sm.addInt(minutes);

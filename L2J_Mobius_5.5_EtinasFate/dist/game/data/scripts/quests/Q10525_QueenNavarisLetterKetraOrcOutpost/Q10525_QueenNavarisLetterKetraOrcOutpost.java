@@ -92,7 +92,7 @@ public class Q10525_QueenNavarisLetterKetraOrcOutpost extends LetterQuest
 					{
 						addExpAndSp(player, 1277640, 306);
 						giveStoryQuestReward(npc, player);
-						showOnScreenMsg(player, NpcStringId.YOU_HAVE_FINISHED_ALL_OF_QUEEN_NAVARI_S_LETTERS_GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_LETTERS_FROM_A_MINSTREL_AT_LV_85, ExShowScreenMessage.TOP_CENTER, 8000);
+						showOnScreenMsg(player, NpcStringId.YOU_HAVE_COMPLETED_QUEEN_NAVARI_S_LETTER, ExShowScreenMessage.TOP_CENTER, 8000);
 						qs.exitQuest(QuestType.ONE_TIME, true);
 						htmltext = event;
 					}

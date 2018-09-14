@@ -2186,7 +2186,7 @@ public final class L2PcInstance extends L2Playable
 		{
 			if (item.getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(item.getEnchantLevel());
 				sm.addItemName(item);
 			}
@@ -2222,7 +2222,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EQUIPPED_YOUR_S1);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.EQUIPPED_S1);
 					sm.addItemName(item);
 				}
 				sendPacket(sm);
@@ -2362,7 +2362,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				setLvlJoinedAcademy(0);
 				// oust pledge member from the academy, cuz he has finished his 2nd class transfer
-				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.CLAN_MEMBER_S1_HAS_BEEN_EXPELLED);
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_DISMISSED);
 				msg.addPcName(this);
 				_clan.broadcastToOnlineMembers(msg);
 				_clan.broadcastToOnlineMembers(new PledgeShowMemberListDelete(getName()));
@@ -5958,7 +5958,7 @@ public final class L2PcInstance extends L2Playable
 			final SystemMessage sm;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 				sm.addInt(unequiped[0].getEnchantLevel());
 				sm.addItemName(unequiped[0]);
 			}
@@ -5998,7 +5998,7 @@ public final class L2PcInstance extends L2Playable
 				SystemMessage sm = null;
 				if (unequiped[0].getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 					sm.addInt(unequiped[0].getEnchantLevel());
 					sm.addItemName(unequiped[0]);
 				}
@@ -6064,21 +6064,21 @@ public final class L2PcInstance extends L2Playable
 			{
 				// A strider cannot be ridden when dead
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHEN_DEAD);
+				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_WHILE_DEAD);
 				return false;
 			}
 			else if (pet.isDead())
 			{
 				// A dead strider cannot be ridden.
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_DEAD_STRIDER_CANNOT_BE_RIDDEN);
+				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_DEAD_MOUNT);
 				return false;
 			}
 			else if (pet.isInCombat() || pet.isRooted())
 			{
 				// A strider in battle cannot be ridden
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_IN_BATTLE_CANNOT_BE_RIDDEN);
+				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_THAT_IS_IN_BATTLE);
 				return false;
 				
 			}
@@ -6086,14 +6086,14 @@ public final class L2PcInstance extends L2Playable
 			{
 				// A strider cannot be ridden while in battle
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CANNOT_BE_RIDDEN_WHILE_IN_BATTLE);
+				sendPacket(SystemMessageId.YOU_CANNOT_USE_A_MOUNT_WHILE_IN_BATTLE);
 				return false;
 			}
 			else if (_waitTypeSitting)
 			{
 				// A strider can be ridden only when standing
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_STRIDER_CAN_BE_RIDDEN_ONLY_WHEN_STANDING);
+				sendPacket(SystemMessageId.YOU_MUST_BE_STANDING_TO_USE_A_MOUNT);
 				return false;
 			}
 			else if (isFishing())
@@ -6119,7 +6119,7 @@ public final class L2PcInstance extends L2Playable
 			else if (pet.isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_HUNGRY_STRIDER_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+				sendPacket(SystemMessageId.YOU_CAN_NEITHER_MOUNT_NOR_DISMOUNT_WHILE_HUNGRY);
 				return false;
 			}
 			else if (!Util.checkIfInRange(200, this, pet, true))
@@ -6148,7 +6148,7 @@ public final class L2PcInstance extends L2Playable
 			else if (isHungry())
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
-				sendPacket(SystemMessageId.A_HUNGRY_STRIDER_CANNOT_BE_MOUNTED_OR_DISMOUNTED);
+				sendPacket(SystemMessageId.YOU_CAN_NEITHER_MOUNT_NOR_DISMOUNT_WHILE_HUNGRY);
 				return false;
 			}
 			else
@@ -8455,20 +8455,20 @@ public final class L2PcInstance extends L2Playable
 				final int seconds = (remainingTime % 60);
 				if (hours > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HOUR_S_S3_MINUTE_S_AND_S4_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_HR_S3_MIN_AND_S4_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 					sm.addInt(hours);
 					sm.addInt(minutes);
 				}
 				else if (minutes > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MINUTE_S_S3_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_MIN_S3_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 					sm.addInt(minutes);
 				}
 				else
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SECOND_S_REMAINING_IN_S1_S_RE_USE_TIME);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.THERE_ARE_S2_SEC_REMAINING_IN_S1_S_RE_USE_TIME);
 					sm.addSkillName(skill);
 				}
 				
@@ -10296,7 +10296,7 @@ public final class L2PcInstance extends L2Playable
 			}
 			
 			final long restoreExp = Math.round(((_expBeforeDeath - getExp()) * _revivePower) / 100);
-			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId());
+			final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_RESURRECT_YOU_AND_RESTORE_YOUR_XP_S2_S3_ACCEPT.getId());
 			dlg.addPcName(reviver);
 			dlg.addLong(restoreExp);
 			dlg.addInt(power);
@@ -11726,7 +11726,7 @@ public final class L2PcInstance extends L2Playable
 				
 				if (equippedItem.getEnchantLevel() > 0)
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
 					sm.addInt(equippedItem.getEnchantLevel());
 					sm.addItemName(equippedItem);
 				}
@@ -14082,7 +14082,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		if (oldLevel < getFactionLevel(faction))
 		{
-			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_FACTION_LEVEL_OF_S1_HAS_INCREASED_OPEN_THE_FACTIONS_WINDOW_TO_CHECK).addFactionName(faction.getId()));
+			sendPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_AMITY_LEVEL_OF_S1_HAS_INCREASED_OPEN_THE_FACTIONS_WINDOW_TO_CHECK).addFactionName(faction.getId()));
 		}
 	}
 	

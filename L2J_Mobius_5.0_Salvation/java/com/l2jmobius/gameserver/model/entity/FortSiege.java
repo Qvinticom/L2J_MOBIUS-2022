@@ -116,49 +116,49 @@ public class FortSiege implements Siegable
 				else if (_time == 600) // 10min remains
 				{
 					_fort.despawnSuspiciousMerchant();
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(10);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(300), 300000); // Prepare task for 5 minutes left.
 				}
 				else if (_time == 300) // 5min remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(5);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(60), 240000); // Prepare task for 1 minute left.
 				}
 				else if (_time == 60) // 1min remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MINUTE_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_MIN_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(1);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(30), 30000); // Prepare task for 30 seconds left.
 				}
 				else if (_time == 30) // 30seconds remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SEC_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(30);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(10), 20000); // Prepare task for 10 seconds left.
 				}
 				else if (_time == 10) // 10seconds remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SEC_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(10);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(5), 5000); // Prepare task for 5 seconds left.
 				}
 				else if (_time == 5) // 5seconds remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SEC_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(5);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(1), 4000); // Prepare task for 1 seconds left.
 				}
 				else if (_time == 1) // 1seconds remains
 				{
-					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SECOND_S_UNTIL_THE_FORTRESS_BATTLE_STARTS);
+					sm = SystemMessage.getSystemMessage(SystemMessageId.S1_SEC_UNTIL_THE_FORTRESS_BATTLE_STARTS);
 					sm.addInt(1);
 					announceToPlayer(sm);
 					ThreadPool.schedule(new ScheduleStartSiegeTask(0), 1000); // Prepare task start siege.

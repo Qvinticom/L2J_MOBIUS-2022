@@ -67,7 +67,7 @@ public final class ChatWorld implements IChatHandler
 		}
 		else if (activeChar.isChatBanned() && Config.BAN_CHAT_CHANNELS.contains(type))
 		{
-			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER_CHATTING_BAN_TIME_REMAINING_S1_SECONDS);
+			activeChar.sendPacket(SystemMessageId.CHATTING_IS_CURRENTLY_PROHIBITED_IF_YOU_TRY_TO_CHAT_BEFORE_THE_PROHIBITION_IS_REMOVED_THE_PROHIBITION_TIME_WILL_INCREASE_EVEN_FURTHER_CHATTING_BAN_TIME_REMAINING_S1_SEC);
 		}
 		else if (Config.JAIL_DISABLE_CHAT && activeChar.isJailed() && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 		{
@@ -76,7 +76,7 @@ public final class ChatWorld implements IChatHandler
 		}
 		else if (activeChar.getWorldChatUsed() >= activeChar.getWorldChatPoints())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_A_NEW_DAY_STARTS_EVERY_DAY_AT_18_30);
+			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_THE_WORLD_CHAT_QUOTA_RESETS_AT_7AM_EVERYDAY);
 		}
 		else
 		{

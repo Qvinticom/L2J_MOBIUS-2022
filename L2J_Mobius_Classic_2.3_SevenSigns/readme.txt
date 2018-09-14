@@ -64,12 +64,14 @@ Zaken: https://eu.4game.com/lineage2classic/play/zaken/
 -Newbie quest changes
 
 Antharas: https://eu.4game.com/lineage2classic/play/antharas/
+-Parsed new system messages and npc strings from client.
 -Parsed new skills from client
 -Parsed new items from client
 -Parsed new NPCs from L2Wiki and client
 -Clan Arena
 
 Seven Signs: https://eu.4gameforum.com/threads/658543/
+-Parsed new system messages and npc strings from client.
 -TODO: Parse new items from client
 
 Customs:

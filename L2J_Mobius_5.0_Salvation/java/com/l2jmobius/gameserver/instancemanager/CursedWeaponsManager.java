@@ -315,7 +315,7 @@ public final class CursedWeaponsManager implements IGameXmlReader
 				cw.giveSkill();
 				player.setCursedWeaponEquippedId(cw.getItemId());
 				
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MINUTE_S_OF_USAGE_TIME_REMAINING);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_S2_MIN_OF_USAGE_TIME_REMAINING);
 				sm.addString(cw.getName());
 				// sm.addItemName(cw.getItemId());
 				sm.addInt((int) ((cw.getEndTime() - System.currentTimeMillis()) / 60000));

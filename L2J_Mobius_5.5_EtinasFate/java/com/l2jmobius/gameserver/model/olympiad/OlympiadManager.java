@@ -190,7 +190,7 @@ public class OlympiadManager
 		final int charId = player.getObjectId();
 		if (Olympiad.getInstance().getRemainingWeeklyMatches(charId) < 1)
 		{
-			player.sendPacket(SystemMessageId.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_30);
+			player.sendPacket(SystemMessageId.YOU_MAY_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
 			return false;
 		}
 		

@@ -256,7 +256,7 @@ public final class RequestSendPost implements IClientIncomingPacket
 		
 		if (!client.getFloodProtectors().getSendMail().tryPerformAction("sendmail"))
 		{
-			activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MINUTE_AGO_AND_THIS_CANNOT_BE_FORWARDED);
+			activeChar.sendPacket(SystemMessageId.THE_PREVIOUS_MAIL_WAS_FORWARDED_LESS_THAN_1_MIN_AGO_AND_THIS_CANNOT_BE_FORWARDED);
 			return;
 		}
 		

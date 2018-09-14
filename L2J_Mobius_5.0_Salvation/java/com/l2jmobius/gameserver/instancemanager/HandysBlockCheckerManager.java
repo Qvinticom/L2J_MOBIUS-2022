@@ -195,7 +195,7 @@ public final class HandysBlockCheckerManager
 			
 			if (_registrationPenalty.contains(player.getObjectId()))
 			{
-				player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_SECONDS_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN);
+				player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_SEC_BEFORE_ATTEMPTING_TO_REGISTER_AGAIN);
 				return false;
 			}
 			

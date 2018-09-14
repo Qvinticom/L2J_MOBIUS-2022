@@ -146,7 +146,7 @@ public class Fishing
 		{
 			if (minPlayerLevel == 85)
 			{
-				_player.sendPacket(SystemMessageId.FISHING_IS_AVAILABLE_TO_CHARACTERS_LV_85_OR_ABOVE);
+				_player.sendPacket(SystemMessageId.FISHING_IS_AVAILABLE_TO_PREMIUM_USERS_ONLY);
 			}
 			else // In case of custom fishing level.
 			{

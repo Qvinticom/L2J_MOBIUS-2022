@@ -72,7 +72,7 @@ public class RequestPledgeDraftListApply implements IClientIncomingPacket
 				
 				if (ClanEntryManager.getInstance().addToWaitingList(activeChar.getObjectId(), pledgeDraftList))
 				{
-					client.sendPacket(SystemMessageId.ENTERED_INTO_WAITING_LIST_NAME_IS_AUTOMATICALLY_DELETED_AFTER_30_DAYS_IF_DELETE_FROM_WAITING_LIST_IS_USED_YOU_CANNOT_ENTER_NAMES_INTO_THE_WAITING_LIST_FOR_5_MINUTES);
+					client.sendPacket(SystemMessageId.YOU_HAVE_JOINED_THE_WAITING_LIST_CHARACTERS_ARE_AUTOMATICALLY_DELETED_FROM_THE_LIST_AFTER_30_DAYS_IF_EXIT_WAITING_LIST_IS_USED_YOU_CANNOT_JOIN_THE_WAITING_LIST_FOR_5_MINUTES);
 				}
 				else
 				{
