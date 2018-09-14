@@ -56,7 +56,7 @@ public class L2PenaltyMonsterInstance extends L2MonsterInstance
 	
 	public void setPlayerToKill(L2PcInstance ptk)
 	{
-		if (Rnd.nextInt(100) <= 80)
+		if (Rnd.get(100) <= 80)
 		{
 			CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "mmm your bait was delicious");
 			broadcastPacket(cs);
@@ -75,7 +75,7 @@ public class L2PenaltyMonsterInstance extends L2MonsterInstance
 			return false;
 		}
 		
-		if (Rnd.nextInt(100) <= 75)
+		if (Rnd.get(100) <= 75)
 		{
 			CreatureSay cs = new CreatureSay(getObjectId(), Say2.ALL, getName(), "I will tell fishes not to take your bait");
 			broadcastPacket(cs);

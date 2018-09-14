@@ -48,7 +48,7 @@ public class L2XmassTreeInstance extends L2NpcInstance
 		{
 			for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 			{
-				final int i = Rnd.nextInt(3);
+				final int i = Rnd.get(3);
 				handleCast(player, (4262 + i));
 			}
 		}

@@ -138,6 +138,6 @@ public final class Harvesting extends AbstractEffect
 		{
 			basicSuccess = 1;
 		}
-		return Rnd.nextInt(99) < basicSuccess;
+		return Rnd.get(99) < basicSuccess;
 	}
 }

@@ -484,7 +484,7 @@ public class LoginController
 	 */
 	public ScrambledKeyPair getScrambledRSAKeyPair()
 	{
-		return _keyPairs[Rnd.nextInt(10)];
+		return _keyPairs[Rnd.get(10)];
 	}
 	
 	/**

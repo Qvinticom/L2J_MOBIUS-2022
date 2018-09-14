@@ -94,7 +94,7 @@ public class L2GroupSpawn extends L2Spawn
 			
 			if (getHeading() == -1)
 			{
-				mob.setHeading(Rnd.nextInt(61794));
+				mob.setHeading(Rnd.get(61794));
 			}
 			else
 			{

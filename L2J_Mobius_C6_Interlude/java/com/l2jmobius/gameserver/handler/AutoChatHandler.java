@@ -759,7 +759,7 @@ public class AutoChatHandler implements SpawnListener
 						}
 						
 						final int maxIndex = chatDef.getChatTexts().length;
-						int lastIndex = Rnd.nextInt(maxIndex);
+						int lastIndex = Rnd.get(maxIndex);
 						
 						String creatureName = chatNpc.getName();
 						String text;
@@ -786,7 +786,7 @@ public class AutoChatHandler implements SpawnListener
 						
 						if (!nearbyPlayers.isEmpty())
 						{
-							final int randomPlayerIndex = Rnd.nextInt(nearbyPlayers.size());
+							final int randomPlayerIndex = Rnd.get(nearbyPlayers.size());
 							
 							L2PcInstance randomPlayer = nearbyPlayers.get(randomPlayerIndex);
 							

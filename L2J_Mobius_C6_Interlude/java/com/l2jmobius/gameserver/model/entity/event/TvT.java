@@ -2240,7 +2240,7 @@ public class TvT implements EventTask
 					break;
 				}
 				
-				final int playerToAddIndex = Rnd.nextInt(_playersShuffle.size());
+				final int playerToAddIndex = Rnd.get(_playersShuffle.size());
 				L2PcInstance player = null;
 				player = _playersShuffle.get(playerToAddIndex);
 				

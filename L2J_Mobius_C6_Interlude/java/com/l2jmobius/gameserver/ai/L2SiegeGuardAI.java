@@ -374,7 +374,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 		if (!_actor.isMuted() && (dist_2 > ((range + 20) * (range + 20))))
 		{
 			// check for long ranged skills and heal/buff skills
-			if (!Config.ALT_GAME_MOB_ATTACK_AI || ((_actor instanceof L2MonsterInstance) && (Rnd.nextInt(100) <= 5)))
+			if (!Config.ALT_GAME_MOB_ATTACK_AI || ((_actor instanceof L2MonsterInstance) && (Rnd.get(100) <= 5)))
 			{
 				for (L2Skill sk : skills)
 				{
@@ -500,7 +500,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getGameTicks();
 			
 			// check for close combat skills && heal/buff skills
-			if (!_actor.isMuted() && (Rnd.nextInt(100) <= 5))
+			if (!_actor.isMuted() && (Rnd.get(100) <= 5))
 			{
 				for (L2Skill sk : skills)
 				{

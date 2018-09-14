@@ -83,7 +83,7 @@ final class EffectConfusion extends L2Effect
 		}
 		
 		// Choosing randomly a new target
-		final int nextTargetIdx = Rnd.nextInt(targetList.size());
+		final int nextTargetIdx = Rnd.get(targetList.size());
 		final L2Object target = targetList.get(nextTargetIdx);
 		
 		// Attacking the target

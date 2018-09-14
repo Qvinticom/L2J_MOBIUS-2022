@@ -37,7 +37,7 @@ public final class OptionDataGroup
 		Options result = null;
 		do
 		{
-			double random = Rnd.get() * 100.0;
+			double random = Rnd.nextDouble() * 100.0;
 			for (OptionDataCategory category : _categories)
 			{
 				if (category.getChance() >= random)

@@ -147,10 +147,10 @@ public final class MobGroup
 			{
 				final L2GroupSpawn spawn = new L2GroupSpawn(_npcTemplate);
 				
-				final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-				final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+				final int signX = (Rnd.get(2) == 0) ? -1 : 1;
+				final int signY = (Rnd.get(2) == 0) ? -1 : 1;
+				final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
+				final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
 				
 				spawn.setXYZ(x + (signX * randX), y + (signY * randY), z);
 				spawn.stopRespawn();
@@ -185,8 +185,8 @@ public final class MobGroup
 			
 			if (!mobInst.isDead())
 			{
-				final int x = player.getX() + Rnd.nextInt(50);
-				final int y = player.getY() + Rnd.nextInt(50);
+				final int x = player.getX() + Rnd.get(50);
+				final int y = player.getY() + Rnd.get(50);
 				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
 				((L2ControllableMobAI) mobInst.getAI()).follow(player);
@@ -203,7 +203,7 @@ public final class MobGroup
 			return null;
 		}
 		
-		int choice = Rnd.nextInt(getMobs().size());
+		int choice = Rnd.get(getMobs().size());
 		for (L2ControllableMobInstance mob : getMobs())
 		{
 			if (--choice == 0)
@@ -321,10 +321,10 @@ public final class MobGroup
 				continue;
 			}
 			
-			final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-			final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-			final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+			final int signX = (Rnd.get(2) == 0) ? -1 : 1;
+			final int signY = (Rnd.get(2) == 0) ? -1 : 1;
+			final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
+			final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
 			
 			final L2ControllableMobAI ai = (L2ControllableMobAI) mobInst.getAI();
 			ai.move(activeChar.getX() + (signX * randX), activeChar.getY() + (signY * randY), activeChar.getZ());

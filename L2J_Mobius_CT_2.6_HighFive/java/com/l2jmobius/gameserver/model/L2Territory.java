@@ -150,7 +150,7 @@ public class L2Territory
 		if (_procMax > 0)
 		{
 			int pos = 0;
-			final int rnd = Rnd.nextInt(_procMax);
+			final int rnd = Rnd.get(_procMax);
 			for (Point p1 : _points)
 			{
 				pos += p1._proc;

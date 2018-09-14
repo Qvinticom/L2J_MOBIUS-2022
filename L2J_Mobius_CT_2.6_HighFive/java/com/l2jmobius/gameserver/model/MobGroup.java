@@ -146,10 +146,10 @@ public final class MobGroup
 			{
 				final L2GroupSpawn spawn = new L2GroupSpawn(_npcTemplate);
 				
-				final int signX = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				final int signY = (Rnd.nextInt(2) == 0) ? -1 : 1;
-				final int randX = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
-				final int randY = Rnd.nextInt(MobGroupTable.RANDOM_RANGE);
+				final int signX = (Rnd.get(2) == 0) ? -1 : 1;
+				final int signY = (Rnd.get(2) == 0) ? -1 : 1;
+				final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
+				final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
 				
 				spawn.setXYZ(x + (signX * randX), y + (signY * randY), z);
 				spawn.stopRespawn();
@@ -184,8 +184,8 @@ public final class MobGroup
 			
 			if (!mobInst.isDead())
 			{
-				final int x = player.getX() + Rnd.nextInt(50);
-				final int y = player.getY() + Rnd.nextInt(50);
+				final int x = player.getX() + Rnd.get(50);
+				final int y = player.getY() + Rnd.get(50);
 				
 				mobInst.teleToLocation(new Location(x, y, player.getZ()), true);
 				((L2ControllableMobAI) mobInst.getAI()).follow(player);
@@ -196,7 +196,7 @@ public final class MobGroup
 	public L2ControllableMobInstance getRandomMob()
 	{
 		removeDead();
-		return getMobs().size() == 0 ? null : getMobs().get(Rnd.nextInt(getMobs().size()));
+		return getMobs().size() == 0 ? null : getMobs().get(Rnd.get(getMobs().size()));
 	}
 	
 	public void unspawnGroup()
@@ -306,7 +306,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			((L2ControllableMobAI) mobInst.getAI()).move(activeChar.getX() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.RANDOM_RANGE)), activeChar.getY() + (((Rnd.nextInt(2) == 0) ? -1 : 1) * Rnd.nextInt(MobGroupTable.RANDOM_RANGE)), activeChar.getZ());
+			((L2ControllableMobAI) mobInst.getAI()).move(activeChar.getX() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getY() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getZ());
 		}
 	}
 	

@@ -622,7 +622,7 @@ public class L2AttackableAI extends L2CharacterAI
 		}
 		
 		// Chance to forget attackers after some time
-		if ((npc.getCurrentHp() == npc.getMaxHp()) && (npc.getCurrentMp() == npc.getMaxMp()) && !npc.getAttackByList().isEmpty() && (Rnd.nextInt(500) == 0))
+		if ((npc.getCurrentHp() == npc.getMaxHp()) && (npc.getCurrentMp() == npc.getMaxMp()) && !npc.getAttackByList().isEmpty() && (Rnd.get(500) == 0))
 		{
 			npc.clearAggroList();
 			npc.getAttackByList().clear();
@@ -694,7 +694,7 @@ public class L2AttackableAI extends L2CharacterAI
 				moveTo(x1, y1, z1);
 				return;
 			}
-			if (Rnd.nextInt(RANDOM_WALK_RATE) == 0)
+			if (Rnd.get(RANDOM_WALK_RATE) == 0)
 			{
 				for (Skill sk : npc.getTemplate().getAISkills(AISkillScope.BUFF))
 				{
@@ -706,7 +706,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 		}
 		// Order to the L2MonsterInstance to random walk (1/100)
-		else if ((npc.getSpawn() != null) && (Rnd.nextInt(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
+		else if ((npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0) && npc.isRandomWalkingEnabled())
 		{
 			int x1 = 0;
 			int y1 = 0;
@@ -731,7 +731,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 			else
 			{
-				final int deltaX = Rnd.nextInt(range * 2); // x
+				final int deltaX = Rnd.get(range * 2); // x
 				int deltaY = Rnd.get(deltaX, range * 2); // distance
 				deltaY = (int) Math.sqrt((deltaY * deltaY) - (deltaX * deltaX)); // y
 				x1 = (deltaX + x1) - range;
@@ -887,7 +887,7 @@ public class L2AttackableAI extends L2CharacterAI
 		// Note from Gnacik:
 		// On l2js because of that sometimes mobs don't attack player only running
 		// around player without any sense, so decrease chance for now
-		if (!npc.isMovementDisabled() && (Rnd.nextInt(100) <= 3))
+		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class))
 			{

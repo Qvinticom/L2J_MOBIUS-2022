@@ -87,7 +87,7 @@ public final class Confuse extends AbstractEffect
 		if (!targetList.isEmpty())
 		{
 			// Choosing randomly a new target
-			final L2Character target = targetList.get(Rnd.nextInt(targetList.size()));
+			final L2Character target = targetList.get(Rnd.get(targetList.size()));
 			// Attacking the target
 			info.getEffected().setTarget(target);
 			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);

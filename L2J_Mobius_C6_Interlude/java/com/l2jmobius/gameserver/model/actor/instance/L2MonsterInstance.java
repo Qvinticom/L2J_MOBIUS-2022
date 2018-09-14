@@ -204,13 +204,13 @@ public class L2MonsterInstance extends L2Attackable
 					final int masterZ = getZ();
 					
 					// Calculate a new random coord for the minion based on the master's coord
-					int minionX = (masterX + Rnd.nextInt(401)) - 200;
-					int minionY = (masterY + Rnd.nextInt(401)) - 200;
+					int minionX = (masterX + Rnd.get(401)) - 200;
+					int minionY = (masterY + Rnd.get(401)) - 200;
 					final int minionZ = masterZ;
 					while (((minionX != (masterX + 30)) && (minionX != (masterX - 30))) || ((minionY != (masterY + 30)) && (minionY != (masterY - 30))))
 					{
-						minionX = (masterX + Rnd.nextInt(401)) - 200;
-						minionY = (masterY + Rnd.nextInt(401)) - 200;
+						minionX = (masterX + Rnd.get(401)) - 200;
+						minionY = (masterY + Rnd.get(401)) - 200;
 					}
 					
 					// Move the minion to the new coords

@@ -68,7 +68,7 @@ public class L2GroupSpawn extends L2Spawn
 			final L2Npc mob = new L2ControllableMobInstance(_template);
 			mob.setCurrentHpMp(mob.getMaxHp(), mob.getMaxMp());
 			
-			mob.setHeading(getHeading() == -1 ? Rnd.nextInt(61794) : getHeading());
+			mob.setHeading(getHeading() == -1 ? Rnd.get(61794) : getHeading());
 			
 			mob.setSpawn(this);
 			mob.spawnMe(newlocx, newlocy, newlocz);

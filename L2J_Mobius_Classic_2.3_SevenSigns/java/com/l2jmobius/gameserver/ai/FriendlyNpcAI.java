@@ -116,7 +116,7 @@ public class FriendlyNpcAI extends L2AttackableAI
 		
 		final int combinedCollision = collision + originalAttackTarget.getTemplate().getCollisionRadius();
 		
-		if (!npc.isMovementDisabled() && (Rnd.nextInt(100) <= 3))
+		if (!npc.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (L2Attackable nearby : L2World.getInstance().getVisibleObjects(npc, L2Attackable.class))
 			{

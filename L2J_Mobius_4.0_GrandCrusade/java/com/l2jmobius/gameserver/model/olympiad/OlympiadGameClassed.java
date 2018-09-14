@@ -68,7 +68,7 @@ public class OlympiadGameClassed extends OlympiadGameNormal
 		Participant[] opponents;
 		while (!classList.isEmpty())
 		{
-			list = classList.get(Rnd.nextInt(classList.size()));
+			list = classList.get(Rnd.get(classList.size()));
 			if ((list == null) || (list.size() < 2))
 			{
 				classList.remove(list);

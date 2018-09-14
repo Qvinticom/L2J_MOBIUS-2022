@@ -76,7 +76,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 		
 		while (set.size() > 1)
 		{
-			int random = Rnd.nextInt(set.size());
+			int random = Rnd.get(set.size());
 			Iterator<Integer> iter = set.iterator();
 			while (iter.hasNext())
 			{
@@ -94,7 +94,7 @@ public abstract class OlympiadGameNormal extends AbstractOlympiadGame
 				continue;
 			}
 			
-			random = Rnd.nextInt(set.size());
+			random = Rnd.get(set.size());
 			iter = set.iterator();
 			while (iter.hasNext())
 			{

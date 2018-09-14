@@ -433,7 +433,7 @@ public class L2Spawn extends Location implements IIdentifiable, INamable
 		// Set the heading of the L2NpcInstance (random heading if not defined)
 		if (getHeading() == -1)
 		{
-			npc.setHeading(Rnd.nextInt(61794));
+			npc.setHeading(Rnd.get(61794));
 		}
 		else
 		{

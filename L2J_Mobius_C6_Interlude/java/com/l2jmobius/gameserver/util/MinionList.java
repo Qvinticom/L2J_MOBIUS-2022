@@ -240,18 +240,18 @@ public class MinionList
 		int spawnConstant;
 		final int randSpawnLim = 170;
 		int randPlusMin = 1;
-		spawnConstant = Rnd.nextInt(randSpawnLim);
+		spawnConstant = Rnd.get(randSpawnLim);
 		// randomize +/-
-		randPlusMin = Rnd.nextInt(2);
+		randPlusMin = Rnd.get(2);
 		if (randPlusMin == 1)
 		{
 			spawnConstant *= -1;
 		}
 		
 		final int newX = master.getX() + spawnConstant;
-		spawnConstant = Rnd.nextInt(randSpawnLim);
+		spawnConstant = Rnd.get(randSpawnLim);
 		// randomize +/-
-		randPlusMin = Rnd.nextInt(2);
+		randPlusMin = Rnd.get(2);
 		
 		if (randPlusMin == 1)
 		{

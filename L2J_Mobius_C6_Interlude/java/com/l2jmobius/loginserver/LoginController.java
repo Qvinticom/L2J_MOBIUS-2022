@@ -192,7 +192,7 @@ public class LoginController
 		{
 			for (int j = 0; j < _blowfishKeys[i].length; j++)
 			{
-				_blowfishKeys[i][j] = (byte) (Rnd.nextInt(255) + 1);
+				_blowfishKeys[i][j] = (byte) (Rnd.get(255) + 1);
 			}
 		}
 		LOGGER.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
@@ -561,7 +561,7 @@ public class LoginController
 	 */
 	public ScrambledKeyPair getScrambledRSAKeyPair()
 	{
-		return _keyPairs[Rnd.nextInt(10)];
+		return _keyPairs[Rnd.get(10)];
 	}
 	
 	/**

@@ -91,7 +91,7 @@ public final class L2GuardNoHTMLInstance extends L2Attackable
 	{
 		super(objectId, template);
 		getKnownList(); // init knownlist
-		ThreadPool.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.nextInt(60000));
+		ThreadPool.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.get(60000));
 	}
 	
 	/*

@@ -1627,7 +1627,8 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		return Rnd.get(getPartyMembers(player, npc, var, value));
+		final List<L2PcInstance> members = getPartyMembers(player, npc, var, value);
+		return members.get(Rnd.get(members.size()));
 	}
 	
 	/**
@@ -1749,7 +1750,8 @@ public class Quest extends ManagedScript
 		}
 		
 		// Return random candidate.
-		return Rnd.get(getPartyMembersState(player, npc, state));
+		final List<L2PcInstance> members = getPartyMembersState(player, npc, state);
+		return members.get(Rnd.get(members.size()));
 	}
 	
 	/**

@@ -506,7 +506,7 @@ public class AutoSpawn
 				}
 				
 				final int locationCount = locationList.length;
-				int locationIndex = Rnd.nextInt(locationCount);
+				int locationIndex = Rnd.get(locationCount);
 				
 				/*
 				 * If random spawning is disabled, the spawn at the next set of co-ordinates after the last. If the index is greater than the number of possible spawns, reset the counter to zero.
@@ -578,7 +578,7 @@ public class AutoSpawn
 						// To prevent spawning of more than one NPC in the exact
 						// same spot,
 						// move it slightly by a small random offset.
-						npcInst.setXYZ(npcInst.getX() + Rnd.nextInt(50), npcInst.getY() + Rnd.nextInt(50), npcInst.getZ());
+						npcInst.setXYZ(npcInst.getX() + Rnd.get(50), npcInst.getY() + Rnd.get(50), npcInst.getZ());
 						
 						// Add the NPC instance to the list of managed
 						// instances.

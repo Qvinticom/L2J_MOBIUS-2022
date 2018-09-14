@@ -245,7 +245,7 @@ public class GameServerTable
 	
 	public KeyPair getKeyPair()
 	{
-		return _keyPairs[Rnd.nextInt(10)];
+		return _keyPairs[Rnd.get(10)];
 	}
 	
 	private byte[] stringToHex(String string)

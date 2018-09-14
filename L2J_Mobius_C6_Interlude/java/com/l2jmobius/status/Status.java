@@ -140,22 +140,22 @@ public class Status extends Thread
 		
 		for (int i = 0; i < length; i++)
 		{
-			final int charSet = Rnd.nextInt(3);
+			final int charSet = Rnd.get(3);
 			switch (charSet)
 			{
 				case 0:
 				{
-					password.append(lowerChar.charAt(Rnd.nextInt(lowerChar.length() - 1)));
+					password.append(lowerChar.charAt(Rnd.get(lowerChar.length() - 1)));
 					break;
 				}
 				case 1:
 				{
-					password.append(upperChar.charAt(Rnd.nextInt(upperChar.length() - 1)));
+					password.append(upperChar.charAt(Rnd.get(upperChar.length() - 1)));
 					break;
 				}
 				case 2:
 				{
-					password.append(digits.charAt(Rnd.nextInt(digits.length() - 1)));
+					password.append(digits.charAt(Rnd.get(digits.length() - 1)));
 					break;
 				}
 			}

@@ -557,8 +557,8 @@ public class L2AttackableAI extends L2CharacterAI
 				int y1;
 				int z1;
 				
-				x1 = (((L2MinionInstance) _actor).getLeader().getX() + Rnd.nextInt((offset - 30) * 2)) - (offset - 30);
-				y1 = (((L2MinionInstance) _actor).getLeader().getY() + Rnd.nextInt((offset - 30) * 2)) - (offset - 30);
+				x1 = (((L2MinionInstance) _actor).getLeader().getX() + Rnd.get((offset - 30) * 2)) - (offset - 30);
+				y1 = (((L2MinionInstance) _actor).getLeader().getY() + Rnd.get((offset - 30) * 2)) - (offset - 30);
 				z1 = ((L2MinionInstance) _actor).getLeader().getZ();
 				// Move the actor to Location (x,y,z) server side AND client side by sending Server->Client packet CharMoveToLocation (broadcast)
 				moveTo(x1, y1, z1);
@@ -566,7 +566,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 		}
 		// Order to the L2MonsterInstance to random walk (1/100)
-		else if (!(npc instanceof L2ChestInstance) && (npc.getSpawn() != null) && (Rnd.nextInt(RANDOM_WALK_RATE) == 0))
+		else if (!(npc instanceof L2ChestInstance) && (npc.getSpawn() != null) && (Rnd.get(RANDOM_WALK_RATE) == 0))
 		{
 			int x1;
 			int y1;
@@ -610,8 +610,8 @@ public class L2AttackableAI extends L2CharacterAI
 				}
 				
 				// If NPC with fixed coord
-				x1 = (npc.getSpawn().getX() + Rnd.nextInt(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;
-				y1 = (npc.getSpawn().getY() + Rnd.nextInt(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;
+				x1 = (npc.getSpawn().getX() + Rnd.get(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;
+				y1 = (npc.getSpawn().getY() + Rnd.get(Config.MAX_DRIFT_RANGE * 2)) - Config.MAX_DRIFT_RANGE;
 				z1 = npc.getZ();
 			}
 			
@@ -772,7 +772,7 @@ public class L2AttackableAI extends L2CharacterAI
 		// Note from Gnacik:
 		// On l2js because of that sometimes mobs don't attack player only running
 		// around player without any sense, so decrease chance for now
-		if (!_actor.isMovementDisabled() && (Rnd.nextInt(100) <= 3))
+		if (!_actor.isMovementDisabled() && (Rnd.get(100) <= 3))
 		{
 			for (L2Object nearby : _actor.getKnownList().getKnownObjects().values())
 			{
@@ -879,7 +879,7 @@ public class L2AttackableAI extends L2CharacterAI
 		if (dist2 > (range * range))
 		{
 			// check for long ranged skills and heal/buff skills
-			if (!_actor.isMuted() && (!Config.ALT_GAME_MOB_ATTACK_AI || ((_actor instanceof L2MonsterInstance) && (Rnd.nextInt(100) <= 5))))
+			if (!_actor.isMuted() && (!Config.ALT_GAME_MOB_ATTACK_AI || ((_actor instanceof L2MonsterInstance) && (Rnd.get(100) <= 5))))
 			{
 				for (L2Skill sk : skills)
 				{
@@ -891,7 +891,7 @@ public class L2AttackableAI extends L2CharacterAI
 						_inRange = true;
 					}
 					
-					if (((sk.getSkillType() == L2Skill.SkillType.BUFF) || (sk.getSkillType() == L2Skill.SkillType.HEAL) || _inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.nextInt(100) <= 5))
+					if (((sk.getSkillType() == L2Skill.SkillType.BUFF) || (sk.getSkillType() == L2Skill.SkillType.HEAL) || _inRange) && !_actor.isSkillDisabled(sk) && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !sk.isPassive() && (Rnd.get(100) <= 5))
 					{
 						if ((sk.getSkillType() == L2Skill.SkillType.BUFF) || (sk.getSkillType() == L2Skill.SkillType.HEAL))
 						{
@@ -959,7 +959,7 @@ public class L2AttackableAI extends L2CharacterAI
 			
 			for (L2Skill sk : skills)
 			{
-				if (/* sk.getCastRange() >= dist && sk.getCastRange() <= 70 && */!sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk) && ((Rnd.nextInt(100) <= 8) || ((_actor instanceof L2PenaltyMonsterInstance) && (Rnd.nextInt(100) <= 20))))
+				if (/* sk.getCastRange() >= dist && sk.getCastRange() <= 70 && */!sk.isPassive() && (_actor.getCurrentMp() >= _actor.getStat().getMpConsume(sk)) && !_actor.isSkillDisabled(sk) && ((Rnd.get(100) <= 8) || ((_actor instanceof L2PenaltyMonsterInstance) && (Rnd.get(100) <= 20))))
 				{
 					if ((sk.getSkillType() == L2Skill.SkillType.BUFF) || (sk.getSkillType() == L2Skill.SkillType.HEAL))
 					{

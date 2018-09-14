@@ -68,14 +68,14 @@ public class CTF implements EventTask
 	
 	/** The _joining location name. */
 	protected static String _eventName = new String();
-
+	
 	/**
-	 * The _joining location name. 
+	 * The _joining location name.
 	 */
 	protected static String _eventDesc = new String();
-
+	
 	/**
-	 * The _joining location name. 
+	 * The _joining location name.
 	 */
 	protected static String _joiningLocationName = new String();
 	
@@ -84,92 +84,92 @@ public class CTF implements EventTask
 	
 	/** The _in progress. */
 	protected static boolean _joining = false;
-
+	
 	/**
-	 * The _in progress. 
+	 * The _in progress.
 	 */
 	protected static boolean _teleport = false;
-
+	
 	/**
-	 * The _in progress. 
+	 * The _in progress.
 	 */
 	protected static boolean _started = false;
-
+	
 	/**
-	 * The _in progress. 
+	 * The _in progress.
 	 */
 	protected static boolean _aborted = false;
-
+	
 	/**
-	 * The _in progress. 
+	 * The _in progress.
 	 */
 	protected static boolean _sitForced = false;
-
+	
 	/**
-	 * The _in progress. 
+	 * The _in progress.
 	 */
 	protected static boolean _inProgress = false;
 	
 	/** The _max players. */
 	protected static int _npcId = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _npcX = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _npcY = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _npcZ = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _npcHeading = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _rewardId = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _rewardAmount = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _minlvl = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _maxlvl = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _joinTime = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _eventTime = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _minPlayers = 0;
-
+	
 	/**
-	 * The _max players. 
+	 * The _max players.
 	 */
 	protected static int _maxPlayers = 0;
 	
@@ -193,37 +193,37 @@ public class CTF implements EventTask
 	
 	/** The _save player teams. */
 	public static Vector<String> _teams = new Vector<>();
-
+	
 	/**
-	 * The _save player teams. 
+	 * The _save player teams.
 	 */
 	public static Vector<String> _savePlayers = new Vector<>();
-
+	
 	/**
-	 * The _save player teams. 
+	 * The _save player teams.
 	 */
 	public static Vector<String> _savePlayerTeams = new Vector<>();
 	
 	/** The _teams z. */
 	public static Vector<Integer> _teamPlayersCount = new Vector<>();
-
+	
 	/**
-	 * The _teams z. 
+	 * The _teams z.
 	 */
 	public static Vector<Integer> _teamColors = new Vector<>();
-
+	
 	/**
-	 * The _teams z. 
+	 * The _teams z.
 	 */
 	public static Vector<Integer> _teamsX = new Vector<>();
-
+	
 	/**
-	 * The _teams z. 
+	 * The _teams z.
 	 */
 	public static Vector<Integer> _teamsY = new Vector<>();
-
+	
 	/**
-	 * The _teams z. 
+	 * The _teams z.
 	 */
 	public static Vector<Integer> _teamsZ = new Vector<>();
 	
@@ -235,53 +235,53 @@ public class CTF implements EventTask
 	
 	/** The _event offset. */
 	public static int _eventCenterX = 0;
-
+	
 	/**
-	 * The _event offset. 
+	 * The _event offset.
 	 */
 	public static int _eventCenterY = 0;
-
+	
 	/**
-	 * The _event offset. 
+	 * The _event offset.
 	 */
 	public static int _eventCenterZ = 0;
-
+	
 	/**
-	 * The _event offset. 
+	 * The _event offset.
 	 */
 	public static int _eventOffset = 0;
 	
 	/** The _ fla g_ i n_ han d_ ite m_ id. */
 	private static int _FlagNPC = 35062;
-
+	
 	/**
-	 * The _ fla g_ i n_ han d_ ite m_ id. 
+	 * The _ fla g_ i n_ han d_ ite m_ id.
 	 */
 	private static int _FLAG_IN_HAND_ITEM_ID = 6718;
 	
 	/** The _flags z. */
 	public static Vector<Integer> _flagIds = new Vector<>();
-
+	
 	/**
-	 * The _flags z. 
+	 * The _flags z.
 	 */
 	public static Vector<Integer> _flagsX = new Vector<>();
-
+	
 	/**
-	 * The _flags z. 
+	 * The _flags z.
 	 */
 	public static Vector<Integer> _flagsY = new Vector<>();
-
+	
 	/**
-	 * The _flags z. 
+	 * The _flags z.
 	 */
 	public static Vector<Integer> _flagsZ = new Vector<>();
 	
 	/** The _throne spawns. */
 	public static Vector<L2Spawn> _flagSpawns = new Vector<>();
-
+	
 	/**
-	 * The _throne spawns. 
+	 * The _throne spawns.
 	 */
 	public static Vector<L2Spawn> _throneSpawns = new Vector<>();
 	
@@ -2530,7 +2530,7 @@ public class CTF implements EventTask
 					break;
 				}
 				
-				final int playerToAddIndex = Rnd.nextInt(_playersShuffle.size());
+				final int playerToAddIndex = Rnd.get(_playersShuffle.size());
 				L2PcInstance player = null;
 				player = _playersShuffle.get(playerToAddIndex);
 				

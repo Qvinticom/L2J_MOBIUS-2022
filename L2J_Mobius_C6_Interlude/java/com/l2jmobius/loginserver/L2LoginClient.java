@@ -87,7 +87,7 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 		
 		_scrambledPair = LoginController.getInstance().getScrambledRSAKeyPair();
 		_blowfishKey = LoginController.getInstance().getBlowfishKey();
-		_sessionId = Rnd.nextInt(Integer.MAX_VALUE);
+		_sessionId = Rnd.get(Integer.MAX_VALUE);
 		_connectionStartTime = System.currentTimeMillis();
 		_loginCrypt = new LoginCrypt();
 		_loginCrypt.setKey(_blowfishKey);

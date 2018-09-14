@@ -584,7 +584,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 				_attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
 				
 				// check for close combat skills && heal/buff skills
-				if (!_actor.isMuted() && (Rnd.nextInt(100) <= 5))
+				if (!_actor.isMuted() && (Rnd.get(100) <= 5))
 				{
 					for (Skill sk : skills)
 					{

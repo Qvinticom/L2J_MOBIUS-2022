@@ -58,7 +58,7 @@ public final class AltarsOfSacrifice extends AbstractNpcAI
 			spawn.setHeading(Rnd.get(65536));
 			
 			final int radius = Rnd.get(BOSS_MIN_SPAWN_RADIUS, BOSS_MAX_SPAWN_RADIUS);
-			final double angleRadians = Rnd.get() * 2 * Math.PI;
+			final double angleRadians = Rnd.nextDouble() * 2 * Math.PI;
 			final int spawnX = (int) (radius * Math.cos(angleRadians)) + _middlePoint.getX();
 			final int spawnY = (int) (radius * Math.sin(angleRadians)) + _middlePoint.getY();
 			

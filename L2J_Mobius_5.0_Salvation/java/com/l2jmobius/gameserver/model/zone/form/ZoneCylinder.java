@@ -138,8 +138,8 @@ public class ZoneCylinder extends L2ZoneForm
 	@Override
 	public Location getRandomPoint()
 	{
-		final int q = (int) (Rnd.get() * 2 * Math.PI);
-		final int r = (int) Math.sqrt(Rnd.get());
+		final int q = (int) (Rnd.nextDouble() * 2 * Math.PI);
+		final int r = (int) Math.sqrt(Rnd.nextDouble());
 		final int x = (int) ((_rad * r * Math.cos(q)) + _x);
 		final int y = (int) ((_rad * r * Math.sin(q)) + _y);
 		

@@ -304,7 +304,7 @@ public final class CastleManorManager implements IGameXmlReader, IStorable
 							if (crop.getStartAmount() != crop.getAmount())
 							{
 								long count = (long) ((crop.getStartAmount() - crop.getAmount()) * 0.9);
-								if ((count < 1) && (Rnd.nextInt(99) < 90))
+								if ((count < 1) && (Rnd.get(99) < 90))
 								{
 									count = 1;
 								}

@@ -185,7 +185,7 @@ public class Sow implements ISkillHandler
 			basicSuccess = 1;
 		}
 		
-		final int rate = Rnd.nextInt(99);
+		final int rate = Rnd.get(99);
 		
 		return (rate < basicSuccess);
 	}

@@ -199,7 +199,7 @@ public class L2SiegeGuardInstance extends L2Attackable
 				}
 				else
 				{
-					SocialAction sa = new SocialAction(getObjectId(), Rnd.nextInt(8));
+					SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
 					broadcastPacket(sa);
 					sendPacket(sa);
 					showChatWindow(player, 0);

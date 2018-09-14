@@ -579,7 +579,7 @@ public class L2Spawn
 			// Set the heading of the L2NpcInstance (random heading if not defined)
 			if (_heading == -1)
 			{
-				mob.setHeading(Rnd.nextInt(61794));
+				mob.setHeading(Rnd.get(61794));
 			}
 			else
 			{

@@ -1357,7 +1357,7 @@ public class L2CharacterAI extends AbstractAI
 		public void update(L2Character target)
 		{
 			// update status once in 4 seconds
-			if ((target == character) && (Rnd.nextInt(100) > 25))
+			if ((target == character) && (Rnd.get(100) > 25))
 			{
 				return;
 			}

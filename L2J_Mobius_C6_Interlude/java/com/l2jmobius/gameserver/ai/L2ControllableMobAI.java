@@ -63,10 +63,10 @@ public class L2ControllableMobAI extends L2AttackableAI
 		
 		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true))
 		{
-			final int signX = Rnd.nextInt(2) == 0 ? -1 : 1;
-			final int signY = Rnd.nextInt(2) == 0 ? -1 : 1;
-			final int randX = Rnd.nextInt(MobGroupTable.FOLLOW_RANGE);
-			final int randY = Rnd.nextInt(MobGroupTable.FOLLOW_RANGE);
+			final int signX = Rnd.get(2) == 0 ? -1 : 1;
+			final int signY = Rnd.get(2) == 0 ? -1 : 1;
+			final int randX = Rnd.get(MobGroupTable.FOLLOW_RANGE);
+			final int randY = Rnd.get(MobGroupTable.FOLLOW_RANGE);
 			
 			moveTo(getForcedTarget().getX() + (signX * randX), getForcedTarget().getY() + (signY * randY), getForcedTarget().getZ());
 		}
@@ -344,7 +344,7 @@ public class L2ControllableMobAI extends L2AttackableAI
 				setAttackTarget(hated);
 			}
 			
-			if (!_actor.isMuted() && (skills.length > 0) && (Rnd.nextInt(5) == 3))
+			if (!_actor.isMuted() && (skills.length > 0) && (Rnd.get(5) == 3))
 			{
 				for (L2Skill sk : skills)
 				{
@@ -476,7 +476,7 @@ public class L2ControllableMobAI extends L2AttackableAI
 		}
 		
 		// we choose a random target
-		final int choice = Rnd.nextInt(potentialTarget.size());
+		final int choice = Rnd.get(potentialTarget.size());
 		
 		final L2Character target = potentialTarget.get(choice);
 		

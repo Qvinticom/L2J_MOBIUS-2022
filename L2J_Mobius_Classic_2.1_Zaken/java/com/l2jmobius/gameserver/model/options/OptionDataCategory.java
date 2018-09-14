@@ -39,7 +39,7 @@ public final class OptionDataCategory
 		Options result = null;
 		do
 		{
-			double random = Rnd.get() * 100.0;
+			double random = Rnd.nextDouble() * 100.0;
 			for (Map.Entry<Options, Double> entry : _options.entrySet())
 			{
 				if (entry.getValue() >= random)

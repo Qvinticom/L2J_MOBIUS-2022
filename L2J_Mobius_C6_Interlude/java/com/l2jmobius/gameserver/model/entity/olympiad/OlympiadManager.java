@@ -387,7 +387,7 @@ class OlympiadManager implements Runnable
 			return null;
 		}
 		
-		return list.get(classList.get(Rnd.nextInt(classList.size())));
+		return list.get(classList.get(Rnd.get(classList.size())));
 	}
 	
 	protected List<L2PcInstance> nextOpponents(List<L2PcInstance> list)
@@ -407,11 +407,11 @@ class OlympiadManager implements Runnable
 			return opponents;
 		}
 		
-		first = Rnd.nextInt(list.size());
+		first = Rnd.get(list.size());
 		opponents.add(list.get(first));
 		list.remove(first);
 		
-		second = Rnd.nextInt(list.size());
+		second = Rnd.get(list.size());
 		opponents.add(list.get(second));
 		list.remove(second);
 		

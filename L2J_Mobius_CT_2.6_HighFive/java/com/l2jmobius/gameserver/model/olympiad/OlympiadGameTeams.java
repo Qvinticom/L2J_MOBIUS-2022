@@ -109,7 +109,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 		
 		while (list.size() > 1)
 		{
-			teamOne = list.remove(Rnd.nextInt(list.size()));
+			teamOne = list.remove(Rnd.get(list.size()));
 			
 			if ((teamOne == null) || teamOne.isEmpty())
 			{
@@ -131,7 +131,7 @@ public class OlympiadGameTeams extends AbstractOlympiadGame
 				continue;
 			}
 			
-			teamTwo = list.remove(Rnd.nextInt(list.size()));
+			teamTwo = list.remove(Rnd.get(list.size()));
 			if ((teamTwo == null) || teamTwo.isEmpty())
 			{
 				list.add(teamOne);
