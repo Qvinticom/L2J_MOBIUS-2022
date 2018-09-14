@@ -784,14 +784,8 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
+			<effect name="TrackLimitedSkill" />
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11833</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
 		<!-- Updated to Ertheia -->
@@ -857,14 +851,8 @@
 					<value fromLevel="1" toLevel="1" fromSubLevel="1020" toSubLevel="1020">4504</value>
 				</power>
 			</effect>
+			<effect name="TrackLimitedSkill" />
 		</effects>
-		<endEffects>
-			<effect name="CallSkill">
-				<!-- Lingering Protection -->
-				<skillId>11834</skillId>
-				<skillLevel>1</skillLevel>
-			</effect>
-		</endEffects>
 	</skill>
 	<skill id="11760" toLevel="11" name="Radiant Recharge">
 		<!-- Glory Days confirmed -->

@@ -154,6 +154,7 @@ Lethal: Upon success sets enemy Player's CP to 1 and enemy NPC's HP to 50%.
 LimitCp: Sets maximum recoverable CP through heals.
 LimitHp: Sets maximum recoverable HP through heals.
 LimitMp: Sets maximum recoverable MP through heals.
+LimitSkill: Limits skill duration. (l2jmobius)
 Lucky: dummy effect since behavior is hardcoded
 MagicAccuracy: M. Accuracy stat.
 MagicalAbnormalDispelAttack: Magical attack that does damage only if it manages to dispel the given AbnormalType
@@ -308,6 +309,7 @@ TeleportToNpc: Teleports to a specified Npc Id.
 TeleportToPlayer: Teleports to targeted player. (l2jmobius)
 TeleportToSummon: Teleports to your summon.
 TeleportToTarget: Teleports to your target.
+TrackLimitedSkill: Checks limit skill duration, see LimitSkill effect. (l2jmobius)
 TransferDamageToPlayer: Transfers portion of incoming damage from target to you.
 TransferDamageToSummon: Transfers portion of incoming damage towards your summon.
 TransferHate: Transfers Npc's hate from you to your target.

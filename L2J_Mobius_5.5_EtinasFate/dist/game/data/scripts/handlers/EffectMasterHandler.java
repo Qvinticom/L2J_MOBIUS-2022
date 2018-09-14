@@ -185,6 +185,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("LimitCp", LimitCp::new);
 		EffectHandler.getInstance().registerHandler("LimitHp", LimitHp::new);
 		EffectHandler.getInstance().registerHandler("LimitMp", LimitMp::new);
+		EffectHandler.getInstance().registerHandler("LimitSkill", LimitSkill::new);
 		EffectHandler.getInstance().registerHandler("Lucky", Lucky::new);
 		EffectHandler.getInstance().registerHandler("MagicAccuracy", MagicAccuracy::new);
 		EffectHandler.getInstance().registerHandler("MagicalAbnormalDispelAttack", MagicalAbnormalDispelAttack::new);
@@ -340,6 +341,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("TeleportToPlayer", TeleportToPlayer::new);
 		EffectHandler.getInstance().registerHandler("TeleportToSummon", TeleportToSummon::new);
 		EffectHandler.getInstance().registerHandler("TeleportToTarget", TeleportToTarget::new);
+		EffectHandler.getInstance().registerHandler("TrackLimitedSkill", TrackLimitedSkill::new);
 		EffectHandler.getInstance().registerHandler("FlyAway", FlyAway::new);
 		EffectHandler.getInstance().registerHandler("TransferDamageToPlayer", TransferDamageToPlayer::new);
 		EffectHandler.getInstance().registerHandler("TransferDamageToSummon", TransferDamageToSummon::new);

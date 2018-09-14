@@ -1387,42 +1387,21 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11833" toLevel="1" name="Lingering Protection">
+	<skill id="11833" toLevel="3" name="Limit of Aeore">
 		<!-- Updated to Ertheia -->
 		<!-- Glory Days confirmed -->
 		<!-- Skill activates once Celestial Protection wears off. -->
 		<!-- Lingering Celestial Protection. For 1 minute, increases HP/MP recovery bonus and Spd. + 5. Cannot receive the effects of Celestial Protection, Celestial Party Protection, or Celestial Aegis. -->
-		<icon>icon.skill11758</icon>
-		<abnormalLvl>9</abnormalLvl>
-		<abnormalTime>70</abnormalTime> <!-- Tested -->
-		<abnormalType>INVINCIBILITY_SPECIAL</abnormalType>
-		<operateType>A2</operateType>
-		<isMagic>1</isMagic>
-		<effectPoint>1</effectPoint>
-		<isDebuff>true</isDebuff>
-		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
-		<magicCriticalRate>5</magicCriticalRate>
-		<specialLevel>-2</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<magicLvl>99</magicLvl>
-		<irreplacableBuff>true</irreplacableBuff>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
+		<icon>icon.skill11833</icon>
+		<isDebuff>true</isDebuff>
+		<operateType>A2</operateType>
+		<reuseDelay>1</reuseDelay>
+		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
-			<effect name="Speed">
-				<amount>5</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="MpRegen">
-				<amount>1</amount>
-				<mode>DIFF</mode>
-			</effect>
+			<effect name="LimitSkill" />
 		</effects>
 	</skill>
 	<skill id="11834" toLevel="1" name="Lingering Protection">
