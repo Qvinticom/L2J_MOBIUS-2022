@@ -85,7 +85,6 @@ import quests.Q00237_WindsOfChange.Q00237_WindsOfChange;
 import quests.Q00238_SuccessFailureOfBusiness.Q00238_SuccessFailureOfBusiness;
 import quests.Q00239_WontYouJoinUs.Q00239_WontYouJoinUs;
 import quests.Q00240_ImTheOnlyOneYouCanTrust.Q00240_ImTheOnlyOneYouCanTrust;
-import quests.Q00245_ComeToMe.Q00245_ComeToMe;
 import quests.Q00254_LegendaryTales.Q00254_LegendaryTales;
 import quests.Q00270_TheOneWhoEndsSilence.Q00270_TheOneWhoEndsSilence;
 import quests.Q00278_HomeSecurity.Q00278_HomeSecurity;
@@ -123,7 +122,6 @@ import quests.Q00483_IntendedTactic.Q00483_IntendedTactic;
 import quests.Q00485_HotSpringWater.Q00485_HotSpringWater;
 import quests.Q00488_WondersOfCaring.Q00488_WondersOfCaring;
 import quests.Q00489_InThisQuietPlace.Q00489_InThisQuietPlace;
-import quests.Q00490_DutyOfTheSurvivor.Q00490_DutyOfTheSurvivor;
 import quests.Q00491_InNominePatris.Q00491_InNominePatris;
 import quests.Q00492_TombRaiders.Q00492_TombRaiders;
 import quests.Q00493_KickingOutUnwelcomeGuests.Q00493_KickingOutUnwelcomeGuests;
@@ -134,11 +132,6 @@ import quests.Q00497_IncarnationOfGreedZellakaSolo.Q00497_IncarnationOfGreedZell
 import quests.Q00498_IncarnationOfJealousyPellineSolo.Q00498_IncarnationOfJealousyPellineSolo;
 import quests.Q00499_IncarnationOfGluttonyKaliosSolo.Q00499_IncarnationOfGluttonyKaliosSolo;
 import quests.Q00500_BrothersBoundInChains.Q00500_BrothersBoundInChains;
-import quests.Q00501_ProofOfClanAlliance.Q00501_ProofOfClanAlliance;
-import quests.Q00503_PursuitOfClanAmbition.Q00503_PursuitOfClanAmbition;
-import quests.Q00508_AClansReputation.Q00508_AClansReputation;
-import quests.Q00509_AClansFame.Q00509_AClansFame;
-import quests.Q00510_AClansPrestige.Q00510_AClansPrestige;
 import quests.Q00511_AwlUnderFoot.Q00511_AwlUnderFoot;
 import quests.Q00512_BladeUnderFoot.Q00512_BladeUnderFoot;
 import quests.Q00551_OlympiadStarter.Q00551_OlympiadStarter;
@@ -203,7 +196,6 @@ import quests.Q00928_100DaySubjugationOperation.Q00928_100DaySubjugationOperatio
 import quests.Q00937_ToReviveTheFishingGuild.Q00937_ToReviveTheFishingGuild;
 import quests.Q10273_GoodDayToFly.Q10273_GoodDayToFly;
 import quests.Q10274_CollectingInTheAir.Q10274_CollectingInTheAir;
-import quests.Q10275_ContainingTheAttributePower.Q10275_ContainingTheAttributePower;
 import quests.Q10282_ToTheSeedOfAnnihilation.Q10282_ToTheSeedOfAnnihilation;
 import quests.Q10283_RequestOfIceMerchant.Q10283_RequestOfIceMerchant;
 import quests.Q10284_AcquisitionOfDivineSword.Q10284_AcquisitionOfDivineSword;
@@ -245,7 +237,6 @@ import quests.Q10335_RequestToFindSakum.Q10335_RequestToFindSakum;
 import quests.Q10336_DividedSakumKanilov.Q10336_DividedSakumKanilov;
 import quests.Q10337_SakumsImpact.Q10337_SakumsImpact;
 import quests.Q10338_SeizeYourDestiny.Q10338_SeizeYourDestiny;
-import quests.Q10339_FightingTheForgotten.Q10339_FightingTheForgotten;
 import quests.Q10341_DayOfDestinyHumansFate.Q10341_DayOfDestinyHumansFate;
 import quests.Q10342_DayOfDestinyElvenFate.Q10342_DayOfDestinyElvenFate;
 import quests.Q10343_DayOfDestinyDarkElfsFate.Q10343_DayOfDestinyDarkElfsFate;
@@ -298,7 +289,6 @@ import quests.Q10403_TheGuardianGiant.Q10403_TheGuardianGiant;
 import quests.Q10404_KekropusLetterAHiddenMeaning.Q10404_KekropusLetterAHiddenMeaning;
 import quests.Q10405_KartiasSeed.Q10405_KartiasSeed;
 import quests.Q10406_BeforeDarknessBearsFruit.Q10406_BeforeDarknessBearsFruit;
-import quests.Q10407_LetsGoFishing.Q10407_LetsGoFishing;
 import quests.Q10408_KekropusLetterTheSwampOfScreams.Q10408_KekropusLetterTheSwampOfScreams;
 import quests.Q10409_ASuspiciousVagabondInTheSwamp.Q10409_ASuspiciousVagabondInTheSwamp;
 import quests.Q10410_EmbryoInTheSwampOfScreams.Q10410_EmbryoInTheSwampOfScreams;
@@ -329,8 +319,6 @@ import quests.Q10453_StoppingTheWindDragon.Q10453_StoppingTheWindDragon;
 import quests.Q10455_ElikiasLetter.Q10455_ElikiasLetter;
 import quests.Q10459_ASickAmbition.Q10459_ASickAmbition;
 import quests.Q10460_ReturnOfTheAlligatorHunter.Q10460_ReturnOfTheAlligatorHunter;
-import quests.Q10462_TemperARustingBlade.Q10462_TemperARustingBlade;
-import quests.Q10465_SoulFrostSword.Q10465_SoulFrostSword;
 import quests.Q10472_WindsOfFateEncroachingShadows.Q10472_WindsOfFateEncroachingShadows;
 import quests.Q10501_ZakenEmbroideredSoulCloak.Q10501_ZakenEmbroideredSoulCloak;
 import quests.Q10502_FreyaEmbroideredSoulCloak.Q10502_FreyaEmbroideredSoulCloak;
@@ -521,7 +509,6 @@ public class QuestMasterHandler
 		Q00238_SuccessFailureOfBusiness.class,
 		Q00239_WontYouJoinUs.class,
 		Q00240_ImTheOnlyOneYouCanTrust.class,
-		Q00245_ComeToMe.class,
 		Q00254_LegendaryTales.class,
 		Q00270_TheOneWhoEndsSilence.class,
 		Q00278_HomeSecurity.class,
@@ -559,7 +546,6 @@ public class QuestMasterHandler
 		Q00485_HotSpringWater.class,
 		Q00488_WondersOfCaring.class,
 		Q00489_InThisQuietPlace.class,
-		Q00490_DutyOfTheSurvivor.class,
 		Q00491_InNominePatris.class,
 		Q00492_TombRaiders.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
@@ -570,11 +556,6 @@ public class QuestMasterHandler
 		Q00498_IncarnationOfJealousyPellineSolo.class,
 		Q00499_IncarnationOfGluttonyKaliosSolo.class,
 		Q00500_BrothersBoundInChains.class,
-		Q00501_ProofOfClanAlliance.class,
-		Q00503_PursuitOfClanAmbition.class,
-		Q00508_AClansReputation.class,
-		Q00509_AClansFame.class,
-		Q00510_AClansPrestige.class,
 		Q00511_AwlUnderFoot.class,
 		Q00512_BladeUnderFoot.class,
 		Q00551_OlympiadStarter.class,
@@ -639,7 +620,6 @@ public class QuestMasterHandler
 		Q00937_ToReviveTheFishingGuild.class,
 		Q10273_GoodDayToFly.class,
 		Q10274_CollectingInTheAir.class,
-		Q10275_ContainingTheAttributePower.class,
 		Q10282_ToTheSeedOfAnnihilation.class,
 		Q10283_RequestOfIceMerchant.class,
 		Q10284_AcquisitionOfDivineSword.class,
@@ -681,7 +661,6 @@ public class QuestMasterHandler
 		Q10336_DividedSakumKanilov.class,
 		Q10337_SakumsImpact.class,
 		Q10338_SeizeYourDestiny.class,
-		Q10339_FightingTheForgotten.class,
 		Q10341_DayOfDestinyHumansFate.class,
 		Q10342_DayOfDestinyElvenFate.class,
 		Q10343_DayOfDestinyDarkElfsFate.class,
@@ -734,7 +713,6 @@ public class QuestMasterHandler
 		Q10404_KekropusLetterAHiddenMeaning.class,
 		Q10405_KartiasSeed.class,
 		Q10406_BeforeDarknessBearsFruit.class,
-		Q10407_LetsGoFishing.class,
 		Q10408_KekropusLetterTheSwampOfScreams.class,
 		Q10409_ASuspiciousVagabondInTheSwamp.class,
 		Q10410_EmbryoInTheSwampOfScreams.class,
@@ -765,8 +743,6 @@ public class QuestMasterHandler
 		Q10455_ElikiasLetter.class,
 		Q10459_ASickAmbition.class,
 		Q10460_ReturnOfTheAlligatorHunter.class,
-		Q10462_TemperARustingBlade.class,
-		Q10465_SoulFrostSword.class,
 		Q10472_WindsOfFateEncroachingShadows.class,
 		Q10501_ZakenEmbroideredSoulCloak.class,
 		Q10502_FreyaEmbroideredSoulCloak.class,
