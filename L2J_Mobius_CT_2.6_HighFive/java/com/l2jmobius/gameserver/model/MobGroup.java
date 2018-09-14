@@ -146,8 +146,8 @@ public final class MobGroup
 			{
 				final L2GroupSpawn spawn = new L2GroupSpawn(_npcTemplate);
 				
-				final int signX = (Rnd.get(2) == 0) ? -1 : 1;
-				final int signY = (Rnd.get(2) == 0) ? -1 : 1;
+				final int signX = Rnd.nextBoolean() ? -1 : 1;
+				final int signY = Rnd.nextBoolean() ? -1 : 1;
 				final int randX = Rnd.get(MobGroupTable.RANDOM_RANGE);
 				final int randY = Rnd.get(MobGroupTable.RANDOM_RANGE);
 				
@@ -306,7 +306,7 @@ public final class MobGroup
 				continue;
 			}
 			
-			((L2ControllableMobAI) mobInst.getAI()).move(activeChar.getX() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getY() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getZ());
+			((L2ControllableMobAI) mobInst.getAI()).move(activeChar.getX() + ((Rnd.nextBoolean() ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getY() + ((Rnd.nextBoolean() ? -1 : 1) * Rnd.get(MobGroupTable.RANDOM_RANGE)), activeChar.getZ());
 		}
 	}
 	

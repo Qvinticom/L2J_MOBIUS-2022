@@ -653,7 +653,7 @@ public class Anakim extends AbstractNpcAI
 	@Override
 	public String onSkillSee(L2Npc npc, L2PcInstance caster, Skill skill, L2Object[] targets, boolean isPet)
 	{
-		if (CommonUtil.contains(ANAKIM_MINIONS, npc.getId()) && (Rnd.get(2) == 1))
+		if (CommonUtil.contains(ANAKIM_MINIONS, npc.getId()) && Rnd.nextBoolean())
 		{
 			if (skill.getAbnormalType() == AbnormalType.HP_RECOVER)
 			{

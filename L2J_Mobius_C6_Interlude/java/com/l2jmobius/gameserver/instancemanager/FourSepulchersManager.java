@@ -1256,7 +1256,7 @@ public class FourSepulchersManager extends GrandBossManager
 		List<L2SepulcherMonsterInstance> mobs = new ArrayList<>();
 		L2Spawn keyBoxMobSpawn;
 		
-		if (Rnd.get(2) == 0)
+		if (Rnd.nextBoolean())
 		{
 			monsterList = _physicalMonsters.get(npcId);
 		}

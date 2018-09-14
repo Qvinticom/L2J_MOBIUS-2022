@@ -1062,7 +1062,7 @@ public final class FourSepulchersManager
 		}
 		
 		final List<L2SepulcherMonsterInstance> mobs = new CopyOnWriteArrayList<>();
-		final List<L2Spawn> monsterList = Rnd.get(2) == 0 ? _physicalMonsters.get(npcId) : _magicalMonsters.get(npcId);
+		final List<L2Spawn> monsterList = Rnd.nextBoolean() ? _physicalMonsters.get(npcId) : _magicalMonsters.get(npcId);
 		if (monsterList == null)
 		{
 			return;

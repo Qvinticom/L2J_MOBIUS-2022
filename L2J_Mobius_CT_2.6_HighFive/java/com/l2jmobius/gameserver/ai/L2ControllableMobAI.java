@@ -66,7 +66,7 @@ public final class L2ControllableMobAI extends L2AttackableAI
 	{
 		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, _actor, getForcedTarget(), true))
 		{
-			moveTo(getForcedTarget().getX() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getY() + (((Rnd.get(2) == 0) ? -1 : 1) * Rnd.get(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getZ());
+			moveTo(getForcedTarget().getX() + ((Rnd.nextBoolean() ? -1 : 1) * Rnd.get(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getY() + ((Rnd.nextBoolean() ? -1 : 1) * Rnd.get(MobGroupTable.FOLLOW_RANGE)), getForcedTarget().getZ());
 		}
 	}
 	

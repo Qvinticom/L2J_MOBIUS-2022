@@ -275,7 +275,7 @@ public class QueenAnt extends Quest
 			{
 				if (Rnd.get(3) == 0)
 				{
-					if (Rnd.get(2) == 0)
+					if (Rnd.nextBoolean())
 					{
 						npc.broadcastPacket(new SocialAction(npc.getObjectId(), 3));
 					}

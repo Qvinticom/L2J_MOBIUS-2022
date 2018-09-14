@@ -833,7 +833,7 @@ public class Zaken extends Quest
 						}
 					}
 				}
-				if (Rnd.get(2) < 1)
+				if (Rnd.nextBoolean())
 				{
 					if (attacker == ((L2Attackable) npc).getMostHated())
 					{
@@ -898,7 +898,7 @@ public class Zaken extends Quest
 	 * public String onSkillSee(L2NpcInstance npc, L2PcInstance caster, L2Skill skill, L2Object[] targets, boolean isPet) { int npcId = npc.getNpcId(); if (npcId == ZAKEN) { if (skill.getAggroPoints() > 0) { ((L2Attackable) npc).addDamageHate(caster, 0, (((skill.getAggroPoints() / npc.getMaxHp()) *
 	 * 10) * 150)); } if (Rnd.get(12) < 1) { int i0 = Rnd.get((15 * 15)); if (i0 < 1) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4216, 1)); } else if (i0 < 2) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4217, 1)); } else if (i0 < 4) {
 	 * npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4219, 1)); } else if (i0 < 8) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4218, 1)); } else if (i0 < 15) { for (L2Character character : npc.getKnownList().getKnownCharactersInRadius(100)) { if
-	 * (character != caster) continue; if (caster != ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4221, 1)); } } } if (Rnd.get(2) < 1) { if (caster == ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster);
+	 * (character != caster) continue; if (caster != ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster); npc.doCast(SkillTable.getInstance().getInfo(4221, 1)); } } } if (Rnd.get(2)ss < 1) { if (caster == ((L2Attackable) npc).getMostHated()) { npc.setTarget(caster);
 	 * npc.doCast(SkillTable.getInstance().getInfo(4220, 1)); } } } } return super.onSkillSee(npc, caster, skill, targets, isPet); }
 	 */
 	
@@ -977,7 +977,7 @@ public class Zaken extends Quest
 							}
 						}
 					}
-					if (Rnd.get(2) < 1)
+					if (Rnd.nextBoolean())
 					{
 						if (player == ((L2Attackable) npc).getMostHated())
 						{

@@ -63,8 +63,8 @@ public final class L2ControllableMobAI extends L2AttackableAI
 		
 		if (!Util.checkIfInRange(MobGroupTable.FOLLOW_RANGE, me, getForcedTarget(), true))
 		{
-			final int signX = (Rnd.get(2) == 0) ? -1 : 1;
-			final int signY = (Rnd.get(2) == 0) ? -1 : 1;
+			final int signX = Rnd.nextBoolean() ? -1 : 1;
+			final int signY = Rnd.nextBoolean() ? -1 : 1;
 			final int randX = Rnd.get(MobGroupTable.FOLLOW_RANGE);
 			final int randY = Rnd.get(MobGroupTable.FOLLOW_RANGE);
 			

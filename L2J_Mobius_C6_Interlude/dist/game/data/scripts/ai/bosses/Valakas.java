@@ -733,7 +733,7 @@ public class Valakas extends Quest
 					{
 						skill = SkillTable.getInstance().getInfo(4683, 1);
 					}
-					else if (Rnd.get(2) == 0)
+					else if (Rnd.nextBoolean())
 					{
 						skill = SkillTable.getInstance().getInfo(4681, 1); // left hand
 					}
@@ -787,7 +787,7 @@ public class Valakas extends Quest
 					{
 						skill = SkillTable.getInstance().getInfo(4683, 1);
 					}
-					else if (Rnd.get(2) == 0)
+					else if (Rnd.nextBoolean())
 					{
 						skill = SkillTable.getInstance().getInfo(4681, 1); // left hand
 					}
@@ -841,7 +841,7 @@ public class Valakas extends Quest
 					{
 						skill = SkillTable.getInstance().getInfo(4683, 1);
 					}
-					else if (Rnd.get(2) == 0)
+					else if (Rnd.nextBoolean())
 					{
 						skill = SkillTable.getInstance().getInfo(4681, 1); // left hand
 					}
@@ -895,7 +895,7 @@ public class Valakas extends Quest
 					{
 						skill = SkillTable.getInstance().getInfo(4683, 1);
 					}
-					else if (Rnd.get(2) == 0)
+					else if (Rnd.nextBoolean())
 					{
 						skill = SkillTable.getInstance().getInfo(4681, 1); // left hand
 					}

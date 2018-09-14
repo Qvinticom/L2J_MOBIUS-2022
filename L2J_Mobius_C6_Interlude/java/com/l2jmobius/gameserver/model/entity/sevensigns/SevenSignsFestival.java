@@ -4730,8 +4730,6 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		protected void festivalInit()
 		{
-			boolean isPositive;
-			
 			if (Config.DEBUG)
 			{
 				LOGGER.info("SevenSignsFestival: Initializing festival for " + SevenSigns.getCabalShortName(_cabal) + " (" + getFestivalName(_levelRange) + ")");
@@ -4750,9 +4748,7 @@ public class SevenSignsFestival implements SpawnListener
 						int x = _startLocation._x;
 						int y = _startLocation._y;
 						
-						isPositive = Rnd.get(2) == 1;
-						
-						if (isPositive)
+						if (Rnd.nextBoolean())
 						{
 							x += Rnd.get(FESTIVAL_MAX_OFFSET_X);
 							y += Rnd.get(FESTIVAL_MAX_OFFSET_Y);
@@ -4843,8 +4839,6 @@ public class SevenSignsFestival implements SpawnListener
 		 */
 		protected void moveMonstersToCenter()
 		{
-			boolean isPositive;
-			
 			if (Config.DEBUG)
 			{
 				LOGGER.info("SevenSignsFestival: Moving spawns to arena center for festival " + SevenSigns.getCabalShortName(_cabal) + " (" + getFestivalName(_levelRange) + ")");
@@ -4871,9 +4865,7 @@ public class SevenSignsFestival implements SpawnListener
 				/*
 				 * Random X and Y coords around the player start location, up to half of the maximum allowed offset are generated to prevent the mobs from all moving to the exact same place.
 				 */
-				isPositive = Rnd.get(2) == 1;
-				
-				if (isPositive)
+				if (Rnd.nextBoolean())
 				{
 					x += Rnd.get(FESTIVAL_MAX_OFFSET_X);
 					y += Rnd.get(FESTIVAL_MAX_OFFSET_Y);

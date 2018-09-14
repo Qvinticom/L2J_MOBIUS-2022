@@ -469,7 +469,7 @@ public class Q00620_FourGoblets extends Quest
 					}
 					else if (reward == 0)
 					{
-						if (Rnd.get(2) == 0)
+						if (Rnd.nextBoolean())
 						{
 							htmltext = "31454-14.htm";
 						}
@@ -918,7 +918,7 @@ public class Q00620_FourGoblets extends Quest
 				}
 				if (reward == 0)
 				{
-					if (Rnd.get(2) == 0)
+					if (Rnd.nextBoolean())
 					{
 						htmltext = "31919-4.htm";
 					}
