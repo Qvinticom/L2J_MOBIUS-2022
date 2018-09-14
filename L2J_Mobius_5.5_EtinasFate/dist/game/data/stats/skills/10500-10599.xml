@@ -3639,7 +3639,7 @@
 	<skill id="10560" toLevel="1" name="Maximum Blow">
 		<!-- For 20 sec., Vital Spot Attack Rate + 10%. Requires a dagger or dual dagger. -->
 		<abnormalLvl>5</abnormalLvl>
-		<abnormalTime>20</abnormalTime>
+		<abnormalTime>120</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
 		<icon>icon.skill11877</icon>
 		<operateType>A2</operateType>
@@ -3649,7 +3649,7 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>549</effectPoint>
-		<reuseDelay>300000</reuseDelay>
+		<reuseDelay>150000</reuseDelay>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

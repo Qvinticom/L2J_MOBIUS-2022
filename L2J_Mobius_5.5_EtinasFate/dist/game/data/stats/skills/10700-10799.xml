@@ -254,14 +254,17 @@
 	</skill>
  	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
  		<!-- Updated to GRAND CRUSADE -->
-		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Attack and decrease Speed by 50. Additionally, applies an effect on you to increase Critical Rate/Damage from the side and from behind for 10 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
+		<!-- Moves to the left side of the target to attempt Deadly Attack with 56030 power added to P. Atk. Causes Bleed on the target for 15 seconds. Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/dual dagger to be equipped -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
 		</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
-		<abnormalType>SPEED_DOWN</abnormalType>
+		<abnormalTime>15</abnormalTime>
+		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<abnormalType>BLEEDING</abnormalType>
+		<basicProperty>PHYSICAL</basicProperty>
  		<icon>icon.skill10705</icon>
 		<operateType>DA4</operateType>
 		<targetType>ENEMY</targetType>
@@ -1073,8 +1076,8 @@
 		</effects>
 	</skill>
 	<skill id="10760" toLevel="11" name="Tornado Shot">
-		<!-- Glory Days confirmed -->
-		<!-- Attacks target with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
+		<!-- Salvation -->
+		<!-- Attacks target and enemies in the route with 20814 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10760</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1124,7 +1127,10 @@
 		<reuseDelay>7000</reuseDelay>
 		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;1100;50</fanRange>
+		<affectLimit>5-12</affectLimit>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -1228,7 +1234,10 @@
 		<rideState>NONE</rideState>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
-		<affectScope>SINGLE</affectScope>
+		<affectScope>SQUARE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;1100;50</fanRange>
+		<affectLimit>5-12</affectLimit>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>

@@ -253,18 +253,41 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="16334" toLevel="3" name="Disarm">
-		<!-- AUTO GENERATED SKILL -->
-		<!-- Disarmed. -->
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>DISARM</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<icon>icon.skill0485</icon>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
-		<mpConsume>13</mpConsume>
+		<mpConsume>38</mpConsume>
 		<castRange>40</castRange>
-		<hitTime>1500</hitTime>
-		<coolTime>800</coolTime>
-		<reuseDelay>15000</reuseDelay>
-		<effectPoint>-100</effectPoint>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-341</effectPoint>
+		<abnormalTime>5</abnormalTime>
 		<isDebuff>true</isDebuff>
+		<activateRate>70</activateRate>
+		<basicProperty>PHYSICAL</basicProperty>
+		<lvlBonusRate>20</lvlBonusRate>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="EquipWeapon">
+				<weaponType>
+					<item>SWORD</item>
+					<item>BLUNT</item>
+					<item>POLE</item>
+					<item>DUALFIST</item>
+					<item>DUAL</item>
+					<item>DUALBLUNT</item>
+				</weaponType>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Disarm">
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16335" toLevel="1" name="Fear">
 		<!-- AUTO GENERATED SKILL -->

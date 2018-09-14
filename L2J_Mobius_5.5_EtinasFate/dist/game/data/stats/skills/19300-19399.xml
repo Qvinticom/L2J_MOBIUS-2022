@@ -15,31 +15,68 @@
 		</effects>
 	</skill>
 	<skill id="19301" toLevel="9" name="Acid Swarm">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Creates Danger Zone for $s1 to decrease nearby enemies?? P. Attack/Defense, M. Defense, Speed and Shield Defense and block any magical skills. -->
+		<!-- Salvation -->
+		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for 15 seconds. 
+		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
 		<operateType>A1</operateType>
-		<targetType>GROUND</targetType>
-		<affectScope>SINGLE</affectScope>
-		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>107</mpConsume>
 		<castRange>900</castRange>
-		<effectRange>1100</effectRange>
-		<mpConsume>
-			<value level="1">76</value>
-			<value level="2">79</value>
-			<value level="3">83</value>
-			<value level="4">87</value>
-			<value level="5">91</value>
-			<value level="6">95</value>
-			<value level="7">99</value>
-			<value level="8">103</value>
-			<value level="9">107</value>
-		</mpConsume>
-		<hitTime>200</hitTime>
-		<coolTime>500</coolTime>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
+			<value level="6">6</value>
+			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+		</abnormalLvl>
 		<reuseDelay>15000</reuseDelay>
+		<abnormalTime>15</abnormalTime>
+		<abnormalType>POISON</abnormalType>
+		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
+		<activateRate>130</activateRate>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>300</affectRange>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">87</value>
+			<value level="3">90</value>
+			<value level="4">93</value>
+			<value level="5">96</value>
+			<value level="6">99</value>
+			<value level="7">101</value>
+			<value level="8">103</value>
+			<value level="9">105</value>
+		</magicLvl>
+		<lvlBonusRate>20</lvlBonusRate>
+		<mpConsume>1</mpConsume>
+		<effectPoint>
+			<value level="1">-707</value>
+			<value level="2">-709</value>
+			<value level="3">-709</value>
+			<value level="4">-709</value>
+			<value level="5">-709</value>
+			<value level="6">-709</value>
+			<value level="7">-709</value>
+			<value level="8">-709</value>
+			<value level="9">-709</value>
+		</effectPoint>
+		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
+		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
+		<hitTime>2500</hitTime>
+		<hitCancelTime>0</hitCancelTime>
+		<trait>ZONE</trait>
+		<targetType>GROUND</targetType>
+		<affectScope>POINT_BLANK</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<channelingStart>1</channelingStart>
 		<effects>
 			<effect name="SummonNpc">
 				<npcId>
@@ -54,12 +91,33 @@
 					<value level="9">13549</value>
 				</npcId>
 				<npcCount>1</npcCount>
+				<despawnDelay>15000</despawnDelay>
+				<singleInstance>true</singleInstance>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>-30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ShieldDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="BlockSkill">
+				<magicTypes>1</magicTypes>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Poisoned. Decreases Speed/Attack/P. Defense/M. Defense/Shield Defense, blocks magical skills and drains HP by $s1 every second. -->
+		<!-- Salvation -->
+		<!-- Damaged by acid. P. Def/M. Def -30% and, Atk. Spd./Movement Speed/Shield Def. -50%, cannot use magic skills, and HP -$s3 per second. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -77,7 +135,7 @@
 		<activateRate>130</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill19301</icon>
+		<icon>icon.skill19302</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -119,8 +177,8 @@
 			<effect name="BlockSkill">
 				<magicTypes>1</magicTypes>
 			</effect>
-			<effect name="PAtk">
-				<amount>-23</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Speed">
@@ -131,22 +189,19 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="AddHate">
-				<power>1000</power>
-			</effect>
 			<effect name="MagicalDefence">
-				<amount>-10</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>-10</amount>
+				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Moves to the right side of the target to attempt Deadly Attack with 35530 power added to P. Attack. Causes Bleed on the target for 15 seconds. Half-kill is possible. Requires dagger/dual dagger. -->
+		<!-- Salvation -->
+		<!-- Moves to the right side of the target to attempt the Deadly Attack with 35530 Power added to P. Atk and stun the target for 2 seconds. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -156,11 +211,10 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 		</abnormalLvl>
-		<abnormalTime>15</abnormalTime>
-		<abnormalType>BLEEDING</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>120</activateRate>
-		<trait>BLEED</trait>
 		<icon>icon.skill19303</icon>
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
@@ -186,7 +240,7 @@
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<reuseDelay>5000</reuseDelay>
+		<reuseDelay>6000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
 		<nextAction>ATTACK</nextAction>
@@ -198,6 +252,12 @@
 				</weaponType>
 			</condition>
 		</conditions>
+		<selfEffects>
+			<effect name="CallSkill">
+				<skillId>19304</skillId>
+				<skillLevel>1</skillLevel>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="FatalBlow">
 				<power>
@@ -222,10 +282,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19304" toLevel="1" name="Easterly Wind Strike">
+	<skill id="19304" toLevel="2" name="Easterly Wind Strike">
 		<!-- Updated to GRAND CRUSADE -->
 		<!-- Increases critical rate/critical damage inflicted from the side and critical rate/critical damage inflicted from behind by 20% and 10%, respectively. -->
-		<abnormalLvl>1</abnormalLvl>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>EASTERLY_WIND_STRIKE</abnormalType>
 		<icon>icon.skill10705</icon>
@@ -234,6 +297,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<isTriggeredSkill>true</isTriggeredSkill>
+		<selfEffects>
+			<effect name="ReuseSkillById">
+				<skillId>10705</skillId>
+			</effect>
+		</selfEffects>
 		<effects>
 			<effect name="CriticalDamagePosition">
 				<amount>20</amount>
@@ -507,8 +575,8 @@
 		</effects>
 	</skill>
 	<skill id="19312" toLevel="1" name="Holy Stance">
-		<!-- Updated to GRAND CRUSADE -->
-		<!-- Decreases damage received by $s1 and increases Holy Defense by $s2, and applies Holy to attribute magic. -->
+		<!-- Salvation -->
+		<!-- Damage received -5%, Damage dealt +5%, and Holy Attribute Def. +100, and applies Holy to attribute magic. -->
 		<icon>icon.skill19312</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -518,6 +586,14 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<effects>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PvpPhysicalAttackDefenceBonus">
 				<amount>5</amount>
 				<mode>PER</mode>
