@@ -554,7 +554,7 @@ public final class Baium extends AbstractNpcAI
 			setStatus(DEAD);
 			addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
 			zone.broadcastPacket(new PlaySound("BS01_D"));
-			final long respawnTime = (Config.BAIUM_SPAWN_INTERVAL + getRandom(-Config.BAIUM_SPAWN_RANDOM, Config.BAIUM_SPAWN_RANDOM)) * 3600000;
+			final long respawnTime = Config.BAIUM_SPAWN_INTERVAL * 3600000;
 			setRespawn(respawnTime);
 			startQuestTimer("CLEAR_STATUS", respawnTime, null, null);
 			startQuestTimer("CLEAR_ZONE", 900000, null, null);

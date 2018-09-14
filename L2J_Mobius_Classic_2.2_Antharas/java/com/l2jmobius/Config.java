@@ -831,7 +831,6 @@ public final class Config
 	
 	// Baium
 	public static int BAIUM_SPAWN_INTERVAL;
-	public static int BAIUM_SPAWN_RANDOM;
 	
 	// Core
 	public static int CORE_SPAWN_INTERVAL;
@@ -2144,7 +2143,6 @@ public final class Config
 			ANTHARAS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfAntharasSpawn", 72);
 			
 			BAIUM_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfBaiumSpawn", 168);
-			BAIUM_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfBaiumSpawn", 48);
 			
 			CORE_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfCoreSpawn", 60);
 			CORE_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfCoreSpawn", 24);
