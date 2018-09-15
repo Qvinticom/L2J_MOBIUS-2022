@@ -636,11 +636,6 @@ public class L2DoorInstance extends L2Character
 			broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.THE_CASTLE_GATE_HAS_BEEN_DESTROYED));
 		}
 		
-		// Correct position in case pathfinding moved player to a restricted location, since door coordinates can be behind objects.
-		if (killer.isPlayer())
-		{
-			killer.setLocation(killer.getActingPlayer().getLastServerPosition());
-		}
 		return true;
 	}
 	
