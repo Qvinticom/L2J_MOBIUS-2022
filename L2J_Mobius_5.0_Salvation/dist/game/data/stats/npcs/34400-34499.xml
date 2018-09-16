@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="34412" level="84" type="L2Npc" name="Nerupa">
+		<!-- Salvation -->
+		<race>ETC</race>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="9.5" mp="2355" mpRegen="3.3" />
+			<speed>
+				<walk ground="1" />
+				<run ground="1" />
+			</speed>
+			<attack physical="0" magical="0" critical="4" attackSpeed="253" range="40" />
+			<defence physical="0" magical="0" />
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="15" />
+			<height normal="26" />
+		</collision>
+		<drop_lists>
+		</drop_lists>
+	</npc>
+</list>

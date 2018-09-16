@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="24115" level="106" type="L2Monster" name="Lithra Butterfly">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="11929754" hpRegen="11.5" mp="26228" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="8350827.8" magical="23605.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3578926.2" magical="13114" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="24116" level="105" type="L2Monster" name="Lithra Needle">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="11225834" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="7858083.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3367750.2" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
+	<npc id="24117" level="104" type="L2Monster" name="Crystal Reep">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="906218560" sp="811200" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
+			<defence physical="345517.2" magical="12730" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17436" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Helmet -->
+				<item id="57" min="28873" max="67370" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="3.476" /> <!-- Quality Leather Braid -->
+				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="10.65" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.041" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24118" level="104" type="L2Monster" name="Crystal Reep" title="Repeat">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="906218560" sp="811200" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
+			<defence physical="345517.2" magical="12730" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17436" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Helmet -->
+				<item id="57" min="28873" max="67370" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="3.476" /> <!-- Quality Leather Braid -->
+				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="10.65" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.041" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24119" level="104" type="L2Monster" name="Crystal Needle">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="906218560" sp="811200" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
+			<defence physical="345517.2" magical="12730" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
+				<item id="57" min="28873" max="67370" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="3.586" /> <!-- Quality Leather Braid -->
+				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="11.13" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24121" level="105" type="L2Monster" name="Treant Blossom">
+		<!-- Source: www.l2wiki.com -->
+		<race>BEAST</race>
+		<acquire exp="923729625" sp="826875" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1151724" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="806206.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="345517.2" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="3.584" /> <!-- Quality Leather Braid -->
+				<item id="35348" min="1" max="1" chance="1.225" /> <!-- Eternal Leather Boot Ingredient -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="10.77" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.069" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24122" level="105" type="L2Monster" name="Treant Blossom">
+		<!-- Source: www.l2wiki.com -->
+		<race>BEAST</race>
+		<acquire exp="923729625" sp="826875" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1151724" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="806206.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="345517.2" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="3.584" /> <!-- Quality Leather Braid -->
+				<item id="35348" min="1" max="1" chance="1.225" /> <!-- Eternal Leather Boot Ingredient -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="10.77" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.069" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24123" level="105" type="L2Monster" name="Flush Teasle">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1108486575" sp="992250" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17439" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Gloves -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="1.824" /> <!-- Quality Leather Braid -->
+				<item id="35469" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="11.14" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.989" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24124" level="105" type="L2Monster" name="Flush Teasle">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1108486575" sp="992250" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17439" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Gloves -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="1.824" /> <!-- Quality Leather Braid -->
+				<item id="35469" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="11.14" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="0.989" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24125" level="105" type="L2Monster" name="Creeper Rampike">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1108486575" sp="992250" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17440" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boots -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="1.867" /> <!-- Quality Leather Braid -->
+				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="11.66" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.008" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24126" level="105" type="L2Monster" name="Creeper Rampike">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1108486575" sp="992250" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17440" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Boots -->
+				<item id="57" min="29489" max="68756" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="1.867" /> <!-- Quality Leather Braid -->
+				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="11.66" /> <!-- Synthetic Cokes -->
+				<item id="36564" min="1" max="1" chance="1.008" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24127" level="105" type="L2Monster" name="Lithra Aprias">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1108486575" sp="992250" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="36427" max="84934" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="2.228" /> <!-- Quality Leather Braid -->
+				<item id="35453" min="1" max="1" chance="0.03" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="1.297" /> <!-- Greater Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24128" level="105" type="L2Monster" name="Nerupa Aprias">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="1219342950" sp="1091475" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="374194.8" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="28149" level="7" /> <!--  -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="36427" max="84934" chance="70" /> <!-- Adena -->
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
+				<item id="35453" min="1" max="1" chance="0.03" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="1.28" /> <!-- Greater Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24139" level="104" type="L2Monster" name="Reep Child">
+		<!-- Source: www.l2wiki.com -->
+		<race>PLANT</race>
+		<acquire exp="174905536" sp="151424" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="207303" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="145112.1" magical="22914" critical="4" attackSpeed="253" range="40" />
+			<defence physical="62190.9" magical="12730" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="5371" max="12532" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.75" /> <!-- Orichalcum -->
+				<item id="35349" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35332" min="1" max="1" chance="0.075" /> <!-- Helios Stormer Fragment -->
+				<item id="35473" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Circlet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="1.422" /> <!-- Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.75" /> <!-- Gemstone (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24140" level="104" type="L2Monster" name="Needle Child">
+		<!-- Source: www.l2wiki.com -->
+		<race>BUG</race>
+		<acquire exp="174905536" sp="151424" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="207303" hpRegen="11.5" mp="25460" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="145112.1" magical="22914" critical="4" attackSpeed="253" range="40" />
+			<defence physical="62190.9" magical="12730" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="5371" max="12532" chance="70" /> <!-- Adena -->
+				<item id="35350" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Ingredient -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35474" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Tunic (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="1.343" /> <!-- Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.75" /> <!-- Gemstone (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24141" level="105" type="L2Monster" name="Blossom Child">
+		<!-- Source: www.l2wiki.com -->
+		<race>BEAST</race>
+		<acquire exp="213951150" sp="187425" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="224508" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="157155.6" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="67352.4" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="57" min="4331" max="10097" chance="70" /> <!-- Adena -->
+				<item id="35353" min="1" max="1" chance="0.3" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35351" min="1" max="1" chance="0.075" /> <!-- Eternal Stocking Ingredient -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35456" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35475" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Stockings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="1.104" /> <!-- Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.75" /> <!-- Gemstone (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+	<npc id="24142" level="105" type="L2Monster" name="Teasle Child">
+		<!-- Source: www.l2wiki.com -->
+		<race>BEAST</race>
+		<acquire exp="213951150" sp="187425" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="224508" hpRegen="11.5" mp="25848" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="157155.6" magical="23263.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="67352.4" magical="12924" />
+		</stats>
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+		<drop_lists>
+			<drop>
+				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
+				<item id="57" min="5485" max="12790" chance="70" /> <!-- Adena -->
+				<item id="35352" min="1" max="1" chance="0.3" /> <!-- Eternal Glove Ingredient -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35476" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Gloves (60%) -->
+			</drop>
+			<spoil>
+				<item id="36563" min="1" max="1" chance="1.351" /> <!-- Synthetic Cokes -->
+				<item id="19440" min="1" max="1" chance="0.75" /> <!-- Gemstone (R-grade) -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky_drop>
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky_drop>
+		</drop_lists>
+	</npc>
+</list>
