@@ -541,7 +541,8 @@ public enum AbnormalType
 	KNOCKDOWN(367),
 	EARTHWORM_DEBUFF(424),
 	INSIDE_POSITION(593),
-	STEEL_MIND(596);
+	STEEL_MIND(596),
+	SIGEL_SHIELD(-1);
 	
 	private int _clientId;
 	
