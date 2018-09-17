@@ -661,8 +661,8 @@
 									</xs:complexType>
 								</xs:element>
 								<xs:element name="effects">
-									<xs:complexType mixed="true">
-										<xs:sequence minOccurs="0">
+									<xs:complexType>
+										<xs:sequence>
 											<xs:element minOccurs="0" name="dispel">
 												<xs:complexType>
 													<xs:sequence>
@@ -1292,8 +1292,8 @@
 																						<xs:complexType>
 																							<xs:attribute name="id" type="xs:unsignedShort" use="required" />
 																							<xs:attribute name="count" type="xs:unsignedInt" use="required" />
-																							<xs:attribute name="minEnchant" type="xs:unsignedInt" />
-																							<xs:attribute name="maxEnchant" type="xs:unsignedInt" />
+																							<xs:attribute name="minEnchant" type="xs:unsignedByte" use="optional" />
+																							<xs:attribute name="maxEnchant" type="xs:unsignedByte" use="optional" />
 																						</xs:complexType>
 																					</xs:element>
 																				</xs:sequence>
@@ -1996,6 +1996,7 @@
 																</xs:complexType>
 															</xs:element>
 															<xs:element name="fame" type="xs:unsignedInt" />
+															<xs:element name="disable" type="xs:string" />
 															<xs:element name="allowSkillAttack" type="xs:boolean" />
 															<xs:element name="affectScope" type="xs:string" />
 															<xs:element name="skillSubLevel">
