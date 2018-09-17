@@ -8480,8 +8480,12 @@ public final class L2PcInstance extends L2Playable
 				sm.addSkillName(skill);
 			}
 			
-			sendPacket(sm);
-			return false;
+			// Don't send packet for Raise/Focus Shield if Final Ultimate Defense is active.
+			if (!(getEffectList().getBuffInfoBySkillId(10017) != null) && ((skill.getId() == 10020) || (skill.getId() == 10021)))
+			{
+				sendPacket(sm);
+				return false;
+			}
 		}
 		
 		// Check if the caster is sitting

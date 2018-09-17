@@ -1317,7 +1317,7 @@
 			<value fromLevel="3" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SIGEL_SHIELD</abnormalType>
-		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
+		<abnormalVisualEffect>RAISE_SHIELD;FOCUS_SHIELD</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1573,6 +1573,7 @@
 			<value fromLevel="1" toLevel="7">10</value>
 		</abnormalTime>
 		<abnormalType>SIGEL_SHIELD</abnormalType>
+		<abnormalVisualEffect>FOCUS_SHIELD</abnormalVisualEffect>
 		<icon>icon.skill10020</icon>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1634,6 +1635,7 @@
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SIGEL_SHIELD</abnormalType>
+		<abnormalVisualEffect>RAISE_SHIELD</abnormalVisualEffect>
 		<icon>icon.skill10021</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

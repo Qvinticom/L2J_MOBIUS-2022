@@ -61,7 +61,6 @@ public class DisableSkill extends AbstractEffect
 				effected.disableSkill(knownSKill, 0);
 				
 			}
-			effected.disableSkill(skill, 0);
 		}
 	}
 	

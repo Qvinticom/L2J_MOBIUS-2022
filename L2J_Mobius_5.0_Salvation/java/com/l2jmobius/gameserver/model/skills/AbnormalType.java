@@ -542,7 +542,7 @@ public enum AbnormalType
 	EARTHWORM_DEBUFF(424),
 	INSIDE_POSITION(593),
 	STEEL_MIND(596),
-	SIGEL_SHIELD(-1);
+	SIGEL_SHIELD(597);
 	
 	private int _clientId;
 	
