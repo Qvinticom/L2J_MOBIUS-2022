@@ -257,6 +257,7 @@ public class PcStatus extends PlayableStatus
 				smsg.addString(getActiveChar().getName());
 				smsg.addString(attacker.getName());
 				smsg.addInt(fullValue);
+				smsg.addPopup(getActiveChar().getObjectId(), attacker.getObjectId(), -fullValue);
 				getActiveChar().sendPacket(smsg);
 				
 				if ((tDmg > 0) && (summon != null) && (attackerPlayer != null))
