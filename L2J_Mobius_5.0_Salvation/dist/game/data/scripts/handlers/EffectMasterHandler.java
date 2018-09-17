@@ -121,6 +121,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DeleteTopAgro", DeleteTopAgro::new);
 		EffectHandler.getInstance().registerHandler("DetectHiddenObjects", DetectHiddenObjects::new);
 		EffectHandler.getInstance().registerHandler("Detection", Detection::new);
+		EffectHandler.getInstance().registerHandler("DisableSkill", DisableSkill::new);
 		EffectHandler.getInstance().registerHandler("DisableTargeting", DisableTargeting::new);
 		EffectHandler.getInstance().registerHandler("Disarm", Disarm::new);
 		EffectHandler.getInstance().registerHandler("Disarmor", Disarmor::new);
@@ -129,6 +130,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("DispelBySlot", DispelBySlot::new);
 		EffectHandler.getInstance().registerHandler("DispelBySlotMyself", DispelBySlotMyself::new);
 		EffectHandler.getInstance().registerHandler("DispelBySlotProbability", DispelBySlotProbability::new);
+		EffectHandler.getInstance().registerHandler("DispelCaster", DispelCaster::new);
 		EffectHandler.getInstance().registerHandler("DoubleCast", DoubleCast::new);
 		EffectHandler.getInstance().registerHandler("DuelistFury", DuelistFury::new);
 		EffectHandler.getInstance().registerHandler("EnableCloak", EnableCloak::new);

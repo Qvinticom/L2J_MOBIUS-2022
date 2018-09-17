@@ -550,6 +550,9 @@
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
+			<effect name="DispelCaster">
+				<dispel>SIGEL_SHIELD</dispel>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="10009" toLevel="11" name="Last Judgment">
@@ -1313,7 +1316,7 @@
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<abnormalType>PD_UP_SPECIAL</abnormalType>
+		<abnormalType>SIGEL_SHIELD</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1416,6 +1419,9 @@
 					<value fromLevel="3" toLevel="7" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="DisableSkill">
+				<disable>10020;10021</disable>
 			</effect>
 		</effects>
 	</skill>
@@ -1562,87 +1568,22 @@
 		</effects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
-		<!-- Glory Days confirmed -->
-		<!-- P. Def + 1160, Shield Def +2320, Shield Def +50% -->
-		<mpConsume>50</mpConsume>
-		<magicCriticalRate>5</magicCriticalRate>
-		<magicLvl>
-			<value level="1">85</value>
-			<value level="2">90</value>
-			<value level="3">95</value>
-			<value level="4">99</value>
-			<value level="5">100</value>
-			<value level="6">102</value>
-			<value level="7">104</value>
-		</magicLvl>
-		<icon>icon.skill10020</icon>
-		<operateType>T</operateType>
-		<rideState>NONE</rideState>
-		<mpConsume>50</mpConsume>
-		<targetType>NONE</targetType>
-		<effects>
-			<effect name="MpConsumePerLevel">
-				<power>1</power>
-				<ticks>5</ticks>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>
-					<value level="1">616</value>
-					<value level="2">684</value>
-					<value level="3">761</value>
-					<value level="4">845</value>
-					<value level="5">939</value>
-					<value level="6">1044</value>
-					<value level="7">1160</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-			<effect name="ShieldDefenceRate">
-				<amount>
-					<value level="1">35</value>
-					<value level="2">40</value>
-					<value level="3">45</value>
-					<value level="4">50</value>
-					<value level="5">50</value>
-					<value level="6">50</value>
-					<value level="7">50</value>
-				</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ShieldDefence">
-				<amount>
-					<value level="1">1232</value>
-					<value level="2">1368</value>
-					<value level="3">1522</value>
-					<value level="4">1690</value>
-					<value level="5">1878</value>
-					<value level="6">2088</value>
-					<value level="7">2320</value>
-				</amount>
-				<mode>DIFF</mode>
-			</effect>
-		</effects>
-	</skill>
-	<skill id="10021" toLevel="7" name="Spike Shield">
-		<!-- Glory Days confirmed -->
-		<!-- For 10 seconds, reflects 10% of received damage back to the attacker. Also has a 50% chance of reflecting magic damage back to the attacker. Requires a shield. -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">10</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
-		<icon>icon.skill10021</icon>
+		<abnormalType>SIGEL_SHIELD</abnormalType>
+		<icon>icon.skill10020</icon>
 		<operateType>A2</operateType>
-		<magicCriticalRate>5</magicCriticalRate>
+		<rideState>NONE</rideState>
 		<mpConsume>
-			<value level="1">20</value>
-			<value level="2">21</value>
-			<value level="3">23</value>
-			<value level="4">24</value>
-			<value level="5">25</value>
-			<value level="6">26</value>
-			<value level="7">27</value>
+			<value level="1">58</value>
+			<value level="2">61</value>
+			<value level="3">63</value>
+			<value level="4">66</value>
+			<value level="5">69</value>
+			<value level="6">72</value>
+			<value level="7">75</value>
 		</mpConsume>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -1662,20 +1603,88 @@
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value fromLevel="3" toLevel="4">70</value>
+					<value level="5">80</value>
+					<value level="6">90</value>
+					<value level="7">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="DamageShield">
 				<amount>
-					<value level="1">10</value>
-					<value level="2">15</value>
-					<value level="3">20</value>
-					<value level="4">25</value>
-					<value level="5">27</value>
-					<value level="6">30</value>
-					<value level="7">32</value>
+					<value fromLevel="4" toLevel="7">10</value>
 				</amount>
 			</effect>
-			<effect name="ReflectMagic">
-				<amount>50</amount>
-				<type>MAGIC</type>
+			<effect name="MagicCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="7">-100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="10021" toLevel="7" name="Raise Shield">
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>
+			<value fromLevel="1" toLevel="7">10</value>
+			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+		</abnormalTime>
+		<abnormalType>SIGEL_SHIELD</abnormalType>
+		<icon>icon.skill10021</icon>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">58</value>
+			<value level="2">61</value>
+			<value level="3">63</value>
+			<value level="4">66</value>
+			<value level="5">69</value>
+			<value level="6">72</value>
+			<value level="7">75</value>
+		</mpConsume>
+		<hitTime>500</hitTime>
+		<effectPoint>2</effectPoint>
+		<basicProperty>NONE</basicProperty>
+		<rideState>NONE</rideState>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+		</magicLvl>
+		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="EquipShield" />
+		</conditions>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">60</value>
+					<value fromLevel="3" toLevel="4">70</value>
+					<value level="5">80</value>
+					<value level="6">90</value>
+					<value level="7">100</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>
+					<value fromLevel="4" toLevel="7">10</value>
+				</amount>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>
+					<value fromLevel="1" toLevel="7">-100</value>
+				</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="PAtk" fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
