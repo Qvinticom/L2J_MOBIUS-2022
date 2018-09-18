@@ -325,7 +325,12 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effects>
 			<effect name="PAtk">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+					<value level="3">-30</value>
+					<value level="4">-40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="Accuracy">
@@ -333,7 +338,12 @@
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="PhysicalAttackSpeed">
-				<amount>-10</amount>
+				<amount>
+					<value level="1">-10</value>
+					<value level="2">-20</value>
+					<value level="3">-30</value>
+					<value level="4">-40</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="CriticalDamage">
