@@ -16,8 +16,14 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Set;
+
 import com.l2jmobius.gameserver.ai.CtrlIntention;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
+import com.l2jmobius.gameserver.model.actor.L2Character;
+import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -25,7 +31,7 @@ import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
  * Get Agro effect implementation.
- * @author Adry_85
+ * @author Adry_85, Mobius
  */
 public final class GetAgro extends AbstractEffect
 {
@@ -49,9 +55,26 @@ public final class GetAgro extends AbstractEffect
 	@Override
 	public void onStart(BuffInfo info)
 	{
-		if ((info.getEffected() != null) && info.getEffected().isAttackable())
+		final L2Character effected = info.getEffected();
+		if ((effected != null) && effected.isAttackable())
 		{
-			info.getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, info.getEffector());
+			final L2Character effector = info.getEffector();
+			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
+			
+			// Monsters from the same clan should assist.
+			final L2NpcTemplate template = ((L2Attackable) effected).getTemplate();
+			final Set<Integer> clans = template.getClans();
+			if (clans != null)
+			{
+				for (L2Attackable nearby : L2World.getInstance().getVisibleObjectsInRange(effected, L2Attackable.class, template.getClanHelpRange()))
+				{
+					if (!nearby.isMovementDisabled() && nearby.getTemplate().isClan(clans))
+					{
+						nearby.addDamageHate(effector, 200, 200);
+						nearby.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
+					}
+				}
+			}
 		}
 	}
 }
