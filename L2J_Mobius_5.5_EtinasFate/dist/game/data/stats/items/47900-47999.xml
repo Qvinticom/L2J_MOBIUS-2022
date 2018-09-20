@@ -562,4 +562,916 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
+	<item id="47951" name="Crystal of Determination" type="EtcItem">
+		<!-- A crystal infused with the spirits' burning desire for battle. The crystal's special power can be used to upgrade a weapon. -->
+		<set name="icon" val="icon.weapone_upgrade_crystal" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47952" name="Crystal of Protection" type="EtcItem">
+		<!-- A crystal infused with the spirits' ardent wish to protect. The crystal's special power can be used to upgrade armor. -->
+		<set name="icon" val="icon.amor_upgrade_crystal" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47953" name="Shaper of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">526</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="47954" name="Dicing Death of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47955" name="Slasher of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">732</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47956" name="Avenger of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47957" name="Fighter of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">732</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47958" name="Stormer of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">602</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47959" name="Thrower of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1185</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="47960" name="Shooter of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1067</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="47961" name="Buster of Challenger" type="Weapon">
+		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">481</stat>
+			<stat type="mAtk">350</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47962" name="Caster of Challenger" type="Weapon">
+		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">481</stat>
+			<stat type="mAtk">350</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47963" name="Retributer of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">586</stat>
+			<stat type="mAtk">385</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47964" name="Dual Sword of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">732</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47965" name="Dual Dagger of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">526</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47966" name="Dual Blunt of Challenger" type="Weapon">
+		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">732</stat>
+			<stat type="mAtk">262</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47967" name="Enhance Shaper of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dagger_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">610</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="47968" name="Enhance Dicing Death of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_sword_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">698</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47969" name="Enhanced Slasher of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">849</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47970" name="Enhanced Avenger of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_axe_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">698</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47971" name="Enhanced Fighter of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_fist_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">849</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47972" name="Enhanced Stormer of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_pole_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="BRONZE" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">698</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">80</stat>
+		</stats>
+	</item>
+	<item id="47973" name="Enhanced Thrower of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_bow_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1374</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">293</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="47974" name="Enhanced Shooter of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">1237</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">500</stat>
+		</stats>
+	</item>
+	<item id="47975" name="Enhanced Buster of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">558</stat>
+			<stat type="mAtk">405</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47976" name="Enhanced Caster of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_mace_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">558</stat>
+			<stat type="mAtk">405</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47977" name="Enhanced Retributer of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_staff_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="WOOD" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">679</stat>
+			<stat type="mAtk">445</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47978" name="Enhanced Dual Sword of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualsword_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">849</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47979" name="Enhanced Dual Dagger of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">698</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">12</stat>
+			<stat type="accCombat">-3.75</stat>
+			<stat type="pAtkSpd">433</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47980" name="Enhanced Dual Blunt of Challenger" type="Weapon">
+		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
+		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R" />
+		<set name="material" val="FINE_STEEL" />
+		<set name="weight" val="500" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">849</stat>
+			<stat type="mAtk">303</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">20</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="47981" name="Challenger's Weapon Selection Ticket" type="EtcItem">
+		<!-- It can be used to purchase a Challenger weapon of choice through a Dimensional Merchant found in every town. -->
+		<set name="icon" val="icon.bm_challenger_wp_sell_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47982" name="Challenger's Weapon Exchange Ticket" type="EtcItem">
+		<!-- It can be used to exchange a Challenger weapon to another type of choice through a Dimensional Merchant found in every town. -->
+		<set name="icon" val="icon.bm_challenger_wp_trade_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47983" name="Brooch Spirit Stone" type="EtcItem">
+		<!-- Spirit Stone: Accessory for La Vie En Rose's Brooch. Can only be used to augment an enhanced Glorious Brooch. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="100" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47984" name="La Vie En Rose's Glorious Brooch" type="Armor">
+		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
+	<item id="47985" name="La Vie En Rose's Glorious Brooch" additionalName="Enchant Type" type="Armor">
+		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
+	<item id="47986" name="+5 Shiny Elemental Shirt Box" type="EtcItem">
+		<!-- Double-click to obtain a +5 Shiny Elemental Shirt. -->
+		<set name="icon" val="icon.event_six_party_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47987" name="Challenger's Weapon Enhancement Ticket" type="EtcItem">
+		<!-- It can be used to enhance a Challenger weapon through a Dimensional Merchant found in every town. -->
+		<set name="icon" val="icon.bm_challenger_wp_ench_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47988" name="Master's Lucky Jewelry Box" type="EtcItem">
+		<!-- Double-click to obtain a jewelry box containing Ruby, Sapphire, Topaz, Opal, Diamond, Emerald, Tanzanite, Red Cat's Eye, Blue Cat's Eye, or Obsidian. -->
+		<set name="icon" val="icon.etc_bm_jewelbox_main_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47989" name="Lucky Jewel Ticket" type="EtcItem">
+		<!-- Take it to Shadai in Heine to exchange it for a special item. -->
+		<set name="icon" val="icon.bm_jewel_ticket" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47990" name="La Vie En Rose's Glorious Brooch" additionalName="Rare" type="Armor">
+		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. All stats +1. Can be augmented. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">114</stat>
+		</stats>
+	</item>
+	<item id="47991" name="Brooch Spirit Stone" additionalName="Rare" type="EtcItem">
+		<!-- Item crated by infusing a brooch accessory Spirit Stone with a special power. Can be used to inject the special power into an enhanced Glorious Brooch through Shadai in Heine. -->
+		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47992" name="Fish Chilli Stew - WIT" additionalName="Event" type="EtcItem">
+		<!-- When used, WIT +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47993" name="Fish Chilli Stew - INT" additionalName="Event" type="EtcItem">
+		<!-- When used, INT +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47994" name="Fish Chilli Stew - MEN" additionalName="Event" type="EtcItem">
+		<!-- When used, MEN +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47995" name="Fish Chilli Stew - DEX" additionalName="Event" type="EtcItem">
+		<!-- When used, DEX +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47996" name="Fish Chilli Stew - STR" additionalName="Event" type="EtcItem">
+		<!-- When used, STR +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47997" name="Fish Chilli Stew - CON" additionalName="Event" type="EtcItem">
+		<!-- When used, CON +3 and LUC +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_luc" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47998" name="Fish Cream Stew - WIT" additionalName="Event" type="EtcItem">
+		<!-- When used, WIT +3 and CHA +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="47999" name="Fish Cream Stew - INT" additionalName="Event" type="EtcItem">
+		<!-- When used, INT +3 and CHA +1 for 30 minutes. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<set name="icon" val="icon.fish_stew_residence_cha" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
 </list>

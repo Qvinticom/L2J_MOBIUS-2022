@@ -82,7 +82,7 @@ Grand Crusade:
 -Live world map information
 
 Salvation:
--TODO: Parse new items from client
+-Parsed new items from client
 -TODO: Skills
 -TODO: Skill trees
 

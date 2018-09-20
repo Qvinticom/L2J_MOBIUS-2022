@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48630" name="Master Fisherman's Blessing - 1-hr" type="EtcItem">
+		<!-- For 1 hour, increases EXP/ SP increases by 100% when fishing succeeds. Applied to all bait. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48631" name="Master Fisherman's Blessing - 2-hr" type="EtcItem">
+		<!-- For 2 hour, increases EXP/ SP increases by 100% when fishing succeeds. Applied to all bait. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48632" name="Master Fisherman's Blessing - 4-hr" type="EtcItem">
+		<!-- For 4 hour, increases EXP/ SP increases by 100% when fishing succeeds. Applied to all bait. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48633" name="Master Fisherman's Blessing - 8-hr" type="EtcItem">
+		<!-- For 8 hour, increases EXP/ SP increases by 100% when fishing succeeds. Applied to all bait. -->
+		<set name="icon" val="icon.fishing_zone_ticket" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>

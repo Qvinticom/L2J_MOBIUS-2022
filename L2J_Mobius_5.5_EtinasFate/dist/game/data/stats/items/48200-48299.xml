@@ -1,5 +1,58 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="48200" name="Antharas Fighter" additionalName="Balthus Knight" type="Weapon">
+		<!-- A weapon forged by the Balthus Knights, emulating the power of Antharas. Max HP/ MP/ CP +30%, Atk. Spd. +30%. -->
+		<set name="icon" val="icon.weapon_antaras_fist_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUALFIST" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1550" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">5</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="48201" name="Antharas Dual Sword" additionalName="Balthus Knight" type="Weapon">
+		<!-- A weapon forged by the Balthus Knights, emulating the power of Antharas. Max HP/ MP/ CP +30%, Atk. Spd. +30%. -->
+		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="S" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="1520" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">2611</stat>
+			<stat type="mAtk">935</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
 	<item id="48202" name="Circlet of Authority" type="Armor">
 		<!-- Circlet of Authority. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Circlet of Authority. -->
 		<set name="icon" val="icon.bm_pattack_circlet_01" />
@@ -198,6 +251,799 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
+	<item id="48221" name="Balthus Knight Supply Items List" type="EtcItem">
+		<!-- A sheet of paper listing the supplies needed by the Balthus Knights. -->
+		<set name="icon" val="icon.etc_scroll_white_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48222" name="New Year's Gift Package" additionalName="Event" type="EtcItem">
+		<!-- A package filled with New Year's gifts, received from Chorong. Use to obtain a Lucky Bag and a Hanbok costume. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.event_oriental_park_i00" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48223" name="Lucky Gift Coupon" additionalName="3 Hours" type="EtcItem">
+		<!-- Use it to change into the Hanbok appearance for 3 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48224" name="Lucky Gift Coupon" additionalName="6 Hours" type="EtcItem">
+		<!-- Use it to change into the Hanbok appearance for 6 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_lottery_card_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48225" name="Chorong's Lucky Scroll" additionalName="Event" type="EtcItem">
+		<!-- For 30 min. XP/ SP gained +30%, additionally XP/ SP gained when Vitality is active +30%, P. Atk./ P. Def./ M. Atk./ M. Def. +15%. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_charm_of_luck_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48226" name="Lucky Bait" type="EtcItem">
+		<!-- A very lucky-looking bait. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48227" name="+7 Zodiac Agathion Charm Box" type="EtcItem">
+		<!-- A lucky gift from Chorong. Use to obtain a +7 Zodiac Agathion. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48228" name="Life Stone Instilled with Giants' Power (x3) Box" type="EtcItem">
+		<!-- Use it to obtain 3 Life Stones Instilled with Giants' Power. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48229" name="Chorong's Summon Friend Scroll" type="EtcItem">
+		<!-- Can summon a friend to your location once every 30 minutes. Target a party member and double-click to use the skill. -->
+		<set name="icon" val="icon.etc_scroll_chalik_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48230" name="Antharas Transformation Slasher" type="Weapon">
+		<!-- NPC only weapon -->
+		<set name="icon" val="icon.weapon_antaras_twohand_sword_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<stats>
+			<stat type="pAtk">1445</stat>
+			<stat type="mAtk">517</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">325</stat>
+			<stat type="randomDamage">10</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="48231" name="Antharas Transformation Costume" type="Armor">
+		<!-- NPC only costume -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
+	<item id="48232" name="Devil Spearshooter" type="Weapon">
+		<!-- NPC only weapon -->
+		<set name="icon" val="icon.Deathslayer_a_wp_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="106" />
+		<set name="soulshots" val="3" />
+		<set name="spiritshots" val="3" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">92</stat>
+			<stat type="mAtk">54</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">5</stat>
+		</stats>
+	</item>
+	<item id="48233" name="Clan Cloak - War Specialty" additionalName="Stage 1" type="Armor">
+		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48234" name="Clan Cloak - War Specialty" additionalName="Stage 2" type="Armor">
+		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">45</stat>
+			<stat type="pDef">60</stat>
+		</stats>
+	</item>
+	<item id="48235" name="Clan Cloak - War Specialty" additionalName="Stage 3" type="Armor">
+		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">50</stat>
+			<stat type="pDef">70</stat>
+		</stats>
+	</item>
+	<item id="48236" name="Clan Cloak - War Specialty" additionalName="Stage 4" type="Armor">
+		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">60</stat>
+			<stat type="pDef">80</stat>
+		</stats>
+	</item>
+	<item id="48237" name="Clan Cloak - Growth Specialty" additionalName="Stage 1" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48238" name="Clan Cloak - Growth Specialty" additionalName="Stage 2" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">45</stat>
+			<stat type="pDef">60</stat>
+		</stats>
+	</item>
+	<item id="48239" name="Clan Cloak - Growth Specialty" additionalName="Stage 3" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">50</stat>
+			<stat type="pDef">70</stat>
+		</stats>
+	</item>
+	<item id="48240" name="Clan Cloak - Growth Specialty" additionalName="Stage 4" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">60</stat>
+			<stat type="pDef">80</stat>
+		</stats>
+	</item>
+	<item id="48241" name="Clan Cloak - Combat Specialty" additionalName="Stage 1" type="Armor">
+		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48242" name="Clan Cloak - Combat Specialty" additionalName="Stage 2" type="Armor">
+		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">45</stat>
+			<stat type="pDef">60</stat>
+		</stats>
+	</item>
+	<item id="48243" name="Clan Cloak - Combat Specialty" additionalName="Stage 3" type="Armor">
+		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">50</stat>
+			<stat type="pDef">70</stat>
+		</stats>
+	</item>
+	<item id="48244" name="Clan Cloak - Combat Specialty" additionalName="Stage 4" type="Armor">
+		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">60</stat>
+			<stat type="pDef">80</stat>
+		</stats>
+	</item>
+	<item id="48245" name="Putrefied Extract" type="EtcItem">
+		<!-- Putrefied Extract that Trade Vollodos in the Bloody Swampland asks you to collect. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48246" name="Rotten Blood" type="EtcItem">
+		<!-- Rotten Blood that Trade Vollodos in the Bloody Swampland asks you to collect. -->
+		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48247" name="Research Item Materials" type="EtcItem">
+		<!-- Research item received after helping with the mission of Hesed of the Black Anvil Guild, who you met at the Isle of Souls Harbor. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48248" name="Completed Research Item" type="EtcItem">
+		<!-- Research item that you enhanced by using the Fragments of Monster Soul. -->
+		<set name="icon" val="icon.etc_jewel_box_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48249" name="Fragment of Monster Soul" type="EtcItem">
+		<!-- Monster soul obtained after defeating a Raid Monster. -->
+		<set name="icon" val="icon.etc_hard_fossil_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48250" name="Herphah's Support Box" type="EtcItem">
+		<!-- A support box received after completing Herphah's mission. Double-click to obtain various items needed for growth. -->
+		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48251" name="Herphah's Completion Box" type="EtcItem">
+		<!-- A support box received after competing all of Herphah's missions. Opening this box requires Herphah's Support Box Key, which can be obtained by completing other missions from Herphah. -->
+		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48252" name="Herphah Bracelet" type="Armor">
+		<!-- Bracelet received after completing Herphah's mission. MP +187. Activates 5 Talisman slots when equipped. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48253" name="Herphah's Support Box Key" type="EtcItem">
+		<!-- A key received after completing Herphah's mission. Used to open Herphah's Completion Box you received after helping with Herphah's missions. -->
+		<set name="icon" val="icon.etc_old_key_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48254" name="Giant Trackers Basic Treasure Chest" additionalName="Superion" type="EtcItem">
+		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48255" name="Giant Trackers Intermediate Treasure Chest" additionalName="Superion" type="EtcItem">
+		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48256" name="Giant Trackers Advanced Treasure Chest" additionalName="Superion" type="EtcItem">
+		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48257" name="Clan Point Token" type="EtcItem">
+		<!-- Obsolete Clan Points that attest to the clan's glorious past. Can be exchanged for other items with Mulia in the Town of Rune. Will be deleted after the event. -->
+		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48258" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- War Specialty from level 1 to level 2. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r_soul_stone_i05" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48259" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- War Specialty from level 2 to level 3. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r95_soul_stone_i05" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48260" name="Clan Cloak War Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- War Specialty from level 3 to level 4. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r99_soul_stone_i05" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48261" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- Combat Specialty from level 1 to level 2. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r_soul_stone_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48262" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- Combat Specialty from level 2 to level 3. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r95_soul_stone_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48263" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
+		<!-- Material needed to upgrade Clan Cloak- Combat Specialty from level 3 to level 4. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
+		<set name="icon" val="icon.r99_soul_stone_i00" />
+		<set name="etcitem_type" val="MATERIAL" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48264" name="Clan Cloak Enchant Scroll" type="EtcItem">
+		<!-- Enchanting a Clan Cloak increases its P. Def. and adds special abilities at certain enchantment levels. The cloak can be enchanted to up to +5. A failed enchanting attempt resets the enchantment level. -->
+		<set name="icon" val="icon.scroll_of_enchant_am_pledge_cloak" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48265" name="Giant's Clan Cloak Enchant Scroll" type="EtcItem">
+		<!-- Enchanting a Clan Cloak increases its P. Def. and adds special abilities at certain enchantment levels. The cloak can be enchanted to up to +5. When enchanting is successful, the enchantment level increases randomly to +1 or +2, while a failed attempt resets the enchantment level. Cannot be used beyond +3. -->
+		<set name="icon" val="icon.scroll_of_enchant_am_pledge_cloak" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48266" name="Raid Specialty Cloak Enchant Scroll" type="EtcItem">
+		<!-- Not in Use -->
+		<set name="icon" val="icon.star_scrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48267" name="Raid Specialty Cloak Giant's Enchant Scroll" type="EtcItem">
+		<!-- Not in Use -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48268" name="Training Fairy Agathion Charm" additionalName="1-day" type="Armor">
+		<!-- Equipping it summons a Training Fairy Agathion. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="1440" />
+	</item>
+	<item id="48269" name="Huge Giant's Apostle" type="EtcItem">
+		<!-- Obtained after defeating the ruler of the giants. It is needed for declaring the Kamael's independence. Take it to Kekropus in the Town of Giran. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48270" name="Giant Queen's Apostle" type="EtcItem">
+		<!-- Obtained after defeating Giant Queen Ramona. Additionally defeating one of Enhanced Mimir, Enhanced Core or Enhanced Harnak changes it to the Huge Giant's Apostle, enabling the declaration of Kamael's independence. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i01" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48271" name="Enhanced Giant's Apostle" type="EtcItem">
+		<!-- Obtained after defeating one of Enhanced Mimir, Enhanced Core or Enhanced Harnak. Additionally defeating Queen Ramona changes it to the Huge Giant's Apostle, enabling the declaration of Kamael's independence. -->
+		<set name="icon" val="icon.etc_crystal_cave_crystal_i02" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48272" name="Personal Fame Token" type="EtcItem">
+		<!-- Obsolete Personal Fame. Can be exchanged for other items with the Fame Managers Rapidus in the Town of Aden or Scipio in the Town of Rune. Will be deleted on Wednesday, May 31 8, 2017, after regular maintenance. -->
+		<set name="icon" val="icon.etc_pvp_point_i00" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48273" name="Glorious Defense Box" type="EtcItem">
+		<!-- Box issued as a reward for successfully defending the castle. Use it to obtain several Giant's Scroll: Enchant Weapon. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48274" name="Defender's Valor Chest" type="EtcItem">
+		<!-- Chest issued as a reward for capturing the fortress. Use it to obtain the Giant's Energy, with a chance to additionally obtain Giant's Scroll: Enchant Weapon. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48275" name="Chaos Essence Pack" type="EtcItem">
+		<!-- Double-click to obtain a Chaos Essence (30-day). Used for changing the awakened main specialized class, but the Ertheia cannot use it. Open it to obtain a 30-day item that cannot be exchanged. -->
+		<set name="icon" val="icon.darkelf_campaign_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48276" name="Chaos Essence (Dual Class) Treasure Chest (Time limited)" type="EtcItem">
+		<!-- Double-click to obtain a Chaos Essence (Dual Class, 30-day). Used for changing the dual specialized class, but the Ertheia cannot use it. Open it to obtain a 30-day item that cannot be exchanged. -->
+		<set name="icon" val="icon.darkelf_campaign_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48277" name="Balthus Knight Bracelet" type="Armor">
+		<!-- A bracelet received as a reward for defeating Antharas with the Balthus Knights. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN +1 and 5 Talismans can be equipped. Cannot be shared within the account. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48278" name="Clan Cloak - Economy Specialty" additionalName="Stage 1" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48279" name="Clan Cloak - Economy Specialty" additionalName="Stage 2" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48280" name="Clan Cloak - Economy Specialty" additionalName="Stage 3" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
+	<item id="48281" name="Clan Cloak - Economy Specialty" additionalName="Stage 4" type="Armor">
+		<!-- Not open -->
+		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="mDef">40</stat>
+			<stat type="pDef">50</stat>
+		</stats>
+	</item>
 	<item id="48282" name="Party Scroll of Escape" type="EtcItem">
 		<!-- A magical scroll that teleports the entire party to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
@@ -243,6 +1089,17 @@
 		<skills>
 			<skill id="39173" level="1" /> <!-- Stealth Detector -->
 		</skills>
+	</item>
+	<item id="48284" name="Valor Recovery Potion" type="EtcItem">
+		<!-- Upon use, it restores 5000 HP and the remaining power restores CP. Cannot be used in the Olympiad. -->
+		<set name="icon" val="icon.etc_potion_of_acumen2_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="10" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48285" name="Scroll PK" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. -->
@@ -444,5 +1301,103 @@
 			<stat type="randomDamage">10</stat>
 			<stat type="pAtkRange">40</stat>
 		</stats>
+	</item>
+	<item id="48292" name="Aden Hero Support Box" type="EtcItem">
+		<!-- A box containing support items for playing on the test server. Use to obtain +12 Bloody Weapon Pack, +10 Bloody Armor Pack, Dimensional Bracelet- Stage 6, Ruler's Authority, Talisman- Golden Bough, Talisman- Seven Signs, Lv. 5 Legendary Dye Pack, Super Advanced Seed Bracelet, Mysterious R-grade Soulshot/ Blessed Spiritshot Pack, 10 billion Adena, Scroll: 1,000,000,000 SP, Rare Accessory Box, and +10 Zodiac Agathion Box. -->
+		<set name="icon" val="icon.etc_readybox_silver" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48293" name="+12 Bloody Helios Weapon Pack" type="EtcItem">
+		<!-- Test server support item. Use to obtain all Bloody Helios weapons, enchanted to +12. -->
+		<set name="icon" val="icon.etc_treasure_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48294" name="+10 Eternal Armor set Pack" type="EtcItem">
+		<!-- Test server support item. Use to obtain all Bloody Eternal light armor/ heavy armor/ robe sets, enchanted to +10. -->
+		<set name="icon" val="icon.etc_treasure_box_i03" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48295" name="+10 Eternal Armor Heavy Armor Capsule" type="EtcItem">
+		<!-- Test server support item. Use to obtain a Bloody Eternal Heavy Armor set, enchanted to +10. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48296" name="+10 Eternal Armor Light Armor Capsule" type="EtcItem">
+		<!-- Test server support item. Use to obtain a Bloody Eternal Light Armor set, enchanted to +10. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48297" name="+10 Eternal Armor Robe Capsule" type="EtcItem">
+		<!-- Test server support item. Use to obtain a Bloody Eternal Robe set, enchanted to +10. -->
+		<set name="icon" val="icon.etc_equip_item_box_i00" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48298" name="+10 Zodiac Agathion Box" type="EtcItem">
+		<!-- Test server support item. Use to obtain all 12 types of Zodiac Agathion charms, enchanted to +10. -->
+		<set name="icon" val="icon.etc_treasure_box_i04" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="48299" name="Balthus Graduation Reward Box" type="EtcItem">
+		<!-- Supply Box issued to players who graduated from the Balthus Knights with honors on the test server. Use it to obtain a 15-day Antharas weapon. -->
+		<set name="icon" val="icon.etc_readybox_gold" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
 	</item>
 </list>
