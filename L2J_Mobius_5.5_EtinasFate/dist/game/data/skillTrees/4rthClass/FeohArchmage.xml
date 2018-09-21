@@ -101,7 +101,6 @@
 			<removeSkill id="1238" /> <!-- Freezing Skin -->
 			<removeSkill id="1047" /> <!-- Mana Regeneration -->
 			<removeSkill id="434" /> <!-- Necromancy -->
-			<removeSkill id="1457" /> <!-- Empowering Echo -->
 		</skill>
 		<skill skillName="Death Breath" skillId="11029" skillLvl="1" getLevel="85" levelUpSp="10000">
 			<removeSkill id="1233" /> <!-- Decay -->
@@ -450,5 +449,8 @@
 		<skill skillName="Shadow Snare" skillId="11058" skillLvl="6" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Elemental Spike" skillId="11011" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Volcanic Destruction" skillId="11024" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
+		
+		<skill skillName="Empowering Echo" skillId="1457" skillLvl="1" getLevel="79" levelUpSp="4000" />
+		<skill skillName="Empowering Echo" skillId="1457" skillLvl="2" getLevel="85" levelUpSp="10000" />
 	</skillTree>
 </list>

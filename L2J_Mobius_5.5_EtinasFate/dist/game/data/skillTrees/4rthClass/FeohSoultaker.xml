@@ -98,7 +98,6 @@
 			<removeSkill id="1238" /> <!-- Freezing Skin -->
 			<removeSkill id="1047" /> <!-- Mana Regeneration -->
 			<removeSkill id="434" /> <!-- Necromancy -->
-			<removeSkill id="1457" /> <!-- Empowering Echo -->
 		</skill>
 		<skill skillName="Sacrificial Soul" skillId="11152" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		<skill skillName="Death Breath" skillId="11029" skillLvl="1" getLevel="85" levelUpSp="10000">
@@ -461,5 +460,8 @@
 		<skill skillName="Lockshard Destruction" skillId="11027" skillLvl="11" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Discarded Wizard's Soul" skillId="19405" skillLvl="4" getLevel="105" levelUpSp="1753765925" />
 		<skill skillName="Elemental Burst" skillId="11121" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
+		
+		<skill skillName="Empowering Echo" skillId="1457" skillLvl="1" getLevel="79" levelUpSp="4000" />
+		<skill skillName="Empowering Echo" skillId="1457" skillLvl="2" getLevel="85" levelUpSp="10000" />
 	</skillTree>
 </list>
