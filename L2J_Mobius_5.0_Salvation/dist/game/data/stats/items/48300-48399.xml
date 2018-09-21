@@ -992,7 +992,6 @@
 	<item id="48393" name="Adventure Guild Cube Treasure Chest" type="EtcItem">
 		<!-- A cube treasure chest received from Herphah for completing the Adventure Guild missions. Double-click to obtain useful items periodically. -->
 		<set name="icon" val="icon.cube_piece_bless" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 	</item>

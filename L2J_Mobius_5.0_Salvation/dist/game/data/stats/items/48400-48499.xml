@@ -22,7 +22,6 @@
 	<item id="48402" name="Test_Count Items 1" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -33,7 +32,6 @@
 	<item id="48403" name="Test_Count Items 2" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -44,7 +42,6 @@
 	<item id="48404" name="Test_Count Items 3" type="EtcItem">
 		<!-- Specified Usage Count Item -->
 		<set name="icon" val="icon.cube_upgrade" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -835,7 +832,6 @@
 	<item id="48477" name="Balthus Knight Cube" type="EtcItem">
 		<!-- Special cube issued by the Balthus Knights to new or returning players. Use to obtain the Knights' Basic Supplies. Can obtain special items at the 5th, 10th, 15th, and 25th uses. Can obtain a Challenger's Weapon Exchange Ticket at the 20th use, and a Challenger's Weapon Enhancement Ticket at the 30th use. -->
 		<set name="icon" val="icon.bm_balthus_cube" />
-		<set name="default_action" val="action_use_count" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
