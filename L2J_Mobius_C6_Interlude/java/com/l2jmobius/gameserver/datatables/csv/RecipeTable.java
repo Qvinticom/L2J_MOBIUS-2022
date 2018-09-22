@@ -63,7 +63,7 @@ public class RecipeTable extends RecipeController
 		
 		try
 		{
-			final File recipesData = new File(Config.DATAPACK_ROOT, "data/recipes.csv");
+			final File recipesData = new File(Config.DATAPACK_ROOT, "data/csv/recipes.csv");
 			
 			reader = new FileReader(recipesData);
 			buff = new BufferedReader(reader);
