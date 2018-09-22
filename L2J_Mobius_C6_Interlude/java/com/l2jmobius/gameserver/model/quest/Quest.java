@@ -1859,21 +1859,12 @@ public class Quest extends ManagedScript
 	 */
 	public String getHtmlText(String fileName)
 	{
-		if (isRealQuest())
+		if (_questId > 0)
 		{
-			return HtmCache.getInstance().getHtmForce("./data/html/scripts/quests/" + getName() + "/" + fileName);
+			return HtmCache.getInstance().getHtmForce("data/scripts/quests/" + getName() + "/" + fileName);
 		}
 		
-		return HtmCache.getInstance().getHtmForce("./data/html/scripts/" + getDescr() + "/" + getName() + "/" + fileName);
-	}
-	
-	/**
-	 * Return type of the quest.
-	 * @return boolean : True for (live) quest, False for script, AI, etc.
-	 */
-	public boolean isRealQuest()
-	{
-		return _questId > 0;
+		return HtmCache.getInstance().getHtmForce("data/scripts/" + getDescr() + "/" + getName() + "/" + fileName);
 	}
 	
 	// =========================================================
