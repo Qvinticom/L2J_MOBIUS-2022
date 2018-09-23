@@ -1,6 +1,6 @@
 L2J-Mobius Interlude
 
-Client: https://mega.nz/#!5xFgCTwZ!dJSLc9Xf8J90bv2V4WQPmggCtxo5EGs_ytHR9-VJMRw
+Client: https://drive.google.com/uc?id=1tpXwh3FPWEIoWzfOb7-v482spYuQp6JM&export=download
 Geodata: http://www.mediafire.com/file/jwivbb2t91a474e/mobius_interlude_geodata_l2j.zip
 
 
