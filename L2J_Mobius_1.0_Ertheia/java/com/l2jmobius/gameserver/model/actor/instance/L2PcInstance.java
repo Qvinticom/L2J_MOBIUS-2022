@@ -6007,6 +6007,11 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean mount(L2Summon pet)
 	{
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneId.SIEGE))
+		{
+			return false;
+		}
+		
 		if (!disarmWeapons() || !disarmShield() || isTransformed())
 		{
 			return false;

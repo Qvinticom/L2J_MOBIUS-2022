@@ -454,6 +454,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void transform(Transform transformation, boolean addSkills)
 	{
+		if (!Config.ALLOW_MOUNTS_DURING_SIEGE && transformation.isRiding() && isInsideZone(ZoneId.SIEGE))
+		{
+			return;
+		}
+		
 		_transform = Optional.of(transformation);
 		transformation.onTransform(this, addSkills);
 	}

@@ -391,6 +391,7 @@ public final class Config
 	public static int CLAN_LEVEL_11_REQUIREMENT;
 	public static boolean ALLOW_WYVERN_ALWAYS;
 	public static boolean ALLOW_WYVERN_DURING_SIEGE;
+	public static boolean ALLOW_MOUNTS_DURING_SIEGE;
 	
 	// --------------------------------------------------
 	// General Settings
@@ -1389,6 +1390,7 @@ public final class Config
 			CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
 			ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
 			ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
+			ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
 			
 			// Load Attandance config file (if exists)
 			final PropertiesParser Attandance = new PropertiesParser(ATTENDANCE_CONFIG_FILE);
