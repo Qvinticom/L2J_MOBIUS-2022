@@ -135,7 +135,6 @@ public final class Config
 	public static boolean GM_DEBUG_HTML_PATHS;
 	public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
 	
-	public static boolean CHECK_KNOWN;
 	public static String DEFAULT_GLOBAL_CHAT;
 	public static String DEFAULT_TRADE_CHAT;
 	public static boolean TRADE_CHAT_WITH_PVP;
@@ -1054,7 +1053,7 @@ public final class Config
 	public static float ALT_DAGGER_DMG_VS_ROBE;
 	public static float ALT_DAGGER_DMG_VS_LIGHT;
 	public static boolean ALLOW_RAID_LETHAL;
-
+	
 	public static boolean ALLOW_LETHAL_PROTECTION_MOBS;
 	public static String LETHAL_PROTECTED_MOBS;
 	public static List<Integer> LIST_LETHAL_PROTECTED_MOBS = new ArrayList<>();
@@ -1341,7 +1340,6 @@ public final class Config
 			
 			MINIMUM_UPDATE_DISTANCE = Integer.parseInt(optionsSettings.getProperty("MaximumUpdateDistance", "50"));
 			MINIMUN_UPDATE_TIME = Integer.parseInt(optionsSettings.getProperty("MinimumUpdateTime", "500"));
-			CHECK_KNOWN = Boolean.valueOf(optionsSettings.getProperty("CheckKnownList", "false"));
 			KNOWNLIST_FORGET_DELAY = Integer.parseInt(optionsSettings.getProperty("KnownListForgetDelay", "10000"));
 			
 			HIGH_RATE_SERVER_DROPS = Boolean.valueOf(optionsSettings.getProperty("HighRateServerDrops", "false"));

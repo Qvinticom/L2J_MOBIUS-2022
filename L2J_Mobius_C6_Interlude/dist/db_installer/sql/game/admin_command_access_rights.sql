@@ -558,7 +558,6 @@ INSERT IGNORE INTO `admin_command_access_rights` VALUES
 ('admin_skill_test','3'),
 ('admin_st','3'),
 ('admin_mp','3'),
-('admin_known','3'),
 
 -- Section: TownWar 
 ('admin_townwar_start','3'),

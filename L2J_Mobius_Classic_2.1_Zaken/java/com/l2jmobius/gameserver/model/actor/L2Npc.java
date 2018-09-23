@@ -93,7 +93,6 @@ import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
-import com.l2jmobius.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -240,7 +239,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && getAiType() != AIType.CORPSE);
+		return ((Config.MAX_NPC_ANIMATION > 0) && _isRandomAnimationEnabled && (getAiType() != AIType.CORPSE));
 	}
 	
 	/**
@@ -383,7 +382,7 @@ public class L2Npc extends L2Character
 			}
 			else
 			{
-				player.sendPacket(new NpcInfoAbnormalVisualEffect(this));
+				player.sendPacket(new NpcInfo(this));
 			}
 		});
 	}
@@ -1294,11 +1293,6 @@ public class L2Npc extends L2Character
 	{
 		if (isVisibleFor(activeChar))
 		{
-			if (Config.CHECK_KNOWN && activeChar.isGM())
-			{
-				activeChar.sendMessage("Added NPC: " + getName());
-			}
-			
 			if (_isFakePlayer)
 			{
 				activeChar.sendPacket(new FakePlayerInfo(this));
@@ -1337,7 +1331,7 @@ public class L2Npc extends L2Character
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return super.isMovementDisabled() || !getTemplate().canMove() || getAiType() == AIType.CORPSE;
+		return super.isMovementDisabled() || !getTemplate().canMove() || (getAiType() == AIType.CORPSE);
 	}
 	
 	public AIType getAiType()

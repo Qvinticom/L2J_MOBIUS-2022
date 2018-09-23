@@ -769,7 +769,6 @@ public final class Config
 	// No classification assigned to the following yet
 	// --------------------------------------------------
 	public static int MAX_ITEM_IN_PACKET;
-	public static boolean CHECK_KNOWN;
 	public static int GAME_SERVER_LOGIN_PORT;
 	public static String GAME_SERVER_LOGIN_HOST;
 	public static List<String> GAME_SERVER_SUBNETS;

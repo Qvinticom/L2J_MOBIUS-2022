@@ -293,7 +293,7 @@ public class L2Npc extends L2Character
 	 */
 	public boolean hasRandomAnimation()
 	{
-		return ((Config.MAX_NPC_ANIMATION > 0) && isRandomAnimationEnabled() && getAiType() != AIType.CORPSE);
+		return ((Config.MAX_NPC_ANIMATION > 0) && isRandomAnimationEnabled() && (getAiType() != AIType.CORPSE));
 	}
 	
 	/**
@@ -1502,11 +1502,6 @@ public class L2Npc extends L2Character
 	{
 		if (isVisibleFor(activeChar))
 		{
-			if (Config.CHECK_KNOWN && activeChar.isGM())
-			{
-				activeChar.sendMessage("Added NPC: " + getName());
-			}
-			
 			if (_isFakePlayer)
 			{
 				activeChar.sendPacket(new FakePlayerInfo(this));
@@ -1579,7 +1574,7 @@ public class L2Npc extends L2Character
 	@Override
 	public boolean isMovementDisabled()
 	{
-		return super.isMovementDisabled() || !canMove() || getAiType() == AIType.CORPSE;
+		return super.isMovementDisabled() || !canMove() || (getAiType() == AIType.CORPSE);
 	}
 	
 	public AIType getAiType()

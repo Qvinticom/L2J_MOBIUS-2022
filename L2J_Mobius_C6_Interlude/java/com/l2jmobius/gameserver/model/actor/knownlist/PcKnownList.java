@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.knownlist;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -147,11 +146,6 @@ public class PcKnownList extends PlayableKnownList
 			}
 			else if (object instanceof L2NpcInstance)
 			{
-				if (Config.CHECK_KNOWN)
-				{
-					active_char.sendMessage("Added NPC: " + ((L2NpcInstance) object).getName());
-				}
-				
 				active_char.sendPacket(new NpcInfo((L2NpcInstance) object, active_char));
 			}
 			else if (object instanceof L2Summon)
@@ -276,11 +270,6 @@ public class PcKnownList extends PlayableKnownList
 			
 			// Send Server-Client Packet DeleteObject to the L2PcInstance
 			active_char.sendPacket(new DeleteObject(object));
-		}
-		
-		if (Config.CHECK_KNOWN && (object instanceof L2NpcInstance))
-		{
-			active_char.sendMessage("Removed NPC: " + ((L2NpcInstance) object).getName());
 		}
 		
 		return true;
