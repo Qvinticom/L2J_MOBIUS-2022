@@ -246,6 +246,15 @@ public class L2SiegeZone extends L2ZoneType
 		}
 	}
 	
+	@Override
+	public void onPlayerLogoutInside(L2PcInstance player)
+	{
+		if (player.getClanId() != getSettings().getSiegeableId())
+		{
+			player.teleToLocation(TeleportWhereType.TOWN);
+		}
+	}
+	
 	public void updateZoneStatusForCharactersInside()
 	{
 		if (getSettings().isActiveSiege())
@@ -327,15 +336,13 @@ public class L2SiegeZone extends L2ZoneType
 	 */
 	public void banishForeigners(int owningClanId)
 	{
-		final TeleportWhereType type = TeleportWhereType.TOWN;
 		for (L2PcInstance temp : getPlayersInside())
 		{
 			if (temp.getClanId() == owningClanId)
 			{
 				continue;
 			}
-			
-			temp.teleToLocation(type);
+			temp.teleToLocation(TeleportWhereType.TOWN);
 		}
 	}
 }
