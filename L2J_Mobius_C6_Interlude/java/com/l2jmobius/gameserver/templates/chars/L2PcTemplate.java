@@ -131,11 +131,6 @@ public class L2PcTemplate extends L2CharTemplate
 		}
 		
 		return 400;
-		
-		/*
-		 * Dark Elf Fighter F 380 Dark Elf Fighter M 350 Dark Elf Mystic F 330 Dark Elf Mystic M 300 Dwarf Fighter F 200 Dwarf Fighter M 180 Elf Fighter F 380 Elf Fighter M 350 Elf Mystic F 330 Elf Mystic M 300 Human Fighter F 270 Human Fighter M 250 Human Mystic F 220 Human Mystic M 200 Orc Fighter
-		 * F 220 Orc Fighter M 200 Orc Mystic F 280 Orc Mystic M 250
-		 */
 	}
 	
 	public final int getFallHeight()

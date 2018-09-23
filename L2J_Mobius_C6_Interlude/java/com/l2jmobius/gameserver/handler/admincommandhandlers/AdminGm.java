@@ -39,11 +39,6 @@ public class AdminGm implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (command.equals("admin_gm"))
 		{
 			handleGm(activeChar);
@@ -63,8 +58,6 @@ public class AdminGm implements IAdminCommandHandler
 		if (activeChar.isGM())
 		{
 			GmListTable.getInstance().deleteGm(activeChar);
-			// activeChar.setIsGM(false);
-			
 			BuilderUtil.sendSysMessage(activeChar, "You no longer have GM status.");
 			
 			if (Config.DEBUG)
@@ -75,8 +68,6 @@ public class AdminGm implements IAdminCommandHandler
 		else
 		{
 			GmListTable.getInstance().addGm(activeChar, false);
-			// activeChar.setIsGM(true);
-			
 			BuilderUtil.sendSysMessage(activeChar, "You now have GM status.");
 			
 			if (Config.DEBUG)

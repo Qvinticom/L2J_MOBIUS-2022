@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class TakeCastle implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(TakeCastle.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.TAKECASTLE

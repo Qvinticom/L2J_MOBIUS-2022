@@ -20,24 +20,11 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 
 public class SummonStatus extends PlayableStatus
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public SummonStatus(L2Summon activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
-	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2Summon getActiveChar()
 	{

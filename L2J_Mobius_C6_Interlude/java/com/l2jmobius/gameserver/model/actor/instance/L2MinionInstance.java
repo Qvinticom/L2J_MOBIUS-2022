@@ -28,9 +28,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2MinionInstance extends L2MonsterInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2RaidMinionInstance.class);
-	
-	/** The master L2Character whose depends this L2MinionInstance on. */
 	private L2MonsterInstance _master;
 	
 	/**
@@ -70,10 +67,6 @@ public final class L2MinionInstance extends L2MonsterInstance
 		return _master;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance#onSpawn()
-	 */
 	@Override
 	public void onSpawn()
 	{

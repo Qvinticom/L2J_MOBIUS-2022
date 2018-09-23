@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.templates.StatsSet;
 
 public class L2SkillSeed extends L2Skill
 {
-	
 	public L2SkillSeed(StatsSet set)
 	{
 		super(set);
@@ -64,9 +63,6 @@ public class L2SkillSeed extends L2Skill
 				if (effect.getEffectType() == L2Effect.EffectType.SEED)
 				{
 					effect.rescheduleEffect();
-					/*
-					 * for (int j=0;j<effects.length;j++ { if (effects[j].getEffectType()==L2Effect.EffectType.SEED) { EffectSeed e = (EffectSeed)effects[j]; if (e.getInUse() || e.getSkill().getId()==this.getId()) { e.rescheduleEffect(); } } }
-					 */
 				}
 			}
 		}

@@ -272,9 +272,6 @@ public class WildBeastFarmSiege extends ClanHallSiege
 				L2NpcTemplate template;
 				final L2Clan clan = ClanTable.getInstance().getClanByName(clanName);
 				template = NpcTable.getInstance().getTemplate(35617 + mobCounter);
-				/*
-				 * template.setServerSideTitle(true); template.setTitle(clan.getName());
-				 */
 				final L2MonsterInstance questMob = new L2MonsterInstance(IdFactory.getInstance().getNextId(), template);
 				questMob.setHeading(100);
 				questMob.getStatus().setCurrentHpMp(questMob.getMaxHp(), questMob.getMaxMp());
@@ -602,12 +599,9 @@ public class WildBeastFarmSiege extends ClanHallSiege
 		else
 		{
 			final CreatureSay cs = new CreatureSay(0, 1, "Journal", text);
-			/* L2MapRegion region = MapRegionManager.getInstance().getRegion(53508, -93776, -1584); */
 			for (L2PcInstance player : L2World.getInstance().getAllPlayers())
 			{
-				if /*
-					 * (region == MapRegionManager.getInstance().getRegion(player.getX(), player.getY(), player.getZ()) &&
-					 */ (player.getInstanceId() == 0)/* ) */
+				if (player.getInstanceId() == 0)
 				{
 					player.sendPacket(cs);
 				}

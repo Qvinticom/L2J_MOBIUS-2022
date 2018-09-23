@@ -583,15 +583,11 @@ public class Disablers implements ISkillHandler
 						_negateId = skill.getNegateId();
 						negateEffect(target, SkillType.BUFF, _negatePower, _negateId);
 					}
-					else
-					// all others negate type skills
+					else // all others negate type skills
 					{
 						_negateSkillTypes = skill.getNegateSkillTypes();
 						_negateEffectTypes = skill.getNegateEffectTypes();
 						_negatePower = skill.getNegatePower();
-						/*
-						 * Negate LOGGER LOGGER.info("EFFECT-TYPES: "); for(String effect: _negateEffectTypes) LOGGER.info("	"+effect); LOGGER.info("SKILL-TYPES: "); for(String skillt: _negateSkillTypes) LOGGER.info("	"+skillt);
-						 */
 						for (String stat : _negateSkillTypes)
 						{
 							stat = stat.toLowerCase().intern();
@@ -682,7 +678,7 @@ public class Disablers implements ISkillHandler
 									LOGGER.warning(e.getMessage());
 								}
 							}
-						} // end for
+						}
 						for (String stat : _negateEffectTypes)
 						{
 							EffectType effect_type = null;
@@ -724,11 +720,11 @@ public class Disablers implements ISkillHandler
 										break;
 								}
 							}
-						} // end for
-					} // end else
-				} // end case
-			}// end switch
-		} // end for
+						}
+					}
+				}
+			}
+		}
 		
 		if (skill.isMagic())
 		{
@@ -754,7 +750,7 @@ public class Disablers implements ISkillHandler
 			effect.exit(false);
 		}
 		skill.getEffectsSelf(activeChar);
-	} // end void
+	}
 	
 	private void negateEffect(L2Character target, SkillType type, double power)
 	{

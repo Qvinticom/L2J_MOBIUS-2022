@@ -151,8 +151,6 @@ public class Crystals implements IItemHandler
 		if (skill != null)
 		{
 			activeChar.doCast(skill);
-			// We have the consume on XML skills
-			// playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
 	}
 	

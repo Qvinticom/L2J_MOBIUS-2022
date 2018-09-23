@@ -29,8 +29,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2AdventurerInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2AdventurerInstance.class);
-	
 	public L2AdventurerInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);

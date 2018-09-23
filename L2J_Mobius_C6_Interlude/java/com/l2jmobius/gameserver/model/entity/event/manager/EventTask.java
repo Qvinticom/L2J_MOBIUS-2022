@@ -24,7 +24,4 @@ public interface EventTask extends Runnable
 	String getEventIdentifier();
 	
 	String getEventStartTime(); // hh:mm (es. 01:05)
-	
-	// public void notifyEventStart();
-	
 }

@@ -29,13 +29,8 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2CastleMagicianInstance extends L2NpcInstance
 {
-	/** The Constant COND_ALL_FALSE. */
 	protected static final int COND_ALL_FALSE = 0;
-	
-	/** The Constant COND_BUSY_BECAUSE_OF_SIEGE. */
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
-	
-	/** The Constant COND_OWNER. */
 	protected static final int COND_OWNER = 2;
 	
 	/**
@@ -48,10 +43,6 @@ public class L2CastleMagicianInstance extends L2NpcInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#showChatWindow(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, int)
-	 */
 	@Override
 	public void showChatWindow(L2PcInstance player, int val)
 	{
@@ -84,10 +75,6 @@ public class L2CastleMagicianInstance extends L2NpcInstance
 		player.sendPacket(html);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{

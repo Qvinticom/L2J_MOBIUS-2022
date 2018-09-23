@@ -30,10 +30,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.MyTargetSelected;
 
-/**
- * This class ...
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
- */
 public class WayPointNode extends L2Object
 {
 	private int _id;
@@ -46,19 +42,12 @@ public class WayPointNode extends L2Object
 	private static final String LINE_TYPE = "item";
 	private final Map<WayPointNode, List<WayPointNode>> _linkLists;
 	
-	/**
-	 * @param objectId
-	 */
 	public WayPointNode(int objectId)
 	{
 		super(objectId);
 		_linkLists = Collections.synchronizedMap(new WeakHashMap<WayPointNode, List<WayPointNode>>());
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAutoAttackable(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
@@ -177,10 +166,6 @@ public class WayPointNode extends L2Object
 		_type = type;
 	}
 	
-	/**
-	 * @param nodeA
-	 * @param nodeB
-	 */
 	public static void drawLine(WayPointNode nodeA, WayPointNode nodeB)
 	{
 		int x1 = nodeA.getX();
@@ -221,10 +206,6 @@ public class WayPointNode extends L2Object
 		_linkLists.put(node, line);
 	}
 	
-	/**
-	 * @param target
-	 * @param selectedNode
-	 */
 	public static void eraseLine(WayPointNode target, WayPointNode selectedNode)
 	{
 		List<WayPointNode> lineNodes = target.getLineInfo(selectedNode);
@@ -243,18 +224,11 @@ public class WayPointNode extends L2Object
 		selectedNode.eraseLine(target);
 	}
 	
-	/**
-	 * @param target
-	 */
 	public void eraseLine(WayPointNode target)
 	{
 		_linkLists.remove(target);
 	}
 	
-	/**
-	 * @param selectedNode
-	 * @return
-	 */
 	private List<WayPointNode> getLineInfo(WayPointNode selectedNode)
 	{
 		return _linkLists.get(selectedNode);

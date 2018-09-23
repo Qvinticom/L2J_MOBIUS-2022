@@ -33,24 +33,11 @@ import com.l2jmobius.gameserver.datatables.AccessLevel;
  */
 public class AdminCommandAccessRights
 {
-	/**
-	 * The logger<br>
-	 */
 	protected static final Logger LOGGER = Logger.getLogger(AdminCommandAccessRights.class.getName());
 	
-	/**
-	 * The one and only instance of this class, retriveable by getInstance()<br>
-	 */
 	private static AdminCommandAccessRights _instance = null;
-	
-	/**
-	 * The access rights<br>
-	 */
 	private final Map<String, Integer> adminCommandAccessRights = new HashMap<>();
 	
-	/**
-	 * Loads admin command access rights from database<br>
-	 */
 	private AdminCommandAccessRights()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
@@ -122,13 +109,11 @@ public class AdminCommandAccessRights
 			return true;
 		}
 		
-		// L2EMU_ADD - Visor123 need parse command before check
 		String command = adminCommand;
 		if (adminCommand.indexOf(" ") != -1)
 		{
 			command = adminCommand.substring(0, adminCommand.indexOf(" "));
 		}
-		// L2EMU_ADD
 		
 		int acar = 0;
 		if (adminCommandAccessRights.get(command) != null)

@@ -45,13 +45,8 @@ import com.l2jmobius.gameserver.templates.item.L2WeaponType;
 
 public class Pdam implements ISkillHandler
 {
-	// all the items ids that this handler knowns
 	private static Logger LOGGER = Logger.getLogger(Pdam.class.getName());
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.PDAM,
@@ -59,10 +54,6 @@ public class Pdam implements ISkillHandler
 		/* , SkillType.CHARGEDAM */
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -117,12 +108,7 @@ public class Pdam implements ISkillHandler
 				continue;
 			}
 			
-			/*
-			 * if(target.isInvul()){ continue; }
-			 */
-			
 			// Calculate skill evasion
-			// Formulas.getInstance();
 			if (Formulas.calcPhysicalSkillEvasion(target, skill))
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
@@ -185,11 +171,9 @@ public class Pdam implements ISkillHandler
 							sm.addSkillName(skill.getId());
 							activeChar.sendPacket(sm);
 						}
-						else // activate attacked effects, if any
-						if (f.calcSkillSuccess(activeChar, target, skill, soul, false, false))
+						else if (f.calcSkillSuccess(activeChar, target, skill, soul, false, false)) // activate attacked effects, if any
 						{
 							// Like L2OFF must remove the first effect if the second effect lands
-							// target.stopSkillEffects(skill.getId());
 							skill.getEffects(activeChar, target, ss, sps, bss);
 							SystemMessage sm = new SystemMessage(SystemMessageId.YOU_FEEL_S1_EFFECT);
 							sm.addSkillName(skill.getId());
@@ -229,8 +213,7 @@ public class Pdam implements ISkillHandler
 						// Half Kill!
 						activeChar.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE));
 					}
-					else
-					// 2nd lethal effect activate (cp,hp to 1 or if target is npc then hp to 1)
+					else // 2nd lethal effect activate (cp,hp to 1 or if target is npc then hp to 1)
 					{
 						// If is a monster damage is (CurrentHp - 1) so HP = 1
 						if (target instanceof L2NpcInstance)
@@ -251,8 +234,7 @@ public class Pdam implements ISkillHandler
 						activeChar.sendPacket(new SystemMessage(SystemMessageId.LETHAL_STRIKE_SUCCESSFUL));
 					}
 				}
-				else // Make damage directly to HP
-				if (skill.getDmgDirectlyToHP() || !(activeChar instanceof L2Playable))
+				else if (skill.getDmgDirectlyToHP() || !(activeChar instanceof L2Playable)) // Make damage directly to HP
 				{
 					if (target instanceof L2PcInstance)
 					{
@@ -295,8 +277,7 @@ public class Pdam implements ISkillHandler
 						target.reduceCurrentHp(damage, activeChar);
 					}
 				}
-				else // only players can reduce CPs each other
-				if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && !target.isInvul())
+				else if ((activeChar instanceof L2PcInstance) && (target instanceof L2PcInstance) && !target.isInvul()) // only players can reduce CPs each other
 				{
 					final L2PcInstance player = (L2PcInstance) target;
 					
@@ -324,8 +305,7 @@ public class Pdam implements ISkillHandler
 					target.reduceCurrentHp(damage, activeChar);
 				}
 			}
-			else
-			// No - damage
+			else // No - damage
 			{
 				activeChar.sendPacket(new SystemMessage(SystemMessageId.ATTACK_FAILED));
 			}

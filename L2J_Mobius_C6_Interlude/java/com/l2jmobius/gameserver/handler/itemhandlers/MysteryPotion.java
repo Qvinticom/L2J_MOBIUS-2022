@@ -49,7 +49,6 @@ public class MysteryPotion implements IItemHandler
 		}
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
-		// item.getItem().getEffects(item, activeChar);
 		
 		// Use a summon skill effect for fun ;)
 		MagicSkillUse MSU = new MagicSkillUse(playable, playable, 2103, 1, 0, 0);

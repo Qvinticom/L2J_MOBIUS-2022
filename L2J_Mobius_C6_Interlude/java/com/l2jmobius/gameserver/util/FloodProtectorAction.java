@@ -174,13 +174,10 @@ public final class FloodProtectorAction
 			if (command_count == null)
 			{
 				command_count = new AtomicInteger(0);
-				// received_commands_actions.put(command, command_count);
 			}
 			
 			final int count = command_count.incrementAndGet();
 			received_commands_actions.put(command, command_count);
-			
-			// _count.incrementAndGet();
 			
 			if (!_punishmentInProgress && (config.PUNISHMENT_LIMIT > 0) && (count >= config.PUNISHMENT_LIMIT) && (config.PUNISHMENT_TYPE != null))
 			{
@@ -257,8 +254,8 @@ public final class FloodProtectorAction
 			long newChatBanTime = 60000; // 1 minute
 			if (activeChar.getPunishLevel() == PunishLevel.CHAT)
 			{
-				if (activeChar.getPunishTimer() <= (60000 * 3))
-				{ // if less then 3 minutes (MAX CHAT BAN TIME), add 1 minute
+				if (activeChar.getPunishTimer() <= (60000 * 3)) // if less then 3 minutes (MAX CHAT BAN TIME), add 1 minute
+				{
 					newChatBanTime += activeChar.getPunishTimer();
 				}
 				else

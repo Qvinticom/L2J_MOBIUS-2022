@@ -5098,9 +5098,7 @@ public enum SystemMessageId
 	 * ID: 2028<br>
 	 * Message: $s1 cannot receive a duel challenge because $s1 is too far away.
 	 */
-	S1_CANNOT_RECEIVE_A_DUEL_CHALLENGE_BECAUSE_S1_IS_TOO_FAR_AWAY(2028),
-	
-	;
+	S1_CANNOT_RECEIVE_A_DUEL_CHALLENGE_BECAUSE_S1_IS_TOO_FAR_AWAY(2028);
 	
 	private int _id;
 	

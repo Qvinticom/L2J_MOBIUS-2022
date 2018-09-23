@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class QuestTimer
 {
-	// =========================================================
-	// Schedule Task
 	public class ScheduleTimerTask implements Runnable
 	{
 		@Override
@@ -50,8 +48,6 @@ public class QuestTimer
 		}
 	}
 	
-	// =========================================================
-	// Data Field
 	boolean _isActive = true;
 	final String _name;
 	final Quest _quest;
@@ -60,8 +56,6 @@ public class QuestTimer
 	final boolean _isRepeating;
 	private ScheduledFuture<?> _schedular;
 	
-	// =========================================================
-	// Constructor
 	public QuestTimer(Quest quest, String name, long time, L2NpcInstance npc, L2PcInstance player, boolean repeating)
 	{
 		_name = name;
@@ -89,8 +83,6 @@ public class QuestTimer
 		this(qs.getQuest(), name, time, null, qs.getPlayer(), false);
 	}
 	
-	// =========================================================
-	// Method - Public
 	public void cancel()
 	{
 		cancel(true);
@@ -129,8 +121,6 @@ public class QuestTimer
 		return (npc == _npc) && (player == _player);
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final boolean getIsActive()
 	{
 		return _isActive;

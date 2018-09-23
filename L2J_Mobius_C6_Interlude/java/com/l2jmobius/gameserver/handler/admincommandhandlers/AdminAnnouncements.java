@@ -71,11 +71,6 @@ public class AdminAnnouncements implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		final StringTokenizer st = new StringTokenizer(command);
 		
 		final String comm_s = st.nextToken();
@@ -116,8 +111,6 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				Announcements.getInstance().listAnnouncements(activeChar);
 				return true;
 			}
-			/*
-			*/
 			case admin_announce_announcements:
 			{
 				for (L2PcInstance player : L2World.getInstance().getAllPlayers())
@@ -132,7 +125,6 @@ public class AdminAnnouncements implements IAdminCommandHandler
 				if (st.hasMoreTokens())
 				{
 					text = command.replace(comm_s + " ", "");
-					// text = st.nextToken();
 				}
 				if (!text.equals(""))
 				{

@@ -99,7 +99,6 @@ public class PaganKeys implements IItemHandler
 					}
 					else
 					{
-						// test with: activeChar.sendPacket(new SystemMessage(SystemMessage.FAILED_TO_UNLOCK_DOOR));
 						activeChar.sendMessage("You failed to open Anterooms Door.");
 						activeChar.broadcastPacket(new SocialAction(activeChar.getObjectId(), 13));
 						final PlaySound playSound = new PlaySound("interfacesound.system_close_01");

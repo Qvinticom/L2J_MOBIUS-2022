@@ -184,7 +184,6 @@ public class CharTemplateTable
 			while (rset.next())
 			{
 				StatsSet set = new StatsSet();
-				// ClassId classId = ClassId.values()[rset.getInt("id")];
 				set.set("classId", rset.getInt("id"));
 				set.set("className", rset.getString("className"));
 				set.set("raceId", rset.getInt("raceId"));
@@ -228,7 +227,7 @@ public class CharTemplateTable
 				set.set("collision_radius", rset.getDouble("m_col_r"));
 				set.set("collision_height", rset.getDouble("m_col_h"));
 				ct = new L2PcTemplate(set);
-				// 5items must go here
+				// 5 items must go here
 				for (int x = 1; x < 6; x++)
 				{
 					if (rset.getInt("items" + x) != 0)
@@ -283,9 +282,4 @@ public class CharTemplateTable
 		
 		return currId;
 	}
-	
-	// public L2CharTemplate[] getAllTemplates()
-	// {
-	// return _templates.values().toArray(new L2CharTemplate[_templates.size()]);
-	// }
 }

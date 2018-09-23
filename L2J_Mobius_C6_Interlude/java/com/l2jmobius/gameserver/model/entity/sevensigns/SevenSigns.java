@@ -46,216 +46,75 @@ import com.l2jmobius.gameserver.templates.StatsSet;
  */
 public class SevenSigns
 {
-	
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(SevenSigns.class.getName());
 	
-	/** The _instance. */
 	private static SevenSigns _instance;
-	
-	// Basic Seven Signs Constants \\
-	/** The Constant SEVEN_SIGNS_DATA_FILE. */
 	public static final String SEVEN_SIGNS_DATA_FILE = "config/main/sevensigns.ini";
-	
-	/** The Constant SEVEN_SIGNS_HTML_PATH. */
 	public static final String SEVEN_SIGNS_HTML_PATH = "data/html/seven_signs/";
-	
-	/** The Constant CABAL_NULL. */
 	public static final int CABAL_NULL = 0;
-	
-	/** The Constant CABAL_DUSK. */
 	public static final int CABAL_DUSK = 1;
-	
-	/** The Constant CABAL_DAWN. */
 	public static final int CABAL_DAWN = 2;
-	
-	/** The Constant SEAL_NULL. */
 	public static final int SEAL_NULL = 0;
-	
-	/** The Constant SEAL_AVARICE. */
 	public static final int SEAL_AVARICE = 1;
-	
-	/** The Constant SEAL_GNOSIS. */
 	public static final int SEAL_GNOSIS = 2;
-	
-	/** The Constant SEAL_STRIFE. */
 	public static final int SEAL_STRIFE = 3;
-	
-	/** The Constant PERIOD_COMP_RECRUITING. */
 	public static final int PERIOD_COMP_RECRUITING = 0;
-	
-	/** The Constant PERIOD_COMPETITION. */
 	public static final int PERIOD_COMPETITION = 1;
-	
-	/** The Constant PERIOD_COMP_RESULTS. */
 	public static final int PERIOD_COMP_RESULTS = 2;
-	
-	/** The Constant PERIOD_SEAL_VALIDATION. */
 	public static final int PERIOD_SEAL_VALIDATION = 3;
-	
-	/** The Constant PERIOD_START_HOUR. */
 	public static final int PERIOD_START_HOUR = 18;
-	
-	/** The Constant PERIOD_START_MINS. */
 	public static final int PERIOD_START_MINS = 00;
-	
-	/** The Constant PERIOD_START_DAY. */
 	public static final int PERIOD_START_DAY = Calendar.MONDAY;
-	
-	// The quest event and seal validation periods last for approximately one week
-	// with a 15 minutes "interval" period sandwiched between them.
-	/** The Constant PERIOD_MINOR_LENGTH. */
 	public static final int PERIOD_MINOR_LENGTH = 900000;
-	
-	/** The Constant PERIOD_MAJOR_LENGTH. */
 	public static final int PERIOD_MAJOR_LENGTH = 604800000 - PERIOD_MINOR_LENGTH;
-	
-	/** The Constant ANCIENT_ADENA_ID. */
 	public static final int ANCIENT_ADENA_ID = 5575;
-	
-	/** The Constant RECORD_SEVEN_SIGNS_ID. */
 	public static final int RECORD_SEVEN_SIGNS_ID = 5707;
-	
-	/** The Constant CERTIFICATE_OF_APPROVAL_ID. */
 	public static final int CERTIFICATE_OF_APPROVAL_ID = 6388;
-	
-	/** The Constant RECORD_SEVEN_SIGNS_COST. */
 	public static final int RECORD_SEVEN_SIGNS_COST = 500;
-	
-	/** The Constant ADENA_JOIN_DAWN_COST. */
 	public static final int ADENA_JOIN_DAWN_COST = 50000;
-	
-	// NPC Related Constants \\
-	/** The Constant ORATOR_NPC_ID. */
 	public static final int ORATOR_NPC_ID = 31094;
-	
-	/** The Constant PREACHER_NPC_ID. */
 	public static final int PREACHER_NPC_ID = 31093;
-	
-	/** The Constant MAMMON_MERCHANT_ID. */
 	public static final int MAMMON_MERCHANT_ID = 31113;
-	
-	/** The Constant MAMMON_BLACKSMITH_ID. */
 	public static final int MAMMON_BLACKSMITH_ID = 31126;
-	
-	/** The Constant MAMMON_MARKETEER_ID. */
 	public static final int MAMMON_MARKETEER_ID = 31092;
-	
-	/** The Constant SPIRIT_IN_ID. */
 	public static final int SPIRIT_IN_ID = 31111;
-	
-	/** The Constant SPIRIT_OUT_ID. */
 	public static final int SPIRIT_OUT_ID = 31112;
-	
-	/** The Constant LILITH_NPC_ID. */
 	public static final int LILITH_NPC_ID = 25283;
-	
-	/** The Constant ANAKIM_NPC_ID. */
 	public static final int ANAKIM_NPC_ID = 25286;
-	
-	/** The Constant CREST_OF_DAWN_ID. */
 	public static final int CREST_OF_DAWN_ID = 31170;
-	
-	/** The Constant CREST_OF_DUSK_ID. */
 	public static final int CREST_OF_DUSK_ID = 31171;
-	// Seal Stone Related Constants \\
-	/** The Constant SEAL_STONE_BLUE_ID. */
 	public static final int SEAL_STONE_BLUE_ID = 6360;
-	
-	/** The Constant SEAL_STONE_GREEN_ID. */
 	public static final int SEAL_STONE_GREEN_ID = 6361;
-	
-	/** The Constant SEAL_STONE_RED_ID. */
 	public static final int SEAL_STONE_RED_ID = 6362;
-	
-	/** The Constant SEAL_STONE_BLUE_VALUE. */
 	public static final int SEAL_STONE_BLUE_VALUE = 3;
-	
-	/** The Constant SEAL_STONE_GREEN_VALUE. */
 	public static final int SEAL_STONE_GREEN_VALUE = 5;
-	
-	/** The Constant SEAL_STONE_RED_VALUE. */
 	public static final int SEAL_STONE_RED_VALUE = 10;
-	
-	/** The Constant BLUE_CONTRIB_POINTS. */
 	public static final int BLUE_CONTRIB_POINTS = 3;
-	
-	/** The Constant GREEN_CONTRIB_POINTS. */
 	public static final int GREEN_CONTRIB_POINTS = 5;
-	
-	/** The Constant RED_CONTRIB_POINTS. */
 	public static final int RED_CONTRIB_POINTS = 10;
-	
-	/** The _calendar. */
 	private final Calendar _calendar = Calendar.getInstance();
-	
-	/** The _active period. */
 	protected int _activePeriod;
-	
-	/** The _current cycle. */
 	protected int _currentCycle;
-	
-	/** The _dawn stone score. */
 	protected double _dawnStoneScore;
-	
-	/** The _dusk stone score. */
 	protected double _duskStoneScore;
-	
-	/** The _dawn festival score. */
 	protected int _dawnFestivalScore;
-	
-	/** The _dusk festival score. */
 	protected int _duskFestivalScore;
-	
-	/** The _comp winner. */
 	protected int _compWinner;
-	
-	/** The _previous winner. */
 	protected int _previousWinner;
-	
-	/** The _signs player data. */
 	private final Map<Integer, StatsSet> _signsPlayerData;
-	
-	/** The _signs seal owners. */
 	private final Map<Integer, Integer> _signsSealOwners;
-	
-	/** The _signs dusk seal totals. */
 	private final Map<Integer, Integer> _signsDuskSealTotals;
-	
-	/** The _signs dawn seal totals. */
 	private final Map<Integer, Integer> _signsDawnSealTotals;
-	
-	/** The _merchant spawn. */
 	private static AutoSpawnInstance _merchantSpawn;
-	
-	/** The _blacksmith spawn. */
 	private static AutoSpawnInstance _blacksmithSpawn;
-	
-	/** The _spirit in spawn. */
 	private static AutoSpawnInstance _spiritInSpawn;
-	
-	/** The _spirit out spawn. */
 	private static AutoSpawnInstance _spiritOutSpawn;
-	
-	/** The _lilith spawn. */
 	private static AutoSpawnInstance _lilithSpawn;
-	
-	/** The _anakim spawn. */
 	private static AutoSpawnInstance _anakimSpawn;
-	
-	/** The _crestofdawnspawn. */
 	private static AutoSpawnInstance _crestofdawnspawn;
-	
-	/** The _crestofduskspawn. */
 	private static AutoSpawnInstance _crestofduskspawn;
-	
-	/** The _orator spawns. */
 	private static Map<Integer, AutoSpawnInstance> _oratorSpawns;
-	
-	/** The _preacher spawns. */
 	private static Map<Integer, AutoSpawnInstance> _preacherSpawns;
-	
-	/** The _marketeer spawns. */
 	private static Map<Integer, AutoSpawnInstance> _marketeerSpawns;
 	
 	/**
@@ -308,7 +167,6 @@ public class SevenSigns
 			SevenSignsPeriodChange sspc = new SevenSignsPeriodChange();
 			ThreadPool.schedule(sspc, milliToChange);
 			
-			// Thanks to http://rainbow.arch.scriptmania.com/scripts/timezone_countdown.html for help with this.
 			final double numSecs = (milliToChange / 1000) % 60;
 			double countDown = ((milliToChange / 1000) - numSecs) / 60;
 			final int numMins = (int) Math.floor(countDown % 60);
@@ -1248,8 +1106,7 @@ public class SevenSigns
 		
 		if (currPlayerData != null)
 		{
-			// If the seal validation period has passed,
-			// cabal information was removed and so "re-register" player
+			// If the seal validation period has passed, cabal information was removed and so "re-register" player.
 			currPlayerData.set("cabal", getCabalShortName(chosenCabal));
 			currPlayerData.set("seal", chosenSeal);
 			
@@ -1530,10 +1387,8 @@ public class SevenSigns
 			final int totalDuskMembers = getTotalMembers(CABAL_DUSK) == 0 ? 1 : getTotalMembers(CABAL_DUSK);
 			final int duskPercent = Math.round(((float) duskProportion / totalDuskMembers) * 100);
 			
-			/*
-			 * - If a Seal was already closed or owned by the opponent and the new winner wants to assume ownership of the Seal, 35% or more of the members of the Cabal must have chosen the Seal. If they chose less than 35%, they cannot own the Seal. - If the Seal was owned by the winner in the
-			 * previous Seven Signs, they can retain that seal if 10% or more members have chosen it. If they want to possess a new Seal, at least 35% of the members of the Cabal must have chosen the new Seal.
-			 */
+			// If a Seal was already closed or owned by the opponent and the new winner wants to assume ownership of the Seal, 35% or more of the members of the Cabal must have chosen the Seal. If they chose less than 35%, they cannot own the Seal.
+			// If the Seal was owned by the winner in the previous Seven Signs, they can retain that seal if 10% or more members have chosen it. If they want to possess a new Seal, at least 35% of the members of the Cabal must have chosen the new Seal.
 			switch (prevSealOwner)
 			{
 				case CABAL_NULL:
@@ -1746,21 +1601,13 @@ public class SevenSigns
 	
 	/**
 	 * The primary controller of period change of the Seven Signs system. This runs all related tasks depending on the period that is about to begin.
-	 * @author Tempy
 	 */
 	protected class SevenSignsPeriodChange implements Runnable
 	{
-		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
-			/*
-			 * Remember the period check here refers to the period just ENDED!
-			 */
+			// Remember the period check here refers to the period just ENDED!
 			final int periodEnded = _activePeriod;
 			_activePeriod++;
 			

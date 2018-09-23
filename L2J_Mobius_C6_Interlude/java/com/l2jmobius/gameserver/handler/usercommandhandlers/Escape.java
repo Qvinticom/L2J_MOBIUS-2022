@@ -34,10 +34,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-/**
- *
- *
- */
 public class Escape implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
@@ -45,10 +41,6 @@ public class Escape implements IUserCommandHandler
 		52
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -150,7 +142,7 @@ public class Escape implements IUserCommandHandler
 		
 		MagicSkillUse msk = new MagicSkillUse(activeChar, 1050, 1, unstuckTimer, 0);
 		activeChar.setTarget(null); // Like retail we haven't self target
-		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000/* 900 */);
+		Broadcast.toSelfAndKnownPlayersInRadius(activeChar, msk, 810000);
 		SetupGauge sg = new SetupGauge(0, unstuckTimer);
 		activeChar.sendPacket(sg);
 		// End SoE Animation section
@@ -198,10 +190,6 @@ public class Escape implements IUserCommandHandler
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

@@ -40,110 +40,43 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * The Class ClanHall.
- */
 public class ClanHall
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(ClanHall.class.getName());
 	
-	/** The _clan hall id. */
+	public static final int FUNC_TELEPORT = 1;
+	public static final int FUNC_ITEM_CREATE = 2;
+	public static final int FUNC_RESTORE_HP = 3;
+	public static final int FUNC_RESTORE_MP = 4;
+	public static final int FUNC_RESTORE_EXP = 5;
+	public static final int FUNC_SUPPORT = 6;
+	public static final int FUNC_DECO_FRONTPLATEFORM = 7;
+	public static final int FUNC_DECO_CURTAINS = 8;
 	final int _clanHallId;
-	
-	/** The _doors. */
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
-	
-	/** The _door default. */
 	private final List<String> _doorDefault = new ArrayList<>();
-	
-	/** The _name. */
 	final String _name;
-	
-	/** The _owner id. */
 	private int _ownerId;
-	
-	/** The _owner clan. */
 	private L2Clan _ownerClan;
-	
-	/** The _lease. */
 	private final int _lease;
-	
-	/** The _desc. */
 	private final String _desc;
-	
-	/** The _location. */
 	private final String _location;
-	
-	/** The _paid until. */
 	protected long _paidUntil;
-	
-	/** The _zone. */
 	private L2ClanHallZone _zone;
-	
-	/** The _grade. */
 	private final int _grade;
-	
-	/** The _ch rate. */
 	protected final int _chRate = 604800000;
-	
-	/** The _is free. */
 	protected boolean _isFree = true;
-	
-	/** The _functions. */
 	private final Map<Integer, ClanHallFunction> _functions;
-	
-	/** The _paid. */
 	protected boolean _paid;
 	
-	/** Clan Hall Functions. */
-	public static final int FUNC_TELEPORT = 1;
-	
-	/** The Constant FUNC_ITEM_CREATE. */
-	public static final int FUNC_ITEM_CREATE = 2;
-	
-	/** The Constant FUNC_RESTORE_HP. */
-	public static final int FUNC_RESTORE_HP = 3;
-	
-	/** The Constant FUNC_RESTORE_MP. */
-	public static final int FUNC_RESTORE_MP = 4;
-	
-	/** The Constant FUNC_RESTORE_EXP. */
-	public static final int FUNC_RESTORE_EXP = 5;
-	
-	/** The Constant FUNC_SUPPORT. */
-	public static final int FUNC_SUPPORT = 6;
-	
-	/** The Constant FUNC_DECO_FRONTPLATEFORM. */
-	public static final int FUNC_DECO_FRONTPLATEFORM = 7;
-	
-	/** The Constant FUNC_DECO_CURTAINS. */
-	public static final int FUNC_DECO_CURTAINS = 8;
-	
-	/**
-	 * The Class ClanHallFunction.
-	 */
 	public class ClanHallFunction
 	{
-		/** The _type. */
 		final int _type;
-		
-		/** The _lvl. */
 		private int _lvl;
-		
-		/** The _fee. */
 		protected int _fee;
-		
-		/** The _temp fee. */
 		protected int _tempFee;
-		
-		/** The _rate. */
 		final long _rate;
-		
-		/** The _end date. */
 		long _endDate;
-		
-		/** The _in debt. */
 		protected boolean _inDebt;
 		
 		/**
@@ -260,22 +193,12 @@ public class ClanHall
 			}
 		}
 		
-		/**
-		 * The Class FunctionTask.
-		 */
 		private class FunctionTask implements Runnable
 		{
-			/**
-			 * Instantiates a new function task.
-			 */
 			public FunctionTask()
 			{
 			}
 			
-			/*
-			 * (non-Javadoc)
-			 * @see java.lang.Runnable#run()
-			 */
 			@Override
 			public void run()
 			{
@@ -493,8 +416,6 @@ public class ClanHall
 	 */
 	public final List<L2DoorInstance> getDoors()
 	{
-		// if (_doors == null)
-		// _doors = new ArrayList<L2DoorInstance>();
 		return _doors;
 	}
 	

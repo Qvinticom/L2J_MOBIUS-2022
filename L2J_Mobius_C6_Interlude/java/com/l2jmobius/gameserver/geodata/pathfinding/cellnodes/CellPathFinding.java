@@ -334,7 +334,6 @@ public class CellPathFinding extends PathFinding
 				if (playable)
 				{
 					i.playableOverflows++;
-					// System.err.println("Overflow, size requested: " + size + " playable:"+playable);
 				}
 			}
 		}

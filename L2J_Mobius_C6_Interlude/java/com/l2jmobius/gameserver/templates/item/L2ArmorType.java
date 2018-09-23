@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.templates.item;
 /**
  * Description of Armor Type
  */
-
 public enum L2ArmorType
 {
 	NONE(1, "None"),

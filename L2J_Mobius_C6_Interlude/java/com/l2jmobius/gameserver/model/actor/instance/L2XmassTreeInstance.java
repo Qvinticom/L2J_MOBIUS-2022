@@ -94,14 +94,9 @@ public class L2XmassTreeInstance extends L2NpcInstance
 		return 900;
 	}
 	
-	/**
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAttackable()
-	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
 		return false;
 	}
-	
 }

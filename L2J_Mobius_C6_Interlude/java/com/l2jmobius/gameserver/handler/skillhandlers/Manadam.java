@@ -50,10 +50,6 @@ public class Manadam implements ISkillHandler
 			return;
 		}
 		
-		/*
-		 * boolean ss = false; boolean bss = false; L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance(); if(weaponInst != null) { if(weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) { bss = true;
-		 * weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); } else if(weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) { ss = true; weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); } } weaponInst = null;
-		 */
 		final boolean sps = activeChar.checkSps();
 		final boolean bss = activeChar.checkBss();
 		

@@ -197,8 +197,7 @@ public class FishTable
 		}
 		if (_Fishs == null)
 		{
-			// the fish list is empty
-			LOGGER.warning("Fish are not defined !");
+			LOGGER.warning("Fish are not defined!");
 			return null;
 		}
 		for (FishData f : _Fishs)

@@ -37,10 +37,6 @@ import com.l2jmobius.gameserver.handler.usercommandhandlers.PartyInfo;
 import com.l2jmobius.gameserver.handler.usercommandhandlers.SiegeStatus;
 import com.l2jmobius.gameserver.handler.usercommandhandlers.Time;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.1.2.5 $ $Date: 2005/03/27 15:30:09 $
- */
 public class UserCommandHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
@@ -106,9 +102,6 @@ public class UserCommandHandler
 		return _datatable.get(new Integer(userCommand));
 	}
 	
-	/**
-	 * @return
-	 */
 	public int size()
 	{
 		return _datatable.size();

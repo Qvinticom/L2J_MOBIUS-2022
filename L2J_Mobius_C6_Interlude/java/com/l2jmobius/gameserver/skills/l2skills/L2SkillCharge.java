@@ -93,14 +93,6 @@ public class L2SkillCharge extends L2Skill
 		}
 		getEffects(caster, caster, false, false, false);
 		
-		// effect self :]
-		// L2Effect seffect = caster.getEffect(getId());
-		// TODO ?? this is always null due to a return in the if block above!
-		// if (effect != null && seffect.isSelfEffect())
-		// {
-		// Replace old effect with new one.
-		// seffect.exit();
-		// }
 		// cast self effect if any
 		getEffectsSelf(caster);
 	}

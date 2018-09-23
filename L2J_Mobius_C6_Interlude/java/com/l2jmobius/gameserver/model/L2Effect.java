@@ -106,21 +106,14 @@ public abstract class L2Effect
 	
 	private static final Func[] _emptyFunctionSet = new Func[0];
 	
-	// member _effector is the instance of L2Character that cast/used the spell/skill that is
-	// causing this effect. Do not confuse with the instance of L2Character that
-	// is being affected by this effect.
+	// member _effector is the instance of L2Character that cast/used the spell/skill that is causing this effect. Do not confuse with the instance of L2Character that is being affected by this effect.
 	private final L2Character _effector;
 	
-	// member _effected is the instance of L2Character that was affected
-	// by this effect. Do not confuse with the instance of L2Character that
-	// catsed/used this effect.
+	// member _effected is the instance of L2Character that was affected by this effect. Do not confuse with the instance of L2Character that catsed/used this effect.
 	protected final L2Character _effected;
 	
 	// the skill that was used.
 	public L2Skill _skill;
-	
-	// or the items that was used.
-	// private final L2Item _item;
 	
 	// the value of an update
 	private final Lambda _lambda;
@@ -245,7 +238,6 @@ public abstract class L2Effect
 			_currentTask = null;
 			_periodfirsttime = newfirsttime;
 			final int duration = _period - _periodfirsttime;
-			// LOGGER.warning("Period: "+_period+"-"+_periodfirsttime+"="+duration);
 			_currentTask = new EffectTask(duration * 1000, -1);
 			_currentFuture = ThreadPool.schedule(_currentTask, duration * 1000);
 		}

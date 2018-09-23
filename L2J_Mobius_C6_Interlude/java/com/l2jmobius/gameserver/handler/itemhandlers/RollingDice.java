@@ -30,10 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.util.Broadcast;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class ...
- * @version $Revision: 1.1.4.2 $ $Date: 2005/03/27 15:30:07 $
- */
 public class RollingDice implements IItemHandler
 {
 	private static final int[] ITEM_IDS =

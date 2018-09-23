@@ -639,7 +639,6 @@ public class TradeList
 			
 			if ((item == null) || (titem.getCount() < 1))
 			{
-				// LOGGER.warning(_owner.getName() + ": Invalid Item in TradeList");
 				return false;
 			}
 		}
@@ -981,11 +980,6 @@ public class TradeList
 			
 			final SystemMessage msg2 = SystemMessage.sendString("You spent " + price + " " + item.getItemName());
 			player.sendPacket(msg2);
-			
-			/*
-			 * L2ItemInstance item = playerInventory.getItemByItemId(Config.SELL_ITEM); playerInventory.destroyItem("PrivateStore", item.getObjectId(), price, player, _owner); playerIU.addItem(item); L2ItemInstance item2 = ownerInventory.getItemByItemId(Config.SELL_ITEM);
-			 * ownerInventory.addItem("PrivateStore", item2.getObjectId(), price, _owner, player); ownerIU.addItem(ownerInventory.getItemByItemId(Config.SELL_ITEM));
-			 */
 		}
 		else
 		{
@@ -1413,5 +1407,4 @@ public class TradeList
 		}
 		return null;
 	}
-	
 }

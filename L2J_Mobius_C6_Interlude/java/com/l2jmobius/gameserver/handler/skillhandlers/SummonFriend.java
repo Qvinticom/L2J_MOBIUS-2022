@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class SummonFriend implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(SummonFriend.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.SUMMON_FRIEND

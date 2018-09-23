@@ -41,11 +41,8 @@ public class PetStat extends SummonStat
 			return false;
 		}
 		
-		/*
-		 * Micht : Use of PetInfo for C5 StatusUpdate su = new StatusUpdate(getActiveChar().getObjectId()); su.addAttribute(StatusUpdate.EXP, getExp()); getActiveChar().broadcastPacket(su);
-		 */
 		getActiveChar().broadcastPacket(new PetInfo(getActiveChar()));
-		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them
+		// The PetInfo packet wipes the PartySpelled (list of active spells' icons). Re-add them.
 		getActiveChar().updateEffectIcons(true);
 		
 		return true;

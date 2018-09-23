@@ -37,18 +37,11 @@ public class AdminZone implements IAdminCommandHandler
 		"admin_zone_reload"
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
 		StringTokenizer st = new StringTokenizer(command, " ");
 		String actualCommand = st.nextToken(); // Get actual command
-		
-		// String val = "";
-		// if (st.countTokens() >= 1) {val = st.nextToken();}
 		
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
@@ -106,14 +99,9 @@ public class AdminZone implements IAdminCommandHandler
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

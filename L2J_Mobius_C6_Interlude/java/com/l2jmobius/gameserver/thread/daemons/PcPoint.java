@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author ProGramMoS
  */
-
 public class PcPoint implements Runnable
 {
 	Logger LOGGER = Logger.getLogger(PcPoint.class.getName());

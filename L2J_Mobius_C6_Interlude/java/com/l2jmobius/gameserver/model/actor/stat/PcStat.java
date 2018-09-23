@@ -54,7 +54,7 @@ public class PcStat extends PlayableStat
 	{
 		L2PcInstance activeChar = getActiveChar();
 		
-		// Player is Gm and access level is below or equal to canGainExp and is in party, don't give Xp
+		// Player is Gm and access level is below or equal to canGainExp and is in party, don't give XP
 		if (!getActiveChar().getAccessLevel().canGainExp() && getActiveChar().isInParty())
 		{
 			return false;
@@ -76,11 +76,7 @@ public class PcStat extends PlayableStat
 			}
 		}
 		
-		/*
-		 * Micht : Use of UserInfo for C5 StatusUpdate su = new StatusUpdate(activeChar.getObjectId()); su.addAttribute(StatusUpdate.EXP, getExp()); activeChar.sendPacket(su);
-		 */
 		activeChar.sendPacket(new UserInfo(activeChar));
-		
 		return true;
 	}
 	
@@ -172,7 +168,6 @@ public class PcStat extends PlayableStat
 	@Override
 	public final boolean addLevel(byte value)
 	{
-		// getActiveChar().setLocked(true);
 		if ((getLevel() + value) > (ExperienceData.getInstance().getMaxLevel() - 1))
 		{
 			return false;
@@ -204,9 +199,7 @@ public class PcStat extends PlayableStat
 			}
 			else
 			{
-				
 				LOGGER.info("Attention: Remote ClassMaster is Enabled, but not inserted into DataBase. Remember to install 31288 Custom_Npc...");
-				
 			}
 		}
 		
@@ -334,8 +327,6 @@ public class PcStat extends PlayableStat
 			{
 				player_subclass.setExp(value);
 			}
-			
-			// getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setExp(value);
 		}
 		else
 		{
@@ -349,7 +340,6 @@ public class PcStat extends PlayableStat
 		try
 		{
 			final L2PcInstance player = getActiveChar();
-			
 			if (player.isSubClassActive())
 			{
 				final int class_index = player.getClassIndex();
@@ -359,13 +349,7 @@ public class PcStat extends PlayableStat
 				{
 					return player_subclass.getLevel();
 				}
-				
-				// getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setExp(value);
 			}
-			
-			// if (getActiveChar().isSubClassActive())
-			// return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getLevel();
-			//
 			return super.getLevel();
 		}
 		catch (NullPointerException e)
@@ -393,10 +377,6 @@ public class PcStat extends PlayableStat
 			{
 				player_subclass.setLevel(value);
 			}
-			
-			// if(getActiveChar().isSubClassActive())
-			// {
-			// getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setLevel(value);
 		}
 		else
 		{
@@ -471,7 +451,6 @@ public class PcStat extends PlayableStat
 	public final int getSp()
 	{
 		final L2PcInstance player = getActiveChar();
-		
 		if (player.isSubClassActive())
 		{
 			final int class_index = player.getClassIndex();
@@ -482,9 +461,6 @@ public class PcStat extends PlayableStat
 				return player_subclass.getSp();
 			}
 		}
-		// if(getActiveChar().isSubClassActive())
-		// return getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).getSp();
-		
 		return super.getSp();
 	}
 	
@@ -504,11 +480,6 @@ public class PcStat extends PlayableStat
 				player_subclass.setSp(value);
 			}
 		}
-		
-		// if(getActiveChar().isSubClassActive())
-		// {
-		// getActiveChar().getSubClasses().get(getActiveChar().getClassIndex()).setSp(value);
-		// }
 		else
 		{
 			super.setSp(value);

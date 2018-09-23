@@ -140,7 +140,6 @@ public class StatsCmd implements IVoicedCommandHandler
 					return false;
 				}
 				final L2PcInstance targetp = (L2PcInstance) activeChar.getTarget();
-				// L2PcInstance pc = L2World.getInstance().getPlayer(target);
 				if (targetp != null)
 				{
 					NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
@@ -172,5 +171,4 @@ public class StatsCmd implements IVoicedCommandHandler
 	{
 		return VOICED_COMMANDS;
 	}
-	
 }

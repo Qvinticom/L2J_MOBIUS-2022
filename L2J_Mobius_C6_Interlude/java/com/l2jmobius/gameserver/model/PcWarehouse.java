@@ -21,8 +21,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class PcWarehouse extends Warehouse
 {
-	// private static final Logger LOGGER = Logger.getLogger(PcWarehouse.class);
-	
 	private final L2PcInstance _owner;
 	
 	public PcWarehouse(L2PcInstance owner)

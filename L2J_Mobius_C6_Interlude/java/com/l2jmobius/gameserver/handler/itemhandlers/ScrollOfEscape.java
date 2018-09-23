@@ -40,14 +40,9 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SetupGauge;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.2.3 $ $Date: 2009/04/29 14:01:12 $
- */
-
 public class ScrollOfEscape implements IItemHandler
 {
-	// all the items ids that this handler knowns
+	// All the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
 		736,
@@ -86,10 +81,6 @@ public class ScrollOfEscape implements IItemHandler
 		7619
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -112,38 +103,29 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		// if(activeChar._inEventTvT && TvT._started)
 		if (activeChar._inEventTvT && TvT.is_started())
 		{
 			activeChar.sendMessage("You can't use Scroll of Escape in TvT.");
 			return;
 		}
 		
-		// if(activeChar._inEventDM && DM._started)
 		if (activeChar._inEventDM && DM.is_started())
 		{
 			activeChar.sendMessage("You can't use Scroll of Escape in DM.");
 			return;
 		}
 		
-		// if(activeChar._inEventCTF && CTF._started)
 		if (activeChar._inEventCTF && CTF.is_started())
 		{
 			activeChar.sendMessage("You can't use Scroll of Escape in CTF.");
 			return;
 		}
 		
-		// if(activeChar._inEventVIP && VIP._started)
 		if (activeChar._inEventVIP && VIP._started)
 		{
 			activeChar.sendMessage("You can't use Scroll of Escape in VIP.");
 			return;
 		}
-		
-		// not usefull
-		/*
-		 * if(GrandBossManager.getInstance().getZone(activeChar) != null && !activeChar.isGM()) { activeChar.sendMessage("You Can't Use SOE In Grand boss zone!"); return; }
-		 */
 		
 		// Check to see if player is on olympiad
 		if (activeChar.isInOlympiadMode())
@@ -185,7 +167,6 @@ public class ScrollOfEscape implements IItemHandler
 			return;
 		}
 		
-		// activeChar.abortCast();
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		// SoE Animation section
 		// Check if this is a blessed scroll, if it is then shorten the cast time.

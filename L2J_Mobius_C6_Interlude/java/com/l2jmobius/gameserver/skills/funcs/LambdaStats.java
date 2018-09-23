@@ -78,5 +78,4 @@ public final class LambdaStats extends Lambda
 		}
 		return 0;
 	}
-	
 }

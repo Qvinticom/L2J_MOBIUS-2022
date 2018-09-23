@@ -60,5 +60,4 @@ public final class LambdaCalc extends Lambda
 		tmp[len] = f;
 		funcs = tmp;
 	}
-	
 }

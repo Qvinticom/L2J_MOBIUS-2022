@@ -726,8 +726,7 @@ public abstract class L2Item
 		{
 			final int len = _funcTemplates.length;
 			final FuncTemplate[] tmp = new FuncTemplate[len + 1];
-			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest,
-			// number of components to be copied)
+			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest, number of components to be copied)
 			System.arraycopy(_funcTemplates, 0, tmp, 0, len);
 			tmp[len] = f;
 			_funcTemplates = tmp;

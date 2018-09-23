@@ -1355,8 +1355,7 @@ class OlympiadGameTask implements Runnable
 			{
 			}
 			
-			// If game haveWinner then stop waiting battle_period
-			// and validate winner
+			// If game haveWinner then stop waiting battle_period and validate winner
 			if (_game.haveWinner())
 			{
 				break;

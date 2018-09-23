@@ -89,5 +89,4 @@ public class PlayerStatus
 		CUR_CP = (int) actor.getCurrentCp();
 		MAX_CP = actor.getMaxCp();
 	}
-	
 }

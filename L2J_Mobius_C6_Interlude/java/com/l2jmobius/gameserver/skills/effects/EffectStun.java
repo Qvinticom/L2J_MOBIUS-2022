@@ -35,7 +35,6 @@ final class EffectStun extends L2Effect
 		return EffectType.STUN;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -45,7 +44,6 @@ final class EffectStun extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

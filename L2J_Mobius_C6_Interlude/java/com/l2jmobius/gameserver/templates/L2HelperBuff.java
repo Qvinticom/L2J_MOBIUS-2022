@@ -150,5 +150,4 @@ public class L2HelperBuff
 	{
 		_isMagicClass = isMagicClass;
 	}
-	
 }

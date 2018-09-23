@@ -29,18 +29,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class AttackableKnownList extends NpcKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public AttackableKnownList(L2Attackable activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean removeKnownObject(L2Object object)
 	{
@@ -68,11 +61,6 @@ public class AttackableKnownList extends NpcKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2Attackable getActiveChar()
 	{

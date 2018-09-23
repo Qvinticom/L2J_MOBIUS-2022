@@ -22,7 +22,6 @@ import com.l2jmobius.gameserver.skills.Stats;
 /**
  * @author ProGramMoS
  */
-
 public class FuncBaseMul extends Func
 {
 	private final Lambda _lambda;

@@ -43,11 +43,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.2.4.4 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class Potions implements IItemHandler
 {
 	protected static final Logger LOGGER = Logger.getLogger(Potions.class.getName());
@@ -214,28 +209,24 @@ public class Potions implements IItemHandler
 			L2PcInstance activeChar;
 			activeChar = (L2PcInstance) playable;
 			
-			// if(activeChar._inEventTvT && TvT._started && !Config.TVT_ALLOW_POTIONS)
 			if (activeChar._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_POTIONS)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			// if(activeChar._inEventDM && DM._started && !Config.DM_ALLOW_POTIONS)
 			if (activeChar._inEventDM && DM.is_started() && !Config.DM_ALLOW_POTIONS)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			// if(activeChar._inEventCTF && CTF._started && !Config.CTF_ALLOW_POTIONS)
 			if (activeChar._inEventCTF && CTF.is_started() && !Config.CTF_ALLOW_POTIONS)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 				return;
 			}
 			
-			// if(activeChar._inEventVIP && VIP._started)
 			if (activeChar._inEventVIP && VIP._started)
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -247,10 +238,6 @@ public class Potions implements IItemHandler
 				activeChar.sendPacket(SystemMessageId.THIS_ITEM_IS_NOT_AVAILABLE_FOR_THE_OLYMPIAD_EVENT);
 				return;
 			}
-			
-			/*
-			 * if(activeChar.isAllSkillsDisabled()) { activeChar.sendPacket(ActionFailed.STATIC_PACKET); return; }
-			 */
 			
 			if (!Config.ALLOW_POTS_IN_PVP && (activeChar.isInDuel() || (activeChar.getPvpFlag() != 0)))
 			{
@@ -760,10 +747,6 @@ public class Potions implements IItemHandler
 		{
 			return;
 		}
-		
-		/*
-		 * if(res) { playable.destroyItem("Consume", item.getObjectId(), 1, null, false); }
-		 */
 	}
 	
 	private boolean isEffectReplaceable(L2Playable activeChar, Enum<EffectType> effectType, int itemId)
@@ -865,8 +848,7 @@ public class Potions implements IItemHandler
 			final L2Skill skill = SkillTable.getInstance().getInfo(magicId, level);
 			if (skill != null)
 			{
-				// Return false if potion is in reuse
-				// so is not destroyed from inventory
+				// Return false if potion is in reuse so is not destroyed from inventory
 				if (activeChar.isSkillDisabled(skill))
 				{
 					if ((skill.getId() != 2166))
@@ -908,8 +890,8 @@ public class Potions implements IItemHandler
 		{
 			for (Integer potion : possible_potions)
 			{
-				if ((potion >= 8600) && (potion <= 8614))
-				{ // herbs are directly destroyed
+				if ((potion >= 8600) && (potion <= 8614)) // herbs are directly destroyed
+				{
 					continue;
 				}
 				
@@ -1058,22 +1040,17 @@ public class Potions implements IItemHandler
 		
 		private PotionsSkills(int potion_item, int skill_identifier, int skill_level)
 		{
-			// Map<Integer, Integer> skills = new HashMap<Integer, Integer>();
 			skills.put(skill_identifier, skill_level);
-			// potion_id_skills.put(potion_item, skills);
 			potion_id = potion_item;
 		}
 		
 		private PotionsSkills(int potion_item, Integer[] skill_identifiers, Integer[] skill_levels)
 		{
-			// Map<Integer, Integer> skills = new HashMap<Integer, Integer>();
 			for (int i = 0; i < skill_identifiers.length; i++)
 			{
-				skills.put(skill_identifiers[i], skill_levels[i]); // each skill of a particular potion
-																	// can have just 1 level, not more
+				skills.put(skill_identifiers[i], skill_levels[i]); // each skill of a particular potion can have just 1 level, not more
 			}
 			potion_id = potion_item;
-			// potion_id_skills.put(potion_item, skills);
 		}
 	}
 }

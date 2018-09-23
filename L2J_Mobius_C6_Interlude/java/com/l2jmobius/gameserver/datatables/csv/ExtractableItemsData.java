@@ -139,7 +139,6 @@ public class ExtractableItemsData
 		}
 		catch (Exception e)
 		{
-			// if(Config.ENABLE_ALL_EXCEPTIONS)
 			e.printStackTrace();
 			
 			LOGGER.info("Extractable items data: Can not find './data/csv/extractable_items.csv'");

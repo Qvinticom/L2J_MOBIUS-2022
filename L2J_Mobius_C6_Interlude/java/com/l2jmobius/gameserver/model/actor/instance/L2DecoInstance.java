@@ -21,10 +21,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public class L2DecoInstance extends L2NpcInstance
 {
-	/**
-	 * @param objectId
-	 * @param template
-	 */
 	public L2DecoInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);

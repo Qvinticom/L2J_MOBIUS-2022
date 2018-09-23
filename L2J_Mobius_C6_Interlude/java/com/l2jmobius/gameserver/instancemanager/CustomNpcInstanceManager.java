@@ -279,7 +279,6 @@ public final class CustomNpcInstanceManager
 	 */
 	public final void updateRemoveInDB(customInfo ciToRemove)
 	{
-		//
 	}
 	
 	public final void AddInDB(customInfo ciToAdd)

@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2ArenaZone;
 
 public class ArenaManager
 {
-	// =========================================================
 	private static ArenaManager _instance;
 	private static final Logger LOGGER = Logger.getLogger(ArenaManager.class.getName());
 	
@@ -39,20 +38,11 @@ public class ArenaManager
 		return _instance;
 	}
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private List<L2ArenaZone> _arenas;
 	
-	// =========================================================
-	// Constructor
 	public ArenaManager()
 	{
 	}
-	
-	// =========================================================
-	// Property - Public
 	
 	public void addArena(L2ArenaZone arena)
 	{

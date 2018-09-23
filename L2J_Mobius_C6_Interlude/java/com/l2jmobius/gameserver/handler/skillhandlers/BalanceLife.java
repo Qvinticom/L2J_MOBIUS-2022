@@ -29,11 +29,9 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
- * This class ...
  * @author earendil
  * @version $Revision: 1.1.2.2.2.4 $ $Date: 2005/04/06 16:13:48 $
  */
-
 public class BalanceLife implements ISkillHandler
 {
 	private static final SkillType[] SKILL_IDS =
@@ -44,7 +42,6 @@ public class BalanceLife implements ISkillHandler
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
-		// L2Character activeChar = activeChar;
 		// check for other effects
 		try
 		{
@@ -81,7 +78,7 @@ public class BalanceLife implements ISkillHandler
 			}
 			
 			// Avoid characters heal inside Baium lair from outside
-			if (/* (activeChar.isInsideZone(12007) || target.isInsideZone(12007)) && */ (((GrandBossManager.getInstance().getZone(activeChar) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(activeChar) != null))))
+			if (((GrandBossManager.getInstance().getZone(activeChar) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(activeChar) != null)))
 			{
 				continue;
 			}

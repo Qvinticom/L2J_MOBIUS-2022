@@ -24,8 +24,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class QuestStateManager
 {
-	// =========================================================
-	// Schedule Task
 	public class ScheduleTimerTask implements Runnable
 	{
 		@Override
@@ -42,20 +40,14 @@ public class QuestStateManager
 		}
 	}
 	
-	// =========================================================
-	// Data Field
 	private static QuestStateManager _instance;
 	private List<QuestState> _questStates = new ArrayList<>();
 	
-	// =========================================================
-	// Constructor
 	public QuestStateManager()
 	{
 		ThreadPool.schedule(new ScheduleTimerTask(), 60000);
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Add QuestState for the specified player instance
 	 * @param quest
@@ -86,8 +78,6 @@ public class QuestStateManager
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
 	/**
 	 * Remove QuestState instance
 	 * @param qs
@@ -97,8 +87,6 @@ public class QuestStateManager
 		qs = null;
 	}
 	
-	// =========================================================
-	// Property - Public
 	public static final QuestStateManager getInstance()
 	{
 		if (_instance == null)

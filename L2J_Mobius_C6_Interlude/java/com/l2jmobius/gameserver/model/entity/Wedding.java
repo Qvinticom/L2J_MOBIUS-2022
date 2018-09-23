@@ -33,8 +33,6 @@ public class Wedding
 {
 	protected static final Logger LOGGER = Logger.getLogger(Wedding.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private int _Id = 0;
 	private int _player1Id = 0;
 	private int _player2Id = 0;
@@ -43,8 +41,6 @@ public class Wedding
 	private Calendar _weddingDate;
 	private int _type = 0;
 	
-	// =========================================================
-	// Constructor
 	public Wedding(int coupleId)
 	{
 		_Id = coupleId;

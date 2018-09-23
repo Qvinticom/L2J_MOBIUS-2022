@@ -46,8 +46,6 @@ public class DayNightSpawnManager
 	private final List<L2Spawn> _nightCreatures = new ArrayList<>();
 	private final Map<L2Spawn, L2RaidBossInstance> _bosses = new ConcurrentHashMap<>();
 	
-	// private static int _currentState; // 0 = Day, 1 = Night
-	
 	public static DayNightSpawnManager getInstance()
 	{
 		if (_instance == null)
@@ -60,7 +58,6 @@ public class DayNightSpawnManager
 	
 	private DayNightSpawnManager()
 	{
-		// Prevent external initialization.
 		LOGGER.info("DayNightSpawnManager: Day/Night handler initialised");
 	}
 	
@@ -84,7 +81,7 @@ public class DayNightSpawnManager
 		_nightCreatures.add(spawnDat);
 	}
 	
-	/*
+	/**
 	 * Spawn Day Creatures, and Unspawn Night Creatures
 	 */
 	public void spawnDayCreatures()
@@ -92,7 +89,7 @@ public class DayNightSpawnManager
 		spawnCreatures(_nightCreatures, _dayCreatures, "night", "day");
 	}
 	
-	/*
+	/**
 	 * Spawn Night Creatures, and Unspawn Day Creatures
 	 */
 	public void spawnNightCreatures()

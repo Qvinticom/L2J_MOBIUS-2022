@@ -158,5 +158,4 @@ public class AdminPetition implements IAdminCommandHandler
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

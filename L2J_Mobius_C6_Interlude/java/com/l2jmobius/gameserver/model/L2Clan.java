@@ -54,10 +54,6 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 
-/**
- * This class ...
- * @version $Revision: 1.7.2.4.2.7 $ $Date: 2005/04/06 16:13:41 $
- */
 public class L2Clan
 {
 	private static final Logger LOGGER = Logger.getLogger(L2Clan.class.getName());
@@ -234,10 +230,6 @@ public class L2Clan
 		return _leader;
 	}
 	
-	/**
-	 * @param member
-	 * @return
-	 */
 	public boolean setLeader(L2ClanMember member)
 	{
 		if (member == null)
@@ -281,7 +273,6 @@ public class L2Clan
 		return true;
 	}
 	
-	// public void setNewLeader(L2ClanMember member)
 	public void setNewLeader(L2ClanMember member, L2PcInstance activeChar)
 	{
 		if (activeChar.isRiding() || activeChar.isFlying())
@@ -304,7 +295,6 @@ public class L2Clan
 			return;
 		}
 		
-		// L2PcInstance exLeader = _leader.getPlayerInstance();
 		if (setLeader(member))
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.CLAN_LEADER_PRIVILEGES_HAVE_BEEN_TRANSFERRED_TO_S1);
@@ -394,8 +384,7 @@ public class L2Clan
 		
 		if (leadssubpledge != 0)
 		{
-			// Sub-unit leader withdraws, position becomes vacant and leader
-			// should appoint new via NPC
+			// Sub-unit leader withdraws, position becomes vacant and leader should appoint new via NPC
 			getSubPledge(leadssubpledge).setLeaderName("");
 			updateSubPledgeInDB(leadssubpledge);
 		}
@@ -586,24 +575,17 @@ public class L2Clan
 			catch (NullPointerException e)
 			{
 				e.printStackTrace();
-				// null
 			}
 		}
 		
 		return result.toArray(new L2PcInstance[result.size()]);
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getAllyId()
 	{
 		return _allyId;
 	}
 	
-	/**
-	 * @return
-	 */
 	public String getAllyName()
 	{
 		return _allyName;
@@ -614,41 +596,26 @@ public class L2Clan
 		_allyCrestId = allyCrestId;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getAllyCrestId()
 	{
 		return _allyCrestId;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getLevel()
 	{
 		return _level;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getHasCastle()
 	{
 		return _hasCastle;
 	}
 	
-	/**
-	 * @return hasFort
-	 */
 	public int getHasFort()
 	{
 		return _hasFort;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getHasHideout()
 	{
 		return _hasHideout;
@@ -662,73 +629,46 @@ public class L2Clan
 		_crestId = crestId;
 	}
 	
-	/**
-	 * @return Returns the clanCrestId.
-	 */
 	public int getCrestId()
 	{
 		return _crestId;
 	}
 	
-	/**
-	 * @param crestLargeId The id of pledge LargeCrest.
-	 */
 	public void setCrestLargeId(int crestLargeId)
 	{
 		_crestLargeId = crestLargeId;
 	}
 	
-	/**
-	 * @return Returns the clan CrestLargeId
-	 */
 	public int getCrestLargeId()
 	{
 		return _crestLargeId;
 	}
 	
-	/**
-	 * @param allyId The allyId to set.
-	 */
 	public void setAllyId(int allyId)
 	{
 		_allyId = allyId;
 	}
 	
-	/**
-	 * @param allyName The allyName to set.
-	 */
 	public void setAllyName(String allyName)
 	{
 		_allyName = allyName;
 	}
 	
-	/**
-	 * @param hasCastle The hasCastle to set.
-	 */
 	public void setHasCastle(int hasCastle)
 	{
 		_hasCastle = hasCastle;
 	}
 	
-	/**
-	 * @param hasFort
-	 */
 	public void setHasFort(int hasFort)
 	{
 		_hasFort = hasFort;
 	}
 	
-	/**
-	 * @param hasHideout The hasHideout to set.
-	 */
 	public void setHasHideout(int hasHideout)
 	{
 		_hasHideout = hasHideout;
 	}
 	
-	/**
-	 * @param level The level to set.
-	 */
 	public void setLevel(int level)
 	{
 		_level = level;
@@ -747,10 +687,6 @@ public class L2Clan
 		}
 	}
 	
-	/**
-	 * @param name
-	 * @return
-	 */
 	public boolean isMember(String name)
 	{
 		return name == null ? false : _members.containsKey(name);
@@ -1067,10 +1003,6 @@ public class L2Clan
 		}
 	}
 	
-	/**
-	 * used to retrieve all skills
-	 * @return
-	 */
 	public final L2Skill[] getAllSkills()
 	{
 		if (_skills == null)
@@ -1171,7 +1103,6 @@ public class L2Clan
 				catch (NullPointerException e)
 				{
 					e.printStackTrace();
-					// null
 				}
 			}
 		}
@@ -1197,7 +1128,6 @@ public class L2Clan
 				}
 				catch (NullPointerException e)
 				{
-					// null
 					e.printStackTrace();
 				}
 			}
@@ -1213,7 +1143,6 @@ public class L2Clan
 		
 		for (L2Skill skill : _skills.values())
 		{
-			//
 			if (skill.getMinPledgeClass() <= cm.getPledgeClass())
 			{
 				cm.addSkill(skill, false); // Skill is not saved to player DB
@@ -1250,7 +1179,6 @@ public class L2Clan
 			}
 			catch (NullPointerException e)
 			{
-				// null
 				e.printStackTrace();
 			}
 		}
@@ -1269,19 +1197,11 @@ public class L2Clan
 			}
 			catch (NullPointerException e)
 			{
-				// null
 				e.printStackTrace();
 			}
 		}
 	}
 	
-	/*
-	 * @Override public String toString() { return getName(); }
-	 */
-	
-	/**
-	 * @return
-	 */
 	public boolean hasCrest()
 	{
 		return _hasCrest;
@@ -1425,9 +1345,6 @@ public class L2Clan
 		_skillList.remove(deleteSkill);
 	}
 	
-	/**
-	 * @return
-	 */
 	public List<L2Skill> getSkills()
 	{
 		return _skillList;
@@ -1466,9 +1383,6 @@ public class L2Clan
 			_leaderName = leaderName;
 		}
 		
-		/**
-		 * @param pledgeName
-		 */
 		public void setName(String pledgeName)
 		{
 			_subPledgeName = pledgeName;
@@ -1669,7 +1583,6 @@ public class L2Clan
 	{
 		if (_subPledges.get(pledgeType) != null)
 		{
-			// LOGGER.warning("found sub-unit with id: "+pledgeType);
 			switch (pledgeType)
 			{
 				case SUBUNIT_ACADEMY:
@@ -1739,7 +1652,6 @@ public class L2Clan
 		{
 			PreparedStatement statement = con.prepareStatement("SELECT privs,rank,party FROM clan_privs WHERE clan_id=?");
 			statement.setInt(1, _clanId);
-			// LOGGER.warning("clanPrivs restore for ClanId : "+_clanId);
 			ResultSet rset = statement.executeQuery();
 			
 			// Go though the recordset of this SQL query
@@ -1749,10 +1661,6 @@ public class L2Clan
 				// int party = rset.getInt("party");
 				
 				final int privileges = rset.getInt("privs");
-				// Create a SubPledge object for each record
-				// RankPrivs privs = new RankPrivs(rank, party, privileges);
-				// _Privs.put(rank, privs);
-				
 				_privs.get(rank).setPrivs(privileges);
 			}
 			
@@ -1845,10 +1753,6 @@ public class L2Clan
 		}
 	}
 	
-	/**
-	 * used to retrieve all RankPrivs
-	 * @return
-	 */
 	public final RankPrivs[] getAllRankPrivs()
 	{
 		if (_privs == null)
@@ -2053,11 +1957,6 @@ public class L2Clan
 			}
 			return false;
 		}
-		/*
-		 * Custom feature working, member with privileges can invite only in their pledge int leadssubpledge = getLeaderSubPledge(activeChar.getName()); if (pledgeType != -1 && !activeChar.isClanLeader()) { if (activeChar.getPledgeType() != pledgeType) { if (leadssubpledge == 0) {
-		 * activeChar.sendMessage("Invite to another subunit is not allowed."); return false; } else if (leadssubpledge != pledgeType) { activeChar.sendMessage("Invite to another subunit is not allowed."); return false; } } else if (leadssubpledge != 0) {
-		 * activeChar.sendMessage("Invite to another subunit is not allowed."); return false; } }
-		 */
 		
 		return true;
 	}
@@ -2337,7 +2236,6 @@ public class L2Clan
 		
 		setAllyId(0);
 		setAllyName(null);
-		// 24*60*60*1000 = 86400000
 		setAllyPenaltyExpiryTime(currentTime + (Config.ALT_CREATE_ALLY_DAYS_WHEN_DISSOLVED * 86400000), PENALTY_TYPE_DISSOLVE_ALLY);
 		updateClanInDB();
 		
@@ -2557,11 +2455,6 @@ public class L2Clan
 		// notify all the members about it
 		broadcastToOnlineMembers(new SystemMessage(SystemMessageId.CLAN_LEVEL_INCREASED));
 		broadcastToOnlineMembers(new PledgeShowInfoUpdate(this));
-		/*
-		 * Micht : - use PledgeShowInfoUpdate instead of PledgeStatusChanged to update clan level ingame - remove broadcastClanStatus() to avoid members duplication
-		 */
-		// clan.broadcastToOnlineMembers(new PledgeStatusChanged(clan));
-		// clan.broadcastClanStatus();
 	}
 	
 	public void setAllyCrest(int crestId)
@@ -2581,10 +2474,6 @@ public class L2Clan
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
 	@Override
 	public String toString()
 	{

@@ -80,5 +80,4 @@ public class L2ManufactureList
 	{
 		_list = list;
 	}
-	
 }

@@ -36,7 +36,6 @@ public class EffectCharmOfLuck extends L2Effect
 		return EffectType.CHARM_OF_LUCK;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -46,7 +45,6 @@ public class EffectCharmOfLuck extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

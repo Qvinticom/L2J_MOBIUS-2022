@@ -33,10 +33,6 @@ public class ClanPenalty implements IUserCommandHandler
 		100
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -91,10 +87,6 @@ public class ClanPenalty implements IUserCommandHandler
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

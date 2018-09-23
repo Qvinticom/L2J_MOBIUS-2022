@@ -18,21 +18,16 @@ package com.l2jmobius.gameserver.model.actor.appearance;
 
 public class PcAppearance
 {
-	// =========================================================
-	// Data Field
 	private byte _face;
 	private byte _hairColor;
 	private byte _hairStyle;
 	private boolean _sex; // Female true(1)
-	/** true if the player is invisible */
 	private boolean _invisible = false;
 	/** The hexadecimal Color of players name (white is 0xFFFFFF) */
 	private int _nameColor = 0xFFFFFF;
 	/** The hexadecimal Color of players name (white is 0xFFFFFF) */
 	private int _titleColor = 0xFFFF77;
 	
-	// =========================================================
-	// Constructor
 	public PcAppearance(byte Face, byte HColor, byte HStyle, boolean Sex)
 	{
 		_face = Face;
@@ -41,22 +36,11 @@ public class PcAppearance
 		_sex = Sex;
 	}
 	
-	// =========================================================
-	// Method - Public
-	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	public final byte getFace()
 	{
 		return _face;
 	}
 	
-	/**
-	 * @param value
-	 */
 	public final void setFace(int value)
 	{
 		_face = (byte) value;
@@ -67,9 +51,6 @@ public class PcAppearance
 		return _hairColor;
 	}
 	
-	/**
-	 * @param value
-	 */
 	public final void setHairColor(int value)
 	{
 		_hairColor = (byte) value;
@@ -80,9 +61,6 @@ public class PcAppearance
 		return _hairStyle;
 	}
 	
-	/**
-	 * @param value
-	 */
 	public final void setHairStyle(int value)
 	{
 		_hairStyle = (byte) value;
@@ -93,9 +71,6 @@ public class PcAppearance
 		return _sex;
 	}
 	
-	/**
-	 * @param isfemale
-	 */
 	public final void setSex(boolean isfemale)
 	{
 		_sex = isfemale;

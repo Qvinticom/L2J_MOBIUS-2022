@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 
 public class ZakenPlayer implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(ZakenPlayer.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.ZAKENPLAYER

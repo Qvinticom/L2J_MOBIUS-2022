@@ -18,11 +18,6 @@ package com.l2jmobius.gameserver.model;
 
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.2.4.2 $ $Date: 2005/03/27 15:29:33 $
- */
-
 public final class L2EnchantSkillLearn
 {
 	// these two build the primary key

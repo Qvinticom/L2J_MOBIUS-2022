@@ -25,19 +25,13 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class PetStatus extends SummonStatus
 {
-	// =========================================================
-	// Data Field
 	private int _currentFed = 0; // Current Fed of the L2PetInstance
 	
-	// =========================================================
-	// Constructor
 	public PetStatus(L2PetInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public final void reduceHp(double value, L2Character attacker)
 	{
@@ -74,11 +68,6 @@ public class PetStatus extends SummonStatus
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2PetInstance getActiveChar()
 	{

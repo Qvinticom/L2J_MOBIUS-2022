@@ -76,9 +76,7 @@ public class ZoneNPoly extends L2ZoneForm
 			return true;
 		}
 		
-		// If the first point wasn't inside the rectangle it might still have any line crossing any side
-		// of the rectangle
-		
+		// If the first point wasn't inside the rectangle it might still have any line crossing any side of the rectangle
 		// Check every possible line of the polygon for a collision with any of the rectangles side
 		for (int i = 0; i < _y.length; i++)
 		{
@@ -127,9 +125,6 @@ public class ZoneNPoly extends L2ZoneForm
 		return Math.sqrt(shortestDist);
 	}
 	
-	/*
-	 * getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
-	 */
 	@Override
 	public int getLowZ()
 	{

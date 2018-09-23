@@ -31,13 +31,8 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision: 1.4.2.1.2.7 $ $Date: 2005/03/27 15:29:32 $
- */
 public final class L2ClassMasterInstance extends L2FolkInstance
 {
-	/** The _instance. */
 	private static L2ClassMasterInstance _instance;
 	
 	/**
@@ -60,10 +55,6 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 		return _instance;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -87,8 +78,7 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player) && !Config.ALLOW_REMOTE_CLASS_MASTERS)
+		else if (!canInteract(player) && !Config.ALLOW_REMOTE_CLASS_MASTERS) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -215,10 +205,6 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -716,14 +702,12 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 			if (classId.getParent() != null)
 			{
 				while (classId.level() == 0)
-				{ // go to root
-					classId = classId.getParent();
+				{
+					classId = classId.getParent(); // go to root
 				}
 			}
 			
 			player.setBaseClass(classId);
-			
-			// player.setBaseClass(player.getActiveClass());
 		}
 		
 		player.broadcastUserInfo();

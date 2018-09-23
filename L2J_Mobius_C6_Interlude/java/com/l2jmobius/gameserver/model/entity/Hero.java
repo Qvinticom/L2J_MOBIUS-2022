@@ -223,7 +223,6 @@ public class Hero
 		}
 		catch (Exception e)
 		{
-			/*   */
 		}
 	}
 	
@@ -321,7 +320,6 @@ public class Hero
 				}
 				catch (NullPointerException e)
 				{
-					/**/
 				}
 			}
 		}

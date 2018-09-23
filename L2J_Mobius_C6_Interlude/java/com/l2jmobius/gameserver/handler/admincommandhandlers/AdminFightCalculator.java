@@ -36,8 +36,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class AdminFightCalculator implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminFightCalculator.class);
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_fight_calculator",
@@ -45,15 +43,9 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		"admin_fcs",
 	};
 	
-	// TODO: remove from gm list etc etc
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		try
 		{
 			if (command.startsWith("admin_fight_calculator_show"))
@@ -251,8 +243,6 @@ public class AdminFightCalculator implements IAdminCommandHandler
 		// number of ATTACK per 100 seconds
 		sAtk1 = 100000 / sAtk1;
 		sAtk2 = 100000 / sAtk2;
-		
-		// Formulas f = Formulas.getInstance();
 		
 		for (int i = 0; i < 10000; i++)
 		{

@@ -42,7 +42,6 @@ final class EffectConfusion extends L2Effect
 		return EffectType.CONFUSION;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -50,7 +49,6 @@ final class EffectConfusion extends L2Effect
 		onActionTime();
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

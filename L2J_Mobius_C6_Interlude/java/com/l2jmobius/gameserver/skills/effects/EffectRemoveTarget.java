@@ -41,13 +41,8 @@ public class EffectRemoveTarget extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		// nothing
 		return false;
 	}
-	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onExit()
-	 */
 	
 	@Override
 	public void onExit()
@@ -63,9 +58,6 @@ public class EffectRemoveTarget extends L2Effect
 		}
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public void onStart()
 	{

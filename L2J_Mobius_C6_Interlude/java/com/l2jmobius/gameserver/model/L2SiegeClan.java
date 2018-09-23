@@ -23,10 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 
 public class L2SiegeClan
 {
-	// ==========================================================================================
-	// Instance
-	// ===============================================================
-	// Data Field
 	private int _clanId = 0;
 	private List<L2NpcInstance> _flag = new ArrayList<>();
 	private int _numFlagsAdded = 0;
@@ -40,17 +36,12 @@ public class L2SiegeClan
 		DEFENDER_PENDING
 	}
 	
-	// =========================================================
-	// Constructor
-	
 	public L2SiegeClan(int clanId, SiegeClanType type)
 	{
 		_clanId = clanId;
 		_type = type;
 	}
 	
-	// =========================================================
-	// Method - Public
 	public int getNumFlags()
 	{
 		return _numFlagsAdded;
@@ -71,7 +62,6 @@ public class L2SiegeClan
 		
 		final boolean ret = getFlag().remove(flag);
 		
-		// flag.deleteMe();
 		// check if null objects or dups remain in the list.
 		// for some reason, this might be happening sometimes...
 		// delete false duplicates: if this flag got deleted, delete its copies too.
@@ -79,7 +69,6 @@ public class L2SiegeClan
 		{
 			while (getFlag().remove(flag))
 			{
-				//
 			}
 		}
 		
@@ -119,8 +108,6 @@ public class L2SiegeClan
 		}
 	}
 	
-	// =========================================================
-	// Property
 	public final int getClanId()
 	{
 		return _clanId;

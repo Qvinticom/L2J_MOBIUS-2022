@@ -54,77 +54,30 @@ import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2CharTemplate;
 import com.l2jmobius.gameserver.templates.item.L2Weapon;
 
-/**
- * This class ...
- * @version $Revision: 1.3.2.2.2.5 $ $Date: 2005/03/27 15:29:32 $
- */
 public class L2DoorInstance extends L2Character
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(L2DoorInstance.class.getName());
 	
-	/** The castle index in the array of L2Castle this L2NpcInstance belongs to. */
 	private int _castleIndex = -2;
-	
-	/** The _map region. */
 	private int _mapRegion = -1;
-	
-	/** fort index in array L2Fort -> L2NpcInstance. */
 	private int _fortIndex = -2;
-	
-	// when door is closed, the dimensions are
-	/** The _range x min. */
 	private int _rangeXMin = 0;
-	
-	/** The _range y min. */
 	private int _rangeYMin = 0;
-	
-	/** The _range z min. */
 	private int _rangeZMin = 0;
-	
-	/** The _range x max. */
 	private int _rangeXMax = 0;
-	
-	/** The _range y max. */
 	private int _rangeYMax = 0;
-	
-	/** The _range z max. */
 	private int _rangeZMax = 0;
-	
-	/** The _ a. */
 	private int _A = 0;
-	
-	/** The _ b. */
 	private int _B = 0;
-	
-	/** The _ c. */
 	private int _C = 0;
-	
-	/** The _ d. */
 	private int _D = 0;
-	
-	/** The _door id. */
 	protected final int _doorId;
-	
-	/** The _name. */
 	protected final String _name;
-	
-	/** The _open. */
 	boolean _open;
-	
-	/** The _unlockable. */
 	private final boolean _unlockable;
-	
-	/** The _clan hall. */
 	private ClanHall _clanHall;
-	
-	/** The _auto action delay. */
 	protected int _autoActionDelay = -1;
-	
-	/** The _auto action task. */
 	private ScheduledFuture<?> _autoActionTask;
-	
-	/** The pos. */
 	public final L2Territory pos;
 	
 	/**
@@ -132,68 +85,39 @@ public class L2DoorInstance extends L2Character
 	 */
 	public class AIAccessor extends L2Character.AIAccessor
 	{
-		/**
-		 * Instantiates a new aI accessor.
-		 */
 		protected AIAccessor()
 		{
-			// null;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see com.l2jmobius.gameserver.model.L2Character.AIAccessor#getActor()
-		 */
 		@Override
 		public L2DoorInstance getActor()
 		{
 			return L2DoorInstance.this;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see com.l2jmobius.gameserver.model.L2Character.AIAccessor#moveTo(int, int, int, int)
-		 */
 		@Override
 		public void moveTo(int x, int y, int z, int offset)
 		{
-			// null;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see com.l2jmobius.gameserver.model.L2Character.AIAccessor#moveTo(int, int, int)
-		 */
 		@Override
 		public void moveTo(int x, int y, int z)
 		{
-			// null;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see com.l2jmobius.gameserver.model.L2Character.AIAccessor#stopMove(com.l2jmobius.gameserver.model.actor.position.Location)
-		 */
 		@Override
 		public void stopMove(Location pos)
 		{
-			// null;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see com.l2jmobius.gameserver.model.L2Character.AIAccessor#doAttack(com.l2jmobius.gameserver.model.L2Character)
-		 */
 		@Override
 		public void doAttack(L2Character target)
 		{
-			// null;
 		}
 		
 		@Override
 		public void doCast(L2Skill skill)
 		{
-			// null;
 		}
 	}
 	
@@ -213,25 +137,14 @@ public class L2DoorInstance extends L2Character
 		return _ai;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#hasAI()
-	 */
 	@Override
 	public boolean hasAI()
 	{
 		return _ai != null;
 	}
 	
-	/**
-	 * The Class CloseTask.
-	 */
 	class CloseTask implements Runnable
 	{
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -251,10 +164,6 @@ public class L2DoorInstance extends L2Character
 	 */
 	class AutoOpenClose implements Runnable
 	{
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -302,13 +211,9 @@ public class L2DoorInstance extends L2Character
 		_doorId = doorId;
 		_name = name;
 		_unlockable = unlockable;
-		pos = new L2Territory(/* "door_" + doorId */);
+		pos = new L2Territory();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getKnownList()
-	 */
 	@Override
 	public final DoorKnownList getKnownList()
 	{
@@ -320,10 +225,6 @@ public class L2DoorInstance extends L2Character
 		return (DoorKnownList) super.getKnownList();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStat()
-	 */
 	@Override
 	public final DoorStat getStat()
 	{
@@ -335,10 +236,6 @@ public class L2DoorInstance extends L2Character
 		return (DoorStat) super.getStat();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStatus()
-	 */
 	@Override
 	public final DoorStatus getStatus()
 	{
@@ -359,10 +256,6 @@ public class L2DoorInstance extends L2Character
 		return _unlockable;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getLevel()
-	 */
 	@Override
 	public final int getLevel()
 	{
@@ -505,10 +398,6 @@ public class L2DoorInstance extends L2Character
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAutoAttackable(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{
@@ -517,14 +406,13 @@ public class L2DoorInstance extends L2Character
 			return true;
 		}
 		
-		// Doors can`t be attacked by NPCs
+		// Doors can't be attacked by NPCs
 		if ((attacker == null) || !(attacker instanceof L2Playable))
 		{
 			return false;
 		}
 		
 		// Attackable during siege by attacker only
-		
 		L2PcInstance player = null;
 		if (attacker instanceof L2PcInstance)
 		{
@@ -574,10 +462,6 @@ public class L2DoorInstance extends L2Character
 		return isAutoAttackable(attacker);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#updateAbnormalEffect()
-	 */
 	@Override
 	public void updateAbnormalEffect()
 	{
@@ -629,40 +513,24 @@ public class L2DoorInstance extends L2Character
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getActiveWeaponItem()
-	 */
 	@Override
 	public L2Weapon getActiveWeaponItem()
 	{
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getSecondaryWeaponInstance()
-	 */
 	@Override
 	public L2ItemInstance getSecondaryWeaponInstance()
 	{
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getSecondaryWeaponItem()
-	 */
 	@Override
 	public L2Weapon getSecondaryWeaponItem()
 	{
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -703,18 +571,13 @@ public class L2DoorInstance extends L2Character
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
-			// if (isAutoAttackable(player))
-			// {
 			DoorStatusUpdate su = new DoorStatusUpdate(this);
 			player.sendPacket(su);
-			// }
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel());
-		// player.sendPacket(my);
-		if (isAutoAttackable(player))
+		else if (isAutoAttackable(player))
 		{
 			if (Math.abs(player.getZ() - getZ()) < 400) // this max heigth difference might need some tweaking
 			{
@@ -745,10 +608,6 @@ public class L2DoorInstance extends L2Character
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#onActionShift(com.l2jmobius.gameserver.network.L2GameClient)
-	 */
 	@Override
 	public void onActionShift(L2GameClient client)
 	{
@@ -815,8 +674,6 @@ public class L2DoorInstance extends L2Character
 			
 			html.setHtml(html1.toString());
 			player.sendPacket(html);
-			
-			// openMe();
 		}
 		else
 		{
@@ -843,10 +700,6 @@ public class L2DoorInstance extends L2Character
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#broadcastStatusUpdate()
-	 */
 	@Override
 	public void broadcastStatusUpdate()
 	{
@@ -865,25 +718,16 @@ public class L2DoorInstance extends L2Character
 		}
 	}
 	
-	/**
-	 * On open.
-	 */
 	public void onOpen()
 	{
 		ThreadPool.schedule(new CloseTask(), 60000);
 	}
 	
-	/**
-	 * On close.
-	 */
 	public void onClose()
 	{
 		closeMe();
 	}
 	
-	/**
-	 * Close me.
-	 */
 	public final void closeMe()
 	{
 		synchronized (this)
@@ -899,9 +743,6 @@ public class L2DoorInstance extends L2Character
 		broadcastStatusUpdate();
 	}
 	
-	/**
-	 * Open me.
-	 */
 	public final void openMe()
 	{
 		synchronized (this)
@@ -916,10 +757,6 @@ public class L2DoorInstance extends L2Character
 		broadcastStatusUpdate();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#toString()
-	 */
 	@Override
 	public String toString()
 	{
@@ -1096,7 +933,6 @@ public class L2DoorInstance extends L2Character
 		final List<L2FortSiegeGuardInstance> result = new ArrayList<>();
 		
 		final Collection<L2Object> objs = getKnownList().getKnownObjects().values();
-		// synchronized (getKnownList().getKnownObjects())
 		{
 			for (L2Object obj : objs)
 			{
@@ -1109,10 +945,6 @@ public class L2DoorInstance extends L2Character
 		return result;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#reduceCurrentHp(double, com.l2jmobius.gameserver.model.L2Character, boolean)
-	 */
 	@Override
 	public void reduceCurrentHp(double damage, L2Character attacker, boolean awake)
 	{
@@ -1126,10 +958,6 @@ public class L2DoorInstance extends L2Character
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -1143,7 +971,7 @@ public class L2DoorInstance extends L2Character
 		
 		if (isFort || isCastle)
 		{
-			broadcastPacket(SystemMessage.sendString("The castle gate has been broken down"));
+			broadcastPacket(SystemMessage.sendString("The castle gate has been broken down."));
 		}
 		return true;
 	}

@@ -124,7 +124,7 @@ public final class RequestDestroyItem extends L2GameClientPacket
 		{
 			if (itemToRemove.isAugmented())
 			{
-				itemToRemove.getAugmentation().removeBoni(activeChar);
+				itemToRemove.getAugmentation().removeBonus(activeChar);
 			}
 			
 			final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(itemToRemove.getEquipSlot());

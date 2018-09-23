@@ -25,27 +25,14 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.4 $ $Date: 2005/04/06 16:13:48 $
- */
-
 public class Craft implements ISkillHandler
 {
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.COMMON_CRAFT,
 		SkillType.DWARVEN_CRAFT
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{

@@ -373,9 +373,6 @@ public final class L2Weapon extends L2Item
 			return output;
 		}
 		
-		// return _emptyEffectSet;
-		// List<L2Effect> effects = new ArrayList<L2Effect>();
-		
 		for (L2Skill skill : _skillsOnCast)
 		{
 			if (trigger.isOffensive() != skill.isOffensive())
@@ -440,9 +437,6 @@ public final class L2Weapon extends L2Item
 			{
 			}
 		}
-		// if(effects.size() == 0)
-		// return _emptyEffectSet;
-		// return effects.toArray(new L2Effect[effects.size()]);
 		
 		return output;
 	}
@@ -464,8 +458,7 @@ public final class L2Weapon extends L2Item
 		{
 			final int len = _skillsOnCrit.length;
 			final L2Skill[] tmp = new L2Skill[len + 1];
-			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest,
-			// number of components to be copied)
+			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest, number of components to be copied)
 			System.arraycopy(_skillsOnCrit, 0, tmp, 0, len);
 			tmp[len] = skill;
 			_skillsOnCrit = tmp;
@@ -489,8 +482,7 @@ public final class L2Weapon extends L2Item
 		{
 			final int len = _skillsOnCast.length;
 			final L2Skill[] tmp = new L2Skill[len + 1];
-			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest,
-			// number of components to be copied)
+			// Definition : arraycopy(array source, begins copy at this position of source, array destination, begins copy at this position in dest, number of components to be copied)
 			System.arraycopy(_skillsOnCast, 0, tmp, 0, len);
 			tmp[len] = skill;
 			_skillsOnCast = tmp;

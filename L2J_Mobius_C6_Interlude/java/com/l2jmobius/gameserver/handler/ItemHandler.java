@@ -64,10 +64,6 @@ import com.l2jmobius.gameserver.handler.itemhandlers.SpecialXMas;
 import com.l2jmobius.gameserver.handler.itemhandlers.SpiritShot;
 import com.l2jmobius.gameserver.handler.itemhandlers.SummonItems;
 
-/**
- * This class manages handlers of items
- * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:09 $
- */
 public class ItemHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());

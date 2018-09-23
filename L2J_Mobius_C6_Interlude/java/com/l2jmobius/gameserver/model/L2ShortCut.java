@@ -16,10 +16,6 @@
  */
 package com.l2jmobius.gameserver.model;
 
-/**
- * This class ...
- * @version $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:29:32 $
- */
 public class L2ShortCut
 {
 	public static final int TYPE_ITEM = 1;
@@ -41,7 +37,6 @@ public class L2ShortCut
 		_type = shortcutType;
 		_id = shortcutId;
 		_level = shortcutLevel;
-		// _unk = unknown;
 	}
 	
 	public int getId()

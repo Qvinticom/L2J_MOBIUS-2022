@@ -21,11 +21,6 @@ import com.l2jmobius.gameserver.skills.Stats;
 
 public class NpcStat extends CharStat
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public NpcStat(L2NpcInstance activeChar)
 	{
 		super(activeChar);
@@ -33,14 +28,6 @@ public class NpcStat extends CharStat
 		setLevel(getActiveChar().getTemplate().level);
 	}
 	
-	// =========================================================
-	// Method - Public
-	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2NpcInstance getActiveChar()
 	{

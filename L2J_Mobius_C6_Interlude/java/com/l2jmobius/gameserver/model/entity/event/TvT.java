@@ -51,12 +51,8 @@ import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * The Class TvT.
- */
 public class TvT implements EventTask
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(TvT.class.getName());
 	
 	protected static String _eventName = new String();
@@ -1137,14 +1133,14 @@ public class TvT implements EventTask
 						finishEvent();
 						
 						LOGGER.info(_eventName + ": waiting... delay for final messages ");
-						waiter(60000);// just a give a delay delay for final messages
+						waiter(60000); // just a give a delay delay for final messages
 						sendFinalMessages();
 						
-						if (!_started && !_aborted)
-						{ // if is not already started and it's not aborted
+						if (!_started && !_aborted) // if is not already started and it's not aborted
+						{
 							
 							LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatchs + " minutes.");
-							waiter(60000);// just a give a delay to next restart
+							waiter(60000); // just a give a delay to next restart
 							
 							try
 							{
@@ -1178,7 +1174,6 @@ public class TvT implements EventTask
 		ThreadPool.execute(new AutoEventTask());
 	}
 	
-	// start without restart
 	/**
 	 * Event once start.
 	 */
@@ -1251,7 +1246,6 @@ public class TvT implements EventTask
 					case 120: // 2 minutes left
 					case 60: // 1 minute left
 					{
-						// removeOfflinePlayers();
 						if (_joining)
 						{
 							Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
@@ -1480,10 +1474,6 @@ public class TvT implements EventTask
 					}
 				}
 			}
-			
-			/*
-			 * eventPlayer.sendMessage("Dual Box not allowed in Events"); return false;
-			 */
 		}
 		
 		synchronized (_players)
@@ -2092,7 +2082,7 @@ public class TvT implements EventTask
 	}
 	
 	/**
-	 * Clean tv t.
+	 * Clean tvt.
 	 */
 	public static void cleanTvT()
 	{
@@ -2264,7 +2254,6 @@ public class TvT implements EventTask
 		}
 	}
 	
-	// Show loosers and winners animations
 	/**
 	 * Play kneel animation.
 	 * @param teamName the team name
@@ -2327,7 +2316,7 @@ public class TvT implements EventTask
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 					else if (teamName == null)
-					{ // TIE
+					{
 						
 						int minus_reward = 0;
 						if (_topKills != 0)
@@ -2365,7 +2354,7 @@ public class TvT implements EventTask
 	 */
 	private static void processTopPlayer()
 	{
-		//
+		// nothing
 	}
 	
 	/**
@@ -2657,10 +2646,6 @@ public class TvT implements EventTask
 		return _eventName;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.entity.event.manager.EventTask#getEventStartTime()
-	 */
 	@Override
 	public String getEventStartTime()
 	{
@@ -2749,7 +2734,6 @@ public class TvT implements EventTask
 		if (_started || _teleport)
 		{
 			_playersShuffle.remove(playerToKick);
-			// playerToKick._inEventTvT = false;
 			removePlayer(playerToKick);
 			if (playerToKick.isOnline() != 0)
 			{
@@ -2820,7 +2804,7 @@ public class TvT implements EventTask
 		private String name = null;
 		
 		/**
-		 * Instantiates a new tv t team.
+		 * Instantiates a new tvt team.
 		 * @param name the name
 		 * @param killCount the kill count
 		 */

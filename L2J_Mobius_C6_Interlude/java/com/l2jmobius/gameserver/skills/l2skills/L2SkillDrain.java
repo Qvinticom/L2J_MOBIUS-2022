@@ -69,12 +69,6 @@ public class L2SkillDrain extends L2Skill
 				continue; // No effect on invulnerable chars unless they cast it themselves.
 			}
 			
-			/*
-			 * L2ItemInstance weaponInst = activeChar.getActiveWeaponInstance(); if(weaponInst != null) { if(weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) { bss = true; weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); } else
-			 * if(weaponInst.getChargedSpiritshot() == L2ItemInstance.CHARGED_SPIRITSHOT) { ss = true; weaponInst.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); } } // If there is no weapon equipped, check for an active summon. else if(activeChar instanceof L2Summon) { L2Summon activeSummon =
-			 * (L2Summon) activeChar; if(activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_BLESSED_SPIRITSHOT) { bss = true; activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE); } else if(activeSummon.getChargedSpiritShot() == L2ItemInstance.CHARGED_SPIRITSHOT) { ss = true;
-			 * activeSummon.setChargedSpiritShot(L2ItemInstance.CHARGED_NONE); } }
-			 */
 			final boolean mcrit = Formulas.calcMCrit(activeChar.getMCriticalHit(target, this));
 			final int damage = (int) Formulas.calcMagicDam(activeChar, target, this, sps, bss, mcrit);
 			

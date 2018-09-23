@@ -25,9 +25,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class PcFreight extends ItemContainer
 {
-	// private static final Logger LOGGER = Logger.getLogger(PcFreight.class);
-	
-	private final L2PcInstance _owner; // This is the L2PcInstance that owns this Freight;
+	private final L2PcInstance _owner;
 	private int _activeLocationId;
 	
 	public PcFreight(L2PcInstance owner)

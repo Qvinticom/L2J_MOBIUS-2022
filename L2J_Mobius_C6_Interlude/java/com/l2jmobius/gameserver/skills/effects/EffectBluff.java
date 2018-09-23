@@ -51,12 +51,6 @@ public class EffectBluff extends L2Effect
 		return false;
 	}
 	
-	/*
-	 * @Override public void onExit() { super.onExit(); }
-	 */
-	
-	/** Notify started */
-	
 	@Override
 	public void onStart()
 	{

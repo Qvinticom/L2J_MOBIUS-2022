@@ -125,7 +125,6 @@ public class AdminEffects implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 			}
 		}
-		
 		else if (command.startsWith("admin_invis"))
 		{
 			activeChar.getAppearance().setInvisible();
@@ -140,7 +139,6 @@ public class AdminEffects implements IAdminCommandHandler
 			activeChar.broadcastUserInfo();
 			BuilderUtil.sendSysMessage(activeChar, "Now, you can be seen.");
 		}
-		
 		else if (command.startsWith("admin_earthquake"))
 		{
 			try
@@ -157,7 +155,6 @@ public class AdminEffects implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Use: //earthquake <intensity> <duration>");
 			}
 		}
-		
 		else if (command.startsWith("admin_atmosphere"))
 		{
 			try
@@ -170,7 +167,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_npc_say"))
 		{
 			try
@@ -190,7 +186,6 @@ public class AdminEffects implements IAdminCommandHandler
 				else
 				{
 					activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
-					
 					return false;
 				}
 			}
@@ -199,7 +194,6 @@ public class AdminEffects implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Target Npc before. Use: //npc_say");
 			}
 		}
-		
 		else if (command.equals("admin_play_sounds"))
 		{
 			AdminHelpPage.showHelpPage(activeChar, "songs/songs.htm");
@@ -224,7 +218,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.equals("admin_para") || command.equals("admin_para_menu"))
 		{
 			String type = "1";
@@ -260,7 +253,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.equals("admin_unpara") || command.equals("admin_unpara_menu"))
 		{
 			try
@@ -278,7 +270,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_para_all"))
 		{
 			try
@@ -299,7 +290,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_unpara_all"))
 		{
 			try
@@ -314,7 +304,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_bighead"))
 		{
 			try
@@ -332,7 +321,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_shrinkhead"))
 		{
 			try
@@ -350,7 +338,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_polyself"))
 		{
 			try
@@ -369,7 +356,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_unpolyself"))
 		{
 			try
@@ -387,7 +373,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.equals("admin_clear_teams"))
 		{
 			try
@@ -402,7 +387,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_setteam_close"))
 		{
 			try
@@ -432,7 +416,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_setteam"))
 		{
 			String val = command.substring(14);
@@ -462,7 +445,6 @@ public class AdminEffects implements IAdminCommandHandler
 			
 			player.broadcastUserInfo();
 		}
-		
 		else if (command.startsWith("admin_social"))
 		{
 			try
@@ -537,7 +519,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("debuff"))
 		{
 			try
@@ -556,7 +537,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_abnormal"))
 		{
 			try
@@ -637,7 +617,6 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 			}
 		}
-		
 		else if (command.startsWith("admin_effect"))
 		{
 			try

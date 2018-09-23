@@ -23,15 +23,9 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
-/**
- * This class ...
- * @version $Revision: 1.2.2.1.2.5 $ $Date: 2005/03/27 15:29:30 $
- */
 public class L2Potion extends L2Object
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2Character.class.getName());
-	
-	// private L2Character _target;
 	
 	private Future<?> _potionhpRegTask;
 	private Future<?> _potionmpRegTask;
@@ -111,7 +105,6 @@ public class L2Potion extends L2Object
 	public void setCurrentHpPotion1(L2Character activeChar, int item)
 	{
 		_potion = item;
-		// _target = activeChar;
 		
 		switch (_potion)
 		{
@@ -223,12 +216,6 @@ public class L2Potion extends L2Object
 	public void setCurrentMpPotion1(L2Character activeChar, int item)
 	{
 		_potion = item;
-		// _target = activeChar;
-		//
-		// switch(_potion)
-		// {
-		// null
-		// }
 	}
 	
 	@Override

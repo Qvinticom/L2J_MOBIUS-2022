@@ -25,10 +25,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 
-/*
- * Mobs can teleport players to them
- */
-
 public class GetPlayer implements ISkillHandler
 {
 	private static final SkillType[] SKILL_IDS =
@@ -54,7 +50,6 @@ public class GetPlayer implements ISkillHandler
 					continue;
 				}
 				
-				// trg.teleToLocation(activeChar.getX(), activeChar.getY(), activeChar.getZ(), true);
 				trg.setXYZ(activeChar.getX() + Rnd.get(-10, 10), activeChar.getY() + Rnd.get(-10, 10), activeChar.getZ());
 				trg.sendPacket(new ValidateLocation(trg));
 			}

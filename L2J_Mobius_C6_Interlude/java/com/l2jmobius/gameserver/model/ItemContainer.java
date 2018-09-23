@@ -31,8 +31,8 @@ import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance.ItemLocation;
-import com.l2jmobius.gameserver.templates.item.L2Item;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.templates.item.L2Item;
 
 /**
  * @author Advi
@@ -158,7 +158,6 @@ public abstract class ItemContainer
 		{
 			if ((item != null) && (item.getItemId() == itemId) && ((item.getEnchantLevel() == enchantLevel) || (enchantLevel < 0)))
 			{
-				// if (item.isAvailable((L2PcInstance)getOwner(), true) || item.getItem().getType2() == 3)//available or quest item
 				if (item.isStackable())
 				{
 					count = item.getCount();
@@ -426,7 +425,7 @@ public abstract class ItemContainer
 			
 			if (sourceitem.isAugmented())
 			{
-				sourceitem.getAugmentation().removeBoni(actor);
+				sourceitem.getAugmentation().removeBonus(actor);
 			}
 			
 			refreshWeight();

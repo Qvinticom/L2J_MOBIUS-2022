@@ -71,7 +71,6 @@ public class EffectNegate extends L2Effect
 			}
 			catch (Exception e)
 			{
-				//
 			}
 			
 			if (type != null)
@@ -94,7 +93,6 @@ public class EffectNegate extends L2Effect
 			}
 			catch (Exception e)
 			{
-				//
 			}
 			
 			if (type != null)

@@ -77,10 +77,6 @@ public final class AwayManager
 		_awayPlayers = Collections.synchronizedMap(new WeakHashMap<L2PcInstance, RestoreData>());
 	}
 	
-	/**
-	 * @param activeChar
-	 * @param text
-	 */
 	public void setAway(L2PcInstance activeChar, String text)
 	{
 		activeChar.set_awaying(true);
@@ -93,9 +89,6 @@ public final class AwayManager
 		ThreadPool.schedule(new setPlayerAwayTask(activeChar, text), Config.AWAY_TIMER * 1000);
 	}
 	
-	/**
-	 * @param activeChar
-	 */
 	public void setBack(L2PcInstance activeChar)
 	{
 		activeChar.sendMessage("You are back from Away Status in " + Config.BACK_TIMER + " Sec.");

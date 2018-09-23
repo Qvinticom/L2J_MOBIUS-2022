@@ -25,35 +25,16 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
  */
 public class ItemInfo
 {
-	/** Identifier of the L2ItemInstance */
 	private int _objectId;
-	
-	/** The L2Item template of the L2ItemInstance */
 	private L2Item _item;
-	
-	/** The level of enchant on the L2ItemInstance */
 	private int _enchant;
-	
-	/** The augmentation of the item */
 	private int _augmentation;
-	
-	/** The quantity of L2ItemInstance */
 	private int _count;
-	
-	/** The price of the L2ItemInstance */
 	private int _price;
-	
-	/** The custom L2ItemInstance types (used loto, race tickets) */
 	private int _type1;
 	private int _type2;
-	
-	/** If True the L2ItemInstance is equipped */
 	private int _equipped;
-	
-	/** The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE) */
-	private int _change;
-	
-	/** The mana of this item */
+	private int _change; // 1=ADD, 2=MODIFY, 3=REMOVE
 	private int _mana;
 	
 	/**
@@ -77,7 +58,7 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchantLevel();
 		
-		// Get the augmentation boni
+		// Get the augmentation bonus
 		if (item.isAugmented())
 		{
 			_augmentation = item.getAugmentation().getAugmentationId();
@@ -137,7 +118,7 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchantLevel();
 		
-		// Get the augmentation boni
+		// Get the augmentation bonus
 		if (item.isAugmented())
 		{
 			_augmentation = item.getAugmentation().getAugmentationId();
@@ -179,7 +160,7 @@ public class ItemInfo
 		return _enchant;
 	}
 	
-	public int getAugemtationBoni()
+	public int getAugemtationBonus()
 	{
 		return _augmentation;
 	}

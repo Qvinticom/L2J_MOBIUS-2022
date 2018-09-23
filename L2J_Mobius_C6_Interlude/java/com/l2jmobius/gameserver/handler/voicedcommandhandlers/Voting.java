@@ -90,9 +90,6 @@ public class Voting implements IVoicedCommandHandler
 		return true;
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
-	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{

@@ -47,19 +47,10 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2ClanHallManagerInstance extends L2FolkInstance
 {
-	/** The Constant COND_OWNER_FALSE. */
 	protected static final int COND_OWNER_FALSE = 0;
-	
-	/** The Constant COND_ALL_FALSE. */
 	protected static final int COND_ALL_FALSE = 1;
-	
-	/** The Constant COND_BUSY_BECAUSE_OF_SIEGE. */
 	protected static final int COND_BUSY_BECAUSE_OF_SIEGE = 2;
-	
-	/** The Constant COND_OWNER. */
 	protected static final int COND_OWNER = 3;
-	
-	/** The _clan hall id. */
 	private int _clanHallId = -1;
 	
 	/**
@@ -72,10 +63,6 @@ public class L2ClanHallManagerInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -1008,7 +995,7 @@ public class L2ClanHallManagerInstance extends L2FolkInstance
 		final int condition = validateCondition(player);
 		if (condition == COND_OWNER)
 		{
-			filename = "data/html/clanHallManager/chamberlain.htm";// Owner message window
+			filename = "data/html/clanHallManager/chamberlain.htm"; // Owner message window
 		}
 		if (condition == COND_OWNER_FALSE)
 		{
@@ -1033,7 +1020,6 @@ public class L2ClanHallManagerInstance extends L2FolkInstance
 		{
 			return COND_ALL_FALSE;
 		}
-		// if (player.isGM()) return COND_OWNER;
 		if (player.getClan() != null)
 		{
 			if (getClanHall().getOwnerId() == player.getClanId())

@@ -169,9 +169,7 @@ public class TradeListTable
 			statement1.close();
 			
 			LOGGER.info("TradeListTable: Loaded " + _lists.size() + " Buylists.");
-			/*
-			 * Restore Task for reinitialize count of buy item
-			 */
+			
 			try
 			{
 				int time = 0;

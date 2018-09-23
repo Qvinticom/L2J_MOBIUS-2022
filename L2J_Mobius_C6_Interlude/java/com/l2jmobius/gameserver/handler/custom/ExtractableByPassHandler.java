@@ -43,7 +43,6 @@ public class ExtractableByPassHandler implements ICustomByPassHandler
 		return _IDS;
 	}
 	
-	// custom_extractOne <objectID> custom_extractAll <objectID>
 	@Override
 	public void handleCommand(String command, L2PcInstance player, String parameters)
 	{

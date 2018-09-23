@@ -22,10 +22,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- *
- *
- */
 public class Time implements IUserCommandHandler
 {
 	private static final int[] COMMAND_IDS =
@@ -33,9 +29,6 @@ public class Time implements IUserCommandHandler
 		77
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{

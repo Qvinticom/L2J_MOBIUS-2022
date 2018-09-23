@@ -97,7 +97,7 @@ public class EventPoint
 	
 	public void removePoints(Integer points)
 	{
-		// Don't know , do the calc or return. it's up to you
+		// Don not know, do the calc or return. It's up to you.
 		if ((_points - points) < 0)
 		{
 			return;
@@ -110,5 +110,4 @@ public class EventPoint
 	{
 		return (_points - value) >= 0;
 	}
-	
 }

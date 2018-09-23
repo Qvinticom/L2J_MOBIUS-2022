@@ -168,7 +168,7 @@ public final class RequestRestart extends L2GameClientPacket
 		
 		if ((player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND) != null) && player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).isAugmented())
 		{
-			player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).getAugmentation().removeBoni(player);
+			player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND).getAugmentation().removeBonus(player);
 		}
 		
 		// delete box from the world

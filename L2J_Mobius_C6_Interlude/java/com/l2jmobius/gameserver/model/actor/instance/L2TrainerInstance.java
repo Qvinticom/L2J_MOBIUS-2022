@@ -18,10 +18,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision: 1.5.4.8 $ $Date: 2005/04/02 15:57:52 $
- */
 public final class L2TrainerInstance extends L2FolkInstance
 {
 	/**
@@ -34,10 +30,6 @@ public final class L2TrainerInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{

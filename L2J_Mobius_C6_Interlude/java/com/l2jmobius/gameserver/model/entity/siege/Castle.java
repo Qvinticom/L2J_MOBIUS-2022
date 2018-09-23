@@ -54,8 +54,6 @@ public class Castle
 {
 	protected static Logger LOGGER = Logger.getLogger(Castle.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private List<CropProcure> _procure = new ArrayList<>();
 	private List<SeedProduction> _production = new ArrayList<>();
 	private List<CropProcure> _procureNext = new ArrayList<>();
@@ -63,19 +61,12 @@ public class Castle
 	private boolean _isNextPeriodApproved = false;
 	
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION = "DELETE FROM castle_manor_production WHERE castle_id=?;";
-	
 	private static final String CASTLE_MANOR_DELETE_PRODUCTION_PERIOD = "DELETE FROM castle_manor_production WHERE castle_id=? AND period=?;";
-	
 	private static final String CASTLE_MANOR_DELETE_PROCURE = "DELETE FROM castle_manor_procure WHERE castle_id=?;";
-	
 	private static final String CASTLE_MANOR_DELETE_PROCURE_PERIOD = "DELETE FROM castle_manor_procure WHERE castle_id=? AND period=?;";
-	
 	private static final String CASTLE_UPDATE_CROP = "UPDATE castle_manor_procure SET can_buy=? WHERE crop_id=? AND castle_id=? AND period=?";
-	
 	private static final String CASTLE_UPDATE_SEED = "UPDATE castle_manor_production SET can_produce=? WHERE seed_id=? AND castle_id=? AND period=?";
 	
-	// =========================================================
-	// Data Field
 	private int _castleId = 0;
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
 	private final List<String> _doorDefault = new ArrayList<>();
@@ -100,8 +91,6 @@ public class Castle
 	};
 	private final Map<Integer, Integer> _engrave = new HashMap<>();
 	
-	// =========================================================
-	// Constructor
 	public Castle(int castleId)
 	{
 		_castleId = castleId;
@@ -113,9 +102,6 @@ public class Castle
 		load();
 		loadDoor();
 	}
-	
-	// =========================================================
-	// Method - Public
 	
 	public void Engrave(L2Clan clan, int objId)
 	{
@@ -149,7 +135,6 @@ public class Castle
 		}
 	}
 	
-	// This method add to the treasury
 	/**
 	 * Add amount to castle instance's treasury (warehouse).
 	 * @param amount
@@ -510,9 +495,6 @@ public class Castle
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	// This method loads castle
 	private void load()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
@@ -713,8 +695,6 @@ public class Castle
 		}
 	}
 	
-	// =========================================================
-	// Property
 	public final int getCastleId()
 	{
 		return _castleId;

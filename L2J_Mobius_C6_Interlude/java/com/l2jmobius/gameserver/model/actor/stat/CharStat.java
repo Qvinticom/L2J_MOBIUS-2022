@@ -27,31 +27,17 @@ import com.l2jmobius.gameserver.skills.Calculator;
 import com.l2jmobius.gameserver.skills.Env;
 import com.l2jmobius.gameserver.skills.Stats;
 
-/**
- * The Class CharStat.
- */
 public class CharStat
 {
 	private final Logger LOGGER = Logger.getLogger(CharStat.class.getName());
-	// =========================================================
-	// Data Field
-	/** The _active char. */
+	
 	private final L2Character _activeChar;
-	
-	/** The _exp. */
 	private long _exp = 0;
-	
-	/** The _sp. */
 	private int _sp = 0;
-	
-	/** The _level. */
 	private int _level = 1;
-	
 	/** Speed multiplier set by admin gmspeed command */
 	private float _gmSpeedMultiplier = 1;
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new char stat.
 	 * @param activeChar the active char
@@ -61,8 +47,6 @@ public class CharStat
 		_activeChar = activeChar;
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Calculate the new value of the state with modifiers that will be applied on the targeted L2Character.<BR>
 	 * <BR>
@@ -108,8 +92,7 @@ public class CharStat
 		
 		// Launch the calculation
 		c.calc(env);
-		// avoid some troubles with negative stats (some stats should never be
-		// negative)
+		// avoid some troubles with negative stats (some stats should never be negative)
 		if (env.value <= 0)
 		{
 			switch (stat)
@@ -140,11 +123,6 @@ public class CharStat
 		return env.value;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	/**
 	 * Return the Accuracy (base+modifier) of the L2Character in function of the Weapon Expertise Penalty.
 	 * @return the accuracy
@@ -401,8 +379,7 @@ public class CharStat
 		
 		double attack = _activeChar.getTemplate().baseMAtk * bonusAtk;
 		
-		// Get the skill type to calculate its effect in function of base stats
-		// of the L2Character target
+		// Get the skill type to calculate its effect in function of base stats of the L2Character target.
 		Stats stat = skill == null ? null : skill.getStat();
 		
 		if (stat != null)
@@ -916,8 +893,7 @@ public class CharStat
 			return 1;
 		}
 		
-		// err we should be adding TO the persons run speed
-		// not making it a constant
+		// err we should be adding TO the persons run speed not making it a constant
 		int val = (int) calcStat(Stats.RUN_SPEED, _activeChar.getTemplate().baseRunSpd, null, null) + Config.RUN_SPD_BOOST;
 		
 		if (_activeChar.isInsideZone(ZoneId.WATER))

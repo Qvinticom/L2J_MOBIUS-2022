@@ -20,7 +20,6 @@ package com.l2jmobius.gameserver.model.base;
  * ClassType Enum
  * @author Tempy
  */
-
 public enum ClassType
 {
 	Fighter,

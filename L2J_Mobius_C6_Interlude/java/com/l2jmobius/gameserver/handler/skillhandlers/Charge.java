@@ -26,19 +26,10 @@ import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.9 $ $Date: 2005/04/04 19:08:01 $
- */
-
 public class Charge implements ISkillHandler
 {
 	static Logger LOGGER = Logger.getLogger(Charge.class.getName());
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		/* SkillType.CHARGE */

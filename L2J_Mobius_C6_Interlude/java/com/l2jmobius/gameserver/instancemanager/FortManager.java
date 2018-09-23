@@ -41,21 +41,14 @@ public class FortManager
 		return SingletonHolder._instance;
 	}
 	
-	// =========================================================
-	// Data Field
 	private final List<Fort> _forts = new ArrayList<>();
 	
-	// =========================================================
-	// Constructor
 	public FortManager()
 	{
 		LOGGER.info("Initializing FortManager");
 		_forts.clear();
 		load();
 	}
-	
-	// =========================================================
-	// Method - Public
 	
 	public final int findNearestFortIndex(L2Object obj)
 	{
@@ -83,8 +76,6 @@ public class FortManager
 		return index;
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
@@ -112,8 +103,6 @@ public class FortManager
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final Fort getFortById(int fortId)
 	{
 		for (Fort f : _forts)

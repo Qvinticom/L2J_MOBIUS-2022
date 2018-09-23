@@ -24,9 +24,6 @@ public class Expression
 {
 	private final ScriptContext _context;
 	
-	// private final String _lang;
-	// private final String _code;
-	
 	public static Object eval(String lang, String code)
 	{
 		try
@@ -53,11 +50,11 @@ public class Expression
 		}
 	}
 	
-	public static Expression create(ScriptContext context/* , String lang, String code */)
+	public static Expression create(ScriptContext context)
 	{
 		try
 		{
-			return new Expression(context/* , lang, code */);
+			return new Expression(context);
 		}
 		catch (Exception e)
 		{
@@ -66,11 +63,9 @@ public class Expression
 		}
 	}
 	
-	private Expression(ScriptContext pContext/* , String pLang, String pCode */)
+	private Expression(ScriptContext pContext)
 	{
 		_context = pContext;
-		// _lang = pLang;
-		// _code = pCode;
 	}
 	
 	public <T> void addDynamicVariable(String name, T value)
@@ -96,5 +91,4 @@ public class Expression
 			e.printStackTrace();
 		}
 	}
-	
 }

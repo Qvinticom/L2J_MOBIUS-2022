@@ -47,15 +47,9 @@ public class L2Rebirth
 {
 	private static Logger LOGGER = Logger.getLogger(BitSetIDFactory.class.getName());
 	
-	/** The current instance - static repeller. */
 	private static L2Rebirth _instance = null;
-	
-	/** Basically, this will act as a cache so it doesnt have to read DB information on relog. */
 	private final HashMap<Integer, Integer> _playersRebirthInfo = new HashMap<>();
 	
-	/**
-	 * Creates a new NON-STATIC instance.
-	 */
 	private L2Rebirth()
 	{
 		// Do Nothing ^_-
@@ -393,8 +387,7 @@ public class L2Rebirth
 				loopBirth++;
 			}
 		}
-		// Player is a Fighter.
-		else
+		else // Player is a Fighter.
 		{
 			int loopBirth = 0;
 			for (String readSkill : Config.REBIRTH_FIGHTER_SKILL)

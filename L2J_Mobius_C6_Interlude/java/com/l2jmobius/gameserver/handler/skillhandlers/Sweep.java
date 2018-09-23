@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public class Sweep implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(Sweep.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.SWEEP

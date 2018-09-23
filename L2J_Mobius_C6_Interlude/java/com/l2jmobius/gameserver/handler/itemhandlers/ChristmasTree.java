@@ -35,8 +35,7 @@ public class ChristmasTree implements IItemHandler
 	private static final int[] ITEM_IDS =
 	{
 		5560, /* x-mas tree */
-		5561
-		/* Special x-mas tree */
+		5561, /* Special x-mas tree */
 	};
 	
 	private static final int[] NPC_IDS =

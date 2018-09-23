@@ -38,7 +38,6 @@ public final class EffectChameleonRest extends L2Effect
 		return EffectType.RELAXING;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -55,10 +54,6 @@ public final class EffectChameleonRest extends L2Effect
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{

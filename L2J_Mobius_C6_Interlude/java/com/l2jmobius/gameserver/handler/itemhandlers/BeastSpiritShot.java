@@ -149,7 +149,6 @@ public class BeastSpiritShot implements IItemHandler
 			}
 		}
 		
-		// TODO: test ss
 		if (!Config.DONT_DESTROY_SS)
 		{
 			if (!activeOwner.destroyItemWithoutTrace("Consume", item.getObjectId(), shotConsumption, null, false))

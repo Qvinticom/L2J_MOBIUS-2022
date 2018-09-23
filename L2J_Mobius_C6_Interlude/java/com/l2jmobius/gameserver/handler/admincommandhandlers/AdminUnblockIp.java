@@ -39,18 +39,9 @@ public class AdminUnblockIp implements IAdminCommandHandler
 		"admin_unblockip"
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (command.startsWith("admin_unblockip "))
 		{
 			try
@@ -66,7 +57,6 @@ public class AdminUnblockIp implements IAdminCommandHandler
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{
-				// Send syntax to the user
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Usage mode: //unblockip <ip>");
 				activeChar.sendPacket(sm);
@@ -84,10 +74,7 @@ public class AdminUnblockIp implements IAdminCommandHandler
 	
 	private boolean unblockIp(String ipAddress, L2PcInstance activeChar)
 	{
-		// LoginServerThread.getInstance().unBlockip(ipAddress);
 		LOGGER.warning("IP removed by GM " + activeChar.getName());
-		
 		return true;
 	}
-	
 }

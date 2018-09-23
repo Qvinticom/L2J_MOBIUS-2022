@@ -34,9 +34,6 @@ public class BankingCmd implements IVoicedCommandHandler
 		"deposit"
 	};
 	
-	/**
-	 * @see com.l2jmobius.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(java.lang.String, com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
@@ -92,9 +89,6 @@ public class BankingCmd implements IVoicedCommandHandler
 		return true;
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
-	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{

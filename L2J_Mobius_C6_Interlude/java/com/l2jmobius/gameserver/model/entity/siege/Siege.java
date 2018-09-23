@@ -102,31 +102,16 @@ public class Siege
 	protected static final Logger LOGGER = Logger.getLogger(Siege.class.getName());
 	private final SimpleDateFormat fmt = new SimpleDateFormat("H:mm.");
 	
-	/**
-	 * The Enum TeleportWhoType.
-	 */
 	public enum TeleportWhoType
 	{
-		/** The All. */
 		All,
-		
-		/** The Attacker. */
 		Attacker,
-		
-		/** The Defender not owner. */
 		DefenderNotOwner,
-		
-		/** The Owner. */
 		Owner,
-		
-		/** The Spectator. */
 		Spectator
 	}
 	
-	/** The _control tower count. */
 	private int _controlTowerCount;
-	
-	/** The _control tower max count. */
 	private int _controlTowerMaxCount;
 	
 	/**
@@ -138,8 +123,6 @@ public class Siege
 		return _controlTowerCount;
 	}
 	
-	// ===============================================================
-	// Schedule task
 	/**
 	 * The Class ScheduleEndSiegeTask.
 	 */
@@ -157,10 +140,6 @@ public class Siege
 			_castleInst = pCastle;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -217,12 +196,8 @@ public class Siege
 		}
 	}
 	
-	/**
-	 * The Class ScheduleStartSiegeTask.
-	 */
 	public class ScheduleStartSiegeTask implements Runnable
 	{
-		/** The _castle inst. */
 		private final Castle _castleInst;
 		
 		/**
@@ -234,10 +209,6 @@ public class Siege
 			_castleInst = pCastle;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -303,51 +274,20 @@ public class Siege
 		}
 	}
 	
-	// =========================================================
-	// Data Field
-	// Attacker and Defender
-	/** The _attacker clans. */
 	private final List<L2SiegeClan> _attackerClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender clans. */
 	private final List<L2SiegeClan> _defenderClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender waiting clans. */
 	private final List<L2SiegeClan> _defenderWaitingClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender respawn delay penalty. */
 	private int _defenderRespawnDelayPenalty;
-	
-	// Castle setting
-	/** The _artifacts. */
 	private List<L2ArtefactInstance> _artifacts = new ArrayList<>();
-	
-	/** The _control towers. */
 	private List<L2ControlTowerInstance> _controlTowers = new ArrayList<>();
-	
-	/** The _castle. */
 	private final Castle[] _castle;
-	
-	/** The _is in progress. */
 	boolean _isInProgress = false;
-	
-	/** The _is normal side. */
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
-	
-	/** The _is registration over. */
 	protected boolean _isRegistrationOver = false;
-	
-	/** The _siege end date. */
 	protected Calendar _siegeEndDate;
-	
-	/** The _siege guard manager. */
 	private SiegeGuardManager _siegeGuardManager;
-	
-	/** The _siege registration end date. */
 	protected Calendar _siegeRegistrationEndDate;
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new siege.
 	 * @param castle the castle
@@ -360,8 +300,6 @@ public class Siege
 		startAutoTask();
 	}
 	
-	// =========================================================
-	// Siege phases
 	/**
 	 * When siege ends<BR>
 	 * <BR>
@@ -681,8 +619,6 @@ public class Siege
 		}
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Announce to player.<BR>
 	 * <BR>
@@ -1256,8 +1192,6 @@ public class Siege
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
 	/**
 	 * Add clan as attacker<BR>
 	 * <BR>
@@ -1369,8 +1303,6 @@ public class Siege
 			{
 				continue;
 			}
-			// if(siege.getSiegeDate().get(Calendar.DAY_OF_WEEK) == this.getSiegeDate().get(Calendar.DAY_OF_WEEK))
-			// {
 			if (siege.checkIsAttacker(clan))
 			{
 				return true;
@@ -1382,7 +1314,6 @@ public class Siege
 			if (siege.checkIsDefenderWaiting(clan))
 			{
 				return true;
-				// }
 			}
 		}
 		return false;
@@ -1698,10 +1629,6 @@ public class Siege
 			L2NpcTemplate template = NpcTable.getInstance().getTemplate(_sp.getNpcId());
 			
 			template.getStatsSet().set("baseHpMax", _sp.getHp());
-			// TODO: Check/confirm if control towers have any special weapon resistances/vulnerabilities
-			// template.addVulnerability(Stats.BOW_WPN_VULN,0);
-			// template.addVulnerability(Stats.BLUNT_WPN_VULN,0);
-			// template.addVulnerability(Stats.DAGGER_WPN_VULN,0);
 			
 			ct = new L2ControlTowerInstance(IdFactory.getInstance().getNextId(), template);
 			

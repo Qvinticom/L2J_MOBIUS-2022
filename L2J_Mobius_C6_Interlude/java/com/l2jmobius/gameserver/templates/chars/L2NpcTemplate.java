@@ -177,8 +177,7 @@ public final class L2NpcTemplate extends L2CharTemplate
 	
 	public boolean canTeach(ClassId classId)
 	{
-		// If the player is on a third class, fetch the class teacher
-		// information for its parent class.
+		// If the player is on a third class, fetch the class teacher information for its parent class.
 		if (classId.getId() >= 88)
 		{
 			return _teachInfo.contains(classId.getParent());
@@ -190,17 +189,8 @@ public final class L2NpcTemplate extends L2CharTemplate
 	// add a drop to a given category. If the category does not exist, create it.
 	public void addDropData(L2DropData drop, int categoryType)
 	{
-		if (drop.isQuestDrop())
+		if (!drop.isQuestDrop())
 		{
-			// if (_questDrops == null)
-			// _questDrops = new ArrayList<L2DropData>(0);
-			// _questDrops.add(drop);
-		}
-		else
-		{
-			// if the category doesn't already exist, create it first
-			// synchronized (_categories)
-			// {
 			boolean catExists = false;
 			for (L2DropCategory cat : _categories)
 			{
@@ -219,7 +209,6 @@ public final class L2NpcTemplate extends L2CharTemplate
 				cat.addDropData(drop, type.equalsIgnoreCase("L2RaidBoss") || type.equalsIgnoreCase("L2GrandBoss"));
 				_categories.add(cat);
 			}
-			// }
 		}
 	}
 	
@@ -322,10 +311,9 @@ public final class L2NpcTemplate extends L2CharTemplate
 			final Quest[] _quests = _questEvents.get(EventType);
 			final int len = _quests.length;
 			
-			// if only one registration per npc is allowed for this event type
-			// then only register this NPC if not already registered for the specified event.
-			// if a quest allows multiple registrations, then register regardless of count
-			// In all cases, check if this new registration is replacing an older copy of the SAME quest
+			// If only one registration per npc is allowed for this event type then only register this NPC if not already registered for the specified event.
+			// If a quest allows multiple registrations, then register regardless of count.
+			// In all cases, check if this new registration is replacing an older copy of the SAME quest.
 			if (!EventType.isMultipleRegistrationAllowed())
 			{
 				if (_quests[0].getName().equals(q.getName()))
@@ -339,12 +327,10 @@ public final class L2NpcTemplate extends L2CharTemplate
 			}
 			else
 			{
-				// be ready to add a new quest to a new copy of the list, with larger size than previously.
+				// Be ready to add a new quest to a new copy of the list, with larger size than previously.
 				final Quest[] tmp = new Quest[len + 1];
-				// loop through the existing quests and copy them to the new list. While doing so, also
-				// check if this new quest happens to be just a replacement for a previously loaded quest.
-				// If so, just save the updated reference and do NOT use the new list. Else, add the new
-				// quest to the end of the new list
+				// Loop through the existing quests and copy them to the new list. While doing so, also check if this new quest happens to be just a replacement for a previously loaded quest.
+				// If so, just save the updated reference and do NOT use the new list. Else, add the new quest to the end of the new list.
 				for (int i = 0; i < len; i++)
 				{
 					if (_quests[i].getName().equals(q.getName()))
@@ -540,5 +526,4 @@ public final class L2NpcTemplate extends L2CharTemplate
 	{
 		return _custom;
 	}
-	
 }

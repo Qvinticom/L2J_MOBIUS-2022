@@ -52,162 +52,43 @@ import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * The Class DM.
- */
 public class DM implements EventTask
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(DM.class.getName());
 	
-	/** The _joining location name. */
 	private static String _eventName = new String();
-
-	/**
-	 * The _joining location name. 
-	 */
 	private static String _eventDesc = new String();
-
-	/**
-	 * The _joining location name. 
-	 */
 	private static String _joiningLocationName = new String();
-	
-	/** The _npc spawn. */
 	private static L2Spawn _npcSpawn;
-	
-	/** The _in progress. */
 	private static boolean _joining = false;
-
-	/**
-	 * The _in progress. 
-	 */
 	private static boolean _teleport = false;
-
-	/**
-	 * The _in progress. 
-	 */
 	private static boolean _started = false;
-
-	/**
-	 * The _in progress. 
-	 */
 	private static boolean _aborted = false;
-
-	/**
-	 * The _in progress. 
-	 */
 	private static boolean _sitForced = false;
-
-	/**
-	 * The _in progress. 
-	 */
 	private static boolean _inProgress = false;
-	
-	/** The _player z. */
 	protected static int _npcId = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _npcX = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _npcY = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _npcZ = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _npcHeading = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _rewardId = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _rewardAmount = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _minlvl = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _maxlvl = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _joinTime = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _eventTime = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _minPlayers = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _maxPlayers = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _topKills = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _playerColors = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _playerX = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _playerY = 0;
-
-	/**
-	 * The _player z. 
-	 */
 	protected static int _playerZ = 0;
-	
-	/** The _interval between matchs. */
 	private static long _intervalBetweenMatchs = 0;
-	
-	/** The start event time. */
 	private String startEventTime;
-	
-	/** The _team event. */
 	protected static boolean _teamEvent = false; // TODO to be integrated
-	
-	/** The _players. */
 	public static Vector<L2PcInstance> _players = new Vector<>();
-	
-	/** The _top players. */
 	public static List<L2PcInstance> _topPlayers = new ArrayList<>();
-	
-	/** The _save players. */
 	public static Vector<String> _savePlayers = new Vector<>();
 	
 	/**
@@ -896,7 +777,6 @@ public class DM implements EventTask
 		}
 		else
 		{
-			// final int size = getPlayers().size();
 			synchronized (_players)
 			{
 				final int size = _players.size();
@@ -922,7 +802,6 @@ public class DM implements EventTask
 			sit();
 			afterTeleportOperations();
 			
-			// final Vector<L2PcInstance> players = getPlayers();
 			synchronized (_players)
 			{
 				for (L2PcInstance player : _players)
@@ -956,14 +835,7 @@ public class DM implements EventTask
 							party.removePartyMember(player);
 						}
 						
-						// player._originalTitleDM = player.getTitle();
-						// player.setTitle("Kills: " + player._countDMkills);
-						
-						if (_teamEvent)
-						{
-							// player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameCTF)), _teamsY.get(_teams.indexOf(player._teamNameCTF)), _teamsZ.get(_teams.indexOf(player._teamNameCTF)));
-						}
-						else
+						if (!_teamEvent)
 						{
 							final int offset = Config.DM_SPAWN_OFFSET;
 							player.teleToLocation(_playerX + Rnd.get(offset), _playerY + Rnd.get(offset), _playerZ);
@@ -1016,7 +888,6 @@ public class DM implements EventTask
 	 */
 	private static void removeParties()
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -1185,7 +1056,6 @@ public class DM implements EventTask
 		removeUserData();
 		ThreadPool.schedule(() ->
 		{
-			// final Vector<L2PcInstance> players = getPlayers();
 			synchronized (_players)
 			{
 				for (L2PcInstance player : _players)
@@ -1252,14 +1122,14 @@ public class DM implements EventTask
 					finishEvent();
 					
 					LOGGER.info(_eventName + ": waiting... delay for final messages ");
-					waiter(60000);// just a give a delay delay for final messages
+					waiter(60000); // just a give a delay delay for final messages
 					sendFinalMessages();
 					
-					if (!_started && !_aborted)
-					{ // if is not already started and it's not aborted
+					if (!_started && !_aborted) // if is not already started and it's not aborted
+					{
 						
 						LOGGER.info(_eventName + ": waiting.....delay for restart event  " + _intervalBetweenMatchs + " minutes.");
-						waiter(60000);// just a give a delay to next restart
+						waiter(60000); // just a give a delay to next restart
 						
 						try
 						{
@@ -1284,7 +1154,6 @@ public class DM implements EventTask
 		}
 	}
 	
-	// start without restart
 	/**
 	 * Event once start.
 	 */
@@ -1357,7 +1226,6 @@ public class DM implements EventTask
 					case 120: // 2 minutes left
 					case 60: // 1 minute left
 					{
-						// removeOfflinePlayers();
 						if (_joining)
 						{
 							Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
@@ -1426,7 +1294,6 @@ public class DM implements EventTask
 			_sitForced = true;
 		}
 		
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -1460,7 +1327,6 @@ public class DM implements EventTask
 	{
 		try
 		{
-			// final Vector<L2PcInstance> players = getPlayers();
 			synchronized (_players)
 			{
 				if ((_players == null) || _players.isEmpty())
@@ -1495,7 +1361,6 @@ public class DM implements EventTask
 						player._inEventDM = false;
 						
 						toBeRemoved.add(player);
-						// _players.remove(player);
 						
 						player.sendMessage("Your participation in the DeathMatch event has been removed.");
 					}
@@ -1584,10 +1449,6 @@ public class DM implements EventTask
 					}
 				}
 			}
-			
-			/*
-			 * eventPlayer.sendMessage("Dual Box not allowed in Events"); return false;
-			 */
 		}
 		
 		if (!Config.DM_ALLOW_HEALER_CLASSES && ((eventPlayer.getClassId() == ClassId.cardinal) || (eventPlayer.getClassId() == ClassId.evaSaint) || (eventPlayer.getClassId() == ClassId.shillienSaint)))
@@ -1596,7 +1457,6 @@ public class DM implements EventTask
 			return false;
 		}
 		
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			if (_players.contains(eventPlayer))
@@ -1628,8 +1488,6 @@ public class DM implements EventTask
 	 */
 	public static void setUserData()
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
-		
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -1704,7 +1562,6 @@ public class DM implements EventTask
 		LOGGER.info("# _players(Vector<L2PcInstance>) #");
 		LOGGER.info("##################################");
 		
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			LOGGER.info("Total Players : " + _players.size());
@@ -1887,7 +1744,6 @@ public class DM implements EventTask
 			replyMSG.append("<center>Description:&nbsp;<font color=\"00FF00\">" + _eventDesc + "</font></center><br><br>");
 			replyMSG.append("<center>Event Type:&nbsp;<font color=\"00FF00\"> Full Buff Event!!! </font></center><br><br>");
 			
-			// final Vector<L2PcInstance> players = getPlayers();
 			synchronized (_players)
 			{
 				if (!_started && !_joining)
@@ -2015,7 +1871,6 @@ public class DM implements EventTask
 	 */
 	public static void cleanDM()
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -2041,9 +1896,6 @@ public class DM implements EventTask
 						player._originalKarmaDM = 0;
 						player._countDMkills = 0;
 						player._inEventDM = false;
-						
-						// _players.remove(player);
-						
 						player.sendMessage("Your participation in the DeathMatch event has been removed.");
 					}
 					
@@ -2086,18 +1938,12 @@ public class DM implements EventTask
 		// nothing
 	}
 	
-	/*
-	 * public static void cleanDM() { synchronized (_players){ for(L2PcInstance player : _players) { removePlayer(player); } _savePlayers = new Vector<String>(); _topPlayer = null; _npcSpawn = null; _joining = false; _teleport = false; _started = false; _inProgress = false; _sitForced = false;
-	 * _topKills = 0; _players = new Vector<L2PcInstance>(); } }
-	 */
-	
 	/**
 	 * Adds the disconnected player.
 	 * @param player the player
 	 */
 	public static void addDisconnectedPlayer(L2PcInstance player)
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			if (!_players.contains(player) && _savePlayers.contains(player.getName()))
@@ -2184,7 +2030,6 @@ public class DM implements EventTask
 	 */
 	private static void processTopPlayer()
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -2225,14 +2070,6 @@ public class DM implements EventTask
 	}
 	
 	/**
-	 * Gets the players.
-	 * @return the players
-	 */
-	/*
-	 * protected synchronized static Vector<L2PcInstance> getPlayers() { return _players; }
-	 */
-	
-	/**
 	 * Sets the players pos.
 	 * @param activeChar the new players pos
 	 */
@@ -2248,7 +2085,6 @@ public class DM implements EventTask
 	 */
 	public static void removeUserData()
 	{
-		// final Vector<L2PcInstance> players = getPlayers();
 		synchronized (_players)
 		{
 			for (L2PcInstance player : _players)
@@ -2297,20 +2133,12 @@ public class DM implements EventTask
 		startEventTime = newTime;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.entity.event.manager.EventTask#getEventIdentifier()
-	 */
 	@Override
 	public String getEventIdentifier()
 	{
 		return _eventName;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see java.lang.Runnable#run()
-	 */
 	@Override
 	public void run()
 	{
@@ -2318,10 +2146,6 @@ public class DM implements EventTask
 		eventOnceStart();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.entity.event.manager.EventTask#getEventStartTime()
-	 */
 	@Override
 	public String getEventStartTime()
 	{

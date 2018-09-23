@@ -46,7 +46,6 @@ public class AugmentationData
 {
 	private static final Logger LOGGER = Logger.getLogger(AugmentationData.class.getName());
 	
-	// =========================================================
 	private static AugmentationData _instance;
 	
 	public static final AugmentationData getInstance()
@@ -59,21 +58,14 @@ public class AugmentationData
 		return _instance;
 	}
 	
-	// =========================================================
-	// Data Field
-	
 	// stats
 	private static final int STAT_START = 1;
 	private static final int STAT_END = 14560;
 	private static final int STAT_BLOCKSIZE = 3640;
-	// private static final int STAT_NUMBEROF_BLOCKS = 4;
 	private static final int STAT_SUBBLOCKSIZE = 91;
-	// private static final int STAT_NUMBEROF_SUBBLOCKS = 40;
 	
 	// skills
 	private static final int BLUE_START = 14561;
-	// private static final int PURPLE_START = 14578;
-	// private static final int RED_START = 14685;
 	private static final int SKILLS_BLOCKSIZE = 178;
 	
 	// basestats
@@ -87,8 +79,6 @@ public class AugmentationData
 	private final Map<Integer, ArrayList<augmentationSkill>> _purpleSkills;
 	private final Map<Integer, ArrayList<augmentationSkill>> _redSkills;
 	
-	// =========================================================
-	// Constructor
 	@SuppressWarnings("unchecked")
 	private AugmentationData()
 	{
@@ -130,9 +120,6 @@ public class AugmentationData
 		_instance = null;
 		getInstance();
 	}
-	
-	// =========================================================
-	// Nested Class
 	
 	public class augmentationSkill
 	{
@@ -216,15 +203,10 @@ public class AugmentationData
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
 	private final void load()
 	{
 		// Load the skillmap
-		// Note: the skillmap data is only used when generating new augmentations
-		// the client expects a different id in order to display the skill in the
-		// items description...
+		// Note: the skillmap data is only used when generating new augmentations the client expects a different id in order to display the skill in the items description.
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -421,9 +403,6 @@ public class AugmentationData
 		}
 	}
 	
-	// =========================================================
-	// Properties - Public
-	
 	/**
 	 * Generate a new random augmentation
 	 * @param item
@@ -433,11 +412,7 @@ public class AugmentationData
 	 */
 	public L2Augmentation generateRandomAugmentation(L2ItemInstance item, int lifeStoneLevel, int lifeStoneGrade)
 	{
-		// Note that stat12 stands for stat 1 AND 2 (same for stat34 ;p )
-		// this is because a value can contain up to 2 stat modifications
-		// (there are two short values packed in one integer value, meaning 4 stat modifications at max)
-		// for more info take a look at getAugStatsById(...)
-		
+		// Note: stat12 stands for stat 1 AND 2 (same for stat34 ;p ) this is because a value can contain up to 2 stat modifications (there are two short values packed in one integer value, meaning 4 stat modifications at max) for more info take a look at getAugStatsById(...)
 		// Note: lifeStoneGrade: (0 means low grade, 3 top grade)
 		// First: determine whether we will add a skill/baseStatModifier or not because this determine which color could be the result
 		int skill_Chance = 0;
@@ -496,15 +471,10 @@ public class AugmentationData
 		
 		// Second: decide which grade the augmentation result is going to have:
 		// 0:yellow, 1:blue, 2:purple, 3:red
-		// The chances used here are most likely custom,
-		// whats known is: u can also get a red result from a normal grade lifeStone
-		// however I will make it so that a higher grade lifeStone will more likely result in a
-		// higher grade augmentation... and the augmentation result will at least have the grade
-		// of the life stone
-		// Second: Calculate the subblock offset for the choosen color,
-		// and the level of the lifeStone
-		// whats known is: you cant have yellow with skill(or baseStatModifier)
-		// noGrade stone can not have glow, mid only with skill, high has a chance(custom), top allways glow
+		// The chances used here are most likely custom, whats known is: u can also get a red result from a normal grade lifeStone however I will make it so that a higher grade lifeStone will more likely result in a higher grade augmentation...
+		// and the augmentation result will at least have the grade of the life stone
+		// Second: Calculate the subblock offset for the choosen color, and the level of the lifeStone
+		// Whats is known: you cant have yellow with skill(or baseStatModifier) noGrade stone can not have glow, mid only with skill, high has a chance(custom), top allways glow
 		if ((stat34 == 0) && !generateSkill)
 		{
 			resultColor = Rnd.get(0, 100);
@@ -679,8 +649,7 @@ public class AugmentationData
 					final augmentationStat as = _augmentationStats[block].get((stats[i] - 1));
 					temp.add(new AugStat(as.getStat(), as.getSingleStatValue(subblock)));
 				}
-				else
-				// twin stat
+				else // twin stat
 				{
 					stats[i] -= 13; // rescale to 0 (if first of first combined block)
 					

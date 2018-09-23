@@ -75,7 +75,6 @@ public class ZoneData
 {
 	private static final Logger LOGGER = Logger.getLogger(ZoneData.class.getName());
 	
-	// =========================================================
 	private static ZoneData _instance;
 	
 	public static final ZoneData getInstance()
@@ -88,11 +87,6 @@ public class ZoneData
 		return _instance;
 	}
 	
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public ZoneData()
 	{
 		LOGGER.info("Loading zones...");
@@ -100,7 +94,6 @@ public class ZoneData
 		load();
 	}
 	
-	// reload
 	public void reload()
 	{
 		synchronized (_instance)
@@ -109,9 +102,6 @@ public class ZoneData
 			_instance = new ZoneData();
 		}
 	}
-	
-	// =========================================================
-	// Method - Private
 	
 	private final void load()
 	{
@@ -269,9 +259,6 @@ public class ZoneData
 										temp = new L2BossZone(zoneId, boss_id);
 										break;
 									}
-									/*
-									 * else if(zoneType.equals("SkillZone")) { temp = new L2SkillZone(zoneId); }
-									 */
 									case "EffectZone":
 									{
 										zoneId = effect_zone_id;
@@ -309,7 +296,6 @@ public class ZoneData
 								}
 								
 								// get the zone shape from file if any
-								
 								int[][] coords = null;
 								int[] point;
 								final List<int[]> rs = new ArrayList<>();
@@ -436,11 +422,7 @@ public class ZoneData
 									}
 									
 								}
-								else // Create this zone. Parsing for cuboids is a
-								// bit different than for other polygons
-								// cuboids need exactly 2 points to be defined.
-								// Other polygons need at least 3 (one per
-								// vertex)
+								else // Create this zone. Parsing for cuboids is a bit different than for other polygons cuboids need exactly 2 points to be defined. Other polygons need at least 3 (one per vertex)
 								if (zoneShape.equalsIgnoreCase("Cuboid"))
 								{
 									if (coords.length == 2)
@@ -475,8 +457,7 @@ public class ZoneData
 								}
 								else if (zoneShape.equalsIgnoreCase("Cylinder"))
 								{
-									// A Cylinder zone requires a center point
-									// at x,y and a radius
+									// A cylinder zone requires a center point at x,y and a radius
 									attrs = d.getAttributes();
 									final int zoneRad = Integer.parseInt(attrs.getNamedItem("rad").getNodeValue());
 									if ((coords.length == 1) && (zoneRad > 0))
@@ -524,8 +505,7 @@ public class ZoneData
 									FishingZoneManager.getInstance().addWaterZone((L2WaterZone) temp);
 								}
 								
-								// Register the zone into any world region it intersects with...
-								// currently 11136 test for each zone :>
+								// Register the zone into any world region it intersects with currently 11136 test for each zone :>
 								int ax;
 								int ay;
 								int bx;

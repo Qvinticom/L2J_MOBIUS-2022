@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public final class L2GourdInstance extends L2MonsterInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2GourdInstance.class);
-	
 	private String _name;
 	private byte _nectar = 0;
 	private byte _good = 0;

@@ -78,8 +78,6 @@ public class CursedWeaponsManager
 		LOGGER.info("Loaded: " + _cursedWeapons.size() + " cursed weapon(s).");
 	}
 	
-	// =========================================================
-	// Method - Private
 	public final void reload()
 	{
 		if (!Config.ALLOW_CURSED_WEAPONS)
@@ -171,7 +169,6 @@ public class CursedWeaponsManager
 								}
 							}
 							
-							// Store cursed weapon
 							_cursedWeapons.put(id, cw);
 						}
 					}
@@ -291,8 +288,6 @@ public class CursedWeaponsManager
 		}
 	}
 	
-	// =========================================================
-	// Properties - Public
 	public synchronized void checkDrop(L2Attackable attackable, L2PcInstance player)
 	{
 		if ((attackable instanceof L2SiegeGuardInstance) || (attackable instanceof L2RiftInvaderInstance) || (attackable instanceof L2FestivalMonsterInstance) || (attackable instanceof L2GrandBossInstance) || (attackable instanceof L2FortSiegeGuardInstance) || (attackable instanceof L2CommanderInstance))

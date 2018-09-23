@@ -31,18 +31,12 @@ final class EffectBestowSkill extends L2Effect
 		super(env, template);
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public EffectType getEffectType()
 	{
 		return EffectType.BUFF;
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public void onStart()
 	{
@@ -53,18 +47,12 @@ final class EffectBestowSkill extends L2Effect
 		}
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{
 		getEffected().removeSkill(getSkill().getTriggeredId());
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{

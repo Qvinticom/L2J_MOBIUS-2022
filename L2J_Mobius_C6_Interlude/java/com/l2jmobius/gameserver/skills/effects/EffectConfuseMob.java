@@ -43,7 +43,6 @@ final class EffectConfuseMob extends L2Effect
 		return EffectType.CONFUSE_MOB_ONLY;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -51,7 +50,6 @@ final class EffectConfuseMob extends L2Effect
 		onActionTime();
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

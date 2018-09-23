@@ -36,19 +36,10 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2FestivalGuideInstance extends L2FolkInstance
 {
-	/** The _festival type. */
 	protected int _festivalType;
-	
-	/** The _festival oracle. */
 	protected int _festivalOracle;
-	
-	/** The _blue stones needed. */
 	protected int _blueStonesNeeded;
-	
-	/** The _green stones needed. */
 	protected int _greenStonesNeeded;
-	
-	/** The _red stones needed. */
 	protected int _redStonesNeeded;
 	
 	/**
@@ -165,10 +156,6 @@ public final class L2FestivalGuideInstance extends L2FolkInstance
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -223,10 +210,7 @@ public final class L2FestivalGuideInstance extends L2FolkInstance
 						showChatWindow(player, 2, "d", false);
 						return;
 					}
-					// TODO: Check if the player has delevelled by comparing their skill levels.
-					/*
-					 * Check to see if the player has already signed up, if they are then update the participant list providing all the required criteria has been met.
-					 */
+					
 					if (player.isFestivalParticipant())
 					{
 						SevenSignsFestival.getInstance().setParticipants(_festivalOracle, _festivalType, playerParty);
@@ -415,9 +399,7 @@ public final class L2FestivalGuideInstance extends L2FolkInstance
 					{
 						return;
 					}
-					/**
-					 * If the player is the party leader, remove all participants from the festival (i.e. set the party to null, when updating the participant list) otherwise just remove this player from the "arena", and also remove them from the party.
-					 */
+					// If the player is the party leader, remove all participants from the festival (i.e. set the party to null, when updating the participant list) otherwise just remove this player from the "arena", and also remove them from the party.
 					final boolean isLeader = playerParty.isLeader(player);
 					if (isLeader)
 					{
@@ -455,8 +437,7 @@ public final class L2FestivalGuideInstance extends L2FolkInstance
 		}
 		else
 		{
-			// this class dont know any other commands, let forward
-			// the command to the parent class
+			// this class dont know any other commands, let forward the command to the parent class
 			super.onBypassFeedback(player, command);
 		}
 	}

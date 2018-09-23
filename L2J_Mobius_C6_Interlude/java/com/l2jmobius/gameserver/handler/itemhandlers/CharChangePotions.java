@@ -46,8 +46,7 @@ public class CharChangePotions implements IItemHandler
 		5245,
 		5246,
 		5247,
-		5248
-		// Hair Style
+		5248, // Hair Style
 	};
 	
 	@Override

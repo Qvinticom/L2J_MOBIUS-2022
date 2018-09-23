@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public final class L2MercManagerInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2MercManagerInstance.class);
-	
 	private static final int COND_ALL_FALSE = 0;
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
 	private static final int COND_OWNER = 2;
@@ -64,8 +62,8 @@ public final class L2MercManagerInstance extends L2FolkInstance
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
-		} else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		}
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

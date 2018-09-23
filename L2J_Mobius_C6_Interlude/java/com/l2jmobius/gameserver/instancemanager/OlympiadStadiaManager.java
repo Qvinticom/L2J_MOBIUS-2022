@@ -27,7 +27,6 @@ public class OlympiadStadiaManager
 {
 	protected static Logger LOGGER = Logger.getLogger(OlympiadStadiaManager.class.getName());
 	
-	// =========================================================
 	private static OlympiadStadiaManager _instance;
 	
 	public static final OlympiadStadiaManager getInstance()
@@ -40,20 +39,11 @@ public class OlympiadStadiaManager
 		return _instance;
 	}
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private List<L2OlympiadStadiumZone> _olympiadStadias;
 	
-	// =========================================================
-	// Constructor
 	public OlympiadStadiaManager()
 	{
 	}
-	
-	// =========================================================
-	// Property - Public
 	
 	public void addStadium(L2OlympiadStadiumZone arena)
 	{
@@ -93,18 +83,4 @@ public class OlympiadStadiaManager
 		
 		return null;
 	}
-	
-	@Deprecated
-	public final L2OlympiadStadiumZone getOlympiadStadiumById(int olympiadStadiumId)
-	{
-		for (L2OlympiadStadiumZone temp : _olympiadStadias)
-		{
-			if (temp.getStadiumId() == olympiadStadiumId)
-			{
-				return temp;
-			}
-		}
-		return null;
-	}
-	
 }

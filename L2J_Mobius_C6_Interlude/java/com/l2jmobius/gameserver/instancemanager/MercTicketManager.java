@@ -44,10 +44,6 @@ public class MercTicketManager
 {
 	protected static Logger LOGGER = Logger.getLogger(MercTicketManager.class.getName());
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private final List<L2ItemInstance> _droppedTickets = new ArrayList<>();
 	
 	public static final MercTicketManager getInstance()
@@ -246,8 +242,7 @@ public class MercTicketManager
 		20,
 		20,
 		20,
-		20
-		// Schuttgart
+		20, // Schuttgart
 	};
 	private static final int[] MERCS_MAX_PER_CASTLE =
 	{
@@ -259,8 +254,7 @@ public class MercTicketManager
 		400, // Innadril
 		400, // Goddard
 		400, // Rune
-		400
-		// Schuttgart
+		400, // Schuttgart
 	};
 	
 	private static final int[] ITEM_IDS =
@@ -444,8 +438,7 @@ public class MercTicketManager
 		7937,
 		7938,
 		7939,
-		7940
-		// Schuttgart
+		7940, // Schuttgart
 	};
 	
 	private static final int[] NPC_IDS =
@@ -629,13 +622,9 @@ public class MercTicketManager
 		35036,
 		35037,
 		35038,
-		35039
-		// Schuttgart
+		35039, // Schuttgart
 	};
 	
-	// =========================================================
-	// Method - Public
-	// returns the castleId for the passed ticket item id
 	public int getTicketCastleId(int itemId)
 	{
 		if (((itemId >= ITEM_IDS[0]) && (itemId <= ITEM_IDS[9])) || ((itemId >= ITEM_IDS[10]) && (itemId <= ITEM_IDS[19])))
@@ -683,8 +672,6 @@ public class MercTicketManager
 		load();
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		// load merc tickets into the world
@@ -725,7 +712,6 @@ public class MercTicketManager
 					if (NPC_IDS[i] == npcId) // Find the index of the item used
 					{
 						// only handle tickets if a siege is not ongoing in this npc's castle
-						
 						if ((castle != null) && !castle.getSiege().getIsInProgress())
 						{
 							itemId = ITEM_IDS[i];
@@ -753,8 +739,6 @@ public class MercTicketManager
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	/**
 	 * Checks if the passed item has reached the limit of number of dropped tickets that this SPECIFIC item may have in its castle
 	 * @param itemId

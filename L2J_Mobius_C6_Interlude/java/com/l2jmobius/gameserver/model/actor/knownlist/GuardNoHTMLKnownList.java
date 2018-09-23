@@ -31,18 +31,11 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 {
 	private static Logger LOGGER = Logger.getLogger(GuardKnownList.class.getName());
 	
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public GuardNoHTMLKnownList(L2GuardNoHTMLInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -116,7 +109,6 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 		// Check if the _aggroList of the L2GuardInstance is Empty
 		if (getActiveChar().noTarget())
 		{
-			// removeAllKnownObjects();
 			// Set the L2GuardInstance to AI_INTENTION_IDLE
 			final L2CharacterAI ai = getActiveChar().getAI();
 			if (ai != null)
@@ -128,10 +120,6 @@ public class GuardNoHTMLKnownList extends AttackableKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2GuardNoHTMLInstance getActiveChar()
 	{

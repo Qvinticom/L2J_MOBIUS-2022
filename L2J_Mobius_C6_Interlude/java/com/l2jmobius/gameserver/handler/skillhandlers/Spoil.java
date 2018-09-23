@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.skills.Formulas;
  */
 public class Spoil implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(Spoil.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.SPOIL
@@ -67,7 +66,6 @@ public class Spoil implements ISkillHandler
 				continue;
 			}
 			
-			// SPOIL SYSTEM by Lbaldi
 			boolean spoil = false;
 			if (!target.isDead())
 			{

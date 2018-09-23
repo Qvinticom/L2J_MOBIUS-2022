@@ -32,11 +32,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.templates.item.L2Henna;
 
-/**
- * This class ...
- * @version $Revision$ $Date$
- */
-
 public class HennaTreeTable
 {
 	private static Logger LOGGER = Logger.getLogger(HennaTreeTable.class.getName());
@@ -60,9 +55,6 @@ public class HennaTreeTable
 			final PreparedStatement statement = con.prepareStatement("SELECT class_name, id, parent_id FROM class_list ORDER BY id");
 			final ResultSet classlist = statement.executeQuery();
 			List<L2HennaInstance> list;
-			
-			// int parentClassId;
-			// L2Henna henna;
 			
 			classlist: while (classlist.next())
 			{
@@ -141,5 +133,4 @@ public class HennaTreeTable
 	{
 		return _initialized;
 	}
-	
 }

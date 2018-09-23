@@ -37,9 +37,6 @@ public abstract class FaenorParser extends Parser
 	protected static FaenorInterface _bridge = FaenorInterface.getInstance();
 	protected final DateFormat DATE_FORMAT = new SimpleDateFormat("dd MMM yyyy", Locale.US);
 	
-	/*
-	 * UTILITY FUNCTIONS
-	 */
 	public static String attribute(Node node, String attributeName)
 	{
 		return attribute(node, attributeName, null);
@@ -125,10 +122,6 @@ public abstract class FaenorParser extends Parser
 		return "faenor.Faenor" + name + "Parser";
 	}
 	
-	/**
-	 * @param node
-	 * @param context
-	 */
 	@Override
 	public abstract void parseScript(Node node, ScriptContext context);
 }

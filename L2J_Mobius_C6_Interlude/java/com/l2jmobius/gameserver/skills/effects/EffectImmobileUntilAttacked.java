@@ -47,16 +47,12 @@ public class EffectImmobileUntilAttacked extends L2Effect
 		return false;
 	}
 	
-	/** Notify exited */
-	
 	@Override
 	public void onExit()
 	{
 		super.onExit();
 		getEffected().stopImmobileUntilAttacked(this);
 	}
-	
-	/** Notify started */
 	
 	@Override
 	public void onStart()

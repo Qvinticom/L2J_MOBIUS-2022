@@ -56,7 +56,6 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 	public L2SepulcherNpcInstance(int objectID, L2NpcTemplate template)
 	{
 		super(objectID, template);
-		// setShowSummonAnimation(true);
 		
 		if (_closeTask != null)
 		{
@@ -118,15 +117,12 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 			// Check if the player is attackable (without a forced attack)
 			if (isAutoAttackable(player))
 			{
-				// Send a Server->Client packet MyTargetSelected to the
-				// L2PcInstance player
-				// The player.getLevel() - getLevel() permit to display the
-				// correct color in the select window
+				// Send a Server->Client packet MyTargetSelected to the L2PcInstance player
+				// The player.getLevel() - getLevel() permit to display the correct color in the select window
 				final MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 				player.sendPacket(my);
 				
-				// Send a Server->Client packet StatusUpdate of the
-				// L2NpcInstance to the L2PcInstance to update its HP bar
+				// Send a Server->Client packet StatusUpdate of the L2NpcInstance to the L2PcInstance to update its HP bar
 				final StatusUpdate su = new StatusUpdate(getObjectId());
 				su.addAttribute(StatusUpdate.CUR_HP, (int) getStatus().getCurrentHp());
 				su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
@@ -134,42 +130,35 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 			}
 			else
 			{
-				// Send a Server->Client packet MyTargetSelected to the
-				// L2PcInstance player
+				// Send a Server->Client packet MyTargetSelected to the L2PcInstance player
 				final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 				player.sendPacket(my);
 			}
 			
-			// Send a Server->Client packet ValidateLocation to correct the
-			// L2NpcInstance position and heading on the client
+			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
 		else
 		{
-			// Check if the player is attackable (without a forced attack) and
-			// isn't dead
+			// Check if the player is attackable (without a forced attack) and isn't dead
 			if (isAutoAttackable(player) && !isAlikeDead())
 			{
 				// Check the height difference
-				if (Math.abs(player.getZ() - getZ()) < 400) // this max heigth
-				// difference might
-				// need some tweaking
+				if (Math.abs(player.getZ() - getZ()) < 400) // this max heigth difference might need some tweaking
 				{
 					// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 				}
 				else
 				{
-					// Send a Server->Client packet ActionFailed (target is out
-					// of attack range) to the L2PcInstance player
+					// Send a Server->Client packet ActionFailed (target is out of attack range) to the L2PcInstance player
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 			}
 			
 			if (!isAutoAttackable(player))
 			{
-				// Calculate the distance between the L2PcInstance and the
-				// L2NpcInstance
+				// Calculate the distance between the L2PcInstance and the L2NpcInstance
 				if (!canInteract(player))
 				{
 					// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
@@ -177,18 +166,14 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 				}
 				else
 				{
-					// Send a Server->Client packet SocialAction to the all
-					// L2PcInstance on the _knownPlayer of the L2NpcInstance
-					// to display a social action of the L2NpcInstance on their
-					// client
+					// Send a Server->Client packet SocialAction to the all L2PcInstance on the _knownPlayer of the L2NpcInstance to display a social action of the L2NpcInstance on their client
 					final SocialAction sa = new SocialAction(getObjectId(), Rnd.get(8));
 					broadcastPacket(sa);
 					
 					doAction(player);
 				}
 			}
-			// Send a Server->Client ActionFailed to the L2PcInstance in order
-			// to avoid that the client wait another packet
+			// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
@@ -453,7 +438,7 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 	{
 		if ((msg == null) || msg.isEmpty())
 		{
-			return;// wrong usage
+			return; // wrong usage
 		}
 		final Collection<L2PcInstance> knownPlayers = L2World.getInstance().getAllPlayers();
 		if ((knownPlayers == null) || knownPlayers.isEmpty())

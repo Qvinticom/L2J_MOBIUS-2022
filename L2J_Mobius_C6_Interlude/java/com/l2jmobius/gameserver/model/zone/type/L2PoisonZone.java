@@ -145,19 +145,8 @@ public class L2PoisonZone extends L2ZoneType
 		_enabled = val;
 	}
 	
-	/*
-	 * protected Collection getCharacterList() { return _characterList.values(); }
-	 */
-	
 	class ApplySkill implements Runnable
 	{
-		// private L2PoisonZone _poisonZone;
-		
-		// ApplySkill(/*L2PoisonZone zone*/)
-		// {
-		// _poisonZone = zone;
-		// }
-		
 		@Override
 		public void run()
 		{

@@ -27,11 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CharInfo;
 import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
 import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
-/**
- * This class ...
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
- */
-
 public final class Broadcast
 {
 	private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
@@ -88,9 +83,7 @@ public final class Broadcast
 				continue;
 			}
 			
-			/*
-			 * TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
-			 */
+			// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
 			if ((character instanceof L2PcInstance) && !player.isGM() && (((L2PcInstance) character).getAppearance().getInvisible() || ((L2PcInstance) character).inObserverMode()))
 			{
 				return;

@@ -43,7 +43,6 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 {
 	private static final Logger LOGGER = Logger.getLogger(L2GamePacketHandler.class.getName());
 	
-	// implementation
 	@Override
 	public ReceivablePacket<L2GameClient> handlePacket(ByteBuffer buf, L2GameClient client)
 	{
@@ -63,8 +62,6 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 				opcode2 = buf.getShort() & 0xffff;
 			}
 		}
-		
-		// LOGGER.warning("Packet: " + Integer.toHexString(opcode));
 		
 		ReceivablePacket<L2GameClient> msg = null;
 		GameClientState state = client.getState();
@@ -151,7 +148,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 						break;
 					}
 					// case 0x02:
-					// // Say ... not used any more ??
+					// Say ... not used any more ??
 					// break;
 					case 0x03:
 					{
@@ -180,7 +177,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x10:
 					{
-						// // RequestEquipItem ... not used any more, instead "useItem"
+						// RequestEquipItem ... not used any more, instead "useItem"
 						break;
 					}
 					case 0x11:
@@ -285,7 +282,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x28:
 					{
-						// // RequestDismissPledge
+						// RequestDismissPledge
 						break;
 					}
 					case 0x29:
@@ -389,7 +386,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					case 0x41:
 					{
 						msg = new MoveWithDelta();
-						// // MoveWithDelta ... unused ?? or only on ship ??
+						// MoveWithDelta ... unused ?? or only on ship ??
 						break;
 					}
 					case 0x42:
@@ -429,10 +426,9 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x49:
 					{
-						// // RequestSEKCustom
+						// RequestSEKCustom
 						break;
 					}
-					// THESE ARE NOW TEMPORARY DISABLED
 					case 0x4a:
 					{
 						msg = new StartRotating();
@@ -565,7 +561,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x6a:
 					{
-						// // Ride
+						// Ride
 						break;
 					}
 					case 0x6b: // send when talking to trainer npc, to show list of available skills
@@ -635,7 +631,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x78:
 					{
-						// // RequestPrivateStoreList
+						// RequestPrivateStoreList
 						break;
 					}
 					case 0x79:
@@ -645,7 +641,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x7a:
 					{
-						// // ReviveReply
+						// ReviveReply
 						break;
 					}
 					case 0x7b:
@@ -760,7 +756,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x92:
 					{
-						// // RequestPrivateStoreBuyManageCancel
+						// RequestPrivateStoreBuyManageCancel
 						break;
 					}
 					case 0x93:
@@ -775,7 +771,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x95:
 					{
-						// // RequestPrivateStoreBuyList
+						// RequestPrivateStoreBuyList
 						break;
 					}
 					case 0x96:
@@ -785,40 +781,37 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0x97:
 					{
-						// // SendTimeCheckPacket
+						// SendTimeCheckPacket
 						break;
 					}
 					case 0x98:
 					{
-						// // RequestStartAllianceWar
+						// RequestStartAllianceWar
 						break;
 					}
 					case 0x99:
 					{
-						// // ReplyStartAllianceWar
+						// ReplyStartAllianceWar
 						break;
 					}
 					case 0x9a:
 					{
-						// // RequestStopAllianceWar
+						// RequestStopAllianceWar
 						break;
 					}
 					case 0x9b:
 					{
-						// // ReplyStopAllianceWar
+						// ReplyStopAllianceWar
 						break;
 					}
 					case 0x9c:
 					{
-						// // RequestSurrenderAllianceWar
+						// RequestSurrenderAllianceWar
 						break;
 					}
 					case 0x9d:
 					{
 						msg = new RequestSkillCoolTime();
-						/*
-						 * if (Config.DEBUG) LOGGER.info("Request Skill Cool Time .. ignored"); msg = null;
-						 */
 						break;
 					}
 					case 0x9e:
@@ -838,7 +831,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0xa1:
 					{
-						// // RequestCastleSiegeInfo
+						// RequestCastleSiegeInfo
 						break;
 					}
 					case 0xa2:
@@ -863,7 +856,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0xa6:
 					{
-						// // RequestSetCastleSiegeTime
+						// RequestSetCastleSiegeTime
 						break;
 					}
 					case 0xa7:
@@ -873,7 +866,7 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0xa8:
 					{
-						// // NetPing
+						// NetPing
 						break;
 					}
 					case 0xaa:
@@ -1039,9 +1032,6 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					}
 					case 0xd0:
 					{
-						/*
-						 * int id2 = -1; if(buf.remaining() >= 2) { id2 = buf.getShort() & 0xffff; } else { LOGGER.warning("Client: " + client.toString() + " sent a 0xd0 without the second opcode."); break; }
-						 */
 						if (opcode2 == -1)
 						{
 							LOGGER.warning("Client: " + client + " sent a 0xd0 without the second opcode.");

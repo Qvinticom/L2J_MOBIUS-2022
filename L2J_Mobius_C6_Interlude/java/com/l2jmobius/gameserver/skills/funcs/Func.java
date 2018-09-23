@@ -78,5 +78,4 @@ public abstract class Func
 	 * @param env
 	 */
 	public abstract void calc(Env env);
-	
 }

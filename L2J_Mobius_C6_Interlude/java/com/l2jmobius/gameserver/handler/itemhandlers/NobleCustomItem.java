@@ -25,9 +25,13 @@ import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 
 public class NobleCustomItem implements IItemHandler
 {
+	private static final int ITEM_IDS[] =
+	{
+		Config.NOOBLE_CUSTOM_ITEM_ID
+	};
+	
 	public NobleCustomItem()
 	{
-		// null
 	}
 	
 	@Override
@@ -68,10 +72,4 @@ public class NobleCustomItem implements IItemHandler
 	{
 		return ITEM_IDS;
 	}
-	
-	private static final int ITEM_IDS[] =
-	{
-		Config.NOOBLE_CUSTOM_ITEM_ID
-	};
-	
 }

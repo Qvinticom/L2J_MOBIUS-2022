@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2FestivalMonsterInstance extends L2MonsterInstance
 {
-	/** The _bonus multiplier. */
 	protected int _bonusMultiplier = 1;
 	
 	/**

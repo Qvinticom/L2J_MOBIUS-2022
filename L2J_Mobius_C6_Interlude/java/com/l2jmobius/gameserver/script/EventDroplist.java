@@ -26,8 +26,6 @@ import java.util.List;
  */
 public class EventDroplist
 {
-	// private static Logger LOGGER = Logger.getLogger(EventDroplist.class);
-	
 	private static EventDroplist _instance;
 	
 	/** The table containing all DataDrop object */
@@ -97,17 +95,14 @@ public class EventDroplist
 	public List<DateDrop> getAllDrops()
 	{
 		final List<DateDrop> list = new ArrayList<>();
-		
 		for (DateDrop drop : _allNpcDateDrops)
 		{
 			Date currentDate = new Date();
-			// LOGGER.info("From: "+drop.from+" To: "+drop.to+" Now: "+ currentDate);
 			if (drop.dateRange.isWithinRange(currentDate))
 			{
 				list.add(drop);
 			}
 		}
-		
 		return list;
 	}
 }

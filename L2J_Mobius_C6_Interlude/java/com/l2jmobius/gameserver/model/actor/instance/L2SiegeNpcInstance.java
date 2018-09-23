@@ -23,14 +23,8 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision$ $Date$
- */
 public class L2SiegeNpcInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2SiegeNpcInstance.class);
-	
 	public L2SiegeNpcInstance(int objectID, L2NpcTemplate template)
 	{
 		super(objectID, template);
@@ -59,8 +53,8 @@ public class L2SiegeNpcInstance extends L2FolkInstance
 			player.sendPacket(my);
 			
 			player.sendPacket(new ValidateLocation(this));
-		} else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		}
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

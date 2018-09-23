@@ -19,13 +19,6 @@ package com.l2jmobius.gameserver.handler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 
-/**
- * Mother class of all itemHandlers.<BR>
- * <BR>
- * an IItemHandler implementation has to be stateless
- * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:09 $
- */
-
 public interface IItemHandler
 {
 	/**

@@ -30,11 +30,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 /**
  * @author programmos, scoria dev
  */
-
 public class CombatFlag
 {
-	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class);
-	
 	protected L2PcInstance _player = null;
 	public int playerId = 0;
 	private L2ItemInstance _item = null;
@@ -44,16 +41,9 @@ public class CombatFlag
 	
 	private final int _itemId;
 	
-	// private int _heading;
-	// private int _fortId;
-	
-	// =========================================================
-	// Constructor
-	public CombatFlag(/* int fort_id, */final int x, int y, int z, int heading, int item_id)
+	public CombatFlag(final int x, int y, int z, int heading, int item_id)
 	{
-		// _fortId = fort_id;
 		_location = new Location(x, y, z, heading);
-		// _heading = heading;
 		_itemId = item_id;
 	}
 	
@@ -82,8 +72,7 @@ public class CombatFlag
 	
 	public void activate(L2PcInstance player, L2ItemInstance item)
 	{
-		// if the player is mounted, attempt to unmount first. Only allow picking up
-		// the comabt flag if unmounting is successful.
+		// if the player is mounted, attempt to unmount first. Only allow picking up the comabt flag if unmounting is successful.
 		if (player.isMounted())
 		{
 			// TODO: dismount
@@ -125,13 +114,11 @@ public class CombatFlag
 		
 		// Refresh player stats
 		_player.broadcastUserInfo();
-		// _player.setCombatFlagEquipped(true);
 	}
 	
 	public void dropIt()
 	{
 		// Reset player stats
-		// _player.setCombatFlagEquipped(false);
 		removeSkill();
 		_player.destroyItem("DieDrop", _item, null, false);
 		_item = null;
@@ -153,5 +140,4 @@ public class CombatFlag
 		_player.removeSkill(SkillTable.getInstance().getInfo(3358, 1), false);
 		_player.sendSkillList();
 	}
-	
 }

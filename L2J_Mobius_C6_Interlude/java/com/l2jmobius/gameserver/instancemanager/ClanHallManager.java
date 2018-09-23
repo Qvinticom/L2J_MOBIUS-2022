@@ -60,7 +60,6 @@ public class ClanHallManager
 		load();
 	}
 	
-	/** Load All Clan Hall */
 	private final void load()
 	{
 		LOGGER.info("Initializing ClanHallManager");

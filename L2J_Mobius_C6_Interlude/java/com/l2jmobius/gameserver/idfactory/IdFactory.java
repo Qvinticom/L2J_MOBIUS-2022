@@ -196,10 +196,6 @@ public abstract class IdFactory
 		}
 	}
 	
-	/**
-	 * @return
-	 * @throws SQLException
-	 */
 	protected int[] extractUsedObjectIDTable() throws SQLException
 	{
 		try (Connection con = DatabaseFactory.getConnection())
@@ -219,7 +215,6 @@ public abstract class IdFactory
 			s.executeUpdate("insert into temporaryObjectTable (object_id) select obj_id from characters");
 			s.executeUpdate("insert into temporaryObjectTable (object_id) select object_id from items");
 			s.executeUpdate("insert into temporaryObjectTable (object_id) select clan_id from clan_data");
-			// s.executeUpdate("insert into temporaryObjectTable (object_id) select crest_id from clan_data where crest_id > 0");
 			s.executeUpdate("insert into temporaryObjectTable (object_id) select object_id from itemsonground");
 			
 			ResultSet result = s.executeQuery("select count(object_id) from temporaryObjectTable");
@@ -227,7 +222,6 @@ public abstract class IdFactory
 			result.next();
 			final int size = result.getInt(1);
 			final int[] tmp_obj_ids = new int[size];
-			// LOGGER.info("tmp table size: " + tmp_obj_ids.length);
 			result.close();
 			
 			result = s.executeQuery("select object_id from temporaryObjectTable ORDER BY object_id");

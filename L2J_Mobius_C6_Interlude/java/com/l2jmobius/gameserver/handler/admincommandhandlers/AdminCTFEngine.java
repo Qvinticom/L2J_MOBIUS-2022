@@ -112,11 +112,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		final StringTokenizer st = new StringTokenizer(command);
 		
 		final CommandEnum comm = CommandEnum.valueOf(st.nextToken());
@@ -743,7 +738,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		replyMSG.append("<center><font color=\"LEVEL\">[CTF Engine]</font></center><br><br><br>");
 		
 		replyMSG.append("<table><tr>");
-		// if(!CTF._joining && !CTF._started && !CTF._teleport)
 		if (!CTF.is_inProgress())
 		{
 			replyMSG.append("<td width=\"100\"><button value=\"Edit\" action=\"bypass -h admin_ctf_edit\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
@@ -816,7 +810,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 			replyMSG.append("<button value=\"Tele->Flag\" action=\"bypass -h admin_ctf_tele_flag " + team + "\" width=90 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\">");
 			replyMSG.append("</td></tr><tr><td>");
 			replyMSG.append(CTF._flagsX.get(CTF._teams.indexOf(team)) + ", " + CTF._flagsY.get(CTF._teams.indexOf(team)) + ", " + CTF._flagsZ.get(CTF._teams.indexOf(team)) + "</td></tr>");
-			// if(!CTF._joining && !CTF._started && !CTF._teleport)
 			if (!CTF.is_inProgress())
 			{
 				replyMSG.append("<tr><td width=\"60\"><button value=\"Remove\" action=\"bypass -h admin_ctf_team_remove " + team + "\" width=50 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr><tr></tr>");
@@ -825,7 +818,6 @@ public class AdminCTFEngine implements IAdminCommandHandler
 		
 		replyMSG.append("</table></center>");
 		
-		// if(!CTF._joining && !CTF._started && !CTF._teleport)
 		if (!CTF.is_inProgress())
 		{
 			if (CTF.checkStartJoinOk())

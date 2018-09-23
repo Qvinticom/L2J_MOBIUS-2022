@@ -99,7 +99,7 @@ public final class QuestState
 		_questName = quest.getName();
 		_player = player;
 		
-		// Save the state of the quest for the player in the player's list of quest onwed
+		// Save the state of the quest for the player in the player's list of quest owned
 		_player.setQuestState(this);
 		
 		// set the state of the quest
@@ -285,9 +285,7 @@ public final class QuestState
 			return;
 		}
 		
-		// cond 0 and 1 do not need completedStateFlags. Also, if cond > 1, the 1st step must
-		// always exist (i.e. it can never be skipped). So if cond is 2, we can still safely
-		// assume no steps have been skipped.
+		// cond 0 and 1 do not need completedStateFlags. Also, if cond > 1, the 1st step must always exist (i.e. it can never be skipped). So if cond is 2, we can still safely assume no steps have been skipped.
 		// Finally, more than 31 steps CANNOT be supported in any way with skipping.
 		if ((cond < 3) || (cond > 31))
 		{
@@ -301,20 +299,15 @@ public final class QuestState
 		// case 1: No steps have been skipped so far...
 		if (completedStateFlags == 0)
 		{
-			// check if this step also doesn't skip anything. If so, no further work is needed
-			// also, in this case, no work is needed if the state is being reset to a smaller value
-			// in those cases, skip forward to informing the client about the change...
-			
+			// Check if this step also doesn't skip anything. If so, no further work is needed also, in this case, no work is needed if the state is being reset to a smaller value in those cases, skip forward to informing the client about the change...
 			// ELSE, if we just now skipped for the first time...prepare the flags!!!
 			if (cond > (old + 1))
 			{
 				// set the most significant bit to 1 (indicates that there exist skipped states)
-				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter
-				// what the cond says)
+				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter what the cond says)
 				completedStateFlags = 0x80000001;
 				
-				// since no flag had been skipped until now, the least significant bits must all
-				// be set to 1, up until "old" number of bits.
+				// since no flag had been skipped until now, the least significant bits must all be set to 1, up until "old" number of bits.
 				completedStateFlags |= (1 << old) - 1;
 				
 				// now, just set the bit corresponding to the passed cond to 1 (current step)
@@ -323,8 +316,7 @@ public final class QuestState
 			}
 		}
 		// case 2: There were exist previously skipped steps
-		else // if this is a push back to a previous step, clear all completion flags ahead
-		if (cond < old)
+		else if (cond < old) // if this is a push back to a previous step, clear all completion flags ahead
 		{
 			completedStateFlags &= (1 << cond) - 1; // note, this also unsets the flag indicating that there exist skips
 			
@@ -336,14 +328,12 @@ public final class QuestState
 			else
 			{
 				// set the most significant bit back to 1 again, to correctly indicate that this skips states.
-				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter
-				// what the cond says)
+				// also, ensure that the least significant bit is an 1 (the first step is never skipped, no matter what the cond says)
 				completedStateFlags |= 0x80000001;
 				set("__compltdStateFlags", String.valueOf(completedStateFlags));
 			}
 		}
-		// if this moves forward, it changes nothing on previously skipped steps...so just mark this
-		// state and we are done
+		// if this moves forward, it changes nothing on previously skipped steps...so just mark this state and we are done
 		else
 		{
 			completedStateFlags |= 1 << (cond - 1);

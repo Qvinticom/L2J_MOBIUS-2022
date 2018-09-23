@@ -164,16 +164,6 @@ final class DocumentItem extends DocumentBase
 		Node first = n.getFirstChild();
 		for (n = first; n != null; n = n.getNextSibling())
 		{
-			// No tables in item xmls.
-			// if ("table".equals(n.getNodeName()))
-			// {
-			// if (_currentItem.item != null)
-			// {
-			// throw new IllegalStateException("Item created but table node found! Item " + itemId);
-			// }
-			// parseTable(n);
-			// }
-			// else
 			if ("set".equals(n.getNodeName()))
 			{
 				if (_currentItem.item != null)
@@ -182,12 +172,6 @@ final class DocumentItem extends DocumentBase
 				}
 				parseBeanSet(n, _currentItem.set, 1);
 			}
-			// Handled bellow, after item type is set.
-			// else if ("for".equals(n.getNodeName()))
-			// {
-			// makeItem();
-			// parseTemplate(n, _currentItem.item);
-			// }
 		}
 		
 		if (className.equals("Weapon"))

@@ -74,7 +74,6 @@ public class AutoAnnouncementHandler
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			// ignore
 		}
 	}
 	

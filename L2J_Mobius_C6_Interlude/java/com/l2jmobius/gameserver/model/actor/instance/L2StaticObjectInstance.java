@@ -29,29 +29,17 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ShowTownMap;
 
 /**
- * GODSON ROX!.
+ * @author GODSON
  */
 public class L2StaticObjectInstance extends L2Object
 {
-	/** The LOGGER. */
 	private static Logger LOGGER = Logger.getLogger(L2StaticObjectInstance.class.getName());
 	
-	/** The interaction distance of the L2StaticObjectInstance. */
 	public static final int INTERACTION_DISTANCE = 150;
-	
-	/** The _static object id. */
 	private int _staticObjectId;
-	
-	/** The _type. */
 	private int _type = -1; // 0 - map signs, 1 - throne , 2 - arena signs
-	
-	/** The _x. */
 	private int _x;
-	
-	/** The _y. */
 	private int _y;
-	
-	/** The _texture. */
 	private String _texture;
 	
 	/**
@@ -194,10 +182,6 @@ public class L2StaticObjectInstance extends L2Object
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAttackable()
-	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{

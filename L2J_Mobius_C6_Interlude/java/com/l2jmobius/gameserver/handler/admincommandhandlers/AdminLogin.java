@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminLogin implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminDelete.class);
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_server_gm_only",
@@ -43,18 +41,9 @@ public class AdminLogin implements IAdminCommandHandler
 		"admin_server_login"
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#useAdminCommand(java.lang.String, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (command.equals("admin_server_gm_only"))
 		{
 			gmOnly();
@@ -163,14 +152,9 @@ public class AdminLogin implements IAdminCommandHandler
 		Config.SERVER_GMONLY = true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{
 		return ADMIN_COMMANDS;
 	}
-	
 }

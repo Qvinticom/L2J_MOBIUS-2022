@@ -35,8 +35,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminFortSiege implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminFortSiege.class);
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_fortsiege",
@@ -56,11 +54,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		final StringTokenizer st = new StringTokenizer(command, " ");
 		command = st.nextToken(); // Get actual command
 		
@@ -71,14 +64,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			fort = FortManager.getInstance().getFort(st.nextToken());
 		}
-		
-		// Get fort
-		// String val = "";
-		//
-		// if(st.hasMoreTokens())
-		// {
-		// val = st.nextToken();
-		// }
 		
 		// No fort specified
 		if ((fort == null) || (fort.getFortId() < 0))
@@ -117,19 +102,6 @@ public class AdminFortSiege implements IAdminCommandHandler
 					fort.getSiege().registerDefender(player, true);
 				}
 			}
-			// FIXME
-			// else if (command.equalsIgnoreCase("admin_add_guard"))
-			// {
-			// try
-			// {
-			// int npcId = Integer.parseInt(val);
-			// fort.getSiege().getFortSiegeGuardManager().addFortSiegeGuard(activeChar, npcId);
-			// }
-			// catch (Exception e)
-			// {
-			// BuilderUtil.sendSysMessage(activeChar, "Usage: //add_guard npcId");
-			// }
-			// }
 			else if (command.equalsIgnoreCase("admin_clear_fortsiege_list"))
 			{
 				fort.getSiege().clearSiegeClan();

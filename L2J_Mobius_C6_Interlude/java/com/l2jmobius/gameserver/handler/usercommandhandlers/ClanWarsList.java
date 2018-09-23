@@ -40,10 +40,6 @@ public class ClanWarsList implements IUserCommandHandler
 		90
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useUserCommand(int id, L2PcInstance activeChar)
 	{
@@ -65,24 +61,21 @@ public class ClanWarsList implements IUserCommandHandler
 		{
 			PreparedStatement statement;
 			
-			if (id == 88)
+			if (id == 88) // Attack List
 			{
-				// Attack List
 				activeChar.sendPacket(SystemMessageId.CLANS_YOU_DECLARED_WAR_ON);
 				statement = con.prepareStatement("select clan_name,clan_id,ally_id,ally_name from clan_data,clan_wars where clan1=? and clan_id=clan2 and clan2 not in (select clan1 from clan_wars where clan2=?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, clan.getClanId());
 			}
-			else if (id == 89)
+			else if (id == 89) // Under Attack List
 			{
-				// Under Attack List
 				activeChar.sendPacket(SystemMessageId.CLANS_THAT_HAVE_DECLARED_WAR_ON_YOU);
 				statement = con.prepareStatement("select clan_name,clan_id,ally_id,ally_name from clan_data,clan_wars where clan2=? and clan_id=clan1 and clan1 not in (select clan2 from clan_wars where clan1=?)");
 				statement.setInt(1, clan.getClanId());
 				statement.setInt(2, clan.getClanId());
 			}
-			else
-			// ID = 90
+			else // ID = 90
 			{
 				// War List
 				activeChar.sendPacket(SystemMessageId.WAR_LIST);
@@ -97,16 +90,14 @@ public class ClanWarsList implements IUserCommandHandler
 				final String clanName = rset.getString("clan_name");
 				final int ally_id = rset.getInt("ally_id");
 				
-				if (ally_id > 0)
+				if (ally_id > 0) // Target With Ally
 				{
-					// Target With Ally
 					sm = new SystemMessage(SystemMessageId.S1_S2_ALLIANCE);
 					sm.addString(clanName);
 					sm.addString(rset.getString("ally_name"));
 				}
-				else
+				else // Target Without Ally
 				{
-					// Target Without Ally
 					sm = new SystemMessage(SystemMessageId.S1_NO_ALLI_EXISTS);
 					sm.addString(clanName);
 				}
@@ -126,10 +117,6 @@ public class ClanWarsList implements IUserCommandHandler
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

@@ -42,8 +42,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public class L2ManorManagerInstance extends L2MerchantInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2ManorManagerInstance.class);
-	
 	public L2ManorManagerInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);
@@ -71,8 +69,7 @@ public class L2ManorManagerInstance extends L2MerchantInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -136,9 +133,6 @@ public class L2ManorManagerInstance extends L2MerchantInstance
 		
 		if (command.startsWith("manor_menu_select"))
 		{
-			// input string format:
-			// manor_menu_select?ask=X&state=Y&time=X
-			
 			if (CastleManorManager.getInstance().isUnderMaintenance())
 			{
 				player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -164,7 +158,7 @@ public class L2ManorManagerInstance extends L2MerchantInstance
 			}
 			
 			switch (ask)
-			{ // Main action
+			{
 				case 1: // Seed purchase
 				{
 					if (castleId != getCastle().getCastleId())
@@ -263,9 +257,7 @@ public class L2ManorManagerInstance extends L2MerchantInstance
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
-		return "data/html/manormanager/manager.htm"; // Used only in parent method
-		// to return from "Territory status"
-		// to initial screen.
+		return "data/html/manormanager/manager.htm"; // Used only in parent method to return from "Territory status" to initial screen.
 	}
 	
 	private void showMessageWindow(L2PcInstance player, String filename)

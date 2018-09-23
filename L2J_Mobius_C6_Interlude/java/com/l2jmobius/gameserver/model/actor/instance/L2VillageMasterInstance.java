@@ -50,14 +50,8 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class ...
- * @version $Revision: 1.4.2.3.2.8 $ $Date: 2005/03/29 23:15:15 $
- */
 public final class L2VillageMasterInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2VillageMasterInstance.class);
-	
 	/**
 	 * Instantiates a new l2 village master instance.
 	 * @param objectId the object id
@@ -68,10 +62,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -335,9 +325,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 				}
 				case 4: // Add Subclass - Action (Subclass 4 x[x])
 				{
-					/*
-					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice.
-					 */
+					// If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice.
 					// Fix exploit stuck subclass and skills
 					if (player.isLearningSkill() || player.isLocked())
 					{
@@ -388,10 +376,8 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 							}
 						}
 					}
-					/*
-					 * If quest checking is enabled, verify if the character has completed the Mimir's Elixir (Path to Subclass) and Fate's Whisper (A Grade Weapon) quests by checking for instances of their unique reward items. If they both exist, remove both unique items and continue with adding
-					 * the sub-class.
-					 */
+					// If quest checking is enabled, verify if the character has completed the Mimir's Elixir (Path to Subclass) and Fate's Whisper (A Grade Weapon) quests by checking for instances of their unique reward items.
+					// If they both exist, remove both unique items and continue with adding the sub-class.
 					if (!Config.ALT_GAME_SUBCLASS_WITHOUT_QUESTS)
 					{
 						QuestState qs = player.getQuestState("235_MimirsElixir");
@@ -436,9 +422,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 				}
 				case 5: // Change Class - Action
 				{
-					/*
-					 * If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice. Note: paramOne = classIndex
-					 */
+					// If the character is less than level 75 on any of their previously chosen classes then disallow them to change to their most recently added sub-class choice. Note: paramOne = classIndex
 					// Fix exploit stuck subclass and skills
 					if (player.isLearningSkill() || player.isLocked())
 					{
@@ -494,9 +478,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 				}
 				case 7: // Cancel/Change Subclass - Action
 				{
-					/*
-					 * Warning: the information about this subclass will be removed from the subclass list even if false!
-					 */
+					// Warning: the information about this subclass will be removed from the subclass list even if false!
 					// Fix exploit stuck subclass and skills
 					if (player.isLearningSkill() || player.isLocked())
 					{
@@ -534,9 +516,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 					}
 					else
 					{
-						/*
-						 * This isn't good! modifySubClass() removed subclass from memory we must update _classIndex! Else IndexOutOfBoundsException can turn up some place down the line along with other seemingly unrelated problems.
-						 */
+						// This isn't good! modifySubClass() removed subclass from memory we must update _classIndex! Else IndexOutOfBoundsException can turn up some place down the line along with other seemingly unrelated problems.
 						player.setActiveClass(0); // Also updates _classIndex plus switching _classid to baseclass.
 						// Check player skills
 						if (Config.CHECK_SKILLS_ON_ENTER && !Config.ALT_GAME_SKILL_LEARN)
@@ -553,8 +533,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 			}
 			content.append("</body></html>");
 			
-			// If the content is greater than for a basic blank page,
-			// then assume no external HTML file was assigned.
+			// If the content is greater than for a basic blank page, then assume no external HTML file was assigned.
 			if (content.length() > 26)
 			{
 				html.setHtml(content.toString());
@@ -564,16 +543,11 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 		}
 		else
 		{
-			// this class dont know any other commands, let forward
-			// the command to the parent class
+			// this class dont know any other commands, let forward the command to the parent class
 			super.onBypassFeedback(player, command);
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
@@ -591,7 +565,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 		return "data/html/villagemaster/" + pom + ".htm";
 	}
 	
-	// Private stuff
 	/**
 	 * Dissolve clan.
 	 * @param player the player
@@ -761,7 +734,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 			}
 		}
 		
-		// clan.setNewLeader(member);
 		clan.setNewLeader(member, player);
 	}
 	
@@ -1053,9 +1025,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 				
 				if ((npcRace == PlayerRace.Human) || (npcRace == PlayerRace.LightElf))
 				{
-					// If the master is human or light elf, ensure that fighter-type
-					// masters only teach fighter classes, and priest-type masters
-					// only teach priest classes etc.
+					// If the master is human or light elf, ensure that fighter-type masters only teach fighter classes, and priest-type masters only teach priest classes etc.
 					if (!availSub.isOfType(npcTeachType))
 					{
 						availSubs.remove(availSub);
@@ -1065,9 +1035,7 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 						availSubs.remove(availSub);
 					}
 				}
-				else // If the master is not human and not light elf,
-				// then remove any classes not of the same race as the master.
-				if ((npcRace != PlayerRace.Human) && (npcRace != PlayerRace.LightElf) && !availSub.isOfRace(npcRace))
+				else if ((npcRace != PlayerRace.Human) && (npcRace != PlayerRace.LightElf) && !availSub.isOfRace(npcRace)) // If the master is not human and not light elf, then remove any classes not of the same race as the master.
 				{
 					availSubs.remove(availSub);
 				}

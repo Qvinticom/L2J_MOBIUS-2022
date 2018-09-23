@@ -29,7 +29,6 @@ public class DuelManager
 {
 	private static final Logger LOGGER = Logger.getLogger(DuelManager.class.getName());
 	
-	// =========================================================
 	private static DuelManager _instance;
 	
 	public static final DuelManager getInstance()
@@ -41,21 +40,14 @@ public class DuelManager
 		return _instance;
 	}
 	
-	// =========================================================
-	// Data Field
 	private final List<Duel> _duels;
 	private int _currentDuelId = 0x90;
 	
-	// =========================================================
-	// Constructor
 	private DuelManager()
 	{
 		LOGGER.info("Initializing DuelManager");
 		_duels = new ArrayList<>();
 	}
-	
-	// =========================================================
-	// Method - Private
 	
 	private int getNextDuelId()
 	{
@@ -80,9 +72,6 @@ public class DuelManager
 		}
 		return null;
 	}
-	
-	// =========================================================
-	// Method - Public
 	
 	public void addDuel(L2PcInstance playerA, L2PcInstance playerB, int partyDuel)
 	{

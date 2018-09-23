@@ -61,7 +61,6 @@ public final class EffectSignet extends L2Effect
 	@Override
 	public boolean onActionTime()
 	{
-		// if (getCount() == getTotalCount() - 1) return true; // do nothing first time
 		if (_skill == null)
 		{
 			return true;
@@ -95,7 +94,8 @@ public final class EffectSignet extends L2Effect
 						continue;
 					}
 				}
-			} else if (cha instanceof L2PcInstance)
+			}
+			else if (cha instanceof L2PcInstance)
 			{
 				if (((cha.getParty() != null) && (caster.getParty() != null) && cha.getParty().equals(caster.getParty())) || ((((L2PcInstance) cha).getClanId() > 0) && (caster.getClanId() > 0) && (((L2PcInstance) cha).getClanId() == caster.getClanId())) || ((((L2PcInstance) cha).getAllyId() > 0) && (caster.getAllyId() > 0) && (((L2PcInstance) cha).getAllyId() == caster.getAllyId())))
 				{

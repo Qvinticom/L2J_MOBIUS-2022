@@ -60,7 +60,6 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		// if(activeChar._inEventTvT && TvT._started && !Config.TVT_ALLOW_SUMMON)
 		if (activeChar._inEventTvT && TvT.is_started() && !Config.TVT_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -68,7 +67,6 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		// if(activeChar._inEventDM && DM._started && !Config.DM_ALLOW_SUMMON)
 		if (activeChar._inEventDM && DM.is_started() && !Config.DM_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -76,7 +74,6 @@ public class SummonItems implements IItemHandler
 			return;
 		}
 		
-		// if(activeChar._inEventCTF && CTF._started && !Config.CTF_ALLOW_SUMMON)
 		if (activeChar._inEventCTF && CTF.is_started() && !Config.CTF_ALLOW_SUMMON)
 		{
 			final ActionFailed af = ActionFailed.STATIC_PACKET;
@@ -150,8 +147,6 @@ public class SummonItems implements IItemHandler
 				try
 				{
 					L2Spawn spawn = new L2Spawn(npcTemplate);
-					// if(spawn == null)
-					// return;
 					spawn.setId(IdFactory.getInstance().getNextId());
 					spawn.setX(activeChar.getX());
 					spawn.setY(activeChar.getY());

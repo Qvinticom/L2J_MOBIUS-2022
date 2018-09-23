@@ -200,8 +200,6 @@ public class Olympiad
 		catch (Exception e)
 		{
 			LOGGER.warning(OLYMPIAD_DATA_FILE + " cannot be loaded... It will be created on next save or server shutdown..");
-			// LOGGER.warning( "Olympiad System: Error loading olympiad properties: ", e);
-			// return;
 		}
 		finally
 		{
@@ -458,10 +456,6 @@ public class Olympiad
 	{
 		SystemMessage sm;
 		
-		/*
-		 * if (_compStarted) { noble.sendMessage("Cant Register whilst competition is under way"); return false; }
-		 */
-		
 		if (!_inCompPeriod)
 		{
 			sm = new SystemMessage(SystemMessageId.THE_OLYMPIAD_GAME_IS_NOT_CURRENTLY_IN_PROGRESS);
@@ -698,9 +692,6 @@ public class Olympiad
 	public boolean unRegisterNoble(L2PcInstance noble)
 	{
 		SystemMessage sm;
-		/*
-		 * if (_compStarted) { noble.sendMessage("Cant Unregister whilst competition is under way"); return false; }
-		 */
 		
 		if (!_inCompPeriod)
 		{
@@ -788,8 +779,6 @@ public class Olympiad
 	
 	private void updateCompStatus()
 	{
-		// _compStarted = false;
-		
 		synchronized (this)
 		{
 			final long milliToStart = getMillisToCompBegin();
@@ -858,9 +847,7 @@ public class Olympiad
 	
 	private long getMillisToOlympiadEnd()
 	{
-		// if (_olympiadEnd > Calendar.getInstance().getTimeInMillis())
 		return (_olympiadEnd - Calendar.getInstance().getTimeInMillis());
-		// return 10;
 	}
 	
 	public void manualSelectHeroes()
@@ -979,9 +966,7 @@ public class Olympiad
 	
 	protected long getMillisToCompEnd()
 	{
-		// if (_compEnd > Calendar.getInstance().getTimeInMillis())
 		return (_compEnd - Calendar.getInstance().getTimeInMillis());
-		// return 10;
 	}
 	
 	private long getMillisToWeekChange()
@@ -1261,13 +1246,11 @@ public class Olympiad
 			gc.setTimeInMillis(_nextWeeklyChange);
 			
 			OlympiadProperties.setProperty("NextWeeklyChange_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
-			// LOGGER.info("NextPoints: "+DateFormat.getInstance().format(gc.getTime()));
 			
 			gc.clear();
 			gc.setTimeInMillis(_olympiadEnd);
 			
 			OlympiadProperties.setProperty("OlympiadEnd_DateFormat", DateFormat.getDateTimeInstance().format(gc.getTime()));
-			// LOGGER.info("NextOlyDate: "+DateFormat.getInstance().format(gc.getTime()));
 			
 			OlympiadProperties.store(fos, "Olympiad Properties");
 		}
@@ -1370,8 +1353,6 @@ public class Olympiad
 	
 	public List<String> getClassLeaderBoard(int classId)
 	{
-		// if (_period != 1) return;
-		
 		final List<String> names = new ArrayList<>();
 		
 		PreparedStatement statement = null;

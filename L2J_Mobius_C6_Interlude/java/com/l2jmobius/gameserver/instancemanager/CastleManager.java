@@ -42,12 +42,8 @@ public class CastleManager
 		return SingletonHolder._instance;
 	}
 	
-	// =========================================================
-	// Data Field
 	private List<Castle> _castles;
 	
-	// =========================================================
-	// Constructor
 	private static final int _castleCirclets[] =
 	{
 		0,
@@ -66,9 +62,6 @@ public class CastleManager
 	{
 		load();
 	}
-	
-	// =========================================================
-	// Method - Public
 	
 	public final int findNearestCastlesIndex(L2Object obj)
 	{
@@ -99,8 +92,6 @@ public class CastleManager
 		return index;
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		LOGGER.info("Initializing CastleManager");
@@ -124,9 +115,6 @@ public class CastleManager
 			e.printStackTrace();
 		}
 	}
-	
-	// =========================================================
-	// Property - Public
 	
 	public final Castle getCastleById(int castleId)
 	{
@@ -300,7 +288,6 @@ public class CastleManager
 		}
 	}
 	
-	// TODO:
 	// added: remove clan cirlet for clan leaders
 	public void removeCirclet(L2ClanMember member, int castleId)
 	{
@@ -349,7 +336,6 @@ public class CastleManager
 					// continue removing offline
 				}
 			}
-			// else offline-player circlet removal
 			PreparedStatement statement = null;
 			try (Connection con = DatabaseFactory.getConnection())
 			{

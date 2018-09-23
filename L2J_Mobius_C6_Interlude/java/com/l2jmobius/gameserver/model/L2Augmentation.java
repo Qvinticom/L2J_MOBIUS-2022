@@ -32,7 +32,7 @@ import com.l2jmobius.gameserver.skills.funcs.FuncAdd;
 import com.l2jmobius.gameserver.skills.funcs.LambdaConst;
 
 /**
- * Used to store an augmentation and its boni
+ * Used to store an augmentation and its bonus
  * @author durgus
  */
 public final class L2Augmentation
@@ -41,14 +41,14 @@ public final class L2Augmentation
 	
 	private final L2ItemInstance _item;
 	private int _effectsId = 0;
-	private augmentationStatBoni _boni = null;
+	private augmentationStatBonus _bonus = null;
 	private L2Skill _skill = null;
 	
 	public L2Augmentation(L2ItemInstance item, int effects, L2Skill skill, boolean save)
 	{
 		_item = item;
 		_effectsId = effects;
-		_boni = new augmentationStatBoni(_effectsId);
+		_bonus = new augmentationStatBonus(_effectsId);
 		_skill = skill;
 		
 		// write to DB if save is true
@@ -63,16 +63,13 @@ public final class L2Augmentation
 		this(item, effects, SkillTable.getInstance().getInfo(skill, skillLevel), save);
 	}
 	
-	// =========================================================
-	// Nested Class
-	
-	public class augmentationStatBoni
+	public class augmentationStatBonus
 	{
 		private final Stats _stats[];
 		private final float _values[];
 		private boolean _active;
 		
-		public augmentationStatBoni(int augmentationId)
+		public augmentationStatBonus(int augmentationId)
 		{
 			_active = false;
 			List<AugmentationData.AugStat> as = AugmentationData.getInstance().getAugStatsById(augmentationId);
@@ -89,9 +86,9 @@ public final class L2Augmentation
 			}
 		}
 		
-		public void applyBoni(L2PcInstance player)
+		public void applyBonus(L2PcInstance player)
 		{
-			// make sure the boni are not applyed twice..
+			// make sure the bonus are not applyed twice..
 			if (_active)
 			{
 				return;
@@ -105,9 +102,9 @@ public final class L2Augmentation
 			_active = true;
 		}
 		
-		public void removeBoni(L2PcInstance player)
+		public void removeBonus(L2PcInstance player)
 		{
-			// make sure the boni is not removed twice
+			// make sure the bonus is not removed twice
 			if (!_active)
 			{
 				return;
@@ -183,12 +180,12 @@ public final class L2Augmentation
 	}
 	
 	/**
-	 * Applys the boni to the player.
+	 * Applies the bonus to the player.
 	 * @param player
 	 */
-	public void applyBoni(L2PcInstance player)
+	public void applyBonus(L2PcInstance player)
 	{
-		_boni.applyBoni(player);
+		_bonus.applyBonus(player);
 		
 		// add the skill if any
 		if (_skill != null)
@@ -207,12 +204,12 @@ public final class L2Augmentation
 	}
 	
 	/**
-	 * Removes the augmentation boni from the player.
+	 * Removes the augmentation bonus from the player.
 	 * @param player
 	 */
-	public void removeBoni(L2PcInstance player)
+	public void removeBonus(L2PcInstance player)
 	{
-		_boni.removeBoni(player);
+		_bonus.removeBonus(player);
 		
 		// remove the skill if any
 		if (_skill != null)

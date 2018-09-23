@@ -27,19 +27,8 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Stats;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.1 $ $Date: 2005/03/02 15:38:36 $
- */
-
 public class ManaHeal implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(ManaHeal.class);
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.MANAHEAL,
@@ -47,10 +36,6 @@ public class ManaHeal implements ISkillHandler
 		SkillType.MANAHEAL_PERCENT
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useSkill(L2Character actChar, L2Skill skill, L2Object[] targets)
 	{
@@ -64,7 +49,6 @@ public class ManaHeal implements ISkillHandler
 			double mp = skill.getPower();
 			if (skill.getSkillType() == SkillType.MANAHEAL_PERCENT)
 			{
-				// double mp = skill.getPower();
 				mp = (target.getMaxMp() * mp) / 100.0;
 			}
 			else
@@ -72,10 +56,6 @@ public class ManaHeal implements ISkillHandler
 				mp = (skill.getSkillType() == SkillType.MANARECHARGE) ? target.calcStat(Stats.RECHARGE_MP_RATE, mp, null, null) : mp;
 			}
 			
-			// if ((target.getCurrentMp() + mp) >= target.getMaxMp())
-			// {
-			// mp = target.getMaxMp() - target.getCurrentMp();
-			// }
 			target.setLastHealAmount((int) mp);
 			target.setCurrentMp(mp + target.getCurrentMp());
 			final StatusUpdate sump = new StatusUpdate(target.getObjectId());

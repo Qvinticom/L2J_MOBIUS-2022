@@ -22,14 +22,8 @@ import com.l2jmobius.gameserver.network.serverpackets.HennaEquipList;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision$ $Date$
- */
 public class L2SymbolMakerInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2SymbolMakerInstance.class);
-	
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -99,10 +93,6 @@ public class L2SymbolMakerInstance extends L2FolkInstance
 		return "data/html/symbolmaker/SymbolMaker.htm";
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAttackable()
-	 */
 	@Override
 	public boolean isAutoAttackable(L2Character attacker)
 	{

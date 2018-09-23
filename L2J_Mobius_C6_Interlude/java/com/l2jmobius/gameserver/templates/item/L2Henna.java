@@ -18,10 +18,6 @@ package com.l2jmobius.gameserver.templates.item;
 
 import com.l2jmobius.gameserver.templates.StatsSet;
 
-/**
- * This class ...
- * @version $Revision$ $Date$
- */
 public class L2Henna
 {
 	public final int symbolId;
@@ -56,78 +52,48 @@ public class L2Henna
 		return symbolId;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getDyeId()
 	{
 		return dye;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getPrice()
 	{
 		return price;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getAmountDyeRequire()
 	{
 		return amount;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatINT()
 	{
 		return statINT;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatSTR()
 	{
 		return statSTR;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatCON()
 	{
 		return statCON;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatMEM()
 	{
 		return statMEM;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatDEX()
 	{
 		return statDEX;
 	}
 	
-	/**
-	 * @return
-	 */
 	public int getStatWIT()
 	{
 		return statWIT;
 	}
-	/**
-	 * @return
-	 */
 }

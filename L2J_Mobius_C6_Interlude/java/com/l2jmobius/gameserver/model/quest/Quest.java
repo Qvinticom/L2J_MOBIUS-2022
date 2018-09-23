@@ -75,11 +75,9 @@ public class Quest extends ManagedScript
 	private final String _prefixPath; // used only for admin_quest_reload
 	private final String _descr;
 	private final byte _initialState = State.CREATED;
-	// NOTE: questItemIds will be overriden by child classes. Ideally, it should be
-	// protected instead of public. However, quest scripts written in Jython will
-	// have trouble with protected, as Jython only knows private and public...
-	// In fact, protected will typically be considered private thus breaking the scripts.
-	// Leave this as public as a workaround.
+	// NOTE: questItemIds will be overriden by child classes. Ideally, it should be protected instead of public.
+	// However, quest scripts written in Jython will have trouble with protected, as Jython only knows private and public...
+	// In fact, protected will typically be considered private thus breaking the scripts. Leave this as public as a workaround.
 	public int[] questItemIds = null;
 	
 	// Dimensional Diamond Rewards by Class for 2nd class transfer quest (35)
@@ -159,11 +157,9 @@ public class Quest extends ManagedScript
 		_name = name;
 		_descr = descr;
 		
-		// Given the quest instance, create a string representing the path and questName
-		// like a simplified version of a canonical class name. That is, if a script is in
-		// DATAPACK_PATH/scripts/quests/abc the result will be quests.abc
-		// Similarly, for a script in DATAPACK_PATH/scripts/ai/individual/myClass.py
-		// the result will be ai.individual.myClass
+		// Given the quest instance, create a string representing the path and questName like a simplified version of a canonical class name.
+		// That is, if a script is in DATAPACK_PATH/scripts/quests/abc the result will be quests.abc
+		// Similarly, for a script in DATAPACK_PATH/scripts/ai/individual/myClass.py the result will be ai.individual.myClass
 		// All quests are to be indexed, processed, and reloaded by this form of pathname.
 		StringBuffer temp = new StringBuffer(getClass().getCanonicalName());
 		temp.delete(0, temp.indexOf(".scripts.") + 9);
@@ -231,8 +227,7 @@ public class Quest extends ManagedScript
 		/** OnAttack РґРµР№СЃС‚РІРёРµ РїСЂРё Р°С‚Р°РєРµ (MOBGOTATTACKED) */
 		ON_ATTACK(true);
 		
-		// control whether this event type is allowed for the same npc template in multiple quests
-		// or if the npc must be registered in at most one quest for the specified event
+		// Control whether this event type is allowed for the same npc template in multiple quests or if the npc must be registered in at most one quest for the specified event.
 		private boolean _allowMultipleRegistration;
 		
 		QuestEventType(boolean allowMultipleRegistration)
@@ -1681,8 +1676,7 @@ public class Quest extends ManagedScript
 			return null; // no match
 		}
 		
-		// if the player is in a party, gather a list of all matching party members (possibly
-		// including this player)
+		// if the player is in a party, gather a list of all matching party members (possibly including this player)
 		final List<L2PcInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
@@ -1783,8 +1777,7 @@ public class Quest extends ManagedScript
 			return null; // no match
 		}
 		
-		// if the player is in a party, gather a list of all matching party members (possibly
-		// including this player)
+		// if the player is in a party, gather a list of all matching party members (possibly including this player)
 		final List<L2PcInstance> candidates = new ArrayList<>();
 		
 		// get the target for enforcing distance limitations.
@@ -1917,11 +1910,8 @@ public class Quest extends ManagedScript
 	public boolean unload()
 	{
 		saveGlobalData();
-		// cancel all pending timers before reloading.
-		// if timers ought to be restarted, the quest can take care of it
-		// with its code (example: save global data indicating what timer must
-		// be restarted).
-		
+		// Cancel all pending timers before reloading.
+		// If timers ought to be restarted, the quest can take care of it with its code (example: save global data indicating what timer must be restarted).
 		synchronized (_allEventTimers)
 		{
 			for (ArrayList<QuestTimer> timers : _allEventTimers.values())

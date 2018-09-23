@@ -93,7 +93,6 @@ public class AttackStanceTaskManager
 	{
 		protected FightModeScheduler()
 		{
-			// Do nothing
 		}
 		
 		@Override
@@ -124,8 +123,7 @@ public class AttackStanceTaskManager
 			}
 			catch (Exception e)
 			{
-				// TODO: Find out the reason for exception. Unless caught here,
-				// players remain in attack positions.
+				// TODO: Find out the reason for exception. Unless caught here, players remain in attack positions.
 				LOGGER.warning("Error in FightModeScheduler: " + e.getMessage());
 			}
 		}

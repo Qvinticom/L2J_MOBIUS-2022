@@ -27,14 +27,8 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.0.0.0.0.0 $ $Date: 2005/09/02 19:41:13 $
- */
-
 public class Firework implements IItemHandler
 {
-	// Modified by Baghak (Prograsso): Added Firework support
 	private static final int[] ITEM_IDS =
 	{
 		6403,
@@ -115,9 +109,6 @@ public class Firework implements IItemHandler
 			return;
 		}
 		
-		/*
-		 * Elven Firecracker
-		 */
 		if (itemId == 6403) // elven_firecracker, xml: 2023
 		{
 			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2023, 1, 1, 0);
@@ -126,9 +117,6 @@ public class Firework implements IItemHandler
 			useFw(activeChar, 2023, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
-		/*
-		 * Firework
-		 */
 		else if (itemId == 6406) // firework, xml: 2024
 		{
 			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2024, 1, 1, 0);
@@ -137,9 +125,6 @@ public class Firework implements IItemHandler
 			useFw(activeChar, 2024, 1);
 			playable.destroyItem("Consume", item.getObjectId(), 1, null, false);
 		}
-		/*
-		 * Lage Firework
-		 */
 		else if (itemId == 6407) // large_firework, xml: 2025
 		{
 			MagicSkillUse MSU = new MagicSkillUse(playable, activeChar, 2025, 1, 1, 0);

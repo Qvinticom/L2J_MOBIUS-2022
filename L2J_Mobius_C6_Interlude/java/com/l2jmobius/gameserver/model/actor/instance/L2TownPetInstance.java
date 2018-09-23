@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 /**
  * @author Kerberos
  */
-
 public class L2TownPetInstance extends L2NpcInstance
 {
 	int randomX;
@@ -64,8 +63,7 @@ public class L2TownPetInstance extends L2NpcInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2ArtefactInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

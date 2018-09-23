@@ -43,7 +43,7 @@ public class L2Multisell
 {
 	private static Logger LOGGER = Logger.getLogger(L2Multisell.class.getName());
 	private final List<MultiSellListContainer> _entries = new ArrayList<>();
-	private static L2Multisell _instance;/* = new L2Multisell(); */
+	private static L2Multisell _instance;
 	
 	public MultiSellListContainer getList(int id)
 	{
@@ -133,8 +133,7 @@ public class L2Multisell
 			int enchantLevel;
 			for (L2ItemInstance item : items)
 			{
-				// only do the matchup on equipable items that are not currently equipped
-				// so for each appropriate item, produce a set of entries for the multisell list.
+				// Only do the matchup on equipable items that are not currently equipped so for each appropriate item, produce a set of entries for the multisell list.
 				if (!item.isWear() && ((item.getItem() instanceof L2Armor) || (item.getItem() instanceof L2Weapon)))
 				{
 					enchantLevel = listTemplate.getMaintainEnchantment() ? item.getEnchantLevel() : 0;
@@ -161,8 +160,8 @@ public class L2Multisell
 						}
 					}
 				}
-			} // end for each inventory item.
-		} // end if "inventory-only"
+			}
+		}
 		else // this is a list-all type
 		{
 			// if no taxes are applied, no modifications are needed
@@ -177,10 +176,8 @@ public class L2Multisell
 	
 	// Regarding taxation, the following is the case:
 	// a) The taxes come out purely from the adena TaxIngredient
-	// b) If the entry has no adena ingredients other than the taxIngredient, the resulting
-	// amount of adena is appended to the entry
-	// c) If the entry already has adena as an entry, the taxIngredient is used in order to increase
-	// the count for the existing adena ingredient
+	// b) If the entry has no adena ingredients other than the taxIngredient, the resulting amount of adena is appended to the entry
+	// c) If the entry already has adena as an entry, the taxIngredient is used in order to increase the count for the existing adena ingredient
 	private MultiSellEntry prepareEntry(MultiSellEntry templateEntry, boolean applyTaxes, boolean maintainEnchantment, int enchantLevel, double taxRate)
 	{
 		final MultiSellEntry newEntry = new MultiSellEntry();
@@ -235,8 +232,7 @@ public class L2Multisell
 			
 			if (maintainEnchantment)
 			{
-				// if it is an armor/weapon, modify the enchantment level appropriately
-				// (note, if maintain enchantment is "false" this modification will result to a +0)
+				// if it is an armor/weapon, modify the enchantment level appropriately (note, if maintain enchantment is "false" this modification will result to a +0)
 				final L2Item tempItem = ItemTable.getInstance().createDummyItem(ing.getItemId()).getItem();
 				
 				if ((tempItem instanceof L2Armor) || (tempItem instanceof L2Weapon))
@@ -464,7 +460,6 @@ public class L2Multisell
 			if ((entry.getIngredients().size() == 1) && (entry.getIngredients().get(0).getItemId() == 57))
 			{
 				// the buy price must necessarily higher then total reference item price / 2 that is the default sell price
-				
 				int totalProductReferencePrice = 0;
 				for (MultiSellIngredient product : entry.getProducts())
 				{

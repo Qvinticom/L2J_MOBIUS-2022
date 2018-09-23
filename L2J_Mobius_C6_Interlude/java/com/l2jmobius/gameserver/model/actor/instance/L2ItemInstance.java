@@ -54,17 +54,12 @@ import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class manages items.
- * @version $Revision: 1.4.2.1.2.11 $ $Date: 2005/03/31 16:07:50 $
  */
 public final class L2ItemInstance extends L2Object
 {
-	/** The Constant LOGGER. */
 	private static final Logger LOGGER = Logger.getLogger(L2ItemInstance.class.getName());
-	
-	/** The Constant _logItems. */
 	private static final Logger _logItems = Logger.getLogger("item");
 	
-	/** The _drop protection. */
 	private final DropProtection _dropProtection = new DropProtection();
 	
 	/**
@@ -72,143 +67,53 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public enum ItemLocation
 	{
-		/** The VOID. */
 		VOID,
-		
-		/** The INVENTORY. */
 		INVENTORY,
-		
-		/** The PAPERDOLL. */
 		PAPERDOLL,
-		
-		/** The WAREHOUSE. */
 		WAREHOUSE,
-		
-		/** The CLANWH. */
 		CLANWH,
-		
-		/** The PET. */
 		PET,
-		
-		/** The PE t_ equip. */
 		PET_EQUIP,
-		
-		/** The LEASE. */
 		LEASE,
-		
-		/** The FREIGHT. */
 		FREIGHT
 	}
 	
-	/** ID of the owner. */
 	private int _ownerId;
-	
-	/** Quantity of the item. */
 	private int _count;
-	
-	/** Initial Quantity of the item. */
 	private int _initCount;
-	
-	/** Time after restore Item count (in Hours). */
 	private int _time;
-	
-	/** Quantity of the item can decrease. */
 	private boolean _decrease = false;
-	
-	/** ID of the item. */
 	private final int _itemId;
-	
-	/** Object L2Item associated to the item. */
 	private final L2Item _item;
-	
-	/** Location of the item : Inventory, PaperDoll, WareHouse. */
 	private ItemLocation _loc;
-	
-	/** Slot where item is stored. */
 	private int _locData;
-	
-	/** Level of enchantment of the item. */
 	private int _enchantLevel;
-	
-	/** Price of the item for selling. */
 	private int _priceSell;
-	
-	/** Price of the item for buying. */
 	private int _priceBuy;
-	
-	/** Wear Item. */
 	private boolean _wear;
-	
-	/** Augmented Item. */
 	private L2Augmentation _augmentation = null;
-	
-	/** Shadow item. */
 	private int _mana = -1;
-	
-	/** The _consuming mana. */
 	private boolean _consumingMana = false;
-	
-	/** The Constant MANA_CONSUMPTION_RATE. */
 	private static final int MANA_CONSUMPTION_RATE = 60000;
-	
-	/** Custom item types (used loto, race tickets). */
 	private int _type1;
-	
-	/** The _type2. */
 	private int _type2;
-	
-	/** The _drop time. */
 	private long _dropTime;
-	
-	/** The Constant CHARGED_NONE. */
 	public static final int CHARGED_NONE = 0;
-	
-	/** The Constant CHARGED_SOULSHOT. */
 	public static final int CHARGED_SOULSHOT = 1;
-	
-	/** The Constant CHARGED_SPIRITSHOT. */
 	public static final int CHARGED_SPIRITSHOT = 1;
-	
-	/** The Constant CHARGED_BLESSED_SOULSHOT. */
-	public static final int CHARGED_BLESSED_SOULSHOT = 2; // It's a realy exists? ;-)
-	
-	/** The Constant CHARGED_BLESSED_SPIRITSHOT. */
+	public static final int CHARGED_BLESSED_SOULSHOT = 2; // Does it real;y exist? ;-)
 	public static final int CHARGED_BLESSED_SPIRITSHOT = 2;
-	
-	/** Item charged with SoulShot (type of SoulShot). */
 	private int _chargedSoulshot = CHARGED_NONE;
-	
-	/** Item charged with SpiritShot (type of SpiritShot). */
 	private int _chargedSpiritshot = CHARGED_NONE;
-	
-	/** The _charged fishtshot. */
 	private boolean _chargedFishtshot = false;
-	
-	/** The _protected. */
 	private boolean _protected;
-	
-	/** The Constant UNCHANGED. */
 	public static final int UNCHANGED = 0;
-	
-	/** The Constant ADDED. */
 	public static final int ADDED = 1;
-	
-	/** The Constant REMOVED. */
 	public static final int REMOVED = 3;
-	
-	/** The Constant MODIFIED. */
 	public static final int MODIFIED = 2;
-	
-	/** The _last change. */
 	private int _lastChange = 2; // 1 ??, 2 modified, 3 removed
-	
-	/** The _exists in db. */
 	private boolean _existsInDb; // if a record exists in DB.
-	
-	/** The _stored in db. */
 	private boolean _storedInDb; // if DB data is up-to-date.
-	
-	/** The item loot shedule. */
 	private ScheduledFuture<?> itemLootShedule = null;
 	
 	/**
@@ -258,9 +163,6 @@ public final class L2ItemInstance extends L2Object
 		final int oldOwner = _ownerId;
 		setOwnerId(owner_id);
 		
-		/*
-		 * if(Config.LOG_ITEMS) { LogRecord record = new LogRecord(Level.INFO, "CHANGE:" + process); record.setLoggerName("item"); record.setParameters(new Object[] { this, creator, reference }); _logItems.LOGGER(record); record = null; }
-		 */
 		fireEvent(EventType.SETOWNER.name, new Object[]
 		{
 			process,
@@ -530,7 +432,6 @@ public final class L2ItemInstance extends L2Object
 		return _dropTime;
 	}
 	
-	// Cupid's bow
 	/**
 	 * Checks if is cupid bow.
 	 * @return true, if is cupid bow
@@ -627,25 +528,6 @@ public final class L2ItemInstance extends L2Object
 	}
 	
 	/**
-	 * Returns the price of the item for buying.
-	 * @return int
-	 */
-	// public int getPriceToBuy()
-	// {
-	// return isConsumable() ? (int) (_priceBuy * Config.RATE_CONSUMABLE_COST) : _priceBuy;
-	// }
-	
-	/**
-	 * Sets the price of the item for buying <U><I>Remark :</I></U> If loc and loc_data different from database, say datas not up-to-date.
-	 * @param price : int
-	 */
-	// public void setPriceToBuy(int price)
-	// {
-	// _priceBuy = price;
-	// _storedInDb = false;
-	// }
-	
-	/**
 	 * Returns the last change of the item.
 	 * @return int
 	 */
@@ -722,10 +604,6 @@ public final class L2ItemInstance extends L2Object
 			&& (player.getActiveEnchantItem() != this) && (allowAdena || (_itemId != 57)) && ((player.getCurrentSkill() == null) || (player.getCurrentSkill().getSkill().getItemConsumeId() != _itemId)) && isTradeable();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#onAction(com.l2jmobius.gameserver.model.L2PcInstance) also check constraints: only soloing castle owners may pick up mercenary tickets of their castle
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -823,7 +701,7 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean setAugmentation(L2Augmentation augmentation)
 	{
-		// there shall be no previous augmentation..
+		// there shall be no previous augmentation.
 		if (_augmentation != null)
 		{
 			return false;
@@ -850,7 +728,6 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public class ScheduleConsumeManaTask implements Runnable
 	{
-		/** The _shadow item. */
 		private final L2ItemInstance _shadowItem;
 		
 		/**
@@ -862,10 +739,6 @@ public final class L2ItemInstance extends L2Object
 			_shadowItem = item;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -1335,8 +1208,7 @@ public final class L2ItemInstance extends L2Object
 		
 		setDropTime(System.currentTimeMillis());
 		
-		// this can synchronize on others instancies, so it's out of
-		// synchronized, to avoid deadlocks
+		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
 		// Add the L2ItemInstance dropped in the world as a visible object
 		L2World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), dropper);
 		

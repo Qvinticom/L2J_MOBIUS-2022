@@ -70,8 +70,7 @@ public final class L2BabyPetInstance extends L2PetInstance
 				_weakHeal = skill1;
 				_strongHeal = skill1;
 			}
-			else // arrange the weak and strong skills appropriately
-			if (skill1.getPower() > skill2.getPower())
+			else if (skill1.getPower() > skill2.getPower()) // arrange the weak and strong skills appropriately
 			{
 				_weakHeal = skill2;
 				_strongHeal = skill1;

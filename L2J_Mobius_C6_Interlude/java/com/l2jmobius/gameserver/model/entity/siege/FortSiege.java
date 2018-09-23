@@ -59,35 +59,17 @@ import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
  */
 public class FortSiege
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(FortSiege.class.getName());
 	
-	/**
-	 * The Enum TeleportWhoType.
-	 */
 	public enum TeleportWhoType
 	{
-		/** The All. */
 		All,
-		
-		/** The Attacker. */
 		Attacker,
-		
-		/** The Defender not owner. */
 		DefenderNotOwner,
-		
-		/** The Owner. */
 		Owner,
-		
-		/** The Spectator. */
 		Spectator
 	}
 	
-	// ===============================================================
-	// Schedule task
-	/**
-	 * The Class ScheduleEndSiegeTask.
-	 */
 	public class ScheduleEndSiegeTask implements Runnable
 	{
 		/** The _fort inst. */
@@ -102,10 +84,6 @@ public class FortSiege
 			_fortInst = pFort;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -159,12 +137,8 @@ public class FortSiege
 		}
 	}
 	
-	/**
-	 * The Class ScheduleStartSiegeTask.
-	 */
 	public class ScheduleStartSiegeTask implements Runnable
 	{
-		/** The _fort inst. */
 		private final Fort _fortInst;
 		
 		/**
@@ -240,54 +214,21 @@ public class FortSiege
 		}
 	}
 	
-	// =========================================================
-	// Data Field
-	// Attacker and Defender
-	/** The _attacker clans. */
 	private final List<L2SiegeClan> _attackerClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender clans. */
 	private final List<L2SiegeClan> _defenderClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender waiting clans. */
 	private final List<L2SiegeClan> _defenderWaitingClans = new ArrayList<>(); // L2SiegeClan
-	
-	/** The _defender respawn delay penalty. */
 	private int _defenderRespawnDelayPenalty;
-	
-	// Fort setting
-	/** The _commanders. */
 	private List<L2CommanderInstance> _commanders = new ArrayList<>();
-	
-	/** The _combatflag. */
 	private List<L2ArtefactInstance> _combatflag = new ArrayList<>();
-	
-	/** The _fort. */
 	private final Fort[] _fort;
-	
-	/** The _is in progress. */
 	boolean _isInProgress = false;
-	
-	/** The _is scheduled. */
 	private boolean _isScheduled = false;
-	
-	/** The _is normal side. */
 	private boolean _isNormalSide = true; // true = Atk is Atk, false = Atk is Def
-	
-	/** The _is registration over. */
 	protected boolean _isRegistrationOver = false;
-	
-	/** The _siege end date. */
 	protected Calendar _siegeEndDate;
-	
-	/** The _siege guard manager. */
 	private FortSiegeGuardManager _siegeGuardManager;
-	
-	/** The _siege registration end date. */
 	protected Calendar _siegeRegistrationEndDate;
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new fort siege.
 	 * @param fort the fort
@@ -295,13 +236,9 @@ public class FortSiege
 	public FortSiege(Fort[] fort)
 	{
 		_fort = fort;
-		// _siegeGuardManager = new SiegeGuardManager(getFort());
-		
 		checkAutoTask();
 	}
 	
-	// =========================================================
-	// Siege phases
 	/**
 	 * When siege ends<BR>
 	 * <BR>
@@ -514,8 +451,6 @@ public class FortSiege
 		}
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Announce to player.<BR>
 	 * <BR>
@@ -860,7 +795,6 @@ public class FortSiege
 			if (_commanders.size() == 0)
 			{
 				spawnFlag(getFort().getFortId());
-				// LOGGER.info("Commander empty !");
 			}
 		}
 	}
@@ -1139,8 +1073,6 @@ public class FortSiege
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
 	/**
 	 * Add clan as attacker<BR>
 	 * <BR>
@@ -1503,38 +1435,6 @@ public class FortSiege
 	private void spawnSiegeGuard()
 	{
 		getSiegeGuardManager().spawnSiegeGuard();
-		
-		// Register guard to the closest Control Tower
-		// When CT dies, so do all the guards that it controls
-		// if (getSiegeGuardManager().getSiegeGuardSpawn().size() > 0 && _controlTowers.size() > 0)
-		// {
-		// L2ControlTowerInstance closestCt;
-		// double distance, x, y, z;
-		// double distanceClosest = 0;
-		// for (L2Spawn spawn : getSiegeGuardManager().getSiegeGuardSpawn())
-		// {
-		// if (spawn == null) continue;
-		// closestCt = null;
-		// distanceClosest = 0;
-		// for (L2ControlTowerInstance ct : _controlTowers)
-		// {
-		// if (ct == null) continue;
-		// x = (spawn.getX() - ct.getX());
-		// y = (spawn.getY() - ct.getY());
-		// z = (spawn.getZ() - ct.getZ());
-		//
-		// distance = (x * x) + (y * y) + (z * z);
-		//
-		// if (closestCt == null || distance < distanceClosest)
-		// {
-		// closestCt = ct;
-		// distanceClosest = distance;
-		// }
-		// }
-		//
-		// if (closestCt != null) closestCt.registerGuard(spawn);
-		// }
-		// }
 	}
 	
 	/**

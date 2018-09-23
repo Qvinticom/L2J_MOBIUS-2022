@@ -29,7 +29,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public class L2ArenaZone extends L2ZoneType
 {
-	// private String _arenaName;
 	private final int[] _spawnLoc;
 	
 	public L2ArenaZone(int id)
@@ -42,11 +41,6 @@ public class L2ArenaZone extends L2ZoneType
 	@Override
 	public void setParameter(String name, String value)
 	{
-		// if(name.equals("name"))
-		// {
-		// _arenaName = value;
-		// }
-		/* else */
 		switch (name)
 		{
 			case "spawnX":

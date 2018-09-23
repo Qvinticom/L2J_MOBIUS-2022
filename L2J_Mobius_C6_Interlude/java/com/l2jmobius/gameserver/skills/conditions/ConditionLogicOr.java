@@ -75,5 +75,4 @@ public class ConditionLogicOr extends Condition
 		}
 		return false;
 	}
-	
 }

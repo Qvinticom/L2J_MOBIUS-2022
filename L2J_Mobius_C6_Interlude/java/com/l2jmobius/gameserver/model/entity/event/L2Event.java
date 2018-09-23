@@ -38,10 +38,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.util.EventData;
 
-/**
- * This class ...
- * @version $Revision: 1.3.4.1 $ $Date: 2005/03/27 15:29:32 $
- */
 public class L2Event
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2Event.class.getName());
@@ -255,8 +251,6 @@ public class L2Event
 		
 		try
 		{
-			// L2MonsterInstance mob = new L2MonsterInstance(template1);
-			
 			L2Spawn spawn = new L2Spawn(template1);
 			
 			spawn.setX(target.getX() + 50);

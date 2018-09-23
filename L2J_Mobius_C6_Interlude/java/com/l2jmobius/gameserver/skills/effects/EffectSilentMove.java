@@ -31,7 +31,6 @@ final class EffectSilentMove extends L2Effect
 		super(env, template);
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -44,7 +43,6 @@ final class EffectSilentMove extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

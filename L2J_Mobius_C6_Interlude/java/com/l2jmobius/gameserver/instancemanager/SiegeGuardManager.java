@@ -34,20 +34,14 @@ public class SiegeGuardManager
 {
 	private static Logger LOGGER = Logger.getLogger(SiegeGuardManager.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private final Castle _castle;
 	private final List<L2Spawn> _siegeGuardSpawn = new ArrayList<>();
 	
-	// =========================================================
-	// Constructor
 	public SiegeGuardManager(Castle castle)
 	{
 		_castle = castle;
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Add guard.<BR>
 	 * <BR>
@@ -188,8 +182,6 @@ public class SiegeGuardManager
 		_siegeGuardSpawn.clear();
 	}
 	
-	// =========================================================
-	// Method - Private
 	/**
 	 * Load guards.<BR>
 	 * <BR>
@@ -281,9 +273,6 @@ public class SiegeGuardManager
 			LOGGER.warning("Error adding siege guard for castle " + _castle.getName() + ":" + e1);
 		}
 	}
-	
-	// =========================================================
-	// Proeprty
 	
 	public final Castle getCastle()
 	{

@@ -39,19 +39,9 @@ public class AdminGeodata implements IAdminCommandHandler
 		"admin_geomap"
 	};
 	
-	// private static final int REQUIRED_LEVEL = Config.GM_MIN;
-	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		// if (!Config.ALT_PRIVILEGES_ADMIN)
-		// {
-		// if (!(checkLevel(activeChar.getAccessLevel()) && activeChar.isGM()))
-		// {
-		// return false;
-		// }
-		// }
-		
 		if (command.equals("admin_geo_pos"))
 		{
 			final int worldX = activeChar.getX();
@@ -147,9 +137,4 @@ public class AdminGeodata implements IAdminCommandHandler
 	{
 		return _adminCommands;
 	}
-	
-	// private boolean checkLevel(int level)
-	// {
-	// return (level >= REQUIRED_LEVEL);
-	// }
 }

@@ -30,10 +30,6 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
 import com.l2jmobius.gameserver.templates.item.L2Weapon;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-/**
- * This class ...
- * @version $Revision: 1.2.4.4 $ $Date: 2005/03/27 15:30:07 $
- */
 public class SoulShots implements IItemHandler
 {
 	// All the item IDs that this handler knows.
@@ -57,10 +53,6 @@ public class SoulShots implements IItemHandler
 		2154
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -108,7 +100,6 @@ public class SoulShots implements IItemHandler
 			final int saSSCount = (int) activeChar.getStat().calcStat(Stats.SOULSHOT_COUNT, 0, null, null);
 			final int SSCount = saSSCount == 0 ? weaponItem.getSoulShotCount() : saSSCount;
 			
-			// TODO: test ss
 			if (!Config.DONT_DESTROY_SS)
 			{
 				if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), SSCount, null, false))

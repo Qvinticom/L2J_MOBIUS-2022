@@ -24,9 +24,7 @@ import java.util.NoSuchElementException;
  */
 public enum Stats
 {
-	//
 	// Base stats, for each in Calculator a slot is allocated
-	//
 	
 	// HP & MP
 	MAX_HP("maxHp"),
@@ -72,15 +70,11 @@ public enum Stats
 	MAGIC_ATTACK_RANGE("mAtkRange"),
 	POWER_ATTACK_ANGLE("pAtkAngle"),
 	ATTACK_COUNT_MAX("atkCountMax"),
-	// Run speed,
-	// walk & escape speed are calculated proportionally,
-	// magic speed is a buff
+	// Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
 	RUN_SPEED("runSpd"),
 	WALK_SPEED("walkSpd"),
 	
-	//
 	// Player-only stats
-	//
 	STAT_STR("STR"),
 	STAT_CON("CON"),
 	STAT_DEX("DEX"),
@@ -88,14 +82,11 @@ public enum Stats
 	STAT_WIT("WIT"),
 	STAT_MEN("MEN"),
 	
-	//
 	// Special stats, share one slot in Calculator
-	//
 	
 	// stats of various abilities
 	BREATH("breath"),
 	FALL("fall"),
-	//
 	AGGRESSION("aggression"), // locks a mob on tank caster
 	BLEED("bleed"), // by daggers, like poison
 	POISON("poison"), // by magic, hp dmg over time

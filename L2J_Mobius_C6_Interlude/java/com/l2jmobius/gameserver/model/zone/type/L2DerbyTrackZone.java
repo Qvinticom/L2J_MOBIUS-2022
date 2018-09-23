@@ -60,5 +60,4 @@ public class L2DerbyTrackZone extends L2PeaceZone
 	protected void onReviveInside(L2Character character)
 	{
 	}
-	
 }

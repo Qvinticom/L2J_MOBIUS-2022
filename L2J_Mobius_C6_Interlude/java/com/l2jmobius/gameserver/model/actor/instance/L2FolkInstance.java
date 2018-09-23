@@ -36,7 +36,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2FolkInstance extends L2NpcInstance
 {
-	/** The _classes to teach. */
 	private final ClassId[] _classesToTeach;
 	
 	/**
@@ -50,10 +49,6 @@ public class L2FolkInstance extends L2NpcInstance
 		_classesToTeach = template.getTeachInfo();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -247,10 +242,6 @@ public class L2FolkInstance extends L2NpcInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -335,9 +326,7 @@ public class L2FolkInstance extends L2NpcInstance
 		}
 		else
 		{
-			// this class dont know any other commands, let forward
-			// the command to the parent class
-			
+			// this class dont know any other commands, let forward the command to the parent class
 			super.onBypassFeedback(player, command);
 		}
 	}

@@ -31,20 +31,14 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class CharKnownList extends ObjectKnownList
 {
-	// =========================================================
-	// Data Field
 	private Map<Integer, L2PcInstance> _knownPlayers;
 	private Map<Integer, Integer> _knownRelations;
 	
-	// =========================================================
-	// Constructor
 	public CharKnownList(L2Character activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -119,11 +113,6 @@ public class CharKnownList extends ObjectKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	public L2Character getActiveChar()
 	{
 		return (L2Character) super.getActiveObject();

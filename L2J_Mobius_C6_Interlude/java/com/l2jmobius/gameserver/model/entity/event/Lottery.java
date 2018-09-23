@@ -34,11 +34,10 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Lottery
 {
+	protected static final Logger LOGGER = Logger.getLogger(Lottery.class.getName());
+	
 	public static final long SECOND = 1000;
 	public static final long MINUTE = 60000;
-	
-	private static Lottery _instance;
-	protected static final Logger LOGGER = Logger.getLogger(Lottery.class.getName());
 	
 	private static final String INSERT_LOTTERY = "INSERT INTO games(id, idnr, enddate, prize, newprize) VALUES (?, ?, ?, ?, ?)";
 	private static final String UPDATE_PRICE = "UPDATE games SET prize=?, newprize=? WHERE id = 1 AND idnr = ?";
@@ -52,6 +51,8 @@ public class Lottery
 	protected boolean _isSellingTickets;
 	protected boolean _isStarted;
 	protected long _enddate;
+	
+	private static Lottery _instance;
 	
 	private Lottery()
 	{
@@ -125,7 +126,6 @@ public class Lottery
 	{
 		protected startLottery()
 		{
-			// Do nothing
 		}
 		
 		@Override
@@ -237,7 +237,6 @@ public class Lottery
 	{
 		protected stopSellingTickets()
 		{
-			// Do nothing
 		}
 		
 		@Override
@@ -258,7 +257,6 @@ public class Lottery
 	{
 		protected finishLottery()
 		{
-			// Do nothing
 		}
 		
 		@Override

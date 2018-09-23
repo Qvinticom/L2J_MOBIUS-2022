@@ -58,234 +58,61 @@ import com.l2jmobius.gameserver.network.serverpackets.Ride;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * The Class CTF.
- */
 public class CTF implements EventTask
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(CTF.class.getName());
 	
-	/** The _joining location name. */
 	protected static String _eventName = new String();
-	
-	/**
-	 * The _joining location name.
-	 */
 	protected static String _eventDesc = new String();
-	
-	/**
-	 * The _joining location name.
-	 */
 	protected static String _joiningLocationName = new String();
-	
-	/** The _npc spawn. */
 	private static L2Spawn _npcSpawn;
-	
-	/** The _in progress. */
 	protected static boolean _joining = false;
-	
-	/**
-	 * The _in progress.
-	 */
 	protected static boolean _teleport = false;
-	
-	/**
-	 * The _in progress.
-	 */
 	protected static boolean _started = false;
-	
-	/**
-	 * The _in progress.
-	 */
 	protected static boolean _aborted = false;
-	
-	/**
-	 * The _in progress.
-	 */
 	protected static boolean _sitForced = false;
-	
-	/**
-	 * The _in progress.
-	 */
 	protected static boolean _inProgress = false;
-	
-	/** The _max players. */
 	protected static int _npcId = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _npcX = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _npcY = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _npcZ = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _npcHeading = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _rewardId = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _rewardAmount = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _minlvl = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _maxlvl = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _joinTime = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _eventTime = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _minPlayers = 0;
-	
-	/**
-	 * The _max players.
-	 */
 	protected static int _maxPlayers = 0;
-	
-	/** The _interval between matches. */
 	protected static long _intervalBetweenMatches = 0;
-	
-	/** The start event time. */
 	private String startEventTime;
-	
-	/** The _team event. */
 	protected static boolean _teamEvent = true; // TODO to be integrated
-	
-	/** The _players. */
 	public static Vector<L2PcInstance> _players = new Vector<>();
-	
-	/** The _top team. */
 	private static String _topTeam = new String();
-	
-	/** The _players shuffle. */
 	public static Vector<L2PcInstance> _playersShuffle = new Vector<>();
-	
-	/** The _save player teams. */
 	public static Vector<String> _teams = new Vector<>();
-	
-	/**
-	 * The _save player teams.
-	 */
 	public static Vector<String> _savePlayers = new Vector<>();
-	
-	/**
-	 * The _save player teams.
-	 */
 	public static Vector<String> _savePlayerTeams = new Vector<>();
-	
-	/** The _teams z. */
 	public static Vector<Integer> _teamPlayersCount = new Vector<>();
-	
-	/**
-	 * The _teams z.
-	 */
 	public static Vector<Integer> _teamColors = new Vector<>();
-	
-	/**
-	 * The _teams z.
-	 */
 	public static Vector<Integer> _teamsX = new Vector<>();
-	
-	/**
-	 * The _teams z.
-	 */
 	public static Vector<Integer> _teamsY = new Vector<>();
-	
-	/**
-	 * The _teams z.
-	 */
 	public static Vector<Integer> _teamsZ = new Vector<>();
-	
-	/** The _team points count. */
 	public static Vector<Integer> _teamPointsCount = new Vector<>();
-	
-	/** The _top score. */
 	public static int _topScore = 0;
-	
-	/** The _event offset. */
 	public static int _eventCenterX = 0;
-	
-	/**
-	 * The _event offset.
-	 */
 	public static int _eventCenterY = 0;
-	
-	/**
-	 * The _event offset.
-	 */
 	public static int _eventCenterZ = 0;
-	
-	/**
-	 * The _event offset.
-	 */
 	public static int _eventOffset = 0;
-	
-	/** The _ fla g_ i n_ han d_ ite m_ id. */
 	private static int _FlagNPC = 35062;
-	
-	/**
-	 * The _ fla g_ i n_ han d_ ite m_ id.
-	 */
 	private static int _FLAG_IN_HAND_ITEM_ID = 6718;
-	
-	/** The _flags z. */
 	public static Vector<Integer> _flagIds = new Vector<>();
-	
-	/**
-	 * The _flags z.
-	 */
 	public static Vector<Integer> _flagsX = new Vector<>();
-	
-	/**
-	 * The _flags z.
-	 */
 	public static Vector<Integer> _flagsY = new Vector<>();
-	
-	/**
-	 * The _flags z.
-	 */
 	public static Vector<Integer> _flagsZ = new Vector<>();
-	
-	/** The _throne spawns. */
 	public static Vector<L2Spawn> _flagSpawns = new Vector<>();
-	
-	/**
-	 * The _throne spawns.
-	 */
 	public static Vector<L2Spawn> _throneSpawns = new Vector<>();
-	
-	/** The _flags taken. */
 	public static Vector<Boolean> _flagsTaken = new Vector<>();
 	
 	/**
@@ -1068,10 +895,6 @@ public class CTF implements EventTask
 							final int offset = Config.CTF_SPAWN_OFFSET;
 							player.teleToLocation(_teamsX.get(_teams.indexOf(player._teamNameCTF)) + Rnd.get(offset), _teamsY.get(_teams.indexOf(player._teamNameCTF)) + Rnd.get(offset), _teamsZ.get(_teams.indexOf(player._teamNameCTF)));
 						}
-						else
-						{
-							// player.teleToLocation(_playerX, _playerY, _playerZ);
-						}
 					}
 				}
 			}
@@ -1485,7 +1308,6 @@ public class CTF implements EventTask
 					case 120: // 2 minutes left
 					case 60: // 1 minute left
 					{
-						// removeOfflinePlayers();
 						if (_joining)
 						{
 							Announcements.getInstance().gameAnnounceToAll(_eventName + ": Joinable in " + _joiningLocationName + "!");
@@ -1714,10 +1536,6 @@ public class CTF implements EventTask
 					}
 				}
 			}
-			
-			/*
-			 * eventPlayer.sendMessage("Dual Box not allowed in Events"); return false;
-			 */
 		}
 		
 		synchronized (_players)
@@ -2554,7 +2372,6 @@ public class CTF implements EventTask
 		}
 	}
 	
-	// Show loosers and winners animations
 	/**
 	 * Play kneel animation.
 	 * @param teamName the team name
@@ -2610,7 +2427,7 @@ public class CTF implements EventTask
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 					else if (teamName == null)
-					{ // TIE
+					{
 						
 						int minus_reward = 0;
 						if (_topScore != 0)
@@ -2641,12 +2458,6 @@ public class CTF implements EventTask
 				}
 			}
 		}
-		
-		/*
-		 * for(L2PcInstance player : _players) { if(player != null && (player.isOnline() != 0) && (player._inEventCTF == true) && (player._teamNameCTF.equals(teamName))) { player.addItem(_eventName+" Event: " + _eventName, _rewardId, _rewardAmount, player, true); NpcHtmlMessage nhm = new
-		 * NpcHtmlMessage(5); StringBuilder replyMSG = new StringBuilder(""); replyMSG.append("<html><body>"); replyMSG.append("<font color=\"FFFF00\">Your team wins the event. Look in your inventory for the reward.</font>"); replyMSG.append("</body></html>"); nhm.setHtml(replyMSG.toString());
-		 * player.sendPacket(nhm); // Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet player.sendPacket( ActionFailed.STATIC_PACKET ); } }
-		 */
 	}
 	
 	/**
@@ -3659,5 +3470,4 @@ public class CTF implements EventTask
 		}
 		return false;
 	}
-	
 }

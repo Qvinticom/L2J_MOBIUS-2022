@@ -127,7 +127,6 @@ public class ExtractableItems implements IItemHandler
 		}
 	}
 	
-	// by Azagthtot
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{

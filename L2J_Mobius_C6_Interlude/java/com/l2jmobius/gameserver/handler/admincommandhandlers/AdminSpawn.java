@@ -263,8 +263,7 @@ public class AdminSpawn implements IAdminCommandHandler
 				permanent = false;
 				spawn.set_customBossInstance(true); // for raids, this value is used in order to segnalate to not save respawn time - status for custom instance
 			}
-			// else
-			// {
+			
 			if (RaidBossSpawnManager.getInstance().getValidTemplate(spawn.getNpcId()) != null)
 			{
 				RaidBossSpawnManager.getInstance().addNewSpawn(spawn, 0, template1.getStatsSet().getDouble("baseHpMax"), template1.getStatsSet().getDouble("baseMpMax"), permanent);
@@ -282,7 +281,6 @@ public class AdminSpawn implements IAdminCommandHandler
 			}
 			
 			BuilderUtil.sendSysMessage(activeChar, "Created " + template1.name + " on " + target.getObjectId());
-			// }
 		}
 		catch (Exception e)
 		{

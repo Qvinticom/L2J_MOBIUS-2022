@@ -398,5 +398,4 @@ public abstract class L2ZoneType
 	{
 		return _characterList;
 	}
-	
 }

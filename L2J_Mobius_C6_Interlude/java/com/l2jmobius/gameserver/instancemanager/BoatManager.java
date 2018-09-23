@@ -41,10 +41,6 @@ public class BoatManager
 		return SingletonHolder._instance;
 	}
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private Map<Integer, L2BoatInstance> _staticItems = new HashMap<>();
 	
 	public BoatManager()
@@ -53,8 +49,6 @@ public class BoatManager
 		load();
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		if (!Config.ALLOW_BOAT)
@@ -141,10 +135,6 @@ public class BoatManager
 		}
 	}
 	
-	/**
-	 * @param line
-	 * @return
-	 */
 	private L2BoatInstance parseLine(String line)
 	{
 		L2BoatInstance boat;
@@ -175,7 +165,6 @@ public class BoatManager
 		npcDat.set("baseEvasRate", 38);
 		npcDat.set("baseCritRate", 38);
 		
-		// npcDat.set("name", "");
 		npcDat.set("collision_radius", 0);
 		npcDat.set("collision_height", 0);
 		npcDat.set("sex", "male");
@@ -205,7 +194,6 @@ public class BoatManager
 		boat = new L2BoatInstance(IdFactory.getInstance().getNextId(), template, name);
 		boat.getPosition().setHeading(heading);
 		boat.setXYZ(xspawn, yspawn, zspawn);
-		// boat.spawnMe();
 		
 		int IdWaypoint1 = Integer.parseInt(st.nextToken());
 		int IdWTicket1 = Integer.parseInt(st.nextToken());
@@ -235,12 +223,6 @@ public class BoatManager
 		return boat;
 	}
 	
-	// =========================================================
-	// Property - Public
-	/**
-	 * @param boatId
-	 * @return
-	 */
 	public L2BoatInstance GetBoat(int boatId)
 	{
 		if (_staticItems == null)

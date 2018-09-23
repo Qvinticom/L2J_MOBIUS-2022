@@ -40,7 +40,6 @@ public class TerritoryTable
 	public TerritoryTable()
 	{
 		_territory.clear();
-		// load all data at server start
 		reload_data();
 	}
 	
@@ -64,7 +63,6 @@ public class TerritoryTable
 			
 			while (rset.next())
 			{
-				// final String terr = "sql_terr_" + rset.getString("loc_id");
 				final int terr = rset.getInt("loc_id");
 				
 				if (_territory.get(terr) == null)

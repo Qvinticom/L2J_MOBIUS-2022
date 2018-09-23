@@ -124,8 +124,7 @@ public class OfflineShop implements IVoicedCommandHandler
 			return false;
 		}
 		
-		// Prevent player from logging out if they are a festival participant nd it is in progress,
-		// otherwise notify party members that the player is not longer a participant.
+		// Prevent player from logging out if they are a festival participant nd it is in progress, otherwise notify party members that the player is not longer a participant.
 		if (player.isFestivalParticipant())
 		{
 			if (SevenSignsFestival.getInstance().isFestivalInitialized())

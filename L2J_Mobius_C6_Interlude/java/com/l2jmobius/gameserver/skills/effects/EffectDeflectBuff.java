@@ -27,29 +27,17 @@ import com.l2jmobius.gameserver.skills.Env;
  */
 public final class EffectDeflectBuff extends L2Effect
 {
-	/**
-	 * @param env
-	 * @param template
-	 */
 	public EffectDeflectBuff(Env env, EffectTemplate template)
 	{
 		super(env, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Effect#getEffectType()
-	 */
 	@Override
 	public EffectType getEffectType()
 	{
 		return EffectType.PREVENT_BUFF;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onActionTime()
-	 */
 	@Override
 	public boolean onActionTime()
 	{
@@ -72,10 +60,6 @@ public final class EffectDeflectBuff extends L2Effect
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onStart()
-	 */
 	@Override
 	public void onStart()
 	{
@@ -83,10 +67,6 @@ public final class EffectDeflectBuff extends L2Effect
 		return;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Effect#onExit()
-	 */
 	@Override
 	public void onExit()
 	{

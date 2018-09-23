@@ -72,8 +72,6 @@ public class CursedWeapon
 	private int _playerKarma = 0;
 	private int _playerPkKills = 0;
 	
-	// =========================================================
-	// Constructor
 	public CursedWeapon(int itemId, int skillId, String name)
 	{
 		_name = name;
@@ -82,8 +80,6 @@ public class CursedWeapon
 		_skillMaxLevel = SkillTable.getInstance().getMaxLevel(_skillId, 0);
 	}
 	
-	// =========================================================
-	// Private
 	public void endOfLife()
 	{
 		if (_isActivated)
@@ -147,9 +143,7 @@ public class CursedWeapon
 				}
 			}
 		}
-		else // either this cursed weapon is in the inventory of someone who has another cursed weapon equipped,
-		// OR this cursed weapon is on the ground.
-		if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null))
+		else if ((_player != null) && (_player.getInventory().getItemByItemId(_itemId) != null)) // either this cursed weapon is in the inventory of someone who has another cursed weapon equipped, OR this cursed weapon is on the ground.
 		{
 			final L2ItemInstance rhand = _player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
 			if (rhand != null)
@@ -270,10 +264,6 @@ public class CursedWeapon
 			_player.broadcastUserInfo();
 			
 			sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
-			
-			// EndTime: if dropped from player, the endTime is the same then before
-			// cancelTask();
-			// _endTime = 0;
 		}
 		
 		sm.addItemName(_itemId);
@@ -290,7 +280,6 @@ public class CursedWeapon
 	}
 	
 	/**
-	 * Yesod:<br>
 	 * Rebind the passive skill belonging to the CursedWeapon. Invoke this method if the weapon owner switches to a subclass.
 	 */
 	public void giveSkill()
@@ -303,7 +292,6 @@ public class CursedWeapon
 		}
 		
 		L2Skill skill = SkillTable.getInstance().getInfo(_skillId, level);
-		// Yesod:
 		// To properly support subclasses this skill can not be stored.
 		_player.addSkill(skill, false);
 		
@@ -329,8 +317,6 @@ public class CursedWeapon
 		_player.sendSkillList();
 	}
 	
-	// =========================================================
-	// Public
 	public void reActivate()
 	{
 		_isActivated = true;
@@ -367,8 +353,7 @@ public class CursedWeapon
 	public void activate(L2PcInstance player, L2ItemInstance item)
 	{
 		_player = player;
-		// if the player is mounted, attempt to unmount first. Only allow picking up
-		// the zariche if unmounting is successful.
+		// if the player is mounted, attempt to unmount first. Only allow picking up the zariche if unmounting is successful.
 		if (player.isMounted())
 		{
 			if (_player.setMountType(0))
@@ -528,8 +513,6 @@ public class CursedWeapon
 		saveData();
 	}
 	
-	// =========================================================
-	// Setter
 	public void setDisapearChance(int disapearChance)
 	{
 		_disapearChance = disapearChance;
@@ -601,8 +584,6 @@ public class CursedWeapon
 		_item = item;
 	}
 	
-	// =========================================================
-	// Getter
 	public boolean isActivated()
 	{
 		return _isActivated;

@@ -40,7 +40,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 	public static final int LANES = 8;
 	public static final int WINDOW_START = 0;
 	
-	// private static List<Race> _history;
 	private static List<L2RaceManagerInstance> _managers;
 	protected static int _raceNumber = 4;
 	
@@ -93,7 +92,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 		if (_notInitialized)
 		{
 			_notInitialized = false;
-			// _history = new ArrayList<Race>();
 			_managers = new ArrayList<>();
 			
 			ThreadPool.scheduleAtFixedRate(new Announcement(SystemMessageId.MONSRACE_TICKETS_AVAILABLE_FOR_S1_RACE), 0, 10 * MINUTE);
@@ -155,10 +153,10 @@ public class L2RaceManagerInstance extends L2NpcInstance
 			case 817: // SystemMessageId.MONSRACE_TICKETS_NOW_AVAILABLE_FOR_S1_RACE
 			{
 				if (_state != ACCEPTING_BETS)
-				{// LOGGER.info("Race Initializing");
+				{
 					_state = ACCEPTING_BETS;
 					startRace();
-				} // else{LOGGER.info("Race open");}
+				}
 				sm.addNumber(_raceNumber);
 				break;
 			}
@@ -173,7 +171,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 			}
 			case 819: // SystemMessageId.MONSRACE_TICKET_SALES_CLOSED
 			{
-				// LOGGER.info("Sales closed");
 				sm.addNumber(_raceNumber);
 				_state = WAITING;
 				_minutes = 2;
@@ -188,21 +185,16 @@ public class L2RaceManagerInstance extends L2NpcInstance
 			}
 			case 826: // SystemMessageId.MONSRACE_FIRST_PLACE_S1_SECOND_S2
 			{
-				// LOGGER.info("Placing");
 				_state = RACE_END;
 				sm.addNumber(MonsterRace.getInstance().getFirstPlace());
 				sm.addNumber(MonsterRace.getInstance().getSecondPlace());
 				break;
 			}
 		}
-		// LOGGER.info("Counter: "+minutes);
-		// LOGGER.info("State: "+state);
 		broadcast(sm);
-		// LOGGER.info("Player's known: "+getKnownPlayers().size());
 		
 		if (type == SystemMessageId.MONSRACE_RACE_START)
 		{
-			// LOGGER.info("Starting race");
 			_state = STARTING_RACE;
 			startRace();
 			_minutes = 5;
@@ -230,7 +222,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 		MonsterRace race = MonsterRace.getInstance();
 		if (_state == STARTING_RACE)
 		{
-			// state++;
 			PlaySound SRace = new PlaySound(1, "S_Race", 0, 0, 0, 0, 0);
 			broadcast(SRace);
 			PlaySound SRace2 = new PlaySound(0, "ItemSound2.race_start", 1, 121209259, 12125, 182487, -3559);
@@ -242,7 +233,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 		}
 		else
 		{
-			// state++;
 			race.newRace();
 			race.newSpeeds();
 			_packet = new MonRaceInfo(_codes[0][0], _codes[0][1], race.getMonsters(), race.getSpeeds());
@@ -296,7 +286,6 @@ public class L2RaceManagerInstance extends L2NpcInstance
 		}
 		else
 		{
-			// getKnownList().removeKnownObject(player);
 			super.onBypassFeedback(player, command);
 		}
 	}
@@ -538,5 +527,4 @@ public class L2RaceManagerInstance extends L2NpcInstance
 			}
 		}
 	}
-	
 }

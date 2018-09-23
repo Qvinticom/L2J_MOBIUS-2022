@@ -72,8 +72,7 @@ public final class L2CustomNpcInstance
 		// HairStyle=19, HairColor=20, Face=21
 		// NameColor=22, TitleColor=23
 		
-		_boolean = new boolean[4];
-		// pvp=0 , noble=1, hero=2, isFemaleSex=3
+		_boolean = new boolean[4]; // pvp=0 , noble=1, hero=2, isFemaleSex=3
 		
 		// load the Pc Morph Data
 		CustomNpcInstanceManager.customInfo ci = CustomNpcInstanceManager.getInstance().getCustomData(_NpcInstance.getSpawn().getId(), _NpcInstance.getNpcId());

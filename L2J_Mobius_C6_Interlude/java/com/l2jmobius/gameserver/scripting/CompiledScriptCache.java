@@ -80,7 +80,6 @@ public class CompiledScriptCache implements Serializable
 			isr = new InputStreamReader(fis);
 			buff = new BufferedReader(isr);
 			
-			// TODO lock file
 			cs = eng.compile(buff);
 			if (cs instanceof Serializable)
 			{

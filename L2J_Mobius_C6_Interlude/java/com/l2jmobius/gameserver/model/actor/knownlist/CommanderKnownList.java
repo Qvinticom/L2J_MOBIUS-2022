@@ -28,18 +28,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class CommanderKnownList extends AttackableKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public CommanderKnownList(L2CommanderInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -76,10 +69,9 @@ public class CommanderKnownList extends AttackableKnownList
 			// Check if player is not the defender
 			if ((player != null) && ((player.getClan() == null) || (getActiveChar().getFort().getSiege().getAttackerClan(player.getClan()) != null)))
 			{
-				// LOGGER.info(getActiveChar().getName()+": PK "+player.getObjectId()+" entered scan range");
 				if (getActiveChar().getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE)
 				{
-					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);// (L2Character)object);
+					getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE, null);
 				}
 			}
 		}
@@ -87,11 +79,6 @@ public class CommanderKnownList extends AttackableKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2CommanderInstance getActiveChar()
 	{

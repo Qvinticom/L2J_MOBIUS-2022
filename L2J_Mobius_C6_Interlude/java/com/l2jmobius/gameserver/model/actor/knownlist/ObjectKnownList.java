@@ -30,20 +30,14 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class ObjectKnownList
 {
-	// =========================================================
-	// Data Field
 	private final L2Object _activeObject;
 	private Map<Integer, L2Object> _knownObjects;
 	
-	// =========================================================
-	// Constructor
 	public ObjectKnownList(L2Object activeObject)
 	{
 		_activeObject = activeObject;
 	}
 	
-	// =========================================================
-	// Method - Public
 	public boolean addKnownObject(L2Object object)
 	{
 		return addKnownObject(object, null);
@@ -121,8 +115,6 @@ public class ObjectKnownList
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void findCloseObjects()
 	{
 		final boolean isActiveObjectPlayable = _activeObject instanceof L2Playable;
@@ -174,8 +166,7 @@ public class ObjectKnownList
 				}
 				
 				// Try to add object to active object's known objects
-				// L2Character only needs to see visible L2PcInstance and L2PlayableInstance,
-				// when moving. Other l2characters are currently only known from initial spawn area.
+				// L2Character only needs to see visible L2PcInstance and L2PlayableInstance, when moving. Other l2characters are currently only known from initial spawn area.
 				// Possibly look into getDistanceToForgetObject values before modifying this approach...
 				addKnownObject(playable);
 			}
@@ -233,8 +224,6 @@ public class ObjectKnownList
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public L2Object getActiveObject()
 	{
 		return _activeObject;
@@ -272,10 +261,6 @@ public class ObjectKnownList
 			_obj = obj;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{

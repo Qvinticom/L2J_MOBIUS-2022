@@ -23,9 +23,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public interface ICustomByPassHandler
 {
-	/**
-	 * @return as String -
-	 */
 	String[] getByPassCommands();
 	
 	void handleCommand(String command, L2PcInstance player, String parameters);

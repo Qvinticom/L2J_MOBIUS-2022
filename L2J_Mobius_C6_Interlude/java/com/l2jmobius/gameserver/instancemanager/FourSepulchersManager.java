@@ -49,8 +49,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
- * This class ...
- * @version $Revision: $ $Date: $
  * @author sandman TODO: Gatekeepers shouting some text when doors get opened..so far unknown in leaked C4 is this text: 1000502 [brushes hinders competitor's monster.] which is really ugly translation TODO: Victim should attack one npc, when u save this NPC debuff zones will not be activated and
  *         NPC will polymorph into some kind of Tammed Beast xD and shout: 1000503 [many thanks rescue.] which is again really ugly translation. When Victim kill this NPC, debuff zones will get activated with current core its impossible to make attack npc * npc i will try to search where is this
  *         prevented but still is unknown which npc u need to save to survive in next room without debuffs
@@ -314,42 +312,32 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		timeCalculator();
 		final long currentTime = Calendar.getInstance().getTimeInMillis();
-		// if current time >= time of entry beginning and if current time < time
-		// of entry beginning + time of entry end
-		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd)) // entry
-		// time
-		// check
+		// if current time >= time of entry beginning and if current time < time of entry beginning + time of entry end
+		if ((currentTime >= _coolDownTimeEnd) && (currentTime < _entryTimeEnd)) // entry time check
 		{
 			clean();
 			_changeEntryTimeTask = ThreadPool.schedule(new ChangeEntryTime(), 0);
 			LOGGER.info("FourSepulchersManager: Beginning in Entry time");
 		}
-		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd)) // warmup
-		// time
-		// check
+		else if ((currentTime >= _entryTimeEnd) && (currentTime < _warmUpTimeEnd)) // warmup time check
 		{
 			clean();
 			_changeWarmUpTimeTask = ThreadPool.schedule(new ChangeWarmUpTime(), 0);
 			LOGGER.info("FourSepulchersManager: Beginning in WarmUp time");
 		}
-		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd)) // attack
-		// time
-		// check
+		else if ((currentTime >= _warmUpTimeEnd) && (currentTime < _attackTimeEnd)) // attack time check
 		{
 			clean();
 			_changeAttackTimeTask = ThreadPool.schedule(new ChangeAttackTime(), 0);
 			LOGGER.info("FourSepulchersManager: Beginning in Attack time");
 		}
-		else
-		// else cooldown time and without cleanup because it's already
-		// implemented
+		else // cooldown time and without cleanup because it's already implemented
 		{
 			_changeCoolDownTimeTask = ThreadPool.schedule(new ChangeCoolDownTime(), 0);
 			LOGGER.info("FourSepulchersManager: Beginning in Cooldown time");
 		}
 	}
 	
-	// phase end times calculator
 	protected void timeCalculator()
 	{
 		Calendar tmp = Calendar.getInstance();
@@ -401,7 +389,6 @@ public class FourSepulchersManager extends GrandBossManager
 	protected void spawnManagers()
 	{
 		_managers = new ArrayList<>();
-		// L2Spawn spawnDat;
 		
 		int i = 31921;
 		for (L2Spawn spawnDat; i <= 31924; i++)
@@ -1288,8 +1275,6 @@ public class FourSepulchersManager extends GrandBossManager
 							if (Rnd.get(48) == 0)
 							{
 								spawnKeyBoxMob = true;
-								// LOGGER.info("FourSepulchersManager.SpawnMonster:
-								// Set to spawn Church of Viscount Key Mob.");
 							}
 							break;
 						}
@@ -1518,8 +1503,6 @@ public class FourSepulchersManager extends GrandBossManager
 	protected void locationShadowSpawns()
 	{
 		final int locNo = Rnd.get(4);
-		// LOGGER.info("FourSepulchersManager.LocationShadowSpawns: Location index
-		// is " + locNo + ".");
 		final int[] gateKeeper =
 		{
 			31929,
@@ -1713,7 +1696,7 @@ public class FourSepulchersManager extends GrandBossManager
 			}
 			
 			min = minuteSelect(min);
-			String msg = min + " minute(s) have passed."; // now this is a proper message^^
+			String msg = min + " minute(s) have passed.";
 			if (min == 90)
 			{
 				msg = "Game over. The teleport will appear momentarily";
@@ -1731,8 +1714,7 @@ public class FourSepulchersManager extends GrandBossManager
 					LOGGER.warning("FourSepulchersManager: managerSay(): manager is not Sepulcher instance");
 					continue;
 				}
-				// hall not used right now, so its manager will not tell you
-				// anything :)
+				// hall not used right now, so its manager will not tell you anything :)
 				// if you don't need this - delete next two lines.
 				if (!_hallInUse.get(temp.getNpcId()).booleanValue())
 				{
@@ -1777,12 +1759,7 @@ public class FourSepulchersManager extends GrandBossManager
 				tmp.setTimeInMillis(Calendar.getInstance().getTimeInMillis() - _warmUpTimeEnd);
 				if ((tmp.get(Calendar.MINUTE) + 5) < Config.FS_TIME_ATTACK)
 				{
-					managerSay((byte) tmp.get(Calendar.MINUTE)); // byte
-					// because
-					// minute
-					// cannot be
-					// more than
-					// 59
+					managerSay((byte) tmp.get(Calendar.MINUTE)); // byte because minute cannot be more than 59
 					ThreadPool.schedule(new ManagerSay(), 5 * 60000);
 				}
 				// attack time ending chat
@@ -1803,26 +1780,20 @@ public class FourSepulchersManager extends GrandBossManager
 		@Override
 		public void run()
 		{
-			// LOGGER.info("FourSepulchersManager:In Entry Time");
 			_inEntryTime = true;
 			_inWarmUpTime = false;
 			_inAttackTime = false;
 			_inCoolDownTime = false;
 			
 			long interval = 0;
-			// if this is first launch - search time when entry time will be
-			// ended:
-			// counting difference between time when entry time ends and current
-			// time
-			// and then launching change time task
+			// if this is first launch - search time when entry time will be ended: counting difference between time when entry time ends and current time and then launching change time task
 			if (_firstTimeRun)
 			{
 				interval = _entryTimeEnd - Calendar.getInstance().getTimeInMillis();
 			}
 			else
 			{
-				interval = Config.FS_TIME_ENTRY * 60000; // else use stupid
-				// method
+				interval = Config.FS_TIME_ENTRY * 60000; // else use stupid method
 			}
 			
 			// launching saying process...
@@ -1841,17 +1812,13 @@ public class FourSepulchersManager extends GrandBossManager
 		@Override
 		public void run()
 		{
-			// LOGGER.info("FourSepulchersManager:In Warm-Up Time");
 			_inEntryTime = true;
 			_inWarmUpTime = false;
 			_inAttackTime = false;
 			_inCoolDownTime = false;
 			
 			long interval = 0;
-			// searching time when warmup time will be ended:
-			// counting difference between time when warmup time ends and
-			// current time
-			// and then launching change time task
+			// searching time when warmup time will be ended: counting difference between time when warmup time ends and current time and then launching change time task
 			if (_firstTimeRun)
 			{
 				interval = _warmUpTimeEnd - Calendar.getInstance().getTimeInMillis();
@@ -1875,7 +1842,6 @@ public class FourSepulchersManager extends GrandBossManager
 		@Override
 		public void run()
 		{
-			// LOGGER.info("FourSepulchersManager:In Attack Time");
 			_inEntryTime = false;
 			_inWarmUpTime = false;
 			_inAttackTime = true;
@@ -1900,11 +1866,8 @@ public class FourSepulchersManager extends GrandBossManager
 				for (double min = Calendar.getInstance().get(Calendar.MINUTE); min < _newCycleMin; min++)
 				{
 					// looking for next shout time....
-					if ((min % 5) == 0)// check if min can be divided by 5
+					if ((min % 5) == 0) // check if min can be divided by 5
 					{
-						// LOGGER.info(Calendar.getInstance().getTime()
-						// + " Atk announce scheduled to " + min
-						// + " minute of this hour.");
 						final Calendar inter = Calendar.getInstance();
 						inter.set(Calendar.MINUTE, (int) min);
 						ThreadPool.schedule(new ManagerSay(), inter.getTimeInMillis() - Calendar.getInstance().getTimeInMillis());
@@ -1916,10 +1879,7 @@ public class FourSepulchersManager extends GrandBossManager
 			{
 				ThreadPool.schedule(new ManagerSay(), 5 * 60400);
 			}
-			// searching time when attack time will be ended:
-			// counting difference between time when attack time ends and
-			// current time
-			// and then launching change time task
+			// searching time when attack time will be ended: counting difference between time when attack time ends and current time and then launching change time task
 			if (_firstTimeRun)
 			{
 				interval = _attackTimeEnd - Calendar.getInstance().getTimeInMillis();
@@ -1943,7 +1903,6 @@ public class FourSepulchersManager extends GrandBossManager
 		@Override
 		public void run()
 		{
-			// LOGGER.info("FourSepulchersManager:In Cool-Down Time");
 			_inEntryTime = false;
 			_inWarmUpTime = false;
 			_inAttackTime = false;
@@ -1952,18 +1911,15 @@ public class FourSepulchersManager extends GrandBossManager
 			clean();
 			
 			Calendar time = Calendar.getInstance();
-			// one hour = 55th min to 55 min of next hour, so we check for this,
-			// also check for first launch
+			// one hour = 55th min to 55 min of next hour, so we check for this, also check for first launch
 			if ((Calendar.getInstance().get(Calendar.MINUTE) > _newCycleMin) && !_firstTimeRun)
 			{
 				time.set(Calendar.HOUR, Calendar.getInstance().get(Calendar.HOUR) + 1);
 			}
 			time.set(Calendar.MINUTE, _newCycleMin);
-			// LOGGER.info("FourSepulchersManager: Entry time: " + time.getTime());
 			if (_firstTimeRun)
 			{
-				_firstTimeRun = false; // cooldown phase ends event hour, so it
-				// will be not first run
+				_firstTimeRun = false; // cooldown phase ends event hour, so it will be not first run
 			}
 			
 			final long interval = time.getTimeInMillis() - Calendar.getInstance().getTimeInMillis();

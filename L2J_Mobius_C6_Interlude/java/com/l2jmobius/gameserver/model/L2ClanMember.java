@@ -24,10 +24,6 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.5.4.2 $ $Date: 2005/03/27 15:29:33 $
- */
 public class L2ClanMember
 {
 	private final L2Clan _clan;
@@ -224,7 +220,6 @@ public class L2ClanMember
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			// LOGGER.warning("could not set char power_grade:"+e);
 		}
 	}
 	
@@ -271,7 +266,6 @@ public class L2ClanMember
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			// LOGGER.warning("could not set char power_grade:"+e);
 		}
 	}
 	
@@ -557,7 +551,6 @@ public class L2ClanMember
 		catch (SQLException e)
 		{
 			e.printStackTrace();
-			// LOGGER.warning("could not set apprentice/sponsor:"+e.getMessage());
 		}
 	}
 }

@@ -38,7 +38,6 @@ final class EffectCancel extends L2Effect
 		return EffectType.CANCEL;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -98,7 +97,8 @@ final class EffectCancel extends L2Effect
 					}
 				}
 			}
-		} else if (getEffector() instanceof L2PcInstance)
+		}
+		else if (getEffector() instanceof L2PcInstance)
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.S1_WAS_UNAFFECTED_BY_S2);
 			sm.addString(getEffected().getName());
@@ -107,11 +107,9 @@ final class EffectCancel extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{
-		// null
 	}
 	
 	@Override

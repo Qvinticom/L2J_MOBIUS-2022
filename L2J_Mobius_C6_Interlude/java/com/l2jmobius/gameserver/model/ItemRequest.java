@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.model;
 
-/**
- *
- */
 public class ItemRequest
 {
 	int _objectId;
@@ -81,9 +78,6 @@ public class ItemRequest
 		return _enchant;
 	}
 	
-	/**
-	 * @param enchant
-	 */
 	public void setEnchant(int enchant)
 	{
 		_enchant = enchant;

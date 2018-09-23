@@ -35,7 +35,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminShutdown implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminShutdown.class);
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_server_shutdown",
@@ -161,5 +160,4 @@ public class AdminShutdown implements IAdminCommandHandler
 	{
 		Shutdown.getInstance().abort(activeChar);
 	}
-	
 }

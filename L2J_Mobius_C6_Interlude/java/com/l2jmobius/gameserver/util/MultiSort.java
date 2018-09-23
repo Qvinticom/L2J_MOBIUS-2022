@@ -239,8 +239,7 @@ public class MultiSort
 				{
 					final int currValue = getValues().get(i);
 					
-					// If the current value is equal to the last value, we have at least one
-					// duplicate that has been outputted already, so continue.
+					// If the current value is equal to the last value, we have at least one duplicate that has been outputted already, so continue.
 					if (currValue == lastValue)
 					{
 						continue;
@@ -249,8 +248,7 @@ public class MultiSort
 					// Set the last value to the current value, to prevent duplication.
 					lastValue = currValue;
 					
-					// Iterate through each key and match it to its stored integer value,
-					// then output both sets of data in the correct descending numerical order.
+					// Iterate through each key and match it to its stored integer value, then output both sets of data in the correct descending numerical order.
 					for (int j = 0; j < getKeys().size(); j++)
 					{
 						final Object currKey = getKeys().get(j);

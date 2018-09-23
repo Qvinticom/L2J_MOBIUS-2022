@@ -207,11 +207,7 @@ public class L2Manor
 		{
 			if (seed.getCrop() == cropId)
 			{
-				return seed.getReward(type);
-				// there can be several
-				// seeds with same crop, but
-				// reward should be the same for
-				// all
+				return seed.getReward(type); // there can be several seeds with same crop, but reward should be the same for all
 			}
 		}
 		return -1;

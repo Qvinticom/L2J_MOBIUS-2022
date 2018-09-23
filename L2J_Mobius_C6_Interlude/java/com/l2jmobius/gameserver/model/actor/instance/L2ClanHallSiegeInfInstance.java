@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 /**
  * @author MHard L2EmuRT
  */
-
 public class L2ClanHallSiegeInfInstance extends L2NpcInstance
 {
 	public L2ClanHallSiegeInfInstance(int objectId, L2NpcTemplate template)
@@ -57,17 +56,13 @@ public class L2ClanHallSiegeInfInstance extends L2NpcInstance
 			player.setTarget(this);
 			
 			// Send a Server->Client packet MyTargetSelected to the L2PcInstance
-			// player
 			final MyTargetSelected my = new MyTargetSelected(getObjectId(), 0);
 			player.sendPacket(my);
 			
-			// Send a Server->Client packet ValidateLocation to correct the
-			// L2NpcInstance position and heading on the client
+			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the
-		// L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -76,8 +71,7 @@ public class L2ClanHallSiegeInfInstance extends L2NpcInstance
 		{
 			showMessageWindow(player, 0);
 		}
-		// Send a Server->Client ActionFailed to the L2PcInstance in order to
-		// avoid that the client wait another packet
+		// Send a Server->Client ActionFailed to the L2PcInstance in order to avoid that the client wait another packet
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	

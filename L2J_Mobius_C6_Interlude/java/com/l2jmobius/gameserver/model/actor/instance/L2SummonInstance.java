@@ -226,11 +226,6 @@ public class L2SummonInstance extends L2Summon
 		return true;
 	}
 	
-	/*
-	 * protected void displayHitMessage(int damage, boolean crit, boolean miss) { if (crit) { getOwner().sendPacket(new SystemMessage(SystemMessage.SUMMON_CRITICAL_HIT)); } if (miss) { getOwner().sendPacket(new SystemMessage(SystemMessage.MISSED_TARGET)); } else { SystemMessage sm = new
-	 * SystemMessage(SystemMessage.SUMMON_GAVE_DAMAGE_OF_S1); sm.addNumber(damage); getOwner().sendPacket(sm); } }
-	 */
-	
 	static class SummonLifetime implements Runnable
 	{
 		private final L2PcInstance _activeChar;

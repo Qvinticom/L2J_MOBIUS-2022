@@ -37,14 +37,12 @@ final class EffectFakeDeath extends L2Effect
 		return EffectType.FAKE_DEATH;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
 		getEffected().startFakeDeath();
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

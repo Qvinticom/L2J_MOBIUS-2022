@@ -132,7 +132,6 @@ public class NodeLoc extends AbstractNodeLoc
 		
 		result = (prime * result) + (((_geoHeight & 0xFFFF) << 1) | nswe);
 		return result;
-		// return super.hashCode();
 	}
 	
 	@Override

@@ -57,48 +57,21 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 import com.l2jmobius.gameserver.templates.item.L2Item;
 import com.l2jmobius.gameserver.templates.item.L2Weapon;
 
-/**
- * This class ...
- * @version $Revision: 1.15.2.10.2.16 $ $Date: 2009/04/13 09:18:40 $
- */
 public class L2PetInstance extends L2Summon
 {
-	/** The Constant _logPet. */
 	protected static final Logger LOGGER = Logger.getLogger(L2PetInstance.class.getName());
 	
-	// private byte _pvpFlag;
-	/** The _cur fed. */
-	int _curFed;
-	
-	/** The _inventory. */
-	final PetInventory _inventory;
-	
-	/** The _control item id. */
-	private final int _controlItemId;
-	
-	/** The _respawned. */
-	private boolean _respawned;
-	
-	/** The _mountable. */
-	private final boolean _mountable;
-	
-	/** The _feed task. */
-	private Future<?> _feedTask;
-	
-	/** The _feed time. */
-	private int _feedTime;
-	
-	/** The _feed mode. */
-	protected boolean _feedMode;
-	
-	/** The _data. */
-	private L2PetData _data;
-	
-	/** The Experience before the last Death Penalty. */
-	private long _expBeforeDeath = 0;
-	
-	/** The Constant FOOD_ITEM_CONSUME_COUNT. */
 	private static final int FOOD_ITEM_CONSUME_COUNT = 5;
+	int _curFed;
+	final PetInventory _inventory;
+	private final int _controlItemId;
+	private boolean _respawned;
+	private final boolean _mountable;
+	private Future<?> _feedTask;
+	private int _feedTime;
+	protected boolean _feedMode;
+	private L2PetData _data;
+	private long _expBeforeDeath = 0;
 	
 	/**
 	 * Gets the pet data.
@@ -135,10 +108,6 @@ public class L2PetInstance extends L2Summon
 	
 	class FeedTask implements Runnable
 	{
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -270,10 +239,6 @@ public class L2PetInstance extends L2Summon
 		_mountable = L2PetDataTable.isMountable(npcId);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getStat()
-	 */
 	@Override
 	public PetStat getStat()
 	{
@@ -284,10 +249,6 @@ public class L2PetInstance extends L2Summon
 		return (PetStat) super.getStat();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getLevelMod()
-	 */
 	@Override
 	public double getLevelMod()
 	{
@@ -303,20 +264,12 @@ public class L2PetInstance extends L2Summon
 		return _respawned;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getSummonType()
-	 */
 	@Override
 	public int getSummonType()
 	{
 		return 2;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -346,10 +299,6 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getControlItemId()
-	 */
 	@Override
 	public int getControlItemId()
 	{
@@ -383,12 +332,6 @@ public class L2PetInstance extends L2Summon
 		_curFed = num > getStat().getMaxFeed() ? getStat().getMaxFeed() : num;
 	}
 	
-	// public void setPvpFlag(byte pvpFlag) { _pvpFlag = pvpFlag; }
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#setPkKills(int)
-	 */
 	@Override
 	public void setPkKills(int pkKills)
 	{
@@ -430,32 +373,18 @@ public class L2PetInstance extends L2Summon
 		return (L2Weapon) weapon.getItem();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getSecondaryWeaponInstance()
-	 */
 	@Override
 	public L2ItemInstance getSecondaryWeaponInstance()
 	{
-		// temporary? unavailable
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getSecondaryWeaponItem()
-	 */
 	@Override
 	public L2Weapon getSecondaryWeaponItem()
 	{
-		// temporary? unavailable
 		return null;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getInventory()
-	 */
 	@Override
 	public PetInventory getInventory()
 	{
@@ -541,10 +470,6 @@ public class L2PetInstance extends L2Summon
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#doPickupItem(com.l2jmobius.gameserver.model.L2Object)
-	 */
 	@Override
 	protected void doPickupItem(L2Object object)
 	{
@@ -654,10 +579,6 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#deleteMe(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void deleteMe(L2PcInstance owner)
 	{
@@ -665,10 +586,6 @@ public class L2PetInstance extends L2Summon
 		destroyControlItem(owner); // this should also delete the pet from the db
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -682,10 +599,6 @@ public class L2PetInstance extends L2Summon
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#doRevive()
-	 */
 	@Override
 	public void doRevive()
 	{
@@ -703,15 +616,10 @@ public class L2PetInstance extends L2Summon
 		startFeed(false);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#doRevive(double)
-	 */
 	@Override
 	public void doRevive(double revivePower)
 	{
-		// Restore the pet's lost experience,
-		// depending on the % return of the skill used (based on its power).
+		// Restore the pet's lost experience, depending on the % return of the skill used (based on its power).
 		restoreExp(revivePower);
 		doRevive();
 	}
@@ -785,10 +693,6 @@ public class L2PetInstance extends L2Summon
 		return newItem;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#giveAllToOwner()
-	 */
 	@Override
 	public void giveAllToOwner()
 	{
@@ -933,29 +837,6 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	// public void startAttack(L2Character target)
-	// {
-	// if (!knownsObject(target))
-	// {
-	// target.addKnownObject(this);
-	// this.addKnownObject(target);
-	// }
-	// if (!target.knownsObject(this))
-	// {
-	// target.addKnownObject(this);
-	// this.addKnownObject(target);
-	// }
-	//
-	// if (!isRunning())
-	// {
-	// setRunning(true);
-	// ChangeMoveType move = new ChangeMoveType(this, ChangeMoveType.RUN);
-	// broadcastPacket(move);
-	// }
-	//
-	// super.startAttack(target);
-	// }
-	//
 	/**
 	 * Checks if is mountable.
 	 * @return Returns the mountable.
@@ -1025,10 +906,6 @@ public class L2PetInstance extends L2Summon
 		return pet;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#store()
-	 */
 	@Override
 	public void store()
 	{
@@ -1125,10 +1002,6 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#unSummon(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public synchronized void unSummon(L2PcInstance owner)
 	{
@@ -1163,7 +1036,6 @@ public class L2PetInstance extends L2Summon
 	private void deathPenalty()
 	{
 		// TODO Need Correct Penalty
-		
 		final int lvl = getStat().getLevel();
 		final double percentLost = (-0.07 * lvl) + 6.5;
 		
@@ -1177,10 +1049,6 @@ public class L2PetInstance extends L2Summon
 		getStat().addExp(-lostExp);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#addExpAndSp(long, int)
-	 */
 	@Override
 	public void addExpAndSp(long addToExp, int addToSp)
 	{
@@ -1194,30 +1062,18 @@ public class L2PetInstance extends L2Summon
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getExpForThisLevel()
-	 */
 	@Override
 	public long getExpForThisLevel()
 	{
 		return getStat().getExpForLevel(getStat().getLevel());
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Summon#getExpForNextLevel()
-	 */
 	@Override
 	public long getExpForNextLevel()
 	{
 		return getStat().getExpForLevel(getStat().getLevel() + 1);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getLevel()
-	 */
 	@Override
 	public final int getLevel()
 	{
@@ -1233,110 +1089,66 @@ public class L2PetInstance extends L2Summon
 		return getStat().getMaxFeed();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getAccuracy()
-	 */
 	@Override
 	public int getAccuracy()
 	{
 		return getStat().getAccuracy();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getCriticalHit(com.l2jmobius.gameserver.model.L2Character, com.l2jmobius.gameserver.model.L2Skill)
-	 */
 	@Override
 	public int getCriticalHit(L2Character target, L2Skill skill)
 	{
 		return getStat().getCriticalHit(target, skill);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getEvasionRate(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public int getEvasionRate(L2Character target)
 	{
 		return getStat().getEvasionRate(target);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getRunSpeed()
-	 */
 	@Override
 	public int getRunSpeed()
 	{
 		return getStat().getRunSpeed();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getPAtkSpd()
-	 */
 	@Override
 	public int getPAtkSpd()
 	{
 		return getStat().getPAtkSpd();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getMAtkSpd()
-	 */
 	@Override
 	public int getMAtkSpd()
 	{
 		return getStat().getMAtkSpd();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getMAtk(com.l2jmobius.gameserver.model.L2Character, com.l2jmobius.gameserver.model.L2Skill)
-	 */
 	@Override
 	public int getMAtk(L2Character target, L2Skill skill)
 	{
 		return getStat().getMAtk(target, skill);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getMDef(com.l2jmobius.gameserver.model.L2Character, com.l2jmobius.gameserver.model.L2Skill)
-	 */
 	@Override
 	public int getMDef(L2Character target, L2Skill skill)
 	{
 		return getStat().getMDef(target, skill);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getPAtk(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public int getPAtk(L2Character target)
 	{
 		return getStat().getPAtk(target);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getPDef(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public int getPDef(L2Character target)
 	{
 		return getStat().getPDef(target);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getSkillLevel(int)
-	 */
 	@Override
 	public final int getSkillLevel(int skillId)
 	{
@@ -1361,10 +1173,6 @@ public class L2PetInstance extends L2Summon
 		L2World.getInstance().addPet(oldOwnerId, this);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#sendDamageMessage(com.l2jmobius.gameserver.model.L2Character, int, boolean, boolean, boolean)
-	 */
 	@Override
 	public final void sendDamageMessage(L2Character target, int damage, boolean mcrit, boolean pcrit, boolean miss)
 	{

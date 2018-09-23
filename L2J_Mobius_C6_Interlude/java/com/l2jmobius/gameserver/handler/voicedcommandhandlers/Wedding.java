@@ -53,10 +53,6 @@ public class Wedding implements IVoicedCommandHandler
 		"gotolove"
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{
@@ -218,13 +214,6 @@ public class Wedding implements IVoicedCommandHandler
 			return false;
 		}
 		
-		// check if target has player on friendlist
-		/*
-		 * boolean FoundOnFriendList = false; int objectId; Connection con = null; try { con = L2DatabaseFactory.getConnection(false); PreparedStatement statement; statement = con.prepareStatement("SELECT friend_id FROM character_friends WHERE char_id=?"); statement.setInt(1,
-		 * ptarget.getObjectId()); ResultSet rset = statement.executeQuery(); while(rset.next()) { objectId = rset.getInt("friend_id"); if(objectId == activeChar.getObjectId()) { FoundOnFriendList = true; } } } catch(Exception e) { if(Config.ENABLE_ALL_EXCEPTIONS) e.printStackTrace();
-		 * LOGGER.warning( "could not read friend data:" + e); } finally { CloseUtil.close(con); con = null; }
-		 */
-		
 		if (!activeChar.getFriendList().contains(ptarget.getObjectId()))
 		{
 			activeChar.sendMessage("The player you want to ask is not on your friends list, you must first be on each others friends list before you choose to engage.");
@@ -232,7 +221,6 @@ public class Wedding implements IVoicedCommandHandler
 		}
 		
 		ptarget.setEngageRequest(true, activeChar.getObjectId());
-		// ptarget.sendMessage("Player "+activeChar.getName()+" wants to engage with you.");
 		ConfirmDlg dlg = new ConfirmDlg(614);
 		dlg.addString(activeChar.getName() + " asking you to engage. Do you want to start a new relationship?");
 		ptarget.sendPacket(dlg);
@@ -454,10 +442,6 @@ public class Wedding implements IVoicedCommandHandler
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public String[] getVoicedCommandList()
 	{

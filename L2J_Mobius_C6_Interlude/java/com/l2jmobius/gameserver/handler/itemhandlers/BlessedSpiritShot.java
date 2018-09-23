@@ -35,7 +35,7 @@ import com.l2jmobius.gameserver.util.Broadcast;
  */
 public class BlessedSpiritShot implements IItemHandler
 {
-	// all the items ids that this handler knowns
+	// All the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
 		3947,
@@ -55,10 +55,6 @@ public class BlessedSpiritShot implements IItemHandler
 		2164
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -111,7 +107,6 @@ public class BlessedSpiritShot implements IItemHandler
 		}
 		
 		// Consume Blessed Spiritshot if player has enough of them
-		// TODO: test ss
 		if (!Config.DONT_DESTROY_SS)
 		{
 			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))

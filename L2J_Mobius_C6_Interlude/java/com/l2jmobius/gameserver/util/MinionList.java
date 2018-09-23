@@ -241,7 +241,6 @@ public class MinionList
 		final int randSpawnLim = 170;
 		int randPlusMin = 1;
 		spawnConstant = Rnd.get(randSpawnLim);
-		// randomize +/-
 		randPlusMin = Rnd.get(2);
 		if (randPlusMin == 1)
 		{
@@ -250,7 +249,6 @@ public class MinionList
 		
 		final int newX = master.getX() + spawnConstant;
 		spawnConstant = Rnd.get(randSpawnLim);
-		// randomize +/-
 		randPlusMin = Rnd.get(2);
 		
 		if (randPlusMin == 1)

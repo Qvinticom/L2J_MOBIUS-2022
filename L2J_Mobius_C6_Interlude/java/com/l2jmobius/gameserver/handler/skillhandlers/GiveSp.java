@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.actor.L2Character;
 /**
  * @author Forsaiken
  */
-
 public class GiveSp implements ISkillHandler
 {
 	private static final SkillType[] SKILL_IDS =

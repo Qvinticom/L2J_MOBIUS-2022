@@ -468,8 +468,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	
 	public L2PcInstance loadCharFromDisk(int charslot)
 	{
-		// L2PcInstance character = L2PcInstance.load(getObjectIdForSlot(charslot));
-		
 		final int objId = getObjectIdForSlot(charslot);
 		if (objId < 0)
 		{
@@ -480,7 +478,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		if (character != null)
 		{
 			// exploit prevention, should not happens in normal way
-			
 			LOGGER.warning("Attempt of double login: " + character.getName() + "(" + objId + ") " + accountName);
 			
 			if (character.getClient() != null)
@@ -501,44 +498,12 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 				}
 				
 			}
-			
-			// return null;
 		}
 		
 		character = L2PcInstance.load(objId);
-		// if(character != null)
-		// {
-		// //restoreInventory(character);
-		// //restoreSkills(character);
-		// //character.restoreSkills();
-		// //restoreShortCuts(character);
-		// //restoreWarehouse(character);
-		//
-		// // preinit some values for each login
-		// character.setRunning(); // running is default
-		// character.standUp(); // standing is default
-		//
-		// character.refreshOverloaded();
-		// character.refreshExpertisePenalty();
-		// character.refreshMasteryPenality();
-		// character.refreshMasteryWeapPenality();
-		//
-		// character.sendPacket(new UserInfo(character));
-		// character.broadcastKarma();
-		// character.setOnlineStatus(true);
-		// }
-		// if(character == null)
-		// {
-		// LOGGER.severe("could not restore in slot: " + charslot);
-		// }
-		
-		// setCharacter(character);
 		return character;
 	}
 	
-	/**
-	 * @param chars
-	 */
 	public void setCharSelection(CharSelectInfoPackage[] chars)
 	{
 		_charSlotMapping.clear();
@@ -559,10 +524,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		}
 	}
 	
-	/**
-	 * @param charslot
-	 * @return
-	 */
 	private int getObjectIdForSlot(int charslot)
 	{
 		if ((charslot < 0) || (charslot >= _charSlotMapping.size()))
@@ -691,10 +652,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			try
 			{
-				// // we are going to manually save the char below thus we can force the cancel
-				// if (_autoSaveInDB != null)
-				// _autoSaveInDB.cancel(true);
-				//
+				// we are going to manually save the char below thus we can force the cancel
 				
 				final L2PcInstance player = activeChar;
 				if (player != null) // this should only happen on connection loss
@@ -779,9 +737,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			try
 			{
-				// // we are going to manually save the char bellow thus we can force the cancel
-				// if(_autoSaveInDB != null)
-				// _autoSaveInDB.cancel(true);
+				// we are going to manually save the char bellow thus we can force the cancel
 				
 				L2PcInstance player = activeChar;
 				if (player != null) // this should only happen on connection loss
@@ -976,7 +932,6 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		
 		// save last action time
 		_last_received_packet_action_time = System.currentTimeMillis();
-		// LOGGER.severe("Client " + toString() + " - updated last action state "+_last_received_packet_action_time);
 		
 		try
 		{
@@ -1058,16 +1013,11 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 	
 	public boolean isConnectionAlive()
 	{
-		// if last received packet time is higher then Config.CHECK_CONNECTION_INACTIVITY_TIME --> check connection
 		if ((System.currentTimeMillis() - _last_received_packet_action_time) > Config.CHECK_CONNECTION_INACTIVITY_TIME)
 		{
-			
 			_last_received_packet_action_time = System.currentTimeMillis();
-			
 			return getConnection().isConnected() && !getConnection().isClosed();
-			
 		}
-		
 		return true;
 	}
 }

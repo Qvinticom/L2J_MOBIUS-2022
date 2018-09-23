@@ -386,8 +386,8 @@ public class AdminTeleport implements IAdminCommandHandler
 			case admin_recall_npc:
 			{
 				recallNPC(activeChar);
-			}
 				break;
+			}
 			case admin_gonorth:
 			case admin_gosouth:
 			case admin_goeast:
@@ -456,8 +456,8 @@ public class AdminTeleport implements IAdminCommandHandler
 			case admin_tele:
 			{
 				showTeleportWindow(activeChar);
-			}
 				break;
+			}
 			case admin_teleto:
 			{
 				String val = "";
@@ -504,7 +504,6 @@ public class AdminTeleport implements IAdminCommandHandler
 	}
 	
 	private void teleportTo(L2PcInstance activeChar, int x, int y, int z)
-	// private void teleportTo(L2PcInstance activeChar, String Cords)
 	{
 		activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		activeChar.teleToLocation(x, y, z, false);
@@ -562,9 +561,7 @@ public class AdminTeleport implements IAdminCommandHandler
 		if ((target != null) && (target instanceof L2PcInstance))
 		{
 			player = (L2PcInstance) target;
-		} /*
-			 * else if(target != null && target instanceof L2NpcInstance){ npc = (L2NpcInstance) target; }
-			 */
+		}
 		else
 		{
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
@@ -585,9 +582,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			activeChar.teleToLocation(x, y, z, true);
 			
 			BuilderUtil.sendSysMessage(activeChar, "You have teleported to character " + player.getName() + ".");
-		} /*
-			 * else if(npc!=null) { int x = npc.getX(); int y = npc.getY(); int z = npc.getZ(); activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE); activeChar.teleToLocation(x, y, z, true); BuilderUtil.sendSysMessage(activeChar, "You have teleported to npc " + npc.getName() + "."); }
-			 */
+		}
 	}
 	
 	private void recallNPC(L2PcInstance activeChar)
@@ -629,8 +624,6 @@ public class AdminTeleport implements IAdminCommandHandler
 			
 			try
 			{
-				// L2MonsterInstance mob = new L2MonsterInstance(monsterTemplate, template1);
-				
 				spawn = new L2Spawn(template1);
 				spawn.setX(activeChar.getX());
 				spawn.setY(activeChar.getY());

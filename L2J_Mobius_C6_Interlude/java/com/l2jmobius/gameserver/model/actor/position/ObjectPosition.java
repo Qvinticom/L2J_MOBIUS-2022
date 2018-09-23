@@ -26,34 +26,16 @@ import com.l2jmobius.gameserver.model.L2WorldRegion;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * The Class ObjectPosition.
- */
 public class ObjectPosition
 {
-	
-	/** The Constant LOGGER. */
 	private static final Logger LOGGER = Logger.getLogger(ObjectPosition.class.getName());
 	
-	// =========================================================
-	// Data Field
-	/** The _active object. */
 	private final L2Object _activeObject;
-	
-	/** The _heading. */
 	private int _heading = 0;
-	
-	/** The _world position. */
 	private Point3D _worldPosition;
-	
-	/** The _world region. */
 	private L2WorldRegion _worldRegion; // Object localization : Used for items/chars that are seen in the world
-	
-	/** The _changing region. */
 	private Boolean _changingRegion = false;
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new object position.
 	 * @param activeObject the active object
@@ -64,8 +46,6 @@ public class ObjectPosition
 		setWorldRegion(L2World.getInstance().getRegion(getWorldPosition()));
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Set the x,y,z position of the L2Object and if necessary modify its _worldRegion.<BR>
 	 * <BR>
@@ -102,7 +82,6 @@ public class ObjectPosition
 			
 			if (_activeObject instanceof L2PcInstance)
 			{
-				// ((L2PcInstance)obj).deleteMe();
 				((L2PcInstance) _activeObject).teleToLocation(0, 0, 0, false);
 				((L2PcInstance) _activeObject).sendMessage("Error with your coords, Please ask a GM for help!");
 				
@@ -185,11 +164,6 @@ public class ObjectPosition
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	/**
 	 * Gets the active object.
 	 * @return the active object

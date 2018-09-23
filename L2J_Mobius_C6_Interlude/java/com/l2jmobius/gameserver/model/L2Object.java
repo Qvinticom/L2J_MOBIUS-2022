@@ -44,12 +44,10 @@ import com.l2jmobius.gameserver.network.serverpackets.GetItem;
  * <li>L2ItemInstance</li>
  * <li>L2Potion</li>
  */
-
 public abstract class L2Object
 {
 	private final Logger LOGGER = Logger.getLogger(L2Object.class.getName());
-	// =========================================================
-	// Data Field
+	
 	private boolean _isVisible; // Object visibility
 	private ObjectKnownList _knownList;
 	private String _name;
@@ -60,13 +58,7 @@ public abstract class L2Object
 	// Objects can only see objects in same instancezone, instance 0 is normal world -1 the all seeing world
 	private int _instanceId = 0;
 	
-	// =========================================================
-	// Constructor
-	// by Azagthtot
 	private BaseExtender _extender = null;
-	
-	// =========================================================
-	// Constructor
 	
 	public L2Object(int objectId)
 	{
@@ -161,8 +153,6 @@ public abstract class L2Object
 		}
 	}
 	
-	// =========================================================
-	// Event - Public
 	public void onAction(L2PcInstance player)
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -201,7 +191,6 @@ public abstract class L2Object
 		fireEvent(EventType.SPAWN.name, (Object[]) null);
 	}
 	
-	// =========================================================
 	// Position - Should remove to fully move to L2ObjectPosition
 	public final void setXYZ(int x, int y, int z)
 	{
@@ -243,8 +232,6 @@ public abstract class L2Object
 		return getPosition().getZ();
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Remove a L2Object from the world.<BR>
 	 * <BR>
@@ -341,8 +328,7 @@ public abstract class L2Object
 			}
 		}
 		
-		// this can synchronize on others instancies, so it's out of
-		// synchronized, to avoid deadlocks
+		// this can synchronize on others instancies, so it's out of synchronized, to avoid deadlocks
 		// Remove the L2ItemInstance from the world
 		L2World.getInstance().removeVisibleObject(this, oldregion);
 	}
@@ -393,8 +379,7 @@ public abstract class L2Object
 			getPosition().getWorldRegion().addVisibleObject(this);
 		}
 		
-		// this can synchronize on others instances, so it's out of
-		// synchronized, to avoid deadlocks
+		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
 		// Add the L2Object spawn in the world as a visible object
 		L2World.getInstance().addVisibleObject(this, getPosition().getWorldRegion(), null);
 		
@@ -434,8 +419,7 @@ public abstract class L2Object
 			getPosition().setWorldRegion(L2World.getInstance().getRegion(getPosition().getWorldPosition()));
 		}
 		
-		// these can synchronize on others instances, so they're out of
-		// synchronized, to avoid deadlocks
+		// these can synchronize on others instances, so they're out of synchronized, to avoid deadlocks
 		// Add the L2Object spawn in the _allobjects of L2World
 		L2World.getInstance().storeObject(this);
 		
@@ -450,8 +434,7 @@ public abstract class L2Object
 			LOGGER.info("ATTENTION: no region found for location " + x + "," + y + "," + z + ". It's not possible to spawn object " + _objectId + " here...");
 			return;
 		}
-		// this can synchronize on others instances, so it's out of
-		// synchronized, to avoid deadlocks
+		// this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
 		// Add the L2Object spawn in the world as a visible object
 		L2World.getInstance().addVisibleObject(this, region, null);
 		
@@ -470,11 +453,6 @@ public abstract class L2Object
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	public boolean isAttackable()
 	{
 		return false;
@@ -496,7 +474,6 @@ public abstract class L2Object
 	 */
 	public final boolean isVisible()
 	{
-		// return getPosition().getWorldRegion() != null && _IsVisible;
 		return getPosition().getWorldRegion() != null;
 	}
 	
@@ -588,9 +565,7 @@ public abstract class L2Object
 		{
 			if (this instanceof L2PcInstance)
 			{
-				// We don't want some ugly looking disappear/appear effects, so don't update
-				// the knownlist here, but players usually enter instancezones through teleporting
-				// and the teleport will do the revalidation for us.
+				// We don't want some ugly looking disappear/appear effects, so don't update the knownlist here, but players usually enter instancezones through teleporting and the teleport will do the revalidation for us.
 			}
 			else
 			{

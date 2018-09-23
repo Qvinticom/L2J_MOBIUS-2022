@@ -29,7 +29,6 @@ public class TownManager
 {
 	private static final Logger LOGGER = Logger.getLogger(TownManager.class.getName());
 	
-	// =========================================================
 	private static TownManager _instance;
 	
 	public static final TownManager getInstance()
@@ -42,20 +41,11 @@ public class TownManager
 		return _instance;
 	}
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private List<L2TownZone> _towns;
 	
-	// =========================================================
-	// Constructor
 	public TownManager()
 	{
 	}
-	
-	// =========================================================
-	// Property - Public
 	
 	public void addTown(L2TownZone arena)
 	{
@@ -230,7 +220,6 @@ public class TownManager
 	
 	public final boolean townHasCastleInSiege(int townId)
 	{
-		// int[] castleidarray = {0,0,0,0,0,0,0,1,2,3,4,0,5,0,0,6,0};
 		final int[] castleidarray =
 		{
 			0,
@@ -269,7 +258,6 @@ public class TownManager
 	public final boolean townHasCastleInSiege(int x, int y)
 	{
 		final int curtown = MapRegionTable.getInstance().getMapRegion(x, y);
-		// int[] castleidarray = {0,0,0,0,0,1,0,2,3,4,5,0,0,6,0,0,0,0};
 		final int[] castleidarray =
 		{
 			0,

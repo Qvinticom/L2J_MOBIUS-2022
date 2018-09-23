@@ -67,8 +67,8 @@ public class L2FortManagerInstance extends L2MerchantInstance
 		{
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
-		} else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		}
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -164,8 +164,7 @@ public class L2FortManagerInstance extends L2MerchantInstance
 				}
 				return;
 			}
-			else if (actualCommand.equalsIgnoreCase("operate_door")) // Door
-			// Control
+			else if (actualCommand.equalsIgnoreCase("operate_door")) // Door Control
 			{
 				if ((player.getClanPrivileges() & L2Clan.CP_CS_OPEN_DOOR) == L2Clan.CP_CS_OPEN_DOOR)
 				{

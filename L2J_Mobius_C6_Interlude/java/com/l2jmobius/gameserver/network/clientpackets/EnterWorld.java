@@ -245,7 +245,7 @@ public class EnterWorld extends L2GameClientPacket
 		{
 			if ((temp != null) && temp.isEquipped())
 			{
-				temp.getAugmentation().applyBoni(activeChar);
+				temp.getAugmentation().applyBonus(activeChar);
 			}
 		}
 		

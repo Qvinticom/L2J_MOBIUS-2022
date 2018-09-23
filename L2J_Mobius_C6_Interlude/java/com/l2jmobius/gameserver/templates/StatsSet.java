@@ -277,7 +277,6 @@ public class StatsSet
 		{
 			throw new RuntimeException();
 		}
-		// throw new IllegalArgumentException("Integer value required, but not specified");
 		if (val instanceof Number)
 		{
 			final int[] result =
@@ -316,7 +315,6 @@ public class StatsSet
 		{
 			throw new RuntimeException();
 		}
-		// throw new IllegalArgumentException("Integer value required, but not specified");
 		if (val instanceof Number)
 		{
 			return ((Number) val).longValue();
@@ -640,5 +638,4 @@ public class StatsSet
 	{
 		return "StatsSet [_set=" + _set + "]";
 	}
-	
 }

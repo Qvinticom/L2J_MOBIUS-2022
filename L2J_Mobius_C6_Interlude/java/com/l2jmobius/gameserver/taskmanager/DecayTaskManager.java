@@ -75,7 +75,6 @@ public class DecayTaskManager
 	{
 		protected DecayScheduler()
 		{
-			// Do nothing
 		}
 		
 		@Override

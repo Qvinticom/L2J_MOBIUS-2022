@@ -35,14 +35,12 @@ final class EffectImobileBuff extends L2Effect
 		return EffectType.BUFF;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
 		getEffector().setIsImobilised(true);
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

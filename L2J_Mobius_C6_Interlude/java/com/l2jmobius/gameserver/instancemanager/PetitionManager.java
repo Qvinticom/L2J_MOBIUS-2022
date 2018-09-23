@@ -87,7 +87,6 @@ public final class PetitionManager
 	private class Petition
 	{
 		private final long _submitTime = System.currentTimeMillis();
-		// private long _endTime = -1;
 		
 		private final int _id;
 		private final PetitionType _type;
@@ -126,8 +125,6 @@ public final class PetitionManager
 		public boolean endPetitionConsultation(PetitionState endState)
 		{
 			setState(endState);
-			// _endTime = System.currentTimeMillis();
-			
 			if ((_responder != null) && (_responder.isOnline() == 1))
 			{
 				if (endState == PetitionState.Responder_Reject)
@@ -181,11 +178,6 @@ public final class PetitionManager
 			return _responder;
 		}
 		
-		// public long getEndTime()
-		// {
-		// return _endTime;
-		// }
-		
 		public long getSubmitTime()
 		{
 			return _submitTime;
@@ -205,7 +197,6 @@ public final class PetitionManager
 		{
 			if ((_petitioner == null) || (_petitioner.isOnline() == 0))
 			{
-				// endPetitionConsultation(PetitionState.Petitioner_Missing);
 				return;
 			}
 			
@@ -517,9 +508,6 @@ public final class PetitionManager
 	
 	public boolean sendActivePetitionMessage(L2PcInstance player, String messageText)
 	{
-		// if (!isPlayerInConsultation(player))
-		// return false;
-		
 		CreatureSay cs;
 		
 		for (Petition currPetition : _pendingPetitions.values())

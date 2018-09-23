@@ -21,10 +21,7 @@ package com.l2jmobius.gameserver.model.actor.instance;
  */
 public class L2RecipeInstance
 {
-	/** The Identifier of the item needed in the L2RecipeInstance. */
 	private final int _itemId;
-	
-	/** The item quantity needed in the L2RecipeInstance. */
 	private final int _quantity;
 	
 	/**
@@ -58,5 +55,4 @@ public class L2RecipeInstance
 	{
 		return _quantity;
 	}
-	
 }

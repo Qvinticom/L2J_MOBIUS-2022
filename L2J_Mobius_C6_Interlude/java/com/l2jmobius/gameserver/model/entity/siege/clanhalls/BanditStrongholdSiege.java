@@ -83,46 +83,43 @@ public class BanditStrongholdSiege extends ClanHallSiege
 	
 	public void startSiege()
 	{
-		// if (GameServer._instanceOk)
+		setRegistrationPeriod(false);
+		if (_clansInfo.size() == 0)
 		{
-			setRegistrationPeriod(false);
-			if (_clansInfo.size() == 0)
+			endSiege(false);
+			return;
+		}
+		
+		if ((_clansInfo.size() == 1) && (clanhall.getOwnerClan() == null))
+		{
+			endSiege(false);
+			return;
+		}
+		
+		if ((_clansInfo.size() == 1) && (clanhall.getOwnerClan() != null))
+		{
+			L2Clan clan = null;
+			for (clanPlayersInfo a : _clansInfo.values())
 			{
-				endSiege(false);
-				return;
-			}
-			
-			if ((_clansInfo.size() == 1) && (clanhall.getOwnerClan() == null))
-			{
-				endSiege(false);
-				return;
-			}
-			
-			if ((_clansInfo.size() == 1) && (clanhall.getOwnerClan() != null))
-			{
-				L2Clan clan = null;
-				for (clanPlayersInfo a : _clansInfo.values())
-				{
-					clan = ClanTable.getInstance().getClanByName(a._clanName);
-				}
-				setIsInProgress(true);
-				startSecondStep(clan);
-				_siegeEndDate = Calendar.getInstance();
-				_siegeEndDate.add(Calendar.MINUTE, 20);
-				_endSiegeTask.schedule(1000);
-				return;
+				clan = ClanTable.getInstance().getClanByName(a._clanName);
 			}
 			setIsInProgress(true);
-			spawnFlags();
-			gateControl(1);
-			anonce("Take place at the siege of his headquarters.", 1);
-			ThreadPool.schedule(new startFirstStep(), 5 * 60000);
-			_midTimer = ThreadPool.schedule(new midSiegeStep(), 25 * 60000);
-			
+			startSecondStep(clan);
 			_siegeEndDate = Calendar.getInstance();
-			_siegeEndDate.add(Calendar.MINUTE, 60);
+			_siegeEndDate.add(Calendar.MINUTE, 20);
 			_endSiegeTask.schedule(1000);
+			return;
 		}
+		setIsInProgress(true);
+		spawnFlags();
+		gateControl(1);
+		anonce("Take place at the siege of his headquarters.", 1);
+		ThreadPool.schedule(new startFirstStep(), 5 * 60000);
+		_midTimer = ThreadPool.schedule(new midSiegeStep(), 25 * 60000);
+		
+		_siegeEndDate = Calendar.getInstance();
+		_siegeEndDate.add(Calendar.MINUTE, 60);
+		_endSiegeTask.schedule(1000);
 	}
 	
 	public void startSecondStep(L2Clan winner)
@@ -287,9 +284,6 @@ public class BanditStrongholdSiege extends ClanHallSiege
 					continue;
 				}
 				template = NpcTable.getInstance().getTemplate(35427 + mobCounter);
-				/*
-				 * template.setServerSideTitle(true); template.setTitle(clan.getName());
-				 */
 				final L2MonsterInstance questMob = new L2MonsterInstance(IdFactory.getInstance().getNextId(), template);
 				questMob.setHeading(100);
 				questMob.getStatus().setCurrentHpMp(questMob.getMaxHp(), questMob.getMaxMp());
@@ -617,12 +611,9 @@ public class BanditStrongholdSiege extends ClanHallSiege
 		else
 		{
 			final CreatureSay cs = new CreatureSay(0, 1, "Journal", text);
-			// L2MapRegion region = MapRegionManager.getInstance().getRegion(88404, -21821, -2276);
 			for (L2PcInstance player : L2World.getInstance().getAllPlayers())
 			{
-				if /*
-					 * (region == MapRegionManager.getInstance().getRegion(player.getX(), player.getY(), player.getZ()) &&
-					 */ (player.getInstanceId() == 0/* ) */)
+				if (player.getInstanceId() == 0)
 				{
 					player.sendPacket(cs);
 				}

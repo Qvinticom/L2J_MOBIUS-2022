@@ -71,8 +71,6 @@ public class EventManager
 			is = new FileInputStream(new File(EVENT_MANAGER_CONFIGURATION_FILE));
 			eventSettings.load(is);
 			
-			// ============================================================
-			
 			TVT_EVENT_ENABLED = Boolean.parseBoolean(eventSettings.getProperty("TVTEventEnabled", "false"));
 			TVT_TIMES_LIST = new ArrayList<>();
 			
@@ -150,13 +148,11 @@ public class EventManager
 			LOGGER.warning("registerTvT: TvT Event is not setted Properly");
 		}
 		
-		// clear all tvt
 		EventsGlobalTask.getInstance().clearEventTasksByEventName(TvT.get_eventName());
 		
 		for (String time : TVT_TIMES_LIST)
 		{
 			final TvT newInstance = TvT.getNewInstance();
-			// LOGGER.info("registerTvT: reg.time: "+time);
 			newInstance.setEventStartTime(time);
 			EventsGlobalTask.getInstance().registerNewEventTask(newInstance);
 		}
@@ -170,13 +166,11 @@ public class EventManager
 			LOGGER.warning("registerCTF: CTF Event is not setted Properly");
 		}
 		
-		// clear all tvt
 		EventsGlobalTask.getInstance().clearEventTasksByEventName(CTF.get_eventName());
 		
 		for (String time : CTF_TIMES_LIST)
 		{
 			final CTF newInstance = CTF.getNewInstance();
-			// LOGGER.info("registerCTF: reg.time: "+time);
 			newInstance.setEventStartTime(time);
 			EventsGlobalTask.getInstance().registerNewEventTask(newInstance);
 		}
@@ -190,16 +184,13 @@ public class EventManager
 			LOGGER.warning("registerDM: DM Event is not setted Properly");
 		}
 		
-		// clear all tvt
 		EventsGlobalTask.getInstance().clearEventTasksByEventName(DM.get_eventName());
 		
 		for (String time : DM_TIMES_LIST)
 		{
 			final DM newInstance = DM.getNewInstance();
-			// LOGGER.info("registerDM: reg.time: "+time);
 			newInstance.setEventStartTime(time);
 			EventsGlobalTask.getInstance().registerNewEventTask(newInstance);
 		}
 	}
-	
 }

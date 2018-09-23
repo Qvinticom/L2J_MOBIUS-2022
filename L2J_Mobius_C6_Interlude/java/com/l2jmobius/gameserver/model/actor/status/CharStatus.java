@@ -36,49 +36,21 @@ import com.l2jmobius.gameserver.model.entity.Duel;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.skills.Formulas;
 
-/**
- * The Class CharStatus.
- */
 public class CharStatus
 {
-	
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(CharStatus.class.getName());
 	
-	// =========================================================
-	// Data Field
-	/** The _active char. */
 	final L2Character _activeChar;
-	
-	/** The _current cp. */
 	double _currentCp = 0; // Current CP of the L2Character
-	
-	/** The _current hp. */
 	double _currentHp = 0; // Current HP of the L2Character
-	
-	/** The _current mp. */
 	double _currentMp = 0; // Current MP of the L2Character
-	
-	/** Array containing all clients that need to be notified about hp/mp updates of the L2Character. */
 	private Set<L2Character> _StatusListener;
-	
-	/** The _reg task. */
 	private Future<?> _regTask;
-	
-	/** The _flags regen active. */
 	private byte _flagsRegenActive = 0;
-	
-	/** The Constant REGEN_FLAG_CP. */
 	private static final byte REGEN_FLAG_CP = 4;
-	
-	/** The Constant REGEN_FLAG_HP. */
 	private static final byte REGEN_FLAG_HP = 1;
-	
-	/** The Constant REGEN_FLAG_MP. */
 	private static final byte REGEN_FLAG_MP = 2;
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new char status.
 	 * @param activeChar the active char
@@ -258,8 +230,7 @@ public class CharStatus
 			}
 			setCurrentHp(value); // Set Hp
 		}
-		else // If we're dealing with an L2Attackable Instance and the attacker's hit didn't kill the mob, clear the over-hit flag
-		if (_activeChar instanceof L2Attackable)
+		else if (_activeChar instanceof L2Attackable) // If we're dealing with an L2Attackable Instance and the attacker's hit didn't kill the mob, clear the over-hit flag.
 		{
 			((L2Attackable) _activeChar).overhitEnabled(false);
 		}
@@ -278,8 +249,7 @@ public class CharStatus
 				}
 			}
 			
-			// first die (and calculate rewards), if currentHp < 0,
-			// then overhit may be calculated
+			// first die (and calculate rewards), if currentHp < 0, then overhit may be calculated
 			if (Config.DEBUG)
 			{
 				LOGGER.info("char is dead.");
@@ -389,11 +359,6 @@ public class CharStatus
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	/**
 	 * Gets the active char.
 	 * @return the active char
@@ -686,8 +651,6 @@ public class CharStatus
 		return _StatusListener;
 	}
 	
-	// =========================================================
-	// Runnable
 	/**
 	 * Task of HP/MP/CP regeneration.
 	 */

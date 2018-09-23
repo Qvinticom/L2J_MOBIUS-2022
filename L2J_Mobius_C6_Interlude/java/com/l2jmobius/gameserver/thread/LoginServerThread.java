@@ -426,7 +426,6 @@ public class LoginServerThread extends Thread
 			}
 			catch (InterruptedException e)
 			{
-				// no need exception LOGGER
 			}
 		}
 	}
@@ -496,10 +495,6 @@ public class LoginServerThread extends Thread
 			e.printStackTrace();
 		}
 	}
-	
-	/*
-	 * public void addGameServerLogin(String account, L2GameClient client) { _accountsInGameServer.put(account, client); }
-	 */
 	
 	public boolean addGameServerLogin(String account, L2GameClient client)
 	{
@@ -731,7 +726,7 @@ public class LoginServerThread extends Thread
 		public int playOkID2;
 		public int loginOkID1;
 		public int loginOkID2;
-		public int clientKey = -1; // by Azagthtot
+		public int clientKey = -1;
 		
 		public SessionKey(int loginOK1, int loginOK2, int playOK1, int playOK2)
 		{

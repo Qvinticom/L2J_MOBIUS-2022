@@ -43,87 +43,37 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * The Class Duel.
- */
 public class Duel
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(Duel.class.getName());
 	
-	/** The Constant DUELSTATE_NODUEL. */
 	public static final int DUELSTATE_NODUEL = 0;
-	
-	/** The Constant DUELSTATE_DUELLING. */
 	public static final int DUELSTATE_DUELLING = 1;
-	
-	/** The Constant DUELSTATE_DEAD. */
 	public static final int DUELSTATE_DEAD = 2;
-	
-	/** The Constant DUELSTATE_WINNER. */
 	public static final int DUELSTATE_WINNER = 3;
-	
-	/** The Constant DUELSTATE_INTERRUPTED. */
 	public static final int DUELSTATE_INTERRUPTED = 4;
 	
-	// =========================================================
-	// Data Field
-	/** The _duel id. */
 	private final int _duelId;
-	
-	/** The _player a. */
 	private L2PcInstance _playerA;
-	
-	/** The _player b. */
 	private L2PcInstance _playerB;
-	
-	/** The _party duel. */
 	protected boolean _partyDuel;
-	
-	/** The _duel end time. */
 	private final Calendar _duelEndTime;
-	
-	/** The _surrender request. */
 	private int _surrenderRequest = 0;
-	
-	/** The _countdown. */
 	private int _countdown = 4;
-	
-	/** The _finished. */
 	private boolean _finished = false;
-	
-	/** The _player conditions. */
 	private Map<Integer, PlayerCondition> _playerConditions;
 	
-	/**
-	 * The Enum DuelResultEnum.
-	 */
 	public enum DuelResultEnum
 	{
-		/** The Continue. */
 		Continue,
-		
-		/** The Team1 win. */
 		Team1Win,
-		
-		/** The Team2 win. */
 		Team2Win,
-		
-		/** The Team1 surrender. */
 		Team1Surrender,
-		
-		/** The Team2 surrender. */
 		Team2Surrender,
-		
-		/** The Canceled. */
 		Canceled,
-		
-		/** The Timeout. */
 		Timeout
 	}
 	
-	// =========================================================
-	// Constructor
 	/**
 	 * Instantiates a new duel.
 	 * @param playerA the player a
@@ -166,43 +116,19 @@ public class Duel
 		ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
 	}
 	
-	// ===============================================================
-	// Nested Class
-	
 	/**
 	 * The Class PlayerCondition.
 	 */
 	public class PlayerCondition
 	{
-		/** The _player. */
 		private L2PcInstance _player;
-		
-		/** The _hp. */
 		private double _hp;
-		
-		/** The _mp. */
 		private double _mp;
-		
-		/** The _cp. */
 		private double _cp;
-		
-		/** The _pa duel. */
 		private boolean _paDuel;
-		
-		/** The _z. */
 		private int _x;
-
-		/**
-		 * The _z. 
-		 */
 		private int _y;
-
-		/**
-		 * The _z. 
-		 */
 		private int _z;
-		
-		/** The _debuffs. */
 		private List<L2Effect> _debuffs;
 		
 		/**
@@ -311,8 +237,6 @@ public class Duel
 		}
 	}
 	
-	// ===============================================================
-	// Schedule task
 	/**
 	 * The Class ScheduleDuelTask.
 	 */
@@ -330,10 +254,6 @@ public class Duel
 			_duel = duel;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -365,12 +285,8 @@ public class Duel
 		}
 	}
 	
-	/**
-	 * The Class ScheduleStartDuelTask.
-	 */
 	public class ScheduleStartDuelTask implements Runnable
 	{
-		/** The _duel. */
 		private final Duel _duel;
 		
 		/**
@@ -382,10 +298,6 @@ public class Duel
 			_duel = duel;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -403,11 +315,9 @@ public class Duel
 				if (count == 4)
 				{
 					// players need to be teleportet first
-					// TODO: stadia manager needs a function to return an unused stadium for duels
+					// TODO: stadium manager needs a function to return an unused stadium for duels
 					
-					// currently if oly in competition period
-					// and defined location is into a stadium
-					// just use Gludin Arena as location
+					// currently if oly in competition period and defined location is into a stadium just use Gludin Arena as location
 					if (Olympiad.getInstance().inCompPeriod() && (OlympiadStadiaManager.getInstance().getStadiumByLoc(Config.DUEL_SPAWN_X, Config.DUEL_SPAWN_Y, Config.DUEL_SPAWN_Z) != null))
 					{
 						_duel.teleportPlayers(-87912, 142221, -3645);
@@ -436,15 +346,9 @@ public class Duel
 		}
 	}
 	
-	/**
-	 * The Class ScheduleEndDuelTask.
-	 */
 	public static class ScheduleEndDuelTask implements Runnable
 	{
-		/** The _duel. */
 		private final Duel _duel;
-		
-		/** The _result. */
 		private final DuelResultEnum _result;
 		
 		/**
@@ -458,10 +362,6 @@ public class Duel
 			_result = result;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -475,9 +375,6 @@ public class Duel
 			}
 		}
 	}
-	
-	// ========================================================
-	// Method - Private
 	
 	/**
 	 * Stops all players from attacking. Used for duel timeout / interrupt.
@@ -516,9 +413,6 @@ public class Duel
 		}
 	}
 	
-	// ========================================================
-	// Method - Public
-	
 	/**
 	 * Check if a player engaged in pvp combat (only for 1on1 duels).
 	 * @param sendMessage the send message
@@ -546,14 +440,8 @@ public class Duel
 		return false;
 	}
 	
-	/**
-	 * Starts the duel.
-	 */
 	public void startDuel()
 	{
-		// Save player Conditions
-		// savePlayerConditions();
-		
 		if ((_playerA == null) || (_playerB == null) || _playerA.isInDuel() || _playerB.isInDuel() || Olympiad.getInstance().isRegisteredInComp(_playerA) || Olympiad.getInstance().isRegisteredInComp(_playerB) || Olympiad.getInstance().isRegistered(_playerA) || Olympiad.getInstance().isRegistered(_playerB))
 		{
 			// clean up
@@ -701,7 +589,6 @@ public class Duel
 		}
 		
 		// restore player conditions
-		// for (FastList.Node<PlayerCondition> e = _playerConditions.head(), end = _playerConditions.tail(); (e = e.getNext()) != end;)
 		for (Integer playerObjId : _playerConditions.keySet())
 		{
 			final PlayerCondition e = _playerConditions.get(playerObjId);
@@ -1273,8 +1160,7 @@ public class Duel
 				_playerB = null;
 			}
 		}
-		else
-		// teleport the player back & delete his PlayerCondition record
+		else // teleport the player back & delete his PlayerCondition record
 		{
 			final PlayerCondition e = _playerConditions.remove(player.getObjectId());
 			

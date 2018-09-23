@@ -66,20 +66,14 @@ public class L2BoxInstance extends L2NpcInstance
 		public int itemid;
 		public int id;
 		public int count;
-		// public int enchant;
 		public String name;
 		
-		// public L2BoxItem()
-		// {
-		// //
-		// }
 		public L2BoxItem(int _itemid, int _count, String _name, int _id/* , int _enchant */)
 		{
 			itemid = _itemid;
 			count = _count;
 			name = _name;
 			id = _id;
-			// enchant = _enchant;
 		}
 		
 		@Override
@@ -100,7 +94,6 @@ public class L2BoxInstance extends L2NpcInstance
 		}
 	}
 	
-	// private static Logger LOGGER = Logger.getLogger(L2BoxInstance.class);
 	private static final int MAX_ITEMS_PER_PAGE = 25;
 	private static final String INSERT_GRANT = "INSERT INTO boxaccess (charname,spawn) VALUES(?,?)";
 	private static final String DELETE_GRANT = "DELETE FROM boxaccess WHERE charname=? AND spawn=?";
@@ -149,7 +142,6 @@ public class L2BoxInstance extends L2NpcInstance
 		else
 		{
 			super.onBypassFeedback(player, command);
-			// else LOGGER.info("onBypassFeedback unknown command "+command);
 		}
 	}
 	

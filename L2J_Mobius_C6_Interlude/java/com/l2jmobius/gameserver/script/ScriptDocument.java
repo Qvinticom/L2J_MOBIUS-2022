@@ -90,5 +90,4 @@ public class ScriptDocument
 	{
 		return _name;
 	}
-	
 }

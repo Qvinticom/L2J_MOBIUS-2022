@@ -58,8 +58,6 @@ public class FortSiegeManager
 		load();
 	}
 	
-	// =========================================================
-	// Data Field
 	private int _attackerMaxClans = 500; // Max number of clans
 	private int _attackerRespawnDelay = 20000; // Time in ms. Changeable in siege.config
 	private int _defenderMaxClans = 500; // Max number of clans
@@ -173,8 +171,6 @@ public class FortSiegeManager
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		LOGGER.info("Initializing FortSiegeManager");
@@ -282,8 +278,6 @@ public class FortSiegeManager
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final List<SiegeSpawn> getCommanderSpawnList(int _fortId)
 	{
 		if (_commanderSpawnList.containsKey(_fortId))

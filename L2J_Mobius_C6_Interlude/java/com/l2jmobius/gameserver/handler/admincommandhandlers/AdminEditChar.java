@@ -276,7 +276,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				activeChar.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
 				return false;
-			} // given a player name:{} displays an information window
+			}
 			case admin_show_characters:
 			{
 				String val = "";
@@ -371,7 +371,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				return true;
-			} // find all the player connections from a given IPv4 number
+			}
 			case admin_find_account:
 			{
 				String val = "";
@@ -387,7 +387,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				findCharactersPerAccount(activeChar, val);
 				return true;
-			} // list all the characters from an account (useful for GMs w/o DB access)
+			}
 			case admin_save_modifications:
 			{
 				String val = "";
@@ -413,7 +413,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				}
 				adminModifyCharacter(activeChar, val);
 				return true;
-			} // consider it deprecated...
+			}
 			case admin_rec:
 			{
 				String val = "";
@@ -501,9 +501,6 @@ public class AdminEditChar implements IAdminCommandHandler
 					final ClassId classId = ClassId.getClassIdByOrdinal(classidval);
 					if (!player.isSubClassActive())
 					{
-						// while(classId.level() != 0){ //go to root
-						// classId = classId.getParent();
-						// }
 						player.setBaseClass(classId);
 					}
 					String newclass = player.getTemplate().className;
@@ -871,11 +868,11 @@ public class AdminEditChar implements IAdminCommandHandler
 					L2PcInstance target;
 					if ((activeChar.getTarget() != null) && (activeChar.getTarget() instanceof L2PcInstance))
 					{
-						target = (L2PcInstance) activeChar.getTarget();// Target - player
+						target = (L2PcInstance) activeChar.getTarget(); // Target - player
 					}
 					else
 					{
-						target = activeChar;// No target
+						target = activeChar; // No target
 					}
 					if (target != null)
 					{
@@ -997,7 +994,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		replyMSG = new StringBuilder();
 		
 		for (int i = CharactersStart; i < CharactersEnd; i++)
-		{ // Add player info into new Table row
+		{
 			replyMSG.append("<tr><td width=80><a action=\"bypass -h admin_character_info " + players[i].getName() + "\">" + players[i].getName() + "</a></td><td width=110>" + players[i].getTemplate().className + "</td><td width=40>" + players[i].getLevel() + "</td></tr>");
 		}
 		
@@ -1219,7 +1216,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		StringBuilder replyMSG = new StringBuilder();
 		
 		for (L2PcInstance player : players)
-		{ // Add player info into new Table row
+		{
 			name = player.getName();
 			
 			if (name.toLowerCase().contains(CharacterToFind.toLowerCase()))

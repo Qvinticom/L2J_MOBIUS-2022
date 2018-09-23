@@ -99,8 +99,7 @@ public class GrandBossManager
 			final ResultSet rset = statement.executeQuery();
 			while (rset.next())
 			{
-				// Read all info from DB, and store it for AI to read and decide what to do
-				// faster than accessing DB in real time
+				// Read all info from DB, and store it for AI to read and decide what to do faster than accessing DB in real time
 				StatsSet info = new StatsSet();
 				final int bossId = rset.getInt("boss_id");
 				info.set("loc_x", rset.getInt("loc_x"));
@@ -232,18 +231,11 @@ public class GrandBossManager
 		return temp.getZoneName().equalsIgnoreCase(zoneType);
 	}
 	
-	/*
-	 * The rest
-	 */
-	
 	public Integer getBossStatus(int bossId)
 	{
 		return _bossStatus.get(bossId);
 	}
 	
-	/*
-	 * public void setBossStatus(int bossId, int status) { _bossStatus.remove(bossId); _bossStatus.put(bossId, status); }
-	 */
 	public void setBossStatus(int bossId, int status)
 	{
 		_bossStatus.put(bossId, status);

@@ -57,10 +57,6 @@ import com.l2jmobius.gameserver.handler.skillhandlers.ZakenPlayer;
 import com.l2jmobius.gameserver.handler.skillhandlers.ZakenSelf;
 import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 
-/**
- * This class ...
- * @version $Revision: 1.1.4.4 $ $Date: 2005/04/03 15:55:06 $
- */
 public class SkillHandler
 {
 	private static final Logger LOGGER = Logger.getLogger(GameServer.class.getName());
@@ -134,9 +130,6 @@ public class SkillHandler
 		return _datatable.get(skillType);
 	}
 	
-	/**
-	 * @return
-	 */
 	public int size()
 	{
 		return _datatable.size();

@@ -40,18 +40,9 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2TeleporterInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2TeleporterInstance.class);
-	
-	/** The Constant COND_ALL_FALSE. */
 	private static final int COND_ALL_FALSE = 0;
-	
-	/** The Constant COND_BUSY_BECAUSE_OF_SIEGE. */
 	private static final int COND_BUSY_BECAUSE_OF_SIEGE = 1;
-	
-	/** The Constant COND_OWNER. */
 	private static final int COND_OWNER = 2;
-	
-	/** The Constant COND_REGULAR. */
 	private static final int COND_REGULAR = 3;
 	
 	/**
@@ -64,10 +55,6 @@ public final class L2TeleporterInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -169,10 +156,6 @@ public final class L2TeleporterInstance extends L2FolkInstance
 		super.onBypassFeedback(player, command);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
@@ -189,10 +172,6 @@ public final class L2TeleporterInstance extends L2FolkInstance
 		return "data/html/teleporter/" + pom + ".htm";
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#showChatWindow(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void showChatWindow(L2PcInstance player)
 	{

@@ -56,8 +56,7 @@ public class L2FortMerchantInstance extends L2NpcWalkerInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -81,9 +80,6 @@ public class L2FortMerchantInstance extends L2NpcWalkerInstance
 		{
 			par = st.nextToken();
 		}
-		
-		// LOGGER.info("actualCommand : " + actualCommand);
-		// LOGGER.info("par : " + par);
 		
 		if (actualCommand.equalsIgnoreCase("Chat"))
 		{
@@ -174,5 +170,4 @@ public class L2FortMerchantInstance extends L2NpcWalkerInstance
 		}
 		return true;
 	}
-	
 }

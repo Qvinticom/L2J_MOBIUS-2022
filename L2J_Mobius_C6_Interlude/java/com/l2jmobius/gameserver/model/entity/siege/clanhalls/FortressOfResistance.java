@@ -117,10 +117,6 @@ public class FortressOfResistance
 		
 		_clansDamageInfo = new HashMap<>();
 		
-		/*
-		 * synchronized (this) { setCalendarForNextCaprture(); long milliToCapture = getMilliToCapture(); RunMessengerSpawn rms = new RunMessengerSpawn(); ThreadPoolManager.scheduleGeneral(rms, milliToCapture); LOGGER.info("Fortress of Resistanse: " + milliToCapture / 1000 +
-		 * " sec. to capture"); }
-		 */
 		synchronized (this)
 		{
 			setCalendarForNextCaprture();

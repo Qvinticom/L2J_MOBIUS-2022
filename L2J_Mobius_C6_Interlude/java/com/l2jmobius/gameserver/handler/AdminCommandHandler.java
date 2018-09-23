@@ -149,7 +149,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminChristmas());
 		registerAdminCommandHandler(new AdminBan());
 		registerAdminCommandHandler(new AdminPolymorph());
-		// registerAdminCommandHandler(new AdminBanChat());
 		registerAdminCommandHandler(new AdminReload());
 		registerAdminCommandHandler(new AdminKick());
 		registerAdminCommandHandler(new AdminMonsterRace());
@@ -186,9 +185,7 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminNoble());
 		registerAdminCommandHandler(new AdminBuffs());
 		registerAdminCommandHandler(new AdminAio());
-		registerAdminCommandHandler(new AdminWho()); // L2OFF command
-		// ATTENTION: adding new command handlers, you have to change the
-		// sql file containing the access levels rights
+		registerAdminCommandHandler(new AdminWho());
 		
 		LOGGER.info("AdminCommandHandler: Loaded " + _datatable.size() + " handlers.");
 		

@@ -37,10 +37,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public class L2FishermanInstance extends L2FolkInstance
 {
-	/**
-	 * @param objectId
-	 * @param template
-	 */
 	public L2FishermanInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);

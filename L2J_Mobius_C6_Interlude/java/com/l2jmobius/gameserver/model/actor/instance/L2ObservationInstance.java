@@ -32,8 +32,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2ObservationInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2TeleporterInstance.class);
-	
 	/**
 	 * Instantiates a new l2 observation instance.
 	 * @param objectId the object id
@@ -44,10 +42,6 @@ public final class L2ObservationInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -112,10 +106,6 @@ public final class L2ObservationInstance extends L2FolkInstance
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{

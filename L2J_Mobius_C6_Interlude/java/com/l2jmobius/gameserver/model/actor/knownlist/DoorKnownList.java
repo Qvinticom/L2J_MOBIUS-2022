@@ -24,24 +24,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2SiegeGuardInstance;
 
 public class DoorKnownList extends CharKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public DoorKnownList(L2DoorInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
-	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2DoorInstance getActiveChar()
 	{

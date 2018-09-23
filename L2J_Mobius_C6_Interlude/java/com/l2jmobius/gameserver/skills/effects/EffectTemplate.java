@@ -92,8 +92,6 @@ public final class EffectTemplate
 		try
 		{
 			final L2Effect effect = (L2Effect) _constructor.newInstance(env, this);
-			// if (_applayCond != null)
-			// effect.setCondition(_applayCond);
 			return effect;
 		}
 		catch (IllegalAccessException e)
@@ -132,5 +130,4 @@ public final class EffectTemplate
 			funcTemplates = tmp;
 		}
 	}
-	
 }

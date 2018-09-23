@@ -33,14 +33,8 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.WearList;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision: 1.10.4.9 $ $Date: 2005/04/11 10:06:08 $
- */
 public class L2MerchantInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2MerchantInstance.class);
-	
 	/**
 	 * Instantiates a new l2 merchant instance.
 	 * @param objectId the object id
@@ -51,10 +45,6 @@ public class L2MerchantInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
@@ -158,10 +148,6 @@ public class L2MerchantInstance extends L2FolkInstance
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -229,9 +215,7 @@ public class L2MerchantInstance extends L2FolkInstance
 		}
 		else
 		{
-			// this class dont know any other commands, let forward
-			// the command to the parent class
-			
+			// this class dont know any other commands, let forward the command to the parent class
 			super.onBypassFeedback(player, command);
 		}
 	}
@@ -325,10 +309,6 @@ public class L2MerchantInstance extends L2FolkInstance
 		player.startRentPet(time);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onActionShift(com.l2jmobius.gameserver.network.L2GameClient)
-	 */
 	@Override
 	public void onActionShift(L2GameClient client)
 	{
@@ -370,7 +350,6 @@ public class L2MerchantInstance extends L2FolkInstance
 			html1.append("<tr><td>Class: " + getClass().getName() + "</td></tr>");
 			html1.append("<tr><td><br></td></tr>");
 			
-			// changed by terry 2005-02-22 21:45
 			html1.append("</table><table><tr><td><button value=\"Edit NPC\" action=\"bypass -h admin_edit_npc " + getTemplate().npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td>");
 			html1.append("<td><button value=\"Kill\" action=\"bypass -h admin_kill\" width=40 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");
 			html1.append("<tr><td><button value=\"Show DropList\" action=\"bypass -h admin_show_droplist " + getTemplate().npcId + "\" width=100 height=15 back=\"sek.cbui94\" fore=\"sek.cbui92\"></td></tr>");

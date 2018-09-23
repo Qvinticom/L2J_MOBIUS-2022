@@ -187,10 +187,6 @@ public class AdminTest implements IAdminCommandHandler
 		return true;
 	}
 	
-	/**
-	 * @param activeChar
-	 * @param id
-	 */
 	private void adminTestSkill(L2PcInstance activeChar, int id)
 	{
 		L2Character player;
@@ -209,10 +205,6 @@ public class AdminTest implements IAdminCommandHandler
 		
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IAdminCommandHandler#getAdminCommandList()
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{

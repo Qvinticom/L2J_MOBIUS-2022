@@ -90,14 +90,12 @@ class OlympiadManager implements Runnable
 				}
 				catch (InterruptedException ex)
 				{
-					// return;
 				}
 				continue;
 			}
 			
 			int _gamesQueueSize = 0;
 			
-			// _compStarted = true;
 			final List<Integer> readyClasses = Olympiad.hasEnoughRegisteredClassed();
 			final boolean readyNonClassed = Olympiad.hasEnoughRegisteredNonClassed();
 			if ((readyClasses != null) || readyNonClassed)
@@ -280,10 +278,6 @@ class OlympiadManager implements Runnable
 					}
 				}
 				
-				/*
-				 * try { wait(30000); } catch (InterruptedException e) { }
-				 */
-				
 				// Start games
 				_gamesQueueSize = _gamesQueue.size();
 				for (int i = 0; i < _gamesQueueSize; i++)
@@ -302,7 +296,6 @@ class OlympiadManager implements Runnable
 					}
 					catch (InterruptedException e)
 					{
-						// return;
 					}
 				}
 			}
@@ -314,12 +307,10 @@ class OlympiadManager implements Runnable
 			}
 			catch (InterruptedException e)
 			{
-				// return;
 			}
 		}
 		
-		// when comp time finish wait for all games terminated before execute
-		// the cleanup code
+		// when comp time finish wait for all games terminated before execute the cleanup code
 		boolean allGamesTerminated = false;
 		// wait for all games terminated
 		while (!allGamesTerminated)

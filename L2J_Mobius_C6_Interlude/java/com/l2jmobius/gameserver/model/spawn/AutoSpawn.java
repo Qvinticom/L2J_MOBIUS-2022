@@ -106,8 +106,7 @@ public class AutoSpawn
 			
 			while (rs.next())
 			{
-				// Register random spawn group, set various options on the
-				// created spawn instance.
+				// Register random spawn group, set various options on the created spawn instance.
 				final AutoSpawnInstance spawnInst = registerSpawn(rs.getInt("npcId"), rs.getInt("initialDelay"), rs.getInt("respawnDelay"), rs.getInt("despawnDelay"));
 				
 				spawnInst.setSpawnCount(rs.getInt("count"));
@@ -489,8 +488,7 @@ public class AutoSpawn
 					
 				}
 				
-				// If the spawn is not scheduled to be active, cancel the spawn
-				// task.
+				// If the spawn is not scheduled to be active, cancel the spawn task.
 				if (!spawnInst.isSpawnActive())
 				{
 					return;
@@ -508,9 +506,7 @@ public class AutoSpawn
 				final int locationCount = locationList.length;
 				int locationIndex = Rnd.get(locationCount);
 				
-				/*
-				 * If random spawning is disabled, the spawn at the next set of co-ordinates after the last. If the index is greater than the number of possible spawns, reset the counter to zero.
-				 */
+				// If random spawning is disabled, the spawn at the next set of co-ordinates after the last. If the index is greater than the number of possible spawns, reset the counter to zero.
 				if (!spawnInst.isRandomSpawn())
 				{
 					locationIndex = spawnInst._lastLocIndex;
@@ -524,8 +520,7 @@ public class AutoSpawn
 					spawnInst._lastLocIndex = locationIndex;
 				}
 				
-				// Set the X, Y and Z co-ordinates, where this spawn will take
-				// place.
+				// Set the X, Y and Z co-ordinates, where this spawn will take place.
 				final int x = locationList[locationIndex].getX();
 				final int y = locationList[locationIndex].getY();
 				final int z = locationList[locationIndex].getZ();
@@ -558,8 +553,7 @@ public class AutoSpawn
 					newSpawn.setRespawnDelay(spawnInst._resDelay);
 				}
 				
-				// Add the new spawn information to the spawn table, but do not
-				// store it.
+				// Add the new spawn information to the spawn table, but do not store it.
 				SpawnTable.getInstance().addNewSpawn(newSpawn, false);
 				L2NpcInstance npcInst = null;
 				
@@ -575,21 +569,17 @@ public class AutoSpawn
 					{
 						npcInst = newSpawn.doSpawn();
 						
-						// To prevent spawning of more than one NPC in the exact
-						// same spot,
-						// move it slightly by a small random offset.
+						// To prevent spawning of more than one NPC in the exact same spot, move it slightly by a small random offset.
 						npcInst.setXYZ(npcInst.getX() + Rnd.get(50), npcInst.getY() + Rnd.get(50), npcInst.getZ());
 						
-						// Add the NPC instance to the list of managed
-						// instances.
+						// Add the NPC instance to the list of managed instances.
 						spawnInst.addNpcInstance(npcInst);
 					}
 				}
 				
 				String nearestTown = MapRegionTable.getInstance().getClosestTownName(npcInst);
 				
-				// Announce to all players that the spawn has taken place, with
-				// the nearest town location.
+				// Announce to all players that the spawn has taken place, with the nearest town location.
 				if (spawnInst.isBroadcasting() && (npcInst != null))
 				{
 					Announcements.getInstance().announceToAll("The " + npcInst.getName() + " has spawned near " + nearestTown + "!");
@@ -672,9 +662,6 @@ public class AutoSpawn
 			}
 			catch (Exception e)
 			{
-				// if(Config.ENABLE_ALL_EXCEPTIONS)
-				// e.printStackTrace();
-				
 				LOGGER.warning("AutoSpawnHandler: An error occurred while despawning spawn (Object ID = " + _objectId + "): " + e);
 				e.printStackTrace();
 			}

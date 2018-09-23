@@ -29,14 +29,9 @@ import com.l2jmobius.gameserver.model.entity.siege.Castle;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.7 $ $Date: 2005/04/05 19:41:13 $
- */
-
 public class ScrollOfResurrection implements IItemHandler
 {
-	// all the items ids that this handler knows
+	// All the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
 		737,
@@ -45,10 +40,6 @@ public class ScrollOfResurrection implements IItemHandler
 		6387
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -76,7 +67,6 @@ public class ScrollOfResurrection implements IItemHandler
 		}
 		
 		final int itemId = item.getItemId();
-		// boolean blessedScroll = (itemId != 737);
 		final boolean humanScroll = (itemId == 3936) || (itemId == 3959) || (itemId == 737);
 		final boolean petScroll = (itemId == 6387) || (itemId == 737);
 		

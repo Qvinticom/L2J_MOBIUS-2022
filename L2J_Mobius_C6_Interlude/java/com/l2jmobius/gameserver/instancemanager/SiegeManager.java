@@ -53,8 +53,6 @@ public class SiegeManager
 		return SingletonHolder._instance;
 	}
 	
-	// =========================================================
-	// Data Field
 	private int _attackerMaxClans = 500; // Max number of clans
 	private int _attackerRespawnDelay = 20000; // Time in ms. Changeable in siege.config
 	private int _defenderMaxClans = 500; // Max number of clans
@@ -72,17 +70,11 @@ public class SiegeManager
 	private boolean _teleport_to_siege = false;
 	private boolean _teleport_to_siege_town = false;
 	
-	// private List<Siege> _sieges;
-	
-	// =========================================================
-	// Constructor
 	private SiegeManager()
 	{
 		load();
 	}
 	
-	// =========================================================
-	// Method - Public
 	public final void addSiegeSkills(L2PcInstance character)
 	{
 		character.addSkill(SkillTable.getInstance().getInfo(246, 1), false);
@@ -196,8 +188,6 @@ public class SiegeManager
 		character.removeSkill(SkillTable.getInstance().getInfo(247, 1));
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		LOGGER.info("Initializing SiegeManager");
@@ -292,7 +282,6 @@ public class SiegeManager
 		}
 		catch (Exception e)
 		{
-			// _initialized = false;
 			LOGGER.warning("Error while loading siege data.");
 			e.printStackTrace();
 			
@@ -314,8 +303,6 @@ public class SiegeManager
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final List<SiegeSpawn> getArtefactSpawnList(int _castleId)
 	{
 		if (_artefactSpawnList.containsKey(_castleId))

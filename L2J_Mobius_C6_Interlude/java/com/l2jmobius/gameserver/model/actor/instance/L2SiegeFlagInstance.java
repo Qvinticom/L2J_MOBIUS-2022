@@ -118,7 +118,8 @@ public class L2SiegeFlagInstance extends L2NpcInstance
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
-		} else if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100))
+		}
+		else if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100))
 		{
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}

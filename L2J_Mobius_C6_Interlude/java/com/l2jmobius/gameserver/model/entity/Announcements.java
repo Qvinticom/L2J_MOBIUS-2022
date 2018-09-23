@@ -273,7 +273,7 @@ public class Announcements
 		}
 	}
 	
-	// Method fo handling announcements from admin
+	// Method for handling announcements from admin
 	public void handleAnnounce(String command, int lengthToTrim)
 	{
 		try

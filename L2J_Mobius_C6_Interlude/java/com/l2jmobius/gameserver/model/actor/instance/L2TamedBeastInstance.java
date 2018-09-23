@@ -32,52 +32,26 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-// While a tamed beast behaves a lot like a pet (ingame) and does have
-// an owner, in all other aspects, it acts like a mob.
-// In addition, it can be fed in order to increase its duration.
-// This class handles the running tasks, AI, and feed of the mob.
-// The (mostly optional) AI on feeding the spawn is handled by the datapack ai script
 /**
- * The Class L2TamedBeastInstance.
+ * While a tamed beast behaves a lot like a pet (ingame) and does have an owner, in all other aspects, it acts like a mob. In addition, it can be fed in order to increase its duration.<br>
+ * This class handles the running tasks, AI, and feed of the mob. The (mostly optional) AI on feeding the spawn is handled by the datapack ai script
  */
 public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 {
-	/** The _food skill id. */
-	private int _foodSkillId;
 	
-	/** The Constant MAX_DISTANCE_FROM_HOME. */
 	private static final int MAX_DISTANCE_FROM_HOME = 30000;
-	
-	/** The Constant MAX_DISTANCE_FROM_OWNER. */
 	private static final int MAX_DISTANCE_FROM_OWNER = 2000;
-	
-	/** The Constant MAX_DURATION. */
 	private static final int MAX_DURATION = 1200000; // 20 minutes
-	
-	/** The Constant DURATION_CHECK_INTERVAL. */
 	private static final int DURATION_CHECK_INTERVAL = 60000; // 1 minute
-	
-	/** The Constant DURATION_INCREASE_INTERVAL. */
 	private static final int DURATION_INCREASE_INTERVAL = 20000; // 20 secs (gained upon feeding)
-	
-	/** The Constant BUFF_INTERVAL. */
 	private static final int BUFF_INTERVAL = 5000; // 5 seconds
-	
-	/** The _remaining time. */
+	private int _foodSkillId;
 	private int _remainingTime = MAX_DURATION;
-	
-	/** The _home. */
 	private int _homeX;
 	private int _homeY;
 	private int _homeZ;
-	
-	/** The _owner. */
 	private L2PcInstance _owner;
-	
-	/** The _buff task. */
 	private Future<?> _buffTask = null;
-	
-	/** The _duration check task. */
 	private Future<?> _durationCheckTask = null;
 	
 	/**
@@ -205,10 +179,6 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -430,10 +400,6 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 			_tamedBeast = tamedBeast;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -469,16 +435,11 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 				// this also causes a call to the AI tasks handling feeding, which may call onReceiveFood as required.
 				owner.callSkill(SkillTable.getInstance().getInfo(foodTypeSkillId, 1), targets);
 				owner.setTarget(oldTarget);
-			} else // if the owner has no food, the beast immediately despawns, except when it was only
-			// newly spawned. Newly spawned beasts can last up to 5 minutes
-			if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000))
+			}
+			else if (_tamedBeast.getRemainingTime() < (MAX_DURATION - 300000)) // if the owner has no food, the beast immediately despawns, except when it was only newly spawned. Newly spawned beasts can last up to 5 minutes
 			{
 				_tamedBeast.setRemainingTime(-1);
 			}
-			
-			/*
-			 * There are too many conflicting reports about whether distance from home should be taken into consideration. Disabled for now. if (_tamedBeast.isTooFarFromHome()) _tamedBeast.setRemainingTime(-1);
-			 */
 			
 			if (_tamedBeast.getRemainingTime() <= 0)
 			{
@@ -487,32 +448,17 @@ public final class L2TamedBeastInstance extends L2FeedableBeastInstance
 		}
 	}
 	
-	/**
-	 * The Class CheckOwnerBuffs.
-	 */
 	private class CheckOwnerBuffs implements Runnable
 	{
-		/** The _tamed beast. */
 		private final L2TamedBeastInstance _tamedBeast;
-		
-		/** The _num buffs. */
 		private final int _numBuffs;
 		
-		/**
-		 * Instantiates a new check owner buffs.
-		 * @param tamedBeast the tamed beast
-		 * @param numBuffs the num buffs
-		 */
 		CheckOwnerBuffs(L2TamedBeastInstance tamedBeast, int numBuffs)
 		{
 			_tamedBeast = tamedBeast;
 			_numBuffs = numBuffs;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{

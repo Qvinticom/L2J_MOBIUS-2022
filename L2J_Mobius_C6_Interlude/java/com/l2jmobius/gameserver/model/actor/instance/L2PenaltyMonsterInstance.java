@@ -37,7 +37,7 @@ public class L2PenaltyMonsterInstance extends L2MonsterInstance
 	@Override
 	public L2Character getMostHated()
 	{
-		return _ptk; // zawsze attakuje tylko 1 osobe chodzby nie wiem co xD
+		return _ptk;
 	}
 	
 	@Deprecated

@@ -53,10 +53,6 @@ public class FishShots implements IItemHandler
 		2186
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -100,8 +96,6 @@ public class FishShots implements IItemHandler
 		activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), 1, null, false);
 		final L2Object oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
-		
-		// activeChar.sendPacket(new SystemMessage(SystemMessage.ENABLED_SPIRITSHOT));
 		
 		MagicSkillUse MSU = new MagicSkillUse(activeChar, SKILL_IDS[grade], 1, 0, 0);
 		Broadcast.toSelfAndKnownPlayers(activeChar, MSU);

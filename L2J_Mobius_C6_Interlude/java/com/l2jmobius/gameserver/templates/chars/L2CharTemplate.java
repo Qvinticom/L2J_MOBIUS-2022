@@ -168,5 +168,4 @@ public class L2CharTemplate
 		collisionRadius = set.getInteger("collision_radius");
 		collisionHeight = set.getInteger("collision_height");
 	}
-	
 }

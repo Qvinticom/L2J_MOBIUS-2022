@@ -42,8 +42,6 @@ public class hitConditionBonus
 	private static int lowBonus = 0;
 	private static int darkBonus = 0;
 	
-	// private static int rainBonus = 0;
-	
 	protected static double getConditionBonus(L2Character attacker, L2Character target)
 	{
 		double mod = 100;
@@ -61,8 +59,6 @@ public class hitConditionBonus
 		if (GameTimeController.getInstance().isNowNight())
 		{
 			mod += darkBonus;
-			// else if () No rain support yet.
-			// chance += hitConditionBonus.rainBonus;
 		}
 		
 		// Get side bonus
@@ -158,8 +154,6 @@ public class hitConditionBonus
 									break;
 								}
 							}
-							// else if ("rain".equals(name))
-							// rainBonus = bonus;
 						}
 					}
 				}

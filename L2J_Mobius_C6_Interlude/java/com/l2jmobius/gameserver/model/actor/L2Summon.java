@@ -54,8 +54,6 @@ import com.l2jmobius.gameserver.templates.item.L2Weapon;
 
 public abstract class L2Summon extends L2Playable
 {
-	// private static Logger LOGGER = Logger.getLogger(L2Summon.class);
-	
 	protected int _pkKills;
 	private L2PcInstance _owner;
 	private int _attackRange = 36; // Melee range
@@ -66,8 +64,7 @@ public abstract class L2Summon extends L2Playable
 	private int _chargedSoulShot;
 	private int _chargedSpiritShot;
 	
-	// TODO: currently, all servitors use 1 shot. However, this value
-	// should vary depending on the servitor template (id and level)!
+	// TODO: currently, all servitors use 1 shot. However, this value should vary depending on the servitor template (id and level)!
 	private final int _soulShotsPerHit = 1;
 	private final int _spiritShotsPerHit = 1;
 	protected boolean _showSummonAnimation;
@@ -76,7 +73,6 @@ public abstract class L2Summon extends L2Playable
 	{
 		protected AIAccessor()
 		{
-			// null
 		}
 		
 		public L2Summon getSummon()
@@ -212,7 +208,7 @@ public abstract class L2Summon extends L2Playable
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
 			
-			// update status hp&mp
+			// update status hp and mp
 			StatusUpdate su = new StatusUpdate(getObjectId());
 			su.addAttribute(StatusUpdate.CUR_HP, (int) getCurrentHp());
 			su.addAttribute(StatusUpdate.MAX_HP, getMaxHp());
@@ -429,11 +425,6 @@ public abstract class L2Summon extends L2Playable
 	
 	public synchronized void unSummon(L2PcInstance owner)
 	{
-		/*
-		 * if(isVisible() && !isDead()) { getAI().stopFollow(); owner.sendPacket(new PetDelete(getObjectId(), 2)); if(getWorldRegion() != null) { getWorldRegion().removeFromZones(this); } store(); giveAllToOwner(); decayMe(); getKnownList().removeAllKnownObjects(); owner.setPet(null);
-		 * setTarget(null); }
-		 */
-		
 		if (isVisible() && !isDead())
 		{
 			stopAllEffects();
@@ -623,8 +614,6 @@ public abstract class L2Summon extends L2Playable
 			return;
 		}
 		
-		// ************************************* Check Casting in Progress *******************************************
-		
 		// If a skill is currently being used
 		if (isCastingNow())
 		{
@@ -633,8 +622,6 @@ public abstract class L2Summon extends L2Playable
 		
 		// Set current pet skill
 		_owner.setCurrentPetSkill(skill, forceUse, dontMove);
-		
-		// ************************************* Check Target *******************************************
 		
 		// Get the target for the skill
 		L2Object target = null;
@@ -673,8 +660,6 @@ public abstract class L2Summon extends L2Playable
 			return;
 		}
 		
-		// ************************************* Check skill availability *******************************************
-		
 		// Check if this skill is enabled (ex : reuse time)
 		if (isSkillDisabled(skill) && (_owner != null) && _owner.getAccessLevel().allowPeaceAttack())
 		{
@@ -689,8 +674,6 @@ public abstract class L2Summon extends L2Playable
 		{
 			return;
 		}
-		
-		// ************************************* Check Consumables *******************************************
 		
 		// Check if the summon has enough MP
 		if (getCurrentMp() < (getStat().getMpConsume(skill) + getStat().getMpInitialConsume(skill)))
@@ -715,8 +698,6 @@ public abstract class L2Summon extends L2Playable
 			
 			return;
 		}
-		
-		// ************************************* Check Summon State *******************************************
 		
 		// Check if this is offensive magic skill
 		if (skill.isOffensive())

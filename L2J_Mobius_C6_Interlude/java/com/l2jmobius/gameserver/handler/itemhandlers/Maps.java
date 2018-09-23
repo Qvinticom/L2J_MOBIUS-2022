@@ -23,14 +23,9 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.RadarControl;
 import com.l2jmobius.gameserver.network.serverpackets.ShowMiniMap;
 
-/**
- * This class provides handling for items that should display a map when double clicked.
- * @version $Revision: 1.1.4.3 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class Maps implements IItemHandler
 {
-	// all the items ids that this handler knowns
+	// All the items ids that this handler knows
 	private static final int[] ITEM_IDS =
 	{
 		1665,
@@ -38,10 +33,6 @@ public class Maps implements IItemHandler
 		7063
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{

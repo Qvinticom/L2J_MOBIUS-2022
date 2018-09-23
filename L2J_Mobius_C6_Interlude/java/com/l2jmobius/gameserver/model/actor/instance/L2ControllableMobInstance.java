@@ -114,8 +114,7 @@ public class L2ControllableMobInstance extends L2MonsterInstance
 		
 		if (isDead())
 		{
-			// first die (and calculate rewards), if currentHp < 0,
-			// then overhit may be calculated
+			// first die (and calculate rewards), if currentHp < 0, then overhit may be calculated
 			if (Config.DEBUG)
 			{
 				LOGGER.info("char is dead.");

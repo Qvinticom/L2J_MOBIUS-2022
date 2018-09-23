@@ -32,9 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * The Class L2WeddingManagerInstance.
- */
 public class L2WeddingManagerInstance extends L2NpcInstance
 {
 	/**
@@ -48,10 +45,6 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -71,8 +64,8 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 			
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
-		} else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		}
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -102,10 +95,6 @@ public class L2WeddingManagerInstance extends L2NpcInstance
 		player.sendPacket(html);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{

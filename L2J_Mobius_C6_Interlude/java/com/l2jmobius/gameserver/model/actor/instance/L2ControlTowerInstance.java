@@ -112,7 +112,6 @@ public class L2ControlTowerInstance extends L2NpcInstance
 						continue;
 					}
 					spawn.stopRespawn();
-					// spawn.getLastSpawn().doDie(spawn.getLastSpawn());
 				}
 			}
 		}

@@ -129,5 +129,4 @@ public class L2DynamicZone extends L2ZoneType
 	{
 		_skill.getEffects(_owner, character, false, false, false);
 	}
-	
 }

@@ -33,60 +33,29 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision$ $Date$
- */
 public class L2DoormenInstance extends L2FolkInstance
 {
-	/** The _clan hall. */
 	private ClanHall _clanHall;
-	
-	/** The CON d_ al l_ false. */
 	private static int COND_ALL_FALSE = 0;
-	
-	/** The CON d_ bus y_ becaus e_ o f_ siege. */
 	private static int COND_BUSY_BECAUSE_OF_SIEGE = 1;
-	
-	/** The CON d_ castl e_ owner. */
 	private static int COND_CASTLE_OWNER = 2;
-	
-	/** The CON d_ hal l_ owner. */
 	private static int COND_HALL_OWNER = 3;
-	
-	/** The CON d_ for t_ owner. */
 	private static int COND_FORT_OWNER = 4;
 	
-	/**
-	 * Instantiates a new l2 doormen instance.
-	 * @param objectID the object id
-	 * @param template the template
-	 */
 	public L2DoormenInstance(int objectID, L2NpcTemplate template)
 	{
 		super(objectID, template);
 	}
 	
-	/**
-	 * Gets the clan hall.
-	 * @return the clan hall
-	 */
 	public final ClanHall getClanHall()
 	{
-		// LOGGER.warning(this.getName()+" searching ch");
 		if (_clanHall == null)
 		{
 			_clanHall = ClanHallManager.getInstance().getNearbyClanHall(getX(), getY(), 500);
 		}
-		// if (_ClanHall != null)
-		// LOGGER.warning(this.getName()+" found ch "+_ClanHall.getName());
 		return _clanHall;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -115,7 +84,6 @@ public class L2DoormenInstance extends L2FolkInstance
 				}
 				else if (condition == COND_CASTLE_OWNER)
 				{
-					// DoorTable doorTable = DoorTable.getInstance();
 					StringTokenizer st = new StringTokenizer(command.substring(10), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid
 					
@@ -216,10 +184,8 @@ public class L2DoormenInstance extends L2FolkInstance
 				}
 				else if (condition == COND_CASTLE_OWNER)
 				{
-					// DoorTable doorTable = DoorTable.getInstance();
 					StringTokenizer st = new StringTokenizer(command.substring(11), ", ");
 					st.nextToken(); // Bypass first value since its castleid/hallid
-					// L2Clan playersClan = player.getClan();
 					
 					while (st.hasMoreTokens())
 					{
@@ -271,8 +237,7 @@ public class L2DoormenInstance extends L2FolkInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);

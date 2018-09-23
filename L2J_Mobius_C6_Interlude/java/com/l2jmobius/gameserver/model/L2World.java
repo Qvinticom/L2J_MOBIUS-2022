@@ -41,13 +41,8 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
  */
 public final class L2World
 {
-	/** The LOGGER. */
 	private static Logger LOGGER = Logger.getLogger(L2World.class.getName());
 	
-	/*
-	 * biteshift, defines number of regions note, shifting by 15 will result in regions corresponding to map tiles shifting by 12 divides one tile to 8x8 regions
-	 */
-	/** The Constant SHIFT_BY. */
 	public static final int SHIFT_BY = 12;
 	
 	// Geodata min/max tiles
@@ -57,10 +52,6 @@ public final class L2World
 	public static final int TILE_Y_MAX = 25;
 	
 	// Map dimensions
-	// public static final int MAP_MIN_X = -131072;
-	// public static final int MAP_MAX_X = 228608;
-	// public static final int MAP_MIN_Y = -262144;
-	// public static final int MAP_MAX_Y = 262144;
 	public static final int TILE_SIZE = 32768;
 	public static final int MAP_MIN_X = (TILE_X_MIN - 20) * TILE_SIZE;
 	public static final int MAP_MAX_X = (TILE_X_MAX - 19) * TILE_SIZE;
@@ -79,11 +70,6 @@ public final class L2World
 	/** The Constant REGIONS_Y. */
 	private static final int REGIONS_Y = (MAP_MAX_Y >> SHIFT_BY) + OFFSET_Y;
 	
-	// public static final int WORLD_SIZE_X = L2World.MAP_MAX_X - L2World.MAP_MIN_X + 1 >> 15;
-	// public static final int WORLD_SIZE_Y = L2World.MAP_MAX_Y - L2World.MAP_MIN_Y + 1 >> 15;
-	
-	// private Map<String, L2PcInstance> _allGms;
-	
 	/** HashMap(String Player name, L2PcInstance) containing all the players in game. */
 	private static Map<String, L2PcInstance> _allPlayers = new ConcurrentHashMap<>();
 	
@@ -99,15 +85,8 @@ public final class L2World
 	/** The _world regions. */
 	private L2WorldRegion[][] _worldRegions;
 	
-	/**
-	 * Constructor of L2World.<BR>
-	 * <BR>
-	 */
 	private L2World()
 	{
-		// _allGms = new HashMap<String, L2PcInstance>();
-		// _allPlayers = new HashMap<String, L2PcInstance>().shared();
-		
 		_petsInstance = new ConcurrentHashMap<>();
 		_allObjects = L2ObjectMap.createL2ObjectMap();
 		
@@ -177,8 +156,7 @@ public final class L2World
 	 */
 	public void removeObject(L2Object object)
 	{
-		_allObjects.remove(object); // suggestion by whatev
-		// IdFactory.getInstance().releaseId(object.getObjectId());
+		_allObjects.remove(object);
 	}
 	
 	/**
@@ -189,8 +167,7 @@ public final class L2World
 	{
 		for (L2Object o : list)
 		{
-			_allObjects.remove(o); // suggestion by whatev
-			// IdFactory.getInstance().releaseId(object.getObjectId());
+			_allObjects.remove(o);
 		}
 	}
 	
@@ -202,8 +179,7 @@ public final class L2World
 	{
 		for (L2Object o : objects)
 		{
-			_allObjects.remove(o); // suggestion by whatev
-			// IdFactory.getInstance().releaseId(object.getObjectId());
+			_allObjects.remove(o);
 		}
 	}
 	
@@ -482,8 +458,7 @@ public final class L2World
 			}
 		}
 		
-		// Get all visible objects contained in the _visibleObjects of L2WorldRegions
-		// in a circular area of 2000 units
+		// Get all visible objects contained in the _visibleObjects of L2WorldRegions in a circular area of 2000 units
 		List<L2Object> visibles = getVisibleObjects(object, 2000);
 		if (Config.DEBUG)
 		{
@@ -572,8 +547,6 @@ public final class L2World
 			return;
 		}
 		
-		// removeObject(object);
-		
 		if (oldRegion != null)
 		{
 			// Remove the object from the L2ObjectHashSet(L2Object) _visibleObjects of L2WorldRegion
@@ -621,10 +594,6 @@ public final class L2World
 				{
 					removeFromAllPlayers((L2PcInstance) object);
 				}
-				
-				// If selected L2Object is a GM L2PcInstance, remove it from Set(L2PcInstance) _gmList of GmListTable
-				// if (((L2PcInstance)object).isGM())
-				// GmListTable.getInstance().deleteGm((L2PcInstance)object);
 			}
 		}
 	}
@@ -761,14 +730,9 @@ public final class L2World
 				final int y1 = _object.getY();
 				
 				final double dx = x1 - x;
-				// if (dx > radius || -dx > radius)
-				// continue;
 				final double dy = y1 - y;
-				// if (dy > radius || -dy > radius)
-				// continue;
 				
-				// If the visible object is inside the circular area
-				// add the object to the FastList result
+				// If the visible object is inside the circular area add the object to the FastList result
 				if (((dx * dx) + (dy * dy)) < sqRadius)
 				{
 					result.add(_object);
@@ -834,11 +798,7 @@ public final class L2World
 				final int z1 = _object.getZ();
 				
 				final long dx = x1 - x;
-				// if (dx > radius || -dx > radius)
-				// continue;
 				final long dy = y1 - y;
-				// if (dy > radius || -dy > radius)
-				// continue;
 				final long dz = z1 - z;
 				
 				if (((dx * dx) + (dy * dy) + (dz * dz)) < sqRadius)

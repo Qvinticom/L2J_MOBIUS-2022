@@ -41,11 +41,6 @@ public class OfflineShop implements IUserCommandHandler
 		114
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#useUserCommand(int, com.l2jmobius.gameserver.model.L2PcInstance)
-	 */
-	@SuppressWarnings("null")
 	@Override
 	public synchronized boolean useUserCommand(int id, L2PcInstance player)
 	{
@@ -70,7 +65,7 @@ public class OfflineShop implements IUserCommandHandler
 		}
 		
 		final TradeList storeListBuy = player.getBuyList();
-		if ((storeListBuy == null) && (storeListBuy.getItemCount() == 0))
+		if ((storeListBuy == null) || (storeListBuy.getItemCount() == 0))
 		{
 			player.sendMessage("Your buy list is empty.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -78,7 +73,7 @@ public class OfflineShop implements IUserCommandHandler
 		}
 		
 		final TradeList storeListSell = player.getSellList();
-		if ((storeListSell == null) && (storeListSell.getItemCount() == 0))
+		if ((storeListSell == null) || (storeListSell.getItemCount() == 0))
 		{
 			player.sendMessage("Your sell list is empty.");
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -128,8 +123,7 @@ public class OfflineShop implements IUserCommandHandler
 			return false;
 		}
 		
-		// Prevent player from logging out if they are a festival participant nd it is in progress,
-		// otherwise notify party members that the player is not longer a participant.
+		// Prevent player from logging out if they are a festival participant nd it is in progress, otherwise notify party members that the player is not longer a participant.
 		if (player.isFestivalParticipant())
 		{
 			if (SevenSignsFestival.getInstance().isFestivalInitialized())
@@ -167,10 +161,6 @@ public class OfflineShop implements IUserCommandHandler
 		return false;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IUserCommandHandler#getUserCommandList()
-	 */
 	@Override
 	public int[] getUserCommandList()
 	{

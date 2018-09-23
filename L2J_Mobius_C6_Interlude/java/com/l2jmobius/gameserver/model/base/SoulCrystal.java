@@ -126,5 +126,4 @@ public class SoulCrystal
 	public static final int RED_NEW_CRYSTAL = 4629;
 	public static final int GRN_NEW_CYRSTAL = 4640;
 	public static final int BLU_NEW_CRYSTAL = 4651;
-	
 }

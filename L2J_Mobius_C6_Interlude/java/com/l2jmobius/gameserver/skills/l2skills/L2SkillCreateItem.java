@@ -45,9 +45,6 @@ public class L2SkillCreateItem extends L2Skill
 		_randomCount = set.getInteger("random_count", 1);
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.model.L2Skill#useSkill(com.l2jmobius.gameserver.model.actor.L2Character, com.l2jmobius.gameserver.model.L2Object[])
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Object[] targets)
 	{
@@ -77,9 +74,6 @@ public class L2SkillCreateItem extends L2Skill
 	public void giveItems(L2PcInstance activeChar, int itemId, int count)
 	{
 		final L2ItemInstance item = new L2ItemInstance(IdFactory.getInstance().getNextId(), itemId);
-		// if(item == null)
-		// return;
-		
 		item.setCount(count);
 		activeChar.getInventory().addItem("Skill", item, activeChar, activeChar);
 		

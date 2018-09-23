@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.templates.item.L2WeaponType;
 
 public class FishingSkill implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(SiegeFlag.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.PUMPING,
@@ -85,8 +84,8 @@ public class FishingSkill implements ISkillHandler
 		
 		final double gradebonus = 1 + (weaponItem.getCrystalType() * 0.1);
 		int dmg = (int) (skill.getPower() * gradebonus * SS);
-		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise
-		{// Penalty
+		if (player.getSkillLevel(1315) <= (skill.getLevel() - 2)) // 1315 - Fish Expertise Penalty
+		{
 			player.sendPacket(SystemMessageId.REELING_PUMPING_3_LEVELS_HIGHER_THAN_FISHING_PENALTY);
 			pen = 50;
 			final int penatlydmg = dmg - pen;
@@ -102,12 +101,11 @@ public class FishingSkill implements ISkillHandler
 			weaponInst.setChargedFishshot(false);
 		}
 		
-		if (skill.getSkillType() == SkillType.REELING)// Realing
+		if (skill.getSkillType() == SkillType.REELING) // Realing
 		{
 			fish.useRealing(dmg, pen);
 		}
-		else
-		// Pumping
+		else // Pumping
 		{
 			fish.usePomping(dmg, pen);
 		}

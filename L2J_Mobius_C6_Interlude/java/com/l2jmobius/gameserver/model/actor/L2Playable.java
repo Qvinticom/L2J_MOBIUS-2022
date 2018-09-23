@@ -34,16 +34,9 @@ import com.l2jmobius.gameserver.templates.chars.L2CharTemplate;
  */
 public abstract class L2Playable extends L2Character
 {
-	/** The _is noblesse blessed. */
 	private boolean _isNoblesseBlessed = false; // for Noblesse Blessing skill, restores buffs after death
-	
-	/** The _get charm of luck. */
 	private boolean _getCharmOfLuck = false; // Charm of Luck - During a Raid/Boss war, decreased chance for death penalty
-	
-	/** The _is phoenix blessed. */
 	private boolean _isPhoenixBlessed = false; // for Soul of The Phoenix or Salvation buffs
-	
-	/** The _ protection blessing. */
 	private boolean _ProtectionBlessing = false;
 	
 	/**
@@ -64,10 +57,6 @@ public abstract class L2Playable extends L2Character
 		getStatus(); // init status
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getKnownList()
-	 */
 	@Override
 	public PlayableKnownList getKnownList()
 	{
@@ -78,10 +67,6 @@ public abstract class L2Playable extends L2Character
 		return (PlayableKnownList) super.getKnownList();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStat()
-	 */
 	@Override
 	public PlayableStat getStat()
 	{
@@ -92,10 +77,6 @@ public abstract class L2Playable extends L2Character
 		return (PlayableStat) super.getStat();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStatus()
-	 */
 	@Override
 	public PlayableStatus getStatus()
 	{
@@ -106,10 +87,6 @@ public abstract class L2Playable extends L2Character
 		return (PlayableStatus) super.getStatus();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -205,12 +182,7 @@ public abstract class L2Playable extends L2Character
 		}
 		
 		return true;
-		/*
-		 * Even at war, there should be PvP flag if( player.getClan() == null || targetPlayer.getClan() == null || ( !targetPlayer.getClan().isAtWarWith(player.getClanId()) && targetPlayer.getWantsPeace() == 0 && player.getWantsPeace() == 0 ) ) { return true; } return false;
-		 */
 	}
-	
-	// ==================================== DONT EVEN THINK!! ====================================//
 	
 	/**
 	 * Return True.<BR>
@@ -225,8 +197,7 @@ public abstract class L2Playable extends L2Character
 	
 	private L2Effect _lastNoblessEffect = null;
 	
-	// Support for Noblesse Blessing skill, where buffs are retained
-	// after resurrect
+	// Support for Noblesse Blessing skill, where buffs are retained after resurrect
 	/**
 	 * Checks if is noblesse blessed.
 	 * @return true, if is noblesse blessed

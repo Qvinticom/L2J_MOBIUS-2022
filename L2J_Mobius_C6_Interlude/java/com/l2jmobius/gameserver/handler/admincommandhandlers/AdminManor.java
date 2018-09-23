@@ -134,10 +134,6 @@ public class AdminManor implements IAdminCommandHandler
 		return _adminCommands;
 	}
 	
-	/*
-	 * private String formatTime(long millis) { String s = ""; int secs = (int) millis/1000; int mins = secs/60; secs -= mins*60; int hours = mins/60; mins -= hours*60; if (hours>0) s += hours + ":"; s += mins + ":"; s += secs; return s; }
-	 */
-	
 	private void showMainPage(L2PcInstance activeChar)
 	{
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);

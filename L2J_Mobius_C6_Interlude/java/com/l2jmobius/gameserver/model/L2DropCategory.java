@@ -42,13 +42,7 @@ public class L2DropCategory
 	
 	public void addDropData(L2DropData drop, boolean raid)
 	{
-		if (drop.isQuestDrop())
-		{
-			// if (_questDrops == null)
-			// _questDrops = new ArrayList<L2DropData>(0);
-			// _questDrops.add(drop);
-		}
-		else
+		if (!drop.isQuestDrop())
 		{
 			_drops.add(drop);
 			_categoryChance += drop.getChance();
@@ -72,9 +66,7 @@ public class L2DropCategory
 		return _categoryType == -1;
 	}
 	
-	// this returns the chance for the category to be visited in order to check if
-	// drops might come from it. Category -1 (spoil) must always be visited
-	// (but may return 0 or many drops)
+	// this returns the chance for the category to be visited in order to check if drops might come from it. Category -1 (spoil) must always be visited (but may return 0 or many drops)
 	public int getCategoryChance()
 	{
 		if (_categoryType >= 0)

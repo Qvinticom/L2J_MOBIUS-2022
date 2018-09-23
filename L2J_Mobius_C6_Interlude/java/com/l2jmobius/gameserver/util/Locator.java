@@ -204,8 +204,7 @@ public final class Locator
 		{
 			return null;
 		}
-		// couldn't find compiler - try to find tools.jar
-		// based on java.home setting
+		// couldn't find compiler - try to find tools.jar based on java.home setting
 		String javaHome = System.getProperty("java.home");
 		if (javaHome.toLowerCase(Locale.US).endsWith("jre"))
 		{

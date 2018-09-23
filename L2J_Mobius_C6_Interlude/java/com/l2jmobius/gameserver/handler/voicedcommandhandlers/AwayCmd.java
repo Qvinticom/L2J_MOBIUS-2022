@@ -35,10 +35,6 @@ public class AwayCmd implements IVoicedCommandHandler
 		"back"
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IVoicedCommandHandler#useVoicedCommand(String, com.l2jmobius.gameserver.model.L2PcInstance), String)
-	 */
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String text)
 	{
@@ -54,11 +50,6 @@ public class AwayCmd implements IVoicedCommandHandler
 	}
 	
 	public static final int ZONE_PEACE = 2;
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IVoicedCommandHandler#getVoicedCommandList()
-	 */
 	
 	private boolean away(L2PcInstance activeChar, String text)
 	{

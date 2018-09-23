@@ -24,11 +24,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ItemList;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.1.2.3 $ $Date: 2005/03/27 15:30:07 $
- */
-
 public class CompShotPacks implements IItemHandler
 {
 	private static final int[] ITEM_IDS =
@@ -38,16 +33,13 @@ public class CompShotPacks implements IItemHandler
 		5136,
 		5137,
 		5138,
-		5139, /**/
+		5139,
 		5250,
 		5251,
 		5252,
 		5253,
 		5254,
 		5255
-		// SS
-		// 5140, 5141, 5142, 5143, 5144, 5145, /**/ 5256, 5257, 5258, 5259, 5260, 5261, // SpS
-		// 5146, 5147, 5148, 5149, 5150, 5151, /**/ 5262, 5263, 5264, 5265, 5266, 5267 // BSpS
 	};
 	
 	@Override

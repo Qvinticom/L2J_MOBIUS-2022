@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 /**
  * @author programmos
  */
-
 public class L2CommanderInstance extends L2Attackable
 {
 	private int _homeX;
@@ -137,5 +136,4 @@ public class L2CommanderInstance extends L2Attackable
 			}
 		}
 	}
-	
 }

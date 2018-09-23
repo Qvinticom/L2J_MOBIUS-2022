@@ -29,10 +29,8 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2CastleTeleporterInstance extends L2NpcInstance
 {
-	/** The Constant LOGGER. */
 	public static final Logger LOGGER = Logger.getLogger(L2CastleTeleporterInstance.class.getName());
 	
-	/** The _current task. */
 	private boolean _currentTask = false;
 	
 	/**
@@ -45,10 +43,6 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -82,10 +76,6 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		super.onBypassFeedback(player, command);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#showChatWindow(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void showChatWindow(L2PcInstance player)
 	{
@@ -112,32 +102,18 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		player.sendPacket(html);
 	}
 	
-	/**
-	 * Oust all players.
-	 */
 	void oustAllPlayers()
 	{
 		getCastle().oustAllPlayers();
 	}
 	
-	/**
-	 * The Class oustAllPlayers.
-	 */
 	class oustAllPlayers implements Runnable
 	{
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
 			try
 			{
-				/*
-				 * CreatureSay cs = new CreatureSay(getObjectId(), 1, getName(), 1000443); // The defenders of $s1 castle will be teleported to the inner castle. cs.addStringParameter(getCastle().getName()); int region = MapRegionTable.getInstance().getMapRegion(getX(), getY());
-				 * Collection<L2PcInstance> pls = L2World.getInstance().getAllPlayers(); //synchronized (L2World.getInstance().getAllPlayers()) { for (L2PcInstance player : pls) { if (region == MapRegionTable.getInstance().getMapRegion(player.getX(),player.getY())) player.sendPacket(cs); } }
-				 */
 				oustAllPlayers();
 				setTask(false);
 			}
@@ -148,22 +124,13 @@ public final class L2CastleTeleporterInstance extends L2NpcInstance
 		}
 	}
 	
-	/**
-	 * Gets the task.
-	 * @return the task
-	 */
 	public boolean getTask()
 	{
 		return _currentTask;
 	}
 	
-	/**
-	 * Sets the task.
-	 * @param state the new task
-	 */
 	public void setTask(boolean state)
 	{
 		_currentTask = state;
 	}
-	
 }

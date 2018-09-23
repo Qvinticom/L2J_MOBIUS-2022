@@ -21,18 +21,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 
 public class NpcStatus extends CharStatus
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public NpcStatus(L2NpcInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public final void reduceHp(double value, L2Character attacker)
 	{
@@ -56,11 +49,6 @@ public class NpcStatus extends CharStatus
 		super.reduceHp(value, attacker, awake);
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2NpcInstance getActiveChar()
 	{

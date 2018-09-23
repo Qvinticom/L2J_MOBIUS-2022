@@ -33,6 +33,13 @@ import com.l2jmobius.gameserver.skills.l2skills.L2SkillCharge;
 
 public class EnergyStone implements IItemHandler
 {
+	private static final int ITEM_IDS[] =
+	{
+		5589
+	};
+	private EffectCharge _effect;
+	private L2SkillCharge _skill;
+	
 	public EnergyStone()
 	{
 	}
@@ -100,7 +107,8 @@ public class EnergyStone implements IItemHandler
 			final SystemMessage sm = new SystemMessage(SystemMessageId.FORCE_INCREASED_TO_S1);
 			sm.addNumber(_effect.getLevel());
 			activeChar.sendPacket(sm);
-		} else if (_effect.numCharges == 2)
+		}
+		else if (_effect.numCharges == 2)
 		{
 			activeChar.sendPacket(SystemMessageId.FORCE_MAXLEVEL_REACHED);
 		}
@@ -132,12 +140,4 @@ public class EnergyStone implements IItemHandler
 	{
 		return ITEM_IDS;
 	}
-	
-	private static final int ITEM_IDS[] =
-	{
-		5589
-	};
-	private EffectCharge _effect;
-	private L2SkillCharge _skill;
-	
 }

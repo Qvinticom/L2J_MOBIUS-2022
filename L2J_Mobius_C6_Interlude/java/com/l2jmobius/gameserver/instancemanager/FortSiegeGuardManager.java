@@ -33,25 +33,18 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 /**
  * @author programmos, scoria dev
  */
-
 public class FortSiegeGuardManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FortSiegeGuardManager.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private final Fort _fort;
 	private final List<L2Spawn> _siegeGuardSpawn = new ArrayList<>();
 	
-	// =========================================================
-	// Constructor
 	public FortSiegeGuardManager(Fort fort)
 	{
 		_fort = fort;
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Add guard.<BR>
 	 * <BR>
@@ -199,8 +192,6 @@ public class FortSiegeGuardManager
 		_siegeGuardSpawn.clear();
 	}
 	
-	// =========================================================
-	// Method - Private
 	/**
 	 * Load guards.<BR>
 	 * <BR>
@@ -284,9 +275,6 @@ public class FortSiegeGuardManager
 			LOGGER.warning("Error adding siege guard for fort " + _fort.getName() + ":" + e1);
 		}
 	}
-	
-	// =========================================================
-	// Proeprty
 	
 	public final Fort getFort()
 	{

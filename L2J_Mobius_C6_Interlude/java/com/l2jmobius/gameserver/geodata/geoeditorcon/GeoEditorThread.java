@@ -34,8 +34,7 @@ public class GeoEditorThread extends Thread
 	
 	private int _mode = 0; // 0 - don't send coords, 1 - send each
 	
-	// validateposition from client, 2 - send in
-	// intervals of _sendDelay ms.
+	// validateposition from client, 2 - send in intervals of _sendDelay ms.
 	private int _sendDelay = 1000; // default - once in second
 	
 	private final Socket _geSocket;

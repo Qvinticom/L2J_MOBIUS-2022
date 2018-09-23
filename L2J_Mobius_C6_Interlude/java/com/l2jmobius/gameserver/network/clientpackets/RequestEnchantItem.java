@@ -704,7 +704,7 @@ public final class RequestEnchantItem extends L2GameClientPacket
 					{
 						if (item.isAugmented())
 						{
-							item.getAugmentation().removeBoni(activeChar);
+							item.getAugmentation().removeBonus(activeChar);
 						}
 						
 						final L2ItemInstance[] unequiped = activeChar.getInventory().unEquipItemInSlotAndRecord(item.getEquipSlot());

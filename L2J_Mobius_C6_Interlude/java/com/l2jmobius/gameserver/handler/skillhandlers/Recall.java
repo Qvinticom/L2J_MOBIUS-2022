@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class Recall implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(Recall.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.RECALL
@@ -127,11 +126,6 @@ public class Recall implements ISkillHandler
 						activeChar.sendPacket(sm);
 						continue;
 					}
-					
-					/*
-					 * Like L2OFF player can be recalled also if he is on combat/rooted if(targetChar.isRooted() || targetChar.isInCombat()) { SystemMessage sm = SystemMessageId.S1_IS_ENGAGED_IN_COMBAT_AND_CANNOT_BE_SUMMONED); sm.addString(targetChar.getName()); activeChar.sendPacket(sm); sm = null;
-					 * continue; }
-					 */
 					
 					if ((GrandBossManager.getInstance().getZone(targetChar) != null) && !targetChar.isGM())
 					{

@@ -25,18 +25,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class FortSiegeGuardKnownList extends AttackableKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public FortSiegeGuardKnownList(L2FortSiegeGuardInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -77,8 +70,6 @@ public class FortSiegeGuardKnownList extends AttackableKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2FortSiegeGuardInstance getActiveChar()
 	{

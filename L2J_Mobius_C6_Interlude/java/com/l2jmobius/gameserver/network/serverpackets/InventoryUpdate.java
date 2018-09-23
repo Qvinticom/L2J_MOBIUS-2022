@@ -163,7 +163,7 @@ public class InventoryUpdate extends L2GameServerPacket
 			writeH(item.getCustomType2()); // Pet name exists or not shown
 			// in
 			// control item
-			writeD(item.getAugemtationBoni());
+			writeD(item.getAugemtationBonus());
 			writeD(item.getMana());
 		}
 	}

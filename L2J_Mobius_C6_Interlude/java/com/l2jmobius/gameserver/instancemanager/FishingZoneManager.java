@@ -25,7 +25,6 @@ import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
 
 public class FishingZoneManager
 {
-	// =========================================================
 	private static FishingZoneManager _instance;
 	private static final Logger LOGGER = Logger.getLogger(FishingZoneManager.class.getName());
 	
@@ -39,21 +38,12 @@ public class FishingZoneManager
 		return _instance;
 	}
 	
-	// =========================================================
-	
-	// =========================================================
-	// Data Field
 	private List<L2FishingZone> _fishingZones;
 	private List<L2WaterZone> _waterZones;
 	
-	// =========================================================
-	// Constructor
 	public FishingZoneManager()
 	{
 	}
-	
-	// =========================================================
-	// Property - Public
 	
 	public void addFishingZone(L2FishingZone fishingZone)
 	{

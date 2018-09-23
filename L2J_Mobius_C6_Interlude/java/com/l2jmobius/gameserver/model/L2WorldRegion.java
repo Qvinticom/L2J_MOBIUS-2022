@@ -38,19 +38,11 @@ import com.l2jmobius.gameserver.model.zone.L2ZoneManager;
 import com.l2jmobius.gameserver.model.zone.L2ZoneType;
 import com.l2jmobius.gameserver.model.zone.type.L2PeaceZone;
 
-/**
- * This class ...
- * @version $Revision: 1.3.4.4 $ $Date: 2005/03/27 15:29:33 $
- */
 public final class L2WorldRegion
 {
 	private static Logger LOGGER = Logger.getLogger(L2WorldRegion.class.getName());
 	
-	/**
-	 * L2ObjectHashSet(L2PlayableInstance) containing L2PlayableInstance of all player & summon in game in this L2WorldRegion
-	 */
 	private final L2ObjectSet<L2Playable> _allPlayable;
-	/** L2ObjectHashSet(L2Object) containing L2Object visible in this L2WorldRegion */
 	private final L2ObjectSet<L2Object> _visibleObjects;
 	private final List<L2WorldRegion> _surroundingRegions;
 	private final int _tileX;
@@ -61,10 +53,9 @@ public final class L2WorldRegion
 	
 	public L2WorldRegion(int pTileX, int pTileY)
 	{
-		_allPlayable = L2ObjectSet.createL2PlayerSet(); // new L2ObjectHashSet<L2PcInstance>();
-		_visibleObjects = L2ObjectSet.createL2ObjectSet(); // new L2ObjectHashSet<L2Object>();
+		_allPlayable = L2ObjectSet.createL2PlayerSet();
+		_visibleObjects = L2ObjectSet.createL2ObjectSet();
 		_surroundingRegions = new ArrayList<>();
-		// _surroundingRegions.add(this); //done in L2World.initRegions()
 		
 		_tileX = pTileX;
 		_tileY = pTileY;
@@ -234,11 +225,6 @@ public final class L2WorldRegion
 							((L2SiegeGuardAI) mob.getAI()).stopAITask();
 						}
 					}
-					
-					// Stop HP/MP/CP Regeneration task
-					// try this: allow regen, but only until mob is 100% full...then stop
-					// it until the grid is made active.
-					// mob.getStatus().stopHpMpRegeneration();
 				}
 			}
 			if (Config.DEBUG)
@@ -255,9 +241,6 @@ public final class L2WorldRegion
 					c++;
 					// Start HP/MP/CP Regeneration task
 					((L2Attackable) o).getStatus().startHpMpRegeneration();
-					
-					// start the ai
-					// ((L2AttackableAI) mob.getAI()).startAITask();
 				}
 				else if (o instanceof L2NpcInstance)
 				{
@@ -317,8 +300,7 @@ public final class L2WorldRegion
 		// turn the AI on or off to match the region's activation.
 		switchAI(value);
 		
-		// TODO
-		// turn the geodata on or off to match the region's activation.
+		// TODO: turn the geodata on or off to match the region's activation.
 		if (Config.DEBUG)
 		{
 			if (value)
@@ -442,9 +424,6 @@ public final class L2WorldRegion
 	 */
 	public List<L2WorldRegion> getSurroundingRegions()
 	{
-		// change to return L2WorldRegion[] ?
-		// this should not change after initialization, so maybe changes are not necessary
-		
 		return _surroundingRegions;
 	}
 	

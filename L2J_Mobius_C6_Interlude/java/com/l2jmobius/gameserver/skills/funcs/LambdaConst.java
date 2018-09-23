@@ -35,5 +35,4 @@ public final class LambdaConst extends Lambda
 	{
 		return _value;
 	}
-	
 }

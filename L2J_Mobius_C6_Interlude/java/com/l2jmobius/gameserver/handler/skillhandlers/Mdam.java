@@ -28,29 +28,14 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.8.2.9 $ $Date: 2005/04/05 19:41:23 $
- */
-
 public class Mdam implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(Mdam.class);
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.MDAM,
 		SkillType.DEATHLINK
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -115,8 +100,7 @@ public class Mdam implements ISkillHandler
 						sm.addSkillName(skill.getId());
 						activeChar.sendPacket(sm);
 					}
-					else // activate attacked effects, if any
-					if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, false, sps, bss))
+					else if (Formulas.getInstance().calcSkillSuccess(activeChar, target, skill, false, sps, bss)) // activate attacked effects, if any
 					{
 						// Like L2OFF must remove the first effect only if the second effect is successful
 						target.stopSkillEffects(skill.getId());

@@ -33,20 +33,8 @@ import com.l2jmobius.gameserver.network.serverpackets.StatusUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Stats;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.4 $ $Date: 2005/04/06 16:13:48 $
- */
-
 public class Heal implements ISkillHandler
 {
-	// all the items ids that this handler knowns
-	// private static Logger LOGGER = Logger.getLogger(Heal.class);
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.HEAL,
@@ -54,10 +42,6 @@ public class Heal implements ISkillHandler
 		SkillType.HEAL_STATIC
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useSkill(L2Character activeChar, L2Skill skill, L2Object[] targets)
 	{
@@ -96,7 +80,7 @@ public class Heal implements ISkillHandler
 			}
 			
 			// Avoid players heal inside Baium lair from outside
-			if (/* (activeChar.isInsideZone(12007) || target.isInsideZone(12007)) && */ (((GrandBossManager.getInstance().getZone(player) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(activeChar) != null))))
+			if (((GrandBossManager.getInstance().getZone(player) == null) && (GrandBossManager.getInstance().getZone(target) != null)) || ((GrandBossManager.getInstance().getZone(target) == null) && (GrandBossManager.getInstance().getZone(activeChar) != null)))
 			{
 				continue;
 			}

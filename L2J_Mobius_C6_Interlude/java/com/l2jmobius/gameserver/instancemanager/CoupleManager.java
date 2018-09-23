@@ -35,8 +35,6 @@ public class CoupleManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(CoupleManager.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private final List<Wedding> _couples = new ArrayList<>();
 	
 	public static final CoupleManager getInstance()
@@ -51,16 +49,12 @@ public class CoupleManager
 		load();
 	}
 	
-	// =========================================================
-	// Method - Public
 	public void reload()
 	{
 		_couples.clear();
 		load();
 	}
 	
-	// =========================================================
-	// Method - Private
 	private final void load()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
@@ -87,8 +81,6 @@ public class CoupleManager
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final Wedding getCouple(int coupleId)
 	{
 		final int index = getCoupleIndex(coupleId);

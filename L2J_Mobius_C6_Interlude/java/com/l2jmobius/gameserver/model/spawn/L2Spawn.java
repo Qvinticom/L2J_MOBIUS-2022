@@ -43,57 +43,22 @@ public class L2Spawn
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2Spawn.class.getName());
 	
-	/**
-	 * The link on the L2NpcTemplate object containing generic and static properties of this spawn (ex : RewardExp, RewardSP, AggroRange...)
-	 */
 	private L2NpcTemplate _template;
-	
-	/** The Identifier of this spawn in the spawn table */
 	private int _id;
-	
-	// private String _location = DEFAULT_LOCATION;
-	
-	/** The identifier of the location area where L2NpcInstance can be spawned */
 	private int _location;
-	
-	/** The maximum number of L2NpcInstance that can manage this L2Spawn */
 	private int _maximumCount;
-	
-	/** The current number of L2NpcInstance managed by this L2Spawn */
 	private int _currentCount;
-	
-	/** The current number of SpawnTask in progress or stand by of this L2Spawn */
 	protected int _scheduledCount;
-	
-	/** The X position of the spawn point */
 	private int _locX;
-	
-	/** The Y position of the spawn point */
 	private int _locY;
-	
-	/** The Z position of the spawn point */
 	private int _locZ;
-	
-	/** The heading of L2NpcInstance when they are spawned */
 	private int _heading;
-	
-	/** The delay between a L2NpcInstance remove and its re-spawn */
 	private int _respawnDelay;
-	
-	/** Minimum delay RaidBoss */
 	private int _respawnMinDelay;
-	
-	/** Maximum delay RaidBoss */
 	private int _respawnMaxDelay;
-	
-	/** The generic constructor of L2NpcInstance managed by this L2Spawn */
 	private Constructor<?> _constructor;
-	
-	/** If True a L2NpcInstance is respawned each time that another is killed */
 	private boolean _doRespawn;
-	
 	private int _instanceId = 0;
-	
 	private L2NpcInstance _lastSpawn;
 	private static List<SpawnListener> _spawnListeners = new ArrayList<>();
 	
@@ -158,8 +123,6 @@ public class L2Spawn
 		{
 			implementationName = "L2RaceManager";
 		}
-		
-		// if (mobTemplate.npcId == 8050)
 		
 		if ((mobTemplate.npcId >= 31046) && (mobTemplate.npcId <= 31053))
 		{
@@ -511,8 +474,7 @@ public class L2Spawn
 			};
 			
 			// Call the constructor of the L2NpcInstance
-			// (can be a L2ArtefactInstance, L2FriendlyMobInstance, L2GuardInstance, L2MonsterInstance, L2SiegeGuardInstance, L2BoxInstance,
-			// L2FeedableBeastInstance, L2TamedBeastInstance, L2FolkInstance)
+			// (can be a L2ArtefactInstance, L2FriendlyMobInstance, L2GuardInstance, L2MonsterInstance, L2SiegeGuardInstance, L2BoxInstance, L2FeedableBeastInstance, L2TamedBeastInstance, L2FolkInstance)
 			final Object tmp = _constructor.newInstance(parameters);
 			
 			// Must be done before object is spawned into visible world

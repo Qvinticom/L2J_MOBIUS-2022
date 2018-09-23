@@ -40,15 +40,11 @@ public class L2BossZone extends L2ZoneType
 	private boolean _enabled = true; // default value, unless overridden by xml...
 	private boolean _IsFlyingEnable = true; // default value, unless overridden by xml...
 	
-	// track the times that players got disconnected. Players are allowed
-	// to LOGGER back into the zone as long as their LOGGER-out was within _timeInvade
-	// time...
+	// track the times that players got disconnected. Players are allowed to LOGGER back into the zone as long as their LOGGER-out was within _timeInvade time...
 	// <player objectId, expiration time in milliseconds>
 	private final Map<Integer, Long> _playerAllowedReEntryTimes;
 	
-	// track the players admitted to the zone who should be allowed back in
-	// after reboot/server downtime (outside of their control), within 30
-	// of server restart
+	// track the players admitted to the zone who should be allowed back in after reboot/server downtime (outside of their control), within 30 of server restart
 	private List<Integer> _playersAllowed;
 	
 	private final int _bossId;
@@ -98,7 +94,6 @@ public class L2BossZone extends L2ZoneType
 		{
 			if (character instanceof L2PcInstance)
 			{
-				// Thread.dumpStack();
 				L2PcInstance player = (L2PcInstance) character;
 				
 				if (player.isGM() || Config.ALLOW_DIRECT_TP_TO_BOSS_ROOM)
@@ -130,8 +125,7 @@ public class L2BossZone extends L2ZoneType
 					return;
 				}
 				
-				// if player has been (previously) cleared by npc/ai for entry and the zone is
-				// set to receive players (aka not waiting for boss to respawn)
+				// if player has been (previously) cleared by npc/ai for entry and the zone is set to receive players (aka not waiting for boss to respawn)
 				if (_playersAllowed.contains(character.getObjectId()))
 				{
 					// Get the information about this player's last logout-exit from this zone.
@@ -209,8 +203,7 @@ public class L2BossZone extends L2ZoneType
 					return;
 				}
 				
-				// if the player just got disconnected/logged out, store the dc time so that
-				// decisions can be made later about allowing or not the player to LOGGER into the zone
+				// if the player just got disconnected/logged out, store the dc time so that decisions can be made later about allowing or not the player to LOGGER into the zone
 				if ((player.isOnline() == 0) && _playersAllowed.contains(character.getObjectId()))
 				{
 					// mark the time that the player left the zone

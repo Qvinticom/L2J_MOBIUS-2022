@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.templates.StatsSet;
 
 public class L2SkillElemental extends L2Skill
 {
-	
 	private final int[] _seeds;
 	private final boolean _seedAny;
 	
@@ -141,6 +140,5 @@ public class L2SkillElemental extends L2Skill
 		{
 			activeChar.removeSps();
 		}
-		
 	}
 }

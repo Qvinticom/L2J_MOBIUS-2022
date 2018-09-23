@@ -36,8 +36,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2SignsPriestInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2SignsPriestInstance.class);
-	
 	public L2SignsPriestInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);
@@ -82,9 +80,6 @@ public class L2SignsPriestInstance extends L2FolkInstance
 					}
 					catch (Exception e2)
 					{
-						// if (Config.ENABLE_ALL_EXCEPTIONS)
-						// e2.printStackTrace();
-						
 						try
 						{
 							StringTokenizer st = new StringTokenizer(command.trim());
@@ -108,7 +103,7 @@ public class L2SignsPriestInstance extends L2FolkInstance
 						player.sendPacket(SystemMessageId.INVENTORY_VOLUME);
 						break;
 					}
-					// L2ItemInstance adenaItem = player.getInventory().getAdenaInstance(); ???
+					
 					if (!player.reduceAdena("SevenSigns", SevenSigns.RECORD_SEVEN_SIGNS_COST, this, false))
 					{
 						final String filename = "data/html/seven_signs/noadena.htm";
@@ -158,7 +153,7 @@ public class L2SignsPriestInstance extends L2FolkInstance
 									return;
 								}
 							}
-							// TODO
+							
 							if (!getPlayerAllyHasCastle(player))
 							{
 								if (cabal == SevenSigns.CABAL_DAWN)
@@ -167,10 +162,7 @@ public class L2SignsPriestInstance extends L2FolkInstance
 									return;
 								}
 							}
-							else /*
-									 * If the player is trying to join the Lords of Dawn, check if they are carrying a Lord's certificate. If not then try to take the required amount of adena instead.
-									 */
-							if (cabal == SevenSigns.CABAL_DAWN)
+							else if (cabal == SevenSigns.CABAL_DAWN)
 							{
 								boolean allowJoinDawn = false;
 								if (player.destroyItemByItemId("SevenSigns", SevenSigns.CERTIFICATE_OF_APPROVAL_ID, 1, this, false))
@@ -602,8 +594,7 @@ public class L2SignsPriestInstance extends L2FolkInstance
 			return false;
 		}
 		
-		// If castle ownage check is clan-based rather than ally-based,
-		// check if the player's clan has a castle and return the result.
+		// If castle ownage check is clan-based rather than ally-based, check if the player's clan has a castle and return the result.
 		if (!Config.ALT_GAME_REQUIRE_CLAN_CASTLE)
 		{
 			final int allyId = playerClan.getAllyId();
@@ -611,8 +602,7 @@ public class L2SignsPriestInstance extends L2FolkInstance
 			// The player's clan is not in an alliance, so return false.
 			if (allyId != 0)
 			{
-				// Check if another clan in the same alliance owns a castle,
-				// by traversing the list of clans and act accordingly.
+				// Check if another clan in the same alliance owns a castle, by traversing the list of clans and act accordingly.
 				L2Clan[] clanList = ClanTable.getInstance().getClans();
 				
 				for (L2Clan clan : clanList)

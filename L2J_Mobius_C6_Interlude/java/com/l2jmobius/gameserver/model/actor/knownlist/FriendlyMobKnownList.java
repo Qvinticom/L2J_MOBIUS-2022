@@ -25,18 +25,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public class FriendlyMobKnownList extends AttackableKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public FriendlyMobKnownList(L2FriendlyMobInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -86,7 +79,6 @@ public class FriendlyMobKnownList extends AttackableKnownList
 		if (getActiveChar().isVisible() && getKnownPlayers().isEmpty())
 		{
 			getActiveChar().clearAggroList();
-			// removeAllKnownObjects();
 			if (getActiveChar().hasAI())
 			{
 				getActiveChar().getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE, null);
@@ -96,11 +88,6 @@ public class FriendlyMobKnownList extends AttackableKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2FriendlyMobInstance getActiveChar()
 	{

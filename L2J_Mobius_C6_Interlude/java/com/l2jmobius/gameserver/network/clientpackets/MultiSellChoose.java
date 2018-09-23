@@ -304,7 +304,7 @@ public class MultiSellChoose extends L2GameClientPacket
 							{
 								if (inventoryContents[i].isAugmented())
 								{
-									inventoryContents[i].getAugmentation().removeBoni(player);
+									inventoryContents[i].getAugmentation().removeBonus(player);
 								}
 							}
 							
@@ -357,7 +357,7 @@ public class MultiSellChoose extends L2GameClientPacket
 							{
 								if (itemToTake.isAugmented())
 								{
-									itemToTake.getAugmentation().removeBoni(player);
+									itemToTake.getAugmentation().removeBonus(player);
 								}
 							}
 							

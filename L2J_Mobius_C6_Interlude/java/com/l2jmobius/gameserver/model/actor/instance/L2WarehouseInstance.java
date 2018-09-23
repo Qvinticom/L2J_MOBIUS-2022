@@ -29,14 +29,8 @@ import com.l2jmobius.gameserver.network.serverpackets.WareHouseDepositList;
 import com.l2jmobius.gameserver.network.serverpackets.WareHouseWithdrawalList;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * This class ...
- * @version $Revision: 1.3.4.10 $ $Date: 2005/04/06 16:13:41 $
- */
 public final class L2WarehouseInstance extends L2FolkInstance
 {
-	// private static Logger LOGGER = Logger.getLogger(L2WarehouseInstance.class);
-	
 	/**
 	 * Instantiates a new l2 warehouse instance.
 	 * @param objectId the object id
@@ -47,10 +41,6 @@ public final class L2WarehouseInstance extends L2FolkInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#getHtmlPath(int, int)
-	 */
 	@Override
 	public String getHtmlPath(int npcId, int val)
 	{
@@ -194,7 +184,8 @@ public final class L2WarehouseInstance extends L2FolkInstance
 			{
 				player.sendPacket(SystemMessageId.NO_ITEM_DEPOSITED_IN_WH);
 			}
-		} else if (Config.DEBUG)
+		}
+		else if (Config.DEBUG)
 		{
 			LOGGER.info("no items freightened");
 		}
@@ -211,8 +202,7 @@ public final class L2WarehouseInstance extends L2FolkInstance
 		{
 			player.sendPacket(SystemMessageId.CHARACTER_DOES_NOT_EXIST);
 		}
-		// One or more chars other than this player for this account
-		else
+		else // One or more chars other than this player for this account
 		{
 			Map<Integer, String> chars = player.getAccountChars();
 			
@@ -271,10 +261,6 @@ public final class L2WarehouseInstance extends L2FolkInstance
 		player.sendPacket(new WareHouseDepositList(player, WareHouseDepositList.FREIGHT));
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -325,9 +311,7 @@ public final class L2WarehouseInstance extends L2FolkInstance
 		}
 		else
 		{
-			// this class dont know any other commands, let forward
-			// the command to the parent class
-			
+			// this class dont know any other commands, let forward the command to the parent class
 			super.onBypassFeedback(player, command);
 		}
 	}

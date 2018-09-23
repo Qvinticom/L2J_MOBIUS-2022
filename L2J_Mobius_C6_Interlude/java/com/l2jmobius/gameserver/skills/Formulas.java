@@ -63,20 +63,9 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class Formulas
 {
-	/** Regen Task period */
 	protected static final Logger LOGGER = Logger.getLogger(L2Character.class.getName());
-	private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs
 	
-	/*
-	 * public static final int MAX_STAT_VALUE = 100; private static final double[] STRCompute = new double[] { 1.036, 34.845 }; //{1.016, 28.515}; for C1 private static final double[] INTCompute = new double[] { 1.020, 31.375 }; //{1.020, 31.375}; for C1 private static final double[] DEXCompute =
-	 * new double[] { 1.009, 19.360 }; //{1.009, 19.360}; for C1 private static final double[] WITCompute = new double[] { 1.050, 20.000 }; //{1.050, 20.000}; for C1 private static final double[] CONCompute = new double[] { 1.030, 27.632 }; //{1.015, 12.488}; for C1 private static final double[]
-	 * MENCompute = new double[] { 1.010, -0.060 }; //{1.010, -0.060}; for C1 protected static final double[] WITbonus = new double[MAX_STAT_VALUE]; protected static final double[] MENbonus = new double[MAX_STAT_VALUE]; protected static final double[] INTbonus = new double[MAX_STAT_VALUE]; protected
-	 * static final double[] STRbonus = new double[MAX_STAT_VALUE]; protected static final double[] DEXbonus = new double[MAX_STAT_VALUE]; protected static final double[] CONbonus = new double[MAX_STAT_VALUE]; // These values are 100% matching retail tables, no need to change and no need add //
-	 * calculation into the stat bonus when accessing (not efficient), // better to have everything precalculated and use values directly (saves CPU) static { for(int i = 0; i < STRbonus.length; i++) { STRbonus[i] = Math.floor(Math.pow(STRCompute[0], i - STRCompute[1]) * 100 + .5d) / 100; } for(int
-	 * i = 0; i < INTbonus.length; i++) { INTbonus[i] = Math.floor(Math.pow(INTCompute[0], i - INTCompute[1]) * 100 + .5d) / 100; } for(int i = 0; i < DEXbonus.length; i++) { DEXbonus[i] = Math.floor(Math.pow(DEXCompute[0], i - DEXCompute[1]) * 100 + .5d) / 100; } for(int i = 0; i < WITbonus.length;
-	 * i++) { WITbonus[i] = Math.floor(Math.pow(WITCompute[0], i - WITCompute[1]) * 100 + .5d) / 100; } for(int i = 0; i < CONbonus.length; i++) { CONbonus[i] = Math.floor(Math.pow(CONCompute[0], i - CONCompute[1]) * 100 + .5d) / 100; } for(int i = 0; i < MENbonus.length; i++) { MENbonus[i] =
-	 * Math.floor(Math.pow(MENCompute[0], i - MENCompute[1]) * 100 + .5d) / 100; } }
-	 */
+	private static final int HP_REGENERATE_PERIOD = 3000; // 3 secs
 	
 	static class FuncAddLevel3 extends Func
 	{
@@ -414,7 +403,6 @@ public final class Formulas
 		public void calc(Env env)
 		{
 			final int level = env.player.getLevel();
-			// [Square(DEX)]*6 + lvl;
 			
 			final L2Character p = env.player;
 			if (p instanceof L2PetInstance)
@@ -575,7 +563,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -601,7 +588,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -627,7 +613,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -653,7 +638,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -679,7 +663,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -705,7 +688,6 @@ public final class Formulas
 		@Override
 		public void calc(Env env)
 		{
-			// L2PcTemplate t = (L2PcTemplate)env._player.getTemplate();
 			final L2PcInstance pc = (L2PcInstance) env.player;
 			if (pc != null)
 			{
@@ -937,11 +919,6 @@ public final class Formulas
 		return std;
 	}
 	
-	/*
-	 * // Add the FuncAtkAccuracy to the Standard Calculator of ACCURACY_COMBAT std[Stats.ACCURACY_COMBAT.ordinal()] = new Calculator(); std[Stats.ACCURACY_COMBAT.ordinal()].addFunc(FuncAtkAccuracy.getInstance()); // Add the FuncAtkEvasion to the Standard Calculator of EVASION_RATE
-	 * std[Stats.EVASION_RATE.ordinal()] = new Calculator(); std[Stats.EVASION_RATE.ordinal()].addFunc(FuncAtkEvasion.getInstance()); return std; }
-	 */
-	
 	/**
 	 * Add basics Func objects to L2PcInstance and L2Summon.<BR>
 	 * <BR>
@@ -1090,7 +1067,6 @@ public final class Formulas
 			}
 			
 			// Add CON bonus
-			// init *= cha.getLevelMod() * CONbonus[cha.getCON()];
 			init *= cha.getLevelMod() * BaseStats.CON.calcBonus(cha);
 		}
 		
@@ -1297,10 +1273,6 @@ public final class Formulas
 	 */
 	public static double calcBlowDamage(L2Character attacker, L2Character target, L2Skill skill, boolean shld, boolean crit, boolean ss)
 	{
-		/*
-		 * wtf is this shit -Nefer if((skill.getCondition() & L2Skill.COND_BEHIND) != 0 && !attacker.isBehind(target)) return 0;
-		 */
-		
 		double damage = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
 		
@@ -1329,10 +1301,6 @@ public final class Formulas
 			}
 			
 			damage = improvedDamageByCriticalVulnAndAdd;
-			
-			/*
-			 * damage = attacker.calcStat(Stats.CRITICAL_DAMAGE, (damage+power), target, skill); damage += attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 6.5; damage *= target.calcStat(Stats.CRIT_VULN, target.getTemplate().baseCritVuln, target, skill);
-			 */
 			
 			final L2Effect vicious = attacker.getFirstEffect(312);
 			if ((vicious != null) && (damage > 1))
@@ -1371,9 +1339,6 @@ public final class Formulas
 		}
 		
 		// possible skill power critical hit, based on Official Description:
-		/*
-		 * skill critical effects (skill damage x2) have been added
-		 */
 		if (calcCrit(skill.getBaseCritRate() * 10 * BaseStats.DEX.calcBonus(attacker)))
 		{
 			damage *= 2;
@@ -1386,10 +1351,6 @@ public final class Formulas
 		{
 			damage = attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
 		}
-		
-		// Multiplier should be removed, it's false ??
-		// damage += 1.5 * attacker.calcStat(Stats.CRITICAL_DAMAGE, damage + power, target, skill);
-		// damage *= (double)attacker.getLevel()/target.getLevel();
 		
 		// get the vulnerability for the instance due to skills (buffs, passives, toggles, etc)
 		damage = target.calcStat(Stats.DAGGER_WPN_VULN, damage, target, null);
@@ -1408,11 +1369,8 @@ public final class Formulas
 			damage *= 1.04;
 		}
 		
-		// Sami: Must be removed, after armor resistances are checked.
-		// These values are a quick fix to balance dagger gameplay and give
-		// armor resistances vs dagger. daggerWpnRes could also be used if a skill
-		// was given to all classes. The values here try to be a compromise.
-		// They were originally added in a late C4 rev (2289).
+		// Must be removed, after armor resistances are checked.
+		// These values are a quick fix to balance dagger gameplay and give armor resistances vs dagger. daggerWpnRes could also be used if a skill was given to all classes. The values here try to be a compromise. They were originally added in a late C4 rev (2289).
 		if (target instanceof L2PcInstance)
 		{
 			final L2Armor armor = ((L2PcInstance) target).getActiveChestArmorItem();
@@ -1619,8 +1577,6 @@ public final class Formulas
 		}
 		
 		damage += (Rnd.nextDouble() * damage) / 10;
-		// damage += _rnd.nextDouble()* attacker.getRandomDamage(target);
-		// }
 		if (shld && Config.ALT_GAME_SHIELD_BLOCKS)
 		{
 			damage -= target.getShldDef();
@@ -1809,12 +1765,10 @@ public final class Formulas
 		{
 			if (bss)
 			{
-				// ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				ssModifier = 4;
 			}
 			else if (ss)
 			{
-				// ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				ssModifier = 2;
 			}
 		}
@@ -1825,12 +1779,10 @@ public final class Formulas
 			{
 				if (bss)
 				{
-					// weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 					ssModifier = 4;
 				}
 				else if (ss)
 				{
-					// weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 					ssModifier = 2;
 				}
 			}
@@ -2064,11 +2016,6 @@ public final class Formulas
 							}
 						}
 					}
-					
-					// TODO: remove half kill since SYSMsg got changed.
-					/*
-					 * else if (target instanceof L2Npc) // If is a monster remove first damage and after 50% of current hp target.reduceCurrentHp(target.getCurrentHp() / 2, activeChar, skill);
-					 */
 				}
 				else
 				{
@@ -2102,10 +2049,6 @@ public final class Formulas
 			{
 				return true;
 			}
-			
-			// if (target.isCastingNow()&& target.getLastSkillCast() != null)
-			// if (target.getLastSkillCast().isCancelIfHit())
-			// return true;
 		}
 		double init = 0;
 		
@@ -2208,10 +2151,6 @@ public final class Formulas
 	 */
 	public static boolean calcHitMiss(L2Character attacker, L2Character target)
 	{
-		/*
-		 * // OLD FORMULA // accuracy+dexterity => probability to hit in percents int acc_attacker; int evas_target; acc_attacker = attacker.getAccuracy(); evas_target = target.getEvasionRate(attacker); int d = 85 + acc_attacker - evas_target; return d < Rnd.get(100);
-		 */
-		
 		int chance = (80 + (2 * (attacker.getAccuracy() - target.getEvasionRate(attacker)))) * 10;
 		// Get additional bonus from the conditions when you are attacking
 		chance *= hitConditionBonus.getConditionBonus(attacker, target);
@@ -2287,8 +2226,7 @@ public final class Formulas
 	{
 		double multiplier = 1; // initialize...
 		
-		// Get the skill type to calculate its effect in function of base stats
-		// of the L2Character target
+		// Get the skill type to calculate its effect in function of base stats of the L2Character target
 		if (skill != null)
 		{
 			// first, get the natural template vulnerability values for the target
@@ -2482,11 +2420,6 @@ public final class Formulas
 		return multiplier;
 	}
 	
-	/*
-	 * public double calcSkillStatModifier(SkillType type, L2Character target) { double multiplier = 1; if(type == null) return multiplier; switch(type) { case STUN: case BLEED: multiplier = 2 - Math.sqrt(CONbonus[target.getCON()]); break; case POISON: case SLEEP: case DEBUFF: case WEAKNESS: case
-	 * ERASE: case ROOT: case MUTE: case FEAR: case BETRAY: case CONFUSION: case AGGREDUCE_CHAR: case PARALYZE: multiplier = 2 - Math.sqrt(MENbonus[target.getMEN()]); break; default: return multiplier; } if(multiplier < 0) { multiplier = 0; } return multiplier; }
-	 */
-	
 	public static double calcSkillStatModifier(L2Skill skill, L2Character target)
 	{
 		final BaseStats saveVs = skill.getSavevs();
@@ -2631,15 +2564,9 @@ public final class Formulas
 			{
 				ssModifier = 2;
 			}
-			/*
-			 * // Add Bonus for Sps/SS if(attacker instanceof L2Summon && !(attacker instanceof L2PetInstance)){ if (bss){ ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE); ssModifier = 4; }else if(sps){ ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
-			 * ssModifier = 2; } }else{ L2ItemInstance weapon = attacker.getActiveWeaponInstance(); if(weapon!=null){ if (bss){ weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); ssModifier = 4; }else if (sps){ weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE); ssModifier = 2; } } }
-			 */
 			
 			mAtkModifier = (14 * Math.sqrt(ssModifier * attacker.getMAtk(target, skill))) / mAtkModifier;
-		} /*
-			 * else{ L2ItemInstance weapon = attacker.getActiveWeaponInstance(); if(weapon!=null){ if(ss){ weapon.setChargedSoulshot(L2ItemInstance.CHARGED_NONE); } } //no soulshots influence over not magic attacks }
-			 */
+		}
 		
 		final SkillType type = skill.getSkillType();
 		
@@ -2664,9 +2591,7 @@ public final class Formulas
 		
 		// Resists
 		final double vulnModifier = calcSkillVulnerability(target, skill);
-		
-		// double profModifier = calcSkillProficiency(skill, attacker, target);
-		final double res = vulnModifier/* + profModifier */;
+		final double res = vulnModifier;
 		double resMod = 1;
 		if (res != 0)
 		{
@@ -2768,8 +2693,6 @@ public final class Formulas
 		if (skill.isMagic())
 		{
 			mAtkModifier = target.getMDef(target, skill);
-			// if (shld == SHIELD_DEFENSE_SUCCEED)
-			// mAtkModifier += target.getShldDef();
 			
 			// Add Bonus for Sps/SS
 			if (bss)
@@ -2792,8 +2715,6 @@ public final class Formulas
 		
 		// Resists
 		final double vulnModifier = calcSkillTypeVulnerability(1, target, type);
-		// double profModifier = calcSkillTypeProficiency(0, attacker, target, type);
-		
 		final double res = vulnModifier;
 		double resMod = 1;
 		if (res != 0)
@@ -2825,12 +2746,6 @@ public final class Formulas
 			
 			rate *= resMod;
 		}
-		/*
-		 * double res = vulnModifier; double resMod = 1; if (res != 0) { if (res < 0) { resMod = 1 - 0.075 * res; resMod = 1 / resMod; } else resMod = 1 + 0.02 * res; rate *= resMod; }
-		 */
-		
-		// int elementModifier = calcElementModifier(attacker, target, skill);
-		// rate += elementModifier;
 		
 		// lvl modifier.
 		final int deltamod = calcLvlDependModifier(attacker, target, skill);
@@ -3129,12 +3044,10 @@ public final class Formulas
 		{
 			if (bss)
 			{
-				// ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				ssModifier = 4;
 			}
 			else if (ss)
 			{
-				// ((L2Summon)attacker).setChargedSpiritShot(L2ItemInstance.CHARGED_NONE);
 				ssModifier = 2;
 			}
 		}
@@ -3145,12 +3058,10 @@ public final class Formulas
 			{
 				if (bss)
 				{
-					// weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 					ssModifier = 4;
 				}
 				else if (ss)
 				{
-					// weapon.setChargedSpiritshot(L2ItemInstance.CHARGED_NONE);
 					ssModifier = 2;
 				}
 			}
@@ -3192,10 +3103,6 @@ public final class Formulas
 		return restorePercent;
 	}
 	
-	/*
-	 * public static double getSTRBonus(L2Character activeChar) { return STRbonus[activeChar.getSTR()]; }
-	 */
-	
 	public static boolean calcPhysicalSkillEvasion(L2Character target, L2Skill skill)
 	{
 		if (skill.isMagic() || (skill.getCastRange() > 40))
@@ -3219,12 +3126,10 @@ public final class Formulas
 		{
 			if (((L2PcInstance) actor).isMageClass())
 			{
-				// val *= INTbonus[actor.getINT()];
 				val *= BaseStats.INT.calcBonus(actor);
 			}
 			else
 			{
-				// val *= STRbonus[actor.getSTR()];
 				val *= BaseStats.STR.calcBonus(actor);
 			}
 		}
@@ -3281,7 +3186,6 @@ public final class Formulas
 		
 		if (crit)
 		{
-			// double cAtkMultiplied = (damage) + attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
 			final double improvedDamageByCriticalVuln = target.calcStat(Stats.CRIT_VULN, damage, target, skill);
 			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
 			
@@ -3294,22 +3198,9 @@ public final class Formulas
 			}
 			
 			damage = improvedDamageByCriticalVulnAndAdd;
-			
-			/*
-			 * //Finally retail like formula double cAtkMultiplied = damage+attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill); double cAtkVuln = target.calcStat(Stats.CRIT_VULN, 1, target, null); double improvedDamageByCriticalMulAndVuln = cAtkMultiplied * cAtkVuln; double
-			 * improvedDamageByCriticalMulAndAdd = improvedDamageByCriticalMulAndVuln + attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill); if(Config.DEBUG){ LOGGER.info("Attacker '"+attacker.getName()+"' Critical Skill Damage Debug:"); LOGGER.info("	-	Initial Damage:  "+damage);
-			 * LOGGER.info("	-	Damage increased of mult:  "+cAtkMultiplied); LOGGER.info("	-	cAtkVuln Mult:  "+cAtkVuln); LOGGER.info("	-	improvedDamageByCriticalMulAndVuln: "+improvedDamageByCriticalMulAndVuln);
-			 * LOGGER.info("	-	improvedDamageByCriticalMulAndAdd: "+improvedDamageByCriticalMulAndAdd); } damage = improvedDamageByCriticalMulAndAdd;
-			 */
-			
-			/*
-			 * //Finally retail like formula damage = 2 * attacker.calcStat(Stats.CRITICAL_DAMAGE, 1, target, skill) * target.calcStat(Stats.CRIT_VULN, 1, target, null) * (56 * damage / defence); //Crit dmg add is almost useless in normal hits... damage +=
-			 * (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill) * 56 / defence);
-			 */
 		}
 		
-		if (skill != null) // skill add is not influenced by criticals improvements,
-							// so it's applied later
+		if (skill != null) // skill add is not influenced by criticals improvements, so it's applied later
 		{
 			double skillpower = skill.getPower(attacker);
 			final float ssboost = skill.getSSBoost();
@@ -3424,8 +3315,6 @@ public final class Formulas
 		{
 			damage *= 1.04;
 		}
-		
-		// LOGGER.info(" - Final damage: "+damage);
 		
 		if (shld && Config.ALT_GAME_SHIELD_BLOCKS)
 		{
@@ -3545,5 +3434,4 @@ public final class Formulas
 		
 		return damage;
 	}
-	
 }

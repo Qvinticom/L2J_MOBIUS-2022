@@ -41,11 +41,6 @@ public class AdminDonator implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (activeChar == null)
 		{
 			return false;
@@ -129,8 +124,6 @@ public class AdminDonator implements IAdminCommandHandler
 	 */
 	private void updateDatabase(L2PcInstance player, boolean newDonator)
 	{
-		// prevents any NPE.
-		// ----------------
 		if (player == null)
 		{
 			return;
@@ -141,7 +134,6 @@ public class AdminDonator implements IAdminCommandHandler
 			PreparedStatement stmt = con.prepareStatement(newDonator ? INSERT_DATA : DEL_DATA);
 			
 			// if it is a new donator insert proper data
-			// --------------------------------------------
 			if (newDonator)
 			{
 				stmt.setInt(1, player.getObjectId());
@@ -165,14 +157,9 @@ public class AdminDonator implements IAdminCommandHandler
 		}
 	}
 	
-	// Updates That Will be Executed by MySQL
-	// ----------------------------------------
 	String INSERT_DATA = "REPLACE INTO characters_custom_data (obj_Id, char_name, hero, noble, donator) VALUES (?,?,?,?,?)";
 	String DEL_DATA = "UPDATE characters_custom_data SET donator = 0 WHERE obj_Id=?";
 	
-	/**
-	 * @return
-	 */
 	@Override
 	public String[] getAdminCommandList()
 	{

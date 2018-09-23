@@ -59,10 +59,6 @@ public class L2NpcWalkerInstance extends L2NpcInstance
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#onSpawn()
-	 */
 	@Override
 	public void onSpawn()
 	{
@@ -124,10 +120,6 @@ public class L2NpcWalkerInstance extends L2NpcInstance
 		return false;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getAI()
-	 */
 	@Override
 	public L2CharacterAI getAI()
 	{

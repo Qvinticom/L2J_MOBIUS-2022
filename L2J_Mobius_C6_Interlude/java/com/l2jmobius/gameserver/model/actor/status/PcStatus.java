@@ -31,18 +31,11 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class PcStatus extends PlayableStatus
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public PcStatus(L2PcInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public final void reduceHp(double value, L2Character attacker)
 	{
@@ -123,7 +116,7 @@ public class PcStatus extends PlayableStatus
 				}
 			}
 			
-			if (attacker instanceof L2Playable/* || attacker instanceof L2SiegeGuardInstance */)
+			if (attacker instanceof L2Playable)
 			{
 				if (getCurrentCp() >= value)
 				{
@@ -193,11 +186,6 @@ public class PcStatus extends PlayableStatus
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2PcInstance getActiveChar()
 	{

@@ -49,95 +49,36 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
  */
 public class L2CubicInstance
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(L2CubicInstance.class.getName());
 	
-	// Type of Cubics
-	/** The Constant STORM_CUBIC. */
 	public static final int STORM_CUBIC = 1;
-	
-	/** The Constant VAMPIRIC_CUBIC. */
 	public static final int VAMPIRIC_CUBIC = 2;
-	
-	/** The Constant LIFE_CUBIC. */
 	public static final int LIFE_CUBIC = 3;
-	
-	/** The Constant VIPER_CUBIC. */
 	public static final int VIPER_CUBIC = 4;
-	
-	/** The Constant POLTERGEIST_CUBIC. */
 	public static final int POLTERGEIST_CUBIC = 5;
-	
-	/** The Constant BINDING_CUBIC. */
 	public static final int BINDING_CUBIC = 6;
-	
-	/** The Constant AQUA_CUBIC. */
 	public static final int AQUA_CUBIC = 7;
-	
-	/** The Constant SPARK_CUBIC. */
 	public static final int SPARK_CUBIC = 8;
-	
-	/** The Constant ATTRACT_CUBIC. */
 	public static final int ATTRACT_CUBIC = 9;
-	
-	/** The Constant SMART_CUBIC_EVATEMPLAR. */
 	public static final int SMART_CUBIC_EVATEMPLAR = 10;
-	
-	/** The Constant SMART_CUBIC_SHILLIENTEMPLAR. */
 	public static final int SMART_CUBIC_SHILLIENTEMPLAR = 11;
-	
-	/** The Constant SMART_CUBIC_ARCANALORD. */
 	public static final int SMART_CUBIC_ARCANALORD = 12;
-	
-	/** The Constant SMART_CUBIC_ELEMENTALMASTER. */
 	public static final int SMART_CUBIC_ELEMENTALMASTER = 13;
-	
-	/** The Constant SMART_CUBIC_SPECTRALMASTER. */
 	public static final int SMART_CUBIC_SPECTRALMASTER = 14;
-	
-	// Max range of cubic skills
-	// TODO: Check/fix the max range
-	/** The Constant MAX_MAGIC_RANGE. */
 	public static final int MAX_MAGIC_RANGE = 900;
-	
-	// Cubic skills
-	/** The Constant SKILL_CUBIC_HEAL. */
 	public static final int SKILL_CUBIC_HEAL = 4051;
-	
-	/** The Constant SKILL_CUBIC_CURE. */
 	public static final int SKILL_CUBIC_CURE = 5579;
 	
-	/** The _owner. */
 	protected L2PcInstance _owner;
-	
-	/** The _target. */
 	protected L2Character _target;
-	
-	/** The _id. */
 	protected int _id;
-	
-	/** The _matk. */
 	protected int _matk;
-	
-	/** The _activationtime. */
 	protected int _activationtime;
-	
-	/** The _activationchance. */
 	protected int _activationchance;
-	
-	/** The _active. */
 	protected boolean _active;
-	
-	/** The _given by other. */
 	private final boolean _givenByOther;
-	
-	/** The _skills. */
 	protected List<L2Skill> _skills = new ArrayList<>();
-	
-	/** The _disappear task. */
 	private Future<?> _disappearTask;
-	
-	/** The _action task. */
 	private Future<?> _actionTask;
 	
 	/**
@@ -226,8 +167,7 @@ public class L2CubicInstance
 				// _skills.add(SkillTable.getInstance().getInfo(4166,9)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5115,4)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5116,4)); no animation
-				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the
-				// cubic skills list
+				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the cubic skills list
 				break;
 			}
 			case SMART_CUBIC_ELEMENTALMASTER:
@@ -244,8 +184,7 @@ public class L2CubicInstance
 				_skills.add(SkillTable.getInstance().getInfo(4166, 9)); // have animation
 				// _skills.add(SkillTable.getInstance().getInfo(5115,4)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5116,4)); no animation
-				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the
-				// cubic skills list
+				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the cubic skills list
 				break;
 			}
 			case SMART_CUBIC_SPECTRALMASTER:
@@ -262,8 +201,7 @@ public class L2CubicInstance
 				// _skills.add(SkillTable.getInstance().getInfo(4166,9)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5115,4)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5116,4)); no animation
-				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the
-				// cubic skills list
+				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the cubic skills list
 				break;
 			}
 			case SMART_CUBIC_EVATEMPLAR:
@@ -280,8 +218,7 @@ public class L2CubicInstance
 				// _skills.add(SkillTable.getInstance().getInfo(4166,9)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5115,4)); no animation
 				// _skills.add(SkillTable.getInstance().getInfo(5116,4)); no animation
-				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the
-				// cubic skills list
+				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the cubic skills list
 				break;
 			}
 			case SMART_CUBIC_SHILLIENTEMPLAR:
@@ -298,8 +235,7 @@ public class L2CubicInstance
 				// _skills.add(SkillTable.getInstance().getInfo(4166,9)); no animation
 				_skills.add(SkillTable.getInstance().getInfo(5115, 4)); // have animation
 				// _skills.add(SkillTable.getInstance().getInfo(5116,4)); no animation
-				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the
-				// cubic skills list
+				// _skills.add(SkillTable.getInstance().getInfo(5579,4)); no need to add to the cubic skills list
 				break;
 			}
 		}
@@ -628,12 +564,8 @@ public class L2CubicInstance
 		}
 	}
 	
-	/**
-	 * The Class Action.
-	 */
 	private class Action implements Runnable
 	{
-		/** The _chance. */
 		private final int _chance;
 		
 		/**
@@ -643,7 +575,6 @@ public class L2CubicInstance
 		Action(int chance)
 		{
 			_chance = chance;
-			// run task
 		}
 		
 		@Override
@@ -825,9 +756,7 @@ public class L2CubicInstance
 				}
 			}
 			
-			// if this is a debuff let the duel manager know about it
-			// so the debuff can be removed after the duel
-			// (player & target must be in the same duel)
+			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 			if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((L2PcInstance) target).getDuelId()))
 			{
 				final DuelManager dm = DuelManager.getInstance();
@@ -938,9 +867,7 @@ public class L2CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it
-						// so the debuff can be removed after the duel
-						// (player & target must be in the same duel)
+						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 						if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((L2PcInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
@@ -971,9 +898,7 @@ public class L2CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it
-						// so the debuff can be removed after the duel
-						// (player & target must be in the same duel)
+						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 						if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((L2PcInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
@@ -1030,9 +955,7 @@ public class L2CubicInstance
 				{
 					if (Formulas.calcCubicSkillSuccess(activeCubic, target, skill))
 					{
-						// if this is a debuff let the duel manager know about it
-						// so the debuff can be removed after the duel
-						// (player & target must be in the same duel)
+						// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 						if ((target instanceof L2PcInstance) && ((L2PcInstance) target).isInDuel() && (skill.getSkillType() == SkillType.DEBUFF) && (activeCubic.getOwner().getDuelId() == ((L2PcInstance) target).getDuelId()))
 						{
 							final DuelManager dm = DuelManager.getInstance();
@@ -1118,8 +1041,7 @@ public class L2CubicInstance
 		double percentleft = 100.0;
 		L2Party party = _owner.getParty();
 		
-		// if owner is in a duel but not in a party duel, then it is the same as he does not have a
-		// party
+		// if owner is in a duel but not in a party duel, then it is the same as he does not have a party
 		if (_owner.isInDuel())
 		{
 			if (!DuelManager.getInstance().getDuel(_owner.getDuelId()).isPartyDuel())
@@ -1140,8 +1062,7 @@ public class L2CubicInstance
 					// if party member not dead, check if he is in castrange of heal cubic
 					if (isInCubicRange(_owner, partyMember))
 					{
-						// member is in cubic casting range, check if he need heal and if he have
-						// the lowest HP
+						// member is in cubic casting range, check if he need heal and if he have the lowest HP
 						if (partyMember.getCurrentHp() < partyMember.getMaxHp())
 						{
 							if (percentleft > (partyMember.getCurrentHp() / partyMember.getMaxHp()))
@@ -1165,8 +1086,7 @@ public class L2CubicInstance
 						continue;
 					}
 					
-					// member's pet is in cubic casting range, check if he need heal and if he have
-					// the lowest HP
+					// member's pet is in cubic casting range, check if he need heal and if he have the lowest HP
 					if (partyMember.getPet().getCurrentHp() < partyMember.getPet().getMaxHp())
 					{
 						if (percentleft > (partyMember.getPet().getCurrentHp() / partyMember.getPet().getMaxHp()))
@@ -1206,23 +1126,12 @@ public class L2CubicInstance
 		return _givenByOther;
 	}
 	
-	/**
-	 * The Class Heal.
-	 */
 	private class Heal implements Runnable
 	{
-		/**
-		 * Instantiates a new heal.
-		 */
 		Heal()
 		{
-			// run task
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -1281,23 +1190,12 @@ public class L2CubicInstance
 		}
 	}
 	
-	/**
-	 * The Class Disappear.
-	 */
 	private class Disappear implements Runnable
 	{
-		/**
-		 * Instantiates a new disappear.
-		 */
 		Disappear()
 		{
-			// run task
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{

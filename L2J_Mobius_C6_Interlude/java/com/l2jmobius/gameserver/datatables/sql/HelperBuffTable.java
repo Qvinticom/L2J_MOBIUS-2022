@@ -36,23 +36,10 @@ public class HelperBuffTable
 	private static final Logger LOGGER = Logger.getLogger(HennaTable.class.getName());
 	
 	private static HelperBuffTable _instance;
-	
-	/** The table containing all Buff of the Newbie Helper */
 	public List<L2HelperBuff> helperBuff;
-	
 	private final boolean _initialized = true;
-	
-	/**
-	 * The player level since Newbie Helper can give the fisrt buff <BR>
-	 * Used to generate message : "Come back here when you have reached level ...")
-	 */
 	private int _magicClassLowestLevel = 100;
 	private int _physicClassLowestLevel = 100;
-	
-	/**
-	 * The player level above which Newbie Helper won't give any buff <BR>
-	 * Used to generate message : "Only novice character of level ... or less can receive my support magic.")
-	 */
 	private int _magicClassHighestLevel = 1;
 	private int _physicClassHighestLevel = 1;
 	
@@ -235,5 +222,4 @@ public class HelperBuffTable
 	{
 		_physicClassLowestLevel = physicClassLowestLevel;
 	}
-	
 }

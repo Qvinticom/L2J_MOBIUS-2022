@@ -49,5 +49,4 @@ public class L2ScriptZone extends L2ZoneType
 	protected void onReviveInside(L2Character character)
 	{
 	}
-	
 }

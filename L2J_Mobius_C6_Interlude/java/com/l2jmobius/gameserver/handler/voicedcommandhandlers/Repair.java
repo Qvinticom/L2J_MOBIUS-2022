@@ -56,7 +56,6 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 			return false;
 		}
 		
-		// Send activeChar HTML page
 		if (command.startsWith("repair"))
 		{
 			final String htmContent = HtmCache.getInstance().getHtm("data/html/mods/repair/repair.htm");
@@ -66,9 +65,6 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 			activeChar.sendPacket(npcHtmlMessage);
 			return true;
 		}
-		// Command for enter repairFunction from html
-		
-		// LOGGER.warning("Repair Attempt: Failed. ");
 		return false;
 	}
 	
@@ -88,14 +84,12 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 					result += rset.getString(1) + ";";
 				}
 			}
-			// LOGGER.warning("Repair Attempt: Output Result for searching characters on account:"+result);
 			rset.close();
 			statement.close();
 		}
 		catch (SQLException e)
 		{
 			e.printStackTrace();
-			// return result;
 		}
 		return result;
 	}
@@ -260,10 +254,6 @@ public class Repair implements IVoicedCommandHandler, ICustomByPassHandler
 		return _BYPASSCMD;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.ICustomByPassHandler#handleCommand(java.lang.String, com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void handleCommand(String command, L2PcInstance activeChar, String repairChar)
 	{

@@ -229,18 +229,10 @@ public class L2CastleZone extends L2ZoneType
 		return players;
 	}
 	
-	/**
-	 * Get the castles defender spawn
-	 * @return
-	 */
 	public int[] getSpawn()
 	{
 		return _spawnLoc;
 	}
-	
-	/**
-	 * @return
-	 */
 	
 	public boolean isSiegeActive()
 	{

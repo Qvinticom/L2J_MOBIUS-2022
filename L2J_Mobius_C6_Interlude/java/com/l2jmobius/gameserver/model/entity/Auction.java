@@ -34,98 +34,44 @@ import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * The Class Auction.
- */
 public class Auction
 {
-	/** The Constant LOGGER. */
 	protected static final Logger LOGGER = Logger.getLogger(Auction.class.getName());
 	
-	/** The _id. */
-	private int _id = 0;
-	
-	/** The _adena id. */
-	private final int _adenaId = 57;
-	
-	/** The _end date. */
-	private long _endDate;
-	
-	/** The _highest bidder id. */
-	private int _highestBidderId = 0;
-	
-	/** The _highest bidder name. */
-	private String _highestBidderName = "";
-	
-	/** The _highest bidder max bid. */
-	private int _highestBidderMaxBid = 0;
-	
-	/** The _item id. */
-	private int _itemId = 0;
-	
-	/** The _item name. */
-	private String _itemName = "";
-	
-	/** The _item object id. */
-	private int _itemObjectId = 0;
-	
-	/** The _item quantity. */
-	private final int _itemQuantity = 0;
-	
-	/** The _item type. */
-	private String _itemType = "";
-	
-	/** The _seller id. */
-	private int _sellerId = 0;
-	
-	/** The _seller clan name. */
-	private String _sellerClanName = "";
-	
-	/** The _seller name. */
-	private String _sellerName = "";
-	
-	/** The _current bid. */
-	private int _currentBid = 0;
-	
-	/** The _starting bid. */
-	private int _startingBid = 0;
-	
-	/** The Constant MAX_ADENA. */
 	public static final long MAX_ADENA = 99900000000L;
-	
-	/** The _bidders. */
+	private int _id = 0;
+	private final int _adenaId = 57;
+	private long _endDate;
+	private int _highestBidderId = 0;
+	private String _highestBidderName = "";
+	private int _highestBidderMaxBid = 0;
+	private int _itemId = 0;
+	private String _itemName = "";
+	private int _itemObjectId = 0;
+	private final int _itemQuantity = 0;
+	private String _itemType = "";
+	private int _sellerId = 0;
+	private String _sellerClanName = "";
+	private String _sellerName = "";
+	private int _currentBid = 0;
+	private int _startingBid = 0;
 	private final Map<Integer, Bidder> _bidders = new HashMap<>();
 	
-	/** The Constant ItemTypeName. */
 	private static final String[] ItemTypeName =
 	{
 		"ClanHall"
 	};
 	
-	/**
-	 * The Enum ItemTypeEnum.
-	 */
 	public enum ItemTypeEnum
 	{
-		/** The Clan hall. */
 		ClanHall
 	}
 	
-	/**
-	 * The Class Bidder.
-	 */
 	public class Bidder
 	{
-		/** The _name. */
 		private final String _name;
-		
-		/** The _clan name. */
 		private final String _clanName;
-		
-		/** The _bid. */
 		private int _bid;
-		
-		/** The _time bid. */
 		private final Calendar _timeBid;
 		
 		/**
@@ -199,22 +145,13 @@ public class Auction
 		}
 	}
 	
-	/**
-	 * Task Sheduler for endAuction.
-	 */
 	public class AutoEndTask implements Runnable
 	{
-		/**
-		 * Instantiates a new auto end task.
-		 */
+		
 		public AutoEndTask()
 		{
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -227,11 +164,6 @@ public class Auction
 			}
 		}
 	}
-	
-	/**
-	 * Constructor.
-	 * @param auctionId the auction id
-	 */
 	
 	public Auction(int auctionId)
 	{
@@ -299,9 +231,6 @@ public class Auction
 		}
 	}
 	
-	/**
-	 * Load bidders *.
-	 */
 	private void loadBid()
 	{
 		_highestBidderId = 0;

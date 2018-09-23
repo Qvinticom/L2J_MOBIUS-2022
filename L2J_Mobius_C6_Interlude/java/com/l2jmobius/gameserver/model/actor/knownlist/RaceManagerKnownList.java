@@ -25,18 +25,11 @@ import com.l2jmobius.gameserver.network.serverpackets.DeleteObject;
 
 public class RaceManagerKnownList extends NpcKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public RaceManagerKnownList(L2RaceManagerInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	@Override
 	public boolean addKnownObject(L2Object object)
 	{
@@ -51,10 +44,6 @@ public class RaceManagerKnownList extends NpcKnownList
 			return false;
 		}
 		
-		/*
-		 * DONT KNOW WHY WE NEED THIS WHEN RACE MANAGER HAS A METHOD THAT BROADCAST TO ITS KNOW PLAYERS if (object instanceof L2PcInstance) { if (packet != null) ((L2PcInstance) object).sendPacket(packet); }
-		 */
-		
 		return true;
 	}
 	
@@ -68,7 +57,6 @@ public class RaceManagerKnownList extends NpcKnownList
 		
 		if (object instanceof L2PcInstance)
 		{
-			// LOGGER.info("Sending delete monsrac info.");
 			DeleteObject obj = null;
 			for (int i = 0; i < 8; i++)
 			{
@@ -80,11 +68,6 @@ public class RaceManagerKnownList extends NpcKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public L2RaceManagerInstance getActiveChar()
 	{

@@ -27,11 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.CharMoveToLocation;
 
 public class NpcKnownList extends CharKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public NpcKnownList(L2NpcInstance activeChar)
 	{
 		super(activeChar);

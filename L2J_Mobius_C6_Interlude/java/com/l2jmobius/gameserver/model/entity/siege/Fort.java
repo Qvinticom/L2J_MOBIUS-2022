@@ -46,8 +46,6 @@ public class Fort
 {
 	protected static final Logger LOGGER = Logger.getLogger(Fort.class.getName());
 	
-	// =========================================================
-	// Data Field
 	private int _fortId = 0;
 	private final List<L2DoorInstance> _doors = new ArrayList<>();
 	private final List<String> _doorDefault = new ArrayList<>();
@@ -61,17 +59,12 @@ public class Fort
 	private L2FortZone _zone;
 	private L2Clan _formerOwner = null;
 	
-	// =========================================================
-	// Constructor
 	public Fort(int fortId)
 	{
 		_fortId = fortId;
 		load();
 		loadDoor();
 	}
-	
-	// =========================================================
-	// Method - Public
 	
 	public void EndOfSiege(L2Clan clan)
 	{
@@ -84,7 +77,6 @@ public class Fort
 		setOwner(clan);
 	}
 	
-	// This method add to the treasury
 	/**
 	 * Add amount to fort instance's treasury (warehouse).
 	 * @param amount
@@ -337,8 +329,6 @@ public class Fort
 		}
 	}
 	
-	// =========================================================
-	// Method - Private
 	// This method loads fort
 	private void load()
 	{
@@ -380,7 +370,6 @@ public class Fort
 			if (_ownerId > 0)
 			{
 				L2Clan clan = ClanTable.getInstance().getClan(getOwnerId()); // Try to find clan instance
-				// ThreadPoolManager.scheduleGeneral(new FortUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 				if (clan != null)
 				{
 					clan.setHasFort(_fortId);
@@ -510,8 +499,6 @@ public class Fort
 			statement.execute();
 			statement.close();
 			
-			// ============================================================================
-			
 			// Announce to clan memebers
 			if (clan != null)
 			{
@@ -519,7 +506,6 @@ public class Fort
 				Announcements.getInstance().announceToAll(clan.getName() + " has taken " + getName() + " fort!");
 				clan.broadcastToOnlineMembers(new PledgeShowInfoUpdate(clan));
 				clan.broadcastToOnlineMembers(new PlaySound(1, "Siege_Victory", 0, 0, 0, 0, 0));
-				// ThreadPoolManager.scheduleGeneral(new FortUpdater(clan, 1), 3600000); // Schedule owner tasks to start running
 			}
 		}
 		catch (Exception e)
@@ -528,8 +514,6 @@ public class Fort
 		}
 	}
 	
-	// =========================================================
-	// Property
 	public final int getFortId()
 	{
 		return _fortId;

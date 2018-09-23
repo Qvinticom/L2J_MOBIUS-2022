@@ -118,19 +118,13 @@ public class CompactionIDFactory extends IdFactory
 	@Override
 	public synchronized int getNextId()
 	{
-		/* if (_freeSize == 0) */return _curOID++;
-		/*
-		 * else return _freeOIDs[--_freeSize];
-		 */
+		return _curOID++;
 	}
 	
 	@Override
 	public synchronized void releaseId(int id)
 	{
 		// dont release ids until we are sure it isnt messing up
-		/*
-		 * if (_freeSize >= _freeOIDs.length) { int[] tmp = new int[_freeSize + STACK_SIZE_INCREMENT]; System.arraycopy(_freeOIDs, 0, tmp, 0, _freeSize); _freeOIDs = tmp; } _freeOIDs[_freeSize++] = id;
-		 */
 	}
 	
 	@Override

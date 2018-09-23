@@ -111,7 +111,6 @@ public class AdminHeal implements IAdminCommandHandler
 				}
 				catch (NumberFormatException nbe)
 				{
-					// ignore
 				}
 			}
 		}

@@ -159,9 +159,7 @@ public class AutoSaveManager
 		{
 			int erased = 0;
 			
-			/*
-			 * Perform the clean here instead of every time that the skills are saved in order to do it in once step because if skill have 0 reuse delay doesn't affect the game, just makes the table grows bigger
-			 */
+			// Perform the clean here instead of every time that the skills are saved in order to do it in once step because if skill have 0 reuse delay doesn't affect the game, just makes the table grows bigger
 			try (Connection con = DatabaseFactory.getConnection())
 			{
 				PreparedStatement statement;

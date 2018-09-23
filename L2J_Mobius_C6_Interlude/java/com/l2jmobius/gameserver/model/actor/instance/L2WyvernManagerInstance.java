@@ -30,16 +30,9 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.network.serverpackets.ValidateLocation;
 import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
-/**
- * The Class L2WyvernManagerInstance.
- */
 public class L2WyvernManagerInstance extends L2CastleChamberlainInstance
 {
-	
-	/** The Constant COND_CLAN_OWNER. */
 	protected static final int COND_CLAN_OWNER = 3;
-	
-	/** The _clan hall id. */
 	private int _clanHallId = -1;
 	
 	/**
@@ -52,10 +45,6 @@ public class L2WyvernManagerInstance extends L2CastleChamberlainInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2CastleChamberlainInstance#onBypassFeedback(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance, java.lang.String)
-	 */
 	@Override
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
@@ -131,10 +120,6 @@ public class L2WyvernManagerInstance extends L2CastleChamberlainInstance
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2CastleChamberlainInstance#onAction(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	public void onAction(L2PcInstance player)
 	{
@@ -156,8 +141,7 @@ public class L2WyvernManagerInstance extends L2CastleChamberlainInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Calculate the distance between the L2PcInstance and the L2NpcInstance
-		if (!canInteract(player))
+		else if (!canInteract(player)) // Calculate the distance between the L2PcInstance and the L2NpcInstance
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, this);
@@ -223,10 +207,6 @@ public class L2WyvernManagerInstance extends L2CastleChamberlainInstance
 		return ClanHallManager.getInstance().getClanHallById(_clanHallId);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2CastleChamberlainInstance#validateCondition(com.l2jmobius.gameserver.model.actor.instance.L2PcInstance)
-	 */
 	@Override
 	protected int validateCondition(L2PcInstance player)
 	{

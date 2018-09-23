@@ -52,5 +52,4 @@ public class L2PeaceZone extends L2ZoneType
 	protected void onReviveInside(L2Character character)
 	{
 	}
-	
 }

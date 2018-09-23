@@ -76,5 +76,4 @@ public class L2MotherTreeZone extends L2ZoneType
 	protected void onReviveInside(L2Character character)
 	{
 	}
-	
 }

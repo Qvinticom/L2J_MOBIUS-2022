@@ -64,8 +64,7 @@ public final class L2Radar
 	
 	public void loadMarkers()
 	{
-		// TODO: Need method to re-send radar markers after load/teleport/death
-		// etc.
+		// TODO: Need method to re-send radar markers after load/teleport/death etc.
 	}
 	
 	private static class RadarMarker

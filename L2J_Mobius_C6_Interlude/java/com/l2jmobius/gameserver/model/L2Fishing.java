@@ -34,8 +34,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
 
 public class L2Fishing implements Runnable
 {
-	// =========================================================
-	// Data Field
 	private L2PcInstance _fisher;
 	private int _time;
 	private int _stop = 0;
@@ -45,7 +43,6 @@ public class L2Fishing implements Runnable
 	private int _deceptiveMode = 0;
 	private Future<?> _fishAiTask;
 	private boolean _thinking;
-	// Fish datas
 	private final int _fishId;
 	private final int _fishMaxHp;
 	private int _fishCurHp;
@@ -80,7 +77,6 @@ public class L2Fishing implements Runnable
 		}
 	}
 	
-	// =========================================================
 	public L2Fishing(L2PcInstance Fisher, FishData fish, boolean isNoob, boolean isUpperGrade, int lureId)
 	{
 		_fisher = Fisher;
@@ -456,7 +452,6 @@ public class L2Fishing implements Runnable
 			}
 			catch (Exception e)
 			{
-				// Nothing
 			}
 		}
 	}

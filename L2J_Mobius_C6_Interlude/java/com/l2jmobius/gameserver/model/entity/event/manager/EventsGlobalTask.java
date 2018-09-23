@@ -102,11 +102,8 @@ public class EventsGlobalTask implements Runnable
 			// check Info
 			for (String time : time_to_tasks.keySet())
 			{
-				// LOGGER.info("--Time: "+time);
 				final ArrayList<EventTask> tasks = time_to_tasks.get(time);
-				
 				final Iterator<EventTask> taskIt = tasks.iterator();
-				
 				while (taskIt.hasNext())
 				{
 					final EventTask actual_event = taskIt.next();
@@ -118,9 +115,7 @@ public class EventsGlobalTask implements Runnable
 			{
 				LOGGER.info("--Event: " + event_id);
 				final ArrayList<EventTask> times = eventid_to_tasks.get(event_id);
-				
 				final Iterator<EventTask> timesIt = times.iterator();
-				
 				while (timesIt.hasNext())
 				{
 					final EventTask actual_time = timesIt.next();
@@ -230,10 +225,7 @@ public class EventsGlobalTask implements Runnable
 		}
 		
 		final String currentTime = hourStr + ":" + minStr;
-		
-		// LOGGER.info("Current Time: "+currentTime);
 		final ArrayList<EventTask> registeredEventsAtCurrentTime = time_to_tasks.get(currentTime);
-		
 		if (registeredEventsAtCurrentTime != null)
 		{
 			for (EventTask actualEvent : registeredEventsAtCurrentTime)

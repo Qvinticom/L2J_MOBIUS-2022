@@ -36,7 +36,6 @@ final class EffectPhoenixBless extends L2Effect
 		return EffectType.PHOENIX_BLESSING;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -46,7 +45,6 @@ final class EffectPhoenixBless extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

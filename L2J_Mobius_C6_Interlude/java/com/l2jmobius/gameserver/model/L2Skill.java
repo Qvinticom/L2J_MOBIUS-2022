@@ -73,10 +73,6 @@ import com.l2jmobius.gameserver.skills.l2skills.L2SkillSummon;
 import com.l2jmobius.gameserver.templates.StatsSet;
 import com.l2jmobius.gameserver.util.Util;
 
-/**
- * This class...
- * @version $Revision: 1.3.2.8.2.22 $ $Date: 2005/04/06 16:13:42 $
- */
 public abstract class L2Skill
 {
 	protected static final Logger LOGGER = Logger.getLogger(L2Skill.class.getName());
@@ -786,9 +782,6 @@ public abstract class L2Skill
 	 */
 	public final double getPower(L2Character activeChar)
 	{
-		/*
-		 * if(_skillType == SkillType.DEATHLINK && activeChar != null) return _power * Math.pow(1.7165 - activeChar.getCurrentHp() / activeChar.getMaxHp(), 2) * 0.577; else
-		 */
 		if ((_skillType == SkillType.FATALCOUNTER) && (activeChar != null))
 		{
 			return _power * 3.5 * (1 - (activeChar.getCurrentHp() / activeChar.getMaxHp()));
@@ -1341,11 +1334,6 @@ public abstract class L2Skill
 		}
 	}
 	
-	// int weapons[] = {L2Weapon.WEAPON_TYPE_ETC, L2Weapon.WEAPON_TYPE_BOW,
-	// L2Weapon.WEAPON_TYPE_POLE, L2Weapon.WEAPON_TYPE_DUALFIST,
-	// L2Weapon.WEAPON_TYPE_DUAL, L2Weapon.WEAPON_TYPE_BLUNT,
-	// L2Weapon.WEAPON_TYPE_SWORD, L2Weapon.WEAPON_TYPE_DAGGER};
-	
 	public final boolean getWeaponDependancy(L2Character activeChar)
 	{
 		if (getWeaponDependancy(activeChar, false))
@@ -1706,18 +1694,12 @@ public abstract class L2Skill
 							{
 								continue;
 							}
-							/*
-							 * if(src.isInOlympiadMode() && !src.isOlympiadStart()) { continue; } if(src.getParty() != null && ((L2PcInstance) obj).getParty() != null && src.getParty().getPartyLeaderOID() == ((L2PcInstance) obj).getParty().getPartyLeaderOID()) { continue; }
-							 */
 							if (!srcInArena && (!((L2Character) obj).isInsideZone(ZoneId.PVP) || ((L2Character) obj).isInsideZone(ZoneId.SIEGE)))
 							{
 								if (checkPartyClan(src, obj))
 								{
 									continue;
 								}
-								/*
-								 * if(src.getClanId() != 0 && src.getClanId() == ((L2PcInstance) obj).getClanId()) { continue; }
-								 */
 								if ((src.getAllyId() != 0) && (src.getAllyId() == ((L2PcInstance) obj).getAllyId()))
 								{
 									continue;
@@ -1739,18 +1721,12 @@ public abstract class L2Skill
 							{
 								continue;
 							}
-							/*
-							 * if(src.isInOlympiadMode() && !src.isOlympiadStart()) { continue; }
-							 */
 							if ((src.getParty() != null) && (trg.getParty() != null) && (src.getParty().getPartyLeaderOID() == trg.getParty().getPartyLeaderOID()))
 							{
 								continue;
 							}
 							if (!srcInArena && (!((L2Character) obj).isInsideZone(ZoneId.PVP) || ((L2Character) obj).isInsideZone(ZoneId.SIEGE)))
 							{
-								/*
-								 * if(src.getClanId() != 0 && src.getClanId() == trg.getClanId()) { continue; }
-								 */
 								if (checkPartyClan(src, obj))
 								{
 									continue;
@@ -1910,9 +1886,6 @@ public abstract class L2Skill
 									{
 										continue;
 									}
-									/*
-									 * if(src.getClan() != null && trg.getClan() != null) { if(src.getClan().getClanId() == trg.getClan().getClanId()) { continue; } }
-									 */
 									if (!src.checkPvpSkill(obj, this))
 									{
 										continue;
@@ -1940,9 +1913,6 @@ public abstract class L2Skill
 									{
 										continue;
 									}
-									/*
-									 * if(src.getClan() != null && trg.getClan() != null) { if(src.getClan().getClanId() == trg.getClan().getClanId()) { continue; } }
-									 */
 									if (checkPartyClan(src, obj))
 									{
 										continue;
@@ -2049,8 +2019,7 @@ public abstract class L2Skill
 					}
 				}
 				return targetList.toArray(new L2Character[targetList.size()]);
-				// TODO multiface targets all around right now. need it to just get targets
-				// the character is facing.
+				// TODO multiface targets all around right now. need it to just get targets the character is facing.
 			}
 			case TARGET_PARTY:
 			{
@@ -2097,7 +2066,6 @@ public abstract class L2Skill
 							continue;
 						}
 						// check if allow interference is allowed if player is not on event but target is on event
-						// if(((TvT._started && !Config.TVT_ALLOW_INTERFERENCE) || (CTF._started && !Config.CTF_ALLOW_INTERFERENCE) || (DM._started && !Config.DM_ALLOW_INTERFERENCE)) && !player.isGM())
 						if (((TvT.is_started() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.is_started() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.is_started() && !Config.DM_ALLOW_INTERFERENCE))/* && !player.isGM() */)
 						{
 							if ((partyMember._inEventTvT && !player._inEventTvT) || (!partyMember._inEventTvT && player._inEventTvT))
@@ -2249,15 +2217,6 @@ public abstract class L2Skill
 									continue;
 								}
 							}
-							/*
-							 * The target_ally or target_corpse_ally have to work indipendent on duel/party status if(player.isInDuel() && (player.getDuelId() != ((L2PcInstance) newTarget).getDuelId() || player.getParty() != null && !player.getParty().getPartyMembers().contains(newTarget))) {
-							 * continue; }
-							 */
-							/*
-							 * }else if(newTarget instanceof L2Summon){ L2PcInstance trg = ((L2Summon) newTarget).getOwner(); if(trg == src) { continue; } //if src is in event and trg not OR viceversa: //to be fixed for mixed events status (in TvT joining phase, someone can attack a partecipating
-							 * CTF player with area attack) if( ((src._inEvent || src._inEventCTF || src._inEventDM || src._inEventTvT || src._inEventVIP) && (!trg._inEvent && !trg._inEventCTF && !trg._inEventDM && !trg._inEventTvT && !trg._inEventVIP)) || ((trg._inEvent || trg._inEventCTF ||
-							 * trg._inEventDM || trg._inEventTvT || trg._inEventVIP) && (!src._inEvent && !src._inEventCTF && !src._inEventDM && !src._inEventTvT && !src._inEventVIP)) ){ continue; } }
-							 */
 							L2Summon pet = ((L2PcInstance) newTarget).getPet();
 							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_ALLY) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_ALLY) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
@@ -2351,11 +2310,6 @@ public abstract class L2Skill
 							{
 								continue;
 							}
-							/*
-							 * //check if allow interference is allowed if player is not on event but target is on event //if(((TvT._started && !Config.TVT_ALLOW_INTERFERENCE) || (CTF._started && !Config.CTF_ALLOW_INTERFERENCE) || (DM._started && !Config.DM_ALLOW_INTERFERENCE)) && !player.isGM())
-							 * if(((TvT.is_inProgress() && !Config.TVT_ALLOW_INTERFERENCE) || (CTF.is_inProgress() && !Config.CTF_ALLOW_INTERFERENCE) || (DM.is_inProgress() && !Config.DM_ALLOW_INTERFERENCE))) { if((newTarget._inEventTvT && !player._inEventTvT) || (!newTarget._inEventTvT &&
-							 * player._inEventTvT)) { continue; } if((newTarget._inEventCTF && !player._inEventCTF) || (!newTarget._inEventCTF && player._inEventCTF)) { continue; } if((newTarget._inEventDM && !player._inEventDM) || (!newTarget._inEventDM && player._inEventDM)) { continue; } }
-							 */
 							L2Summon pet = newTarget.getPet();
 							if ((pet != null) && Util.checkIfInRange(radius, activeChar, pet, true) && !onlyFirst && (((_targetType == SkillTargetType.TARGET_CORPSE_CLAN) && pet.isDead()) || ((_targetType == SkillTargetType.TARGET_CLAN) && !pet.isDead())) && player.checkPvpSkill(newTarget, this))
 							{
@@ -2967,10 +2921,6 @@ public abstract class L2Skill
 			skillMastery = true;
 		}
 		
-		/*
-		 * if(_skillType==SkillType.BUFF) for(L2Effect ef: effector.getAllEffects()) { if(ef!=null && ef.getSkill()!=null){ if(ef.getSkill().getId() == getId() && ef.getSkill().getLevel() > getLevel()) return _emptyEffectSet; } }
-		 */
-		
 		final Env env = new Env();
 		env.player = effector;
 		env.target = effected;
@@ -2994,9 +2944,6 @@ public abstract class L2Skill
 					effects.add(e);
 				}
 			}
-			/*
-			 * L2Effect e = et.getEffect(env); if(e != null) { effects.add(e); } e = null;
-			 */
 		}
 		
 		if (effects.size() == 0)
@@ -3128,7 +3075,6 @@ public abstract class L2Skill
 		}
 	}
 	
-	// Author Jose Moreira
 	public boolean isAbnormalEffectByName(int abnormalEffect)
 	{
 		// Function to know if the skill has "abnormalEffect"

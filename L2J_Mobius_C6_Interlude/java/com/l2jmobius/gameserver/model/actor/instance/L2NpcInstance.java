@@ -109,36 +109,15 @@ import com.l2jmobius.gameserver.templates.item.L2WeaponType;
  */
 public class L2NpcInstance extends L2Character
 {
-	// private static Logger LOGGER = Logger.getLogger(L2NpcInstance.class);
-	
-	/** The interaction distance of the L2NpcInstance(is used as offset in MovetoLocation method). */
 	public static final int INTERACTION_DISTANCE = 150;
-	
-	/** The Polymorph object that manage this L2NpcInstance's morph to a PcInstance... I wrote this line too =P Darki699 */
 	private L2CustomNpcInstance _customNpcInstance;
-	
-	/** The L2Spawn object that manage this L2NpcInstance. */
 	private L2Spawn _spawn;
-	
-	/** The flag to specify if this L2NpcInstance is busy. */
 	private boolean _isBusy = false;
-	
-	/** The busy message for this L2NpcInstance. */
 	private String _busyMessage = "";
-	
-	/** True if endDecayTask has already been called. */
 	volatile boolean _isDecayed = false;
-	
-	/** True if a Dwarf has used Spoil on this L2NpcInstance. */
 	private boolean _isSpoil = false;
-	
-	/** The castle index in the array of L2Castle this L2NpcInstance belongs to. */
 	private int _castleIndex = -2;
-	
-	/** The fortress index in the array of L2Fort this L2NpcInstance belongs to. */
 	private int _fortIndex = -2;
-	
-	/** Ctf. */
 	public boolean isEventMob = false;
 	public boolean _isEventMobTvT = false;
 	public boolean _isEventVIPNPC = false;
@@ -147,35 +126,16 @@ public class L2NpcInstance extends L2Character
 	public boolean _isEventMobCTF = false;
 	public boolean _isCTF_throneSpawn = false;
 	public boolean _isCTF_Flag = false;
-	
-	/** The _is in town. */
 	private boolean _isInTown = false;
-	
-	/** The ctf flag team name. */
 	public String _CTF_FlagTeamName;
-	
-	/** The _is spoiled by. */
 	private int _isSpoiledBy = 0;
-	
-	/** Time of last social packet broadcast */
 	private long _lastSocialBroadcast = 0;
-	/** Minimum interval between social packets */
 	private static final int MINIMUM_SOCIAL_INTERVAL = 6000;
-	/** The _r ani task. */
 	protected RandomAnimationTask _rAniTask;
-	
-	/** The _current l hand id. */
 	private int _currentLHandId; // normally this shouldn't change from the template, but there exist exceptions
-	
-	/** The _current r hand id. */
 	private int _currentRHandId; // normally this shouldn't change from the template, but there exist exceptions
-	
-	/** The _current collision height. */
 	private int _currentCollisionHeight; // used for npc grow effect skills
-	
-	/** The _current collision radius. */
 	private int _currentCollisionRadius; // used for npc grow effect skills
-	
 	private int _scriptValue = 0;
 	
 	public class RandomAnimationTask implements Runnable
@@ -306,27 +266,15 @@ public class L2NpcInstance extends L2Character
 		return Config.MAX_NPC_ANIMATION > 0;
 	}
 	
-	/**
-	 * The Class destroyTemporalNPC.
-	 */
 	public class destroyTemporalNPC implements Runnable
 	{
-		/** The _old spawn. */
 		private final L2Spawn _oldSpawn;
 		
-		/**
-		 * Instantiates a new destroy temporal npc.
-		 * @param spawn the spawn
-		 */
 		public destroyTemporalNPC(L2Spawn spawn)
 		{
 			_oldSpawn = spawn;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -343,32 +291,17 @@ public class L2NpcInstance extends L2Character
 		}
 	}
 	
-	/**
-	 * The Class destroyTemporalSummon.
-	 */
 	public class destroyTemporalSummon implements Runnable
 	{
-		/** The _summon. */
 		L2Summon _summon;
-		
-		/** The _player. */
 		L2PcInstance _player;
 		
-		/**
-		 * Instantiates a new destroy temporal summon.
-		 * @param summon the summon
-		 * @param player the player
-		 */
 		public destroyTemporalSummon(L2Summon summon, L2PcInstance player)
 		{
 			_summon = summon;
 			_player = player;
 		}
 		
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -390,8 +323,7 @@ public class L2NpcInstance extends L2Character
 	 */
 	public L2NpcInstance(int objectId, L2NpcTemplate template)
 	{
-		// Call the L2Character constructor to set the _template of the L2Character, copy skills from template to object
-		// and link _calculators to NPC_STD_CALCULATOR
+		// Call the L2Character constructor to set the _template of the L2Character, copy skills from template to object and link _calculators to NPC_STD_CALCULATOR
 		super(objectId, template);
 		getKnownList(); // init knownlist
 		getStat(); // init stats
@@ -424,10 +356,6 @@ public class L2NpcInstance extends L2Character
 		return _scriptValue == val;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getKnownList()
-	 */
 	@Override
 	public NpcKnownList getKnownList()
 	{
@@ -439,10 +367,6 @@ public class L2NpcInstance extends L2Character
 		return (NpcKnownList) super.getKnownList();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStat()
-	 */
 	@Override
 	public NpcStat getStat()
 	{
@@ -454,10 +378,6 @@ public class L2NpcInstance extends L2Character
 		return (NpcStat) super.getStat();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#getStatus()
-	 */
 	@Override
 	public NpcStatus getStatus()
 	{
@@ -489,10 +409,6 @@ public class L2NpcInstance extends L2Character
 		return getTemplate().npcId;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Object#isAttackable()
-	 */
 	@Override
 	public boolean isAttackable()
 	{
@@ -577,9 +493,6 @@ public class L2NpcInstance extends L2Character
 	@Override
 	public void updateAbnormalEffect()
 	{
-		// NpcInfo info = new NpcInfo(this);
-		// broadcastPacket(info);
-		
 		// Send a Server->Client packet NpcInfo with state of abnormal effect to all L2PcInstance in the _KnownPlayers of the L2NpcInstance
 		for (L2PcInstance player : getKnownList().getKnownPlayers().values())
 		{
@@ -790,9 +703,6 @@ public class L2NpcInstance extends L2Character
 	{
 		// TODO: NPC busy check etc...
 		
-		// if (!canTarget(player))
-		// return false;
-		
 		if (!isInsideRadius(player, INTERACTION_DISTANCE, false, false))
 		{
 			return false;
@@ -952,11 +862,6 @@ public class L2NpcInstance extends L2Character
 					}
 					else
 					{
-						// Open a chat window on client with the text of the L2NpcInstance
-						/*
-						 * Quest[] qlsa = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START); if ( (qlsa != null) && qlsa.length > 0) player.setLastQuestNpcObject(getObjectId());
-						 */
-						
 						final Quest[] qlst = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
 						if (qlst.length == 1)
 						{
@@ -1163,8 +1068,7 @@ public class L2NpcInstance extends L2Character
 			html.setHtml(html1.toString());
 			player.sendPacket(html);
 		}
-		else
-		// Like L2OFF set the target of the L2PcInstance player
+		else // Like L2OFF set the target of the L2PcInstance player
 		{
 			// Check if the L2PcInstance already target the L2NpcInstance
 			if (this != player.getTarget())
@@ -1289,11 +1193,6 @@ public class L2NpcInstance extends L2Character
 						}
 						else
 						{
-							// Open a chat window on client with the text of the L2NpcInstance
-							/*
-							 * Quest[] qlsa = getTemplate().getEventQuests(Quest.QuestEventType.QUEST_START); if ( (qlsa != null) && qlsa.length > 0) player.setLastQuestNpcObject(getObjectId());
-							 */
-							
 							final Quest[] qlst = getTemplate().getEventQuests(Quest.QuestEventType.NPC_FIRST_TALK);
 							if (qlst.length == 1)
 							{
@@ -1405,8 +1304,6 @@ public class L2NpcInstance extends L2Character
 	 */
 	public void onBypassFeedback(L2PcInstance player, String command)
 	{
-		// if (canInteract(player))
-		// {
 		if (_isBusy && (_busyMessage.length() > 0))
 		{
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -1815,7 +1712,7 @@ public class L2NpcInstance extends L2Character
 	@Override
 	public L2ItemInstance getActiveWeaponInstance()
 	{
-		// regular NPCs dont have weapons instancies
+		// regular NPCs dont have weapons
 		return null;
 	}
 	
@@ -1886,7 +1783,7 @@ public class L2NpcInstance extends L2Character
 	@Override
 	public L2ItemInstance getSecondaryWeaponInstance()
 	{
-		// regular NPCs dont have weapons instancies
+		// regular NPCs dont have weapons
 		return null;
 	}
 	
@@ -2618,17 +2515,6 @@ public class L2NpcInstance extends L2Character
 		return false;
 	}
 	
-	/*
-	 * Returns true if html exists
-	 * @param player
-	 * @param type
-	 * @return boolean
-	 */
-	/*
-	 * private boolean showFlagDenyChatWindow(L2PcInstance player, String type) { String html = HtmCache.getInstance().getHtm("data/html/" + type + "/" + getNpcId() + "-f.htm"); if (html != null) { NpcHtmlMessage pkDenyMsg = new NpcHtmlMessage(getObjectId()); pkDenyMsg.setHtml(html);
-	 * player.sendPacket(pkDenyMsg); player.sendPacket(ActionFailed.STATIC_PACKET); html = null; return true; } return false; }
-	 */
-	
 	/**
 	 * Open a chat window on client with the text of the L2NpcInstance.<BR>
 	 * <BR>
@@ -3151,8 +3037,6 @@ public class L2NpcInstance extends L2Character
 		NpcHtmlMessage html = new NpcHtmlMessage(getObjectId());
 		html.setFile(filename);
 		
-		// String word = "npc-"+npcId+(val>0 ? "-"+val : "" )+"-dialog-append";
-		
 		if (this instanceof L2MerchantInstance)
 		{
 			if (Config.LIST_PET_RENT_NPC.contains(npcId))
@@ -3240,8 +3124,7 @@ public class L2NpcInstance extends L2Character
 			return false;
 		}
 		
-		// normally this wouldn't really be needed, but for those few exceptions,
-		// we do need to reset the weapons back to the initial templated weapon.
+		// Normally this wouldn't really be needed, but for those few exceptions, we do need to reset the weapons back to the initial templated weapon.
 		_currentLHandId = getTemplate().lhand;
 		_currentRHandId = getTemplate().rhand;
 		_currentCollisionHeight = getTemplate().collisionHeight;
@@ -3359,10 +3242,6 @@ public class L2NpcInstance extends L2Character
 		return _spawn;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#toString()
-	 */
 	@Override
 	public String toString()
 	{
@@ -3399,8 +3278,6 @@ public class L2NpcInstance extends L2Character
 		}
 	}
 	
-	// Two functions to change the appearance of the equipped weapons on the NPC
-	// This is only useful for a few NPCs and is most likely going to be called from AI
 	/**
 	 * Sets the l hand id.
 	 * @param newWeaponId the new l hand id

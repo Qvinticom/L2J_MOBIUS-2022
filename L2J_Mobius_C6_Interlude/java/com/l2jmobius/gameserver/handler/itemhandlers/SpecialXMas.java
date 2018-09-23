@@ -55,13 +55,9 @@ public class SpecialXMas implements IItemHandler
 		{
 			ShowXMasSeal SXS = new ShowXMasSeal(5555);
 			activeChar.sendPacket(SXS);
-			// activeChar.broadcastPacket(SXS);
 		}
 	}
 	
-	/**
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#getItemIds()
-	 */
 	@Override
 	public int[] getItemIds()
 	{

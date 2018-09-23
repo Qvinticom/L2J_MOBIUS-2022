@@ -35,10 +35,6 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
-/**
- * This class ...
- * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
- */
 public enum PlayerClass
 {
 	HumanFighter(Human, Fighter, First),
@@ -135,9 +131,6 @@ public enum PlayerClass
 	dummyEntry29(null, null, null),
 	dummyEntry30(null, null, null),
 	
-	/*
-	 * (3rd classes)
-	 */
 	duelist(Human, Fighter, Fourth),
 	dreadnought(Human, Fighter, Fourth),
 	phoenixKnight(Human, Fighter, Fourth),

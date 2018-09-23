@@ -75,9 +75,6 @@ public class L2SkillChargeEffect extends L2Skill
 		// decrease?
 		effect.numCharges -= getNumCharges();
 		
-		// update icons
-		// activeChar.updateEffectIcons();
-		
 		// maybe exit? no charge
 		if (effect.numCharges == 0)
 		{

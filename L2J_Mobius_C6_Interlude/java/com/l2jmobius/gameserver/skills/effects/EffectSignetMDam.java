@@ -48,8 +48,6 @@ public final class EffectSignetMDam extends L2Effect
 	private boolean bss;
 	private boolean sps;
 	
-	// private SigmetMDAMTask skill_task;
-	
 	public EffectSignetMDam(Env env, EffectTemplate template)
 	{
 		super(env, template);
@@ -99,8 +97,6 @@ public final class EffectSignetMDam extends L2Effect
 		effectPoint.spawnMe(x, y, z);
 		
 		_actor = effectPoint;
-		
-		// skill_task = new SigmetMDAMTask();
 	}
 	
 	@Override

@@ -50,8 +50,7 @@ public final class SubClass
 	
 	public SubClass()
 	{
-		// Used for specifying ALL attributes of a sub class directly,
-		// using the preset default values.
+		// Used for specifying ALL attributes of a sub class directly, using the preset default values.
 	}
 	
 	public PlayerClass getClassDefinition()

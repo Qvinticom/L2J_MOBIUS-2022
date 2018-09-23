@@ -44,7 +44,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminDoorControl implements IAdminCommandHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(AdminDoorControl.class);
 	private static DoorTable _doorTable;
 	private static final String[] ADMIN_COMMANDS =
 	{
@@ -54,21 +53,14 @@ public class AdminDoorControl implements IAdminCommandHandler
 		"admin_closeall"
 	};
 	
-	// private static final Map<String, Integer> doorMap = new HashMap<String, Integer>(); //FIXME: should we jute remove this?
-	
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		_doorTable = DoorTable.getInstance();
 		
 		L2Object target2 = null;
 		
-		if (command.startsWith("admin_close ")) // id
+		if (command.startsWith("admin_close "))
 		{
 			try
 			{
@@ -96,7 +88,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				return false;
 			}
 		}
-		else if (command.equals("admin_close")) // target
+		else if (command.equals("admin_close"))
 		{
 			target2 = activeChar.getTarget();
 			
@@ -109,7 +101,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 			}
 		}
-		else if (command.startsWith("admin_open ")) // id
+		else if (command.startsWith("admin_open "))
 		{
 			try
 			{
@@ -137,7 +129,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 				return false;
 			}
 		}
-		else if (command.equals("admin_open")) // target
+		else if (command.equals("admin_open"))
 		{
 			target2 = activeChar.getTarget();
 			
@@ -150,7 +142,6 @@ public class AdminDoorControl implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Incorrect target.");
 			}
 		}
-		
 		// need optimize cycle
 		// set limits on the ID doors that do not cycle to close doors
 		else if (command.equals("admin_closeall"))

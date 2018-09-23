@@ -126,7 +126,7 @@ public class ChristmasManager
 		"May you have the best of Christmas this year and all your dreams come true.",
 		"May the miracle of Christmas fill your heart with warmth and love. Merry Christmas!"
 	};
-
+	
 	protected String[] sender =
 	{
 		"Santa Claus",
@@ -170,7 +170,7 @@ public class ChristmasManager
 		"Reindeer Rudolf",
 		"Christmas Elf"
 	};
-		
+	
 	// Presents List:
 	protected int[] presents =
 	{
@@ -238,23 +238,14 @@ public class ChristmasManager
 		9138, /* Santa Hat #2 */
 		8936, /* Santa's Antlers Hat */
 		6394, /* Red Party Mask */
-		5808
-		/* Black Party Mask */
+		5808, /* Black Party Mask */
 	};
 	
-	// The message task sent at fixed rate
 	protected Future<?> _XMasMessageTask = null;
-
 	protected Future<?> _XMasPresentsTask = null;
-	
-	// Manager should only be Initialized once:
 	protected int isManagerInit = 0;
-	
-	// Interval of Christmas actions:
 	protected long _IntervalOfChristmas = 600000; // 10 minutes
-	
 	private final int first = 25000;
-
 	private final int last = 73099;
 	
 	/************************************** Initial Functions **************************************/
@@ -323,8 +314,6 @@ public class ChristmasManager
 			activeChar.sendMessage("Terminating! This may take a while, please be patient...");
 		}
 		
-		// Tasks:
-		
 		ThreadPool.execute(new DeleteSpawns());
 		
 		endFestiveMessagesAtFixedRate();
@@ -335,8 +324,6 @@ public class ChristmasManager
 		
 		checkIfOkToAnnounce();
 	}
-	
-	/************************************ - Tree management - *************************************/
 	
 	/**
 	 * Main function - spawns all trees.
@@ -437,7 +424,6 @@ public class ChristmasManager
 	/**
 	 * Delete all x-mas spawned trees from the world. Delete all x-mas trees spawns, and clears the L2NpcInstance tree queue.
 	 */
-	
 	public class DeleteSpawns implements Runnable
 	{
 		@Override
@@ -505,12 +491,9 @@ public class ChristmasManager
 		}
 	}
 	
-	/**************************** - send players festive messages - *****************************/
-	
 	/**
 	 * Ends X-Mas messages sent to players, and terminates the thread.
 	 */
-	
 	private void endFestiveMessagesAtFixedRate()
 	{
 		if (_XMasMessageTask != null)
@@ -532,9 +515,7 @@ public class ChristmasManager
 	
 	/**
 	 * Sends X-Mas messages to all world players.
-	 * @author Darki699
 	 */
-	
 	class SendXMasMessage implements Runnable
 	{
 		@Override
@@ -592,13 +573,9 @@ public class ChristmasManager
 		return message[rand.nextInt(message.length)];
 	}
 	
-	/******************************* - give special items trees - ********************************/
-	// Trees , Carols , Tokens of love, Fireworks, Santa Hats.
-	
 	/**
 	 * Starts X-Mas Santa presents sent to all players, and initialize the thread.
 	 */
-	
 	private void givePresentsAtFixedRate()
 	{
 		final XMasPresentGivingTask XMasPresents = new XMasPresentGivingTask();
@@ -665,8 +642,6 @@ public class ChristmasManager
 			_XMasPresentsTask = null;
 		}
 	}
-	
-	/************************************ - spawn NPCs in towns - ***************************************/
 	
 	// NPC Ids: 31863 , 31864
 	public class SpawnSantaNPCs implements Runnable

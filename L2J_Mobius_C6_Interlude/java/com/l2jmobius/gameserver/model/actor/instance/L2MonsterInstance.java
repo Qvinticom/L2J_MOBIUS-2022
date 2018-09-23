@@ -41,16 +41,9 @@ import com.l2jmobius.gameserver.util.MinionList;
  */
 public class L2MonsterInstance extends L2Attackable
 {
-	// private static Logger LOGGER = Logger.getLogger(L2MonsterInstance.class);
-	
-	/** The _minion list. */
-	protected final MinionList _minionList;
-	
-	/** The _minion maintain task. */
-	protected ScheduledFuture<?> _minionMaintainTask = null;
-	
-	/** The Constant MONSTER_MAINTENANCE_INTERVAL. */
 	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
+	protected final MinionList _minionList;
+	protected ScheduledFuture<?> _minionMaintainTask = null;
 	
 	/**
 	 * Constructor of L2MonsterInstance (use L2Character and L2NpcInstance constructor).<BR>
@@ -71,10 +64,6 @@ public class L2MonsterInstance extends L2Attackable
 		_minionList = new MinionList(this);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Attackable#getKnownList()
-	 */
 	@Override
 	public final MonsterKnownList getKnownList()
 	{
@@ -85,9 +74,6 @@ public class L2MonsterInstance extends L2Attackable
 		return (MonsterKnownList) super.getKnownList();
 	}
 	
-	/**
-	 * Return home.
-	 */
 	public void returnHome()
 	{
 		ThreadPool.schedule(() ->
@@ -128,10 +114,6 @@ public class L2MonsterInstance extends L2Attackable
 		return (getTemplate().aggroRange > 0) && !isEventMob;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Attackable#onSpawn()
-	 */
 	@Override
 	public void onSpawn()
 	{
@@ -186,9 +168,6 @@ public class L2MonsterInstance extends L2Attackable
 		_minionMaintainTask = ThreadPool.schedule(() -> _minionList.spawnMinions(), getMaintenanceInterval());
 	}
 	
-	/**
-	 * Call minions.
-	 */
 	public void callMinions()
 	{
 		if (_minionList.hasMinions())
@@ -256,10 +235,6 @@ public class L2MonsterInstance extends L2Attackable
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Attackable#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -334,10 +309,6 @@ public class L2MonsterInstance extends L2Attackable
 		return _minionList.hasMinions();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Attackable#addDamageHate(com.l2jmobius.gameserver.model.L2Character, int, int)
-	 */
 	@Override
 	public void addDamageHate(L2Character attacker, int damage, int aggro)
 	{
@@ -347,10 +318,6 @@ public class L2MonsterInstance extends L2Attackable
 		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance#deleteMe()
-	 */
 	@Override
 	public void deleteMe()
 	{

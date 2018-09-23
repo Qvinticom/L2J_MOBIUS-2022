@@ -82,7 +82,6 @@ public class MonsterRace
 			{
 				e.printStackTrace();
 			}
-			// LOGGER.info("Monster "+i+" is id: "+(id+random));
 		}
 		newSpeeds();
 	}

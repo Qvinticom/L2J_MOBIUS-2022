@@ -41,30 +41,15 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2GuardNoHTMLInstance extends L2Attackable
 {
-	/** The LOGGER. */
 	private static Logger LOGGER = Logger.getLogger(L2GuardNoHTMLInstance.class.getName());
 	
-	/** The _home x. */
+	private static final int RETURN_INTERVAL = 60000;
 	private int _homeX;
-	
-	/** The _home y. */
 	private int _homeY;
-	
-	/** The _home z. */
 	private int _homeZ;
 	
-	/** The Constant RETURN_INTERVAL. */
-	private static final int RETURN_INTERVAL = 60000;
-	
-	/**
-	 * The Class ReturnTask.
-	 */
 	public class ReturnTask implements Runnable
 	{
-		/*
-		 * (non-Javadoc)
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{
@@ -94,10 +79,6 @@ public final class L2GuardNoHTMLInstance extends L2Attackable
 		ThreadPool.scheduleAtFixedRate(new ReturnTask(), RETURN_INTERVAL, RETURN_INTERVAL + Rnd.get(60000));
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Attackable#getKnownList()
-	 */
 	@Override
 	public final GuardNoHTMLKnownList getKnownList()
 	{
@@ -229,8 +210,7 @@ public final class L2GuardNoHTMLInstance extends L2Attackable
 			// L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else // Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
-		if (containsTarget(player))
+		else if (containsTarget(player)) // Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
 		{
 			if (Config.DEBUG)
 			{

@@ -45,13 +45,11 @@ public class EffectInterrupt extends L2Effect
 	@Override
 	public void onExit()
 	{
-		// nothing
 	}
 	
 	@Override
 	public boolean onActionTime()
 	{
-		// nothing
 		return false;
 	}
 }

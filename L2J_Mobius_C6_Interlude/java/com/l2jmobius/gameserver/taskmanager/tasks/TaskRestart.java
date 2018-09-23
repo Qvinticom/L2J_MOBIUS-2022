@@ -30,20 +30,12 @@ public final class TaskRestart extends Task
 	private static final Logger LOGGER = Logger.getLogger(TaskRestart.class.getName());
 	public static final String NAME = "restart";
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.tasks.Task#getName()
-	 */
 	@Override
 	public String getName()
 	{
 		return NAME;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.tasks.Task#onTimeElapsed(com.l2jmobius.gameserver.tasks.TaskManager.ExecutedTask)
-	 */
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{

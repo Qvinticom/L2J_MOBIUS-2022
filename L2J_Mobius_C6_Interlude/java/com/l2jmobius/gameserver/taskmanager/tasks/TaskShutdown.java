@@ -30,20 +30,12 @@ public class TaskShutdown extends Task
 	private static final Logger LOGGER = Logger.getLogger(TaskShutdown.class.getName());
 	public static final String NAME = "shutdown";
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.taskmanager.Task#getName()
-	 */
 	@Override
 	public String getName()
 	{
 		return NAME;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.taskmanager.Task#onTimeElapsed(com.l2jmobius.gameserver.taskmanager.TaskManager.ExecutedTask)
-	 */
 	@Override
 	public void onTimeElapsed(ExecutedTask task)
 	{

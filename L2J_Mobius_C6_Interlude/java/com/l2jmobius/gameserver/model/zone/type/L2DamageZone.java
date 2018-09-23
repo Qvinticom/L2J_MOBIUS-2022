@@ -114,5 +114,4 @@ public class L2DamageZone extends L2ZoneType
 	protected void onReviveInside(L2Character character)
 	{
 	}
-	
 }

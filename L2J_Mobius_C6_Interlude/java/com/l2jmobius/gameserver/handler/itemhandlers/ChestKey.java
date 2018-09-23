@@ -40,8 +40,7 @@ public class ChestKey implements IItemHandler
 		6669,
 		6670,
 		6671,
-		6672
-		// deluxe key
+		6672, // deluxe key
 	};
 	
 	@Override
@@ -54,7 +53,7 @@ public class ChestKey implements IItemHandler
 		
 		L2PcInstance activeChar = (L2PcInstance) playable;
 		final int itemId = item.getItemId();
-		L2Skill skill = SkillTable.getInstance().getInfo(2229, itemId - 6664);// box key skill
+		L2Skill skill = SkillTable.getInstance().getInfo(2229, itemId - 6664); // box key skill
 		L2Object target = activeChar.getTarget();
 		
 		if (!(target instanceof L2ChestInstance))
@@ -81,5 +80,4 @@ public class ChestKey implements IItemHandler
 	{
 		return ITEM_IDS;
 	}
-	
 }

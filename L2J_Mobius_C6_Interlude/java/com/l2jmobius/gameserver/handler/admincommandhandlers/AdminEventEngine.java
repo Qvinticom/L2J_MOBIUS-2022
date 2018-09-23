@@ -194,13 +194,11 @@ public class AdminEventEngine implements IAdminCommandHandler
 			file.delete();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.startsWith("admin_event_name"))
 		{
 			tempName += command.substring(17);
 			showNewEventPage(activeChar);
 		}
-		
 		else if (command.equalsIgnoreCase("admin_delete_buffer"))
 		{
 			try
@@ -213,7 +211,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 				tempBuffer = "";
 			}
 		}
-		
 		else if (command.startsWith("admin_event_store"))
 		{
 			FileOutputStream file = null;
@@ -314,7 +311,6 @@ public class AdminEventEngine implements IAdminCommandHandler
 			
 			showEventControl(activeChar);
 		}
-		
 		else if (command.startsWith("admin_event_control_sit"))
 		{
 			StringTokenizer st = new StringTokenizer(command.substring(24), "-");

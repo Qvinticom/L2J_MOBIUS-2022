@@ -23,11 +23,6 @@ import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
-/**
- * an IItemHandler implementation has to be stateless
- * @version $Revision: 1.2.2.2.2.3 $ $Date: 2005/04/03 15:55:06 $
- */
-
 public interface ISkillHandler
 {
 	/**

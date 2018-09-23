@@ -31,8 +31,6 @@ public class L2PetDataTable
 {
 	private static final Logger LOGGER = Logger.getLogger(L2PetInstance.class.getName());
 	private static L2PetDataTable _instance;
-	
-	// private static final int[] PET_LIST = { 12077, 12312, 12313, 12311, 12527, 12528, 12526 };
 	private static Map<Integer, Map<Integer, L2PetData>> _petTable;
 	
 	public static L2PetDataTable getInstance()
@@ -135,7 +133,6 @@ public class L2PetDataTable
 	
 	public L2PetData getPetData(int petID, int petLevel)
 	{
-		// LOGGER.info("Getting id "+petID+" level "+ petLevel);
 		return _petTable.get(petID).get(petLevel);
 	}
 	
@@ -378,23 +375,23 @@ public class L2PetDataTable
 	{
 		switch (npcId)
 		{
-			case 12077:// wolf pet a
+			case 12077: // wolf pet a
 			{
 				return new int[]
 				{
 					2375
 				};
 			}
-			case 12564:// Sin Eater
+			case 12564: // Sin Eater
 			{
 				return new int[]
 				{
 					4425
 				};
 			}
-			case 12311:// hatchling of wind
-			case 12312:// hatchling of star
-			case 12313:// hatchling of twilight
+			case 12311: // hatchling of wind
+			case 12312: // hatchling of star
+			case 12313: // hatchling of twilight
 			{
 				return new int[]
 				{
@@ -403,9 +400,9 @@ public class L2PetDataTable
 					3502
 				};
 			}
-			case 12526:// wind strider
-			case 12527:// Star strider
-			case 12528:// Twilight strider
+			case 12526: // wind strider
+			case 12527: // Star strider
+			case 12528: // Twilight strider
 			{
 				return new int[]
 				{
@@ -414,16 +411,16 @@ public class L2PetDataTable
 					4424
 				};
 			}
-			case 12621:// Wyvern
+			case 12621: // Wyvern
 			{
 				return new int[]
 				{
 					8663
 				};
 			}
-			case 12780:// Baby Buffalo
-			case 12782:// Baby Cougar
-			case 12781:// Baby Kookaburra
+			case 12780: // Baby Buffalo
+			case 12782: // Baby Cougar
+			case 12781: // Baby Kookaburra
 			{
 				return new int[]
 				{
@@ -445,9 +442,9 @@ public class L2PetDataTable
 	
 	public static boolean isMountable(int npcId)
 	{
-		return (npcId == 12526 // wind strider
-		) || (npcId == 12527 // star strider
-		) || (npcId == 12528 // twilight strider
-		) || (npcId == 12621); // wyvern
+		return (npcId == 12526) // wind strider
+			|| (npcId == 12527) // star strider
+			|| (npcId == 12528) // twilight strider
+			|| (npcId == 12621); // wyvern
 	}
 }

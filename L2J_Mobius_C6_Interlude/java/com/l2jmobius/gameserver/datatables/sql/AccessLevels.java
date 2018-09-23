@@ -34,36 +34,12 @@ import com.l2jmobius.gameserver.datatables.AccessLevel;
 public class AccessLevels
 {
 	private static final Logger LOGGER = Logger.getLogger(AccessLevels.class.getName());
-	/**
-	 * The one and only instance of this class, retriveable by getInstance()<br>
-	 */
+	
 	private static AccessLevels _instance = null;
-	/**
-	 * Reserved master access level<br>
-	 */
-	// public static final int _masterAccessLevelNum = Config.MASTERACCESS_LEVEL;
-	/**
-	 * The master access level which can use everything<br>
-	 */
-	
-	// L2EMU_EDIT - Rayan -
-	public AccessLevel _masterAccessLevel;/*
-											 * = new AccessLevel(_masterAccessLevelNum, "Master Access", Config.MASTERACCESS_NAME_COLOR, Config.MASTERACCESS_TITLE_COLOR, true, true, true, true, true, true, true, true, true, true, true); //L2EMU_EDIT /** Reserved user access level<br>
-											 */
-	// public static final int _userAccessLevelNum = 0;
-	/**
-	 * The user access level which can do no administrative tasks<br>
-	 */
-	
-	// L2EMU_EDIT - Rayan -
-	public AccessLevel _userAccessLevel;/*
-										 * = new AccessLevel(_userAccessLevelNum, "User", Integer.decode("0xFFFFFF"), Integer.decode("0xFFFFFF"), false, false, false, true, false, true, true, true, true, true, false); //L2EMU_EDIT /** Map of access levels defined in database<br>
-										 */
+	public AccessLevel _masterAccessLevel;
+	public AccessLevel _userAccessLevel;
 	private final Map<Integer, AccessLevel> _accessLevels = new HashMap<>();
 	
-	/**
-	 * Loads the access levels from database<br>
-	 */
 	private AccessLevels()
 	{
 		_masterAccessLevel = new AccessLevel(Config.MASTERACCESS_LEVEL, "Master Access", Config.MASTERACCESS_NAME_COLOR, Config.MASTERACCESS_TITLE_COLOR, true, true, true, true, true, true, true, true, true, true, true);
@@ -86,11 +62,9 @@ public class AccessLevels
 			boolean takeAggro = false;
 			boolean gainExp = false;
 			
-			// L2EMU_ADD
 			boolean useNameColor = true;
 			boolean useTitleColor = false;
 			boolean canDisableGmStatus = true;
-			// L2EMU_ADD
 			
 			while (rset.next())
 			{
@@ -158,14 +132,11 @@ public class AccessLevels
 				takeAggro = rset.getBoolean("takeAggro");
 				gainExp = rset.getBoolean("gainExp");
 				
-				// L2EMU_ADD - Rayan for temp access
 				useNameColor = rset.getBoolean("useNameColor");
 				useTitleColor = rset.getBoolean("useTitleColor");
 				canDisableGmStatus = rset.getBoolean("canDisableGmStatus");
 				
-				// L2EMU_EDIT - Rayan for temp access
 				_accessLevels.put(accessLevel, new AccessLevel(accessLevel, name, nameColor, titleColor, isGm, allowPeaceAttack, allowFixedRes, allowTransaction, allowAltG, giveDamage, takeAggro, gainExp, useNameColor, useTitleColor, canDisableGmStatus));
-				// L2EMU_EDIT
 			}
 			
 			rset.close();
@@ -175,7 +146,6 @@ public class AccessLevels
 		{
 			LOGGER.warning("AccessLevels: Error loading from database " + e);
 		}
-		// LOGGER.info("AccessLevels: Loaded " + _accessLevels.size() + " Access Levels from database.");
 		LOGGER.info("AccessLevels: Master Access Level is " + Config.MASTERACCESS_LEVEL);
 		LOGGER.info("AccessLevels: User Access Level is " + Config.USERACCESS_LEVEL);
 		if (Config.DEBUG)
@@ -225,9 +195,7 @@ public class AccessLevels
 				return;
 			}
 			
-			// L2EMU_ADD - Rayan -
 			_accessLevels.put(accessLevel, new AccessLevel(accessLevel, "Banned", Integer.decode("0x000000"), Integer.decode("0x000000"), false, false, false, false, false, false, false, false, false, false, false));
-			// L2EMU_ADD
 		}
 	}
 	

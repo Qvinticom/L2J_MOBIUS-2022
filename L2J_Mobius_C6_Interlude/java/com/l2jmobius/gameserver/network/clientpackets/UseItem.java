@@ -474,7 +474,7 @@ public final class UseItem extends L2GameClientPacket
 				// Remove augementation bonus on unequipment
 				if (item.isAugmented())
 				{
-					item.getAugmentation().removeBoni(activeChar);
+					item.getAugmentation().removeBonus(activeChar);
 				}
 				
 				switch (item.getEquipSlot())
@@ -542,7 +542,7 @@ public final class UseItem extends L2GameClientPacket
 				// currently weapons only..
 				if ((tempItem != null) && tempItem.isAugmented())
 				{
-					tempItem.getAugmentation().removeBoni(activeChar);
+					tempItem.getAugmentation().removeBonus(activeChar);
 				}
 				
 				// check if the item replaces a wear-item
@@ -609,7 +609,7 @@ public final class UseItem extends L2GameClientPacket
 				// Apply augementation boni on equip
 				if (item.isAugmented())
 				{
-					item.getAugmentation().applyBoni(activeChar);
+					item.getAugmentation().applyBonus(activeChar);
 				}
 				
 				// Apply cupid's bow skills on equip

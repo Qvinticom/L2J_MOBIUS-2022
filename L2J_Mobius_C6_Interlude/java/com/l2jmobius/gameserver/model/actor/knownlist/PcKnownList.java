@@ -49,18 +49,11 @@ import com.l2jmobius.gameserver.network.serverpackets.VehicleInfo;
 
 public class PcKnownList extends PlayableKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public PcKnownList(L2PcInstance activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
 	/**
 	 * Add a visible L2Object to L2PcInstance _knownObjects and _knownPlayer (if necessary) and send Server-Client Packets needed to inform the L2PcInstance of its state and actions in progress.<BR>
 	 * <BR>
@@ -113,10 +106,7 @@ public class PcKnownList extends PlayableKnownList
 		
 		if (object.getPoly().isMorphed() && object.getPoly().getPolyType().equals("item"))
 		{
-			// if (object.getPolytype().equals("item"))
 			active_char.sendPacket(new SpawnItemPoly(object));
-			// else if (object.getPolytype().equals("npc"))
-			// sendPacket(new NpcInfoPoly(object, this));
 		}
 		else
 		{
@@ -266,9 +256,7 @@ public class PcKnownList extends PlayableKnownList
 			object_char = (L2PcInstance) object;
 		}
 		
-		/*
-		 * TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
-		 */
+		// TEMP FIX: If player is not visible don't send packets broadcast to all his KnowList. This will avoid GM detection with l2net and olympiad's crash. We can now find old problems with invisible mode.
 		if ((object_char != null) && !active_char.isGM())
 		{ // GM has to receive remove however because he can see any invisible or inobservermode player
 			
@@ -283,8 +271,8 @@ public class PcKnownList extends PlayableKnownList
 				active_char.sendPacket(new DeleteObject(object));
 			}
 		}
-		else
-		{ // All other objects has to be removed
+		else // All other objects has to be removed
+		{
 			
 			// Send Server-Client Packet DeleteObject to the L2PcInstance
 			active_char.sendPacket(new DeleteObject(object));
@@ -298,11 +286,6 @@ public class PcKnownList extends PlayableKnownList
 		return true;
 	}
 	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2PcInstance getActiveChar()
 	{
@@ -312,9 +295,7 @@ public class PcKnownList extends PlayableKnownList
 	@Override
 	public int getDistanceToForgetObject(L2Object object)
 	{
-		// when knownlist grows, the distance to forget should be at least
-		// the same as the previous watch range, or it becomes possible that
-		// extra charinfo packets are being sent (watch-forget-watch-forget)
+		// When knownlist grows, the distance to forget should be at least the same as the previous watch range, or it becomes possible that extra charinfo packets are being sent (watch-forget-watch-forget).
 		final int knownlistSize = getKnownObjects().size();
 		
 		if (knownlistSize <= 25)

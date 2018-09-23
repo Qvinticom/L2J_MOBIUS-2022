@@ -27,11 +27,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
-/**
- * This class ...
- * @version $Revision: 1.1.6.4 $ $Date: 2005/04/06 18:25:18 $
- */
-
 public class Scrolls implements IItemHandler
 {
 	private static final int[] ITEM_IDS =

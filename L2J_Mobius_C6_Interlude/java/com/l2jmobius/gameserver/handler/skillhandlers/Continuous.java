@@ -40,10 +40,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.2.2.9 $ $Date: 2005/04/03 15:55:04 $
- */
 public class Continuous implements ISkillHandler
 {
 	private static final SkillType[] SKILL_IDS =
@@ -255,9 +251,7 @@ public class Continuous implements ISkillHandler
 				continue;
 			}
 			
-			// if this is a debuff let the duel manager know about it
-			// so the debuff can be removed after the duel
-			// (player & target must be in the same duel)
+			// if this is a debuff let the duel manager know about it so the debuff can be removed after the duel (player & target must be in the same duel)
 			if ((target instanceof L2PcInstance) && (player != null) && ((L2PcInstance) target).isInDuel() && ((skill.getSkillType() == SkillType.DEBUFF) || (skill.getSkillType() == SkillType.BUFF)) && (player.getDuelId() == ((L2PcInstance) target).getDuelId()))
 			{
 				DuelManager dm = DuelManager.getInstance();
@@ -325,13 +319,6 @@ public class Continuous implements ISkillHandler
 			}
 		}
 		
-		// // self Effect :]
-		// L2Effect effect = activeChar.getFirstEffect(skill.getId());
-		// if(effect != null && effect.isSelfEffect())
-		// {
-		// //Replace old effect with new one.
-		// effect.exit(false);
-		// }
 		skill.getEffectsSelf(activeChar);
 	}
 	

@@ -25,11 +25,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.5.2.5 $ $Date: 2005/04/06 16:13:51 $
- */
-
 public class Recipes implements IItemHandler
 {
 	private final int[] ITEM_IDS;
@@ -57,7 +52,8 @@ public class Recipes implements IItemHandler
 		{
 			SystemMessage sm = new SystemMessage(SystemMessageId.RECIPE_ALREADY_REGISTERED);
 			activeChar.sendPacket(sm);
-		} else if (rp.isDwarvenRecipe())
+		}
+		else if (rp.isDwarvenRecipe())
 		{
 			if (activeChar.hasDwarvenCraft())
 			{
@@ -88,7 +84,8 @@ public class Recipes implements IItemHandler
 				SystemMessage sm = new SystemMessage(SystemMessageId.CANT_REGISTER_NO_ABILITY_TO_CRAFT);
 				activeChar.sendPacket(sm);
 			}
-		} else if (activeChar.hasCommonCraft())
+		}
+		else if (activeChar.hasCommonCraft())
 		{
 			if (rp.getLevel() > activeChar.getCommonCraft())
 			{

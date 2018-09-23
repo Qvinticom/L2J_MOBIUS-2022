@@ -104,8 +104,6 @@ public class QuestManager extends ScriptManager<Quest>
 		}
 	}
 	
-	// =========================================================
-	// Property - Public
 	public final Quest getQuest(String name)
 	{
 		return getQuests().get(name);
@@ -134,8 +132,7 @@ public class QuestManager extends ScriptManager<Quest>
 			_questCount++;
 		}
 		
-		// Note: HastMap will replace the old value if the key already exists
-		// so there is no need to explicitly try to remove the old reference.
+		// Note: HastMap will replace the old value if the key already exists so there is no need to explicitly try to remove the old reference.
 		getQuests().put(newQuest.getName(), newQuest);
 	}
 	

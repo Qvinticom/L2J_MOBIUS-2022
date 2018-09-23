@@ -24,5 +24,4 @@ public enum OlympiadPeriod
 	MONTH,
 	WEEK,
 	DAY
-
 }

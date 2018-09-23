@@ -262,8 +262,8 @@ public class DimensionalRift
 	
 	protected void teleportToNextRoom(L2PcInstance player)
 	{
-		if (_choosenRoom == -1)
-		{ // Do not tp in the same room a second time and do not tp in the busy room
+		if (_choosenRoom == -1) // Do not tp in the same room a second time and do not tp in the busy room
+		{
 			do
 			{
 				_choosenRoom = (byte) Rnd.get(1, 9);
@@ -380,10 +380,6 @@ public class DimensionalRift
 		
 		if ((_party.getMemberCount() - revivedInWaitingRoom.size()) < Config.RIFT_MIN_PARTY_SIZE)
 		{
-			// int pcm = _party.getMemberCount();
-			// int rev = revivedInWaitingRoom.size();
-			// int min = Config.RIFT_MIN_PARTY_SIZE;
-			
 			for (L2PcInstance p : _party.getPartyMembers())
 			{
 				if (!revivedInWaitingRoom.contains(p))

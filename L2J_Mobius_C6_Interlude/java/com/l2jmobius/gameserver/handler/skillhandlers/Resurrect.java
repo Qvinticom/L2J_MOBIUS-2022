@@ -31,15 +31,8 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.skills.Formulas;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.5.2.4 $ $Date: 2005/04/03 15:55:03 $
- */
-
 public class Resurrect implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(Resurrect.class);
-	
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.RESURRECT

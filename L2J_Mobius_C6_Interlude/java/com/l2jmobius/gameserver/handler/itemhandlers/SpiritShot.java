@@ -29,10 +29,6 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
 import com.l2jmobius.gameserver.templates.item.L2Weapon;
 import com.l2jmobius.gameserver.util.Broadcast;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.1.2.5 $ $Date: 2005/03/27 15:30:07 $
- */
 public class SpiritShot implements IItemHandler
 {
 	// All the item IDs that this handler knows.
@@ -56,10 +52,6 @@ public class SpiritShot implements IItemHandler
 		2159
 	};
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.handler.IItemHandler#useItem(com.l2jmobius.gameserver.model.L2PcInstance, com.l2jmobius.gameserver.model.L2ItemInstance)
-	 */
 	@Override
 	public void useItem(L2Playable playable, L2ItemInstance item)
 	{
@@ -101,7 +93,6 @@ public class SpiritShot implements IItemHandler
 		}
 		
 		// Consume Spiritshot if player has enough of them
-		// TODO: test ss
 		if (!Config.DONT_DESTROY_SS)
 		{
 			if (!activeChar.destroyItemWithoutTrace("Consume", item.getObjectId(), weaponItem.getSpiritShotCount(), null, false))

@@ -131,7 +131,6 @@ public class RecipeTable extends RecipeController
 		}
 	}
 	
-	// TODO XMLize the recipe list
 	private void parseList(String line)
 	{
 		try

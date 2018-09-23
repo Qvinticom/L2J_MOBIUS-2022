@@ -110,12 +110,8 @@ public class L2BoatInstance extends L2Character
 			loadBoatPath();
 		}
 		
-		/**
-		 * @param line
-		 */
 		public void parseLine(String line)
 		{
-			// L2BoatPath bp = new L2BoatPath();
 			_path = new HashMap<>();
 			StringTokenizer st = new StringTokenizer(line, ";");
 			Integer.parseInt(st.nextToken());
@@ -213,11 +209,6 @@ public class L2BoatInstance extends L2Character
 			}
 		}
 		
-		/**
-		 * @param state
-		 * @param _boat
-		 * @return
-		 */
 		public int state(int state, L2BoatInstance _boat)
 		{
 			if (state < max)
@@ -232,7 +223,6 @@ public class L2BoatInstance extends L2Character
 				_boat.getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
 				
 				_boat._vd = new VehicleDeparture(_boat, bp.speed1, bp.speed2, bp.x, bp.y, bp.z);
-				// _boat.getTemplate().baseRunSpd = bp.speed1;
 				boatSpeed = bp.speed1;
 				_boat.moveToLocation(bp.x, bp.y, bp.z, (float) bp.speed1);
 				Collection<L2PcInstance> knownPlayers = _boat.getKnownList().getKnownPlayers().values();
@@ -269,17 +259,10 @@ public class L2BoatInstance extends L2Character
 		_name = name;
 	}
 	
-	/**
-	 * @param x
-	 * @param y
-	 * @param z
-	 * @param speed
-	 */
 	public void moveToLocation(int x, int y, int z, float speed)
 	{
 		final int curX = getX();
 		final int curY = getY();
-		// final int curZ = getZ();
 		
 		// Calculate distance (dx,dy) between current position and destination
 		final int dx = x - curX;
@@ -300,9 +283,6 @@ public class L2BoatInstance extends L2Character
 		final double sin = dy / distance;
 		// Create and Init a MoveData object
 		MoveData m = new MoveData();
-		
-		// Caclulate the Nb of ticks between the current position and the destination
-		// int ticksToMove = (int) (GameTimeController.TICKS_PER_SECOND * distance / speed);
 		
 		// Calculate and set the heading of the L2Character
 		getPosition().setHeading((int) (Math.atan2(-sin, -cos) * 10430.378350470452724949566316381) + 32768);
@@ -327,13 +307,9 @@ public class L2BoatInstance extends L2Character
 		private final int _state;
 		private final L2BoatInstance _boat;
 		
-		/**
-		 * @param i
-		 * @param instance
-		 */
-		public BoatCaptain(int i, L2BoatInstance instance)
+		public BoatCaptain(int state, L2BoatInstance instance)
 		{
-			_state = i;
+			_state = state;
 			_boat = instance;
 		}
 		
@@ -379,13 +355,9 @@ public class L2BoatInstance extends L2Character
 		private int _state;
 		private final L2BoatInstance _boat;
 		
-		/**
-		 * @param i
-		 * @param instance
-		 */
-		public Boatrun(int i, L2BoatInstance instance)
+		public Boatrun(int state, L2BoatInstance instance)
 		{
-			_state = i;
+			_state = state;
 			_boat = instance;
 		}
 		
@@ -450,16 +422,12 @@ public class L2BoatInstance extends L2Character
 	{
 		if (_runstate != 0)
 		{
-			// _runstate++;
 			Boatrun bc = new Boatrun(_runstate, this);
 			ThreadPool.schedule(bc, 10);
 			_runstate = 0;
 		}
 	}
 	
-	/**
-	 * @param activeChar
-	 */
 	public void sendVehicleDeparture(L2PcInstance activeChar)
 	{
 		if (_vd != null)
@@ -508,7 +476,6 @@ public class L2BoatInstance extends L2Character
 				{
 					if (player.getBoat() == this)
 					{
-						// player.getKnownList().addKnownObject(this);
 						player.getPosition().setXYZ(x, y, z);
 						player.revalidateZone(false);
 					}
@@ -600,15 +567,12 @@ public class L2BoatInstance extends L2Character
 		}
 	}
 	
-	/**
-	 * @param i
-	 */
-	public void say(int i)
+	public void say(int id)
 	{
 		Collection<L2PcInstance> knownPlayers = getKnownList().getKnownPlayers().values();
 		CreatureSay sm;
 		PlaySound ps;
-		switch (i)
+		switch (id)
 		{
 			case 10:
 			{

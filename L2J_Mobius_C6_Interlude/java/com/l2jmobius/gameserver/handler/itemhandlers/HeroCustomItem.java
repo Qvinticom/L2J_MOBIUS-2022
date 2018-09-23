@@ -32,7 +32,6 @@ public class HeroCustomItem implements IItemHandler
 {
 	public HeroCustomItem()
 	{
-		// null
 	}
 	
 	protected static final Logger LOGGER = Logger.getLogger(HeroCustomItem.class.getName());

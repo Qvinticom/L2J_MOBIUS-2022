@@ -34,10 +34,6 @@ import com.l2jmobius.gameserver.handler.voicedcommandhandlers.TvTCmd;
 import com.l2jmobius.gameserver.handler.voicedcommandhandlers.Voting;
 import com.l2jmobius.gameserver.handler.voicedcommandhandlers.Wedding;
 
-/**
- * This class ...
- * @version $Revision: 1.1.4.6 $ $Date: 2009/05/12 19:44:09 $
- */
 public class VoicedCommandHandler
 {
 	private static Logger LOGGER = Logger.getLogger(GameServer.class.getName());
@@ -144,9 +140,6 @@ public class VoicedCommandHandler
 		return _datatable.get(command);
 	}
 	
-	/**
-	 * @return
-	 */
 	public int size()
 	{
 		return _datatable.size();

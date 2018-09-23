@@ -186,7 +186,6 @@ public class SpawnTable
 					statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay FROM custom_spawnlist ORDER BY id");
 				}
 				
-				// PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay FROM custom_spawnlist ORDER BY id");
 				final ResultSet rset = statement.executeQuery();
 				
 				L2Spawn spawnDat;

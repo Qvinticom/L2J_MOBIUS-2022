@@ -54,11 +54,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, L2PcInstance activeChar)
 	{
-		/*
-		 * if(!AdminCommandAccessRights.getInstance().hasAccess(command, activeChar.getAccessLevel())){ return false; } if(Config.GMAUDIT) { Logger _logAudit = Logger.getLogger("gmaudit"); LogRecord record = new LogRecord(Level.INFO, command); record.setParameters(new Object[] { "GM: " +
-		 * activeChar.getName(), " to target [" + activeChar.getTarget() + "] " }); _logAudit.LOGGER(record); }
-		 */
-		
 		if (command.equals("admin_dmevent"))
 		{
 			showMainPage(activeChar);
@@ -73,9 +68,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.startsWith("admin_dmevent_desc "))
 		{
 			if (DM.set_eventDesc(command.substring(19)))
@@ -88,7 +81,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 			}
 			
 		}
-		
 		else if (command.startsWith("admin_dmevent_minlvl "))
 		{
 			if (!DM.checkMinLevel(Integer.valueOf(command.substring(21))))
@@ -104,9 +96,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.startsWith("admin_dmevent_maxlvl "))
 		{
 			if (!DM.checkMaxLevel(Integer.valueOf(command.substring(21))))
@@ -122,9 +112,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.startsWith("admin_dmevent_join_loc "))
 		{
 			if (DM.set_joiningLocationName(command.substring(23)))
@@ -135,9 +123,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.startsWith("admin_dmevent_npc "))
 		{
 			if (DM.set_npcId(Integer.valueOf(command.substring(18))))
@@ -148,15 +134,12 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.equals("admin_dmevent_npc_pos"))
 		{
 			DM.setNpcPos(activeChar);
 			showMainPage(activeChar);
 		}
-		
 		else if (command.startsWith("admin_dmevent_reward "))
 		{
 			if (DM.set_rewardId(Integer.valueOf(command.substring(21))))
@@ -167,9 +150,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.startsWith("admin_dmevent_reward_amount "))
 		{
 			if (DM.set_rewardAmount(Integer.valueOf(command.substring(28))))
@@ -180,15 +161,12 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.equals("admin_dmevent_spawnpos"))
 		{
 			DM.setPlayersPos(activeChar);
 			showMainPage(activeChar);
 		}
-		
 		else if (command.startsWith("admin_dmevent_color "))
 		{
 			if (DM.set_playerColors(Integer.decode("0x" + command.substring(20))))
@@ -199,9 +177,7 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot perform requested operation, event in progress");
 			}
-			
 		}
-		
 		else if (command.equals("admin_dmevent_join"))
 		{
 			if (DM.startJoin())
@@ -213,13 +189,11 @@ public class AdminDMEngine implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "Cannot startJoin, check LOGGER for info..");
 			}
 		}
-		
 		else if (command.equals("admin_dmevent_teleport"))
 		{
 			DM.startTeleport();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_start"))
 		{
 			if (DM.startEvent())
@@ -230,47 +204,39 @@ public class AdminDMEngine implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Cannot startEvent, check LOGGER for info..");
 			}
-			
 		}
-		
 		else if (command.equals("admin_dmevent_startevent"))
 		{
 			DM.startEvent();
 			showMainPage(activeChar);
 			
 		}
-		
 		else if (command.equals("admin_dmevent_abort"))
 		{
 			BuilderUtil.sendSysMessage(activeChar, "Aborting event");
 			DM.abortEvent();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_finish"))
 		{
 			DM.finishEvent();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_sit"))
 		{
 			DM.sit();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_load"))
 		{
 			DM.loadData();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_save"))
 		{
 			DM.saveData();
 			showMainPage(activeChar);
 		}
-		
 		else if (command.equals("admin_dmevent_dump"))
 		{
 			DM.dumpData();
@@ -351,7 +317,6 @@ public class AdminDMEngine implements IAdminCommandHandler
 			replyMSG.append(DM._players.size() + " players participating.");
 			replyMSG.append("<br><br>");
 		}
-		
 		else if (DM.is_started())
 		{
 			replyMSG.append("<br1>");

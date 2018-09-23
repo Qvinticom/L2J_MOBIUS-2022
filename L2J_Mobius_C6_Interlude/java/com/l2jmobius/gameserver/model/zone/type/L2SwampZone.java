@@ -84,5 +84,4 @@ public class L2SwampZone extends L2ZoneType
 	public void onReviveInside(L2Character character)
 	{
 	}
-	
 }

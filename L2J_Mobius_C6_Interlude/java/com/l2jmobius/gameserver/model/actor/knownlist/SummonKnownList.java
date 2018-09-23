@@ -21,24 +21,11 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 
 public class SummonKnownList extends PlayableKnownList
 {
-	// =========================================================
-	// Data Field
-	
-	// =========================================================
-	// Constructor
 	public SummonKnownList(L2Summon activeChar)
 	{
 		super(activeChar);
 	}
 	
-	// =========================================================
-	// Method - Public
-	
-	// =========================================================
-	// Method - Private
-	
-	// =========================================================
-	// Property - Public
 	@Override
 	public final L2Summon getActiveChar()
 	{

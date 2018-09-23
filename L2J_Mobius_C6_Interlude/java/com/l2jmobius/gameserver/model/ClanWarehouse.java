@@ -22,8 +22,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 public final class ClanWarehouse extends Warehouse
 {
-	// private static final Logger LOGGER = Logger.getLogger(PcWarehouse.class);
-	
 	private final L2Clan _clan;
 	
 	public ClanWarehouse(L2Clan clan)

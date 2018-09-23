@@ -35,14 +35,12 @@ final class EffectSleep extends L2Effect
 		return EffectType.SLEEP;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
 		getEffected().startSleeping();
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

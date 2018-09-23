@@ -42,14 +42,12 @@ public class L2SepulcherMonsterInstance extends L2MonsterInstance
 	public L2SepulcherMonsterInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);
-		// setShowSummonAnimation(true);
 	}
 	
 	@Override
 	public void onSpawn()
 	{
 		super.onSpawn();
-		// setShowSummonAnimation(false);
 		switch (getNpcId())
 		{
 			case 18150:

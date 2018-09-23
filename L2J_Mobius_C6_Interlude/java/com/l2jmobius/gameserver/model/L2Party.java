@@ -70,8 +70,6 @@ public class L2Party
 		1.71
 	};
 	
-	// private static final Logger LOGGER = Logger.getLogger(L2Party.class);
-	
 	private static final int PARTY_POSITION_BROADCAST = 10000;
 	
 	public static final int ITEM_LOOTER = 0;

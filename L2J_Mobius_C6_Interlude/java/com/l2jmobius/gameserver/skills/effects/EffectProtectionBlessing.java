@@ -36,7 +36,6 @@ public class EffectProtectionBlessing extends L2Effect
 		return EffectType.PROTECTION_BLESSING;
 	}
 	
-	/** Notify started */
 	@Override
 	public void onStart()
 	{
@@ -46,7 +45,6 @@ public class EffectProtectionBlessing extends L2Effect
 		}
 	}
 	
-	/** Notify exited */
 	@Override
 	public void onExit()
 	{

@@ -34,10 +34,7 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2RaidBossInstance extends L2MonsterInstance
 {
-	/** The Constant RAIDBOSS_MAINTENANCE_INTERVAL. */
 	private static final int RAIDBOSS_MAINTENANCE_INTERVAL = 20000; // 20 sec
-	
-	/** The _raid status. */
 	private RaidBossSpawnManager.StatusEnum _raidStatus;
 	
 	/**
@@ -57,30 +54,18 @@ public final class L2RaidBossInstance extends L2MonsterInstance
 		super(objectId, template);
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.L2Character#isRaid()
-	 */
 	@Override
 	public boolean isRaid()
 	{
 		return true;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance#getMaintenanceInterval()
-	 */
 	@Override
 	protected int getMaintenanceInterval()
 	{
 		return RAIDBOSS_MAINTENANCE_INTERVAL;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance#doDie(com.l2jmobius.gameserver.model.L2Character)
-	 */
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -148,9 +133,7 @@ public final class L2RaidBossInstance extends L2MonsterInstance
 				teleToLocation(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), true);
 				// healFull(); // Prevents minor exploiting with it
 			}
-			/*
-			 * if(!isInsideRadius(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), 5000, true, false)) { teleToLocation(bossSpawn.getX(), bossSpawn.getY(), bossSpawn.getZ(), true); healFull(); // prevents minor exploiting with it }
-			 */
+			
 			_minionList.maintainMinions();
 		}, 60000, getMaintenanceInterval());
 	}

@@ -42,5 +42,4 @@ public final class LambdaRnd extends Lambda
 		}
 		return _max.calc(env) * Rnd.nextGaussian();
 	}
-	
 }

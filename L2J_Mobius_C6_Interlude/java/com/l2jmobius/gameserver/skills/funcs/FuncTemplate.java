@@ -58,8 +58,7 @@ public final class FuncTemplate
 				Stats.class, // stats to update
 				Integer.TYPE, // order of execution
 				Object.class, // owner
-				Lambda.class
-				// value for function
+				Lambda.class, // value for function
 			});
 		}
 		catch (NoSuchMethodException e)

@@ -188,10 +188,8 @@ final class DocumentSkill extends DocumentBase
 		{
 			_currentSkill.enchsets1[i] = new StatsSet();
 			_currentSkill.enchsets1[i].set("skill_id", _currentSkill.id);
-			// currentSkill.enchsets1[i] = currentSkill.sets[currentSkill.sets.length-1];
 			_currentSkill.enchsets1[i].set("level", i + 101);
 			_currentSkill.enchsets1[i].set("name", _currentSkill.name);
-			// currentSkill.enchsets1[i].set("skillType", "NOTDONE");
 			
 			for (n = first; n != null; n = n.getNextSibling())
 			{
@@ -218,11 +216,9 @@ final class DocumentSkill extends DocumentBase
 		for (int i = 0; i < enchantLevels2; i++)
 		{
 			_currentSkill.enchsets2[i] = new StatsSet();
-			// currentSkill.enchsets2[i] = currentSkill.sets[currentSkill.sets.length-1];
 			_currentSkill.enchsets2[i].set("skill_id", _currentSkill.id);
 			_currentSkill.enchsets2[i].set("level", i + 141);
 			_currentSkill.enchsets2[i].set("name", _currentSkill.name);
-			// currentSkill.enchsets2[i].set("skillType", "NOTDONE");
 			
 			for (n = first; n != null; n = n.getNextSibling())
 			{

@@ -38,7 +38,6 @@ import com.l2jmobius.gameserver.templates.item.L2WeaponType;
  */
 public class StrSiegeAssault implements ISkillHandler
 {
-	// private static Logger LOGGER = Logger.getLogger(StrSiegeAssault.class);
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.STRSIEGEASSAULT

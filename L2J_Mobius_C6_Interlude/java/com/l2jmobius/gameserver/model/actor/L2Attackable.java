@@ -81,8 +81,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public class L2Attackable extends L2NpcInstance
 {
-	// protected static Logger LOGGER = Logger.getLogger(L2Attackable.class);
-	
 	/**
 	 * This class contains all AggroInfo of the L2Attackable against the attacker L2Character.<BR>
 	 * <BR>
@@ -400,8 +398,6 @@ public class L2Attackable extends L2NpcInstance
 		return _ai;
 	}
 	
-	// get condition to hate, actually isAggressive() is checked
-	// by monster and karma by guards in motheds that overwrite this one.
 	/**
 	 * Not used.<BR>
 	 * <BR>
@@ -445,11 +441,6 @@ public class L2Attackable extends L2NpcInstance
 	@Override
 	public void reduceCurrentHp(double damage, L2Character attacker, boolean awake)
 	{
-		/*
-		 * if ((this instanceof L2SiegeGuardInstance) && (attacker instanceof L2SiegeGuardInstance)) //if((this.getEffect(L2Effect.EffectType.CONFUSION)!=null) && (attacker.getEffect(L2Effect.EffectType.CONFUSION)!=null)) return; if ((this instanceof L2MonsterInstance)&&(attacker instanceof
-		 * L2MonsterInstance)) if((this.getEffect(L2Effect.EffectType.CONFUSION)!=null) && (attacker.getEffect(L2Effect.EffectType.CONFUSION)!=null)) return;
-		 */
-		
 		if (isRaid() && (attacker != null) && (attacker.getParty() != null) && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this))
 		{
 			if (_firstCommandChannelAttacked == null) // looting right isn't set
@@ -474,11 +465,7 @@ public class L2Attackable extends L2NpcInstance
 				_commandChannelLastAttack = System.currentTimeMillis(); // update last attack time
 			}
 		}
-		/*
-		 * // CommandChannel if(_commandChannelTimer == null && isRaid() && attacker != null) { if(attacker.isInParty() && attacker.getParty().isInCommandChannel() && attacker.getParty().getCommandChannel().meetRaidWarCondition(this)) { _firstCommandChannelAttacked =
-		 * attacker.getParty().getCommandChannel(); _commandChannelTimer = new CommandChannelTimer(this, attacker.getParty().getCommandChannel()); ThreadPoolManager.scheduleGeneral(_commandChannelTimer, 300000); // 5 min _firstCommandChannelAttacked.broadcastToChannelMembers(new CreatureSay(0,
-		 * Say2.PARTYROOM_ALL, "", "You have looting rights!")); } }
-		 */
+		
 		if (isEventMob)
 		{
 			return;
@@ -580,7 +567,6 @@ public class L2Attackable extends L2NpcInstance
 		}
 		
 		setChampion(false);
-		// TODO
 		if (Config.L2JMOD_CHAMPION_ENABLE)
 		{
 			// Set champion on next spawn
@@ -878,8 +864,7 @@ public class L2Attackable extends L2NpcInstance
 								
 								rewards.remove(pl); // Remove the L2PcInstance from the L2Attackable rewards
 							}
-							else // Add L2PcInstance of the party (that have attacked or not) to members that can be rewarded
-							// and in range of the monster.
+							else // Add L2PcInstance of the party (that have attacked or not) to members that can be rewarded and in range of the monster.
 							if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, this, pl, true))
 							{
 								rewardedMembers.add(pl);
@@ -997,7 +982,7 @@ public class L2Attackable extends L2NpcInstance
 	 */
 	public void addDamageHate(L2Character attacker, int damage, int aggro)
 	{
-		if (attacker == null /* || _aggroList == null */)
+		if (attacker == null)
 		{
 			return;
 		}
@@ -1168,7 +1153,7 @@ public class L2Attackable extends L2NpcInstance
 		
 		int maxHate = 0;
 		
-		// While Interating over This Map Removing Object is Not Allowed
+		// While iterating over This Map Removing Object is Not Allowed
 		synchronized (_aggroList)
 		{
 			// Go through the aggroList of the L2Attackable
@@ -1180,8 +1165,6 @@ public class L2Attackable extends L2NpcInstance
 				}
 				
 				if (ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ((ai._attacker instanceof L2PcInstance) && (((L2PcInstance) ai._attacker).isOnline() == 0) && !((L2PcInstance) ai._attacker).isInOfflineMode())) // if player go in offline
-																																																																				// mode, he
-				// must be hated however
 				{
 					ai._hate = 0;
 				}
@@ -1202,15 +1185,6 @@ public class L2Attackable extends L2NpcInstance
 		return mostHated;
 	}
 	
-	/**
-	 * useful to give correctly the item to players
-	 * @return
-	 */
-	/*
-	 * public L2Character getMostDamager(){ if(getAggroListRP().isEmpty() || isAlikeDead()) return null; //L2Character mostDamager = null; int maxDamage = 0; // While Interating over This Map Removing Object is Not Allowed synchronized (getAggroList()) { // Go through the aggroList of the
-	 * L2Attackable for(AggroInfo ai : _aggroList.values()) { if(ai == null) { continue; } if(ai._attacker.isAlikeDead() || !getKnownList().knowsObject(ai._attacker) || !ai._attacker.isVisible() || ai._attacker instanceof L2PcInstance && ((L2PcInstance)ai._attacker).isOffline() ) { ai._damage = 0; }
-	 * if(ai._damage > maxDamage) { _mostDamager = ai._attacker; maxDamage = ai._damage; } } } return _mostDamager; }
-	 */
 	/**
 	 * Return the hate level of the L2Attackable against this L2Character contained in _aggroList.<BR>
 	 * <BR>
@@ -1238,7 +1212,7 @@ public class L2Attackable extends L2NpcInstance
 		
 		if ((ai._attacker instanceof L2PcInstance) && (((L2PcInstance) ai._attacker).getAppearance().getInvisible() || ((L2PcInstance) ai._attacker).isSpawnProtected() || ((L2PcInstance) ai._attacker).isTeleportProtected() || ai._attacker.isInvul()))
 		{
-			// Remove Object Should Use This Method and Can be Blocked While Interating
+			// Remove Object Should Use This Method and Can be Blocked While iterating
 			_aggroList.remove(target);
 			
 			return 0;
@@ -1273,9 +1247,8 @@ public class L2Attackable extends L2NpcInstance
 	{
 		// Get default drop chance
 		if ((Config.HIGH_RATE_SERVER_DROPS && !drop.isQuestDrop() && (drop.getItemId() != 57)))
-		{ // it's not adena-->check if drop has an epic jewel
-			
-			// ant queen,orfen,core,frintezza,baium,antharas,valakas,zaken,stones
+		{
+			// it's not adena-->check if drop has an epic jewel ant queen,orfen,core,frintezza,baium,antharas,valakas,zaken,stones
 			if ((drop.getItemId() == 6660) || (drop.getItemId() == 6661) || (drop.getItemId() == 6662) || (drop.getItemId() == 8191) || (drop.getItemId() == 6658) || (drop.getItemId() == 6656) || (drop.getItemId() == 6657) || (drop.getItemId() == 6659) || ((drop.getItemId() >= 6360) && (drop.getItemId() <= 6362)) || ((drop.getItemId() >= 8723) && (drop.getItemId() <= 8762)))
 			{
 				// if epic jewel, seal stones or life stone, continue
@@ -1284,15 +1257,14 @@ public class L2Attackable extends L2NpcInstance
 			{
 				return null;
 			}
-			
 		}
 		
 		float dropChance = 0;
 		
 		switch (drop.getItemId())
 		{
-			case 6662:
-			{ // core ring
+			case 6662: // core ring
+			{
 				if (Config.CORE_RING_CHANCE > 0)
 				{
 					dropChance = (10000 * Config.CORE_RING_CHANCE);
@@ -1301,10 +1273,10 @@ public class L2Attackable extends L2NpcInstance
 				{
 					dropChance = drop.getChance();
 				}
-			}
 				break;
-			case 6661:
-			{ // orfen earring
+			}
+			case 6661: // orfen earring
+			{
 				if (Config.ORFEN_EARRING_CHANCE > 0)
 				{
 					dropChance = (10000 * Config.ORFEN_EARRING_CHANCE);
@@ -1313,10 +1285,10 @@ public class L2Attackable extends L2NpcInstance
 				{
 					dropChance = drop.getChance();
 				}
-			}
 				break;
-			case 6659:
-			{ // zaken earring
+			}
+			case 6659: // zaken earring
+			{
 				if (Config.ZAKEN_EARRING_CHANCE > 0)
 				{
 					dropChance = (10000 * Config.ZAKEN_EARRING_CHANCE);
@@ -1325,10 +1297,10 @@ public class L2Attackable extends L2NpcInstance
 				{
 					dropChance = drop.getChance();
 				}
-			}
 				break;
-			case 6660:
-			{ // aq ring
+			}
+			case 6660: // aq ring
+			{
 				if (Config.QA_RING_CHANCE > 0)
 				{
 					dropChance = (10000 * Config.QA_RING_CHANCE);
@@ -1337,8 +1309,8 @@ public class L2Attackable extends L2NpcInstance
 				{
 					dropChance = drop.getChance();
 				}
-			}
 				break;
+			}
 			default:
 			{
 				dropChance = drop.getChance();
@@ -1459,10 +1431,6 @@ public class L2Attackable extends L2NpcInstance
 			dropChance = 1;
 		}
 		
-		// If item is adena, dont drop multiple time
-		// if (drop.getItemId() == 57 && dropChance > L2DropData.MAX_CHANCE)
-		// dropChance = L2DropData.MAX_CHANCE;
-		
 		// Get min and max Item quantity that can be dropped in one time
 		final int minCount = drop.getMinDrop();
 		final int maxCount = drop.getMaxDrop();
@@ -1558,21 +1526,18 @@ public class L2Attackable extends L2NpcInstance
 			
 			for (L2DropData dd : categoryDrops.getAllDrops())
 			{
-				
 				// quest_drop,ant queen,orfen,core,frintezza,baium,antharas,valakas,zaken, seal Stones, life stones
 				if (dd.isQuestDrop() || (dd.getItemId() == 6660) || (dd.getItemId() == 6661) || (dd.getItemId() == 6662) || (dd.getItemId() == 8191) || (dd.getItemId() == 6658) || (dd.getItemId() == 6656) || (dd.getItemId() == 6657) || (dd.getItemId() == 6659) || ((dd.getItemId() >= 6360) && (dd.getItemId() <= 6362)) || ((dd.getItemId() >= 8723) && (dd.getItemId() <= 8762)))
 				{
 					// if epic jewel, return just 1 from raid
 					to_drop = true;
 				}
-				
 			}
 			
 			if (!to_drop)
 			{
 				return null;
 			}
-			
 		}
 		
 		// Get default drop chance for the category (that's the sum of chances for all items in the category)
@@ -1655,13 +1620,12 @@ public class L2Attackable extends L2NpcInstance
 			// At least 1 item will be dropped for sure. So the chance will be adjusted to 100%
 			// if smaller.
 			
-			// int dropChance = drop.getChance();
 			int dropChance = 0;
 			
 			switch (drop.getItemId())
 			{
-				case 6662:
-				{ // core ring
+				case 6662: // core ring
+				{
 					if (Config.CORE_RING_CHANCE > 0)
 					{
 						dropChance = (10000 * Config.CORE_RING_CHANCE);
@@ -1670,10 +1634,10 @@ public class L2Attackable extends L2NpcInstance
 					{
 						dropChance = drop.getChance();
 					}
-				}
 					break;
-				case 6661:
-				{ // orfen earring
+				}
+				case 6661: // orfen earring
+				{
 					if (Config.ORFEN_EARRING_CHANCE > 0)
 					{
 						dropChance = (10000 * Config.ORFEN_EARRING_CHANCE);
@@ -1682,10 +1646,10 @@ public class L2Attackable extends L2NpcInstance
 					{
 						dropChance = drop.getChance();
 					}
-				}
 					break;
-				case 6659:
-				{ // zaken earring
+				}
+				case 6659: // zaken earring
+				{
 					if (Config.ZAKEN_EARRING_CHANCE > 0)
 					{
 						dropChance = (10000 * Config.ZAKEN_EARRING_CHANCE);
@@ -1694,10 +1658,10 @@ public class L2Attackable extends L2NpcInstance
 					{
 						dropChance = drop.getChance();
 					}
-				}
 					break;
-				case 6660:
-				{ // aq ring
+				}
+				case 6660: // aq ring
+				{
 					if (Config.QA_RING_CHANCE > 0)
 					{
 						dropChance = (10000 * Config.QA_RING_CHANCE);
@@ -1706,8 +1670,8 @@ public class L2Attackable extends L2NpcInstance
 					{
 						dropChance = drop.getChance();
 					}
-				}
 					break;
+				}
 				default:
 				{
 					dropChance = drop.getChance();
@@ -1736,7 +1700,6 @@ public class L2Attackable extends L2NpcInstance
 						dropChance *= Config.DONATOR_ADENA_RATE;
 					}
 				}
-				
 			}
 			else if (this instanceof L2RaidBossInstance)
 			{
@@ -1997,7 +1960,6 @@ public class L2Attackable extends L2NpcInstance
 						if (item_templ == null)
 						{
 							LOGGER.info("ERROR: Item id to autoloot " + item.getItemId() + " has not template into items/armor/weapon tables.. It cannot be dropped..");
-							// DropItem(player, item);
 						}
 						else if (!player.getInventory().validateCapacity(item_templ) || (!Config.AUTO_LOOT_BOSS && (this instanceof L2RaidBossInstance)) || (!Config.AUTO_LOOT_BOSS && (this instanceof L2GrandBossInstance)))
 						{
@@ -2049,7 +2011,6 @@ public class L2Attackable extends L2NpcInstance
 				{
 					player.addItem("ChampionLoot", item.getItemId(), item.getCount(), this, true);
 				}
-				
 			}
 			else
 			{
@@ -2997,7 +2958,6 @@ public class L2Attackable extends L2NpcInstance
 				}
 				
 				crystalQTY = 0;
-				
 				continue;
 			}
 			
@@ -3328,9 +3288,8 @@ public class L2Attackable extends L2NpcInstance
 	
 	/**
 	 * Check if the server allows Random Animation.<BR>
-	 * <BR>
+	 * This is located here because L2Monster and L2FriendlyMob both extend this class. The other non-pc instances extend either L2NpcInstance or L2MonsterInstance.
 	 */
-	// This is located here because L2Monster and L2FriendlyMob both extend this class. The other non-pc instances extend either L2NpcInstance or L2MonsterInstance.
 	@Override
 	public boolean hasRandomAnimation()
 	{
@@ -3376,9 +3335,6 @@ public class L2Attackable extends L2NpcInstance
 			_monster = monster;
 		}
 		
-		/**
-		 * @see java.lang.Runnable#run()
-		 */
 		@Override
 		public void run()
 		{

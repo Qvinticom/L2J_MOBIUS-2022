@@ -162,10 +162,7 @@ public class ZoneCuboid extends L2ZoneForm
 	@Override
 	public double getDistanceToZone(int x, int y)
 	{
-		// Since we aren't given a z coordinate to test against
-		// we just use the minimum z coordinate to prevent the
-		// function from saying we aren't in the zone because
-		// of a bad z coordinate.
+		// Since we aren't given a z coordinate to test against we just use the minimum z coordinate to prevent the function from saying we aren't in the zone because of a bad z coordinate.
 		if (isInsideZone(x, y, _z1))
 		{
 			return 0; // If you are inside the zone distance to zone is 0.
@@ -195,9 +192,6 @@ public class ZoneCuboid extends L2ZoneForm
 		return Math.sqrt(shortestDist);
 	}
 	
-	/*
-	 * getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
-	 */
 	@Override
 	public int getLowZ()
 	{

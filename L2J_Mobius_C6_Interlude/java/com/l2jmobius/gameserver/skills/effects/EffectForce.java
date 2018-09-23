@@ -85,15 +85,5 @@ public class EffectForce extends L2Effect
 	@Override
 	public void onExit()
 	{
-		// try
-		// {
-		// getEffector().abortCast();
-		// if(getEffector().getForceBuff() != null)
-		// getEffector().getForceBuff().delete();
-		// }
-		// catch(Exception e)
-		// {
-		// null
-		// }
 	}
 }

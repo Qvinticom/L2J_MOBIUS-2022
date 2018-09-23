@@ -60,7 +60,6 @@ public final class QuestSpawn
 		}
 	}
 	
-	// Method - Public
 	/**
 	 * Add spawn for player instance Will despawn after the spawn length expires Uses player's coords and heading. Adds a little randomization in the x y coords Return object id of newly spawned npc
 	 * @param npcId
@@ -93,11 +92,8 @@ public final class QuestSpawn
 			
 			if (template != null)
 			{
-				// Sometimes, even if the quest script specifies some xyz (for example npc.getX() etc) by the time the code
-				// reaches here, xyz have become 0! Also, a questdev might have purposely set xy to 0,0...however,
-				// the spawn code is coded such that if x=y=0, it looks into location for the spawn loc! This will NOT work
-				// with quest spawns! For both of the above cases, we need a fail-safe spawn. For this, we use the
-				// default spawn location, which is at the player's loc.
+				// Sometimes, even if the quest script specifies some xyz (for example npc.getX() etc) by the time the code reaches here, xyz have become 0! Also, a questdev might have purposely set xy to 0,0...however,
+				// the spawn code is coded such that if x=y=0, it looks into location for the spawn loc! This will NOT work with quest spawns! For both of the above cases, we need a fail-safe spawn. For this, we use the default spawn location, which is at the player's loc.
 				if ((x == 0) && (y == 0))
 				{
 					LOGGER.warning("Failed to adjust bad locks for quest spawn!  Spawn aborted!");
@@ -153,5 +149,4 @@ public final class QuestSpawn
 		
 		return null;
 	}
-	
 }

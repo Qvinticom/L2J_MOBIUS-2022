@@ -26,11 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 
-/**
- * This class ...
- * @version $Revision: 1.1.2.4 $ $Date: 2005/04/06 16:13:51 $
- */
-
 public class Remedy implements IItemHandler
 {
 	private static int[] ITEM_IDS =

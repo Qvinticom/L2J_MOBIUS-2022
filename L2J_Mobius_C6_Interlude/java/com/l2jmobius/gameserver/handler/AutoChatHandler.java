@@ -599,17 +599,12 @@ public class AutoChatHandler implements SpawnListener
 					LOGGER.info("AutoChatHandler: Chat definition added for NPC ID " + _npcInstance.getNpcId() + " (Object ID = " + _npcInstance.getObjectId() + ").");
 				}
 				
-				// If global chat isn't enabled for the parent instance,
-				// then handle the chat task locally.
+				// If global chat isn't enabled for the parent instance, then handle the chat task locally.
 				if (!chatInst.isGlobal())
 				{
 					setActive(true);
 				}
 			}
-			
-			/*
-			 * protected AutoChatDefinition(AutoChatInstance chatInst, L2NpcInstance npcInst) { this(chatInst, npcInst, null, -1); }
-			 */
 			
 			protected String[] getChatTexts()
 			{
@@ -667,8 +662,7 @@ public class AutoChatHandler implements SpawnListener
 					
 					if (getChatDelay() == 0)
 					{
-						// Schedule it set to 5Ms, isn't error, if use 0 sometine
-						// chatDefinition return null in AutoChatRunner
+						// Schedule it set to 5Ms, isn't error, if use 0 sometimes chatDefinition return null in AutoChatRunner
 						_chatTask = ThreadPool.schedule(acr, 5);
 					}
 					else
