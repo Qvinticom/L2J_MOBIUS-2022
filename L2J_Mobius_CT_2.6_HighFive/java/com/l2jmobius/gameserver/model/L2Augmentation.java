@@ -32,21 +32,21 @@ import com.l2jmobius.gameserver.model.options.Options;
 public final class L2Augmentation
 {
 	private int _effectsId = 0;
-	private AugmentationStatBoni _boni = null;
+	private AugmentationStatBonus _bonus = null;
 	
 	public L2Augmentation(int effects)
 	{
 		_effectsId = effects;
-		_boni = new AugmentationStatBoni(_effectsId);
+		_bonus = new AugmentationStatBonus(_effectsId);
 	}
 	
-	public static class AugmentationStatBoni
+	public static class AugmentationStatBonus
 	{
-		private static final Logger LOGGER = Logger.getLogger(AugmentationStatBoni.class.getName());
+		private static final Logger LOGGER = Logger.getLogger(AugmentationStatBonus.class.getName());
 		private final List<Options> _options = new ArrayList<>();
 		private boolean _active;
 		
-		public AugmentationStatBoni(int augmentationId)
+		public AugmentationStatBonus(int augmentationId)
 		{
 			_active = false;
 			final int[] stats = new int[2];
@@ -120,7 +120,7 @@ public final class L2Augmentation
 	 */
 	public void applyBonus(L2PcInstance player)
 	{
-		_boni.applyBonus(player);
+		_bonus.applyBonus(player);
 	}
 	
 	/**
@@ -129,6 +129,6 @@ public final class L2Augmentation
 	 */
 	public void removeBonus(L2PcInstance player)
 	{
-		_boni.removeBonus(player);
+		_bonus.removeBonus(player);
 	}
 }

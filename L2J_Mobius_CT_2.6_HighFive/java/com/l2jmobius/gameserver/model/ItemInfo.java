@@ -161,7 +161,7 @@ public class ItemInfo
 		// Get the enchant level of the L2ItemInstance
 		_enchant = item.getEnchant();
 		
-		// Get the augmentation boni
+		// Get the augmentation bonus
 		_augmentation = 0;
 		
 		// Get the quantity of the L2ItemInstance
