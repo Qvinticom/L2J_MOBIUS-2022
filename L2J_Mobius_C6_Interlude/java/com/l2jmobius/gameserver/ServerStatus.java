@@ -22,7 +22,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Memory;
 import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -69,8 +68,8 @@ public class ServerStatus
 			LOGGER.info("Active Players Online: " + ActivePlayers);
 			LOGGER.info("Offline Players Online: " + OfflinePlayers);
 			LOGGER.info("Threads: " + Thread.activeCount());
-			LOGGER.info("Free Memory: " + Memory.getFreeMemory() + " MB");
-			LOGGER.info("Used memory: " + Memory.getUsedMemory() + " MB");
+			LOGGER.info("Free Memory: " + (((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
+			LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
 			Util.printSection("Server Status");
 		}
 	}

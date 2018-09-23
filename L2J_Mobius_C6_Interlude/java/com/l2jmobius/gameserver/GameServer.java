@@ -36,7 +36,6 @@ import com.l2jmobius.commons.mmocore.NetcoreConfig;
 import com.l2jmobius.commons.mmocore.SelectorConfig;
 import com.l2jmobius.commons.mmocore.SelectorThread;
 import com.l2jmobius.commons.util.IPv4Filter;
-import com.l2jmobius.commons.util.Memory;
 import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.gameserver.cache.CrestCache;
 import com.l2jmobius.gameserver.cache.HtmCache;
@@ -596,8 +595,8 @@ public class GameServer
 		
 		Util.printSection("Info");
 		LOGGER.info("Maximum Numbers of Connected Players: " + Config.MAXIMUM_ONLINE_USERS);
-		LOGGER.info("GameServer Started, free memory " + Memory.getFreeMemory() + " Mb of " + Memory.getTotalMemory() + " Mb");
-		LOGGER.info("Used memory: " + Memory.getUsedMemory() + " MB");
+		LOGGER.info("GameServer Started, free memory " + (((Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory()) + Runtime.getRuntime().freeMemory()) / 1048576) + " Mb of " + (Runtime.getRuntime().maxMemory() / 1048576) + " Mb");
+		LOGGER.info("Used memory: " + ((Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576) + " MB");
 		
 		Util.printSection("Status");
 		System.gc();
