@@ -182,6 +182,7 @@ public class GameServer
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
 		{
+			System.out.println("GameServer: Running in GUI mode.");
 			new Gui();
 		}
 		

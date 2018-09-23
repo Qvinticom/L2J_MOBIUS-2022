@@ -66,6 +66,7 @@ public class LoginServer
 		// GUI
 		if (!GraphicsEnvironment.isHeadless())
 		{
+			System.out.println("LoginServer: Running in GUI mode.");
 			new Gui();
 		}
 		
