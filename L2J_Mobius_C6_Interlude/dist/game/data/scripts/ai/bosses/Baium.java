@@ -29,7 +29,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -487,7 +487,7 @@ public class Baium extends Quest
 			{
 				if (obj instanceof L2Character)
 				{
-					if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoData.getInstance().canSeeTarget(obj, npc))
+					if (((((L2Character) obj).getZ() < (npc.getZ() - 100)) && (((L2Character) obj).getZ() > (npc.getZ() + 100))) || !GeoEngine.getInstance().canSeeTarget(obj, npc))
 					{
 						continue;
 					}

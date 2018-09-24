@@ -27,7 +27,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.datatables.sql.TerritoryTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -249,7 +249,7 @@ public class L2AttackableAI extends L2CharacterAI
 			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getKarma() > 0))
 			{
 				// Los Check
-				return GeoData.getInstance().canSeeTarget(me, target);
+				return GeoEngine.getInstance().canSeeTarget(me, target);
 			}
 			
 			// if (target instanceof L2Summon)
@@ -257,7 +257,7 @@ public class L2AttackableAI extends L2CharacterAI
 			// Check if the L2MonsterInstance target is aggressive
 			if (target instanceof L2MonsterInstance)
 			{
-				return ((L2MonsterInstance) target).isAggressive() && GeoData.getInstance().canSeeTarget(me, target);
+				return ((L2MonsterInstance) target).isAggressive() && GeoEngine.getInstance().canSeeTarget(me, target);
 			}
 			
 			return false;
@@ -276,7 +276,7 @@ public class L2AttackableAI extends L2CharacterAI
 			if ((target instanceof L2PcInstance) && (((L2PcInstance) target).getKarma() > 0))
 			{
 				// Los Check
-				return GeoData.getInstance().canSeeTarget(me, target);
+				return GeoEngine.getInstance().canSeeTarget(me, target);
 			}
 			return false;
 		}
@@ -298,7 +298,7 @@ public class L2AttackableAI extends L2CharacterAI
 			}
 			
 			// Check if the actor is Aggressive
-			return me.isAggressive() && GeoData.getInstance().canSeeTarget(me, target);
+			return me.isAggressive() && GeoEngine.getInstance().canSeeTarget(me, target);
 		}
 	}
 	
@@ -678,7 +678,7 @@ public class L2AttackableAI extends L2CharacterAI
 		 * "c_dungeon_nephi".equals(npcfaction))) sevenSignFaction = true; //Lilim mobs should assist other Lilim and catacomb mobs else if ("c_dungeon_lilim".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; //Nephilim mobs should assist other Nephilim and catacomb
 		 * mobs else if ("c_dungeon_nephi".equals(faction_id) && "c_dungeon_clan".equals(npcfaction)) sevenSignFaction = true; if (!faction_id.equals(npc.getFactionId()) && !sevenSignFaction) continue; // Check if the L2Object is inside the Faction Range of // the actor if
 		 * (_actor.isInsideRadius(npc, npc.getFactionRange() + npc.getTemplate().collisionRadius, true, false) && npc.getAI() != null) { if (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600 && _actor.getAttackByList().contains(originalAttackTarget) && (npc.getAI()._intention ==
-		 * CtrlIntention.AI_INTENTION_IDLE || npc.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE) && GeoData.getInstance().canSeeTarget(_actor, npc)) { if ((originalAttackTarget instanceof L2PcInstance) || (originalAttackTarget instanceof L2Summon)) { if
+		 * CtrlIntention.AI_INTENTION_IDLE || npc.getAI()._intention == CtrlIntention.AI_INTENTION_ACTIVE) && GeoEngine.getInstance().canSeeTarget(_actor, npc)) { if ((originalAttackTarget instanceof L2PcInstance) || (originalAttackTarget instanceof L2Summon)) { if
 		 * (npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_FACTION_CALL) != null) { L2PcInstance player = (originalAttackTarget instanceof L2PcInstance) ? (L2PcInstance) originalAttackTarget : ((L2Summon) originalAttackTarget).getOwner(); for (Quest quest :
 		 * npc.getTemplate().getEventQuests(Quest.QuestEventType.ON_FACTION_CALL)) quest.notifyFactionCall(npc, (L2NpcInstance) _actor, player, (originalAttackTarget instanceof L2Summon)); } } else if (npc instanceof L2Attackable && getAttackTarget() != null && npc.getAI()._intention !=
 		 * CtrlIntention.AI_INTENTION_ATTACK) { ((L2Attackable) npc).addDamageHate(getAttackTarget(), 0, ((L2Attackable) _actor).getHating(getAttackTarget())); npc.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, getAttackTarget()); } } } } } } catch (NullPointerException e) { LOGGER.warning(
@@ -706,7 +706,7 @@ public class L2AttackableAI extends L2CharacterAI
 					{
 						if ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
 						{
-							if (GeoData.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600))
+							if (GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 600))
 							{
 								if ((originalAttackTarget instanceof L2PcInstance) && originalAttackTarget.isInParty() && originalAttackTarget.getParty().isInDimensionalRift())
 								{
@@ -723,7 +723,7 @@ public class L2AttackableAI extends L2CharacterAI
 							}
 						}
 						
-						if (GeoData.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 500))
+						if (GeoEngine.getInstance().canSeeTarget(_actor, npc) && (Math.abs(originalAttackTarget.getZ() - npc.getZ()) < 500))
 						{
 							if ((originalAttackTarget instanceof L2PcInstance) || (originalAttackTarget instanceof L2Summon))
 							{
@@ -800,7 +800,7 @@ public class L2AttackableAI extends L2CharacterAI
 					if (!_actor.isInsideRadius(newX, newY, collision, false))
 					{
 						final int newZ = _actor.getZ() + 30;
-						if ((Config.PATHFINDING == 0) || GeoData.getInstance().canMove(_actor, newX, newY, newZ))
+						if (!Config.PATHFINDING || GeoEngine.getInstance().canMoveToTarget(_actor.getX(), _actor.getY(), _actor.getZ(), newX, newY, newZ, _actor.getInstanceId()))
 						{
 							moveTo(newX, newY, newZ);
 						}
@@ -816,9 +816,6 @@ public class L2AttackableAI extends L2CharacterAI
 			final double distance2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
 			if (Math.sqrt(distance2) <= (60 + combinedCollision))
 			{
-				// double distance2 = _actor.getPlanDistanceSq(originalAttackTarget.getX(), originalAttackTarget.getY());
-				// if(distance2 <= 10000)
-				// {
 				final int chance = 5;
 				if (chance >= Rnd.get(100))
 				{
@@ -992,7 +989,7 @@ public class L2AttackableAI extends L2CharacterAI
 						}
 					}
 					// GeoData Los Check here
-					if (!useSkillSelf && !GeoData.getInstance().canSeeTarget(_actor, _actor.getTarget()))
+					if (!useSkillSelf && !GeoEngine.getInstance().canSeeTarget(_actor, _actor.getTarget()))
 					{
 						return;
 					}

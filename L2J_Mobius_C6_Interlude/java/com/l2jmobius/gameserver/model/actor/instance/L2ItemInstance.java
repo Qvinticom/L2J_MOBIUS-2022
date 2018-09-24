@@ -29,7 +29,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.ItemsOnGroundManager;
 import com.l2jmobius.gameserver.model.DropProtection;
 import com.l2jmobius.gameserver.model.L2Augmentation;
@@ -1183,9 +1183,9 @@ public final class L2ItemInstance extends L2Object
 			assert getPosition().getWorldRegion() == null;
 		}
 		
-		if ((Config.PATHFINDING > 0) && (dropper != null))
+		if (Config.PATHFINDING && (dropper != null))
 		{
-			Location dropDest = GeoData.getInstance().moveCheck(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z);
+			Location dropDest = GeoEngine.getInstance().canMoveToTargetLoc(dropper.getX(), dropper.getY(), dropper.getZ(), x, y, z, dropper.getInstanceId());
 			
 			if ((dropDest != null) && (dropDest.getX() != 0) && (dropDest.getY() != 0))
 			{

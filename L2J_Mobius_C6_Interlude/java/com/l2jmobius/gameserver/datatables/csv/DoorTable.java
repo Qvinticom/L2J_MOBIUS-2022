@@ -28,10 +28,10 @@ import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
+import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.templates.StatsSet;
 import com.l2jmobius.gameserver.templates.chars.L2CharTemplate;
@@ -332,7 +332,7 @@ public class DoorTable
 		}
 	}
 	
-	public boolean checkIfDoorsBetween(AbstractNodeLoc start, AbstractNodeLoc end)
+	public boolean checkIfDoorsBetween(Location start, Location end)
 	{
 		return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ());
 	}

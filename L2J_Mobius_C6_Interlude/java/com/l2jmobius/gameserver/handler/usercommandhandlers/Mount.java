@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.usercommandhandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IUserCommandHandler;
 import com.l2jmobius.gameserver.model.Inventory;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -78,7 +78,7 @@ public class Mount implements IUserCommandHandler
 				activeChar.sendMessage("Too far away from strider to mount.");
 				return false;
 			}
-			else if (!GeoData.getInstance().canSeeTarget(activeChar, pet))
+			else if (!GeoEngine.getInstance().canSeeTarget(activeChar, pet))
 			{
 				final SystemMessage msg = new SystemMessage(SystemMessageId.CANT_SEE_TARGET);
 				activeChar.sendPacket(msg);

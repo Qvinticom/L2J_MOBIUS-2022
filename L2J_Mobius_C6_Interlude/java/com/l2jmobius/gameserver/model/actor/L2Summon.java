@@ -23,7 +23,7 @@ import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2SummonAI;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -106,7 +106,7 @@ public abstract class L2Summon extends L2Playable
 		final int x = owner.getX();
 		final int y = owner.getY();
 		final int z = owner.getZ();
-		final Location location = GeoData.getInstance().moveCheck(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z);
+		final Location location = GeoEngine.getInstance().canMoveToTargetLoc(x, y, z, x + Rnd.get(-100, 100), y + Rnd.get(-100, 100), z, getInstanceId());
 		setXYZInvisible(location.getX(), location.getY(), location.getZ());
 	}
 	
@@ -220,9 +220,9 @@ public abstract class L2Summon extends L2Playable
 		{
 			if (isAutoAttackable(player))
 			{
-				if (Config.PATHFINDING > 0)
+				if (Config.PATHFINDING)
 				{
-					if (GeoData.getInstance().canSeeTarget(player, this))
+					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
 						player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 						player.onActionRequest();
@@ -239,9 +239,9 @@ public abstract class L2Summon extends L2Playable
 				// This Action Failed packet avoids player getting stuck when clicking three or more times
 				player.sendPacket(ActionFailed.STATIC_PACKET);
 				
-				if (Config.PATHFINDING > 0)
+				if (Config.PATHFINDING)
 				{
-					if (GeoData.getInstance().canSeeTarget(player, this))
+					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
 						player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this);
 					}

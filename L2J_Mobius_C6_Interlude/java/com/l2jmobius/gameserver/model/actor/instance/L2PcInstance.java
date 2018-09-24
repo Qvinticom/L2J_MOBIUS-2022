@@ -70,7 +70,7 @@ import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminEditChar;
@@ -5253,9 +5253,9 @@ public final class L2PcInstance extends L2Playable
 				{
 					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
-				else if (Config.PATHFINDING > 0)
+				else if (Config.PATHFINDING)
 				{
-					if (GeoData.getInstance().canSeeTarget(player, this))
+					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
 						player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 						player.onActionRequest();
@@ -5267,9 +5267,9 @@ public final class L2PcInstance extends L2Playable
 					player.onActionRequest();
 				}
 			}
-			else if (Config.PATHFINDING > 0)
+			else if (Config.PATHFINDING)
 			{
-				if (GeoData.getInstance().canSeeTarget(player, this))
+				if (GeoEngine.getInstance().canSeeTarget(player, this))
 				{
 					player.getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, this);
 				}
@@ -5441,9 +5441,9 @@ public final class L2PcInstance extends L2Playable
 					{
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
-					else if (Config.PATHFINDING > 0)
+					else if (Config.PATHFINDING)
 					{
-						if (GeoData.getInstance().canSeeTarget(player, this))
+						if (GeoEngine.getInstance().canSeeTarget(player, this))
 						{
 							// Calculate the distance between the L2PcInstance
 							// Only archer can hit from long
@@ -5479,9 +5479,9 @@ public final class L2PcInstance extends L2Playable
 						player.sendPacket(ActionFailed.STATIC_PACKET);
 					}
 				}
-				else if (Config.PATHFINDING > 0)
+				else if (Config.PATHFINDING)
 				{
-					if (GeoData.getInstance().canSeeTarget(player, this))
+					if (GeoEngine.getInstance().canSeeTarget(player, this))
 					{
 						// Calculate the distance between the L2PcInstance. Only archer can hit from long.
 						if ((currentWeapon != null) && (currentWeapon.getItemType() == L2WeaponType.BOW))
@@ -11758,7 +11758,7 @@ public final class L2PcInstance extends L2Playable
 		}
 		
 		// GeoData Los Check here
-		if ((skill.getCastRange() > 0) && !GeoData.getInstance().canSeeTarget(this, target))
+		if ((skill.getCastRange() > 0) && !GeoEngine.getInstance().canSeeTarget(this, target))
 		{
 			sendPacket(SystemMessageId.CANT_SEE_TARGET);
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -16923,7 +16923,7 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(ActionFailed.STATIC_PACKET);
 				return false;
 			}
-			if ((GeoData.getInstance().getHeight(getX(), getY(), getZ()) + 300) < getZ())
+			if ((GeoEngine.getInstance().getHeight(getX(), getY(), getZ()) + 300) < getZ())
 			{
 				sendPacket(SystemMessageId.YOU_CANNOT_DISMOUNT_FROM_THIS_ELEVATION);
 				sendPacket(ActionFailed.STATIC_PACKET);

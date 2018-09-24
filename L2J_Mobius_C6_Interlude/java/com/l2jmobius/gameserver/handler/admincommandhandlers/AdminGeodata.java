@@ -16,7 +16,7 @@
  */
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -47,12 +47,12 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldX = activeChar.getX();
 			final int worldY = activeChar.getY();
 			final int worldZ = activeChar.getZ();
-			final int geoX = GeoData.getInstance().getGeoX(worldX);
-			final int geoY = GeoData.getInstance().getGeoY(worldY);
+			final int geoX = GeoEngine.getGeoX(worldX);
+			final int geoY = GeoEngine.getGeoY(worldY);
 			
-			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
+			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
-				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getNearestZ(geoX, geoY, worldZ));
+				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeightNearest(geoX, geoY, worldZ));
 			}
 			else
 			{
@@ -64,12 +64,12 @@ public class AdminGeodata implements IAdminCommandHandler
 			final int worldX = activeChar.getX();
 			final int worldY = activeChar.getY();
 			final int worldZ = activeChar.getZ();
-			final int geoX = GeoData.getInstance().getGeoX(worldX);
-			final int geoY = GeoData.getInstance().getGeoY(worldY);
+			final int geoX = GeoEngine.getGeoX(worldX);
+			final int geoY = GeoEngine.getGeoY(worldY);
 			
-			if (GeoData.getInstance().hasGeoPos(geoX, geoY))
+			if (GeoEngine.getInstance().hasGeoPos(geoX, geoY))
 			{
-				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoData.getInstance().getSpawnHeight(worldX, worldY, worldZ));
+				BuilderUtil.sendSysMessage(activeChar, "WorldX: " + worldX + ", WorldY: " + worldY + ", WorldZ: " + worldZ + ", GeoX: " + geoX + ", GeoY: " + geoY + ", GeoZ: " + GeoEngine.getInstance().getHeightNearest(worldX, worldY, worldZ));
 			}
 			else
 			{
@@ -81,7 +81,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if (target != null)
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Can move beeline.");
 				}
@@ -100,7 +100,7 @@ public class AdminGeodata implements IAdminCommandHandler
 			final L2Object target = activeChar.getTarget();
 			if (target != null)
 			{
-				if (GeoData.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
 				{
 					BuilderUtil.sendSysMessage(activeChar, "Can see target.");
 				}

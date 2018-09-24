@@ -27,7 +27,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.HeroSkillTable;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillTreeTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -1675,7 +1675,7 @@ public abstract class L2Skill
 						{
 							continue;
 						}
-						if (!GeoData.getInstance().canSeeTarget(activeChar, obj))
+						if (!GeoEngine.getInstance().canSeeTarget(activeChar, obj))
 						{
 							continue;
 						}
@@ -1816,7 +1816,7 @@ public abstract class L2Skill
 						continue;
 					}
 					target = (L2Character) obj;
-					if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+					if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 					{
 						continue;
 					}
@@ -2514,7 +2514,7 @@ public abstract class L2Skill
 						{
 							continue;
 						}
-						if (!GeoData.getInstance().canSeeTarget(activeChar, obj))
+						if (!GeoEngine.getInstance().canSeeTarget(activeChar, obj))
 						{
 							continue;
 						}
@@ -2694,7 +2694,7 @@ public abstract class L2Skill
 						{
 							continue;
 						}
-						if (!GeoData.getInstance().canSeeTarget(activeChar, target))
+						if (!GeoEngine.getInstance().canSeeTarget(activeChar, target))
 						{
 							continue;
 						}

@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.skills.effects;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.actor.instance.L2CommanderInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2FolkInstance;
@@ -120,7 +120,7 @@ final class EffectFear extends L2Effect
 		posX += signx * FEAR_RANGE;
 		posY += signy * FEAR_RANGE;
 		
-		Location destiny = GeoData.getInstance().moveCheck(getEffected().getX(), getEffected().getY(), getEffected().getZ(), posX, posY, posZ);
+		Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(getEffected().getX(), getEffected().getY(), getEffected().getZ(), posX, posY, posZ, getEffected().getInstanceId());
 		getEffected().setRunning();
 		getEffected().getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(destiny.getX(), destiny.getY(), destiny.getZ(), 0));
 		

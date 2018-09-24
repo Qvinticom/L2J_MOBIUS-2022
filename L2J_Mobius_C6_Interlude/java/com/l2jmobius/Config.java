@@ -29,8 +29,6 @@ import java.io.LineNumberReader;
 import java.io.OutputStream;
 import java.math.BigInteger;
 import java.net.UnknownHostException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +40,6 @@ import java.util.logging.Logger;
 import com.l2jmobius.commons.util.ClassMasterSettings;
 import com.l2jmobius.commons.util.L2Properties;
 import com.l2jmobius.commons.util.StringUtil;
-import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.entity.olympiad.OlympiadPeriod;
 import com.l2jmobius.gameserver.util.FloodProtectorConfig;
 import com.l2jmobius.loginserver.LoginController;
@@ -63,7 +60,7 @@ public final class Config
 	private static final String CLANHALL_CONFIG_FILE = "./config/main/clanhall.ini";
 	private static final String ENCHANT_CONFIG_FILE = "./config/main/enchant.ini";
 	public static final String FORTSIEGE_CONFIG_FILE = "./config/main/fort.ini";
-	private static final String GEODATA_CONFIG_FILE = "./config/main/geodata.ini";
+	private static final String GEODATA_CONFIG_FILE = "./config/main/GeoEngine.ini";
 	private static final String OLYMP_CONFIG_FILE = "./config/main/olympiad.ini";
 	private static final String OPTIONS_CONFIG_FILE = "./config/main/options.ini";
 	private static final String OTHER_CONFIG_FILE = "./config/main/other.ini";
@@ -1078,23 +1075,17 @@ public final class Config
 	public static boolean LEAVE_BUFFS_ON_DIE;
 	public static boolean ALT_RAIDS_STATS_BONUS;
 	
-	public static int PATHFINDING;
-	public static File PATHNODE_DIR;
-	public static String PATHFIND_BUFFERS;
-	public static float LOW_WEIGHT;
-	public static float MEDIUM_WEIGHT;
-	public static float HIGH_WEIGHT;
-	public static boolean ADVANCED_DIAGONAL_STRATEGY;
-	public static float DIAGONAL_WEIGHT;
-	public static int MAX_POSTFILTER_PASSES;
-	public static boolean DEBUG_PATH;
-	public static boolean FORCE_GEODATA;
+	public static String GEODATA_PATH;
 	public static int COORD_SYNCHRONIZE;
-	public static Path GEODATA_PATH;
-	public static boolean TRY_LOAD_UNSPECIFIED_REGIONS;
-	public static Map<String, Boolean> GEODATA_REGIONS;
-	public static boolean ACCEPT_GEOEDITOR_CONN;
-	public static int GEOEDITOR_PORT;
+	public static int PART_OF_CHARACTER_HEIGHT;
+	public static int MAX_OBSTACLE_HEIGHT;
+	public static boolean PATHFINDING;
+	public static String PATHFIND_BUFFERS;
+	public static int BASE_WEIGHT;
+	public static int DIAGONAL_WEIGHT;
+	public static int HEURISTIC_WEIGHT;
+	public static int OBSTACLE_MULTIPLIER;
+	public static int MAX_ITERATIONS;
 	public static boolean FALL_DAMAGE;
 	public static boolean ALLOW_WATER;
 	
@@ -3388,42 +3379,19 @@ public final class Config
 			geodataSetting.load(is);
 			is.close();
 			
-			PATHFINDING = Integer.parseInt(geodataSetting.getProperty("PathFinding", "0"));
-			try
-			{
-				PATHNODE_DIR = new File(geodataSetting.getProperty("PathnodeDirectory", "data/pathnode").replaceAll("\\\\", "/")).getCanonicalFile();
-			}
-			catch (IOException e)
-			{
-				PATHNODE_DIR = new File("data/pathnode");
-			}
-			PATHFIND_BUFFERS = geodataSetting.getProperty("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-			LOW_WEIGHT = Float.parseFloat(geodataSetting.getProperty("LowWeight", "0.5f"));
-			MEDIUM_WEIGHT = Float.parseFloat(geodataSetting.getProperty("MediumWeight", "2"));
-			HIGH_WEIGHT = Float.parseFloat(geodataSetting.getProperty("HighWeight", "3"));
-			ADVANCED_DIAGONAL_STRATEGY = Boolean.parseBoolean(geodataSetting.getProperty("AdvancedDiagonalStrategy", "true"));
-			DIAGONAL_WEIGHT = Float.parseFloat(geodataSetting.getProperty("DiagonalWeight", "0.707f"));
-			MAX_POSTFILTER_PASSES = Integer.parseInt(geodataSetting.getProperty("MaxPostfilterPasses", "3"));
-			DEBUG_PATH = Boolean.parseBoolean(geodataSetting.getProperty("DebugPath", "false"));
-			FORCE_GEODATA = Boolean.parseBoolean(geodataSetting.getProperty("ForceGeoData", "true"));
+			GEODATA_PATH = geodataSetting.getProperty("GeoDataPath", "./data/geodata/");
 			COORD_SYNCHRONIZE = Integer.parseInt(geodataSetting.getProperty("CoordSynchronize", "-1"));
-			GEODATA_PATH = Paths.get(geodataSetting.getProperty("GeoDataPath", "./data/geodata"));
-			TRY_LOAD_UNSPECIFIED_REGIONS = Boolean.parseBoolean(geodataSetting.getProperty("TryLoadUnspecifiedRegions", "true"));
-			GEODATA_REGIONS = new HashMap<>();
-			for (int regionX = L2World.TILE_X_MIN; regionX <= L2World.TILE_X_MAX; regionX++)
-			{
-				for (int regionY = L2World.TILE_Y_MIN; regionY <= L2World.TILE_Y_MAX; regionY++)
-				{
-					final String key = regionX + "_" + regionY;
-					if (geodataSetting.containsKey(regionX + "_" + regionY))
-					{
-						GEODATA_REGIONS.put(key, Boolean.parseBoolean(geodataSetting.getProperty(key, "false")));
-					}
-				}
-			}
 			
-			ACCEPT_GEOEDITOR_CONN = Boolean.parseBoolean(geodataSetting.getProperty("AcceptGeoeditorConn", "false"));
-			GEOEDITOR_PORT = Integer.parseInt(geodataSetting.getProperty("GeoEditorPort", "9011"));
+			PART_OF_CHARACTER_HEIGHT = Integer.parseInt(geodataSetting.getProperty("PartOfCharacterHeight", "75"));
+			MAX_OBSTACLE_HEIGHT = Integer.parseInt(geodataSetting.getProperty("MaxObstacleHeight", "32"));
+			
+			PATHFINDING = Boolean.parseBoolean(geodataSetting.getProperty("PathFinding", "true"));
+			PATHFIND_BUFFERS = geodataSetting.getProperty("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
+			BASE_WEIGHT = Integer.parseInt(geodataSetting.getProperty("BaseWeight", "10"));
+			DIAGONAL_WEIGHT = Integer.parseInt(geodataSetting.getProperty("DiagonalWeight", "14"));
+			OBSTACLE_MULTIPLIER = Integer.parseInt(geodataSetting.getProperty("ObstacleMultiplier", "10"));
+			HEURISTIC_WEIGHT = Integer.parseInt(geodataSetting.getProperty("HeuristicWeight", "20"));
+			MAX_ITERATIONS = Integer.parseInt(geodataSetting.getProperty("MaxIterations", "3500"));
 			
 			FALL_DAMAGE = Boolean.parseBoolean(geodataSetting.getProperty("FallDamage", "false"));
 			ALLOW_WATER = Boolean.valueOf(geodataSetting.getProperty("AllowWater", "false"));

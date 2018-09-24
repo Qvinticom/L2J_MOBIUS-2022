@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.handler.itemhandlers;
 
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
@@ -83,7 +83,7 @@ public class RollingDice implements IItemHandler
 			final int x = activeChar.getX() + x1;
 			final int y = activeChar.getY() + y1;
 			final int z = activeChar.getZ();
-			final Location destination = GeoData.getInstance().moveCheck(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z);
+			final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(activeChar.getX(), activeChar.getY(), activeChar.getZ(), x, y, z, activeChar.getInstanceId());
 			
 			Broadcast.toSelfAndKnownPlayers(activeChar, new Dice(activeChar.getObjectId(), item.getItemId(), number, destination.getX(), destination.getY(), destination.getZ()));
 			

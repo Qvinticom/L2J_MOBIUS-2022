@@ -29,7 +29,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -194,7 +194,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 		}
 		// Los Check Here
-		return _actor.isAutoAttackable(target) && GeoData.getInstance().canSeeTarget(_actor, target);
+		return _actor.isAutoAttackable(target) && GeoEngine.getInstance().canSeeTarget(_actor, target);
 	}
 	
 	/**
@@ -531,7 +531,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 							{
 								continue;
 							}
-							if (!GeoData.getInstance().canSeeTarget(_actor, cha))
+							if (!GeoEngine.getInstance().canSeeTarget(_actor, cha))
 							{
 								break;
 							}
@@ -561,7 +561,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 				// && _actor.getAttackByList().contains(getAttackTarget())
 					&& ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE))
 					// limiting aggro for siege guards
-					&& target.isInsideRadius(npc, 1500, true, false) && GeoData.getInstance().canSeeTarget(npc, target))
+					&& target.isInsideRadius(npc, 1500, true, false) && GeoEngine.getInstance().canSeeTarget(npc, target))
 				{
 					// Notify the L2Object AI with EVT_AGGRESSION
 					final L2CharacterAI ai = npc.getAI();
@@ -593,7 +593,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 						{
 							continue;
 						}
-						if (!GeoData.getInstance().canSeeTarget(_actor, npc))
+						if (!GeoEngine.getInstance().canSeeTarget(_actor, npc))
 						{
 							break;
 						}
@@ -648,7 +648,7 @@ public class L2FortSiegeGuardAI extends L2CharacterAI implements Runnable
 			return;
 		}
 		
-		if (!GeoData.getInstance().canSeeTarget(_actor, attackTarget))
+		if (!GeoEngine.getInstance().canSeeTarget(_actor, attackTarget))
 		{
 			// Siege guards differ from normal mobs currently:
 			// If target cannot seen, don't attack any more

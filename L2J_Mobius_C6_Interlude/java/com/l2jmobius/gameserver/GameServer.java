@@ -76,9 +76,7 @@ import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
 import com.l2jmobius.gameserver.datatables.xml.FenceData;
 import com.l2jmobius.gameserver.datatables.xml.ItemTable;
 import com.l2jmobius.gameserver.datatables.xml.ZoneData;
-import com.l2jmobius.gameserver.geodata.GeoData;
-import com.l2jmobius.gameserver.geodata.geoeditorcon.GeoEditorListener;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.AdminCommandHandler;
 import com.l2jmobius.gameserver.handler.AutoAnnouncementHandler;
 import com.l2jmobius.gameserver.handler.AutoChatHandler;
@@ -300,11 +298,7 @@ public class GameServer
 		}
 		
 		Util.printSection("Geodata");
-		GeoData.getInstance();
-		if (Config.PATHFINDING > 0)
-		{
-			PathFinding.getInstance();
-		}
+		GeoEngine.getInstance();
 		
 		Util.printSection("Economy");
 		TradeController.getInstance();
@@ -357,10 +351,6 @@ public class GameServer
 		CursedWeaponsManager.getInstance();
 		TaskManager.getInstance();
 		L2PetDataTable.getInstance().loadPetsData();
-		if (Config.ACCEPT_GEOEDITOR_CONN)
-		{
-			GeoEditorListener.getInstance();
-		}
 		if (Config.SAVE_DROPPED_ITEM)
 		{
 			ItemsOnGroundManager.getInstance();

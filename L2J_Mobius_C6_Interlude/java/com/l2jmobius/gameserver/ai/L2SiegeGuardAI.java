@@ -26,7 +26,7 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -150,7 +150,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			}
 		}
 		// Los Check Here
-		return _actor.isAutoAttackable(target) && GeoData.getInstance().canSeeTarget(_actor, target);
+		return _actor.isAutoAttackable(target) && GeoEngine.getInstance().canSeeTarget(_actor, target);
 	}
 	
 	/**
@@ -360,7 +360,7 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			return;
 		}
 		
-		if (!GeoData.getInstance().canSeeTarget(_actor, attackTarget))
+		if (!GeoEngine.getInstance().canSeeTarget(_actor, attackTarget))
 		{
 			// Siege guards differ from normal mobs currently:
 			// If target cannot seen, don't attack any more
@@ -654,9 +654,9 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 			// Check if the L2Object is inside the Faction Range of the actor
 			if ((npc.getAI() != null) && ((npc.getAI().getIntention() == AI_INTENTION_IDLE) || (npc.getAI().getIntention() == AI_INTENTION_ACTIVE)) && actor.isInsideRadius(npc, npc.getFactionRange(), false, true) && target.isInsideRadius(npc, npc.getFactionRange(), false, true))
 			{
-				if (Config.PATHFINDING > 0)
+				if (Config.PATHFINDING)
 				{
-					if (GeoData.getInstance().canSeeTarget(npc, target))
+					if (GeoEngine.getInstance().canSeeTarget(npc, target))
 					{
 						// Notify the L2Object AI with EVT_AGGRESSION
 						final L2CharacterAI ai = npc.getAI();

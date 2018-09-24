@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.l2jmobius.gameserver.ai.CtrlIntention;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.spawn.L2Spawn;
 import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
@@ -86,8 +86,8 @@ public class L2ControlTowerInstance extends L2NpcInstance
 			// Send a Server->Client packet ValidateLocation to correct the L2NpcInstance position and heading on the client
 			player.sendPacket(new ValidateLocation(this));
 		}
-		else if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100 // Less then max height difference, delete check when geo
-		) && GeoData.getInstance().canSeeTarget(player, this))
+		else if (isAutoAttackable(player) && (Math.abs(player.getZ() - getZ()) < 100) // Less then max height difference, delete check when geo
+			&& GeoEngine.getInstance().canSeeTarget(player, this))
 		{
 			// Notify the L2PcInstance AI with AI_INTENTION_INTERACT
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);

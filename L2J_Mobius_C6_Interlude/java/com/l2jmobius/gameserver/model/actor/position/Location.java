@@ -19,7 +19,7 @@ package com.l2jmobius.gameserver.model.actor.position;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
-public final class Location
+public class Location
 {
 	public int _x;
 	public int _y;

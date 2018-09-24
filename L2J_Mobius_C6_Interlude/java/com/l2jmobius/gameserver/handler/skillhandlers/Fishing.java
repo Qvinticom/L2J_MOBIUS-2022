@@ -18,7 +18,7 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.instancemanager.FishingZoneManager;
 import com.l2jmobius.gameserver.model.Inventory;
@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.L2Skill.SkillType;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.zone.type.L2FishingZone;
 import com.l2jmobius.gameserver.model.zone.type.L2WaterZone;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -130,13 +131,17 @@ public class Fishing implements ISkillHandler
 		// ...and if the spot is in a fishing zone. If it is, it will then position the hook on the water surface. If not, you have to be GM to proceed past here... in that case, the hook will be positioned using the old Z lookup method.
 		L2FishingZone aimingTo = FishingZoneManager.getInstance().isInsideFishingZone(x, y, z);
 		L2WaterZone water = FishingZoneManager.getInstance().isInsideWaterZone(x, y, z);
-		if ((aimingTo != null) && (water != null) && (GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ() + 50, x, y, water.getWaterZ() - 50)))
+		if ((water != null))
 		{
-			z = water.getWaterZ() + 10;
-		}
-		else if ((aimingTo != null) && (water != null) && GeoData.getInstance().canSeeTarget(player.getX(), player.getY(), player.getZ() + 50, x, y, water.getWaterZ() - 50))
-		{
-			z = aimingTo.getWaterZ() + 10;
+			final Location waterLocation = new Location(x, y, water.getWaterZ() - 50);
+			if ((aimingTo != null) && GeoEngine.getInstance().canSeeTarget(player, waterLocation))
+			{
+				z = water.getWaterZ() + 10;
+			}
+			else if ((aimingTo != null) && GeoEngine.getInstance().canSeeTarget(player, waterLocation))
+			{
+				z = aimingTo.getWaterZ() + 10;
+			}
 		}
 		else
 		{

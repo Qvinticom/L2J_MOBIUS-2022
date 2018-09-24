@@ -1,7 +1,7 @@
 L2J-Mobius Interlude
 
-Client: https://drive.google.com/uc?id=1tpXwh3FPWEIoWzfOb7-v482spYuQp6JM&export=download
-Geodata: http://www.mediafire.com/file/jwivbb2t91a474e/mobius_interlude_geodata_l2j.zip
+Client: https://drive.google.com/uc?id=1LcKCQTbRXJvteJcuvc_rnX8i2gT1fcHB&export=download
+Geodata: http://www.mediafire.com/file/8m6vosu7h5p23j1/mobius_geodata_interlude_l2d.zip
 
 
 Prelude: http://legacy.lineage2.com/news/career.html

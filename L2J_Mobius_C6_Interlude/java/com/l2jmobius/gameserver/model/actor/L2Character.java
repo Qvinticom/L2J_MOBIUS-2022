@@ -42,9 +42,7 @@ import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable.TeleportWhereType;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
-import com.l2jmobius.gameserver.geodata.pathfinding.AbstractNodeLoc;
-import com.l2jmobius.gameserver.geodata.pathfinding.PathFinding;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
 import com.l2jmobius.gameserver.handler.SkillHandler;
 import com.l2jmobius.gameserver.handler.itemhandlers.Potions;
@@ -1004,7 +1002,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// GeoData Los Check here (or dz > 1000)
-		if (!GeoData.getInstance().canSeeTarget(this, target))
+		if (!GeoEngine.getInstance().canSeeTarget(this, target))
 		{
 			sendPacket(new SystemMessage(SystemMessageId.CANT_SEE_TARGET));
 			getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
@@ -4764,7 +4762,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		public int _heading;
 		public boolean disregardingGeodata;
 		public int onGeodataPathIndex;
-		public List<AbstractNodeLoc> geoPath;
+		public List<Location> geoPath;
 		public int geoPathAccurateTx;
 		public int geoPathAccurateTy;
 		public int geoPathGtx;
@@ -5618,7 +5616,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				final int y1 = (int) (Math.sin(Math.PI + radian + course) * frontDistance);
 				final int x = xPrev + x1;
 				final int y = yPrev + y1;
-				if (!GeoData.getInstance().canMove(xPrev, yPrev, zPrev, x, y, zPrev))
+				if (!GeoEngine.getInstance().canMoveToTarget(xPrev, yPrev, zPrev, x, y, zPrev, getInstanceId()))
 				{
 					_move.onGeodataPathIndex = -1;
 					stopMove(getActingPlayer().getLastServerPosition());
@@ -5733,7 +5731,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		// All data are contained in a L2CharPosition object
 		if (pos != null)
 		{
-			getPosition().setXYZ(pos.getX(), pos.getY(), GeoData.getInstance().getHeight(pos.getX(), pos.getY(), pos.getZ()));
+			getPosition().setXYZ(pos.getX(), pos.getY(), GeoEngine.getInstance().getHeight(pos.getX(), pos.getY(), pos.getZ()));
 			setHeading(pos.getHeading());
 			
 			if (this instanceof L2PcInstance)
@@ -6026,7 +6024,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			}
 			
 			// Movement checks.
-			if (Config.PATHFINDING > 0)
+			if (Config.PATHFINDING)
 			{
 				final double originalDistance = distance;
 				final int originalX = x;
@@ -6077,7 +6075,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					&& !(((curZ - z) > 300) && (distance < 300))) // Prohibit correcting destination if character wants to fall.
 				{
 					// location different if destination wasn't reached (or just z coord is different)
-					final Location destiny = GeoData.getInstance().moveCheck(curX, curY, curZ, x, y, z);
+					final Location destiny = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, x, y, z, getInstanceId());
 					x = destiny.getX();
 					y = destiny.getY();
 					dx = x - curX;
@@ -6090,13 +6088,13 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				if (((originalDistance - distance) > 30) && !_isAfraid && !isInBoat)
 				{
 					// Path calculation -- overrides previous movement check
-					m.geoPath = PathFinding.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, this instanceof L2Playable);
+					m.geoPath = GeoEngine.getInstance().findPath(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 					if ((m.geoPath == null) || (m.geoPath.size() < 2)) // No path found
 					{
 						m.disregardingGeodata = true;
 						
 						// Mobius: Verify destination. Prevents wall collision issues.
-						final Location newDestination = GeoData.getInstance().moveCheck(curX, curY, curZ, originalX, originalY, originalZ);
+						final Location newDestination = GeoEngine.getInstance().canMoveToTargetLoc(curX, curY, curZ, originalX, originalY, originalZ, getInstanceId());
 						x = newDestination.getX();
 						y = newDestination.getY();
 						z = newDestination.getZ();
@@ -6124,7 +6122,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			}
 			
 			// If no distance to go through, the movement is cancelled
-			if ((distance < 1) && ((Config.PATHFINDING > 0) || (this instanceof L2Playable) || _isAfraid || (this instanceof L2RiftInvaderInstance)))
+			if ((distance < 1) && (Config.PATHFINDING || (this instanceof L2Playable) || _isAfraid || (this instanceof L2RiftInvaderInstance)))
 			{
 				if (this instanceof L2Summon)
 				{
@@ -6989,7 +6987,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		}
 		
 		// GeoData Los Check or dz > 1000
-		if (!GeoData.getInstance().canSeeTarget(player, this))
+		if (!GeoEngine.getInstance().canSeeTarget(player, this))
 		{
 			player.sendPacket(SystemMessageId.CANT_SEE_TARGET);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
@@ -7863,7 +7861,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 					}
 					
 					// Check if the target is behind a wall
-					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && (Config.PATHFINDING > 0) && !GeoData.getInstance().canSeeTarget(this, targets[i]))
+					if ((skill.getSkillRadius() > 0) && skill.isOffensive() && Config.PATHFINDING && !GeoEngine.getInstance().canSeeTarget(this, targets[i]))
 					{
 						_skipped++;
 						continue;

@@ -31,7 +31,7 @@ import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.sql.SpawnTable;
-import com.l2jmobius.gameserver.geodata.GeoData;
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.instancemanager.GrandBossManager;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2World;
@@ -621,7 +621,8 @@ public class Antharas extends Quest
 						final int rx = Rnd.get(175000, 179900);
 						final int ry = Rnd.get(112400, 116000);
 						final int rdt = ((_antharas.getX() - rx) * (_antharas.getX() - rx)) + ((_antharas.getY() - ry) * (_antharas.getY() - ry));
-						if (GeoData.getInstance().canSeeTarget(_antharas.getX(), _antharas.getY(), -7704, rx, ry, -7704))
+						final Location randomLocation = new Location(rx, ry, -7704);
+						if (GeoEngine.getInstance().canSeeTarget(_antharas, randomLocation))
 						{
 							if (rdt < dt)
 							{
