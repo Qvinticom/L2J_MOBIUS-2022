@@ -102,8 +102,8 @@ public final class GeoUtils
 	
 	public static void debugGrid(L2PcInstance player)
 	{
-		final int geoRadius = 20;
-		final int blocksPerPacket = 40;
+		final int geoRadius = 10;
+		final int blocksPerPacket = 20;
 		
 		int iBlock = blocksPerPacket;
 		int iPacket = 0;
@@ -159,6 +159,7 @@ public final class GeoUtils
 				exsp.addLine(col, x - 3, y + 5, z, x + 3, y + 5, z);
 				exsp.addLine(col, x - 4, y + 4, z, x + 4, y + 4, z);
 				
+				// west arrow
 				col = getDirectionColor(gx, gy, z, GeoStructure.CELL_FLAG_W);
 				exsp.addLine(col, x - 7, y - 1, z, x - 7, y + 1, z);
 				exsp.addLine(col, x - 6, y - 2, z, x - 6, y + 2, z);
