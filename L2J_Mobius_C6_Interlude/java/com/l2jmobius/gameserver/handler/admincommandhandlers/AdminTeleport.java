@@ -255,7 +255,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "Usage: //move_to <coordinates>");
 					AdminHelpPage.showHelpPage(activeChar, "teleports.htm");
 					return false;
 				}
