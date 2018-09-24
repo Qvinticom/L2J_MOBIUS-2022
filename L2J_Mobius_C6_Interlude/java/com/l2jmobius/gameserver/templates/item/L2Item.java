@@ -318,10 +318,18 @@ public abstract class L2Item
 			}
 			default: // "none"
 			{
-				_bodyPart = SLOT_NONE;
+				if (_name.contains(" Arrow") || _name.contains(" Lure")) // Tempfix for invisible equipped consumables.
+				{
+					_bodyPart = L2Item.SLOT_L_HAND; // TODO: Should be done on XML.
+				}
+				else
+				{
+					_bodyPart = SLOT_NONE;
+				}
 				break;
 			}
 		}
+		
 		_referencePrice = set.getInteger("price");
 		_crystalCount = set.getInteger("crystal_count", 0);
 		_sellable = set.getBool("sellable", true);
