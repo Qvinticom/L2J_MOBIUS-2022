@@ -35,7 +35,7 @@ public class EventManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(EventManager.class.getName());
 	
-	private static final String EVENT_MANAGER_CONFIGURATION_FILE = "./config/events/eventmanager.ini";
+	private static final String EVENT_MANAGER_CONFIGURATION_FILE = "./config/events/EventManager.ini";
 	
 	public static boolean TVT_EVENT_ENABLED;
 	public static ArrayList<String> TVT_TIMES_LIST;

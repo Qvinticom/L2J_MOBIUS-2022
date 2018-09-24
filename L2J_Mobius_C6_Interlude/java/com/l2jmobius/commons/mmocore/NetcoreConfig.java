@@ -56,7 +56,7 @@ public class NetcoreConfig
 	
 	private NetcoreConfig()
 	{
-		final String MMO_CONFIG = "./config/protected/mmocore.ini";
+		final String MMO_CONFIG = "./config/protected/MmoCore.ini";
 		
 		try
 		{
