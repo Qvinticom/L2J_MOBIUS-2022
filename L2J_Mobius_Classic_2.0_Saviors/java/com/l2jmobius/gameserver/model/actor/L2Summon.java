@@ -422,6 +422,7 @@ public abstract class L2Summon extends L2Playable
 			}
 			
 			stopAllEffects();
+			stopHpMpRegeneration();
 			
 			if (owner != null)
 			{
