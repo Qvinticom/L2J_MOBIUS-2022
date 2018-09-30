@@ -93,6 +93,7 @@ import com.l2jmobius.gameserver.network.serverpackets.FakePlayerInfo;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.NpcInfo;
+import com.l2jmobius.gameserver.network.serverpackets.NpcInfoAbnormalVisualEffect;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
 import com.l2jmobius.gameserver.network.serverpackets.ServerObjectInfo;
 import com.l2jmobius.gameserver.network.serverpackets.SocialAction;
@@ -382,7 +383,7 @@ public class L2Npc extends L2Character
 			}
 			else
 			{
-				player.sendPacket(new NpcInfo(this));
+				player.sendPacket(new NpcInfoAbnormalVisualEffect(this));
 			}
 		});
 	}
