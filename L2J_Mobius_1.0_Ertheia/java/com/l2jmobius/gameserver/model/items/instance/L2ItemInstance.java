@@ -1597,6 +1597,15 @@ public final class L2ItemInstance extends L2Object
 			ps.executeUpdate();
 			_existsInDb = true;
 			_storedInDb = true;
+			
+			if (_augmentation != null)
+			{
+				updateItemOptions(con);
+			}
+			if (_elementals != null)
+			{
+				updateItemElements(con);
+			}
 		}
 		catch (Exception e)
 		{
