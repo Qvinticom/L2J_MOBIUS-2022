@@ -58,7 +58,7 @@ public class ItemTable
 	private static Logger LOGGER = Logger.getLogger(ItemTable.class.getName());
 	private static Logger LOGGER_ITEMS = Logger.getLogger("item");
 	
-	public static final Map<String, Integer> SLOTS = new HashMap<>();
+	public static final Map<String, Long> SLOTS = new HashMap<>();
 	
 	private L2Item[] _allTemplates;
 	private final Map<Integer, L2EtcItem> _etcItems = new HashMap<>();
@@ -66,45 +66,45 @@ public class ItemTable
 	private final Map<Integer, L2Weapon> _weapons = new HashMap<>();
 	static
 	{
-		SLOTS.put("shirt", L2Item.SLOT_UNDERWEAR);
-		SLOTS.put("lbracelet", L2Item.SLOT_L_BRACELET);
-		SLOTS.put("rbracelet", L2Item.SLOT_R_BRACELET);
-		SLOTS.put("talisman", L2Item.SLOT_DECO);
-		SLOTS.put("chest", L2Item.SLOT_CHEST);
-		SLOTS.put("fullarmor", L2Item.SLOT_FULL_ARMOR);
-		SLOTS.put("head", L2Item.SLOT_HEAD);
-		SLOTS.put("hair", L2Item.SLOT_HAIR);
-		SLOTS.put("hairall", L2Item.SLOT_HAIRALL);
-		SLOTS.put("underwear", L2Item.SLOT_UNDERWEAR);
-		SLOTS.put("back", L2Item.SLOT_BACK);
-		SLOTS.put("neck", L2Item.SLOT_NECK);
-		SLOTS.put("legs", L2Item.SLOT_LEGS);
-		SLOTS.put("feet", L2Item.SLOT_FEET);
-		SLOTS.put("gloves", L2Item.SLOT_GLOVES);
-		SLOTS.put("chest,legs", L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
-		SLOTS.put("belt", L2Item.SLOT_BELT);
-		SLOTS.put("rhand", L2Item.SLOT_R_HAND);
-		SLOTS.put("lhand", L2Item.SLOT_L_HAND);
-		SLOTS.put("lrhand", L2Item.SLOT_LR_HAND);
-		SLOTS.put("rear;lear", L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
-		SLOTS.put("rfinger;lfinger", L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
-		SLOTS.put("wolf", L2Item.SLOT_WOLF);
-		SLOTS.put("greatwolf", L2Item.SLOT_GREATWOLF);
-		SLOTS.put("hatchling", L2Item.SLOT_HATCHLING);
-		SLOTS.put("strider", L2Item.SLOT_STRIDER);
-		SLOTS.put("babypet", L2Item.SLOT_BABYPET);
-		SLOTS.put("brooch", L2Item.SLOT_BROOCH);
-		SLOTS.put("brooch_jewel", L2Item.SLOT_BROOCH_JEWEL);
+		SLOTS.put("shirt", (long) L2Item.SLOT_UNDERWEAR);
+		SLOTS.put("lbracelet", (long) L2Item.SLOT_L_BRACELET);
+		SLOTS.put("rbracelet", (long) L2Item.SLOT_R_BRACELET);
+		SLOTS.put("talisman", (long) L2Item.SLOT_DECO);
+		SLOTS.put("chest", (long) L2Item.SLOT_CHEST);
+		SLOTS.put("fullarmor", (long) L2Item.SLOT_FULL_ARMOR);
+		SLOTS.put("head", (long) L2Item.SLOT_HEAD);
+		SLOTS.put("hair", (long) L2Item.SLOT_HAIR);
+		SLOTS.put("hairall", (long) L2Item.SLOT_HAIRALL);
+		SLOTS.put("underwear", (long) L2Item.SLOT_UNDERWEAR);
+		SLOTS.put("back", (long) L2Item.SLOT_BACK);
+		SLOTS.put("neck", (long) L2Item.SLOT_NECK);
+		SLOTS.put("legs", (long) L2Item.SLOT_LEGS);
+		SLOTS.put("feet", (long) L2Item.SLOT_FEET);
+		SLOTS.put("gloves", (long) L2Item.SLOT_GLOVES);
+		SLOTS.put("chest,legs", (long) L2Item.SLOT_CHEST | L2Item.SLOT_LEGS);
+		SLOTS.put("belt", (long) L2Item.SLOT_BELT);
+		SLOTS.put("rhand", (long) L2Item.SLOT_R_HAND);
+		SLOTS.put("lhand", (long) L2Item.SLOT_L_HAND);
+		SLOTS.put("lrhand", (long) L2Item.SLOT_LR_HAND);
+		SLOTS.put("rear;lear", (long) L2Item.SLOT_R_EAR | L2Item.SLOT_L_EAR);
+		SLOTS.put("rfinger;lfinger", (long) L2Item.SLOT_R_FINGER | L2Item.SLOT_L_FINGER);
+		SLOTS.put("wolf", (long) L2Item.SLOT_WOLF);
+		SLOTS.put("greatwolf", (long) L2Item.SLOT_GREATWOLF);
+		SLOTS.put("hatchling", (long) L2Item.SLOT_HATCHLING);
+		SLOTS.put("strider", (long) L2Item.SLOT_STRIDER);
+		SLOTS.put("babypet", (long) L2Item.SLOT_BABYPET);
+		SLOTS.put("brooch", (long) L2Item.SLOT_BROOCH);
+		SLOTS.put("brooch_jewel", (long) L2Item.SLOT_BROOCH_JEWEL);
 		SLOTS.put("agathion", L2Item.SLOT_AGATHION);
-		SLOTS.put("none", L2Item.SLOT_NONE);
+		SLOTS.put("none", (long) L2Item.SLOT_NONE);
 		
 		// retail compatibility
-		SLOTS.put("onepiece", L2Item.SLOT_FULL_ARMOR);
-		SLOTS.put("hair2", L2Item.SLOT_HAIR2);
-		SLOTS.put("dhair", L2Item.SLOT_HAIRALL);
-		SLOTS.put("alldress", L2Item.SLOT_ALLDRESS);
-		SLOTS.put("deco1", L2Item.SLOT_DECO);
-		SLOTS.put("waist", L2Item.SLOT_BELT);
+		SLOTS.put("onepiece", (long) L2Item.SLOT_FULL_ARMOR);
+		SLOTS.put("hair2", (long) L2Item.SLOT_HAIR2);
+		SLOTS.put("dhair", (long) L2Item.SLOT_HAIRALL);
+		SLOTS.put("alldress", (long) L2Item.SLOT_ALLDRESS);
+		SLOTS.put("deco1", (long) L2Item.SLOT_DECO);
+		SLOTS.put("waist", (long) L2Item.SLOT_BELT);
 	}
 	
 	/**

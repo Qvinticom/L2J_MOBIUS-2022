@@ -41,7 +41,7 @@ public final class L2Armor extends L2Item
 		super.set(set);
 		_type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 		
-		final int _bodyPart = getBodyPart();
+		final long _bodyPart = getBodyPart();
 		if ((_bodyPart == L2Item.SLOT_NECK) || ((_bodyPart & L2Item.SLOT_L_EAR) != 0) || ((_bodyPart & L2Item.SLOT_L_FINGER) != 0) || ((_bodyPart & L2Item.SLOT_R_BRACELET) != 0) || ((_bodyPart & L2Item.SLOT_L_BRACELET) != 0))
 		{
 			_type1 = L2Item.TYPE1_WEAPON_RING_EARRING_NECKLACE;

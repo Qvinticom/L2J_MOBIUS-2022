@@ -35,7 +35,7 @@ public class AppearanceHolder
 	private final AppearanceHandType _handType;
 	private final AppearanceMagicType _magicType;
 	private final AppearanceTargetType _targetType;
-	private final Integer _bodyPart;
+	private final long _bodyPart;
 	
 	public AppearanceHolder(StatsSet set)
 	{
@@ -73,7 +73,7 @@ public class AppearanceHolder
 		return _targetType;
 	}
 	
-	public int getBodyPart()
+	public long getBodyPart()
 	{
 		return _bodyPart;
 	}

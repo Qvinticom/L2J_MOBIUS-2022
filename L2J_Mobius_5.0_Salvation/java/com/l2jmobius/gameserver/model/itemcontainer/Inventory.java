@@ -902,108 +902,104 @@ public abstract class Inventory extends ItemContainer
 		return _paperdoll[slot] == null;
 	}
 	
-	public static int getPaperdollIndex(int slot)
+	public boolean isPaperdollSlotNotEmpty(int slot)
 	{
-		switch (slot)
+		return _paperdoll[slot] != null;
+	}
+	
+	public static int getPaperdollIndex(long slot)
+	{
+		if (slot == L2Item.SLOT_UNDERWEAR)
 		{
-			case L2Item.SLOT_UNDERWEAR:
-			{
-				return PAPERDOLL_UNDER;
-			}
-			case L2Item.SLOT_R_EAR:
-			{
-				return PAPERDOLL_REAR;
-			}
-			case L2Item.SLOT_LR_EAR:
-			case L2Item.SLOT_L_EAR:
-			{
-				return PAPERDOLL_LEAR;
-			}
-			case L2Item.SLOT_NECK:
-			{
-				return PAPERDOLL_NECK;
-			}
-			case L2Item.SLOT_R_FINGER:
-			case L2Item.SLOT_LR_FINGER:
-			{
-				return PAPERDOLL_RFINGER;
-			}
-			case L2Item.SLOT_L_FINGER:
-			{
-				return PAPERDOLL_LFINGER;
-			}
-			case L2Item.SLOT_HEAD:
-			{
-				return PAPERDOLL_HEAD;
-			}
-			case L2Item.SLOT_R_HAND:
-			case L2Item.SLOT_LR_HAND:
-			{
-				return PAPERDOLL_RHAND;
-			}
-			case L2Item.SLOT_L_HAND:
-			{
-				return PAPERDOLL_LHAND;
-			}
-			case L2Item.SLOT_GLOVES:
-			{
-				return PAPERDOLL_GLOVES;
-			}
-			case L2Item.SLOT_CHEST:
-			case L2Item.SLOT_FULL_ARMOR:
-			case L2Item.SLOT_ALLDRESS:
-			{
-				return PAPERDOLL_CHEST;
-			}
-			case L2Item.SLOT_LEGS:
-			{
-				return PAPERDOLL_LEGS;
-			}
-			case L2Item.SLOT_FEET:
-			{
-				return PAPERDOLL_FEET;
-			}
-			case L2Item.SLOT_BACK:
-			{
-				return PAPERDOLL_CLOAK;
-			}
-			case L2Item.SLOT_HAIR:
-			case L2Item.SLOT_HAIRALL:
-			{
-				return PAPERDOLL_HAIR;
-			}
-			case L2Item.SLOT_HAIR2:
-			{
-				return PAPERDOLL_HAIR2;
-			}
-			case L2Item.SLOT_R_BRACELET:
-			{
-				return PAPERDOLL_RBRACELET;
-			}
-			case L2Item.SLOT_L_BRACELET:
-			{
-				return PAPERDOLL_LBRACELET;
-			}
-			case L2Item.SLOT_DECO:
-			{
-				return PAPERDOLL_DECO1; // return first we deal with it later
-			}
-			case L2Item.SLOT_BELT:
-			{
-				return PAPERDOLL_BELT;
-			}
-			case L2Item.SLOT_BROOCH:
-			{
-				return PAPERDOLL_BROOCH;
-			}
-			case L2Item.SLOT_BROOCH_JEWEL:
-			{
-				return PAPERDOLL_BROOCH_JEWEL1;
-			}
-			case L2Item.SLOT_AGATHION:
-			{
-				return PAPERDOLL_AGATHION1;
-			}
+			return PAPERDOLL_UNDER;
+		}
+		else if (slot == L2Item.SLOT_R_EAR)
+		{
+			return PAPERDOLL_REAR;
+		}
+		else if ((slot == L2Item.SLOT_LR_EAR) || (slot == L2Item.SLOT_L_EAR))
+		{
+			return PAPERDOLL_LEAR;
+		}
+		else if (slot == L2Item.SLOT_NECK)
+		{
+			return PAPERDOLL_NECK;
+		}
+		else if ((slot == L2Item.SLOT_R_FINGER) || (slot == L2Item.SLOT_LR_FINGER))
+		{
+			return PAPERDOLL_RFINGER;
+		}
+		else if (slot == L2Item.SLOT_L_FINGER)
+		{
+			return PAPERDOLL_LFINGER;
+		}
+		else if (slot == L2Item.SLOT_HEAD)
+		{
+			return PAPERDOLL_HEAD;
+		}
+		else if ((slot == L2Item.SLOT_R_HAND) || (slot == L2Item.SLOT_LR_HAND))
+		{
+			return PAPERDOLL_RHAND;
+		}
+		else if (slot == L2Item.SLOT_L_HAND)
+		{
+			return PAPERDOLL_LHAND;
+		}
+		else if (slot == L2Item.SLOT_GLOVES)
+		{
+			return PAPERDOLL_GLOVES;
+		}
+		else if ((slot == L2Item.SLOT_CHEST) || (slot == L2Item.SLOT_FULL_ARMOR) || (slot == L2Item.SLOT_ALLDRESS))
+		{
+			return PAPERDOLL_CHEST;
+		}
+		else if (slot == L2Item.SLOT_LEGS)
+		{
+			return PAPERDOLL_LEGS;
+		}
+		else if (slot == L2Item.SLOT_FEET)
+		{
+			return PAPERDOLL_FEET;
+		}
+		else if (slot == L2Item.SLOT_BACK)
+		{
+			return PAPERDOLL_CLOAK;
+		}
+		else if ((slot == L2Item.SLOT_HAIR) || (slot == L2Item.SLOT_HAIRALL))
+		{
+			return PAPERDOLL_HAIR;
+		}
+		else if (slot == L2Item.SLOT_HAIR2)
+		{
+			return PAPERDOLL_HAIR2;
+		}
+		else if (slot == L2Item.SLOT_R_BRACELET)
+		{
+			return PAPERDOLL_RBRACELET;
+		}
+		else if (slot == L2Item.SLOT_L_BRACELET)
+		{
+			return PAPERDOLL_LBRACELET;
+		}
+		else if (slot == L2Item.SLOT_DECO)
+		{
+			return PAPERDOLL_DECO1; // return first we deal with it later
+		}
+		else if (slot == L2Item.SLOT_BELT)
+		{
+			return PAPERDOLL_BELT;
+		}
+		else if (slot == L2Item.SLOT_BROOCH)
+		{
+			return PAPERDOLL_BROOCH;
+		}
+		else if (slot == L2Item.SLOT_BROOCH_JEWEL)
+		{
+			return PAPERDOLL_BROOCH_JEWEL1;
+		}
+		else if (slot == L2Item.SLOT_AGATHION)
+		{
+			return PAPERDOLL_AGATHION1;
 		}
 		return -1;
 	}
@@ -1174,9 +1170,9 @@ public abstract class Inventory extends ItemContainer
 		return _wearedMask;
 	}
 	
-	public int getSlotFromItem(L2ItemInstance item)
+	public long getSlotFromItem(L2ItemInstance item)
 	{
-		int slot = -1;
+		long slot = -1;
 		final int location = item.getLocationSlot();
 		switch (location)
 		{
@@ -1315,11 +1311,11 @@ public abstract class Inventory extends ItemContainer
 	
 	/**
 	 * Unequips item in body slot and returns alterations.<BR>
-	 * <B>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(int)} instead</B>
+	 * <B>If you dont need return value use {@link Inventory#unEquipItemInBodySlot(long)} instead</B>
 	 * @param slot : int designating the slot of the paperdoll
 	 * @return L2ItemInstance[] : list of changes
 	 */
-	public L2ItemInstance[] unEquipItemInBodySlotAndRecord(int slot)
+	public L2ItemInstance[] unEquipItemInBodySlotAndRecord(long slot)
 	{
 		final ChangeRecorder recorder = newRecorder();
 		
@@ -1374,141 +1370,111 @@ public abstract class Inventory extends ItemContainer
 	 * @param slot : int designating the slot
 	 * @return {@link L2ItemInstance} designating the item placed in the slot
 	 */
-	public L2ItemInstance unEquipItemInBodySlot(int slot)
+	public L2ItemInstance unEquipItemInBodySlot(long slot)
 	{
 		int pdollSlot = -1;
 		
-		switch (slot)
+		if (slot == L2Item.SLOT_L_EAR)
 		{
-			case L2Item.SLOT_L_EAR:
-			{
-				pdollSlot = PAPERDOLL_LEAR;
-				break;
-			}
-			case L2Item.SLOT_R_EAR:
-			{
-				pdollSlot = PAPERDOLL_REAR;
-				break;
-			}
-			case L2Item.SLOT_NECK:
-			{
-				pdollSlot = PAPERDOLL_NECK;
-				break;
-			}
-			case L2Item.SLOT_R_FINGER:
-			{
-				pdollSlot = PAPERDOLL_RFINGER;
-				break;
-			}
-			case L2Item.SLOT_L_FINGER:
-			{
-				pdollSlot = PAPERDOLL_LFINGER;
-				break;
-			}
-			case L2Item.SLOT_HAIR:
-			{
-				pdollSlot = PAPERDOLL_HAIR;
-				break;
-			}
-			case L2Item.SLOT_HAIR2:
-			{
-				pdollSlot = PAPERDOLL_HAIR2;
-				break;
-			}
-			case L2Item.SLOT_HAIRALL:
-			{
-				setPaperdollItem(PAPERDOLL_HAIR, null);
-				pdollSlot = PAPERDOLL_HAIR;
-				break;
-			}
-			case L2Item.SLOT_HEAD:
-			{
-				pdollSlot = PAPERDOLL_HEAD;
-				break;
-			}
-			case L2Item.SLOT_R_HAND:
-			case L2Item.SLOT_LR_HAND:
-			{
-				pdollSlot = PAPERDOLL_RHAND;
-				break;
-			}
-			case L2Item.SLOT_L_HAND:
-			{
-				pdollSlot = PAPERDOLL_LHAND;
-				break;
-			}
-			case L2Item.SLOT_GLOVES:
-			{
-				pdollSlot = PAPERDOLL_GLOVES;
-				break;
-			}
-			case L2Item.SLOT_CHEST:
-			case L2Item.SLOT_ALLDRESS:
-			case L2Item.SLOT_FULL_ARMOR:
-			{
-				pdollSlot = PAPERDOLL_CHEST;
-				break;
-			}
-			case L2Item.SLOT_LEGS:
-			{
-				pdollSlot = PAPERDOLL_LEGS;
-				break;
-			}
-			case L2Item.SLOT_BACK:
-			{
-				pdollSlot = PAPERDOLL_CLOAK;
-				break;
-			}
-			case L2Item.SLOT_FEET:
-			{
-				pdollSlot = PAPERDOLL_FEET;
-				break;
-			}
-			case L2Item.SLOT_UNDERWEAR:
-			{
-				pdollSlot = PAPERDOLL_UNDER;
-				break;
-			}
-			case L2Item.SLOT_L_BRACELET:
-			{
-				pdollSlot = PAPERDOLL_LBRACELET;
-				break;
-			}
-			case L2Item.SLOT_R_BRACELET:
-			{
-				pdollSlot = PAPERDOLL_RBRACELET;
-				break;
-			}
-			case L2Item.SLOT_DECO:
-			{
-				pdollSlot = PAPERDOLL_DECO1;
-				break;
-			}
-			case L2Item.SLOT_BELT:
-			{
-				pdollSlot = PAPERDOLL_BELT;
-				break;
-			}
-			case L2Item.SLOT_BROOCH:
-			{
-				pdollSlot = PAPERDOLL_BROOCH;
-				break;
-			}
-			case L2Item.SLOT_BROOCH_JEWEL:
-			{
-				pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
-				break;
-			}
-			case L2Item.SLOT_AGATHION:
-			{
-				pdollSlot = PAPERDOLL_AGATHION1;
-				break;
-			}
-			default:
-			{
-				LOGGER.info("Unhandled slot type: " + slot);
-				LOGGER.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
-			}
+			pdollSlot = PAPERDOLL_LEAR;
+		}
+		else if (slot == L2Item.SLOT_R_EAR)
+		{
+			pdollSlot = PAPERDOLL_REAR;
+		}
+		else if (slot == L2Item.SLOT_NECK)
+		{
+			pdollSlot = PAPERDOLL_NECK;
+		}
+		else if (slot == L2Item.SLOT_R_FINGER)
+		{
+			pdollSlot = PAPERDOLL_RFINGER;
+		}
+		else if (slot == L2Item.SLOT_L_FINGER)
+		{
+			pdollSlot = PAPERDOLL_LFINGER;
+		}
+		else if (slot == L2Item.SLOT_HAIR)
+		{
+			pdollSlot = PAPERDOLL_HAIR;
+		}
+		else if (slot == L2Item.SLOT_HAIR2)
+		{
+			pdollSlot = PAPERDOLL_HAIR2;
+		}
+		else if (slot == L2Item.SLOT_HAIRALL)
+		{
+			setPaperdollItem(PAPERDOLL_HAIR, null);
+			pdollSlot = PAPERDOLL_HAIR;
+		}
+		else if (slot == L2Item.SLOT_HEAD)
+		{
+			pdollSlot = PAPERDOLL_HEAD;
+		}
+		else if ((slot == L2Item.SLOT_R_HAND) || (slot == L2Item.SLOT_LR_HAND))
+		{
+			pdollSlot = PAPERDOLL_RHAND;
+		}
+		else if (slot == L2Item.SLOT_L_HAND)
+		{
+			pdollSlot = PAPERDOLL_LHAND;
+		}
+		else if (slot == L2Item.SLOT_GLOVES)
+		{
+			pdollSlot = PAPERDOLL_GLOVES;
+		}
+		else if ((slot == L2Item.SLOT_CHEST) || (slot == L2Item.SLOT_ALLDRESS) || (slot == L2Item.SLOT_FULL_ARMOR))
+		{
+			pdollSlot = PAPERDOLL_CHEST;
+		}
+		else if (slot == L2Item.SLOT_LEGS)
+		{
+			pdollSlot = PAPERDOLL_LEGS;
+		}
+		else if (slot == L2Item.SLOT_BACK)
+		{
+			pdollSlot = PAPERDOLL_CLOAK;
+		}
+		else if (slot == L2Item.SLOT_FEET)
+		{
+			pdollSlot = PAPERDOLL_FEET;
+		}
+		else if (slot == L2Item.SLOT_UNDERWEAR)
+		{
+			pdollSlot = PAPERDOLL_UNDER;
+		}
+		else if (slot == L2Item.SLOT_L_BRACELET)
+		{
+			pdollSlot = PAPERDOLL_LBRACELET;
+		}
+		else if (slot == L2Item.SLOT_R_BRACELET)
+		{
+			pdollSlot = PAPERDOLL_RBRACELET;
+		}
+		else if (slot == L2Item.SLOT_DECO)
+		{
+			pdollSlot = PAPERDOLL_DECO1;
+		}
+		else if (slot == L2Item.SLOT_BELT)
+		{
+			pdollSlot = PAPERDOLL_BELT;
+		}
+		else if (slot == L2Item.SLOT_BROOCH)
+		{
+			pdollSlot = PAPERDOLL_BROOCH;
+		}
+		else if (slot == L2Item.SLOT_BROOCH_JEWEL)
+		{
+			pdollSlot = PAPERDOLL_BROOCH_JEWEL1;
+		}
+		else if (slot == L2Item.SLOT_AGATHION)
+		{
+			pdollSlot = PAPERDOLL_AGATHION1;
+		}
+		else
+		{
+			LOGGER.info("Unhandled slot type: " + slot);
+			LOGGER.info(CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
 		}
 		if (pdollSlot >= 0)
 		{
@@ -1567,225 +1533,184 @@ public abstract class Inventory extends ItemContainer
 			}
 		}
 		
-		final int targetSlot = item.getItem().getBodyPart();
+		final long targetSlot = item.getItem().getBodyPart();
 		
 		// Check if player is using Formal Wear and item isn't Wedding Bouquet.
 		final L2ItemInstance formal = getPaperdollItem(PAPERDOLL_CHEST);
 		if ((item.getId() != 21163) && (formal != null) && (formal.getItem().getBodyPart() == L2Item.SLOT_ALLDRESS))
 		{
 			// only chest target can pass this
-			switch (targetSlot)
+			if ((targetSlot == L2Item.SLOT_LR_HAND) || (targetSlot == L2Item.SLOT_L_HAND) || (targetSlot == L2Item.SLOT_R_HAND) || (targetSlot == L2Item.SLOT_LEGS) || (targetSlot == L2Item.SLOT_FEET) || (targetSlot == L2Item.SLOT_GLOVES) || (targetSlot == L2Item.SLOT_HEAD))
 			{
-				case L2Item.SLOT_LR_HAND:
-				case L2Item.SLOT_L_HAND:
-				case L2Item.SLOT_R_HAND:
-				case L2Item.SLOT_LEGS:
-				case L2Item.SLOT_FEET:
-				case L2Item.SLOT_GLOVES:
-				case L2Item.SLOT_HEAD:
-				{
-					return;
-				}
+				return;
 			}
 		}
 		
-		switch (targetSlot)
+		// don't care about arrows, listener will unequip them (hopefully)
+		// handle full armor
+		// formal dress
+		if (targetSlot == L2Item.SLOT_LR_HAND)
 		{
-			case L2Item.SLOT_LR_HAND:
+			setPaperdollItem(PAPERDOLL_LHAND, null);
+			setPaperdollItem(PAPERDOLL_RHAND, item);
+		}
+		else if (targetSlot == L2Item.SLOT_L_HAND)
+		{
+			final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
+			if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
 			{
-				setPaperdollItem(PAPERDOLL_LHAND, null);
-				setPaperdollItem(PAPERDOLL_RHAND, item);
-				break;
+				setPaperdollItem(PAPERDOLL_RHAND, null);
 			}
-			case L2Item.SLOT_L_HAND:
+			setPaperdollItem(PAPERDOLL_LHAND, item);
+		}
+		else if (targetSlot == L2Item.SLOT_R_HAND)
+		{
+			setPaperdollItem(PAPERDOLL_RHAND, item);
+		}
+		else if ((targetSlot == L2Item.SLOT_L_EAR) || (targetSlot == L2Item.SLOT_R_EAR) || (targetSlot == L2Item.SLOT_LR_EAR))
+		{
+			if (_paperdoll[PAPERDOLL_LEAR] == null)
 			{
-				final L2ItemInstance rh = getPaperdollItem(PAPERDOLL_RHAND);
-				if ((rh != null) && (rh.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) && !(((rh.getItemType() == WeaponType.BOW) && (item.getItemType() == EtcItemType.ARROW)) || (((rh.getItemType() == WeaponType.CROSSBOW) || (rh.getItemType() == WeaponType.TWOHANDCROSSBOW)) && (item.getItemType() == EtcItemType.BOLT)) || ((rh.getItemType() == WeaponType.FISHINGROD) && (item.getItemType() == EtcItemType.LURE))))
-				{
-					setPaperdollItem(PAPERDOLL_RHAND, null);
-				}
-				setPaperdollItem(PAPERDOLL_LHAND, item);
-				break;
+				setPaperdollItem(PAPERDOLL_LEAR, item);
 			}
-			case L2Item.SLOT_R_HAND:
+			else if (_paperdoll[PAPERDOLL_REAR] == null)
 			{
-				// don't care about arrows, listener will unequip them (hopefully)
-				setPaperdollItem(PAPERDOLL_RHAND, item);
-				break;
+				setPaperdollItem(PAPERDOLL_REAR, item);
 			}
-			case L2Item.SLOT_L_EAR:
-			case L2Item.SLOT_R_EAR:
-			case L2Item.SLOT_LR_EAR:
+			else
 			{
-				if (_paperdoll[PAPERDOLL_LEAR] == null)
-				{
-					setPaperdollItem(PAPERDOLL_LEAR, item);
-				}
-				else if (_paperdoll[PAPERDOLL_REAR] == null)
-				{
-					setPaperdollItem(PAPERDOLL_REAR, item);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_LEAR, item);
-				}
-				break;
+				setPaperdollItem(PAPERDOLL_LEAR, item);
 			}
-			case L2Item.SLOT_L_FINGER:
-			case L2Item.SLOT_R_FINGER:
-			case L2Item.SLOT_LR_FINGER:
+		}
+		else if ((targetSlot == L2Item.SLOT_L_FINGER) || (targetSlot == L2Item.SLOT_R_FINGER) || (targetSlot == L2Item.SLOT_LR_FINGER))
+		{
+			if (_paperdoll[PAPERDOLL_LFINGER] == null)
 			{
-				if (_paperdoll[PAPERDOLL_LFINGER] == null)
-				{
-					setPaperdollItem(PAPERDOLL_LFINGER, item);
-				}
-				else if (_paperdoll[PAPERDOLL_RFINGER] == null)
-				{
-					setPaperdollItem(PAPERDOLL_RFINGER, item);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_LFINGER, item);
-				}
-				break;
+				setPaperdollItem(PAPERDOLL_LFINGER, item);
 			}
-			case L2Item.SLOT_NECK:
+			else if (_paperdoll[PAPERDOLL_RFINGER] == null)
 			{
-				setPaperdollItem(PAPERDOLL_NECK, item);
-				break;
+				setPaperdollItem(PAPERDOLL_RFINGER, item);
 			}
-			case L2Item.SLOT_FULL_ARMOR:
+			else
 			{
-				setPaperdollItem(PAPERDOLL_LEGS, null);
-				setPaperdollItem(PAPERDOLL_CHEST, item);
-				break;
+				setPaperdollItem(PAPERDOLL_LFINGER, item);
 			}
-			case L2Item.SLOT_CHEST:
+		}
+		else if (targetSlot == L2Item.SLOT_NECK)
+		{
+			setPaperdollItem(PAPERDOLL_NECK, item);
+		}
+		else if (targetSlot == L2Item.SLOT_FULL_ARMOR)
+		{
+			setPaperdollItem(PAPERDOLL_LEGS, null);
+			setPaperdollItem(PAPERDOLL_CHEST, item);
+		}
+		else if (targetSlot == L2Item.SLOT_CHEST)
+		{
+			setPaperdollItem(PAPERDOLL_CHEST, item);
+		}
+		else if (targetSlot == L2Item.SLOT_LEGS)
+		{
+			final L2ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
+			if ((chest != null) && (chest.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR))
 			{
-				setPaperdollItem(PAPERDOLL_CHEST, item);
-				break;
+				setPaperdollItem(PAPERDOLL_CHEST, null);
 			}
-			case L2Item.SLOT_LEGS:
-			{
-				// handle full armor
-				final L2ItemInstance chest = getPaperdollItem(PAPERDOLL_CHEST);
-				if ((chest != null) && (chest.getItem().getBodyPart() == L2Item.SLOT_FULL_ARMOR))
-				{
-					setPaperdollItem(PAPERDOLL_CHEST, null);
-				}
-				setPaperdollItem(PAPERDOLL_LEGS, item);
-				break;
-			}
-			case L2Item.SLOT_FEET:
-			{
-				setPaperdollItem(PAPERDOLL_FEET, item);
-				break;
-			}
-			case L2Item.SLOT_GLOVES:
-			{
-				setPaperdollItem(PAPERDOLL_GLOVES, item);
-				break;
-			}
-			case L2Item.SLOT_HEAD:
-			{
-				setPaperdollItem(PAPERDOLL_HEAD, item);
-				break;
-			}
-			case L2Item.SLOT_HAIR:
-			{
-				final L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
-				if ((hair != null) && (hair.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
-				{
-					setPaperdollItem(PAPERDOLL_HAIR2, null);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_HAIR, null);
-				}
-				setPaperdollItem(PAPERDOLL_HAIR, item);
-				break;
-			}
-			case L2Item.SLOT_HAIR2:
-			{
-				final L2ItemInstance hair2 = getPaperdollItem(PAPERDOLL_HAIR);
-				if ((hair2 != null) && (hair2.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
-				{
-					setPaperdollItem(PAPERDOLL_HAIR, null);
-				}
-				else
-				{
-					setPaperdollItem(PAPERDOLL_HAIR2, null);
-				}
-				setPaperdollItem(PAPERDOLL_HAIR2, item);
-				break;
-			}
-			case L2Item.SLOT_HAIRALL:
+			setPaperdollItem(PAPERDOLL_LEGS, item);
+		}
+		else if (targetSlot == L2Item.SLOT_FEET)
+		{
+			setPaperdollItem(PAPERDOLL_FEET, item);
+		}
+		else if (targetSlot == L2Item.SLOT_GLOVES)
+		{
+			setPaperdollItem(PAPERDOLL_GLOVES, item);
+		}
+		else if (targetSlot == L2Item.SLOT_HEAD)
+		{
+			setPaperdollItem(PAPERDOLL_HEAD, item);
+		}
+		else if (targetSlot == L2Item.SLOT_HAIR)
+		{
+			final L2ItemInstance hair = getPaperdollItem(PAPERDOLL_HAIR);
+			if ((hair != null) && (hair.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
 			{
 				setPaperdollItem(PAPERDOLL_HAIR2, null);
-				setPaperdollItem(PAPERDOLL_HAIR, item);
-				break;
 			}
-			case L2Item.SLOT_UNDERWEAR:
+			else
 			{
-				setPaperdollItem(PAPERDOLL_UNDER, item);
-				break;
+				setPaperdollItem(PAPERDOLL_HAIR, null);
 			}
-			case L2Item.SLOT_BACK:
+			setPaperdollItem(PAPERDOLL_HAIR, item);
+		}
+		else if (targetSlot == L2Item.SLOT_HAIR2)
+		{
+			final L2ItemInstance hair2 = getPaperdollItem(PAPERDOLL_HAIR);
+			if ((hair2 != null) && (hair2.getItem().getBodyPart() == L2Item.SLOT_HAIRALL))
 			{
-				setPaperdollItem(PAPERDOLL_CLOAK, item);
-				break;
+				setPaperdollItem(PAPERDOLL_HAIR, null);
 			}
-			case L2Item.SLOT_L_BRACELET:
+			else
 			{
-				setPaperdollItem(PAPERDOLL_LBRACELET, item);
-				break;
+				setPaperdollItem(PAPERDOLL_HAIR2, null);
 			}
-			case L2Item.SLOT_R_BRACELET:
-			{
-				setPaperdollItem(PAPERDOLL_RBRACELET, item);
-				break;
-			}
-			case L2Item.SLOT_DECO:
-			{
-				equipTalisman(item);
-				break;
-			}
-			case L2Item.SLOT_BELT:
-			{
-				setPaperdollItem(PAPERDOLL_BELT, item);
-				break;
-			}
-			case L2Item.SLOT_ALLDRESS:
-			{
-				// formal dress
-				setPaperdollItem(PAPERDOLL_LEGS, null);
-				setPaperdollItem(PAPERDOLL_LHAND, null);
-				setPaperdollItem(PAPERDOLL_RHAND, null);
-				setPaperdollItem(PAPERDOLL_HEAD, null);
-				setPaperdollItem(PAPERDOLL_FEET, null);
-				setPaperdollItem(PAPERDOLL_GLOVES, null);
-				setPaperdollItem(PAPERDOLL_CHEST, item);
-				break;
-			}
-			case L2Item.SLOT_BROOCH:
-			{
-				setPaperdollItem(PAPERDOLL_BROOCH, item);
-				break;
-			}
-			case L2Item.SLOT_BROOCH_JEWEL:
-			{
-				equipBroochJewel(item);
-				break;
-			}
-			case L2Item.SLOT_AGATHION:
-			{
-				equipAgathion(item);
-				break;
-			}
-			default:
-			{
-				LOGGER.warning("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
-			}
+			setPaperdollItem(PAPERDOLL_HAIR2, item);
+		}
+		else if (targetSlot == L2Item.SLOT_HAIRALL)
+		{
+			setPaperdollItem(PAPERDOLL_HAIR2, null);
+			setPaperdollItem(PAPERDOLL_HAIR, item);
+		}
+		else if (targetSlot == L2Item.SLOT_UNDERWEAR)
+		{
+			setPaperdollItem(PAPERDOLL_UNDER, item);
+		}
+		else if (targetSlot == L2Item.SLOT_BACK)
+		{
+			setPaperdollItem(PAPERDOLL_CLOAK, item);
+		}
+		else if (targetSlot == L2Item.SLOT_L_BRACELET)
+		{
+			setPaperdollItem(PAPERDOLL_LBRACELET, item);
+		}
+		else if (targetSlot == L2Item.SLOT_R_BRACELET)
+		{
+			setPaperdollItem(PAPERDOLL_RBRACELET, item);
+		}
+		else if (targetSlot == L2Item.SLOT_DECO)
+		{
+			equipTalisman(item);
+		}
+		else if (targetSlot == L2Item.SLOT_BELT)
+		{
+			setPaperdollItem(PAPERDOLL_BELT, item);
+		}
+		else if (targetSlot == L2Item.SLOT_ALLDRESS)
+		{
+			setPaperdollItem(PAPERDOLL_LEGS, null);
+			setPaperdollItem(PAPERDOLL_LHAND, null);
+			setPaperdollItem(PAPERDOLL_RHAND, null);
+			setPaperdollItem(PAPERDOLL_HEAD, null);
+			setPaperdollItem(PAPERDOLL_FEET, null);
+			setPaperdollItem(PAPERDOLL_GLOVES, null);
+			setPaperdollItem(PAPERDOLL_CHEST, item);
+		}
+		else if (targetSlot == L2Item.SLOT_BROOCH)
+		{
+			setPaperdollItem(PAPERDOLL_BROOCH, item);
+		}
+		else if (targetSlot == L2Item.SLOT_BROOCH_JEWEL)
+		{
+			equipBroochJewel(item);
+		}
+		else if (targetSlot == L2Item.SLOT_AGATHION)
+		{
+			equipAgathion(item);
+		}
+		else
+		{
+			LOGGER.warning("Unknown body slot " + targetSlot + " for Item ID: " + item.getId());
 		}
 	}
 	
@@ -2097,7 +2022,7 @@ public abstract class Inventory extends ItemContainer
 	 * Blocks the given item slot from being equipped.
 	 * @param itemSlot mask from L2Item
 	 */
-	public void blockItemSlot(int itemSlot)
+	public void blockItemSlot(long itemSlot)
 	{
 		_blockedItemSlotsMask |= itemSlot;
 	}
@@ -2106,7 +2031,7 @@ public abstract class Inventory extends ItemContainer
 	 * Unblocks the given item slot so it can be equipped.
 	 * @param itemSlot mask from L2Item
 	 */
-	public void unblockItemSlot(int itemSlot)
+	public void unblockItemSlot(long itemSlot)
 	{
 		_blockedItemSlotsMask &= ~itemSlot;
 	}
@@ -2115,7 +2040,7 @@ public abstract class Inventory extends ItemContainer
 	 * @param itemSlot mask from L2Item
 	 * @return if the given item slot is blocked or not.
 	 */
-	public boolean isItemSlotBlocked(int itemSlot)
+	public boolean isItemSlotBlocked(long itemSlot)
 	{
 		return (_blockedItemSlotsMask & itemSlot) == itemSlot;
 	}

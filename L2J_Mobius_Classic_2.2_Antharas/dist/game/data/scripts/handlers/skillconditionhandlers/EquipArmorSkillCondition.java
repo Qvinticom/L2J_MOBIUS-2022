@@ -73,7 +73,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		// So from here, chest armor matches conditions
 		
-		final int chestBodyPart = chest.getItem().getBodyPart();
+		final long chestBodyPart = chest.getItem().getBodyPart();
 		// return True if chest armor is a Full Armor
 		if (chestBodyPart == L2Item.SLOT_FULL_ARMOR)
 		{

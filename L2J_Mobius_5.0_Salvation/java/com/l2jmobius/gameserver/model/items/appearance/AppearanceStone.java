@@ -49,7 +49,7 @@ public class AppearanceStone
 	private final AppearanceMagicType _magicType;
 	private List<CrystalType> _crystalTypes;
 	private List<AppearanceTargetType> _targetTypes;
-	private List<Integer> _bodyParts;
+	private List<Long> _bodyParts;
 	private List<Race> _races;
 	private List<Race> _racesNot;
 	private List<AppearanceHolder> _allVisualIds;
@@ -103,7 +103,7 @@ public class AppearanceStone
 			addCrystalType(crystalType);
 		}
 		
-		final int bodyPart = ItemTable.SLOTS.get(set.getString("bodyPart", "none"));
+		final long bodyPart = ItemTable.SLOTS.get(set.getString("bodyPart", "none"));
 		if (bodyPart != L2Item.SLOT_NONE)
 		{
 			addBodyPart(bodyPart);
@@ -195,7 +195,7 @@ public class AppearanceStone
 		return _targetTypes != null ? _targetTypes : Collections.emptyList();
 	}
 	
-	public void addBodyPart(Integer part)
+	public void addBodyPart(long part)
 	{
 		if (_bodyParts == null)
 		{
@@ -218,7 +218,7 @@ public class AppearanceStone
 		return _allVisualIds != null ? _allVisualIds : Collections.emptyList();
 	}
 	
-	public List<Integer> getBodyParts()
+	public List<Long> getBodyParts()
 	{
 		return _bodyParts != null ? _bodyParts : Collections.emptyList();
 	}

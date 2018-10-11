@@ -104,7 +104,7 @@ public class CombatFlag
 	{
 		// Reset player stats
 		_player.setCombatFlagEquipped(false);
-		final int slot = _player.getInventory().getSlotFromItem(_item);
+		final long slot = _player.getInventory().getSlotFromItem(_item);
 		_player.getInventory().unEquipItemInBodySlot(slot);
 		_player.destroyItem("CombatFlag", _item, null, true);
 		_item = null;

@@ -111,7 +111,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	public static final int SLOT_BELT = 0x10000000;
 	public static final int SLOT_BROOCH = 0x20000000;
 	public static final int SLOT_BROOCH_JEWEL = 0x40000000;
-	public static final int SLOT_AGATHION = 0x80000000;
+	public static final long SLOT_AGATHION = 0x3000000000L;
 	
 	public static final int SLOT_WOLF = -100;
 	public static final int SLOT_HATCHLING = -101;
@@ -134,7 +134,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	private int _duration;
 	private long _time;
 	private int _autoDestroyTime;
-	private int _bodyPart;
+	private long _bodyPart;
 	private int _referencePrice;
 	private int _crystalCount;
 	private boolean _sellable;
@@ -507,7 +507,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	/**
 	 * @return the part of the body used with the item.
 	 */
-	public final int getBodyPart()
+	public final long getBodyPart()
 	{
 		return _bodyPart;
 	}
