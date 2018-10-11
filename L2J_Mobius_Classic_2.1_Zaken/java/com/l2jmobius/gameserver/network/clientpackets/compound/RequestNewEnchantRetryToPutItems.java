@@ -1,12 +1,14 @@
 /*
- * This file is part of the L2J Mobius project.
+ * Copyright (C) 2004-2016 L2J Unity
  * 
- * This program is free software: you can redistribute it and/or modify
+ * This file is part of L2J Unity.
+ * 
+ * L2J Unity is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * 
- * This program is distributed in the hope that it will be useful,
+ * L2J Unity is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
  * General Public License for more details.
@@ -14,14 +16,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package com.l2jmobius.gameserver.network.clientpackets;
+package com.l2jmobius.gameserver.network.clientpackets.compound;
 
 import com.l2jmobius.commons.network.PacketReader;
+import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.request.CompoundRequest;
+import com.l2jmobius.gameserver.model.items.combination.CombinationItem;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.clientpackets.IClientIncomingPacket;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantRetryToPutItemFail;
 import com.l2jmobius.gameserver.network.serverpackets.ExEnchantRetryToPutItemOk;
 
@@ -89,14 +94,15 @@ public class RequestNewEnchantRetryToPutItems implements IClientIncomingPacket
 			return;
 		}
 		
+		final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
+		
 		// Not implemented or not able to merge!
-		if ((itemOne.getItem().getCompoundItem() == 0) || (itemOne.getItem().getCompoundChance() == 0))
+		if (combinationItem == null)
 		{
 			client.sendPacket(ExEnchantRetryToPutItemFail.STATIC_PACKET);
 			activeChar.removeRequest(request.getClass());
 			return;
 		}
-		
 		client.sendPacket(ExEnchantRetryToPutItemOk.STATIC_PACKET);
 	}
 }
