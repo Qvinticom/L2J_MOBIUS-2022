@@ -563,7 +563,7 @@ public class EnterWorld implements IClientIncomingPacket
 			}
 			else
 			{
-				final int slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
+				final long slot = activeChar.getInventory().getSlotFromItem(activeChar.getInventory().getItemByItemId(9819));
 				activeChar.getInventory().unEquipItemInBodySlot(slot);
 				activeChar.destroyItem("CombatFlag", activeChar.getInventory().getItemByItemId(9819), null, true);
 			}

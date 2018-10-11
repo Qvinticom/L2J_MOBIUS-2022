@@ -249,6 +249,9 @@ public enum Stats
 	// Agathions
 	AGATHION_SLOTS("agathionSlots"),
 	
+	// Artifacts
+	ARTIFACT_SLOTS("artifactSlots"),
+	
 	// Summon Points
 	MAX_SUMMON_POINTS("summonPoints"),
 	

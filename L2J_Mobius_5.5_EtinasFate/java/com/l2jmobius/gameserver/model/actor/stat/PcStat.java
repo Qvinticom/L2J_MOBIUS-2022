@@ -681,6 +681,15 @@ public class PcStat extends PlayableStat
 		return (int) getValue(Stats.AGATHION_SLOTS, 0);
 	}
 	
+	/**
+	 * Gets the maximum artifact book count.
+	 * @return the maximum artifact book count
+	 */
+	public int getArtifactSlots()
+	{
+		return (int) getValue(Stats.ARTIFACT_SLOTS, 0);
+	}
+	
 	@Override
 	protected void onRecalculateStats(boolean broadcast)
 	{

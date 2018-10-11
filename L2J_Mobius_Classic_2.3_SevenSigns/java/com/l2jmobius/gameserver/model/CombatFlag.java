@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public class CombatFlag
 {
-	// private static final Logger LOGGER = Logger.getLogger(CombatFlag.class.getName());
-	
 	private L2PcInstance _player = null;
 	private int _playerId = 0;
 	private L2ItemInstance _item = null;
@@ -104,7 +102,7 @@ public class CombatFlag
 	{
 		// Reset player stats
 		_player.setCombatFlagEquipped(false);
-		final int slot = _player.getInventory().getSlotFromItem(_item);
+		final long slot = _player.getInventory().getSlotFromItem(_item);
 		_player.getInventory().unEquipItemInBodySlot(slot);
 		_player.destroyItem("CombatFlag", _item, null, true);
 		_item = null;

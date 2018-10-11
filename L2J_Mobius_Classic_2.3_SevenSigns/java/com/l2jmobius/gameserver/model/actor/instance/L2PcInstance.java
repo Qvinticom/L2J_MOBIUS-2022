@@ -2168,9 +2168,9 @@ public final class L2PcInstance extends L2Playable
 			}
 			sendPacket(sm);
 			
-			final int slot = _inventory.getSlotFromItem(item);
+			final long slot = _inventory.getSlotFromItem(item);
 			// we can't unequip talisman by body slot
-			if ((slot == L2Item.SLOT_DECO) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION))
+			if ((slot == L2Item.SLOT_DECO) || (slot == L2Item.SLOT_BROOCH_JEWEL) || (slot == L2Item.SLOT_AGATHION) || (slot == L2Item.SLOT_ARTIFACT))
 			{
 				items = _inventory.unEquipItemInSlotAndRecord(item.getLocationSlot());
 			}
@@ -4957,7 +4957,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				else
 				{
-					final int slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
+					final long slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
 					_inventory.unEquipItemInBodySlot(slot);
 					destroyItem("CombatFlag", _inventory.getItemByItemId(9819), null, true);
 				}
@@ -10813,7 +10813,7 @@ public final class L2PcInstance extends L2Playable
 				}
 				else
 				{
-					final int slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
+					final long slot = _inventory.getSlotFromItem(_inventory.getItemByItemId(9819));
 					_inventory.unEquipItemInBodySlot(slot);
 					destroyItem("CombatFlag", _inventory.getItemByItemId(9819), null, true);
 				}

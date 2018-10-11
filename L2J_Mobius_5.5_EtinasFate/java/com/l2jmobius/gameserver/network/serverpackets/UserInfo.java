@@ -334,13 +334,13 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType>
 			{
 				packet.writeC(0x01); // Charm slots
 				packet.writeC(_activeChar.getInventory().getAgathionSlots() - 1);
-				packet.writeC(0x00); // Artifact set slots // 152
+				packet.writeC(_activeChar.getInventory().getArtifactSlots()); // Artifact set slots // 152
 			}
 			else
 			{
 				packet.writeC(0x00); // Charm slots
 				packet.writeC(0x00);
-				packet.writeC(0x00); // Artifact set slots // 152
+				packet.writeC(_activeChar.getInventory().getArtifactSlots()); // Artifact set slots // 152
 			}
 		}
 		

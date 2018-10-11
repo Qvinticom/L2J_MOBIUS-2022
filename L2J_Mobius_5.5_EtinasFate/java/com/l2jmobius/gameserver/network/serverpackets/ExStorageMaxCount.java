@@ -69,7 +69,7 @@ public class ExStorageMaxCount implements IClientOutgoingPacket
 		packet.writeD(_inventoryQuestItems);
 		packet.writeD(40); // TODO: Find me!
 		packet.writeD(40); // TODO: Find me!
-		packet.writeD(0x00); // Artifact slots // 152
+		packet.writeD(0x64); // Artifact slots (Fixed)
 		return true;
 	}
 }

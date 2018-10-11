@@ -88,7 +88,29 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		Inventory.PAPERDOLL_BROOCH_JEWEL3,
 		Inventory.PAPERDOLL_BROOCH_JEWEL4,
 		Inventory.PAPERDOLL_BROOCH_JEWEL5,
-		Inventory.PAPERDOLL_BROOCH_JEWEL6
+		Inventory.PAPERDOLL_BROOCH_JEWEL6,
+		Inventory.PAPERDOLL_ARTIFACT_BOOK, // 152
+		Inventory.PAPERDOLL_ARTIFACT1, // 152
+		Inventory.PAPERDOLL_ARTIFACT2, // 152
+		Inventory.PAPERDOLL_ARTIFACT3, // 152
+		Inventory.PAPERDOLL_ARTIFACT4, // 152
+		Inventory.PAPERDOLL_ARTIFACT5, // 152
+		Inventory.PAPERDOLL_ARTIFACT6, // 152
+		Inventory.PAPERDOLL_ARTIFACT7, // 152
+		Inventory.PAPERDOLL_ARTIFACT8, // 152
+		Inventory.PAPERDOLL_ARTIFACT9, // 152
+		Inventory.PAPERDOLL_ARTIFACT10, // 152
+		Inventory.PAPERDOLL_ARTIFACT11, // 152
+		Inventory.PAPERDOLL_ARTIFACT12, // 152
+		Inventory.PAPERDOLL_ARTIFACT13, // 152
+		Inventory.PAPERDOLL_ARTIFACT14, // 152
+		Inventory.PAPERDOLL_ARTIFACT15, // 152
+		Inventory.PAPERDOLL_ARTIFACT16, // 152
+		Inventory.PAPERDOLL_ARTIFACT17, // 152
+		Inventory.PAPERDOLL_ARTIFACT18, // 152
+		Inventory.PAPERDOLL_ARTIFACT19, // 152
+		Inventory.PAPERDOLL_ARTIFACT20, // 152
+		Inventory.PAPERDOLL_ARTIFACT21 // 152
 	};
 	
 	private static final int[] PAPERDOLL_ORDER_VISUAL_ID = new int[]
@@ -214,29 +236,6 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			{
 				packet.writeD(charInfoPackage.getPaperdollItemId(slot));
 			}
-			
-			packet.writeD(0x00); // Book // 152
-			packet.writeD(0x00); // Balance artifact (1) // 152
-			packet.writeD(0x00); // Balance artifact (2) // 152
-			packet.writeD(0x00); // Balance artifact (3) // 152
-			packet.writeD(0x00); // Balance artifact (4) // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
-			packet.writeD(0x00); // 152
 			
 			for (int slot : getPaperdollOrderVisualId())
 			{

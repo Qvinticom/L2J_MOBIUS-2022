@@ -192,64 +192,61 @@ public final class UseItem implements IClientIncomingPacket
 				activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
 				return;
 			}
-			
-			switch (item.getItem().getBodyPart())
+			// Prevent players to equip weapon while wearing combat flag
+			// Don't allow weapon/shield equipment if a cursed weapon is equipped.
+			if ((item.getItem().getBodyPart() == L2Item.SLOT_LR_HAND) || (item.getItem().getBodyPart() == L2Item.SLOT_L_HAND) || (item.getItem().getBodyPart() == L2Item.SLOT_R_HAND))
 			{
-				case L2Item.SLOT_LR_HAND:
-				case L2Item.SLOT_L_HAND:
-				case L2Item.SLOT_R_HAND:
+				if ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getId() == 9819))
 				{
-					// Prevent players to equip weapon while wearing combat flag
-					if ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getId() == 9819))
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					
-					if (activeChar.isMounted() || activeChar.isDisarmed())
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					
-					// Don't allow weapon/shield equipment if a cursed weapon is equipped.
-					if (activeChar.isCursedWeaponEquipped())
-					{
-						return;
-					}
-					break;
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					return;
 				}
-				case L2Item.SLOT_DECO:
+				if (activeChar.isMounted() || activeChar.isDisarmed())
 				{
-					if (!item.isEquipped() && (activeChar.getInventory().getTalismanSlots() == 0))
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					break;
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					return;
 				}
-				case L2Item.SLOT_BROOCH_JEWEL:
+				if (activeChar.isCursedWeaponEquipped())
 				{
-					if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0))
-					{
-						final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
-						sm.addItemName(item);
-						activeChar.sendPacket(sm);
-						return;
-					}
-					break;
-				}
-				case L2Item.SLOT_AGATHION:
-				{
-					if (!item.isEquipped() && (activeChar.getInventory().getAgathionSlots() == 0))
-					{
-						activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
-						return;
-					}
-					break;
+					return;
 				}
 			}
-			
+			else if (item.getItem().getBodyPart() == L2Item.SLOT_DECO)
+			{
+				if (!item.isEquipped() && (activeChar.getInventory().getTalismanSlots() == 0))
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					return;
+				}
+			}
+			else if (item.getItem().getBodyPart() == L2Item.SLOT_BROOCH_JEWEL)
+			{
+				if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0))
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
+					sm.addItemName(item);
+					activeChar.sendPacket(sm);
+					return;
+				}
+			}
+			else if (item.getItem().getBodyPart() == L2Item.SLOT_AGATHION)
+			{
+				if (!item.isEquipped() && (activeChar.getInventory().getAgathionSlots() == 0))
+				{
+					activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+					return;
+				}
+			}
+			else if (item.getItem().getBodyPart() == L2Item.SLOT_ARTIFACT)
+			{
+				if (!item.isEquipped() && (activeChar.getInventory().getArtifactSlots() == 0))
+				{
+					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVEN_T_EQUIPPED_AN_ARTIFACT_BOOK_SO_S1_CANNOT_BE_EQUIPPED);
+					sm.addItemName(item);
+					activeChar.sendPacket(sm);
+					return;
+				}
+			}
 			if (activeChar.isCastingNow())
 			{
 				// Create and Bind the next action to the AI

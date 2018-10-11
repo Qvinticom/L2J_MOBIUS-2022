@@ -112,13 +112,13 @@ public interface IStatsFunction
 		for (L2ItemInstance equippedItem : creature.getInventory().getPaperdollItems(L2ItemInstance::isEquipped, L2ItemInstance::isEnchanted))
 		{
 			final L2Item item = equippedItem.getItem();
-			final int bodypart = item.getBodyPart();
+			final long bodypart = item.getBodyPart();
 			if ((bodypart == L2Item.SLOT_HAIR) || //
 				(bodypart == L2Item.SLOT_HAIR2) || //
 				(bodypart == L2Item.SLOT_HAIRALL))
 			{
 				// TODO: Item after enchant shows pDef, but scroll says mDef increase.
-				if (stat != Stats.PHYSICAL_DEFENCE && stat != Stats.MAGICAL_DEFENCE)
+				if ((stat != Stats.PHYSICAL_DEFENCE) && (stat != Stats.MAGICAL_DEFENCE))
 				{
 					continue;
 				}

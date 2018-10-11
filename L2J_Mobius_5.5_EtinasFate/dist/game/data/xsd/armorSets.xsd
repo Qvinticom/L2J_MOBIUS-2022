@@ -37,6 +37,8 @@
 												<xs:attribute type="xs:byte" name="minimumPieces" use="optional" />
 												<xs:attribute type="xs:byte" name="minimumEnchant" use="optional" />
 												<xs:attribute type="xs:boolean" name="optional" use="optional" />
+												<xs:attribute type="xs:positiveInteger" name="slotMask" use="optional" />
+												<xs:attribute type="xs:positiveInteger" name="bookSlot" use="optional" />
 											</xs:complexType>
 										</xs:element>
 									</xs:sequence>

@@ -129,7 +129,9 @@ public final class ArmorSetsData implements IGameXmlReader
 										final int minPieces = parseInteger(attrs, "minimumPieces", set.getMinimumPieces());
 										final int minEnchant = parseInteger(attrs, "minimumEnchant", 0);
 										final boolean isOptional = parseBoolean(attrs, "optional", false);
-										set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional));
+										final int artifactSlotMask = parseInteger(attrs, "slotMask", 0);
+										final int artifactBookSlot = parseInteger(attrs, "bookSlot", 0);
+										set.addSkill(new ArmorsetSkillHolder(skillId, skillLevel, minPieces, minEnchant, isOptional, artifactSlotMask, artifactBookSlot));
 									});
 									break;
 								}

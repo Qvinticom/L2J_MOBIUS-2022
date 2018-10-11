@@ -171,7 +171,7 @@ public class L2WarehouseItem
 	/**
 	 * @return the part of body used with this item.
 	 */
-	public final int getBodyPart()
+	public final long getBodyPart()
 	{
 		return _item.getBodyPart();
 	}

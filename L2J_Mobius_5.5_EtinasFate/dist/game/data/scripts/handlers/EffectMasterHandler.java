@@ -42,6 +42,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AgathionSlot", AgathionSlot::new);
 		EffectHandler.getInstance().registerHandler("AirBind", AirBind::new);
 		EffectHandler.getInstance().registerHandler("AreaDamage", AreaDamage::new);
+		EffectHandler.getInstance().registerHandler("ArtifactSlot", ArtifactSlot::new);
 		EffectHandler.getInstance().registerHandler("AttackAttribute", AttackAttribute::new);
 		EffectHandler.getInstance().registerHandler("AttackAttributeAdd", AttackAttributeAdd::new);
 		EffectHandler.getInstance().registerHandler("AttackBehind", AttackBehind::new);

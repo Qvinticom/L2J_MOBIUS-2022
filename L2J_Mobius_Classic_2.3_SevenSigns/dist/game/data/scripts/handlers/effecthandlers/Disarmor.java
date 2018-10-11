@@ -38,14 +38,14 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 public final class Disarmor extends AbstractEffect
 {
 	private final Map<Integer, Integer> _unequippedItems; // PlayerObjId, ItemObjId
-	private final int _slot;
+	private final long _slot;
 	
 	public Disarmor(StatsSet params)
 	{
 		_unequippedItems = new ConcurrentHashMap<>();
 		
 		final String slot = params.getString("slot", "chest");
-		_slot = ItemTable.SLOTS.getOrDefault(slot, L2Item.SLOT_NONE);
+		_slot = ItemTable.SLOTS.getOrDefault(slot, (long) L2Item.SLOT_NONE);
 		if (_slot == L2Item.SLOT_NONE)
 		{
 			LOGGER.severe("Unknown bodypart slot for effect: " + slot);

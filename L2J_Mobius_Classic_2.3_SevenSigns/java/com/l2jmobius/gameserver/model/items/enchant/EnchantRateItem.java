@@ -54,7 +54,7 @@ public final class EnchantRateItem
 	 * Adds body slot verification.
 	 * @param slot
 	 */
-	public void addSlot(int slot)
+	public void addSlot(long slot)
 	{
 		_slot |= slot;
 	}

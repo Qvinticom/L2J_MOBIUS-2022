@@ -54,6 +54,39 @@ public final class L2ArmorSet
 		Inventory.PAPERDOLL_GLOVES,
 		Inventory.PAPERDOLL_FEET
 	};
+	private static final int[] ARTIFACT_1_SLOTS = new int[]
+	{
+		Inventory.PAPERDOLL_ARTIFACT1,
+		Inventory.PAPERDOLL_ARTIFACT2,
+		Inventory.PAPERDOLL_ARTIFACT3,
+		Inventory.PAPERDOLL_ARTIFACT4,
+		Inventory.PAPERDOLL_ARTIFACT13,
+		Inventory.PAPERDOLL_ARTIFACT16,
+		Inventory.PAPERDOLL_ARTIFACT19,
+	
+	};
+	private static final int[] ARTIFACT_2_SLOTS = new int[]
+	{
+		Inventory.PAPERDOLL_ARTIFACT5,
+		Inventory.PAPERDOLL_ARTIFACT6,
+		Inventory.PAPERDOLL_ARTIFACT7,
+		Inventory.PAPERDOLL_ARTIFACT8,
+		Inventory.PAPERDOLL_ARTIFACT14,
+		Inventory.PAPERDOLL_ARTIFACT17,
+		Inventory.PAPERDOLL_ARTIFACT20,
+	
+	};
+	private static final int[] ARTIFACT_3_SLOTS = new int[]
+	{
+		Inventory.PAPERDOLL_ARTIFACT9,
+		Inventory.PAPERDOLL_ARTIFACT10,
+		Inventory.PAPERDOLL_ARTIFACT11,
+		Inventory.PAPERDOLL_ARTIFACT12,
+		Inventory.PAPERDOLL_ARTIFACT15,
+		Inventory.PAPERDOLL_ARTIFACT18,
+		Inventory.PAPERDOLL_ARTIFACT21,
+	
+	};
 	
 	/**
 	 * @param id
@@ -200,6 +233,59 @@ public final class L2ArmorSet
 			enchantLevel = 0;
 		}
 		return enchantLevel;
+	}
+	
+	/**
+	 * Condition for 3 Lv. Set Effect Applied Skill
+	 * @param player
+	 * @param bookSlot
+	 * @return total paperdoll(busy) count for 1 of 3 artifact book slots
+	 */
+	public int getArtifactSlotMask(L2PcInstance player, int bookSlot)
+	{
+		final PcInventory inv = player.getInventory();
+		int slotMask = 0;
+		switch (bookSlot)
+		{
+			case 1:
+			{
+				
+				for (int artifactSlot : ARTIFACT_1_SLOTS)
+				{
+					final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					if ((itemPart != null) && _requiredItems.contains(itemPart.getId()))
+					{
+						slotMask += artifactSlot;
+					}
+				}
+				break;
+			}
+			case 2:
+			{
+				for (int artifactSlot : ARTIFACT_2_SLOTS)
+				{
+					final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					if ((itemPart != null) && _requiredItems.contains(itemPart.getId()))
+					{
+						slotMask += artifactSlot;
+					}
+				}
+				break;
+			}
+			case 3:
+			{
+				for (int artifactSlot : ARTIFACT_3_SLOTS)
+				{
+					final L2ItemInstance itemPart = inv.getPaperdollItem(artifactSlot);
+					if ((itemPart != null) && _requiredItems.contains(itemPart.getId()))
+					{
+						slotMask += artifactSlot;
+					}
+				}
+				break;
+			}
+		}
+		return slotMask;
 	}
 	
 	public boolean hasOptionalEquipped(L2PcInstance player, Function<L2ItemInstance, Integer> idProvider)

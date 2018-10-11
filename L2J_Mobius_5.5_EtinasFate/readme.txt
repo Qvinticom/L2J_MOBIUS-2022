@@ -84,9 +84,11 @@ Grand Crusade:
 Salvation:
 -TODO: Skills
 -TODO: Skill trees
+-New Agathion item support
 
 Etina's Fate:
 -TODO: Parse new items from client
+-Artifact item support
 
 Events:
 -Birth of Draco
