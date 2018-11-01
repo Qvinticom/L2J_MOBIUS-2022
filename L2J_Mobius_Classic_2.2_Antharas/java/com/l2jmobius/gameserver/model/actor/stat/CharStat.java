@@ -776,7 +776,7 @@ public class CharStat
 			final CharEffectList effectList = _activeChar.getEffectList();
 			final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _activeChar, _activeChar));
 			final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
-			final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives != null ? passives : Stream.empty(), options != null ? options : Stream.empty()));
+			final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));
 			
 			// Call pump to each effect
 			//@formatter:off

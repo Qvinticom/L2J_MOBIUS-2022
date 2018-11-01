@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
@@ -24,41 +23,12 @@ import java.util.stream.Collectors;
 import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
-import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 
 public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 {
 	private final L2Character _character;
-	private List<Effect> _effects = new ArrayList<>();
-	
-	private static class Effect
-	{
-		protected int _skillId;
-		protected int _level;
-		protected int _subLevel;
-		protected int _abnormalType;
-		protected int _duration;
-		protected int _caster;
-		
-		public Effect(BuffInfo info)
-		{
-			final Skill skill = info.getSkill();
-			final L2Character caster = info.getEffector();
-			int casterId = 0;
-			if (caster != null)
-			{
-				casterId = caster.getObjectId();
-			}
-			
-			_skillId = skill.getDisplayId();
-			_level = skill.getDisplayLevel();
-			_subLevel = skill.getSubLevel();
-			_abnormalType = skill.getAbnormalType().getClientId();
-			_duration = skill.isAura() ? -1 : info.getTime();
-			_caster = casterId;
-		}
-	}
+	private final List<BuffInfo> _effects;
 	
 	public ExAbnormalStatusUpdateFromTarget(L2Character character)
 	{
@@ -69,7 +39,6 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 					.filter(Objects::nonNull)
 					.filter(BuffInfo::isInUse)
 					.filter(b -> !b.getSkill().isToggle())
-					.map(Effect::new)
 					.collect(Collectors.toList());
 		//@formatter:on
 	}
@@ -82,14 +51,14 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 		packet.writeD(_character.getObjectId());
 		packet.writeH(_effects.size());
 		
-		for (Effect info : _effects)
+		for (BuffInfo info : _effects)
 		{
-			packet.writeD(info._skillId);
-			packet.writeH(info._level);
-			packet.writeH(info._subLevel);
-			packet.writeH(info._abnormalType);
-			writeOptionalD(packet, info._duration);
-			packet.writeD(info._caster);
+			packet.writeD(info.getSkill().getDisplayId());
+			packet.writeH(info.getSkill().getDisplayLevel());
+			packet.writeH(info.getSkill().getSubLevel());
+			packet.writeH(info.getSkill().getAbnormalType().getClientId());
+			writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
+			packet.writeD(info.getEffectorObjectId());
 		}
 		return true;
 	}

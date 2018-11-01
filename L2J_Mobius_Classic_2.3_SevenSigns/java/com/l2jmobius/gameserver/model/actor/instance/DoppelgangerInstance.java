@@ -77,7 +77,6 @@ public class DoppelgangerInstance extends L2Npc
 					info.setAbnormalTime(summonerInfo.getAbnormalTime());
 					getEffectList().add(info);
 				}
-				
 			}
 		}
 	}
