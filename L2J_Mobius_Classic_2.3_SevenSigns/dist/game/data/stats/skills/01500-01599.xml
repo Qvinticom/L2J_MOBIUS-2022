@@ -2830,11 +2830,16 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
+			<effect name="TriggerSkillByAttack">
+				<castSkillId>927</castSkillId> <!-- Burning Chop -->
+				<skillId>6060</skillId> <!-- Great Fury -->
+				<skillLevel>1</skillLevel>
+				<chance>30</chance>
+				<targetType>MY_PARTY</targetType>
+			</effect>
 			<effect name="TriggerSkillBySkill">
-				<!-- Burning Chop -->
-				<!-- Great Fury -->
-				<castSkillId>927</castSkillId>
-				<skillId>6060</skillId>
+				<castSkillId>927</castSkillId> <!-- Burning Chop -->
+				<skillId>6060</skillId> <!-- Great Fury -->
 				<skillLevel>1</skillLevel>
 				<chance>30</chance>
 				<targetType>MY_PARTY</targetType>

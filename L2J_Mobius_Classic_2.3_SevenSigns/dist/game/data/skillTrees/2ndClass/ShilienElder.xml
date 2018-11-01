@@ -34,6 +34,7 @@
 		<skill skillName="Stigma of Shilien" skillId="1539" skillLvl="1" getLevel="40" levelUpSp="90000">
 			<item id="49432" count="1" />
 		</skill>
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="1" getLevel="40" levelUpSp="90000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="13" getLevel="42" levelUpSp="130000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="12" getLevel="42" levelUpSp="130000" />
@@ -143,6 +144,7 @@
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="330000" >
 			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
 		</skill>
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="2" getLevel="52" levelUpSp="330000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="22" getLevel="54" levelUpSp="520000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="21" getLevel="54" levelUpSp="520000" />
@@ -251,6 +253,7 @@
 		<skill skillName="Wild Magic" skillId="1303" skillLvl="1" getLevel="62" levelUpSp="770000">
 			<item id="5815" count="1" />
 		</skill>
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="3" getLevel="62" levelUpSp="770000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="31" getLevel="63" levelUpSp="960000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="30" getLevel="63" levelUpSp="960000" />
@@ -292,6 +295,7 @@
 		<skill skillName="Holy Attack Resistance" skillId="1392" skillLvl="2" getLevel="66" levelUpSp="1200000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="21" getLevel="66" levelUpSp="1200000" />
 		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="15" getLevel="66" levelUpSp="1200000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="1" getLevel="66" levelUpSp="1200000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="35" getLevel="67" levelUpSp="1500000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="34" getLevel="67" levelUpSp="1500000" />
@@ -313,6 +317,7 @@
 		<skill skillName="Concentration" skillId="1078" skillLvl="6" getLevel="68" levelUpSp="1500000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="23" getLevel="68" levelUpSp="1500000" />
 		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="16" getLevel="68" levelUpSp="1500000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="2" getLevel="68" levelUpSp="1500000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="37" getLevel="69" levelUpSp="1800000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="36" getLevel="69" levelUpSp="1800000" />
@@ -334,6 +339,8 @@
 		<skill skillName="Stigma of Shilien" skillId="1539" skillLvl="4" getLevel="70" levelUpSp="1800000" />
 		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="17" getLevel="70" levelUpSp="1800000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="25" getLevel="70" levelUpSp="1800000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="3" getLevel="70" levelUpSp="1800000" />
+		<skill skillName="Shilen's Cursed Field" skillId="1897" skillLvl="4" getLevel="70" levelUpSp="1800000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="39" getLevel="71" levelUpSp="2200000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="38" getLevel="71" levelUpSp="2200000" />
@@ -355,6 +362,7 @@
 		<skill skillName="Vampiric Rage" skillId="1268" skillLvl="4" getLevel="72" levelUpSp="2200000" />
 		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="18" getLevel="72" levelUpSp="2200000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="27" getLevel="72" levelUpSp="2200000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="4" getLevel="72" levelUpSp="2200000" />
 		
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="41" getLevel="73" levelUpSp="2700000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="40" getLevel="73" levelUpSp="2700000" />
@@ -377,5 +385,6 @@
 		<skill skillName="Holy Attack Resistance" skillId="1392" skillLvl="3" getLevel="74" levelUpSp="2700000" />
 		<skill skillName="Greater Heal" skillId="1217" skillLvl="29" getLevel="74" levelUpSp="2700000" />
 		<skill skillName="Might Of Heaven" skillId="1028" skillLvl="19" getLevel="74" levelUpSp="2700000" />
+		<skill skillName="Mass Recharge" skillId="1428" skillLvl="5" getLevel="74" levelUpSp="2700000" />
 	</skillTree>
 </list>

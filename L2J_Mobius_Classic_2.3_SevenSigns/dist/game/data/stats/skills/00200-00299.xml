@@ -666,6 +666,7 @@
 		</effects>
 	</skill>
 	<skill id="211" toLevel="10" name="Boost HP">
+		<!-- Warrior, Warlord, Raider, Destroyer, Scavenger, Bounty Hunter, Artisan, Warsmith, Prophet, Overlord, Warcryer -->
 		<icon>icon.skill0211</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -1966,7 +1967,7 @@
 		</effects>
 	</skill>
 	<skill id="232" toLevel="60" name="Heavy Armor Mastery">
-		<!-- Human Knight, Paladin, Phoenix Knight, Dark Avenger, Hell Knight, Elven Knight, Temple Knight, Evas Templar, Palus Knight, Shillien Knight, Shillien Templar -->
+		<!-- Human Knight, Paladin, Phoenix Knight, Dark Avenger, Hell Knight, Elven Knight, Temple Knight, Evas Templar, Swordsinger, Sword Muse, Palus Knight, Shillien Knight, Shillien Templar, Bladedancer, Spectral Dancer -->
 		<icon>icon.skill0232</icon>
 		<magicLvl>
 			<value level="1">18</value>
@@ -2243,61 +2244,61 @@
 			</effect>
 			<effect name="PhysicalEvasion">
 				<amount>
-					<value level="1">4</value>
-					<value level="2">4</value>
-					<value level="3">6</value>
-					<value level="4">6</value>
+					<value level="1">7</value>
+					<value level="2">7</value>
+					<value level="3">7</value>
+					<value level="4">7</value>
 					<value level="5">7</value>
 					<value level="6">7</value>
 					<value level="7">7</value>
 					<value level="8">7</value>
 					<value level="9">7</value>
 					<value level="10">7</value>
-					<value level="11">7</value>
-					<value level="12">7</value>
-					<value level="13">7</value>
-					<value level="14">7</value>
-					<value level="15">7</value>
-					<value level="16">7</value>
-					<value level="17">7</value>
-					<value level="18">7</value>
-					<value level="19">7</value>
-					<value level="20">7</value>
-					<value level="21">7</value>
-					<value level="22">7</value>
-					<value level="23">7</value>
-					<value level="24">7</value>
-					<value level="25">7</value>
-					<value level="26">7</value>
-					<value level="27">7</value>
-					<value level="28">7</value>
-					<value level="29">7</value>
-					<value level="30">7</value>
-					<value level="31">7</value>
-					<value level="32">7</value>
-					<value level="33">7</value>
-					<value level="34">7</value>
-					<value level="35">7</value>
-					<value level="36">7</value>
-					<value level="37">7</value>
-					<value level="38">7</value>
-					<value level="39">7</value>
-					<value level="40">7</value>
-					<value level="41">7</value>
-					<value level="42">7</value>
-					<value level="43">7</value>
-					<value level="44">7</value>
-					<value level="45">7</value>
-					<value level="46">7</value>
-					<value level="47">7</value>
-					<value level="48">7</value>
-					<value level="49">7</value>
-					<value level="50">7</value>
-					<value level="51">7</value>
-					<value level="52">7</value>
-					<value level="53">7</value>
-					<value level="54">7</value>
-					<value level="55">7</value>
+					<value level="11">9</value>
+					<value level="12">9</value>
+					<value level="13">9</value>
+					<value level="14">9</value>
+					<value level="15">9</value>
+					<value level="16">9</value>
+					<value level="17">9</value>
+					<value level="18">9</value>
+					<value level="19">9</value>
+					<value level="20">9</value>
+					<value level="21">9</value>
+					<value level="22">9</value>
+					<value level="23">9</value>
+					<value level="24">9</value>
+					<value level="25">9</value>
+					<value level="26">9</value>
+					<value level="27">9</value>
+					<value level="28">9</value>
+					<value level="29">9</value>
+					<value level="30">9</value>
+					<value level="31">9</value>
+					<value level="32">9</value>
+					<value level="33">9</value>
+					<value level="34">9</value>
+					<value level="35">9</value>
+					<value level="36">9</value>
+					<value level="37">9</value>
+					<value level="38">9</value>
+					<value level="39">9</value>
+					<value level="40">9</value>
+					<value level="41">9</value>
+					<value level="42">9</value>
+					<value level="43">9</value>
+					<value level="44">9</value>
+					<value level="45">9</value>
+					<value level="46">9</value>
+					<value level="47">9</value>
+					<value level="48">12</value>
+					<value level="49">12</value>
+					<value level="50">12</value>
+					<value level="51">12</value>
+					<value level="52">12</value>
+					<value level="53">12</value>
+					<value level="54">12</value>
+					<value level="55">12</value>
 				</amount>
 				<mode>DIFF</mode>
 				<armorType>
@@ -3295,16 +3296,16 @@
 					<value level="40">0</value>
 					<value level="41">0</value>
 					<value level="42">0</value>
-					<value level="43">5</value>
-					<value level="44">5</value>
-					<value level="45">5</value>
-					<value level="46">5</value>
-					<value level="47">5</value>
-					<value level="48">5</value>
-					<value level="49">5</value>
-					<value level="50">5</value>
+					<value level="43">10</value>
+					<value level="44">10</value>
+					<value level="45">10</value>
+					<value level="46">10</value>
+					<value level="47">10</value>
+					<value level="48">10</value>
+					<value level="49">10</value>
+					<value level="50">10</value>
 				</amount>
-				<chance>15</chance> <!-- Guessed -->
+				<chance>100</chance> <!-- Seven Signs -->
 			</effect>
 			<effect name="Accuracy">
 				<amount>-8</amount>
@@ -5622,7 +5623,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="279" toLevel="17" name="Lightning Strike">
+	<skill id="279" toLevel="9" name="Lightning Strike">
 		<!-- Confirmed CT2.5 and Updated to IO -->
 		<!-- Guessed -->
 		<!-- Confirmed -->
@@ -5630,10 +5631,7 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<activateRate>
-			<value fromLevel="1" toLevel="17">40</value>
-			<value fromLevel="13" toLevel="17" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
-		</activateRate>
+		<activateRate>50</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>400</castRange>
 		<coolTime>500</coolTime>
@@ -5647,14 +5645,6 @@
 			<value level="7">-987</value>
 			<value level="8">-987</value>
 			<value level="9">-987</value>
-			<value level="10">-987</value>
-			<value level="11">-828</value>
-			<value level="12">-828</value>
-			<value level="13">-828</value>
-			<value level="14">-828</value>
-			<value level="15">-828</value>
-			<value level="16">-828</value>
-			<value level="17">-828</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
@@ -5668,18 +5658,10 @@
 			<value level="3">66</value>
 			<value level="4">70</value>
 			<value level="5">74</value>
-			<value level="6">75</value>
-			<value level="7">77</value>
-			<value level="8">79</value>
-			<value level="9">81</value>
-			<value level="10">83</value>
-			<value level="11">85</value>
-			<value level="12">90</value>
-			<value level="13">95</value>
-			<value level="14">99</value>
-			<value level="15">101</value>
-			<value level="16">103</value>
-			<value level="17">105</value>
+			<value level="6">78</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">64</value>
@@ -5687,18 +5669,10 @@
 			<value level="3">74</value>
 			<value level="4">78</value>
 			<value level="5">82</value>
-			<value level="6">83</value>
-			<value level="7">85</value>
-			<value level="8">87</value>
-			<value level="9">89</value>
-			<value level="10">91</value>
-			<value level="11">93</value>
-			<value level="12">95</value>
-			<value level="13">103</value>
-			<value level="14">110</value>
-			<value level="15">117</value>
-			<value level="16">124</value>
-			<value level="17">131</value>
+			<value level="6">94</value>
+			<value level="7">98</value>
+			<value level="8">103</value>
+			<value level="9">109</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -5716,19 +5690,10 @@
 					<value level="3">3990</value>
 					<value level="4">4553</value>
 					<value level="5">5114</value>
-					<value level="6">5131</value>
-					<value level="7">5334</value>
-					<value level="8">5662</value>
-					<value level="9">5991</value>
-					<value level="10">6318</value>
-					<value level="11">17140</value>
-					<value level="12">20255</value>
-					<value level="13">23370</value>
-					<value level="14">25862</value>
-					<value level="15">27108</value>
-					<value level="16">28354</value>
-					<value level="17">29600</value>
-					<value fromLevel="13" toLevel="17" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
+					<value level="6">5334</value>
+					<value level="7">5554</value>
+					<value level="8">5776</value>
+					<value level="9">6007</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
@@ -6281,7 +6246,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="283" toLevel="9" name="Summon Dark Panther">
+	<skill id="283" toLevel="11" name="Summon Dark Panther">
 		<hitTime>15000</hitTime>
 		<icon>icon.skill0283</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -6307,6 +6272,8 @@
 			<value level="7">74</value>
 			<value level="8">78</value>
 			<value level="9">82</value>
+			<value level="10">83</value>
+			<value level="11">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">56</value>
@@ -6318,6 +6285,8 @@
 			<value level="7">109</value>
 			<value level="8">151</value>
 			<value level="9">158</value>
+			<value level="10">175</value>
+			<value level="11">193</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">14</value>
@@ -6329,6 +6298,8 @@
 			<value level="7">28</value>
 			<value level="8">29</value>
 			<value level="9">30</value>
+			<value level="10">30</value>
+			<value level="11">30</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -6351,6 +6322,8 @@
 					<value level="7">14805</value>
 					<value level="8">14806</value>
 					<value level="9">14807</value>
+					<value level="10">14808</value>
+					<value level="11">14809</value>
 				</npcId>
 				<consumeItemId>1459</consumeItemId>
 				<consumeItemCount>
@@ -6363,6 +6336,8 @@
 					<value level="7">4</value>
 					<value level="8">7</value>
 					<value level="9">8</value>
+					<value level="10">9</value>
+					<value level="11">9</value>
 				</consumeItemCount>
 				<expMultiplier>0.85</expMultiplier>
 			</effect>
@@ -6823,11 +6798,11 @@
 			</effect>
 			<effect name="PhysicalDefence">
 				<amount>
-					<value level="1">121.8</value>
-					<value level="2">161.1</value>
-					<value level="3">212.1</value>
-					<value level="4">256.5</value>
-					<value level="5">310</value>
+					<value level="1">182.7</value>
+					<value level="2">241.6</value>
+					<value level="3">318.1</value>
+					<value level="4">384.7</value>
+					<value level="5">465</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -6998,7 +6973,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="291" toLevel="11" name="Final Fortress">
+	<skill id="291" toLevel="20" name="Final Fortress">
 		<icon>icon.skill0291</icon>
 		<magicLvl>
 			<value level="1">52</value>
@@ -7012,6 +6987,15 @@
 			<value level="9">70</value>
 			<value level="10">72</value>
 			<value level="11">74</value>
+			<value level="12">76</value>
+			<value level="13">77</value>
+			<value level="14">78</value>
+			<value level="15">79</value>
+			<value level="16">80</value>
+			<value level="17">81</value>
+			<value level="18">82</value>
+			<value level="19">83</value>
+			<value level="20">84</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -7029,6 +7013,15 @@
 					<value level="9">196.5</value>
 					<value level="10">206.125</value>
 					<value level="11">215.75</value>
+					<value level="12">225.375</value>
+					<value level="13">235</value>
+					<value level="14">244.625</value>
+					<value level="15">254.25</value>
+					<value level="16">263.875</value>
+					<value level="17">273.5</value>
+					<value level="18">283.125</value>
+					<value level="19">292.75</value>
+					<value level="20">302.375</value>
 				</amount>
 				<mode>DIFF</mode>
 				<hpPercent>30</hpPercent>
@@ -7199,7 +7192,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Accuracy">
+			<effect name="Accuracy"> <!-- BUG:Condition - Should be given only during night time -->
 				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>

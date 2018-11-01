@@ -3646,7 +3646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1176" toLevel="17" name="Tempest">
+	<skill id="1176" toLevel="23" name="Tempest">
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3668,6 +3668,12 @@
 			<value level="15">-328</value>
 			<value level="16">-333</value>
 			<value level="17">-338</value>
+			<value level="18">-343</value>
+			<value level="19">-348</value>
+			<value level="20">-353</value>
+			<value level="21">-358</value>
+			<value level="22">-363</value>
+			<value level="23">-368</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<attributeType>WIND</attributeType>
@@ -3693,25 +3699,37 @@
 			<value level="15">74</value>
 			<value level="16">76</value>
 			<value level="17">78</value>
+			<value level="18">79</value>
+			<value level="19">80</value>
+			<value level="20">81</value>
+			<value level="21">82</value>
+			<value level="22">83</value>
+			<value level="23">84</value>
 		</magicLvl>
 		<mpConsume>
-			<value level="1">49</value>
-			<value level="2">52</value>
-			<value level="3">54</value>
-			<value level="4">56</value>
-			<value level="5">59</value>
-			<value level="6">61</value>
-			<value level="7">64</value>
-			<value level="8">66</value>
-			<value level="9">69</value>
-			<value level="10">71</value>
-			<value level="11">74</value>
-			<value level="12">76</value>
-			<value level="13">78</value>
-			<value level="14">80</value>
-			<value level="15">82</value>
-			<value level="16">113</value>
-			<value level="17">117</value>
+			<value level="1">56</value>
+			<value level="2">59</value>
+			<value level="3">62</value>
+			<value level="4">63</value>
+			<value level="5">67</value>
+			<value level="6">70</value>
+			<value level="7">72</value>
+			<value level="8">75</value>
+			<value level="9">79</value>
+			<value level="10">81</value>
+			<value level="11">84</value>
+			<value level="12">86</value>
+			<value level="13">89</value>
+			<value level="14">90</value>
+			<value level="15">93</value>
+			<value level="16">102</value>
+			<value level="17">106</value>
+			<value level="18">108</value>
+			<value level="19">111</value>
+			<value level="20">114</value>
+			<value level="21">117</value>
+			<value level="22">119</value>
+			<value level="23">122</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">13</value>
@@ -3731,6 +3749,12 @@
 			<value level="15">21</value>
 			<value level="16">21</value>
 			<value level="17">21</value>
+			<value level="18">22</value>
+			<value level="19">22</value>
+			<value level="20">22</value>
+			<value level="21">22</value>
+			<value level="22">22</value>
+			<value level="23">22</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -3759,6 +3783,12 @@
 					<value level="15">54</value>
 					<value level="16">55</value>
 					<value level="17">57</value>
+					<value level="18">58</value>
+					<value level="19">60</value>
+					<value level="20">62</value>
+					<value level="21">64</value>
+					<value level="22">66</value>
+					<value level="23">68</value>
 				</power>
 			</effect>
 		</effects>

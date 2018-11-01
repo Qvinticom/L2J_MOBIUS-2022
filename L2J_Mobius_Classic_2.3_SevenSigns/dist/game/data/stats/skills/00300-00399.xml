@@ -548,7 +548,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockMove" />
+			<effect name="BlockMove" fromLevel="1" toLevel="2" />
 			<effect name="PAtk">
 				<amount>
 					<value level="1">124</value>
@@ -603,6 +603,23 @@
 			<effect name="CriticalRate">
 				<amount>20</amount>
 				<mode>PER</mode>
+				<weaponType>
+					<item>BOW</item>
+				</weaponType>
+			</effect>
+			<effect name="Speed">
+				<amount>
+					<value level="1">0</value>
+					<value level="2">0</value>
+					<value level="3">-100</value>
+					<value level="4">-100</value>
+					<value level="5">-80</value>
+					<value level="6">-80</value>
+					<value level="7">-60</value>
+					<value level="8">-60</value>
+					<value level="9">-40</value>
+				</amount>
+				<mode>DIFF</mode>
 				<weaponType>
 					<item>BOW</item>
 				</weaponType>
@@ -1610,16 +1627,36 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="343" toLevel="1" name="Lethal Shot">
+	<skill id="343" toLevel="9" name="Lethal Shot">
 		<castRange>900</castRange>
 		<effectPoint>-897</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
 		<icon>icon.skill0343</icon>
-		<magicLvl>76</magicLvl>
-		<mpConsume>168</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">168</value>
+			<value level="2">174</value>
+			<value level="3">180</value>
+			<value level="4">186</value>
+			<value level="5">192</value>
+			<value level="6">198</value>
+			<value level="7">204</value>
+			<value level="8">211</value>
+			<value level="9">218</value>
+		</mpConsume>
 		<operateType>A1</operateType>
-		<reuseDelay>8000</reuseDelay>
+		<reuseDelay>3500</reuseDelay>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<trait>DEATH</trait>
@@ -1634,7 +1671,17 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>6503</power>
+				<power>
+					<value level="1">6503</value>
+					<value level="2">6698</value>
+					<value level="3">6898</value>
+					<value level="4">7104</value>
+					<value level="5">7317</value>
+					<value level="6">7536</value>
+					<value level="7">7762</value>
+					<value level="8">7994</value>
+					<value level="9">8233</value>
+				</power>
 				<overHit>true</overHit>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -1818,18 +1865,48 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="347" toLevel="1" name="Earthquake">
+	<skill id="347" toLevel="9" name="Earthquake">
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-679</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1800</hitTime>
-		<hpConsume>340</hpConsume>
+		<hpConsume>
+			<value level="1">340</value>
+			<value level="2">347</value>
+			<value level="3">354</value>
+			<value level="4">362</value>
+			<value level="5">370</value>
+			<value level="6">378</value>
+			<value level="7">386</value>
+			<value level="8">394</value>
+			<value level="9">402</value>
+		</hpConsume>
 		<icon>icon.skill0347</icon>
 		<isDebuff>true</isDebuff>
-		<magicLvl>76</magicLvl>
-		<mpConsume>78</mpConsume>
+		<magicLvl>
+			<value level="1">76</value>
+			<value level="2">77</value>
+			<value level="3">78</value>
+			<value level="4">79</value>
+			<value level="5">80</value>
+			<value level="6">81</value>
+			<value level="7">82</value>
+			<value level="8">83</value>
+			<value level="9">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">78</value>
+			<value level="2">80</value>
+			<value level="3">82</value>
+			<value level="4">84</value>
+			<value level="5">86</value>
+			<value level="6">88</value>
+			<value level="7">90</value>
+			<value level="8">92</value>
+			<value level="9">94</value>
+		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
 		<rideState>NONE</rideState>
@@ -1849,14 +1926,24 @@
 				<chance>60</chance>
 			</effect>
 			<effect name="PhysicalAttack">
-				<power>3878</power>
+				<power>
+					<value level="1">3878</value>
+					<value level="2">3903</value>
+					<value level="3">3928</value>
+					<value level="4">3953</value>
+					<value level="5">3978</value>
+					<value level="6">4003</value>
+					<value level="7">4028</value>
+					<value level="8">4053</value>
+					<value level="9">4078</value>	
+				</power>
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="348" toLevel="2" name="Spoil Crush">
+	<skill id="348" toLevel="8" name="Spoil Crush">
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
 		<effectPoint>-337</effectPoint>
@@ -1865,11 +1952,23 @@
 		<icon>icon.skill0348</icon>
 		<magicLvl>
 			<value level="1">77</value>
-			<value level="2">83</value>
+			<value level="2">78</value>
+			<value level="3">79</value>
+			<value level="4">80</value>
+			<value level="5">81</value>
+			<value level="6">82</value>
+			<value level="7">83</value>
+			<value level="8">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">70</value>
-			<value level="2">80</value>
+			<value level="2">72</value>
+			<value level="3">74</value>
+			<value level="4">76</value>
+			<value level="5">78</value>
+			<value level="6">80</value>
+			<value level="7">82</value>
+			<value level="8">84</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -2011,7 +2110,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="352" toLevel="1" name="Shield Bash">
+	<skill id="352" toLevel="10" name="Shield Bash">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2025,8 +2124,30 @@
 		<icon>icon.skill0352</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>18</mpConsume>
+		<magicLvl>
+			<value level="1">66</value>
+			<value level="2">68</value>
+			<value level="3">70</value>
+			<value level="4">72</value>
+			<value level="5">74</value>
+			<value level="6">76</value>
+			<value level="7">78</value>
+			<value level="8">80</value>
+			<value level="9">82</value>
+			<value level="10">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">27</value>
+			<value level="2">29</value>
+			<value level="3">30</value>
+			<value level="4">32</value>
+			<value level="5">33</value>
+			<value level="6">36</value>
+			<value level="7">38</value>
+			<value level="8">39</value>
+			<value level="9">41</value>
+			<value level="10">42</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
@@ -2039,10 +2160,24 @@
 			<condition name="EquipShield" />
 		</conditions>
 		<effects>
-			<effect name="TargetCancel">
-				<chance>80</chance>
+			<effect name="PhysicalAttack">
+				<power>
+					<value level="1">1425</value>
+					<value level="2">1525</value>
+					<value level="3">1626</value>
+					<value level="4">1727</value>
+					<value level="5">1827</value>
+					<value level="6">3692</value>
+					<value level="7">3770</value>
+					<value level="8">3848</value>
+					<value level="9">3926</value>
+					<value level="10">4004</value>
+				</power>
 			</effect>
 			<effect name="BlockActions" />
+			<effect name="TargetCancel">
+				<chance>50</chance> <!-- Guessed -->
+			</effect>
 		</effects>
 	</skill>
 	<skill id="353" toLevel="1" name="Shield Slam">
@@ -2414,7 +2549,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="362" toLevel="1" name="Armor Crush">
+	<skill id="362" toLevel="8" name="Armor Crush">
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2426,12 +2561,39 @@
 		<effectPoint>-507</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1900</hitTime>
-		<hpConsume>338</hpConsume>
+		<hpConsume>
+			<value level="1">338</value>
+			<value level="2">345</value>
+			<value level="3">352</value>
+			<value level="4">360</value>
+			<value level="5">368</value>
+			<value level="6">376</value>
+			<value level="7">384</value>
+			<value level="8">392</value>
+		</hpConsume>
 		<icon>icon.skill0362</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
-		<magicLvl>77</magicLvl>
-		<mpConsume>35</mpConsume>
+		<magicLvl>
+			<value level="1">77</value>
+			<value level="2">78</value>
+			<value level="3">79</value>
+			<value level="4">80</value>
+			<value level="5">81</value>
+			<value level="6">82</value>
+			<value level="7">83</value>
+			<value level="8">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">35</value>
+			<value level="2">36</value>
+			<value level="3">37</value>
+			<value level="4">38</value>
+			<value level="5">39</value>
+			<value level="6">40</value>
+			<value level="7">41</value>
+			<value level="8">42</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -2450,7 +2612,16 @@
 		</conditions>
 		<effects>
 			<effect name="PhysicalAttack">
-				<power>3077</power>
+				<power>
+					<value level="1">3077</value>
+					<value level="2">3143</value>
+					<value level="3">3209</value>
+					<value level="4">3275</value>
+					<value level="5">3341</value>
+					<value level="6">3407</value>
+					<value level="7">3473</value>
+					<value level="8">3539</value>
+				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>20</criticalChance>
 				<overHit>true</overHit>

@@ -913,7 +913,7 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
-		<affectRange>1000</affectRange>
+		<affectRange>900</affectRange>
 		<hitTime>2000</hitTime>
 		<hitCancelTime>500</hitCancelTime>
 		<icon>icon.skill1621</icon>
@@ -970,6 +970,7 @@
 	<skill id="1623" toLevel="1" name="Eva's Protection">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
+		<affectRange>900</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>669</effectPoint>
 		<effectRange>600</effectRange>
@@ -1004,9 +1005,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1624" toLevel="1" name="Indestructible Sound">
+	<skill id="1624" toLevel="4" name="Indestructible Sound">
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>
+		<abnormalTime>
+			<value level="1">10</value>
+			<value level="2">12</value>
+			<value level="3">14</value>
+			<value level="4">16</value>
+		</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
 		<chargeConsume>7</chargeConsume>
 		<activateRate>100</activateRate>
@@ -1021,8 +1027,18 @@
 		<isMagic>1</isMagic>
 		<lvlBonusRate>30</lvlBonusRate>
 		<operateType>A2</operateType>
-		<magicLvl>78</magicLvl>
-		<mpConsume>120</mpConsume>
+		<magicLvl>
+			<value level="1">78</value>
+			<value level="2">80</value>
+			<value level="3">82</value>
+			<value level="4">84</value>
+		</magicLvl>
+		<mpConsume>
+			<value level="1">120</value>
+			<value level="2">130</value>
+			<value level="3">141</value>
+			<value level="4">153</value>
+		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>120000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1042,11 +1058,15 @@
 			<effect name="PhysicalMute" />
 			<effect name="BlockTarget" />
 			<effect name="BlockMove" />
-			<effect name="DefenceCriticalDamage">
+			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceMagicCriticalDamage">
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>

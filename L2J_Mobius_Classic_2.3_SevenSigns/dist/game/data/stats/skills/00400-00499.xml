@@ -684,13 +684,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<conditions>
-			<condition name="RemainHpPer">
-				<amount>40</amount>
-				<percentType>LESS</percentType>
-				<affectType>CASTER</affectType>
-			</condition>
-		</conditions>
 		<effects>
 			<effect name="ResistDispelByCategory">
 				<amount>
@@ -1539,13 +1532,13 @@
 				<amount>
 					<value level="1">-50</value>
 					<value level="2">-50</value>
-					<value level="3">-50</value>
-					<value level="4">-50</value>
-					<value level="5">-50</value>
-					<value level="6">-50</value>
-					<value level="7">-50</value>
-					<value level="8">-50</value>
-					<value level="9">-40</value>
+					<value level="3">-40</value>
+					<value level="4">-40</value>
+					<value level="5">-30</value>
+					<value level="6">-30</value>
+					<value level="7">-20</value>
+					<value level="8">-20</value>
+					<value level="9">-10</value>
 				</amount>
 				<mode>PER</mode>
 				<weaponType>
@@ -2213,14 +2206,31 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="429" toLevel="1" name="Knighthood">
+	<skill id="429" toLevel="7" name="Knighthood">
+		<!-- Phoenix Knight, Hell Knight, Evas Templar, Shillien Templar -->
 		<icon>icon.skill0429</icon>
-		<magicLvl>78</magicLvl>
+		<magicLvl>
+			<value level="1">78</value>
+			<value level="2">79</value>
+			<value level="3">80</value>
+			<value level="4">81</value>
+			<value level="5">82</value>
+			<value level="6">83</value>
+			<value level="7">84</value>
+		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalDefence">
-				<amount>87.1</amount>
+				<amount>
+					<value level="1">87.1</value>
+					<value level="2">90</value>
+					<value level="3">93</value>
+					<value level="4">96</value>
+					<value level="5">99</value>
+					<value level="6">102</value>
+					<value level="7">105</value>
+				</amount>
 				<mode>DIFF</mode>
 				<armorType>
 					<item>HEAVY</item>
@@ -2843,7 +2853,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="451" toLevel="3" name="Sonic Move">
+	<skill id="451" toLevel="5" name="Sonic Move">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -2851,11 +2861,15 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">2</value>
+			<value level="4">2</value>
+			<value level="5">2</value>
 		</chargeConsume>
 		<effectPoint>
 			<value level="1">472</value>
 			<value level="2">542</value>
 			<value level="3">611</value>
+			<value level="4">681</value>
+			<value level="5">761</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
 		<icon>icon.skill0451</icon>
@@ -2863,11 +2877,15 @@
 			<value level="1">56</value>
 			<value level="2">62</value>
 			<value level="3">68</value>
+			<value level="4">79</value>
+			<value level="5">81</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">26</value>
 			<value level="2">29</value>
 			<value level="3">32</value>
+			<value level="4">35</value>
+			<value level="5">38</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -2888,6 +2906,8 @@
 					<value level="1">1</value>
 					<value level="2">2</value>
 					<value level="3">3</value>
+					<value level="4">3</value>
+					<value level="5">3</value>
 				</amount>
 			</condition>
 		</conditions>
@@ -2897,6 +2917,8 @@
 					<value level="1">20</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
+					<value level="4">45</value>
+					<value level="5">50</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

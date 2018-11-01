@@ -1079,7 +1079,7 @@
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
-		<activateRate>80</activateRate> <!-- Guessed -->
+		<activateRate>70</activateRate> <!-- Seven Signs -->
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-1</effectPoint>
@@ -1326,7 +1326,7 @@
 		</effects>
 	</skill>
 	<skill id="826" toLevel="1" name="Spike">
-		<!-- Confirmed CT2.5 and Updated to H5 -->
+		<!-- Confirmed CT2.5 and updated to Seven Signs -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -1347,10 +1347,10 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="AttackTrait">
-				<SHOCK>8</SHOCK>
+				<SHOCK>15</SHOCK>
 			</effect>
 			<effect name="PAtk">
-				<amount>5</amount>
+				<amount>10</amount>
 				<mode>PER</mode>
 				<weaponType>
 					<item>BLUNT</item>
