@@ -57,8 +57,7 @@ public class ExAbnormalStatusUpdateFromTarget implements IClientOutgoingPacket
 			packet.writeH(info.getSkill().getDisplayLevel());
 			// packet.writeH(info.getSkill().getSubLevel());
 			packet.writeH(info.getSkill().getAbnormalType().getClientId());
-			// writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
-			packet.writeH(info.getSkill().isAura() ? -1 : info.getTime());
+			writeOptionalD(packet, info.getSkill().isAura() ? -1 : info.getTime());
 			packet.writeD(info.getEffectorObjectId());
 		}
 		return true;
