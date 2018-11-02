@@ -72,8 +72,9 @@ Antharas: https://eu.4game.com/lineage2classic/play/antharas/
 -New Agathion item support
 
 Seven Signs: https://eu.4gameforum.com/threads/658543/
--Parsed new system messages and npc strings from client.
--Update skiltrees and skills from L2Wiki.
+-Parsed new system messages and npc strings from client
+-Updated skiltrees and skills from L2Wiki
+-Updated experience values from L2Wiki
 -TODO: Parse new items from client
 
 Customs:
