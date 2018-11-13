@@ -11601,7 +11601,7 @@
 		<location x="86225" y="247062" z="-8584" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250002" level="2" name="Eva_002">
 		<nodes nodeZ="-8845">
@@ -11613,7 +11613,7 @@
 		<location x="88490" y="253870" z="-8584" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250003" level="2" name="Eva_003">
 		<nodes nodeZ="-8856">
@@ -11625,7 +11625,7 @@
 		<location x="76872" y="253953" z="-8584" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250004" level="2" name="Eva_004">
 		<nodes nodeZ="-8838">
@@ -11637,7 +11637,7 @@
 		<location x="79032" y="247128" z="-8583" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250005" level="2" name="Eva_005">
 		<nodes nodeZ="-9359">
@@ -11649,7 +11649,7 @@
 		<location x="82737" y="246602" z="-9092" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250006" level="2" name="Eva_006">
 		<nodes nodeZ="-9361">
@@ -11661,7 +11661,7 @@
 		<location x="87902" y="250377" z="-9092" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250007" level="2" name="Eva_007">
 		<nodes nodeZ="-9352">
@@ -11673,7 +11673,7 @@
 		<location x="85913" y="256377" z="-9092" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250008" level="2" name="Eva_008">
 		<nodes nodeZ="-9348">
@@ -11685,7 +11685,7 @@
 		<location x="79561" y="256348" z="-9092" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250009" level="2" name="Eva_009">
 		<nodes nodeZ="-9360">
@@ -11697,7 +11697,7 @@
 		<location x="77616" y="250360" z="-9093" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250010" level="2" name="Eva_010">
 		<nodes nodeZ="-9883">
@@ -11709,7 +11709,7 @@
 		<location x="80101" y="248387" z="-9610" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250011" level="2" name="Eva_011">
 		<nodes nodeZ="-9869">
@@ -11721,7 +11721,7 @@
 		<location x="85343" y="248343" z="-9610" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250012" level="2" name="Eva_012">
 		<nodes nodeZ="-9875">
@@ -11733,7 +11733,7 @@
 		<location x="87018" y="253388" z="-9610" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250013" level="2" name="Eva_013">
 		<nodes nodeZ="-9873">
@@ -11745,7 +11745,7 @@
 		<location x="82767" y="256485" z="-9610" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250014" level="2" name="Eva_014">
 		<nodes nodeZ="-9884">
@@ -11757,7 +11757,7 @@
 		<location x="78490" y="253390" z="-9610" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250015" level="2" name="Eva_015">
 		<nodes nodeZ="-10386">
@@ -11781,7 +11781,7 @@
 		<location x="79275" y="250855" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250017" level="2" name="Eva_017">
 		<nodes nodeZ="-10370">
@@ -11793,7 +11793,7 @@
 		<location x="80600" y="249045" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250018" level="2" name="Eva_018">
 		<nodes nodeZ="-10391">
@@ -11805,7 +11805,7 @@
 		<location x="82836" y="248341" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250019" level="2" name="Eva_019">
 		<nodes nodeZ="-10379">
@@ -11817,7 +11817,7 @@
 		<location x="84906" y="249034" z="-10116" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250020" level="2" name="Eva_020">
 		<nodes nodeZ="-10368">
@@ -11829,7 +11829,7 @@
 		<location x="86246" y="250887" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250021" level="2" name="Eva_021">
 		<nodes nodeZ="-10380">
@@ -11841,7 +11841,7 @@
 		<location x="86213" y="253196" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250022" level="2" name="Eva_022">
 		<nodes nodeZ="-10376">
@@ -11853,7 +11853,7 @@
 		<location x="84889" y="254972" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250023" level="2" name="Eva_023">
 		<nodes nodeZ="-10387">
@@ -11865,7 +11865,7 @@
 		<location x="82726" y="255659" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250024" level="2" name="Eva_024">
 		<nodes nodeZ="-10372">
@@ -11877,7 +11877,7 @@
 		<location x="80590" y="254949" z="-10118" height="512" />
 		<stats basePDef="476" baseMDef="383" baseHpMax="150000" />
 		<status showHp="false" />
-		<openStatus default="close" closeTime="20" />
+		<openStatus openMethod="BY_TIME" default="close" closeTime="20" openTime="300" randomTime="120" />
 	</door>
 	<door id="22250025" level="2" name="Eva_025">
 		<nodes nodeZ="-10888">
