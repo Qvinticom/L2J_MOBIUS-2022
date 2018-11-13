@@ -1397,8 +1397,8 @@ public final class Formulas
 	 */
 	public static boolean calcStunBreak(L2Character activeChar)
 	{
-		// Check if target is stunned and 10% chance (retail is 14% and 35% on crit?)
-		if (activeChar.hasBlockActions() && (Rnd.get(10) == 0))
+		// Check if target is stunned and break it with 14% chance. (retail is 14% and 35% on crit?)
+		if (Config.ALT_GAME_STUN_BREAK && activeChar.hasBlockActions() && (Rnd.get(14) == 0))
 		{
 			// Any stun that has double duration due to skill mastery, doesn't get removed until its time reaches the usual abnormal time.
 			return activeChar.getEffectList().hasAbnormalType(AbnormalType.STUN, info -> info.getTime() <= info.getSkill().getAbnormalTime());

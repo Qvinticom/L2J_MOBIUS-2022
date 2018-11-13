@@ -170,6 +170,7 @@ public final class Config
 	public static boolean ALT_GAME_CANCEL_BOW;
 	public static boolean ALT_GAME_CANCEL_CAST;
 	public static boolean ALT_GAME_MAGICFAILURES;
+	public static boolean ALT_GAME_STUN_BREAK;
 	public static int PLAYER_FAKEDEATH_UP_PROTECTION;
 	public static boolean STORE_SKILL_COOLTIME;
 	public static boolean SUBCLASS_STORE_SKILL_COOLTIME;
@@ -1488,6 +1489,7 @@ public final class Config
 			ALT_GAME_CANCEL_BOW = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
 			ALT_GAME_CANCEL_CAST = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
 			ALT_GAME_MAGICFAILURES = Character.getBoolean("MagicFailures", true);
+			ALT_GAME_STUN_BREAK = Character.getBoolean("BreakStun", false);
 			PLAYER_FAKEDEATH_UP_PROTECTION = Character.getInt("PlayerFakeDeathUpProtection", 0);
 			STORE_SKILL_COOLTIME = Character.getBoolean("StoreSkillCooltime", true);
 			SUBCLASS_STORE_SKILL_COOLTIME = Character.getBoolean("SubclassStoreSkillCooltime", false);
