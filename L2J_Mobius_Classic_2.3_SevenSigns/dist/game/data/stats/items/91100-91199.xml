@@ -1,5 +1,149 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="91116" name="Nebula’s Old Necklace" additionalName="Lv4" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">96</stat>
+			<stat type="maxMp">42</stat>
+			<stat type="waterRes">80</stat>
+		</stats>
+	</item>
+	<item id="91117" name="Nebula’s Necklace" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">50</stat>
+			<stat type="waterRes">100</stat>
+		</stats>
+	</item>
+	<item id="91118" name="Ignis’ Old Necklace" additionalName="Lv4" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">96</stat>
+			<stat type="maxMp">42</stat>
+			<stat type="fireRes">80</stat>
+		</stats>
+	</item>
+	<item id="91119" name="Ignis’ Necklace" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">50</stat>
+			<stat type="fireRes">100</stat>
+		</stats>
+	</item>
+	<item id="91120" name="Procella’s Old Necklace" additionalName="Lv4" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">96</stat>
+			<stat type="maxMp">42</stat>
+			<stat type="windRes">80</stat>
+		</stats>
+	</item>
+	<item id="91121" name="Procella’s Necklace" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">50</stat>
+			<stat type="windRes">100</stat>
+		</stats>
+	</item>
+	<item id="91122" name="Petram’s Old Necklace" additionalName="Lv4" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">96</stat>
+			<stat type="maxMp">42</stat>
+			<stat type="earthRes">80</stat>
+		</stats>
+	</item>
+	<item id="91123" name="Petram’s Necklace" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" /> <!-- TODO: Possible Upgrade - https://l2wiki.com/classic/Ignis%27_Necklace -->
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">100</stat>
+			<stat type="maxMp">50</stat>
+			<stat type="earthRes">100</stat>
+		</stats>
+	</item>
 	<item id="91138" name="Reinforced Antharas' Earring" type="Armor">
 		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +10%, Mental Resistance and Atk. Rate +10%, Reflect Damage Resistance +7%, Healing Effects +10%, Skill MP Consumption -4%, Vampiric Rage effect +2%. The effect doesn't stack if two identical earrings are worn. -->
 		<set name="icon" val="icon.agathion_base" />

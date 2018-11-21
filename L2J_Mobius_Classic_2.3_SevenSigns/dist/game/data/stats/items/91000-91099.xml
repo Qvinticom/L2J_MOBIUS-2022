@@ -269,4 +269,324 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="91039" name="Water Attribute Fragment" type="EtcItem">
+		<!-- A material filled with the power of Water Attribute. Can be used to create equipment with the power of Water Attribute. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91040" name="Fire Attribute Fragment" type="EtcItem">
+		<!-- A material filled with the power of Fire Attribute. Can be used to create equipment with the power of Fire Attribute. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91041" name="Wind Attribute Fragment" type="EtcItem">
+		<!-- A material filled with the power of Wind Attribute. Can be used to create equipment with the power of Wind Attribute. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91042" name="Earth Attribute Fragment" type="EtcItem">
+		<!-- A material filled with the power of Earth Attribute. Can be used to create equipment with the power of Earth Attribute. -->
+		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="waterRes">20</stat>
+		</stats>
+	</item>
+	<item id="91044" name="Nebula’s Old Necklace" additionalName="Lv2" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">90</stat>
+			<stat type="maxMp">37</stat>
+			<stat type="waterRes">40</stat>
+		</stats>
+	</item>
+	<item id="91045" name="Nebula’s Old Necklace" additionalName="Lv3" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">93</stat>
+			<stat type="maxMp">40</stat>
+			<stat type="waterRes">60</stat>
+		</stats>
+	</item>
+	<item id="91046" name="Ignis’ Old Necklace" additionalName="Lv1" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="fireRes">20</stat>
+		</stats>
+	</item>
+	<item id="91047" name="Ignis’ Old Necklace" additionalName="Lv2" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">90</stat>
+			<stat type="maxMp">37</stat>
+			<stat type="fireRes">40</stat>
+		</stats>
+	</item>
+	<item id="91048" name="Ignis’ Old Necklace" additionalName="Lv3" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">93</stat>
+			<stat type="maxMp">40</stat>
+			<stat type="fireRes">60</stat>
+		</stats>
+	</item>
+	<item id="91049" name="Procella’s Old Necklace" additionalName="Lv1" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="windRes">20</stat>
+		</stats>
+	</item>
+	<item id="91050" name="Procella’s Old Necklace" additionalName="Lv2" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">90</stat>
+			<stat type="maxMp">37</stat>
+			<stat type="windRes">40</stat>
+		</stats>
+	</item>
+	<item id="91051" name="Procella’s Old Necklace" additionalName="Lv3" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">93</stat>
+			<stat type="maxMp">40</stat>
+			<stat type="windRes">60</stat>
+		</stats>
+	</item>
+	<item id="91052" name="Petram’s Old Necklace" additionalName="Lv1" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="earthRes">20</stat>
+		</stats>
+	</item>
+	<item id="91053" name="Petram’s Old Necklace" additionalName="Lv2" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">90</stat>
+			<stat type="maxMp">37</stat>
+			<stat type="earthRes">40</stat>
+		</stats>
+	</item>
+	<item id="91054" name="Petram’s Old Necklace" additionalName="Lv3" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<stats>
+			<stat type="mDef">93</stat>
+			<stat type="maxMp">40</stat>
+			<stat type="earthRes">60</stat>
+		</stats>
+	</item>
+	<item id="91055" name="Nebula’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="waterRes">20</stat>
+		</stats>
+	</item>
+	<item id="91056" name="Ignis’ Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="fireRes">20</stat>
+		</stats>
+	</item>
+	<item id="91057" name="Procella’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="windRes">20</stat>
+		</stats>
+	</item>
+	<item id="91058" name="Petram’s Old Necklace Lv. 1" additionalName="7-day" type="Armor">
+		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="false" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="neck" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="150" />
+		<set name="enchant_enabled" val="0" />
+		<set name="commissionItemType" val="NECKLACE" />
+		<set name="time" val="10080" />
+		<stats>
+			<stat type="mDef">87</stat>
+			<stat type="maxMp">35</stat>
+			<stat type="earthRes">20</stat>
+		</stats>
+	</item>
 </list>
