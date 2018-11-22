@@ -74,8 +74,6 @@
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/gameserver/**" />
 				<exclude name="**/geodataconverter/**" />
-				<exclude name="**/commons/geodriver/**" />
-				<exclude name="**/commons/javaengine/**" />
 			</fileset>
 			<manifest>
 				<attribute name="Build-By" value="${user.name}" />

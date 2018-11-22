@@ -73,6 +73,7 @@
 			<fileset dir="${build.bin}">
 				<exclude name="**/dbinstaller/**" />
 				<exclude name="**/gameserver/**" />
+				<exclude name="**/geodataconverter/**" />
 			</fileset>
 			<manifest>
 				<attribute name="Build-By" value="${user.name}" />
