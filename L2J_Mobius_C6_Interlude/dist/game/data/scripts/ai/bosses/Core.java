@@ -16,7 +16,10 @@
  */
 package ai.bosses;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import com.l2jmobius.Config;
@@ -26,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.instance.L2GrandBossInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2NpcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.actor.position.Location;
 import com.l2jmobius.gameserver.model.entity.Announcements;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -34,28 +38,45 @@ import com.l2jmobius.gameserver.templates.StatsSet;
 
 /**
  * Core AI
- * @author qwerty
+ * @author qwerty, Mobius
  */
 public class Core extends Quest
 {
+	// NPCs
 	private static final int CORE = 29006;
 	private static final int DEATH_KNIGHT = 29007;
 	private static final int DOOM_WRAITH = 29008;
-	// private static final int DICOR = 29009;
-	// private static final int VALIDUS = 29010;
 	private static final int SUSCEPTOR = 29011;
-	// private static final int PERUM = 29012;
-	// private static final int PREMO = 29013;
+	// Spawns
+	private static final Map<Integer, Location> MINNION_SPAWNS = new HashMap<>();
+	{
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17191, 109298, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17564, 109548, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17855, 109552, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(18280, 109202, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(18784, 109253, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(18059, 108314, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17300, 108444, -6488));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17148, 110071, -6648));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(18318, 110077, -6648));
+		MINNION_SPAWNS.put(DEATH_KNIGHT, new Location(17726, 110391, -6648));
+		MINNION_SPAWNS.put(DOOM_WRAITH, new Location(17113, 110970, -6648));
+		MINNION_SPAWNS.put(DOOM_WRAITH, new Location(17496, 110880, -6648));
+		MINNION_SPAWNS.put(DOOM_WRAITH, new Location(18061, 110990, -6648));
+		MINNION_SPAWNS.put(DOOM_WRAITH, new Location(18384, 110698, -6648));
+		MINNION_SPAWNS.put(DOOM_WRAITH, new Location(17993, 111458, -6584));
+		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17297, 111470, -6584));
+		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17893, 110198, -6648));
+		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17706, 109423, -6488));
+		MINNION_SPAWNS.put(SUSCEPTOR, new Location(17849, 109388, -6480));
+	}
+	// Misc
+	private static final byte ALIVE = 0;
+	private static final byte DEAD = 1;
 	
-	// CORE Status Tracking :
-	private static final byte ALIVE = 0; // Core is spawned.
-	private static final byte DEAD = 1; // Core has been killed.
+	private static boolean _firstAttacked;
 	
-	private static boolean _FirstAttacked;
-	
-	List<L2Attackable> Minions = new CopyOnWriteArrayList<>();
-	
-	// private static final Logger LOGGER = Logger.getLogger(Core.class);
+	private static final List<L2Attackable> _minions = new CopyOnWriteArrayList<>();
 	
 	public Core(int id, String name, String descr)
 	{
@@ -75,22 +96,20 @@ public class Core extends Quest
 			addEventId(mob, Quest.QuestEventType.ON_ATTACK);
 		}
 		
-		_FirstAttacked = false;
+		_firstAttacked = false;
 		final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-		
-		final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
-		
-		if (status == DEAD)
+		if (GrandBossManager.getInstance().getBossStatus(CORE) == DEAD)
 		{
-			// load the unlock date and time for Core from DB
+			// Load the unlock date and time for Core from DB.
 			final long temp = info.getLong("respawn_time") - System.currentTimeMillis();
+			// If Core is locked until a certain time, mark it so and start the unlock timer the unlock time has not yet expired.
 			if (temp > 0)
 			{
 				startQuestTimer("core_unlock", temp, null, null);
 			}
 			else
 			{
-				// the time has already expired while the server was offline. Immediately spawn Core.
+				// The time has already expired while the server was offline. Immediately spawn Core.
 				final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 				if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 				{
@@ -105,12 +124,8 @@ public class Core extends Quest
 			final String test = loadGlobalQuestVar("Core_Attacked");
 			if (test.equalsIgnoreCase("true"))
 			{
-				_FirstAttacked = true;
+				_firstAttacked = true;
 			}
-			/*
-			 * int loc_x = info.getInteger("loc_x"); int loc_y = info.getInteger("loc_y"); int loc_z = info.getInteger("loc_z"); int heading = info.getInteger("heading"); int hp = info.getInteger("currentHP"); int mp = info.getInteger("currentMP"); L2GrandBossInstance core = (L2GrandBossInstance)
-			 * addSpawn(CORE,loc_x,loc_y,loc_z,heading,false,0); core.setCurrentHpMp(hp,mp);
-			 */
 			final L2GrandBossInstance core = (L2GrandBossInstance) addSpawn(CORE, 17726, 108915, -6480, 0, false, 0);
 			if (Config.ANNOUNCE_TO_ALL_SPAWN_RB)
 			{
@@ -123,8 +138,23 @@ public class Core extends Quest
 	@Override
 	public void saveGlobalData()
 	{
-		final String val = "" + _FirstAttacked;
+		final String val = "" + _firstAttacked;
 		saveGlobalQuestVar("Core_Attacked", val);
+	}
+	
+	public void spawnBoss(L2GrandBossInstance npc)
+	{
+		GrandBossManager.getInstance().addBoss(npc);
+		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
+		// Spawn minions
+		L2Attackable mob;
+		Location spawnLocation;
+		for (Entry<Integer, Location> spawn : MINNION_SPAWNS.entrySet())
+		{
+			spawnLocation = spawn.getValue();
+			mob = (L2Attackable) addSpawn(spawn.getKey(), spawnLocation.getX(), spawnLocation.getY(), spawnLocation.getZ(), Rnd.get(61794), false, 0);
+			_minions.add(mob);
+		}
 	}
 	
 	@Override
@@ -144,23 +174,23 @@ public class Core extends Quest
 		}
 		else if (status == null)
 		{
-			LOGGER.warning("GrandBoss with Id " + CORE + " has not valid status into GrandBossManager");
+			LOGGER.warning("GrandBoss with Id " + CORE + " has not valid status into GrandBossManager.");
 		}
 		else if (event.equals("spawn_minion") && (status == ALIVE))
 		{
-			Minions.add((L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0));
+			_minions.add((L2Attackable) addSpawn(npc.getNpcId(), npc.getX(), npc.getY(), npc.getZ(), npc.getHeading(), false, 0));
 		}
 		else if (event.equals("despawn_minions"))
 		{
-			for (int i = 0; i < Minions.size(); i++)
+			for (int i = 0; i < _minions.size(); i++)
 			{
-				final L2Attackable mob = Minions.get(i);
+				final L2Attackable mob = _minions.get(i);
 				if (mob != null)
 				{
 					mob.decayMe();
 				}
 			}
-			Minions.clear();
+			_minions.clear();
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
@@ -170,7 +200,7 @@ public class Core extends Quest
 	{
 		if (npc.getNpcId() == CORE)
 		{
-			if (_FirstAttacked)
+			if (_firstAttacked)
 			{
 				if (Rnd.get(100) == 0)
 				{
@@ -179,7 +209,7 @@ public class Core extends Quest
 			}
 			else
 			{
-				_FirstAttacked = true;
+				_firstAttacked = true;
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "A non-permitted target has been discovered."));
 				npc.broadcastPacket(new CreatureSay(npc.getObjectId(), 0, npc.getName(), "Starting intruder removal system."));
 			}
@@ -199,55 +229,30 @@ public class Core extends Quest
 			npc.broadcastPacket(new CreatureSay(objId, 0, name, "A fatal error has occurred."));
 			npc.broadcastPacket(new CreatureSay(objId, 0, name, "System is being shut down..."));
 			npc.broadcastPacket(new CreatureSay(objId, 0, name, "......"));
-			_FirstAttacked = false;
+			_firstAttacked = false;
 			
 			if (!npc.getSpawn().is_customBossInstance())
 			{
 				addSpawn(31842, 16502, 110165, -6394, 0, false, 900000);
 				addSpawn(31842, 18948, 110166, -6397, 0, false, 900000);
 				GrandBossManager.getInstance().setBossStatus(CORE, DEAD);
-				// time is 60hour +/- 23hour
+				// Calculate Min and Max respawn times randomly.
 				final long respawnTime = (Config.CORE_RESP_FIRST + Rnd.get(Config.CORE_RESP_SECOND)) * 3600000;
 				startQuestTimer("core_unlock", respawnTime, null, null);
-				// also save the respawn time so that the info is maintained past reboots
+				// Also save the respawn time so that the info is maintained past reboots.
 				final StatsSet info = GrandBossManager.getInstance().getStatsSet(CORE);
-				info.set("respawn_time", (System.currentTimeMillis() + respawnTime));
+				info.set("respawn_time", System.currentTimeMillis() + respawnTime);
 				GrandBossManager.getInstance().setStatsSet(CORE, info);
 				startQuestTimer("despawn_minions", 20000, null, null);
+				cancelQuestTimers("spawn_minion");
 			}
 		}
-		else
+		else if ((GrandBossManager.getInstance().getBossStatus(CORE) == ALIVE) && _minions.contains(npc))
 		{
-			final Integer status = GrandBossManager.getInstance().getBossStatus(CORE);
-			
-			if ((status == ALIVE) && Minions.contains(npc))
-			{
-				Minions.remove(npc);
-				startQuestTimer("spawn_minion", Config.CORE_RESP_MINION * 1000, npc, null);
-			}
+			_minions.remove(npc);
+			startQuestTimer("spawn_minion", Config.CORE_RESP_MINION * 1000, npc, null);
 		}
-		
 		return super.onKill(npc, killer, isPet);
-	}
-	
-	public void spawnBoss(L2GrandBossInstance npc)
-	{
-		GrandBossManager.getInstance().addBoss(npc);
-		npc.broadcastPacket(new PlaySound(1, "BS01_A", 1, npc.getObjectId(), npc.getX(), npc.getY(), npc.getZ()));
-		// Spawn minions
-		for (int i = 0; i < 5; i++)
-		{
-			final int x = 16800 + (i * 360);
-			Minions.add((L2Attackable) addSpawn(DEATH_KNIGHT, x, 110000, npc.getZ(), 280 + Rnd.get(40), false, 0));
-			Minions.add((L2Attackable) addSpawn(DEATH_KNIGHT, x, 109000, npc.getZ(), 280 + Rnd.get(40), false, 0));
-			final int x2 = 16800 + (i * 600);
-			Minions.add((L2Attackable) addSpawn(DOOM_WRAITH, x2, 109300, npc.getZ(), 280 + Rnd.get(40), false, 0));
-		}
-		for (int i = 0; i < 4; i++)
-		{
-			final int x = 16800 + (i * 450);
-			Minions.add((L2Attackable) addSpawn(SUSCEPTOR, x, 110300, npc.getZ(), 280 + Rnd.get(40), false, 0));
-		}
 	}
 	
 	public static void main(String[] args)
