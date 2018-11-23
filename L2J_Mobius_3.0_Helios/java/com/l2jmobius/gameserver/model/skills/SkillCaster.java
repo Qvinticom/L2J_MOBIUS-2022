@@ -340,7 +340,7 @@ public class SkillCaster implements Runnable
 		{
 			// Get the L2ItemInstance consumed by the spell.
 			final L2ItemInstance requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
-			if (requiredItem.getItem().getDefaultAction() == ActionType.NONE) // Non reagent items are removed at finishSkill or item handler.
+			if (_skill.isBad() || (requiredItem.getItem().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
 			{
 				caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
 			}
