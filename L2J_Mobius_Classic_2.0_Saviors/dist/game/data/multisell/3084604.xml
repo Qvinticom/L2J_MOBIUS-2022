@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list applyTaxes="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
+<list maintainEnchantment="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/multisell.xsd">
 	<npcs>
 		<npc>30300</npc> <!-- Pushkin -->
 		<npc>30846</npc> <!-- Wilbert -->
@@ -414,5 +414,45 @@
 		<ingredient count="1" id="49756" />
 		<!-- Majestic Boots - Robe -->
 		<production count="1" id="5788" />
+	</item>
+	<item>
+		<!-- Sealed Tallum Helmet -->
+		<ingredient count="1" id="5294" />
+		<!-- Adena -->
+		<ingredient count="235500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Tallum Helmet -->
+		<production count="1" id="547" />
+	</item>
+	<item>
+		<!-- Sealed Dark Crystal Helmet -->
+		<ingredient count="1" id="5289" />
+		<!-- Adena -->
+		<ingredient count="235500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Dark Crystal Helmet -->
+		<production count="1" id="512" />
+	</item>
+	<item>
+		<!-- Sealed Majestic Circlet -->
+		<ingredient count="1" id="5317" />
+		<!-- Adena -->
+		<ingredient count="355500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Majestic Circlet -->
+		<production count="1" id="2419" />
+	</item>
+	<item>
+		<!-- Sealed Helm of Nightmare -->
+		<ingredient count="1" id="5312" />
+		<!-- Adena -->
+		<ingredient count="355500" id="57" />
+		<!-- Cloth Piece -->
+		<ingredient count="1" id="49756" />
+		<!-- Helm of Nightmare -->
+		<production count="1" id="2418" />
 	</item>
 </list>
