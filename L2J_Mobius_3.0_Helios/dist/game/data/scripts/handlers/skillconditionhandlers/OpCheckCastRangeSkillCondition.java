@@ -16,6 +16,7 @@
  */
 package handlers.skillconditionhandlers;
 
+import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -23,7 +24,7 @@ import com.l2jmobius.gameserver.model.skills.ISkillCondition;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * @author Sdw
+ * @author Mobius
  */
 public class OpCheckCastRangeSkillCondition implements ISkillCondition
 {
@@ -37,6 +38,8 @@ public class OpCheckCastRangeSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
-		return (target != null) && (caster.calculateDistance3D(target) /* for some reason this used Sq3D check */ >= _distance);
+		return (target != null) //
+			&& (caster.calculateDistance3D(target) >= _distance) //
+			&& GeoEngine.getInstance().canSeeTarget(caster, target);
 	}
 }
