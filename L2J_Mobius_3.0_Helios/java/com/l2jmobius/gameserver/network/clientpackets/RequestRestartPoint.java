@@ -22,18 +22,20 @@ import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
 import com.l2jmobius.gameserver.instancemanager.CastleManager;
 import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.MapRegionManager;
+import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.TeleportWhereType;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
 import com.l2jmobius.gameserver.model.entity.ClanHall;
 import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.entity.Fort.FortFunction;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.listeners.AbstractEventListener;
 import com.l2jmobius.gameserver.model.instancezone.Instance;
 import com.l2jmobius.gameserver.model.quest.Event;
-import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunctionType;
 import com.l2jmobius.gameserver.network.L2GameClient;
 
@@ -157,15 +159,16 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 			}
 			case 2: // to castle
 			{
-				final Castle castle = CastleManager.getInstance().getCastle(activeChar);
+				final L2Clan clan = activeChar.getClan();
+				Castle castle = CastleManager.getInstance().getCastle(activeChar);
 				if ((castle != null) && castle.getSiege().isInProgress())
 				{
 					// Siege in progress
-					if (castle.getSiege().checkIsDefender(activeChar.getClan()))
+					if (castle.getSiege().checkIsDefender(clan))
 					{
 						loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
 					}
-					else if (castle.getSiege().checkIsAttacker(activeChar.getClan()))
+					else if (castle.getSiege().checkIsAttacker(clan))
 					{
 						loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
 					}
@@ -177,32 +180,45 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 				}
 				else
 				{
-					if ((activeChar.getClan() == null) || (activeChar.getClan().getCastleId() == 0))
+					if ((clan == null) || (clan.getCastleId() == 0))
 					{
 						return;
 					}
 					loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
 				}
 				
-				if ((castle != null) && (castle.hasFunction(ResidenceFunctionType.EXP_RESTORE)))
+				if (clan != null)
 				{
-					activeChar.restoreExp(castle.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue());
+					castle = CastleManager.getInstance().getCastleByOwner(clan);
+					if (castle != null)
+					{
+						final CastleFunction castleFunction = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
+						if (castleFunction != null)
+						{
+							activeChar.getStat().addExp(Math.round(((activeChar.getExpBeforeDeath() - activeChar.getExp()) * castleFunction.getLvl()) / 100));
+						}
+					}
 				}
 				break;
 			}
 			case 3: // to fortress
 			{
-				if ((activeChar.getClan() == null) || (activeChar.getClan().getFortId() == 0))
+				final L2Clan clan = activeChar.getClan();
+				if ((clan == null) || (clan.getFortId() == 0))
 				{
 					LOGGER.warning("Player [" + activeChar.getName() + "] called RestartPointPacket - To Fortress and he doesn't have Fortress!");
 					return;
 				}
 				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.FORTRESS);
 				
-				final AbstractResidence residense = FortManager.getInstance().getFortByOwner(activeChar.getClan());
-				if ((residense != null) && (residense.hasFunction(ResidenceFunctionType.EXP_RESTORE)))
+				final Fort fort = FortManager.getInstance().getFortByOwner(clan);
+				if (fort != null)
 				{
-					activeChar.restoreExp(residense.getFunction(ResidenceFunctionType.EXP_RESTORE).getValue());
+					final FortFunction fortFunction = fort.getFortFunction(Fort.FUNC_RESTORE_EXP);
+					if (fortFunction != null)
+					{
+						activeChar.getStat().addExp(Math.round(((activeChar.getExpBeforeDeath() - activeChar.getExp()) * fortFunction.getLvl()) / 100));
+					}
 				}
 				break;
 			}

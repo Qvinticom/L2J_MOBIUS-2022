@@ -28,6 +28,10 @@ import com.l2jmobius.gameserver.model.L2SiegeClan;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
+import com.l2jmobius.gameserver.model.entity.Castle;
+import com.l2jmobius.gameserver.model.entity.Castle.CastleFunction;
+import com.l2jmobius.gameserver.model.entity.Fort;
+import com.l2jmobius.gameserver.model.entity.Fort.FortFunction;
 import com.l2jmobius.gameserver.model.entity.Siege;
 import com.l2jmobius.gameserver.model.residences.AbstractResidence;
 import com.l2jmobius.gameserver.model.residences.ResidenceFunction;
@@ -96,13 +100,13 @@ public class RegenHPFinalizer implements IStatsFunction
 				final int castleIndex = player.getClan().getCastleId();
 				if ((castleIndex > 0) && (castleIndex == posCastleIndex))
 				{
-					final AbstractResidence residense = CastleManager.getInstance().getCastleById(player.getClan().getCastleId());
-					if (residense != null)
+					final Castle castle = CastleManager.getInstance().getCastleById(player.getClan().getCastleId());
+					if (castle != null)
 					{
-						final ResidenceFunction func = residense.getFunction(ResidenceFunctionType.HP_REGEN);
+						final CastleFunction func = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
 						if (func != null)
 						{
-							baseValue *= func.getValue();
+							baseValue *= func.getLvl();
 						}
 					}
 				}
@@ -115,13 +119,13 @@ public class RegenHPFinalizer implements IStatsFunction
 				final int fortIndex = player.getClan().getFortId();
 				if ((fortIndex > 0) && (fortIndex == posFortIndex))
 				{
-					final AbstractResidence residense = FortManager.getInstance().getFortById(player.getClan().getCastleId());
-					if (residense != null)
+					final Fort fort = FortManager.getInstance().getFortById(player.getClan().getCastleId());
+					if (fort != null)
 					{
-						final ResidenceFunction func = residense.getFunction(ResidenceFunctionType.HP_REGEN);
+						final FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_HP);
 						if (func != null)
 						{
-							baseValue *= func.getValue();
+							baseValue *= func.getLvl();
 						}
 					}
 				}

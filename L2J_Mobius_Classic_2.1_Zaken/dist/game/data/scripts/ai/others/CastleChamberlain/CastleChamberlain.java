@@ -160,7 +160,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				html = getHtmlPacket(player, npc, "castleresetdeco.html");
 				html.replace("%AgitDecoSubmit%", Integer.toString(func));
 			}
-			else if ((castle.getFunction(func) != null) && (castle.getCastleFunction(func).getLvl() == level))
+			else if ((castle.getCastleFunction(func) != null) && (castle.getCastleFunction(func).getLvl() == level))
 			{
 				html = getHtmlPacket(player, npc, "castledecoalreadyset.html");
 				html.replace("%AgitDecoEffect%", "<fstring p1=\"" + level + "\">" + fstring + "</fstring>");
@@ -374,17 +374,17 @@ public final class CastleChamberlain extends AbstractNpcAI
 	
 	// private final boolean isDomainFortressInContractStatus(int castleId)
 	// {
-	// 	final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
-	// 	final List<Integer> fortList = FORTRESS.get(castleId);
-	// 	for (int i = 0; i < numFort; i++)
-	// 	{
-	// 		final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
-	// 		if (fortress.getFortState() == 2)
-	// 		{
-	// 			return true;
-	// 		}
-	// 	}
-	// 	return false;
+	// final int numFort = ((castleId == 1) || (castleId == 5)) ? 2 : 1;
+	// final List<Integer> fortList = FORTRESS.get(castleId);
+	// for (int i = 0; i < numFort; i++)
+	// {
+	// final Fort fortress = FortManager.getInstance().getFortById(fortList.get(i));
+	// if (fortress.getFortState() == 2)
+	// {
+	// return true;
+	// }
+	// }
+	// return false;
 	// }
 	
 	private final boolean isOwner(L2PcInstance player, L2Npc npc)
@@ -465,7 +465,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					}
 					// else if (!isDomainFortressInContractStatus(castle.getResidenceId()))
 					// {
-					// 	htmltext = "chamberlain-27.html";
+					// htmltext = "chamberlain-27.html";
 					// }
 					else
 					{
@@ -940,7 +940,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 					{
 						castle.updateFunctions(player, func, level, 0, 0, false);
 					}
-					else if (!castle.updateFunctions(player, func, level, getFunctionFee(func, level), getFunctionRatio(func), castle.getFunction(func) == null))
+					else if (!castle.updateFunctions(player, func, level, getFunctionFee(func, level), getFunctionRatio(func), castle.getCastleFunction(func) == null))
 					{
 						htmltext = "chamberlain-09.html";
 					}
@@ -976,7 +976,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 				{
 					htmltext = "chamberlain-21.html";
 				}
-				else if (castle.getFunction(Castle.FUNC_TELEPORT) == null)
+				else if (castle.getCastleFunction(Castle.FUNC_TELEPORT) == null)
 				{
 					htmltext = "castlefuncdisabled.html";
 				}
@@ -1022,7 +1022,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					if (castle.getFunction(Castle.FUNC_SUPPORT) == null)
+					if (castle.getCastleFunction(Castle.FUNC_SUPPORT) == null)
 					{
 						htmltext = "castlefuncdisabled.html";
 					}
@@ -1043,7 +1043,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 			{
 				if (isOwner(player, npc) && player.hasClanPrivilege(ClanPrivilege.CS_USE_FUNCTIONS))
 				{
-					if (castle.getFunction(Castle.FUNC_SUPPORT) == null)
+					if (castle.getCastleFunction(Castle.FUNC_SUPPORT) == null)
 					{
 						htmltext = "castlefuncdisabled.html";
 					}

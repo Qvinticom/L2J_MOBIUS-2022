@@ -243,7 +243,7 @@ public final class Fort extends AbstractResidence
 			loadFunctions();
 		}
 		initResidenceZone();
-		initFunctions();
+		// initFunctions();
 		initNpcs(); // load and spawn npcs (Always spawned)
 		initSiegeNpcs(); // load suspicious merchants (Despawned 10mins before siege)
 		// spawnSuspiciousMerchant(); // spawn suspicious merchants

@@ -241,7 +241,7 @@ public final class Castle extends AbstractResidence
 		super(castleId);
 		load();
 		initResidenceZone();
-		initFunctions();
+		// initFunctions();
 		spawnSideNpcs();
 		if (_ownerId != 0)
 		{
