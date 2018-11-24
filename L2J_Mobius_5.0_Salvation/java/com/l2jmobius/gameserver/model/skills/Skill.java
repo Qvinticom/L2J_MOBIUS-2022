@@ -163,6 +163,7 @@ public final class Skill implements IIdentifiable
 	
 	private final int _minPledgeClass;
 	private final int _soulMaxConsume;
+	private final int _chargeConsume;
 	
 	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
 	private final int _effectPoint;
@@ -380,6 +381,7 @@ public final class Skill implements IIdentifiable
 		_minPledgeClass = set.getInt("minPledgeClass", 0);
 		
 		_soulMaxConsume = set.getInt("soulMaxConsumeCount", 0);
+		_chargeConsume = set.getInt("chargeConsume", 0);
 		
 		_isTriggeredSkill = set.getBoolean("isTriggeredSkill", false);
 		_effectPoint = set.getInt("effectPoint", 0);
@@ -1061,6 +1063,11 @@ public final class Skill implements IIdentifiable
 	public int getMaxSoulConsumeCount()
 	{
 		return _soulMaxConsume;
+	}
+	
+	public int getChargeConsumeCount()
+	{
+		return _chargeConsume;
 	}
 	
 	public boolean isStayAfterDeath()

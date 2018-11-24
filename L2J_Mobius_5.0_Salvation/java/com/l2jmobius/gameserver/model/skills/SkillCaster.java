@@ -484,10 +484,19 @@ public class SkillCaster implements Runnable
 			caster.sendPacket(su);
 		}
 		
-		// Consume Souls if necessary
-		if (caster.isPlayer() && (_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount(), _skill))
+		if (caster.isPlayer())
 		{
-			return false;
+			// Consume Souls if necessary.
+			if ((_skill.getMaxSoulConsumeCount() > 0) && !caster.getActingPlayer().decreaseSouls(_skill.getMaxSoulConsumeCount(), _skill))
+			{
+				return false;
+			}
+			
+			// Consume charges if necessary.
+			if ((_skill.getChargeConsumeCount() > 0) && !caster.getActingPlayer().decreaseCharges(_skill.getChargeConsumeCount()))
+			{
+				return false;
+			}
 		}
 		
 		// Consume skill reduced item on success.
