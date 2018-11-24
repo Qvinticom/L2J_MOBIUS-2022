@@ -195,7 +195,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 						final CastleFunction castleFunction = castle.getCastleFunction(Castle.FUNC_RESTORE_EXP);
 						if (castleFunction != null)
 						{
-							activeChar.getStat().addExp(Math.round(((activeChar.getExpBeforeDeath() - activeChar.getExp()) * castleFunction.getLvl()) / 100));
+							activeChar.restoreExp(castleFunction.getLvl());
 						}
 					}
 				}
@@ -217,7 +217,7 @@ public final class RequestRestartPoint implements IClientIncomingPacket
 					final FortFunction fortFunction = fort.getFortFunction(Fort.FUNC_RESTORE_EXP);
 					if (fortFunction != null)
 					{
-						activeChar.getStat().addExp(Math.round(((activeChar.getExpBeforeDeath() - activeChar.getExp()) * fortFunction.getLvl()) / 100));
+						activeChar.restoreExp(fortFunction.getLvl());
 					}
 				}
 				break;
