@@ -67,9 +67,10 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 	private static final int NAVARI_MARK = 39536;
 	private static final int PROPHECY_MACHINE_FRAGMENT = 39537;
 	private static final int KAIN_PROPHECY_MACHINE_FRAGMENT = 39538;
-	private static final int STEEL_DOOR_COIN = 37045;
-	private static final int SOUL_SHOT_PACK = 22576;
-	private static final int SPIRIT_SHOT_PACK = 22607;
+	private static final int SOULSHOT = 1467;
+	private static final int SPIRITSHOT = 3952;
+	private static final int BLESSED_SCROLL_OF_RESURRECTION = 33518;
+	private static final int PAULINAS_EQUIPMENT_SET = 46852;
 	// Location
 	private static final Location TELEPORT_LOC = new Location(-81948, 249635, -3371);
 	private static final Location GHOST_SPAWN_LOC = new Location(51483, -54407, -3160);
@@ -221,9 +222,10 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
 					giveAdena(player, 5_000_000, false);
-					giveItems(player, SOUL_SHOT_PACK, 1);
-					giveItems(player, SPIRIT_SHOT_PACK, 1);
-					giveItems(player, STEEL_DOOR_COIN, 87);
+					giveItems(player, SOULSHOT, 8000);
+					giveItems(player, SPIRITSHOT, 8000);
+					giveItems(player, BLESSED_SCROLL_OF_RESURRECTION, 3);
+					giveItems(player, PAULINAS_EQUIPMENT_SET, 1);
 					addExpAndSp(player, 2_050_000, 0);
 					qs.exitQuest(false, true);
 				}
@@ -242,11 +244,12 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
-					giveAdena(player, 5_000_000, false);
-					giveItems(player, SOUL_SHOT_PACK, 1);
-					giveItems(player, SPIRIT_SHOT_PACK, 1);
-					giveItems(player, STEEL_DOOR_COIN, 87);
-					addExpAndSp(player, 2_050_000, 0);
+					giveAdena(player, 5000000, false);
+					giveItems(player, SOULSHOT, 8000);
+					giveItems(player, SPIRITSHOT, 8000);
+					giveItems(player, BLESSED_SCROLL_OF_RESURRECTION, 3);
+					giveItems(player, PAULINAS_EQUIPMENT_SET, 1);
+					addExpAndSp(player, 2050000, 0);
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -574,7 +577,7 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
-		if ((qs == null) && player.getRace() == Race.ERTHEIA && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
+		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.THIRD_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
 			{
