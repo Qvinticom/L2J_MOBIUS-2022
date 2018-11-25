@@ -262,7 +262,7 @@ public class OlympiadManager
 			return false;
 		}
 		
-		if (!noble.isNoble())
+		if ((!noble.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !noble.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (noble.getLevel() < 55)) // Classic noble equivalent check.
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CHARACTER_C1_DOES_NOT_MEET_THE_CONDITIONS_ONLY_CHARACTERS_WHO_HAVE_CHANGED_TWO_OR_MORE_CLASSES_CAN_PARTICIPATE_IN_OLYMPIAD);
 			sm.addString(noble.getName());
