@@ -26,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.stat.PcStat;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.entity.Duel;
-import com.l2jmobius.gameserver.model.events.EventDispatcher;
-import com.l2jmobius.gameserver.model.events.impl.character.OnCreatureHpChange;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
 import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -272,7 +270,6 @@ public class PcStatus extends PlayableStatus
 		
 		if (value > 0)
 		{
-			final double oldHp = getCurrentHp();
 			double newHp = Math.max(getCurrentHp() - value, getActiveChar().isUndying() ? 1 : 0);
 			if (newHp <= 0)
 			{
@@ -295,8 +292,6 @@ public class PcStatus extends PlayableStatus
 				}
 			}
 			setCurrentHp(newHp);
-			
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getActiveChar(), oldHp, newHp), getActiveChar());
 		}
 		
 		if ((getActiveChar().getCurrentHp() < 0.5) && !isHPConsumption && !getActiveChar().isUndying())

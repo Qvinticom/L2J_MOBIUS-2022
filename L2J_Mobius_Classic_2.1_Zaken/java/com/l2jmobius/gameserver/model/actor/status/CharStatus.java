@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.status;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
 import com.l2jmobius.commons.concurrent.ThreadPool;
@@ -50,8 +49,6 @@ public class CharStatus
 	protected static final byte REGEN_FLAG_CP = 4;
 	private static final byte REGEN_FLAG_HP = 1;
 	private static final byte REGEN_FLAG_MP = 2;
-	
-	private final AtomicInteger _previousHpPercent = new AtomicInteger();
 	
 	public CharStatus(L2Character activeChar)
 	{
@@ -175,10 +172,7 @@ public class CharStatus
 		
 		if (value > 0)
 		{
-			final double oldHp = _currentHp;
-			final double newHp = Math.max(_currentHp - value, activeChar.isUndying() ? 1 : 0);
-			setCurrentHp(newHp);
-			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(activeChar, oldHp, newHp), activeChar);
+			setCurrentHp(Math.max(_currentHp - value, activeChar.isUndying() ? 1 : 0));
 		}
 		
 		if ((activeChar.getCurrentHp() < 0.5)) // Die
@@ -247,7 +241,6 @@ public class CharStatus
 	// place holder, only PcStatus has CP
 	public void setCurrentCp(double newCp, boolean broadcastPacket)
 	{
-		
 	}
 	
 	public final double getCurrentHp()
@@ -269,7 +262,7 @@ public class CharStatus
 	public boolean setCurrentHp(double newHp, boolean broadcastPacket)
 	{
 		// Get the Max HP of the L2Character
-		final int currentHp = (int) _currentHp;
+		final int oldHp = (int) _currentHp;
 		final double maxHp = _activeChar.getStat().getMaxHp();
 		
 		synchronized (this)
@@ -302,30 +295,16 @@ public class CharStatus
 			}
 		}
 		
-		final boolean hpWasChanged = currentHp != _currentHp;
+		final boolean hpWasChanged = oldHp != _currentHp;
 		
 		// Send the Server->Client packet StatusUpdate with current HP and MP to all other L2PcInstance to inform
 		if (hpWasChanged)
 		{
-			final int lastHpPercent = _previousHpPercent.get();
-			final int currentHpPercent = (int) ((_currentHp * 100) / maxHp);
-			//@formatter:off
-			if (((lastHpPercent >= 60) && (currentHpPercent <= 60))
-				|| ((currentHpPercent >= 60) && (lastHpPercent <= 60))
-				|| ((lastHpPercent >= 30) && (currentHpPercent <= 30))
-				|| ((currentHpPercent >= 30) && (lastHpPercent <= 30)))
-			//@formatter:on
-			{
-				if (_previousHpPercent.compareAndSet(lastHpPercent, currentHpPercent))
-				{
-					_activeChar.getStat().recalculateStats(broadcastPacket);
-				}
-			}
-			
 			if (broadcastPacket)
 			{
 				_activeChar.broadcastStatusUpdate();
 			}
+			EventDispatcher.getInstance().notifyEventAsync(new OnCreatureHpChange(getActiveChar(), oldHp, _currentHp), getActiveChar());
 		}
 		
 		return hpWasChanged;
