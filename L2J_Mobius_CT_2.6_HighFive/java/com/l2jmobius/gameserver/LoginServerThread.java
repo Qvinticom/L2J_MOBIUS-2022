@@ -80,7 +80,9 @@ public class LoginServerThread extends Thread
 	protected static final Logger LOGGER = Logger.getLogger(LoginServerThread.class.getName());
 	protected static final Logger ACCOUNTING_LOGGER = Logger.getLogger("accounting");
 	
-	/** @see com.l2jmobius.loginserver.LoginServer#PROTOCOL_REV */
+	/**
+	 * @see com.l2jmobius.loginserver.LoginServer#PROTOCOL_REV
+	 */
 	private static final int REVISION = 0x0106;
 	private final String _hostname;
 	private final int _port;
@@ -565,7 +567,6 @@ public class LoginServerThread extends Thread
 				{
 					client.getActiveChar().deleteMe();
 				}
-				sendLogout(account);
 			}
 			else
 			{
@@ -573,6 +574,7 @@ public class LoginServerThread extends Thread
 			}
 			client.close(SystemMessage.getSystemMessage(SystemMessageId.ANOTHER_PERSON_HAS_LOGGED_IN_WITH_THE_SAME_ACCOUNT));
 		}
+		sendLogout(account);
 	}
 	
 	/**
