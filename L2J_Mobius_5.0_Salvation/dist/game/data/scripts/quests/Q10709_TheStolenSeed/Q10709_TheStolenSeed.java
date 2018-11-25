@@ -41,7 +41,10 @@ public final class Q10709_TheStolenSeed extends Quest
 	// Items
 	private static final int FRAGMENT = 39511; // Normal Fragment
 	private static final int MEMORY_FRAGMENT = 39510; // Akum's Memory Fragment
-	private static final int EAB = 948; // Scroll: Enchant Armor (B-grade)
+	private static final int SOULSHOT = 1466; // Soulshot (A-grade)
+	private static final int SPIRITSHOT = 3951; // Blessed Spiritshot (A-grade)
+	private static final int BLESSED_SCROLL_OF_ESCAPE = 33640; // Blessed Scroll of Escape
+	private static final int PAULINA_EQUIPMENT_SET = 46851; // Paulina's Equipment Set (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 58;
 	private static final int MAX_LEVEL = 61;
@@ -117,7 +120,10 @@ public final class Q10709_TheStolenSeed extends Quest
 				{
 					st.exitQuest(false, true);
 					takeItems(player, FRAGMENT, -1);
-					giveItems(player, EAB, 5);
+					giveItems(player, SOULSHOT, 6000);
+					giveItems(player, SPIRITSHOT, 6000);
+					giveItems(player, BLESSED_SCROLL_OF_ESCAPE, 3);
+					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
