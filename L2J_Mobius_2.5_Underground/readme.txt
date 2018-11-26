@@ -4,6 +4,7 @@ Client: https://drive.google.com/uc?id=0Bz1qNvCniabUMDhOd3RpUzBNSW8&export=downl
 Mirror: https://mega.nz/#!h1FXyByZ!XmyZBtk4qSOlKb435rx7X372_NreN1PTH8l7A4lNCoo
 
 Geodata: http://www.mediafire.com/file/bo5wyngtsf5575k/mobius_geodata_underground_l2d.zip
+JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 
 Working features...

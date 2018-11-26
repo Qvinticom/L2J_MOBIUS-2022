@@ -2,6 +2,7 @@ L2J-Mobius Classic Saviors
 
 Client: https://drive.google.com/uc?id=0B0Pl9EOrFIjuSVNPXzRpRFRZWlk&export=download
 Geodata: http://www.mediafire.com/file/4z99x6nibu0b6qo/mobius_geodata_saviors_l2d.zip
+JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 Saviors: https://eu.4game.com/lineage2classic/play/saviors/
 -Classic packet compatibility

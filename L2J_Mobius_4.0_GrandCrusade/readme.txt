@@ -4,6 +4,7 @@ Client: https://drive.google.com/uc?id=1MA8eTpTZHblC9Iki4xXdWWbS4HGednDq&export=
 Mirror: https://mega.nz/#!0eB0RIZS!RGm506vctH72n7H9tCNpepWfIfs1AvFB5NkcsNcMYA4
 
 Geodata: http://www.mediafire.com/file/sf1bcc3rvaq50sw/mobius_geodata_grand_crusade_l2d.zip
+JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 
 Working features...
