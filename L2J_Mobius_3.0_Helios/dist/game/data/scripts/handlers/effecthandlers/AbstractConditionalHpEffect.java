@@ -16,6 +16,8 @@
  */
 package handlers.effecthandlers;
 
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -33,8 +35,7 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 {
 	private final int _hpPercent;
-	private final AtomicBoolean _active = new AtomicBoolean();
-	private final AtomicBoolean _update = new AtomicBoolean();
+	private final Map<L2Character, AtomicBoolean> _updates = new ConcurrentHashMap<>();
 	
 	protected AbstractConditionalHpEffect(StatsSet params, Stats stat)
 	{
@@ -52,10 +53,9 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 		}
 		
 		// Register listeners
-		if ((_hpPercent > 0) && !_active.get())
+		if ((_hpPercent > 0) && !_updates.containsKey(effected))
 		{
-			_active.set(true);
-			_update.set(canPump(effector, effected, skill));
+			_updates.put(effected, new AtomicBoolean(canPump(effector, effected, skill)));
 			final ListenersContainer container = effected;
 			container.addListener(new ConsumerEventListener(container, EventType.ON_CREATURE_HP_CHANGE, (OnCreatureHpChange event) -> onHpChange(event), this));
 		}
@@ -71,7 +71,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 		}
 		
 		effected.removeListenerIf(listener -> listener.getOwner() == this);
-		_active.set(false);
+		_updates.remove(effected);
 	}
 	
 	@Override
@@ -83,17 +83,18 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 	private void onHpChange(OnCreatureHpChange event)
 	{
 		final L2Character activeChar = event.getCreature();
+		final AtomicBoolean update = _updates.get(activeChar);
 		if (canPump(null, activeChar, null))
 		{
-			if (_update.get())
+			if (update.get())
 			{
-				_update.set(false);
+				update.set(false);
 				activeChar.getStat().recalculateStats(true);
 			}
 		}
-		else if (!_update.get())
+		else if (!update.get())
 		{
-			_update.set(true);
+			update.set(true);
 			activeChar.getStat().recalculateStats(true);
 		}
 	}
