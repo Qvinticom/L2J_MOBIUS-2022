@@ -33,8 +33,8 @@ import com.l2jmobius.gameserver.model.stats.Stats;
 abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 {
 	private final int _hpPercent;
-	private final AtomicBoolean _actived = new AtomicBoolean();
-	private final AtomicBoolean _updated = new AtomicBoolean();
+	private final AtomicBoolean _active = new AtomicBoolean();
+	private final AtomicBoolean _update = new AtomicBoolean();
 	
 	protected AbstractConditionalHpEffect(StatsSet params, Stats stat)
 	{
@@ -52,10 +52,10 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 		}
 		
 		// Register listeners
-		if ((_hpPercent > 0) && !_actived.get())
+		if ((_hpPercent > 0) && !_active.get())
 		{
-			_actived.set(true);
-			_updated.set(canPump(effector, effected, skill));
+			_active.set(true);
+			_update.set(canPump(effector, effected, skill));
 			final ListenersContainer container = effected;
 			container.addListener(new ConsumerEventListener(container, EventType.ON_CREATURE_HP_CHANGE, (OnCreatureHpChange event) -> onHpChange(event), this));
 		}
@@ -71,7 +71,7 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 		}
 		
 		effected.removeListenerIf(listener -> listener.getOwner() == this);
-		_actived.set(false);
+		_active.set(false);
 	}
 	
 	@Override
@@ -85,15 +85,15 @@ abstract class AbstractConditionalHpEffect extends AbstractStatEffect
 		final L2Character activeChar = event.getCreature();
 		if (canPump(null, activeChar, null))
 		{
-			if (_updated.get())
+			if (_update.get())
 			{
-				_updated.set(false);
+				_update.set(false);
 				activeChar.getStat().recalculateStats(true);
 			}
 		}
-		else if (!_updated.get())
+		else if (!_update.get())
 		{
-			_updated.set(true);
+			_update.set(true);
 			activeChar.getStat().recalculateStats(true);
 		}
 	}
