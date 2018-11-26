@@ -91,7 +91,7 @@ public class RegenMPFinalizer implements IStatsFunction
 						final CastleFunction func = castle.getCastleFunction(Castle.FUNC_RESTORE_MP);
 						if (func != null)
 						{
-							baseValue *= func.getLvl();
+							baseValue *= (func.getLvl() / 100);
 						}
 					}
 				}
@@ -110,7 +110,7 @@ public class RegenMPFinalizer implements IStatsFunction
 						final FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_MP);
 						if (func != null)
 						{
-							baseValue *= func.getLvl();
+							baseValue *= (func.getLvl() / 100);
 						}
 					}
 				}

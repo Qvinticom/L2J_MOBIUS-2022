@@ -106,7 +106,7 @@ public class RegenHPFinalizer implements IStatsFunction
 						final CastleFunction func = castle.getCastleFunction(Castle.FUNC_RESTORE_HP);
 						if (func != null)
 						{
-							baseValue *= func.getLvl();
+							baseValue *= (func.getLvl() / 100);
 						}
 					}
 				}
@@ -125,7 +125,7 @@ public class RegenHPFinalizer implements IStatsFunction
 						final FortFunction func = fort.getFortFunction(Fort.FUNC_RESTORE_HP);
 						if (func != null)
 						{
-							baseValue *= func.getLvl();
+							baseValue *= (func.getLvl() / 100);
 						}
 					}
 				}
