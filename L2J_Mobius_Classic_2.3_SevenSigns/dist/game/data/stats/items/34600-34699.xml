@@ -4,6 +4,8 @@
 		<!-- Soulshot bestowed upon a weapon increases its attack power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spirit_bullet_white_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
@@ -18,6 +20,8 @@
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spirit_bullet_blue_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
@@ -33,6 +37,8 @@
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing power of attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spirit_bullet_green_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="C" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
@@ -48,6 +54,8 @@
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_red_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
@@ -63,6 +71,8 @@
 		<!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spirit_bullet_silver_i00" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="A" />
 		<set name="commissionItemType" val="SOULSHOT" />
 		<set name="default_action" val="SOULSHOT" />
@@ -78,6 +88,8 @@
 		<!-- Spiritshot bestowed upon a weapon increases its magic power. Used with No-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spell_shot_white_i01" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="etcitem_type" val="SOULSHOT" />
@@ -92,6 +104,8 @@
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with D-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spell_shot_blue_i01" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="D" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -107,6 +121,8 @@
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing power of magic attack. Used with C-grade weapons. Cannot be exchanged, dropped, or sold. -->
 		<set name="icon" val="icon.etc_spell_shot_green_i01" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="C" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -122,6 +138,8 @@
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with B-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_red_i01" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="B" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
@@ -137,6 +155,8 @@
 		<!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with A-grade weapons. Cannot be exchanged, dropped, sold in the grocery store, or stored in a private warehouse. -->
 		<set name="icon" val="icon.etc_spell_shot_silver_i01" />
 		<set name="is_sellable" val="false" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
 		<set name="crystal_type" val="A" />
 		<set name="commissionItemType" val="SPIRITSHOT" />
 		<set name="default_action" val="SPIRITSHOT" />
