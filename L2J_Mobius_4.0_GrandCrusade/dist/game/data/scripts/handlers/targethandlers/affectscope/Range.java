@@ -46,6 +46,7 @@ public class Range implements IAffectScopeHandler
 		final int affectLimit = skill.getAffectLimit();
 		
 		// Target checks.
+		final TargetType targetType = skill.getTargetType();
 		final AtomicInteger affected = new AtomicInteger(0);
 		final Predicate<L2Character> filter = c ->
 		{
@@ -53,7 +54,7 @@ public class Range implements IAffectScopeHandler
 			{
 				return false;
 			}
-			if (c.isDead())
+			if (c.isDead() && (targetType != TargetType.NPC_BODY) && (targetType != TargetType.PC_BODY))
 			{
 				return false;
 			}
@@ -75,7 +76,7 @@ public class Range implements IAffectScopeHandler
 		};
 		
 		// Check and add targets.
-		if (skill.getTargetType() == TargetType.GROUND)
+		if (targetType == TargetType.GROUND)
 		{
 			if (activeChar.isPlayable())
 			{

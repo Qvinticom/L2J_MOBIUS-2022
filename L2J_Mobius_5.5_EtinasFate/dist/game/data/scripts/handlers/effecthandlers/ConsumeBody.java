@@ -19,13 +19,14 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * Consume Body effect implementation.
- * @author Zoey76
+ * @author Mobius
  */
 public final class ConsumeBody extends AbstractEffect
 {
@@ -42,11 +43,18 @@ public final class ConsumeBody extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (!effected.isNpc() || !effected.isDead())
+		if (!effected.isDead() || (!effected.isNpc() && !effected.isSummon()))
 		{
 			return;
 		}
 		
-		((L2Npc) effected).endDecayTask();
+		if (effected.isNpc())
+		{
+			((L2Npc) effected).endDecayTask();
+		}
+		else
+		{
+			((L2Summon) effected).deleteMe();
+		}
 	}
 }
