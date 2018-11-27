@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="29100" level="80" type="L2Npc" name="Archangel">
+	<npc id="21900" level="80" type="L2Npc" name="Ancient Holy Ground's Deadman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -19,7 +19,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29101" level="80" type="L2Npc" name="Baium">
+	<npc id="21901" level="80" type="L2Npc" name="Lillim Slayer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -38,7 +38,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29102" level="80" type="L2Npc" name="Antharas" title="Land Dragon">
+	<npc id="21902" level="80" type="L2Npc" name="Lillim Shaman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -57,7 +57,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29103" level="80" type="L2Npc" name="Behemoth Dragon">
+	<npc id="21903" level="80" type="L2Npc" name="Lillim Royal Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -76,7 +76,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29104" level="80" type="L2Npc" name="Tarask Dragon">
+	<npc id="21904" level="80" type="L2Npc" name="Graveyard Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -95,7 +95,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29105" level="80" type="L2Npc" name="Ignis" title="Flame Spirit King">
+	<npc id="21905" level="80" type="L2Npc" name="Netherworld Gatekeeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -114,7 +114,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29106" level="80" type="L2Npc" name="Nebula" title="Water Spirit Queen">
+	<npc id="21906" level="80" type="L2Npc" name="Netherworld Guide">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -133,7 +133,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29107" level="80" type="L2Npc" name="Procella" title="Wind Spirit King">
+	<npc id="21907" level="80" type="L2Npc" name="Sepulcher Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -152,7 +152,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29108" level="80" type="L2Npc" name="Petram" title="Earth Spirit King">
+	<npc id="21908" level="80" type="L2Npc" name="Sepulcher Prophet">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -171,7 +171,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29109" level="80" type="L2Npc" name="Freya" title="Ice Queen">
+	<npc id="21909" level="80" type="L2Npc" name="Sepulcher Hermit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -190,7 +190,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29110" level="80" type="L2Npc" name="Safe Zone">
+	<npc id="21910" level="80" type="L2Npc" name="Nephilim Royal Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -209,7 +209,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29111" level="80" type="L2Npc" name="Water Slime">
+	<npc id="21911" level="80" type="L2Npc" name="Nephilim High Priest">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -228,7 +228,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="29112" level="80" type="L2Npc" name="Procella's Guardian">
+	<npc id="21912" level="80" type="L2Npc" name="Nephilim Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -245,181 +245,6 @@
 		<collision>
 			<radius normal="5" />
 			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29113" level="80" type="L2Npc" name="Procella's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29114" level="80" type="L2Npc" name="Procella's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29115" level="80" type="L2Npc" name="Procella's Storm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29116" level="80" type="L2Npc" name="Petram Piece">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29117" level="80" type="L2Npc" name="Petram Fragment">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29118" level="80" type="L2Npc" name="Spirit King's Magic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29119" level="80" type="L2Npc" name="Zaken">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="29190" level="84" type="L2Monster" name="Tarask Dragon">
-		<!-- Todo: CT2.5 -->
-		<parameters>
-			<skill name="Skill01_ID" id="5095" level="1" />
-			<skill name="Skill02_ID" id="5096" level="1" />
-		</parameters>
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
-			<vitals hp="292335" hpRegen="76.71" mp="22800" mpRegen="3" />
-			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1071.29474264312" magical="522.626863116263" />
-			<speed>
-				<walk ground="180" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
-			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="6655" level="1" /> <!-- Tarsque Carapace -->
-		</skill_list>
-		<ex_crt_effect>true</ex_crt_effect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="63" />
-			<height normal="54" />
 		</collision>
 	</npc>
 </list>

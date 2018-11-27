@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="19133" level="75" type="L2Npc" name="Expedition Member">
-	    <!-- CLASSIC NPC TOI slot_lhand=8683-->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8683" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="60" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status showName="false" attackable="false" talkable="false" targetable="false" />
-		<collision>
-			<radius normal="8.0" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="19134" level="80" type="L2Npc" name="Antharas Decoration 1">
+	<npc id="21396" level="80" type="L2Npc" name="Carrion Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -39,7 +19,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="19135" level="80" type="L2Npc" name="Antharas Decoration 2">
+	<npc id="21397" level="80" type="L2Npc" name="Carrion Scarab">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -58,43 +38,42 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="19136" level="75" type="L2Npc" name="Expedition Member">
-	    <!-- CLASSIC NPC TOI-->
+	<npc id="21398" level="80" type="L2Npc" name="Soldier Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="288" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status showName="false" attackable="false" talkable="false" targetable="false" />
+		<status attackable="false" />
 		<collision>
-			<radius normal="8.0" />
-			<height normal="23.5" />
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="19137" level="75" type="L2Npc" name="Expedition Member">
-	    <!-- CLASSIC NPC TOI-->
+	<npc id="21399" level="80" type="L2Npc" name="Soldier Scarab">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="60" />
+				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status showName="false" attackable="false" talkable="false" targetable="false" />
+		<status attackable="false" />
 		<collision>
-			<radius normal="8.0" />
-			<height normal="23.5" />
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 </list>

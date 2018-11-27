@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27200" level="36" type="L2Monster" name="Krudel Lizardman" title="Quest Monster">
 		<parameters>
@@ -43,7 +43,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="27201" level="23" type="L2Monster" name="Ol Mahum Thief">
+	<npc id="27201" level="23" type="L2Monster" name="Ol Mahum Thief" title="Quest Monster">
 	<parameters>
 			<param name="MoveAroundSocial" value="130" />
 			<param name="MoveAroundSocial1" value="130" />
@@ -88,7 +88,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27202" level="31" type="L2Monster" name="Turek Orc Commander">
+	<npc id="27202" level="31" type="L2Monster" name="Turek Orc Commander" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -130,7 +130,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27203" level="31" type="L2Monster" name="Turek Orc Invader">
+	<npc id="27203" level="31" type="L2Monster" name="Turek Orc Invader" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -172,7 +172,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27204" level="10" type="L2Monster" name="Turek Orc Invader">
+	<npc id="27204" level="10" type="L2Monster" name="Woopee" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -214,7 +214,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27205" level="10" type="L2Monster" name="Wild Boar">
+	<npc id="27205" level="10" type="L2Monster" name="Wild Boar" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -256,7 +256,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27206" level="85" type="L2Monster" name="Black Wild Boar">
+	<npc id="27206" level="85" type="L2Monster" name="Black Wild Boar" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />
@@ -298,7 +298,7 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="27207" level="10" type="L2Monster" name="White Wild Boar">
+	<npc id="27207" level="10" type="L2Monster" name="White Wild Boar" title="Quest Monster">
 		<parameters>
 			<param name="MoveAroundSocial" value="124" />
 			<param name="MoveAroundSocial1" value="124" />

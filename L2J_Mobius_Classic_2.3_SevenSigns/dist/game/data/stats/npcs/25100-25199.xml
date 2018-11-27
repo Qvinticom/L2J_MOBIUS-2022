@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25100" level="55" type="L2Monster" name="Spirit of the Sea of Spores" title="Raid Fighter">
 		<parameters>
@@ -1987,7 +1987,7 @@
 			<height normal="40" grown="48" />
 		</collision>
 	</npc>
-	<npc id="25140" level="78" type="L2RaidBoss" name="Hekaton Prime" title="Raid Boss">
+	<npc id="25140" level="78" type="L2RaidBoss" name="Hekaton Press" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25141" count="1" respawnTime="360" weightPoint="1" />

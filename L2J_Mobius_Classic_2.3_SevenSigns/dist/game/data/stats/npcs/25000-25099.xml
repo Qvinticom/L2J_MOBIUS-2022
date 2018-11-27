@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25001" level="23" type="L2RaidBoss" name="Greyclaw Kutus" title="Raid Boss">
 		<parameters>
@@ -3254,7 +3254,7 @@
 			<height normal="61" />
 		</collision>
 	</npc>
-	<npc id="25070" level="55" type="L2RaidBoss" name="Enchanted Forest Lookout Ruell" title="Raid Boss">
+	<npc id="25070" level="55" type="L2RaidBoss" name="Enchanted Valley Lookout Ruell" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25071" count="3" respawnTime="360" weightPoint="1" /> <!-- Ruell's Wind -->
@@ -4563,7 +4563,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="25098" level="35" type="L2RaidBoss" name="u,Sejarr’s Servant" title="Raid Boss">
+	<npc id="25098" level="35" type="L2RaidBoss" name="Sejarr�s Servant" title="Raid Boss">
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
 			<skill name="SelfRangeCancel_a" id="4177" level="3" />

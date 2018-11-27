@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20600" level="40" type="L2Monster" name="Karul Bugbear">
 		<parameters>
@@ -3678,7 +3678,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20651" level="77" type="L2Monster" name="Gamlin">
+	<npc id="20651" level="77" type="L2Monster" name="Gamlin" title="Elven Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3748,7 +3748,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20652" level="77" type="L2Monster" name="Leogul">
+	<npc id="20652" level="77" type="L2Monster" name="Leogul" title="Elven Scout">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -3819,7 +3819,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20653" level="76" type="L2Monster" name="Lesser Giant">
+	<npc id="20653" level="76" type="L2Monster" name="Lesser Giant Bandit">
 		<parameters>
 			<param name="MoveAroundSocial" value="170" />
 			<param name="MoveAroundSocial1" value="170" />
