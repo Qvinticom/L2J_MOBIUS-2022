@@ -605,61 +605,53 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34047" level="80" type="L2Npc" name="Tara" title="Researcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="34047" level="78" type="L2Teleporter" name="Tara" title="Researcher">
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<equipment rhand="2" lhand="102" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.0" />
+			<height normal="24.0" />
 		</collision>
 	</npc>
-	<npc id="34048" level="80" type="L2Npc" name="Wiri" title="Researcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="34048" level="80" type="L2Teleporter" name="Wiri" title="Researcher">
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.0" />
+			<height normal="19.7" />
 		</collision>
 	</npc>
-	<npc id="34049" level="80" type="L2Npc" name="Tritan" title="Researcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="34049" level="78" type="L2Teleporter" name="Tritan" title="Researcher">
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.0" />
+			<height normal="19.7" />
 		</collision>
 	</npc>
 	<npc id="34050" level="80" type="L2Npc" name="Hermun">
@@ -719,20 +711,20 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34053" level="80" type="L2Merchant" name="Svein" title="Attribute Master">
+	<npc id="34053" level="78" type="L2Merchant" name="Svein" title="Attribute Master">
 		<race>HUMAN</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="100" />
 			</speed>
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="11" />
-			<height normal="17" />
+			<radius normal="16" />
+			<height normal="13.25" />
 		</collision>
 	</npc>
 	<npc id="34054" level="80" type="L2Npc" name="God of Water" title="Attribute Master">
@@ -773,23 +765,21 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34056" level="80" type="L2Npc" name="Tyren" title="Researcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="34056" level="78" type="L2Teleporter" name="Tyren" title="Researcher">
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<equipment rhand="0" lhand="17300" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="8446" hpRegen="7.5" mp="2355" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9.0" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="34057" level="80" type="L2Npc" name="Santa's Girl" title="Event Manager">

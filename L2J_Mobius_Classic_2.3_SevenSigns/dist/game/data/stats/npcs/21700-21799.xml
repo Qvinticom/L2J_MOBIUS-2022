@@ -2676,62 +2676,102 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21764" level="80" type="L2Npc" name="Growler" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite">
+		<!-- Classic Seven Sings -->
+		<race>ELEMENTAL</race>
+		<acquire exp="141405" sp="3817" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3736.528" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="826.2" magical="289.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="354.8" magical="161.5" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10.8" /> <!-- Need retail value -->
+			<height normal="33.0" /> <!-- Need retail value -->
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="91038" min="1" max="1" chance="25.705" /> <!-- Earth Spirit Rough Jewel -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="21765" level="80" type="L2Npc" name="Tree Soldier" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21765" level="83" type="L2Monster" name="Tree Soldier" title="Elite">
+		<!-- Classic Seven Sings -->
+		<race>ETC</race> <!-- TODO: Magic Creatures -->
+		<acquire exp="897671" sp="24237" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297.86" hpRegen="9.5" mp="2666.1" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="857.9" magical="542.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="939.1" magical="568" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="53.3" /> <!-- Need retail value -->
+			<height normal="40.55" /> <!-- Need retail value -->
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="91038" min="1" max="1" chance="26.66" /> <!-- Earth Spirit Rough Jewel -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="21766" level="80" type="L2Npc" name="Tortay" title="Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21766" level="83" type="L2Monster" name="Tortay" title="Master">
+		<!-- Classic Seven Sings -->
+		<race>ELEMENTAL</race>
+		<acquire exp="2581570" sp="69702" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297.86" hpRegen="9.5" mp="2666.1" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="822.2" magical="893.4" critical="4" attackSpeed="253" range="40" />
+			<defence physical="923.8" magical="563" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="18" /> <!-- Extremely Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="40.0" /> <!-- Need retail value -->
+			<height normal="65.4" /> <!-- Need retail value -->
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="91038" min="1" max="1" chance="100" /> <!-- Earth Spirit Rough Jewel -->
+				<item id="91034" min="1" max="1" chance="4.5315" /> <!-- Earth Spirit Evolution Stone -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="21767" level="80" type="L2Npc" name="Undine" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2790,61 +2830,161 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21770" level="80" type="L2Npc" name="Sylph" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21770" level="82" type="L2Monster" name="Sylph" title="Elite">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="141405" sp="3817" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4416" level="7" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="18" />
+			<skill id="4412" level="13" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="91037" min="1" max="1" chance="46.71" /> <!-- Руда Духа Ветра -->
+			</drop>
+		</drop_lists>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14.3" />
+			<height normal="46.4" />
 		</collision>
 	</npc>
-	<npc id="21771" level="80" type="L2Npc" name="Kimerian" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21771" level="83" type="L2Monster" name="Kimerian" title="Elite">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="897671" sp="24237" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4416" level="7" />
+			<skill id="4408" level="12" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="15" />
+			<skill id="4412" level="18" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="91037" min="1" max="1" chance="46.50" /> <!-- Руда Духа Ветра -->
+			</drop>
+		</drop_lists>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18.0" />
+			<height normal="45.0" />
 		</collision>
 	</npc>
-	<npc id="21772" level="80" type="L2Npc" name="Radin" title="Master">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21772" level="83" type="L2Monster" name="Radin" title="Master">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="2581570" sp="69702" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>	
+			<skill id="4416" level="7" />
+			<skill id="4408" level="13" />
+			<skill id="4410" level="21" />
+			<skill id="4411" level="18" />
+			<skill id="4412" level="18" />
+			<skill id="4413" level="14" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="91037" min="1" max="1" chance="100" /> <!-- Руда Духа Ветра -->
+				<item id="91033" min="1" max="1" chance="7.446" /> <!-- Камень Эволюции Духа Ветра -->
+			</drop>
+		</drop_lists>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="40.0" />
+			<height normal="131.0" />
 		</collision>
 	</npc>
 	<npc id="21773" level="80" type="L2Npc" name="Capitan's Henchman">
@@ -2866,384 +3006,886 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21774" level="80" type="L2Npc" name="Buffalo" title="Guardian of Gorge">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
+		<!-- Classic Seven Sings -->
+		<race>BEAST</race>
+		<acquire exp="65216" sp="1760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3736.528" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="4132.1" magical="2898.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="1770.9" magical="1610.5" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
+			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
+		</skill_list>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="32.4" />
+			<height normal="46.2" />
 		</collision>
 	</npc>
-	<npc id="21775" level="80" type="L2Npc" name="Arahan" title="Hero of the Past">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past">
+		<!-- Classic Seven Sings -->
+		<race>DIVINE</race>
+		<acquire exp="624686" sp="16866" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="6227.54" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<attack physical="754.5" magical="557.2" critical="4" attackSpeed="253" range="40" />
+			<defence physical="11806.5" magical="1754" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<skill_list>
+			<skill id="4416" level="8" /> <!-- Angel -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18.0" /> <!-- Need retail value -->
+			<height normal="44.0" /> <!-- Need retail value -->
 		</collision>
 	</npc>
-	<npc id="21776" level="80" type="L2Npc" name="Fuish" title="Guardian of Wind">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21776" level="82" type="L2Monster" name="Fuish" title="Guardian of Wind">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="110421" sp="2981" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>	
+			<skill id="4416" level="9" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="19" />
+			<skill id="4411" level="15" />
+			<skill id="4412" level="18" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12.0" />
+			<height normal="31.44" />
 		</collision>
 	</npc>
-	<npc id="21777" level="80" type="L2Npc" name="White Tiger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21777" level="78" type="L2Monster" name="White Tiger">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="22942" sp="688" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3547.976" hpRegen="6.5" mp="2411.1" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>	
+			<skill id="4416" level="7" />
+			<skill id="4410" level="13" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="12" />
+			<skill id="4413" level="10" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28.0" />
+			<height normal="28.0" />
 		</collision>
 	</npc>
-	<npc id="21778" level="80" type="L2Npc" name="Black Tiger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21778" level="79" type="L2Monster" name="Black Tiger">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="42650" sp="1151" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>	
+			<skill id="4416" level="7" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="14" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28.0" />
+			<height normal="28.0" />
 		</collision>
 	</npc>
-	<npc id="21779" level="80" type="L2Npc" name="Scorn Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21779" level="79" type="L2Monster" name="Scorn Warrior">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="25744" sp="695" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>				
+			<skill id="4416" level="7" />
+			<skill id="4410" level="14" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="40.0" />
 		</collision>
 	</npc>
-	<npc id="21780" level="80" type="L2Npc" name="Porcupine">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21780" level="80" type="L2Monster" name="Porcupine">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="45081" sp="1217" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>						
+			<skill id="4416" level="7" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10.8" />
+			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="21781" level="80" type="L2Npc" name="Scorn Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21781" level="80" type="L2Monster" name="Scorn Soldier">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="28320" sp="764" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3646.048" hpRegen="6.5" mp="2512.2" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="174" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>						
+			<skill id="4416" level="7" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="13" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="40.0" />
 		</collision>
 	</npc>
-	<npc id="21782" level="80" type="L2Npc" name="Scorn Seeker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21782" level="81" type="L2Monster" name="Scorn Seeker">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="30607" sp="826" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3692.28" hpRegen="6.5" mp="2563.2" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>							
+			<skill id="4416" level="7" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="40.0" />
 		</collision>
 	</npc>
-	<npc id="21783" level="80" type="L2Npc" name="Nero Commander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21783" level="81" type="L2Monster" name="Nero Commander">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="52317" sp="1412" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3692.28" hpRegen="6.5" mp="2563.2" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>									
+			<skill id="4416" level="7" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="17" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28.0" />
+			<height normal="28.0" />
 		</collision>
 	</npc>
-	<npc id="21784" level="80" type="L2Npc" name="Storm Tapo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21784" level="82" type="L2Monster" name="Storm Tapo">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="52205" sp="1409" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>											
+			<skill id="4416" level="7" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="16" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="14" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28.0" />
+			<height normal="28.0" />
 		</collision>
 	</npc>
-	<npc id="21785" level="80" type="L2Npc" name="Breeze Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21785" level="82" type="L2Monster" name="Breeze Warrior">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="367977" sp="11039" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>												
+			<skill id="4416" level="7" />
+			<skill id="4408" level="13" />
+			<skill id="4410" level="16" />
+			<skill id="4411" level="15" />
+			<skill id="4412" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="40.0" />
 		</collision>
 	</npc>
-	<npc id="21786" level="80" type="L2Npc" name="Sharp Kau">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21786" level="82" type="L2Monster" name="Sharp Kau">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="308530" sp="8330" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>															
+			<skill id="4416" level="7" />
+			<skill id="4408" level="12" />
+			<skill id="4410" level="16" />
+			<skill id="4411" level="15" />
+			<skill id="4412" level="14" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10.8" />
+			<height normal="21.3" />
 		</collision>
 	</npc>
-	<npc id="21787" level="80" type="L2Npc" name="Breeze Piker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21787" level="82" type="L2Monster" name="Breeze Piker">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="378803" sp="10227" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>															
+			<skill id="4416" level="7" />
+			<skill id="4408" level="13" />
+			<skill id="4410" level="17" />
+			<skill id="4411" level="15" />
+			<skill id="4412" level="14" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="40.0" />
 		</collision>
 	</npc>
-	<npc id="21788" level="80" type="L2Npc" name="Breeze Mage">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21788" level="82" type="L2Monster" name="Breeze Mage">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="308860" sp="8339" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																	
+			<skill id="4416" level="7" />
+			<skill id="4408" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4411" level="17" />
+			<skill id="4412" level="14" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24.0" />
+			<height normal="48.6" />
 		</collision>
 	</npc>
-	<npc id="21789" level="80" type="L2Npc" name="Folding">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21789" level="83" type="L2Monster" name="Folding">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="321502" sp="8680" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																	
+			<skill id="4416" level="7" />
+			<skill id="4408" level="12" />
+			<skill id="4410" level="13" />
+			<skill id="4411" level="18" />
+			<skill id="4412" level="14" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18.0" />
+			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="21790" level="80" type="L2Npc" name="Wingrow">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21790" level="83" type="L2Monster" name="Wingrow">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="427882" sp="11552" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																	
+			<skill id="4416" level="7" />
+			<skill id="4408" level="15" />
+			<skill id="4410" level="18" />
+			<skill id="4411" level="16" />
+			<skill id="4412" level="15" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="43.0" />
+			<height normal="43.0" />
 		</collision>
 	</npc>
-	<npc id="21791" level="80" type="L2Npc" name="Storm Lucifer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21791" level="83" type="L2Monster" name="Storm Lucifer">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="432994" sp="11690" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																		
+			<skill id="4416" level="7" />
+			<skill id="4408" level="15" />
+			<skill id="4410" level="18" />
+			<skill id="4411" level="16" />
+			<skill id="4412" level="16" />
+			<skill id="4413" level="13" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="46.0" />
+			<height normal="50.0" />
 		</collision>
 	</npc>
-	<npc id="21792" level="80" type="L2Npc" name="Blow Breaker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21792" level="83" type="L2Monster" name="Blow Breaker">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="431065" sp="11638" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																				
+			<skill id="4416" level="6" />
+			<skill id="4408" level="14" />
+			<skill id="4410" level="19" />
+			<skill id="4411" level="16" />
+			<skill id="4412" level="16" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18.6" />
+			<height normal="27.6" />
 		</collision>
 	</npc>
-	<npc id="21793" level="80" type="L2Npc" name="Brolly Seeker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21793" level="83" type="L2Monster" name="Brolly Seeker">
+		<parameters>
+			<param name="MoveAroundSocial" value="0" />
+			<param name="MoveAroundSocial1" value="0" />
+			<param name="MoveAroundSocial2" value="0" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
+		</parameters>
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="433958" sp="11716" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>390</hit_time>
+			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="240.785479" magical="160.17851" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>																						
+			<skill id="4416" level="1" />
+			<skill id="4408" level="14" />
+			<skill id="4410" level="19" />
+			<skill id="4411" level="16" />
+			<skill id="4412" level="17" />
+			<skill id="4413" level="12" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai aggroRange="350" clanHelpRange="300">
+			<clan_list>
+				<clan>UNDEAD</clan>
+			</clan_list>
+		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.0" />
+			<height normal="53.0" />
 		</collision>
 	</npc>
 	<npc id="21794" level="80" type="L2Npc" name="Seer">
@@ -3322,42 +3964,218 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="21798" level="80" type="L2Npc" name="Kookaburra">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21798" level="78" type="L2Monster" name="Kookaburra">
+	    <!-- Classic Seven Sings -->
+		<parameters>
+			<param name="MoveAroundSocial" value="72" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="72" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="PhysicalSpecial" id="4067" level="6" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="35719" sp="964" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3547.976" hpRegen="7.5" mp="2411.1" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>540</hit_time>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="3" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="14" />
+			<skill id="4411" level="13" />
+			<skill id="4412" level="10" />
+			<skill id="4413" level="10" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>ANIMAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5290" min="1" max="1" chance="0.005" />
+				<item id="5291" min="1" max="1" chance="0.005" />
+				<item id="5295" min="1" max="1" chance="0.005" />
+				<item id="5296" min="1" max="1" chance="0.005" />
+				<item id="57" min="1513" max="3532" chance="70" />
+				<item id="1895" min="1" max="1" chance="11.00" />
+				<item id="1876" min="1" max="1" chance="7.890" />
+				<item id="1879" min="1" max="1" chance="6.603" />
+				<item id="1866" min="2" max="6" chance="6.571" />
+				<item id="1870" min="5" max="15" chance="3.935" />
+				<item id="1871" min="9" max="27" chance="2.656" />
+				<item id="5496" min="1" max="1" chance="0.5" />
+				<item id="5497" min="1" max="1" chance="0.5" />
+				<item id="5508" min="1" max="1" chance="0.5" />
+				<item id="5509" min="1" max="1" chance="0.5" />
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="7" chance="81.96" />
+				<item id="1871" min="1" max="7" chance="79.32" />
+				<item id="1866" min="1" max="5" chance="77.36" />
+				<item id="1876" min="1" max="1" chance="67.57" />
+				<item id="1879" min="1" max="1" chance="56.32" />
+				<item id="1895" min="1" max="3" chance="49.93" />
+			</spoil>
+		</drop_lists>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21799" level="80" type="L2Npc" name="Kookaburra">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="21799" level="79" type="L2Monster" name="Kookaburra">
+	    <!-- Classic Seven Sings -->
+		<parameters>
+			<param name="MoveAroundSocial" value="72" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="72" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="PhysicalSpecial" id="4032" level="6" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="35817" sp="967" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3597.92" hpRegen="7.5" mp="2461.5" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="190" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<hit_time>540</hit_time>
+			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" />
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="3" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="12" />
+			<skill id="4411" level="14" />
+			<skill id="4412" level="12" />
+			<skill id="4413" level="7" />
+			<skill id="4414" level="3" />
+			<skill id="4276" level="2" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>ANIMAL</clan>
+			</clan_list>
+		</ai>
+		<drop_lists>
+			<drop>
+				<item id="5297" min="1" max="1" chance="0.001" />
+				<item id="5298" min="1" max="1" chance="0.001" />
+				<item id="5301" min="1" max="1" chance="0.001" />
+				<item id="57" min="1520" max="3549" chance="70" />
+				<item id="1895" min="1" max="1" chance="10.81" />
+				<item id="1876" min="1" max="1" chance="8.012" />
+				<item id="1866" min="2" max="6" chance="6.716" />
+				<item id="1879" min="1" max="1" chance="6.715" />
+				<item id="1870" min="5" max="15" chance="3.956" />
+				<item id="1871" min="9" max="27" chance="2.149" />
+				<item id="5482" min="1" max="1" chance="0.5" />
+				<item id="5479" min="1" max="1" chance="0.1" />
+				<item id="5480" min="1" max="1" chance="0.1" />
+				<item id="5481" min="1" max="1" chance="0.1" />
+				<item id="5478" min="1" max="1" chance="0.1" />
+			</drop>
+			<spoil>
+				<item id="1871" min="1" max="7" chance="83.17" />
+				<item id="1870" min="1" max="7" chance="79.62" />
+				<item id="1866" min="1" max="5" chance="70.11" />
+				<item id="1876" min="1" max="1" chance="69.77" />
+				<item id="1879" min="1" max="1" chance="58.30" />
+				<item id="1895" min="1" max="3" chance="49.56" />
+			</spoil>
+		</drop_lists>
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
+	</npc>
+	<npc id="21800" level="80" type="L2Monster" name="Kookaburra">
+	    <!-- Classic Seven Sings -->
+		<parameters>
+			<param name="MoveAroundSocial" value="72" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="72" />
+			<param name="SoulShot" value="200" />
+			<param name="SoulShotRate" value="5" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="10" />
+			<param name="LongRangeGuardRate" value="10" />
+			<skill name="PhysicalSpecial" id="4244" level="6" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>MALE</sex>
+		<acquire exp="75552" sp="2039" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="3646.048" hpRegen="7.5" mp="2512.2" mpRegen="2.7" />
+			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="281.55251" magical="206.02791" />
+			<speed>
+				<walk ground="23" />
+				<run ground="190" />
+			</speed>
+			<hit_time>540</hit_time>
+			<abnormalResist physical="10" magical="10" />
+		</stats>
+		<status undying="false" canBeSown="true" />
+		<skill_list>
+			<skill id="4244" level="6" /> <!-- NPC Wild Sweep -->
+			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4415" level="3" /> <!-- One-handed Sword -->
+			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="3" />
+			<skill id="4408" level="10" />
+			<skill id="4410" level="15" />
+			<skill id="4411" level="13" />
+			<skill id="4414" level="3" />
+		</skill_list>
+		<shots shotChance="30" spiritChance="30" />
+		<ex_crt_effect>false</ex_crt_effect>
+		<ai clanHelpRange="300" aggroRange="300">
+			<clan_list>
+				<clan>ANIMAL</clan>
+			</clan_list>
+		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
 		</collision>
 	</npc>
 </list>
