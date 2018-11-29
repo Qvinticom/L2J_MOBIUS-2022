@@ -14,6 +14,51 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
+	<item id="48017" name="Healer Costume" type="Armor">
+		<set name="icon" val="icon.healer_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48018" name="Chevalier Costume" type="Armor">
+		<set name="icon" val="icon.chevalier_chest_change" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48019" name="Kat the Cat Costume" type="Armor">
+		<set name="icon" val="icon.cat_the_cat_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48020" name="Barbarian Wolf Costume" type="Armor">
+		<set name="icon" val="icon.barbarian_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="48021" name="Valkyrie Costume" type="Armor">
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+	</item>
 	<item id="48022" name="Teddy Bear Wear" type="Armor">
 		<!-- Teddy Bear wear. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
 		<set name="icon" val="icon.agathion_gem_star_1" />

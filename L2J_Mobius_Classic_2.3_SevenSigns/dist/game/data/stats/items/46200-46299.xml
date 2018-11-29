@@ -12,4 +12,17 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="46261" name="Ninja Assassin Outfit" type="Armor">
+		<!-- Ninja Assassin outfit. -->
+		<set name="icon" val="icon.bm2018_ninja_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="alldress" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="BRONZE" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">400</stat>
+		</stats>
+	</item>
 </list>

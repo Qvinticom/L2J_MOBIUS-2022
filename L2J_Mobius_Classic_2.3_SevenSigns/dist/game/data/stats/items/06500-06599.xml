@@ -136,4 +136,30 @@
 			<skill id="2212" level="1" /> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
 		</skills>
 	</item>
+	<item id="6579" name="NoItemName" type="Weapon">
+		<set name="icon" val="icon.weapon_arcana_mace_i00" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="ADAMANTAITE" />
+		<set name="weight" val="1300" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_destroyable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
+		<stats>
+			<stat type="pAtk">225</stat>
+			<stat type="mAtk">175</stat>
+			<stat type="rCrit">6</stat>
+			<stat type="accCombat">8</stat>
+			<stat type="pAtkSpd">379</stat>
+			<stat type="randomDamage">20</stat>
+		</stats>
+	</item>
 </list>

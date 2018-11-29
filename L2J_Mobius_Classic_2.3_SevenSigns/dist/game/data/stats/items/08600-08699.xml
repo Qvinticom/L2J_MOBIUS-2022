@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="8615" name="Summoning Crystal" type="EtcItem">
+		<!-- Crystal imbued with mystical power. Used for teleportation magic. -->
+		<set name="icon" val="icon.etc_recall_crystal_i00" />
+		<set name="weight" val="10" />
+		<set name="price" val="35000" />
+		<set name="is_stackable" val="true" />
+	</item>
 	<item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" type="EtcItem">
 		<!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
 		<set name="icon" val="icon.etc_add_buffslot_i00" />

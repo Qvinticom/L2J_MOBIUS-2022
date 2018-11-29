@@ -1252,4 +1252,30 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
+	<item id="49598" name="Blue Talisman - P. Crit." additionalName="1 hour" type="Armor">
+		<!-- A 1-hour item. P. Critical Rate +10. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+	</item>
+	<item id="49599" name="Blue Talisman - P. Crit." additionalName="1 hour" type="Armor">
+		<!-- A 1-hour item. P. Atk. +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
+		<set name="icon" val="icon.etc_talisman_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="60" />
+	</item>
 </list>
