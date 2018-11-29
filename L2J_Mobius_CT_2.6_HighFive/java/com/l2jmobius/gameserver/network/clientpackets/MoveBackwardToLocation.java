@@ -106,6 +106,11 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 		// Validate position packets sends head level.
 		_targetZ += activeChar.getTemplate().getCollisionHeight();
 		
+		if (!activeChar.isCursorKeyMovementActive() && (activeChar.isInFrontOf(new Location(_targetX, _targetY, _targetZ)) || activeChar.isOnSideOf(new Location(_originX, _originY, _originZ))))
+		{
+			activeChar.setCursorKeyMovementActive(true);
+		}
+		
 		if (_movementMode == 1)
 		{
 			activeChar.setCursorKeyMovement(false);
@@ -123,6 +128,10 @@ public class MoveBackwardToLocation implements IClientIncomingPacket
 				return;
 			}
 			activeChar.setCursorKeyMovement(true);
+			if (!activeChar.isCursorKeyMovementActive())
+			{
+				return;
+			}
 		}
 		
 		if (activeChar.getTeleMode() > 0)

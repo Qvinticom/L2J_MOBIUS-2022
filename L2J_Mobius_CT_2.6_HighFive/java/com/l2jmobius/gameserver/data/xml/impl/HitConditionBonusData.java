@@ -131,11 +131,11 @@ public final class HitConditionBonusData implements IGameXmlReader
 		}
 		
 		// Get side bonus
-		if (attacker.isBehindTarget())
+		if (attacker.isBehind(target))
 		{
 			mod += backBonus;
 		}
-		else if (attacker.isInFrontOfTarget())
+		else if (attacker.isInFrontOf(target))
 		{
 			mod += frontBonus;
 		}

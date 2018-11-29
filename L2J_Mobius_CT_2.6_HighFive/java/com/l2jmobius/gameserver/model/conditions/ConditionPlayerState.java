@@ -50,39 +50,57 @@ public class ConditionPlayerState extends Condition
 		switch (_check)
 		{
 			case RESTING:
+			{
 				if (player != null)
 				{
 					return (player.isSitting() == _required);
 				}
 				return !_required;
+			}
 			case MOVING:
+			{
 				return character.isMoving() == _required;
+			}
 			case RUNNING:
+			{
 				return character.isRunning() == _required;
+			}
 			case STANDING:
+			{
 				if (player != null)
 				{
 					return (_required != (player.isSitting() || player.isMoving()));
 				}
 				return (_required != character.isMoving());
+			}
 			case FLYING:
+			{
 				return (character.isFlying() == _required);
+			}
 			case BEHIND:
-				return (character.isBehindTarget() == _required);
+			{
+				return (character.isBehind(effected) == _required);
+			}
 			case FRONT:
-				return (character.isInFrontOfTarget() == _required);
+			{
+				return (character.isInFrontOf(effected) == _required);
+			}
 			case CHAOTIC:
+			{
 				if (player != null)
 				{
 					return ((player.getKarma() > 0) == _required);
 				}
 				return !_required;
+			}
 			case OLYMPIAD:
+			{
 				if (player != null)
 				{
 					return (player.isInOlympiadMode() == _required);
 				}
 				return !_required;
+			}
 		}
 		return !_required;
 	}

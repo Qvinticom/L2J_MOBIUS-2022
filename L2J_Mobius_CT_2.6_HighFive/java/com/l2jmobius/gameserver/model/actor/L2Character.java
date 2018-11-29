@@ -253,6 +253,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Movement data of this L2Character */
 	protected MoveData _move;
 	private boolean _cursorKeyMovement = false;
+	private boolean _cursorKeyMovementActive = true;
 	
 	/** This creature's target. */
 	private L2Object _target;
@@ -1336,8 +1337,9 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		int attackCountMax = (int) _stat.calcStat(Stats.ATTACK_COUNT_MAX, 1, null, null);
 		if (attackCountMax > 1)
 		{
+			final double headingAngle = Util.convertHeadingToDegree(getHeading());
 			final int maxRadius = _stat.getPhysicalAttackRange();
-			final int maxAngleDiff = _stat.getPhysicalAttackAngle();
+			final int physicalAttackAngle = _stat.getPhysicalAttackAngle();
 			double attackpercent = 85;
 			for (L2Character obj : L2World.getInstance().getVisibleObjectsInRange(this, L2Character.class, maxRadius))
 			{
@@ -1360,7 +1362,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 				
 				// Check if target is within attack angle.
-				if (!isFacing(obj, maxAngleDiff))
+				if (Math.abs(calculateDirectionTo(obj) - headingAngle) > physicalAttackAngle)
 				{
 					continue;
 				}
@@ -3944,6 +3946,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					_move.onGeodataPathIndex = -1;
 					stopMove(getActingPlayer().getLastServerPosition());
+					_cursorKeyMovementActive = false;
 					return false;
 				}
 			}
@@ -4168,6 +4171,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		double dy = (y - curY);
 		double dz = (z - curZ);
 		double distance = Math.hypot(dx, dy);
+		
+		if (!_cursorKeyMovementActive && (distance > 200))
+		{
+			return;
+		}
 		
 		final boolean verticalMovementOnly = _isFlying && (distance == 0) && (dz != 0);
 		if (verticalMovementOnly)
@@ -5795,117 +5803,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
-	 * @param target
-	 * @return True if the L2Character is behind the target and can't be seen.
-	 */
-	public boolean isBehind(L2Object target)
-	{
-		double angleChar;
-		double angleTarget;
-		double angleDiff;
-		final double maxAngleDiff = 60;
-		
-		if (target == null)
-		{
-			return false;
-		}
-		
-		if (target.isCharacter())
-		{
-			final L2Character target1 = (L2Character) target;
-			angleChar = Util.calculateAngleFrom(this, target1);
-			angleTarget = Util.convertHeadingToDegree(target1.getHeading());
-			angleDiff = angleChar - angleTarget;
-			if (angleDiff <= (-360 + maxAngleDiff))
-			{
-				angleDiff += 360;
-			}
-			if (angleDiff >= (360 - maxAngleDiff))
-			{
-				angleDiff -= 360;
-			}
-			if (Math.abs(angleDiff) <= maxAngleDiff)
-			{
-				return true;
-			}
-		}
-		return false;
-	}
-	
-	public boolean isBehindTarget()
-	{
-		return isBehind(_target);
-	}
-	
-	/**
-	 * @param target
-	 * @return True if the target is facing the L2Character.
-	 */
-	public boolean isInFrontOf(L2Object target)
-	{
-		double angleChar;
-		double angleTarget;
-		double angleDiff;
-		final double maxAngleDiff = 60;
-		if (target == null)
-		{
-			return false;
-		}
-		
-		angleTarget = Util.calculateAngleFrom(target, this);
-		angleChar = Util.convertHeadingToDegree(target.getHeading());
-		angleDiff = angleChar - angleTarget;
-		if (angleDiff <= (-360 + maxAngleDiff))
-		{
-			angleDiff += 360;
-		}
-		if (angleDiff >= (360 - maxAngleDiff))
-		{
-			angleDiff -= 360;
-		}
-		return Math.abs(angleDiff) <= maxAngleDiff;
-	}
-	
-	/**
-	 * @param target
-	 * @param maxAngle
-	 * @return true if target is in front of L2Character (shield def etc)
-	 */
-	public boolean isFacing(L2Object target, int maxAngle)
-	{
-		double angleChar;
-		double angleTarget;
-		double angleDiff;
-		double maxAngleDiff;
-		if (target == null)
-		{
-			return false;
-		}
-		maxAngleDiff = maxAngle / 2.;
-		angleTarget = Util.calculateAngleFrom(this, target);
-		angleChar = Util.convertHeadingToDegree(getHeading());
-		angleDiff = angleChar - angleTarget;
-		if (angleDiff <= (-360 + maxAngleDiff))
-		{
-			angleDiff += 360;
-		}
-		if (angleDiff >= (360 - maxAngleDiff))
-		{
-			angleDiff -= 360;
-		}
-		return Math.abs(angleDiff) <= maxAngleDiff;
-	}
-	
-	public boolean isInFrontOfTarget()
-	{
-		if ((_target != null) && _target.isCharacter())
-		{
-			return isInFrontOf(_target);
-		}
-		return false;
-	}
-	
-	/**
 	 * @return the Level Modifier ((level + 89) / 100).
 	 */
 	public double getLevelMod()
@@ -6813,6 +6710,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void setCursorKeyMovement(boolean value)
 	{
 		_cursorKeyMovement = value;
+	}
+	
+	public void setCursorKeyMovementActive(boolean value)
+	{
+		_cursorKeyMovementActive = value;
+	}
+	
+	public boolean isCursorKeyMovementActive()
+	{
+		return _cursorKeyMovementActive;
 	}
 	
 	public List<L2ItemInstance> getFakePlayerDrops()

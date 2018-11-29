@@ -562,7 +562,7 @@ public final class Formulas
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
 		final double power = skill.getPower(isPvP, isPvE);
 		double damage = 0;
-		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed);
+		final double proximityBonus = attacker.isBehind(target) ? 1.2 : attacker.isInFrontOf(target) ? 1 : 1.1; // Behind: +20% - Side: +10% (TODO: values are unconfirmed, possibly custom, remove or update when confirmed);
 		final double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
@@ -632,7 +632,7 @@ public final class Formulas
 		final boolean isPvP = attacker.isPlayable() && target.isPlayer();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
 		double damage = 0;
-		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10%
+		final double proximityBonus = attacker.isBehind(target) ? 1.2 : attacker.isInFrontOf(target) ? 1 : 1.1; // Behind: +20% - Side: +10%
 		final double ssboost = ss ? 1.458 : 1;
 		double pvpBonus = 1;
 		
@@ -695,7 +695,7 @@ public final class Formulas
 	{
 		final boolean isPvP = attacker.isPlayable() && target.isPlayable();
 		final boolean isPvE = attacker.isPlayable() && target.isAttackable();
-		final double proximityBonus = attacker.isBehindTarget() ? 1.2 : attacker.isInFrontOfTarget() ? 1 : 1.1; // Behind: +20% - Side: +10%
+		final double proximityBonus = attacker.isBehind(target) ? 1.2 : attacker.isInFrontOf(target) ? 1 : 1.1; // Behind: +20% - Side: +10%
 		double damage = attacker.getPAtk(target);
 		double defence = target.getPDef(attacker);
 		
@@ -1198,7 +1198,7 @@ public final class Formulas
 		}
 		
 		final int degreeside = (int) target.calcStat(Stats.SHIELD_DEFENCE_ANGLE, 0, null, null) + 120;
-		if ((degreeside < 360) && (!target.isFacing(attacker, degreeside)))
+		if ((degreeside < 360) && (Math.abs(target.calculateDirectionTo(attacker) - Util.convertHeadingToDegree(target.getHeading())) > (degreeside / 2)))
 		{
 			return 0;
 		}
@@ -1878,7 +1878,7 @@ public final class Formulas
 		// Apply DEX Mod.
 		final double blowChance = skill.getBlowChance();
 		// Apply Position Bonus (TODO: values are unconfirmed, possibly custom, remove or update when confirmed).
-		final double sideMod = (activeChar.isInFrontOfTarget()) ? 1 : (activeChar.isBehindTarget()) ? 2 : 1.5;
+		final double sideMod = (activeChar.isInFrontOf(target)) ? 1 : (activeChar.isBehind(target)) ? 2 : 1.5;
 		// Apply all mods.
 		final double baseRate = blowChance * dexMod * sideMod;
 		// Apply blow rates

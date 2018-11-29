@@ -248,6 +248,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	/** Movement data of this L2Character */
 	protected MoveData _move;
 	private boolean _cursorKeyMovement = false;
+	private boolean _cursorKeyMovementActive = true;
 	
 	/** This creature's target. */
 	private L2Object _target;
@@ -2945,6 +2946,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				{
 					_move.onGeodataPathIndex = -1;
 					stopMove(getActingPlayer().getLastServerPosition());
+					_cursorKeyMovementActive = false;
 					return false;
 				}
 			}
@@ -3171,6 +3173,11 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		double dy = (y - curY);
 		double dz = (z - curZ);
 		double distance = Math.hypot(dx, dy);
+		
+		if (!_cursorKeyMovementActive && (distance > 200))
+		{
+			return;
+		}
 		
 		final boolean verticalMovementOnly = _isFlying && (distance == 0) && (dz != 0);
 		if (verticalMovementOnly)
@@ -5365,6 +5372,16 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void setCursorKeyMovement(boolean value)
 	{
 		_cursorKeyMovement = value;
+	}
+	
+	public void setCursorKeyMovementActive(boolean value)
+	{
+		_cursorKeyMovementActive = value;
+	}
+	
+	public boolean isCursorKeyMovementActive()
+	{
+		return _cursorKeyMovementActive;
 	}
 	
 	public List<L2ItemInstance> getFakePlayerDrops()
