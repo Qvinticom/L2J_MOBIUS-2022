@@ -18,6 +18,7 @@ package ai.others.MonumentOfHeroes;
 
 import java.util.List;
 
+import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
@@ -225,7 +226,11 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 	@Override
 	public String onFirstTalk(L2Npc npc, L2PcInstance player)
 	{
-		return player.isNoble() ? "MonumentOfHeroes-noblesse.html" : "MonumentOfHeroes-noNoblesse.html";
+		if ((!player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (player.getLevel() < 55))
+		{
+			return "MonumentOfHeroes-noNoblesse.html";
+		}
+		return "MonumentOfHeroes-noblesse.html";
 	}
 	
 	private int getOlympiadRank(L2PcInstance player)
