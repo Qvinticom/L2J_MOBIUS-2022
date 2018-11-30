@@ -44,7 +44,13 @@
 			<condition name="OpTargetNpc">
 				<npcIds>
 					<item>13399</item>
+					<item>13400</item>
+					<item>13401</item>
+					<item>13402</item>
 					<item>13403</item>
+					<item>13404</item>
+					<item>13405</item>
+					<item>13406</item>
 				</npcIds>
 			</condition>
 		</conditions>
@@ -56,7 +62,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>37552</itemConsumeId> <!-- Snowy Squash Seed -->
+		<itemConsumeId>38923</itemConsumeId> <!-- Snowy Squash Seed -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -81,7 +87,7 @@
 		<reuseDelay>10000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>37553</itemConsumeId> <!-- Snowy Large Squash Seed -->
+		<itemConsumeId>38924</itemConsumeId> <!-- Snowy Large Squash Seed -->
 		<magicLvl>1</magicLvl>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>

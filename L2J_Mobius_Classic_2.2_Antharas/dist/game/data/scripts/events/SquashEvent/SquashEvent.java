@@ -20,11 +20,13 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2MonsterInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.items.type.CrystalType;
 import com.l2jmobius.gameserver.model.quest.LongTimeEvent;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -37,8 +39,8 @@ public class SquashEvent extends LongTimeEvent
 	private static final int MANAGER = 31860;
 	private static final int NECTAR_SKILL = 2005;
 	
-	private static final List<Integer> SQUASH_LIST = Arrays.asList(12774, 12776, 12775, 12777, 12778, 12779, 13016, 13017);
-	private static final List<Integer> LARGE_SQUASH_LIST = Arrays.asList(12777, 12778, 12779, 13017);
+	private static final List<Integer> SQUASH_LIST = Arrays.asList(12774, 12775, 12776, 12777, 12778, 12779, 13016, 13017);
+	private static final List<Integer> LARGE_SQUASH_LIST = Arrays.asList(12778, 12779, 13016, 13017);
 	private static final List<Integer> CHRONO_LIST = Arrays.asList(4202, 5133, 5817, 7058, 8350);
 	
 	//@formatter:off
@@ -572,27 +574,27 @@ public class SquashEvent extends LongTimeEvent
 	private static final void dropItem(L2Npc mob, L2PcInstance player)
 	{
 		final int npcId = mob.getId();
-		final int chance = Rnd.get(100);
 		for (int[] drop : DROPLIST)
 		{
 			if (npcId == drop[0])
 			{
-				if (chance < drop[2])
+				if (getRandomBoolean())
 				{
-					if (drop[1] > 6000)
-					{
-						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
-					}
-					else
-					{
-						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
-					}
 					continue;
 				}
-			}
-			if (npcId < drop[0])
-			{
-				return;
+				if (Rnd.get(100) < drop[2])
+				{
+					if (ItemTable.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
+					{
+						((L2MonsterInstance) mob).dropItem(player, drop[1], 1);
+						break;
+					}
+					((L2MonsterInstance) mob).dropItem(player, drop[1], (getRandom(1, 3)));
+					if (getRandomBoolean())
+					{
+						break;
+					}
+				}
 			}
 		}
 	}
