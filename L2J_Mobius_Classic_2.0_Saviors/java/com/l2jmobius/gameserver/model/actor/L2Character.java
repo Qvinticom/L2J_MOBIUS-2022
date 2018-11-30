@@ -3784,7 +3784,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	public void breakCast()
 	{
 		// Break only one skill at a time while casting.
-		final SkillCaster skillCaster = getSkillCaster(SkillCaster::canAbortCast, SkillCaster::isAnyNormalType);
+		final SkillCaster skillCaster = getSkillCaster(SkillCaster::isAnyNormalType);
 		if ((skillCaster != null) && skillCaster.getSkill().isMagic())
 		{
 			// Abort the cast of the L2Character and send Server->Client MagicSkillCanceld/ActionFailed packet.
