@@ -48,10 +48,9 @@ public final class Q00420_LittleWing extends Quest
 	private static final int SHAMHAI = 30752;
 	private static final int COOPER = 30829;
 	// Items
-	private static final int COAL = 1870;
-	private static final int CHARCOAL = 1871;
-	private static final int SILVER_NUGGET = 1873;
-	private static final int STONE_OF_PURITY = 1875;
+	private static final int ACCESSORY_GEM = 36556;
+	private static final int ARMOR_FRAGMENT = 36551;
+	private static final int COKES = 36561;
 	private static final int GEMSTONE_D = 2130;
 	private static final int GEMSTONE_C = 2131;
 	private static final int FAIRY_DUST = 3499;
@@ -209,13 +208,13 @@ public final class Q00420_LittleWing extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if ((qs.getInt("fairy_stone") == 1) && (getQuestItemsCount(player, COAL) >= 10) && (getQuestItemsCount(player, CHARCOAL) >= 10) && (getQuestItemsCount(player, GEMSTONE_D) >= 1) && (getQuestItemsCount(player, SILVER_NUGGET) >= 3) && (getQuestItemsCount(player, TOAD_SKIN) >= 10))
+					if ((qs.getInt("fairy_stone") == 1) && (getQuestItemsCount(player, ACCESSORY_GEM) >= 4) && (getQuestItemsCount(player, ARMOR_FRAGMENT) >= 2) && (getQuestItemsCount(player, GEMSTONE_D) >= 1) && (getQuestItemsCount(player, COKES) >= 1) && (getQuestItemsCount(player, TOAD_SKIN) >= 10))
 					{
 						takeItems(player, FAIRY_STONE_LIST, -1);
-						takeItems(player, COAL, 10);
-						takeItems(player, CHARCOAL, 10);
+						takeItems(player, ACCESSORY_GEM, 4);
+						takeItems(player, ARMOR_FRAGMENT, 2);
 						takeItems(player, GEMSTONE_D, 1);
-						takeItems(player, SILVER_NUGGET, 3);
+						takeItems(player, COKES, 1);
 						takeItems(player, TOAD_SKIN, -1);
 						giveItems(player, FAIRY_STONE, 1);
 					}
@@ -228,14 +227,13 @@ public final class Q00420_LittleWing extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					if ((qs.getInt("fairy_stone") == 2) && (getQuestItemsCount(player, COAL) >= 10) && (getQuestItemsCount(player, CHARCOAL) >= 10) && (getQuestItemsCount(player, GEMSTONE_C) >= 1) && (getQuestItemsCount(player, STONE_OF_PURITY) >= 1) && (getQuestItemsCount(player, SILVER_NUGGET) >= 5) && (getQuestItemsCount(player, TOAD_SKIN) >= 20))
+					if ((qs.getInt("fairy_stone") == 2) && (getQuestItemsCount(player, ACCESSORY_GEM) >= 5) && (getQuestItemsCount(player, ARMOR_FRAGMENT) >= 2) && (getQuestItemsCount(player, GEMSTONE_C) >= 1) && (getQuestItemsCount(player, COKES) >= 1) && (getQuestItemsCount(player, TOAD_SKIN) >= 20))
 					{
 						takeItems(player, DELUXE_STONE_LIST, -1);
-						takeItems(player, COAL, 10);
-						takeItems(player, CHARCOAL, 10);
+						takeItems(player, ACCESSORY_GEM, 5);
+						takeItems(player, ARMOR_FRAGMENT, 2);
 						takeItems(player, GEMSTONE_C, 1);
-						takeItems(player, STONE_OF_PURITY, 1);
-						takeItems(player, SILVER_NUGGET, 5);
+						takeItems(player, COKES, 1);
 						takeItems(player, TOAD_SKIN, -1);
 						giveItems(player, DELUXE_FAIRY_STONE, 1);
 					}
@@ -501,11 +499,11 @@ public final class Q00420_LittleWing extends Quest
 						{
 							case 2:
 							{
-								if ((qs.getInt("fairy_stone") == 1) && (getQuestItemsCount(talker, COAL) >= 10) && (getQuestItemsCount(talker, CHARCOAL) >= 10) && (getQuestItemsCount(talker, GEMSTONE_D) >= 1) && (getQuestItemsCount(talker, SILVER_NUGGET) >= 3) && (getQuestItemsCount(talker, TOAD_SKIN) >= 10))
+								if ((qs.getInt("fairy_stone") == 1) && (getQuestItemsCount(talker, ACCESSORY_GEM) >= 4) && (getQuestItemsCount(talker, ARMOR_FRAGMENT) >= 2) && (getQuestItemsCount(talker, GEMSTONE_D) >= 1) && (getQuestItemsCount(talker, COKES) >= 1) && (getQuestItemsCount(talker, TOAD_SKIN) >= 10))
 								{
 									htmltext = "30608-02.html";
 								}
-								else if ((qs.getInt("fairy_stone") == 2) && (getQuestItemsCount(talker, COAL) >= 10) && (getQuestItemsCount(talker, CHARCOAL) >= 10) && (getQuestItemsCount(talker, GEMSTONE_C) >= 1) && (getQuestItemsCount(talker, STONE_OF_PURITY) >= 1) && (getQuestItemsCount(talker, SILVER_NUGGET) >= 5) && (getQuestItemsCount(talker, TOAD_SKIN) >= 20))
+								else if ((qs.getInt("fairy_stone") == 2) && (getQuestItemsCount(talker, ACCESSORY_GEM) >= 5) && (getQuestItemsCount(talker, ARMOR_FRAGMENT) >= 2) && (getQuestItemsCount(talker, GEMSTONE_C) >= 1) && (getQuestItemsCount(talker, COKES) >= 1) && (getQuestItemsCount(talker, TOAD_SKIN) >= 20))
 								{
 									htmltext = "30608-04.html";
 								}
