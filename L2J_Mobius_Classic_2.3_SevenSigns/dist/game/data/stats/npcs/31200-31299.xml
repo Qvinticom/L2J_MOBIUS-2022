@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31210" level="70" type="L2Npc" name="Race Track Gatekeeper" title="Monster Race Track">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -188,7 +188,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31257" level="80" type="L2Npc" name="Veronica" title="Weapon Merchant">
+	<npc id="31257" level="80" type="L2Merchant" name="Veronica" title="Weapon Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -207,7 +207,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31258" level="80" type="L2Npc" name="Helmut" title="Armor Merchant">
+	<npc id="31258" level="80" type="L2Merchant" name="Helmut" title="Armor Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -245,7 +245,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31260" level="80" type="L2Npc" name="Judith" title="Accessory Merchant">
+	<npc id="31260" level="80" type="L2Merchant" name="Judith" title="Accessory Merchant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -302,7 +302,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31263" level="80" type="L2Npc" name="Liesel" title="Grocer">
+	<npc id="31263" level="80" type="L2Merchant" name="Liesel" title="Grocer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -340,7 +340,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31267" level="80" type="L2Npc" name="Lietta" title="Warehouse Keeper">
+	<npc id="31267" level="80" type="L2Warehouse" name="Lietta" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -359,7 +359,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31268" level="80" type="L2Npc" name="Hakon" title="Warehouse Keeper">
+	<npc id="31268" level="80" type="L2Warehouse" name="Hakon" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -378,10 +378,10 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31269" level="80" type="L2Npc" name="Mona" title="Warehouse Chief">
+	<npc id="31269" level="80" type="L2VillageMasterDwarf" name="Mona" title="Warehouse Chief">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<race>DWARF</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -397,7 +397,7 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="31270" level="80" type="L2Npc" name="Stefano" title="Warehouse Keeper">
+	<npc id="31270" level="80" type="L2Warehouse" name="Stefano" title="Warehouse Keeper">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>

@@ -40,6 +40,7 @@ public final class SymbolMaker extends AbstractNpcAI
 		31051, // Keach
 		31052, // Heid
 		31053, // Kidder
+		31264, // Olsun
 	};
 	
 	private SymbolMaker()
