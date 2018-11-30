@@ -722,6 +722,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 				{
 					if ((skill == FONDEST_HEART_SKILL.getSkill()) && qs.isCond(14))
 					{
+						takeItems(player, FONDEST_HEART, 1);
 						qs.setCond(15, true);
 					}
 					break;
@@ -730,6 +731,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 				{
 					if ((skill == FIERCEST_FLAME_SKILL.getSkill()) && qs.isCond(15))
 					{
+						takeItems(player, FIERCEST_FLAME, 1);
 						qs.setCond(16, true);
 					}
 					break;
@@ -738,6 +740,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 				{
 					if ((skill == BRIGHTEST_LIGHT_SKILL.getSkill()) && qs.isCond(16))
 					{
+						takeItems(player, BRIGHTEST_LIGHT, 1);
 						showOnScreenMsg(player, NpcStringId.YOU_MUST_DEFEAT_SHILEN_S_MESSENGER, ExShowScreenMessage.TOP_CENTER, 5000);
 						final L2Npc monster = addSpawn(SHILEN_MESSENGER, 28767, 11030, -4232, 0, false, 0, false);
 						monster.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.BRIGHTEST_LIGHT_HOW_DARE_YOU_DESECRATE_THE_ALTAR_OF_SHILEN);
@@ -749,6 +752,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 				{
 					if ((skill == PUREST_SOUL_SKILL.getSkill()) && qs.isCond(17))
 					{
+						takeItems(player, PUREST_SOUL, 1);
 						qs.setCond(18, true);
 					}
 					break;
@@ -757,6 +761,7 @@ public final class Q10385_RedThreadOfFate extends Quest
 				{
 					if (((skill == CLEAREST_WATER_SKILL.getSkill()) && qs.isCond(18)))
 					{
+						takeItems(player, CLEAREST_WATER, 1);
 						qs.setCond(19, true);
 						final Quest instance = QuestManager.getInstance().getQuest(TalkingIslandPast.class.getSimpleName());
 						if (instance != null)
