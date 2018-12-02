@@ -16,9 +16,6 @@
  */
 package ai.others.OlyManager;
 
-import java.time.DayOfWeek;
-import java.time.LocalDate;
-import java.time.temporal.WeekFields;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -101,22 +98,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				}
 				else
 				{
-					switch (LocalDate.now().get(WeekFields.of(DayOfWeek.MONDAY, 7).weekOfMonth()))
-					{
-						case 1:
-						case 2:
-						case 3: // First 3 weeks of month is 1v1 + 1v1 class matches
-						{
-							htmltext = getHtm(player, "OlyManager-joinMatch.html");
-							break;
-						}
-						default:// Rest is only 1v1 class matches
-						{
-							htmltext = getHtm(player, "OlyManager-joinMatchClass.html");
-							break;
-						}
-					}
-					
+					htmltext = getHtm(player, "OlyManager-joinMatch.html");
 					htmltext = htmltext.replace("%olympiad_round%", String.valueOf(Olympiad.getInstance().getPeriod()));
 					htmltext = htmltext.replace("%olympiad_week%", String.valueOf(Olympiad.getInstance().getCurrentCycle()));
 					htmltext = htmltext.replace("%olympiad_participant%", String.valueOf(OlympiadManager.getInstance().getCountOpponents()));
@@ -124,7 +106,6 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				break;
 			}
 			case "register1v1":
-			case "register1v1class":
 			{
 				if (player.isSubClassActive())
 				{
@@ -142,13 +123,9 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 				{
 					player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
 				}
-				else if (event.equals("register1v1"))
-				{
-					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
-				}
 				else
 				{
-					OlympiadManager.getInstance().registerNoble(player, CompetitionType.CLASSED);
+					OlympiadManager.getInstance().registerNoble(player, CompetitionType.NON_CLASSED);
 				}
 				break;
 			}
