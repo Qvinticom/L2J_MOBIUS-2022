@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31601" level="70" type="L2Npc" name="Pamela Aprodia">
 		<parameters>
@@ -309,7 +309,7 @@
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="80" lhand="633" /> <!-- Tallum Blade / Zubei's Shield -->
+		<equipment rhand="232" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -463,7 +463,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="6579" /> <!-- Arcana Mace -->
+		<equipment rhand="192" /> <!-- Arcana Mace -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -577,7 +577,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="130" lhand="109" /> <!-- Elven Sword / Shield of Solar Eclipse -->
+		<equipment rhand="130" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -621,7 +621,7 @@
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="64" />
+				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -653,7 +653,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="192" />
+		<equipment rhand="7890" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -680,8 +680,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
+			<radius normal="7" />
+			<height normal="21.2" />
 		</collision>
 	</npc>
 	<npc id="31621" level="70" type="L2Npc" name="Abyssal Saintess Elcadia">
@@ -1067,7 +1067,7 @@
 		</parameters>
 		<race>ORC</race>
 		<sex>MALE</sex>
-		<equipment rhand="267" /> <!-- Arthro Nail -->
+		<equipment rhand="175" /> <!-- Arthro Nail -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1143,7 +1143,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment rhand="36218" />
+		<equipment rhand="2612" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1257,7 +1257,7 @@
 		</parameters>
 		<race>ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="6579" /> <!-- Arcana Mace -->
+		<equipment rhand="7890" /> <!-- Arcana Mace -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1322,8 +1322,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="12" />
-			<height normal="23.75" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="31645" level="70" type="L2Npc" name="Hindemith Truevoice">
@@ -1862,10 +1862,11 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="275" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1873,18 +1874,19 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="31674" level="80" type="L2Npc" name="Patrol">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="94" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1892,8 +1894,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="31688" level="70" type="L2Npc" name="Olympiad Manager">

@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25800" level="74" type="L2Monster" name="Kasha" title="Gosmos' Mentor">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="135" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4323949" hpRegen="1298.24561403509" mp="1020338" mpRegen="1370.37037037037" />
+			<vitals hp="4323949" hpRegen="1298.24561403509" mp="531703" mpRegen="1370.37037037037" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 			<attack physical="35238.0952380952" magical="6218.48739495798" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2740.74074074074" magical="1591.39784946237" />
@@ -24,8 +24,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="52" />
 		</collision>
 	</npc>
 	<npc id="25801" level="76" type="L2Monster" name="Dorak" title="Kabed's Rival">
@@ -33,10 +33,10 @@
 		<race>UNDEAD</race>
 		<equipment rhand="142" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5231979" hpRegen="1333.33333333333" mp="1124924" mpRegen="1407.40740740741" />
+			<vitals hp="5231979" hpRegen="1333.33333333333" mp="586203" mpRegen="1407.40740740741" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="170" />
 			</speed>
 			<attack physical="36190.4761904762" magical="6386.55462184874" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2814.81481481481" magical="1634.40860215054" />
@@ -52,8 +52,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="46.5" />
 		</collision>
 	</npc>
 	<npc id="25802" level="78" type="L2Monster" name="Turan" title="Leo Tracker">
@@ -61,10 +61,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="91" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6330695" hpRegen="1368.42105263158" mp="1240229" mpRegen="1444.44444444444" />
+			<vitals hp="6330695" hpRegen="1368.42105263158" mp="646289" mpRegen="1444.44444444444" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="170" />
 			</speed>
 			<attack physical="37142.8571428571" magical="6554.6218487395" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2888.88888888889" magical="1677.41935483871" />
@@ -80,8 +80,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46.2" />
 		</collision>
 	</npc>
 	<npc id="25803" level="80" type="L2Monster" name="Varkan" title="Varka's Gatekeeper">
@@ -89,10 +89,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="229" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="44" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -108,8 +108,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="19.2" />
+			<height normal="46.2" />
 		</collision>
 	</npc>
 	<npc id="25804" level="80" type="L2Monster" name="Ketran" title="Ketra's Gatekeeper">
@@ -117,10 +117,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -140,8 +140,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="18" />
+			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="25805" level="80" type="L2Monster" name="Death Lord Likan" title="Hallate's Follower">
@@ -149,10 +149,10 @@
 		<race>UNDEAD</race>
 		<equipment rhand="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -172,18 +172,18 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="21" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25806" level="80" type="L2Monster" name="Anbarad" title="Barda's Nemesis">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7660141" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="7660141" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="67" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -203,8 +203,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="18.4" />
+			<height normal="48.2" />
 		</collision>
 	</npc>
 	<npc id="25807" level="80" type="L2Monster" name="Baranos" title="Mos' Escort Captain">
@@ -212,10 +212,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="79" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10187987" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="10187987" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="34" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -236,8 +236,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="49.2" />
 		</collision>
 	</npc>
 	<npc id="25808" level="80" type="L2Monster" name="Takuran" title="Tayr's Escort Captain">
@@ -245,10 +245,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="171" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="11183805" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="11183805" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="33" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -269,18 +269,18 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="14" />
+			<height normal="28.8" />
 		</collision>
 	</npc>
 	<npc id="25809" level="80" type="L2Monster" name="Nast" title="Ipos' Agent">
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12332827" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="12332827" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -301,8 +301,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="18" />
+			<height normal="39.6" />
 		</collision>
 	</npc>
 	<npc id="25810" level="80" type="L2Monster" name="Keltar" title="Shuriel's Paladin">
@@ -310,10 +310,10 @@
 		<race>DIVINE</race>
 		<equipment rhand="80" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13558449" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="13558449" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -334,8 +334,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15.6" />
+			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="25811" level="80" type="L2Monster" name="Satur" title="Shadith' Escort Captain">
@@ -343,10 +343,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="2504" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15320282" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="15320282" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="25" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -367,8 +367,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="22" />
+			<height normal="51" />
 		</collision>
 	</npc>
 	<npc id="25812" level="80" type="L2Monster" name="Kosnak" title="Hekaton's Escort Captain">
@@ -376,10 +376,10 @@
 		<race>HUMANOID</race>
 		<equipment rhand="6719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22980422" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="22980422" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="24" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -400,18 +400,18 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 	</npc>
 	<npc id="25813" level="80" type="L2Monster" name="Garaki" title="Shax's Shadow">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="30640563" hpRegen="1403.50877192982" mp="1367351" mpRegen="1481.48148148148" />
+			<vitals hp="30640563" hpRegen="1403.50877192982" mp="712533" mpRegen="1481.48148148148" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="63" />
+				<run ground="170" />
 			</speed>
 			<attack physical="38095.2380952381" magical="6722.68907563025" critical="4" attackSpeed="253" range="40" />
 			<defence physical="2962.96296296296" magical="1720.43010752688" />
@@ -432,65 +432,68 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="25" />
+			<height normal="47" />
 		</collision>
 	</npc>
 	<npc id="25814" level="80" type="L2Npc" name="Kutis' Pawn" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="283" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="46957" hpRegen="10.5" mp="35201" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="25815" level="80" type="L2Npc" name="Garan's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="72" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="37345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="34" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="29" />
 		</collision>
 	</npc>
 	<npc id="25816" level="80" type="L2Npc" name="Batur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="84" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="39620" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="22" />
 		</collision>
 	</npc>
 	<npc id="25817" level="80" type="L2Npc" name="Venir's Spirit" title="Raid Fighter">
@@ -498,75 +501,78 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="42032" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="100" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="25818" level="80" type="L2Npc" name="Oel's Vanguard" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="75" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="44592" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="25819" level="80" type="L2Npc" name="Taranka's Healer" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="195" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="48227" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="29" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="32" />
 		</collision>
 	</npc>
 	<npc id="25820" level="80" type="L2Npc" name="Kasha's Marksman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="53170" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="25821" level="80" type="L2Npc" name="Dorak's Evil Spirit" title="Raid Fighter">
@@ -574,75 +580,78 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="58620" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="15" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25822" level="80" type="L2Npc" name="Turan's Escort" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="2503" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="64628" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="25823" level="80" type="L2Npc" name="Varkan's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5793" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="41.5" />
 		</collision>
 	</npc>
 	<npc id="25824" level="80" type="L2Npc" name="Ketran's Sniper" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="287" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="25825" level="80" type="L2Npc" name="Likan's Maid" title="Raid Fighter">
@@ -650,37 +659,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25826" level="80" type="L2Npc" name="Anbarad's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="210" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="70" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="25827" level="80" type="L2Npc" name="Baranos' Guard" title="Raid Fighter">
@@ -688,189 +698,198 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 	<npc id="25828" level="80" type="L2Npc" name="Takuran's Protector" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="175" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="25829" level="80" type="L2Npc" name="Nast's Pikeman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="1472" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="100" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="25830" level="80" type="L2Npc" name="Keltar's Shaman" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="25831" level="80" type="L2Npc" name="Satur's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5794" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="39.5" />
 		</collision>
 	</npc>
 	<npc id="25832" level="80" type="L2Npc" name="Kosnak's Escorts" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="171" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="33" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="25833" level="80" type="L2Npc" name="Garaki's Banshee" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="3939" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="25834" level="80" type="L2Npc" name="Shadai" title="Chief">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8679" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="3417" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="25" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="22" />
+			<height normal="51" />
 		</collision>
 	</npc>
 	<npc id="25835" level="80" type="L2Npc" name="Turabait" title="Conqueror">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="80" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="3486" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="38" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="22.5" />
+			<height normal="41.25" />
 		</collision>
 	</npc>
 	<npc id="25836" level="80" type="L2Npc" name="Tier" title="Fallen Angel">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8683" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="3554" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10.5" />
+			<height normal="55.1" />
 		</collision>
 	</npc>
 	<npc id="25837" level="80" type="L2Npc" name="Cherkya" title="Demon Apostle">
@@ -878,18 +897,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="3624" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="21" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="25838" level="80" type="L2Npc" name="Spicula" title="Procella's Nemesis">
@@ -897,75 +916,78 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="3693" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="46" />
 		</collision>
 	</npc>
 	<npc id="25839" level="80" type="L2Npc" name="Shadai's Priest" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5794" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="102528" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="14" />
+			<height normal="39.5" />
 		</collision>
 	</npc>
 	<npc id="25840" level="80" type="L2Npc" name="Turabait's Warrior" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8678" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="104580" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="33" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="25841" level="80" type="L2Npc" name="Tier's Follower" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8680" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="106644" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="61" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="23.4" />
 		</collision>
 	</npc>
 	<npc id="25842" level="80" type="L2Npc" name="Cherkya's Escort" title="Raid Fighter">
@@ -973,18 +995,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="108720" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="16.8" />
+			<height normal="30.6" />
 		</collision>
 	</npc>
 	<npc id="25843" level="80" type="L2Npc" name="Spicula's Follower" title="Raid Fighter">
@@ -992,18 +1014,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="110808" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 </list>

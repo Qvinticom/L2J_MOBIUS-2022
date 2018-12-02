@@ -21,12 +21,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8446" mp="1345" />
+			<vitals hp="8446" mp="2355" />
 			<attack physical="500" magical="500" attackSpeed="278" range="40" />
 			<defence physical="500" magical="500" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="25" />
+				<run ground="140" />
 			</speed>
 		</stats>
 		<skill_list>
@@ -34,7 +34,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="8" />
-			<height normal="22" />
+			<height normal="15" />
 		</collision>
 	</npc>
 																									

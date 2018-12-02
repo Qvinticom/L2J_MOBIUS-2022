@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20800" level="47" type="L2Monster" name="Eva's Watchman">
 		<parameters>
@@ -16,7 +16,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5916" sp="424" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1795" hpRegen="11" mp="665" mpRegen="2.1" />
+			<vitals hp="6227" hpRegen="11" mp="2614" mpRegen="2.1" />
 			<attack physical="237.9049909" magical="178.7041" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="205.299259" magical="136.5719" />
 			<speed>
@@ -90,11 +90,11 @@
 		<equipment rhand="302" /> <!-- Body Slasher -->
 		<acquire exp="7133" sp="521" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1862" hpRegen="11" mp="692" mpRegen="2.1" />
+			<vitals hp="6227" hpRegen="11" mp="2614" mpRegen="2.1" />
 			<attack physical="292.6274249" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="216" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="210.240833" magical="139.8592" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="60" />
 				<run ground="174" />
 			</speed>
 			<hit_time>450</hit_time>
@@ -124,8 +124,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="9" />
-			<height normal="32" />
+			<radius normal="27" />
+			<height normal="34.8" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
 			<drop>
@@ -169,11 +169,11 @@
 		<equipment rhand="192" /> <!-- Crystal Staff -->
 		<acquire exp="7261" sp="536" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1929" hpRegen="11" mp="720" mpRegen="2.1" />
+			<vitals hp="6227" hpRegen="11" mp="2614" mpRegen="2.1" />
 			<attack physical="319.490468" magical="198.33688" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="151.1941518" magical="143.17771" evasion="10" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="45" />
 				<run ground="174" />
 			</speed>
 			<hit_time>450</hit_time>
@@ -204,8 +204,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="9" />
-			<height normal="32" />
+			<radius normal="20" />
+			<height normal="32.5" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
 			<drop>
@@ -245,7 +245,7 @@
 		<sex>MALE</sex>
 		<acquire exp="14218" sp="1072" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1998" hpRegen="16.5" mp="747" mpRegen="2.1" />
+			<vitals hp="6297" hpRegen="16.5" mp="2666" mpRegen="2.1" />
 			<attack physical="369.7143626" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="165.486314" magical="146.5258" />
 			<speed>
@@ -1351,7 +1351,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="80" /> <!-- rhand: Tallum Blade -->
+		<equipment rhand="84" /> <!-- rhand: Tallum Blade -->
 		<acquire exp="26256" sp="787" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2149" hpRegen="30" mp="1097" mpRegen="2.7" />
@@ -1784,7 +1784,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<equipment rhand="284" /> <!-- rhand: Carnage Bow -->
 		<acquire exp="59114" sp="1773" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2367" hpRegen="22.5" mp="1219" mpRegen="2.7" />
@@ -1994,7 +1994,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
+		<equipment rhand="79" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="84601" sp="2538" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="42.5" mp="1345" mpRegen="3" />
@@ -2175,7 +2175,7 @@
 		<equipment rhand="292" /> <!-- Pike -->
 		<acquire exp="3264" sp="221" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1539" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1539" hpRegen="5.5" mp="557" mpRegen="2.1" />
 			<attack physical="157.8124117" magical="143.43577" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="191.3499432" magical="123.76505" evasion="10" />
 			<speed>
@@ -2261,7 +2261,7 @@
 		<equipment rhand="279" /> <!-- Reinforced Longbow -->
 		<acquire exp="3631" sp="248" /> <!-- Need confirm retail value -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1601" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1601" hpRegen="5.5" mp="584" mpRegen="2.1" />
 			<attack physical="370.9974069" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="196.2162756" magical="126.91259" evasion="10" />
 			<speed>
@@ -2410,7 +2410,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2974" sp="206" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1664" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1664" hpRegen="5.5" mp="610" mpRegen="2.1" />
 			<attack physical="176.482562" magical="160.40508" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="201.1398429" magical="130.09715" evasion="10" />
 			<speed>
@@ -2488,7 +2488,7 @@
 		<equipment rhand="225" /> <!-- Mithril Dagger -->
 		<acquire exp="6798" sp="466" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1601" hpRegen="11" mp="2096" mpRegen="2.1" />
+			<vitals hp="1601" hpRegen="11" mp="584" mpRegen="2.1" />
 			<attack physical="213.897453" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="157.6686545" magical="126.91259" />
 			<speed>
@@ -2730,7 +2730,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3452" sp="245" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1729" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1729" hpRegen="5.5" mp="637" mpRegen="2.1" />
 			<attack physical="186.3655898" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="242.492441" magical="133.31739" />
 			<speed>
@@ -2810,7 +2810,7 @@
 		<sex>MALE</sex>
 		<acquire exp="94263" sp="2827" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1795" hpRegen="8.5" mp="2096" mpRegen="4.7" />
+			<vitals hp="1795" hpRegen="8.5" mp="665" mpRegen="4.7" />
 			<attack physical="794.70901" magical="542.68324" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" evasion="10" />
 			<speed>
@@ -2890,7 +2890,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3662" sp="268" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1862" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1862" hpRegen="5.5" mp="692" mpRegen="2.1" />
 			<attack physical="460.4716041" magical="188.35412" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="216.2326967" magical="139.8592" evasion="10" />
 			<speed>
@@ -2971,7 +2971,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3492" sp="258" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1929" hpRegen="5.5" mp="2096" mpRegen="2.1" />
+			<vitals hp="1929" hpRegen="5.5" mp="720" mpRegen="2.1" />
 			<attack physical="218.2162885" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="260.4274796" magical="143.17771" />
 			<speed>
@@ -3051,7 +3051,7 @@
 		<equipment rhand="225" lhand="945" /> <!-- Mithril Dagger / Skeleton Buckler -->
 		<acquire exp="4413" sp="332" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1998" hpRegen="5.5" mp="20960" mpRegen="2.1" />
+			<vitals hp="1998" hpRegen="5.5" mp="747" mpRegen="2.1" />
 			<attack physical="200.8680898" magical="208.6504" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="266.5173636" magical="146.5258" shield="100" shieldRate="20" />
 			<speed>
@@ -3130,7 +3130,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3935" sp="300" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2068" hpRegen="6.5" mp="2096" mpRegen="2.4" />
+			<vitals hp="2068" hpRegen="6.5" mp="775" mpRegen="2.4" />
 			<attack physical="241.2712772" magical="219.29157" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="272.6579321" magical="149.90176" />
 			<speed>
@@ -3215,7 +3215,7 @@
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
 		<acquire exp="5944" sp="460" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2138" hpRegen="6.5" mp="2096" mpRegen="2.4" />
+			<vitals hp="2138" hpRegen="6.5" mp="804" mpRegen="2.4" />
 			<attack physical="221.6679837" magical="230.25615" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="278.8459109" magical="153.30378" />
 			<speed>
@@ -3305,7 +3305,7 @@
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="129198" sp="3875" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2209" hpRegen="8.5" mp="2096" mpRegen="4.7" />
+			<vitals hp="2209" hpRegen="8.5" mp="832" mpRegen="4.7" />
 			<attack physical="773.81598" magical="528.41601" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" evasion="10" shield="94" />
 			<speed>
@@ -3382,7 +3382,7 @@
 		<sex>MALE</sex>
 		<acquire exp="90904" sp="2727" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2280" hpRegen="8.5" mp="2096" mpRegen="4.7" />
+			<vitals hp="2280" hpRegen="8.5" mp="861" mpRegen="4.7" />
 			<attack physical="773.81598" magical="528.41601" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="344.65987" magical="260.25444" evasion="10" />
 			<speed>
@@ -3459,7 +3459,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5838" sp="414" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1729" hpRegen="11" mp="2096" mpRegen="2.1" />
+			<vitals hp="1729" hpRegen="11" mp="637" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
@@ -3533,7 +3533,7 @@
 		<sex>MALE</sex>
 		<acquire exp="4638" sp="304" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418" hpRegen="11" mp="504" mpRegen="2.1" />
+			<vitals hp="6297" hpRegen="11" mp="2666" mpRegen="2.1" />
 			<attack physical="170.1079818" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="176.759022" magical="117.58598" />
 			<speed>
@@ -3568,8 +3568,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="5" />
-			<height normal="16" />
+			<radius normal="7.5" />
+			<height normal="25.5" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
 			<drop>

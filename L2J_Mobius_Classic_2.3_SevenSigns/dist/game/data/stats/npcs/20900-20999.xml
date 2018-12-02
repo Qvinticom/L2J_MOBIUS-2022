@@ -2722,7 +2722,7 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="150" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
+		<equipment rhand="131" lhand="103" /> <!-- Elemental Sword / Tower Shield -->
 		<acquire exp="16795" sp="503" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2259" hpRegen="3.75" mp="1158" mpRegen="2.7" />
@@ -3382,12 +3382,12 @@
 		<sex>MALE</sex>
 		<acquire exp="15549" sp="466" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2679" hpRegen="4.25" mp="1442" mpRegen="3" />
+			<vitals hp="2679" hpRegen="4.25" mp="2115" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
 				<walk ground="25" />
-				<run ground="140" />
+				<run ground="174" />
 			</speed>
 			<hit_time>100</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3456,12 +3456,12 @@
 		<sex>MALE</sex>
 		<acquire exp="16428" sp="492" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2776" hpRegen="4.25" mp="1475" mpRegen="3" />
+			<vitals hp="2776" hpRegen="4.25" mp="2212" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="314.65987" magical="230.25444" />
 			<speed>
 				<walk ground="80" />
-				<run ground="170" />
+				<run ground="185" />
 			</speed>
 			<hit_time>720</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3528,7 +3528,7 @@
 		<sex>MALE</sex>
 		<acquire exp="31387" sp="941" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.25" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="4.25" mp="2261" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
@@ -3596,7 +3596,7 @@
 		<sex>MALE</sex>
 		<acquire exp="16875" sp="506" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.25" mp="1607" mpRegen="3" />
+			<vitals hp="2823" hpRegen="4.25" mp="2261" mpRegen="3" />
 			<attack physical="855.81387" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -3670,12 +3670,12 @@
 		<equipment rhand="4028" /> <!-- Giant Cannon -->
 		<acquire exp="31387" sp="941" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.25" mp="1607" mpRegen="3" />
+			<vitals hp="2823" hpRegen="4.25" mp="2261" mpRegen="3" />
 			<attack physical="1945.355645" magical="597.85136" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="337.07008" magical="246.65326" />
 			<speed>
 				<walk ground="80" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>630</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3749,12 +3749,12 @@
 		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) -->
 		<acquire exp="15987" sp="479" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2728" hpRegen="4.25" mp="1442" mpRegen="3" />
+			<vitals hp="2728" hpRegen="4.25" mp="2163" mpRegen="3" />
 			<attack physical="752.73928" magical="514.02335" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="263.5251515" magical="226.8662" evasion="10" />
 			<speed>
 				<walk ground="15" />
-				<run ground="180" />
+				<run ground="190" />
 			</speed>
 			<hit_time>580</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3822,12 +3822,12 @@
 		<equipment rhand="3937" /> <!-- Monster Only (Lesser Giant) -->
 		<acquire exp="16428" sp="492" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2776" hpRegen="4.25" mp="1507" mpRegen="3" />
+			<vitals hp="2776" hpRegen="4.25" mp="2212" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="271.3592955" magical="233.61053" evasion="10" />
 			<speed>
 				<walk ground="15" />
-				<run ground="180" />
+				<run ground="185" />
 			</speed>
 			<hit_time>580</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3900,12 +3900,12 @@
 		<equipment rhand="3938" /> <!-- Monster Only (Lesser Giant Wizard's Weapon) -->
 		<acquire exp="31387" sp="941" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.25" mp="1507" mpRegen="3" />
+			<vitals hp="2823" hpRegen="4.25" mp="2261" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="271.3592955" magical="233.61053" evasion="10" />
 			<speed>
 				<walk ground="15" />
-				<run ground="180" />
+				<run ground="195" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -3973,12 +3973,12 @@
 		<equipment rhand="3938" /> <!-- Monster Only (Lesser Giant Wizard's Weapon) -->
 		<acquire exp="16875" sp="506" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.25" mp="1574" mpRegen="3" />
+			<vitals hp="2823" hpRegen="4.25" mp="2261" mpRegen="3" />
 			<attack physical="835.75573" magical="570.71283" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="279.0301205" magical="240.21427" evasion="10" />
 			<speed>
 				<walk ground="15" />
-				<run ground="180" />
+				<run ground="185" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -4281,7 +4281,7 @@
 		<equipment rhand="3939" /> <!-- Monster Only (Bensh) -->
 		<acquire exp="273694" sp="8210" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2204" hpRegen="15" mp="1188" mpRegen="2.7" />
+			<vitals hp="2204" hpRegen="15" mp="1127" mpRegen="2.7" />
 			<attack physical="529.8341727" magical="397.98887" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="299.079363" magical="198.95754" />
 			<speed>
@@ -4353,7 +4353,7 @@
 		<equipment rhand="284" /> <!-- Dark Elven Longbow -->
 		<acquire exp="129914" sp="3897" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2204" hpRegen="15" mp="1158" mpRegen="2.7" />
+			<vitals hp="2204" hpRegen="15" mp="1127" mpRegen="2.7" />
 			<attack physical="1373.696006" magical="383.78868" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="206.3527073" magical="195.41171" evasion="10" />
 			<speed>
@@ -4410,7 +4410,7 @@
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="82029" sp="2460" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2204" hpRegen="15" mp="1158" mpRegen="2.7" />
+			<vitals hp="2204" hpRegen="15" mp="1127" mpRegen="2.7" />
 			<attack physical="618.225025" magical="383.78868" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="242.7678909" magical="195.41171" shield="138" />
 			<speed>
@@ -4683,7 +4683,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="147" /> <!-- rhand: Tear of Darkness -->
+		<equipment rhand="79" /> <!-- rhand: Tear of Darkness -->
 		<acquire exp="96708" sp="2901" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2776" hpRegen="17" mp="1475" mpRegen="3" />
@@ -4817,7 +4817,7 @@
 		</parameters>
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<equipment rhand="288" /> <!-- rhand: Carnage Bow -->
+		<equipment rhand="287" /> <!-- rhand: Carnage Bow -->
 		<acquire exp="92129" sp="2763" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2728" hpRegen="17" mp="1442" mpRegen="3" />
@@ -4879,7 +4879,7 @@
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="86040" sp="2581" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2280" hpRegen="13" mp="2096" mpRegen="2.4" />
+			<vitals hp="2280" hpRegen="13" mp="861" mpRegen="2.4" />
 			<attack physical="370.68904" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="218.89589" magical="160.17851" shield="113" />
 			<speed>
@@ -4958,7 +4958,7 @@
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="12060" sp="948" />  <!-- Neeed confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2209" hpRegen="13" mp="2096" mpRegen="2.4" />
+			<vitals hp="2209" hpRegen="13" mp="832" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="156.73001" shield="111" />
 			<speed>
@@ -5039,7 +5039,7 @@
 		<equipment rhand="5129" lhand="5129" /> <!-- Doll Knife / Doll Knife -->
 		<acquire exp="13265" sp="1043" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2209" hpRegen="13" mp="2096" mpRegen="2.4" />
+			<vitals hp="2209" hpRegen="13" mp="832" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="156.73001" shield="111" />
 			<speed>
@@ -5263,7 +5263,7 @@
 		<equipment rhand="5131" /> <!-- Monster Only (Parhit Staff) -->
 		<acquire exp="7022" sp="210" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1248" hpRegen="11" mp="637" mpRegen="2.1" />
+			<vitals hp="1248" hpRegen="11" mp="610" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<speed>
@@ -5401,7 +5401,7 @@
 		<equipment rhand="5127" /> <!-- Dailaon Knife -->
 		<acquire exp="6714" sp="201" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1201" hpRegen="11" mp="610" mpRegen="2.1" />
+			<vitals hp="1201" hpRegen="11" mp="584" mpRegen="2.1" />
 			<attack physical="493.7975486" magical="151.75505" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="173.43552" magical="126.91259" />
 			<speed>
@@ -5468,11 +5468,11 @@
 		<sex>MALE</sex>
 		<acquire exp="14866" sp="1120" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1998" hpRegen="11" mp="747" mpRegen="2.1" />
+			<vitals hp="6297" hpRegen="11" mp="2666" mpRegen="2.1" />
 			<attack physical="336.103966" magical="208.6504" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.0349455" magical="146.5258" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="45" />
 				<run ground="174" />
 			</speed>
 			<hit_time>560</hit_time>
@@ -5504,8 +5504,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="30" />
-			<height normal="63" />
+			<radius normal="15.6" />
+			<height normal="34.05" />
 		</collision>
 		<drop_lists> <!-- CT2.5 -->
 			<drop>
@@ -5544,7 +5544,7 @@
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
 		<acquire exp="10134" sp="740" /> <!-- Need confirm retail values -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1862" hpRegen="11" mp="692" mpRegen="2.1" />
+			<vitals hp="6227" hpRegen="11" mp="2614" mpRegen="2.1" />
 			<attack physical="275.82705" magical="188.35412" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="191.12803" magical="139.8592" />
 			<speed>

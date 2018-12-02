@@ -76,7 +76,7 @@ Seven Signs: https://eu.4gameforum.com/threads/658543/
 -Parsed new system messages and npc strings from client
 -Parsed new skills from client
 -Parsed new items from client
--Parsed dummy NPC XMLs based on client
+-Parsed new NPCs from client
 -Updated skiltrees and skills from L2Wiki
 -Updated experience values from L2Wiki
 -Land of Winds spawns

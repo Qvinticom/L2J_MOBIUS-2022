@@ -1,22 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="25901" level="80" type="L2Npc" name="Lilith" title="Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="42.5" />
+			<height normal="55" />
 		</collision>
 	</npc>
 	<npc id="25902" level="80" type="L2Npc" name="Lilith' Agent">
@@ -24,37 +24,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="25903" level="80" type="L2Npc" name="Lilith' Escort">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5800" lhand="5799" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="56" />
+				<run ground="220" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="25904" level="80" type="L2Npc" name="Anakim" title="Fallen Angel">
@@ -62,18 +63,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="37500000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20.15" />
+			<height normal="38.6" />
 		</collision>
 	</npc>
 	<npc id="25905" level="80" type="L2Npc" name="Anakim's Guardian">
@@ -81,18 +82,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="23" />
+			<height normal="40.5" />
 		</collision>
 	</npc>
 	<npc id="25906" level="80" type="L2Npc" name="Anakim's Royal Guard">
@@ -100,18 +101,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="65" />
+				<run ground="220" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="25907" level="80" type="L2Npc" name="Anakim's Executor">
@@ -119,18 +120,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="2000000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="65" />
+				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="36" />
 		</collision>
 	</npc>
 </list>

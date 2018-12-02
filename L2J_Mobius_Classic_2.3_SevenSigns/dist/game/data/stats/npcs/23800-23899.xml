@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23820" level="80" type="L2Npc" name="Ketra Elite Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -211,7 +211,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="299" />
+		<equipment rhand="193" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="27111" hpRegen="10.5" mp="1158" mpRegen="3.6" />
 			<speed>
@@ -234,11 +234,11 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="84" />
+		<equipment rhand="1472" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="21689" hpRegen="10.5" mp="1158" mpRegen="3.6" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="100" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -249,8 +249,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="10" />
-			<height normal="25" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="23831" level="80" type="L2Npc" name="Bloody Maid">
@@ -272,8 +272,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
+			<radius normal="14" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="23832" level="80" type="L2Npc" name="Chaos Skeleton" title="Demon's Servant">
@@ -305,7 +305,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="34096" hpRegen="10.5" mp="1219" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="70" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -316,8 +316,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="32.5" />
+			<radius normal="14.4" />
+			<height normal="49.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -346,7 +346,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="43585" hpRegen="10.5" mp="1251" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -357,8 +357,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="28" />
-			<height normal="39" />
+			<radius normal="11" />
+			<height normal="34" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -390,7 +390,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="21689" hpRegen="10.5" mp="1158" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -401,14 +401,15 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="34" />
-			<height normal="28" />
+			<radius normal="20" />
+			<height normal="40.25" />
 		</collision>
 	</npc>
 	<npc id="23836" level="80" type="L2Npc" name="Tanta Sharpshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="24988" hpRegen="10.5" mp="1188" mpRegen="3.6" />
 			<speed>
@@ -423,8 +424,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="21" />
-			<height normal="40" />
+			<radius normal="20" />
+			<height normal="40.25" />
 		</collision>
 	</npc>
 	<npc id="23837" level="80" type="L2Npc" name="Tanta Shaman" title="Tanta Lizardman Leader">
@@ -434,7 +435,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="34096" hpRegen="10.5" mp="1219" mpRegen="3.6" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="75" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -445,8 +446,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
+			<radius normal="29" />
+			<height normal="44" />
 		</collision>
 	</npc>
 	<npc id="23838" level="80" type="L2Npc" name="Tanta High Priest">
@@ -456,7 +457,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="34096" hpRegen="10.5" mp="1219" mpRegen="3.6" />
 			<speed>
-				<walk ground="35" />
+				<walk ground="90" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -467,8 +468,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="34" />
-			<height normal="25" />
+			<radius normal="32" />
+			<height normal="42.2" />
 		</collision>
 	</npc>
 	<npc id="23839" level="80" type="L2Npc" name="Tanta Commander" title="Tanta Lizardman Leader">
@@ -478,7 +479,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="43585" hpRegen="10.5" mp="1251" mpRegen="3.6" />
 			<speed>
-				<walk ground="26" />
+				<walk ground="58" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -489,8 +490,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="33.5" />
+			<radius normal="28" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 	<npc id="23840" level="80" type="L2Npc" name="Frightful Poisonous Spider">
@@ -500,7 +501,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="72" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -511,8 +512,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="14" />
-			<height normal="22" />
+			<radius normal="20.8" />
+			<height normal="19.8" />
 		</collision>
 	</npc>
 	<npc id="23841" level="80" type="L2Npc" name="Scorpion of Terror">
@@ -533,8 +534,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="28" />
-			<height normal="66" />
+			<radius normal="19.6" />
+			<height normal="45.3" />
 		</collision>
 	</npc>
 	<npc id="23842" level="80" type="L2Npc" name="Laikel of Terror" title="Leader of Creation">
@@ -555,8 +556,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="37" />
-			<height normal="64" />
+			<radius normal="25.9" />
+			<height normal="43.9" />
 		</collision>
 	</npc>
 	<npc id="23843" level="80" type="L2Npc" name="Giant Spider of Terror" title="Leader of Creation">
@@ -577,8 +578,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="45" />
-			<height normal="39" />
+			<radius normal="31.5" />
+			<height normal="26.4" />
 		</collision>
 	</npc>
 	<npc id="23844" level="80" type="L2Npc" name="Riba of Terror" title="Leader of Creation">
@@ -610,7 +611,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6" />
 			<speed>
-				<walk ground="140" />
+				<walk ground="55" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -621,8 +622,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" />
-			<height normal="50" />
+			<radius normal="18" />
+			<height normal="36.4" />
 		</collision>
 	</npc>
 	<npc id="23846" level="80" type="L2Npc" name="Stakato Guard">
@@ -632,7 +633,29 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="29693" hpRegen="10.5" mp="1282" mpRegen="3.6" />
 			<speed>
-				<walk ground="54" />
+				<walk ground="25" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="15" />
+			<height normal="39" />
+		</collision>
+	</npc>
+	<npc id="23847" level="80" type="L2Npc" name="Stakato Invader" title="Stakato Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="72773" hpRegen="10.5" mp="1314" mpRegen="3.6" />
+			<speed>
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -644,29 +667,7 @@
 		</skill_list>
 		<collision>
 			<radius normal="34" />
-			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="23847" level="80" type="L2Npc" name="Stakato Invader" title="Stakato Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="72773" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="13" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="38" />
-			<height normal="45" />
+			<height normal="48.8" />
 		</collision>
 	</npc>
 	<npc id="23848" level="80" type="L2Npc" name="Stakato Queen" title="Stakato Leader">
@@ -676,7 +677,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="78837" hpRegen="10.5" mp="1314" mpRegen="3.6" />
 			<speed>
-				<walk ground="23" />
+				<walk ground="34" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -687,8 +688,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="31" />
+			<radius normal="40" />
+			<height normal="42" />
 		</collision>
 	</npc>
 	<npc id="23849" level="80" type="L2Npc" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
@@ -761,6 +762,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5800" lhand="5799" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="96461" hpRegen="10.5" mp="1410" mpRegen="3.6" />
 			<speed>
@@ -775,8 +777,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="12" />
-			<height normal="50" />
+			<radius normal="9.6" />
+			<height normal="39.4" />
 		</collision>
 	</npc>
 	<npc id="23853" level="80" type="L2Npc" name="Hell Queen" title="Devil�s Advocate">
@@ -786,7 +788,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="98227" hpRegen="10.5" mp="1442" mpRegen="3.6" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -797,8 +799,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="42" />
+			<radius normal="16.8" />
+			<height normal="55.1" />
 		</collision>
 	</npc>
 	<npc id="23854" level="80" type="L2Npc" name="Hell Lord" title="Devil�s Advocate">
@@ -827,6 +829,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="80" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
@@ -849,6 +852,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="2504" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="41019" hpRegen="10.5" mp="1377" mpRegen="3.6" />
 			<speed>
@@ -886,8 +890,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="15" />
-			<height normal="80" />
+			<radius normal="13" />
+			<height normal="37.5" />
 		</collision>
 	</npc>
 	<npc id="23858" level="80" type="L2Npc" name="Heavenly Wings">
@@ -1015,8 +1019,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="100" />
-			<height normal="40" />
+			<radius normal="44" />
+			<height normal="51.5" />
 		</collision>
 	</npc>
 	<npc id="23863" level="80" type="L2Npc" name="Inferno Drake">
@@ -1059,8 +1063,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="112" />
-			<height normal="60" />
+			<radius normal="55" />
+			<height normal="80.5" />
 		</collision>
 	</npc>
 	<npc id="23865" level="80" type="L2Npc" name="Velociraptor">
@@ -1355,7 +1359,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12377" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+			<vitals hp="12377" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -1378,7 +1382,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15471" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+			<vitals hp="15471" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
@@ -1401,7 +1405,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -1424,7 +1428,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1447,7 +1451,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="298" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="30942" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+			<vitals hp="30942" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="24" />
 				<run ground="180" />
@@ -1470,7 +1474,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12377" hpRegen="10.5" mp="1036" mpRegen="3.6" />
+			<vitals hp="12377" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1493,7 +1497,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="279" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15471" hpRegen="10.5" mp="1066" mpRegen="3.6" />
+			<vitals hp="15471" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1516,7 +1520,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1097" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1539,7 +1543,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2503" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1127" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1560,9 +1564,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="299" />
+		<equipment rhand="193" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="30942" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+			<vitals hp="30942" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1583,11 +1587,11 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="84" />
+		<equipment rhand="1472" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1158" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="40" />
+				<walk ground="100" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1598,8 +1602,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="10" />
-			<height normal="25" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="23889" level="80" type="L2Npc" name="Bloody Maid">
@@ -1608,7 +1612,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="946" lhand="945" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+			<vitals hp="27848" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -1621,8 +1625,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
+			<radius normal="14" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="23890" level="80" type="L2Npc" name="Chaos Skeleton" title="Demon's Servant">
@@ -1630,7 +1634,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="37131" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<vitals hp="37131" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
@@ -1652,9 +1656,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="37131" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<vitals hp="37131" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="70" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1665,8 +1669,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="20" />
-			<height normal="32.5" />
+			<radius normal="14.4" />
+			<height normal="49.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1693,9 +1697,9 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="46413" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<vitals hp="46413" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1706,8 +1710,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="28" />
-			<height normal="39" />
+			<radius normal="11" />
+			<height normal="34" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1737,97 +1741,9 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="24754" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23894" level="80" type="L2Npc" name="Tanta Sharpshooter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1188" mpRegen="3.6" />
+			<vitals hp="24754" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23895" level="80" type="L2Npc" name="Tanta Shaman" title="Tanta Lizardman Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="37131" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
-		</collision>
-	</npc>
-	<npc id="23896" level="80" type="L2Npc" name="Tanta High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="37131" hpRegen="10.5" mp="1219" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skill_list>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skill_list>
-		<collision>
-			<radius normal="34" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23897" level="80" type="L2Npc" name="Tanta Commander" title="Tanta Lizardman Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="46413" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="26" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1839,17 +1755,18 @@
 		</skill_list>
 		<collision>
 			<radius normal="20" />
-			<height normal="33.5" />
+			<height normal="40.25" />
 		</collision>
 	</npc>
-	<npc id="23898" level="80" type="L2Npc" name="Frightful Poisonous Spider">
+	<npc id="23894" level="80" type="L2Npc" name="Tanta Sharpshooter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="15302" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1251" mpRegen="3.6" />
+			<vitals hp="27848" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="45" />
+				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -1860,8 +1777,96 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="14" />
-			<height normal="22" />
+			<radius normal="20" />
+			<height normal="40.25" />
+		</collision>
+	</npc>
+	<npc id="23895" level="80" type="L2Npc" name="Tanta Shaman" title="Tanta Lizardman Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="37131" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="75" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="29" />
+			<height normal="44" />
+		</collision>
+	</npc>
+	<npc id="23896" level="80" type="L2Npc" name="Tanta High Priest">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="37131" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="90" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="32" />
+			<height normal="42.2" />
+		</collision>
+	</npc>
+	<npc id="23897" level="80" type="L2Npc" name="Tanta Commander" title="Tanta Lizardman Leader">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="46413" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="58" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="28" />
+			<height normal="37.5" />
+		</collision>
+	</npc>
+	<npc id="23898" level="80" type="L2Npc" name="Frightful Poisonous Spider">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
+		<sex>FEMALE</sex>
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="27848" hpRegen="10.5" mp="1345" mpRegen="3.6" />
+			<speed>
+				<walk ground="72" />
+				<run ground="180" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<skill_list>
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+		</skill_list>
+		<collision>
+			<radius normal="20.8" />
+			<height normal="19.8" />
 		</collision>
 	</npc>
 	<npc id="23899" level="80" type="L2Npc" name="Scorpion of Terror">
@@ -1869,7 +1874,7 @@
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="30942" hpRegen="10.5" mp="1282" mpRegen="3.6" />
+			<vitals hp="30942" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
@@ -1882,8 +1887,8 @@
 			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="28" />
-			<height normal="66" />
+			<radius normal="19.6" />
+			<height normal="45.3" />
 		</collision>
 	</npc>
 </list>

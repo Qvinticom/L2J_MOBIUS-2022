@@ -61,6 +61,7 @@
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="88" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="306149" hpRegen="8.5" mp="245" mpRegen="3" />
 			<speed>
@@ -99,6 +100,7 @@
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="198715" hpRegen="8.5" mp="166" mpRegen="3" />
 			<speed>
@@ -118,6 +120,7 @@
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="7" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="518257" hpRegen="8.5" mp="387" mpRegen="3" />
 			<speed>
@@ -252,24 +255,25 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="8.5" mp="1345" mpRegen="3" />
+			<vitals hp="2444" hpRegen="8.5" mp="259" mpRegen="3" />
 			<speed>
-				<walk ground="37" />
-				<run ground="100" />
+				<walk ground="60" />
+				<run ground="190" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="20" />
-			<height normal="10" />
+			<radius normal="30" />
+			<height normal="21.25" />
 		</collision>
 	</npc>
 	<npc id="9014" level="75" type="L2Npc" name="Riana" title="Event Manager">
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="192" lhand="192" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1" hpRegen="8.5" mp="1" mpRegen="3" />
 			<speed>
@@ -289,6 +293,7 @@
 		<!-- Classic NPC -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="192" lhand="192" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1" hpRegen="8.5" mp="1" mpRegen="3" />
 			<speed>
@@ -309,18 +314,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2676" hpRegen="8.5" mp="889" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="25" />
+			<radius normal="18" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="9017" level="75" type="L2Npc" name="Babayaga">
@@ -328,10 +333,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2676" hpRegen="8.5" mp="889" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="600" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
@@ -339,7 +344,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="25" />
+			<height normal="8" />
 		</collision>
 	</npc>
 	<npc id="9018" level="75" type="L2Npc" name="Minion Eye">
@@ -347,18 +352,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2676" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="25" />
+			<radius normal="3" />
+			<height normal="9" />
 		</collision>
 	</npc>
 	<npc id="9019" level="75" type="L2Npc" name="Matryoshka">
@@ -366,18 +371,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2676" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="25" />
+			<radius normal="3" />
+			<height normal="9" />
 		</collision>
 	</npc>
 	<npc id="9020" level="75" type="L2Npc" name="Frintezza" title="In Love">
@@ -385,18 +390,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2676" hpRegen="8.5" mp="2355" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="1" />
 			</speed>
 			<attack physical="795.07855864326" magical="542.73382161824" critical="4" attackSpeed="253" range="40" />
 			<defence physical="319.51219512195" magical="233.84045721645" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="8" />
-			<height normal="25" />
+			<radius normal="15" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="9021" level="80" type="L2Npc" name="Sin Eater">
@@ -404,18 +409,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="2" />
+			<height normal="1" />
 		</collision>
 	</npc>
 	<npc id="9022" level="80" type="L2Npc" name="Rico" title="Jack's Scarecrow">
@@ -423,7 +428,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -433,8 +438,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="9023" level="80" type="L2Npc" name="Bonfire" title="Made with matchsticks">
@@ -442,18 +447,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1812" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="29" />
+			<height normal="30.5" />
 		</collision>
 	</npc>
 	<npc id="9024" level="80" type="L2Npc" name="Older Sister" title="Daydreamer Match Girl">
@@ -461,7 +466,7 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -471,8 +476,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6" />
+			<height normal="18" />
 		</collision>
 	</npc>
 	<npc id="9025" level="80" type="L2Npc" name="Younger Sister" title="Hungry Match Girl">
@@ -480,9 +485,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -490,8 +495,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6" />
+			<height normal="17.7" />
 		</collision>
 	</npc>
 	<npc id="9026" level="80" type="L2Npc" name="Transformed: Part-time Seller Cat">
@@ -501,15 +506,15 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="13" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -520,15 +525,15 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="13" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -539,15 +544,15 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="13" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -558,15 +563,15 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="13" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -577,15 +582,15 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="13" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -594,9 +599,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="30" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -604,8 +609,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="9032" level="80" type="L2Npc" name="Agathion Bugbear">
@@ -613,10 +618,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -624,7 +629,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="5" />
-			<height normal="12" />
+			<height normal="3.75" />
 		</collision>
 	</npc>
 	<npc id="9033" level="80" type="L2Npc" name="Agathion Dryad">
@@ -632,10 +637,10 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
@@ -643,7 +648,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="5" />
-			<height normal="12" />
+			<height normal="3.75" />
 		</collision>
 	</npc>
 	<npc id="9034" level="80" type="L2Npc" name="Happy Cat" title="Tournament Helper">
@@ -651,9 +656,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="20" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -661,8 +666,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="9035" level="80" type="L2Npc" name="Agathion Mermaid">
@@ -672,16 +677,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="0.01" />
+			<height normal="6" />
 		</collision>
 	</npc>
 	<npc id="9036" level="80" type="L2Npc" name="Ball Trapping Gnosian">
@@ -689,18 +694,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="4" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9037" level="80" type="L2Npc" name="Ball Trapping Orodriel">
@@ -708,18 +713,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="4" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9038" level="80" type="L2Npc" name="Penalty Kick">
@@ -727,18 +732,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6" />
+			<height normal="6" />
 		</collision>
 	</npc>
 	<npc id="9039" level="80" type="L2Npc" name="Agathion Meliodas">
@@ -748,16 +753,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9040" level="80" type="L2Npc" name="Agathion Elizabeth">
@@ -767,16 +772,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9041" level="80" type="L2Npc" name="Agathion Hawk">
@@ -786,16 +791,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9042" level="80" type="L2Npc" name="Agathion Ban">
@@ -805,16 +810,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9043" level="80" type="L2Npc" name="Agathion Diane">
@@ -824,16 +829,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9044" level="80" type="L2Npc" name="Agathion King">
@@ -843,16 +848,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9045" level="80" type="L2Npc" name="Agathion Merlin">
@@ -862,16 +867,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9046" level="80" type="L2Npc" name="Agathion Gowther">
@@ -881,16 +886,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9047" level="80" type="L2Npc" name="Agathion Escanor">
@@ -900,16 +905,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="1" />
+			<height normal="5" />
 		</collision>
 	</npc>
 	<npc id="9048" level="80" type="L2Npc" name="Snake" title="Card Master">
@@ -919,16 +924,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="1" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="17" />
 		</collision>
 	</npc>
 </list>

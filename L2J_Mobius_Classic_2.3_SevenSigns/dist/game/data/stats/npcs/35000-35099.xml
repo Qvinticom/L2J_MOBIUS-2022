@@ -2367,12 +2367,12 @@
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="939" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2944391" hpRegen="7.5" mp="2280" mpRegen="2.7" />
+			<vitals hp="2944391" hpRegen="7.5" mp="1842" mpRegen="2.7" />
 			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2398,8 +2398,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
-			<height normal="23" />
+			<radius normal="8.4" />
+			<height normal="28.2" />
 		</collision>
 	</npc>
 	<npc id="35065" level="62" type="L2Defender" name="Cronenberg" title="Royal Guard Captain">
@@ -2411,12 +2411,12 @@
 		<equipment rhand="142" /> <!-- Keshanberk -->
 		<acquire exp="901" sp="1" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="981463" hpRegen="7.5" mp="2205" mpRegen="2.7" />
+			<vitals hp="981463" hpRegen="7.5" mp="1842" mpRegen="2.7" />
 			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
 				<walk ground="50" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
@@ -2442,8 +2442,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="7" />
-			<height normal="24" />
+			<radius normal="7.7" />
+			<height normal="26.7" />
 		</collision>
 	</npc>
 	<npc id="35066" level="60" type="L2Defender" name="Royal Knight" title="Gludio">

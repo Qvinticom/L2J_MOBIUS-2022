@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31580" level="70" type="L2Npc" name="Galadrid" title="Master">
 		<parameters>
@@ -85,7 +85,7 @@
 		</parameters>
 		<race>DARK_ELF</race>
 		<sex>MALE</sex>
-		<equipment rhand="84" lhand="634" /> <!-- Homunkulus' Sword / Dragon Shield -->
+		<equipment rhand="84" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -121,10 +121,11 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="168" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -132,8 +133,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7" />
+			<height normal="16.5" />
 		</collision>
 	</npc>
 	<npc id="31584" level="80" type="L2Npc" name="Valentine" title="Brewer">
@@ -141,9 +142,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="20" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -151,8 +152,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="17.5" />
 		</collision>
 	</npc>
 	<npc id="31585" level="70" type="L2Npc" name="Sparky the Cat" title="Keats Servitor">
@@ -236,9 +237,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -246,8 +247,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="31589" level="80" type="L2Npc" name="Duda-Mara Totem Spirit">
@@ -255,9 +256,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="72" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -265,8 +266,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="26" />
+			<height normal="25.5" />
 		</collision>
 	</npc>
 	<npc id="31590" level="70" type="L2Npc" name="Devianne" title="Truth Seeker">
@@ -276,13 +277,13 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="192" /> <!-- Crystal Staff -->
+		<equipment rhand="7890" /> <!-- Crystal Staff -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
-				<walk ground="32" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -303,8 +304,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="7" />
-			<height normal="21" />
+			<radius normal="8" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="31591" level="70" type="L2Npc" name="Sunset Guide Luna">
@@ -389,7 +390,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="37635" />
+		<equipment rhand="97" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />

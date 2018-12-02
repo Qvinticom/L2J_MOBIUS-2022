@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="27300" level="76" type="L2Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
 		<parameters>
@@ -16,7 +16,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
@@ -67,7 +67,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="97" /> <!-- Lance -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="323.78455" magical="236.93149" />
 			<speed>
@@ -553,7 +553,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -599,7 +599,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -645,7 +645,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1540" mpRegen="3" />
+			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
 			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="275.2168675" magical="236.93149" evasion="10" />
 			<speed>
@@ -686,11 +686,11 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="2823" hpRegen="6.5" mp="1507" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="190.09077" magical="163.64727" evasion="10" />
 			<speed>
-				<walk ground="36" />
+				<walk ground="20" />
 				<run ground="180" />
 			</speed>
 			<hit_time>540</hit_time>
@@ -724,11 +724,11 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="251.5285745" magical="216.53847" evasion="10" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 			<hit_time>560</hit_time>
@@ -749,8 +749,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="13" />
-			<height normal="32" />
+			<radius normal="12" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="27318" level="70" type="L2Monster" name="Soul of Cold" title="Quest Monster">
@@ -762,12 +762,12 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="5.5" mp="637" mpRegen="2.1" />
+			<vitals hp="2823" hpRegen="5.5" mp="1507" mpRegen="2.1" />
 			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="182.18816" magical="133.31739" />
 			<speed>
-				<walk ground="50" />
-				<run ground="130" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<hit_time>430</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -788,7 +788,7 @@
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
 			<radius normal="16" />
-			<height normal="37.2" />
+			<height normal="35.6" />
 		</collision>
 	</npc>
 	<npc id="27319" level="70" type="L2Monster" name="Ghost of Solitude" title="Quest Monster">
@@ -800,12 +800,12 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="2.5" mp="174" mpRegen="1.2" />
+			<vitals hp="2823" hpRegen="2.5" mp="1507" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="81.34791" magical="59.52687" />
 			<speed>
-				<walk ground="30" />
-				<run ground="130" />
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 			<hit_time>240</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -825,8 +825,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="14" />
-			<height normal="14.5" />
+			<radius normal="12" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="27320" level="70" type="L2Monster" name="Fiend of Cold" title="Quest Monster">
@@ -839,12 +839,12 @@
 		<sex>MALE</sex>
 		<equipment rhand="2" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="192" mpRegen="3.09" />
+			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
 			<attack physical="6300" magical="4200" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
 			<defence physical="3500" magical="4200" />
 			<speed>
-				<walk ground="80" />
-				<run ground="130" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hit_time>460</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -864,8 +864,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
 		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
+			<radius normal="34" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="27321" level="70" type="L2Monster" name="Spirit of Cold" title="Quest Monster">
@@ -873,12 +873,12 @@
 		<sex>MALE</sex>
 		<equipment rhand="291" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="192" mpRegen="3.09" />
+			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
 			<attack physical="36.4" magical="57.4" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
 			<defence physical="70" magical="50.4" />
 			<speed>
-				<walk ground="43" />
-				<run ground="130" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -898,8 +898,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<collision>
-			<radius normal="10" />
-			<height normal="23" />
+			<radius normal="20" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="27322" level="80" type="L2Npc" name="Possessed Windsus" title="Quest Monster">
@@ -907,18 +907,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="35" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="27323" level="80" type="L2Npc" name="Windsus Whelp" title="Quest Monster">
@@ -926,18 +926,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="35" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="27324" level="80" type="L2Npc" name="Windsus of Terror" title="Quest Monster">
@@ -945,18 +945,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="35" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="27325" level="80" type="L2Npc" name="Weak Windsus" title="Quest Monster">
@@ -964,18 +964,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="35" />
+				<run ground="174" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="27326" level="80" type="L2Npc" name="Lesser Strain" title="Quest Monster">
@@ -983,9 +983,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="343" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="15" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -993,8 +993,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="30" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="27327" level="80" type="L2Npc" name="Lesser Ghoul" title="Quest Monster">
@@ -1002,18 +1002,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="358" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="15" />
+				<run ground="15" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="21" />
 		</collision>
 	</npc>
 	<npc id="27328" level="80" type="L2Npc" name="Lesser Granite Golem" title="Quest Monster">
@@ -1021,18 +1021,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="372" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="23" />
+				<run ground="23" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="27329" level="80" type="L2Npc" name="Lesser Corpse Tracker" title="Quest Monster">
@@ -1040,18 +1040,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="387" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="80" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="33.5" />
 		</collision>
 	</npc>
 	<npc id="27330" level="80" type="L2Npc" name="Iron Wild Boar" title="Quest Monster">
@@ -1059,18 +1059,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2512" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="44" />
+			<height normal="32" />
 		</collision>
 	</npc>
 </list>

@@ -98,8 +98,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="23" />
-			<height normal="25" />
+			<radius normal="34" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="13403" level="1" type="L2Monster" name="Snowy Large Young Squash">
@@ -132,8 +132,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="34" />
-			<height normal="40" />
+			<radius normal="23" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="13404" level="1" type="L2Monster" name="Snowy Large Ripe Squash">
@@ -166,8 +166,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="28" />
-			<height normal="31" />
+			<radius normal="34" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="13405" level="80" type="L2Monster" name="Snowy Large Rotten Squash">
@@ -200,8 +200,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" aggroRange="450" />
 		<collision>
-			<radius normal="23" />
-			<height normal="25" />
+			<radius normal="28" />
+			<height normal="31" />
 		</collision>
 	</npc>
 	<npc id="13406" level="81" type="L2Monster" name="Snowy Royal Large Ripe Squash">
@@ -264,16 +264,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13409" level="80" type="L2Npc" name="Cat">
@@ -302,16 +302,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13411" level="80" type="L2Npc" name="Aries">
@@ -340,16 +340,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13413" level="80" type="L2Npc" name="Gemini">
@@ -359,16 +359,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13414" level="80" type="L2Npc" name="Leo">
@@ -378,16 +378,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13415" level="80" type="L2Npc" name="Libra">
@@ -397,16 +397,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13416" level="80" type="L2Npc" name="Sagittarius">
@@ -416,16 +416,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13417" level="80" type="L2Npc" name="Scorpio">
@@ -435,16 +435,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13418" level="80" type="L2Npc" name="Taurus">
@@ -454,16 +454,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13419" level="1" type="L2Monster" name="High Quality Squash">
@@ -627,16 +627,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13498" level="80" type="L2Npc" name="Aquarius">
@@ -646,16 +646,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 	<npc id="13499" level="80" type="L2Npc" name="Cancer">
@@ -665,16 +665,16 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="3" />
+			<height normal="5.15" />
 		</collision>
 	</npc>
 </list>

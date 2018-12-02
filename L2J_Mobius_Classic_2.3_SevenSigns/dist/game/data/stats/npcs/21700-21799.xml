@@ -1,22 +1,22 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21700" level="80" type="L2Npc" name="Ailith Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="34" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="21701" level="80" type="L2Npc" name="Hellinack" title="Naia's Guardian">
@@ -24,37 +24,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="37" />
+				<run ground="200" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="25" />
+			<height normal="90" />
 		</collision>
 	</npc>
 	<npc id="21702" level="80" type="L2Npc" name="Magic Circle Patrol">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="234" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="26" />
 		</collision>
 	</npc>
 	<npc id="21703" level="80" type="L2Npc" name="Magic Circle Guard">
@@ -62,18 +63,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="30.7" />
 		</collision>
 	</npc>
 	<npc id="21704" level="80" type="L2Npc" name="Magic Circle Watchman">
@@ -81,37 +82,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="21705" level="80" type="L2Npc" name="Remnant Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="123" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="24.6" />
 		</collision>
 	</npc>
 	<npc id="21706" level="80" type="L2Npc" name="Sand Scorpion">
@@ -119,18 +121,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="37" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28" />
+			<height normal="66" />
 		</collision>
 	</npc>
 	<npc id="21707" level="80" type="L2Npc" name="Desert Scorpion">
@@ -138,18 +140,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="37" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28" />
+			<height normal="66" />
 		</collision>
 	</npc>
 	<npc id="21708" level="80" type="L2Npc" name="Body Destroyer">
@@ -157,18 +159,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="39" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7" />
+			<height normal="30" />
 		</collision>
 	</npc>
 	<npc id="21709" level="80" type="L2Npc" name="Soul Harvester">
@@ -176,18 +178,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="21710" level="80" type="L2Npc" name="Caravan Outcast">
@@ -195,18 +197,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="56" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="33" />
+			<height normal="58.5" />
 		</collision>
 	</npc>
 	<npc id="21711" level="80" type="L2Npc" name="Sand Storm">
@@ -214,37 +216,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="180" />
+				<run ground="250" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21712" level="80" type="L2Npc" name="Kertas">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8686" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="21713" level="80" type="L2Npc" name="Darion's Executioner">
@@ -252,18 +255,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="140" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="23" />
 		</collision>
 	</npc>
 	<npc id="21714" level="80" type="L2Npc" name="Darion's Executor">
@@ -271,18 +274,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="48" />
+				<run ground="190" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7" />
+			<height normal="33" />
 		</collision>
 	</npc>
 	<npc id="21715" level="80" type="L2Npc" name="Quarry Foreman">
@@ -290,56 +293,58 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="43" />
+				<run ground="165" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="9" />
+			<height normal="31.5" />
 		</collision>
 	</npc>
 	<npc id="21716" level="80" type="L2Npc" name="Quarry Foreman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="99" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="46" />
+				<run ground="165" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="5.5" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21717" level="80" type="L2Npc" name="Quarry Patrol Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="8686" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="165" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="22" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="21718" level="80" type="L2Npc" name="Quarry Patrolman">
@@ -347,18 +352,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3692" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="210" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="34" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="21719" level="80" type="L2Npc" name="Chimaera of Earth">
@@ -366,18 +371,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="21720" level="80" type="L2Npc" name="Chimaera of Darkness">
@@ -385,18 +390,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="21721" level="80" type="L2Npc" name="Chimaera of Wind">
@@ -404,18 +409,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="21722" level="80" type="L2Npc" name="Chimaera of Flame">
@@ -423,18 +428,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="21723" level="80" type="L2Npc" name="Seltus" title="Chimaera">
@@ -442,18 +447,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1708" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="36" />
 		</collision>
 	</npc>
 	<npc id="21724" level="80" type="L2Npc" name="Factory Worker">
@@ -461,18 +466,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="46" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="47.5" />
 		</collision>
 	</npc>
 	<npc id="21725" level="80" type="L2Npc" name="Factory Foreman">
@@ -480,18 +485,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="33" />
+			<height normal="49" />
 		</collision>
 	</npc>
 	<npc id="21726" level="80" type="L2Npc" name="Lesser Evil Spirit">
@@ -499,9 +504,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="33" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -509,8 +514,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="17" />
+			<height normal="30.5" />
 		</collision>
 	</npc>
 	<npc id="21727" level="80" type="L2Npc" name="Greater Evil Spirit">
@@ -518,9 +523,9 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="43" />
 				<run ground="120" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
@@ -528,8 +533,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="21728" level="80" type="L2Npc" name="Factory Foreman">
@@ -537,18 +542,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="1777" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="405.985" />
 		</collision>
 	</npc>
 	<npc id="21729" level="80" type="L2Npc" name="Magic Circle Guard Captain">
@@ -556,18 +561,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="37" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21730" level="80" type="L2Npc" name="Failan Guard">
@@ -575,56 +580,58 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="170" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="15" />
+			<height normal="32.5" />
 		</collision>
 	</npc>
 	<npc id="21731" level="80" type="L2Npc" name="Leodas" title="Partisan Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6611" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6486" hpRegen="10.5" mp="2822" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="21732" level="80" type="L2Npc" name="Native Veteran">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="135" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6486" hpRegen="10.5" mp="2822" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="100" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="24" />
 		</collision>
 	</npc>
 	<npc id="21742" level="79" type="L2Monster" name="Varka Silenos Searcher">
@@ -650,7 +657,7 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="41658" sp="1124" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14212" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<vitals hp="3597" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -818,7 +825,7 @@
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
 		<acquire exp="48794" sp="1317" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14585" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="3692" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -906,7 +913,7 @@
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="36" />
-				<run ground="180" />
+				<run ground="150" />
 			</speed>
 			<hit_time>470</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -987,7 +994,7 @@
 		<equipment rhand="79" /> <!-- Damascus Sword -->
 		<acquire exp="41658" sp="1124" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14212" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<vitals hp="3597" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -1071,7 +1078,7 @@
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<acquire exp="48794" sp="1317" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="14585" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="3692" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="2" />
 			<speed>
@@ -1218,8 +1225,8 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="10" />
-			<height normal="23" />
+			<radius normal="12" />
+			<height normal="28.2" />
 		</collision>
 	</npc>
 	<npc id="21734" level="80" type="L2Monster" name="Ketra Orc Archer">
@@ -1299,8 +1306,8 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="12" />
-			<height normal="27" />
+			<radius normal="14.4" />
+			<height normal="33" />
 		</collision>
 	</npc>
 	<npc id="21751" level="80" type="L2Npc" name="Treasure Lookout">
@@ -1308,56 +1315,58 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2512" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="38.5" />
+			<height normal="42.5" />
 		</collision>
 	</npc>
 	<npc id="21754" level="80" type="L2Npc" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="6719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="38.5" />
 		</collision>
 	</npc>
 	<npc id="21755" level="80" type="L2Npc" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="2504" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6153" hpRegen="10.5" mp="2563" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="42.5" />
 		</collision>
 	</npc>
 	<npc id="21758" level="80" type="L2Npc" name="Treasure Lookout">
@@ -1365,18 +1374,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6076" hpRegen="10.5" mp="2512" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="38.5" />
+			<height normal="42.5" />
 		</collision>
 	</npc>
 	<npc id="21759" level="80" type="L2Monster" name="Ketra Orc Captain">
@@ -1403,7 +1412,7 @@
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<acquire exp="48203" sp="1123" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="15948" hpRegen="8.5" mp="2607" mpRegen="3" />
+			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="2" />
 			<speed>
@@ -1469,7 +1478,7 @@
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
 		<acquire exp="49275" sp="1121" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="15948" hpRegen="8.5" mp="2607" mpRegen="3" />
+			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -1516,12 +1525,12 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="13301" hpRegen="3.18" mp="2920" mpRegen="3.18" />
+			<vitals hp="13301" hpRegen="3.18" mp="2614" mpRegen="3.18" />
 			<attack physical="1024.61236488433" magical="741.658070600305" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="391.584384310193" magical="237.213641422467" evasion="6" />
 			<speed>
-				<walk ground="80" />
-				<run ground="1" />
+				<walk ground="30" />
+				<run ground="175" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1542,8 +1551,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8.5" />
-			<height normal="8.5" />
+			<radius normal="14" />
+			<height normal="12.4" />
 		</collision>
 	</npc>
 	<npc id="21746" level="79" type="L2Monster" name="Varka Silenos Ranger">
@@ -1566,10 +1575,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<equipment rhand="142" />
 		<acquire exp="353034" sp="9531" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="56844" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<vitals hp="5996" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -1654,10 +1663,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="79" lhand="6919" /> <!-- Damascus Sword / Monster Only (Shield of Ketra Orc) -->
+		<equipment rhand="79" />
 		<acquire exp="353034" sp="9531" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="56844" hpRegen="8.5" mp="2461" mpRegen="3" />
+			<vitals hp="5996" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" shield="166" shieldRate="20" />
 			<speed>
@@ -1748,12 +1757,12 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="402090" sp="10856" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
 				<walk ground="36" />
-				<run ground="150" />
+				<run ground="175" />
 			</speed>
 			<hit_time>490</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1836,15 +1845,15 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<equipment rhand="2500" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="383891" sp="10365" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="67203" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<vitals hp="6076" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
 				<walk ground="34" />
-				<run ground="175" />
+				<run ground="150" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1926,7 +1935,7 @@
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
 		<acquire exp="426859" sp="11525" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="78712" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -1977,8 +1986,8 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="18" />
-			<height normal="42.5" />
+			<radius normal="21.6" />
+			<height normal="51.6" />
 		</collision>
 	</npc>
 	<npc id="21750" level="81" type="L2Monster" name="Varka Elite Searcher">
@@ -1999,10 +2008,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
+		<equipment rhand="2500" />
 		<acquire exp="400253" sp="10806" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -2090,10 +2099,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="2504" /> <!-- Meteor Shower -->
+		<equipment rhand="2500" /> <!-- Meteor Shower -->
 		<acquire exp="420270" sp="11347" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68873" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -2180,15 +2189,15 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<equipment rhand="92" /> <!-- Spirit's Staff -->
+		<equipment rhand="213" /> <!-- Spirit's Staff -->
 		<acquire exp="402090" sp="10856" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="1" />
 			<speed>
 				<walk ground="10" />
-				<run ground="150" />
+				<run ground="160" />
 			</speed>
 			<hit_time>340</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2248,8 +2257,8 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="10" />
-			<height normal="23" />
+			<radius normal="14" />
+			<height normal="33.4" />
 		</collision>
 	</npc>
 	<npc id="21738" level="80" type="L2Monster" name="Ketra Orc Ranger Officer">
@@ -2272,12 +2281,12 @@
 		<equipment rhand="80" /> <!-- Tallum Blade -->
 		<acquire exp="383891" sp="10365" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="67203" hpRegen="8.5" mp="2512" mpRegen="3" />
+			<vitals hp="6076" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="2" />
 			<speed>
 				<walk ground="33" />
-				<run ground="180" />
+				<run ground="175" />
 			</speed>
 			<hit_time>480</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2330,8 +2339,8 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="12" />
-			<height normal="24" />
+			<radius normal="14.4" />
+			<height normal="29.4" />
 		</collision>
 	</npc>
 	<npc id="21752" level="82" type="L2Monster" name="Ketra Orc Commander">
@@ -2358,7 +2367,7 @@
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
 		<acquire exp="426859" sp="11525" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="78712" hpRegen="8.5" mp="2614" mpRegen="3" />
+			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="2" />
 			<speed>
@@ -2432,7 +2441,7 @@
 		<equipment rhand="80" /> <!-- Tallum Blade -->
 		<acquire exp="400253" sp="10806" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68055" hpRegen="8.5" mp="2563" mpRegen="3" />
+			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" evasion="2" />
 			<speed>
@@ -2494,20 +2503,20 @@
 			</spoil>
 		</drop_lists>
 		<collision>
-			<radius normal="12" />
-			<height normal="24" />
+			<radius normal="15.6" />
+			<height normal="32.1" />
 		</collision>
 	</npc>
 	<npc id="21757" level="81" type="L2Chest" name="Mysterious Treasure Chest">
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="13301" hpRegen="3.18" mp="2920" mpRegen="3.18" />
+			<vitals hp="6227" hpRegen="3.18" mp="2614" mpRegen="3.18" />
 			<attack physical="1024.61236488433" magical="741.658070600305" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="391.584384310193" magical="237.213641422467" evasion="6" />
 			<speed>
-				<walk ground="80" />
-				<run ground="1" />
+				<walk ground="30" />
+				<run ground="175" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2528,8 +2537,8 @@
 		</skill_list>
 		<ex_crt_effect>true</ex_crt_effect>
 		<collision>
-			<radius normal="8.5" />
-			<height normal="8.5" />
+			<radius normal="14" />
+			<height normal="12.4" />
 		</collision>
 	</npc>
 	<npc id="21740" level="82" type="L2Monster" name="Ketra Orc Escort Chief">
@@ -2557,7 +2566,7 @@
 		<equipment rhand="80" lhand="6919" /> <!-- Tallum Blade / Monster Only (Shield of Ketra Orc) -->
 		<acquire exp="420270" sp="11347" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="68873" hpRegen="8.721" mp="2614" mpRegen="3.0804" />
+			<vitals hp="6227" hpRegen="8.721" mp="2614" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="354.8183475" magical="239.180922" evasion="3" shield="173" shieldRate="20" />
 			<speed>
@@ -2624,18 +2633,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="25" />
 		</collision>
 	</npc>
 	<npc id="21762" level="80" type="L2Npc" name="Lava" title="Elite">
@@ -2643,18 +2652,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="13" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="38" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="21763" level="80" type="L2Npc" name="Firen" title="Master">
@@ -2662,18 +2671,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="85" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="28" />
+			<height normal="70" />
 		</collision>
 	</npc>
 	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite">
@@ -2681,10 +2690,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="141405" sp="3817" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3736.528" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
+			<vitals hp="3736.528" hpRegen="9.5" mp="2614" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="20" />
+				<run ground="175" />
 			</speed>
 			<attack physical="826.2" magical="289.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="354.8" magical="161.5" />
@@ -2699,8 +2708,8 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="10.8" /> <!-- Need retail value -->
-			<height normal="33.0" /> <!-- Need retail value -->
+			<radius normal="10.8" />
+			<height normal="33" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2713,10 +2722,10 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="897671" sp="24237" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6297.86" hpRegen="9.5" mp="2666.1" mpRegen="3.3" />
+			<vitals hp="6297" hpRegen="9.5" mp="2666" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="20" />
+				<run ground="175" />
 			</speed>
 			<attack physical="857.9" magical="542.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="939.1" magical="568" />
@@ -2731,8 +2740,8 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="53.3" /> <!-- Need retail value -->
-			<height normal="40.55" /> <!-- Need retail value -->
+			<radius normal="53.3" />
+			<height normal="40.55" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2745,10 +2754,10 @@
 		<race>ELEMENTAL</race>
 		<acquire exp="2581570" sp="69702" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6297.86" hpRegen="9.5" mp="2666.1" mpRegen="3.3" />
+			<vitals hp="6297" hpRegen="9.5" mp="2666" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="175" />
 			</speed>
 			<attack physical="822.2" magical="893.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="923.8" magical="563" />
@@ -2763,8 +2772,8 @@
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="40.0" /> <!-- Need retail value -->
-			<height normal="65.4" /> <!-- Need retail value -->
+			<radius normal="40" />
+			<height normal="65.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2778,18 +2787,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="19.2" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="21768" level="80" type="L2Npc" name="Snow Golem" title="Elite">
@@ -2797,18 +2806,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="33" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="35" />
+			<height normal="47.5" />
 		</collision>
 	</npc>
 	<npc id="21769" level="80" type="L2Npc" name="Ishtir" title="Master">
@@ -2816,18 +2825,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="42" />
+			<height normal="38.3" />
 		</collision>
 	</npc>
 	<npc id="21770" level="82" type="L2Monster" name="Sylph" title="Elite">
@@ -2847,10 +2856,10 @@
 		<sex>MALE</sex>
 		<acquire exp="141405" sp="3817" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="175" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2899,10 +2908,10 @@
 		<sex>MALE</sex>
 		<acquire exp="897671" sp="24237" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="45" />
+				<run ground="175" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2930,8 +2939,8 @@
 			</drop>
 		</drop_lists>
 		<collision>
-			<radius normal="18.0" />
-			<height normal="45.0" />
+			<radius normal="18" />
+			<height normal="45" />
 		</collision>
 	</npc>
 	<npc id="21772" level="83" type="L2Monster" name="Radin" title="Master">
@@ -2951,10 +2960,10 @@
 		<sex>MALE</sex>
 		<acquire exp="2581570" sp="69702" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
 				<walk ground="80" />
-				<run ground="174" />
+				<run ground="175" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2983,8 +2992,8 @@
 			</drop>
 		</drop_lists>
 		<collision>
-			<radius normal="40.0" />
-			<height normal="131.0" />
+			<radius normal="40" />
+			<height normal="131" />
 		</collision>
 	</npc>
 	<npc id="21773" level="80" type="L2Npc" name="Capitan's Henchman">
@@ -2992,18 +3001,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="6227" hpRegen="10.5" mp="2614" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="54" />
+				<run ground="175" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="23.8" />
+			<height normal="32" />
 		</collision>
 	</npc>
 	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
@@ -3011,10 +3020,10 @@
 		<race>BEAST</race>
 		<acquire exp="65216" sp="1760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3736.528" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
+			<vitals hp="3736.528" hpRegen="9.5" mp="2614" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="20" />
+				<run ground="175" />
 			</speed>
 			<attack physical="4132.1" magical="2898.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1770.9" magical="1610.5" />
@@ -3027,8 +3036,8 @@
 			<skill id="4412" level="19" /> <!-- Extremely Strong P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="32.4" />
-			<height normal="46.2" />
+			<radius normal="26.4" />
+			<height normal="37.8" />
 		</collision>
 	</npc>
 	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past">
@@ -3036,10 +3045,10 @@
 		<race>DIVINE</race>
 		<acquire exp="624686" sp="16866" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="6227.54" hpRegen="9.5" mp="2614.5" mpRegen="3.3" />
+			<vitals hp="6227" hpRegen="9.5" mp="2614" mpRegen="3.3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="175" />
 			</speed>
 			<attack physical="754.5" magical="557.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="11806.5" magical="1754" />
@@ -3054,8 +3063,8 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="18.0" /> <!-- Need retail value -->
-			<height normal="44.0" /> <!-- Need retail value -->
+			<radius normal="18" />
+			<height normal="44" />
 		</collision>
 	</npc>
 	<npc id="21776" level="82" type="L2Monster" name="Fuish" title="Guardian of Wind">
@@ -3075,10 +3084,10 @@
 		<sex>MALE</sex>
 		<acquire exp="110421" sp="2981" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="175" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3100,7 +3109,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="12.0" />
+			<radius normal="12" />
 			<height normal="31.44" />
 		</collision>
 	</npc>
@@ -3121,10 +3130,10 @@
 		<sex>MALE</sex>
 		<acquire exp="22942" sp="688" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3547.976" hpRegen="6.5" mp="2411.1" mpRegen="2.4" />
+			<vitals hp="3547.976" hpRegen="6.5" mp="2411" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3146,8 +3155,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="28.0" />
-			<height normal="28.0" />
+			<radius normal="28" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21778" level="79" type="L2Monster" name="Black Tiger">
@@ -3167,10 +3176,10 @@
 		<sex>MALE</sex>
 		<acquire exp="42650" sp="1151" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
+			<vitals hp="3597" hpRegen="6.5" mp="2461" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3192,8 +3201,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="28.0" />
-			<height normal="28.0" />
+			<radius normal="28" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21779" level="79" type="L2Monster" name="Scorn Warrior">
@@ -3213,10 +3222,10 @@
 		<sex>MALE</sex>
 		<acquire exp="25744" sp="695" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
+			<vitals hp="3597" hpRegen="6.5" mp="2461" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3237,8 +3246,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="40.0" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21780" level="80" type="L2Monster" name="Porcupine">
@@ -3258,10 +3267,10 @@
 		<sex>MALE</sex>
 		<acquire exp="45081" sp="1217" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3597.92" hpRegen="6.5" mp="2461.5" mpRegen="2.4" />
+			<vitals hp="3597.92" hpRegen="6.5" mp="2512" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3304,10 +3313,10 @@
 		<sex>MALE</sex>
 		<acquire exp="28320" sp="764" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3646.048" hpRegen="6.5" mp="2512.2" mpRegen="2.4" />
+			<vitals hp="3646.048" hpRegen="6.5" mp="2512" mpRegen="2.4" />
 			<speed>
-				<walk ground="80" />
-				<run ground="174" />
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
 			<attack physical="336.9900364" magical="253.13256" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -3329,8 +3338,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="40.0" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21782" level="81" type="L2Monster" name="Scorn Seeker">
@@ -3350,7 +3359,7 @@
 		<sex>MALE</sex>
 		<acquire exp="30607" sp="826" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3692.28" hpRegen="6.5" mp="2563.2" mpRegen="2.4" />
+			<vitals hp="3692" hpRegen="6.5" mp="2563" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3375,8 +3384,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="40.0" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21783" level="81" type="L2Monster" name="Nero Commander">
@@ -3396,7 +3405,7 @@
 		<sex>MALE</sex>
 		<acquire exp="52317" sp="1412" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3692.28" hpRegen="6.5" mp="2563.2" mpRegen="2.4" />
+			<vitals hp="3692" hpRegen="6.5" mp="2563" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3421,8 +3430,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="28.0" />
-			<height normal="28.0" />
+			<radius normal="28" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21784" level="82" type="L2Monster" name="Storm Tapo">
@@ -3442,7 +3451,7 @@
 		<sex>MALE</sex>
 		<acquire exp="52205" sp="1409" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3736.528" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="3736.528" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3467,8 +3476,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="28.0" />
-			<height normal="28.0" />
+			<radius normal="28" />
+			<height normal="28" />
 		</collision>
 	</npc>
 	<npc id="21785" level="82" type="L2Monster" name="Breeze Warrior">
@@ -3488,7 +3497,7 @@
 		<sex>MALE</sex>
 		<acquire exp="367977" sp="11039" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="6227" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3513,8 +3522,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="40.0" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21786" level="82" type="L2Monster" name="Sharp Kau">
@@ -3534,9 +3543,9 @@
 		<sex>MALE</sex>
 		<acquire exp="308530" sp="8330" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="6227" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="39" />
 				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
@@ -3580,7 +3589,7 @@
 		<sex>MALE</sex>
 		<acquire exp="378803" sp="10227" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="6227" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3605,8 +3614,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="40.0" />
+			<radius normal="20" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21788" level="82" type="L2Monster" name="Breeze Mage">
@@ -3626,7 +3635,7 @@
 		<sex>MALE</sex>
 		<acquire exp="308860" sp="8339" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6227.54" hpRegen="6.5" mp="2614.5" mpRegen="2.4" />
+			<vitals hp="6227" hpRegen="6.5" mp="2614" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3652,7 +3661,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="24.0" />
+			<radius normal="24" />
 			<height normal="48.6" />
 		</collision>
 	</npc>
@@ -3673,9 +3682,9 @@
 		<sex>MALE</sex>
 		<acquire exp="321502" sp="8680" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="39" />
 				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
@@ -3698,7 +3707,7 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="18.0" />
+			<radius normal="18" />
 			<height normal="27.6" />
 		</collision>
 	</npc>
@@ -3719,7 +3728,7 @@
 		<sex>MALE</sex>
 		<acquire exp="427882" sp="11552" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3744,8 +3753,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="43.0" />
-			<height normal="43.0" />
+			<radius normal="43" />
+			<height normal="43" />
 		</collision>
 	</npc>
 	<npc id="21791" level="83" type="L2Monster" name="Storm Lucifer">
@@ -3765,7 +3774,7 @@
 		<sex>MALE</sex>
 		<acquire exp="432994" sp="11690" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3791,8 +3800,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="46.0" />
-			<height normal="50.0" />
+			<radius normal="46" />
+			<height normal="50" />
 		</collision>
 	</npc>
 	<npc id="21792" level="83" type="L2Monster" name="Blow Breaker">
@@ -3812,9 +3821,9 @@
 		<sex>MALE</sex>
 		<acquire exp="431065" sp="11638" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
-				<walk ground="60" />
+				<walk ground="36" />
 				<run ground="180" />
 			</speed>
 			<hit_time>390</hit_time>
@@ -3858,7 +3867,7 @@
 		<sex>MALE</sex>
 		<acquire exp="433958" sp="11716" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6297.86" hpRegen="6.5" mp="2666.1" mpRegen="2.4" />
+			<vitals hp="6297" hpRegen="6.5" mp="2666" mpRegen="2.4" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -3884,8 +3893,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20.0" />
-			<height normal="53.0" />
+			<radius normal="20" />
+			<height normal="53" />
 		</collision>
 	</npc>
 	<npc id="21794" level="80" type="L2Npc" name="Seer">
@@ -3893,18 +3902,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5157" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="68" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="34" />
 		</collision>
 	</npc>
 	<npc id="21795" level="80" type="L2Npc" name="Guardian Spirit">
@@ -3912,56 +3921,58 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5258" hpRegen="10.5" mp="2066" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="40" />
 		</collision>
 	</npc>
 	<npc id="21796" level="80" type="L2Npc" name="Midnight Sairon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5129" lhand="5129" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="22" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10.2" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="21797" level="80" type="L2Npc" name="Daymen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="84" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5457" hpRegen="10.5" mp="2163" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="13" />
+			<height normal="33.4" />
 		</collision>
 	</npc>
 	<npc id="21798" level="78" type="L2Monster" name="Kookaburra">
@@ -3981,7 +3992,7 @@
 		<sex>MALE</sex>
 		<acquire exp="35719" sp="964" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3547.976" hpRegen="7.5" mp="2411.1" mpRegen="2.7" />
+			<vitals hp="3547.976" hpRegen="7.5" mp="2411" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<speed>
@@ -4061,7 +4072,7 @@
 		<sex>MALE</sex>
 		<acquire exp="35817" sp="967" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3597.92" hpRegen="7.5" mp="2461.5" mpRegen="2.7" />
+			<vitals hp="3597" hpRegen="7.5" mp="2461" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<speed>

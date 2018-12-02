@@ -933,7 +933,7 @@
 			<defence physical="176.759022" magical="117.58598" />
 			<speed>
 				<walk ground="90" />
-				<run ground="90" />
+				<run ground="174" />
 			</speed>
 			<hit_time>390</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1010,7 +1010,7 @@
 			<defence physical="149.8955727" magical="120.65578" />
 			<speed>
 				<walk ground="30" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<hit_time>240</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1086,7 +1086,7 @@
 			<defence physical="169.13417" magical="123.76505" />
 			<speed>
 				<walk ground="90" />
-				<run ground="90" />
+				<run ground="174" />
 			</speed>
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1267,7 +1267,7 @@
 			<defence physical="161.6249636" magical="130.09715" />
 			<speed>
 				<walk ground="55" />
-				<run ground="110" />
+				<run ground="174" />
 			</speed>
 			<hit_time>610</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1352,7 +1352,7 @@
 			<defence physical="200.406976" magical="133.31739" />
 			<speed>
 				<walk ground="70" />
-				<run ground="110" />
+				<run ground="174" />
 			</speed>
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1439,7 +1439,7 @@
 			<defence physical="169.6688091" magical="136.5719" />
 			<speed>
 				<walk ground="80" />
-				<run ground="120" />
+				<run ground="174" />
 			</speed>
 			<hit_time>130</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -1618,7 +1618,7 @@
 			<defence physical="177.8754727" magical="143.17771" />
 			<speed>
 				<walk ground="70" />
-				<run ground="110" />
+				<run ground="174" />
 			</speed>
 			<hit_time>300</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -2264,8 +2264,8 @@
 		<ex_crt_effect>false</ex_crt_effect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="20" />
-			<height normal="10" />
+			<radius normal="18" />
+			<height normal="8.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2970,7 +2970,7 @@
 			<defence physical="190.4555091" magical="153.30378" />
 			<speed>
 				<walk ground="100" />
-				<run ground="100" />
+				<run ground="174" />
 			</speed>
 			<hit_time>370</hit_time>
 			<abnormalResist physical="10" magical="10" />

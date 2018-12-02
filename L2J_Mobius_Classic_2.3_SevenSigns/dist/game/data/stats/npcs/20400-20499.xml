@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="20400" level="12" type="L2Monster" name="Blood Fungus">
 		<parameters>
@@ -155,7 +155,7 @@
 		<equipment rhand="88" /> <!-- Morning Star -->
 		<acquire exp="1161" sp="34" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="612" hpRegen="3.5" mp="387" mpRegen="1.5" />
+			<vitals hp="612" hpRegen="3.5" mp="245" mpRegen="1.5" />
 			<attack physical="66.216557" magical="41.10666" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="89.73562727" magical="72.2311" />
 			<speed>
@@ -408,13 +408,14 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="38968" sp="1169" />
+		<equipment rhand="3939" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="18278" hpRegen="115.186274265113" mp="1188" mpRegen="2.7" />
 			<attack physical="4044.43744641044" magical="2658.00371930373" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="429.54225" magical="419.1" evasion="-18" />
 			<speed>
 				<walk ground="80" />
-				<run ground="170" />
+				<run ground="174" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -439,8 +440,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="9" />
-			<height normal="23" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -477,8 +478,8 @@
 			<attack physical="4044.43744641044" magical="2658.00371930373" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="429.54225" magical="419.1" evasion="-18" />
 			<speed>
-				<walk ground="80" />
-				<run ground="170" />
+				<walk ground="45" />
+				<run ground="174" />
 			</speed>
 			<hit_time>560</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -503,8 +504,8 @@
 		<ex_crt_effect>true</ex_crt_effect>
 		<ai type="BALANCED" clanHelpRange="300" />
 		<collision>
-			<radius normal="9" />
-			<height normal="23" />
+			<radius normal="15" />
+			<height normal="45" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -602,7 +603,7 @@
 		<sex>MALE</sex>
 		<acquire exp="794" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="424" hpRegen="2.5" mp="329" mpRegen="1.2" />
+			<vitals hp="424" hpRegen="2.5" mp="174" mpRegen="1.2" />
 			<attack physical="41.612252" magical="25.83252" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="73.95264545" magical="59.52687" />
 			<speed>
@@ -670,12 +671,13 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="56812" sp="1704" />
+		<equipment rhand="3939" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2039" hpRegen="5.5" mp="720" mpRegen="2.1" />
+			<vitals hp="2039" hpRegen="5.5" mp="1036" mpRegen="2.1" />
 			<attack physical="264.0417091" magical="198.33688" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="215.229322" magical="143.17771" />
 			<speed>
-				<walk ground="27" />
+				<walk ground="80" />
 				<run ground="174" />
 			</speed>
 			<hit_time>430</hit_time>
@@ -702,8 +704,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="20" />
-			<height normal="35" />
+			<radius normal="11" />
+			<height normal="28.5" />
 		</collision>
 	</npc>
 	<npc id="20415" level="17" type="L2Monster" name="Scarlet Salamander">
@@ -2524,7 +2526,7 @@
 			<attack physical="32.578601" magical="20.22451" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="66.8656" magical="53.82228" />
 			<speed>
-				<walk ground="25" />
+				<walk ground="80" />
 				<run ground="140" />
 			</speed>
 			<hit_time>100</hit_time>
@@ -3015,7 +3017,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1174" sp="35" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="544" hpRegen="3.5" mp="372" mpRegen="1.5" />
+			<vitals hp="544" hpRegen="3.5" mp="218" mpRegen="1.5" />
 			<attack physical="56.928058" magical="35.34044" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="84.23358182" magical="67.80232" />
 			<speed>
@@ -4342,7 +4344,7 @@
 			<attack physical="31.72536364" magical="23.83074" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="86.553159" magical="57.57804" />
 			<speed>
-				<walk ground="25" />
+				<walk ground="80" />
 				<run ground="140" />
 			</speed>
 			<hit_time>100</hit_time>
@@ -4767,7 +4769,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2180" sp="65" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="612" hpRegen="7" mp="343" mpRegen="1.5" />
+			<vitals hp="612" hpRegen="7" mp="245" mpRegen="1.5" />
 			<attack physical="66.216557" magical="41.10666" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="89.73562727" magical="72.2311" />
 			<speed>
@@ -4799,7 +4801,7 @@
 		</ai>
 		<collision>
 			<radius normal="19.5" />
-			<height normal="18.5" />
+			<height normal="17.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -4834,7 +4836,7 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="3059" sp="91" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="849" hpRegen="7" mp="463" mpRegen="1.5" />
+			<vitals hp="849" hpRegen="7" mp="329" mpRegen="1.5" />
 			<attack physical="84.22023636" magical="63.26266" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="130.310697" magical="86.68702" />
 			<speed>
@@ -4907,7 +4909,7 @@
 		<equipment rhand="14" /> <!-- Bow -->
 		<acquire exp="2590" sp="77" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="724" hpRegen="7" mp="417" mpRegen="1.5" />
+			<vitals hp="724" hpRegen="7" mp="286" mpRegen="1.5" />
 			<attack physical="166.6304686" magical="51.20928" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="108.28767" magical="79.24022" />
 			<speed>
@@ -4974,7 +4976,7 @@
 		<equipment rhand="121" /> <!-- Sword of Watershadow -->
 		<acquire exp="2754" sp="82" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="764" hpRegen="7" mp="432" mpRegen="1.5" />
+			<vitals hp="764" hpRegen="7" mp="300" mpRegen="1.5" />
 			<attack physical="73.21869091" magical="54.99876" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="122.775048" magical="81.67405" />
 			<speed>
@@ -5043,7 +5045,7 @@
 		<equipment rhand="11" /> <!-- Bone Dagger -->
 		<acquire exp="2602" sp="78" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="724" hpRegen="7" mp="387" mpRegen="1.5" />
+			<vitals hp="724" hpRegen="7" mp="286" mpRegen="1.5" />
 			<attack physical="59.65209886" magical="51.20928" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="119.116437" magical="79.24022" />
 			<speed>
@@ -5111,7 +5113,7 @@
 		<equipment rhand="2" /> <!-- Long Sword -->
 		<acquire exp="2459" sp="73" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="685" hpRegen="7" mp="358" mpRegen="1.5" />
+			<vitals hp="685" hpRegen="7" mp="273" mpRegen="1.5" />
 			<attack physical="69.75926" magical="47.63653" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="105.02818" magical="76.85506" />
 			<speed>

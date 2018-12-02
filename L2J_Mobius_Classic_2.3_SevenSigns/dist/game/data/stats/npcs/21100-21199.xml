@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="21100" level="19" type="L2Monster" name="Langk Lizardman Sentinel">
 		<parameters>
@@ -556,7 +556,7 @@
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2421" hpRegen="7.5" mp="1251" mpRegen="2.7" />
 			<speed>
-				<walk ground="80" />
+				<walk ground="25" />
 				<run ground="160" />
 			</speed>
 			<hit_time>100</hit_time>
@@ -879,7 +879,7 @@
 		<equipment rhand="287" /> <!-- Bow of Peril -->
 		<acquire exp="16877" sp="506" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2578" hpRegen="8.5" mp="1377" mpRegen="3" />
 			<attack physical="1625.448683" magical="499.53679" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
 			<defence physical="259.5555495" magical="223.44881" evasion="10" />
 			<speed>
@@ -1023,7 +1023,7 @@
 		<equipment rhand="186" /> <!-- Staff of Magic -->
 		<acquire exp="35682" sp="1070" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="2578" hpRegen="8.5" mp="1442" mpRegen="3" />
 			<attack physical="773.81598" magical="528.41601" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="267.4608895" magical="230.25444" evasion="10" />
 			<speed>
@@ -1080,7 +1080,7 @@
 		<equipment rhand="75" lhand="103" /> <!-- Caliburs / Tower Shield -->
 		<acquire exp="17383" sp="521" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2578" hpRegen="8.5" mp="1410" mpRegen="3" />
 			<attack physical="874.179911" magical="542.68324" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="290.2238455" magical="233.61053" shield="160" shieldRate="20" />
 			<speed>
@@ -2835,18 +2835,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="100" />
+				<run ground="160" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="21147" level="43" type="L2Monster" name="Catacomb Gargoyle">
@@ -3014,6 +3014,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<equipment rhand="125" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="1929" hpRegen="22" mp="720" mpRegen="2.1" />
 			<speed>
@@ -4761,7 +4762,7 @@
 		<equipment rhand="229" lhand="229" /> <!-- Kris / Kris -->
 		<acquire exp="18789" sp="1561" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2498" hpRegen="26" mp="18468" mpRegen="2.4" />
+			<vitals hp="2498" hpRegen="26" mp="948" mpRegen="2.4" />
 			<attack physical="449.1566358" magical="289.69611" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="163.810026" magical="170.63714" evasion="10" shield="102" />
 			<speed>
@@ -4832,7 +4833,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="40606" sp="1218" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2719" hpRegen="26" mp="28227" mpRegen="2.4" />
+			<vitals hp="2719" hpRegen="26" mp="1036" mpRegen="2.4" />
 			<attack physical="582.4280671" magical="328.69659" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="204.6694876" magical="181.21958" />
 			<speed>
@@ -4926,7 +4927,7 @@
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
 		<acquire exp="40907" sp="1227" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2939" hpRegen="30" mp="19170" mpRegen="2.7" />
+			<vitals hp="2939" hpRegen="30" mp="1127" mpRegen="2.7" />
 			<attack physical="655.1517654" magical="369.73862" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="216.6894711" magical="191.86238" shield="131" shieldRate="20" />
 			<speed>
@@ -5017,7 +5018,7 @@
 		<equipment rhand="234" lhand="234" /> <!-- Demon's Dagger / Demon's Dagger -->
 		<acquire exp="50613" sp="1518" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3157" hpRegen="30" mp="18818" mpRegen="2.7" />
+			<vitals hp="3157" hpRegen="30" mp="1219" mpRegen="2.7" />
 			<attack physical="639.272223" magical="412.31647" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="194.3953653" magical="202.49719" evasion="10" shield="121" />
 			<speed>
@@ -5113,7 +5114,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="52866" sp="1585" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3369" hpRegen="30" mp="28755" mpRegen="2.7" />
+			<vitals hp="3369" hpRegen="30" mp="1314" mpRegen="2.7" />
 			<attack physical="807.6793681" magical="455.81844" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="240.6203554" magical="213.05139" />
 			<speed>
@@ -5202,7 +5203,7 @@
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
 		<acquire exp="43756" sp="1312" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3572" hpRegen="34" mp="19524" mpRegen="3" />
+			<vitals hp="3572" hpRegen="34" mp="1410" mpRegen="3" />
 			<attack physical="885.1453226" magical="499.53679" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="252.3631983" magical="223.44881" shield="153" shieldRate="20" />
 			<speed>
@@ -5300,7 +5301,7 @@
 		<equipment rhand="236" lhand="236" /> <!-- Soul Separator / Soul Separator -->
 		<acquire exp="35478" sp="3742" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="19170" mpRegen="3" />
+			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
 			<attack physical="841.3981643" magical="542.68324" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="224.2638806" magical="233.61053" evasion="10" shield="140" />
 			<speed>
@@ -5366,7 +5367,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="44134" sp="1324" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="29286" mpRegen="3" />
+			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
 			<attack physical="1035.534783" magical="584.40994" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="274.9591818" magical="243.45587" />
 			<speed>
@@ -5458,7 +5459,7 @@
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
 		<acquire exp="41855" sp="4698" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3764" hpRegen="34" mp="19880" mpRegen="3" />
+			<vitals hp="3764" hpRegen="34" mp="1507" mpRegen="3" />
 			<attack physical="1082.657833" magical="611.00409" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="282.1280992" magical="249.80341" shield="171" shieldRate="20" />
 			<speed>
@@ -6294,7 +6295,7 @@
 		<sex>MALE</sex>
 		<acquire exp="33498" sp="1004" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2498" hpRegen="26" mp="20238" mpRegen="2.4" />
+			<vitals hp="2498" hpRegen="26" mp="948" mpRegen="2.4" />
 			<attack physical="513.3218695" magical="289.69611" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="163.810026" magical="170.63714" evasion="10" />
 			<speed>

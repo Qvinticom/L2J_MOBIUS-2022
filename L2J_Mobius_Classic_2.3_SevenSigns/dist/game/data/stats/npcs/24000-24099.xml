@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24000" level="80" type="L2Npc" name="Leona Blackbird" title="Dragon�s Advocate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="98" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
@@ -26,6 +27,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5233" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>
@@ -290,6 +292,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="97" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6" />
 			<speed>
@@ -312,6 +315,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<acquire exp="13094" sp="392" />
+		<equipment rhand="160" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
 			<speed>
@@ -357,10 +361,10 @@
 		<race>ETC</race> <!-- TODO: Magic Creatures -->
 		<acquire exp="196742" sp="5902" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="27199" hpRegen="8.5" mp="2311" mpRegen="3" />
+			<vitals hp="5738" hpRegen="8.5" mp="2311" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="80" />
+				<run ground="170" />
 			</speed>
 			<attack physical="19039.3" magical="2079.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="8159.7" magical="1155.5" />
@@ -374,8 +378,8 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="32" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -403,11 +407,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<acquire exp="341811" sp="10254" />
+		<equipment rhand="3937" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="56058" hpRegen="8.5" mp="2411" mpRegen="3" />
+			<vitals hp="5913" hpRegen="8.5" mp="2411" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="220" />
 			</speed>
 			<attack physical="39240.6" magical="2169.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="16817.4" magical="1205.5" />
@@ -422,8 +427,8 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="44" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -452,28 +457,28 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2361" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="42.6" />
 		</collision>
 	</npc>
 	<npc id="24018" level="78" type="L2Monster" name="Hekaton Prime" title="Giants' Cave Master">
 		<race>GIANT</race>
 		<acquire exp="1444329" sp="43329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="420390" hpRegen="8.5" mp="2411" mpRegen="3" />
+			<vitals hp="5913" hpRegen="8.5" mp="2411" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="27" />
+				<run ground="140" />
 			</speed>
 			<attack physical="294273" magical="2169.9" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="126117" magical="1205.5" />
@@ -488,8 +493,8 @@
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="32" />
+			<height normal="57.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -509,11 +514,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<acquire exp="528416" sp="15852" />
+		<equipment rhand="3937" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="110475" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="140" />
 			</speed>
 			<attack physical="77332.5" magical="2124.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="33142.5" magical="1180.5" />
@@ -527,8 +533,8 @@
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="27.5" />
+			<height normal="48.7" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -559,10 +565,10 @@
 		<race>GIANT</race>
 		<acquire exp="1051810" sp="31554" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55242" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="55" />
+				<run ground="140" />
 			</speed>
 			<attack physical="38669.4" magical="2124.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="16572.6" magical="1180.5" />
@@ -575,8 +581,8 @@
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="46" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -594,11 +600,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<acquire exp="326047" sp="9781" />
+		<equipment rhand="3937" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="55242" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="180" />
 			</speed>
 			<attack physical="38669.4" magical="2124.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="16572.6" magical="1180.5" />
@@ -612,8 +619,8 @@
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="44" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -641,11 +648,12 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>GIANT</race>
 		<acquire exp="257609" sp="7728" />
+		<equipment rhand="3938" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="36828" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="5827" hpRegen="8.5" mp="2361" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="15" />
+				<run ground="180" />
 			</speed>
 			<attack physical="25779.6" magical="2124.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="11048.4" magical="1180.5" />
@@ -660,8 +668,8 @@
 			<skill id="4285" level="5" /> <!-- Sleep Resistance -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="50" />
+			<height normal="44" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -689,18 +697,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2361" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="24024" level="80" type="L2Npc" name="Hunter" title="Ancient Marauder">
@@ -708,18 +716,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2261" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="27" />
+				<run ground="150" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="24025" level="70" type="L2Monster" name="Bloody Purple">
@@ -738,12 +746,12 @@
 		<sex>MALE</sex>
 		<acquire exp="77020" sp="2310" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="16297" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<vitals hp="5157" hpRegen="7.5" mp="2018" mpRegen="2.7" />
 			<attack physical="11407.9" magical="1816.2" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4889.1" magical="1009" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="10" />
+				<run ground="180" />
 			</speed>
 			<hit_time>540</hit_time>
 			<abnormalResist physical="10" magical="10" />
@@ -764,8 +772,8 @@
 			</clan_list>
 		</ai>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15.6" />
+			<height normal="28.2" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -795,10 +803,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="79766" sp="2392" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16616" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="5258" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4984.8" magical="1033" />
@@ -813,8 +821,8 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="17" />
+			<height normal="26.8" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -844,10 +852,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="86040" sp="2581" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16932" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="5358" hpRegen="8.5" mp="2115" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5079.6" magical="1057.5" />
@@ -859,8 +867,8 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10.4" />
+			<height normal="23.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -891,11 +899,12 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="89303" sp="2679" />
+		<equipment rhand="234" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17245" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="5457" hpRegen="8.5" mp="2163" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5173.5" magical="1081.5" />
@@ -908,8 +917,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="33.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -938,11 +947,12 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<acquire exp="90904" sp="2727" />
+		<equipment rhand="78" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17548" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5264.4" magical="1106" />
@@ -956,8 +966,8 @@
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="33.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -988,10 +998,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="129198" sp="3875" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26323" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="7896.9" magical="1106" />
@@ -1005,8 +1015,8 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16.5" />
+			<height normal="29.45" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1037,10 +1047,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="94263" sp="2827" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17842" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5352.6" magical="1130.5" />
@@ -1053,8 +1063,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13.2" />
+			<height normal="44.3" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1086,10 +1096,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="77020" sp="2310" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16297" hpRegen="7.5" mp="2018" mpRegen="2.7" />
+			<vitals hp="5157" hpRegen="7.5" mp="2018" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="68" />
+				<run ground="180" />
 			</speed>
 			<attack physical="11407.9" magical="1816.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4889.1" magical="1009" />
@@ -1104,8 +1114,8 @@
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="34" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1137,10 +1147,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="79766" sp="2392" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16616" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="5258" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
 			<attack physical="11631.2" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4984.8" magical="1033" />
@@ -1155,8 +1165,8 @@
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1183,11 +1193,12 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<acquire exp="86040" sp="2581" />
+		<equipment rhand="5129" lhand="5129" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16932" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="5358" hpRegen="8.5" mp="2115" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="22" />
+				<run ground="180" />
 			</speed>
 			<attack physical="11852.4" magical="1903.5" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5079.6" magical="1057.5" />
@@ -1199,8 +1210,8 @@
 			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="10.2" />
+			<height normal="22.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1229,11 +1240,12 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<acquire exp="89303" sp="2679" />
+		<equipment rhand="84" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17245" hpRegen="8.5" mp="2163" mpRegen="3" />
+			<vitals hp="5457" hpRegen="8.5" mp="2163" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12071.5" magical="1946.7" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5173.5" magical="1081.5" />
@@ -1246,8 +1258,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13" />
+			<height normal="33.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1275,10 +1287,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="90904" sp="2727" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17548" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12283.6" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5264.4" magical="1106" />
@@ -1292,8 +1304,8 @@
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="13.2" />
+			<height normal="44.3" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1319,10 +1331,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="129198" sp="3875" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26323" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="5553" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
 			<attack physical="18426.1" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="7896.9" magical="1106" />
@@ -1336,8 +1348,8 @@
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="17" />
+			<height normal="55" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1363,10 +1375,10 @@
 		<race>BUG</race>
 		<acquire exp="94263" sp="2827" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17842" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="37" />
+				<run ground="180" />
 			</speed>
 			<attack physical="12489.4" magical="2034.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="5352.6" magical="1130.5" />
@@ -1379,8 +1391,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="22.4" />
+			<height normal="52.2" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1407,10 +1419,10 @@
 		<race>UNDEAD</race>
 		<acquire exp="181912" sp="5457" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26763" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="100" />
+				<run ground="180" />
 			</speed>
 			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="8028.9" magical="1130.5" />
@@ -1423,8 +1435,8 @@
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="20" />
+			<height normal="35" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1448,10 +1460,10 @@
 		<race>DEMONIC</race>
 		<acquire exp="185062" sp="5551" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26763" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="5646" hpRegen="8.5" mp="2261" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="18734.1" magical="2034.9" critical="4" attackSpeed="253" range="40" />
 			<defence physical="8028.9" magical="1130.5" />
@@ -1467,8 +1479,8 @@
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="23" />
+			<height normal="40" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1493,8 +1505,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="25" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1869.6" magical="1033" />
@@ -1505,8 +1517,8 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="35" />
 		</collision>
 	</npc>
 	<npc id="24042" level="71" type="L2Monster" name="Clumsy Wimp">
@@ -1520,8 +1532,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1869.6" magical="1033" />
@@ -1532,8 +1544,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="30" />
+			<height normal="39" />
 		</collision>
 	</npc>
 	<npc id="24043" level="80" type="L2Npc" name="Mysterious Creature">
@@ -1541,18 +1553,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2066" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="25" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="24" />
+			<height normal="37" />
 		</collision>
 	</npc>
 	<npc id="24044" level="74" type="L2Monster" name="Zaken's Treasure Chest">
@@ -1566,8 +1578,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="32899" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="23029.3" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="9869.7" magical="1106" />
@@ -1579,8 +1591,8 @@
 			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="12" />
 		</collision>
 	</npc>
 	<npc id="24045" level="80" type="L2Npc" name="Zaken's Treasure Chest">
@@ -1588,18 +1600,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2212" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="8" />
 		</collision>
 	</npc>
 	<npc id="24046" level="70" type="L2Monster" name="Floating Eye Seer">
@@ -1609,8 +1621,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6111" hpRegen="7.5" mp="2018" mpRegen="2.7" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4277.7" magical="1816.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1833.3" magical="1009" />
@@ -1620,8 +1632,8 @@
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="20" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1648,8 +1660,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="90" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1869.6" magical="1033" />
@@ -1659,8 +1671,8 @@
 			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="20" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1692,8 +1704,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1869.6" magical="1033" />
@@ -1704,8 +1716,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="7" />
+			<height normal="22" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1729,8 +1741,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1905.3" magical="1057.5" />
@@ -1740,8 +1752,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="7" />
+			<height normal="22" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1767,8 +1779,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="70" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4362.4" magical="1859.4" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1869.6" magical="1033" />
@@ -1779,8 +1791,8 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="11" />
+			<height normal="25.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1815,8 +1827,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1905.3" magical="1057.5" />
@@ -1826,8 +1838,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="26" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1856,8 +1868,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="61" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4445.7" magical="1903.5" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1905.3" magical="1057.5" />
@@ -1868,8 +1880,8 @@
 			<skill id="4416" level="8" /> <!-- Angel -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="9" />
+			<height normal="23.4" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1897,11 +1909,12 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<acquire exp="15987" sp="479" />
+		<equipment rhand="47716" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1939.8" magical="1081.5" />
@@ -1911,8 +1924,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="28.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1941,8 +1954,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6466" hpRegen="8.5" mp="2163" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4526.2" magical="1946.7" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1939.8" magical="1081.5" />
@@ -1953,8 +1966,8 @@
 			<skill id="4416" level="14" /> <!-- Humans -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="15" />
+			<height normal="30" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -1983,8 +1996,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6580" hpRegen="8.5" mp="2212" mpRegen="3" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="4606" magical="1990.8" critical="4" attackSpeed="253" range="40" />
 			<defence physical="1974" magical="1106" />
@@ -1994,8 +2007,8 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skill_list>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="28.5" />
 		</collision>
 		<drop_lists>
 			<drop>
@@ -2018,18 +2031,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="24057" level="80" type="L2Npc" name="Fiend's Radiant Chest">
@@ -2037,17 +2050,17 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="11" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -2056,18 +2069,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="9" />
 		</collision>
 	</npc>
 	<npc id="24059" level="80" type="L2Npc" name="Radiant Jewel Box">
@@ -2075,18 +2088,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="9.5" />
 		</collision>
 	</npc>
 	<npc id="24060" level="80" type="L2Npc" name="Strong Large Wooden Chest">
@@ -2094,18 +2107,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="24061" level="80" type="L2Npc" name="Fiend's Strong Chest">
@@ -2113,17 +2126,17 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="11" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -2132,18 +2145,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="24063" level="80" type="L2Npc" name="Strong Treasure Chest">
@@ -2151,18 +2164,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="24064" level="80" type="L2Npc" name="Simple Large Wooden Chest">
@@ -2170,18 +2183,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="24065" level="80" type="L2Npc" name="Simple Big Jar">
@@ -2189,18 +2202,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="24066" level="80" type="L2Npc" name="Simple Iron Chest">
@@ -2208,18 +2221,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="24067" level="80" type="L2Npc" name="Simple Treasure Chest">
@@ -2227,18 +2240,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="80" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8.5" />
+			<height normal="8.5" />
 		</collision>
 	</npc>
 	<npc id="24068" level="80" type="L2Npc" name="Ancient Large Wooden Chest">
@@ -2246,18 +2259,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="18" />
+			<height normal="14" />
 		</collision>
 	</npc>
 	<npc id="24069" level="80" type="L2Npc" name="Old Big Jar">
@@ -2265,18 +2278,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="24070" level="80" type="L2Npc" name="Ancient Iron Chest">
@@ -2284,18 +2297,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="9.5" />
 		</collision>
 	</npc>
 	<npc id="24071" level="80" type="L2Npc" name="Ancient Jewel Box">
@@ -2303,18 +2316,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="9.5" />
 		</collision>
 	</npc>
 	<npc id="24072" level="80" type="L2Npc" name="Small Jar of Luck">
@@ -2322,18 +2335,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="24073" level="80" type="L2Npc" name="Small Jar of Hope">
@@ -2341,18 +2354,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="24074" level="80" type="L2Npc" name="Small Jar of Fate">
@@ -2360,18 +2373,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="10" />
+			<height normal="15" />
 		</collision>
 	</npc>
 	<npc id="24075" level="80" type="L2Npc" name="Large Jar of Luck">
@@ -2379,18 +2392,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="24076" level="80" type="L2Npc" name="Large Jar of Hope">
@@ -2398,18 +2411,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="24077" level="80" type="L2Npc" name="Large Jar of Fate">
@@ -2417,18 +2430,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="1" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="8" />
+			<height normal="21.5" />
 		</collision>
 	</npc>
 	<npc id="24078" level="80" type="L2Npc" name="Large Treasure Chest of Luck">
@@ -2436,18 +2449,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="8" />
 		</collision>
 	</npc>
 	<npc id="24079" level="80" type="L2Npc" name="Large Treasure Chest of Hope">
@@ -2455,18 +2468,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="8" />
 		</collision>
 	</npc>
 	<npc id="24080" level="80" type="L2Npc" name="Large Treasure Chest of Fate">
@@ -2474,18 +2487,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="12" />
+			<height normal="8" />
 		</collision>
 	</npc>
 	<npc id="24081" level="80" type="L2Npc" name="Small Treasure Chest of Luck">
@@ -2493,17 +2506,17 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="11" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -2512,17 +2525,17 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="11" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -2531,17 +2544,17 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
+			<radius normal="11" />
 			<height normal="12" />
 		</collision>
 	</npc>
@@ -2550,18 +2563,18 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="8446" hpRegen="10.5" mp="2018" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
-				<run ground="120" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="11" />
+			<height normal="27" />
 		</collision>
 	</npc>
 	<npc id="24085" level="80" type="L2Npc" name="Sairon's Doll">
@@ -2569,37 +2582,38 @@
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="30" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="6.5" />
+			<height normal="13.5" />
 		</collision>
 	</npc>
 	<npc id="24086" level="80" type="L2Npc" name="Sairon's Doll">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5129" lhand="5129" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="5358" hpRegen="10.5" mp="2115" mpRegen="3.6" />
 			<speed>
-				<walk ground="60" />
-				<run ground="120" />
+				<walk ground="22" />
+				<run ground="180" />
 			</speed>
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="5" />
-			<height normal="12" />
+			<radius normal="7.2" />
+			<height normal="15" />
 		</collision>
 	</npc>
 </list>
