@@ -39,6 +39,7 @@ public final class DarkElfChange2 extends AbstractNpcAI
 		30474, // Angus
 		30862, // Oltran
 		30910, // Xairakin
+		31285, // Samael
 	};
 	// Items
 	private static int MARK_OF_CHALLENGER = 2627;

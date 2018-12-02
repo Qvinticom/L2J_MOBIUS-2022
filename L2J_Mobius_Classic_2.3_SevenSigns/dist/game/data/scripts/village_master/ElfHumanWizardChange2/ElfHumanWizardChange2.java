@@ -37,6 +37,7 @@ public final class ElfHumanWizardChange2 extends AbstractNpcAI
 		30176, // Valleria
 		30694, // Scraide
 		30854, // Drikiyan
+		31279, // Gregory
 	};
 	
 	// Items

@@ -37,6 +37,7 @@ public final class OrcChange2 extends AbstractNpcAI
 		30704, // Garvarentz
 		30865, // Ladanza
 		30913, // Tushku
+		31288, // Aklan
 	};
 	
 	// Items
