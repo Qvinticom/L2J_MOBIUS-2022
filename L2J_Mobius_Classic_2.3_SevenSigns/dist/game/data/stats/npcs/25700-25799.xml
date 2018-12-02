@@ -2747,168 +2747,243 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="77" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="704038" hpRegen="1087.71929824561" mp="352019" mpRegen="1148.14814814815" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="902929.02" mp="607971.6" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="126427.8196" magical="117773.35043478" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="270878.706" magical="451464.51" />
+			<attribute>
+				<attack type="FIRE" value="280" />
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="29523.8095238095" magical="5210.08403361345" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2296.2962962963" magical="1333.33333333333" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="21.0" />
+			<height normal="43.5" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="21" />
-			<height normal="43.5" />
-		</collision>
 	</npc>
 	<npc id="25795" level="64" type="L2Monster" name="Garan" title="Korim's Messenger">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="160" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1746452" hpRegen="1122.80701754386" mp="373457" mpRegen="1185.18518518519" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="995477.64" mp="644997.6" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="139385.1992" magical="129844.90956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="298643.292" magical="497738.82" />
+			<attribute>
+				<attack type="FIRE" value="280" />
+				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
 			</speed>
-			<attack physical="30476.1904761905" magical="5378.1512605042" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2370.37037037037" magical="1376.34408602151" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="37.8" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5464" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4416" level="3" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="15.6" />
-			<height normal="37.8" />
-		</collision>
 	</npc>
 	<npc id="25796" level="66" type="L2Monster" name="Batur" title="Kelbar's Leader">
 		<!-- Source: www.l2wiki.com -->
 		<race>GIANT</race>
 		<equipment rhand="75" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2017154" hpRegen="1192.98245614035" mp="396201" mpRegen="1259.25925925926" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1149777.78" mp="684279" mpRegen="1222.2222222222" hpRegen="60000" />
+			<attack physical="31428.571428571" magical="5546.218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2444.4444444444" magical="1419.3548387097" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="300" water="350" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
 			</speed>
-			<attack physical="31380.9523809524" magical="5514.28571428571" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2418.51851851852" magical="1400.36559139785" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="47.0" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
-			<skill id="4416" level="11" /> <!-- Giant -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4437" level="3" />
+			<skill id="4441" level="3" />
+			<skill id="4435" level="3" />
+			<skill id="4436" level="3" />
+			<skill id="4440" level="3" />
+			<skill id="4439" level="3" />
+			<skill id="4438" level="3" />
+			<skill id="5463" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
+			<skill id="14765" level="4" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="24" />
-			<height normal="47" />
-		</collision>
 	</npc>
 	<npc id="25797" level="68" type="L2Monster" name="Venir" title="Kraven's Best Friend">
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<equipment rhand="76" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2440755" hpRegen="1192.98245614035" mp="420329" mpRegen="1259.25925925926" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1391230.35" mp="725949.9" mpRegen="1259.2592592593" hpRegen="61818.181818182" />
+			<attack physical="32380.952380952" magical="5714.2857142857" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2518.5185185185" magical="1462.3655913978" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="27" />
 				<run ground="170" />
 			</speed>
-			<attack physical="32380.9523809524" magical="5714.28571428571" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2518.51851851852" magical="1462.36559139785" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="18.0" />
+			<height normal="47.5" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5462" level="1" />
+			<skill id="4415" level="19" />
+			<skill id="4494" level="1" />
+			<skill id="14765" level="4" />
+			<skill id="4414" level="1" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="18" />
-			<height normal="47.5" />
-		</collision>
 	</npc>
 	<npc id="25798" level="70" type="L2Monster" name="Oel" title="Blue Flag Captain">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2953314" hpRegen="1228.0701754386" mp="445927" mpRegen="1296.2962962963" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="1683388.98" mp="770160.6" mpRegen="1296.2962962963" hpRegen="63636.363636364" />
+			<attack physical="33333.333333333" magical="5882.3529411765" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2592.5925925926" magical="1505.376344086" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="70" />
 				<run ground="170" />
 			</speed>
-			<attack physical="33333.3333333333" magical="5882.35294117647" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2592.59259259259" magical="1505.37634408602" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="45.0" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="5462" level="1" />
+			<skill id="4415" level="7" />
+			<skill id="4414" level="3" />
+			<skill id="14765" level="4" />
+			<skill id="4045" level="1" />
+			<skill id="4084" level="1" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="24" />
-			<height normal="45" />
-		</collision>
 	</npc>
 	<npc id="25799" level="72" type="L2Monster" name="Taranka" title="Kandra's Follower">
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<equipment rhand="2502" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3573511" hpRegen="1263.15789473684" mp="482270" mpRegen="1333.33333333333" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="2036901.27" mp="832928.4" mpRegen="1333.3333333333" hpRegen="65454.545454545" />
+			<attack physical="34285.714285714" magical="6050.4201680672" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2666.6666666667" magical="1548.3870967742" />
+			<attribute>
+				<attack type="FIRE" value="430" />
+				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
+			</attribute>
 			<speed>
 				<walk ground="27" />
 				<run ground="170" />
 			</speed>
-			<attack physical="34285.7142857143" magical="6050.42016806723" critical="4" attackSpeed="253" range="40" />
-			<defence physical="2666.66666666667" magical="1548.38709677419" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" />
+		<status attackable="true" canMove="true" />
+		<collision>
+			<radius normal="15.6" />
+			<height normal="38.4" />
+		</collision>
 		<skill_list>
 			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4441" level="5" />
+			<skill id="4435" level="5" />
+			<skill id="4440" level="5" />
+			<skill id="4439" level="5" />
+			<skill id="4438" level="5" />
+			<skill id="5238" level="1" />
+			<skill id="5467" level="1" />
+			<skill id="4415" level="3" />
+			<skill id="4494" level="1" />
 		</skill_list>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clan_list>
 				<clan>CLAN_ARENA</clan>
 			</clan_list>
 		</ai>
-		<collision>
-			<radius normal="15.6" />
-			<height normal="38.4" />
-		</collision>
 	</npc>
 </list>
