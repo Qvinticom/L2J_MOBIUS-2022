@@ -324,17 +324,17 @@
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="11.11" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="8.019" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="6.628" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.623" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="3.946" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.235" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="11.95" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="7.985" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.714" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.686" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.033" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.252" /> <!-- Charcoal -->
 				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
 			</drop>
 			<spoil>
-				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="2.399" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
 		</drop_lists>
@@ -367,19 +367,19 @@
 				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
 				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
 				<item id="57" min="2056" max="4798" chance="70" /> <!-- Adena -->
-				<item id="1873" min="1" max="3" chance="18.34" /> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="17.4" /> <!-- Mithril Ore -->
-				<item id="4096" min="1" max="1" chance="7.101" /> <!-- Sealed Blue Wolf Glove Fabric -->
-				<item id="1874" min="1" max="1" chance="6.03" /> <!-- Oriharukon Ore -->
-				<item id="4073" min="1" max="3" chance="4.142" /> <!-- Sealed Avadon Glove Fragment -->
-				<item id="4100" min="1" max="3" chance="2.707" /> <!-- Sealed Zubei's Gauntlet Fragment -->
-				<item id="4091" min="2" max="6" chance="1.709" /> <!-- Sealed Doom Glove Fragment -->
-				<item id="952" min="1" max="1" chance="1.198" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="1873" min="1" max="3" chance="17.93" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="17.13" /> <!-- Mithril Ore -->
+				<item id="4096" min="1" max="1" chance="7.092" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="1874" min="1" max="1" chance="6.021" /> <!-- Oriharukon Ore -->
+				<item id="4073" min="1" max="3" chance="4.032" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4100" min="1" max="3" chance="2.768" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4091" min="2" max="6" chance="1.705" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="952" min="1" max="1" chance="1.246" /> <!-- Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<spoil>
-				<item id="4938" min="1" max="1" chance="24.21" /> <!-- Recipe: Adamantite Ring (70%) -->
-				<item id="4937" min="1" max="1" chance="16.79" /> <!-- Recipe: Adamantite Earring (70%) -->
-				<item id="4939" min="1" max="1" chance="12.43" /> <!-- Recipe: Adamantite Necklace (70%) -->
+				<item id="4938" min="1" max="1" chance="24.48" /> <!-- Recipe: Adamantite Ring (70%) -->
+				<item id="4937" min="1" max="1" chance="15.45" /> <!-- Recipe: Adamantite Earring (70%) -->
+				<item id="4939" min="1" max="1" chance="11.5" /> <!-- Recipe: Adamantite Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -606,7 +606,7 @@
 	</npc>
 	<npc id="23845" level="80" type="L2Npc" name="Stakato Worker">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
 			<vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6" />
@@ -965,17 +965,17 @@
 				<item id="135" min="1" max="1" chance="0.0075" /> <!-- Samurai Long Sword -->
 				<item id="286" min="1" max="1" chance="0.0075" /> <!-- Eminence Bow -->
 				<item id="57" min="1782" max="4157" chance="70" /> <!-- Adena -->
-				<item id="1864" min="4" max="12" chance="25.1" /> <!-- Stem -->
-				<item id="1867" min="7" max="21" chance="9.292" /> <!-- Animal Skin -->
-				<item id="952" min="1" max="1" chance="1.33" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="2121" min="1" max="1" chance="1.285" /> <!-- Eminence Bow Shaft -->
-				<item id="2115" min="1" max="1" chance="1.206" /> <!-- Samurai Long Sword Blade -->
+				<item id="1864" min="4" max="12" chance="26.2" /> <!-- Stem -->
+				<item id="1867" min="7" max="21" chance="9.273" /> <!-- Animal Skin -->
+				<item id="952" min="1" max="1" chance="1.318" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="2121" min="1" max="1" chance="1.244" /> <!-- Eminence Bow Shaft -->
+				<item id="2115" min="1" max="1" chance="1.234" /> <!-- Samurai Long Sword Blade -->
 			</drop>
 			<spoil>
-				<item id="2961" min="1" max="1" chance="34.73" /> <!-- Full Plate Boot Fragment -->
-				<item id="2962" min="1" max="1" chance="34.49" /> <!-- Drake Leather Glove Design -->
-				<item id="1877" min="1" max="1" chance="25.25" /> <!-- Adamantite Nugget -->
-				<item id="1894" min="1" max="1" chance="23.35" /> <!-- Crafted Leather -->
+				<item id="2962" min="1" max="1" chance="35.17" /> <!-- Drake Leather Glove Design -->
+				<item id="2961" min="1" max="1" chance="33.01" /> <!-- Full Plate Boot Fragment -->
+				<item id="1877" min="1" max="1" chance="24.59" /> <!-- Adamantite Nugget -->
+				<item id="1894" min="1" max="1" chance="22.59" /> <!-- Crafted Leather -->
 			</spoil>
 		</drop_lists>
 	</npc>
@@ -1677,17 +1677,17 @@
 				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
 				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
 				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="11.11" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="8.019" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="6.628" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.623" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="3.946" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.235" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="11.95" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="7.985" /> <!-- Mithril Ore -->
+				<item id="1866" min="2" max="6" chance="6.714" /> <!-- Suede -->
+				<item id="1879" min="1" max="1" chance="6.686" /> <!-- Cokes -->
+				<item id="1870" min="5" max="15" chance="4.033" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.252" /> <!-- Charcoal -->
 				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
 				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
 			</drop>
 			<spoil>
-				<item id="948" min="1" max="1" chance="2.453" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="948" min="1" max="1" chance="2.399" /> <!-- Scroll: Enchant Armor (B-grade) -->
 				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
 			</spoil>
 		</drop_lists>
@@ -1720,19 +1720,19 @@
 				<item id="2475" min="1" max="1" chance="0.03" /> <!-- Sealed Doom Gloves -->
 				<item id="2487" min="1" max="1" chance="0.03" /> <!-- Sealed Blue Wolf Gloves -->
 				<item id="57" min="2056" max="4798" chance="70" /> <!-- Adena -->
-				<item id="1873" min="1" max="3" chance="18.34" /> <!-- Silver Nugget -->
-				<item id="1876" min="1" max="1" chance="17.4" /> <!-- Mithril Ore -->
-				<item id="4096" min="1" max="1" chance="7.101" /> <!-- Sealed Blue Wolf Glove Fabric -->
-				<item id="1874" min="1" max="1" chance="6.03" /> <!-- Oriharukon Ore -->
-				<item id="4073" min="1" max="3" chance="4.142" /> <!-- Sealed Avadon Glove Fragment -->
-				<item id="4100" min="1" max="3" chance="2.707" /> <!-- Sealed Zubei's Gauntlet Fragment -->
-				<item id="4091" min="2" max="6" chance="1.709" /> <!-- Sealed Doom Glove Fragment -->
-				<item id="952" min="1" max="1" chance="1.198" /> <!-- Scroll: Enchant Armor (C-grade) -->
+				<item id="1873" min="1" max="3" chance="17.93" /> <!-- Silver Nugget -->
+				<item id="1876" min="1" max="1" chance="17.13" /> <!-- Mithril Ore -->
+				<item id="4096" min="1" max="1" chance="7.092" /> <!-- Sealed Blue Wolf Glove Fabric -->
+				<item id="1874" min="1" max="1" chance="6.021" /> <!-- Oriharukon Ore -->
+				<item id="4073" min="1" max="3" chance="4.032" /> <!-- Sealed Avadon Glove Fragment -->
+				<item id="4100" min="1" max="3" chance="2.768" /> <!-- Sealed Zubei's Gauntlet Fragment -->
+				<item id="4091" min="2" max="6" chance="1.705" /> <!-- Sealed Doom Glove Fragment -->
+				<item id="952" min="1" max="1" chance="1.246" /> <!-- Scroll: Enchant Armor (C-grade) -->
 			</drop>
 			<spoil>
-				<item id="4938" min="1" max="1" chance="24.21" /> <!-- Recipe: Adamantite Ring (70%) -->
-				<item id="4937" min="1" max="1" chance="16.79" /> <!-- Recipe: Adamantite Earring (70%) -->
-				<item id="4939" min="1" max="1" chance="12.43" /> <!-- Recipe: Adamantite Necklace (70%) -->
+				<item id="4938" min="1" max="1" chance="24.48" /> <!-- Recipe: Adamantite Ring (70%) -->
+				<item id="4937" min="1" max="1" chance="15.45" /> <!-- Recipe: Adamantite Earring (70%) -->
+				<item id="4939" min="1" max="1" chance="11.5" /> <!-- Recipe: Adamantite Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 	</npc>

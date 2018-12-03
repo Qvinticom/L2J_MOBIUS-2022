@@ -655,7 +655,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="41658" sp="1124" />
+		<acquire exp="37333" sp="1008" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3597" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -697,20 +697,20 @@
 				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
 				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
 				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
-				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="23.6" /> <!-- Varnish -->
-				<item id="1869" min="4" max="12" chance="9.363" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="7.432" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="5.981" /> <!-- Silver Nugget -->
-				<item id="6346" min="1" max="1" chance="1.847" /> <!-- Sealed Majestic Ring Gemstone -->
-				<item id="6342" min="1" max="1" chance="1.338" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="57" min="1512" max="3531" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="22.71" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.219" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.657" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.314" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.642" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.188" /> <!-- Sealed Majestic Earring Gemstone -->
 				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="84.1" /> <!-- Silver Nugget -->
-				<item id="6339" min="1" max="1" chance="2.384" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
-				<item id="6337" min="1" max="1" chance="1.496" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
-				<item id="6335" min="1" max="1" chance="1.162" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+				<item id="1873" min="1" max="5" chance="72.91" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.064" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.35" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="1.087" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -737,7 +737,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
-		<acquire exp="39456" sp="1065" />
+		<acquire exp="39072" sp="1054" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="14401" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -778,22 +778,22 @@
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
 				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
 				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
-				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="23.14" /> <!-- Varnish -->
-				<item id="1869" min="4" max="12" chance="8.814" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="7.02" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="5.67" /> <!-- Silver Nugget -->
+				<item id="57" min="1590" max="3710" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.31" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.725" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.947" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.571" /> <!-- Silver Nugget -->
 				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
 				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
 				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
 				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1865" min="1" max="9" chance="87.36" /> <!-- Varnish -->
-				<item id="5368" min="1" max="1" chance="2.021" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
-				<item id="5392" min="1" max="1" chance="2" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
-				<item id="5370" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
-				<item id="5394" min="1" max="1" chance="1.952" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="1865" min="1" max="9" chance="92.355" /> <!-- Varnish -->
+				<item id="5392" min="1" max="1" chance="2.017" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5394" min="1" max="1" chance="2.017" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5370" min="1" max="1" chance="1.99" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5368" min="1" max="1" chance="1.963" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -823,7 +823,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
-		<acquire exp="48794" sp="1317" />
+		<acquire exp="43794" sp="1182" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3692" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -866,18 +866,18 @@
 		<drop_lists>
 			<drop>
 				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
-				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
-				<item id="1869" min="4" max="12" chance="10.51" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="8.534" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="6.797" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="4.761" /> <!-- Varnish -->
-				<item id="5494" min="1" max="1" chance="2.106" /> <!-- Sealed Dark Crystal Shield Fragment -->
-				<item id="5495" min="1" max="1" chance="1.465" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5315" min="1" max="1" chance="0.0075" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1748" max="4078" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="25.08" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.624" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.593" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.15" /> <!-- Silver Nugget -->
+				<item id="5494" min="1" max="1" chance="1.841" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.35" /> <!-- Sealed Shield of Nightmare Fragment -->
 			</drop>
 			<spoil>
-				<item id="5364" min="1" max="1" chance="5.644" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
-				<item id="5366" min="1" max="1" chance="3.709" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="5364" min="1" max="1" chance="5.031" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.318" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -906,7 +906,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="48594" sp="1312" />
+		<acquire exp="42098" sp="1136" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="14758" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -945,26 +945,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
-				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1633" max="3811" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.74" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.962" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.134" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.693" /> <!-- Silver Nugget -->
 				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
 				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
 				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
 				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
-				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
-				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
-				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
-				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="1873" min="1" max="3" chance="91.78" /> <!-- Silver Nugget -->
+				<item id="5404" min="1" max="1" chance="1.338" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5382" min="1" max="1" chance="1.329" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5406" min="1" max="1" chance="1.315" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="5380" min="1" max="1" chance="1.269" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -992,7 +992,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<acquire exp="41658" sp="1124" />
+		<acquire exp="37333" sp="1008" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3597" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1033,20 +1033,20 @@
 				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
 				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
 				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
-				<item id="57" min="1699" max="3966" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="24.68" /> <!-- Varnish -->
-				<item id="1869" min="4" max="12" chance="9.361" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="7.421" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="5.959" /> <!-- Silver Nugget -->
-				<item id="6346" min="1" max="1" chance="1.926" /> <!-- Sealed Majestic Ring Gemstone -->
-				<item id="6342" min="1" max="1" chance="1.283" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="57" min="1512" max="3531" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="21.23" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.304" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.649" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.311" /> <!-- Silver Nugget -->
+				<item id="6346" min="1" max="1" chance="1.632" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.121" /> <!-- Sealed Majestic Earring Gemstone -->
 				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="81.93" /> <!-- Silver Nugget -->
-				<item id="6339" min="1" max="1" chance="2.382" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
-				<item id="6337" min="1" max="1" chance="1.585" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
-				<item id="6335" min="1" max="1" chance="1.217" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
+				<item id="1873" min="1" max="5" chance="73.3" /> <!-- Silver Nugget -->
+				<item id="6339" min="1" max="1" chance="2.031" /> <!-- Recipe: Sealed Majestic Ring (70%) -->
+				<item id="6337" min="1" max="1" chance="1.447" /> <!-- Recipe: Sealed Majestic Earring (70%) -->
+				<item id="6335" min="1" max="1" chance="0.969" /> <!-- Recipe: Sealed Majestic Necklace (70%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1076,7 +1076,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="48794" sp="1317" />
+		<acquire exp="43794" sp="1182" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3692" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1118,18 +1118,18 @@
 		<drop_lists>
 			<drop>
 				<item id="5292" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Shield -->
-				<item id="5315" min="1" max="1" chance="0.03" /> <!-- Sealed Shield of Nightmare -->
-				<item id="57" min="1959" max="4571" chance="70" /> <!-- Adena -->
-				<item id="1869" min="4" max="12" chance="11.04" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="8.554" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="6.816" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="4.788" /> <!-- Varnish -->
-				<item id="5494" min="1" max="1" chance="2.038" /> <!-- Sealed Dark Crystal Shield Fragment -->
-				<item id="5495" min="1" max="1" chance="1.583" /> <!-- Sealed Shield of Nightmare Fragment -->
+				<item id="5315" min="1" max="1" chance="0.0075" /> <!-- Sealed Shield of Nightmare -->
+				<item id="57" min="1748" max="4078" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="24.32" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="9.576" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.664" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="6.127" /> <!-- Silver Nugget -->
+				<item id="5494" min="1" max="1" chance="1.821" /> <!-- Sealed Dark Crystal Shield Fragment -->
+				<item id="5495" min="1" max="1" chance="1.395" /> <!-- Sealed Shield of Nightmare Fragment -->
 			</drop>
 			<spoil>
-				<item id="5364" min="1" max="1" chance="5.768" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
-				<item id="5366" min="1" max="1" chance="3.732" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+				<item id="5364" min="1" max="1" chance="5.159" /> <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+				<item id="5366" min="1" max="1" chance="3.339" /> <!-- Recipe: Sealed Shield of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1161,7 +1161,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="92" /> <!-- Spirit's Staff -->
-		<acquire exp="48594" sp="1312" />
+		<acquire exp="42098" sp="1136" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="14758" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1202,26 +1202,26 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="0.0075" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="0.0075" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5318" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Boots -->
-				<item id="57" min="1901" max="4435" chance="70" /> <!-- Adena -->
-				<item id="1869" min="4" max="12" chance="10.23" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="8.367" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="6.597" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="4.632" /> <!-- Varnish -->
+				<item id="5313" min="1" max="1" chance="0.003" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="0.003" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5318" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Boots -->
+				<item id="57" min="1633" max="3811" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="23.74" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.962" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="7.134" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.693" /> <!-- Silver Nugget -->
 				<item id="5502" min="1" max="1" chance="0.75" /> <!-- Sealed Boots of Nightmare Lining -->
 				<item id="5503" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Boot Lining -->
 				<item id="5514" min="1" max="1" chance="0.75" /> <!-- Sealed Gauntlets of Nightmare Design -->
 				<item id="5515" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Gauntlet Design -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="5" chance="72.97" /> <!-- Silver Nugget -->
-				<item id="5382" min="1" max="1" chance="1.556" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
-				<item id="5404" min="1" max="1" chance="1.511" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
-				<item id="5380" min="1" max="1" chance="1.469" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
-				<item id="5406" min="1" max="1" chance="1.466" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="1873" min="1" max="3" chance="91.78" /> <!-- Silver Nugget -->
+				<item id="5404" min="1" max="1" chance="1.338" /> <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+				<item id="5382" min="1" max="1" chance="1.329" /> <!-- Recipe: Sealed Majestic Boots (60%) -->
+				<item id="5406" min="1" max="1" chance="1.315" /> <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+				<item id="5380" min="1" max="1" chance="1.269" /> <!-- Recipe: Sealed Boots of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1247,7 +1247,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="288" /> <!-- Carnage Bow -->
-		<acquire exp="39456" sp="1065" />
+		<acquire exp="39072" sp="1054" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="14401" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
@@ -1287,22 +1287,22 @@
 				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
 				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
 				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
-				<item id="57" min="1607" max="3749" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="3" chance="23.59" /> <!-- Varnish -->
-				<item id="1869" min="4" max="12" chance="8.816" /> <!-- Iron Ore -->
-				<item id="1880" min="1" max="1" chance="7.004" /> <!-- Steel -->
-				<item id="1873" min="2" max="6" chance="5.601" /> <!-- Silver Nugget -->
+				<item id="57" min="1590" max="3710" chance="70" /> <!-- Adena -->
+				<item id="1865" min="1" max="3" chance="22.72" /> <!-- Varnish -->
+				<item id="1869" min="4" max="12" chance="8.652" /> <!-- Iron Ore -->
+				<item id="1880" min="1" max="1" chance="6.898" /> <!-- Steel -->
+				<item id="1873" min="2" max="6" chance="5.578" /> <!-- Silver Nugget -->
 				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
 				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
 				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
 				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1865" min="1" max="9" chance="92.645" /> <!-- Varnish -->
-				<item id="5370" min="1" max="1" chance="2.028" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
-				<item id="5394" min="1" max="1" chance="2.006" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
-				<item id="5368" min="1" max="1" chance="1.911" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
-				<item id="5392" min="1" max="1" chance="1.901" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="1865" min="1" max="9" chance="91.105" /> <!-- Varnish -->
+				<item id="5370" min="1" max="1" chance="1.949" /> <!-- Recipe: Sealed Tallum Boots (60%) -->
+				<item id="5392" min="1" max="1" chance="1.922" /> <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+				<item id="5394" min="1" max="1" chance="1.905" /> <!-- Recipe: Sealed Tallum Gloves (60%) -->
+				<item id="5368" min="1" max="1" chance="1.894" /> <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1312,7 +1312,7 @@
 	</npc>
 	<npc id="21751" level="80" type="L2Npc" name="Treasure Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2512" mpRegen="3.6" />
@@ -1328,10 +1328,18 @@
 			<radius normal="38.5" />
 			<height normal="42.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 	</npc>
-	<npc id="21754" level="80" type="L2Npc" name="Commander's Ghost">
+	<npc id="21754" level="81" type="L2Monster" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="6719" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1348,10 +1356,30 @@
 			<radius normal="11" />
 			<height normal="38.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6701" max="15635" chance="70" /> <!-- Adena -->
+				<item id="1875" min="1" max="3" chance="39.69" /> <!-- Stone of Purity -->
+				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="730" min="1" max="1" chance="2.0195" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21755" level="80" type="L2Npc" name="Commander's Ghost">
+	<npc id="21755" level="81" type="L2Monster" name="Commander's Ghost">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="2504" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -1368,10 +1396,30 @@
 			<radius normal="18" />
 			<height normal="42.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="57" min="6701" max="15635" chance="70" /> <!-- Adena -->
+				<item id="1875" min="1" max="3" chance="39.69" /> <!-- Stone of Purity -->
+				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</drop>
+			<spoil>
+				<item id="730" min="1" max="1" chance="2.0195" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="21758" level="80" type="L2Npc" name="Treasure Lookout">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6076" hpRegen="10.5" mp="2512" mpRegen="3.6" />
@@ -1387,6 +1435,14 @@
 			<radius normal="38.5" />
 			<height normal="42.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
 	</npc>
 	<npc id="21759" level="80" type="L2Monster" name="Ketra Orc Captain">
 		<parameters>
@@ -1576,7 +1632,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" />
-		<acquire exp="353034" sp="9531" />
+		<acquire exp="328744" sp="8876" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5996" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1618,23 +1674,23 @@
 				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
 				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
-				<item id="1873" min="2" max="6" chance="23.42" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="17.37" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.304" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="3.749" /> <!-- Steel -->
-				<item id="5482" min="1" max="1" chance="2.252" /> <!-- Sealed Dark Crystal Legging Design -->
-				<item id="5478" min="1" max="1" chance="1.513" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="5479" min="1" max="1" chance="1.029" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="57" min="6413" max="14975" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.25" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="15.46" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.038" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.573" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.145" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.4" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Leather Armor Pattern -->
 				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</drop>
 			<spoil>
-				<item id="5340" min="1" max="1" chance="4.493" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
-				<item id="5332" min="1" max="1" chance="2.867" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
-				<item id="5334" min="1" max="1" chance="1.884" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
-				<item id="5338" min="1" max="1" chance="1.317" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
-				<item id="5336" min="1" max="1" chance="1.307" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5340" min="1" max="1" chance="4.169" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.593" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.858" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5338" min="1" max="1" chance="1.133" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.116" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1664,7 +1720,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" />
-		<acquire exp="353034" sp="9531" />
+		<acquire exp="328744" sp="8876" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="5996" hpRegen="8.5" mp="2461" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1708,23 +1764,23 @@
 				<item id="5298" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Leggings -->
 				<item id="5297" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Leather Armor -->
 				<item id="5301" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="57" min="6827" max="15941" chance="70" /> <!-- Adena -->
-				<item id="1873" min="2" max="6" chance="24.64" /> <!-- Silver Nugget -->
-				<item id="1865" min="9" max="27" chance="16.49" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.351" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="3.779" /> <!-- Steel -->
-				<item id="5482" min="1" max="1" chance="2.343" /> <!-- Sealed Dark Crystal Legging Design -->
-				<item id="5478" min="1" max="1" chance="1.406" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="5479" min="1" max="1" chance="1.054" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="57" min="6413" max="14975" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="22.87" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="16" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="4.956" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.455" /> <!-- Steel -->
+				<item id="5482" min="1" max="1" chance="2.206" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5478" min="1" max="1" chance="1.318" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5479" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Leather Armor Pattern -->
 				<item id="5480" min="1" max="1" chance="0.75" /> <!-- Sealed Leather Armor of Nightmare Fabric -->
 				<item id="5481" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Leather Armor Fabric -->
 			</drop>
 			<spoil>
-				<item id="5340" min="1" max="1" chance="4.527" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
-				<item id="5332" min="1" max="1" chance="2.737" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
-				<item id="5334" min="1" max="1" chance="1.978" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
-				<item id="5336" min="1" max="1" chance="1.295" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
-				<item id="5338" min="1" max="1" chance="1.237" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+				<item id="5340" min="1" max="1" chance="4.247" /> <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+				<item id="5332" min="1" max="1" chance="2.662" /> <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+				<item id="5334" min="1" max="1" chance="1.82" /> <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+				<item id="5336" min="1" max="1" chance="1.183" /> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+				<item id="5338" min="1" max="1" chance="1.142" /> <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1755,7 +1811,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
-		<acquire exp="402090" sp="10856" />
+		<acquire exp="364063" sp="9829" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1797,27 +1853,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
 				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5288" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gaiters -->
 				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
-				<item id="1865" min="9" max="27" chance="19.17" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.876" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="4.154" /> <!-- Steel -->
-				<item id="1873" min="22" max="66" chance="2.976" /> <!-- Silver Nugget -->
-				<item id="5524" min="1" max="1" chance="1.526" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
-				<item id="5520" min="1" max="1" chance="0.946" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="57" min="6877" max="16047" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="23.76" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="17.23" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.306" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.724" /> <!-- Steel -->
+				<item id="5524" min="1" max="1" chance="1.339" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
 				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
-				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5520" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="87.83" /> <!-- Silver Nugget -->
-				<item id="5424" min="1" max="1" chance="3.162" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
-				<item id="5416" min="1" max="1" chance="1.907" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
-				<item id="5418" min="1" max="1" chance="1.397" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="1873" min="1" max="13" chance="91.725" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="2.761" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.778" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.143" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
 				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
 				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
@@ -1846,7 +1902,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
-		<acquire exp="383891" sp="10365" />
+		<acquire exp="357548" sp="9653" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6076" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -1883,27 +1939,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
 				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5304" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Tunic -->
 				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
-				<item id="1865" min="9" max="27" chance="18.12" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.867" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="4.083" /> <!-- Steel -->
-				<item id="1873" min="22" max="66" chance="2.946" /> <!-- Silver Nugget -->
-				<item id="5489" min="1" max="1" chance="2.493" /> <!-- Sealed Tallum Stocking Fabric -->
-				<item id="5485" min="1" max="1" chance="1.654" /> <!-- Sealed Tallum Tunic Texture -->
-				<item id="5486" min="1" max="1" chance="1.096" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="57" min="6929" max="16168" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="16.82" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.477" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.82" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.725" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.292" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.423" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="0.976" /> <!-- Sealed Dark Crystal Robe Fabric -->
 				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
 				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="88.47" /> <!-- Silver Nugget -->
-				<item id="5354" min="1" max="1" chance="4.074" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
-				<item id="5346" min="1" max="1" chance="2.532" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
-				<item id="5348" min="1" max="1" chance="1.698" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
-				<item id="5350" min="1" max="1" chance="1.196" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
-				<item id="5352" min="1" max="1" chance="1.07" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+				<item id="1873" min="1" max="13" chance="92.48" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="3.723" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.331" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.628" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5352" min="1" max="1" chance="1.086" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.073" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -1933,7 +1989,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
-		<acquire exp="426859" sp="11525" />
+		<acquire exp="394947" sp="10663" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -1975,14 +2031,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="0.966" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="57" min="7250" max="16917" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="15" chance="90.445" /> <!-- Stone of Purity -->
+				<item id="1875" min="1" max="15" chance="82.43" /> <!-- Stone of Purity -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -2009,7 +2065,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" />
-		<acquire exp="400253" sp="10806" />
+		<acquire exp="364522" sp="9842" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2046,11 +2102,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
-				<item id="1877" min="1" max="1" chance="17.09" /> <!-- Adamantite Nugget -->
-				<item id="1876" min="3" max="9" chance="14.98" /> <!-- Mithril Ore -->
-				<item id="1875" min="2" max="6" chance="7.366" /> <!-- Stone of Purity -->
-				<item id="8341" min="1" max="1" chance="2.112" /> <!-- Spiritual Eye Piece -->
+				<item id="57" min="6887" max="16069" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="16.06" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="12.92" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="6.761" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.002" /> <!-- Spiritual Eye Piece -->
 				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
 				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
 				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
@@ -2064,7 +2120,7 @@
 				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="51.92" /> <!-- Stone of Purity -->
+				<item id="1875" min="1" max="1" chance="89.78" /> <!-- Stone of Purity -->
 				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
 				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
 				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
@@ -2100,7 +2156,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Meteor Shower -->
-		<acquire exp="420270" sp="11347" />
+		<acquire exp="378944" sp="10231" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2144,21 +2200,21 @@
 			<drop>
 				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
-				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
-				<item id="1877" min="1" max="1" chance="17.53" /> <!-- Adamantite Nugget -->
-				<item id="1876" min="3" max="9" chance="15.74" /> <!-- Mithril Ore -->
-				<item id="1875" min="2" max="6" chance="7.574" /> <!-- Stone of Purity -->
-				<item id="5525" min="1" max="1" chance="4.141" /> <!-- Sealed Dark Crystal Helmet Design -->
-				<item id="5526" min="1" max="1" chance="4.06" /> <!-- Sealed Tallum Helmet Design -->
-				<item id="5527" min="1" max="1" chance="3.123" /> <!-- Sealed Helm of Nightmare Design -->
-				<item id="5528" min="1" max="1" chance="3.12" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="57" min="6996" max="16324" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="16.36" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="13.79" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="6.782" /> <!-- Stone of Purity -->
+				<item id="5525" min="1" max="1" chance="3.676" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5526" min="1" max="1" chance="3.67" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5527" min="1" max="1" chance="2.854" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="5528" min="1" max="1" chance="2.791" /> <!-- Sealed Majestic Circlet Design -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="72.9" /> <!-- Stone of Purity -->
-				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
-				<item id="5428" min="1" max="1" chance="6.296" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
-				<item id="5432" min="1" max="1" chance="4.16" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
-				<item id="5430" min="1" max="1" chance="4.121" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="1875" min="1" max="3" chance="67.11" /> <!-- Stone of Purity -->
+				<item id="5426" min="1" max="1" chance="5.749" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5428" min="1" max="1" chance="5.724" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5430" min="1" max="1" chance="3.836" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="5432" min="1" max="1" chance="3.782" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -2190,7 +2246,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="213" /> <!-- Spirit's Staff -->
-		<acquire exp="402090" sp="10856" />
+		<acquire exp="364063" sp="9829" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2231,27 +2287,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5288" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Gaiters -->
 				<item id="5287" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Breastplate -->
+				<item id="5288" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gaiters -->
 				<item id="5293" min="1" max="1" chance="0.003" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="5311" min="1" max="1" chance="0.003" /> <!-- Sealed Armor of Nightmare -->
 				<item id="5316" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="57" min="7599" max="17731" chance="70" /> <!-- Adena -->
-				<item id="1865" min="9" max="27" chance="18.72" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.991" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="4.114" /> <!-- Steel -->
-				<item id="1873" min="22" max="66" chance="2.969" /> <!-- Silver Nugget -->
-				<item id="5524" min="1" max="1" chance="1.573" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
-				<item id="5520" min="1" max="1" chance="1.038" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="57" min="6877" max="16047" chance="70" /> <!-- Adena -->
+				<item id="1873" min="2" max="6" chance="24.79" /> <!-- Silver Nugget -->
+				<item id="1865" min="9" max="27" chance="16.58" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.407" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.788" /> <!-- Steel -->
+				<item id="5524" min="1" max="1" chance="1.317" /> <!-- Sealed Dark Crystal Gaiter Pattern -->
 				<item id="5521" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Plate Armor Pattern -->
-				<item id="5522" min="1" max="1" chance="0.75" /> <!-- Sealed Armor of Nightmare Pattern -->
-				<item id="5523" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Plate Armor Pattern -->
+				<item id="5520" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Breastplate Pattern -->
+				<item id="5522" min="1" max="1" chance="0.3" /> <!-- Sealed Armor of Nightmare Pattern -->
+				<item id="5523" min="1" max="1" chance="0.3" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="91.81" /> <!-- Silver Nugget -->
-				<item id="5424" min="1" max="1" chance="3.15" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
-				<item id="5416" min="1" max="1" chance="1.979" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
-				<item id="5418" min="1" max="1" chance="1.376" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+				<item id="1873" min="1" max="13" chance="90.885" /> <!-- Silver Nugget -->
+				<item id="5424" min="1" max="1" chance="2.784" /> <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+				<item id="5416" min="1" max="1" chance="1.73" /> <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+				<item id="5418" min="1" max="1" chance="1.155" /> <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
 				<item id="5420" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Armor of Nightmare (60%) -->
 				<item id="5422" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
 			</spoil>
@@ -2279,7 +2335,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<acquire exp="383891" sp="10365" />
+		<acquire exp="357548" sp="9653" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6076" hpRegen="8.5" mp="2512" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2315,27 +2371,27 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5304" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Tunic -->
 				<item id="5305" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Stockings -->
+				<item id="5304" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Tunic -->
 				<item id="5308" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="57" min="7421" max="17315" chance="70" /> <!-- Adena -->
-				<item id="1865" min="9" max="27" chance="18.23" /> <!-- Varnish -->
-				<item id="1869" min="28" max="84" chance="5.811" /> <!-- Iron Ore -->
-				<item id="1880" min="4" max="12" chance="4.032" /> <!-- Steel -->
-				<item id="1873" min="22" max="66" chance="2.833" /> <!-- Silver Nugget -->
-				<item id="5489" min="1" max="1" chance="2.454" /> <!-- Sealed Tallum Stocking Fabric -->
-				<item id="5485" min="1" max="1" chance="1.56" /> <!-- Sealed Tallum Tunic Texture -->
-				<item id="5486" min="1" max="1" chance="1.129" /> <!-- Sealed Dark Crystal Robe Fabric -->
+				<item id="57" min="6929" max="16168" chance="70" /> <!-- Adena -->
+				<item id="1865" min="9" max="27" chance="16.3" /> <!-- Varnish -->
+				<item id="1869" min="28" max="84" chance="5.426" /> <!-- Iron Ore -->
+				<item id="1880" min="4" max="12" chance="3.824" /> <!-- Steel -->
+				<item id="1873" min="22" max="66" chance="2.659" /> <!-- Silver Nugget -->
+				<item id="5489" min="1" max="1" chance="2.337" /> <!-- Sealed Tallum Stocking Fabric -->
+				<item id="5485" min="1" max="1" chance="1.51" /> <!-- Sealed Tallum Tunic Texture -->
+				<item id="5486" min="1" max="1" chance="1.001" /> <!-- Sealed Dark Crystal Robe Fabric -->
 				<item id="5487" min="1" max="1" chance="0.75" /> <!-- Sealed Robe of Nightmare Fabric -->
 				<item id="5488" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Robe Fabric -->
 			</drop>
 			<spoil>
-				<item id="1873" min="1" max="15" chance="85.84" /> <!-- Silver Nugget -->
-				<item id="5354" min="1" max="1" chance="3.986" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
-				<item id="5346" min="1" max="1" chance="2.53" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
-				<item id="5348" min="1" max="1" chance="1.776" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
-				<item id="5350" min="1" max="1" chance="1.191" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
-				<item id="5352" min="1" max="1" chance="1.12" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
+				<item id="1873" min="1" max="13" chance="94.1" /> <!-- Silver Nugget -->
+				<item id="5354" min="1" max="1" chance="3.735" /> <!-- Recipe: Sealed Tallum Stockings (60%) -->
+				<item id="5346" min="1" max="1" chance="2.327" /> <!-- Recipe: Sealed Tallum Tunic (60%) -->
+				<item id="5348" min="1" max="1" chance="1.646" /> <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
+				<item id="5350" min="1" max="1" chance="1.088" /> <!-- Recipe: Sealed Robe of Nightmare (60%) -->
+				<item id="5352" min="1" max="1" chance="1.065" /> <!-- Recipe: Sealed Majestic Robe (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -2365,7 +2421,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="426859" sp="11525" />
+		<acquire exp="394947" sp="10663" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6227" hpRegen="8.5" mp="2614" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
@@ -2406,14 +2462,14 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7845" max="18306" chance="70" /> <!-- Adena -->
-				<item id="730" min="1" max="1" chance="1.059" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="57" min="7250" max="16917" chance="70" /> <!-- Adena -->
+				<item id="730" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="729" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="90013" min="1" max="1" chance="0.3" /> <!-- Mid-grade Life Stone -->
 				<item id="90014" min="1" max="1" chance="0.075" /> <!-- High-grade Life Stone -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="15" chance="90.935" /> <!-- Stone of Purity -->
+				<item id="1875" min="1" max="15" chance="89.33" /> <!-- Stone of Purity -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -2439,7 +2495,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" /> <!-- Tallum Blade -->
-		<acquire exp="400253" sp="10806" />
+		<acquire exp="364522" sp="9842" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6153" hpRegen="8.5" mp="2563" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -2475,11 +2531,11 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="57" min="7561" max="17642" chance="70" /> <!-- Adena -->
-				<item id="1877" min="1" max="1" chance="18.45" /> <!-- Adamantite Nugget -->
-				<item id="1876" min="3" max="9" chance="15.35" /> <!-- Mithril Ore -->
-				<item id="1875" min="2" max="6" chance="7.319" /> <!-- Stone of Purity -->
-				<item id="8341" min="1" max="1" chance="2.178" /> <!-- Spiritual Eye Piece -->
+				<item id="57" min="6887" max="16069" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="15.36" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="12.84" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="6.699" /> <!-- Stone of Purity -->
+				<item id="8341" min="1" max="1" chance="2.034" /> <!-- Spiritual Eye Piece -->
 				<item id="5533" min="1" max="1" chance="0.3" /> <!-- Elysian Head -->
 				<item id="5548" min="1" max="1" chance="0.3" /> <!-- Tallum Blade Edge -->
 				<item id="5547" min="1" max="1" chance="0.3" /> <!-- Elemental Sword Edge -->
@@ -2493,7 +2549,7 @@
 				<item id="5537" min="1" max="1" chance="0.3" /> <!-- Soul Separator Head -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="52.19" /> <!-- Stone of Purity -->
+				<item id="1875" min="1" max="1" chance="90.92" /> <!-- Stone of Purity -->
 				<item id="5434" min="1" max="1" chance="0.3" /> <!-- Recipe: Dragon Slayer (60%) -->
 				<item id="5440" min="1" max="1" chance="0.3" /> <!-- Recipe: Elysian (60%) -->
 				<item id="5444" min="1" max="1" chance="0.3" /> <!-- Recipe: Carnage Bow (60%) -->
@@ -2564,7 +2620,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="80" lhand="6919" /> <!-- Tallum Blade / Monster Only (Shield of Ketra Orc) -->
-		<acquire exp="420270" sp="11347" />
+		<acquire exp="378944" sp="10231" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="6227" hpRegen="8.721" mp="2614" mpRegen="3.0804" />
 			<attack physical="938.20801458" magical="656.66638089" random="5" critical="8" accuracy="3" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
@@ -2606,21 +2662,21 @@
 			<drop>
 				<item id="5289" min="1" max="1" chance="0.03" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="5294" min="1" max="1" chance="0.03" /> <!-- Sealed Tallum Helmet -->
-				<item id="57" min="7766" max="18120" chance="70" /> <!-- Adena -->
-				<item id="1877" min="1" max="1" chance="18.97" /> <!-- Adamantite Nugget -->
-				<item id="1876" min="3" max="9" chance="15.64" /> <!-- Mithril Ore -->
-				<item id="1875" min="2" max="6" chance="7.512" /> <!-- Stone of Purity -->
-				<item id="5526" min="1" max="1" chance="4.079" /> <!-- Sealed Tallum Helmet Design -->
-				<item id="5525" min="1" max="1" chance="4.056" /> <!-- Sealed Dark Crystal Helmet Design -->
-				<item id="5528" min="1" max="1" chance="3.225" /> <!-- Sealed Majestic Circlet Design -->
-				<item id="5527" min="1" max="1" chance="3.094" /> <!-- Sealed Helm of Nightmare Design -->
+				<item id="57" min="6996" max="16324" chance="70" /> <!-- Adena -->
+				<item id="1877" min="1" max="1" chance="16.65" /> <!-- Adamantite Nugget -->
+				<item id="1876" min="3" max="9" chance="14.18" /> <!-- Mithril Ore -->
+				<item id="1875" min="2" max="6" chance="6.743" /> <!-- Stone of Purity -->
+				<item id="5525" min="1" max="1" chance="3.726" /> <!-- Sealed Dark Crystal Helmet Design -->
+				<item id="5526" min="1" max="1" chance="3.676" /> <!-- Sealed Tallum Helmet Design -->
+				<item id="5528" min="1" max="1" chance="2.799" /> <!-- Sealed Majestic Circlet Design -->
+				<item id="5527" min="1" max="1" chance="2.797" /> <!-- Sealed Helm of Nightmare Design -->
 			</drop>
 			<spoil>
-				<item id="1875" min="1" max="3" chance="74.81" /> <!-- Stone of Purity -->
-				<item id="5428" min="1" max="1" chance="6.375" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
-				<item id="5426" min="1" max="1" chance="6.362" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
-				<item id="5432" min="1" max="1" chance="4.214" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
-				<item id="5430" min="1" max="1" chance="4.213" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="1875" min="1" max="3" chance="67.58" /> <!-- Stone of Purity -->
+				<item id="5426" min="1" max="1" chance="5.707" /> <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+				<item id="5428" min="1" max="1" chance="5.656" /> <!-- Recipe: Sealed Tallum Helmet (60%) -->
+				<item id="5430" min="1" max="1" chance="3.748" /> <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+				<item id="5432" min="1" max="1" chance="3.742" /> <!-- Recipe: Sealed Majestic Circlet (60%) -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -2628,47 +2684,74 @@
 			<height normal="36" />
 		</collision>
 	</npc>
-	<npc id="21761" level="80" type="L2Npc" name="Salamander" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2614" mpRegen="3.6" />
+	<npc id="21761" level="82" type="L2Monster" name="Salamander" title="Elite">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="133236" sp="3597" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="3364.71" mp="2898.9" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1009.413" magical="1682.355" />
 			<speed>
-				<walk ground="30" />
+				<walk ground="39" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="20" />
-			<height normal="25" />
+			<radius normal="20.0" />
+			<height normal="25.0" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x): -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk.: -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91036" min="1" max="1" chance="50.6" /> <!-- Fire Spirit Rough Jewel -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="21762" level="80" type="L2Npc" name="Lava" title="Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
+	<npc id="21762" level="83" type="L2Monster" name="Lava" title="Elite">
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="691276" sp="18664" />
+		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+			<vitals hp="5671.12" mp="3542.4" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="817.728" magical="739.71130434783" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1701.336" magical="2835.56" />
 			<speed>
 				<walk ground="13" />
 				<run ground="175" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="38" />
-			<height normal="45" />
+			<radius normal="38.0" />
+			<height normal="45.0" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x): -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk.: -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def.: -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91036" min="1" max="1" chance="50.53" /> <!-- Fire Spirit Rough Jewel -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="21763" level="80" type="L2Npc" name="Firen" title="Master">
+	<npc id="21763" level="83" type="L2Monster" name="Firen" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
@@ -2684,6 +2767,20 @@
 			<radius normal="28" />
 			<height normal="70" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91036" min="1" max="1" chance="100" /> <!-- Fire Spirit Rough Jewel -->
+				<item id="91032" min="1" max="1" chance="8.33" /> <!-- Fire Spirit Evolution Stone -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="21764" level="82" type="L2Monster" name="Growler" title="Elite">
 		<!-- Classic Seven Sings -->
@@ -2713,7 +2810,7 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="25.705" /> <!-- Earth Spirit Rough Jewel -->
+				<item id="91038" min="1" max="1" chance="50.84" /> <!-- Earth Spirit Rough Jewel -->
 			</drop>
 		</drop_lists>
 	</npc>
@@ -2745,7 +2842,7 @@
 		</collision>
 		<drop_lists>
 			<drop>
-				<item id="91038" min="1" max="1" chance="26.66" /> <!-- Earth Spirit Rough Jewel -->
+				<item id="91038" min="1" max="1" chance="50.14" /> <!-- Earth Spirit Rough Jewel -->
 			</drop>
 		</drop_lists>
 	</npc>
@@ -2778,13 +2875,13 @@
 		<drop_lists>
 			<drop>
 				<item id="91038" min="1" max="1" chance="100" /> <!-- Earth Spirit Rough Jewel -->
-				<item id="91034" min="1" max="1" chance="4.5315" /> <!-- Earth Spirit Evolution Stone -->
+				<item id="91034" min="1" max="1" chance="8.322" /> <!-- Earth Spirit Evolution Stone -->
 			</drop>
 		</drop_lists>
 	</npc>
-	<npc id="21767" level="80" type="L2Npc" name="Undine" title="Elite">
+	<npc id="21767" level="17" type="L2Monster" name="Undine" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2614" mpRegen="3.6" />
@@ -2800,10 +2897,37 @@
 			<radius normal="19.2" />
 			<height normal="45" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4010" level="5" /> <!-- Water Resistance -->
+			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="31" min="1" max="1" chance="0.75" /> <!-- Bone Gaiters -->
+				<item id="412" min="1" max="1" chance="0.75" /> <!-- Cotton Pants -->
+				<item id="24" min="1" max="1" chance="0.3" /> <!-- Bone Breastplate -->
+				<item id="390" min="1" max="1" chance="0.3" /> <!-- Cotton Shirt -->
+				<item id="57" min="73" max="174" chance="70" /> <!-- Adena -->
+				<item id="1867" min="1" max="1" chance="6.71" /> <!-- Animal Skin -->
+				<item id="1865" min="1" max="1" chance="5.051" /> <!-- Varnish -->
+				<item id="1871" min="1" max="1" chance="4.952" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="1" chance="3.336" /> <!-- Suede -->
+				<item id="1873" min="1" max="1" chance="1.949" /> <!-- Silver Nugget -->
+				<item id="2140" min="1" max="1" chance="1.037" /> <!-- Recipe: High-grade Suede -->
+				<item id="1876" min="1" max="1" chance="1.005" /> <!-- Mithril Ore -->
+			</drop>
+			<spoil>
+				<item id="1897" min="1" max="1" chance="17.09" /> <!-- Necklace of Wisdom Chain -->
+				<item id="734" min="1" max="1" chance="11.65" /> <!-- Wind Walk Potion -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21768" level="80" type="L2Npc" name="Snow Golem" title="Elite">
+	<npc id="21768" level="83" type="L2Monster" name="Snow Golem" title="Elite">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
@@ -2819,10 +2943,23 @@
 			<radius normal="35" />
 			<height normal="47.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="18" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91035" min="1" max="1" chance="48.78" /> <!-- Water Spirit Rough Jewel -->
+			</drop>
+		</drop_lists>
 	</npc>
-	<npc id="21769" level="80" type="L2Npc" name="Ishtir" title="Master">
+	<npc id="21769" level="83" type="L2Monster" name="Ishtir" title="Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6297" hpRegen="10.5" mp="2666" mpRegen="3.6" />
@@ -2838,6 +2975,20 @@
 			<radius normal="42" />
 			<height normal="38.3" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91035" min="1" max="1" chance="100" /> <!-- Water Spirit Rough Jewel -->
+				<item id="91031" min="1" max="1" chance="8.316" /> <!-- Water Spirit Evolution Stone -->
+			</drop>
+		</drop_lists>
 	</npc>
 	<npc id="21770" level="82" type="L2Monster" name="Sylph" title="Elite">
 		<parameters>
@@ -2852,7 +3003,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="141405" sp="3817" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2883,7 +3034,7 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="91037" min="1" max="1" chance="46.71" /> <!-- Wind Spirit Rough Jewel -->
+				<item id="91037" min="1" max="1" chance="49.42" /> <!-- Wind Spirit Rough Jewel -->
 			</drop>
 		</drop_lists>
 		<collision>
@@ -2904,7 +3055,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="897671" sp="24237" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2935,7 +3086,7 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="91037" min="1" max="1" chance="46.50" /> <!-- Wind Spirit Rough Jewel -->
+				<item id="91037" min="1" max="1" chance="48.9" /> <!-- Wind Spirit Rough Jewel -->
 			</drop>
 		</drop_lists>
 		<collision>
@@ -2956,7 +3107,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="2581570" sp="69702" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -2988,7 +3139,7 @@
 		<drop_lists>
 			<drop>
 				<item id="91037" min="1" max="1" chance="100" /> <!-- Wind Spirit Rough Jewel -->
-				<item id="91033" min="1" max="1" chance="7.446" /> <!-- Wind Spirit Evolution Stone -->
+				<item id="91033" min="1" max="1" chance="8.353" /> <!-- Wind Spirit Evolution Stone -->
 			</drop>
 		</drop_lists>
 		<collision>
@@ -2996,7 +3147,7 @@
 			<height normal="131" />
 		</collision>
 	</npc>
-	<npc id="21773" level="80" type="L2Npc" name="Capitan's Henchman">
+	<npc id="21773" level="82" type="L2Npc" name="Capitan's Henchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -3014,11 +3165,18 @@
 			<radius normal="23.8" />
 			<height normal="32" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
 	</npc>
-	<npc id="21774" level="82" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
+	<npc id="21774" level="78" type="L2Monster" name="Buffalo" title="Guardian of Gorge">
 		<!-- Classic Seven Sings -->
 		<race>BEAST</race>
-		<acquire exp="65216" sp="1760" />
+		<acquire exp="35463" sp="957" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3736.528" hpRegen="9.5" mp="2614" mpRegen="3.3" />
 			<speed>
@@ -3039,6 +3197,29 @@
 			<radius normal="26.4" />
 			<height normal="37.8" />
 		</collision>
+		<drop_lists>
+			<drop>
+				<item id="6327" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Earring -->
+				<item id="6328" min="1" max="1" chance="0.0075" /> <!-- Sealed Majestic Ring -->
+				<item id="6326" min="1" max="1" chance="0.003" /> <!-- Sealed Majestic Necklace -->
+				<item id="57" min="1502" max="3507" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="17.85" /> <!-- Metallic Fiber -->
+				<item id="1864" min="4" max="12" chance="15.96" /> <!-- Stem -->
+				<item id="1878" min="2" max="6" chance="5.245" /> <!-- Durable Braid -->
+				<item id="1865" min="9" max="27" chance="3.599" /> <!-- Varnish -->
+				<item id="6346" min="1" max="1" chance="1.735" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="6342" min="1" max="1" chance="1.14" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="1" max="1" chance="0.75" /> <!-- Sealed Majestic Necklace Beads -->
+			</drop>
+			<spoil>
+				<item id="1864" min="1" max="15" chance="90.82" /> <!-- Stem -->
+				<item id="1865" min="1" max="7" chance="86.18" /> <!-- Varnish -->
+				<item id="1878" min="1" max="3" chance="70.31" /> <!-- Durable Braid -->
+				<item id="1895" min="1" max="3" chance="52.14" /> <!-- Metallic Fiber -->
+				<item id="4044" min="1" max="1" chance="12.21" /> <!-- Thons -->
+				<item id="4041" min="1" max="1" chance="3.125" /> <!-- Mold Hardener -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="21775" level="82" type="L2Monster" name="Arahan" title="Hero of the Past">
 		<!-- Classic Seven Sings -->
@@ -3080,7 +3261,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<acquire exp="110421" sp="2981" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3126,7 +3307,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="22942" sp="688" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3172,7 +3353,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="42650" sp="1151" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3218,7 +3399,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="25744" sp="695" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3263,7 +3444,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="45081" sp="1217" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3309,7 +3490,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="28320" sp="764" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3355,7 +3536,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="30607" sp="826" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3401,7 +3582,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="52317" sp="1412" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3447,7 +3628,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="52205" sp="1409" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3493,7 +3674,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="367977" sp="11039" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3539,7 +3720,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="308530" sp="8330" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3585,7 +3766,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="378803" sp="10227" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3631,7 +3812,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="308860" sp="8339" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3678,7 +3859,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="321502" sp="8680" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3724,7 +3905,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="427882" sp="11552" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3770,7 +3951,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
 		<acquire exp="432994" sp="11690" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3817,7 +3998,7 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DDMagic" id="4002" level="5" /> <!-- NPC HP Drain -->
 		</parameters>
-		<race>UNDEAD</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="431065" sp="11638" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
@@ -3897,9 +4078,9 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="21794" level="80" type="L2Npc" name="Seer">
+	<npc id="21794" level="70" type="L2Monster" name="Seer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="5157" hpRegen="10.5" mp="2018" mpRegen="3.6" />
@@ -3915,10 +4096,37 @@
 			<radius normal="20" />
 			<height normal="34" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="91" min="1" max="1" chance="0.003" /> <!-- Heavy War Axe -->
+				<item id="92" min="1" max="1" chance="0.003" /> <!-- Spirit's Staff -->
+				<item id="57" min="1096" max="2558" chance="70" /> <!-- Adena -->
+				<item id="1871" min="1" max="3" chance="10.69" /> <!-- Charcoal -->
+				<item id="1895" min="1" max="1" chance="9.13" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="6.427" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="5.399" /> <!-- Cokes -->
+				<item id="1866" min="2" max="6" chance="5.266" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="3.178" /> <!-- Coal -->
+				<item id="4105" min="1" max="1" chance="0.75" /> <!-- Heavy War Axe Head -->
+				<item id="4106" min="1" max="1" chance="0.75" /> <!-- Spirit's Staff Head -->
+			</drop>
+			<spoil>
+				<item id="4965" min="1" max="1" chance="0.75" /> <!-- Recipe: Spirit's Staff (60%) -->
+				<item id="5000" min="1" max="1" chance="0.3" /> <!-- Recipe: Damascus Sword (60%) -->
+				<item id="5004" min="1" max="1" chance="0.3" /> <!-- Recipe: Staff of Evil Spirits (60%) -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21795" level="80" type="L2Npc" name="Guardian Spirit">
+	<npc id="21795" level="71" type="L2Monster" name="Guardian Spirit">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="5258" hpRegen="10.5" mp="2066" mpRegen="3.6" />
@@ -3934,10 +4142,33 @@
 			<radius normal="24" />
 			<height normal="40" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="78" min="1" max="1" chance="0.003" /> <!-- Great Sword -->
+				<item id="142" min="1" max="1" chance="0.003" /> <!-- Keshanberk -->
+				<item id="57" min="1145" max="2673" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="17.23" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="6.656" /> <!-- Oriharukon Ore -->
+				<item id="4104" min="1" max="1" chance="1.001" /> <!-- Great Sword Blade -->
+				<item id="4107" min="1" max="1" chance="0.75" /> <!-- Keshanberk Blade -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="11" chance="86.33" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="35.25" /> <!-- Oriharukon Ore -->
+				<item id="1875" min="1" max="1" chance="34.96" /> <!-- Stone of Purity -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21796" level="80" type="L2Npc" name="Midnight Sairon">
+	<npc id="21796" level="72" type="L2Monster" name="Midnight Sairon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="5129" lhand="5129" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3954,10 +4185,32 @@
 			<radius normal="10.2" />
 			<height normal="22.5" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="266" min="1" max="1" chance="0.003" /> <!-- Great Pata -->
+				<item id="267" min="1" max="1" chance="0.003" /> <!-- Arthro Nail -->
+				<item id="300" min="1" max="1" chance="0.003" /> <!-- Great Axe -->
+				<item id="57" min="1293" max="3017" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="19.03" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="7.582" /> <!-- Oriharukon Ore -->
+				<item id="2120" min="1" max="1" chance="0.75" /> <!-- Great Pata Blade -->
+				<item id="4111" min="1" max="1" chance="0.75" /> <!-- Arthro Nail Blade -->
+				<item id="4113" min="1" max="1" chance="0.75" /> <!-- Great Axe Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="90.49" /> <!-- Coal -->
+				<item id="1875" min="1" max="1" chance="41.34" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="41.12" /> <!-- Oriharukon Ore -->
+			</spoil>
+		</drop_lists>
 	</npc>
-	<npc id="21797" level="80" type="L2Npc" name="Daymen">
+	<npc id="21797" level="73" type="L2Monster" name="Daymen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="84" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -3974,6 +4227,27 @@
 			<radius normal="13" />
 			<height normal="33.4" />
 		</collision>
+		<skill_list>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+		</skill_list>
+		<drop_lists>
+			<drop>
+				<item id="175" min="1" max="1" chance="0.003" /> <!-- Art of Battle Axe -->
+				<item id="210" min="1" max="1" chance="0.003" /> <!-- Staff of Evil Spirits -->
+				<item id="57" min="1357" max="3166" chance="70" /> <!-- Adena -->
+				<item id="1870" min="3" max="9" chance="19.51" /> <!-- Coal -->
+				<item id="1874" min="1" max="1" chance="7.847" /> <!-- Oriharukon Ore -->
+				<item id="4117" min="1" max="1" chance="0.75" /> <!-- Art of Battle Axe Blade -->
+				<item id="4118" min="1" max="1" chance="0.75" /> <!-- Evil Spirit Head -->
+			</drop>
+			<spoil>
+				<item id="1870" min="1" max="13" chance="90.655" /> <!-- Coal -->
+				<item id="1875" min="1" max="1" chance="43.12" /> <!-- Stone of Purity -->
+				<item id="1874" min="1" max="1" chance="42.32" /> <!-- Oriharukon Ore -->
+			</spoil>
+		</drop_lists>
 	</npc>
 	<npc id="21798" level="78" type="L2Monster" name="Kookaburra">
 	    <!-- Classic Seven Sings -->
@@ -4025,29 +4299,29 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5290" min="1" max="1" chance="0.005" />
-				<item id="5291" min="1" max="1" chance="0.005" />
-				<item id="5295" min="1" max="1" chance="0.005" />
-				<item id="5296" min="1" max="1" chance="0.005" />
-				<item id="57" min="1513" max="3532" chance="70" />
-				<item id="1895" min="1" max="1" chance="11.00" />
-				<item id="1876" min="1" max="1" chance="7.890" />
-				<item id="1879" min="1" max="1" chance="6.603" />
-				<item id="1866" min="2" max="6" chance="6.571" />
-				<item id="1870" min="5" max="15" chance="3.935" />
-				<item id="1871" min="9" max="27" chance="2.656" />
-				<item id="5496" min="1" max="1" chance="0.5" />
-				<item id="5497" min="1" max="1" chance="0.5" />
-				<item id="5508" min="1" max="1" chance="0.5" />
-				<item id="5509" min="1" max="1" chance="0.5" />
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1513" max="3532" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="12.35" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.787" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="7.316" /> <!-- Cokes -->
+				<item id="1866" min="2" max="6" chance="7.312" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="4.404" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.442" /> <!-- Charcoal -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1870" min="1" max="7" chance="81.96" />
-				<item id="1871" min="1" max="7" chance="79.32" />
-				<item id="1866" min="1" max="5" chance="77.36" />
-				<item id="1876" min="1" max="1" chance="67.57" />
-				<item id="1879" min="1" max="1" chance="56.32" />
-				<item id="1895" min="1" max="3" chance="49.93" />
+				<item id="1870" min="1" max="7" chance="87.81" /> <!-- Coal -->
+				<item id="1871" min="1" max="7" chance="85.26" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="5" chance="77.81" /> <!-- Suede -->
+				<item id="1876" min="1" max="1" chance="71.04" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="59.28" /> <!-- Cokes -->
+				<item id="1895" min="1" max="3" chance="52.5" /> <!-- Metallic Fiber -->
 			</spoil>
 		</drop_lists>
 		<collision>
@@ -4055,7 +4329,7 @@
 			<height normal="26.4" />
 		</collision>
 	</npc>
-	<npc id="21799" level="79" type="L2Monster" name="Kookaburra">
+	<npc id="21799" level="78" type="L2Monster" name="Kookaburra">
 	    <!-- Classic Seven Sings -->
 		<parameters>
 			<param name="MoveAroundSocial" value="72" />
@@ -4070,7 +4344,7 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="35817" sp="967" />
+		<acquire exp="35719" sp="964" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
 			<vitals hp="3597" hpRegen="7.5" mp="2461" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
@@ -4106,29 +4380,29 @@
 		</ai>
 		<drop_lists>
 			<drop>
-				<item id="5297" min="1" max="1" chance="0.001" />
-				<item id="5298" min="1" max="1" chance="0.001" />
-				<item id="5301" min="1" max="1" chance="0.001" />
-				<item id="57" min="1520" max="3549" chance="70" />
-				<item id="1895" min="1" max="1" chance="10.81" />
-				<item id="1876" min="1" max="1" chance="8.012" />
-				<item id="1866" min="2" max="6" chance="6.716" />
-				<item id="1879" min="1" max="1" chance="6.715" />
-				<item id="1870" min="5" max="15" chance="3.956" />
-				<item id="1871" min="9" max="27" chance="2.149" />
-				<item id="5482" min="1" max="1" chance="0.5" />
-				<item id="5479" min="1" max="1" chance="0.1" />
-				<item id="5480" min="1" max="1" chance="0.1" />
-				<item id="5481" min="1" max="1" chance="0.1" />
-				<item id="5478" min="1" max="1" chance="0.1" />
+				<item id="5290" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Gloves -->
+				<item id="5291" min="1" max="1" chance="0.0075" /> <!-- Sealed Dark Crystal Boots -->
+				<item id="5295" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Gloves -->
+				<item id="5296" min="1" max="1" chance="0.0075" /> <!-- Sealed Tallum Boots -->
+				<item id="57" min="1513" max="3532" chance="70" /> <!-- Adena -->
+				<item id="1895" min="1" max="1" chance="12.35" /> <!-- Metallic Fiber -->
+				<item id="1876" min="1" max="1" chance="8.787" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="7.316" /> <!-- Cokes -->
+				<item id="1866" min="2" max="6" chance="7.312" /> <!-- Suede -->
+				<item id="1870" min="5" max="15" chance="4.404" /> <!-- Coal -->
+				<item id="1871" min="9" max="27" chance="2.442" /> <!-- Charcoal -->
+				<item id="5496" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Boot Lining -->
+				<item id="5497" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Boot Lining -->
+				<item id="5508" min="1" max="1" chance="0.75" /> <!-- Sealed Dark Crystal Glove Design -->
+				<item id="5509" min="1" max="1" chance="0.75" /> <!-- Sealed Tallum Glove Design -->
 			</drop>
 			<spoil>
-				<item id="1871" min="1" max="7" chance="83.17" />
-				<item id="1870" min="1" max="7" chance="79.62" />
-				<item id="1866" min="1" max="5" chance="70.11" />
-				<item id="1876" min="1" max="1" chance="69.77" />
-				<item id="1879" min="1" max="1" chance="58.30" />
-				<item id="1895" min="1" max="3" chance="49.56" />
+				<item id="1870" min="1" max="7" chance="87.81" /> <!-- Coal -->
+				<item id="1871" min="1" max="7" chance="85.26" /> <!-- Charcoal -->
+				<item id="1866" min="1" max="5" chance="77.81" /> <!-- Suede -->
+				<item id="1876" min="1" max="1" chance="71.04" /> <!-- Mithril Ore -->
+				<item id="1879" min="1" max="1" chance="59.28" /> <!-- Cokes -->
+				<item id="1895" min="1" max="3" chance="52.5" /> <!-- Metallic Fiber -->
 			</spoil>
 		</drop_lists>
 		<collision>

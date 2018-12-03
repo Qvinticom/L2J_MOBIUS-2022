@@ -3025,7 +3025,7 @@
 			<radius normal="13" />
 			<height normal="11" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="137" max="273" chance="70" /> <!-- Adena -->
 				<item id="316" min="1" max="1" chance="0.003" /> <!-- Sage's Blood -->
@@ -3097,7 +3097,7 @@
 			<radius normal="10" grown="12" />
 			<height normal="22" grown="27" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="154" max="309" chance="70" /> <!-- Adena -->
 				<item id="83" min="1" max="1" chance="0.075" /> <!-- Sword of Magic -->
@@ -3172,7 +3172,7 @@
 			<radius normal="10" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="149" max="298" chance="70" /> <!-- Adena -->
 				<item id="1124" min="1" max="1" chance="0.005" /> <!-- Boots of Power -->
@@ -3258,7 +3258,7 @@
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="166" max="330" chance="70" /> <!-- Adena -->
 				<item id="395" min="1" max="1" chance="0.006" /> <!-- Manticore Skin Shirt -->
@@ -3332,7 +3332,7 @@
 			<radius normal="12" />
 			<height normal="50" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="199" max="397" chance="70" /> <!-- Adena -->
 				<item id="850" min="1" max="1" chance="0.012" /> <!-- Elven Earring -->
@@ -3407,7 +3407,7 @@
 			<radius normal="30" />
 			<height normal="39" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="355" max="708" chance="70" /> <!-- Adena -->
 				<item id="260" min="1" max="1" chance="0.012" /> <!-- Triple-Edged Jamadhr -->
@@ -3478,7 +3478,7 @@
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="333" max="668" chance="70" /> <!-- Adena -->
 				<item id="393" min="1" max="1" chance="0.011" /> <!-- Mithril Banded Mail -->
@@ -3630,7 +3630,7 @@
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="735" max="1467" chance="70" /> <!-- Adena -->
 				<item id="352" min="1" max="1" chance="0.013" /> <!-- Brigandine Tunic -->
@@ -3710,7 +3710,7 @@
 			<radius normal="13" />
 			<height normal="38" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="684" max="1363" chance="70" /> <!-- Adena -->
 				<item id="88" min="1" max="1" chance="0.002" /> <!-- Morning Star -->
@@ -3801,10 +3801,10 @@
 				<item id="193" min="1" max="1" chance="0.003" /> <!-- Stick of Faith -->
 				<item id="194" min="1" max="1" chance="0.003" /> <!-- Heavy Doom Axe -->
 				<item id="57" min="376" max="880" chance="70" /> <!-- Adena -->
-				<item id="1865" min="1" max="1" chance="16.84" /> <!-- Varnish -->
-				<item id="1866" min="1" max="1" chance="10.63" /> <!-- Suede -->
-				<item id="1878" min="1" max="1" chance="6.588" /> <!-- Durable Braid -->
-				<item id="1864" min="3" max="9" chance="5.559" /> <!-- Stem -->
+				<item id="1865" min="1" max="1" chance="17.16" /> <!-- Varnish -->
+				<item id="1866" min="1" max="1" chance="11.52" /> <!-- Suede -->
+				<item id="1878" min="1" max="1" chance="6.65" /> <!-- Durable Braid -->
+				<item id="1864" min="3" max="9" chance="5.517" /> <!-- Stem -->
 				<item id="2068" min="1" max="1" chance="0.075" /> <!-- Stick of Faith Shaft -->
 				<item id="2067" min="1" max="1" chance="0.075" /> <!-- Crystal Staff Head -->
 				<item id="2066" min="1" max="1" chance="0.075" /> <!-- Heavy Doom Hammer Head -->
@@ -3815,12 +3815,12 @@
 				<item id="2069" min="1" max="1" chance="0.075" /> <!-- Heavy Doom Axe Blade -->
 			</drop>
 			<spoil>
-				<item id="1953" min="1" max="1" chance="8.564" /> <!-- Sage's Rag Lining -->
-				<item id="2062" min="1" max="1" chance="2.128" /> <!-- Scythe Edge -->
+				<item id="1953" min="1" max="1" chance="8.641" /> <!-- Sage's Rag Lining -->
+				<item id="2062" min="1" max="1" chance="2.137" /> <!-- Scythe Edge -->
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20794" level="41" type="L2Monster" name="Stakato">
+	<npc id="20794" level="78" type="L2Monster" name="Stakato">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3832,14 +3832,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="Buff" id="4074" level="2" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="223" /> <!-- Kukuri -->
-		<acquire exp="5047" sp="330" /> <!-- Need confirm retail values -->
+		<acquire exp="22942" sp="688" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1418" hpRegen="11" mp="2411" mpRegen="2.1" />
-			<attack physical="170.1079818" magical="127.77787" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="176.759022" magical="117.58598" />
+			<vitals hp="3194.28" mp="2673.9" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="469.5384" magical="416.6452173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="958.284" magical="1597.14" />
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
@@ -3873,7 +3873,7 @@
 			<radius normal="15" />
 			<height normal="36" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="678" max="1356" chance="70" /> <!-- Adena -->
 				<item id="225" min="1" max="1" chance="0.006" /> <!-- Mithril Dagger -->
@@ -3892,7 +3892,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20795" level="42" type="L2Monster" name="Stakato Worker">
+	<npc id="20795" level="80" type="L2Monster" name="Stakato Worker">
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
 			<param name="MoveAroundSocial1" value="70" />
@@ -3904,14 +3904,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4076" level="3" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="4771" sp="318" /> <!-- Need retail values -->
+		<acquire exp="25632" sp="692" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1477" hpRegen="11" mp="2512" mpRegen="2.1" />
-			<attack physical="173.5526713" magical="135.44454" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="164.88513" magical="120.65578" />
+			<vitals hp="3283.77" mp="2785.5" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="985.131" magical="1641.885" />
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
@@ -3945,7 +3945,7 @@
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="636" max="1285" chance="70" /> <!-- Adena -->
 				<item id="851" min="1" max="1" chance="0.03" /> <!-- Omen Beast's Eye Earring -->
@@ -3969,7 +3969,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20796" level="43" type="L2Monster" name="Stakato Warrior">
+	<npc id="20796" level="80" type="L2Monster" name="Stakato Warrior">
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
 			<param name="MoveAroundSocial1" value="90" />
@@ -3981,14 +3981,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="DeBuff" id="4098" level="4" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="232" /> <!-- Dark Elven Dagger -->
-		<acquire exp="5101" sp="344" /> <!-- Need confirm retail values -->
+		<acquire exp="26400" sp="712" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1539" hpRegen="11" mp="2512" mpRegen="2.1" />
-			<attack physical="231.053152" magical="143.43577" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="153.7583364" magical="123.76505" />
+			<vitals hp="3283.77" mp="2785.5" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="482.6398" magical="428.31782608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="985.131" magical="1641.885" />
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
@@ -4023,7 +4023,7 @@
 			<radius normal="15" />
 			<height normal="38" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="671" max="1364" chance="70" /> <!-- Adena -->
 				<item id="396" min="1" max="1" chance="0.023" /> <!-- Salamander Skin Mail -->
@@ -4045,7 +4045,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20797" level="44" type="L2Monster" name="Stakato Drone">
+	<npc id="20797" level="81" type="L2Monster" name="Stakato Drone">
 		<parameters>
 			<param name="MoveAroundSocial" value="62" />
 			<param name="MoveAroundSocial1" value="62" />
@@ -4063,14 +4063,14 @@
 			<skill name="CancelMagic" id="4094" level="4" />
 			<skill name="SleepMagic" id="4046" level="4" />
 		</parameters>
-		<race>BUG</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="74" /> <!-- Katana -->
-		<acquire exp="7754" sp="530" /> <!-- Need confirm retail values -->
+		<acquire exp="29032" sp="783" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3692" hpRegen="16.5" mp="2563" mpRegen="2.1" />
-			<attack physical="244.454232" magical="151.75505" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="134.0183564" magical="126.91259" evasion="10" />
+			<vitals hp="3324.81" mp="2842.2" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="488.6718" magical="433.67086956522" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="997.443" magical="1662.405" />
 			<speed>
 				<walk ground="25" />
 				<run ground="174" />
@@ -4110,7 +4110,7 @@
 			<radius normal="15" />
 			<height normal="39" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="1015" max="2079" chance="70" /> <!-- Adena -->
 				<item id="397" min="1" max="1" chance="0.021" /> <!-- Mithril Shirt -->
@@ -4132,7 +4132,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20798" level="45" type="L2Monster" name="Water Giant">
+	<npc id="20798" level="81" type="L2Monster" name="Water Giant">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4144,14 +4144,14 @@
 			<param name="LongRangeGuardRate" value="5" />
 			<skill name="PhysicalSpecial" id="4073" level="4" />
 		</parameters>
-		<race>HUMANOID</race>
+		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="5132" /> <!-- Monster Only (Giant Trident) -->
-		<acquire exp="6270" sp="436" /> <!-- Need confirm retail values -->
+		<acquire exp="48971" sp="1322" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3692" hpRegen="11" mp="2563" mpRegen="2.1" />
-			<attack physical="213.5439" magical="160.40508" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="195.566206" magical="130.09715" />
+			<vitals hp="3325.095" mp="2842.2" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="488.7117" magical="433.70804347826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="997.5285" magical="1662.5475" />
 			<speed>
 				<walk ground="35" />
 				<run ground="174" />
@@ -4185,7 +4185,7 @@
 			<radius normal="13" />
 			<height normal="44" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="826" max="1677" chance="70" /> <!-- Adena -->
 				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
@@ -4207,7 +4207,7 @@
 			</spoil>
 		</drop_lists>
 	</npc>
-	<npc id="20799" level="46" type="L2Monster" name="Queen Lad">
+	<npc id="20799" level="82" type="L2Monster" name="Queen Lad">
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
 			<param name="MoveAroundSocial1" value="0" />
@@ -4223,11 +4223,11 @@
 		</parameters>
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
-		<acquire exp="6312" sp="448" /> <!-- Need confirm retail values -->
+		<acquire exp="46819" sp="1264" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1729" hpRegen="11" mp="2614" mpRegen="2.1" />
-			<attack physical="272.85786" magical="169.38777" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="140.78176" magical="133.31739" evasion="10" />
+			<vitals hp="3364.71" mp="2898.9" mpRegen="3.5" hpRegen="3.5" />
+			<attack physical="494.5442" magical="438.8752173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="1009.413" magical="1682.355" />
 			<speed>
 				<walk ground="60" />
 				<run ground="174" />
@@ -4260,7 +4260,7 @@
 			<radius normal="14.4" />
 			<height normal="33" />
 		</collision>
-		<drop_lists> <!-- CT2.5 -->
+		<drop_lists>
 			<drop>
 				<item id="57" min="828" max="1693" chance="70" /> <!-- Adena -->
 				<item id="354" min="1" max="1" chance="0.012" /> <!-- Chain Mail Shirt -->
