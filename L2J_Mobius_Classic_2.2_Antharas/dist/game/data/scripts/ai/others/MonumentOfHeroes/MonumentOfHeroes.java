@@ -181,7 +181,7 @@ public final class MonumentOfHeroes extends AbstractNpcAI
 				{
 					if (!player.isSubClassActive())
 					{
-						if (player.getLevel() >= 85)
+						if (player.getLevel() >= 55)
 						{
 							Hero.getInstance().claimHero(player);
 							showOnScreenMsg(player, (NpcStringId.getNpcStringId(13357 + player.getClassId().getId())), ExShowScreenMessage.TOP_CENTER, 5000);
