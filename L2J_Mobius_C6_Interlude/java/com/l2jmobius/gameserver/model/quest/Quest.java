@@ -1745,6 +1745,10 @@ public class Quest extends ManagedScript
 		
 		// Return random candidate.
 		final List<L2PcInstance> members = getPartyMembersState(player, npc, state);
+		if (members.isEmpty())
+		{
+			return null;
+		}
 		return members.get(Rnd.get(members.size()));
 	}
 	
