@@ -77,7 +77,7 @@ public final class Config
 	public static final String SIEGE_CONFIG_FILE = "./config/main/Siege.ini";
 	// protected
 	private static final String DAEMONS_CONFIG_FILE = "./config/protected/Daemons.ini";
-	private static final String EXTENDER_CONFIG_FILE = "./config/protected/Extender.ini";
+	public static final String EXTENDER_CONFIG_FILE = "./config/protected/Extender.ini";
 	private static final String PROTECT_FLOOD_CONFIG_FILE = "./config/protected/Flood.ini";
 	private static final String ID_CONFIG_FILE = "./config/protected/IdFactory.ini";
 	private static final String PROTECT_OTHER_CONFIG_FILE = "./config/protected/Other.ini";

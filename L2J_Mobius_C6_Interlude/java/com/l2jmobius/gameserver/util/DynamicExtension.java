@@ -23,6 +23,8 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
+import com.l2jmobius.Config;
+
 /**
  * extension loader
  * @author galun
@@ -32,7 +34,6 @@ public class DynamicExtension
 {
 	private static Logger LOGGER = Logger.getLogger(DynamicExtension.class.getName());
 	private JarClassLoader _classLoader;
-	private static final String CONFIG = "config/protected/extender.ini";
 	private Properties _prop;
 	private ConcurrentHashMap<String, Object> _loadedExtensions;
 	private static DynamicExtension _instance;
@@ -90,7 +91,7 @@ public class DynamicExtension
 		
 		try
 		{
-			fis = new FileInputStream(CONFIG);
+			fis = new FileInputStream(Config.EXTENDER_CONFIG_FILE);
 			_prop.load(fis);
 		}
 		catch (FileNotFoundException ex)
