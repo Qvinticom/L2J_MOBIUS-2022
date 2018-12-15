@@ -7193,7 +7193,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
-			<effect name="Accuracy"> <!-- BUG:Condition - Should be given only during night time -->
+			<effect name="HitAtNight">
 				<amount>3</amount>
 				<mode>DIFF</mode>
 			</effect>

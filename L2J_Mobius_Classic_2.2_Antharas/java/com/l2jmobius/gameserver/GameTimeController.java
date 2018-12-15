@@ -25,6 +25,8 @@ import java.util.logging.Logger;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.OnDayNightChange;
+import com.l2jmobius.gameserver.network.SystemMessageId;
+import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 /**
  * Game Time controller class.
@@ -40,10 +42,12 @@ public final class GameTimeController extends Thread
 	public static final int MILLIS_PER_IG_DAY = (3600000 * 24) / IG_DAYS_PER_DAY;
 	public static final int SECONDS_PER_IG_DAY = MILLIS_PER_IG_DAY / 1000;
 	public static final int TICKS_PER_IG_DAY = SECONDS_PER_IG_DAY * TICKS_PER_SECOND;
+	private final static int SHADOW_SENSE_ID = 294;
 	
 	private static GameTimeController _instance;
 	
 	private final Set<L2Character> _movingObjects = ConcurrentHashMap.newKeySet();
+	private final Set<L2Character> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 	private final long _referenceTime;
 	
 	private GameTimeController()
@@ -174,9 +178,39 @@ public final class GameTimeController extends Thread
 			if (isNight() != isNight)
 			{
 				isNight = !isNight;
-				
 				EventDispatcher.getInstance().notifyEventAsync(new OnDayNightChange(isNight));
+				notifyShadowSense();
 			}
+		}
+	}
+	
+	public synchronized void addShadowSenseCharacter(L2Character character)
+	{
+		if (!_shadowSenseCharacters.contains(character))
+		{
+			_shadowSenseCharacters.add(character);
+			if (isNight())
+			{
+				final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
+				msg.addSkillName(SHADOW_SENSE_ID);
+				character.sendPacket(msg);
+			}
+		}
+	}
+	
+	public void removeShadowSenseCharacter(L2Character character)
+	{
+		_shadowSenseCharacters.remove(character);
+	}
+	
+	private void notifyShadowSense()
+	{
+		final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
+		msg.addSkillName(SHADOW_SENSE_ID);
+		for (L2Character character : _shadowSenseCharacters)
+		{
+			character.getStat().recalculateStats(true);
+			character.sendPacket(msg);
 		}
 	}
 	

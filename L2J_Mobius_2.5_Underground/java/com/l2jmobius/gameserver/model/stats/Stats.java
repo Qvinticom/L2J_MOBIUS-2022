@@ -149,6 +149,8 @@ public enum Stats
 	MAGIC_ATTACK_RANGE("mAtkRange"),
 	ATTACK_COUNT_MAX("atkCountMax"),
 	PHYSICAL_POLEARM_TARGET_SINGLE("polearmSingleTarget"),
+	HIT_AT_NIGHT("hitAtNight"),
+	
 	// Run speed, walk & escape speed are calculated proportionally, magic speed is a buff
 	MOVE_SPEED("moveSpeed"),
 	RUN_SPEED("runSpd", new SpeedFinalizer()),

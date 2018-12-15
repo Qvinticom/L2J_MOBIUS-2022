@@ -18,6 +18,7 @@ package com.l2jmobius.gameserver.model.stats.finalizers;
 
 import java.util.Optional;
 
+import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.stats.IStatsFunction;
@@ -67,6 +68,12 @@ public class PAccuracyFinalizer implements IStatsFunction
 		{
 			// Enchanted gloves bonus
 			baseValue += calcEnchantBodyPart(creature, L2Item.SLOT_GLOVES);
+		}
+		
+		// Shadow sense
+		if (GameTimeController.getInstance().isNight())
+		{
+			baseValue += creature.getStat().getAdd(Stats.HIT_AT_NIGHT, 0);
 		}
 		
 		return Stats.defaultValue(creature, stat, baseValue);

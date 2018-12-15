@@ -2575,6 +2575,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 						case MAGIC_ATTACK:
 						case MAGIC_ATTACK_SPEED:
 						case MAGICAL_DEFENCE:
+						case HIT_AT_NIGHT:
 						{
 							info.addComponentType(UserInfoType.STATS);
 							break;
