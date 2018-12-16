@@ -69,6 +69,10 @@ public final class Rnd
 	 */
 	public static int get(int origin, int bound)
 	{
+		if (origin == bound)
+		{
+			return origin;
+		}
 		return origin + (int) (((bound - origin) + 1) * RANDOM.get().nextDouble());
 	}
 	
@@ -96,6 +100,10 @@ public final class Rnd
 	 */
 	public static long get(long origin, long bound)
 	{
+		if (origin == bound)
+		{
+			return origin;
+		}
 		return origin + (long) (((bound - origin) + 1) * RANDOM.get().nextDouble());
 	}
 	
@@ -123,6 +131,10 @@ public final class Rnd
 	 */
 	public static double get(double origin, double bound)
 	{
+		if (origin == bound)
+		{
+			return origin;
+		}
 		return origin + (((bound - origin) + 1) * RANDOM.get().nextDouble());
 	}
 	
