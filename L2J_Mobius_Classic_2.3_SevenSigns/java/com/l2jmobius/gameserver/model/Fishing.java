@@ -144,7 +144,7 @@ public class Fishing
 		final int minPlayerLevel = baitData == null ? 20 : baitData.getMinPlayerLevel();
 		if (_player.getLevel() < minPlayerLevel)
 		{
-			if (minPlayerLevel == 85)
+			if (minPlayerLevel == 20)
 			{
 				_player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
 			}
@@ -287,7 +287,6 @@ public class Fishing
 				final int numRewards = baitData.getRewards().size();
 				if (numRewards > 0)
 				{
-					// TODO: verify, totally guessed
 					final FishingData fishingData = FishingData.getInstance();
 					final int lvlModifier = _player.getLevel() * _player.getLevel();
 					_player.addExpAndSp(Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier, Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier, true);
