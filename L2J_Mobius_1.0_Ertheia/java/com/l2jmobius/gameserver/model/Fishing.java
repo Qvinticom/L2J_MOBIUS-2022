@@ -287,7 +287,6 @@ public class Fishing
 				final int numRewards = baitData.getRewards().size();
 				if (numRewards > 0)
 				{
-					// TODO: verify, totally guessed
 					final FishingData fishingData = FishingData.getInstance();
 					final int lvlModifier = _player.getLevel() * _player.getLevel();
 					_player.addExpAndSp(Rnd.get(fishingData.getExpRateMin(), fishingData.getExpRateMax()) * lvlModifier, Rnd.get(fishingData.getSpRateMin(), fishingData.getSpRateMax()) * lvlModifier, true);

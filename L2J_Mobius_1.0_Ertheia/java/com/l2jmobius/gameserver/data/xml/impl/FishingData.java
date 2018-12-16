@@ -38,10 +38,10 @@ public final class FishingData implements IGameXmlReader
 	private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
 	private int _baitDistanceMin;
 	private int _baitDistanceMax;
-	private int _expRateMin;
-	private int _expRateMax;
-	private int _spRateMin;
-	private int _spRateMax;
+	private double _expRateMin;
+	private double _expRateMax;
+	private double _spRateMin;
+	private double _spRateMax;
 	
 	/**
 	 * Instantiates a new fishing data.
@@ -78,14 +78,14 @@ public final class FishingData implements IGameXmlReader
 						}
 						case "experienceRate":
 						{
-							_expRateMin = parseInteger(listItem.getAttributes(), "min");
-							_expRateMax = parseInteger(listItem.getAttributes(), "max");
+							_expRateMin = parseDouble(listItem.getAttributes(), "min");
+							_expRateMax = parseDouble(listItem.getAttributes(), "max");
 							break;
 						}
 						case "skillPointsRate":
 						{
-							_spRateMin = parseInteger(listItem.getAttributes(), "min");
-							_spRateMax = parseInteger(listItem.getAttributes(), "max");
+							_spRateMin = parseDouble(listItem.getAttributes(), "min");
+							_spRateMax = parseDouble(listItem.getAttributes(), "max");
 							break;
 						}
 						case "baits":
@@ -143,22 +143,22 @@ public final class FishingData implements IGameXmlReader
 		return _baitDistanceMax;
 	}
 	
-	public int getExpRateMin()
+	public double getExpRateMin()
 	{
 		return _expRateMin;
 	}
 	
-	public int getExpRateMax()
+	public double getExpRateMax()
 	{
 		return _expRateMax;
 	}
 	
-	public int getSpRateMin()
+	public double getSpRateMin()
 	{
 		return _spRateMin;
 	}
 	
-	public int getSpRateMax()
+	public double getSpRateMax()
 	{
 		return _spRateMax;
 	}
