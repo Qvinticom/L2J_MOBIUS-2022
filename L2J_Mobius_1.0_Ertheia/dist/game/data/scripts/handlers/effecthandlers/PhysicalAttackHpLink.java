@@ -66,7 +66,6 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 	@Override
 	public void instant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		
 		if (effector.isAlikeDead())
 		{
 			return;
@@ -130,7 +129,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			final double baseMod = (wpnMod * ((attack * effector.getLevelMod()) + power + rangedBonus)) / defence;
 			damage = baseMod * ssmod * critMod * weaponTraitMod * generalTraitMod * attributeMod * pvpPveMod * randomMod;
 			damage = effector.getStat().getValue(Stats.PHYSICAL_SKILL_POWER, damage);
-			damage *= Math.max(1.0d, ((100 - ((effected.getCurrentHp() / effected.getMaxHp()) * 100) - 40) * 2) / 100);
+			damage *= -((effector.getCurrentHp() * 2) / effector.getMaxHp()) + 2;
 		}
 		
 		effector.doAttack(damage, effected, skill, false, false, critical, false);
