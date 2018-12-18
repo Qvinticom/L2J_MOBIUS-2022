@@ -386,7 +386,7 @@ public class CharStat
 	
 	public int getPhysicalAttackAngle()
 	{
-		return 120;
+		return 240; // 360 - 120
 	}
 	
 	/**

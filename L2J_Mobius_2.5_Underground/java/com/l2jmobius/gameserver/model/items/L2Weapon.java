@@ -77,16 +77,16 @@ public final class L2Weapon extends L2Item
 		_spiritShotCount = set.getInt("spiritshots", 0);
 		_mpConsume = set.getInt("mp_consume", 0);
 		_baseAttackRange = set.getInt("attack_range", 40);
-		final String[] damgeRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
-		if ((damgeRange.length > 1) && Util.isDigit(damgeRange[2]) && Util.isDigit(damgeRange[3]))
+		final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
+		if ((damageRange.length > 1) && Util.isDigit(damageRange[2]) && Util.isDigit(damageRange[3]))
 		{
-			_baseAttackRadius = Integer.parseInt(damgeRange[2]);
-			_baseAttackAngle = Integer.parseInt(damgeRange[3]);
+			_baseAttackRadius = Integer.parseInt(damageRange[2]);
+			_baseAttackAngle = 360 - Integer.parseInt(damageRange[3]);
 		}
 		else
 		{
 			_baseAttackRadius = 40;
-			_baseAttackAngle = 120;
+			_baseAttackAngle = 240; // 360 - 120
 		}
 		
 		final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");

@@ -28,6 +28,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.playable.OnPlayableExpChanged;
 import com.l2jmobius.gameserver.model.events.returns.TerminateReturn;
+import com.l2jmobius.gameserver.model.items.L2Weapon;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.model.zone.type.L2SwampZone;
 
@@ -250,5 +251,12 @@ public class PlayableStat extends CharStat
 	public int getMaxLevel()
 	{
 		return ExperienceData.getInstance().getMaxLevel();
+	}
+	
+	@Override
+	public int getPhysicalAttackAngle()
+	{
+		final L2Weapon weapon = getActiveChar().getActiveWeaponItem();
+		return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
 	}
 }

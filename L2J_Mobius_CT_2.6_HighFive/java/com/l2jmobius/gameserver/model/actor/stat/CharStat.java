@@ -569,17 +569,7 @@ public class CharStat
 	
 	public int getPhysicalAttackAngle()
 	{
-		final L2Weapon weapon = _activeChar.getActiveWeaponItem();
-		final int baseAttackAngle;
-		if (weapon != null)
-		{
-			baseAttackAngle = weapon.getBaseAttackAngle();
-		}
-		else
-		{
-			baseAttackAngle = 120;
-		}
-		return baseAttackAngle;
+		return 240; // 360 - 120
 	}
 	
 	/**
