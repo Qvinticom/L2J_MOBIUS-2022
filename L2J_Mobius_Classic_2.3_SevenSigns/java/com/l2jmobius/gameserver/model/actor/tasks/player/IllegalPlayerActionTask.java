@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.tasks.player;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.data.xml.impl.AdminData;
 import com.l2jmobius.gameserver.enums.IllegalActionPunishmentType;
 import com.l2jmobius.gameserver.instancemanager.PunishmentManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -76,7 +75,8 @@ public final class IllegalPlayerActionTask implements Runnable
 	{
 		LOGGER.info("AUDIT, " + _message + ", " + _actor + ", " + _punishment);
 		
-		AdminData.getInstance().broadcastMessageToGMs(_message);
+		// Enable line bellow to get spammed by bot users.
+		// AdminData.getInstance().broadcastMessageToGMs(_message);
 		if (!_actor.isGM())
 		{
 			switch (_punishment)
