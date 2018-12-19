@@ -148,7 +148,7 @@ public final class Formulas
 		{
 			if (attacker.isPlayer())
 			{
-				if (calcMagicSuccess(attacker, target, skill) && ((target.getLevel() - attacker.getLevel()) <= 9))
+				if (calcMagicSuccess(attacker, target, skill))
 				{
 					if (skill.hasEffectType(L2EffectType.HP_DRAIN))
 					{
@@ -755,9 +755,25 @@ public final class Formulas
 	
 	public static boolean calcMagicSuccess(L2Character attacker, L2Character target, Skill skill)
 	{
-		// FIXME: Fix this LevelMod Formula.
-		final int lvlDifference = (target.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : attacker.getLevel()));
-		final double lvlModifier = Math.pow(1.3, lvlDifference);
+		final int mAccDiff = attacker.getMagicAccuracy() - target.getMagicEvasionRate();
+		int mAccModifier = 100;
+		if (mAccDiff > -20)
+		{
+			mAccModifier = 2;
+		}
+		else if (mAccDiff > -25)
+		{
+			mAccModifier = 30;
+		}
+		else if (mAccDiff > -30)
+		{
+			mAccModifier = 60;
+		}
+		else if (mAccDiff > -35)
+		{
+			mAccModifier = 90;
+		}
+		
 		float targetModifier = 1;
 		if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3))
 		{
@@ -773,7 +789,7 @@ public final class Formulas
 		}
 		// general magic resist
 		final double resModifier = target.getStat().getValue(Stats.MAGIC_SUCCESS_RES, 1);
-		final int rate = 100 - Math.round((float) (lvlModifier * targetModifier * resModifier));
+		final int rate = 100 - Math.round((float) (mAccModifier * targetModifier * resModifier));
 		
 		return (Rnd.get(100) < rate);
 	}
