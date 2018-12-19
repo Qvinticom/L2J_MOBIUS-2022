@@ -22,7 +22,6 @@ import java.util.logging.Level;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
-import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -30,6 +29,7 @@ import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2OlympiadManagerInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
+import com.l2jmobius.gameserver.model.holders.SkillHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.olympiad.CompetitionType;
 import com.l2jmobius.gameserver.model.olympiad.Olympiad;
@@ -60,18 +60,18 @@ public class OlympiadManagerLink implements IBypassHandler
 	private static final String MORE_THAN = "More than " + Config.ALT_OLY_REG_DISPLAY;
 	private static final int GATE_PASS = Config.ALT_OLY_COMP_RITEM;
 	
-	private static final int[] BUFFS =
+	private static final SkillHolder[] ALLOWED_BUFFS =
 	{
-		4357, // Haste Lv2
-		4342, // Wind Walk Lv2
-		4356, // Empower Lv3
-		4355, // Acumen Lv3
-		4351, // Concentration Lv6
-		4345, // Might Lv3
-		4358, // Guidance Lv3
-		4359, // Focus Lv3
-		4360, // Death Whisper Lv3
-		4352, // Berserker Spirit Lv2
+		new SkillHolder(4357, 2), // Haste Lv2
+		new SkillHolder(4342, 2), // Wind Walk Lv2
+		new SkillHolder(4356, 3), // Empower Lv3
+		new SkillHolder(4355, 3), // Acumen Lv3
+		new SkillHolder(4351, 6), // Concentration Lv6
+		new SkillHolder(4345, 3), // Might Lv3
+		new SkillHolder(4358, 3), // Guidance Lv3
+		new SkillHolder(4359, 3), // Focus Lv3
+		new SkillHolder(4360, 3), // Death Whisper Lv3
+		new SkillHolder(4352, 2), // Berserker Spirit Lv2
 	};
 	
 	@Override
@@ -276,7 +276,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				}
 				
 				final int index = Integer.parseInt(params[1]);
-				if ((index < 0) || (index > BUFFS.length))
+				if ((index < 0) || (index >= ALLOWED_BUFFS.length))
 				{
 					LOGGER.warning("Olympiad Buffer Warning: npcId = " + target.getId() + " has invalid index sent in the bypass: " + index);
 					return false;
@@ -284,8 +284,7 @@ public class OlympiadManagerLink implements IBypassHandler
 				
 				if (buffCount > 0)
 				{
-					// TODO: Add allowed buff list check?
-					final Skill skill = SkillData.getInstance().getSkill(target.getId(), BUFFS[index]);
+					final Skill skill = ALLOWED_BUFFS[index].getSkill();
 					if (skill != null)
 					{
 						target.setTarget(activeChar);
