@@ -648,6 +648,9 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="311,312,313,314" />
+		</cond>
 		<skills>
 			<skill id="35045" level="1" /> <!-- Talisman of Battle - Liberate -->
 		</skills>
